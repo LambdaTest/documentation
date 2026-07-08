@@ -1,6 +1,6 @@
 # KaneAI - JavaScript Execution
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 With KaneAI’s new JavaScript Execution feature, you now have the flexibility to write or paste custom JavaScript code snippets to perform tests. This allows for more advanced and customized test scenarios alongside KaneAI’s plain English test-writing format.
 

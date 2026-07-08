@@ -1,6 +1,6 @@
 # Ignoring Displacement Differences using Smart Ignore
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 SmartUI's `Smart Ignore` engine is specifically designed to address the challenges that arise when testing dynamic and content-rich web applications. Often, when content is added or removed from a page, it causes other elements to be displaced, leading to numerous false positives in traditional pixel-by-pixel comparisons. Smart Ignore intelligently hides these displacement differences, allowing you to concentrate on actual content changes that impact the user experience.
 

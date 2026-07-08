@@ -1,6 +1,6 @@
 # One Click Migration from X-Ray
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI Test Manager supports one-click migration from **X-Ray (Jira Cloud)**, allowing you to import your entire test library (including projects, test cases, folder structures, attachments, custom fields, and linked requirements) directly into Test Manager without manual data entry.
 

@@ -1,6 +1,6 @@
 # Capture Screenshots by Freezing Animations
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Animations, while visually appealing, can pose challenges during visual testing by causing false positives in visual diffs. These false positives often arise because animations can create minor variations between screenshots, even when there are no actual changes to the content. To address this, TestMu AI SmartUI provides the capability to automatically freeze animations during visual testing, ensuring consistent and reliable test results.
 

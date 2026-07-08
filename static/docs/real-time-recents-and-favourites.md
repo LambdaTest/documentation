@@ -1,6 +1,6 @@
 # Recents and Favourites
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The **Recents** and **Favourites** feature, located under the Quick Links section, helps users easily access frequently used resources. This functionality provides an easy way to revisit recently accessed items or mark important resources for quick retrieval.
 

@@ -1,6 +1,6 @@
 # Debugging in Selenium Using Telemetry Logs
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI Automation allows you to perform parallel test execution through a standalone mode that connects to the Selenium server, where each test can have multiple requests.
 

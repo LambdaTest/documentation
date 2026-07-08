@@ -1,6 +1,6 @@
 # Configure Timezones for Your Tests
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Many applications display dates, schedule events, or trigger time-sensitive logic based on the user's timezone. TestMu AI lets you set the timezone on the test VM using the `timezone` capability in `LT:Options`, so you can validate timezone-dependent behavior without changing your local machine settings. The capability accepts UTC offset strings (e.g., `UTC+05:30`).
 

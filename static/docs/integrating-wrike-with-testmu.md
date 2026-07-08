@@ -1,6 +1,6 @@
 # Integrating Wrike With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 >Wrike is a SaaS(Software-As-A-Service) Product Management software. You can manage and track your projects, deadlines, and other workflow processes. It also allows inter-team communications, and therefore used by many developments, as well as testing teams to keep track of their work and teams. Wrike also provides the ability to track bugs effectively.
 

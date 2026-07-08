@@ -1,6 +1,6 @@
 # Accessibility Automation (Overview)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Accessibility Automation lets teams run accessibility checks as part of automated web test execution.
 

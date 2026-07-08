@@ -1,6 +1,6 @@
 # Ghost Inspector Integration With TestMu AI’s Cloud
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI provides support with Selenium WebDriver for pacing the execution of your automation test scripts. TestMu AI is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.testmuai.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Ghost Inspector on TestMu AI.
 

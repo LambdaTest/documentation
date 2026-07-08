@@ -1,6 +1,6 @@
 # PDF Accessibility Scanning
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use this page as the entry point for PDF-related Accessibility guidance and to understand how PDF workflows differ from standard web or mobile Accessibility testing.
 

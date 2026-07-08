@@ -1,6 +1,6 @@
 # Zoho Cliq Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Zoho Cliq is a team communication and collaboration platform designed to enhance productivity and streamline communication within organizations. It offers a range of features to facilitate real-time messaging, audio and video calls, file sharing, and integrations with other business applications.
 

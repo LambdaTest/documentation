@@ -1,6 +1,6 @@
 # Setting Up Charles Proxy Through TestMu AI Tunnel
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This article will guide you on how to setup Charles Proxy for the tests run on TestMu AI platform through TestMu AI Tunnel.
 

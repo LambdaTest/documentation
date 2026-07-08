@@ -1,6 +1,6 @@
 # Page Titled (2.4.2)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Every web page must have a descriptive title that identifies its topic or purpose.
 

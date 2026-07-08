@@ -1,6 +1,6 @@
 # HAR Log Viewer With Waterfall
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The HAR (HTTP Archive) Log Viewer with Waterfall displays how resources on a web page load and interact over time. Use it to identify bottlenecks and optimize page performance in your Selenium tests.
 

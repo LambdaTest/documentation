@@ -1,6 +1,6 @@
 # Leveraging Custom Libraries in SikuliX for Advanced Visual Verification
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Suppose you want to automate interactions with a desktop application, but traditional frameworks like Selenium fall short because the UI elements lack proper identifiers.
 

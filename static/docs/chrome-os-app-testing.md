@@ -1,6 +1,6 @@
 # ChromeOS App Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This document outlines how you can leverage the features like mark as bug, changing IP geolocation, in-depth device logs and network logs etc to ease your Real Time App testing process.
 

@@ -1,6 +1,6 @@
 # Robot Framework
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Robot Framework sits **above** Selenium: Accessibility is still configured on the **underlying browser session** (desired capabilities passed into `Open Browser` or your library’s remote configuration). This page is the onboarding path for teams using **SeleniumLibrary** (or equivalent) against the TestMu AI grid.
 

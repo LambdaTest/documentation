@@ -1,6 +1,6 @@
 # Test Muting
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Imagine you are a software tester, and you have a test suite with hundreds of tests. Some of these tests are known to fail consistently, but there is no way to disable them. This means that every time you run the test suite, these failing tests cause the suite to fail. This can be frustrating and time-consuming, especially if you are trying to identify and resolve real problems with the application under test.
 

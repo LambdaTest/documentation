@@ -1,6 +1,6 @@
 # Bitbucket Pipeline Integration with SmartUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Bitbucket is a web-based version control repository hosting service owned by Atlassian. It is primarily designed for development teams to manage their code, collaborate on projects, and streamline their workflows.
 

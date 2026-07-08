@@ -1,6 +1,6 @@
 # TeamCity Integration With HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TeamCity is a build management and continuous integration server developed by JetBrains. It is used to automate the process of building, testing, and deploying software. It supports a wide range of programming languages and technologies, including Java, .NET, Ruby, and Python.
 

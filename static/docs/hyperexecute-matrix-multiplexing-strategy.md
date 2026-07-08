@@ -1,6 +1,6 @@
 # Matrix Multiplexing Strategy
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 HyperExecute's Matrix Multiplexing Strategy allows you to execute test cases across a variety of combinations efficiently. This strategy is especially useful when dealing with browser and OS combinations or other parameters like files, tags, and more.
 

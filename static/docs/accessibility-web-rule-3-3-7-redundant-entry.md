@@ -1,6 +1,6 @@
 # Redundant Entry (3.3.7)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Information previously entered by or provided to the user in the same process must be auto-populated or available for selection, unless re-entering is essential for security or the data is no longer valid.
 

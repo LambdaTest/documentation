@@ -1,6 +1,6 @@
 # App Settings in Real Device Cloud
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 App settings play a crucial role in testing the environment for mobile applications. These settings, provided by TestMu AI, offer developers a range of capabilities to enhance testing procedures and ensure comprehensive validation of their apps functionality.
 

@@ -1,6 +1,6 @@
 # Run Your Quick Scan
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Quick Scan is the fastest way to check a single page for accessibility issues using the DevTools extension. It scans the full page and returns a list of issues grouped by severity.
 

@@ -1,6 +1,6 @@
 # Filter by Custom Data
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Ability to sent any custom `key` and `value` pair to TestMu AI platform and then filter the test cases based on the custom data. This feature is available for `Web Automation` and `App Automation` coming soon.
 

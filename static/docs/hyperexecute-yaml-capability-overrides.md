@@ -1,6 +1,6 @@
 # YAML-Based Capability Overrides for Selenium Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 In Selenium-based testing, [capabilities](/support/docs/selenium-automation-capabilities/) are key-value pairs that define how and where your tests should run, such as browser type, version, OS, console logs, video recording, and more.
 

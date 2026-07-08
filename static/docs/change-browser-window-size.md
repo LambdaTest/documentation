@@ -1,6 +1,6 @@
 # Change Browser Window Size
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 When running Selenium tests on TestMu AI, you can control the browser window resolution to test responsive layouts, verify UI elements at specific breakpoints, and reproduce resolution-dependent bugs. Set the resolution through the `resolution` capability in `LT:Options`.
 

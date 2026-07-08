@@ -1,6 +1,6 @@
 # Travis CI Pipeline Integration with SmartUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Travis CI is one of the most popular CI/CD platforms, known for its simplicity and support for open-source projects. It provides continuous integration for projects hosted on GitHub and Bitbucket.
 

@@ -1,6 +1,6 @@
 # Test Reporting & Test Management Tools
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI offers integration with test reporting and test management tools, allowing you to conveniently manage your test execution reports, as you perform cross browser testing using TestMu AI. Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over TestMu AI.
 

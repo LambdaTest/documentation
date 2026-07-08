@@ -1,6 +1,6 @@
 # Missing Switch Element Label
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 iOS switch controls must have an accessibility label that describes the setting they toggle.
 

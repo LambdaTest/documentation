@@ -1,6 +1,6 @@
 # Network Whitelisting Guide
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 When testing private or restricted environments on TestMu AI, your team may need to configure network access controls. Depending on how your applications are hosted and secured, TestMu AI supports multiple approaches **Inbound Whitelisting, Dedicated Proxy, Outbound Whitelisting, STUN/TURN Whitelisting, and Tunnel configurations (including Site-to-Site tunnels)**.
 

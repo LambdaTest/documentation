@@ -1,6 +1,6 @@
 # SmartUI Tests in HyperExecute using Cypress
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Cypress
 

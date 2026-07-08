@@ -1,6 +1,6 @@
 # Step 2: How to Associate the Test Cases
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > Test Plan works in Association with specific [**Visual Studio subscriptions**](https://learn.microsoft.com/en-us/azure/devops/test/create-a-test-plan?view=azure-devops#:~:text=Basic%20%2B%20Test%20Plans%20access%20level%20to%20add%20test%20plans%20and%20test%20suites%2C%20delete%20test%20artifacts%2C%20and%20define%20test%20configurations.%20Or%2C%20have%20one%20of%20the%20following%20Visual%20Studio%20subscriptions).
 

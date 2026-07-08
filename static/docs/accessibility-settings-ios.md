@@ -1,6 +1,6 @@
 # Accessibility Testing on iOS Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Accessibility testing ensures that mobile applications and web content are accessible to all users, including those with disabilities. On iOS devices, this involves testing various accessibility features like text size adjustments, contrast settings, and motion reduction.
 

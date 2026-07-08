@@ -1,6 +1,6 @@
 # Generate your HyperExecute YAML file
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 You can also generate the HyperExecute YAML directly from the HyperExecute Portal. To accomplish this, follow the below mentioned steps:
 

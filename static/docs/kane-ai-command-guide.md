@@ -1,6 +1,6 @@
 # KaneAI - Command Guide
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 KaneAI lets you write **natural language instructions** that it converts into executable automation steps. This guide covers  a wide range of commands that help you interact with web pages, control tabs, handle waits, perform assertions, and build dynamic, reliable tests without writing code, best practices and troubleshooting tips to help you get the most out of KaneAI.
 

@@ -1,6 +1,6 @@
 # Scroll Until Element for Mobile Authoring
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > This document provides a comprehensive guide on using the Scroll Until Element feature in KaneAI. It covers how to define scroll actions using simple natural language commands, eliminating the need for manual coordinate-based scripting for mobile app testing.
 

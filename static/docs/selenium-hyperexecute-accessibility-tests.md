@@ -1,6 +1,6 @@
 # HyperExecute integration — Selenium accessibility automation
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This page is the **HyperExecute** integration guide for **Accessibility Automation** when your tests use **Selenium**. It assumes you already run Selenium jobs on HyperExecute (YAML + CLI) and need the same **accessibility** session capabilities and reporting behavior on the grid, not a generic Selenium-only tutorial. For framework setup on local or other grids, start with **[Accessibility Automation](/support/docs/accessibility-automation/)** and the **[Selenium](/support/docs/accessibility-automation-test/)** setup doc.
 

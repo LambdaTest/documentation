@@ -1,6 +1,6 @@
 # TeamCity Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Developed by JetBrains, TeamCity is Java-based build management to help you with continuous integration and continuous deployment. With TeamCity, you can deploy your automated pipeline quicker, pacing your go-to-market launch.
 

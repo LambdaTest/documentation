@@ -1,6 +1,6 @@
 # Ranorex Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Ranorex is a GUI test automation framework which helps to execute E2E(End-to-End) testing of web, desktop, and mobile applications. Ranorex Core API is powered with Selenium WebDriver helping you to maximize your cross browser testing in an efficient manner.
 

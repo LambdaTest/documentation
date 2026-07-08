@@ -1,6 +1,6 @@
 # GitHub Repo-Based OAuth Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI allows you to integrate with GitHub using repo-based OAuth to log issues directly to your GitHub repository from the TestMu AI platform.
 

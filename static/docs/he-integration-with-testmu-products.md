@@ -1,6 +1,6 @@
 # HyperExecute Integrations with Products
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 You can now integrate HyperExecute with other TestMu AI products like Smart UI testing. You can go through the links below to see the integrations we offer at the moment.
 

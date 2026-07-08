@@ -1,6 +1,6 @@
 # Debugging Options for Automation Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI supports different automation capabilities for enabling debugging log options. This documentation explains how to use various logging options for your failed tests and fix them quickly.
 

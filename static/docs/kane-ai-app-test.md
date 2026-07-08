@@ -1,6 +1,6 @@
 # Automate your App Testing with KaneAI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 In this guide, we'll walk you through the process of generating, and executing automated tests for your mobile application using KaneAI.
 

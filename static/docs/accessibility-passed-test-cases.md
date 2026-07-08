@@ -1,6 +1,6 @@
 # Passed Test Cases
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Passed Test Cases lets teams include successful accessibility checks in a report instead of showing only failures and incomplete items.
 

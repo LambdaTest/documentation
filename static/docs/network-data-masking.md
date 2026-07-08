@@ -1,6 +1,6 @@
 # Network Data Masking
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI provides network data masking capability to protect sensitive information during automation testing sessions. This feature automatically masks sensitive data in network logs on the TestMu AI platform, ensuring that confidential information like passwords, tokens, and authentication keys are not exposed in test logs and network traffic reports.
 

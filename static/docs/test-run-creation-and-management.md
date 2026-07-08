@@ -1,6 +1,6 @@
 # Test Run - Creation and Management
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guide outlines the steps required to create, configure, and manage test runs within TestMu AI's Test Manager. It provides developers and testers with a clear understanding of the process, enabling efficient test execution and organization.
 

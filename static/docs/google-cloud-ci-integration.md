@@ -1,6 +1,6 @@
 # Run Selenium Tests With Google Cloud CI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Google Cloud Platform is one of the market’s leading public cloud providers and offers a variety of management services. Google Cloud Build and Google Cloud Run are two Google Cloud services that use pipelines to automate builds and deployments.
 

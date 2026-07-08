@@ -1,6 +1,6 @@
 # Manual Tests Sessions Dashboard
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Manual Tests Sessions Dashboard provides a unified view of all your manual testing sessions across TestMu AI Real Devices products. It converts ephemeral manual sessions into structured historical records, helping you track, analyze, and report on your manual testing activity.
 

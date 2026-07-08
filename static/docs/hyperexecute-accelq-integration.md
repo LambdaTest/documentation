@@ -1,6 +1,6 @@
 # Accelq Integration with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ACCELQ is a cloud-based, continuous testing platform for functional and API testing needs. It is a codeless test automation tool that allows users to create and execute tests without writing any code. ACCELQ uses a natural language abstraction to generate Java code, which makes it easy to learn and use.
 

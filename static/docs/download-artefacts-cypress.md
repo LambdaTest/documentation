@@ -1,6 +1,6 @@
 # Downloading Artefacts For A Cypress Project
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This article guides you on how to download the artefacts for a Cypress project from TestMu AI Cloud machine.
 

@@ -1,6 +1,6 @@
 # KaneAI - Using Parameters
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guide provides a detailed walkthrough for utilizing parameters in KaneAI to streamline test case management and execute tests with various data inputs. By leveraging data parameters, testers and developers can manage configurations effortlessly. Follow the step-by-step instructions below for successful implementation.
 

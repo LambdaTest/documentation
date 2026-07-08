@@ -1,6 +1,6 @@
 # SmartUI CLI Complete Reference Guide
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This comprehensive reference guide covers all SmartUI CLI and Storybook CLI commands, options, advanced features, and end-to-end workflows for visual regression testing.
 

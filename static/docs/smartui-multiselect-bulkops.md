@@ -1,6 +1,6 @@
 # Multiselect & Bulk Operations
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Managing large visual regression builds can be time-consuming. **Multiselect & Bulk Operations** allow you to perform actions on multiple screenshots at once, significantly speeding up the review process.
 

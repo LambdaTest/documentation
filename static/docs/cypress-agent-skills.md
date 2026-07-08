@@ -1,6 +1,6 @@
 # Run Your Cypress Tests Using Agent Skills
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Instead of manually setting up your Cypress project, you can use **Agent Skills** to let your AI coding assistant generate production-ready Cypress test automation for you.
 

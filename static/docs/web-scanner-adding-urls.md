@@ -1,6 +1,6 @@
 # Adding URLs for Web Scanner
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Step 3: Add URLs to Your Scan
 

@@ -1,6 +1,6 @@
 # Automation Tests with Accessibility Tool using Cypress v9
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This document walks you through the step by step guide for executing the automation tests of your website with TestMu AI's Accessibility Tool using Cypress v9 and below.
 

@@ -1,6 +1,6 @@
 # Missing Screen Title
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Each screen or activity in an Android app must have a descriptive title so users can identify where they are in the app.
 

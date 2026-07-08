@@ -1,6 +1,6 @@
 # Defect Analysis and Prediction
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Modern test automation generates thousands of results per day. Without intelligent analysis, teams waste significant time manually triaging failures, chasing flaky tests, and diagnosing root causes. TestMu AI's AI-powered defect analysis and prediction capabilities automatically classify, analyze, and surface actionable insights from your test execution data, helping you move from reactive debugging to proactive quality improvement.
 

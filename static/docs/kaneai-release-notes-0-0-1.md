@@ -1,6 +1,6 @@
 # Version 0.0.1 - Beta
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ### Proximity-Based Hub Region Allocation for Code Generation
 We’ve introduced proximity-based hub region allocation to optimize code generation performance by selecting the nearest hub region to the user. This enhancement ensures faster execution and reduced latency during test script generation.

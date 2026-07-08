@@ -1,6 +1,6 @@
 # Ignore and Select Regions on SmartUI Web Hooks
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 On the **Web Hooks** path (Selenium with `driver.executeScript("smartui.takeScreenshot", config)`), you can define an ignore or select region in two ways: a **DOM selector** or raw **pixel coordinates**. Coordinate regions work the same way as selectors and need no extra setup.
 

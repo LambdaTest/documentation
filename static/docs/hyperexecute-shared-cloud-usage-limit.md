@@ -1,6 +1,6 @@
 # Daily Usage Limit Per Organization | HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 To ensure fair usage, maintain system stability, and promote optimal test practices across all our users, TestMu AI enforces a daily usage limit on test execution time at the organization level. Each organization is allocated a maximum allowable test duration per day, calculated based on the number of concurrent (parallel) sessions provisioned to the account. This safeguard helps prevent overutilization and ensures equitable access to resources across the platform.
 

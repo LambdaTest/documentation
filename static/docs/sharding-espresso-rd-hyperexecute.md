@@ -1,6 +1,6 @@
 # Sharding for Espresso
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.
 

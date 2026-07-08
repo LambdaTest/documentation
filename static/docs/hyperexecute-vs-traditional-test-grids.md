@@ -1,6 +1,6 @@
 # HyperExecute vs Traditional Test Grids
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Traditional automation testing solutions are slow since the triggered test scenarios are first sent to the Hub, which in turn are scheduled to run on the best-suited Node. This results in unnecessary lag as a number of components are involved in the entire process. Over & above, multiple network hops with the network separated components results in increased test flakiness, a factor that can be a huge hindrance to time-to-market.
 

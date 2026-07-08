@@ -1,6 +1,6 @@
 # Get Started With TestMu A2A CLI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The TestMu A2A CLI lets you test chat agents and phone agents directly from your terminal. You can run quick one-off tests, build scenario-driven test suites, perform adversarial security assessments, and integrate everything into your CI/CD pipeline.
 

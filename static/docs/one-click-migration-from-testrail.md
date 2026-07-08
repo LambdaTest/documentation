@@ -1,6 +1,6 @@
 # One Click Migration from TestRail
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Efficiently importing data from TestRail streamlines your test management process, allowing for seamless project integration. With the Quick Import feature, you can easily transfer your existing TestRail projects from Test Management in just a few steps. This guide will walk you through the process, ensuring a smooth and hassle-free import experience.
 

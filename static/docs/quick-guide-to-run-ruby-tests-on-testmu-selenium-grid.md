@@ -1,6 +1,6 @@
 # Quick Guide To Run Ruby Tests On TestMu AI Selenium Grid
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI Selenium Automation Grid is a secure, scalable, and reliable [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on cloud that can help you run your Ruby automation scripts on 3000+ different browsers and operating system environments. The grid is specifically built for high performance and gives you not only a greater browser coverage but also an ability to run automation tests in parallel. This helps you reduce your automation test execution time significantly. This post will help you quickly get started with running Ruby test scripts on TestMu AI Selenium Grid.
 

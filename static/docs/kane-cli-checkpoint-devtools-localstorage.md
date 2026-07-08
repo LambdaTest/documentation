@@ -1,6 +1,6 @@
 # localStorage Assertions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 localStorage assertions let you verify data stored in the browser's `window.localStorage`: check key existence, values, and item counts.
 

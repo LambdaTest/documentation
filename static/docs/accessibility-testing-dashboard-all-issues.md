@@ -1,6 +1,6 @@
 # All Issues
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The All Issues view lists every issue found in a report and helps teams move from high-level summary to detailed triage.
 

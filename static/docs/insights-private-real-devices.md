@@ -1,6 +1,6 @@
 # Private Real Devices Insights
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI Private Real Devices Insights provide comprehensive insights into your private real devices testing efforts. These insights help you optimize your testing efforts by providing detailed insights into your real devices device usage insights, and more.
 

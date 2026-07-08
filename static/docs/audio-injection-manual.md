@@ -1,6 +1,6 @@
 # Audio Injection Manual Testing on Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **Audio Injection** lets you simulate microphone input on real Android and iOS devices during a manual **App Live** session. Use it to test speech-to-text, voice commands, voice assistants, in-app recording, KYC voice verification, and any other microphone-dependent feature, without speaking into a physical mic.
 

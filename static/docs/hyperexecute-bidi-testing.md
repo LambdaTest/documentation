@@ -1,6 +1,6 @@
 # Execute BiDi Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **BiDi (Bi-Directional)** refers to the **WebDriver BiDi protocol**, a new standard from the W3C (World Wide Web Consortium). Unlike the traditional WebDriver protocol (which works in a request → response model), **WebDriver BiDi enables two-way communication between your test script and the browser in real time**.
 

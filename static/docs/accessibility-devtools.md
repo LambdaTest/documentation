@@ -1,6 +1,6 @@
 # Accessibility DevTools (Overview)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Accessibility DevTools is the browser-based workflow for manual and assisted Accessibility testing on websites and web apps.
 

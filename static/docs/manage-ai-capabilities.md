@@ -1,6 +1,6 @@
 # Manage AI Capabilities
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI provides AI-powered capabilities across multiple products, including Test Manager, HyperExecute, SmartUI, Analytics, Web Automation, App Automation, Accessibility, and KaneAI. The **AI Capabilities** setting allows Org Admins to enable or disable all AI features for their entire organization with a single toggle.
 

@@ -1,6 +1,6 @@
 # SmartUI Plugin for Katalon Studio
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [TestMu AI SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 

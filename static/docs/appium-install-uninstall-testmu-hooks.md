@@ -1,6 +1,6 @@
 # Ability to Install and Uninstall Apps in App Automation Scripts
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Introduction
 

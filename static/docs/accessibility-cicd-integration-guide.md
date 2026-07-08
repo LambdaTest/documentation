@@ -1,6 +1,6 @@
 # CI/CD Integration Guide
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use this guide when you want **Accessibility Automation** (Selenium capabilities + hooks or auto-scan) to run on **every PR, nightly, or release branch**, not only from a laptop.
 

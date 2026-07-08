@@ -1,6 +1,6 @@
 # WebView Testing In Android Online In Real Time
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 WebView, in Android, is the feature which allows any app to display a webpage as a part of its own activity, instead of opening it on a separate browser. This not only allows the app to retain the users within itself but also increases the user-experience multifold. As a result, WebView Testing is one of the most widely in-demand testing techniques around the world as of today.
 

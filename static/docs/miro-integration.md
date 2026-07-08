@@ -1,6 +1,6 @@
 # Miro Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Miro is a cloud-based collaborative whiteboard platform helping teams to manage their projects effectively. Miro gives the team access to digital whiteboards and sticky notes to enable them to brainstorm and do many other collaborative activities such as research, planning, managing workflows and more.
 

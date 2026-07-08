@@ -1,6 +1,6 @@
 # Sitemap Extraction & URL Import
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use sitemap extraction and URL import to build the page list for scheduled Accessibility scans efficiently.
 

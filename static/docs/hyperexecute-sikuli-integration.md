@@ -1,6 +1,6 @@
 # Integrate Sikuli with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Sikuli is an open-source tool that empowers you to automate tasks on your computer screen. It utilizes a unique approach called "visual image match" to interact with graphical user interfaces (GUIs).
 

@@ -1,6 +1,6 @@
 # Favro Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Favro is a project management and collaboration tool set up by serial deep tech entrepreneurs. It works under an agile methodology that helps in planning, execution, collaboration, and creation to enhance the workflow of your organization. You can create your dashboard where you can track your various projects, interact, respond to ideas, handle projects with your teammates using multiple kanbans, timelines, and sheets.
 

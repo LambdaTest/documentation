@@ -1,6 +1,6 @@
 # Fragment Identifier for Accessibility Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The **Fragment Identifier** option lets you treat URLs that differ only by the fragment (the part after `#`) as **separate entities** for accessibility issue tracking and management. That gives you finer-grained audits when anchors, in-page sections, or hash-based routes represent meaningfully different UI states.
 

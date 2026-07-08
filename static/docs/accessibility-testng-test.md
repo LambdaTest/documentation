@@ -1,6 +1,6 @@
 # TestNG
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use this guide when your **Selenium** web tests run with **TestNG** and you want **Accessibility Automation** in the same sessions. The runner does not change how Accessibility works on the grid: you still enable it with **capabilities**, then either use **on-demand hooks** or **auto-scan**. Details match the main [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/) doc; this page adds a **TestNG-shaped onboarding path**.
 

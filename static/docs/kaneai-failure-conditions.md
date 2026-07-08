@@ -1,6 +1,6 @@
 # Failure Conditions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Failure conditions in KaneAI allow you to define how the test execution in a Test Run should behave when a particular test step fails. These conditions give you fine-grained control over how failures are handled at the step level and how they impact the overall execution result.
 

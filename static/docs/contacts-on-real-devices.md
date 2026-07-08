@@ -1,6 +1,6 @@
 # Access your Contacts
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 With TestMu AI Real Devices, you can interact with the built-in Contacts app on our real devices to test your app's functionality. To support diverse testing, we've included sample contact data for you to use.
 

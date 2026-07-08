@@ -1,6 +1,6 @@
 # Running NUnit Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 NUnit is a testing framework for .NET languages, commonly used with Selenium for automated testing. It provides a structure for organizing and executing tests, supporting features like test fixtures, assertions, and setup/teardown methods.
 

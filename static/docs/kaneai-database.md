@@ -1,6 +1,6 @@
 # Database Connection in KaneAI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Managing test data in isolation or manually updating it across different test cases can lead to inconsistencies, increased maintenance efforts, and slower test execution. Integrating database connections within KaneAI allows teams to access and manipulate real-time data directly during test creation and execution. This capability ensures that tests are always aligned with the latest data, reducing manual data management, improving test accuracy, and enabling more efficient and scalable test automation workflows.
 

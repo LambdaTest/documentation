@@ -1,6 +1,6 @@
 # Multi-Device Testing on Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **Multi-Device Testing** enables you to run multiple devices simultaneously in a single App Live session, allowing you to validate your application across different devices and OS versions faster and more efficiently. This approach simplifies **cross-device testing** by bringing multiple devices into a single session.
 

@@ -25,7 +25,7 @@ const DOCS_DIR = path.join(__dirname, '..', 'docs');
 const OUT_DIR = path.join(__dirname, '..', 'static', 'docs');
 
 // llms.txt is served by this docs site under the /support/ baseUrl.
-const LLMS_TXT_URL = 'https://www.testmuai.com/support/llms.txt';
+const LLMS_TXT_URL = 'https://www.testmuai.com/support/docs/llms.txt';
 
 // Agent-facing directive inserted near the top of every generated Markdown file
 // so LLMs/crawlers can discover the machine-readable index.

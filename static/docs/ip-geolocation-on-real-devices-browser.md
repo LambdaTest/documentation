@@ -1,6 +1,6 @@
 # IP Geolocation on Real Devices Browser
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Understanding how your website behaves across different geographies is essential for delivering a personalized and compliant user experience. Whether you're targeting region-specific pricing, content, or legal requirements, geolocation simulation is a critical part of cross-border testing.
 

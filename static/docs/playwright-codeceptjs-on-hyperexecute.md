@@ -1,6 +1,6 @@
 # Running Codecept Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 CodeceptJS is a versatile end-to-end testing framework for JavaScript that allows testing web applications using various libraries like Puppeteer and WebDriver. It stands out for its simplicity and ability to write tests in a more human-readable and expressive manner, making it accessible for both developers and non-developers.
 

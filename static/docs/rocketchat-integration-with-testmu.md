@@ -1,6 +1,6 @@
 # Rocket.Chat Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Rocket.Chat is a free, open-source communication platform that allows collaboration, file sharing, and real-time chat sharing. It's cross-platform and open source, allowing users to customize and extend its functionality to meet their team's or business needs.
 

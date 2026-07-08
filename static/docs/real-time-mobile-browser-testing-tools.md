@@ -1,6 +1,6 @@
 # How to use Testing Tools for Mobile Browsers?
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI offers a comprehensive suite of real-time mobile web browser testing tools designed to improve your testing experience. This guide provides detailed instructions on how to use each of the tools.
 

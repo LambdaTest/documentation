@@ -1,6 +1,6 @@
 # Microsoft Teams Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Microsoft Teams is a leading communication and collaboration platform that combines workplace chat, video conferencing, file storage, and app integration. Designed for teamwork, it enables seamless interaction and productivity within organizations, making it an ideal tool for managing projects and workflows.
 

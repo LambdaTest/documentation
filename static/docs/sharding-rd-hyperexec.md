@@ -1,6 +1,6 @@
 # Sharding for XCUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Generally the XCUI tests are run in sequence which is a time taking process. This document explains how you can speed up this process by splitting the tests into **shards**. We can divide the various tests into shards which can run parallelly and save time while running various XCUI tests.
 

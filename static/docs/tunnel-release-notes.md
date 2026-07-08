@@ -1,6 +1,6 @@
 # Tunnel Client Release Notes
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Version 3.2.29 (14th June 2026)
 - **gRPC / HTTP/2 Tunnel Fix**

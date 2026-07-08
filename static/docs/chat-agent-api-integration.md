@@ -1,6 +1,6 @@
 # Chat Agent API — Integration Guide
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This document outlines the API request format, required credentials, and response schema the platform uses to communicate with your chatbot, regardless of provider or framework.
 

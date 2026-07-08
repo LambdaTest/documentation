@@ -1,6 +1,6 @@
 # Capturing Responsive DOM with SmartUI SDK
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 If your application dynamically changes the DOM based on viewport size or specific breakpoints, SmartUI SDKs can be configured to adapt accordingly. When using the SmartUI CLI, the SDK captures the DOM state at the specified viewport size within the test browser, then renders it across the browsers and resolutions defined in your [configuration file](/support/docs/smartui-sdk-config-options/).
 

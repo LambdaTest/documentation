@@ -1,6 +1,6 @@
 # Bamboo Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Launched on 20 February 2007, Bamboo by Atlassian has become a worldwide adopted CI/CD tool. With Bamboo Server, you can generate multi-level build plans with the ease of defining triggers to specific builds post commits. You could also assign crucial builds or deployments to a colleague. Bamboo is free for open-source projects.
 

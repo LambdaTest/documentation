@@ -1,6 +1,6 @@
 # ClickUp Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ClickUp offers a highly customizable cloud-based platform to boost your productivity for both professional and personal life by storing all of your tasks, docs, conversations, timelines, spreadsheets, and more in a single place. You can have different views of the project such as Gantt view, board view, and calendar view. You could also chat with your colleagues, and share documents with the team. ClickUp also offers numerous features for time management, task management, project management, along with effective collaboration, reporting, and integrations to third-party tools such as TestMu AI.
 

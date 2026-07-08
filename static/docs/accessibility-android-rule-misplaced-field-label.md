@@ -1,6 +1,6 @@
 # Misplaced Field Label
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Form field labels in Android apps must be positioned correctly relative to their associated input so assistive technologies can pair them accurately.
 

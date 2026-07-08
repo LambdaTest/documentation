@@ -1,6 +1,6 @@
 # GitHub App Integration with SmartUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This is the guide to setup your GitHub Repos with SmartUI projects and run your CI along with visual regression testing.
 

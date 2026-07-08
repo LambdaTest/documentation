@@ -1,6 +1,6 @@
 # Missing View Accessibility
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Meaningful Android views must be accessible to assistive technologies rather than being invisible to the accessibility framework.
 

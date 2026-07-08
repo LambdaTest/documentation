@@ -1,6 +1,6 @@
 # Configure Accessibility Automation
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This document details the configuration options available for your automated accessibility tests, ensuring comprehensive and efficient assessments.
 

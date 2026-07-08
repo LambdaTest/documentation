@@ -1,6 +1,6 @@
 # TestMu AI SSO & Google Workspace Using SAML
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI provides seamless Single Sign-On (SSO) integration with Google Workspace, enabling your team to access TestMu AI using their existing Google credentials. This integration streamlines user management and enhances security by centralizing authentication through your Google Workspace identity provider.
 

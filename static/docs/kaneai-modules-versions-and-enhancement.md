@@ -1,6 +1,6 @@
 # Module Versioning and Enhancements
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Every time you modify a module in KaneAI, a new version is created automatically. This version history lets you track what changed, compare any two versions side by side, and revert to a previous version when needed. Version control is especially valuable when multiple team members work with the same modules across test cases.
 

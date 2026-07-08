@@ -1,6 +1,6 @@
 # HyperExecute Platform FAQs
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 #### 1. **What OS does HyperExecute provide to execute tests?**
 

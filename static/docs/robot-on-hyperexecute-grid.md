@@ -1,6 +1,6 @@
 # Running Robot Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Robot Framework is a powerful open-source automation framework for Selenium that supports keyword-driven and behavior-driven development. With an easy-to-read syntax and a rich set of libraries, it simplifies the creation and execution of Selenium test scripts.
 

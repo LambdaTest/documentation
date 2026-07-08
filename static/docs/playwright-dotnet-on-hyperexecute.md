@@ -1,6 +1,6 @@
 # Running DotNet Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Playwright for .NET is a framework that enables browser automation and end-to-end testing using the .NET programming language, such as C#. Developed by Microsoft, Playwright offers a comprehensive .NET API for automating interactions with web pages in Chromium, Firefox, and WebKit browsers
 

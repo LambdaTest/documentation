@@ -1,6 +1,6 @@
 # Selenium Testing With Concourse CI And TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Codeship is a scalable, cloud-based platform for continuous integration that offers GitHub, Bitbucket, and GitLab projects support. There are two versions of Codeship, Codeship Basic and Codeship Pro. Codeship Basic instantly provides robust VMs along with technology stacks being preinstalled to help run your CI/CD pipeline faster. Keep in mind, though, the primary purpose of Codeship Basic is to develop applications with general workflows by UI. It doesn’t offer support for dockers.
 

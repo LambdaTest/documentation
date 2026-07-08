@@ -1,6 +1,6 @@
 # Load Chrome Extensions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Install Chrome extensions into cloud browser sessions so they behave identically to local browsers with your required extensions.
 

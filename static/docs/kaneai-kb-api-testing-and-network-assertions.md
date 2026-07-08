@@ -1,6 +1,6 @@
 # API Testing & Network Assertions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 KaneAI isn't just a UI testing tool. It also supports API testing and network-level assertions, allowing you to validate both frontend behavior and backend responses in a single test flow. This is critical for scenarios where the UI depends on API data, or where you need to verify that the correct API calls are being made behind the scenes.
 

@@ -1,6 +1,6 @@
 # Running Mocha Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Mocha is a versatile JavaScript testing framework often used in conjunction with Puppeteer for testing web applications. With support for asynchronous testing and various reporting options, Mocha enables the creation of robust test suites. When combined with Puppeteer, Mocha facilitates end-to-end testing of web pages by allowing developers to control browser interactions.
 

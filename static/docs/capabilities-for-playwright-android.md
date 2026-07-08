@@ -1,6 +1,6 @@
 # Capabilities for Playwright Android Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The TestMu AI Capability Generator allows you to automatically create the capabilities class needed to run your
 Playwright automation scripts on TestMu AI. Here are a few capabilities that you can configure to run your Playwright

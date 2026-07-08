@@ -1,6 +1,6 @@
 # Getting Started with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Welcome to HyperExecute, **an AI-Native Test Orchestration Cloud Platform**, designed to accelerate your testing process, enabling test automation teams worldwide to achieve an accelerated time to market by providing **JIT (Just-in-time) testing infrastructure**.
 

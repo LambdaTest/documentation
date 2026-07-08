@@ -1,6 +1,6 @@
 # Set SmartUI Comparison Modes at the Session Level
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 SmartUI now lets you declare a comparison mode **once at the session level** and have it apply to every screenshot in that run. Set the mode in `LT:Options` alongside your other capabilities, and SmartUI uses it as the default for each `smartui.takeScreenshot` call, no need to repeat the option on every screenshot.
 

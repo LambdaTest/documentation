@@ -1,6 +1,6 @@
 # Mobile App advanced authoring capabilities
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > This document provides detailed instructions for utilizing advanced features in KaneAI's mobile app authoring. It covers enabling video and image injections, configuring biometrics, and other advanced settings to enhance test authoring.
 

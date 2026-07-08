@@ -1,6 +1,6 @@
 # Inaccessible Text Focus
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Meaningful text content in Android apps must be focusable by assistive technology so users can read it sequentially.
 

@@ -1,6 +1,6 @@
 # Test Setup And Execution
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 After uploading the app to the TestMu AI cloud through REST API, you need to configure different capabilities for the uploaded app in your Appium test scripts. After that, you can run app automation tests using Appium on TestMu AI.
 

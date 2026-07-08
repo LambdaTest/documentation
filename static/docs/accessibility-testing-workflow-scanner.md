@@ -1,6 +1,6 @@
 # Workflow Scanner
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Workflow Scan allows you to record multiple real-time interactions and page loads within a user journey on a website and then analyze them for accessibility issues. This helps ensure that users with disabilities can easily navigate and interact with your website across different scenarios.
 

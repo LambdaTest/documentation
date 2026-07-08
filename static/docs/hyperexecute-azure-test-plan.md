@@ -1,6 +1,6 @@
 # Azure Test Plan Integration with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > It is a **Premium** feature of Azure. You will have to buy access to [Azure Test Plans](https://learn.microsoft.com/en-us/azure/devops/organizations/billing/buy-access-tfs-test-hub?view=azure-devops-2022#buy-monthly-access-to-azure-test-plans)
 

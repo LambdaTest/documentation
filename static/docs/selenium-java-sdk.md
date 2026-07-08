@@ -1,6 +1,6 @@
 # TestMu AI Selenium Java SDK
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The TestMu AI Selenium Java SDK enables you to run your existing Selenium TestNG tests on TestMu AI's cloud grid with **zero code changes**. Configure a YAML file, add a Maven dependency, and include a single listener to get started.
 

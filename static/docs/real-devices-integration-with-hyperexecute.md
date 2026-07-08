@@ -1,6 +1,6 @@
 # Real Devices Integration with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Till now you have executed your test scripts on the [Real Device Automation](/support/docs/appium-python-pytest/). This Document will not only explain to you about how to use Real Devices on HyperExecute but also the superpower you just unlocked with HyperExecute - Test Orchestration and Intelligence.
 

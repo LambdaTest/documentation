@@ -1,6 +1,6 @@
 # Notion Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Notion is an all-in-one workspace for the teams where you can write, plan, collaborate, and get organized. You can take notes, assign tasks, manage projects, and much more. Notion has customized markdown support that integrates kanban boards, tasks, wikis, and databases.
 

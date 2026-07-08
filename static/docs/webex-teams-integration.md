@@ -1,6 +1,6 @@
 # Webex Teams Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Cisco Webex Teams is a collaboration platform designed to help you and your team get more done faster. It combines messaging, file sharing, video conferencing, whiteboarding, and calling into one simple-to-use solution that keeps everyone connected and working smarter.
 

@@ -1,6 +1,6 @@
 # Selenium Testing from Different Geolocations
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI allows you to run your tests from different geographies across the world.
 

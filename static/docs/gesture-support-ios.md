@@ -1,6 +1,6 @@
 # iOS Gestures on Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 When testing iOS apps on **TestMu AI Real Devices**, certain native gestures like double‑tap, triple‑tap, or multi‑finger interactions may be required to complete test flows.
 

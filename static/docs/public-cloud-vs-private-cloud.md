@@ -1,6 +1,6 @@
 # Public Cloud VS Private Cloud
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 In mobile app development, thorough testing on real devices is essential for performance and seamless user experience. Platforms like Public and Private Device Clouds offer access to a variety of real devices for testing, each with differences in accessibility, security, and features. Understanding these nuances is crucial for organizations to choose the right option.
 

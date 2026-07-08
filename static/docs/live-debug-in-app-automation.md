@@ -1,6 +1,6 @@
 # Live Inspect Your App Automation Tests
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Optimize your [app automation testing](https://www.testmuai.com/blog/mobile-app-testing-tools/) with TestMu AI's Real Devices UI Inspector. Now access unparalleled live debugging capabilities right from the app automation dashboard, enabling direct interaction with the test device, not just viewing the script's video.
 

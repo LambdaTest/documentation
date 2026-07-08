@@ -1,6 +1,6 @@
 # New Relic Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 New Relic is a comprehensive observability platform that helps you monitor, troubleshoot, and optimize your software systems. It collects data from all your applications, infrastructure, and logs and provides insights into how your system is performing and where potential problems lie.
 

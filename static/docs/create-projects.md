@@ -1,6 +1,6 @@
 # Create Projects
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Test cases play a pivotal role in ensuring the systematic execution of testing activities. Below are key aspects related to test cases, including creating projects, importing test cases, creating manual test cases, and managing them through the test case repository.
 

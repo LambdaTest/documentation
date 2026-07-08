@@ -1,6 +1,6 @@
 # Kane CLI Skills for AI Agents
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 A Kane CLI **skill** is a markdown instruction file that teaches an AI coding agent how to use `kane-cli`: when to invoke it, how to build commands, how to parse NDJSON output, how to present results, and how to handle failures. Install the skill once, and your agent handles browser automation tasks automatically whenever you ask.
 

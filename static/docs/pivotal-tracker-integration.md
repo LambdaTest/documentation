@@ -1,6 +1,6 @@
 # Pivotal Tracker Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Pivotal Tracker offers a project management platform on cloud. Designed for Agile teams, the tracker helps you organize your release cycle through an intuitive dashboard where everyone can monitor who is working on what, along with their upcoming tasks! Also, a shared backlog is there to help the team prioritize tasks which require more attention. Tracker automatically calculates your team's velocity by analyzing the past iterations, to help you calculate ETAs on your future sprints.
 

@@ -1,6 +1,6 @@
 # KaneAI Free Trial is Here!
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Every great product begins with a vision, but that vision can only become reality when it works flawlessly for real users. Whether you're a solo developer launching your first app, a startup team racing to validate your breakthrough idea, or a growing company looking to scale without breaking things, you face the same fundamental challenge: How do you ensure quality without slowing down innovation?
 

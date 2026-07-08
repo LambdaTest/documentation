@@ -1,6 +1,6 @@
 # Zenkit Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Zenkit is a SaaS tool that helps teams collaborate on projects and build databases. It lets you track your information from the start, like brainstorming ideas all the way to finishing tasks together. Think of Zenkit as a flexible space to arrange and manage any work.
 

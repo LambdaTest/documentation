@@ -1,6 +1,6 @@
 # GitLab CI Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 GitLab is one of the finest tools which facilitates continuous integration for Git projects from small to enterprise level clients. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to-market launch.
 
