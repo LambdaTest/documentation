@@ -1,5 +1,7 @@
 # Pointer Cancellation (2.5.2)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 For single-pointer actions, at least one of the following must be true: the down-event does not trigger the action, the action is triggered on the up-event and can be aborted, the up-event reverses any outcome of the down-event, or completing the action on the down-event is essential.
 
 **WCAG Reference**

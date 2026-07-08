@@ -1,5 +1,7 @@
 # Hive Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Hive is an online project management application that aims at maximizing your workplace productivity. With Hive you can plan project flexible and organize them in a Gantt chart, kanban board, table, or calendar. You can also keep a check on multiple projects simultaneously using their views and they also offer summary views to help you combine several projects in a single space, so you can visualize where all the teams are headed. TestMu AI integration with Hive helps to manage your bugs in Hive by moving them into a project through a single click effort. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on Hive.
 
 The TestMu AI Hive integration helps you in filing issues to your project in Hive directly from TestMu AI platform. With one-click integration, you can push annotated issues to the project of your choice, assign it to the required teammate, and attach necessary screenshots. You can do all that while in the middle of a test session in TestMu AI platform. The fields populated by you when marking as a bug through TestMu AI are displayed as information on the Hive for a testing instance.

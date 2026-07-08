@@ -1,5 +1,7 @@
 # Triggering tests from Buildkite CI/CD to TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Buildkite is a continuous integration (CI) and continuous deployment (CD) platform that integrates with version control systems to automate the testing and release of software. Unlike traditional CI/CD solutions, Buildkite allows developers to run builds on their own infrastructure, offering a hybrid model that combines the flexibility of self-hosted runners with the convenience of a cloud-based UI. This ensures faster build times, high levels of security, and scalability to meet the demands of projects of any size.
 
 TestMu AI now integrates with Buildkite to boost your go-to-market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online [Selenium grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 3000+ real browsers running through machines on the cloud. Perform automation testing in parallel with TestMu AI’s Selenium grid to trim down your test cycles drastically.

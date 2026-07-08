@@ -1,5 +1,7 @@
 # HyperExecute CLI FAQs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 #### 1. **Can HyperExecute CLI download test artifacts generated during execution?**
 
   Yes, HyperExecute can download the artifacts generated during the test execution. In addition, HyperExecute has APIs to download artifacts for a particular job.

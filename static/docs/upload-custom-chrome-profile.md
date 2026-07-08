@@ -1,5 +1,7 @@
 # How to Upload Custom Chrome Profile?
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Custom Chrome profiles allow you to simulate a real-user environment with specific browser settings. Learn how to upload a custom Chrome profile to run your automated tests on TestMu AI.
 
 ## Uploading Your Custom Chrome Profile

@@ -1,5 +1,7 @@
 # Quick Start
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This guide takes you from a fresh install to a passing run in under five minutes.
 
 ## Step 1: Install

@@ -1,5 +1,7 @@
 # Track Bugs and Issues in Test Runs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Overview
 
 Test Manager connects the bugs found during testing to the test instances that exposed them. Every test instance in a Test Run carries its own issues, so the run becomes a traceable map of test results and the defects behind them. You can see which tests have known bugs and open any of them in one click.

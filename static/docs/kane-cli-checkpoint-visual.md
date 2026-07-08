@@ -1,5 +1,7 @@
 # Visual Assertions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Visual assertions verify what's visible on screen by analyzing the current screenshot. This is the default method, when in doubt, KaneAI uses visual analysis.
 
 ## When It's Used

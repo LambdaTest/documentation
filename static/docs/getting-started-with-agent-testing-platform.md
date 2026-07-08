@@ -1,5 +1,7 @@
 # Getting Started With Agent Testing Platform
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI's Agent Testing Platform is the industry's first complete solution built specifically for testing AI systems. We use AI agents to test other AI agents, creating an intelligent testing approach that can handle the complexity of modern AI systems.
 
 This unified platform enables comprehensive testing of AI agents including chatbots, voice assistants, and autonomous systems across real-world scenarios, ensuring precision and relevance in performance validation. By matching intelligent systems with equally sophisticated testing frameworks, organizations can achieve the thorough validation that traditional testing methods simply cannot provide for AI applications.

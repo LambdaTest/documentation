@@ -1,5 +1,7 @@
 # HyperExecute Job Widgets
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Job Trends
 
 The `Job Trends` Widget empowers you to analyze the trends of executed Jobs on the TestMu AI platform, categorized as **Failed**, **Aborted**, **Lambda Error**, **Timeout**, and **Completed**.

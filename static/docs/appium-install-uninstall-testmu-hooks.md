@@ -1,5 +1,7 @@
 # Ability to Install and Uninstall Apps in App Automation Scripts
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Introduction
 
 TestMu AI now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device.

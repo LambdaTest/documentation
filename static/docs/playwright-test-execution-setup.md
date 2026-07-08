@@ -1,5 +1,7 @@
 # Playwright - Test Execution Setup
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Whenever you run a Playwright test, you must specify the operating system and the browser you wish to use. The TestMu AI Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Playwright automation scripts on TestMu AI.
 
 In this document, learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Playwright tests.

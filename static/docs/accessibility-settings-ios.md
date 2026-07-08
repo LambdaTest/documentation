@@ -1,5 +1,7 @@
 # Accessibility Testing on iOS Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Accessibility testing ensures that mobile applications and web content are accessible to all users, including those with disabilities. On iOS devices, this involves testing various accessibility features like text size adjustments, contrast settings, and motion reduction.
 
 This document provides an overview of the accessibility features available on iOS devices within TestMu AI's Real Devices Cloud. With support for key features like text size adjustments, contrast settings, motion reduction, and more, you can ensure your applications are optimized for users with diverse accessibility needs.

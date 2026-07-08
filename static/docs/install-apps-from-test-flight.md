@@ -1,5 +1,7 @@
 # How to Test Apps Installed via Test flight?
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI provides a seamless testing environment for beta versions of mobile applications on real iOS devices. With TestFlight preinstalled, developers can log into TestFlight, install their beta apps on iOS devices, and test before the apps are released on the App Store. This allows developers to effectively assess and improve app performance and user experience prior to launch.
 
 Let's dive in to learn how to test apps installed from Test Flight.

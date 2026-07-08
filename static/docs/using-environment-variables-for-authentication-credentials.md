@@ -1,5 +1,7 @@
 # Using Environment Variables for Authentication Credentials
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 To provide a secure [cross-browser testing](https://www.testmuai.com) environment on-cloud, we recommend integrating TestMu AI Authentication Credentials in your test scripts. This allows our cloud servers to establish a secure connection between your local system and our [cloud-based Selenium Grid](https://www.testmuai.com/selenium-automation/). This document shows you how to set up your TestMu AI authentication credentials as environment variables for your respective operating system. This setup also helps authenticate your colleague's test cases when executed against an individual account.
 
 ## Where to Find Authentication Credentials

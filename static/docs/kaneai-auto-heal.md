@@ -1,5 +1,7 @@
 # Auto-Heal for Automation Scripts in KaneAI with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## What is Auto-Heal in KaneAI & HyperExecute?
 
 KaneAI, the GenAI Native testing assistant from TestMu AI, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, TestMu AI’s high-performance test orchestration platform, they come with an added layer of reliability: the **Auto-Heal** feature.

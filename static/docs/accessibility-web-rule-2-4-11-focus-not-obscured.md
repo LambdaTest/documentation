@@ -1,5 +1,7 @@
 # Focus Not Obscured (Minimum) (2.4.11)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 When a user interface component receives keyboard focus, it must not be entirely hidden by author-created content such as sticky headers, footers, or overlays.
 
 **WCAG Reference**

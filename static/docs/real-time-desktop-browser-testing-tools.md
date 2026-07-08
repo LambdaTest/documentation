@@ -1,5 +1,7 @@
 # How to use Testing Tools for Desktop Browsers?
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI offers a comprehensive suite of real-time desktop web browser testing tools designed to enhance the efficiency and accuracy of your testing process. This guide provides detailed instructions on how to utilize each tool to its fullest potential.
 
 ## Screenshot

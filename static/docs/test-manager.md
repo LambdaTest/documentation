@@ -1,5 +1,7 @@
 # Introduction to Test Manager
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Test Manager is a comprehensive tool that can be used for test management, test triggering, and test reporting. It serves as a centralized tool that streamlines each stage of the testing process and provides a seamless and efficient experience for users. Test manager offers various functionalities that streamline the process of organizing testing tasks, generating test scenarios, and tracking real-time test results to satisfy the needs of testing experts.
 
 **Features**

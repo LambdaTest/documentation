@@ -1,5 +1,7 @@
 # HyperExecute Private Cloud Setup with Azure
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Follow the steps below to understand how to setup **HyperExecute Private Cloud** via the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyperexeonprem?tab=Overview).
 
 ## Prerequisites

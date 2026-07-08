@@ -1,5 +1,7 @@
 # Bypass Firewalls with customHeaders and customUrlFilters
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Corporate firewalls keep networks secure but can occasionally interfere with your testing process. The customHeaders and customUrlFilters capabilities give developers precise control over network requests and firewall bypassing during testing.
 
 This document covers the customHeaders capability, which lets you add custom headers to your tests and bypass firewall restrictions while performing automated browser testing.

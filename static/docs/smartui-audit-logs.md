@@ -1,5 +1,7 @@
 # SmartUI Audit & Activity Logs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 **Audit Logs** give you a permanent, searchable record of every important action in your SmartUI projects: who did it, when, and what changed. Use them for compliance, accountability, and tracing baseline history across projects, builds, and individual screenshots.
 
 ## Why use Audit Logs

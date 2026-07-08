@@ -1,5 +1,7 @@
 # Access Localhost and Internal Networks Using Tunnel
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Create encrypted tunnels between your local machine and Browser Cloud. Let cloud browsers reach localhost dev servers, staging environments, and private network resources.
 
 ## Why You Need This

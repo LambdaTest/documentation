@@ -1,5 +1,7 @@
 # Setting Up the Build Inactivity Time [Build Splitting]
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Build Splitting (Build Inactivity Time) lets you organize tests more efficiently. Track your progress by identifying tests that run at specific intervals. Set a time interval after which the system waits for the defined time and marks the build as completed. Any new builds you run after this time period are created as a new build.
 
 ## How It Works

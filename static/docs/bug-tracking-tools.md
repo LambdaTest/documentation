@@ -1,5 +1,7 @@
 # Integrate with TestMu AI to report and track bugs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Jira Integration With TestMu AI
 
 Jira Self Hosted Integration With TestMu AI

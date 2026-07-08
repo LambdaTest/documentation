@@ -1,5 +1,7 @@
 # How to Use Testing Tools In-Session?
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 With TestMu AI Real Device App Testing, you get access to a plethora of features that helps QA ease their app testing process, without the need of leaving the instance window. From mark as bug and changing IP geolocation, to in-depth device logs and network logs, TestMu AI's real device app testing offers it all.
 
 Let us get an overview of all the features in our real device instance:

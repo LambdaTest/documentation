@@ -1,5 +1,7 @@
 # Name, Role, Value (4.1.2)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 All user interface components must expose their name, role, states, properties, and values to assistive technologies, and notification of changes must be available programmatically.
 
 **WCAG Reference**

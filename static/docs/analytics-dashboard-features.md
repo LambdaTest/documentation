@@ -1,5 +1,7 @@
 # Analytics Dashboard Features to manage your data
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Export Dashboard as PDF
 
 #### Summary of the feature

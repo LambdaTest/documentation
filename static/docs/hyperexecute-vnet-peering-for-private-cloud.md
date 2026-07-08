@@ -1,5 +1,7 @@
 # VNet Peering and VNet Links
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Congratulations on getting the HyperExecute Private setup deployed on your Azure Cloud!
 
 You need to provision a certain public machine inside the Vnet to access this private setup in your environment. This setup cannot access your private applications, URLs, and APIs directly due to the measures set in place for optimal security.

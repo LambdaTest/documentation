@@ -1,5 +1,7 @@
 # Missing Field Label
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Input fields need labels that clearly describe the expected input.
 
 **WCAG Reference**

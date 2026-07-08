@@ -1,5 +1,7 @@
 # Conditional Logic (If / Else‑If / Else) in KaneAI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Introduction
 
 KaneAI supports conditional branching in your test cases using **If / Else‑If / Else** blocks. This lets you handle dynamic application behavior, for example, clicking a login button only when it is visible, or choosing between different checkout flows based on a variable value.

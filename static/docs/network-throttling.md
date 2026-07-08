@@ -1,5 +1,7 @@
 # Network Throttling
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Test your website's functionality on low latency networks (2G/3G/LTE) or offline conditions. These networks have variable upload and download speeds that can alter how your website performs on different browsers.
 
 To validate your website on such network profiles, simulate these network conditions using capabilities. If you want the test suite to start with the default network, use the preset capabilities. The device will have unobstructed internet connectivity.

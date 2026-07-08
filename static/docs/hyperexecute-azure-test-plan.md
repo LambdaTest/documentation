@@ -1,5 +1,7 @@
 # Azure Test Plan Integration with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 > It is a **Premium** feature of Azure. You will have to buy access to [Azure Test Plans](https://learn.microsoft.com/en-us/azure/devops/organizations/billing/buy-access-tfs-test-hub?view=azure-devops-2022#buy-monthly-access-to-azure-test-plans)
 
 In this fast-paced world of software development, ensuring fast and quality testing cycle in not an option anymore, but a necessity. Imagine a scenario where your team is diligently working on a project, but managing test plans, suites, spreadsheets, and cases becomes a maze of complexity. This is where Azure Test Plan comes in as your bestfriend.

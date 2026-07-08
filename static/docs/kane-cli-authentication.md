@@ -1,5 +1,7 @@
 # Kane CLI Authentication
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Kane CLI authenticates against your TestMu AI account before it can run tests, upload sessions, or interact with Test Manager. There are two authentication methods:
 
 - **OAuth**: recommended for everyday local use. Opens a browser, you approve once, and tokens are stored on your machine.

@@ -1,5 +1,7 @@
 # Team Management
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The TestMu AI Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
 
 This functionality addresses the need for:

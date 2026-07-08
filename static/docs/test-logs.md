@@ -1,5 +1,7 @@
 # Test Logs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Test Logs is a library where you can find logs of all cross browser testing performed by you on TestMu AI.
 
 ## Accessing Test Logs

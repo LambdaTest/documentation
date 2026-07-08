@@ -1,5 +1,7 @@
 # Partial Page Scanner
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 While the [Full Page Scanner](/support/docs/accessibility-testing-full-page-scanner/) analyzes an entire webpage, the Partial Page Scanner provides a more focused approach to accessibility evaluation.
 
 It analyzes specific regions or elements within a webpage instead of the entire page. It is Ideal for:

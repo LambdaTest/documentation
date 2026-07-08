@@ -1,5 +1,7 @@
 # Accessible Authentication (Minimum) (3.3.8)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Authentication steps must not require a cognitive function test (such as remembering a password, solving a puzzle, or recognizing images) unless an alternative method, an assistance mechanism, or an object-recognition exception applies.
 
 **WCAG Reference**

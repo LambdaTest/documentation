@@ -1,5 +1,7 @@
 # Performance Assertions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Performance assertions let you verify [Core Web Vitals](https://web.dev/articles/vitals) and other key performance metrics for the current page.
 
 ## How Capture Works

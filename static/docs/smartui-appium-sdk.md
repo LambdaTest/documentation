@@ -1,5 +1,7 @@
 # Integrate SmartUI with Appium Tests
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Appium is an open-source tool for automating mobile application testing. It allows developers and testers to write tests for native, hybrid, and mobile web applications across multiple platforms, such as iOS and Android, using a single codebase.
 
 TestMu AI SmartUI supports Appium automation tests for mobile applications through two integration methods:

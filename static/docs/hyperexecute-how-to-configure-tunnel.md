@@ -1,5 +1,7 @@
 # Tunnel Configuration in HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 You can configure a secure tunnel in HyperExecute to test applications that are:
 
 - Hosted locally on your system, or

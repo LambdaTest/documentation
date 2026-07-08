@@ -1,5 +1,7 @@
 # Getting Started with TestMu AI Web Scanner
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Accessing the Dashboard
 
 Navigate to: `https://webscanner.lambdatest.com/webscan/builds`

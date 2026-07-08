@@ -1,5 +1,7 @@
 # Advanced Features in Web Scanner
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Overview
 
 Web Scanner provides advanced configuration options to enhance your scanning capabilities. These features allow you to test authenticated pages, access network-restricted resources, simulate different geographic locations, and scan locally hosted applications.

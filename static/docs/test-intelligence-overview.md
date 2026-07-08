@@ -1,5 +1,7 @@
 # AI Native Test Intelligence For Advance Test Analysis
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Introduction to Test Intelligence
 
 With advanced AI algorithms and powerful analysis capabilities, Test Intelligence empowers you to enhance the quality and efficiency of your testing processes.

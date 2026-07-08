@@ -1,5 +1,7 @@
 # Scheduled Test Runs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 In this documentation, you will learn how to create a scheduled test run using pre-existing test runs. This involves navigating through your project, selecting test configurations, and setting up recurring schedules to automate test executions at specified times.
 
 **Step 1:** Navigate to **Test Manager** >> select your desired project >> **Test Runs** section.

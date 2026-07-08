@@ -1,5 +1,7 @@
 # How to Test Apps Installed via Play Store?
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI enables developers to test their mobile applications and websites across a range of real devices and browsers. It allows for direct installation of apps from the Google Play Store, facilitating testing of apps on real android devices to ensure optimal performance and compatibility.
 
 Let's dive in to learn how to test apps installed from Play Store.

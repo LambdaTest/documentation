@@ -1,5 +1,7 @@
 # Getting started with SmartUI using Playwright
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
 - Basic understanding of Playwright is required.
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.

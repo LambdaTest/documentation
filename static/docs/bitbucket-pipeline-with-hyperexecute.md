@@ -1,5 +1,7 @@
 # Bitbucket Pipeline Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Bitbucket Pipelines is a CI/CD service that is built into Bitbucket. It enables you to build, test, and even deploy your code automatically based on a configuration file in your repository.
 
 This document will show you how to integrate Bitbucket Pipelines with HyperExecute to greatly shorten your test cycles

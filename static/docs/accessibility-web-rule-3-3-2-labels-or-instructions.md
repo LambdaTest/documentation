@@ -1,5 +1,7 @@
 # Labels or Instructions (3.3.2)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Form fields and interactive controls must have labels or instructions that describe the expected input.
 
 **WCAG Reference**

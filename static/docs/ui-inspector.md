@@ -1,5 +1,7 @@
 # UI Inspector
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI UI App Inspector provides a graphical interface to inspect and interact with the elements of a mobile application. When you launch your mobile app, it retrieves the DOM (Document Object Model) of the app. This DOM includes various UI elements such as buttons, text fields, labels, etc., organised in a hierarchical structure.
 
 ## Benefits of UI Inspector

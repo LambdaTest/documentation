@@ -1,5 +1,7 @@
 # Web Accessibility Checklist
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use this page to see **which WCAG-aligned checks the product supports** (with links to rule-level guidance) and a **manual test checklist** for areas that benefit from human review. For deeper remediation after a scan, use the [Web Rule Repository](/support/docs/accessibility-web-rule-repository/).
 
 **Other platforms:** [iOS checklist](/support/docs/accessibility-ios-what-we-cover/) · [Android checklist](/support/docs/accessibility-android-what-we-cover/)

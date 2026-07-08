@@ -1,5 +1,7 @@
 # Whitelisting Proxy with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 If you access the internet through a firewall-protected network, you may face issues connecting with TestMu AI. You may encounter error messages.
 
 In such scenarios, you need to whitelist the TestMu AI domain. Whitelisting tells your firewall-protected network to allow access for a set of IP addresses, IP range, or an entire domain that you trust. Whitelisting is a security procedure to help users access a website or web-app that their network security team considers non-malicious.

@@ -1,5 +1,7 @@
 # monday.com Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 monday.com is an online project management tool that helps your team to collaborate better by getting everyone on the same page. monday.com provides an intuitive timeline to keep all your deadlines in check. Monitor all the tasks of your colleagues and subordinates through dashboard representation to know who is working on what, and when? You find a collective space for all the communication, so you don't get stuck in finding important emails from your inbox. Develop your projects in a flexible manner using monday.com's intuitive platform and pace up your go-to-market launch with enhanced collaboration and transparency among the team members.
 
 The TestMu AI + monday.com integration helps you in filing issues to your project in monday.com directly from the TestMu AI platform. With one-click integration, you can push annotated issues to the project board of your choice, assign it to the required teammate, and attach necessary screenshots. You can do all that while in the middle of a test session on the TestMu AI platform. The fields populated by you when marking as a bug through TestMu AI are displayed as information on the respective monday.com testing instance.

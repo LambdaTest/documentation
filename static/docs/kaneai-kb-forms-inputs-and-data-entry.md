@@ -1,5 +1,7 @@
 # Forms, Inputs & Data Entry
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Forms are at the heart of most web applications: login pages, registration flows, checkout processes, search filters, and admin panels. This guide covers how to handle every type of form element in KaneAI with real-world testing scenarios.
 
 ## Text Input Fields

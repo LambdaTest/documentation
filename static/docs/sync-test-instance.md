@@ -1,5 +1,7 @@
 # Sync Test Instances in Manual Test Runs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 When a master test case is updated (e.g., steps are added, descriptions are modified, or modules are restructured), the test instances in your existing manual test runs do not automatically reflect these changes. The **Sync Test Instance** feature lets you manually update a test instance to the latest version of its master test case, ensuring your test runs always reflect the most current requirements.
 
 Each test instance tracks the **version** of the master test case it was created from (e.g., v1). When the master test case is updated to a newer version (e.g., v2), TestMu AI Test Manager detects this version mismatch and makes the **sync action** available.

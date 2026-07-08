@@ -1,5 +1,7 @@
 # Lambda Hooks For Appium Automation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This document will help you provide lambdahooks which can be used to improve your test scripts to easily debug your test cases for **App Automation on Real Devices** on **TestMu AI Cloud**.
 
 ## Adding custom status & remark

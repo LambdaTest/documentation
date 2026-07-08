@@ -1,5 +1,7 @@
 # URL Assertions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 URL assertions check values in the browser's address bar: the current URL path, query parameters, fragments, and redirect targets.
 
 ## When It's Used

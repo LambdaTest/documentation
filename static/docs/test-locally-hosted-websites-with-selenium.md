@@ -1,5 +1,7 @@
 # Test Locally Hosted Websites With Selenium
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI Tunnel creates a secure, encrypted connection between your local machine and the TestMu AI cloud grid. Use it to test web apps running on `localhost`, staging servers, or behind a firewall without exposing them to the internet. The tunnel uses TCP with TLS 1.2 over port 443 or WebSocket.
 
 ## How It Works

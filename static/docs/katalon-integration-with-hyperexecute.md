@@ -1,5 +1,7 @@
 # Katalon Integration with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 [Katalon Studio](https://www.katalon.com) is an automation tool for testing web, API, mobile, and desktop applications. It offers a flexible automation platform that fits teams and projects of all sizes and purposes. It also helps uses create tests, execute them and integrate them with the CI/CD ecosystem.
 
 > Katalon Studio Integration with HyperExecute enables cross-platform testing, from web automation on Windows, macOS, and Linux to mobile automation on Android and iOS.

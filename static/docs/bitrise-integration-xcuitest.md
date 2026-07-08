@@ -1,5 +1,7 @@
 # Running XCUITests In Bitrise CI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
 
 Using TestMu AI with Bitrise, you can effortlessly perform [XCUI testing](https://www.testmuai.com/xcuitest-app-testing) of your mobile apps on an [online device farm](https://www.testmuai.com/online-device-farm) of real Android devices.

@@ -1,5 +1,7 @@
 # Getting started with Desktop Web Browser Real Time Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Real-Time Desktop Web Browser Testing on TestMu AI allows you to test your websites and web applications directly on live desktop browsers. This approach allows developers, testers, and QA professionals to interact with their web applications across various browser environments, operating systems, and versions without the need to configure complex infrastructure on local machines.
 
 ## Launch the Virtual Machine

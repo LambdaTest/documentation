@@ -1,5 +1,7 @@
 # Drone CI Integration with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Drone CI is one of the most popular modern open-source CI/CD tools. It not only provides a continuous integration with your projects but also provides a distributed CI/CD pipeline, which is not possible with some other tools like Jenkins. So Drone is the first choice for many teams as it is a purely distributed, cloud-native, DevOps friendly, team-oriented, and highly scalable open-source CI/CD tool.
 
 TestMu AI now integrates with Drone CI to boost your go-to-market delivery. You can perform automated cross-browser testing with TestMu AI to ensure seamless code render through an online Selenium grid. TestMu AI provides 3000+ real browsers running through machines, on the cloud. You can perform automation testing in parallel with TestMu AI’s Selenium grid which in turn can help you to drastically trim down your test cycles.

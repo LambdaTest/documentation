@@ -1,5 +1,7 @@
 # Espresso Supported Capabilities
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This document provide details about the features and capabilities supported for Espresso Framework on TestMu AI.
 
 > The capabilities listed in this document are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)

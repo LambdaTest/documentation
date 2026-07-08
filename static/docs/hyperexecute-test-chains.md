@@ -1,5 +1,7 @@
 # HyperExecute Test Chains
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Test Chains allow you to link multiple test workflows so that one workflow triggers another based on specific conditions, such as the success or failure of a previous workflow. This feature eliminates the need for manual intervention between different stages of testing, allowing for a seamless automated testing pipeline.
 
 In this guide, we will walk through the steps to create test chains using connected workflows in HyperExecute, providing real-world examples and step-by-step instructions on how to implement them.

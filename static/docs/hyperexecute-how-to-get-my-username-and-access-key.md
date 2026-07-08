@@ -1,5 +1,7 @@
 # How to Get my Username and Access key
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This page explains where you can find your LT Username and Access Key.
 
 **Step 1:** Go to the right side Profile dropdown and select **Account Settings**.

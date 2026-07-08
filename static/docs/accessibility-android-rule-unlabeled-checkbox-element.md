@@ -1,5 +1,7 @@
 # Unlabeled Checkbox Element
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Android checkbox elements must have an accessible label that describes what the checkbox controls.
 
 **WCAG Reference**

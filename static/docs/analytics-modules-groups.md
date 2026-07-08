@@ -1,5 +1,7 @@
 # Usage insights for Groups
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ### Introduction to Groups Insights
 
 TestMu AI Analytics Modules provide comprehensive insights into your test groups, helping you understand the performance of your test groups and the distribution of your test cases across different groups. This helps you identify the test groups that are performing well and the ones that need improvement. You can also track the execution time of your test groups and the number of test cases executed in each group.

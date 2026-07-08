@@ -1,5 +1,7 @@
 # AI Issue Detection Agent
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 AI-assisted issue analysis can help teams interpret findings faster, understand likely patterns, and move more quickly into triage.
 
 The guidance below describes where AI-assisted analysis fits in the Accessibility reporting workflow. It also shows how to pair automated interpretation with issue detail and human review so triage stays grounded and defensible.

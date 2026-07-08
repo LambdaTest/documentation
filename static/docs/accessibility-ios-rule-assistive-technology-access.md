@@ -1,5 +1,7 @@
 # Assistive Technology Access
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Interactive iOS elements must be accessible to VoiceOver and other assistive technologies, not just direct touch interaction.
 
 **WCAG Reference**

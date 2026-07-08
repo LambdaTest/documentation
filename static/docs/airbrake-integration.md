@@ -1,5 +1,7 @@
 # Airbrake Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Airbrake is a software tool and service designed to assist developers in tracking and monitoring errors within web and mobile applications. Its primary purpose is promptly identifying and diagnosing software errors and exceptions, enabling developers to react swiftly and effectively.
 
 TestMu AI's integration with Airbrake provides a seamless solution for tracking and managing bugs and issues encountered during cross-browser testing. With this integration, developers can effortlessly log bugs directly from the TestMu AI platform to their Airbrake instance, eliminating the need for manual maintenance of tasks and issues.

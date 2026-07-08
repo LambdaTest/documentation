@@ -1,5 +1,7 @@
 # Notion Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Notion is an all-in-one workspace for the teams where you can write, plan, collaborate, and get organized. You can take notes, assign tasks, manage projects, and much more. Notion has customized markdown support that integrates kanban boards, tasks, wikis, and databases.
 
 The TestMu AI and Notion integration allows you to perform one-click bug logging while perform [cross browser testing](https://www.testmuai.com/) of your websites (and web apps). You can mark and share bugs directly from the TestMu AI to your Notion pages.

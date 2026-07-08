@@ -1,5 +1,7 @@
 # Perform Operations on your Application via GUI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 To test your iOS (.ipa file) or Android (.apk or .aab file) application on TestMu AI, you can upload them directly from the dashboard. In this documentation, we have listed the the ways via which you can upload your application for both Virtual and Real Devices.
 
 ## Real Device Dashboard

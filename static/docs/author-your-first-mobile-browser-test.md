@@ -1,5 +1,7 @@
 # Author Your First Mobile Browser Test
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 In this guide, we'll walk you through how you can author your mobile browser tests using KaneAI
 
 ## Steps to Author Your Mobile Browser Test

@@ -1,5 +1,7 @@
 # Migrate Your Existing Playwright Tests
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI offers an online automation platform for test automation. Therefore you can easily migrate Playwright tests from your local grid to the TestMu AI platform.
 
 In this documentation, we look at how to migrate your existing Playwright test scripts (or test suites) from your local grid to TestMu AI. This lets you automate Playwright scripts across 40+ browsers and operating systems on TestMu AI cloud platform.

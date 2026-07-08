@@ -1,5 +1,7 @@
 # HyperExecute Release Notes 2023
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Version 2.1.4
 
 ### Support for Multiple Runtime Environments

@@ -1,5 +1,7 @@
 # LocalStack Integrates With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 LocalStack is a tool that acts as a drop-in replacement for AWS on your local machine. It works on your laptop or in your CI environment. With LocalStack, you can run your AWS applications or Lambdas on your own computer without needing to connect to a remote cloud provider!
 
 LocalStack and TestMu AI have partnered to create a special combination that makes your tests run faster. Using LocalStack's local cloud emulation abilities and TestMu AI's smart AI solutions, developers and testers can speed up their work and get products out quickly. This collaboration helps you test things faster and bring your products to market sooner.

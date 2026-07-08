@@ -1,5 +1,7 @@
 # Playwright Testing With CI/CD
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI integrates with a variety of CI/CD solutions to help you speed up your go-to-market launch by automating your delivery pipeline. Similarly, you can run Playwright tests in CI/CD across 40+ browsers in the cloud, reducing lead time by multiple folds and shipping quality builds faster.
 
 Running Playwright tests through CI/CD pipeline involves three stages:

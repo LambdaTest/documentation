@@ -1,5 +1,7 @@
 # Setting Up Espresso Environment Variables
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This feature allows you to dynamically set and test environment variables during Espresso test execution on TestMu AI.
 
 ## Step 1: Create Variables in Your Test Suite

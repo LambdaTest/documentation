@@ -1,5 +1,7 @@
 # Variables in KaneAI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Variables are placeholders that store values, which can be reused across different parts of a test case. In automation, using variables helps make the tests more flexible, reusable, and maintainable. Instead of hardcoding values in test steps, you can define variables, assign them values, and reference them throughout your tests. This reduces redundancy and makes the tests easier to modify, especially when dealing with frequently changing parameters like URLs, credentials, or device configurations. Variables can be accessed directly from https://kaneai.lambdatest.com/variables.
 
 Using variables enables you to:

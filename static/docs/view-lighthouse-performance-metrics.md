@@ -1,5 +1,7 @@
 # View Lighthouse Performance Metrics Using Online Selenium Grid
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI integrates [**Lighthouse**](https://developers.google.com/web/tools/lighthouse) to view performance metrics (**Lighthouse Audits**) on its cloud-based Selenium Grid. You can view the scores of:
 
 *   **Performance**,

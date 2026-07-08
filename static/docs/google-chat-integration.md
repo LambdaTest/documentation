@@ -1,5 +1,7 @@
 # Google Chat Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Google Chat enables business teams to streamline their communications within Google Workspace. With Google Chat, you can chat using text, create collaborative chat rooms, share files, and hold virtual conferences.
 
 TestMu AI and Google Chat can be used to create test cards in Google Chats Spaces for logged bugs in TestMu AI. This will notify you every time a new bug is pushed while performing [cross browser testing](https://www.testmuai.com/) of websites.

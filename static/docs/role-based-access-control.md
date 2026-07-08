@@ -1,5 +1,7 @@
 # TestMu AI Role-Based Access Control (RBAC)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 For every enterprise that uses cloud services, access management for those cloud resources is vital. TestMu AI RBAC is an authorization system that allows seamless access management of TestMu AI resources. With TestMu AI role-based access control, you can control who has access to TestMu AI resources, how they can leverage those resources, and what domains they can have access to.
 
 The TestMu AI RBAC will help you in creating the different teams and allot concurrency to those teams. In this way, you can perform the test automation by dividing the concurrency among the teams.

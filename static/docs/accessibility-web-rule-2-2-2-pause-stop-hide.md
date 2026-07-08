@@ -1,5 +1,7 @@
 # Pause, Stop, Hide (2.2.2)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Moving, blinking, scrolling, or auto-updating content must include a mechanism to pause, stop, or hide it.
 
 **WCAG Reference**

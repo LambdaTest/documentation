@@ -1,5 +1,7 @@
 # How to Debug your Scenario Steps Errors
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This document will help you debug your failed job if you are facing any errors in the Scenario stage.
 
 ## Invalid Credentials

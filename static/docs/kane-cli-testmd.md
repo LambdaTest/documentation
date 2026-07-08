@@ -1,5 +1,7 @@
 # Test.md
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 `testmd` lets you write browser tests as Markdown files (`_test.md`) and commit them to your repo. On the first run, the AI agent authors each step and saves a recording. On every subsequent run, each step **replays from cache** with no LLM cost and much faster execution. Commit the test file and its recordings to git so teammates and CI can re-run the same tests without re-authoring.
 
 ## Quick Start

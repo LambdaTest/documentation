@@ -1,5 +1,7 @@
 # Search Query in GUI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## What is a Query?
 
 Think of a query as a smart search filter that automatically finds and selects the exact tests you want to run. Instead of manually clicking through hundreds of test checkboxes, you simply describe what you're looking for using simple English-like instructions.

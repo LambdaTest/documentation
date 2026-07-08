@@ -1,5 +1,7 @@
 # Analytics Dashboard Pre-built templates
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## About the Dashboard templates:
 
 Dashboard templates provide a pre-defined set of widgets and visualizations tailored for specific testing requirements.

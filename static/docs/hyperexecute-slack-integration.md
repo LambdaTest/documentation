@@ -1,5 +1,7 @@
 # Receive Instant Notification on your Jobs Directly in your Slack
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This document details the seamless integration between HyperExecute and Slack, enabling you to streamline your workflow and stay informed about your automated tasks. Through this integration, you can receive real-time notifications and crucial job details directly within your Slack workspace.
 
 ## Prerequisite

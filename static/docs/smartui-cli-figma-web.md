@@ -1,5 +1,7 @@
 # Getting started with TestMu AI's SmartUI Figma-Web CLI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Welcome to the TestMu AI SmartUI Figma Web CLI documentation!
 
 With SmartUI Figma-Web CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying discrepancies between your designs and live websites. This guide will walk you through the process of running successful Figma-Web Visual tests using SmartUI CLI.

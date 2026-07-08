@@ -1,5 +1,7 @@
 # Transfer Cookies and Storage Between Sessions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Extract and inject browser state - cookies, localStorage, and sessionStorage - across sessions to preserve login and user data without re-authenticating.
 
 ## Why You Need This

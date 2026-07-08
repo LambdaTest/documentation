@@ -1,5 +1,7 @@
 # Playwright Integration with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 In the ever-evolving realm of web development, the need for a comprehensive and efficient solution for cross-browser testing became paramount. Developers and QA engineers yearned for a framework that transcended the limitations of existing tools. They craved a solution that could address challenges like:
 
 - **Brittle and Flaky Tests:** Tests that randomly fail or pass, hindering reliable test results.

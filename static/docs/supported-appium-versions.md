@@ -1,5 +1,7 @@
 # Supported Appium Versions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Customize your testing experience on TestMu AI by selecting the appropriate Appium version for your tests on real devices. TestMu AI offers flexibility in choosing the Appium version to meet your testing requirements. By default, the suitable Appium version is selected based on the operating system (OS) when running tests. However, you can explicitly specify the  version using the `appiumVersion` capability in your test scripts.
 
 - We also provide Support for Appium 3.0.2 on following versions

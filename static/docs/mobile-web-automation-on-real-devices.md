@@ -1,5 +1,7 @@
 # Mobile Web Automation Testing on Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Mobile web automation involves testing websites or web apps on real mobile devices like Android and iOS. Testing appearance and performance on a real device ensures that the test runs on real-world conditions, delivers better performance, and improves test coverage across devices.
 
  TestMu AI allows you to perform mobile web automation via Appium on a wide range of real Android and iOS devices. You can [test on mobile devices](https://www.testmuai.com/test-on-mobile-devices/) from OEMs like Samsung, Apple, Xiaomi, and more.

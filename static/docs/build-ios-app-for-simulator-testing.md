@@ -1,5 +1,7 @@
 # Building Your iOS App for Simulator Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 To test your iOS application on TestMu AI iOS Simulators, your app must be built specifically for the **iOS Simulator** platform. A build intended for a physical iPhone will not work on the Simulator, even if the CPU architecture matches. This guide walks you through creating a Simulator-compatible build and verifying it before uploading.
 
 ## Why Simulator Builds Are Different

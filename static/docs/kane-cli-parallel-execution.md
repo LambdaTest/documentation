@@ -1,5 +1,7 @@
 # Parallel Test Execution
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Run multiple independent browser tests concurrently to reduce total execution time. Instead of running tests sequentially (sum of all durations), parallel execution runs them simultaneously: total time equals the longest single test.
 
 ## When to Run in Parallel

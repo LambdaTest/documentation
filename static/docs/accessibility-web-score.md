@@ -1,5 +1,7 @@
 # Accessibility Score
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The **Accessibility Score** is a single number from **0 to 100** that represents the accessibility health of a scanned page or screen. Instead of only reading long reports, the score gives you a **clear, actionable signal** for where the product stands relative to the issues found in that scan. Use it to **track progress over time**, **compare releases**, and **show improvement trends** to stakeholders—**together** with issue detail and any manual testing your program requires.
 
 **Not legal or WCAG certification**

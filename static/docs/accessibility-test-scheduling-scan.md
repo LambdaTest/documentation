@@ -1,5 +1,7 @@
 # Steps to Schedule an Accessibility Scan
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Step 1: Access the Scheduled Scan Feature
 - Open the Accessibility Testing Dashboard.
 - Click the “Scheduled Scan” option from the menu.

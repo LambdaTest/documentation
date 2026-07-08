@@ -1,5 +1,7 @@
 # Multi-Factor Authentication (MFA)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 **Multi-Factor Authentication (MFA)** adds an extra verification step at login on top of your password. After entering your password, you also provide a code from an authenticator app (such as Authy, Google Authenticator, or Microsoft Authenticator) or a biometric factor. This significantly reduces the risk of unauthorized access, even if your password is compromised.
 
 All steps below assume you are signed in to your TestMu AI account. If you don't have an account, register for free.

@@ -1,5 +1,7 @@
 # FogBugz Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 FogBugz is a web-based project management tool with features like bug and issue tracking, discussion boards, wikis, customer relationship management, and more. It can help you manage your projects and communicate with your team. FogBugz is designed to streamline the software development process by enabling teams to easily track and manage issues, prioritize tasks, and communicate with team members.
 
 TestMu AI's integration with FogBugz allows you to avoid the hassle of maintaining issues and tasks manually and instead log bugs in a single click while performing [cross browser testing](https://www.testmuai.com) of your website from the TestMu AI platform to your FogBugz instance.
