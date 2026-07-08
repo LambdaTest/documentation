@@ -1,6 +1,6 @@
 # Managing Automated Tests with Test Manager
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Test Manager enables the creation and management of automated test cases directly within its platform. This feature not only streamlines test case development but also integrates AI to auto-generate BDD Scenarios from automated test runs, further optimizing the management of testing activities.
 

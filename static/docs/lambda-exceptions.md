@@ -1,6 +1,6 @@
 # View Assertion Errors On TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 While handling GET requests in your Selenium scripts, assertions might fail. Use the Lambda Exceptions feature to view these assertion errors as exceptions and handle them more effectively.
 

@@ -1,6 +1,6 @@
 # Command Logs Analytics with Test Intelligence
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ### Introduction to AI Native Command Logs Analytics
 

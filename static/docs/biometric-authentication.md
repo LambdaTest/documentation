@@ -1,6 +1,6 @@
 # Biometric Authentication
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 

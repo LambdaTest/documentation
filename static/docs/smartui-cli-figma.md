@@ -1,6 +1,6 @@
 # Getting started with TestMu AI's SmartUI Figma CLI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Welcome to the TestMu AI SmartUI Figma CLI documentation!
 

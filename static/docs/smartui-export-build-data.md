@@ -1,6 +1,6 @@
 # Export SmartUI Build Data
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 From the TestMu AI dashboard you can export **build-level** data for a SmartUI run (comparison outcomes, statuses, and related metadata) without using the CLI or API. Use it for stakeholder summaries, ticket attachments, spreadsheets, or downstream automation.
 

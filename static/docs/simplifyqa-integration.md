@@ -1,6 +1,6 @@
 # How to integrate SimplyfyQA With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 SimplifyQA is a test automation platform designed to leverage AI for creating, executing, and managing automated tests with ease. The platform's codeless approach democratizes test automation, allowing QA teams to achieve broader test coverage and faster release cycles without the need for extensive programming skills. SimplifyQA aims to streamline the entire QA workflow with its comprehensive suite of features supporting web, mobile, and API testing.
 

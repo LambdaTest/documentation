@@ -1,6 +1,6 @@
 # Text Spacing (1.4.12)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Content must remain readable and functional when users override text spacing properties (line height, paragraph spacing, letter spacing, and word spacing) up to specified thresholds.
 

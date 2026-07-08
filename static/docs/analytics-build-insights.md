@@ -1,6 +1,6 @@
 # Build Insights - Analyze your test builds and get build level insights
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Overview
 

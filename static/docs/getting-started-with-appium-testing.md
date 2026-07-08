@@ -1,6 +1,6 @@
 # Getting Started with Appium Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Appium is an open-source framework that allows you to automate tests for mobile applications. It works across different platforms like Android and iOS, enabling you to write tests once and run them on various devices.
 

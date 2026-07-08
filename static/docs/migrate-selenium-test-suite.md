@@ -1,6 +1,6 @@
 # Migrate Your Selenium Test Suite
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the desired capabilities. Your test logic stays the same.
 

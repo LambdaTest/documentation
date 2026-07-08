@@ -1,6 +1,6 @@
 # Running JUnit Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 JUnit is a widely-used testing framework for Java that is extensively employed in Selenium test automation. It provides annotations and assertions to structure and validate test cases, making it an integral part of the Selenium testing ecosystem.
 

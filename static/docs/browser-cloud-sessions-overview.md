@@ -1,6 +1,6 @@
 # Understanding the Sessions API
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Sessions API lets you create and control cloud-based browser sessions
 through simple SDK calls. Each session is like giving your AI agent its own

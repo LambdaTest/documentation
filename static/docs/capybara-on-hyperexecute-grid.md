@@ -1,6 +1,6 @@
 # Running Capybara Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Capybara is a Ruby-based testing framework commonly used with Selenium for end-to-end web application testing. It provides a clean and expressive DSL (Domain-Specific Language) for interacting with web pages and handling common browser interactions.
 

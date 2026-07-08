@@ -1,6 +1,6 @@
 # Configuring Cypress Test Execution
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 You can specify Cypress CLI flags to run on TestMu AI in two ways:
 

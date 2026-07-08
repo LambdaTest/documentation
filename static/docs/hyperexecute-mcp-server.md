@@ -1,6 +1,6 @@
 # Getting Started with HyperExecute MCP Tool
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 HyperExecute MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It lets you set up HyperExecute test jobs, generate YAML configurations, and monitor runs directly from your IDE using natural language prompts.
 

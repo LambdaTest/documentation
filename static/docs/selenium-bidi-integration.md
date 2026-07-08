@@ -1,6 +1,6 @@
 # BiDi Testing with Selenium WebDriver on TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Selenium WebDriver BiDi is a W3C standard protocol used to establish communication between a test script and a remote WebDriver server. It introduces bi-directional communication, meaning both the script and the browser can send requests and responses, leading to a more dynamic and reactive testing experience.
 

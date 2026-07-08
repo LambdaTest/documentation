@@ -1,6 +1,6 @@
 # Integrations (JIRA / Slack)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Accessibility reporting often needs to move beyond the dashboard into issue tracking and team collaboration workflows.
 

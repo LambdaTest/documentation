@@ -1,6 +1,6 @@
 # Concurrency Usage Insights
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Concurrency Usage Insights module enables QA Managers to get an overview of TestMu AI resources being utilized by their teams. It provides widgets to monitor concurrency trends at different levels and track peak usage patterns.
 

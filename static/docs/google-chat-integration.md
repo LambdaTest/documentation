@@ -1,6 +1,6 @@
 # Google Chat Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Google Chat enables business teams to streamline their communications within Google Workspace. With Google Chat, you can chat using text, create collaborative chat rooms, share files, and hold virtual conferences.
 

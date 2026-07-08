@@ -1,6 +1,6 @@
 # Run Automation Tests on HyperExecute using Cypress v10
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > **NOTE :** This documentation is applicable for **Cypress v10** and **later versions**.
 

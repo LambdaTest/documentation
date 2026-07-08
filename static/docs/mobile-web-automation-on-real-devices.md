@@ -1,6 +1,6 @@
 # Mobile Web Automation Testing on Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Mobile web automation involves testing websites or web apps on real mobile devices like Android and iOS. Testing appearance and performance on a real device ensures that the test runs on real-world conditions, delivers better performance, and improves test coverage across devices.
 

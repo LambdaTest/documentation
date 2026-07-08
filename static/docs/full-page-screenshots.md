@@ -1,6 +1,6 @@
 # Capturing Full-Page Screenshots Of Your Websites
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 [LT Browser](https://www.testmuai.com/lt-browser/) lets you capture full-page screenshots of your pre-installed mobile devices, desktops, and laptops. Now you can capture your website's long content with the full-page screenshot feature and compare it across multiple devices.
 

@@ -1,6 +1,6 @@
 # Airtable Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Airtable is a cloud-collaboration platform to help you organize your team with intuitive & interactive spreadsheets that works like a database. It offers a variety of views such as Grid view, Kanban view, Calendar view, Form view. You can log a task with priority, notes, deadline and more. You can even tag attachments to a task with a simple drag-and-drop. Be it marketing, project management, product design & UX, or a simple distribution record for offline businesses, Airtable helps you to manage a track of anything.
 

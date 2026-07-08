@@ -1,6 +1,6 @@
 # Auto Healing for Selenium Web Automation
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The TestMu AI Auto Healing feature for Selenium testing automatically recovers from certain types of failures during test execution. When enabled, it reduces test flakiness and improves test reliability by handling unexpected situations and errors in your test suites.
 

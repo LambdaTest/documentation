@@ -1,6 +1,6 @@
 # Paymo Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > Paymo is an online project management application that helps your team work better by getting everyone on the same page. Preferred by freelancers, small and medium businesses across globe, Paymo is dedicated to helping business in their planning, task management, and integrated time tracking. TestMu AI integration with Paymo helps to manage your bugs in Paymo by moving them into a project through a single click effort. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on Paymo.
 

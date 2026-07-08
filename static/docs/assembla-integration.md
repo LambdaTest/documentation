@@ -1,6 +1,6 @@
 # Assembla Integration with TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Assembla is a cloud-based platform that provides version control and project management tools specifically designed for software development teams. It supports multiple version control systems, such as Git, Subversion (SVN), and Perforce, allowing teams to manage their source code, track changes, and collaborate more efficiently.
 

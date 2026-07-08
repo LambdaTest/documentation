@@ -1,6 +1,6 @@
 # Azure DevOps Pipeline Integration with Hyperexecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Azure DevOps offers developer services that enable teams to plan their work, collaborate on code development, and build and deploy applications. Azure DevOps fosters a collaborative culture and set of processes that bring together software developers, project managers, and contributors. It enables organizations to create and improve products at a much faster rate than traditional software development approaches allow.
 

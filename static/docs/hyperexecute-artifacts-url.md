@@ -1,6 +1,6 @@
 # Test Artifacts Management
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 HyperExecute now allows you to access your _Artifacts_ directly from the HyperExecute UI and create URLs for them.
 

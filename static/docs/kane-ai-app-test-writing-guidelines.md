@@ -1,6 +1,6 @@
 # Best Practices for Authoring Mobile Native App Tests in KaneAI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Authoring mobile native app tests in KaneAI can be significantly enhanced by following these best practices. These ensure improved stability, reliability, and accuracy of the generated steps and ultimately, the automation.
 

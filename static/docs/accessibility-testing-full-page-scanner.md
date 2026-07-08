@@ -1,6 +1,6 @@
 # Full Page Scanner
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Full Page Scanner is used to analyze the accessibility of entire web pages at once. It goes beyond individual element checks and provides a comprehensive overview of potential accessibility issues across the entire page content.
 

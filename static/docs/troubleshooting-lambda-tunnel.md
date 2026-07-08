@@ -1,6 +1,6 @@
 # Troubleshooting TestMu AI Tunnel
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI Tunnel helps in establishing an SSH connection between your local machine and our cloud servers to help you perform tests on locally hosted websites and web-apps. With TestMu AI Tunnel, you can ensure how robust your website rendering is across 3000+ real browsers, even before you make it live on the internet.
 

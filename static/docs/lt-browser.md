@@ -1,6 +1,6 @@
 # LT Browser - Test Website For Responsiveness Easily
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 LT Browser allows you to ensure your website's responsiveness over a variety of major devices and view ports. You can open a website in the [LT Browser](https://www.testmuai.com/lt-browser) and perform live testing across 50+ pre-installed device viewports.
 

@@ -1,6 +1,6 @@
 # Explore the Automation Dashboard
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you view results, debug failures, and track every test you run on the grid. This page walks you through each section of the dashboard.
 

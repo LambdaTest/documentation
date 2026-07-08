@@ -1,6 +1,6 @@
 # Appium Plugins
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Enhance your testing experience on TestMu AI by leveraging a variety of Appium plugins. Plugins offer various ways to extend or modify Appium's behavior. They are completely optional and are not needed for standard automation functionality, but you may find them useful for more specialized automation workflows.
 By using these plugins, you can tailor your testing environment to better suit your project's specific needs, leading to more efficient and effective test automation.

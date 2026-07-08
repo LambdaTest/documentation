@@ -1,6 +1,6 @@
 # Linear App Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Linear App is a bug tracking tool built for high -performance teams. With Linear App, you can perform bug tracking, streamline software projects, sprints, tasks and more. TestMu AI and Linear App integration allows you to perform one-click bug logging from TestMu AI to your Linear App projects.
 

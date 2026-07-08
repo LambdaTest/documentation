@@ -1,6 +1,6 @@
 # Daily Usage Limit Per Organization
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 To avoid over-exploitation of TestMu AI and promote best practices, we have added a capacity constraint on the total test time that can be used by an organization in a day.
 

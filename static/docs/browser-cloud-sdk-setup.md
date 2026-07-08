@@ -1,6 +1,6 @@
 # Set Up the Browser SDK
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The TestMu AI Browser SDK is the primary way to integrate your agents with TestMu AI Browser Cloud. It handles session creation, browser connections, stealth, profiles, and more from a single Node.js client.
 

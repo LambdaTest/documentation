@@ -1,6 +1,6 @@
 # Regular Expression - Espresso
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 

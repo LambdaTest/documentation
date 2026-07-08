@@ -1,6 +1,6 @@
 # Appium Flutter Integration Driver Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 

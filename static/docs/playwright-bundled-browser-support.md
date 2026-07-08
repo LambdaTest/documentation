@@ -1,6 +1,6 @@
 # Playwright Bundled Browser Support
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then TestMu AI will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version.
 

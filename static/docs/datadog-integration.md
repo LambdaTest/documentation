@@ -1,6 +1,6 @@
 # Datadog Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Datadog is a cloud application monitoring and analytics tool. You can use it to compute performance metrics and event monitoring for infrastructure and cloud services. In addition, Datadog can monitor services such as servers, databases and tools. With TestMu AI and Datadog integration, you can log bugs while perform [cross browser testing](https://www.testmuai.com/) of your websites (and web apps) from the TestMu AI platform to Datadog.
 

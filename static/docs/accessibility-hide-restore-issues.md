@@ -1,6 +1,6 @@
 # Hide and Restore Issues
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use **Hide and Restore Issues** to manage known, accepted, or intentionally excluded findings without deleting them from the report hierarchy. The feature lets you hide and later restore issues at multiple hierarchy levels, capture a reason during the action, and, for supported scheduled web scan flows, apply the same preference to future scans as well.
 

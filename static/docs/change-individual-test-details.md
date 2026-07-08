@@ -1,6 +1,6 @@
 # Changing Individual Test Details
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 You can modify individual test details from your automation test build while running Selenium tests on TestMu AI. This guide covers marking test status and renaming tests during execution.
 

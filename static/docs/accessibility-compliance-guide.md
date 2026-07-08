@@ -1,6 +1,6 @@
 # Accessibility Compliance Guide (ADA / WCAG / EAA / 508)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This page explains how common accessibility compliance frameworks relate to Accessibility Testing outputs.
 

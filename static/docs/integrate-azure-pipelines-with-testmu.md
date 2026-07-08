@@ -1,6 +1,6 @@
 # Integrate Azure Pipelines With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Azure Pipelines is a service presented by Azure DevOps to help projects ship faster with the help of a robust pipeline. With Azure Pipelines you can easily generate a build, test it before deploying the changes live in any language you are comfortable with i.e. Node.js, Python, Java, PHP, Ruby, C/C++, .NET etc. The platform offers unlimited CI/CD minutes for open-source projects, along with 10 free parallel jobs. Azure pipelines offers great cross-platform support using which you can run jobs in parallel across Windows, macOS, Linux.
 

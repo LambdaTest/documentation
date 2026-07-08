@@ -1,6 +1,6 @@
 # Teamwork Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Teamwork Projects is a cloud-based project management tool that tracks project operations and business functionality. It is available on iOS, Android, Google Chrome, and the Web. TestMu AI allows users to push bugs directly to the project.
 

@@ -1,6 +1,6 @@
 # Running PyTest Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 PyTest is a testing framework for Python that is widely used with Selenium for automated testing. Known for its simplicity and powerful features, Pytest allows efficient test organization, parameterization, and fixtures.
 

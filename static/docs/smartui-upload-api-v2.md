@@ -1,6 +1,6 @@
 # Getting Started With Uploading Screenshots through API for Visual Regression Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This is the guide to setup the **version 2** of the SmartUI upload API.
 

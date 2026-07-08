@@ -1,6 +1,6 @@
 # Getting started with SmartUI using Puppeteer
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This documentation will act as your step-by-step guide in to perform Puppteer test with SmartUI.
 

@@ -1,6 +1,6 @@
 # Manage Project Level Secrets in HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Secrets in TestMu AI HyperExecute are encrypted environment variables used to store sensitive data securely like **Access tokens**, **API Keys**, **Passwords**. Secrets are injected into your test environment at runtime, so you never expose them directly in your codebase or logs.
 

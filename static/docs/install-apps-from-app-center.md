@@ -1,6 +1,6 @@
 # How to Test Apps Installed via App Center?
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **note**
 This method of uploading applications will be deprecated on [31st March 2025](https://learn.microsoft.com/en-us/appcenter/retirement).

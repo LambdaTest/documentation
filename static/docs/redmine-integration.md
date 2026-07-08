@@ -1,6 +1,6 @@
 # Redmine Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 >Redmine is an open-source, cross-platform, and cross-database project management tool. It is coded in Ruby on Rails, and it helps in collaboration, bug tracking, managing multiple projects, and allows users to have numerous roles. It has an issue tracking system that enables developers to identify each issue status and prioritize it accordingly. Besides, it has additional features such as email notification, feeds, wikis, forums, and time tracker.
 

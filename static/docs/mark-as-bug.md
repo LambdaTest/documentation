@@ -1,6 +1,6 @@
 # Mark As Bug In Real Time Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 >
 Now, you can avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. TestMu AI does it all for you.

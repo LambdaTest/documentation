@@ -1,6 +1,6 @@
 # zipBoard Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ZipBoard is a visual feedback and bug tracking tool designed to streamline collaboration across teams during the web development process. By integrating TestMu AI with ZipBoard, teams can enhance their testing workflows, enabling seamless communication between developers, testers, and stakeholders.
 

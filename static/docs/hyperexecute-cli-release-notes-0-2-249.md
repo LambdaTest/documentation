@@ -1,6 +1,6 @@
 # Version 0.2.249
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Update CLI to the Latest Version - 0.2.249
 We’re excited to announce several key updates and enhancements in the latest version of our [CLI - 0.2.249](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#download-the-hyperexecute-cli). You can update to the latest version to take advantage of the following improvements:

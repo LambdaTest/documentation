@@ -1,6 +1,6 @@
 # Testsigma Integration With TestMu AI’s Cloud Based Selenium Grid
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Testsigma is an unified codeless automation testing platform, designed and built for Agile and DevOps teams. With Testsigma, you can automate tests on Web, Mobile, and APIs; along with your team, with minimal or no coding skills required.
 

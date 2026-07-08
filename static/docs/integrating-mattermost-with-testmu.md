@@ -1,6 +1,6 @@
 # Integrating Mattermost With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Mattermost is a Communication platform, written in Golang and React, and is open-source, self-hostable, easy to deploy, manage, and upgrade. It is a secure workplace which allows messaging from behind your firewall. Mattermost is a famous alternative to proprietary SaaS messaging apps, as it allows you to bring all your team communication into a single place, making it anywhere searchable and accessible.
 

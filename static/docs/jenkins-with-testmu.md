@@ -1,6 +1,6 @@
 # Jenkins Plugin for Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Jenkins is a widely popular Continuous Integration (CI) tool. It is free to use, open-source software written in Java. Jenkins helps to boost your release agility by providing Continuous Integration services. You can trigger these services by a web application server or merely using a command line to hasten the deployment pipeline & release migration activities. Jenkins's popularity offers thousands of plugins to fast track your productivity. One such plugin to help you pace up automated cross browser testing is the TestMu AI Jenkins plugin. With TestMu AI Jenkins plugin, you will easily automate your Selenium test scripts by connecting your Jenkins CI instance to TestMu AI [Selenium grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). TestMu AI Selenium grid will offer you a comprehensive library of 3000+ browsers and browser versions so you could achieve a higher test coverage while performing automation testing using the Selenium test suite.
 

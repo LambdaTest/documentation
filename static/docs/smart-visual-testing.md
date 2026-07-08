@@ -1,6 +1,6 @@
 # Smart Visual Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > Smart Visual Testing feature allows you to test and compare two image layouts to determine the differences between them quickly. With just one click, you will now be able to view visual bugs easily, such as Icon Size, Padding, Color, Layout, Text, Element Placement, and much more.
 

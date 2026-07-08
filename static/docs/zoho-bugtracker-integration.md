@@ -1,6 +1,6 @@
 # Zoho BugTracker Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Zoho BugTracker is a robust cloud-based bug reporting platform that allows you to keep track of bugs and fix them rapidly. With its multitude of customizations and automation features, issue tracking is simple and effective. Additionally, Zoho BugTracker includes SLA management, time tracking, collaboration, analytics, document management, and automation.
 

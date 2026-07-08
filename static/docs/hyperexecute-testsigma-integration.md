@@ -1,6 +1,6 @@
 # Testsigma Integration With HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Testsigma is an AI Native, cloud-based test automation platform that helps testers create, run, and maintain automated tests for web, mobile, and API applications.
 

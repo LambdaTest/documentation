@@ -1,6 +1,6 @@
 # Self-Hosted Jira Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Many organizations consistently choose to self host their application as it gives them complete control of almost everything. If you want to place Jira behind your corporate firewall and restrict access to someone who isn't on your private network, you can do the same.
 

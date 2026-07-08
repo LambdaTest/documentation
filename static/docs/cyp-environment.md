@@ -1,6 +1,6 @@
 # Environment Variables Support for Cypress Tests
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the TestMu AI Cypress CLI. However, if we set environment variables via both TestMu AI CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below.
 

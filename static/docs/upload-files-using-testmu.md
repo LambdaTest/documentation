@@ -1,6 +1,6 @@
 # Upload Files Using TestMu AI Selenium Grid
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 In Selenium automation testing, you may need to test the upload functionality on a web app or website. TestMu AI lets you test the upload feature on the cloud-based Selenium Grid across 3000+ browser and OS combinations.
 

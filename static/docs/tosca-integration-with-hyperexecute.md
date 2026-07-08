@@ -1,6 +1,6 @@
 # Tricentis Tosca Integration with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Tricentis Tosca is a tool that optimizes and accelerates end-to-end testing for your entire digital landscape. With its no-code approach and the assistance of AI, Tosca efficiently removes bottlenecks from your testing process.
 

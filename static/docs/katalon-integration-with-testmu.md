@@ -1,6 +1,6 @@
 # Katalon Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 [Katalon Studio](https://www.katalon.com) is an automation tool for web, API, mobile, and desktop applications testing. Katalon Studio offers a flexible automation platform that fits teams and projects of any size, for any purpose. It supports users from creating tests, execution, reports to seamless integration with the CI/CD ecosystem.
 

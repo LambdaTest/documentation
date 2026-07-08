@@ -1,6 +1,6 @@
 # GitLab Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 >GitLab is a web-based Git-repository manager with the purpose of facilitating entire DevOps lifecycle. It helps in the collaboration of different teams working on a project. Ensuring Development, QA, Security, Operations and Product team to sync simultaneously on the same project. GitLab helps in bringing your product a lot faster in the market by reducing the time taken to complete a release cycle in a very significant manner.
 

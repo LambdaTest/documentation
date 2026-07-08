@@ -1,6 +1,6 @@
 # Slack Integration with SmartUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This document will guide you to integrate your SmartUI jobs and Slack, allowing you to receive real-time notifications and crucial job details directly within your Slack workspace.
 

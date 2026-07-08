@@ -1,6 +1,6 @@
 # Assertions & Validation
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Assertions verify that your application behaves correctly after performing actions. In KaneAI, you write assertions in natural language, and the AI evaluates them against the current page state. This guide covers every assertion type, shows how to write them reliably, and explains how to handle tricky validation scenarios.
 

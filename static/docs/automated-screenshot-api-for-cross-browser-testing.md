@@ -1,6 +1,6 @@
 # Automated Screenshot API For Cross Browser Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Automated Screenshot API will help you [capture full-page screenshots](https://www.testmuai.com/full-page-screen-capture) of any URL by invoking an API call to TestMu AI cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing regularly. You can do that without logging into TestMu AI, by executing a JSON file in your preferred API development environment such as Postman.
 

@@ -1,6 +1,6 @@
 # TestMu AI Capability Map to Migrate from BrowserStack & SauceLabs
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Switching automation platforms can seem challenging, but a clear capability comparison helps simplify the decision and migration process. Teams often explore alternative testing platforms to improve speed, scalability, test coverage, and overall efficiency in their delivery pipelines.
 

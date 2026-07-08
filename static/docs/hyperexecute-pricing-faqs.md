@@ -1,6 +1,6 @@
 # HyperExecute Pricing FAQs
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 #### 1. **Is there any limit on parallel testing on HyperExecute?**
 

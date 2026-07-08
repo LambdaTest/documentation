@@ -1,6 +1,6 @@
 # Connect to a Session
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Connect to a cloud browser session and control it with Puppeteer, Playwright, or Selenium. All three adapters connect to the same TestMu AI Browser Cloud infrastructure - pick the one that matches your existing test framework.
 

@@ -1,6 +1,6 @@
 # ServiceNow Integration with TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ServiceNow is a cloud-based platform for IT service management and automating business processes. Integrating ServiceNow with TestMu AI enables you to log incidents directly from your testing sessions into ServiceNow, streamlining your workflow and enhancing team collaboration.
 

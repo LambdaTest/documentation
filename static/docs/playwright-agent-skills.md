@@ -1,6 +1,6 @@
 # Run Your Playwright Tests Using Agent Skills
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Instead of manually setting up your Playwright project, you can use **Agent Skills** to let your AI coding assistant generate production-ready Playwright test automation for you.
 

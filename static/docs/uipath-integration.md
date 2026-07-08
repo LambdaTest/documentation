@@ -1,6 +1,6 @@
 # UiPath Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 UiPath is a leading robotic process automation (RPA) platform powered by artificial intelligence (AI), designed to help businesses streamline their operations by automating repetitive, time-consuming tasks. By leveraging AI, UiPath enables organizations to achieve greater efficiency, reduce errors, and focus on more strategic, value-driven activities.
 

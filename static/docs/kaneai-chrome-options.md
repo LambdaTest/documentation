@@ -1,6 +1,6 @@
 # Chrome Options
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Chrome options, also known as Chrome arguments, are command-line switches that alter the default behavior of the Chrome browser. These options provide flexibility to users by enabling or disabling certain browser features, modifying settings, and configuring custom behaviors such as headless browsing or disabling GPU acceleration.
 

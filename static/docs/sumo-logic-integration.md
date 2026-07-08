@@ -1,6 +1,6 @@
 # Sumo Logic Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Sumo Logic is a cloud-based platform that modernizes your security operations. By analyzing security and operational issues with Sumo Logic, you can make smarter decisions and free up resources for other critical functions.
 

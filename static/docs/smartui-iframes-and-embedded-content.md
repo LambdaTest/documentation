@@ -1,6 +1,6 @@
 # Iframes and Embedded Content in SmartUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Pages often include **iframes**: embedded apps, chat widgets, consent managers, or **video players** (YouTube, Vimeo). SmartUI captures what the **browser paints** in your TestMu AI session. How much you can **inspect or target in the DOM** depends on whether the iframe is **same-origin** or **cross-origin** with the top page.
 

@@ -1,6 +1,6 @@
 # Consistent Help (3.2.6)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 If a set of web pages provides help mechanisms (contact information, chat, FAQ links, self-help options), they must appear in the same relative order on each page.
 

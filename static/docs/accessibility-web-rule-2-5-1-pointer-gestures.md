@@ -1,6 +1,6 @@
 # Pointer Gestures (2.5.1)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Functionality that uses multi-point or path-based gestures must also be operable with a single-pointer action without a path-based gesture, unless the gesture is essential.
 

@@ -1,6 +1,6 @@
 # KaneAI - Utilizing JSON Variables for Assertions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This document outlines the process of using JSON variables in KaneAI to assert specific objects within an API response. The guide provides a step-by-step procedure for executing API calls, examining responses, and performing assertions on both status and body of the response.
 

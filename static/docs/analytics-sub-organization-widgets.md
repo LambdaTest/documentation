@@ -1,6 +1,6 @@
 # Sub Organizations Insights
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Monitor and Analyze Sub-Organizations with Insights
 

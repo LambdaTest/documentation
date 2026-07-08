@@ -1,6 +1,6 @@
 # Git Branching Strategy in SmartUI Storybook Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
 

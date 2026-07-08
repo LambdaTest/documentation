@@ -1,6 +1,6 @@
 # IP Geolocation on Real Devices App
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Location-specific behavior is crucial to ensure your mobile apps and websites deliver accurate and localized experiences to users worldwide. Whether it's testing region-based content, geo-restricted features, or local SEO implementations, manually simulating different geolocations is essential for a robust QA process.
 

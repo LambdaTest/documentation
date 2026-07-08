@@ -1,6 +1,6 @@
 # Asana Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > Asana is a popular tool for teams following Agile methodology as a part of their Software Development Life Cycle. With Asana, you can coordinate all your team’s work by eliminating roadblocks and pinpointing risks. It offers a free flowing dashboard for sprint planning. Allowing everyone to acknowledge who is doing what and when! You can manipulate tasks freely from one state to another. You can also set out ambitious goals and create a path towards achieving it by different tasks displayed on the dashboard.
 

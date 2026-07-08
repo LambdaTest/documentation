@@ -1,6 +1,6 @@
 # Bitbucket Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Bitbucket – A web-based repository hosting service owned by Atlassian for facilitating version control in development projects. It supports the project with a revision control system based on either Git or Mercurial. It is free to use, though they also offer a commercial plan. With Bitbucket, you can perform **access control** to your source-code, **workflow control** to impose a project workflow. Easy code revaluation through pull requests offering in-line annotation & Integration with Jira for end-to-end development tracing.
 

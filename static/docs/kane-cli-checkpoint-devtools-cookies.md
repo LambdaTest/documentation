@@ -1,6 +1,6 @@
 # Cookies Assertions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Cookie assertions let you verify browser cookies: check existence, values, and security attributes like httpOnly, secure, and sameSite.
 

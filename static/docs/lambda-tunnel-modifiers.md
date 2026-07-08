@@ -1,6 +1,6 @@
 # TestMu AI Tunnel Modifiers
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI Tunnel provides several command-line arguments that you can leverage to define TestMu AI Tunnel parameters. You can pass command-line arguments to either a **‘config’** file or an environment variable. It is recommended to use the latest version of TestMu AI tunnel binary to ensure compatibility with variables.
 

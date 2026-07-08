@@ -1,6 +1,6 @@
 # TestingWhiz Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 [TestingWhiz](https://www.testing-whiz.com/) is a codeless automation testing tool that can be used for Software testing, Web testing, Mobile testing, Database testing, Cloud testing, Web Services testing, and API testing.
 

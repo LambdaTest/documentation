@@ -1,6 +1,6 @@
 # Upload and Download Files
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Transfer files between your local machine and cloud browser sessions. Handle document uploads, file exports, and downloads without external storage services.
 

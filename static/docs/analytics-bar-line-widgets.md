@@ -1,6 +1,6 @@
 # Bar and Line Chart Widgets
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Bar and Line chart widgets in LambdaTest Insights enable you to visualize test data trends, comparisons, and patterns. Bar charts are ideal for comparing values across categories, while line charts excel at showing trends and changes over time.
 

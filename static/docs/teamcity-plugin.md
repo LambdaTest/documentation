@@ -1,6 +1,6 @@
 # TeamCity Plugin Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The TeamCity plugin will help you to manage your TestMu AI credentials, write and execute tests directly on the TestMu AI platform, and test your local, internal, dev, or stage environments securely with the help of Lambda Tunnel.
 

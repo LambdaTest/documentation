@@ -1,6 +1,6 @@
 # Realtime & Real-Device Modules
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Test Overview module in TestMu AI Analytics is a powerful tool that provides you with a comprehensive view of your test performance across various dimensions. By leveraging this module, you can gain valuable insights into test flakiness, total tests run, and test categorization by status and platform.
 

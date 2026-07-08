@@ -1,6 +1,6 @@
 # TargetProcess Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TargetProcess is an integrated project management tool that offers teams with a modern, customizable, and powerful Agile approach. TargetProcess provides an intuitive visual interface for teams to manage projects with ease. Whether you are new to Agile or want to scale it across, this tool has options to manage projects based on Scrum, Kanban, SAFe, NEXUS, or any other approach. You can create custom reports, dynamic visualizations, and more in seconds. The powerful boards make it unique enabling you to plan and track progress, and can be shared to broadcast information to others. Overall TargetProcess provides users a holistic solution to help them plan, track, and steer complex work at all levels.
 

@@ -1,6 +1,6 @@
 # IPsec Site-to-Site VPN Setup Guide
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI supports connectivity via IPsec Site-to-Site VPN (S2S VPN) for clients who need to test web applications hosted on internal/private networks that are not publicly accessible. This allows TestMu AI cloud infrastructure to reach your privately hosted test environments directly over an encrypted, authenticated tunnel, just as if both networks are on the same LAN.
 

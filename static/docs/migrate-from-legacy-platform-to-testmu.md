@@ -1,6 +1,6 @@
 # How to Migrate From Legacy Test Execution Platform to TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Legacy test execution platforms present various challenges including limited browser and device support, slow test execution, lack of built-in test orchestration, and others; that can impact software quality and increase maintenance efforts and costs. Migrating to a cloud-based test execution platform like TestMu AI is a smart move for any organization that wants to improve software quality, reduce maintenance efforts, and cut costs.
 

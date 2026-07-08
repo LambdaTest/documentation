@@ -1,6 +1,6 @@
 # SmartUI Analytics - Visual Regression Testing Insights
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The SmartUI Analytics module provides a suite of widgets to help you analyze and optimize your visual regression testing efforts on the TestMu AI platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
 

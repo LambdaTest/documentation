@@ -1,6 +1,6 @@
 # Baseline Management
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 In SmartUI, a **Baseline** is the reference image used for comparison against future test runs. Effective baseline management is crucial for accurate visual regression testing. This guide explains how baselines are created, updated, and maintained.
 

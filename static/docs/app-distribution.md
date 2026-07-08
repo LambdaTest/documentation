@@ -1,6 +1,6 @@
 # App Distribution on Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI **App Distribution** lets your team upload Android and iOS app builds from a CI/CD pipeline or the dashboard, organize them by package, and distribute them to internal QA and external beta testers through secure, authenticated download links. Every new build can auto-notify the right testers, and any build can be launched on a real device in one click.
 

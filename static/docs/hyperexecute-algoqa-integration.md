@@ -1,6 +1,6 @@
 # Integrate algoQA with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 algoQA is an AI Native software testing platform that automates end-to-end tests across web, mobile, desktop, and API applications. It generates optimal test cases, datasets, and executable scripts, reducing manual effort and improving test coverage.
 

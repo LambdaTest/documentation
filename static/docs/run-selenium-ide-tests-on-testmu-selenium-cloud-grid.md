@@ -1,6 +1,6 @@
 # Run Selenium IDE Tests with TestMu AI Selenium Grid
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 [Selenium IDE](https://www.testmuai.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is one of the most popular record and playback tool for testing which is widely used for automated browser testing. The Selenium IDE is a very easy-to-use solution for getting started with automation testing. It also provides instant feedback and has cross-browser and operating system compatibility, with the help of Selenium IDE (SIDE) Runner.
 

@@ -1,6 +1,6 @@
 # Beta Testers and Teams Management
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **Beta Testers** in TestMu AI [App Distribution](/support/docs/app-distribution/) are the people you invite to download builds and receive new-build notifications. You can add testers individually, group them into **Beta Teams**, and then assign teams or individual testers to any app's sharing list.
 

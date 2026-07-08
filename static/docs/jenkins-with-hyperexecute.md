@@ -1,6 +1,6 @@
 # Jenkins Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Jenkins is an open-source automation server that is easy to install and configure. It can also be used as a simple CI server or turned into a continuous delivery hub for any project.
 

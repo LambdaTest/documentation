@@ -1,6 +1,6 @@
 # Allure Test Insights with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The `Allure Test Insights` module helps you to get an overview of the test execution results using the Allure. This widget provides insights into the test execution results, test status, and test duration.
 

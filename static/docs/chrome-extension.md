@@ -1,6 +1,6 @@
 # TestMu AI Chrome Extension
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The [TestMu AI Chrome Extension](https://chrome.google.com/webstore/detail/lambdatest/fjcjehbiabkhkdbpkenkhaahhopildlh) enables you to perform cross-browser testing across 3000+ browser environments on the cloud more quickly and easily. Pick your favorite configurations, frequently used lists, and launch tests directly from your browser tab to save time.
 

@@ -1,6 +1,6 @@
 # TestMu AI Selenium Grid Configuration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 We constantly upgrade our grid with the stable version of Selenium.
 

@@ -1,6 +1,6 @@
 # Mantis Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Mantis is a free and an open source bug tracker. Mantis supports multiple OS such as Windows, Linux, and macOS, from the server side. Along with platform compatibility, It also offers cross browser compatibility on Google Chrome, Mozilla Firefox, Opera, Safari and IE10+. Mantis is highly customizable, you can customize your issue fields, workflows and notifications. You can also declare access as per role based in your organization. All these features along with email notifications to keep you updated on everything regarding the project makes Mantis a great choice as a project management tool.
 

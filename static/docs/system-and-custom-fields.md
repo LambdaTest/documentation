@@ -1,6 +1,6 @@
 # System and Custom Fields
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Explore the structured organization of your test projects through the use of Fields and Values, accessible via the Project's dashboard. Dive into System Fields for essential categorizations or enhance your project's flexibility with Custom Fields to improve your testing workflows.
 

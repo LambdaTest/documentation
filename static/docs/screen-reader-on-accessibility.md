@@ -1,6 +1,6 @@
 # Screen Reader
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 A Screen Reader is an assistive technology tool that converts digital content on screens into audio output or Braille for users with visual impairments. More than a simple text-to-speech tool, it acts as a comprehensive digital interpreter, transforming complex visual interfaces into navigable auditory or tactile experiences. It helps users with visual disabilities to interact with digital content with unprecedented independence and depth.
 

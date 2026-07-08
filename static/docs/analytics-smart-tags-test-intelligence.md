@@ -1,6 +1,6 @@
 # Smart Tags - Test Intelligence
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Smart Tags in TestMu AI Analytics help you analyze your test automation execution faster. With Smart Tags, you can categorize your tests based on different parameters and get insights on your test execution. This feature helps you identify patterns, trends, and anomalies in your test results, making it easier to optimize your test automation strategy.
 

@@ -1,6 +1,6 @@
 # iOS Accessibility Rules - Quick Reference
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 These iOS rule summaries are a quick reference for findings that appear in Accessibility App Scanner and Native App Automation reports. Use the repository pages for deeper remediation guidance when a finding needs rule-level detail.
 

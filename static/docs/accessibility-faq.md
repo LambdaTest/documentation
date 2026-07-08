@@ -1,6 +1,6 @@
 # Accessibility FAQs
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## What's the latest WCAG version supported?
 We adhere to **WCAG 2.2 AA**, the most recent version of the Web Content Accessibility Guidelines. In addition to this, we support the following versions: WCAG 2.0 A, WCAG 2.0 AA, WCAG 2.1 A, WCAG 2.1 AA, WCAG 2.1 AAA, and WCAG 2.2 A.

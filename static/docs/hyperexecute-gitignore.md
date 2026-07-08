@@ -1,6 +1,6 @@
 # Ignore Unnecessary Files in your Payload
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 When you trigger your job, [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) creates a zip of your test scripts before sending it for execution on the HyperExecute Platform.
 

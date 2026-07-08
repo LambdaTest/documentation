@@ -1,6 +1,6 @@
 # Dark Mode
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI’s **Dark Mode** feature allows you to manually toggle between light and dark themes on **real iOS and Android devices** during manual testing sessions.
 This enables testers to validate UI appearance, color contrast, and theme switching for both mobile apps and web applications without writing automation scripts.

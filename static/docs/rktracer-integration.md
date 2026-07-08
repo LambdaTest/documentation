@@ -1,6 +1,6 @@
 # RKTracer Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Developed by RKValidate, RKTracer is a Code coverage tool capable of generating coverage data for different programming languages like C, C++, C#, Java, Kotlin, JavaScript, Python, etc; regardless of what compiler, cross compiler, embedded targets, or servers you use to test your apps.
 

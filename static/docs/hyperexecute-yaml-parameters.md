@@ -1,6 +1,6 @@
 # HyperExecute YAML
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The **HyperExecute YAML** file serves as the foundational component for test execution within the HyperExecute Platform. The subsequent list enumerates the diverse configuration options supported by [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/#sample-hyperexecute-yaml), providing you with the flexibility to tailor test execution according to the specific requirements of your project.
 

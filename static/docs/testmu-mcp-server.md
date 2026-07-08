@@ -1,6 +1,6 @@
 # Getting Started with TestMu AI MCP Server
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI MCP Server is a remote MCP server that connects MCP-compatible AI clients to your TestMu AI testing environment. It gives you access to tools for different TestMu AI products - HyperExecute, Automation, SmartUI, and Accessibility - which you can invoke through natural language prompts in your IDE or AI client.
 

@@ -1,6 +1,6 @@
 # Using Katalon Studio with Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 [Katalon Studio](https://katalon.com/) is an automation tool for web, API, mobile, and desktop application testing. Katalon Studio offers a flexible automation platform that fits teams and projects of any size, for any purpose. It supports users from creating tests, execution, and reports to seamless integration with the CI/CD ecosystem.
 

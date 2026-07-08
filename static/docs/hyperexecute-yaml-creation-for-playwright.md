@@ -1,6 +1,6 @@
 # HyperExecute YAML Creation for Playwright
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guide outlines common use cases and solutions for configuring Playwright test executions on **TestMu AI HyperExecute**. It covers dependency management, environment setup, caching, reporting, and troubleshooting common issues.
 

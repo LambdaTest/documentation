@@ -1,6 +1,6 @@
 # SmartUI SDK Capabilities
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 SmartUI SDK provides several capabilities that allow you to configure your visual regression tests. These capabilities can be added to your test configuration to control various aspects of the testing process.
 

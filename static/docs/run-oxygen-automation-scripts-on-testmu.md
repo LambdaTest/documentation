@@ -1,6 +1,6 @@
 # Run Oxygen Automation Scripts On TestMu AI Selenium Grid
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Oxygen is an open-source test automation framework offering a low code approach for Selenium and Appium tests. The scripts are based on JavaScript and look almost as plain as English, making them intuitive.
 

@@ -1,6 +1,6 @@
 # Breeze Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Breeze facilitates project management on-cloud through an intuitive platform, offering Gantt charts, kanban tool, task management, and time tracking to help you finish your release cycles on time. With Breeze, you can keep track of deadlines, an individual effort of your colleagues, and acknowledge who is doing what in a project.
 

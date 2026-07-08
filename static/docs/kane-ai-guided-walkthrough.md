@@ -1,6 +1,6 @@
 # Guided Walkthrough of KaneAI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guided walkthrough will help you understand the various components and features available, ensuring you can efficiently navigate and use the platform for managing your automated tests after you have successfully [run your first test](/support/docs/kane-ai-web-test/).
 

@@ -1,6 +1,6 @@
 # Running Python Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Playwright is a powerful browser automation library that allows developers to automate browser interactions. When using Python with Playwright, developers can leverage a robust testing framework to create automated tests for web applications. This combination enables end-to-end testing, ensuring the functionality, performance, and reliability of web applications.
 

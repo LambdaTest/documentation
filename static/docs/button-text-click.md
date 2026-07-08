@@ -1,6 +1,6 @@
 # Button Click By Text (OCR)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Button Click By Text is an OCR-powered feature that allows you to click UI elements using their visible text or icon description when traditional locator strategies are not feasible.
 

@@ -1,6 +1,6 @@
 # Status Messages (4.1.3)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Status messages that provide information about the success or results of an action, the waiting state of an application, or the progress of a process must be programmatically determinable through role or properties so they can be presented to the user by assistive technologies without receiving focus.
 

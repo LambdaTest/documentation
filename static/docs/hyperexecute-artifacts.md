@@ -1,6 +1,6 @@
 # Job Artifacts
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Artifacts are files generated during test execution, including reports and logs. You can refer to these files for obtaining consolidated information about the executed test cases, and can seamlessly interact with artifacts through the HyperExecute UI.
 

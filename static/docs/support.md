@@ -1,5 +1,7 @@
 # TestMu AI Support and Knowledge Base
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI Documentation and Knowledge Hub
 Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mobile Platforms
 

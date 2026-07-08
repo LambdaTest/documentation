@@ -1,6 +1,6 @@
 # Boost Your API Testing Efficiency with HyperExeucte
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 An API acts as a middleman between different software applications, allowing them to communicate and exchange data. Just like any other part of a software system, APIs need to be thoroughly tested to ensure they function as intended.
 

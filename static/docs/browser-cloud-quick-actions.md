@@ -1,6 +1,6 @@
 # One-Liner Scrape, Screenshot, and PDF
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Scrape content, take screenshots, or generate PDFs from any URL - without managing sessions, browsers, or cleanup yourself. You provide
 a URL, you get back the result. The TestMu AI Browser SDK handles everything behind

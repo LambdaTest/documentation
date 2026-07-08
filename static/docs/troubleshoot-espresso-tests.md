@@ -1,6 +1,6 @@
 # Troubleshoot Your Espresso Tests
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This document is a guide to troubleshooting common errors encountered when running Espresso tests on TestMu AI. Espresso is an open-source Android UI testing framework that helps you automate tests for your mobile applications. Understanding these errors and their explanations can help you diagnose and resolve issues during your test execution on TestMu AI.
 

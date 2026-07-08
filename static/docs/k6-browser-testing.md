@@ -1,6 +1,6 @@
 # Getting Started With k6 Browser Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The [k6 Browser module](https://github.com/grafana/xk6-browser) brings browser automation and end-to-end web testing to k6 while supporting core k6 features. The Browser module introduces browser-level APIs that enable seamless interaction with browsers and facilitate the collection of frontend performance metrics as an integral part of your k6 tests.
 

@@ -1,6 +1,6 @@
 # Password and Access Key Expiration Policy
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI allows you to set an expiry policy to passwords and access keys for users in your organisation. This means that your password and access keys will expire after a certain number of days, and you will be required to change them or update them, respectively.
 

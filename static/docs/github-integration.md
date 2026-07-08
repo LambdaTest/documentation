@@ -1,6 +1,6 @@
 # GitHub Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 GitHub is one of the most popular community among software developers. It helps you with version control by providing a code hosting platform for all. From open source to business, one can share their codes, discover new ideas and discuss about roadblocks, all in order to deliver a better software. GitHub also serves as a project management tool. It allows a team to collaborate from all around the globe.
 

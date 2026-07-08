@@ -1,6 +1,6 @@
 # Hyperexecute Knowledge Base
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 HyperExecute Status
       Learn all the status of the HyperExecute at different levels - Job level, Task level, Stage level and Test level.

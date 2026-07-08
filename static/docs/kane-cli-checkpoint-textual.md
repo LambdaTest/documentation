@@ -1,6 +1,6 @@
 # Textual (DOM) Assertions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Textual assertions extract data from the page's DOM: element states, attributes, and computed styles that aren't always visible in a screenshot.
 

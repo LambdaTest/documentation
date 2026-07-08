@@ -1,6 +1,6 @@
 # Slack Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Slack is a cloud-based messaging platform designed for teams to collaborate in real time. It offers organized conversations through channels, instant messaging, file sharing, and powerful integrations with developer and productivity tools, making it ideal for DevOps and QA workflows.
 

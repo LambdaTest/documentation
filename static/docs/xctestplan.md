@@ -1,6 +1,6 @@
 # XCTestPlan
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 XCTestPlan is a feature within Xcode used for building iOS, iPadOS, macOS, watchOS, tvOS, and audioOS applications. XCTestPlan helps manage how you run automated tests written with the XCTest framework.
 

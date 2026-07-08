@@ -1,6 +1,6 @@
 # GoCD Integration With HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 GoCD, short for "Go Continuous Delivery," is an open-source continuous integration and continuous delivery (CI/CD) server that helps automate and streamline the software development and release process. It is designed to facilitate the efficient and reliable delivery of software from development to production.
 

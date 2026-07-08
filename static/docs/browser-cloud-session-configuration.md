@@ -1,6 +1,6 @@
 # Configure Session Options
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Complete reference for all options available when creating a session with the TestMu AI Browser SDK. Use these to control stealth, persistence, browser settings, network, and extensions.
 

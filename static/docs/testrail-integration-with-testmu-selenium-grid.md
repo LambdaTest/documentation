@@ -1,6 +1,6 @@
 # TestRail Integration With TestMu AI Selenium Grid
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestRail is a modern test case management tool which offers a comprehensive web-platform for software testers and developers. Offering a JIRA add-on for cloud-based integration, TestRail helps you to track, manage, and hasten software release cycle.
 

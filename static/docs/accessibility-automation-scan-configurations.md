@@ -1,6 +1,6 @@
 # Scan Configurations via Capabilities (Automation)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 In automation there is no scan-configuration panel. The scan scope is supplied through each test's **capabilities**, so every test carries its own configuration and the effective rule set is derived from these values. This is the automation counterpart to the manual [Scan Configurations](/support/docs/accessibility-app-scanner-scan-configurations/) panel.
 

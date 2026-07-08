@@ -1,6 +1,6 @@
 # Missing Input Value
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Android input fields must expose their current value to assistive technologies so TalkBack users can verify what they have entered.
 

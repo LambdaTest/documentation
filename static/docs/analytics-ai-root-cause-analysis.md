@@ -1,6 +1,6 @@
 # AI Root Cause Analysis (AI RCA) - Test Intelligence
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 AI Root Cause Analysis (AI RCA) in TestMu AI Analytics uses advanced AI-powered LLM technology to automatically analyze failed tests and identify their root causes. Instead of manually sifting through logs and error messages, AI RCA provides:
 

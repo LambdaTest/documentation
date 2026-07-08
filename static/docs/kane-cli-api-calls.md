@@ -1,6 +1,6 @@
 # API Calls
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Objectives can have the agent **make an API call directly**, not just observe the requests a page makes. This is useful for seeding data before a flow, hitting a backend to set up state, or checking a service, then asserting on or reusing the response.
 

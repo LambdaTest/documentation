@@ -1,6 +1,6 @@
 # Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use this guide when you run automated web tests on LambdaTest and want SmartUI to capture a visual baseline for a specific part of the page, such as a component, card, table, or section, instead of the full browser window.
 

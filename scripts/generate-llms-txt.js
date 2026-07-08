@@ -3,22 +3,21 @@
  *
  * For every source doc in /docs this reads the YAML frontmatter (title,
  * description, url/slug) and emits a single Markdown index at
- * /static/llms.txt, served at <baseUrl>/llms.txt (i.e.
- * https://www.testmuai.com/support/llms.txt).
+ * /static/docs/llms.txt, served at <baseUrl>/docs/llms.txt (i.e.
+ * https://www.testmuai.com/support/docs/llms.txt).
  *
- * The visually-hidden HTML directive (src/theme/Root.js) and the per-page
- * Markdown blockquote (scripts/generate-static-md.js) both point AI agents to
- * this file, so it must exist and list the documentation.
+ * The per-page Markdown blockquote (scripts/generate-static-md.js) points AI
+ * agents to this file, so it must exist and list the documentation.
  *
- * Output is gitignored/regenerated on every build (wired into the
- * `prestart` / `prebuild` npm scripts) — no manual step required.
+ * Output is regenerated on every build (wired into the `prestart` / `prebuild`
+ * npm scripts) — no manual step required.
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
-const OUT_FILE = path.join(__dirname, '..', 'static', 'llms.txt');
+const OUT_FILE = path.join(__dirname, '..', 'static', 'docs', 'llms.txt');
 
 const SITE_ORIGIN = 'https://www.testmuai.com';
 const DOCS_BASE = `${SITE_ORIGIN}/support/docs`;
@@ -104,7 +103,7 @@ function main() {
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
   fs.writeFileSync(OUT_FILE, lines.join('\n') + '\n', 'utf8');
 
-  console.log(`✅ Generated llms.txt with ${entries.length} doc entries at static/llms.txt.`);
+  console.log(`✅ Generated llms.txt with ${entries.length} doc entries at static/docs/llms.txt.`);
 }
 
 main();

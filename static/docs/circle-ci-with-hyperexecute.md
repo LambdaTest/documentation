@@ -1,6 +1,6 @@
 # CircleCI Integration with Hyperexecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 CircleCI allows you to build fully automated pipelines from testing to deployment, freeing up your time to focus on the real work of innovation. Using CircleCI, you can automate your entire testing suite for new commits, reducing the possibility of human error, while also automating deploys with orbs.
 

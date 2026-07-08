@@ -1,6 +1,6 @@
 # Accessibility Issue Remediation Guide
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guide helps teams move from issue discovery to remediation planning.
 

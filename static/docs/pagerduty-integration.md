@@ -1,6 +1,6 @@
 # PagerDuty Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 PagerDuty is a bug tracking platform that uses machine learning and automation to notify clients of interrupts and failures. These flaws are discovered in real-time, informing the appropriate people to react to any issue as quickly as possible to avoid them in the future.
 
