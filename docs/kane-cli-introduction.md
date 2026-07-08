@@ -71,7 +71,6 @@ Kane CLI runs from the integrated terminal of your editor, so you can drive brow
 * Codex
 * Kiro (AWS)
 * Eclipse-based IDEs
-* Visual Studio
 * Web-based IDEs
 
 ## Three Modes
