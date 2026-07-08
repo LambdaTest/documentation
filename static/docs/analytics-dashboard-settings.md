@@ -1,5 +1,7 @@
 # Analytics Dashboard Settings
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Dashboard Settings Overview
 
 The Analytics Dashboard Settings page provides a comprehensive set of controls to help you manage notifications, sharing, and access for your test analytics dashboards. This guide details each setting and how to use it for optimal collaboration and visibility.

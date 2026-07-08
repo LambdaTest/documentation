@@ -1,5 +1,7 @@
 # On Input (3.2.2)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Changing the setting of a form control or UI component must not automatically cause an unexpected change of context unless the user has been informed beforehand.
 
 **WCAG Reference**

@@ -1,5 +1,7 @@
 # Capture Static URLs via CLI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 With SmartUI CLI, you can seamlessly perform visual regression testing on the TestMu AI platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
 
 ## Prerequisites for running SmartUI CLI

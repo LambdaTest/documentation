@@ -1,5 +1,7 @@
 # Automating Accessibility Testing with Selenium
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using TestMu AI's Accessibility Tool.
 
 > Compatible only with Chrome and Edge browser versions >= 90.

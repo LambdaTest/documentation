@@ -1,5 +1,7 @@
 # TestMu AI - Test Insights for visualizing your tests runs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 **Explore AI Dashboard CoPilot**
 
 We have recently launched an AI Dashboard CoPilot feature that provides intelligent recommendations, insights, and predictions tailored to your specific data.

@@ -1,5 +1,7 @@
 # Touch Target Sizing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Touch targets should be large enough for reliable interaction.
 
 **WCAG Reference**

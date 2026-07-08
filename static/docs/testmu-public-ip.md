@@ -1,5 +1,7 @@
 # TestMu AI Public IP Ranges
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 These are the list of the IP ranges that you need to whitelist with respect to the specific TestMu AI products.
 
 | Subnet Range | Standard Grid and Real Time | Real Device | KaneAI |

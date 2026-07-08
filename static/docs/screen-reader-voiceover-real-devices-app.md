@@ -1,5 +1,7 @@
 # Screen Reader (VoiceOver) on iOS Devices for App Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Manual accessibility testing ensures that your app or website is fully accessible and compliant with Web Content Accessibility Guidelines (WCAG). With iOS VoiceOver feature on TestMu AI, you can test the accessibility of your website on supported real iOS devices.
 
 Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.

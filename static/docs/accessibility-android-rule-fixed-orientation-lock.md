@@ -1,5 +1,7 @@
 # Fixed Orientation Lock
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Android activities must support both portrait and landscape orientations unless a specific orientation is essential to the functionality.
 
 **WCAG Reference**

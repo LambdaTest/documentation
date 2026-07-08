@@ -1,5 +1,7 @@
 # Group and Filter Your Test Builds Using Build Tags
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 With TestMu AI, you can group your test builds with Build tags. This document shows how to create Build tags and use them to group or filter your test builds on the TestMu AI Automation Dashboard.
 
 ## How to Create Build Tags

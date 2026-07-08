@@ -1,5 +1,7 @@
 # Supported WCAG Versions & Browsers
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use this page as a reference for supported WCAG version selection and browser-related considerations across Accessibility workflows.
 
 ## Supported WCAG coverage

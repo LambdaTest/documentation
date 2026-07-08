@@ -1,5 +1,7 @@
 # HyperExecute Release Notes 2024
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Version 2.6.5
 
 ### New Regions Added for HyperExecute Performance Testing

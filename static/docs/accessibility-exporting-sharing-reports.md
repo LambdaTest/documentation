@@ -1,5 +1,7 @@
 # Exporting & Sharing Reports
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use this page to understand how Accessibility results can be shared across stakeholders and exported for downstream workflows.
 
 The following sections outline common reasons teams export Accessibility results and which downstream workflows those exports support. They also explain how sharing reflects the active state of the report you are viewing, including filters and visibility choices.

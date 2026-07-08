@@ -1,5 +1,7 @@
 # Audio Injection Manual Testing on Real Device Browsers
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 **Audio Injection** lets you simulate microphone input on real Android and iOS device browsers during a manual **Real Time** browser session. Use it to test speech-to-text web apps, voice search on the mobile web, browser-based voice assistants, web-based KYC voice verification, and any other microphone-dependent web feature, without speaking into a physical mic.
 
 With TestMu AI Real Time browser testing, you can either inject a **pre-uploaded audio file** or stream **Live Input** directly from your system microphone into the device browser.

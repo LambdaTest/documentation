@@ -1,5 +1,7 @@
 # Jobs Archiving
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 HyperExecute's job archiving feature lets you seamlessly organize your workspace by tucking away irrelevant jobs, enhancing your team's efficiency. By archiving jobs, you ensure that only the most relevant and significant jobs occupy your workspace, enabling your team to stay focused and productive.
 
 > Archived jobs are not deleted, they are just removed from the default view on this page.

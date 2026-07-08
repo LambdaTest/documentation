@@ -1,5 +1,7 @@
 # Missing Editable Element Label
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Editable iOS elements (text fields, text views, search bars) must have an accessibility label that describes what input is expected.
 
 **WCAG Reference**

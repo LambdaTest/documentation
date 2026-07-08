@@ -1,5 +1,7 @@
 # Capture Screenshot for Accessibility Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Automatically capture visual evidence of accessibility issues during automated testing. Screenshots include red bounding boxes that highlight the exact location of accessibility violations, providing immediate visual context for debugging and issue resolution.
 
 ## Enable Capture Screenshot

@@ -1,5 +1,7 @@
 # Running Your First Cypress Test On TestMu AI Platform
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 To demonstrate Cypress testing on the TestMu AI platform, we will use the [Cypress Cloud repo](https://github.com/LambdaTest/Cypress-Cloud) in the demo below.
 
 **Step-1:** Clone the [TestMu AI-Cypress Cloud](https://github.com/LambdaTest/Cypress-Cloud) GitHub repo and switch to the cloned directory.

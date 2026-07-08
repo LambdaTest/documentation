@@ -1,5 +1,7 @@
 # Filters for XCUI Tests
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Usually, all the test cases of your XCUI test suite are executed, but there is a way to filter these. You can specify some selected classes or tests, which provides you with options to filter the test cases which you want to execute.
 
 To filter the test cases, you just need to pass the suitable parameters in TestMu AI’s REST API request. Refer to the table below to understand how to use various filters provided by TestMu AI.

@@ -1,5 +1,7 @@
 # Getting started with Mobile App Real Time Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Real-Time Mobile App Testing allows you to test mobile applications directly on real devices in real time. It ensures that your app functions as intended, performs optimally, and provides a seamless user experience across various mobile operating systems such as Android and iOS. With TestMu AI, developers, testers, and QA professionals can interact with their mobile applications as end users would, on actual devices, without needing to manage an in-house device lab.
 
 ## Launch the Virtual Machine

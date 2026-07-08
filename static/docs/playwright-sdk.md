@@ -1,5 +1,7 @@
 # Playwright SDK
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This document guides you through setting up and using the TestMu AI Playwright-Node.js SDK to run your Playwright tests on the TestMu AI platform.
 
 ## Overview

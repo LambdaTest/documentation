@@ -1,5 +1,7 @@
 # OpsGenie Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 OpsGenie is a modern incident management platform by Atlassian that ensures critical alerts are never missed. It offers intelligent alerting, on-call scheduling, and escalation policies to help teams respond to incidents faster. OpsGenie aggregates alerts from monitoring tools and custom applications, routing them to the right people through multiple notification channels.
 
 With TestMu AI and OpsGenie integration, you can log incidents directly while performing [cross browser testing](https://www.testmuai.com/) of your websites (and web apps) from the TestMu AI platform to OpsGenie.

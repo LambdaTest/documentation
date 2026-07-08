@@ -1,5 +1,7 @@
 # Group Folder Redirect for iOS Apps
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI now supports **Group Folder Redirect** for iOS apps during automation testing with Appium.
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 

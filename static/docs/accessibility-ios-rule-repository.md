@@ -1,5 +1,7 @@
 # iOS Rule Repository
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use this repository to browse iOS accessibility rules and remediation guidance.
 
 This repository groups iOS accessibility rules (VoiceOver, labeling, touch targets, and related mobile requirements) with pointers into deeper rule pages. Open it when an App Scanner or Native App Automation report cites an iOS finding and you want WCAG-aligned context and remediation next steps.

@@ -1,4 +1,7 @@
 # Running Ruby Framework Tests on HyperExecute
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 RSpec is a behavior-driven development (BDD) framework for Ruby commonly used in conjunction with Selenium for automated testing. It facilitates expressive and readable specifications, making it easier to define and manage Selenium test cases. RSpec supports a variety of assertions and provides powerful reporting tools, enhancing the efficiency and clarity of Selenium test scripts written in Ruby.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.

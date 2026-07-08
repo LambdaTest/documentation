@@ -1,5 +1,7 @@
 # Changelog
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Full release notes and version history are published on GitHub:
 
 **[github.com/LambdaTest/kane-cli/releases](https://github.com/LambdaTest/kane-cli/releases)**

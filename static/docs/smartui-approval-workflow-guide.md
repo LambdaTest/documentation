@@ -1,5 +1,7 @@
 # SmartUI Approval, Reject, Move, and Merge Functions Guide
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 SmartUI provides powerful baseline management functions that allow you to control how visual regression tests are handled. Understanding these functions is crucial for maintaining accurate baselines and avoiding confusion about which screenshots serve as reference points for future comparisons.
 
 ****Critical Concept****

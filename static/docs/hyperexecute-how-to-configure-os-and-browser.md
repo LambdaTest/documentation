@@ -1,5 +1,7 @@
 # How to configure Operating System and Browser in your Test Suite
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This documentation will guide you through configuring the Operating System and Browser for your test suite on HyperExecute. We will cover the step-by-step method to implement the configuration for various test frameworks supported by HyperExecute. Each section provides practical examples to help you integrate HyperExecute with your existing automation suite.
 
 For demonstration purposes, we use the TestNG sample repository. However, you can apply the same concepts to your preferred framework. You can access the sample repositories for your required frameworks:

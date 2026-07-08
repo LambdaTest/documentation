@@ -1,5 +1,7 @@
 # ChromeOS Web Browser Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This document outlines how to leverage features like mark as bug, changing IP geolocation, in-depth device logs and network logs, etc for your Real Time Web Browser testing.
 
 Apart from these features, TestMu AI also offers you the

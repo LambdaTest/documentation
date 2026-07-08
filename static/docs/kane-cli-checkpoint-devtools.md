@@ -1,5 +1,7 @@
 # DevTools Assertions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 DevTools assertions let you verify data that isn't visible on the page: HTTP network traffic, browser console output, performance metrics, cookies, localStorage, and clipboard. KaneAI captures this data automatically in the background; you just write what to check.
 
 ## Available Domains

@@ -1,5 +1,7 @@
 # KaneAI Free Trial is Here!
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Every great product begins with a vision, but that vision can only become reality when it works flawlessly for real users. Whether you're a solo developer launching your first app, a startup team racing to validate your breakthrough idea, or a growing company looking to scale without breaking things, you face the same fundamental challenge: How do you ensure quality without slowing down innovation?
 
 Traditional testing approaches often force teams to choose between speed and reliability. Complex tools require months to master. Sophisticated frameworks demand specialized expertise. Enterprise solutions come with enterprise price tags that put them out of reach for teams just getting started.

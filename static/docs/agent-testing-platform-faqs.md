@@ -1,5 +1,7 @@
 # Agent Testing Platform FAQs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Below are a few commonly asked questions about our Agent Testing Platform:
 
 #### 1. **Does the Agent Testing Platform provide AI-enabled translation or multilingual analysis capabilities for testing?**

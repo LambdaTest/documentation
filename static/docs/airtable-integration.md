@@ -1,5 +1,7 @@
 # Airtable Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Airtable is a cloud-collaboration platform to help you organize your team with intuitive & interactive spreadsheets that works like a database. It offers a variety of views such as Grid view, Kanban view, Calendar view, Form view. You can log a task with priority, notes, deadline and more. You can even tag attachments to a task with a simple drag-and-drop. Be it marketing, project management, product design & UX, or a simple distribution record for offline businesses, Airtable helps you to manage a track of anything.
 
 Using TestMu AI integration with Airtable, you'll be able to log bugs over your project in Airtable from TestMu AI in just a single click. You can [capture a screenshot](https://www.testmuai.com/full-page-screen-capture) of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions. You can do all that directly from TestMu AI and then mark a bug to your Airtable project with just a single click.

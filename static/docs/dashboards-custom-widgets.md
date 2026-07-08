@@ -1,5 +1,7 @@
 # Custom Widgets in TestMu AI Analytics Dashboards
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Custom widgets in TestMu AI Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
 
 ## Prerequisites

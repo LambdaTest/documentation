@@ -1,5 +1,7 @@
 # MCP TestMu AI Release Notes
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Version 1.0.0 - Major Release
 
 ### 🎉 What's New

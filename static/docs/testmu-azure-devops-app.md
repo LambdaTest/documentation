@@ -1,5 +1,7 @@
 # TestMu AI Azure DevOps App
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI Test Manager integrates directly with Azure DevOps through the Azure DevOps Marketplace App, allowing you to manage tests seamlessly within the Azure DevOps interface. It provides Test Manager functionalities in your Azure DevOps environment, boosting workflow efficiency and facilitating improved collaboration among teams.
 
 **Let's have a look at how to use the TestMu AI Azure DevOps App:**

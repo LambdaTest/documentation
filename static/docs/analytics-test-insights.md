@@ -1,5 +1,7 @@
 # Test Insights - Advanced insights for analyzing test runs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## About Test Insights
 TestMu AI Analytics provides Test Insights, a powerful feature designed to help you analyze your test runs and gain valuable insights into your testing processes. With Test Insights, you can visualize your test runs, track progress, and improve the quality of your tests with actionable analytics.
 

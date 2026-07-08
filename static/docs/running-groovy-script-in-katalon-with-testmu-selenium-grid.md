@@ -1,5 +1,7 @@
 # Running Groovy Script In Katalon With TestMu AI Selenium Grid
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 As you perform testing with Katalon Studio, you can write or edit test automation scripts in the **Script mode** using Groovy programming language. This tutorial will help you run your Groovy script in Katalon with TestMu AI Selenium Grid.
 
 **Step 1:** Open your Katalon Studio instance & go to **Tests Explorer** from the left side-bar.

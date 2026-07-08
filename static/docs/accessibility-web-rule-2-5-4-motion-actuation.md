@@ -1,5 +1,7 @@
 # Motion Actuation (2.5.4)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Functionality triggered by device motion (shaking, tilting) or user motion (gestures captured by a camera) must also be operable through a UI control, and the motion response can be disabled to prevent accidental activation.
 
 **WCAG Reference**

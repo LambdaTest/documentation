@@ -1,5 +1,7 @@
 # Upload and Download Files in KaneAI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This guide provides a step-by-step process for uploading and downloading files within Kane AI, a cloud-based testing platform provided by TestMu AI. Users can easily upload files from their local system, access pre-uploaded files, and download files generated during a test session.
 
 ## Prerequisites

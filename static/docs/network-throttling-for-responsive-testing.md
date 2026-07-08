@@ -1,5 +1,7 @@
 # Network Throttling To Test Website Responsiveness
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 [LT Browser](https://www.testmuai.com/lt-browser/) allows you to test your [mobile website view](https://www.testmuai.com/mobile-view-website) over different networks such as fast 3G, slow 3G, online, or even offline. With network throttling, you can change your network profile to test its functionality when exposed to different network environments.
 
 To get started, you need to download the executable file from here.

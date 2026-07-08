@@ -1,5 +1,7 @@
 # AWS CodePipeline Integration With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 AWS CodePipeline is a cloud-based continuous delivery platform for fully automating your release pipelines. Provides an intuitive interface for configuring & modeling different stages of release cycles, so you can envision how your code changes would look when pushed across these different changes. You can also track your pipeline in real-time, and look into the pipeline history to understand the timestamps involved in the execution of various pipelines.
 
 TestMu AI integration with AWS CodePipeline will help you perform automated cross browser testing through a Selenium Grid offering 3000+ real browsers, browser versions. Now, not only can you commit changes to your code using AWS CodePipeline, but you can also validate any UI/UX anomalies of your web application through a wide variety of browsers using TestMu AI, a cloud-based cross browser testing tool.

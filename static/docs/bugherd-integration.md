@@ -1,5 +1,7 @@
 # BugHerd Integration with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 [BugHerd](https://bugherd.com/) is a website bug tracker that allows you to easily create bug reports and track feedback, all without leaving your website. Developers can pin notes on the UI right on the element where the bug occurs, and also easily collect bug reports from users and team members.   Along with each bug report, user technical data is automatically captured so there’s no back and forth, and BugHerd channels all feedback into an integrated Kanban board for easy task management.
 
 TestMu AI integrates with BugHerd, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the BugHerd platform for each testing instance.

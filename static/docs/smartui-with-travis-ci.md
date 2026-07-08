@@ -1,5 +1,7 @@
 # Travis CI Pipeline Integration with SmartUI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Travis CI is one of the most popular CI/CD platforms, known for its simplicity and support for open-source projects. It provides continuous integration for projects hosted on GitHub and Bitbucket.
 
 This guide explains how to integrate your project with the Travis CI CI/CD pipeline to trigger visual regression testing with TestMu AI SmartUI whenever changes are made to your repository.

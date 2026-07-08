@@ -1,5 +1,7 @@
 # While Loops in KaneAI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Introduction
 
 KaneAI supports repeating a block of steps using **While Loops**. A While Loop executes the steps inside its body for as long as a user‑defined condition evaluates to **true**, and re‑checks the condition before every iteration.

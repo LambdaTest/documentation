@@ -1,5 +1,7 @@
 # Background Services
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Background Services is a feature of HyperExecute which is generally used to run the long running **Application Servers**. You can trigger the background services by using either the `background` or `backgroundDirectives` property in the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#background) file.
 
 This feature is useful for the following cases:

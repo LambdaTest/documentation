@@ -1,5 +1,7 @@
 # Utilizing KaneAI Secrets Feature: A Step-by-Step Guide
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 KaneAI now supports the use of secret variables to enhance security and streamline functionality. This feature leverages HashiCorp Vault for secure management of sensitive information, ensuring robust protection for your data while maintaining ease of use. This guide outlines the process for creating, managing, and utilizing secret variables within KaneAI.
 
 - In Web/App Agent, users will see list of all secrets created at user or org level for that user.

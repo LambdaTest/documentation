@@ -1,5 +1,7 @@
 # HyperExecute Widgets
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The HyperExecute Widgets enables you to get all the insights of the Jobs executed in one place. You can easily find information ranging from the count of the Jobs, Stages, Tasks, and Tests run on the platform and their insights.
 
       Job Widgets

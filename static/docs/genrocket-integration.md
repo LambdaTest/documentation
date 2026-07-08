@@ -1,5 +1,7 @@
 # GenRocket Integrates With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 With TestMu AI's and GenRocket's integration, users utilizing TestMu AI HyperExecute will gain effortless access to GenRocket's capabilities for generating the required synthetic test data in both quantity and diversity. This integration empowers users to define authentic test data using GenRocket and then seamlessly automate the testing process with the aid of HyperExecute.
 
 This collaboration delivers substantial advantages to customers using both platforms, resulting in quicker and more comprehensive testing procedures. As a direct consequence, testing cycles will be notably shortened, contributing to an expedited pace of software delivery.

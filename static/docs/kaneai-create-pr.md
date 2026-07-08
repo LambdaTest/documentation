@@ -1,5 +1,7 @@
 # Create Pull Requests from KaneAI Test Cases
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 KaneAI lets you export generated test code directly to your GitHub or GitLab repository as a pull request (PR) or merge request (MR). Instead of downloading ZIP files and manually copying code, you can raise PRs from the Test Manager in a few clicks, or automatically whenever code is generated.
 
 This guide covers how to integrate your Git provider, configure PR settings, create pull requests from test cases, and track their status.

@@ -1,5 +1,7 @@
 # Locally Hosted Pages
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The [TestMu AI Tunnel](/support/docs/testing-locally-hosted-pages/) feature enables you to perform secure and real-time testing of locally hosted websites, private servers, and web applications that are behind a corporate firewall. By creating a secure connection between your local environment and the TestMu AI cloud, the Tunnel allows you to access and test internal applications on various browsers and devices.
 
 ## Use Cases

@@ -1,5 +1,7 @@
 # KaneAI Web Agent - Guidelines for Writing Instructions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The KaneAI Web Agent is an automation tool that executes web interactions based on natural language instructions. This guide provides best practices for writing clear, user-friendly instructions when using the KaneAI Web Agent. The goal is to ensure accurate execution of tasks by the AI and improve the quality of interactions with web elements.
 
 ## General Instruction

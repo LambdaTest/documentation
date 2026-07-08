@@ -1,5 +1,7 @@
 # Non-text Contrast (1.4.11)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Visual elements needed to identify UI components and graphical objects must have a contrast ratio of at least 3:1 against adjacent colors.
 
 **WCAG Reference**

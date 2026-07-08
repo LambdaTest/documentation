@@ -1,5 +1,7 @@
 # Real Devices Integration with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Till now you have executed your test scripts on the [Real Device Automation](/support/docs/appium-python-pytest/). This Document will not only explain to you about how to use Real Devices on HyperExecute but also the superpower you just unlocked with HyperExecute - Test Orchestration and Intelligence.
 
 HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute lets you achieve an accelerated time to market by providing a test infrastructure that offers optimal speed, test orchestration, and detailed execution logs.

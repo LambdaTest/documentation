@@ -1,5 +1,7 @@
 # Accessibility Issue Remediation Guide
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This guide helps teams move from issue discovery to remediation planning.
 
 You will learn how to translate report findings into an ordered remediation path that matches user impact. You will also see when to step from summary views into rule-level detail so fixes stay aligned with the underlying WCAG expectations.

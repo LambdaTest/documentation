@@ -1,5 +1,7 @@
 # Zoho BugTracker Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Zoho BugTracker is a robust cloud-based bug reporting platform that allows you to keep track of bugs and fix them rapidly. With its multitude of customizations and automation features, issue tracking is simple and effective. Additionally, Zoho BugTracker includes SLA management, time tracking, collaboration, analytics, document management, and automation.
 
 The TestMu AI integration with Zoho BugTracker allows you to log bugs while performing [cross browser testing](https://www.testmuai.com/) of your websites and web apps across over 3000+ browsers and OS combinations on the cloud. From the TestMu AI platform, you can easily log bugs to Zoho BugTracker dashboard.

@@ -1,5 +1,7 @@
 # SOCKS5 Proxy Support in TestMu AI Tunnel
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Overview
 
 TestMu AI Tunnel offers comprehensive support for SOCKS5 proxy, enabling secure and private connections between your local development environment and the TestMu AI cloud platform. This support is crucial for users operating within networks that require advanced proxy configurations for security and privacy. This document outlines the key features, benefits, and usage of the SOCKS5 proxy support in TestMu AI Tunnel.

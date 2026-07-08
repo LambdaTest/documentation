@@ -1,5 +1,7 @@
 # Understanding the Sessions API
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The Sessions API lets you create and control cloud-based browser sessions
 through simple SDK calls. Each session is like giving your AI agent its own
 dedicated browser window, but running on TestMu AI Browser Cloud and controlled

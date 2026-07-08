@@ -1,5 +1,7 @@
 # Accessibility Role Definition
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Interactive iOS elements must expose the correct accessibility traits so VoiceOver announces their role (button, link, switch, header) accurately.
 
 **WCAG Reference**

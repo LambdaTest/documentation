@@ -1,5 +1,7 @@
 # Step 3: Integrate the Test Plan with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 > Test Distribution of the suite is recommended to be at **test level** such that each HyperExecute stage has one test.
 
 To execute the Test Plan with HyperExecute, you will have to follow the below mentioned steps:

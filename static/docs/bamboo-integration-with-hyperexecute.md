@@ -1,5 +1,7 @@
 # Bamboo CI Integration with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Bamboo is a continuous integration (CI) and continuous delivery (CD) server from Atlassian. It helps teams automate the software development and delivery process, from code commit to production deployment. Bamboo can be used to build, test, and deploy software on a variety of platforms, including cloud, on-premises, and hybrid environments.
 
 This document will show you how to integrate Bamboo CI Pipeline with HyperExecute to greatly shorten your test cycles.

@@ -1,5 +1,7 @@
 # TalkBack on Android
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use this page when validating **native or hybrid Android** experiences with **TalkBack**, especially after **App Scanner** or **Appium** accessibility runs.
 
 ## When to use this

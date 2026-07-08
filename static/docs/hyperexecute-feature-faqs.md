@@ -1,5 +1,7 @@
 # HyperExecute Feature FAQs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 #### 1. **How can I integrate HyperExecute with other CI/CD platforms?**
 
   Since HyperExecute is operated using a universal CLI, it essentially takes two lines of terminal commands to integrate HyperExecute with any CI/CD platform. You need to download the CLI and trigger it to do this.

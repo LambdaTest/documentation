@@ -1,5 +1,7 @@
 # Selenium Capabilities for Version 3 and Below
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Capabilities Reference
 
 Use these capabilities to configure browser, platform, and test metadata for Selenium version 3 and below.

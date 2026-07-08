@@ -1,5 +1,7 @@
 # YouTrack Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 YouTrack is a bug tracking and project management tool developed by JetBrains. It allows you to create agile boards, use reports and Gantt charts, dashboards, and time tracking. With YouTrack, you can find issues easily based on autocomplete queries and manipulate them in batches, customize all problem attributes, and create custom workflows.
 
 With TestMu AI and YouTrack integration, you can push bugs directly from TestMu AI to your YouTrack's project. Also, capture screenshots, annotate bugs, and share them with your teammates and colleagues.

@@ -1,5 +1,7 @@
 # Execute Cypress Tests Including Private Dependencies
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This article guides you on how to execute your **Cypress** tests including the **private dependencies** on **TestMu AI platform**.
 Earlier if your project includes any private dependency, the tests will error out with the **LambdaError** on our platform but now we have built the support for handling the private dependencies.
 

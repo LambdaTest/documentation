@@ -1,5 +1,7 @@
 # Testim Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Testim provides an automated testing platform to create stable tests using AI Native capabilities, along with tools that facilitate scaling quality across your software development process.
 
 Integrating TestMu AI with Testim lets you run Testim automated tests on TestMu AI cloud-based grid across 3000+ real browsers and OS.

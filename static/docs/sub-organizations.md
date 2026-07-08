@@ -1,5 +1,7 @@
 # Sub Organizations
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Sub-organizations let you segregate test data across multiple business units within your TestMu AI account. You can also distribute the concurrency you have purchased among sub-organizations, so each operates independently with its own administrators, users, and settings.
 
 This feature is available exclusively on the **Enterprise plan**. To enable it for your organization, please reach out to your account manager.

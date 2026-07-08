@@ -1,5 +1,7 @@
 # Native TestNG Reports on HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The Native TestNG Reports offer a standardized and easily accessible summary of information extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job.
 
 ## Implementation Steps

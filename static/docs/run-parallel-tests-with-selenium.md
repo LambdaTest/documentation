@@ -1,5 +1,7 @@
 # Run Parallel Tests With Selenium
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Running tests sequentially multiplies wait time across every test. Parallel execution on the TestMu AI cloud grid lets you run hundreds of tests simultaneously across different browser and OS combinations, cutting build times from hours to minutes.
 
 ## How Parallel Testing Works

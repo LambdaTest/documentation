@@ -1,5 +1,7 @@
 # Install Custom Certificates on the VM Through Pre-run Executables
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Pre-run executables let you run custom scripts before the Selenium test starts. Use this feature to install user custom certificates that are required for test cases to execute successfully.
 
 To use certificates for Selenium tests, you need 3 things:

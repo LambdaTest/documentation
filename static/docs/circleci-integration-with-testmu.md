@@ -1,5 +1,7 @@
 # CircleCI Integration With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 CircleCI is one of the most renowned CI/CD tools due to its easy-to-use interface, simplistic configuration, and huge support for numerous libraries and services. CircleCI ensures that your code deployment is of high quality and in less time. It does so by passing every commit to run through your automated pipeline before pushing it to the respective feature branch. So if anything goes south, then you know instantly where to look for. This helps in preventing a major breakdown by eliminating any bottleneck at an early stage. CircleCI facilitates rapid as well as robust fixes at scale.
 
 TestMu AI now integrates with CircleCI to boost your go-to-market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines on the cloud. Perform automation testing in parallel with TestMu AI’s Selenium grid to trim down your test cycles drastically.

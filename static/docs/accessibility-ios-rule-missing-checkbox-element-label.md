@@ -1,5 +1,7 @@
 # Missing Checkbox Element Label
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Checkbox-style controls in iOS apps must have an accessibility label that describes the option they control.
 
 **WCAG Reference**

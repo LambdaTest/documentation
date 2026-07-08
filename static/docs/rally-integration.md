@@ -1,5 +1,7 @@
 # Rally Integration with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Rally is a powerful cloud-based project management solution that streamlines project tracking, bug management, and team collaboration through its robust customization and automation capabilities.
 
 The TestMu AI integration enables you to capture and log bugs directly from your test sessions to Rally, complete with screenshots and test environment details, making your testing workflow more efficient.

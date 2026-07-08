@@ -1,5 +1,7 @@
 # Run Selenium Tests Behind the Proxy
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 If your system is behind a proxy or protected by a firewall, you cannot run Selenium test scripts directly on the TestMu AI Selenium grid. You need to define your proxy settings so the connection goes through as usual.
 
 This document shows you how to run your Selenium tests behind a proxy server.

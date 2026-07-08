@@ -1,5 +1,7 @@
 # SmartUI CLI Exec Command
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 SmartUI CLI exec command offers you various options to manage snapshot server and execute your visual testing scripts. This guide will walk you through the available commands and their usage.
 
 ## Prerequisites

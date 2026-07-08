@@ -1,5 +1,7 @@
 # Appium Testing - Real Device On HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This page outlines how to execute your Appium tests on HyperExecute using TestNG with YAML 0.2
 > HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
 

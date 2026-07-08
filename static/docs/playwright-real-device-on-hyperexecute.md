@@ -1,5 +1,7 @@
 # Running Playwright Real Device Tests on HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This guide explains how to run your **Playwright** tests on **Real devices (Android and iOS)**  using HyperExecute:
 
 ## Prerequisites

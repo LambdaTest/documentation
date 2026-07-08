@@ -1,5 +1,7 @@
 # Manual App Profiling
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 App performance is a critical factor for user satisfaction and adoption. While automated profiling through [Appium tests](/support/docs/appium-app-performance-analytics/) provides insights during CI/CD pipelines, there are times when you need to manually interact with your app and observe its performance in real-time. TestMu AI's Manual App Profiling feature enables you to profile your app's performance during live manual testing sessions on real devices, giving you instant visibility into CPU, memory, disk, network, and more as you interact with the app.
 
 You can enable App Profiling from the App Live session toolbar before starting your session. Simply toggle the **Advance App Profiling** option, and profiling will begin capturing metrics as soon as your session starts.

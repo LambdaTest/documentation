@@ -1,5 +1,7 @@
 # HyperExecute Test Widgets
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Test Trends
 
 The Test Trends Widgets enable you to analyze the trends of the tests executed on the platforms over a period of time. You can compare the current trends with the previous trends on the platform by clicking on the legends at the bottom of the graph.

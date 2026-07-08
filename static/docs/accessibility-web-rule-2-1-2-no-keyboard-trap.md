@@ -1,5 +1,7 @@
 # No Keyboard Trap (2.1.2)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 If keyboard focus can be moved to a component on the page, focus must also be able to move away from that component using standard keyboard navigation.
 
 **WCAG Reference**

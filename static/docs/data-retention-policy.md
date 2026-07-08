@@ -1,5 +1,7 @@
 # Data Retention Policy
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This page provides a comprehensive overview of how long your data is retained across all TestMu AI products. Unless stated otherwise, the default retention period is **60 days** from the date of creation.
 
 **Enterprise Retention**

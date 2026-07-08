@@ -1,5 +1,7 @@
 # Configure YAML For Integrating GoCD Pipelines With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Through our previous document, you were able to integrate GoCD pipelines with TestMu AI, and executed your first Selenium testing script through GoCD on TestMu AI. However, in our previous chapter we ran the test by copying the YAML from the cloned [repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample). This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with our online Selenium Grid.
 
 > **Note:** If you are just getting started with GoCD then make sure to visit our documentation to [integrate TestMu AI with GoCD](/docs/gocd-integration-with-testmu/).

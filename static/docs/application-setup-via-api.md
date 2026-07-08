@@ -1,5 +1,7 @@
 # Perform Operations on your Application via API
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application on TestMu AI, you can use our public REST APIs. In this documentation, we have listed all the operations you can perform with your application via APIs or cURL commands for both Virtual and Real Devices.
 
 The maximum size for application should not exceed 1GB.

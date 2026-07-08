@@ -1,5 +1,7 @@
 # Favro Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Favro is a project management and collaboration tool set up by serial deep tech entrepreneurs. It works under an agile methodology that helps in planning, execution, collaboration, and creation to enhance the workflow of your organization. You can create your dashboard where you can track your various projects, interact, respond to ideas, handle projects with your teammates using multiple kanbans, timelines, and sheets.
 
 The TestMu AI Favro Integration allows you to create a task directly to your specified Favro dashboard from TestMu AI platform. Share your UI observations and input with your teammates anytime, by [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture), even in the middle of your test session. You can annotate the screenshot & highlight your issue or input. The fields populated by you when marking as bug through TestMu AI are displayed as information on Favro for that testing instance.

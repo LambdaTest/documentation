@@ -1,5 +1,7 @@
 # Getting Started With Cypress Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA-friendly tool.
 
 Integrating TestMu AI with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.

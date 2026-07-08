@@ -1,5 +1,7 @@
 # Applitools Integration With TestMu AI For Cypress
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 **Applitools** provides an end-to-end software testing platform powered by **Visual AI**. This article will guide you on how to integrate your **Cypress** automation tests with **Applitools** and **TestMu AI**.
 
 > Before getting started, make sure you have made accounts in **TestMu AI** and **Applitools** platforms.
