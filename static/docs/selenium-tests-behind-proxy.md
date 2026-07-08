@@ -1,0 +1,86 @@
+# Run Selenium Tests Behind the Proxy
+
+If your system is behind a proxy or protected by a firewall, you cannot run Selenium test scripts directly on the TestMu AI Selenium grid. You need to define your proxy settings so the connection goes through as usual.
+
+This document shows you how to run your Selenium tests behind a proxy server.
+
+## How to Define Proxy Settings in Selenium C#
+
+Add the proxy host and port to the HttpCommandExecutor in your test code.
+
+You can define proxy programmatically by adding the below snippet in your code.
+
+```csharp
+HttpCommandExecutor commandExecutor = new HttpCommandExecutor(new Uri("https://username:accesskey@hub.lambdatest.com/"), TimeSpan.FromSeconds(60));
+WebProxy myproxy = new WebProxy("proxy_host:proxy_port", false);
+IWebDriver driver;
+```
+
+Below is the NUnit code that shows the insertion of the above code snippet to define proxy settings.
+
+```csharp
+using System;
+using System.Drawing.Text;
+using System.Threading;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
+using NUnit.Framework;
+using System.Net;
+namespace TestSelenium3
+{
+public class Program
+{
+static void setProxy()
+{
+/* HttpWebRequest myWebRequest = (HttpWebRequest)WebRequest.Create("http://3.86.55.62:8888");
+// Obtain the 'Proxy' of the  Default browser.
+IWebProxy proxy = myWebRequest.Proxy;
+// Print the Proxy Url to the console.
+if (proxy != null)
+{
+Console.WriteLine("Proxy: {0}", proxy.GetProxy(myWebRequest.RequestUri));
+}
+else
+{
+Console.WriteLine("Proxy is null; no proxy will be used");
+}
+*/
+}
+public static void Main(String[] args)
+{
+// Init
+setProxy();
+HttpCommandExecutor commandExecutor = new HttpCommandExecutor(new Uri("https://username:accesskey@hub.lambdatest.com/"), TimeSpan.FromSeconds(60));
+commandExecutor.Proxy = new WebProxy("proxy_host:proxy_port", false);
+IWebDriver driver;
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.SetCapability("build", "your build name");
+capabilities.SetCapability("name", "your test name");
+capabilities.SetCapability("platform", "Windows 10");
+capabilities.SetCapability("browserName", "Chrome");
+capabilities.SetCapability("version", "89.0");
+driver = new RemoteWebDriver(commandExecutor, capabilities);
+
+Console.WriteLine("----------------------------" + capabilities + "#####################################");
+try
+{
+/*
+driver = new RemoteWebDriver(new Uri("https://username:accesskey@hub.lambdatest.com/"), capability);
+Console.WriteLine("----------------------------" + driver + "#####################################");
+*/
+driver.Navigate().GoToUrl("https://www.google.com");
+}
+catch (Exception e)
+{
+Console.WriteLine(e);
+Thread.Sleep(500000);
+}
+}
+}
+}
+```
+
+Execute the above NUnit test scripts, and you can run your Selenium tests directly on the TestMu AI Selenium grid behind the proxy server.
+
+If you have any questions or require an additional information, you can contact us at our **24/7 chat support**. You can also drop us a mail at support@testmuai.com.

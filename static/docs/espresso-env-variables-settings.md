@@ -1,0 +1,110 @@
+# Setting Up Espresso Environment Variables
+
+This feature allows you to dynamically set and test environment variables during Espresso test execution on TestMu AI.
+
+## Step 1: Create Variables in Your Test Suite
+Define environment variables in your Espresso test suite to fetch the variable values during execution.
+
+```bash title="Sample Script"
+String envVar = InstrumentationRegistry.getArguments().getString(ENV_VAR);
+```
+
+``` bash title="Examples"
+String stage = InstrumentationRegistry.getArguments().getString(“STAGE”);
+String prod = InstrumentationRegistry.getArguments().getString(“PROD”);
+```
+
+## Step 2: Upload Your Application
+
+To begin testing, upload your Android application (.apk file) to TestMu AI's servers. You'll use our **REST API** for this process.
+
+- **Authentication :** You'll need your TestMu AI Username and AccessKey. Combine them in the format `Username:AccessKey`.
+- **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
+
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@""' --form 'type="espresso-android"'`}
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@""" --form "type=\"espresso-android\""`}
+
+- Provide the path of your android application in the above URL in place of ``
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+
+## Step 3: Upload Your Test Suite
+
+Upload your Espresso test suite (.apk) file to TestMu AI servers using our REST API.
+
+The following sample cURL command shows how to upload a test suite:
+
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@""' --form 'type="espresso-android"'`}
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@""" --form "type=\"espresso-android\""`}
+
+- Provide the path of your android application in the above URL in place of ``
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+
+## Step 4: Executing The Test
+
+- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+
+Take note of the base64 encoded authentication which needs to be added in the next step.
+
+{`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
+- Once you have uploaded your app and test suite, you can execute your test by running the following command:
+
+> Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"app" : "APP_ID",
+"testSuite": "TEST_SUITE_ID",
+"device" :  ["Galaxy S21 5G-12"],
+"queueTimeout": 10800,
+"IdleTimeout": 150,
+"deviceLog": true,
+"network": false,
+"build" : "Proverbial-Espresso"
+# highlight-start
+"envVariables":{                     //setting up environment variables
+"STAGE":"stg1",
+"PROD":"prod1"
+}
+# highlight-end
+}'
+```
+
+## Run your test in HyperExecute
+To execute your test suite in HyperExecute, configure your YAML file by specifying the `` and ``.
+
+```yaml
+---
+version: "0.2"
+concurrency: 4
+runson: android
+autosplit: true
+maxRetries: 2
+# highlight-start
+env:
+STAGE: stg1
+PROD: prod1
+# highlight-end
+framework:
+name: "android/espresso"
+args:
+reservation: false
+buildName: "Test Espresso Sharding"
+appId: <TARGET_SUITE>
+testSuiteAppId: <TEST_SUITE>
+deviceSelectionStrategy: any
+devices: [".*"]
+shards:
+mappings:
+- name: shard1
+strategy: "only-testing/skip-testing"
+values: ["<className>/<className/testName>"]
+- name: shard2
+strategy: "only-testing/skip-testing"
+values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+```

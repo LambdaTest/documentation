@@ -163,10 +163,8 @@ export default function CopyPageButton() {
         break;
       }
       case 'view-markdown': {
-        // Show page content as plain markdown text in a new tab
-        const markdown = await getPageMarkdown();
-        const blob = new Blob([markdown], { type: 'text/plain;charset=utf-8' });
-        window.open(URL.createObjectURL(blob), '_blank');
+        // Open the static .md file served alongside this page
+        window.open(`${pageUrl}.md`, '_blank');
         break;
       }
       case 'open-chatgpt':

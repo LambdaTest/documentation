@@ -1,0 +1,32 @@
+# Link Azure DevOps Issues with Test Manager
+
+## Link Azure DevOps Issues with Test Manager
+
+Test Manager enhances its functionality by seamlessly linking test cases with Azure DevOps Work Items. This integration ensures a reliable connection between your testing activities and Azure DevOps Work Items, optimizing project management and collaboration across teams.
+
+### Prerequisites
+- Active Microsoft Azure DevOps account
+- Appropriate permissions to access Azure DevOps projects
+
+### Initial Setup and Configuration
+
+> **Note:** If you have already integrated Azure DevOps with your TestMu AI account, you can skip this section and proceed directly to [Linking Azure DevOps Work Items](#linking-azure-devops-work-items)
+
+1. Navigate to the [Integration page](https://integrations.lambdatest.com/) to integrate your TestMu AI account with Azure DevOps. Click on **Connect** as shown in the image.
+
+2. A side drawer will open to initiate Azure DevOps integration. Click on **Install** to proceed.
+
+3. Select your Azure DevOps Organization and click **Install**. Azure DevOps is now integrated with your TestMu AI account.
+
+### Linking Azure DevOps Work Items
+
+Once the integration is complete, follow these steps to link work items with your test cases or test runs:
+
+1. Head to the issues section in Test Manager, click on **Link Issue** and go to Azure DevOps.
+> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+
+2. Enter the Azure DevOps Work Item ID or URL in the input field and click on **Link Issue**.
+
+3. The Azure DevOps Work Item from your integrated Organization is successfully linked and listed. You can view the work item name, ID, type, state, priority, and creator.
+
+4. To **unlink an issue**, click on the unlink button located on the right side of the work item.

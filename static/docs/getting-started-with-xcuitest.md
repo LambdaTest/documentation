@@ -1,0 +1,149 @@
+# XCUI Testing on TestMu AI
+
+Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. TestMu AI lets you perform automated app testing of your iOS apps using XCUITest across 10000+ real devices and OS combinations.
+
+## Prerequisites
+
+- Your TestMu AI [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
+- Access to an **iOS** app (.ipa) and an **XCUI Test** app (.ipa file).
+
+If you do not have any **iOS** app (.ipa) and an **XCUI Test** app (.ipa) file, you can run your sample tests on TestMu AI by using our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) and a sample :link: [XCUI Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios_xcuitest.ipa).
+
+## Running Your First Test: A Step-by-Step Guide
+
+### Step 1: Upload Your Application
+
+To begin testing, upload your iOS application (.ipa file) to TestMu AI's servers. You'll use our **REST API** for this process.
+
+- **Authentication :** You'll need your TestMu AI Username and AccessKey. Combine them in the format `Username:AccessKey`.
+- **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
+
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@""' --form 'type="xcuit-ios"'`}
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@""" -F "type="xcuit-ios""`}
+
+- Provide the path of your iOS application in the above URL in place of ``
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+
+### Step 2: Upload Your Test Suite
+
+Upload your iOS test suite (.ipa) file to TestMu AI servers using our REST API.
+
+The following sample cURL command shows how to upload a test suite:
+
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@""' --form 'type="xcuit-ios"'`}
+
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@""" --form "type=\"xcuit-ios\""`}
+
+- Provide the path of your iOS test suite in the above URL in place of ``
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+
+### Step 3: Executing The Test
+
+- You will need **base64 encoded authentication** in order to execute your XCUITest automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+
+Take note of the base64 encoded authentication which needs to be added in the next step.
+
+{`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
+- Once you have uploaded your app and test suite, you can execute your test by running the following command:
+
+> Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"app" : "APP_ID",
+"testSuite": "TEST_SUITE_ID",
+"device" :  ["iPhone 11-14"],
+"video" : true,
+"queueTimeout": 10800,
+"idleTimeout": 150,
+"devicelog": true,
+"network": false,
+"build" : "Proverbial-XCUITest"
+}'
+```
+
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
+--header "Authorization: Basic BASIC_AUTH_TOKEN" \
+--header "Content-Type: application/json" \
+--data-raw "{
+"app" : "APP_ID",
+"testSuite": "TEST_SUITE_ID",
+"device" :  ["iPhone 11-14"],
+"video" : true,
+"queueTimeout": 10800,
+"idleTimeout": 150,
+"devicelog": true,
+"network": false,
+"build" : "Proverbial-XCUITest"
+}"
+```
+
+### Step 4: View Test Execution
+
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI Automation.
+
+## Running Tests in Parallel
+
+You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"app" : "APP_ID",
+"testSuite": "TEST_SUITE_ID",
+"device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
+"queueTimeout": 10800,
+"IdleTimeout": 150,
+"deviceLog": true,
+"build" : "Proverbial-XCUITest"
+}'
+```
+
+- For Virtual Devices, both the App file and Test-suite should be in the `Zip format`.
+- We need to pass the following capability `isvirtualdevice:true` as well when we are running test for Virtual Devices.
+
+## Using the XCUITest Agent Skill with TestMu AI
+
+The [xcuitest-skill](https://github.com/LambdaTest/agent-skills/tree/main/xcuitest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The xcuitest-skill package includes:
+
+```
+xcuitest-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing XCUITest Agent Skill
+
+Install a XCUITest Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/xcuitest-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/xcuitest-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only xcuitest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

@@ -1,0 +1,68 @@
+# Device Passcode in App Automation on Real Devices
+
+For certain use cases, you may need to perform tests on devices that are **passcode-protected**. Apps handling sensitive data (for example, **banking apps**, **enterprise apps**, or apps distributed through **MDM**) often enforce device passcodes for enhanced security.
+
+TestMu AI’s **Device Passcode in Automation** enables you to run such automated tests seamlessly on real devices.
+
+> To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
+
+## Use Cases
+
+- Validate apps requiring a system passcode prompt before login or secure workflows.
+- Ensure authentication flows function correctly when the device is protected by a passcode.
+- Automate enterprise test cases where passcodes are enforced by MDM policies.
+
+## Supported Devices
+
+### iOS Devices
+
+| Device Model          | iOS Version |
+|-----------------------|-------------|
+| iPhone 16            | 18 |
+| iPhone 16 Pro        | 18 |
+| iPhone 15            | 17 |
+| iPhone 14            | 16 |
+| iPhone 13            | 15 |
+| iPad Air 11 (2024)   | 18 |
+
+> We are actively working on expanding coverage to all supported iOS devices on TestMu AI Real Device Cloud.
+
+### Android Devices
+Available on **all real devices** running on **version 11 and above**.
+
+## Default Passcode
+- **iOS:**  `123456`
+- **Android:**  `1234`
+
+## Capability to Enable Passcode
+
+Use the `enablePasscode` capability to configure passcode-protected devices during automation testing.
+
+| Capability        | Type    | Default | Description |
+|-------------------|---------|---------|-------------|
+| **enablePasscode** | Boolean | `false` | Enable passcode devices for running tests. Use `true` to start the session with a system passcode configured. |
+
+```python
+{
+"platformName": "ios",
+"deviceName": "iPhone 16",
+"platformVersion": "18",
+"isRealMobile": True,
+#highlight-next-line
+"enablePasscode": True
+}
+```
+
+```python
+{
+"platformName": "android",
+"deviceName": "Samsung Galaxy S25",
+"platformVersion": "15",
+"isRealMobile": True,
+#highlight-next-line
+"enablePasscode": True
+}
+```
+
+- Passcode entry screens are **not visible** in the stream for security reasons. You may see a blank screen briefly during automation.
+- Enabling passcode for iOS Devices may increase the setup time of your test by **25–30 seconds** compared to regular sessions.
