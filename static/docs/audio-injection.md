@@ -1,6 +1,6 @@
 # Audio Injection on Real Devices
 
-Test audio-driven and microphone-dependent features on real Android and iOS devices through Appium / Selenium automation. Inject pre-recorded audio files directly into the device microphone, no physical mic input required.
+Test audio-driven and microphone-dependent features on real Android and iOS devices through Appium / Selenium automation. Inject pre-recorded audio files directly into the device microphone — no physical mic input required.
 
 > To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
 
@@ -45,7 +45,7 @@ curl -u "LT_USERNAME:LT_ACCESS_KEY"   -X POST "https://api.lambdatest.com/mfs/v1
 }
 ```
 
-Save the returned `media_url`. You will use it in subsequent steps.
+Save the returned `media_url` — you will use it in subsequent steps.
 
 ## Step 2 - Enable Audio Injection on Your Session
 
@@ -54,7 +54,7 @@ Set the `enableAudioInjection` capability when creating your driver session.
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("enableAudioInjection", true);
-caps.setCapability("media", "lt://MEDIA1234567890abcdef"); // optional: pre-set audio
+caps.setCapability("media", "lt://MEDIA1234567890abcdef"); // optional — pre-set audio
 ```
 
 ```python
@@ -92,7 +92,7 @@ driver.executeScript("lambda-audio-injection=lt://MEDIA1234567890abcdef");
 // 2. Trigger the app's mic input (e.g., tap Record / Start Voice Search)
 driver.findElement(AppiumBy.id("recordButton")).click();
 
-// 3. Start audio playback, the app receives the file as live mic input
+// 3. Start audio playback — the app receives the file as live mic input
 driver.executeScript("lambda-audio-start");
 
 // ... wait for the app to finish capturing ...
@@ -122,7 +122,7 @@ await driver.executeScript("lambda-audio-stop");
 - Audio must be **injected before** triggering the microphone in the app. The last injected audio is the active input.
 - The session must be created with `enableAudioInjection: true`. Hooks called without the capability return **HTTP 403 Forbidden**.
 - Calling `lambda-audio-start` before any file has been injected returns **HTTP 400** with `AUDIO_INJECTION_MEDIA_FILE_NOT_PROVIDED_ERROR`.
-- Multiple injections in the same session: the last injected audio is used on the next `lambda-audio-start`.
+- Multiple injections in the same session — the last injected audio is used on the next `lambda-audio-start`.
 - The app must be granted microphone permission. Audio Injection does **not** bypass permission prompts.
 
 ## Best Practices
@@ -136,11 +136,11 @@ await driver.executeScript("lambda-audio-stop");
 
 **Q. Can I use Audio Injection with my own automation framework?**
 
-Yes. Audio Injection is a server-side feature controlled entirely by capabilities and `executeScript` hooks. It works with any Appium- or Selenium-compatible framework.
+Yes — Audio Injection is a server-side feature controlled entirely by capabilities and `executeScript` hooks. It works with any Appium- or Selenium-compatible framework.
 
 **Q. Does Audio Injection work in parallel test runs?**
 
-Yes. Each session has its own isolated injection pipeline. Multiple parallel sessions can inject different audio files simultaneously without interference.
+Yes — each session has its own isolated injection pipeline. Multiple parallel sessions can inject different audio files simultaneously without interference.
 
 **Q. What audio formats give the best results?**
 
@@ -152,16 +152,16 @@ Confirm:
 1. `enableAudioInjection: true` is set on the session.
 2. `lambda-audio-injection=` was called **before** `lambda-audio-start`.
 3. The app has been granted microphone permission.
-4. Some apps (e.g., Google Recorder on Pixel) use privileged hardware audio paths that bypass standard injection. Use a different recorder app to verify.
+4. Some apps (e.g., Google Recorder on Pixel) use privileged hardware audio paths that bypass standard injection — use a different recorder app to verify.
 
 **Q. Can I switch audio files mid-session?**
 
-Yes. Call `lambda-audio-injection=` followed by `lambda-audio-start`. The new file replaces the previous one immediately.
+Yes — call `lambda-audio-injection=` followed by `lambda-audio-start`. The new file replaces the previous one immediately.
 
 ## Related Features
 
-- [Camera Image Injection](/docs/camera-image-injection/): Inject images into the device camera
-- [Video Injection](/docs/video-injection/): Inject videos into the device camera
-- [Biometric Authentication](/docs/biometric-authentication/): Simulate fingerprint/face authentication
+- [Camera Image Injection](/docs/camera-image-injection/) — Inject images into the device camera
+- [Video Injection](/docs/video-injection/) — Inject videos into the device camera
+- [Biometric Authentication](/docs/biometric-authentication/) — Simulate fingerprint/face authentication
 
 **Need help?** Contact Support or chat with us at the bottom-right of any page.

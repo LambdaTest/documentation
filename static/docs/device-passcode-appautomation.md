@@ -64,5 +64,5 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 }
 ```
 
-- Passcode entry screens are **not visible** in the stream for security reasons. You may see a blank screen briefly during automation.
+- Passcode entry screens are **not visible** in the stream for security reasons — you may see a blank screen briefly during automation.
 - Enabling passcode for iOS Devices may increase the setup time of your test by **25–30 seconds** compared to regular sessions.

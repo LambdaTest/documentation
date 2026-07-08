@@ -1,6 +1,6 @@
 # Sequential Test Runs
 
-Sequential test runs let you execute dependent test cases in a specific order. Unlike parallel execution, where test cases run independently and concurrently, sequential execution ensures each test case completes before the next one begins. This is useful when test cases share state or depend on the outcome of a previous test, for example, a login test that must run before an account settings test.
+Sequential test runs let you execute dependent test cases in a specific order. Unlike parallel execution, where test cases run independently and concurrently, sequential execution ensures each test case completes before the next one begins. This is useful when test cases share state or depend on the outcome of a previous test — for example, a login test that must run before an account settings test.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Parameterized test cases must use the default dataset with single values when ru
 
 ### Step 2: Configure for a Single Platform
 
-For a **single-platform sequential run** (e.g., desktop web only), you can select multiple configurations at a global level. For example, you can run the same sequence on both Linux with Chrome 137 and Linux with Firefox. A separate sequential run is created for each configuration.
+For a **single-platform sequential run** (e.g., desktop web only), you can select multiple configurations at a global level. For example, you can run the same sequence on both Linux with Chrome 137 and Linux with Firefox — a separate sequential run is created for each configuration.
 
 ### Step 3: Preview and Save
 
@@ -28,7 +28,7 @@ Click **Show execution preview** to review the test sequence before executing. T
 
 ## Multi-Platform Sequential Runs
 
-You can also configure sequential runs that span multiple platforms, for example, running a web test followed by a mobile app test. When multiple platforms are combined (desktop web, mobile browser, mobile app), the global configuration option is replaced with per-test-case configuration.
+You can also configure sequential runs that span multiple platforms — for example, running a web test followed by a mobile app test. When multiple platforms are combined (desktop web, mobile browser, mobile app), the global configuration option is replaced with per-test-case configuration.
 
 ### Step 1: Select Configurations Per Test Case
 
@@ -36,7 +36,7 @@ Assign the appropriate configuration to each test case individually. Choose conf
 
 ### Step 2: Arrange Execution Order and Preview
 
-Set the execution order based on your test dependencies. Use the execution preview to verify the sequence, for example, a web login test running first, followed by an iOS app verification test.
+Set the execution order based on your test dependencies. Use the execution preview to verify the sequence — for example, a web login test running first, followed by an iOS app verification test.
 
 ### Step 3: Execute the Sequential Run
 
@@ -47,14 +47,14 @@ Save and execute the test run. The test instances will run one after another in 
 | Aspect | Single-Platform Run | Multi-Platform Run |
 |---|---|---|
 | **Configurations** | Multiple global configurations allowed (one sequential run per config) | Single configuration per test case only |
-| **Global config** | Supported | Not supported: group configuration is removed when multiple platforms are added |
+| **Global config** | Supported | Not supported — group configuration is removed when multiple platforms are added |
 | **Concurrency** | One per configuration sequence | Limited to one across the entire run |
 
 ## Limitations
 
 - **Multi-platform runs support only a single configuration per test case.** When you add platforms such as mobile browser or mobile app alongside desktop web, the global (group) configuration option is removed.
 - **Concurrency is limited to one for multi-platform sequential runs.** Tests always run one after another since they depend on execution order.
-- **Execution order must be configured carefully.** The sequence directly impacts dependent test behavior. Verify the order in the execution preview before saving.
+- **Execution order must be configured carefully.** The sequence directly impacts dependent test behavior — verify the order in the execution preview before saving.
 
 ## Troubleshooting
 
@@ -67,6 +67,6 @@ Save and execute the test run. The test instances will run one after another in 
 
 ## Related Guides
 
-- [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/): Standard test run creation and execution
-- [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/): Automate test run scheduling
-- [Test Run Configurations](/support/docs/test-runs-configurations/): Manage browser and device configurations
+- [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/) — Standard test run creation and execution
+- [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/) — Automate test run scheduling
+- [Test Run Configurations](/support/docs/test-runs-configurations/) — Manage browser and device configurations

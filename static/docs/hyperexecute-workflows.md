@@ -42,9 +42,9 @@ During workflow creation (Step 2 of 3), you can configure the **Triggering Sched
 
 You can choose from three trigger options:
 
-- **Once**: The workflow runs automatically as soon as it is created. No manual execution needed.
-- **Later**: Schedule the workflow to run at a specific date and time.
-- **Every**: Set up recurring execution by selecting specific days of the week (Mon–Sun) and a time. For example, you can schedule a workflow to run every Monday, Wednesday, and Friday at 9:00 AM.
+- **Once** — The workflow runs automatically as soon as it is created. No manual execution needed.
+- **Later** — Schedule the workflow to run at a specific date and time.
+- **Every** — Set up recurring execution by selecting specific days of the week (Mon–Sun) and a time. For example, you can schedule a workflow to run every Monday, Wednesday, and Friday at 9:00 AM.
 
 The schedule is set in your **local timezone** and stored internally in UTC. This ensures workflows trigger at the correct time regardless of where team members are located.
 
@@ -66,9 +66,9 @@ Click the **Play** button (▶) next to a workflow to manually trigger it. This 
 
 Click the **three dots menu** (⋯) on any workflow to access the following actions:
 
-- **Edit Workflow**: Modify the workflow name, branch, YAML path, schedule, linked workflows, or variables.
-- **Clone Workflow**: Duplicate an existing workflow configuration. This creates a copy with the same settings, which you can then modify as needed.
-- **Delete Workflow**: Permanently remove a workflow. This does not delete any jobs that were previously triggered by the workflow.
+- **Edit Workflow** — Modify the workflow name, branch, YAML path, schedule, linked workflows, or variables.
+- **Clone Workflow** — Duplicate an existing workflow configuration. This creates a copy with the same settings, which you can then modify as needed.
+- **Delete Workflow** — Permanently remove a workflow. This does not delete any jobs that were previously triggered by the workflow.
 
 ## Connected Workflows (Test Chains)
 Use Workflow Linking to form test chains. For example, run a daily smoke suite first and trigger a broader regression only if smoke passes. You can link across projects you own to coordinate multi-repo testing.

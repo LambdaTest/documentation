@@ -12,7 +12,7 @@ The Accessibility Widgets module is currently in  . If you have any feedback or 
 3. Pick a **date range** that includes at least one completed Accessibility scan; empty widgets usually mean no data in range.
 4. Start with **Accessibility Test Overview** for totals, then **Types of Scans** to confirm manual vs automated mix, then **Top 10 URLs Issue Criticality** for remediation focus.
 5. Click through any **drill-down** links the widgets expose to jump into the underlying Accessibility report when available.
-6. For executive readouts, **export** or screenshot the widgets and pair them with narrative from **[Accessibility Compliance Guide](/support/docs/accessibility-compliance-guide/)**. Widgets summarize engineering signals, not legal conclusions.
+6. For executive readouts, **export** or screenshot the widgets and pair them with narrative from **[Accessibility Compliance Guide](/support/docs/accessibility-compliance-guide/)**—widgets summarize engineering signals, not legal conclusions.
 
 ## Accessibility Test Overview
 

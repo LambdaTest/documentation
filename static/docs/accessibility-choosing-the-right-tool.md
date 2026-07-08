@@ -2,7 +2,7 @@
 
 TestMu AI **Accessibility Testing** spans browser DevTools, web automation, scheduled and Web Scanner scans, native mobile (manual and Appium), reports, checklists, and optional AI/MCP workflows. Use this page as a **router**: match your situation to a starting doc, then follow the linked guides for setup and onboarding.
 
-If you are new to the product, read **[Getting Started with Accessibility Testing](/support/docs/accessibility-testing/)** first. It lists every major path in one place.
+If you are new to the product, read **[Getting Started with Accessibility Testing](/support/docs/accessibility-testing/)** first—it lists every major path in one place.
 
 ## Quick decision table
 
@@ -26,7 +26,7 @@ If you are new to the product, read **[Getting Started with Accessibility Testin
 - you want **manual** or browser-assisted scanning on a live page
 - you need quick investigation without writing test code
 - you want scan types such as [quick scan](/support/docs/accessibility-testing-run-quick-scan/), [full page](/support/docs/accessibility-testing-full-page-scanner/), [partial page](/support/docs/accessibility-testing-partial-page-scanner/), [multi-page](/support/docs/accessibility-testing-multi-page-scanner/), [workflow](/support/docs/accessibility-testing-workflow-scanner/), or [keyboard](/support/docs/accessibility-keyboard-scan/) scan
-- you need to tune DevTools behavior, see [DevTools Settings](/support/docs/accessibility-devtools-settings/) and [Update DevTools](/support/docs/accessibility-update-devtools-extension/)
+- you need to tune DevTools behavior—see [DevTools Settings](/support/docs/accessibility-devtools-settings/) and [Update DevTools](/support/docs/accessibility-update-devtools-extension/)
 
 **Start:** [Accessibility DevTools (Overview)](/support/docs/accessibility-devtools/) → [Install Toolkit](/support/docs/accessibility-testing-install-devtools/) if you have not installed the extension yet.
 
@@ -47,7 +47,7 @@ If you are new to the product, read **[Getting Started with Accessibility Testin
 - [NUnit (C#)](/support/docs/accessibility-nunit-csharp-test/)
 - [Robot Framework](/support/docs/accessibility-robot-framework-test/)
 - [Cucumber (Java)](/support/docs/accessibility-cucumber-java-test/)
-- [HyperExecute integration: Selenium accessibility](/support/docs/selenium-hyperexecute-accessibility-tests/)
+- [HyperExecute integration — Selenium accessibility](/support/docs/selenium-hyperexecute-accessibility-tests/)
 
 **Configuration and pipeline:**
 
@@ -58,7 +58,7 @@ If you are new to the product, read **[Getting Started with Accessibility Testin
 
 - you want **recurring** site scans without opening DevTools each time
 - you need **sitemap**, **CSV**, or **crawler**-driven URL discovery
-- you want the **Accessibility-native** scheduling surface, not the Web Scanner app
+- you want the **Accessibility-native** scheduling surface—not the Web Scanner app
 
 **Start:** [Test Scheduling - Sitemap (Overview)](/support/docs/accessibility-test-scheduling/).
 

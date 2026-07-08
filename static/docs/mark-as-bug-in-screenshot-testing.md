@@ -25,7 +25,7 @@ TestMu AI offers more than 3000+ real browsers and browser versions on every typ
 
 **Step 2:** Once you hit the **Capture** button, you will find a message on the top indicating that the screenshot test has begun.
 
-**Step 3:** Once the screenshot testing is complete, you will have all the screenshots categorized by browsers selected from your input. Double-click on any screenshot you may want to validate.
+**Step 3:** Once the screenshot testing is complete, you will have all the screenshots categorized by browsers selected from your input—double-click on any screenshot you may want to validate.
 
 **Step 4:** As you double-click on any screenshot, an image editor will pop up with various buttons to help you highlight and annotate your UI observation before sharing the screenshot with your colleagues.
 

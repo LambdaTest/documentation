@@ -9,26 +9,26 @@ This feature is being rolled out gradually. If you don't see **While Loop** in t
 
 ## How It Works
 
-1. Insert a **While Loop** block from the **/** slash command menu. This is the only entry point for adding a loop.
-2. Define the loop condition, either in natural language (default) or using the operand & operator editor.
+1. Insert a **While Loop** block from the **/** slash command menu — this is the only entry point for adding a loop.
+2. Define the loop condition — either in natural language (default) or using the operand & operator editor.
 3. Confirm the condition. The loop body opens.
-4. Add steps inside the loop body: natural language steps, modules, JavaScript, API, DB, or manual interaction.
+4. Add steps inside the loop body — natural language steps, modules, JavaScript, API, DB, or manual interaction.
 5. Click **End While** to finalize the block. Until you finalize, the loop is an authoring‑only placeholder and does not run.
 6. Once finalized, each run of the loop follows the same cycle on every iteration:
    - The condition is evaluated.
    - If the condition is **true**, the loop body runs once.
    - If the condition is **false**, the loop exits successfully and execution moves on to the next step in the test.
-7. A hard safety cap of **30 iterations per execution** prevents runaway loops. See [Max Iteration Safety Limit](#max-iteration-safety-limit).
+7. A hard safety cap of **30 iterations per execution** prevents runaway loops — see [Max Iteration Safety Limit](#max-iteration-safety-limit).
 
 ## Prerequisites
 
 - An active KaneAI authoring session.
-- Familiarity with [Conditional Logic (If / Else)](/support/docs/kaneai-conditional-logic/). While Loops reuse the same condition editor.
+- Familiarity with [Conditional Logic (If / Else)](/support/docs/kaneai-conditional-logic/) — While Loops reuse the same condition editor.
 - Any variables, smart variables, or dataset parameters you plan to reference in the loop condition or body.
 
 ## Step‑by‑step Guide
 
-### Step 1: Insert a While Loop Block
+### Step 1 — Insert a While Loop Block
 
 A While Loop can only be added through the **/** slash command menu.
 
@@ -38,11 +38,11 @@ A While Loop can only be added through the **/** slash command menu.
 
 A newly inserted block starts in an empty state with no condition and no body steps.
 
-### Step 2: Define the Loop Condition
+### Step 2 — Define the Loop Condition
 
 The condition editor opens in **natural language mode** by default, matching KaneAI's NL‑first authoring philosophy. You can switch to **operand & operator mode** at any time.
 
-#### Option A: Natural Language
+#### Option A — Natural Language
 
 Type your condition as a plain‑English sentence. KaneAI interprets the intent and re‑evaluates it at runtime. Examples:
 
@@ -51,11 +51,11 @@ Type your condition as a plain‑English sentence. KaneAI interprets the intent 
 - `while {{count}} is greater than 0`
 - `while {{job_status}} is not "complete"`
 
-#### Option B: Operand & Operator
+#### Option B — Operand & Operator
 
 Build the condition explicitly using a **left operand**, a **comparison operator**, and a **right operand**:
 
-1. Enter a **left operand**: this can be a variable (e.g., `{{active_count}}`), a dataset parameter (e.g., `${max_attempts}`), extracted text, or a literal value.
+1. Enter a **left operand** — this can be a variable (e.g., `{{active_count}}`), a dataset parameter (e.g., `${max_attempts}`), extracted text, or a literal value.
 2. Choose a **comparison operator** from the dropdown:
 
 | Operator | Description |
@@ -73,29 +73,29 @@ Build the condition explicitly using a **left operand**, a **comparison operator
 | `is_visible` | Target element is currently visible on the page |
 | `is_not_visible` | Target element is not currently visible on the page |
 
-3. Enter the **right operand**: a literal, variable, dataset parameter, or extracted value.
+3. Enter the **right operand** — a literal, variable, dataset parameter, or extracted value.
 
 Both operands support variables (`{{var_name}}`), dataset parameters (`${param_name}`), extracted text, and literal values.
 
 #### Confirming the Condition
 
-Confirm the condition to open the loop body. Once confirmed, the condition remains editable until the loop begins executing. You can reopen it to adjust operators, operands, or the natural‑language expression.
+Confirm the condition to open the loop body. Once confirmed, the condition remains editable until the loop begins executing — you can reopen it to adjust operators, operands, or the natural‑language expression.
 
-### Step 3: Add Steps Inside the Loop Body
+### Step 3 — Add Steps Inside the Loop Body
 
-The loop body becomes available only after the condition is confirmed. Inside the body you get the standard KaneAI step input, the same one used in the main authoring flow, where you can type a natural‑language step or press **/** to open the slash command menu.
+The loop body becomes available only after the condition is confirmed. Inside the body you get the standard KaneAI step input — the same one used in the main authoring flow — where you can type a natural‑language step or press **/** to open the slash command menu.
 
 You can add any of the following inside a loop body:
 
-- **Natural language steps**: type your instruction in plain English.
-- **Modules**: reuse existing modules by adding them via the slash command menu.
-- **JavaScript steps**: execute custom JS for data extraction, array handling, or index management.
-- **API steps**: make API calls as part of the iteration.
-- **DB steps**: run database queries inside each iteration.
-- **Manual interaction**: perform actions directly on the browser within the loop body using the manual interaction control.
-- **If / Else blocks**: insert a conditional block inside the loop body via the slash command menu to add branching logic within iterations.
+- **Natural language steps** — type your instruction in plain English.
+- **Modules** — reuse existing modules by adding them via the slash command menu.
+- **JavaScript steps** — execute custom JS for data extraction, array handling, or index management.
+- **API steps** — make API calls as part of the iteration.
+- **DB steps** — run database queries inside each iteration.
+- **Manual interaction** — perform actions directly on the browser within the loop body using the manual interaction control.
+- **If / Else blocks** — insert a conditional block inside the loop body via the slash command menu to add branching logic within iterations.
 
-### Step 4: Finalize the Loop with "End While"
+### Step 4 — Finalize the Loop with "End While"
 
 When your loop body is ready, click **End While** at the bottom of the block to finalize it.
 
@@ -118,7 +118,7 @@ Every While Loop exposes a built‑in **`{{loop_counter}}`** variable inside its
 
 `{{loop_counter}}` is available to all step types inside the loop body, including natural language steps, JavaScript snippets, API and DB steps, and **element selectors**.
 
-**Example: clicking each row of a table one at a time:**
+**Example — clicking each row of a table one at a time:**
 
 > Click the row at position `{{loop_counter}}` in the bookings table
 
@@ -128,8 +128,8 @@ KaneAI substitutes the counter into the underlying element selector before it is
 
 All existing KaneAI [variables](/support/docs/kane-ai-using-variables/) and [dataset parameters](/support/docs/kane-ai-using-datasets/) are fully usable inside loop conditions and loop body steps. No special configuration is required.
 
-- **Variables** use the `{{variable_name}}` syntax, for example, `{{active_count}}`, `{{job_status}}`, or a value extracted from a previous step.
-- **Dataset parameters** use the `${parameter_name}` syntax, for example, `${max_retries}`.
+- **Variables** use the `{{variable_name}}` syntax — for example, `{{active_count}}`, `{{job_status}}`, or a value extracted from a previous step.
+- **Dataset parameters** use the `${parameter_name}` syntax — for example, `${max_retries}`.
 
 **Dynamic iteration count pattern.** You can extract a count from the page or an API response into a variable using a JavaScript step, then reference that variable in the While condition:
 
@@ -138,11 +138,11 @@ All existing KaneAI [variables](/support/docs/kane-ai-using-variables/) and [dat
 3. Add the steps you want to repeat inside the body.
 
 **Operand validation**
-Both operands of a condition cannot be parameters at the same time. If one operand is a parameter (for example, a dataset parameter like `${max_retries}`), the other operand must be a runtime‑updated value: a local variable, a smart variable, a value read from the UI, or a literal. If both operands are parameters, KaneAI rejects the condition with the `BOTH_OPERANDS_AS_PARAMETERS` error. See [Error Messages and Troubleshooting](#error-messages-and-troubleshooting) for details.
+Both operands of a condition cannot be parameters at the same time. If one operand is a parameter (for example, a dataset parameter like `${max_retries}`), the other operand must be a runtime‑updated value — a local variable, a smart variable, a value read from the UI, or a literal. If both operands are parameters, KaneAI rejects the condition with the `BOTH_OPERANDS_AS_PARAMETERS` error. See [Error Messages and Troubleshooting](#error-messages-and-troubleshooting) for details.
 
 ## Element Presence / Absence Conditions
 
-While Loop conditions can reference the visibility of UI elements directly, useful for polling, waits, and spinner handling.
+While Loop conditions can reference the visibility of UI elements directly — useful for polling, waits, and spinner handling.
 
 - **Natural language mode:**
   - `while the loading spinner is visible`
@@ -162,11 +162,11 @@ Every While Loop is capped at a hard maximum of **30 iterations per execution**.
 
 This safety cap prevents a mis‑configured or non‑terminating condition from consuming unlimited execution time.
 
-- The maximum iteration value is **not shown** during normal authoring or execution. Only the current iteration number is displayed.
+- The maximum iteration value is **not shown** during normal authoring or execution — only the current iteration number is displayed.
 - When a loop hits the cap, execution stops and an error is reported. The error clearly indicates that termination was caused by the safety limit and not by the exit condition becoming false.
 - The underlying error code is `LOOP_MAX_LIMIT_REACHED`.
 
-Use the safety cap as a last line of defense. Design your condition so the loop exits naturally well before the 30th iteration. If your scenario legitimately requires more than 30 iterations, reach out to your TestMu AI support representative.
+Use the safety cap as a last line of defense — design your condition so the loop exits naturally well before the 30th iteration. If your scenario legitimately requires more than 30 iterations, reach out to your TestMu AI support representative.
 
 ## Common Use Cases
 
@@ -181,12 +181,12 @@ Use the safety cap as a last line of defense. Design your condition so the loop 
 - **Design for a natural exit.** Write conditions that terminate deterministically. Treat the max iteration limit as a safety net, not a control flow mechanism.
 - **Keep loop bodies small.** Extract repeated logic into a [module](/support/docs/kane-ai-modules/) and call the module inside the loop body instead of duplicating steps.
 - **Validate the body first.** Author the steps you intend to repeat outside a loop first, confirm they work, and then move them inside the While block.
-- **Use `{{loop_counter}}` for position‑based targeting.** Prefer `{{loop_counter}}` in selectors over hand‑writing `nth-of-type(…)` indexes. It keeps the intent obvious and avoids off‑by‑one errors.
+- **Use `{{loop_counter}}` for position‑based targeting.** Prefer `{{loop_counter}}` in selectors over hand‑writing `nth-of-type(…)` indexes — it keeps the intent obvious and avoids off‑by‑one errors.
 - **Extract dynamic counts into variables.** Read the number of items from the page or API into a variable first, then reference it in your condition, rather than hard‑coding an iteration count.
 
 ## Editing an Existing While Loop
 
-Once a While Loop has been finalized, you can still change it. The loop itself stays in sync automatically.
+Once a While Loop has been finalized, you can still change it — the loop itself stays in sync automatically.
 
 - **Add, remove, or reorder body steps.** Use the edit instruction action on any step inside the loop; the loop updates automatically to reflect the change.
 - **Change the condition.** Edit the While Loop step directly. The new condition applies on the next test run.
@@ -195,7 +195,7 @@ Once a While Loop has been finalized, you can still change it. The loop itself s
 
 ## Nesting Rules
 
-While Loops can contain **regular If / Else conditional blocks** inside their body, which lets you branch within each iteration. The maximum supported nesting depth is **two levels**: a While Loop containing a conditional, which in turn contains ordinary steps.
+While Loops can contain **regular If / Else conditional blocks** inside their body, which lets you branch within each iteration. The maximum supported nesting depth is **two levels** — a While Loop containing a conditional, which in turn contains ordinary steps.
 
 The following nesting patterns are **not supported**:
 
@@ -209,7 +209,7 @@ The following nesting patterns are **not supported**:
 - **Nested While Loops are not supported.** You cannot place a While Loop inside another While Loop (see [Nesting Rules](#nesting-rules)).
 - **While Loops cannot live inside conditional branches.** A While Loop cannot be placed inside an If / Else branch.
 - **No Break / Continue commands.** There is no way to exit a loop early or skip to the next iteration; structure your condition to terminate naturally.
-- **Natural language cannot create a loop.** Phrases like "repeat this 10 times" or "while the spinner is visible, do X" will not create a loop. You must use the slash command and select **While Loop**. KaneAI surfaces this as the `WHILE_NOT_SUPPORTED_VIA_NL` error.
+- **Natural language cannot create a loop.** Phrases like "repeat this 10 times" or "while the spinner is visible, do X" will not create a loop — you must use the slash command and select **While Loop**. KaneAI surfaces this as the `WHILE_NOT_SUPPORTED_VIA_NL` error.
 - **Both operands in a condition cannot be parameters at the same time.** At least one side must be a runtime‑updated value. See `BOTH_OPERANDS_AS_PARAMETERS` in [Error Messages and Troubleshooting](#error-messages-and-troubleshooting).
 - **Local variables must be defined inside the block.** If a local variable referenced inside a While block was created outside the block, KaneAI shows an error when you click **End While**.
 
@@ -247,11 +247,11 @@ Below are the user‑facing error codes you may encounter when authoring or runn
 
 > Review the loop condition and the actions being performed within the loop to ensure they are correct and will allow the loop to terminate properly.
 
-**When you see it.** KaneAI detected a condition / body combination that cannot terminate, typically a condition that is independent of anything the body changes, or a comparison that is always true.
+**When you see it.** KaneAI detected a condition / body combination that cannot terminate — typically a condition that is independent of anything the body changes, or a comparison that is always true.
 
 **How to resolve.**
 
-- Ensure the body contains at least one step that changes a value referenced by the condition, for example, increment a counter, click a control that updates the UI state, or wait for a status transition.
+- Ensure the body contains at least one step that changes a value referenced by the condition — for example, increment a counter, click a control that updates the UI state, or wait for a status transition.
 - If the condition uses constants only (e.g. `1 == 1`), rewrite it so it depends on a variable or UI state that evolves during the loop.
 
 ### 3. `BOTH_OPERANDS_AS_PARAMETERS`
@@ -264,7 +264,7 @@ Below are the user‑facing error codes you may encounter when authoring or runn
 
 > Please modify the loop condition to ensure that only one operand is a parameter.
 
-**When you see it.** Both sides of the loop condition are test parameters (for example, `${max_retries} > ${default_retries}`). Parameter values are fixed for the lifetime of a run, so such a condition cannot change between iterations. It would either be an infinite loop or never enter.
+**When you see it.** Both sides of the loop condition are test parameters (for example, `${max_retries} > ${default_retries}`). Parameter values are fixed for the lifetime of a run, so such a condition cannot change between iterations — it would either be an infinite loop or never enter.
 
 **How to resolve.** Replace one operand with a runtime‑updated value:
 
@@ -284,7 +284,7 @@ Example valid forms: `{{counter}} < ${max_retries}`, `${status} == "ready"`, `{{
 
 > Use the while loop button in slash commands to create a loop instruction.
 
-**When you see it.** You added a natural‑language step that describes a loop, for example, *"repeat until the cart is empty"*, *"while the spinner is visible, do X"*, or *"keep clicking Next"*. The natural‑language pipeline does not expand these phrases into loops.
+**When you see it.** You added a natural‑language step that describes a loop — for example, *"repeat until the cart is empty"*, *"while the spinner is visible, do X"*, or *"keep clicking Next"*. The natural‑language pipeline does not expand these phrases into loops.
 
 **How to resolve.**
 
@@ -297,15 +297,15 @@ Example valid forms: `{{counter}} < ${max_retries}`, `${status} == "ready"`, `{{
 
 ### How do I exit a While Loop early?
 
-Early exit (Break) and skip‑to‑next‑iteration (Continue) are not supported. Structure your exit condition (for example, combine it with an additional flag variable you set from inside the loop) so the loop terminates naturally on the next re‑evaluation.
+Early exit (Break) and skip‑to‑next‑iteration (Continue) are not supported. Structure your exit condition — for example, combine it with an additional flag variable you set from inside the loop — so the loop terminates naturally on the next re‑evaluation.
 
 ### Can I nest a While Loop inside another While Loop?
 
-No. Nested loops are not supported, and a While Loop cannot be placed inside an If / Else branch either. A While Loop **can** contain conditional (If / Else) blocks in its body. See [Nesting Rules](#nesting-rules). If you need multi‑level iteration, split the logic across multiple test cases or use a single loop combined with JavaScript for inner bookkeeping.
+No. Nested loops are not supported, and a While Loop cannot be placed inside an If / Else branch either. A While Loop **can** contain conditional (If / Else) blocks in its body — see [Nesting Rules](#nesting-rules). If you need multi‑level iteration, split the logic across multiple test cases or use a single loop combined with JavaScript for inner bookkeeping.
 
 ### What happens if my condition is already false on the first check?
 
-The loop body is skipped entirely, zero iterations run, and execution continues with the next step after the block.
+The loop body is skipped entirely — zero iterations run — and execution continues with the next step after the block.
 
 ### What is the maximum number of iterations allowed?
 
@@ -321,7 +321,7 @@ No. The live iteration counter is a Playground‑only view. On the Test Summary 
 
 ### Do dataset parameters and variables work inside loops?
 
-Yes. Both `{{variable}}` and `${dataset_parameter}` syntaxes are fully supported inside loop conditions and body steps with no special configuration. The only restriction is that both operands in a single condition cannot be parameters at the same time. At least one must be a runtime‑updated value such as a local variable, a smart variable, a UI‑derived value, or a literal. See the `BOTH_OPERANDS_AS_PARAMETERS` entry in [Error Messages and Troubleshooting](#error-messages-and-troubleshooting).
+Yes. Both `{{variable}}` and `${dataset_parameter}` syntaxes are fully supported inside loop conditions and body steps with no special configuration. The only restriction is that both operands in a single condition cannot be parameters at the same time — at least one must be a runtime‑updated value such as a local variable, a smart variable, a UI‑derived value, or a literal. See the `BOTH_OPERANDS_AS_PARAMETERS` entry in [Error Messages and Troubleshooting](#error-messages-and-troubleshooting).
 
 ### Why is nothing happening when I click "End While"?
 

@@ -40,7 +40,7 @@ Toggle between a **Grid view** (screenshot thumbnails, ideal for a quick visual 
 
 ### 3. Group by test
 
-Organize screenshots by automation suite or test name so related screenshots stay together, far easier to navigate than a flat list when a run produces dozens of screenshots.
+Organize screenshots by automation suite or test name so related screenshots stay together — far easier to navigate than a flat list when a run produces dozens of screenshots.
 
 ### 4. Deep link into SmartUI
 
@@ -57,14 +57,14 @@ The **View in SmartUI** link on a build takes users straight to the full SmartUI
 ## Availability and access
 
 - The feature appears as a tab in the test view for any test that has associated SmartUI screenshots; tests without SmartUI data won't show SmartUI content.
-- It is rolled out progressively. If the user does not see the SmartUI tab and expects to, their account may not yet be enabled; contact the account team or support.
+- It is rolled out progressively. If the user does not see the SmartUI tab and expects to, their account may not yet be enabled — contact the account team or support.
 - Requires an active SmartUI project linked to the automation run.
 
 ## Tips and known behavior
 
 - **Real Device sessions:** Screenshots are matched to the user's test even when a session identifier isn't present, so results display reliably for Real Device runs.
 - **Mixed runs:** App Automation and Web-Automation-with-Real-Device tests each route to their correct dashboard when the user follows a deep link.
-- For the cleanest grouping, use consistent, descriptive test names in the automation suite; these are what the **Group by test** view uses to cluster screenshots.
+- For the cleanest grouping, use consistent, descriptive test names in the automation suite — these are what the **Group by test** view uses to cluster screenshots.
 
 ## FAQ
 

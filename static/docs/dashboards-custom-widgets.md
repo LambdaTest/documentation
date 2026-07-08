@@ -237,7 +237,7 @@ Get a per-device breakdown showing test count and total duration on each dedicat
 
 Create one widget for **App Automation** and one for **Real Device** testing.
 
-#### Testing by Type: Table
+#### Testing by Type — Table
 
 Get a product-level summary (e.g., "App Automation Real Device", "Manual App Testing Real Device") for dedicated devices.
 
@@ -250,7 +250,7 @@ Get a product-level summary (e.g., "App Automation Real Device", "Manual App Tes
 
 Create one widget for **App Automation** and one for **Real Device** testing.
 
-#### Testing by Type: Bar Chart
+#### Testing by Type — Bar Chart
 
 Same data as the table above, rendered as a bar chart for visual comparison.
 

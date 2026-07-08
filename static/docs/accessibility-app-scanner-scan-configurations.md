@@ -17,13 +17,13 @@ Use Scan Configurations when users want to scope a manual scan to only the relev
 5. **Fine-tune individual rules.** Within each category, switch specific rules on or off. Anything left on is **Enabled**; anything switched off is **Disabled**.
 6. **Run the scan.** Only the selected rules are evaluated on the device, and the report contains results for exactly those rules.
 
-{/* IMAGE PLACEHOLDER: App Scanner home screen with the Scan Settings summary (original screenshot, compressed to under 100 KB). Save the file at the path below, then uncomment.
+{/* IMAGE PLACEHOLDER — App Scanner home screen with the Scan Settings summary (original screenshot, compressed to under 100 KB). Save the file at the path below, then uncomment.
 
 */}
 
 ## Configuration Options Details
 
-{/* IMAGE PLACEHOLDER: scan configuration panel (original screenshot). Save the file at the path below, then uncomment.
+{/* IMAGE PLACEHOLDER — scan configuration panel (original screenshot). Save the file at the path below, then uncomment.
 
 */}
 
@@ -31,8 +31,8 @@ Use Scan Configurations when users want to scope a manual scan to only the relev
 
 Users select a single WCAG target such as `wcag2a`, `wcag21aa`, or `wcag22aaa`. The selection is **cumulative** higher versions and levels include the lower ones:
 
-- A higher **version** includes the lower ones: choosing **2.1** also brings in all **2.0** rules; choosing **2.2** brings in **2.0 + 2.1**.
-- A higher **level** includes the lower ones: choosing **AA** also brings in all **A** rules; choosing **AAA** brings in **A + AA + AAA**.
+- A higher **version** includes the lower ones — choosing **2.1** also brings in all **2.0** rules; choosing **2.2** brings in **2.0 + 2.1**.
+- A higher **level** includes the lower ones — choosing **AA** also brings in all **A** rules; choosing **AAA** brings in **A + AA + AAA**.
 
 > **Example:** Selecting **WCAG 2.1 AA** runs every rule whose success criterion is in WCAG **2.0 or 2.1** at level **A or AA**. WCAG 2.2 rules and AAA-only rules are **not** included until the version or level is raised.
 
@@ -46,7 +46,7 @@ Some rules carry a special tag in addition to their WCAG criterion. Each tag has
 | **Beta** | Newer rules still being refined (for example, traversal-order and certain contrast or touch-target checks). | ON |
 | **AI-powered** | Rules evaluated by AI Detention Agent (for example, *Image in Text* detection). | OFF |
 
-A rule tagged "Best Practice" will **not** run if the Best Practice toggle is off, even if its WCAG criterion is in range. The same applies to Beta and AI-powered rules. If an expected rule does not run, check its group toggle.
+A rule tagged "Best Practice" will **not** run if the Best Practice toggle is off—even if its WCAG criterion is in range. The same applies to Beta and AI-powered rules. If an expected rule does not run, check its group toggle.
 
 ### Individual rules and categories
 
@@ -70,7 +70,7 @@ Within any category, individual rules can be switched on or off. **An explicit s
 Each user's scan configuration is persisted on their last saved scan.
 
 - Every time a user runs a scan, the configuration is saved as that user's **last-used settings**, scoped to **the user account and the platform** (Android and iOS are remembered separately).
-- The next time the user opens the scan configuration panel, it is **pre-filled with the configuration from the most recent scan** on that platform, so the setup does not have to be repeated.
+- The next time the user opens the scan configuration panel, it is **pre-filled with the configuration from the most recent scan** on that platform—so the setup does not have to be repeated.
 - Changing settings and running a new scan **updates** the user's last-used settings to the newest run.
 - This is **per user and per platform**: each user's Android and iOS setups are tracked independently, and teammates' setups do not affect one another.
 
@@ -90,7 +90,7 @@ For users who have never run a configured mobile scan before (no saved settings 
 
 ## What to expect in results
 
-- **Scoped results.** The report contains violations only for the enabled rules. Rules turned off (directly, or through WCAG or group settings) do not appear and do not affect the accessibility score for that scan.
+- **Scoped results.** The report contains violations only for the enabled rules. Rules turned off—directly, or through WCAG or group settings—do not appear and do not affect the accessibility score for that scan.
 - **Faster scans.** Because disallowed rules are skipped **before** they run on the device, narrowing the configuration generally makes scans quicker.
 - **Configuration recorded with the test.** The WCAG version, group toggles, and the enabled or disabled rule lists are stored alongside the scan, so the team can always see how a given result was produced. The exact rules applied to a scan are also visible in the report (see [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/#what-to-expect-in-results)).
 
@@ -100,13 +100,13 @@ For users who have never run a configured mobile scan before (no saved settings 
 A check runs only if its WCAG criterion is in range **and** every tag it carries is enabled. If the Best Practice toggle is off, Best Practice rules are skipped regardless of WCAG level. Turn the relevant group toggle on.
 
 **Does every scan need to be reconfigured?**
-No. The last-used configuration is pre-filled automatically (per platform). Users adjust only what they need and run. The scan must be saved for the configuration to persist.
+No. The last-used configuration is pre-filled automatically (per platform). Users adjust only what they need and run—the scan must be saved for the configuration to persist.
 
 **Do configuration changes affect teammates?**
 No. Settings are saved per user and per platform.
 
 **Why are AI-powered rules off by default?**
-They are opt-in by design: AI rules invoke AI evaluation and surface items for manual verification rather than automatic pass/fail. Users enable them when that depth is required.
+They are opt-in by design—AI rules invoke AI evaluation and surface items for manual verification rather than automatic pass/fail. Users enable them when that depth is required.
 
 ## Related docs
 

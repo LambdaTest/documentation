@@ -2,7 +2,7 @@
 
 Manual accessibility testing is crucial to ensure that your mobile apps and websites are fully compliant with the Web Content Accessibility Guidelines (WCAG). This guarantees that your websites are usable by people with disabilities, regardless of their device or browsing capabilities.
 
-TestMu AI's Live Screen Reader feature empowers you to perform manual accessibility testing on real Android devices, allowing you to navigate through app elements with spoken descriptions of the UI, similar to the [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845) functionality. This feature enables comprehensive accessibility testing to ensure compliance with WCAG standards.
+TestMu AI's Live Screen Reader feature empowers you to perform manual accessibility testing on real Android devices, allowing you to navigate through app elements with spoken descriptions of the UI—similar to the [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845) functionality. This feature enables comprehensive accessibility testing to ensure compliance with WCAG standards.
 
 ## Accessing Screen Reader in Real Device App Testing
 
@@ -10,7 +10,7 @@ TestMu AI's Live Screen Reader feature empowers you to perform manual accessibil
 
 **Step 2:** Select the app you want to test and choose a device. Once selected, click on the **Start button** to launch the session.
 
-> Make sure the device supports accessibility features, look for the **Accessibility icon** next to the device name.
+> Make sure the device supports accessibility features — look for the **Accessibility icon** next to the device name.
 
 **Step 3:** After the session starts, open the **Screen Reader** option from the sidebar and use the **toggle to enable or disable the TalkBack** functionality.
 

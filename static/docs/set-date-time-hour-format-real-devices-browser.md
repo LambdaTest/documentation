@@ -1,6 +1,6 @@
 # Set Custom Date, Time & Hour Format on Real Devices (Browser)
 
-Testing applications often requires validation across different date, time, and format scenarios. TestMu AI now supports dynamic configuration of **date, time, 12/24-hour format**, and **automatic time toggle** on real **iOS (14+)** and **Android (10+)** devices, both in **manual** sessions and via **Appium automation hooks**.
+Testing applications often requires validation across different date, time, and format scenarios. TestMu AI now supports dynamic configuration of **date, time, 12/24-hour format**, and **automatic time toggle** on real **iOS (14+)** and **Android (10+)** devices — both in **manual** sessions and via **Appium automation hooks**.
 
 This enables use cases like testing scheduled alerts, AM/PM behaviors, time-bound features, and regional formatting validations.
 
@@ -16,7 +16,7 @@ This enables use cases like testing scheduled alerts, AM/PM behaviors, time-boun
 
 **Step 5:**  In the **modal**, configure the **date**, **time**, and **time format** as needed, then click **Update** to apply the changes to the device.
 
-On Android devices, certain models, particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**, do not support custom date and time configuration. On such devices, the modal will display a **Not Supported** message.
+On Android devices, certain models — particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs** — do not support custom date and time configuration. On such devices, the modal will display a **Not Supported** message.
 
 ## Date & Time Configuration Options
 
@@ -50,7 +50,7 @@ The modal includes four options to simulate various datetime-related behaviors:
 | iOS      | Manual + Appium Executor    | iOS 14 and above      |
 | Android  | Manual + Appium Executor    | Android 10 and above  |
 
-Custom date and time configuration is not supported on certain Android device models, particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**. On these devices, the modal will display a **Not Supported** message during manual sessions, and the Appium hook will return the following error during automation:
+Custom date and time configuration is not supported on certain Android device models — particularly those from **Motorola, Xiaomi, Oppo, and other Chinese OEMs**. On these devices, the modal will display a **Not Supported** message during manual sessions, and the Appium hook will return the following error during automation:
 
 `Custom date and time hook is not supported on this device. Please try on another device_id.`
 

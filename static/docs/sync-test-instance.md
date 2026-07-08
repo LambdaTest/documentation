@@ -22,31 +22,31 @@ When you open a stale test instance, a banner appears at the top indicating how 
 
 ## Comparing Versions
 
-Before syncing, you can review exactly what changed. Click **View comparison** from the version banner to open a side-by-side diff view. This highlights all differences between the test case version currently linked to the test instance and the latest version of the same test case, including changes to descriptions, preconditions, and individual steps.
+Before syncing, you can review exactly what changed. Click **View comparison** from the version banner to open a side-by-side diff view. This highlights all differences between the test case version currently linked to the test instance and the latest version of the same test case — including changes to descriptions, preconditions, and individual steps.
 
 ## Syncing a Test Instance
 
 When you click the sync action, a confirmation modal appears with the following details:
 
 - The instance will be updated to the latest version.
-- **All statuses will be reset to Not Started**: both the overall instance status and every individual step status.
+- **All statuses will be reset to Not Started** — both the overall instance status and every individual step status.
 - **Existing remarks and attachments will be preserved** for re-verification.
 
 Click **Update to Version** to confirm, or **Cancel** to keep the current version.
 
 ### After Syncing
 
-Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
+Once synced, the test instance is updated with the latest master test case content — including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
 
 ## Audit Log
 
-Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-instance-audit-logs/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes, giving your team full traceability.
+Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-instance-audit-logs/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes — giving your team full traceability.
 
 **Duplicating a Test Run**
-When you duplicate a test run, all test instances in the new run are automatically linked to the **latest version** of their master test cases, regardless of which version was used in the original run. All statuses are set to **Not Started**.
+When you duplicate a test run, all test instances in the new run are automatically linked to the **latest version** of their master test cases — regardless of which version was used in the original run. All statuses are set to **Not Started**.
 
 ## Limitations
 
-- **No auto-sync**: Syncing is a manual action. Test instances do not update automatically when the master test case changes.
-- **No partial status retention**: All statuses (instance and step level) are reset to **Not Started** upon sync. There is no option to selectively retain step statuses.
-- **KaneAI-generated versions**: If the latest version of a master test case was generated via **Automate with KaneAI**, the sync action is disabled for that instance. A tooltip indicates the reason when you hover over the disabled action.
+- **No auto-sync** — Syncing is a manual action. Test instances do not update automatically when the master test case changes.
+- **No partial status retention** — All statuses (instance and step level) are reset to **Not Started** upon sync. There is no option to selectively retain step statuses.
+- **KaneAI-generated versions** — If the latest version of a master test case was generated via **Automate with KaneAI**, the sync action is disabled for that instance. A tooltip indicates the reason when you hover over the disabled action.

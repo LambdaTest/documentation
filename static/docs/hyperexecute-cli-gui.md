@@ -62,7 +62,7 @@ For detailed instructions on creating and using advanced queries, refer to our [
 
 ### Step 4: Specify Run Config
 The **Run Config tab** in HyperExecute GUI offers an intuitive visual interface to configure your test environment and execution settings.
-You’ll find the basic preset configurations displayed just below your project name. If you need to modify or customize these settings, simply navigate to the Run Config tab and adjust your execution environment effortlessly, _no YAML editing required_.
+You’ll find the basic preset configurations displayed just below your project name. If you need to modify or customize these settings, simply navigate to the Run Config tab and adjust your execution environment effortlessly — _no YAML editing required_.
 
 To learn about any configuration in detail, please search for the keyword in the **[HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml)**. Please note that the GUI follows version 0.2 YAML parameters instead of discovery and runner commands as in version 0.1 YAML which you can find [here](/support/docs/hyperexecute-yaml-version0.2).
 

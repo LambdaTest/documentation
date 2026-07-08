@@ -33,7 +33,7 @@ assert the product image is displayed
 assert the green checkmark icon appears next to "Verified"
 ```
 
-Visual assertions rely on screenshots. Elements smaller than 12×12 pixels may not be detected reliably. Avoid asserting on exact hex colors. Use descriptive colors instead.
+Visual assertions rely on screenshots. Elements smaller than 12×12 pixels may not be detected reliably. Avoid asserting on exact hex colors — use descriptive colors instead.
 
 ### URL & Browser State Assertions
 
@@ -85,8 +85,8 @@ Verify the interactive state of UI elements using natural language.
 
 **Present vs. Visible**
 These two assertions behave differently when an element is not found:
-- **"Assert element is hidden"**: Element must exist in the DOM but not be displayed. Returns an **error** if the element is not found at all.
-- **"Assert element is not present"**: Element does not exist in the DOM. Returns **pass** if the element is not found.
+- **"Assert element is hidden"** — Element must exist in the DOM but not be displayed. Returns an **error** if the element is not found at all.
+- **"Assert element is not present"** — Element does not exist in the DOM. Returns **pass** if the element is not found.
 
 ### DOM Attribute Assertions
 
@@ -137,7 +137,7 @@ CSS values are automatically normalized before comparison:
 - **Font families:** Surrounding quotes are stripped.
 - **Whitespace:** Extra whitespace is collapsed.
 
-Named color normalization is exact-match only: "red" maps to `rgb(255, 0, 0)`, but shades like `#d10000` will **not** match "red". Use exact RGB values for precision.
+Named color normalization is exact-match only — "red" maps to `rgb(255, 0, 0)`, but shades like `#d10000` will **not** match "red". Use exact RGB values for precision.
 
 ### Supported Operators
 
@@ -177,7 +177,7 @@ Negation is supported across all assertion types using "NOT", "is not", "isn't",
 | Good Assertion | Bad Assertion | Why |
 |---|---|---|
 | `assert text "Submit" on the form footer is visible` | `assert that the submit button works and the layout is correct` | Combines multiple concerns; "works" is vague |
-| `assert the textbox contains the exact value "heading1"` | `assert the textbox has heading` | "heading" is ambiguous, which heading? |
+| `assert the textbox contains the exact value "heading1"` | `assert the textbox has heading` | "heading" is ambiguous — which heading? |
 | `assert the TestMu logo is visible` | `assert 3 search results are shown` (as a visual assertion) | Count assertions need text-based evidence, not visual |
 | `assert "Error" is not visible on the page` | `assert there are no errors` | Too vague; specify what kind of error |
 

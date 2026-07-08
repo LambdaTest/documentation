@@ -6,11 +6,11 @@ KaneAI converts natural language instructions into automation actions by identif
 
 KaneAI uses a combination of signals to locate elements:
 
-- **Text content**: visible labels, button text, placeholder text
-- **Element type**: button, link, input field, dropdown, checkbox
-- **Position on page**: top, bottom, left sidebar, inside a specific section
-- **Visual appearance**: color, size, icons
-- **Accessibility attributes**: aria-labels, roles, alt text
+- **Text content** — visible labels, button text, placeholder text
+- **Element type** — button, link, input field, dropdown, checkbox
+- **Position on page** — top, bottom, left sidebar, inside a specific section
+- **Visual appearance** — color, size, icons
+- **Accessibility attributes** — aria-labels, roles, alt text
 
 The best instructions combine **what the element is** (type) with **how to identify it** (text or position).
 
@@ -73,7 +73,7 @@ click "Save" inside the modal dialog
 Your page shows a grid of products, each with an "Add to Cart" button.
 
 **Bad approach**
-`click on Add to Cart`. KaneAI won't know which product you mean.
+`click on Add to Cart` — KaneAI won't know which product you mean.
 
 **Good approaches**
 ```
@@ -178,7 +178,7 @@ assert tooltip text "Total revenue for the fiscal year" is visible
 
 ## Drag and Drop
 
-KaneAI supports drag-and-drop interactions on **Desktop Web, Android apps, iOS apps, and Mobile Web**, for sortable lists, kanban boards, sliders, payment confirmation gestures, and similar UI patterns.
+KaneAI supports drag-and-drop interactions on **Desktop Web, Android apps, iOS apps, and Mobile Web** — for sortable lists, kanban boards, sliders, payment confirmation gestures, and similar UI patterns.
 
 ```
 drag "Task: Fix Bug" and drop it on the "In Progress" column
@@ -186,7 +186,7 @@ drag the first item and drop it below the third item in the list
 drag "Card A" to "Column B"
 ```
 
-Use **Manual Interaction** to capture sliders, slide-to-confirm gestures, and other dynamic-target drags that NL cannot resolve reliably. Manual recording is available on Desktop Web, Android, and iOS. Mobile Web is **NL-only**.
+Use **Manual Interaction** to capture sliders, slide-to-confirm gestures, and other dynamic-target drags that NL cannot resolve reliably. Manual recording is available on Desktop Web, Android, and iOS — Mobile Web is **NL-only**.
 
 See the [Drag and Drop](/support/docs/kane-ai-drag-drop/) guide for the full platform matrix, gesture classification rules, and replay behavior.
 
@@ -211,9 +211,9 @@ See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-work
 | Action | Example Instructions |
 |---|---|
 | **Click** | `click on the "Submit" button` |
-| **Double / N-Click** | `double click the title` , `click the button 5 times`, see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| **Right Click** | `right click on the file row` (web only), see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| **Long Press** | `long press the menu icon for 3 seconds`, see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| **Double / N-Click** | `double click the title` , `click the button 5 times` — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| **Right Click** | `right click on the file row` (web only) — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| **Long Press** | `long press the menu icon for 3 seconds` — see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
 | **Type** | `type "hello world" in the search input` |
 | **Clear** | `clear the email input field` |
 | **Hover** | `hover on the "Products" menu` |

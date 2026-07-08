@@ -53,7 +53,7 @@ This removes the `kane-cli` binary but leaves your local data in place. Kane CLI
 rm -rf ~/.testmuai/kaneai
 ```
 
-Only do this if you want a clean reset, it logs you out of all profiles and deletes saved configuration, session history, and command history.
+Only do this if you want a clean reset — it logs you out of all profiles and deletes saved configuration, session history, and command history.
 
 ## Troubleshooting Installation
 

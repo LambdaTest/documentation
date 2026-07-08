@@ -53,7 +53,7 @@ Automation Dashboard → build → **Accessibility** tab (same as [Selenium guid
 
 | Symptom | What to check |
 |--------|----------------|
-| Capability ignored | Selenium 4 requires `AddAdditionalOption` on `ChromeOptions` (or equivalent) for vendor-specific keys. Verify spelling. |
+| Capability ignored | Selenium 4 requires `AddAdditionalOption` on `ChromeOptions` (or equivalent) for vendor-specific keys—verify spelling. |
 | No report | Confirm hook or autoscan as above. |
 
 ## Related docs

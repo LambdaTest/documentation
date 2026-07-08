@@ -1,6 +1,6 @@
 # Console Assertions
 
-Console assertions let you verify browser console output: error messages, warnings, log messages, and uncaught JavaScript exceptions.
+Console assertions let you verify browser console output — error messages, warnings, log messages, and uncaught JavaScript exceptions.
 
 ## How Capture Works
 
@@ -9,7 +9,7 @@ KaneAI captures all browser console output automatically during each test step:
 - **Continuous capture**: Every `console.log()`, `console.warn()`, `console.error()`, and uncaught JS exception is recorded
 - **Per-step scope**: Each test step starts with a fresh capture. Console messages from previous steps are not carried over
 - **Limits**: Up to 50,000 messages are stored per step. When the limit is reached, the oldest 10% are dropped
-- **No truncation**: Message text is stored in full. Unlike network response bodies, console messages are never truncated
+- **No truncation**: Message text is stored in full — unlike network response bodies, console messages are never truncated
 - **Object resolution**: When JavaScript logs an object (`console.log({status: "ok"})`), KaneAI resolves it to the actual value instead of storing "JSHandle@object"
 - **Multi-tab support**: Console messages from new tabs and popups are also captured
 - **Top-frame only**: Messages from embedded iframes (payment widgets, third-party components) are not captured
@@ -47,7 +47,7 @@ Console message levels are normalized to 5 values:
 ### Errors vs Exceptions
 
 - **`errors`** includes ALL error-level messages: both `console.error()` calls AND uncaught exceptions
-- **`exceptions`** is a subset of errors: only uncaught JavaScript exceptions
+- **`exceptions`** is a subset of errors — only uncaught JavaScript exceptions
 - To check for app-level errors without exceptions: query errors where `is_exception` is false
 
 ## Example Assertions

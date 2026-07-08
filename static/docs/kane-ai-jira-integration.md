@@ -32,15 +32,15 @@ KaneAI uses the following fields from the Jira ticket as context to generate tes
 
 - **Summary** and **Description** of the ticket
 - **Comments** on the ticket
-- **Textual custom fields**: You can configure which custom fields are included from the TestMu AI Cloud app settings in Jira. Only text-based custom fields are supported; non-textual fields (e.g., dropdowns, number fields, user pickers, linked tickets) are not used for generation.
+- **Textual custom fields** — You can configure which custom fields are included from the TestMu AI Cloud app settings in Jira. Only text-based custom fields are supported; non-textual fields (e.g., dropdowns, number fields, user pickers, linked tickets) are not used for generation.
 
 To configure which custom fields are used as context, go to the TestMu AI Cloud app settings in your Jira instance and select the desired textual custom fields.
 
 After you post the comment, KaneAI will process the request and respond with a confirmation message. The response includes a link to TestMu AI where you can review, modify, and schedule the generated test case.
 
 ### Step 4: Review and Refine the Generated Test Cases
-Click on the link provided by KaneAI in the Jira comment to open the [AI Test Case Generator](/support/docs/generate-test-cases-with-ai/). The AI will begin [analyzing your Jira ticket content and generating test cases](/support/docs/generate-test-cases-with-ai/#step-3-generate-test-cases) in real time. You can watch scenarios and test cases stream in as they are created.
+Click on the link provided by KaneAI in the Jira comment to open the [AI Test Case Generator](/support/docs/generate-test-cases-with-ai/). The AI will begin [analyzing your Jira ticket content and generating test cases](/support/docs/generate-test-cases-with-ai/#step-3-generate-test-cases) in real time — you can watch scenarios and test cases stream in as they are created.
 
 Once the generation is complete, review the test cases grouped across scenarios. Each scenario represents a theme or functional area and is labeled with priority tags such as **Must have**, **Should have**, and **Could have**. Individual test cases are categorized as **Positive**, **Negative**, or **Edge** to indicate their test type.
 
-You can further refine the generated test cases using the [Conversation Layer](/support/docs/generate-test-cases-with-ai/#conversation-layer-refine-your-test-cases): describe changes in natural language and the AI applies them in real time. Once satisfied, save the test cases to your Test Manager repository or automate them with KaneAI.
+You can further refine the generated test cases using the [Conversation Layer](/support/docs/generate-test-cases-with-ai/#conversation-layer-refine-your-test-cases) — describe changes in natural language and the AI applies them in real time. Once satisfied, save the test cases to your Test Manager repository or automate them with KaneAI.

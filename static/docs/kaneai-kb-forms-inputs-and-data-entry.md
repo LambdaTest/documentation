@@ -1,6 +1,6 @@
 # Forms, Inputs & Data Entry
 
-Forms are at the heart of most web applications: login pages, registration flows, checkout processes, search filters, and admin panels. This guide covers how to handle every type of form element in KaneAI with real-world testing scenarios.
+Forms are at the heart of most web applications — login pages, registration flows, checkout processes, search filters, and admin panels. This guide covers how to handle every type of form element in KaneAI with real-world testing scenarios.
 
 ## Text Input Fields
 
@@ -179,7 +179,7 @@ enter OTP "1234"
 enter OTP "567890"
 ```
 
-Do **not** try to type into each OTP box individually (e.g., `type "1" in first box, type "2" in second box`). Use the `OTP` keyword as a single instruction. KaneAI handles the per-box distribution automatically.
+Do **not** try to type into each OTP box individually (e.g., `type "1" in first box, type "2" in second box`). Use the `OTP` keyword as a single instruction — KaneAI handles the per-box distribution automatically.
 
 ### Scenario: Login with OTP Verification
 

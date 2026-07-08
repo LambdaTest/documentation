@@ -21,7 +21,7 @@ Define suite or global variables so every test uses the same grid options:
 ${LT_OPTIONS}    {"accessibility": true, "accessibility.wcagVersion": "wcag21aa"}
 ```
 
-Exact syntax depends on how you merge JSON into capabilities for your `Open Browser` keyword. Some teams use a **custom keyword** that builds the options dict in Python and passes it to `Create Dictionary` / `Evaluate`.
+Exact syntax depends on how you merge JSON into capabilities for your `Open Browser` keyword—some teams use a **custom keyword** that builds the options dict in Python and passes it to `Create Dictionary` / `Evaluate`.
 
 ### 2. Open Browser with Accessibility on
 

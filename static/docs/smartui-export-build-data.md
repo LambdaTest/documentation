@@ -1,6 +1,6 @@
 # Export SmartUI Build Data
 
-From the TestMu AI dashboard you can export **build-level** data for a SmartUI run (comparison outcomes, statuses, and related metadata) without using the CLI or API. Use it for stakeholder summaries, ticket attachments, spreadsheets, or downstream automation.
+From the TestMu AI dashboard you can export **build-level** data for a SmartUI run—comparison outcomes, statuses, and related metadata—without using the CLI or API. Use it for stakeholder summaries, ticket attachments, spreadsheets, or downstream automation.
 
 ## Prerequisites
 

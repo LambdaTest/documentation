@@ -193,7 +193,7 @@ The suite runs on **Pixel 8 (Android 14)** by default. To target a different dev
 "platformVersion": "14",
 "platformName": "android",
 
-# iOS: uncomment and adjust
+# iOS — uncomment and adjust
 # "deviceName": "iPhone 14",
 # "platformVersion": "16",
 # "platformName": "ios",

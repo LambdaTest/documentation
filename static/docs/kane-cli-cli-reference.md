@@ -91,7 +91,7 @@ kane-cli profiles switch <name>  # Switch the active profile
 kane-cli profiles delete <name>  # Delete a profile
 ```
 
-See [Authentication: Profiles](/support/docs/kane-cli-authentication/#profiles) for details.
+See [Authentication — Profiles](/support/docs/kane-cli-authentication/#profiles) for details.
 
 ### `kane-cli config`
 
@@ -106,7 +106,7 @@ kane-cli config project [id]               # Set Test Manager project (interacti
 kane-cli config folder [id]                # Set Test Manager folder (interactive picker if no id)
 ```
 
-Commands without arguments (`chrome-profile`, `project`, `folder`) launch an interactive picker UI. AI agents cannot run these. Ask the user to run them directly.
+Commands without arguments (`chrome-profile`, `project`, `folder`) launch an interactive picker UI. AI agents cannot run these — ask the user to run them directly.
 
 See [Configuration](/support/docs/kane-cli-configuration/) for the full settings reference.
 

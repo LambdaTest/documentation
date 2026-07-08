@@ -1,6 +1,6 @@
 # Smart Root Cause Analysis (RCA)
 
-Smart Root Cause Analysis (RCA) in SmartUI helps you instantly identify the underlying reasons for visual mismatches. By analyzing the DOM differences between the baseline and the comparison screenshot, RCA pinpoints exactly what changed: whether it's a style update, content change, or layout shift.
+Smart Root Cause Analysis (RCA) in SmartUI helps you instantly identify the underlying reasons for visual mismatches. By analyzing the DOM differences between the baseline and the comparison screenshot, RCA pinpoints exactly what changed—whether it's a style update, content change, or layout shift.
 
 ## Why use Smart RCA?
 - **Speed**: Instantly find why a pixel-level mismatch occurred.
@@ -30,7 +30,7 @@ Before you begin, please ensure the build was generated using a **TestMu AI CLI 
 1.  Open a visual build from your [SmartUI dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2.  In the comparison toolbar, click the **RCA** icon.
 
-When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure, you're ready to investigate immediately.
+When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure—you're ready to investigate immediately.
 
 ### Step 2: Investigate DOM Differences Visually
 

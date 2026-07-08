@@ -1,6 +1,6 @@
 # Text Spacing (1.4.12)
 
-Content must remain readable and functional when users override text spacing properties (line height, paragraph spacing, letter spacing, and word spacing) up to specified thresholds.
+Content must remain readable and functional when users override text spacing properties — line height, paragraph spacing, letter spacing, and word spacing — up to specified thresholds.
 
 **WCAG Reference**
 **Applies to:** WCAG 2.1, WCAG 2.2

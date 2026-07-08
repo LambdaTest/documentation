@@ -1,6 +1,6 @@
 # Variables & Parameters in KaneAI
 
-In KaneAI, one of the core principles of effective test automation is the ability to manage dynamic data efficiently. Testing often requires input that changes frequently or is context-dependent, such as URLs, credentials, or specific device configurations. KaneAI offers a set of powerful tools (variables, secrets, smart variables, parameters and datasets) to simplify the process of managing and using dynamic data in your test cases. Each of these options offers unique functionality that helps you keep your tests flexible, secure, and scalable.
+In KaneAI, one of the core principles of effective test automation is the ability to manage dynamic data efficiently. Testing often requires input that changes frequently or is context-dependent, such as URLs, credentials, or specific device configurations. KaneAI offers a set of powerful tools—variables, secrets, smart variables, parameters and datasets—to simplify the process of managing and using dynamic data in your test cases. Each of these options offers unique functionality that helps you keep your tests flexible, secure, and scalable.
 
 All variables and parameters in KaneAI can be accessed from https://kaneai.lambdatest.com/variables
 

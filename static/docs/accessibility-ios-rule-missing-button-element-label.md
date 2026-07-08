@@ -26,7 +26,7 @@ VoiceOver users hear "Button" with no additional context when a button lacks a l
 - set `accessibilityLabel` on every button that does not have visible title text
 - for icon-only buttons, describe the action: "Close", "Open menu", "Share"
 - in SwiftUI, use `.accessibilityLabel("action description")` on `Button` views
-- if the button already has title text, VoiceOver uses it automatically, no additional label needed
+- if the button already has title text, VoiceOver uses it automatically — no additional label needed
 
 ## Related docs
 

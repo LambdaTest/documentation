@@ -54,15 +54,15 @@ Use this checklist for **quality beyond automated rules**: keyboard journeys, me
 
 | Area | Manual verification focus |
 |------|---------------------------|
-| **1.2.x Time-based media** | Captions, audio description, transcripts, sign language. Exercise with real media workflows and tooling. |
-| **1.3.2 Meaningful sequence · 1.3.3 Sensory characteristics · 1.3.5 Identify input purpose** | Reading order, instructions, autofill semantics. Design and assisted-tech review. |
-| **1.4.4 Resize text · 1.4.5 Images of text · 1.4.13 Content on hover or focus** | Zoom, images-of-text, hover layers. Interactive and visual testing. |
+| **1.2.x Time-based media** | Captions, audio description, transcripts, sign language — exercise with real media workflows and tooling. |
+| **1.3.2 Meaningful sequence · 1.3.3 Sensory characteristics · 1.3.5 Identify input purpose** | Reading order, instructions, autofill semantics — design and assisted-tech review. |
+| **1.4.4 Resize text · 1.4.5 Images of text · 1.4.13 Content on hover or focus** | Zoom, images-of-text, hover layers — interactive and visual testing. |
 | **Full keyboard operability & real focus behavior** | Automated rules support you; still walk critical paths with keyboard only and assistive technologies. |
-| **2.4.5–2.4.6, 2.4.8–2.4.10** | Multiple ways, headings/labels (extended), location. Document expectations and verify in session. |
-| **2.2.3–2.2.6 · 2.3.2–2.3.3** | Extended timing and motion. Validate against your UX and policy. |
-| **3.1.x Language of parts, unusual words, reading level** | Localization and plain language. Content and engineering review. |
-| **3.3.3–3.3.6 Error suggestion / prevention** | Error helpfulness and legal safeguards. Review with design and compliance. |
-| **AAA success criteria** | Optional stretch goals. Plan explicitly if AAA is in scope; default automation targets A/AA-style coverage. |
+| **2.4.5–2.4.6, 2.4.8–2.4.10** | Multiple ways, headings/labels (extended), location — document expectations and verify in session. |
+| **2.2.3–2.2.6 · 2.3.2–2.3.3** | Extended timing and motion — validate against your UX and policy. |
+| **3.1.x Language of parts, unusual words, reading level** | Localization and plain language — content and engineering review. |
+| **3.3.3–3.3.6 Error suggestion / prevention** | Error helpfulness and legal safeguards — review with design and compliance. |
+| **AAA success criteria** | Optional stretch goals — plan explicitly if AAA is in scope; default automation targets A/AA-style coverage. |
 
 ## Related docs
 

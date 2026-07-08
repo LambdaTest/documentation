@@ -2,7 +2,7 @@
 
 Kane CLI stores persistent settings at `~/.testmuai/kaneai/tui-config.json`. Most settings are managed through `kane-cli config` subcommands; a few are managed through interactive pickers in TUI mode, and one (code export) is toggled from the TUI menu.
 
-Authentication credentials are managed separately under `~/.testmuai/kaneai/profiles/`. See [Authentication](/support/docs/kane-cli-authentication/).
+Authentication credentials are managed separately under `~/.testmuai/kaneai/profiles/` — see [Authentication](/support/docs/kane-cli-authentication/).
 
 ## Viewing Settings
 
@@ -109,8 +109,8 @@ kane-cli config set-mode testing
 
 `mode` controls how the agent behaves when a run hits an authentication wall, a blocked page, or an error page:
 
-- **`testing`** (default): the agent treats those pages as part of the run and continues. Use this when you expect the agent to push through gates that would otherwise stop a real user.
-- **`action`**: the agent hard-stops on authentication, blocked, and error pages so you can intervene manually before the run proceeds.
+- **`testing`** (default) — the agent treats those pages as part of the run and continues. Use this when you expect the agent to push through gates that would otherwise stop a real user.
+- **`action`** — the agent hard-stops on authentication, blocked, and error pages so you can intervene manually before the run proceeds.
 
 You can override the saved mode for a single run with `--mode ` on `kane-cli run`.
 
@@ -118,7 +118,7 @@ You can override the saved mode for a single run with `--mode ` on `kane-cli run
 
 The `code_export` block enables and configures generated code output produced after a successful Test Manager upload. There is no `kane-cli config` subcommand for this block. Set it from one of:
 
-- **The TUI**: open the config menu, choose Code Export, and toggle the `enabled` and `skip_validation` switches.
+- **The TUI** — open the config menu, choose Code Export, and toggle the `enabled` and `skip_validation` switches.
 - **Per-run flags** on `kane-cli run`:
   - `--code-export` to enable for this run only
   - `--code-language ` to pick the output language (only `python` is supported)

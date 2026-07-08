@@ -1,6 +1,6 @@
 # Network Logs and Configurations
 
-Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services, all without leaving your testing workflow.
+Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services—all without leaving your testing workflow.
 
 On TestMu AI, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 
@@ -32,7 +32,7 @@ To enable the following you would need to pass them under `networkLogsOptions` C
 
 ## Managing Certificate Pinning in Network Logs
 
-Some mobile apps add an extra layer of security by using **certificate pinning**, a process where the app is hard-coded to trust only a specific certificate or public key for certain hosts. This means that whenever the app communicates with those hosts, it **verifies the server’s certificate** against its pinned copy before allowing the connection.
+Some mobile apps add an extra layer of security by using **certificate pinning** — a process where the app is hard-coded to trust only a specific certificate or public key for certain hosts. This means that whenever the app communicates with those hosts, it **verifies the server’s certificate** against its pinned copy before allowing the connection.
 
 When you enable **network logging** on TestMu AI, traffic passes through a **secure proxy** so requests and responses can be captured. For **certificate-pinned hosts**, this interception may cause the connection to fail because the certificate no longer matches exactly. To avoid such issues, you can exclude pinned hosts from being proxied by adding them to the `networkLogsExcludeHosts` capability. This ensures your tests run smoothly without breaking **secure connections**.
 

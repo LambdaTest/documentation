@@ -55,7 +55,7 @@ Layout Comparison can be executed in two different ways depending on your integr
 
 ### 1. Using SmartUI Hooks (native automation)
 
-If you use **SmartUI Hooks** (visual tests through Selenium / Playwright / Cypress on the grid **without** the `smartui exec` wrapper), **layout comparison is applied per screenshot** by passing **`ignoreType: ["layout"]`** (and `screenshotName`, and optionally `fullPage`, and other layout-related keys) in the **object** you send to **`smartui.takeScreenshot`** via `executeScript`, **not** by relying on `ignoreType` or layout flags **only** inside `LT:Options`.
+If you use **SmartUI Hooks** (visual tests through Selenium / Playwright / Cypress on the grid **without** the `smartui exec` wrapper), **layout comparison is applied per screenshot** by passing **`ignoreType: ["layout"]`** (and `screenshotName`, and optionally `fullPage`, and other layout-related keys) in the **object** you send to **`smartui.takeScreenshot`** via `executeScript`—**not** by relying on `ignoreType` or layout flags **only** inside `LT:Options`.
 
 For **`LT:Options`**, you still set **`smartUI.project`** (and `visual`, credentials). **Do not** assume `LT:Options.ignoreType: ['layout']` or similar capability-only snippets alone will enable layout for Hooks; that does not match current supported behavior.
 

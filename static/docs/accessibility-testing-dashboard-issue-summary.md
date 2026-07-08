@@ -21,7 +21,7 @@ Use this view when you want to understand report shape and severity before drill
 
 1. From **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)**, open a completed report.
 2. Select **Issue Summary** (or the equivalent tab/panel name in the UI).
-3. Read **severity totals** first. Critical/serious items usually block users or compliance narratives.
+3. Read **severity totals** first—critical/serious items usually block users or compliance narratives.
 4. Scan **guideline or rule groupings** to see which WCAG themes dominate (contrast, keyboard, forms, ARIA, etc.).
 5. Use **needs-review** and **best-practice** counts to decide how much manual validation you owe before filing engineering tickets.
 6. When a bucket looks actionable, jump to **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** filtered or grouped by that bucket, or open the **[Web Rule Repository](/support/docs/accessibility-web-rule-repository/)** entry for the rule text.

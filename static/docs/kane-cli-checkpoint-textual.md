@@ -1,6 +1,6 @@
 # Textual (DOM) Assertions
 
-Textual assertions extract data from the page's DOM: element states, attributes, and computed styles that aren't always visible in a screenshot.
+Textual assertions extract data from the page's DOM — element states, attributes, and computed styles that aren't always visible in a screenshot.
 
 ## When It's Used
 

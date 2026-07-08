@@ -25,7 +25,7 @@ In your Cypress configuration file `cypress.config.js`, add the following code t
 
 - The `overwrite` parameter should be set to `true` to ensure the report is replaced with the latest run results.
 - The `html` option should be set to `false` because we will be merging JSON files later, and the mocha-merge utility does not support HTML files.
-- Ensure the `reportDir` path is set to `"cypress/results"`. This path is used to generate logs that will be visible on the dashboard. **Do not change this path.**
+- Ensure the `reportDir` path is set to `"cypress/results"` —this path is used to generate logs that will be visible on the dashboard. **Do not change this path.**
 
 ### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:

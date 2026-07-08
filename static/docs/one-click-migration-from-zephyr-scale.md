@@ -1,14 +1,14 @@
 # One Click Migration from Zephyr Scale
 
-TestMu AI Test Manager supports one-click migration from **Zephyr Scale (Jira Cloud)**, allowing you to import your entire test library (including projects, test cases, folder structures, custom fields, and linked requirements) directly into Test Manager without manual data entry.
+TestMu AI Test Manager supports one-click migration from **Zephyr Scale (Jira Cloud)**, allowing you to import your entire test library — including projects, test cases, folder structures, custom fields, and linked requirements — directly into Test Manager without manual data entry.
 
 ## Key Benefits
 
-- **Zero manual effort**: All test cases, steps, and folder structures are automatically migrated.
-- **Handles both Manual and BDD tests**: Manual step definitions and Gherkin/BDD scenarios are both fully supported.
-- **Custom fields carried over**: Custom fields in your Zephyr Scale tests are automatically detected and created in Test Manager.
-- **Rich text content preserved**: Embedded screenshots within rich text fields (description, preconditions, step descriptions, and expected results) are migrated.
-- **Real-time progress tracking**: A progress bar shows migration status so you know exactly where things stand.
+- **Zero manual effort** — All test cases, steps, and folder structures are automatically migrated.
+- **Handles both Manual and BDD tests** — Manual step definitions and Gherkin/BDD scenarios are both fully supported.
+- **Custom fields carried over** — Custom fields in your Zephyr Scale tests are automatically detected and created in Test Manager.
+- **Rich text content preserved** — Embedded screenshots within rich text fields (description, preconditions, step descriptions, and expected results) are migrated.
+- **Real-time progress tracking** — A progress bar shows migration status so you know exactly where things stand.
 
 This migration supports **Zephyr Scale (Jira Cloud)** only. Zephyr Enterprise and Data Center are not supported at this time.
 
@@ -81,7 +81,7 @@ Click **Continue**. The system validates both your Jira and Zephyr Scale credent
 - A **progress bar** shows real-time migration status.
 - The migration processes test cases in batches. Depending on the size of your test library, the complete process may take some time.
 
-- You can navigate away from the page and continue other work. The migration continues in the background. Once the migration is complete, you will receive an email notification.
+- You can navigate away from the page and continue other work — the migration continues in the background. Once the migration is complete, you will receive an email notification.
 
 ### Step 5: Review the Results
 
@@ -103,7 +103,7 @@ The following entities and data are transferred from Zephyr Scale to Test Manage
 | **Manual Test Steps** | Each step's **Step Description** and **Expected Result** are migrated directly. Step ordering is preserved. |
 | **BDD/Gherkin Scenarios** | Full Gherkin scenario text is extracted and stored under the BDD Scenarios template. |
 | **Folders** | Zephyr Scale folder hierarchy is preserved and mapped to Test Manager folders. |
-| **Rich Text Fields** | Rich text content (including embedded screenshots, tables, lists, and other supported formatting within description, preconditions, step descriptions, and expected results) is preserved. |
+| **Rich Text Fields** | Rich text content — including embedded screenshots, tables, lists, and other supported formatting within description, preconditions, step descriptions, and expected results — is preserved. |
 | **Custom Fields** | Custom fields are automatically detected in Zephyr Scale and created in Test Manager with matching names. |
 | **Linked Issues / Requirements** | Jira issue links and requirement associations are preserved. Requires [Jira integration](https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/) to be configured. |
 | **Zephyr Scale Test Key** | The original Zephyr Scale test key is imported within tags, enabling quick reference and filtering in Test Manager. |
@@ -115,7 +115,7 @@ Test Data from Zephyr Scale steps is migrated as a single textarea custom field 
 
 ## What Does Not Get Migrated
 
-The migration focuses exclusively on your **test library**: definitions, structure, and metadata. The following entities are not included:
+The migration focuses exclusively on your **test library** — definitions, structure, and metadata. The following entities are not included:
 
 | Entity | Reason |
 |---|---|
@@ -127,7 +127,7 @@ The migration focuses exclusively on your **test library**: definitions, structu
 
 ## Test Steps Handling
 
-The migration supports all three Zephyr Scale test script types: **Step by Step**, **BDD-Gherkin**, and **Plain Text**.
+The migration supports all three Zephyr Scale test script types — **Step by Step**, **BDD-Gherkin**, and **Plain Text**.
 
 ### Step by Step and Plain Text
 Manual test cases are migrated with their full step definitions. Each step's **Step Description** and **Expected Result** fields are mapped directly. Step ordering is preserved, and any embedded screenshots within rich text fields are carried over. All Zephyr Scale **Step by Step** and **Plain text** test scripts are mapped to the **Manual Test Steps** template in Test Steps of a Test Case.

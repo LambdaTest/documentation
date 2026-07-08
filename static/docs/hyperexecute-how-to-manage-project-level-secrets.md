@@ -57,7 +57,7 @@ LT_SECRET_KEY: ${{.secrets.token}}
 | **Access Control** | Controlled by user account permissions | Controlled by project permissions |
 
 ## Why Use Project-Level Secrets?
-- **Centralized Management :** Keep all secrets related to a test framework or application in one place: the project.
+- **Centralized Management :** Keep all secrets related to a test framework or application in one place—the project.
 - **Team Collaboration :** Multiple team members can access the same secrets via shared project access.
 - **Simplified CI/CD Setup :** Reference your project in the YAML, and secrets are injected automatically without extra configuration.
 - **Security :** Secrets remain encrypted and are never logged or exposed in your code.

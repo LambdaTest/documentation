@@ -8,11 +8,11 @@ All interactive functionality must be operable through a keyboard interface with
 
 ## What this rule checks
 
-The scanner verifies that interactive elements (links, buttons, form controls, and custom widgets) are reachable and operable using keyboard alone: Tab, Shift+Tab, Enter, Space, and arrow keys as appropriate.
+The scanner verifies that interactive elements (links, buttons, form controls, and custom widgets) are reachable and operable using keyboard alone — Tab, Shift+Tab, Enter, Space, and arrow keys as appropriate.
 
 ## Why it matters
 
-Users who cannot use a mouse, including people who rely on switch devices, voice control, or screen readers, depend entirely on keyboard access. If a control cannot be reached or activated by keyboard, those users are blocked.
+Users who cannot use a mouse — including people who rely on switch devices, voice control, or screen readers — depend entirely on keyboard access. If a control cannot be reached or activated by keyboard, those users are blocked.
 
 ## Common failure patterns
 

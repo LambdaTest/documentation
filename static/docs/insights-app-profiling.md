@@ -33,16 +33,16 @@ Each per-metric trend widget and Label Page Load Time supports **Compare** mode.
 
 Compare dimensions:
 
-- **OS**: Android vs iOS
-- **Device**: for example Galaxy S23 vs Pixel 8 vs iPhone 15 Pro
-- **App Build Version**: for build-over-build comparisons
-- **Label**: for page-transition-level breakdowns
+- **OS** — Android vs iOS
+- **Device** — for example Galaxy S23 vs Pixel 8 vs iPhone 15 Pro
+- **App Build Version** — for build-over-build comparisons
+- **Label** — for page-transition-level breakdowns
 
-Compare is scoped to the widget. Enabling it on one chart does not affect others. Performance Overview, Performance Trends and Device Performance Matrix do not expose Compare: the first two are summary widgets (use filters to change the data scope instead), and the matrix already breaks data down per device.
+Compare is scoped to the widget — enabling it on one chart does not affect others. Performance Overview, Performance Trends and Device Performance Matrix do not expose Compare: the first two are summary widgets (use filters to change the data scope instead), and the matrix already breaks data down per device.
 
 ## SLA thresholds
 
-SLA thresholds are configured at the **organisation level** by an admin. Once set, the same threshold is applied everywhere a metric is rendered: Performance Overview cards, Performance Trends overlays, Device Performance Matrix cells, Label Page Load Time, and the per-metric trend widgets.
+SLA thresholds are configured at the **organisation level** by an admin. Once set, the same threshold is applied everywhere a metric is rendered — Performance Overview cards, Performance Trends overlays, Device Performance Matrix cells, Label Page Load Time, and the per-metric trend widgets.
 
 Default thresholds:
 
@@ -71,17 +71,17 @@ Admins can override the defaults at the organisation level. Regular users see th
 
 A strip of KPI cards summarising the headline metrics over the selected window.
 
-- **Avg CPU (%)**: application CPU usage averaged across sessions in scope.
-- **Avg Memory (MB)**: application memory usage averaged across sessions in scope.
-- **Avg FPS**: frames per second averaged across sessions in scope.
-- **Avg Cold Startup (ms)**: cold-start duration averaged across sessions in scope.
-- **Avg Crashes per Crashed Session**: `avg(crash_count)` over sessions that reported at least one crash. This is the mean crash count among already-crashed sessions, not a crash rate.
+- **Avg CPU (%)** — application CPU usage averaged across sessions in scope.
+- **Avg Memory (MB)** — application memory usage averaged across sessions in scope.
+- **Avg FPS** — frames per second averaged across sessions in scope.
+- **Avg Cold Startup (ms)** — cold-start duration averaged across sessions in scope.
+- **Avg Crashes per Crashed Session** — `avg(crash_count)` over sessions that reported at least one crash. This is the mean crash count among already-crashed sessions, not a crash rate.
 
 > Cards are hidden automatically when the underlying metric are not recorded for the test session.
 
 ### 2. Performance Trends
 
-A single time-series chart that overlays selected metrics on dual Y-axes. The **KPIs** selector in the widget header controls which series are visible: CPU, FPS, Memory, Temperature, Battery, Network Upload and Network Download are available; CPU and Memory are on by default. Each visible KPI gets a Min / Max / Avg row in the stats panel below the chart.
+A single time-series chart that overlays selected metrics on dual Y-axes. The **KPIs** selector in the widget header controls which series are visible — CPU, FPS, Memory, Temperature, Battery, Network Upload and Network Download are available; CPU and Memory are on by default. Each visible KPI gets a Min / Max / Avg row in the stats panel below the chart.
 
 ### 3. Device Performance Matrix
 
@@ -97,13 +97,13 @@ A table comparing performance metrics across the devices that ran in the filtere
 | **FPS** | Frame rate, colour-coded against the configured SLA threshold |
 | **Sessions** | Session count for that device in the filtered scope |
 
-Click any column header to sort. The dashboard-level **Device** filter intentionally does not narrow this widget. The matrix is itself the device breakdown.
+Click any column header to sort. The dashboard-level **Device** filter intentionally does not narrow this widget — the matrix is itself the device breakdown.
 
 ### 4. Label Page Load Time
 
 Duration per page transition label, captured from the `label` events recorded inside the test. Each visible label is plotted as a horizontal bar showing its average duration; the widget shows the top labels by session count by default, and a label selector inside the widget lets you add or remove labels from the chart.
 
-SLA thresholds render as vertical green/amber/red bands behind the bars, with the configured threshold drawn as a dashed reference line. Bars that extend into the red band are out of SLA. The stats panel below the chart reports Min / Max / Avg duration across the visible labels.
+SLA thresholds render as vertical green/amber/red bands behind the bars, with the configured threshold drawn as a dashed reference line — bars that extend into the red band are out of SLA. The stats panel below the chart reports Min / Max / Avg duration across the visible labels.
 
 ### 5. CPU Utilization Trend
 

@@ -1,6 +1,6 @@
 # Defect Analysis and Prediction
 
-Modern test automation generates thousands of results per day. Without intelligent analysis, teams waste significant time manually triaging failures, chasing flaky tests, and diagnosing root causes. TestMu AI's AI-powered defect analysis and prediction capabilities automatically classify, analyze, and surface actionable insights from your test execution data, helping you move from reactive debugging to proactive quality improvement.
+Modern test automation generates thousands of results per day. Without intelligent analysis, teams waste significant time manually triaging failures, chasing flaky tests, and diagnosing root causes. TestMu AI's AI-powered defect analysis and prediction capabilities automatically classify, analyze, and surface actionable insights from your test execution data — helping you move from reactive debugging to proactive quality improvement.
 
 This page provides an overview of the AI/ML-based capabilities available across the TestMu AI platform for defect analysis and prediction, and how they work together to improve test suite reliability.
 
@@ -8,16 +8,16 @@ This page provides an overview of the AI/ML-based capabilities available across 
 
 TestMu AI applies machine learning and AI models across your test execution history to:
 
-1. **Detect**: Identify flaky and unreliable tests automatically using execution pattern analysis
-2. **Classify**: Categorize failures by type (environment, script, application, network) using AI models
-3. **Diagnose**: Pinpoint root causes of failures using LLM-powered analysis
-4. **Predict**: Surface early warning signals through smart tags that flag tests trending toward failure
+1. **Detect** — Identify flaky and unreliable tests automatically using execution pattern analysis
+2. **Classify** — Categorize failures by type (environment, script, application, network) using AI models
+3. **Diagnose** — Pinpoint root causes of failures using LLM-powered analysis
+4. **Predict** — Surface early warning signals through smart tags that flag tests trending toward failure
 
 These capabilities work across **Web Automation**, **App Automation**, and **HyperExecute**.
 
 ## Flaky Test Detection
 
-Flaky tests, tests that produce inconsistent pass/fail results without any code change, are one of the biggest threats to test suite reliability. They erode team confidence in test results and waste time on false investigations.
+Flaky tests — tests that produce inconsistent pass/fail results without any code change — are one of the biggest threats to test suite reliability. They erode team confidence in test results and waste time on false investigations.
 
 TestMu AI uses machine learning algorithms to automatically identify flaky tests by analyzing historical execution patterns across your test runs.
 
@@ -34,8 +34,8 @@ Flaky test detection is available in two places:
 
 | Location | What You Get |
 |----------|--------------|
-| [**Test Intelligence: Flaky Tests Detection**](/docs/test-intelligence-flakiness-test-detection/) | Deep-dive into individual flaky tests, flakiness sources, and command-level analysis |
-| [**Insights: Flaky Tests Analytics**](/docs/analytics-modules-test-intelligence-flaky-test-analytics/) | Dashboard widgets showing flakiness trends, distribution, and team-level patterns |
+| [**Test Intelligence — Flaky Tests Detection**](/docs/test-intelligence-flakiness-test-detection/) | Deep-dive into individual flaky tests, flakiness sources, and command-level analysis |
+| [**Insights — Flaky Tests Analytics**](/docs/analytics-modules-test-intelligence-flaky-test-analytics/) | Dashboard widgets showing flakiness trends, distribution, and team-level patterns |
 
 ## Failure Categorization AI
 
@@ -47,13 +47,13 @@ TestMu AI's Failure Categorization AI automatically classifies test failures int
 
 - Automatically categorizes failures by type (application defect, script error, environment issue, etc.)
 - Analyzes parameters like browser, OS, device, and failure patterns to determine category
-- Helps teams prioritize: focus on application defects first, fix script issues separately
+- Helps teams prioritize — focus on application defects first, fix script issues separately
 - Reduces manual triage time significantly
 
 ### How to Use It
 
-- [**Failure Categorization AI**](/docs/analytics-test-failure-classification/): Available in Insights dashboards for Web Automation, App Automation, and HyperExecute
-- [**Error Categorization Report**](/docs/error-categorization-report/): Structured failure reports for HyperExecute jobs with multiple error types
+- [**Failure Categorization AI**](/docs/analytics-test-failure-classification/) — Available in Insights dashboards for Web Automation, App Automation, and HyperExecute
+- [**Error Categorization Report**](/docs/error-categorization-report/) — Structured failure reports for HyperExecute jobs with multiple error types
 
 **Prerequisite:** Add the `remark` capability in your test scripts to provide additional context to the AI model, which improves categorization accuracy.
 
@@ -65,7 +65,7 @@ Once a failure is detected and categorized, the next step is understanding *why*
 
 - Analyzes failed test logs, screenshots, and execution data using advanced AI
 - Distinguishes **primary root causes** from cascading symptoms
-- Provides **actionable fix recommendations**, not just error descriptions, but specific steps to resolve
+- Provides **actionable fix recommendations** — not just error descriptions, but specific steps to resolve
 - Generates **error timelines** showing the chronological sequence of events leading to the failure
 - Available across multiple surfaces for different use cases
 
@@ -73,9 +73,9 @@ Once a failure is detected and categorized, the next step is understanding *why*
 
 | Surface | Use Case | Details |
 |---------|----------|---------|
-| [**Insights: AI RCA**](/docs/analytics-ai-root-cause-analysis/) | Analyze any failed test from dashboards | LLM-powered, credits-based (15-25 credits per analysis) |
-| [**HyperExecute: AI Native RCA**](/docs/ai-powered-test-failure-analysis/) | Automatic RCA for HyperExecute job failures | Integrated into job results, analyzes logs automatically |
-| [**SmartUI: Visual RCA**](/docs/smartui-root-cause-analysis/) | Diagnose visual regression failures | Identifies underlying causes of visual mismatches |
+| [**Insights — AI RCA**](/docs/analytics-ai-root-cause-analysis/) | Analyze any failed test from dashboards | LLM-powered, credits-based (15-25 credits per analysis) |
+| [**HyperExecute — AI Native RCA**](/docs/ai-powered-test-failure-analysis/) | Automatic RCA for HyperExecute job failures | Integrated into job results, analyzes logs automatically |
+| [**SmartUI — Visual RCA**](/docs/smartui-root-cause-analysis/) | Diagnose visual regression failures | Identifies underlying causes of visual mismatches |
 
 ## Smart Tags
 
@@ -85,9 +85,9 @@ Smart Tags provide an early warning system by automatically labeling tests based
 
 | Tag | What It Means | Why It Matters |
 |-----|---------------|----------------|
-| **Flaky** | Inconsistent results across multiple executions | Unreliable signal, needs investigation or quarantine |
-| **Always Failing** | Consistently failing across multiple executions | Likely a real defect or broken test, high priority |
-| **New Failures** | Recently started failing after previously passing | Potential regression, investigate recent changes |
+| **Flaky** | Inconsistent results across multiple executions | Unreliable signal — needs investigation or quarantine |
+| **Always Failing** | Consistently failing across multiple executions | Likely a real defect or broken test — high priority |
+| **New Failures** | Recently started failing after previously passing | Potential regression — investigate recent changes |
 
 ### What It Does
 
@@ -98,11 +98,11 @@ Smart Tags provide an early warning system by automatically labeling tests based
 
 ### How to Use It
 
-- [**Smart Tags: Test Intelligence**](/docs/analytics-smart-tags-test-intelligence/): Available in Insights dashboards, requires minimum 10 test runs
+- [**Smart Tags — Test Intelligence**](/docs/analytics-smart-tags-test-intelligence/) — Available in Insights dashboards, requires minimum 10 test runs
 
 ## Putting It All Together
 
-These capabilities are designed to work as a pipeline. Each stage feeds into the next:
+These capabilities are designed to work as a pipeline — each stage feeds into the next:
 
 ```
 Test Execution
@@ -119,7 +119,7 @@ AI Root Cause Analysis (diagnose root cause + recommended fix)
 ### Recommended Workflow
 
 1. **Set up Insights dashboards** with Flaky Tests and Failure Categorization widgets to monitor your test suite health continuously
-2. **Review Smart Tags** on drilldowns to catch early warning signals, especially "New Failures" which may indicate regressions
+2. **Review Smart Tags** on drilldowns to catch early warning signals — especially "New Failures" which may indicate regressions
 3. **Use Flaky Test Detection** to identify and quarantine unreliable tests, improving the signal-to-noise ratio of your test results
 4. **Apply AI RCA** to diagnosed failures to get actionable fix recommendations without manually reading through logs
 

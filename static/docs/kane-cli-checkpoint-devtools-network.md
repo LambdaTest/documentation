@@ -1,6 +1,6 @@
 # Network Assertions
 
-Network assertions let you verify HTTP traffic: API responses, status codes, headers, response bodies, and request timing.
+Network assertions let you verify HTTP traffic — API responses, status codes, headers, response bodies, and request timing.
 
 ## How Capture Works
 

@@ -1,6 +1,6 @@
 # Create Pull Requests from KaneAI Test Cases
 
-KaneAI lets you export generated test code directly to your GitHub or GitLab repository as a pull request (PR) or merge request (MR). Instead of downloading ZIP files and manually copying code, you can raise PRs from the Test Manager in a few clicks, or automatically whenever code is generated.
+KaneAI lets you export generated test code directly to your GitHub or GitLab repository as a pull request (PR) or merge request (MR). Instead of downloading ZIP files and manually copying code, you can raise PRs from the Test Manager in a few clicks — or automatically whenever code is generated.
 
 This guide covers how to integrate your Git provider, configure PR settings, create pull requests from test cases, and track their status.
 
@@ -77,8 +77,8 @@ In Single Repository mode, all test case PRs across all projects go to one repos
 
 In Multiple Repositories mode, you can map individual projects to specific repositories. The configuration table shows columns for **Project Name**, **Repository Name**, **Folder Path**, **Base Branch**, and **Auto-PR**.
 
-- **Unmapped Projects**: Any project without a specific mapping uses the default repository configuration.
-- **+ Add Project**: Click to map a specific project to a different repository. Only KaneAI-enabled projects are available for mapping.
+- **Unmapped Projects** — Any project without a specific mapping uses the default repository configuration.
+- **+ Add Project** — Click to map a specific project to a different repository. Only KaneAI-enabled projects are available for mapping.
 
 Click **Update Setup** to save any changes.
 
@@ -90,8 +90,8 @@ Once the integration and repository settings are configured, you can create PRs 
 
 Each test case in the listing displays its PR status inline:
 
-- **PR number with icon** (e.g., `#2`, `#3`, `#4`): A PR exists for this test case. Hover over the PR indicator to see the status (Open, Merged, or Closed), creation details, and a **View on GitHub** link that opens the PR directly.
-- **No PR**: No pull request has been created for this test case yet.
+- **PR number with icon** (e.g., `#2`, `#3`, `#4`) — A PR exists for this test case. Hover over the PR indicator to see the status (Open, Merged, or Closed), creation details, and a **View on GitHub** link that opens the PR directly.
+- **No PR** — No pull request has been created for this test case yet.
 
 ### How to Create a PR
 
@@ -103,12 +103,12 @@ Each test case in the listing displays its PR status inline:
 
 ### Diff-Based Updates
 
-KaneAI automatically tracks whether each code export version already has an associated PR. This detection happens in the background. The **Create PR** button only appears for a version when there is no existing PR for it.
+KaneAI automatically tracks whether each code export version already has an associated PR. This detection happens in the background — the **Create PR** button only appears for a version when there is no existing PR for it.
 
 In the **Code** section of a test case, each code export version shows its PR status alongside the **Create PR** and **Execute** actions. If a PR already exists for that version, the **Create PR** button is disabled with a tooltip: "PR already exists for this version."
 
-- **New version without a PR**: The **Create PR** button is active. Click it to raise a PR with that version's code.
-- **Version with an existing PR**: The PR number is shown (e.g., `#2`) and the **Create PR** button is disabled since the code is already synced.
+- **New version without a PR** — The **Create PR** button is active. Click it to raise a PR with that version's code.
+- **Version with an existing PR** — The PR number is shown (e.g., `#2`) and the **Create PR** button is disabled since the code is already synced.
 
 ### Auto-PR
 
@@ -149,9 +149,9 @@ your-repo/
 │           └── test.py
 ```
 
-- **`{project_name}`**: Derived from the Test Manager project name.
-- **`{test_id}_{test_name}`**: The test case ID and name combined for uniqueness.
-- **`{version_no}`**: The code export version number.
+- **`{project_name}`** — Derived from the Test Manager project name.
+- **`{test_id}_{test_name}`** — The test case ID and name combined for uniqueness.
+- **`{version_no}`** — The code export version number.
 
 You can customize this pattern during setup or in the Pull Requests settings tab.
 

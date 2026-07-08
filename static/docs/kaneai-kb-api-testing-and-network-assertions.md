@@ -1,6 +1,6 @@
 # API Testing & Network Assertions
 
-KaneAI isn't just a UI testing tool. It also supports API testing and network-level assertions, allowing you to validate both frontend behavior and backend responses in a single test flow. This is critical for scenarios where the UI depends on API data, or where you need to verify that the correct API calls are being made behind the scenes.
+KaneAI isn't just a UI testing tool — it also supports API testing and network-level assertions, allowing you to validate both frontend behavior and backend responses in a single test flow. This is critical for scenarios where the UI depends on API data, or where you need to verify that the correct API calls are being made behind the scenes.
 
 ## API Testing in KaneAI
 
@@ -10,7 +10,7 @@ You can add API calls to your test using the `/` (slash) command:
 
 1. Type `/` in the input field
 2. Select **API** from the options
-3. Paste your **curl command**. KaneAI will auto-populate all request details (URL, method, headers, body)
+3. Paste your **curl command** — KaneAI will auto-populate all request details (URL, method, headers, body)
 4. Click **Validate** to execute the API and see the response
 5. If the response is successful (2xx), click **Add to Test** to include it as a test step
 
@@ -88,7 +88,7 @@ assert the email field shows {{api_user.response.email}}
 
 ## Network Logs Assertions
 
-The **Network Logs Assertions** feature lets you validate actual network calls that your application makes during a test session. This is different from making your own API calls. It captures what the app itself is doing behind the scenes.
+The **Network Logs Assertions** feature lets you validate actual network calls that your application makes during a test session. This is different from making your own API calls — it captures what the app itself is doing behind the scenes.
 
 ### How It Works
 
@@ -97,7 +97,7 @@ The **Network Logs Assertions** feature lets you validate actual network calls t
 3. Filter by **Status Code** (200, 404, 500, etc.) or **HTTP Method** (GET, POST, etc.)
 4. Select the specific request you want to assert on
 5. Choose which **request headers**, **request body**, or **response body** keys to validate
-6. Click **Add Assertion**. All chosen values are validated in a single step
+6. Click **Add Assertion** — all chosen values are validated in a single step
 
 ### Accessing Network Data as Variables
 

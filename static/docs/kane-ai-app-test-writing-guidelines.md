@@ -70,7 +70,7 @@ By default, each App step waits up to **10 seconds** for its target element to a
 2. Select **Step Timeout**.
 3. Enter the timeout value in seconds (min **1**, max **300**) and save the step.
 
-Step Timeout is a **dynamic ceiling**: the step proceeds as soon as the element is ready and only uses the extra time on genuinely slow loads. It applies to element-based interactions (Tap/Click, Type/Input, Search, Clear) and has no effect on fixed `wait` steps, assertions, or API steps. Leaving it unset keeps the default 10-second behavior.
+Step Timeout is a **dynamic ceiling** — the step proceeds as soon as the element is ready and only uses the extra time on genuinely slow loads. It applies to element-based interactions (Tap/Click, Type/Input, Search, Clear) and has no effect on fixed `wait` steps, assertions, or API steps. Leaving it unset keeps the default 10-second behavior.
 
 Step Timeout is supported on KaneAI App automation for **Android and iOS** real devices, bringing App testing in line with Web and Mobile Web, which already support per-step timeouts.
 

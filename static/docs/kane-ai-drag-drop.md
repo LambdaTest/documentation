@@ -6,23 +6,23 @@ KaneAI lets you author drag interactions across **Desktop Web, Android apps, iOS
 
 You can author a drag step in two ways:
 
-- **Natural Language (NL)**: describe the drag in plain English (e.g. `drag "Card A" to "Column B"`).
-- **Manual Interaction**: perform the gesture on the device or browser viewport and have it captured as a step.
+- **Natural Language (NL)** — describe the drag in plain English (e.g. `drag "Card A" to "Column B"`).
+- **Manual Interaction** — perform the gesture on the device or browser viewport and have it captured as a step.
 
 ## Drag and Drop vs Click and Drag
 
 KaneAI supports two distinct drag interactions. They look similar but behave differently, and they are **not interchangeable**:
 
-- **Drag and Drop**: the element is first **long-pressed** to pick it up, and only then moved to the target. This is the standard gesture for moving items between containers and works on **all platforms**.
-- **Click and Drag**: the element is pressed and moved **immediately, without any long press**. This is how interactions such as sliders, canvas drawing, and element resizing work, and it is available on **Desktop Web only**.
+- **Drag and Drop** — the element is first **long-pressed** to pick it up, and only then moved to the target. This is the standard gesture for moving items between containers and works on **all platforms**.
+- **Click and Drag** — the element is pressed and moved **immediately, without any long press**. This is how interactions such as sliders, canvas drawing, and element resizing work, and it is available on **Desktop Web only**.
 
 | | Drag and Drop | Click and Drag |
 | --- | --- | --- |
-| **Gesture** | Long press on the element first, then move it to the target | Press and move in one continuous motion, no long press |
+| **Gesture** | Long press on the element first, then move it to the target | Press and move in one continuous motion — no long press |
 | **Platforms** | Desktop Web, Android App, iOS App, Mobile Web | Desktop Web only |
 | **Typical scenarios** | Kanban cards, list reordering, container-to-container transfer | Sliders, canvas drawing, element resizing, range selection |
 
-If a drag step fails on an element that doesn't respond to a long press (for example a slider thumb or a canvas), the element likely expects **Click and Drag** rather than Drag and Drop. Click and Drag has its own constraints, see [Limitations](#limitations).
+If a drag step fails on an element that doesn't respond to a long press (for example a slider thumb or a canvas), the element likely expects **Click and Drag** rather than Drag and Drop. Click and Drag has its own constraints — see [Limitations](#limitations).
 
 ## Supported Platforms
 
@@ -46,7 +46,7 @@ If a drag step fails on an element that doesn't respond to a long press (for exa
 | Element resizing / canvas operations / flow charts                         | **Manual (recommended)** |
 | Drag with no stable element identifier                                     | Manual (recommended)   |
 
-**Sliders and confirmation gestures cannot be authored with NL.** Use Manual Interaction to capture the gesture directly. KaneAI records source, target, and drag vector in a coordinate-safe form.
+**Sliders and confirmation gestures cannot be authored with NL.** Use Manual Interaction to capture the gesture directly — KaneAI records source, target, and drag vector in a coordinate-safe form.
 
 ## Author with Natural Language
 
@@ -94,8 +94,8 @@ For tap, long-press, multi-click, and right-click authoring, see [Click Interact
 
 ### When Manual Interaction is Required
 
-- **Sliders**: volume, range, vertical, payment-style (e.g., slide-to-pay).
-- **Confirmation gestures**: slide-to-confirm, drag-to-pay, swipe-to-unlock.
+- **Sliders** — volume, range, vertical, payment-style (e.g., slide-to-pay).
+- **Confirmation gestures** — slide-to-confirm, drag-to-pay, swipe-to-unlock.
 - **Custom drag handles** without a stable accessibility ID or selector.
 - **Canvas-based interactions**, drawing tools, and flow chart manipulation.
 - **Element resizing** and precise positioning.
@@ -116,11 +116,11 @@ Manual recording is recommended for any scenario where the **drop location isn't
 
 ## Best Practices
 
-- **Use NL for static layouts**: Kanban boards, sortable grids, multi-container drags. Fastest authoring path.
+- **Use NL for static layouts** — Kanban boards, sortable grids, multi-container drags. Fastest authoring path.
 - **Use Manual for sliders, confirmation gestures, and dynamic targets.** These require touch-driven capture.
 - Prefer elements with stable **accessibility IDs / resource IDs** to maximize cross-device replay success.
 - For long lists, **scroll the source element into view** before recording the drag.
-- Allow **1–2 seconds after a navigation step** before recording the next drag, gives the page time to stabilize.
+- Allow **1–2 seconds after a navigation step** before recording the next drag — gives the page time to stabilize.
 - For payment / KYC slider flows, capture the gesture once via Manual and **reuse the step inside a Module**.
 - Use `{{variable_name}}` syntax to **parameterize** source / target references for data-driven runs.
 
@@ -140,7 +140,7 @@ move task card from "To Do" column to "In Progress" column
 
 ### Mobile Slider (Manual Interaction)
 
-Use Manual Interaction to capture brightness, volume, or price-range sliders on Android and iOS. NL cannot resolve a moving slider thumb.
+Use Manual Interaction to capture brightness, volume, or price-range sliders on Android and iOS — NL cannot resolve a moving slider thumb.
 
 ### Payment Confirmation Gesture (Manual Interaction)
 
@@ -156,18 +156,18 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 
 ## Limitations
 
-- **Multi-touch gestures** (two-finger drag, pinch-drag): not supported.
-- **Drag path waypoints**: only start and end coordinates are captured; intermediate path points are not preserved.
-- **Mobile Browser manual recording**: not supported. Use NL only.
-- **Cross-context dragging**: drags between iframes or shadow DOMs are not supported.
-- **Multi-element dragging**: cannot drag multiple elements simultaneously.
-- **Advanced NL** (e.g., `drag X up by 50px`, offset-based reorder): on the roadmap; currently rejected with a graceful error.
-- **Click and Drag via NL**: not supported as a natural language test step; supported only via Manual Interaction. Desktop Web only.
-- **Click and Drag speed**: executes slowly by design so the dragged element stays in focus during the movement; faster execution could cause the element to lose focus mid-drag.
-- **NL slider authoring**: not supported. Use Manual Interaction.
-- **NL confirmation gestures** (slide-to-confirm): not supported. Use Manual Interaction.
-- **Drag and drop on canvas-based elements via NL**: canvas elements rely on custom rendering; use Manual Interaction.
-- **Editing manual drag steps**: source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
+- **Multi-touch gestures** (two-finger drag, pinch-drag) — not supported.
+- **Drag path waypoints** — only start and end coordinates are captured; intermediate path points are not preserved.
+- **Mobile Browser manual recording** — not supported. Use NL only.
+- **Cross-context dragging** — drags between iframes or shadow DOMs are not supported.
+- **Multi-element dragging** — cannot drag multiple elements simultaneously.
+- **Advanced NL** (e.g., `drag X up by 50px`, offset-based reorder) — on the roadmap; currently rejected with a graceful error.
+- **Click and Drag via NL** — not supported as a natural language test step; supported only via Manual Interaction. Desktop Web only.
+- **Click and Drag speed** — executes slowly by design so the dragged element stays in focus during the movement; faster execution could cause the element to lose focus mid-drag.
+- **NL slider authoring** — not supported. Use Manual Interaction.
+- **NL confirmation gestures** (slide-to-confirm) — not supported. Use Manual Interaction.
+- **Drag and drop on canvas-based elements via NL** — canvas elements rely on custom rendering; use Manual Interaction.
+- **Editing manual drag steps** — source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
 
 ## FAQs
 
@@ -175,7 +175,7 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 Drag and Drop long-presses the element to pick it up before moving it, and works on all platforms. Click and Drag presses and moves the element immediately without a long press, and is available on Desktop Web only. See [Drag and Drop vs Click and Drag](#drag-and-drop-vs-click-and-drag).
 
 **Why is my Click and Drag step slow?**
-This is expected. Click and Drag executes deliberately slowly to keep the dragged element in focus throughout the movement. A faster gesture could cause the element to lose focus mid-drag and fail the step.
+This is expected. Click and Drag executes deliberately slowly to keep the dragged element in focus throughout the movement — a faster gesture could cause the element to lose focus mid-drag and fail the step.
 
 **Can I author a slider drag with natural language?**
 No. Sliders have moving targets that NL cannot resolve reliably. Use Manual Interaction to capture the slider gesture directly. The captured step replays at ≥ 95% success rate across devices.
@@ -184,7 +184,7 @@ No. Sliders have moving targets that NL cannot resolve reliably. Use Manual Inte
 No. Confirmation gestures depend on dynamic UI state and must be captured via Manual Interaction.
 
 **My drag step passes on the recording device but fails on another device. What's wrong?**
-KaneAI replays use element resolution by default. Cross-device failures usually indicate that the source or target element identifier changed across builds. Inspect the step logs to see the resolution path used (element vs. coordinate) and ensure the elements expose stable accessibility IDs.
+KaneAI replays use element resolution by default — cross-device failures usually indicate that the source or target element identifier changed across builds. Inspect the step logs to see the resolution path used (element vs. coordinate) and ensure the elements expose stable accessibility IDs.
 
 **Why isn't manual recording available on Mobile Web?**
 The KaneAI agent does not enter Recording state for mobile browser sessions. Use natural language instructions or slash commands instead.
@@ -193,7 +193,7 @@ The KaneAI agent does not enter Recording state for mobile browser sessions. Use
 You can edit the source / target locators and step-level configuration. The drag vector and gesture timing are immutable for Manual steps to preserve replay fidelity.
 
 **Does drag work inside a KaneAI Module?**
-Yes, drag steps can be saved into Modules and reused across test cases. Module versioning applies as usual.
+Yes — drag steps can be saved into Modules and reused across test cases. Module versioning applies as usual.
 
 **Can I parameterize a drag step?**
 Yes. Use `{{variable_name}}` in the source or target reference. Local variables, global variables, smart variables, parameters, and dataset rows are all supported.
@@ -202,4 +202,4 @@ Yes. Use `{{variable_name}}` in the source or target reference. Local variables,
 Yes. Drag steps can be placed inside conditional blocks (`if X is visible then drag Y to Z`) and while loops. Each iteration re-resolves elements at runtime.
 
 **Is drag and drop supported on real devices?**
-Yes, drag works on both real devices and the device cloud for App testing. Real Device Web also supports manual drag.
+Yes — drag works on both real devices and the device cloud for App testing. Real Device Web also supports manual drag.

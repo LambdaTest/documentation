@@ -108,4 +108,4 @@ Any build in App Distribution can be launched on a TestMu AI real device in one 
 
 **Step 2:** Click the **Run** icon on the build row. The device selection modal opens with the build pre-loaded.
 
-**Step 3:** Select an Android or iOS real device and start your session. The build is installed automatically and ready to test.
+**Step 3:** Select an Android or iOS real device and start your session — the build is installed automatically and ready to test.

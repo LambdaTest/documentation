@@ -2,7 +2,7 @@
 
 Understanding how your website behaves across different geographies is essential for delivering a personalized and compliant user experience. Whether you're targeting region-specific pricing, content, or legal requirements, geolocation simulation is a critical part of cross-border testing.
 
-With TestMu AI’s Geolocation Change feature for Real Device Browsers, you can manually simulate a different country during a live browser testing session, on actual Android devices. This allows you to test how your mobile website responds to users from specific locations without using a VPN or emulator.
+With TestMu AI’s Geolocation Change feature for Real Device Browsers, you can manually simulate a different country during a live browser testing session—on actual Android devices. This allows you to test how your mobile website responds to users from specific locations without using a VPN or emulator.
 
 ## Update Geolocation for Real Devices on TestMu AI
 

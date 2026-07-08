@@ -2,7 +2,7 @@
 
 **Beta Testers** in TestMu AI [App Distribution](/support/docs/app-distribution/) are the people you invite to download builds and receive new-build notifications. You can add testers individually, group them into **Beta Teams**, and then assign teams or individual testers to any app's sharing list.
 
-This is a one-time, **organization-level** setup. Once a tester is added, you can reuse them across every app in your organization.
+This is a one-time, **organization-level** setup — once a tester is added, you can reuse them across every app in your organization.
 
 You can manage testers from the sidebar under **Real Device → App Management and Distribution → Beta Testers**.
 
@@ -31,7 +31,7 @@ Until the tester accepts the invite, a **Pending** tag appears next to their ema
 
 ## Create Beta Teams
 
-Teams are groups of testers that make it easier to manage access and notifications at scale. Instead of adding individual testers to each app, you assign a team, and all current (and future) members of that team get access automatically.
+Teams are groups of testers that make it easier to manage access and notifications at scale. Instead of adding individual testers to each app, you assign a team — and all current (and future) members of that team get access automatically.
 
 **Step 1:** Navigate to **Beta Teams**.
 

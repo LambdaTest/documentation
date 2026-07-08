@@ -236,26 +236,23 @@ You can capture the full page screenshot for all different websites which have a
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
 
 ```javascript
-await driver.executeScript("smartui.takeScreenshot", { screenshotName: "<Your Screenshot Name>", fullPage: true });
+driver.executeScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
 ```
 
 ```python
-driver.execute_script("smartui.takeScreenshot", {"screenshotName": "<Your Screenshot Name>", "fullPage": True})
+driver.execute_script("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
 ```
 
 ```ruby
-driver.execute_script("smartui.takeScreenshot", {"screenshotName" => "<Your Screenshot Name>", "fullPage" => true})
+driver.execute_script("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
 ```
 
 ```csharp
-driver.ExecuteScript("smartui.takeScreenshot", new Dictionary<string, object> { { "screenshotName", "<Your Screenshot Name>" }, { "fullPage", true } });
+driver.ExecuteScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>");
 ```
 
 ```java
-Map<String, Object> config = new HashMap<>();
-config.put("screenshotName", "<Your Screenshot Name>");
-config.put("fullPage", true);
-((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
+((JavascriptExecutor)driver).executeScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>");
 ```
 
 The following feature is applicable for `Selenium >= 4.0.0 with Chrome` versions only. Please ensure that the `Lambdatest Capabilities` are updated in your project for executing full page screenshot(s).
@@ -264,27 +261,23 @@ The following feature is applicable for `Selenium >= 4.0.0 with Chrome` versions
 For browsers other than chrome (Mozilla, Safari etc.) and for websites `Full Page Screenshot` fails, you can use smartscroll to take a full page screenshot of your web page by adding this hook in your test script.
 
 ```javascript
-await driver.executeScript("smartui.takeScreenshot", { screenshotName: "<screenshot-name>", fullPage: true, smartScroll: true });
+await driver.executeScript("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }");
 ```
 
 ```python
-driver.execute_script("smartui.takeScreenshot", {"screenshotName": "<screenshot-name>", "fullPage": True, "smartScroll": True})
+driver.execute_script("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }")
 ```
 
 ```ruby
-driver.execute_script("smartui.takeScreenshot", {"screenshotName" => "<screenshot-name>", "fullPage" => true, "smartScroll" => true})
+driver.execute_script("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }")
 ```
 
 ```csharp
-driver.ExecuteScript("smartui.takeScreenshot", new Dictionary<string, object> { { "screenshotName", "<screenshot-name>" }, { "fullPage", true }, { "smartScroll", true } });
+driver.ExecuteScript("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }");
 ```
 
 ```java
-Map<String, Object> config = new HashMap<>();
-config.put("screenshotName", "<screenshot-name>");
-config.put("fullPage", true);
-config.put("smartScroll", true);
-((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
+((JavascriptExecutor)driver).executeScript("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }");
 ```
 
 ### For capturing the screenshot of a specific element

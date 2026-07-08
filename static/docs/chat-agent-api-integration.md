@@ -1,6 +1,6 @@
-# Chat Agent API - Integration Guide
+# Chat Agent API — Integration Guide
 
-This document outlines the API request format, required credentials, and response schema the platform uses to communicate with your chatbot, regardless of provider or framework.
+This document outlines the API request format, required credentials, and response schema the platform uses to communicate with your chatbot — regardless of provider or framework.
 
 ## Request Format
 
@@ -22,21 +22,21 @@ The field names above (`assistantId`, `input`) are illustrative. Your chatbot ma
 
 | Component | Value in Example | Description |
 |-----------|-----------------|-------------|
-| **Method** | `POST` | HTTP method: all chat requests use POST. |
-| **Endpoint URL** *(Required)* | `https://api.examplechatbot.com/chat` | Your chatbot's API endpoint, the URL that accepts incoming messages. This varies by provider. |
+| **Method** | `POST` | HTTP method — all chat requests use POST. |
+| **Endpoint URL** *(Required)* | `https://api.examplechatbot.com/chat` | Your chatbot's API endpoint — the URL that accepts incoming messages. This varies by provider. |
 | **Authorization** *(Required)* | `Bearer sk-example-a1b2c3d4e5f6` | Authentication token. The platform uses the token you provide to authenticate each request. Format may vary (Bearer token, API key header, etc.). |
 | **Content-Type** *(Required)* | `application/json` | Indicates a JSON-formatted request body. |
 | **Additional Headers** *(Optional)* | Any extra `-H "…"` entries | If your chatbot requires additional headers (e.g., session ID, API version, workspace ID, custom tracking headers), they are fully supported. **Include as many as needed.** |
-| **Request Body** | JSON payload | Contains the fields your chatbot expects, typically a bot/assistant identifier and the user message. Field names vary by provider. |
+| **Request Body** | JSON payload | Contains the fields your chatbot expects — typically a bot/assistant identifier and the user message. Field names vary by provider. |
 
 **Header Flexibility**
-The platform sends the exact URL, token, and headers you configure. If your chatbot requires headers beyond Authorization and Content-Type, simply provide them. The platform forwards all configured headers with every request.
+The platform sends the exact URL, token, and headers you configure. If your chatbot requires headers beyond Authorization and Content-Type, simply provide them — the platform forwards all configured headers with every request.
 
 ## Connection Methods
 
 The platform supports three ways to connect to your chatbot, depending on where it is hosted and how it is accessible. Choose the option that matches your environment.
 
-### Option A: Public API (Direct)
+### Option A — Public API (Direct)
 
 The simplest path. If your chatbot exposes a publicly reachable HTTPS endpoint, the platform connects to it directly using the URL, auth headers, and any additional headers you provide.
 
@@ -50,22 +50,22 @@ The simplest path. If your chatbot exposes a publicly reachable HTTPS endpoint, 
 
 > **Best for:** Production / cloud-hosted bots
 
-### Option B: Secure Proxy (Private Network)
+### Option B — Secure Proxy (Private Network)
 
-If your chatbot is not publicly reachable (e.g., it sits behind a corporate firewall, within a VPC, or on an internal network), the platform provides a lightweight **proxy agent** that you install inside your network. The agent establishes a secure outbound tunnel to our platform, allowing test traffic to reach your chatbot without exposing it to the public internet.
+If your chatbot is not publicly reachable — e.g., it sits behind a corporate firewall, within a VPC, or on an internal network — the platform provides a lightweight **proxy agent** that you install inside your network. The agent establishes a secure outbound tunnel to our platform, allowing test traffic to reach your chatbot without exposing it to the public internet.
 
 **Flow:** `Testing Platform` → `Secure Tunnel` → `Proxy Agent (Your Network)` → `Your Chatbot (Internal)`
 
 | You Provide | Details |
 |-------------|---------|
 | **Internal Endpoint** *(Required)* | The internal URL or hostname of your chatbot (e.g., `https://chatbot.internal:8443/chat`). |
-| **Auth Headers** *(Required)* | Same authentication headers your chatbot expects. The proxy handles *network access*, not authentication. Your chatbot still validates credentials on every request. |
+| **Auth Headers** *(Required)* | Same authentication headers your chatbot expects. The proxy handles *network access*, not authentication — your chatbot still validates credentials on every request. |
 | **Additional Headers** *(Optional)* | Any extra headers your chatbot requires. |
-| **Proxy Agent** | Provided by us. A lightweight service installed on a machine within your network that has access to the chatbot. Only outbound connectivity is needed, no inbound firewall rules required. |
+| **Proxy Agent** | Provided by us. A lightweight service installed on a machine within your network that has access to the chatbot. Only outbound connectivity is needed — no inbound firewall rules required. |
 
 > **Best for:** Enterprise / on-premise deployments
 
-### Option C: Localhost (Dev / Staging)
+### Option C — Localhost (Dev / Staging)
 
 For chatbots running on a local development machine (e.g., `localhost:3000`), the same proxy agent is installed locally. It creates a secure tunnel from our platform to your machine, allowing the platform to reach your locally running chatbot.
 
@@ -75,7 +75,7 @@ For chatbots running on a local development machine (e.g., `localhost:3000`), th
 |-------------|---------|
 | **Local Endpoint** *(Required)* | The localhost URL and port your chatbot runs on (e.g., `http://localhost:3000/chat`). |
 | **Auth Headers** *(If applicable)* | If your local chatbot enforces authentication, provide the same auth headers. If auth is disabled in dev mode, this can be skipped. |
-| **Proxy Agent** | Provided by us. Installed on your local machine, runs as a background process during testing. |
+| **Proxy Agent** | Provided by us. Installed on your local machine — runs as a background process during testing. |
 
 > **Best for:** Development / pre-deployment testing
 
@@ -90,11 +90,11 @@ For chatbots running on a local development machine (e.g., `localhost:3000`), th
 | **Firewall changes needed?** | None | None (outbound only) | None |
 | **Typical use case** | Production, cloud-hosted | Enterprise, on-premise | Development, staging |
 
-Regardless of connection method, the platform sends the exact authentication and custom headers you configure with every request. The proxy agent handles *network reachability* only. It does not bypass or replace your chatbot's authentication.
+Regardless of connection method, the platform sends the exact authentication and custom headers you configure with every request. The proxy agent handles *network reachability* only — it does not bypass or replace your chatbot's authentication.
 
 ## Response Schema
 
-The response structure varies by provider. Below is a representative example showing common fields. Your chatbot's response may include different or additional fields. The platform adapts to your specific schema.
+The response structure varies by provider. Below is a representative example showing common fields. Your chatbot's response may include different or additional fields — the platform adapts to your specific schema.
 
 ```json title="Example Response"
 {
@@ -134,8 +134,8 @@ To connect your chatbot, provide the following. No code changes or infrastructur
 |------|-----------|-------------|
 | **Chatbot URL** (API endpoint) | Required | The HTTPS endpoint where your chatbot receives messages. Example: `https://your-domain.com/chat` |
 | **Authentication Credentials** | Required | The token or key needed to access your chatbot API. This could be a Bearer token, API key, or any other auth mechanism your API uses. |
-| **Bot / Assistant Identifier** | Required | The identifier for the specific chatbot to be tested, applicable if your platform hosts multiple bots under one API. |
-| **Additional Headers** | Optional | Any extra headers your chatbot requires, such as a session token, API version, workspace ID, or custom tracking header. Provide as many as needed. |
+| **Bot / Assistant Identifier** | Required | The identifier for the specific chatbot to be tested — applicable if your platform hosts multiple bots under one API. |
+| **Additional Headers** | Optional | Any extra headers your chatbot requires — such as a session token, API version, workspace ID, or custom tracking header. Provide as many as needed. |
 | **Request Body Format** | Optional | If your chatbot expects a different body structure (field names, extra fields), let us know and we will match it exactly. |
 
 ## How the Platform Uses This
@@ -145,7 +145,7 @@ Once credentials are configured, the platform handles everything autonomously:
 `Credentials Configured` → `Test Scenarios Generated` → `API Calls Sent to Your Chatbot` → `Responses Captured` → `Quality Scored`
 
 - The platform sends requests using the exact URL, token, and headers you provide.
-- Multi-turn conversations are executed. The platform reads the `output` field from each response and continues the dialogue across multiple exchanges.
+- Multi-turn conversations are executed — the platform reads the `output` field from each response and continues the dialogue across multiple exchanges.
 - Each completed conversation is evaluated across 18+ quality dimensions and results are surfaced in the dashboard.
 
 **Security**

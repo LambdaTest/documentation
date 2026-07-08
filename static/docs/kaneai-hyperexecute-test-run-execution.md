@@ -79,20 +79,20 @@ Before clicking **Execute**, you can optionally click **Advanced Configurations*
 | **App Profiling** | Enable app performance metrics tracking for native mobile app tests. See [App Performance Analytics](/support/docs/appium-app-performance-analytics/) for details. |
 | **Android App ID** | Specify an Android app ID (`lt://`) to override the existing app in the test instance configuration. |
 | **iOS App ID** | Specify an iOS app ID (`lt://`) to override the existing app in the test instance configuration. |
-| **Visual Regression** | Add visual testing configuration: select browsers, viewports, devices, and orientation. See [Visual Testing with SmartUI](/support/docs/kaneai-smartui-visual-testing/) for details. |
+| **Visual Regression** | Add visual testing configuration — select browsers, viewports, devices, and orientation. See [Visual Testing with SmartUI](/support/docs/kaneai-smartui-visual-testing/) for details. |
 | **Accessibility** | Enable accessibility checks (WCAG 2.1 AA) with best practices and needs review options. Available for web with Chrome and Edge browsers only. May slow down execution time. |
-| **Report Enabled** | Set to true to enable report generation for the test run. Select either HTML or Extent report format. Only one can be active at a time. Reports are accessible from the HyperExecute Job page after execution. See [below](#reports). |
+| **Report Enabled** | Set to true to enable report generation for the test run. Select either HTML or Extent report format — only one can be active at a time. Reports are accessible from the HyperExecute Job page after execution. See [below](#reports). |
 | **Report Email To** | An array of email addresses to receive the test run report via email after execution. Maximum 10 email addresses. Only works when report is enabled. |
 
 Test case failure retries are supported only for code exported from **May 10, 2026 onwards**. For previously exported code, retries are triggered only on test runner command failure. To use this capability, regenerate the code export for your test cases in Test Manager.
 
 ### Reports
 
-Enable the **Reports** option in Advanced Configurations to generate reports for your test run. You can enable either an HTML report or an Extent report. Only one can be active at a time. Reports are supported for both web and mobile test executions.
+Enable the **Reports** option in Advanced Configurations to generate reports for your test run. You can enable either an HTML report or an Extent report — only one can be active at a time. Reports are supported for both web and mobile test executions.
 
-- **Generate HTML Report**: Toggle to **Yes** to generate an HTML report for the test run, available in the HyperExecute dashboard after execution.
-- **Generate Extent Report**: Toggle to **Yes** to generate an Extent report for the test run, available in the HyperExecute dashboard after execution.
-- **Email Addresses**: Add one or more email addresses (separated by space or enter) to receive the report via email after execution. You can add up to **10 email addresses**.
+- **Generate HTML Report** — Toggle to **Yes** to generate an HTML report for the test run, available in the HyperExecute dashboard after execution.
+- **Generate Extent Report** — Toggle to **Yes** to generate an Extent report for the test run, available in the HyperExecute dashboard after execution.
+- **Email Addresses** — Add one or more email addresses (separated by space or enter) to receive the report via email after execution. You can add up to **10 email addresses**.
 
 **Accessing the Report**
 
@@ -102,15 +102,15 @@ Once your test run execution is complete, you can access the generated HTML repo
 
 The generated HTML report includes:
 
-- **Summary**: Job metadata (job number, labels, username, build time, date), test summary with pass/fail counts and donut charts, scenario summary, task analytics, and browser-level breakdown.
-- **Test Cases**: A detailed list of all test cases with their status (pass/fail), OS, OS version, browser, duration, and links to view the test or watch the video recording.
+- **Summary** — Job metadata (job number, labels, username, build time, date), test summary with pass/fail counts and donut charts, scenario summary, task analytics, and browser-level breakdown.
+- **Test Cases** — A detailed list of all test cases with their status (pass/fail), OS, OS version, browser, duration, and links to view the test or watch the video recording.
 
 **Extent Report Overview**
 
 The generated Extent report provides a rich interactive view of test execution results, accessible from the HyperExecute Job page. It includes:
 
-- **Dashboard**: A visual summary of the test run with pass/fail statistics and trend data.
-- **Test Details**: Step-by-step breakdown of each test case with status and screenshots.
+- **Dashboard** — A visual summary of the test run with pass/fail statistics and trend data.
+- **Test Details** — Step-by-step breakdown of each test case with status and screenshots.
 
 **Email Report**
 

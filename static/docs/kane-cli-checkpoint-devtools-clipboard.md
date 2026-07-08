@@ -6,7 +6,7 @@ Clipboard assertions let you verify what a "Copy" button actually copied, extrac
 
 Every run uses an **isolated test clipboard**:
 
-- **Your real clipboard is safe**: the OS clipboard is never read and never written. Tests can't leak your copied data into results, and nothing you copy mid-run interferes with the test
+- **Your real clipboard is safe**: the OS clipboard is never read and never written — tests can't leak your copied data into results, and nothing you copy mid-run interferes with the test
 - **Automatic capture**: when the page copies something (a Copy button, Ctrl/Cmd+C on a selection), it lands in the test clipboard
 - **One current entry**: like a real clipboard, every copy or clipboard write **replaces** the previous content
 - **Multi-format**: a single entry can carry plain text, HTML, and an image together (e.g. a "Copy image" button)
@@ -16,7 +16,7 @@ Every run uses an **isolated test clipboard**:
 
 Because the clipboard holds one entry at a time:
 
-- Verify a copied value **immediately after** the copy or write that produced it. A later clipboard write/clear replaces it
+- Verify a copied value **immediately after** the copy or write that produced it — a later clipboard write/clear replaces it
 - To check several copies, interleave: copy A → verify → copy B → verify
 
 ## What You Can Query
@@ -44,11 +44,11 @@ Click the Copy button, store the copied coupon code as 'coupon'
 Store the clipboard text as 'copied_link'
 ```
 
-Stored values work like any other variable. Fill `{{coupon}}` into a field later, or assert on it.
+Stored values work like any other variable — fill `{{coupon}}` into a field later, or assert on it.
 
 ## Writing and Pasting (actions)
 
-The clipboard isn't read-only. Objectives can also drive it. See [Browser State Actions](/support/docs/kane-cli-browser-state/):
+The clipboard isn't read-only — objectives can also drive it. See [Browser State Actions](/support/docs/kane-cli-browser-state/):
 
 ```
 Write "John Tester" to the clipboard, click the message field, then paste from the clipboard
@@ -56,6 +56,6 @@ Write "John Tester" to the clipboard, click the message field, then paste from t
 
 ## Tips
 
-- **Don't paste to verify**: assert on the clipboard directly instead of pasting into a field and reading it back
+- **Don't paste to verify** — assert on the clipboard directly instead of pasting into a field and reading it back
 - **Prefer positive phrasing** for empties: "verify the clipboard text is empty" rather than "verify X is not on the clipboard"
-- Clipboard actions need a page loaded first. Navigate before writing or pasting
+- Clipboard actions need a page loaded first — navigate before writing or pasting

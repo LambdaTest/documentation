@@ -50,7 +50,7 @@ HyperExecute distributes feature files intelligently across defined parallel nod
 Automatically re-run failed scenarios without restarting the entire suite.
 
 #### 3. Real-Time Logs & Reports**
-Debug faster with per-test logs, reports, and console outputs, available instantly in the HyperExecute dashboard.
+Debug faster with per-test logs, reports, and console outputs—available instantly in the HyperExecute dashboard.
 
 #### 4. Flakiness & Stability Insights**
 Track unstable tests using built-in analytics that detect patterns of failure across builds.

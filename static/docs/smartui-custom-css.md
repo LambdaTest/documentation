@@ -1,6 +1,6 @@
 # Custom CSS Injection in SmartUI
 
-Custom CSS injection is a specialized feature in SmartUI that allows you to apply test-only styles during snapshot capture without modifying your application code. This feature enables you to stabilize visual tests by normalizing dynamic content, enforcing consistent styling across environments, and masking sensitive information, all while keeping your visual testing logic centralized and maintainable.
+Custom CSS injection is a specialized feature in SmartUI that allows you to apply test-only styles during snapshot capture without modifying your application code. This feature enables you to stabilize visual tests by normalizing dynamic content, enforcing consistent styling across environments, and masking sensitive information—all while keeping your visual testing logic centralized and maintainable.
 
 ### Why Custom CSS Matters
 
@@ -93,7 +93,7 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 - **Method Selection**: Choose the file path method for larger stylesheets and team collaboration. Use embedded strings only for quick, single-use CSS rules.
 
-- **CSS Organization**: Keep your CSS snapshot-specific: target only elements that need stabilization or normalization. Avoid broad selectors that might affect unintended elements.
+- **CSS Organization**: Keep your CSS snapshot-specific—target only elements that need stabilization or normalization. Avoid broad selectors that might affect unintended elements.
 
 - **JSON Escaping**: When using embedded strings, escape quotes properly:
   - Use single quotes within CSS strings: `"body{font-family:'Inter',sans-serif;}"`
@@ -101,8 +101,8 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 - **Selector Verification**: If the CSS Injection Report shows "no elements found" or "invalid selector" errors:
   - Verify the element exists at snapshot time (use browser dev tools)
-  - Check selector specificity: it may need to be more specific or less specific
-  - Consider timing issues: ensure the element is rendered before snapshot capture
+  - Check selector specificity—it may need to be more specific or less specific
+  - Consider timing issues—ensure the element is rendered before snapshot capture
   - Check the CSS Injection Report in logs for detailed feedback
 
 - **CLI Version**: Ensure SmartUI CLI v4.1.40+ is installed. You can verify this by running `npx smartui --version`. Older versions may not support the `customCSS` feature.

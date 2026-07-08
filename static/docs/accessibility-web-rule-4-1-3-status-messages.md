@@ -26,7 +26,7 @@ Sighted users see toast notifications, search result counts, and progress indica
 - use `role="status"` for non-urgent updates (result counts, save confirmations)
 - use `role="alert"` for urgent messages (errors, warnings)
 - ensure the live region exists in the DOM before the content is injected (add content to an existing container rather than injecting the container)
-- avoid overusing alerts, since frequent announcements interrupt the user's workflow
+- avoid overusing alerts — frequent announcements interrupt the user's workflow
 
 ## Related docs
 

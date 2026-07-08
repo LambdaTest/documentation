@@ -120,7 +120,7 @@ result = driver.execute_script("lambda-adb",params)
 
 - **adb shell mkdir**
 
-  The `adb shell mkdir` command is used to create new directories on an Android device’s filesystem. It is especially useful when preparing the device environment before automated test runs, ensuring that the required folder structure exists for storing screenshots, logs, or other test-related files. The following is a Python sample using the adb command:
+  The `adb shell mkdir` command is used to create new directories on an Android device’s filesystem. It is especially useful when preparing the device environment before automated test runs—ensuring that the required folder structure exists for storing screenshots, logs, or other test-related files. The following is a Python sample using the adb command:
 
 ```python
 params = {"command": "shell", "text": "mkdir /sdcard/TestResults"}
@@ -147,7 +147,7 @@ result = driver.execute_script("lambda-adb",params)
 
 - **adb shell am**
 
-  The `adb shell am command` uses the Activity Manager to control app components on a real device. It’s useful for launching activities, restarting apps, or sending broadcast intents, commonly done during tests to simulate user actions or reset app state. The following is a Python sample using the adb command:
+  The `adb shell am command` uses the Activity Manager to control app components on a real device. It’s useful for launching activities, restarting apps, or sending broadcast intents—commonly done during tests to simulate user actions or reset app state. The following is a Python sample using the adb command:
 
 ```python
 params = {"command": "shell", "text": "am start -n com.example/.MainActivity"}
@@ -199,11 +199,11 @@ result = driver.execute_script("lambda-adb",params)
 
   #### These are the `ls` commands that can are enabled:
 
-  - `ls /sdcard/Download`: Lists all files and directories inside the Downloads folder. Typically used to check if test downloads or app-generated files exist, and to validate proper file creation or cleanup.
+  - `ls /sdcard/Download` — Lists all files and directories inside the Downloads folder. Typically used to check if test downloads or app-generated files exist, and to validate proper file creation or cleanup.
 
-  - `ls /sdcard/Pictures`: Lists all files in the Pictures directory, which usually stores photos and screenshots. Useful for confirming screenshots are saved correctly or for accessing images created during tests.
+  - `ls /sdcard/Pictures` — Lists all files in the Pictures directory, which usually stores photos and screenshots. Useful for confirming screenshots are saved correctly or for accessing images created during tests.
 
-  - `ls /sdcard/Movies`: Lists media files in the Movies folder. Commonly used to validate recorded or downloaded videos and manage video artifacts from test executions.
+  - `ls /sdcard/Movies` — Lists media files in the Movies folder. Commonly used to validate recorded or downloaded videos and manage video artifacts from test executions.
 
 ```python
 # List files in the Downloads folder
@@ -222,11 +222,11 @@ result = driver.execute_script("lambda-adb", params)
   The `adb shell cat` command in Android's shell outputs a file’s contents to the console, allowing quick access to text or binary data on the device. Short for “concatenate,” it’s a common Linux command used to read files. In automation, cat helps inspect logs, reports, images, or videos without manual device access. Text files show readable content, while binary files output raw data that may need special handling.
 
   #### These are the cat commands that can are enabled:
-    - `cat /sdcard/Download/`: Outputs the contents of a file in the Downloads folder. Typically used to read logs, reports, or downloaded test artifacts.
+    - `cat /sdcard/Download/` — Outputs the contents of a file in the Downloads folder. Typically used to read logs, reports, or downloaded test artifacts.
 
-    - `cat /sdcard/Pictures/`: Outputs the raw binary data of an image file in the Pictures folder, useful for verifying screenshots or photos.
+    - `cat /sdcard/Pictures/` — Outputs the raw binary data of an image file in the Pictures folder, useful for verifying screenshots or photos.
 
-    - `cat /sdcard/Movies/`: Outputs raw binary content of video files in the Movies folder, helpful for validating recorded or downloaded videos.
+    - `cat /sdcard/Movies/` — Outputs raw binary content of video files in the Movies folder, helpful for validating recorded or downloaded videos.
 
 ```python
 params = {"command": "shell", "text": "cat /proc/version"}
