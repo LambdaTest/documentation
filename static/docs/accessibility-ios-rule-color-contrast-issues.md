@@ -1,5 +1,7 @@
 # Color Contrast Issues
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Text and meaningful visual elements in iOS apps must maintain sufficient contrast against their backgrounds to remain readable for all users.
 
 **WCAG Reference**

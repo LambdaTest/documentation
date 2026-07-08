@@ -1,6 +1,8 @@
 # One Click Migration from Zephyr Scale
 
-TestMu AI Test Manager supports one-click migration from **Zephyr Scale (Jira Cloud)**, allowing you to import your entire test library — including projects, test cases, folder structures, custom fields, and linked requirements — directly into Test Manager without manual data entry.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+TestMu AI Test Manager supports one-click migration from **Zephyr Scale (Jira Cloud)**, allowing you to import your entire test library (including projects, test cases, folder structures, custom fields, and linked requirements) directly into Test Manager without manual data entry.
 
 ## Key Benefits
 

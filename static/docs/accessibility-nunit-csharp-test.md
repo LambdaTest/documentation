@@ -1,5 +1,7 @@
 # NUnit (C#)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use this guide for **Selenium C#** tests executed with **NUnit**. Accessibility is enabled on the **RemoteWebDriver** session using the same capability keys as Java ([reference](/support/docs/accessibility-automation-settings/)); NUnit only controls **how and when** tests run.
 
 > **Browsers:** Use **Chrome or Edge** with supported versions.

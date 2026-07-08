@@ -1,5 +1,7 @@
 # Extended Debugging Options for Selenium Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI's Extended Debugging Options let you debug and optimize your Selenium tests by giving you granular control over network behavior and system performance. These debugging features allow you to intercept and modify network requests, simulate various CPU and network conditions, and download network analysis files within your test automation workflow.
 
 With Extended Debugging Options, you can replicate real-world scenarios such as slow networks, resource-constrained devices, API failures, and connectivity issues, ensuring your application delivers a solid user experience across diverse conditions and environments.

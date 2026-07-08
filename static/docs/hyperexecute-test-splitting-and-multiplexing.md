@@ -1,5 +1,7 @@
 # Test Splitting and Multiplexing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 HyperExecute has 3 different modes to select and execute tests:
 - Auto Split Strategy
 - Matrix Strategy

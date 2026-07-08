@@ -1,5 +1,7 @@
 # Support for Wildcard in --allowHosts Flag
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI Tunnel now supports wildcard entries in the [`--allowHosts`](/support/docs/lambda-tunnel-modifiers/#:~:text=TYPE-,%2D%2DallowHosts,-Comma%20separated%20list) flag. This enhancement allows users to specify patterns for hostnames instead of listing each subdomain separately, making it more flexible and efficient.
 
 ## Usage of `--allowHosts` with Wildcards

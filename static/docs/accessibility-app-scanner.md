@@ -1,5 +1,7 @@
 # Accessibility App Scanner (Overview)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Accessibility App Scanner is the **manual** mobile app workflow for reviewing accessibility issues on **real Android or iOS devices**, screen by screen, without writing Appium code.
 
 ## When to use this

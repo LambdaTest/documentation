@@ -1,5 +1,7 @@
 # GitHub Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 GitHub is one of the most popular community among software developers. It helps you with version control by providing a code hosting platform for all. From open source to business, one can share their codes, discover new ideas and discuss about roadblocks, all in order to deliver a better software. GitHub also serves as a project management tool. It allows a team to collaborate from all around the globe.
 
 The TestMu AI GitHub Integration allows you to create a card directly in your repository from TestMu AI platform. Push an issue to your respective repository anytime, even in the middle of your test session. The fields populated by you when marking as bug through TestMu AI are displayed as information on the bug in GitHub repository for that testing instance.

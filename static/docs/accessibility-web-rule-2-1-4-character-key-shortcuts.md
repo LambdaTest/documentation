@@ -1,5 +1,7 @@
 # Character Key Shortcuts (2.1.4)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 If a keyboard shortcut uses only a single printable character (letter, number, punctuation, or symbol), the user must be able to turn it off, remap it, or it must only be active when the relevant component has focus.
 
 **WCAG Reference**

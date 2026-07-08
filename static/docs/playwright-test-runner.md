@@ -1,5 +1,7 @@
 # Playwright Testing With Playwright Test Runner
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Playwright Test Runner is used for end-to-end automated testing of websites and web apps across all major browsers. You can run parallel tests, get context isolation out of the box, capture videos, screenshots, and other test artifacts on test failure, and use fixtures with Playwright test runner.
 
 TestMu AI enables you to run Playwright tests with the Playwright test runner across 40+ real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the TestMu AI platform using the Playwright test runner.

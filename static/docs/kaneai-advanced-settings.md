@@ -1,6 +1,8 @@
 # Advanced Settings in KaneAI Test Case
 
-KaneAI allows you to edit the advanced settings of an existing test case directly from the **Test Summary** page. This gives you the flexibility to update configurations like network settings, timezone, Chrome options, and custom headers after a test has already been authored — without having to recreate it from scratch.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+KaneAI allows you to edit the advanced settings of an existing test case directly from the **Test Summary** page. This gives you the flexibility to update configurations like network settings, timezone, Chrome options, and custom headers after a test has already been authored, without having to recreate it from scratch.
 
 This feature is supported across all platforms: **Desktop Web**, **Mobile App**, and **Mobile Web**.
 

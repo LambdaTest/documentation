@@ -1,5 +1,7 @@
 # Tunnel Security
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI allows you to configure various sharing and security options for TestMu AI Tunnel. With these options, you can restrict tunnel creation to specific users, turn tunnel sharing on or off and control which domains are accessible (or inaccessible) through the tunnel.
 
 > **Note:** Only administrators are able to view and manage these settings in the security tab of the organization settings page.

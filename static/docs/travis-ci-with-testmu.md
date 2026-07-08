@@ -1,5 +1,7 @@
 # Travis CI Integration with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Travis CI is one of the most popular tool which facilitates continuous integration for GitHub projects. Open source projects can use Travis CI without having to pay anything from their pocket. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to market launch.
 
 TestMu AI now integrates with Travis CI to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on cloud. Perform automation testing in parallel with TestMu AI’s Selenium grid to drastically trim down your test cycles.

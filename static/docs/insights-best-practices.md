@@ -1,5 +1,7 @@
 # Best Practices for TestMu AI Insights
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Unlock the full potential of TestMu AI Insights by following these best practices for dashboards, widgets, and insights modules. These guidelines are distilled from the current knowledge base and are designed to help you optimize your testing process, improve reporting, and drive actionable insights.
 
 ## 1. Dashboard and Widget Design

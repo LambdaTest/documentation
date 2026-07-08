@@ -1,5 +1,7 @@
 # Kane CLI Documentation - Getting Started
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 **Kane CLI** `kane-cli` is an AI-powered browser automation tool that runs from your terminal. Describe what you want to test in plain English: Kane CLI navigates websites, clicks elements, fills forms, extracts data, and validates outcomes in a real Chrome browser.
 
 - **Run browser tests from any terminal or IDE**: no test scripts, no selectors, no framework boilerplate

@@ -1,4 +1,7 @@
 # Network Logs Assertions
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The **Network Logs Assertions** feature in KaneAI enables you to test and validate the behavior of your application at the **network layer**.
 This is useful when you need to ensure that API calls, response codes, payloads, or request timings meet expected conditions during your test executions.
 

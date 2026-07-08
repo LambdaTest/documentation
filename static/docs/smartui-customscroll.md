@@ -1,5 +1,7 @@
 # Custom Viewport Capture in SmartUI Screenshots
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 In TestMu AI **SmartUI**, **custom viewport capture screenshots** preserve the scroll position that exists when you take a snapshot. This helps SmartUI capture the exact visual state of pages that use nested scroll containers, PDF viewers, document viewers, virtualized lists, infinite-scroll pages, data grids, modals, drawers, and embedded scrollable components.
 
 Use CustomScroll when the content you want to validate is not fully represented by the top-level page viewport. SmartUI records the active scroll state during snapshot capture, restores it before rendering the screenshot, and compares the resulting image against your baseline.

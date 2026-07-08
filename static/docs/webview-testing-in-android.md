@@ -1,5 +1,7 @@
 # WebView Testing In Android Online In Real Time
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 WebView, in Android, is the feature which allows any app to display a webpage as a part of its own activity, instead of opening it on a separate browser. This not only allows the app to retain the users within itself but also increases the user-experience multifold. As a result, WebView Testing is one of the most widely in-demand testing techniques around the world as of today.
 
 TestMu AI now allows you to perform your WebView Testing using its online cloud-based Selenium Grid, which gives you 3000+ combinations of browsers, operating systems, and mobile devices. You will be able to test WebViews of your app, interact with it in realtime, mark bugs, and much more, with just a click, on the TestMu AI platform. In this article, we will see how to perform WebView Testing in Android using Selenium Grid on TestMu AI.

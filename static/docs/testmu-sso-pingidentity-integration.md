@@ -1,5 +1,7 @@
 # TestMu AI SSO & PingIdentity Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI provides seamless integration with Ping Identity through SAML (Security Assertion Markup Language) to enable Single Sign-On (SSO) for your organization. By integrating Ping Identity with your TestMu AI organization, you can streamline user authentication and enhance security.
 
 ## Key Features of Ping Identity Integration:

@@ -1,5 +1,7 @@
 # UI Testing with Playwright using HyperExecute and SmartUI SDK
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 ## Prerequisites

@@ -1,5 +1,7 @@
 # Using TestMu AI Tunnel with SmartUI SDK
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI Tunnel enables secure testing of your local, development, or privately hosted environments using SmartUI SDK. This guide explains how to configure and use TestMu AI Tunnel with SmartUI SDK.
 
 **Important**

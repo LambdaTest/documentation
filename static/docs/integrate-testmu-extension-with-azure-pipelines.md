@@ -1,5 +1,7 @@
 # Integrate TestMu AI Extension With Azure Pipelines
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Azure Pipelines, by Microsoft, is a feature of Azure DevOps. It helps to automatically build, test, and deploy your projects, with Continuous Integration or CI, upon various production environments. So your Selenium automation test scripts can run successfully on Azure Pipeline. However, sometimes running your scripts can be a bit tedious. This is where the TestMu AI plugin can be used in the Azure Pipeline to ease the workflow and automate the tests. TestMu AI allows you to perform live interactive and automated cross-browser testing on 3000+ real browsers and operating systems online.
 
 Check TestMu AI Extension On Azure DevOps Marketplace

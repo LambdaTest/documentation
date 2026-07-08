@@ -1,5 +1,7 @@
 # Getting started with SmartUI using K6
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This documentation will act as your step-by-step guide in to perform K6 test with SmartUI.
 
 ### Prerequisites for running SmartUI with K6

@@ -1,5 +1,7 @@
 # KaneAI Knowledge Base
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
   const getBrandName = () => 'TestMu AI';
   const getBrandNameLowercase = () => 'testmu ai';
   if (type === 'lowercase') {

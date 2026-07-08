@@ -1,5 +1,7 @@
 # SmartUI in the Automation Dashboard
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## What this feature is
 
 Users can now view, group, and review their SmartUI visual regression results directly inside the Automation Dashboard, without switching products.

@@ -1,5 +1,7 @@
 # Bug Report
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use Bug Report to convert Accessibility findings into actionable engineering work.
 
 Bug Report turns confirmed accessibility findings into engineering work items inside the issue trackers your team already trusts. This page explains when raising a bug from a report is appropriate and how that action extends remediation beyond the dashboard into delivery rituals. Use it when you want a repeatable handoff from accessibility evidence to tracked fixes.

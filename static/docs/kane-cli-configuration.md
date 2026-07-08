@@ -1,5 +1,7 @@
 # Configuration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Kane CLI stores persistent settings at `~/.testmuai/kaneai/tui-config.json`. Most settings are managed through `kane-cli config` subcommands; a few are managed through interactive pickers in TUI mode, and one (code export) is toggled from the TUI menu.
 
 Authentication credentials are managed separately under `~/.testmuai/kaneai/profiles/` — see [Authentication](/support/docs/kane-cli-authentication/).

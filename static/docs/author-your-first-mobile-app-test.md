@@ -1,5 +1,7 @@
 # Author Your First Mobile App Test
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 In this guide, we'll walk you through how you can author your mobile app tests using KaneAI
 
 ## Steps to Author Your Mobile App Test

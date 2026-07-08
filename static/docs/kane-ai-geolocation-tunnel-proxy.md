@@ -1,5 +1,7 @@
 # KaneAI - Geolocation, Tunnel and Proxy Support
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Now you can start your web tests on Kane AI using advanced configurations like geolocation, tunnel, and dedicated proxy support.
 
 ## Geolocation Support

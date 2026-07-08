@@ -1,5 +1,7 @@
 # Benefits of HyperExecute Private Cloud
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 HyperExecute Private Cloud offers you with a host of features to optimize your testing process, just like our Standard Cloud. However, HyperExecute Private Cloud goes one step further to provide you with the best testing experience.
 
 It is designed to meet the needs and wants of an enterprise. The flexibility that you get with HyperExecute Private Cloud is its biggest strength. HyperExecute Private Cloud can be designed to fit your enterprise's testing process, and help you automate it with any changes that you want.

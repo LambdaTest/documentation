@@ -1,5 +1,7 @@
 # HyperExecute Task Widgets
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Task Trends
 
 The `Task Trends` widget allows you to analyze the trends of the Task for each Job executed on the platform categorized into **Completed**, **Failed**, **Aborted**, **Lambda Error**, and **Cancelled**, which can be filtered by a specific date and time.

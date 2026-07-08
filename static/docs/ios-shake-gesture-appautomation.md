@@ -1,5 +1,7 @@
 # Trigger Shake Gesture on iOS Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI supports simulating a **shake gesture** on iOS Real Devices and iOS Simulators during Appium automation sessions. Apps often bind the shake gesture to actions such as switching between production and staging builds, opening debug menus, surfacing feedback prompts, or undoing the last action.
 
 By the end of this document, you will be able to:

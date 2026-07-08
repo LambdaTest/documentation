@@ -1,5 +1,7 @@
 # Integrate TestMu AI with Cypress Dashboard
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This article guides you on how to integrate **TestMu AI platform** with **The Cypress Dashboard**
 
 > In this demo we are demonstrating using [TestMu AI's Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.

@@ -1,5 +1,7 @@
 # Test Manager Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 By default, Kane CLI uploads each session to TestMu AI Test Manager as a test case. This page covers what gets uploaded, where it ends up, and the related features: project and folder selection, code export, share links, the post-session feedback prompt, and the local session directory.
 
 This is the default behaviour for every session in both the TUI and the CLI. You do not need to opt in.

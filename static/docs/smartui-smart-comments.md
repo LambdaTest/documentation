@@ -1,6 +1,8 @@
 # SmartUI Smart Comments
 
-Smart Comments enables real-time collaboration on SmartUI visual test results. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions—all without leaving the SmartUI dashboard.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+Smart Comments enables real-time collaboration on SmartUI visual test results. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions, all without leaving the SmartUI dashboard.
 
 **Key Benefits:**
 - **Contextual Discussions**: Comment directly on specific screenshots and builds

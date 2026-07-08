@@ -1,5 +1,7 @@
 # Regular Expression - Espresso
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 
 When you run a test on TestMu AI using a specific device, there may be scenarios, in which the particular device that you selected isn’t available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.

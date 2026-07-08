@@ -1,5 +1,7 @@
 # Frequently Asked Questions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ### How do I start using Analytics?
 
 Getting started with Analytics is simple.

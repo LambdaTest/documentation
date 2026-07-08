@@ -1,5 +1,7 @@
 # HyperExecute Security FAQs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 #### 1. **How secure is HyperExecute?**
 
   HyperExecute is built with security at its core and provides industry standard security on the entire infrastructure. HyperExecute provides fresh virtual machines every time a new job is triggered and deletes the infrastructure after the test execution of the job is completed. Dozens of microservices ensure that test scripts are deleted after the retention period and uniquely encrypted during their retention period. HyperExecute uses a powerful vault to store client side secrets for the users. Enterprise version enables users to add their own security policies over the HyperExecute infrastructure.

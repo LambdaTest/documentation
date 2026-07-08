@@ -1,6 +1,8 @@
 # Generating Test Cases with AI
 
-`kane-cli generate` turns a plain-language description of *what you want to test* into structured **test scenarios** and **test cases** — without writing them by hand and without launching a browser. This page covers AI test-case generation from both the command line and the interactive kane-cli TUI.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+`kane-cli generate` turns a plain-language description of *what you want to test* into structured **test scenarios** and **test cases**, without writing them by hand and without launching a browser. This page covers AI test-case generation from both the command line and the interactive kane-cli TUI.
 
 A generation produces:
 

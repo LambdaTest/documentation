@@ -1,5 +1,7 @@
 # Timeouts - Errors and Resolutions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 To prevent machines from being held due to incorrect tests, there is a restriction on the number of seconds a machine stays reserved. If our servers fail to retrieve a request from your local machine for more than 120 seconds, your tests are aborted from the queue with a Timeout error message.
 
 ## Reasons for a Timeout Error

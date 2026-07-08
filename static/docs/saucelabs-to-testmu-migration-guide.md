@@ -1,5 +1,7 @@
 # Migrating From Sauce Labs To TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from Sauce Labs to TestMu AI.
 
 [Note: This guide covers the migration of tests running on the cloud grid that uses Selenium 4 and Selenium 3]

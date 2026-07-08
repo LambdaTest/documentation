@@ -17,6 +17,8 @@ canonical: https://www.testmuai.com/support/docs/http2-support/
 
 # HTTP/2 Support in TestMu AI Tunnel
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Overview
 
 TestMu AI Tunnel provides out-of-the-box support for HTTP/2, enabling users to test their web applications using the latest web protocol without any additional configuration. HTTP/2 support is essential for performance testing, as it includes improvements such as multiplexing, server push, and header compression. This document provides an overview of HTTP/2 support within TestMu AI Tunnel and its benefits.

@@ -1,5 +1,7 @@
 # Create SSO Connection With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI allows you to integrate an external user directory with your TestMu AI Organization through an IDP so your team could leverage the Single Sign-on setup using SAML.
 
 TestMu AI SSO supports the following:

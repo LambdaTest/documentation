@@ -1,6 +1,8 @@
 # GitLab Integration with HyperExecute
 
-GitLab is a web-based Git repository that provides free open and private repositories, issue-following capabilities, and wikis. It is a complete DevOps platform that enables professionals to perform all the tasks in a project—from project planning and source code management to monitoring and security.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+GitLab is a web-based Git repository that provides free open and private repositories, issue-following capabilities, and wikis. It is a complete DevOps platform that enables professionals to perform all the tasks in a project, from project planning and source code management to monitoring and security.
 
 This document will show you how to integrate GitLab Pipeline with HyperExecute to greatly shorten your test cycles.
 

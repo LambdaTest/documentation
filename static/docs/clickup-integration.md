@@ -1,5 +1,7 @@
 # ClickUp Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ClickUp offers a highly customizable cloud-based platform to boost your productivity for both professional and personal life by storing all of your tasks, docs, conversations, timelines, spreadsheets, and more in a single place. You can have different views of the project such as Gantt view, board view, and calendar view. You could also chat with your colleagues, and share documents with the team. ClickUp also offers numerous features for time management, task management, project management, along with effective collaboration, reporting, and integrations to third-party tools such as TestMu AI.
 
 TestMu AI integration with ClickUp will help you report bugs and UI anomalies directly in your desired project on ClickUp while performing [cross browser testing](https://www.testmuai.com/) with TestMu AI. You can capture a screenshot of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions. You can do all that directly from TestMu AI, in just a single click.

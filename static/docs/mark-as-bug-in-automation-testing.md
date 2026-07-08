@@ -1,5 +1,7 @@
 # Mark as Bug in Automation Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 >You can skip the steps of capturing a screenshot, annotating it, and logging onto a separate tool to create a task. TestMu AI does it all for you.
 >**Mark as Bug** is a feature that lets you highlight any UI observation from your test sessions on TestMu AI and share it with your colleagues on their favorite project management or bug tracking tools such as Jira, Trello, Hive, Paymo, and more. You can choose the assignee who handles your reported task or bug. You can also mention a description to help them understand the issue. You can do all of this while testing on TestMu AI, without hopping to any other platform or tool.
 

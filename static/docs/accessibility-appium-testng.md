@@ -1,5 +1,7 @@
 # Appium TestNG
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use this guide when **Appium** drives Android or iOS tests and **TestNG** is your runner. Accessibility still depends on **session capabilities** plus **`lambda-accessibility-scan`** at stable UI states.
 
 ## Prerequisites

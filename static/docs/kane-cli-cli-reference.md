@@ -1,5 +1,7 @@
 # CLI Reference
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Commands
 
 ### `kane-cli --tui`

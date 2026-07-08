@@ -1,5 +1,7 @@
 # How to Access and Change Org Product Preferences in HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 In this detailed documentation, learn how you can access and change organization product preferences as per your requirements.
 
 Now, to access your organization product preferences, follow the below mentioned steps:

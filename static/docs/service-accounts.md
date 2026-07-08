@@ -1,5 +1,7 @@
 # Creating and Managing Service Accounts
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Service accounts are a distinct type of user that you can use with command line interfaces. They are primarily used to perform tests through pipelines like Jenkins or GitHub Actions. Service accounts are not granted login or dashboard viewing privileges. Instead, they are helpful in monitoring and reporting test execution at the user level.
 
 The service account has the following benefits:

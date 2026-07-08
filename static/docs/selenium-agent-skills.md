@@ -1,5 +1,7 @@
 # Run Selenium Tests Using Agent Skills
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Instead of manually setting up your Selenium project, use **Agent Skills** to let your AI coding assistant generate production-ready test automation for you. The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI assistants how to write production-grade test code.
 
 ## What Are Agent Skills?

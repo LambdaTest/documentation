@@ -1,4 +1,7 @@
 # How to Use In-Session Testing Tools ?
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 With TestMu AI�s Real Device browser testing, you get access to a plethora of features that helps QA ease their real device browser testing process, without the need of leaving the instance window. From features such as mark as bug and changing IP geolocation, to in-depth Chrome DevTools and Safari Web Inspector, TestMu AI's Real Device browser testing offers it all.
 
 Let us get an overview of all the features in our real device instance:

@@ -1,5 +1,7 @@
 # Accessibility Label Not Punctuated
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Accessibility labels on iOS elements should end with appropriate punctuation so VoiceOver produces natural pauses and intonation when reading them.
 
 **WCAG Reference**

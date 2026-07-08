@@ -1,6 +1,8 @@
 # Audio Injection Manual Testing on Real Devices
 
-**Audio Injection** lets you simulate microphone input on real Android and iOS devices during a manual **App Live** session. Use it to test speech-to-text, voice commands, voice assistants, in-app recording, KYC voice verification, and any other microphone-dependent feature — without speaking into a physical mic.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+**Audio Injection** lets you simulate microphone input on real Android and iOS devices during a manual **App Live** session. Use it to test speech-to-text, voice commands, voice assistants, in-app recording, KYC voice verification, and any other microphone-dependent feature, without speaking into a physical mic.
 
 With TestMu AI App Live, you can either inject a **pre-uploaded audio file** or stream **Live Input** directly from your system microphone into the device under test.
 

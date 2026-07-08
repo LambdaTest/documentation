@@ -1,5 +1,7 @@
 # Bypass Blocks (2.4.1)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Pages must provide a mechanism to skip past repeated blocks of content that appear on multiple pages, such as navigation menus and headers.
 
 **WCAG Reference**

@@ -1,5 +1,7 @@
 # Sub Organizations Insights
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Monitor and Analyze Sub-Organizations with Insights
 
 Sub Organization Widgets provide a comprehensive overview of the test health and trends of your sub-organizations. The module helps you to monitor and analyze the test concurrency utilization, browser distribution, OS distribution, and device coverage of your sub-organizations. This helps you to identify the bottlenecks in the testing process and optimize the testing strategy for your sub-organizations.

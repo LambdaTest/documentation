@@ -1,5 +1,7 @@
 # Three Flashes or Below Threshold (2.3.1)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Pages must not contain anything that flashes more than three times per second, unless the flash is below general flash and red flash thresholds.
 
 **WCAG Reference**

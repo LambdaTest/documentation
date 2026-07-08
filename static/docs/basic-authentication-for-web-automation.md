@@ -1,5 +1,7 @@
 # Basic Authentication for Safari Web Automation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Introduction
 
 Basic Authentication is a method for an HTTP user agent to provide a user name and password when making a request. In basic HTTP authentication, a request contains a header field in the form of `Authorization: Basic `, where credentials is the **Base64** encoding of ID and password joined by a single colon `:`.

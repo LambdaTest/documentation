@@ -1,5 +1,7 @@
 # Testing Locally Hosted Apps For App Automation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Using the TestMu AI tunnel, you can test locally and privately hosted apps across various real Android and iOS devices on the TestMu AI Appium test automation platform. TestMu AI tunnel uses protocols like **Web Socket, HTTPS/TCP** and more to let you build a secure and unique tunnel connection between your local system and TestMu AI cloud servers.
 
 In this documentation, learn how to configure TestMu AI tunnel to test locally or privately hosted apps while performing mobile app automation.

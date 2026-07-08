@@ -1,6 +1,8 @@
 # localStorage Assertions
 
-localStorage assertions let you verify data stored in the browser's `window.localStorage` — check key existence, values, and item counts.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+localStorage assertions let you verify data stored in the browser's `window.localStorage`: check key existence, values, and item counts.
 
 ## How Capture Works
 

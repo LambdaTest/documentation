@@ -1,5 +1,7 @@
 # Analytics Drill-Down Widgets - Export Data Options
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 You can export the data from the Analytics Drill-Down widgets in various formats like CSV, Excel, and PDF. This feature allows you to share the data with your team members, stakeholders, or save it for future reference.
 
 ## About Widget Drill-Down

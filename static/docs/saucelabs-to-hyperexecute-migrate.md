@@ -1,5 +1,7 @@
 # Migrate from SauceLabs to HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Overview
 
 Sauce Labs and HyperExecute are both cloud-based testing platforms that provide a wide range of browsers and devices for running automated tests. However, HyperExecute provides you with a variety of [features](/support/docs/key-features-of-hyperexecute) to help you manage and analyze your test results more easily and efficiently.

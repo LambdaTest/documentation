@@ -1,5 +1,7 @@
 # Modules - Creation and Management
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Tired of recreating the same test steps for repetitive testing flows? With Modules in TestMu AI Test Manager you can streamline your workflow by reusing pre-existing test steps across multiple test cases. This powerful feature enables you to encapsulate redundant testing flows into modular, reusable components, saving time and ensuring consistency across your projects.
 
 ## 1.1 Module Creation from existing Test Steps

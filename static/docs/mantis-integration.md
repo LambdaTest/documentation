@@ -1,5 +1,7 @@
 # Mantis Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Mantis is a free and an open source bug tracker. Mantis supports multiple OS such as Windows, Linux, and macOS, from the server side. Along with platform compatibility, It also offers cross browser compatibility on Google Chrome, Mozilla Firefox, Opera, Safari and IE10+. Mantis is highly customizable, you can customize your issue fields, workflows and notifications. You can also declare access as per role based in your organization. All these features along with email notifications to keep you updated on everything regarding the project makes Mantis a great choice as a project management tool.
 
 TestMu AI integration with Mantis helps you in filing issues to your project in Mantis directly from TestMu AI platform. With one-click integration you can push annotated issues to the project of your choice, assign it to the required team mate, and attach necessary screenshots. You can do all that while in the middle of a test session in TestMu AI platform. The fields populated by you when marking as bug through TestMu AI are displayed as information on the Mantis for a testing instance.

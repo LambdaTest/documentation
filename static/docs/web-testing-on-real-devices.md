@@ -1,5 +1,7 @@
 # Web Testing On Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Mobile website testing involves testing websites and web apps across numerous mobile browsers like Chrome, Safari, Opera, etc to make sure your websites (and web apps) are rendering seamlessly across different mobile browsers and devices. TestMu AI real device cloud allows you to manually test websites and web apps on the range of real Android and iOS devices.
 
 This documentation covers how to perform web testing across real Android and iOS devices on the TestMu AI platform.

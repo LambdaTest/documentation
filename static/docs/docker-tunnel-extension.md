@@ -1,5 +1,7 @@
 # TestMu AI Docker Tunnel Extension
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI Docker Tunnel Extension allows you to perform cross browser testing of locally hosted websites and web applications across 3000+ browser and OS environments, thereby eliminating the need to manually launch the tunnel through the CLI. This allows for a seamless and hassle-free experience when establishing a secure connection for testing locally hosted websites on the TestMu AI platform.
 
 ## Prerequisites

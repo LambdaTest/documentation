@@ -1,5 +1,7 @@
 # Taiga Integration with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Taiga is an open-source project management platform that supports agile methodologies like Scrum and Kanban. Integrating Taiga with TestMu AI enables you to log bugs directly from your testing sessions into Taiga, streamlining your workflow and enhancing team collaboration.
 
 > Taiga Integration with TestMu AI is available for both freemium and premium plans.

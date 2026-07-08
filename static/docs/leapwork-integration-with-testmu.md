@@ -1,5 +1,7 @@
 # How to Integrate TestMu AI With LEAPWORK
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 If you build codeless test automation in LEAPWORK, you can run those same visual flows on real browsers and devices by connecting LEAPWORK to TestMu AI. The integration gives your LEAPWORK agent access to 3,000+ browsers, devices, and OS combinations. You configure TestMu AI once inside LEAPWORK Studio, then run automation flows against the TestMu AI cloud without managing any local machines.
 
 This integration covers two connection types. Use a **web agent** to run flows on the cross browser cloud, and a **TestMu AI Server** connection to automate native Android and iOS apps on real devices.

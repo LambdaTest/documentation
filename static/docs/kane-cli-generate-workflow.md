@@ -1,5 +1,7 @@
 # The Generate Workflow
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 `kane-cli generate` is built around a simple loop: **generate → refine → save → run**. Each command is one turn that exits when done; you move between turns with the request id. This page walks the loop end to end. For the feature overview and option reference, see [Generating test cases with AI](/support/docs/kane-cli-generate/).
 
 ## 1. Generate

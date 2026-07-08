@@ -1,5 +1,7 @@
 # Passed Test Cases
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Passed Test Cases lets teams include successful accessibility checks in a report instead of showing only failures and incomplete items.
 
 Passed checks deserve attention alongside violations because they show what already works and make trends easier to spot across runs. The sections that follow explain why that balance matters, when to turn the feature on, and how it improves conversations with auditors and stakeholders.

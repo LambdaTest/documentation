@@ -1,5 +1,7 @@
 # Modes of Operation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Kane CLI has three modes. Choose based on who (or what) is running the test.
 
 | Mode | Command | Output | Best For |

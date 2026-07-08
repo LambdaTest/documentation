@@ -1,5 +1,7 @@
 # Missing Image Element Label
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Meaningful `UIImageView` and `Image` elements in iOS apps must have an accessibility label that describes their content or purpose.
 
 **WCAG Reference**

@@ -1,6 +1,8 @@
 # Network Assertions
 
-Network assertions let you verify HTTP traffic — API responses, status codes, headers, response bodies, and request timing.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+Network assertions let you verify HTTP traffic: API responses, status codes, headers, response bodies, and request timing.
 
 ## How Capture Works
 

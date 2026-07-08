@@ -1,5 +1,7 @@
 # SmartUI Testing Using HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 SmartUI Testing is a technique used by designers and front-end testers to ensure the visual consistency of web applications by employing a sort of testing called **"Visual Regression"**.
 
 In Visual Regression testing, we compare screenshots and identify visual variations in the pixels. It is integrated with TestMu AI's HyperExecute, allowing you to execute **SmartUI** Tests on the platform.

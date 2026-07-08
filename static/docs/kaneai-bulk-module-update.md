@@ -1,5 +1,7 @@
 # Bulk Module Update
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Maintaining many test cases that share the same module can become slow and error-prone when a module evolves. Each time a module is updated, you would otherwise have to manually open and edit every affected test case and bump the module version one by one.
 
 For an overview of modules, see [Modules](/support/docs/kane-ai-modules/).

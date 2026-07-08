@@ -1,5 +1,7 @@
 # Update your Accessibility DevTools Chrome Extension
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Keeping your TestMu AI Accessibility DevTools Chrome extension updated ensures you have the latest features, improvements, and security patches. Follow the detailed steps below to update your extension.
 
 ## Step-by-Step Guide to Update the TestMu AI Accessibility DevTools Chrome Extension

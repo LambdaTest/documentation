@@ -1,5 +1,7 @@
 # Integrate TestMu AI With Jenkins Freestyle Project
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Integrate TestMu AI Jenkins plugin with your Jenkins Freestyle project for:
 *   Configure your TestMu AI credentials for your Jenkins jobs.
 *   Set up and tear down the Lambda Tunnel binary file to perform automated cross browser testing even on your locally hosted web apps.

@@ -1,5 +1,7 @@
 # Bitbucket Pipelines Integration With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Bitbucket Pipelines offers a free, automated continuous integration service through Bitbucket cloud servers. With Bitbucket Pipelines, teams can ship their product faster as they could rapidly test their code as soon as they commit. Once the code is tested, Bitbucket Pipeline deploys it into the Production environment automatically. It does so with the help of containers that can be fully customized according to your project requirements.
 
 TestMu AI integration with Bitbucket Pipelines will help you perform cross browser testing on 3000+ real browsers & browser versions through a Selenium Grid hosted on TestMu AI cloud servers. All you need is to set up your Bitbucket Pipelines with your TestMu AI account & you can trigger tests onto TestMu AI, directly from your Bitbucket Pipelines.

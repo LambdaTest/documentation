@@ -1,5 +1,7 @@
 # HyperExecute Platform FAQs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 #### 1. **What OS does HyperExecute provide to execute tests?**
 
   HyperExecute provides the latest Windows, MacOS and Linux based virtual machines to run your tests. HyperExecute supports multiple versions of Windows, Linux and MacOS.

@@ -1,5 +1,7 @@
 # Webhooks Integration With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Webhooks provide a way to receive real-time notifications about events in your TestMu AI account. Instead of polling for updates, webhooks push data to your specified endpoints whenever a build completes, enabling seamless integration with your existing workflows and tools.
 
 With the TestMu AI Webhooks Integration, you can:

@@ -1,5 +1,7 @@
 # Comparison Settings for SmartUI - Pixel to Pixel Comparison
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Our Pixel to Pixel (P2P) Comparison Options
 
 We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites.

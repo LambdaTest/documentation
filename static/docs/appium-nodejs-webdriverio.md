@@ -1,5 +1,7 @@
 # Appium With WebDriverIO
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 In this documentation, you will learn how to configure and run your **WebdriverIO** automation testing scripts with **Appium** on TestMu AI, set the desired capabilities for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

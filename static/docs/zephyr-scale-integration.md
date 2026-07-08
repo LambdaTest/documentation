@@ -1,5 +1,7 @@
 # Zephyr Scale Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Zephyr Scale is a test management platform that helps you plan, manage, and measure your tests inside Jira. It's designed from the ground up to support large test libraries and scaling teams.
 
 TestMu AI offers integration with Zephyr Scale that lets you perform automated browser testing on a cloud-based grid of 3000+ real browsers, devices, and OS combinations. By integrating Zephyr Scale with TestMu AI, you can view test execution results directly from TestMu AI platform to your Zephyr Scale instance.

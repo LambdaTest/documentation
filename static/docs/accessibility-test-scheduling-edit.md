@@ -1,5 +1,7 @@
 # Edit an Accessibility Scan
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The Edit Report feature in Accessibility Scheduling allows you to modify scan settings for your scheduled accessibility tests. This document provides a step-by-step guide to update the scan name, recurrence details, and time for accessibility reports.
 
 ## Accessing the Edit Report Feature

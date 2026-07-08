@@ -1,5 +1,7 @@
 # Slack App Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 The TestMu AI Slack App allows you to initiate real-time tests and screenshot tests directly from Slack. Your team can collaborate more effectively by easily communicating on bugs, reducing the feedback loop, and troubleshooting web elements in real-time.
 
 By integrating TestMu AI with Slack App,

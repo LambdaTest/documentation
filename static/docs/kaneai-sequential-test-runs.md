@@ -1,6 +1,8 @@
 # Sequential Test Runs
 
-Sequential test runs let you execute dependent test cases in a specific order. Unlike parallel execution, where test cases run independently and concurrently, sequential execution ensures each test case completes before the next one begins. This is useful when test cases share state or depend on the outcome of a previous test — for example, a login test that must run before an account settings test.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+Sequential test runs let you execute dependent test cases in a specific order. Unlike parallel execution, where test cases run independently and concurrently, sequential execution ensures each test case completes before the next one begins. This is useful when test cases share state or depend on the outcome of a previous test, for example, a login test that must run before an account settings test.
 
 ## Prerequisites
 

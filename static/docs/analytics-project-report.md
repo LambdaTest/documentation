@@ -1,6 +1,8 @@
 # Project - Reports and C-Suite Insights
 
-The Project Analytics Dashboard is not just a tool for QA teams—it's a strategic asset for C-Suite executives. With real-time, high-level insights, it empowers leadership to make data-driven decisions, monitor release readiness, and communicate quality metrics to stakeholders and boards with confidence.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+The Project Analytics Dashboard is not just a tool for QA teams, it's a strategic asset for C-Suite executives. With real-time, high-level insights, it empowers leadership to make data-driven decisions, monitor release readiness, and communicate quality metrics to stakeholders and boards with confidence.
 
 ## Introduction
 

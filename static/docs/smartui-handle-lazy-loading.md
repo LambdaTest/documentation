@@ -1,5 +1,7 @@
 # Handle Pages with Lazy Loading
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## What is Lazy Loading?
 
 Lazy loading is a web performance optimization technique where content (images, videos, or other elements) is loaded only when it's about to enter the viewport or when the user scrolls near it. While this improves page load performance, it can cause issues in visual regression testing because elements may not be loaded when the snapshot is captured.

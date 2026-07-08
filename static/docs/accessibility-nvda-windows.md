@@ -1,5 +1,7 @@
 # NVDA on Windows
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Use this page as the Windows-specific reference for **NVDA** when validating **web** accessibility after DevTools scans, automation, or scheduling.
 
 ## When to use this

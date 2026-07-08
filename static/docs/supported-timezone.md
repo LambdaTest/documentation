@@ -1,5 +1,7 @@
 # Setting up timezone
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 In automated testing with Appium on TestMu AI, configuring the timezone accurately is crucial for precise testing scenarios. TestMu AI provides support for various timezones, allowing users to customize their testing environments to meet specific requirements.
 
 By default, the timezone for Appium testing on TestMu AI is selected based on the device's default settings. However, users have the flexibility to explicitly specify the timezone using the **timezone** capability in their desired capabilities.

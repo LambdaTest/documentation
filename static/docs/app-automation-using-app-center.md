@@ -1,5 +1,7 @@
 # App Test Automation Using App Center
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Visual Studio App Center is an integrated solution for mobile app development on iOS, Android, Windows, and macOS. It combines a number of mobile development services, such as build, test, distribute, monitoring, diagnostics, etc., into a single integrated cloud platform. By automating the upload process, Visual Studio App Center can ease the manual effort of uploading an app.
 
 In this documentation, learn how to install apps from App Center for automated app testing.

@@ -1,5 +1,7 @@
 # Quick Guide To Run Python Tests On TestMu AI Selenium Grid
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.testmuai.com/selenium-automation) platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can leverage TestMu AI Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on TestMu AI Selenium cloud platform.
 
 ## Prerequisites

@@ -1,5 +1,7 @@
 # Zoho Project Integration with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Zoho Project is a powerful cloud-based project management solution that streamlines project tracking, bug management, and team collaboration through its robust customization and automation capabilities.
 
 The TestMu AI integration enables you to capture and log bugs directly from your test sessions to Zoho Project, complete with screenshots and test environment details, making your testing workflow more efficient.

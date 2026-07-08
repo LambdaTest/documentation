@@ -1,5 +1,7 @@
 # TestMu AI Advanced Capabilities
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Advanced Capabilities Reference
 
 These capabilities extend beyond Selenium defaults and give you more control over video, screenshots, network, console logs, tunnels, and other session settings.

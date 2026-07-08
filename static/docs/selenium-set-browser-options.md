@@ -1,5 +1,7 @@
 # Setting Browser Options
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 ## Browser-Specific Options
 
 Configure Chrome, Firefox, and Edge browser arguments using their respective Options classes.

@@ -1,6 +1,8 @@
 # Chat Agent API — Integration Guide
 
-This document outlines the API request format, required credentials, and response schema the platform uses to communicate with your chatbot — regardless of provider or framework.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+This document outlines the API request format, required credentials, and response schema the platform uses to communicate with your chatbot, regardless of provider or framework.
 
 ## Request Format
 

@@ -1,6 +1,8 @@
 # CI/CD Integration Guide
 
-Use this guide when you want **Accessibility Automation** (Selenium capabilities + hooks or auto-scan) to run on **every PR, nightly, or release branch**—not only from a laptop.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+Use this guide when you want **Accessibility Automation** (Selenium capabilities + hooks or auto-scan) to run on **every PR, nightly, or release branch**, not only from a laptop.
 
 ## Typical CI/CD use cases
 

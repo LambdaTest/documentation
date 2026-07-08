@@ -1,5 +1,7 @@
 # Branch-Level Merging in SmartUI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 This guide explains how to effectively merge branches in SmartUI for managing your visual regression testing workflow.
 
 ## Branch-Level Merging

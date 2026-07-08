@@ -1,5 +1,7 @@
 # Building Mobile Applications Using Tools
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Suppose you're working on an Android app using Gradle, and all of a sudden you realize that this project requires an older Java version and a specific Android SDK. Now, setting up a whole new environment in not a very convenient option.
 
 HyperExecute facilitate the development of mobile applications using various tools such as **Gradle**, **Maven**, etc. It provides a language and framework agnostic environment, supporting a wide range of tools and version combinations crucial for building **Android APKs** efficiently.

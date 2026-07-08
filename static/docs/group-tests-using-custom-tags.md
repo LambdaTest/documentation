@@ -1,5 +1,7 @@
 # Group Tests Using Custom Tags
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 TestMu AI allows you to group your automation tests using custom tags. This document shows how to create custom tags and use them. For demonstration purposes, we use a [sample TestNG script](https://github.com/LambdaTest/Java-TestNG-Selenium) to run on the TestMu AI platform.
 
 ## How to Create Custom Tags on the Selenium Grid

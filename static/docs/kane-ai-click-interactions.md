@@ -1,6 +1,8 @@
 # Advanced Click Interactions in KaneAI
 
-KaneAI supports advanced click variants beyond a standard single click — **press and hold (long press)**, **multi-click (double / triple / N-click)**, and **right click (context click)** — across Desktop Web, Android apps, iOS apps, and Mobile Web. Each can be authored with natural language or captured via Manual Interaction, and renders as a distinct step with its own icon and pill label.
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
+KaneAI supports advanced click variants beyond a standard single click: **press and hold (long press)**, **multi-click (double / triple / N-click)**, and **right click (context click)**, across Desktop Web, Android apps, iOS apps, and Mobile Web. Each can be authored with natural language or captured via Manual Interaction, and renders as a distinct step with its own icon and pill label.
 
 ## Overview
 

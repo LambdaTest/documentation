@@ -1,5 +1,7 @@
 # Test Case Repository
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 A test case repository serves as a centralized location for all test cases within a project. Users can access this repository to view a comprehensive list of test cases associated with the project.
 
 **Navigating the Test Case Repository**

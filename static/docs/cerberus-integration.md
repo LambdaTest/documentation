@@ -1,5 +1,7 @@
 # Run Cerberus Tests On TestMu AI Selenium Grid
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+
 Cerberus Testing is an open-source tool that helps you cover the complete test cycle from a single place. It can be used for both Automation testing, as well as Manual testing.
 
 TestMu AI now provides an integration with the Cerberus Testing tool, to help you perform cross-browser testing on over 2000 real desktop browsers, mobile viewports, and operating system combinations. With this document, you will learn how to integrate LamndaTest with the Cerberus Testing tool and get started with your first test.
