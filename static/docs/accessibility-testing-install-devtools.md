@@ -1,6 +1,6 @@
 # Install TestMu AI Accessibility Toolkit
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **Step 1:** Go to the Accessibility Dashboard and click on the [**Download Plugin**](https://chromewebstore.google.com/detail/lambdatest-accessibility/mmbbmjhbidfflcbiffppojapgonepmab) button.
 

@@ -1,6 +1,6 @@
 # Console Assertions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Console assertions let you verify browser console output: error messages, warnings, log messages, and uncaught JavaScript exceptions.
 

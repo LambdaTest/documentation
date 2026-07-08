@@ -1,6 +1,6 @@
 # Choosing the Right Accessibility Tool
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI **Accessibility Testing** spans browser DevTools, web automation, scheduled and Web Scanner scans, native mobile (manual and Appium), reports, checklists, and optional AI/MCP workflows. Use this page as a **router**: match your situation to a starting doc, then follow the linked guides for setup and onboarding.
 

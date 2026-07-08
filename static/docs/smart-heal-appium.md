@@ -1,6 +1,6 @@
 # AI-Powered Smart Heal for Automation Tests
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI’s **Smart Heal** uses **AI-powered algorithms** to automatically detect and recover from locator failures during test execution. It intelligently detects missing elements, analyzes the UI in real time, and applies the closest valid match, keeping tests running smoothly despite UI changes. Both the **original and recovered locators** are logged for full visibility through the TestMu AI dashboard.
 

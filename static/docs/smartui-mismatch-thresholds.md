@@ -1,6 +1,6 @@
 # Mismatch Thresholds
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 When running visual regression tests, not every pixel-level difference is a real bug. Minor rendering variations such as font anti-aliasing, date/time stamps, or animated content can cause screenshots to fail even when the page looks correct to the human eye.
 

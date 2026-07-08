@@ -1,6 +1,6 @@
 # Getting Started With Playwright Testing on iOS Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Playwright test automation on real iOS devices is now supported on TestMu AI across **Node.js, Java, C#, and Python**. Test on latest iPhone and iPad Safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
 

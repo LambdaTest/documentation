@@ -1,6 +1,6 @@
 # WordPress Plugin
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 >With TestMu AI plugin for WordPress, you can generate automated screenshots of your web pages and post directly from your WordPress platform.
 

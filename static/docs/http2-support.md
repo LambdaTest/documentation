@@ -17,7 +17,7 @@ canonical: https://www.testmuai.com/support/docs/http2-support/
 
 # HTTP/2 Support in TestMu AI Tunnel
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Overview
 

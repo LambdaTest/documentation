@@ -1,6 +1,6 @@
 # Finding & Interacting with Elements
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 KaneAI converts natural language instructions into automation actions by identifying the right element on the page. The more precisely you describe an element, the more reliably KaneAI will find and interact with it. This guide covers practical techniques for targeting elements in real-world applications.
 

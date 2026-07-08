@@ -1,6 +1,6 @@
 # Browser State Actions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Objectives can directly manage cookies, localStorage, and the clipboard, useful for seeding state before a flow (skip a login, dismiss a consent banner) and for testing copy/paste behavior.
 

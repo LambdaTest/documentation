@@ -1,6 +1,6 @@
 # Axosoft Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Axosoft is a versatile project management tool designed for Agile teams and organizations seeking to streamline their project planning, tracking, and collaboration. With features for Agile methodologies, collaborative workspaces, roadblock identification, risk management, sprint planning, and goal setting, it empowers teams to work efficiently, eliminate obstacles, and achieve project success across various industries and project management styles.
 

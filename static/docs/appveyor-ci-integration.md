@@ -1,6 +1,6 @@
 # AppVeyor CI Integration with TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **AppVeyor CI** is a very popular continuous integration and deployment platform based on .NET applications. It can also be easily integrated with GitHub and BitBucket projects for CI/CD. It makes testing, deployment, and monitoring builds very easy for developers. It is free for open-source projects.
 

@@ -1,6 +1,6 @@
 # Running Reqnroll Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Reqnroll is an open-source behavior-driven development (BDD) framework for .NET, the successor to SpecFlow. It allows you to define test scenarios in plain language using Gherkin syntax, making collaboration between technical and non-technical team members seamless.
 

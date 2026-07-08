@@ -1,6 +1,6 @@
 # How to Use AutoHeal Using Hooks
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Autoheal automatically handles dynamic element changes during Selenium test execution. This is especially useful for tests where elements' IDs, XPaths, or attributes may change between runs. Autoheal ensures your tests are more resilient and reduces flakiness.
 

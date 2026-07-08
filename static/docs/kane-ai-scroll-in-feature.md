@@ -1,6 +1,6 @@
 # KaneAI - Scroll in Element
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The "Scroll in Element" feature in Kane AI allows users to perform scrolling actions on web elements during testing by using natural language commands. With this feature, you can easily navigate through elements like sidebars, lists, or any scrollable content on a web page.
 

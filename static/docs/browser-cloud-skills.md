@@ -1,6 +1,6 @@
 # AI Agent Skills
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Give any AI agent a real browser. The `browser-cloud` skill is a structured instruction file that tells an LLM assistant exactly how to generate production-grade browser automation code using TestMu AI Browser Cloud. Drop it into Claude, Cursor, or any LLM tool that supports custom skills, and your agent can spin up cloud browsers on demand.
 

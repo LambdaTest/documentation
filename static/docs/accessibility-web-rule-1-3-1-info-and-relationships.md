@@ -1,6 +1,6 @@
 # Info and Relationships (1.3.1)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Content structure conveyed visually through layout, formatting, or styling must also be available programmatically so assistive technologies can interpret and present it correctly.
 

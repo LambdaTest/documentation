@@ -1,6 +1,6 @@
 # HyperExecute Release Notes 2025
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Version 3.1.7
 ### Lighthouse Report Support with Playwright on HyperExecute

@@ -1,6 +1,6 @@
 # Legacy Binary For Linux
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through TestMu AI cloud servers. Through our secure shell tunneling features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on TestMu AI.
 

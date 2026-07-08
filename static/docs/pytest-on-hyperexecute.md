@@ -1,6 +1,6 @@
 # Running PyTest Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Pytest is a popular Python testing framework that can be seamlessly integrated with Playwright for efficient end-to-end testing of web applications. Pytest simplifies the testing process with its straightforward syntax and rich set of features.
 

@@ -1,6 +1,6 @@
 # Agent Mode
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Agent Mode outputs structured NDJSON instead of the interactive terminal UI. It's how AI coding agents (Claude Code, Codex CLI, Gemini CLI) consume Kane CLI results: parse events programmatically, extract the final result, and present it to the user.
 

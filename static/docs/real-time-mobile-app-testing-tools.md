@@ -1,6 +1,6 @@
 # How to use Testing Tools for Mobile Applications?
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI offers a comprehensive suite of real-time mobile app testing tools designed to enhance the efficiency of your testing process. This guide provides detailed instructions on how to utilize each and every tool.
 

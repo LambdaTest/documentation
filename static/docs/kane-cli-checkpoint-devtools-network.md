@@ -1,6 +1,6 @@
 # Network Assertions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Network assertions let you verify HTTP traffic: API responses, status codes, headers, response bodies, and request timing.
 

@@ -1,6 +1,6 @@
 # Test Scheduling - Sitemap (Overview)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Test Scheduling helps teams run recurring Accessibility scans on websites and web apps without manually starting a new scan every time.
 

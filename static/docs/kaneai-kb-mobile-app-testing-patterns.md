@@ -1,6 +1,6 @@
 # Mobile App Testing Patterns
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Mobile native app testing in KaneAI follows many of the same principles as web testing, but with platform-specific nuances for Android and iOS. This guide covers the patterns, workarounds, and best practices that will help you write reliable mobile app tests.
 

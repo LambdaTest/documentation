@@ -1,6 +1,6 @@
 # Copy and Move Support for Test Cases
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Copy and Move feature for test cases helps streamline the organization of test cases. It allows you to easily transfer test cases between different folders or projects, making it simple to keep everything organized. This feature enhances team collaboration and ensures that test cases are always accessible where needed.
 

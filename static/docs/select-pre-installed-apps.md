@@ -1,6 +1,6 @@
 # Select Pre-Installed App in Session
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI empowers developers with a comprehensive testing environment, enabling thorough examination of mobile applications and websites across real devices and browsers. One standout feature is the ability to start testing sessions with pre-installed applications, enhancing efficiency, and reducing test start time,  in **private cloud** setups where data retention and reusability are paramount.
 

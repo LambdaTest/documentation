@@ -1,6 +1,6 @@
 # Non-accessible Interaction
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Interactive elements in Android apps must be operable through assistive technology gestures, not just direct touch.
 

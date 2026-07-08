@@ -1,6 +1,6 @@
 # Custom Specflow Report
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guide provides step-by-step instructions on how to generate a custom SpecFlow report in TestMu AI HyperExecute. By following the specified changes in the YAML file and modifying the test script, users can receive detailed test reports via email.
 

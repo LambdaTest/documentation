@@ -1,6 +1,6 @@
 # Reflow (1.4.10)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Content must reflow to fit within a viewport width of 320 CSS pixels without requiring horizontal scrolling, except for content that requires two-dimensional layout (data tables, toolbars, maps).
 

@@ -1,6 +1,6 @@
 # Navigating the Dashboard
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Accessibility dashboard is the main place to review completed scans, open detailed reports, and act on findings.
 

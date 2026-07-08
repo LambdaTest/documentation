@@ -1,6 +1,6 @@
 # Running PyUnit Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 PyUnit, also known as unittest, is a testing framework in Python that is commonly used with Selenium for automated testing. It provides a structure for organizing and executing test cases, along with features like test fixtures, assertions, and test discovery.
 

@@ -1,6 +1,6 @@
 # Add Test Metadata Using the customData Capability
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The `customData` capability allows you to associate additional metadata with test runs, enabling better traceability, debugging, and reporting. This metadata can include information like issue tracker links, test case IDs, and other critical test context. By embedding this metadata in test configurations, your team can integrate with existing tools and workflows, such as GitHub, Jira, or any test management system.
 

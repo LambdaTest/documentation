@@ -1,6 +1,6 @@
 # Semaphore CI Integration With TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Semaphore is a hosted continuous integration and deployment service used to test and deploy software projects hosted on GitHub and BitBucket. While open-source projects can use Semaphore for free in its full capacity, free use for private projects is limited to 100 builds per month.
 TestMu AI now integrates with Semaphore CI to boost your go-to-market delivery. Perform automated cross browser testing hand in hand with your CI/CD pipeline and ensure your web-app renders seamlessly on more than 2000 real browsers and browser versions. Using TestMu AI Selenium Grid, you can fully automate your continuous testing process and trim down your test cycles significantly.

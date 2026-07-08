@@ -1,6 +1,6 @@
 # Error Codes Reference
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Every Kane CLI run ends with a `result_code` in the `run_end` event. This page lists every code, explains what triggered it, and tells you what to do next.
 

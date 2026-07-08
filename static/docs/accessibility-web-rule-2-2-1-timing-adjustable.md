@@ -1,6 +1,6 @@
 # Timing Adjustable (2.2.1)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 When a page enforces a time limit, users must be able to turn off, adjust, or extend the time before it expires.
 

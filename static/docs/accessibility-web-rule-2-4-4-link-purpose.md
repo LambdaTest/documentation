@@ -1,6 +1,6 @@
 # Link Purpose in Context (2.4.4)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The purpose of each link must be determinable from the link text alone or from the link text combined with its programmatically determined context.
 

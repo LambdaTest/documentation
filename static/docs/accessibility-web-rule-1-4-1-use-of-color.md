@@ -1,6 +1,6 @@
 # Use of Color (1.4.1)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Color must not be the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
 

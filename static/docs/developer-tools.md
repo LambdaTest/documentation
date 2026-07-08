@@ -1,6 +1,6 @@
 # Developer Tools
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > Pace up your cross browser debugging while performing live, interactive testing on mobile and desktop browsers at TestMu AI platform with our native browser tools.
 

@@ -1,6 +1,6 @@
 # Private Desktop Insights
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI Private desktop Insights provide comprehensive insights into your private desktop testing efforts. These insights help you optimize your testing efforts by providing detailed insights into your desktop device usage insights, and more.
 

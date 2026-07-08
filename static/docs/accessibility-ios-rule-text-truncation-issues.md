@@ -1,6 +1,6 @@
 # Text Truncation Issues
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Text content in iOS apps must not be truncated in ways that hide meaningful information from users, especially when Dynamic Type increases font sizes.
 

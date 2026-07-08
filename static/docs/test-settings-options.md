@@ -1,6 +1,6 @@
 # Comparison Settings for SmartUI - Pixel to Pixel Comparison
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Our Pixel to Pixel (P2P) Comparison Options
 

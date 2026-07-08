@@ -1,6 +1,6 @@
 # Trello Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > Trello – A project management tool that was acquired by Atlassian in 2017. It helps in project management under agile development. Providing a highly usable dashboard, where you can easily comprehend on who is working on what? Allowing a team to pinpoint the areas where they feel they are missing something out. Team can plan every sprint in an organized manner by creating and updating cards, lists & boards. Along with project management, Trello also aids in effective bug tracking by providing a space where all your bugs can be logged and prioritized according to your release bandwidth.
 

@@ -1,6 +1,6 @@
 # Build-Level Merging in SmartUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guide explains how to effectively merge builds in SmartUI for granular control over your visual regression testing workflow.
 

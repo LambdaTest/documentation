@@ -1,6 +1,6 @@
 # Cypress Testing Using WebKit
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 WebKit is a web browser engine based on KHTML that displays and interacts with web pages. It is open-source and used by many web browsers like Apple's Safari and Google's Chrome.
 

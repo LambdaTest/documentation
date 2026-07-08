@@ -1,6 +1,6 @@
 # Clipboard Assertions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Clipboard assertions let you verify what a "Copy" button actually copied, extract copied values into variables, and confirm clipboard state after your test writes or clears it.
 

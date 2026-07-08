@@ -1,6 +1,6 @@
 # PingOne SCIM User & Group Provisioning
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 PingOne (by PingIdentity) is a cloud-based identity platform that provides SSO, MFA, and directory services. It supports SCIM 2.0 Outbound provisioning to automatically sync users and groups to external applications.
 

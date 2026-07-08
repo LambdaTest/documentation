@@ -1,6 +1,6 @@
 # How to Test Apps Installed via App Store?
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Apple App Store is a digital marketplace for purchasing and downloading mobile applications on iOS devices. TestMu AI allows you to install apps directly from the App Store and test them on real iOS devices, ensuring that they perform well in actual user environments.
 

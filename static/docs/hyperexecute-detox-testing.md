@@ -1,6 +1,6 @@
 # Detox Testing on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on TestMu AI HyperExecute using your local system setup.
 

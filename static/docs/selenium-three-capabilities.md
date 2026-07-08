@@ -1,6 +1,6 @@
 # Selenium Capabilities for Version 3 and Below
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Capabilities Reference
 

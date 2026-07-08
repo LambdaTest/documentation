@@ -1,6 +1,6 @@
 # Triggering tests from Buildkite CI/CD to TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Buildkite is a continuous integration (CI) and continuous deployment (CD) platform that integrates with version control systems to automate the testing and release of software. Unlike traditional CI/CD solutions, Buildkite allows developers to run builds on their own infrastructure, offering a hybrid model that combines the flexibility of self-hosted runners with the convenience of a cloud-based UI. This ensures faster build times, high levels of security, and scalability to meet the demands of projects of any size.
 

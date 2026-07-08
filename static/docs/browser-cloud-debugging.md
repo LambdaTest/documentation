@@ -1,6 +1,6 @@
 # Replay and Debug Sessions
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Watch, replay, and troubleshoot your agent's browser sessions. Every session automatically records video, console logs, and network requests - accessible from the TestMu AI dashboard.
 

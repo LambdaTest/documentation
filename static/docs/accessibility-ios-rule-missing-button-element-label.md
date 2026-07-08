@@ -1,6 +1,6 @@
 # Missing Button Element Label
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 iOS button elements must have an accessibility label that describes the action they perform.
 

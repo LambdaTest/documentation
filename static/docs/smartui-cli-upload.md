@@ -1,6 +1,6 @@
 # Upload your Screenshots via CLI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 With SmartUI CLI, you can seamlessly perform visual regression testing on the TestMu AI platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 

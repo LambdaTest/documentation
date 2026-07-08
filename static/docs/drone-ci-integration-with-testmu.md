@@ -1,6 +1,6 @@
 # Drone CI Integration with TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Drone CI is one of the most popular modern open-source CI/CD tools. It not only provides a continuous integration with your projects but also provides a distributed CI/CD pipeline, which is not possible with some other tools like Jenkins. So Drone is the first choice for many teams as it is a purely distributed, cloud-native, DevOps friendly, team-oriented, and highly scalable open-source CI/CD tool.
 

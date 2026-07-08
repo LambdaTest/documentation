@@ -1,6 +1,6 @@
 # Real Time Testing Troubleshooting
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Real-Time Testing allows you to perform live-interactive cross browser testing of your website on more than 3000+ real browsers & browser versions running on various operating systems in the cloud. TestMu AI provides you real-time testing experience by virtual machines hosted on our cloud servers.
 

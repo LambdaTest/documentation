@@ -1,6 +1,6 @@
 # SpecFlow Report
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 SpecFlow is a free tool for automating tests using BDD. It's often used to create automation scripts for .NET projects.
 This technical document provides a guide on generating SpecFlow reports after executing tests on HyperExecute.

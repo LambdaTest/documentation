@@ -1,6 +1,6 @@
 # HyperExecute Private Cloud
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 HyperExecute offers you the possibility to complete your test execution process at the highest speeds possible, even on your own private cloud.
 

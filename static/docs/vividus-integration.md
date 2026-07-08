@@ -1,6 +1,6 @@
 # Vividus Tests On TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Vividus is a codeless test automation tool, developed with the aim to help testers perform automation testing for any application, test, or scenario, using a single tool and common language.
 

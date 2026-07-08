@@ -1,6 +1,6 @@
 # Upload Apps on TestMu AI’s Real Device Cloud
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI allows you to upload applications either from your local system or directly from a public URL for testing on real Android and iOS devices. This ensures that your apps perform optimally across diverse user environments.
 

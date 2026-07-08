@@ -1,6 +1,6 @@
 # Running Nightwatch Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Nightwatch.js is an automated testing framework built on top of Selenium and Node.js. It simplifies end-to-end testing, offering a simple syntax and a powerful set of built-in commands. Nightwatch.js supports the Selenium WebDriver protocol and allows efficient browser automation, making it a popular choice for web application testing.
 

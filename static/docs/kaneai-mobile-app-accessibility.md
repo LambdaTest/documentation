@@ -1,6 +1,6 @@
 # Mobile App Accessibility Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Mobile app accessibility testing enables automated accessibility scanning for native mobile applications in KaneAI. This feature performs accessibility checks during test execution, helping identify accessibility issues and ensure compliance with accessibility standards.
 

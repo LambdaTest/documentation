@@ -1,6 +1,6 @@
 # Supported Locales And Languages - XCUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use the given below list of supported locale and language codes for app testing.
 

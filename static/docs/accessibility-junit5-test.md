@@ -1,6 +1,6 @@
 # JUnit 5
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use this guide when your **Selenium** tests use **JUnit 5 (Jupiter)**. Accessibility is still driven entirely by **grid capabilities** and the **`lambda-accessibility-scan`** hook (or **auto-scan**), identical to the [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/) flow. Only the test lifecycle annotations differ.
 

@@ -1,6 +1,6 @@
 # PractiTest Integration with TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 [PractiTest](https://www.practitest.com/) is a QA and test management solution to provide users with better control of their testing and development process. Enabling organizations to guarantee visibility and communication with relevant stakeholders. It also helps project development teams to streamline and manage their testing processes while providing management with a clear and simple view of their project status at all times.
 

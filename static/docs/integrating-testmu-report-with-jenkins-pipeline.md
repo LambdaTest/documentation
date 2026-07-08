@@ -1,6 +1,6 @@
 # Integrating TestMu AI Report With Jenkins Pipeline
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This documentation provides a comprehensive guide on how to integrate TestMu AI Report with your Jenkins Pipeline for web and app test automation.
 

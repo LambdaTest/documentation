@@ -1,6 +1,6 @@
 # A/B Testing and Baseline Variations
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 In TestMu AI **SmartUI**, **A/B testing** lets one **screenshot or PDF page** keep **multiple approved reference images** (called **variations**). Each new capture is compared against **every active variation**; the UI shows which one **matched** (closest visual agreement). That cuts false failures when the same page can look different but still be correct (A/B tests, feature flags, themes, locales, or PDF layout variants) without splitting into separate names in automation or upload flows.
 

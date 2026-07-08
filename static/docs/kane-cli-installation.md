@@ -1,6 +1,6 @@
 # Installing Kane CLI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Kane CLI is published to the public npm registry as `@testmuai/kane-cli`. Install it globally with `npm` to get the `kane-cli` command on your `PATH`.
 

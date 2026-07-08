@@ -1,6 +1,6 @@
 # Testing with MockWebServer & Localhost
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 TestMu AI supports testing apps that use MockWebServer or similar localhost-based mock servers in Android Espresso tests.
 

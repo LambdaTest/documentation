@@ -1,6 +1,6 @@
 # Parallel Testing Of Locally Hosted Pages Using Load Balancing In TestMu AI Tunnel
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Load Balancing feature allows you to perform parallel testing of your locally hosted or privately hosted website or web app on 3000+ real browsers through TestMu AI Tunnel. The Tunnels created under this feature will act as a single pool for the tests and thereby will help in performing parallel testing on the TestMu AI platform.
 

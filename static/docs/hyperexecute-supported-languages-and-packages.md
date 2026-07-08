@@ -1,6 +1,6 @@
 # List of Supported Languages and Addons w.r.t. Operating System
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This document provides a comprehensive list of all the supported versions of programming languages across different operating systems on our platform.
 

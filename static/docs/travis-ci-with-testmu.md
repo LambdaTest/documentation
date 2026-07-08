@@ -1,6 +1,6 @@
 # Travis CI Integration with TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Travis CI is one of the most popular tool which facilitates continuous integration for GitHub projects. Open source projects can use Travis CI without having to pay anything from their pocket. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to market launch.
 

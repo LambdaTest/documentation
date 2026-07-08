@@ -1,6 +1,6 @@
 # Appium WebdriverIO
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Use this guide when **WebdriverIO** orchestrates **Appium** tests for Android or iOS. Accessibility is enabled on the **remote options** object, and you call **`lambda-accessibility-scan`** from async tests or hooks.
 

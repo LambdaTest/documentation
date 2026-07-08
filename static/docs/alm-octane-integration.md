@@ -1,6 +1,6 @@
 # ALM Octane Integration with TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 [ALM Octane](https://www.microfocus.com/en-us/products/alm-octane/overview) is an enterprise-grade Application Lifecycle Management (ALM) platform from Micro Focus. It provides comprehensive test management capabilities including test planning, test case management, defect tracking, and detailed analytics for your software development lifecycle.
 

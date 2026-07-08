@@ -1,6 +1,6 @@
 # Step 1: Setup the Azure Test Plan
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > You need to first [**setup the Azure Test Plan**](https://learn.microsoft.com/en-us/azure/devops/test/create-a-test-plan?view=azure-devops#prerequisites) Project before integrating HyperExecute with it.
 

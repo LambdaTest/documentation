@@ -1,6 +1,6 @@
 # How to Debug a Failed Job
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 As a developer or tester, you know that running tests is an essential part of the software development process. However, there are times when your tests may fail, and you may not be sure how to debug the issue, and you find yourself scratching your head, wondering what went wrong.
 

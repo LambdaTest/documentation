@@ -1,6 +1,6 @@
 # Semaphore Integration with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Semaphore CI/CD is a cloud-based platform that helps engineering teams of all sizes build, test, and deploy their software faster and more reliably. It provides a powerful and flexible way to automate your entire CI/CD pipeline, from code builds to unit tests to production deployments. It is easy to get started with and use, even if you're new to CI/CD. It offers a wide range of features and integrations, so you can customize your pipelines to meet the specific needs of your team and project.
 

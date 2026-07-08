@@ -1,6 +1,6 @@
 # Missing Accessibility Labels
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Interactive iOS elements need accessible names that assistive technologies can announce.
 

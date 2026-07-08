@@ -1,6 +1,6 @@
 # Dragging Movements (2.5.7)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Functionality that uses a dragging movement must also be achievable through a single-pointer action without dragging, unless dragging is essential or the functionality is determined by the user agent.
 

@@ -1,6 +1,6 @@
 # Milestones - Creation and Management
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Milestones in TestMu AI serve as a central organizational tool for grouping test runs. They are particularly useful for tracking progress related to feature releases, ensuring comprehensive oversight of associated testing activities.
 

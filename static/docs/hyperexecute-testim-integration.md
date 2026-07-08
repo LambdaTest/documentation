@@ -1,6 +1,6 @@
 # Integrate Testim with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Testim is a AI Native test authoring platform designed to automate software testing, particularly web and mobile applications. It focuses on creating stable and reliable automated tests. It allows creating tests without writing code or by incorporating custom JavaScript for more intricate scenarios. You can manage and scale the test automation process efficiently, which is particularly valuable for Agile development teams.
 

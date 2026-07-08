@@ -1,6 +1,6 @@
 # Multi-Factor Authentication (MFA)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **Multi-Factor Authentication (MFA)** adds an extra verification step at login on top of your password. After entering your password, you also provide a code from an authenticator app (such as Authy, Google Authenticator, or Microsoft Authenticator) or a biometric factor. This significantly reduces the risk of unauthorized access, even if your password is compromised.
 

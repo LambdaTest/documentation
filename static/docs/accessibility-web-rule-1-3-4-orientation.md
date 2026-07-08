@@ -1,6 +1,6 @@
 # Orientation (1.3.4)
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Content must not restrict its view and operation to a single display orientation (portrait or landscape) unless a specific orientation is essential.
 

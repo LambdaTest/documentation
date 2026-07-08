@@ -1,6 +1,6 @@
 # Robot Report
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Robot Framework is a generic, open-source automation framework designed for acceptance testing, acceptance test-driven development (ATDD), and robotic process automation (RPA). It is widely used in software testing due to its simplicity, extensibility, and ease of use. The framework is keyword-driven, meaning that tests are written using predefined keywords, making it accessible even to non-programmers.
 

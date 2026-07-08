@@ -1,6 +1,6 @@
 # Running Your First Project on SmartUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of TestMu AI that ensures your web applications look flawless across all browsers and devices.
 ## Prerequisites

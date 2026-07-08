@@ -1,6 +1,6 @@
 # Automated Screenshot Testing
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > This feature is **deprecated** and as a result, no further support will be provided for this feature by the TestMu AI Organization.
 

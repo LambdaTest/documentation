@@ -1,6 +1,6 @@
 # Kane CLI Authentication
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Kane CLI authenticates against your TestMu AI account before it can run tests, upload sessions, or interact with Test Manager. There are two authentication methods:
 

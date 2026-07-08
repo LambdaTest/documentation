@@ -1,6 +1,6 @@
 # Running SpecFlow Framework Tests on HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 SpecFlow is a behavior-driven development (BDD) framework for .NET languages, often used with Selenium for automated testing. It enables collaboration between technical and non-technical team members by expressing tests in natural language.
 

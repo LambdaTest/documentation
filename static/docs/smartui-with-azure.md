@@ -1,6 +1,6 @@
 # Azure Pipeline Integration with SmartUI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Azure Pipelines is a cloud-based CI/CD service offered by Microsoft, part of the Azure DevOps suite. It helps automate the process of building, testing, and deploying applications to various platforms.
 

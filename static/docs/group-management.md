@@ -1,6 +1,6 @@
 # Group Based Concurrency Distribution
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The TestMu AI Group Management will help you in creating the different Groups and allot concurrency to those groups. In this way, you can perform the test automation by dividing the concurrency among the groups.
 

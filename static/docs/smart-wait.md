@@ -1,6 +1,6 @@
 # SmartWait Functionality for Selenium Automation
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 With TestMu AI's SmartWait feature, you can increase the efficiency and accuracy of automated test execution. Before performing any action on a webpage element, SmartWait conducts a series of actionability checks. It holds off on performing an action until all relevant checks pass. If the checks do not pass within a set timeframe, it returns the appropriate Selenium error message.
 

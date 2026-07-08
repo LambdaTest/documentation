@@ -1,6 +1,6 @@
 # Upload and Download Files
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Upload and Download Files feature allows you to manage files directly within remote testing environments. This functionality enhances the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
 

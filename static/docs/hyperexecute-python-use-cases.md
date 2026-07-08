@@ -1,6 +1,6 @@
 # HyperExecute Python Use Cases
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 This guide covers the most common real-world scenarios and troubleshooting cases when running **Python**, **Pytest**, and **Behave** test frameworks on **TestMu AI HyperExecute**. Each section describes a use case, its root cause, and the precise YAML translation required to configure or fix the issue within your `hyperexecute.yaml`.
 

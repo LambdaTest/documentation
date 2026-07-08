@@ -1,6 +1,6 @@
 # HyperExecute Analytics
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The HyperExecute Analytics module empowers QA managers to gain comprehensive insights into their HyperExecute testing pipeline. This module provides a centralized view of all the key metrics related to jobs, tasks, and stages executed on the TestMu AI platform.
 

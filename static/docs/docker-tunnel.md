@@ -1,6 +1,6 @@
 # Docker Tunnel
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 With the help of the Docker Tunnel, i.e., Docker and TestMu AI Tunnel, you can perform live interactive and automated cross-browser testing of your locally hosted webpage on the TestMu AI platform, with the help of 3000+ real browsers (desktop and mobile) and operating systems.
 

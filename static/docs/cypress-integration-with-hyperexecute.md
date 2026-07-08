@@ -1,6 +1,6 @@
 # Cypress Integration with HyperExecute
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 In the realm of the software development and testing, developers and QA engineers embarked on a quest to ensure the reliability and efficiency of their applications.
 

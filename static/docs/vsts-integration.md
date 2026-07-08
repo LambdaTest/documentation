@@ -1,6 +1,6 @@
 # Azure DevOps Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Azure DevOps, previously known as **VSTS: Visual Studio Team Services** – A software developed by Microsoft Corporations to provide an IDE(Integrated Development Environment) for facilitating management & development regarding a software project. Azure DevOps provides a set of specific, cloud-based collaboration tools for developers, testers & software architects. So you can plan smarter and ship even faster with the help of effective collaboration. With their **Azure Pipelines** you can deploy your development to any Git provider cloud.
 

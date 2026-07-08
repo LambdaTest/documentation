@@ -1,6 +1,6 @@
 # iOS Entitlements
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 We support all ipa files generated from different Certificates & Profiles.
 

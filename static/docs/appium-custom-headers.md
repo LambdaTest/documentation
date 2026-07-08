@@ -1,6 +1,6 @@
 #  CustomHeaders support for automation
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Custom headers provide you the ability to keep crucial information about the request or response, such as the method, URL, and body content. You can modify the parameters of the HTTP requests delivered by your tests by manipulating with these headers, thereby around firewall restrictions.
 

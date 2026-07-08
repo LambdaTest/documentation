@@ -1,6 +1,6 @@
 # Login & Authentication for Scheduled Scans
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 **Login configurations** are saved profiles the scanner runs **before** a scheduled accessibility test. You define credentials and selectors once, then **select** a profile from the **login modal** whenever you create or edit a scan. The same modal opens from the **scheduler** (advanced options on the URL step) or from **Login configurations** on the dashboard, so you can manage profiles without starting a new scan.
 

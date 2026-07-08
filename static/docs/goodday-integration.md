@@ -1,6 +1,6 @@
 # GoodDay Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > GoodDay is a comprehensive work management platform that offers tools for project management, task organization, and productivity growth with features that boost transparency, agility, and motivation. With GoodDay as the bug tracking tool, project teams can easily avoid the hassle of digging through bug logs for hours. Bugs are a part of the software development process, which is unlikely to change. As software projects grow in features, their complexity also increases, which increases the number of bugs. The GoodDay bug tracker lets users capture, log, and prioritize the bugs that require fixing on priority. GoodDay integrates with the tools you use daily, letting you work faster and deliver more quality software on time. The GoodDay bug tracker template has a Kanban board to represent all the relevant information about each bug. It shows who is responsible for fixing the bug and when, so you can assign the bug to the person responsible. You can even set a deadline or schedule the task to have all the bugs resolved.
 

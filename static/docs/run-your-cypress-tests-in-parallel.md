@@ -1,6 +1,6 @@
 # Run Your Cypress Tests In Parallel
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 If you want to run your tests parallelly on the TestMu AI platform, you can do that using either of the following two ways:
 

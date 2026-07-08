@@ -1,6 +1,6 @@
 # Download Files Using TestMu AI Selenium Grid
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 While performing Selenium test automation, you may want to test the download functionality of your web-application or website. With TestMu AI Selenium Grid, you can test the download feature on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption and decryption.
 

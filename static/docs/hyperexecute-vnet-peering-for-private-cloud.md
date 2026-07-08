@@ -1,6 +1,6 @@
 # VNet Peering and VNet Links
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Congratulations on getting the HyperExecute Private setup deployed on your Azure Cloud!
 

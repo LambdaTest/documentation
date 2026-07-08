@@ -1,6 +1,6 @@
 # User Management
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 With Organization Settings in TestMu AI, you have the ability to effortlessly invite your team members to your TestMu AI Account. TestMu AI offers a range of roles that can be assigned to users.
 

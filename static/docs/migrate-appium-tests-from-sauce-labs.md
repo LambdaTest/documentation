@@ -1,6 +1,6 @@
 # Migrate Appium Tests From Sauce Labs To TestMu AI
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The online Appium Grid is available on both TestMu AI and Sauce Labs. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from Sauce Labs to TestMu AI.
 

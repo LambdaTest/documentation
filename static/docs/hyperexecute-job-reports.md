@@ -1,6 +1,6 @@
 # HyperExecute Job Reports
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 HyperExecute Job Reports are designed to offer deep insights into the performance of your tests. By utilizing these reports, you can identify issues, track progress, and enhance your software testing workflow. Whether you're a developer or QA engineer, understanding and leveraging the various report types is crucial to delivering high-quality software efficiently.
 

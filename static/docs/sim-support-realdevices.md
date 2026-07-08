@@ -1,6 +1,6 @@
 # SIM Support On Public Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 SIM & eSIM support allows testers to validate **SMS-driven workflows** on real mobile devices, including **OTP verification** and **two-factor authentication**. By using SIM-enabled devices manually, you can test SMS handling, **verify phone numbers**, and confirm secure onboarding processes without needing physical test phones in hand.
 

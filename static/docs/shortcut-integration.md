@@ -1,6 +1,6 @@
 # Shortcut Integration
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/llms.txt).
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > Shortcut is a project management platform that would help everyone on your team to collaborate better for hastening the release process. Shortcut helps in finding the right balance for cross-functional collaboration. It is easy for everyone on the team to focus on their individual task, while also being able to envision the bigger picture by zooming out to get an idea about the overall progress of a project. From declaring a story to achieving huge milestones, everything is represented with an intuitive visual representation using simple drag and drop Kanban dashboard. With a simple API and robust set of integrations, Shortcut also seamlessly integrates with the tools you use every day, getting out of your way so that you can deliver quality software on time.
 
