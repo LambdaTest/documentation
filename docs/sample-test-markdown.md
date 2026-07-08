@@ -19,7 +19,7 @@ keywords:
     - Concurrency Groups
 url: https://www.testmuai.com/support/docs/scim/
 site_name: TestMu AI
-slug: scim/
+slug: sample-test-markdown
 canonical: https://www.testmuai.com/support/docs/scim/
 ---
 import Tabs from '@theme/Tabs';
