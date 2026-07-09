@@ -54,13 +54,17 @@ function normalizeUrl(url) {
   return url.replace(/([^:])\/{2,}/g, '$1/');
 }
 
-/** Resolve the canonical public URL for a doc from its frontmatter. */
-function resolveUrl(data, fileName) {
-  if (data.url) return normalizeUrl(data.url);
-  if (data.canonical) return normalizeUrl(data.canonical);
+/**
+ * Resolve the URL to a doc's plain-Markdown (.md) version. The slug matches the
+ * on-disk output of generate-static-md.js (last path segment of slug/id/file),
+ * served at <DOCS_BASE>/<slug>.md.
+ */
+function resolveMdUrl(data, fileName) {
   const fileBase = fileName.replace(/\.mdx?$/, '');
-  const base = (data.slug || data.id || fileBase).replace(/^\//, '').replace(/\/$/, '');
-  return normalizeUrl(`${DOCS_BASE}/${base || fileBase}/`);
+  const base = data.slug || data.id || fileBase;
+  const slug =
+    base.replace(/^\//, '').replace(/\/$/, '').split('/').pop() || fileBase;
+  return normalizeUrl(`${DOCS_BASE}/${slug}.md`);
 }
 
 // Map common typographic (non-ASCII) punctuation to ASCII equivalents. Keeps
@@ -108,7 +112,7 @@ function main() {
 
     const title = toAscii((data.title || file.replace(/\.mdx?$/, '')).trim());
     const description = toAscii((data.description || '').trim());
-    const url = resolveUrl(data, file);
+    const url = resolveMdUrl(data, file);
     entries.push({ title, description, url });
   }
 
@@ -120,6 +124,10 @@ function main() {
     `> ${toAscii(SUMMARY)}`,
     '',
     'A plain-Markdown version of any page is available by appending `.md` to its URL.',
+    '',
+    '## Agent skill',
+    '',
+    `- [TestMu AI Documentation Skill](${DOCS_BASE}/SKILL.md): Product-specific operating guidance for AI agents (agentskills.io format) - how to discover docs, choose the right product area, and follow common testing workflows.`,
     '',
     '## Docs',
     '',
