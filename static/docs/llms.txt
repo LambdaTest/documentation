@@ -4,6 +4,10 @@
 
 A plain-Markdown version of any page is available by appending `.md` to its URL.
 
+## Agent Skills
+
+- [TestMu AI Testing Skill](https://www.testmuai.com/SKILL.md): Operating guidance for AI agents working with TestMu AI (discovery index: /.well-known/agent-skills/index.json).
+
 ## Docs
 
 - [A/B Testing and Baseline Variations in SmartUI](https://www.testmu.ai/support/docs/smartui-ab-testing-variations/): Use SmartUI A/B testing on web screenshots and PDF pages to compare captures against multiple baseline variations (up to 20), see Matched with status, manage variations, and end an experiment by picking a winner.
