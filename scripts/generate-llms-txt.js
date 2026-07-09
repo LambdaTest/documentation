@@ -63,6 +63,35 @@ function resolveUrl(data, fileName) {
   return normalizeUrl(`${DOCS_BASE}/${base || fileBase}/`);
 }
 
+// Map common typographic (non-ASCII) punctuation to ASCII equivalents. Keeps
+// the output plain-ASCII so it can't render as mojibake (e.g. "â€”") when a
+// server/tool serves the file with the wrong charset.
+const CHAR_MAP = {
+  '\u2018': "'", '\u2019': "'", '\u201A': "'", '\u201B': "'", // ‘ ’ ‚ ‛
+  '\u201C': '"', '\u201D': '"', '\u201E': '"', '\u201F': '"', // “ ” „ ‟
+  '\u2013': '-', '\u2014': '-', '\u2011': '-', '\u2012': '-', '\u2015': '-', // – — ‑ ‒ ―
+  '\u2026': '...', // …
+  '\u2022': '-', '\u00B7': '-', // • ·
+  '\u00A0': ' ', // non-breaking space
+  '\u2039': '<', '\u203A': '>', '\u00AB': '<<', '\u00BB': '>>', // ‹ › « »
+  '\u2122': '(TM)', '\u00AE': '(R)', '\u00A9': '(C)', // ™ ® ©
+  '\u2192': '->', '\u2190': '<-', // → ←
+};
+
+/** Convert a string to plain ASCII, mapping known punctuation and stripping the rest. */
+function toAscii(str) {
+  return str
+    .replace(
+      /[\u2018\u2019\u201A\u201B\u201C\u201D\u201E\u201F\u2013\u2014\u2011\u2012\u2015\u2026\u2022\u00B7\u00A0\u2039\u203A\u00AB\u00BB\u2122\u00AE\u00A9\u2192\u2190]/g,
+      (m) => CHAR_MAP[m] || ''
+    )
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '') // strip combining diacritics
+    .replace(/[^\x00-\x7F]/g, '') // drop any remaining non-ASCII
+    .replace(/[ \t]{2,}/g, ' ')
+    .trim();
+}
+
 function main() {
   const files = fs
     .readdirSync(DOCS_DIR)
@@ -77,8 +106,8 @@ function main() {
     const data = parseFrontmatter(raw);
     if (String(data.draft).toLowerCase() === 'true') continue; // skip drafts
 
-    const title = (data.title || file.replace(/\.mdx?$/, '')).trim();
-    const description = (data.description || '').trim();
+    const title = toAscii((data.title || file.replace(/\.mdx?$/, '')).trim());
+    const description = toAscii((data.description || '').trim());
     const url = resolveUrl(data, file);
     entries.push({ title, description, url });
   }
@@ -86,9 +115,9 @@ function main() {
   entries.sort((a, b) => a.title.localeCompare(b.title));
 
   const lines = [
-    `# ${TITLE}`,
+    `# ${toAscii(TITLE)}`,
     '',
-    `> ${SUMMARY}`,
+    `> ${toAscii(SUMMARY)}`,
     '',
     'A plain-Markdown version of any page is available by appending `.md` to its URL.',
     '',
