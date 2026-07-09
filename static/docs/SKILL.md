@@ -1,5 +1,5 @@
 ---
-name: testmu-ai-cloud
+name: TestMu AI Documentation
 description: >
   Runs and scales test automation on the TestMu AI (formerly LambdaTest) cloud -
   3000+ browsers and 10K+ real devices for Selenium, Appium, Playwright, Cypress,
