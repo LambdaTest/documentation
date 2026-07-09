@@ -10,7 +10,7 @@ Plain-Markdown copies are served at `/support/docs/<slug>.md` for each page belo
 
 ## Docs
 
-- [A/B Testing and Baseline Variations in SmartUI](https://www.testmu.ai/support/docs/smartui-ab-testing-variations/): Use SmartUI A/B testing on web screenshots and PDF pages to compare captures against multiple baseline variations (up to 20), see Matched with status, manage variations, and end an experiment by picking a winner.
+- [A/B Testing and Baseline Variations in SmartUI](https://www.testmuai.com/support/docs/smartui-ab-testing-variations/): Use SmartUI A/B testing on web screenshots and PDF pages to compare captures against multiple baseline variations (up to 20), see Matched with status, manage variations, and end an experiment by picking a winner.
 - [Ability to Install and Uninstall Apps in App Automation Scripts](https://www.testmuai.com/support/docs/appium-install-uninstall-testmu-hooks/): Now you can install or uninstall applications using hooks in your App Automation scripts that you run on TestMu AI.
 - [ACCELQ Integration](https://www.testmuai.com/support/docs/accelq-integration/): Accelerate your end-to-end digital testing journey with TestMu AI and ACCELQ. Automate your web and mobile apps across 3000+ real browsers, devices and operating system combinations.
 - [Accelq Integration with HyperExecute](https://www.testmuai.com/support/docs/hyperexecute-accelq-integration/): Leverage TestMu AI's cloud mobile devices to run automation testing using Accelq Studio.
