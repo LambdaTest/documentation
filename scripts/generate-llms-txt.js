@@ -130,6 +130,8 @@ function main() {
     '',
     'Plain-Markdown copies are served at `/support/docs/<slug>.md` for each page below.',
     '',
+    'Sitemap: https://www.testmuai.com/support/sitemap.xml',
+    '',
     '## Agent skill',
     '',
     `- [TestMu AI Documentation Skill](${DOCS_BASE}/SKILL.md): Product-specific operating guidance for AI agents (agentskills.io format) - how to discover docs, choose the right product area, and follow common testing workflows.`,
