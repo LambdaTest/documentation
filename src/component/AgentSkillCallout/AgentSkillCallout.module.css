@@ -1,0 +1,115 @@
+/* Browserbase-style coding-agent callout. Injected just below each doc's title
+   by the docs remark plugin (plugins/remark-agent-callout.js), so it flows in
+   the normal Markdown body, so no clearance for the "Copy page" button is
+   needed here (the button sits over the title above it). */
+.callout {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 16px 0 28px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+[data-theme='dark'] .callout {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.iconCol {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--ifm-color-primary, #ff570a);
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.lead {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.lead strong {
+  color: var(--ifm-color-emphasis-900);
+  font-weight: 600;
+}
+
+/* ── Snippet box ── */
+.snippet {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+[data-theme='dark'] .snippet {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #1b1b1d;
+}
+
+.snippetText {
+  flex: 1;
+  min-width: 0;
+  /* Wrap the long URL rather than creating a horizontal-scroll region (which
+     would need to be keyboard-focusable to satisfy WCAG 2.1.1). The copy button
+     provides the verbatim string regardless. */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-family: var(--ifm-font-family-monospace, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ifm-color-emphasis-900);
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.copyBtn:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
+}
+
+@media (max-width: 996px) {
+  .callout {
+    margin: 12px 0 24px;
+  }
+}
+
+/* Visually hidden, but announced by screen readers (for the copy-status live region). */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
