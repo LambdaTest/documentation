@@ -55,16 +55,21 @@ function normalizeUrl(url) {
 }
 
 /**
- * Resolve the URL to a doc's plain-Markdown (.md) version. The slug matches the
- * on-disk output of generate-static-md.js (last path segment of slug/id/file),
- * served at <DOCS_BASE>/<slug>.md.
+ * Resolve the public HTML page URL for a doc (matches sitemap format).
+ * Docusaurus uses trailingSlash: true, so URLs end with /.
+ * The llms.txt header notes that .md versions are available by appending .md.
  */
-function resolveMdUrl(data, fileName) {
+function resolveHtmlUrl(data, fileName) {
+  const fromFrontmatter = (data.canonical || data.url || '').trim();
+  if (fromFrontmatter) {
+    const url = fromFrontmatter.endsWith('/') ? fromFrontmatter : `${fromFrontmatter}/`;
+    return normalizeUrl(url);
+  }
   const fileBase = fileName.replace(/\.mdx?$/, '');
   const base = data.slug || data.id || fileBase;
   const slug =
     base.replace(/^\//, '').replace(/\/$/, '').split('/').pop() || fileBase;
-  return normalizeUrl(`${DOCS_BASE}/${slug}.md`);
+  return normalizeUrl(`${DOCS_BASE}/${slug}/`);
 }
 
 // Map common typographic (non-ASCII) punctuation to ASCII equivalents. Keeps
@@ -112,7 +117,7 @@ function main() {
 
     const title = toAscii((data.title || file.replace(/\.mdx?$/, '')).trim());
     const description = toAscii((data.description || '').trim());
-    const url = resolveMdUrl(data, file);
+    const url = resolveHtmlUrl(data, file);
     entries.push({ title, description, url });
   }
 
@@ -123,7 +128,7 @@ function main() {
     '',
     `> ${toAscii(SUMMARY)}`,
     '',
-    'A plain-Markdown version of any page is available by appending `.md` to its URL.',
+    'Plain-Markdown copies are served at `/support/docs/<slug>.md` for each page below.',
     '',
     '## Agent skill',
     '',
