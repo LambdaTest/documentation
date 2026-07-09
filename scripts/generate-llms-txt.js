@@ -57,7 +57,6 @@ function normalizeUrl(url) {
 /**
  * Resolve the public HTML page URL for a doc (matches sitemap format).
  * Docusaurus uses trailingSlash: true, so URLs end with /.
- * The llms.txt header notes that .md versions are available by appending .md.
  */
 function resolveHtmlUrl(data, fileName) {
   const fromFrontmatter = (data.canonical || data.url || '').trim();
@@ -70,6 +69,15 @@ function resolveHtmlUrl(data, fileName) {
   const slug =
     base.replace(/^\//, '').replace(/\/$/, '').split('/').pop() || fileBase;
   return normalizeUrl(`${DOCS_BASE}/${slug}/`);
+}
+
+/** Resolve the plain-Markdown URL (matches generate-static-md.js output). */
+function resolveMdUrl(data, fileName) {
+  const fileBase = fileName.replace(/\.mdx?$/, '');
+  const base = data.slug || data.id || fileBase;
+  const slug =
+    base.replace(/^\//, '').replace(/\/$/, '').split('/').pop() || fileBase;
+  return normalizeUrl(`${DOCS_BASE}/${slug}.md`);
 }
 
 // Map common typographic (non-ASCII) punctuation to ASCII equivalents. Keeps
@@ -118,7 +126,8 @@ function main() {
     const title = toAscii((data.title || file.replace(/\.mdx?$/, '')).trim());
     const description = toAscii((data.description || '').trim());
     const url = resolveHtmlUrl(data, file);
-    entries.push({ title, description, url });
+    const mdUrl = resolveMdUrl(data, file);
+    entries.push({ title, description, url, mdUrl });
   }
 
   entries.sort((a, b) => a.title.localeCompare(b.title));
@@ -140,8 +149,9 @@ function main() {
     '',
   ];
 
-  for (const { title, description, url } of entries) {
-    lines.push(description ? `- [${title}](${url}): ${description}` : `- [${title}](${url})`);
+  for (const { title, description, url, mdUrl } of entries) {
+    const link = `- [${title}](${url}) ([.md](${mdUrl}))`;
+    lines.push(description ? `${link}: ${description}` : link);
   }
 
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true });
