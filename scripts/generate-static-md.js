@@ -6,7 +6,9 @@
  *   1. Reads the YAML frontmatter to resolve the public slug.
  *   2. Strips frontmatter, MDX imports/exports, JSX/HTML tags and Docusaurus
  *      admonition fences to produce clean, LLM-friendly Markdown.
- *   3. Writes the result to /static/docs/<slug>.md so it is served at
+ *   3. Inserts an llms.txt blockquote directive after the H1 so AI agents can
+ *      discover the site index.
+ *   4. Writes the result to /static/docs/<slug>.md so it is served at
  *      <baseUrl>/docs/<slug>.md alongside the rendered page.
  *
  * The output files are gitignored and regenerated on every build (wired into
@@ -152,8 +154,15 @@ function toPlainMarkdown(body) {
 /**
  * Insert the llms.txt directive as a blockquote just after the leading H1
  * heading (or at the very top if the document has no heading).
+ * Idempotent: updates an existing directive instead of duplicating it.
  */
 function insertLlmsDirective(markdown) {
+  const directivePattern =
+    /^>\s*For the full site index for AI agents, see \[llms\.txt\]\([^)]+\)\.\s*$/m;
+  if (directivePattern.test(markdown)) {
+    return markdown.replace(directivePattern, MD_DIRECTIVE);
+  }
+
   const lines = markdown.split('\n');
   const headingIdx = lines.findIndex((l) => /^#\s/.test(l));
   if (headingIdx === -1) {

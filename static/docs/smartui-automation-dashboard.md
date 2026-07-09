@@ -1,6 +1,6 @@
 # SmartUI in the Automation Dashboard
 
-**Visual regression results, right where your tests run.**
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## What this feature is
 
