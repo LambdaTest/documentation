@@ -1,7 +1,5 @@
 # Grouping SmartUI Screenshots by Test Cases
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
 TestMu AI’s SmartUI allows you to organize your visual regression screenshots logically by linking them to the automation test cases they were captured in. Grouping screenshots by test cases reduces triage fatigue and allows you to review visual differences with full automation execution context.
 
 This guide’s **recommended flow** is **Selenium on the grid + SmartUI Hooks** (`smartUI.project` in Java `LT:Options` and **`smartui.takeScreenshot`** in the browser). That path works with **Hooks-oriented** SmartUI projects (including many **Omni** projects) and matches the **Capability Generator** output in the TestMu AI dashboard.
