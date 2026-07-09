@@ -54,23 +54,6 @@ function normalizeUrl(url) {
   return url.replace(/([^:])\/{2,}/g, '$1/');
 }
 
-/**
- * Resolve the public HTML page URL for a doc (matches sitemap format).
- * Docusaurus uses trailingSlash: true, so URLs end with /.
- */
-function resolveHtmlUrl(data, fileName) {
-  const fromFrontmatter = (data.canonical || data.url || '').trim();
-  if (fromFrontmatter) {
-    const url = fromFrontmatter.endsWith('/') ? fromFrontmatter : `${fromFrontmatter}/`;
-    return normalizeUrl(url);
-  }
-  const fileBase = fileName.replace(/\.mdx?$/, '');
-  const base = data.slug || data.id || fileBase;
-  const slug =
-    base.replace(/^\//, '').replace(/\/$/, '').split('/').pop() || fileBase;
-  return normalizeUrl(`${DOCS_BASE}/${slug}/`);
-}
-
 /** Resolve the plain-Markdown URL (matches generate-static-md.js output). */
 function resolveMdUrl(data, fileName) {
   const fileBase = fileName.replace(/\.mdx?$/, '');
@@ -125,9 +108,8 @@ function main() {
 
     const title = toAscii((data.title || file.replace(/\.mdx?$/, '')).trim());
     const description = toAscii((data.description || '').trim());
-    const url = resolveHtmlUrl(data, file);
     const mdUrl = resolveMdUrl(data, file);
-    entries.push({ title, description, url, mdUrl });
+    entries.push({ title, description, mdUrl });
   }
 
   entries.sort((a, b) => a.title.localeCompare(b.title));
@@ -137,7 +119,7 @@ function main() {
     '',
     `> ${toAscii(SUMMARY)}`,
     '',
-    'Plain-Markdown copies are served at `/support/docs/<slug>.md` for each page below.',
+    'Each link below points to the plain-Markdown copy at `/support/docs/<slug>.md`.',
     '',
     'Sitemap: https://www.testmuai.com/support/sitemap.xml',
     '',
@@ -149,8 +131,8 @@ function main() {
     '',
   ];
 
-  for (const { title, description, url, mdUrl } of entries) {
-    const link = `- [${title}](${url}) ([.md](${mdUrl}))`;
+  for (const { title, description, mdUrl } of entries) {
+    const link = `- [${title}](${mdUrl})`;
     lines.push(description ? `${link}: ${description}` : link);
   }
 
