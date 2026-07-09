@@ -17,7 +17,9 @@ const fs = require('fs');
 const path = require('path');
 
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
-const OUT_FILE = path.join(__dirname, '..', 'static', 'docs', 'llms.txt');
+const STATIC_DOCS_DIR = path.join(__dirname, '..', 'static', 'docs');
+const OUT_FILE = path.join(STATIC_DOCS_DIR, 'llms.txt');
+const OPENAPI_MD = path.join(STATIC_DOCS_DIR, 'OpenAPI.md');
 
 const SITE_ORIGIN = 'https://www.testmuai.com';
 const DOCS_BASE = `${SITE_ORIGIN}/support/docs`;
@@ -122,14 +124,21 @@ function main() {
     'Each link below points to the plain-Markdown copy at `/support/docs/<slug>.md`.',
     '',
     'Sitemap: https://www.testmuai.com/support/sitemap.xml',
+  ];
+
+  if (fs.existsSync(OPENAPI_MD)) {
+    lines.push(`OpenAPI: ${DOCS_BASE}/OpenAPI.md`);
+  }
+
+  lines.push(
     '',
     '## Agent skill',
     '',
     `- [TestMu AI Documentation Skill](${DOCS_BASE}/SKILL.md): Product-specific operating guidance for AI agents (agentskills.io format) - how to discover docs, choose the right product area, and follow common testing workflows.`,
     '',
     '## Docs',
-    '',
-  ];
+    ''
+  );
 
   for (const { title, description, mdUrl } of entries) {
     const link = `- [${title}](${mdUrl})`;
