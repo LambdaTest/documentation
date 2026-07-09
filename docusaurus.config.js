@@ -32,7 +32,45 @@ module.exports = {
    
   ],
   themes: ['docusaurus-theme-search-typesense','docusaurus-theme-github-codeblock'],
-  plugins: [require.resolve("docusaurus-plugin-image-zoom")],
+  plugins: [
+    require.resolve("docusaurus-plugin-image-zoom"),
+    function tailwindPlugin() {
+      return {
+        name: 'docusaurus-tailwind',
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require('tailwindcss'));
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
+    // Injects a visually-hidden, server-rendered directive near the top of every
+    // page's HTML so AI agents/crawlers can discover llms.txt and the per-page
+    // Markdown (.md) versions. preBodyTags places it right after <body>.
+    function llmsTxtDirectivePlugin() {
+      return {
+        name: 'llms-txt-directive',
+        injectHtmlTags() {
+          return {
+            preBodyTags: [
+              {
+                tagName: 'div',
+                attributes: {
+                  'data-llms-txt': 'true',
+                  style:
+                    'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;',
+                },
+                innerHTML:
+                  'For AI agents and LLMs: a machine-readable index is available at ' +
+                  '<a href="https://stage.testmuinternal.ai/support/docs/llms.txt">llms.txt</a>. ' +
+                  'A plain-Markdown version of any documentation page is available by appending .md to its URL.',
+              },
+            ],
+          };
+        },
+      };
+    },
+  ],
   themeConfig: {
     zoom: {
       selector: 'img:not(.no-zoom)',
