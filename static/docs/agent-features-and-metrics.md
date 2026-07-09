@@ -1,7 +1,5 @@
 # Agent Features & Metrics - Customer Reference Guide
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
 ## Agent Types Overview
 
 The platform supports **5 agent types**, each designed for a specific testing scenario:

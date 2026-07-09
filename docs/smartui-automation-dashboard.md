@@ -13,10 +13,10 @@ keywords:
   - Automation Testing
   - Web Automation
   - App Automation
-url: https://www.testmu.ai/support/docs/smartui-automation-dashboard/
+url: https://www.testmuai.com/support/docs/smartui-automation-dashboard/
 site_name: LambdaTest
 slug: smartui-automation-dashboard/
-canonical: https://www.testmu.ai/support/docs/smartui-automation-dashboard/
+canonical: https://www.testmuai.com/support/docs/smartui-automation-dashboard/
 ---
 
 import Tabs from '@theme/Tabs';

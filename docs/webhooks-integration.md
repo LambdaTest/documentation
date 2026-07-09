@@ -11,10 +11,10 @@ keywords:
   - team communication
   - webhook url
   - real-time notifications
-url: https://www.testmu.ai/support/docs/webhooks-integration/
+url: https://www.testmuai.com/support/docs/webhooks-integration/
 site_name: TestMu AI
 slug: webhooks-integration/
-canonical: https://www.testmu.ai/support/docs/webhooks-integration/
+canonical: https://www.testmuai.com/support/docs/webhooks-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

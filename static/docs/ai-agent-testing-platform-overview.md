@@ -1,7 +1,5 @@
 # AI Agent Testing & Evaluation Platform - Solution Overview
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
 ## Executive Summary
 
 Enterprises are investing heavily in AI-powered agents to handle customer interactions at scale - through phone calls, chat interfaces, and multimodal workflows. However, deploying these agents into production without rigorous, repeatable quality validation creates significant business risk: erratic behavior, regulatory exposure, and poor customer experience that is difficult to detect with conventional testing tools.
