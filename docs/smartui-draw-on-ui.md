@@ -283,6 +283,34 @@ Ignoring color differences in a themed navigation bar while testing its structur
 
 Testing a product card but ignoring the price and rating that may change, while still comparing the product image, title, and description.
 
+## Baseline Regions <NewTag value="New" />
+
+A **baseline** is the reference image that every later build is compared against. Normally you draw regions on a comparison build, so the region belongs to that build's comparison. **Baseline Regions** let you draw an ignore or select region directly on the **#1 Baseline Build**, so the region is owned by the baseline itself and is honored for comparisons from the baseline forward.
+
+This is useful when you already know an area is dynamic at the moment you establish the baseline. Instead of waiting for a comparison build and re-applying the region there, you can annotate the baseline once and have it apply to every build that uses that image as its baseline.
+
+### When to Use
+
+- Marking a known dynamic area (a timestamp, a session banner, a live counter) as ignored right when the baseline is created
+- Keeping the baseline and what is actually compared in sync, without waiting for the next comparison build
+- Establishing a select region on the baseline so every downstream build compares only the area you care about
+
+### How to Use
+
+**Step 1:** Open the **#1 Baseline Build** for your screenshot in the SmartUI dashboard.
+
+**Step 2:** Click on the **Actions** button (annotation icon) to open the annotation tool.
+
+**Step 3:** Click on the **Add Region** button and draw a box around the area you want to ignore or select, then choose the annotation type (for example, **Ignore Region** or **Select Region**).
+
+**Step 4:** Mark the region as a **baseline region** in the apply dialog and click **Save**.
+
+**What Happens:** The region is stored against the baseline screenshot and is applied in every consecutive build that is compared against that baseline. Regions that are not marked as baseline regions continue to behave exactly as before and apply only from the build on which you drew them.
+
+> **Note:** Baseline Regions and the [per-region **Apply to all variants**](/support/docs/smartui-draw-on-ui/#applying-annotations) scope are independent. A baseline region controls the builds a region applies to (from the baseline forward), while the variant scope controls the browser and viewport combinations a region is copied to.
+
+> **Tip:** Use a baseline region for content you already know is dynamic before the first comparison ever runs. For areas you discover later while reviewing a comparison, a normal region on that build is the simpler choice.
+
 ## Managing Annotations
 
 Once you've created annotations, you can view, edit, and delete them as needed.
