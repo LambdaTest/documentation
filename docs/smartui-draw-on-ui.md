@@ -326,17 +326,23 @@ You can always edit or delete pre-configured areas or add new ones according to 
 
 ### Applying Annotations
 
-After creating your annotations, you'll see a modal dialog with options:
+After drawing a region, you'll see a modal dialog that controls where that specific region is applied:
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/applyannotationmodal.png').default} alt="Apply annotation modal" width="1366" height="636" className='doc_img'/>
 
 **Options:**
 
-1. **Apply to Current Screenshot Only:** The annotation will only affect the current screenshot variant (e.g., Chrome on desktop).
+1. **Apply to Current Screenshot Only:** The region will only affect the current screenshot variant (for example, Chrome on desktop).
 
-2. **Apply to All Browser Variants:** The annotation will be applied to all browser/viewport combinations for this screenshot (e.g., Chrome, Firefox, Safari on desktop).
+2. **Apply to All Browser Variants:** The region will be applied to every browser and viewport combination for this screenshot (for example, Chrome, Firefox, and Safari on desktop).
 
-> **Best Practice:** While you can apply annotations to all browser variants, it's recommended to manually verify that these areas are configured correctly for each browser. Certain browsers may render elements differently, potentially causing inconsistencies in your annotations.
+Each region has its own scope, so **Apply to all variants** is a per-region action. Every region you draw is tracked with a stable identity of its own, which means the scope you pick applies to that one region and to no others.
+
+> **Note:** **Apply to all variants** propagates only the region you currently have selected or have just drawn. Any other annotations that already exist on the screenshot are left untouched and are not copied to the other variants unless you select them and apply them too. This keeps regions you never intended to share from spreading across the variant matrix.
+
+To propagate more than one region, select each region and choose **Apply to all variants** for it in turn.
+
+> **Best Practice:** While you can apply a region to all browser variants, it's recommended to manually verify that the area is configured correctly for each browser. Certain browsers may render elements differently, which can cause inconsistencies in your regions.
 
 ### Annotation Color Coding
 
