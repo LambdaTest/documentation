@@ -5,6 +5,7 @@
 Each link below points to the plain-Markdown copy at `/support/docs/<slug>.md`.
 
 Sitemap: https://www.testmuai.com/support/sitemap.xml
+OpenApi: https://www.testmuai.com/support/OpenAPI.md
 
 ## Agent skill
 
