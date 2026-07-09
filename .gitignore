@@ -13,11 +13,8 @@
 
 # Auto-generated docs Markdown + llms.txt index + skills discovery index
 # (regenerated on every build by scripts/generate-static-md.js,
-# generate-llms-txt.js and generate-skill-index.js via prestart/prebuild).
-# SKILL.md is hand-written, so keep it tracked.
+
 /static/docs/*.md
-!/static/docs/SKILL.md
-/static/docs/llms.txt
 /static/.well-known/
 
 # Misc
