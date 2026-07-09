@@ -62,7 +62,7 @@ module.exports = {
                 },
                 innerHTML:
                   'For AI agents and LLMs: a machine-readable index is available at ' +
-                  '<a href="https://stage.testmuinternal.ai/support/docs/llms.txt">llms.txt</a>. ' +
+                  '<a href="https://www.testmuai.com/support/docs/llms.txt">llms.txt</a>. ' +
                   'A plain-Markdown version of any documentation page is available by appending .md to its URL.',
               },
             ],
