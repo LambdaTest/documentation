@@ -238,7 +238,7 @@ module.exports = {
               if (urlSet.includes(item.url)) {
                 return { ...item, priority: 1.0 }; // Highest priority for these URLs
               }
-              return { ...item, priority: 0.5 }; // Default priority
+              return { ...item, priority: 0.9 }; // Default priority
             });
           },
         },
