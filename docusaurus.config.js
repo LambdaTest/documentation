@@ -136,7 +136,11 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        sitemap: {},
+        sitemap: {
+          priority: 0.8,
+          changefreq: 'daily',
+          lastModified: true,
+        },
       },
     ],
   ],
