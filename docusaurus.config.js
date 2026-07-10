@@ -137,6 +137,7 @@ module.exports = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
+          lastModified: true,
           // Custom createSitemapItems function
           createSitemapItems: async ({ defaultCreateSitemapItems, ...rest }) => {
             const items = await defaultCreateSitemapItems(rest);
