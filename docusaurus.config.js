@@ -137,7 +137,7 @@ module.exports = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
-          lastModified: true,
+          lastmod: 'date',
           // Custom createSitemapItems function
           createSitemapItems: async ({ defaultCreateSitemapItems, ...rest }) => {
             const items = await defaultCreateSitemapItems(rest);
@@ -238,7 +238,7 @@ module.exports = {
               if (urlSet.includes(item.url)) {
                 return { ...item, priority: 1.0 }; // Highest priority for these URLs
               }
-              return { ...item, priority: 0.5 }; // Default priority
+              return { ...item, priority: 0.9 }; // Default priority
             });
           },
         },
