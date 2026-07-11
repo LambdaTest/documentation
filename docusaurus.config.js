@@ -4,7 +4,7 @@ module.exports = {
   title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
   url: 'https://www.testmuai.com',
-  baseUrl: '/',
+  baseUrl: '/support/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'TestMu AI', // Usually your GitHub org/user name.
