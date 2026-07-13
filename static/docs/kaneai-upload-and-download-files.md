@@ -11,7 +11,7 @@ This guide provides a step-by-step process for uploading and downloading files w
 - Supported file formats:
   - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
   - **Videos :** MP4 (Maximum size: 50 MB)
-  - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
+  - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 
 ## Steps to Upload a File
 ### Step 1: Initiate a Test Session
@@ -30,7 +30,7 @@ This guide provides a step-by-step process for uploading and downloading files w
 > - Supported file formats:
 >    - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
 >    - **Videos :** MP4 (Maximum size: 50 MB)
->    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED (Maximum size: 15 MB)
+>    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 - Click **Add File** to confirm your selection.
 
 ### Step 4: File Upload Process
@@ -48,7 +48,7 @@ The `FILE_` variable behavior described above applies to **Web tests**. In **App
 
 ## File Upload in App Tests
 
-File upload behaves differently in App tests than in Web tests. In a Web test, TestMu AI creates a file variable for each upload. App tests skip this step entirely. No file variable is created, so you never reference uploaded files with double-curly-brace syntax.
+File upload behaves differently in App tests than in Web tests. In a Web test, TestMu AI creates a file variable for each upload. App tests skip this step entirely — no file variable is created, so you never reference uploaded files with double-curly-brace syntax.
 
 ### How it works
 

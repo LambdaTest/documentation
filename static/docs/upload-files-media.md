@@ -1,7 +1,5 @@
 # Upload & Download Files and Media on Real Devices
 
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
 TestMu AI’s **Files & Media** feature allows you to seamlessly upload files or media from your system to real devices and download files the app or website generated back for verification. This ensures comprehensive validation of workflows such as document generation, media export, and file handling across Android and iOS devices — during both **App** and **Browser** testing sessions.
 
 The same upload and download experience is available whether you are testing a native app or a website in a mobile browser, so there is nothing new to relearn when switching between the two.
@@ -61,8 +59,8 @@ Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximu
 
 The same formats and size limits apply to both **App** and **Browser** sessions:
 
-- **Images**: JPG, JPEG, PNG, GIF (Max: 10 MB)
+- **Images**: JPG, JPEG, PNG, GIF, BMP (Max: 10 MB)
 - **Videos**: MP4 (Max: 50 MB)
-- **Documents**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Max: 15 MB)
+- **Documents**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Max: 15 MB)
 
 You can upload up to **5 files per session**. Files uploaded to or downloaded on the device exist only for the duration of the session and are wiped when the device is recycled.

@@ -26,9 +26,9 @@ Where an uploaded file lands on the device depends on whether it is an **App** o
 
 TestMu AI supports various file types for upload, ensuring flexibility in your testing scenarios. Below are the supported file types:
 
-- **Images**: JPG, JPEG, PNG, GIF, BMP, HEIC (Maximum size: 10 MB)
+- **Images**: JPG, JPEG, PNG, GIF, BMP (Maximum size: 10 MB)
 - **Videos**: MP4  (Maximum size: 50 MB)
-- **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED, GPX (Maximum size: 15 MB)
+- **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 
 ## Upload File and Media feature in App & Browser Automation
 
