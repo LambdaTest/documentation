@@ -88,13 +88,7 @@ The JSON must include at least these fields:
 | `element` | Locator value for the target element. When `elementType` is `webElement`, this is a resolved element handle instead of a locator string. See [Capture by Resolved Element Handle](#capture-by-resolved-element-handle-webelement). |
 | `fullPage` | Set to `false` to capture only the target element |
 
-Example JSON:
-
-```json
-{"screenshotName":"Checkout_Summary_Block","elementType":"css_selector","element":"section.checkout-summary","fullPage":false}
-```
-
-Full script string passed to `executeScript()`:
+Example, with the JSON in place of `<JSON>`. This is the full script string passed to `executeScript()`:
 
 ```text
 smartui.takeScreenshot,{"screenshotName":"Checkout_Summary_Block","elementType":"css_selector","element":"section.checkout-summary","fullPage":false}
