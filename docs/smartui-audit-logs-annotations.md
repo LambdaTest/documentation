@@ -83,14 +83,18 @@ Use the **Events**, **Users**, **Branches**, and **Build No.** filters at the to
 
 Open an entry to see a preview of the screenshot exactly as it was annotated, so you can confirm the change without leaving the log.
 
-<img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/annotation_audit_log.png').default} alt="Expanded audit log entry showing a preview of the annotated screenshot with its drawn ignore regions" />
+<img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/annotation_audit_log.png').default} alt="Expanded audit log entry showing a preview of the annotated screenshot with an Ignore region" />
 
 | Element | What it shows |
 | --- | --- |
-| **Event header** | The event line reads *Screenshot annotation updated*, with the date and time (Jul 13, 2026, 6:30 PM), the build and number (`m2-phase4-live-2 - #5`), the user who made the change (`chaitanyas`), and the count of affected screenshots (1 Screenshots). |
+| **Event header** | The event line reads *Screenshot annotation updated*, with the date and time (Jul 13, 2026, 6:26 PM), the build and number (`m2-phase4-live-2 - #5`), the user who made the change (`chaitanyas`), and the count of affected screenshots (1 Screenshots). |
 | **Screenshot preview** | A thumbnail of the screenshot with its annotations, captured at the time of the change. |
-| **Ignore regions** | The highlighted rectangles mark the areas set to be ignored during comparison. |
+| **Ignore region** | The highlighted rectangle marks the area set to be ignored during comparison. Its **Ignore** label identifies the annotation type. |
 | **Environment** | The browser and resolution the screenshot was captured on (Chrome, 1920x1080). |
+
+When a screenshot carries more than one annotation, the preview shows every drawn ignore region together.
+
+<img loading="lazy" className='doc_img' src={require('../assets/images/smart-visual-testing/audit-history/annotation_audit_log_all_regions.png').default} alt="Expanded audit log entry showing a preview of the annotated screenshot with multiple drawn ignore regions" />
 
 ---
 
