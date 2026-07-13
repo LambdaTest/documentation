@@ -2,13 +2,15 @@
 id: kane-cli-installation
 title: Installing Kane CLI
 sidebar_label: Installation
-description: Install Kane CLI using npm. Supports macOS (Apple Silicon and Intel), Linux (x64), and Windows (x64).
+description: Install Kane CLI using npm or Homebrew. Supports macOS (Apple Silicon and Intel), Linux (x64 and arm64), and Windows (x64).
 keywords:
   - kane cli
   - install kane cli
   - kaneai
   - testmu ai
   - npm install
+  - brew install kane cli
+  - homebrew
 url: https://www.testmuai.com/support/docs/kane-cli-installation/
 site_name: TestMu AI
 slug: kane-cli-installation/
@@ -43,9 +45,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Kane CLI is published to the public npm registry as `@testmuai/kane-cli`. Install it globally with `npm` to get the `kane-cli` command on your `PATH`.
+Kane CLI is published to the public npm registry as `@testmuai/kane-cli` and to a Homebrew tap. Install it with `npm` or `brew` to get the `kane-cli` command on your `PATH`.
 
 ## Install
+
+<Tabs>
+<TabItem value="npm" label="npm" default>
+
+Requires Node.js 18 or higher.
 
 ```bash
 npm install -g @testmuai/kane-cli
@@ -53,8 +60,22 @@ npm install -g @testmuai/kane-cli
 
 Platform-specific native binaries are installed automatically for your OS. No additional configuration is needed.
 
+</TabItem>
+<TabItem value="homebrew" label="Homebrew">
+
+For macOS and Linux. Node.js is not required.
+
+```bash
+brew install LambdaTest/kane/kane-cli
+```
+
+Homebrew also installs Google Chrome automatically through the `google-chrome` cask, so no additional setup is needed.
+
+</TabItem>
+</Tabs>
+
 :::note
-Kane CLI requires **Node.js 18 or higher** and **Google Chrome** installed on your system. Chrome is used as the automation browser and is launched automatically when you run a test.
+Kane CLI requires **Google Chrome** installed on your system. Chrome is used as the automation browser and is launched automatically when you run a test. The npm install additionally requires **Node.js 18 or higher**. The Homebrew install bundles Chrome for you and needs no Node.js.
 :::
 
 ## Verify
