@@ -61,8 +61,8 @@ Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximu
 
 The same formats and size limits apply to both **App** and **Browser** sessions:
 
-- **Images**: JPG, JPEG, PNG, GIF (Max: 10 MB)
+- **Images**: JPG, JPEG, PNG, GIF, BMP (Max: 10 MB)
 - **Videos**: MP4 (Max: 50 MB)
-- **Documents**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Max: 15 MB)
+- **Documents**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Max: 15 MB)
 
 You can upload up to **5 files per session**. Files uploaded to or downloaded on the device exist only for the duration of the session and are wiped when the device is recycled.
