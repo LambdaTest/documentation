@@ -3719,6 +3719,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Annotations in Audit Logs",
+            id: "smartui-audit-logs-annotations",
+          },
+          {
+            type: "doc",
             label: "Smart Comments",
             id: "smartui-smart-comments",
           },
