@@ -60,6 +60,10 @@ This guide details how to execute your **Robot** framework tests on **HyperExecu
 - [**Using Local System**](/support/docs/robot-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/robot-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
+:::tip Mainframe 3270 suites
+Testing a mainframe terminal with Robot Framework? See [Mainframe Testing with HyperExecute](/support/docs/mainframe-testing-with-hyperexecute/) for a suite that installs the `s3270`/`x3270` emulators, runs mock hosts as background services, and records the `x3270` GUI.
+:::
+
 ## 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
