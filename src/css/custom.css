@@ -1733,6 +1733,10 @@ table th, table td{border: none;}
 table th{background-color: #fff;}
 table th:not(:last-child), table td:not(:last-child){border-right: 1px solid #d4d4d4;}
 
+/* Flat tables: header and cells match the page background instead of a filled header */
+.flat-table table th,
+.flat-table table td{background-color: var(--ifm-background-color);}
+
 .desired-capabilities-page table {
   table-layout: fixed;
 }
@@ -1855,6 +1859,11 @@ html[data-theme='dark'] .feedback__form__submit__btn {
 
 html[data-theme='dark'] table th {
   background-color: #0D1117;
+}
+
+html[data-theme='dark'] .flat-table table th,
+html[data-theme='dark'] .flat-table table td {
+  background-color: var(--ifm-background-color);
 }
 
 html[data-theme='dark'] table, html[data-theme='dark'] table th:not(:last-child), html[data-theme='dark'] table td:not(:last-child), html[data-theme='dark'] table tr {
