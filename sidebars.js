@@ -259,6 +259,7 @@ module.exports = {
                   "pyunit-on-hyperexecute-grid",
                   "pytest-on-hyperexecute-grid",
                   "robot-on-hyperexecute-grid",
+                  "mainframe-testing-with-hyperexecute",
                   "behave-on-hyperexecute-grid",
                 ],
               },
