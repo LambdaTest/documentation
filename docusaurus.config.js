@@ -139,6 +139,10 @@ module.exports = {
          sitemap: {
           lastmod: 'date',
           priority: 0.9,
+          ignorePatterns: [
+          '/support/',           // Exclude /support/ URL
+          '/support/api-doc/',    // Exclude /support/api-docs
+        ],
         },
       },
     ],
