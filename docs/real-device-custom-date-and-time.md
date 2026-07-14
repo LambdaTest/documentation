@@ -2,7 +2,7 @@
 id: set-date-time-hour-format-real-devices
 title: Set Custom Date, Time & Hour Format on Real Devices
 sidebar_label: Date & Time Settings
-description: Configure date, time, and hour-format on iOS and Android devices during manual and Appium-based automation testing on TestMu AI.
+description: Set custom date, time, and 12/24-hour format on real iOS and Android devices during manual app testing and Appium automation sessions on TestMu AI.
 
 keywords:
   - set device time iOS
