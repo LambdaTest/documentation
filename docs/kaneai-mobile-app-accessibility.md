@@ -78,7 +78,7 @@ During test authoring, add the accessibility scan instruction:
 3. The instruction is recorded as part of the test flow
 4. The current screen is marked for accessibility scanning
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/mobile-accessibility/add-accessibility-instruction.png').default} alt="add-accessibility-instruction" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/mobile-accessibility/add-accessibility-instruction.webp').default} alt="add-accessibility-instruction" className="doc_img"/>
 
 ### Step 2: Instruction Recording
 
