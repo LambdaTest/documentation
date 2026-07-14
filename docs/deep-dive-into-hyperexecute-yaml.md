@@ -744,6 +744,8 @@ globalPost:
   runson: linux
 ```
 
+>📘 `globalPost` can also download every task's artifacts onto a VM, run custom commands against them, upload the processed output to the dashboard, and email the result. See [Download and Process Job Artifacts in Global Post](/support/docs/hyperexecute-global-post-artifacts/).
+
 <!-- :::info
 You can also use `afterAll` as an alias for the `globalPost` command:
 
