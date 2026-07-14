@@ -6,8 +6,12 @@ When a test fails, you often need to run it again, either to confirm a fix or to
 
 Re-Run offers two options:
 
-- **Replay** - executes the test again, live, against your application.
-- **Reproduce** - executes the test against the network state captured from the original run. Requires HAR logging.
+- **Replay** - runs the test again on the grid.
+- **Reproduce** - replays the test against the data captured from the original run. Requires HAR logging.
+
+**Limited availability**
+
+Re-Run is not generally available. It may not be enabled for your account, and its behavior may change before general availability. Contact TestMu AI support if you need access.
 
 ## Re-Run a Test
 
@@ -20,7 +24,7 @@ The **Re-runs** field in the test summary shows how many times the test has been
 
 ## Replay
 
-**Replay** executes the test again on a fresh session, using the same script and the same configuration (browser, browser version, operating system, and resolution) as the original run. Because it hits your application live, the result reflects the current state of your app and your environment.
+**Replay** runs the test again on the grid, against your application as it exists now. Unlike Reproduce, it does not use the captured data from the original run, so the result reflects the current state of your application and environment.
 
 Use Replay to:
 
@@ -30,9 +34,14 @@ Use Replay to:
 
 ## Reproduce
 
-**Reproduce** re-runs the test against the network state captured from the original run, rather than against live network responses. This replicates the conditions the test originally encountered, which is useful when the failure depended on a specific set of network responses that you cannot easily recreate on demand.
+**Reproduce** replays the test against the network and DOM data captured during the original run, rather than against your live application. This replicates the conditions the test originally encountered, which is what makes it useful for intermittent failures that will not recur on demand.
 
 Reproduce reads the HAR (HTTP Archive) network logs recorded during the original test. If those logs were not captured, the option is unavailable.
+
+A test is eligible for Reproduce only if both of the following are true:
+
+- It ran with the `network.full.har` capability set to `true`.
+- It finished with a passed, failed, or completed status. Tests that did not run to completion cannot be reproduced.
 
 ### Enable Reproduce
 
@@ -54,11 +63,12 @@ In this case, add the capability and run the test again. The new run is then eli
 
 | | Replay | Reproduce |
 | --- | --- | --- |
-| Network responses | Live, from your application | Captured from the original run |
-| Prerequisite | None | `network.full.har : true` on the original run |
-| Best for | Confirming fixes, detecting flakes | Investigating failures tied to specific network responses |
+| Runs against | Your live application | Network and DOM data captured from the original run |
+| Prerequisite | None | `network.full.har : true`, and a passed, failed, or completed original run |
+| Reflects | The current state of your app | The state at the time of the original run |
+| Best for | Confirming fixes, detecting flakes | Investigating intermittent failures that will not recur |
 
-If you are not sure which to use, start with **Replay**. Reach for **Reproduce** when a failure will not recur on a live run and you suspect the original network responses are the reason.
+If you are not sure which to use, start with **Replay**. Reach for **Reproduce** when a failure will not recur on a live run and you need the original conditions back.
 
 ## Next Steps
 
