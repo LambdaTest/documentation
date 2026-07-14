@@ -142,6 +142,13 @@ module.exports = {
           ignorePatterns: [
           '/support/',           // Exclude /support/ URL
           '/support/api-doc/',    // Exclude /support/api-docs
+          '/support/docs/accessibility-rules-checklist/',
+          '/support/docs/kane-cli-getting-started/',
+          '/support/docs/accessibility-android-what-we-do-not-cover/',
+          '/support/docs/accessibility-getting-started-quick-setup/',
+          '/support/docs/kane-cli-agent-output/',
+          '/support/docs/accessibility-web-what-we-do-not-cover/',
+          '/support/docs/accessibility-ios-what-we-do-not-cover/'
         ],
         },
       },
