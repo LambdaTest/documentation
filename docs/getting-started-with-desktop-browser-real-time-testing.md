@@ -64,7 +64,9 @@ Real-Time Desktop Web Browser Testing on <BrandName /> allows you to test your w
 - To test a website, enter its URL and select your **Operating System**, **browser**, **browser version**, and **screen resolution**.
 - Afterwards click on the **Start** button to initiate the testing process.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/getting-started-with-desktop-browser.gif').default} alt="Image" className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/real-time-testing/web-browser/getting-started-with-desktop-browser.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## Understanding the Dashboard
 The dashboard for real-time desktop browser testing is designed to simplify the testing process with an intuitive user interface. Here’s a breakdown of its key components:

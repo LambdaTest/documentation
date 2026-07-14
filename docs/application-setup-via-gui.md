@@ -63,7 +63,9 @@ Wait for the file to upload and process. A success message will indicate when yo
 - **Open App Settings :** Once uploaded, find your application in the list and click on the Settings button.
 - **Copy the App ID :** In the settings, locate the App ID field. Copy this ID, as it will be required to reference your app in automated tests or other configurations.
 
-<img loading="lazy" src={require('../assets/images/appium-app/application/real-device-upload.gif').default} alt="Image" className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/appium-app/application/real-device-upload.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 
 > Learn how to [Upload Apps on <BrandName />’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
