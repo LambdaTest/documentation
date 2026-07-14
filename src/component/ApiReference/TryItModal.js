@@ -94,17 +94,11 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
   const authLine = hasAuth ? ` \\\n  --header 'Authorization: ${authHeader}'` : '';
 
   const bodyProps = endpoint.requestBody?.properties || [];
-  const rawExample = endpoint.requestBody?.example;
   const contentType = endpoint.requestBody?.contentType || 'application/json';
   const isMultipart = contentType === 'multipart/form-data';
   const flattenedBody = !isMultipart ? detectFlattenedArrayBody(endpoint) : null;
-  const userFilledBody = flattenedBody
-    ? flattenedBody.innerFields.some((f) => params[`__body__${f.name}`])
-    : bodyProps.some((p) => params[`__body__${p.name}`]);
-  const useRawExample = !isMultipart && !flattenedBody && !userFilledBody
-    && rawExample != null && typeof rawExample === 'object';
   let bodyLine = '';
-  if (bodyProps.length > 0 || useRawExample || flattenedBody) {
+  if (bodyProps.length > 0 || flattenedBody) {
     if (isMultipart) {
       const bodyEntries = bodyProps.map((p) => [p.name, coerceBodyValue(params[`__body__${p.name}`] || '', p.type)]);
       bodyLine = bodyEntries
@@ -112,40 +106,26 @@ function buildCurl(endpoint, username, password, params, baseUrl) {
         .map(([k, v]) => ` \\\n  --form '${k}=${v}'`)
         .join('');
     } else if (flattenedBody) {
-      // Assemble inner object from per-field inputs (with example fallback),
-      // wrap under the spec's array key.
       const inner = {};
       for (const f of flattenedBody.innerFields) {
         const raw = params[`__body__${f.name}`];
-        const fromEx = flattenedBody.innerExample[f.name];
-        const val = (raw !== undefined && raw !== '')
-          ? coerceBodyValue(raw, f.type)
-          : fromEx;
-        if (val !== undefined && val !== '') inner[f.name] = val;
+        if (raw !== undefined && raw !== '') {
+          inner[f.name] = coerceBodyValue(raw, f.type);
+        }
       }
-      const bodyJson = { [flattenedBody.wrapperKey]: [inner] };
-      bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyJson, null, 2)}'`;
-    } else {
-      let bodyJson;
-      if (useRawExample) {
-        bodyJson = rawExample;
-      } else {
-        // Empty inputs fall back to the spec example so editing one field
-        // doesn't blank out the others.
-        const fromExample = (p) => (rawExample && typeof rawExample === 'object') ? rawExample[p.name] : undefined;
-        const bodyEntries = bodyProps.map((p) => {
-          const raw = params[`__body__${p.name}`] || '';
-          if (!raw) {
-            const ex = fromExample(p);
-            return [p.name, ex !== undefined ? ex : ''];
-          }
-          return [p.name, coerceBodyValue(raw, p.type)];
-        });
-        const bodyObj = Object.fromEntries(bodyEntries.filter(([, v]) => v !== '' && v !== undefined));
-        if (Object.keys(bodyObj).length) bodyJson = bodyObj;
-      }
-      if (bodyJson !== undefined) {
+      if (Object.keys(inner).length) {
+        const bodyJson = { [flattenedBody.wrapperKey]: [inner] };
         bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyJson, null, 2)}'`;
+      }
+    } else {
+      const bodyEntries = bodyProps.map((p) => {
+        const raw = params[`__body__${p.name}`] || '';
+        if (!raw) return [p.name, ''];
+        return [p.name, coerceBodyValue(raw, p.type)];
+      });
+      const bodyObj = Object.fromEntries(bodyEntries.filter(([, v]) => v !== '' && v !== undefined));
+      if (Object.keys(bodyObj).length) {
+        bodyLine = ` \\\n  --header 'Content-Type: application/json' \\\n  --data '${JSON.stringify(bodyObj, null, 2)}'`;
       }
     }
   }
@@ -356,15 +336,6 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
       }
       return initial;
     }
-    const ex = effectiveEndpoint.requestBody?.example;
-    const props = effectiveEndpoint.requestBody?.properties || [];
-    if (ex && typeof ex === 'object' && !Array.isArray(ex)) {
-      for (const p of props) {
-        if (ex[p.name] === undefined) continue;
-        const v = ex[p.name];
-        initial[`__body__${p.name}`] = v == null ? '' : String(v);
-      }
-    }
     return initial;
   }
   // Prefill body fields with the spec example so the form is usable on first
@@ -449,18 +420,12 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
       : '';
 
     const bodyProps = effectiveEndpoint.requestBody?.properties || [];
-    const rawExample = effectiveEndpoint.requestBody?.example;
     const contentType = effectiveEndpoint.requestBody?.contentType || 'application/json';
     const isMultipart = contentType === 'multipart/form-data';
     const flattenedBodyHS = !isMultipart ? detectFlattenedArrayBody(effectiveEndpoint) : null;
-    const userFilledBody = flattenedBodyHS
-      ? flattenedBodyHS.innerFields.some((f) => params[`__body__${f.name}`])
-      : bodyProps.some((p) => params[`__body__${p.name}`]);
-    const useRawExample = !isMultipart && !flattenedBodyHS && !userFilledBody
-      && rawExample != null && typeof rawExample === 'object';
     let fetchBody;
     let fetchHeaders = { ...(authHeader && { Authorization: authHeader }) };
-    if (bodyProps.length > 0 || useRawExample || flattenedBodyHS) {
+    if (bodyProps.length > 0 || flattenedBodyHS) {
       if (isMultipart) {
         const fd = new FormData();
         bodyProps.forEach((p) => { if (params[`__body__${p.name}`]) fd.append(p.name, params[`__body__${p.name}`]); });
@@ -470,28 +435,19 @@ export default function TryItModal({ endpoint, onClose, selectedLang: selectedLa
         const inner = {};
         for (const f of flattenedBodyHS.innerFields) {
           const raw = params[`__body__${f.name}`];
-          const fromEx = flattenedBodyHS.innerExample[f.name];
-          const val = (raw !== undefined && raw !== '')
-            ? coerceBodyValue(raw, f.type)
-            : fromEx;
-          if (val !== undefined && val !== '') inner[f.name] = val;
+          if (raw !== undefined && raw !== '') {
+            inner[f.name] = coerceBodyValue(raw, f.type);
+          }
         }
-        fetchBody = JSON.stringify({ [flattenedBodyHS.wrapperKey]: [inner] });
-        fetchHeaders['Content-Type'] = 'application/json';
-      } else if (useRawExample) {
-        fetchBody = JSON.stringify(rawExample);
-        fetchHeaders['Content-Type'] = 'application/json';
+        if (Object.keys(inner).length) {
+          fetchBody = JSON.stringify({ [flattenedBodyHS.wrapperKey]: [inner] });
+          fetchHeaders['Content-Type'] = 'application/json';
+        }
       } else {
-        // Empty inputs fall back to the spec example so partial edits don't
-        // strip the other example values.
-        const fromExample = (p) => (rawExample && typeof rawExample === 'object') ? rawExample[p.name] : undefined;
         const bodyObj = Object.fromEntries(
           bodyProps.map((p) => {
             const raw = params[`__body__${p.name}`] || '';
-            if (!raw) {
-              const ex = fromExample(p);
-              return [p.name, ex !== undefined ? ex : ''];
-            }
+            if (!raw) return [p.name, ''];
             return [p.name, coerceBodyValue(raw, p.type)];
           }).filter(([, v]) => v !== '' && v !== undefined)
         );

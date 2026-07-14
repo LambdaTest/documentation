@@ -106,7 +106,12 @@ export default function ApiSidebar({ apis, activeApiSlug, activeGroupSlug, activ
           <MethodPill method={endpoint.method} />
           <div className="flex-1 flex min-w-0 items-start gap-x-2.5">
             <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5 [word-break:break-word]">
-              <span className="min-w-0 max-w-full break-words">{endpoint.name}</span>
+              <span className="min-w-0 max-w-full break-words" style={endpoint.deprecated ? { textDecoration: 'line-through', opacity: 0.6 } : undefined}>{endpoint.name}</span>
+              {endpoint.deprecated && (
+                <span style={{ fontSize: '10px', fontWeight: 600, color: '#92400e', background: '#fef3c7', border: '1px solid #f59e0b', borderRadius: '4px', padding: '0 4px', lineHeight: '16px', flexShrink: 0 }}>
+                  Deprecated
+                </span>
+              )}
             </div>
           </div>
         </Link>
