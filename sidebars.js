@@ -148,6 +148,11 @@ module.exports = {
                 label: "Receive the Job Reports as an Email",
                 id: "hyperexecute-email-reports",
               },
+              {
+                type: "doc",
+                label: "Process Artifacts in Global Post",
+                id: "hyperexecute-global-post-artifacts",
+              },
             ],
           },
           {
