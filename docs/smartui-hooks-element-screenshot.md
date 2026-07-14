@@ -71,15 +71,20 @@ This helps ensure the correct region is ready for capture. Use your framework's 
 
 ## Step 3: Call the SmartUI Element Screenshot Hook
 
-Run a JavaScript string in the browser context, for example using Selenium `executeScript()`.
+Call the SmartUI hook through your driver's script executor, passing `"smartui.takeScreenshot"` as the command and a config object with your screenshot options:
 
-Use the following format:
+```js
+const config = {
+  screenshotName: "Checkout_Summary_Block",
+  elementType: "css_selector",
+  element: "section.checkout-summary",
+  fullPage: false
+};
 
-```text
-smartui.takeScreenshot,<JSON>
+await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-The JSON must include at least these fields:
+The config object must include at least these fields:
 
 | Field | Purpose |
 |---|---|
@@ -87,18 +92,6 @@ The JSON must include at least these fields:
 | `elementType` | Locator type. Supported values: `css_selector`, `xpath`, `id`, `class`, `webElement` |
 | `element` | Locator value for the target element. When `elementType` is `webElement`, this is a resolved element handle instead of a locator string. See [Capture by Resolved Element Handle](#capture-by-resolved-element-handle-webelement). |
 | `fullPage` | Set to `false` to capture only the target element |
-
-Example JSON:
-
-```json
-{"screenshotName":"Checkout_Summary_Block","elementType":"css_selector","element":"section.checkout-summary","fullPage":false}
-```
-
-Full script string passed to `executeScript()`:
-
-```text
-smartui.takeScreenshot,{"screenshotName":"Checkout_Summary_Block","elementType":"css_selector","element":"section.checkout-summary","fullPage":false}
-```
 
 Update `elementType` and `element` to match the locator used in your test.
 
@@ -223,14 +216,12 @@ for (const item of elements) {
 
   const screenshotName = `element_${label}`.replace(/[^a-zA-Z0-9_-]+/g, '_').slice(0, 80);
 
-  await driver.executeScript(
-    `smartui.takeScreenshot,${JSON.stringify({
-      screenshotName,
-      elementType: 'xpath',
-      element: item.xpath,
-      fullPage: false
-    })}`
-  );
+  await driver.executeScript("smartui.takeScreenshot", {
+    screenshotName,
+    elementType: 'xpath',
+    element: item.xpath,
+    fullPage: false
+  });
 }
 ```
 
