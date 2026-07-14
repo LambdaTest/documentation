@@ -47,15 +47,17 @@ jobs:
         run: |
           cp -R assets/ build/
           cd build/
-          # Upload/refresh everything except the content-hashed JS/CSS bundles first,
-          # deleting anything that no longer exists in this build (e.g. removed pages).
-          aws s3 sync . s3://lambdatest-prod-support-docs-testmucom/support/ --exclude 'robots.txt' --exclude 'assets/js/*' --exclude 'assets/css/*' --delete
-          # Then add this build's hashed bundles without --delete, so previously
-          # deployed bundles stay in place. Old HTML still cached by browsers/CDN/
-          # crawlers references those old hashes, and deleting them causes 404s on
-          # the JS/CSS mid-deploy. These are cheap, immutable, content-hashed files,
-          # so leaving old ones around is safe.
+          # Upload this build's hashed bundles FIRST, without --delete, so old
+          # bundles stay in place (old HTML still referencing them keeps working)
+          # and this build's new hashes exist in S3 before any HTML that
+          # references them can possibly go live. Doing this second would open a
+          # window where new HTML is already live but its bundle isn't uploaded
+          # yet, causing a 404 that CDNs/browsers can then cache for hours.
           aws s3 sync . s3://lambdatest-prod-support-docs-testmucom/support/ --exclude '*' --include 'assets/js/*' --include 'assets/css/*'
+          # Then sync everything else (HTML etc.), deleting anything that no
+          # longer exists in this build, but never touching the hashed asset
+          # dirs so previously deployed bundles are never removed.
+          aws s3 sync . s3://lambdatest-prod-support-docs-testmucom/support/ --exclude 'robots.txt' --exclude 'assets/js/*' --exclude 'assets/css/*' --delete
 
       - name: Invalidate CloudFront
         run: |
