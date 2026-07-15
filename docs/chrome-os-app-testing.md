@@ -60,7 +60,9 @@ This document outlines how you can leverage the features like mark as bug, chang
 ## Device Controls
 This transcend basic volume adjustments and lock/unlock functionalities. It empowers you to interact with the emulated ChromeOS device programmatically, automating tasks and integrating them within your testing scripts. This gives you fine-grained control over the device's state, tailoring the testing environment to your specific needs.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/device-control.gif').default} style={{ height: '350px' }} className="doc_img"/> 
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/device-control.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## App Controls
 This provide programmatic control over the applications installed within the emulator (e.g., install new app, kill the existing app, or uninstall the app).  App Controls give you the power to do it all programmatically. This streamlines your testing process by eliminating the need for manual app manipulation within the emulator.
@@ -70,7 +72,9 @@ This provide programmatic control over the applications installed within the emu
 ## Screenshot
 Screenshots remain a cornerstone for capturing static images of the current emulator screen.  These screenshots serve as invaluable visual references throughout the testing process, aiding in bug reporting, test case documentation, and visual regression testing.
 
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/screenshot.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/screenshot.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
  
 ## Record Session
 This allows you to record a video of your testing session, providing a detailed playback for in-depth bug analysis, test case demonstrations, and comprehensive test case documentation.
@@ -121,7 +125,9 @@ Settings provide a central location to configure various aspects of your emulate
 ## Switch
 Switch allows you to seamlessly switch between multiple emulated devices within the same project.  This eliminates the need to tear down and rebuild individual emulators, streamlining your testing workflow and enabling you to compare app behavior across different ChromeOS device configurations.
   
-<img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/switch.gif').default} style={{ height: '350px' }} className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/real-time/chromeos-app/switch.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## End Session
 Terminates the current emulator instance, freeing up resources and allowing you to start a fresh session with a clean slate.
