@@ -2693,6 +2693,7 @@ module.exports = {
           "group-tests-using-custom-tags",
           "group-and-filter-your-test-builds-using-build-tags",
           "change-individual-test-details",
+          "rerun-automation-tests",
           "sharing-test-results",
           "mark-as-bug-in-automation-testing",
           "live-interaction",
