@@ -35,6 +35,8 @@ It displays:
 
 Use the action buttons next to the test ID to copy the ID, create an issue, rename, share, or delete the test.
 
+Use the **Re-Run** button to execute the test again from the dashboard. See [Re-Run Automation Tests](/support/docs/rerun-automation-tests/).
+
 ### Command Logs and Network
 
 View every command executed during the test and all associated logs.
