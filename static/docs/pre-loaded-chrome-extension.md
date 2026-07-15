@@ -1,5 +1,7 @@
 # Pre-Loaded Extension for Chrome
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Pre-Loaded Chrome Extensions feature in TestMu AI's real-time testing allows users to install and use Chrome extensions during your testing sessions. This capability provides the flexibility to test web applications with various extensions, such as ad blockers, password managers, and developer tools, replicating real user environments more accurately.
 
 > The Pre-Loaded Extension is only accessible on **Chrome** browsers.

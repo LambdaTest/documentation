@@ -1,4 +1,7 @@
 # How to Test Apps Installed via Firebase?
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI offers real device testing capabilities, enabling developers and QA teams to test on actual Android and iOS devices in the cloud. With Firebase App Distribution, you can easily configure your Firebase account within TestMu AI to seamlessly distribute apps from Firebase to TestMu AI App Live. This integration allows you to collaborate by sharing projects within your team on TestMu AI and test on real devices.
 
 Let’s dive in to learn how to test apps installed from Firebase.

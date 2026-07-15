@@ -59,4 +59,6 @@ The Recents tab displays a list of items that you have accessed recently. This h
 
 > You can also re-launch those tests from the recents or favorites section.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/key-features/recents-and-favourites.gif').default} alt="Image" className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/real-time-testing/key-features/recents-and-favourites.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>

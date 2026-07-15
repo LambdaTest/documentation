@@ -1,5 +1,7 @@
 # Test in IE Mode on Microsoft Edge
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Microsoft retired Internet Explorer 11 in June 2022, but many enterprise applications still require IE rendering for specific workflows. Microsoft Edge includes an IE Mode that loads pages using the IE11 Trident engine inside an Edge tab. TestMu AI supports IE Mode automation on Windows 11, so you can validate legacy apps without maintaining a standalone IE browser.
 
 ## When to Use IE Mode

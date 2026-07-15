@@ -1,5 +1,7 @@
 # Ignore or Select Annotated Regions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Web applications often have dynamic elements that can cause unnecessary noise in your visual testing. Take a social media platform, for instance. The number of unread notifications displayed might change with each test run. While these variations are expected, you don't necessarily want them to trigger alerts as potential regressions.
 
 The SmartUI Annotation tool allows you to interact directly with your screenshots through detailed annotations. You can draw over screenshots, define regions with boxes, and choose to ignore or select these regions for current and future comparisons. With advanced features like **Ignore Colors**, **Floating Regions**, and **Select Ignore**, you can handle even the most complex dynamic content scenarios.
@@ -184,6 +186,34 @@ Ignoring color differences in a themed navigation bar while testing its structur
 
 Testing a product card but ignoring the price and rating that may change, while still comparing the product image, title, and description.
 
+## Baseline Regions
+
+A **baseline** is the reference image that every later build is compared against. Normally you draw regions on a comparison build, so the region belongs to that build's comparison. **Baseline Regions** let you draw an ignore or select region directly on the **#1 Baseline Build**, so the region is owned by the baseline itself and is honored for comparisons from the baseline forward.
+
+This is useful when you already know an area is dynamic at the moment you establish the baseline. Instead of waiting for a comparison build and re-applying the region there, you can annotate the baseline once and have it apply to every build that uses that image as its baseline.
+
+### When to Use
+
+- Marking a known dynamic area (a timestamp, a session banner, a live counter) as ignored right when the baseline is created
+- Keeping the baseline and what is actually compared in sync, without waiting for the next comparison build
+- Establishing a select region on the baseline so every downstream build compares only the area you care about
+
+### How to Use
+
+**Step 1:** Open the **#1 Baseline Build** for your screenshot in the SmartUI dashboard.
+
+**Step 2:** Click on the **Actions** button (annotation icon) to open the annotation tool.
+
+**Step 3:** Click on the **Add Region** button and draw a box around the area you want to ignore or select, then choose the annotation type (for example, **Ignore Region** or **Select Region**).
+
+**Step 4:** Mark the region as a **baseline region** in the apply dialog and click **Save**.
+
+**What Happens:** The region is stored against the baseline screenshot and is applied in every consecutive build that is compared against that baseline. Regions that are not marked as baseline regions continue to behave exactly as before and apply only from the build on which you drew them.
+
+> **Note:** Baseline Regions and the [per-region **Apply to all variants**](/support/docs/smartui-draw-on-ui/#applying-annotations) scope are independent. A baseline region controls the builds a region applies to (from the baseline forward), while the variant scope controls the browser and viewport combinations a region is copied to.
+
+> **Tip:** Use a baseline region for content you already know is dynamic before the first comparison ever runs. For areas you discover later while reviewing a comparison, a normal region on that build is the simpler choice.
+
 ## Managing Annotations
 
 Once you've created annotations, you can view, edit, and delete them as needed.
@@ -225,15 +255,21 @@ You can always edit or delete pre-configured areas or add new ones according to 
 
 ### Applying Annotations
 
-After creating your annotations, you'll see a modal dialog with options:
+After drawing a region, you'll see a modal dialog that controls where that specific region is applied:
 
 **Options:**
 
-1. **Apply to Current Screenshot Only:** The annotation will only affect the current screenshot variant (e.g., Chrome on desktop).
+1. **Apply to Current Screenshot Only:** The region will only affect the current screenshot variant (for example, Chrome on desktop).
 
-2. **Apply to All Browser Variants:** The annotation will be applied to all browser/viewport combinations for this screenshot (e.g., Chrome, Firefox, Safari on desktop).
+2. **Apply to All Browser Variants:** The region will be applied to every browser and viewport combination for this screenshot (for example, Chrome, Firefox, and Safari on desktop).
 
-> **Best Practice:** While you can apply annotations to all browser variants, it's recommended to manually verify that these areas are configured correctly for each browser. Certain browsers may render elements differently, potentially causing inconsistencies in your annotations.
+Each region has its own scope, so **Apply to all variants** is a per-region action. Every region you draw is tracked with a stable identity of its own, which means the scope you pick applies to that one region and to no others.
+
+> **Note:** **Apply to all variants** propagates only the region you currently have selected or have just drawn. Any other annotations that already exist on the screenshot are left untouched and are not copied to the other variants unless you select them and apply them too. This keeps regions you never intended to share from spreading across the variant matrix.
+
+To propagate more than one region, select each region and choose **Apply to all variants** for it in turn.
+
+> **Best Practice:** While you can apply a region to all browser variants, it's recommended to manually verify that the area is configured correctly for each browser. Certain browsers may render elements differently, which can cause inconsistencies in your regions.
 
 ### Annotation Color Coding
 

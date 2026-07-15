@@ -1,5 +1,7 @@
 # Default List Of Mobile And Desktop Browsers For Automated Screenshot Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The default list of Mobile and Desktop browsers for [Automated Screenshot Testing](/docs/automated-screenshot-testing/) includes:
 
 ## Default Desktop Browsers

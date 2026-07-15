@@ -1,5 +1,7 @@
 # Drag and Drop in KaneAI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 KaneAI lets you author drag interactions across **Desktop Web, Android apps, iOS apps, and Mobile Web** using either natural language or by performing the gesture yourself. Use it for Kanban boards  and any other drag-driven UI flow.
 
 ## Overview

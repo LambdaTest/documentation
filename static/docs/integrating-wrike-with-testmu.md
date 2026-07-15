@@ -1,5 +1,7 @@
 # Integrating Wrike With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 >Wrike is a SaaS(Software-As-A-Service) Product Management software. You can manage and track your projects, deadlines, and other workflow processes. It also allows inter-team communications, and therefore used by many developments, as well as testing teams to keep track of their work and teams. Wrike also provides the ability to track bugs effectively.
 
 TestMu AI Wrike integration helps you in creating issues in Wrike directly from the TestMu AI platform. TestMu AI now allows you to integrate your Wrike workspace with simple one-click. You can push annotated issues to a project of your choice, assign it to the required teammate, set the priority, and attach screenshots in the middle of the test session. After creating the issue, it gets reflected directly in your project's workspace on Wrike with the details of the test session along with the annotated screenshot.

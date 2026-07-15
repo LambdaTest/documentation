@@ -1,5 +1,7 @@
 # Label in Name (2.5.3)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 When a UI component has a visible text label, the accessible name must contain the visible text so that voice-input users can activate the control by speaking its visible label.
 
 **WCAG Reference**

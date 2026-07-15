@@ -1,5 +1,7 @@
 # Contrast (Minimum) (1.4.3)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Text and important visual elements need sufficient contrast to remain readable.
 
 **WCAG Reference**

@@ -1,5 +1,7 @@
 # Account Management
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
       Manage Subscriptions
       Learn how to manage your account subscription for the TestMu AI.
 

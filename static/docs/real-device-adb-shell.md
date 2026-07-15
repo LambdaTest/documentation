@@ -1,5 +1,7 @@
 # Execute ADB shell commands
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The integration of Android Debug Bridge (ADB) shell support within the TestMu AI Manual Testing platform for app testing on Android devices empowers users to run supported ADB shell commands directly on devices during manual testing sessions, receiving instant output. This feature addresses the challenge of remote device communication, enabling users to interact with devices as if they were physically present.
 
 ## Benefits

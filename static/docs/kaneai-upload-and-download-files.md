@@ -1,5 +1,7 @@
 # Upload and Download Files in KaneAI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This guide provides a step-by-step process for uploading and downloading files within Kane AI, a cloud-based testing platform provided by TestMu AI. Users can easily upload files from their local system, access pre-uploaded files, and download files generated during a test session.
 
 ## Prerequisites
@@ -9,7 +11,7 @@ This guide provides a step-by-step process for uploading and downloading files w
 - Supported file formats:
   - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
   - **Videos :** MP4 (Maximum size: 50 MB)
-  - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
+  - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 
 ## Steps to Upload a File
 ### Step 1: Initiate a Test Session
@@ -28,7 +30,7 @@ This guide provides a step-by-step process for uploading and downloading files w
 > - Supported file formats:
 >    - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
 >    - **Videos :** MP4 (Maximum size: 50 MB)
->    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED (Maximum size: 15 MB)
+>    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 - Click **Add File** to confirm your selection.
 
 ### Step 4: File Upload Process

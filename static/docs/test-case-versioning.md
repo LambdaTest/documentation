@@ -1,5 +1,7 @@
 # Test Case Versioning
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Test Case Versioning allows teams to track every change made to a test case over time. It provides a complete audit trail, ensures traceability, supports rollbacks to earlier versions, and makes collaboration across teams more reliable.
 
 ## Creating Versions

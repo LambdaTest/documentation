@@ -1,5 +1,7 @@
 # Inside TestMu AI App Automation Dashboard
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 You can view your App automated test results on TestMu AI App Automation Dashboard. TestMu AI App Automation dashboard enables you to debug failed test sessions utilizing different test logs. The capabilities for a given test session may be specified in the test script and generated using the TestMu AI Capability Generator.
 
 ## Debugging Tests

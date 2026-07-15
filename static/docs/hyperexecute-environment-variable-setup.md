@@ -1,5 +1,7 @@
 # HyperExecute Environment Variable Setup
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 To provide you with a secure [cross-browser testing](https://www.testmuai.com) environment on-cloud, we recommend integrating TestMu AI Authentication Credentials in your test scripts. This would allow our cloud servers to establish a secure connection between your local system and [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/). This document will help you understand how to set up HyperExecute environment variable for your respective operating system. This set up would also help authenticate your colleague's test cases when executed against an individual account.
 
 ## Where to find TestMu AI Authentication Credentials?

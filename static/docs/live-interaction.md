@@ -1,5 +1,7 @@
 # Live Interaction
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## What Is Live Interaction?
 
 Live Interaction lets you take manual control of an active automation session.

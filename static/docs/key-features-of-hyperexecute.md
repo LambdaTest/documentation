@@ -1,5 +1,7 @@
 # Key Features of HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 HyperExecute provides you with the tools that you need to run your tests at the fastest speeds possible. In addition to all of the core features that TestMu AI cloud provides to your tests (for example: detailed logs, smart CI features, network insights, video recording, access to browsers & platforms on the cloud), HyperExecute takes a step forward to improve your experience. It supports all [programming languages and major test automation frameworks](/support/docs/hyperexecute-supported-languages-and-frameworks/).
 
 >Check out [TestMu AI HyperExecute on Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyper_execute?exp=ubp8&tab=Overview)

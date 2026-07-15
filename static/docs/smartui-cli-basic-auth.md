@@ -1,5 +1,7 @@
 # Basic Authentication in SmartUI CLI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 When capturing screenshots of applications or websites that are protected with authentication, you need to configure SmartUI to pass the necessary authentication headers. This ensures that SmartUI can access and properly render all assets on the page.
 
 ## Why Basic Authentication is Needed

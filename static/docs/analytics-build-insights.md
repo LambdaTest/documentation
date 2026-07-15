@@ -1,5 +1,7 @@
 # Build Insights - Analyze your test builds and get build level insights
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 
 Build Insights is your build-level health dashboard. It shows how stable each build is, how long it took, and which tests are causing problems so you can decide quickly whether a build is safe to promote or needs more work.

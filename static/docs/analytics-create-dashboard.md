@@ -1,5 +1,7 @@
 # Creating your first Dashboard using TestMu AI Analytics
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Using Custom Dashboards
 
 Add widgets of multiple products and various insights to your dashboard. You can create a custom dashboard with the widgets of your choice. You can add widgets of the same type multiple times and also edit the layout of the dashboard according to your configuration.

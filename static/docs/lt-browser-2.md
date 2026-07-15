@@ -1,5 +1,7 @@
 # Getting Started With LT Browser 2.0
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 > **Note:** This product is deprecated and as a result, no further support will be provided for this feature by the TestMu AI Organization.
 
 [LT Browser 2.0](https://www.testmuai.com/lt-browser) is a Chromium-based mobile-friendly browser that enables web developers to build, test and debug their mobile websites for responsiveness across a wide range of 50+ pre-installed device viewports, including mobile, tablet, desktop and laptop.

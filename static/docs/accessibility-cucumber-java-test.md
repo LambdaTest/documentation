@@ -1,5 +1,7 @@
 # Cucumber (Java)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Cucumber scenarios still execute **ordinary Selenium** code under the hood. Enable Accessibility once on the **shared WebDriver** (usually in a **@Before** hook), then call **`lambda-accessibility-scan`** from step definitions or a small helper when a screen is stable. Behavior matches [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/).
 
 > **Browsers:** Chrome or Edge, supported versions only.

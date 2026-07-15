@@ -1,5 +1,7 @@
 # Mock Video Injection on Web Automation (Selenium/Chromium)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Inject a custom video file as a fake camera feed in Chromium-based Selenium tests on TestMu AI. This is useful for testing WebRTC, video conferencing, KYC or identity verification, and any flow that calls `getUserMedia()`.
 
 ## How It Works

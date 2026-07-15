@@ -1,5 +1,7 @@
 # Test Intelligence - Command Error Logs Analytics
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## About Command Error Logs Analytics
 
 Analyzing your failed tests is a crucial part of your test automation strategy. It helps you to identify the errors that are causing your test runs to fail. This helps you to fix the errors and improve the quality of your test suite.

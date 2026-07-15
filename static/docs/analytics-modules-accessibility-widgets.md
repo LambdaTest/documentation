@@ -1,5 +1,7 @@
 # Accessibility Dashboard Widgets
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI Accessibility Dashboard widgets provide comprehensive insights into your accessibility testing efforts. These widgets help you optimize your accessibility testing efforts by providing detailed insights into your accessibility testing scans,
 Top 10 URLs Issue Criticality, and more.
 

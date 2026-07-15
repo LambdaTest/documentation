@@ -1,5 +1,7 @@
 # Focus Order (2.4.3)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 When a page can be navigated sequentially, interactive components must receive focus in an order that preserves meaning and operability.
 
 **WCAG Reference**

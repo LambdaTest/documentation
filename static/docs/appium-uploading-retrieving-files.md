@@ -1,5 +1,7 @@
 # Uploading/Retrieving files on Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Whenever you are testing your application on **TestMu AI Real Devices**, you might have felt the need for some set of sample data that can help you achieve required output. Thus, to fulfill this need TestMu AI provides you with sample data like **pre-loaded contacts, media files etc.**
 
 You can also upload files to the real device for testing and can also save the files produced for future reference. Let's see how.

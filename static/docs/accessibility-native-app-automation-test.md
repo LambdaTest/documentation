@@ -1,5 +1,7 @@
 # Native App Automation Appium (Overview)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Native App Automation uses **Appium** with the **`lambda-accessibility-scan`** hook to generate accessibility results during **Android** or **iOS** test runs on the TestMu AI grid.
 
 ## When to use this

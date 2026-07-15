@@ -1,5 +1,7 @@
 # GPS Location Mocking for Mobile App and Browser Authoring
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 > This document provides detailed instructions for utilizing the GPS Location Override feature in KaneAI for both Mobile App and Mobile Browser testing. It covers how to set GPS coordinates at the start of a session as well as within a running session to test location-based application behavior accurately.
 
 ## Overview

@@ -15,10 +15,10 @@ keywords:
   - single build multiple tests
   - bulk approve
   - smartui tab
-url: https://www.testmu.ai/support/docs/smartui-group-by-test-cases/
+url: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 site_name: LambdaTest
 slug: smartui-group-by-test-cases/
-canonical: https://www.testmu.ai/support/docs/smartui-group-by-test-cases/
+canonical: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

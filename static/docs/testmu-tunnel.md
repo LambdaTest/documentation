@@ -1,5 +1,7 @@
 # Getting started with TestMu AI-Tunnel
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI Tunnel is a secure and encrypted tunneling feature that allows developers and QA professionals to test their locally hosted web applications or websites on TestMu AI's cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud, enabling testing of internal applications on various browsers and devices.
 
 ## Getting Started

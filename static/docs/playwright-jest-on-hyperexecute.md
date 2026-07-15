@@ -1,4 +1,7 @@
 # Running Jest Framework Tests on HyperExecute
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Jest is a popular JavaScript testing framework primarily used for testing React applications, although it can be employed for any JavaScript project. Developed by Facebook, Jest is known for its simplicity and speed. It provides a testing environment, assertion utilities, and features like snapshot testing, parallel test execution, and mocking to ensure efficient and reliable testing of JavaScript codebases.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.

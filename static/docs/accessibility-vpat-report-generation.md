@@ -1,5 +1,7 @@
 # VPAT and ACR evidence (customer-owned templates)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **TestMu AI does not provide VPAT or ACR deliverables**
 **TestMu AI does not issue, host, or ship an official VPAT® document or Accessibility Conformance Report (ACR)** as a product output. There is **no** “download VPAT” or “generate VPAT” action in the platform that replaces your organization’s own procurement or accessibility documentation.
 

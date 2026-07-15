@@ -1,5 +1,7 @@
 # Getting Started With Selenium 4 On TestMu AI Platform
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Introduction
 
 Now run automated tests with Selenium 4 using the TestMu AI Selenium Grid across 3000+ browsers and operating systems. With this TestMu AI and Selenium 4 integration, TestMu AI not only allows you to perform Selenium 4 testing on an online automation cloud, but also allows you to perform cross-browser testing at scale.

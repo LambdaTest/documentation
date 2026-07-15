@@ -1,5 +1,7 @@
 # HyperExecute Enterprise FAQs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 #### 1. **Does HyperExecute provide enterprise level features?**
 
   HyperExecute provides you with the best in class enterprise features including SSO, dedicated chat support, on-prem and dedicated cloud setups, custom retention period, usage analytics, advance access control, workflow management, and much more.

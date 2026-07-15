@@ -1,5 +1,7 @@
 # Getting Started with Accessibility MCP Tool
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Accessibility MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It runs accessibility checks on publicly hosted URLs and local React applications, and returns a detailed report with remediation guidance.
 
 ## Key Features

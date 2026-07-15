@@ -1,5 +1,7 @@
 # KaneAI Manual Interaction Mode
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 Manual Interaction in KaneAI lets you take direct control of the application during test authoring or while working in a playground session. Instead of relying only on natural language instructions, you can interact with the app in real time and let the agent record everything you do as structured test steps.
 

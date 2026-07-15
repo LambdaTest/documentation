@@ -1,5 +1,7 @@
 # How to setup HyperExecute Private Cloud with AWS
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Prerequisites
 
 Before deploying the CloudFormation template for HyperExecute through the AWS Marketplace, ensure that the following prerequisites are met:

@@ -1,5 +1,7 @@
 # Accessibility Crawler
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Why TestMu AI Crawler is Helpful for Accessibility Testing
 
 In accessibility testing, ensuring that all relevant URLs across a website are properly tested is crucial. Manual URL entry can be cumbersome and inefficient, especially for large websites with many pages. This is where TestMu AI’s URL Crawler comes into play, offering an automated and streamlined solution for accessibility testing.

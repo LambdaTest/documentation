@@ -1,5 +1,7 @@
 # Launch Your First Browser Session
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This guide walks you through setting up your TestMu AI account, creating
 your first browser session on TestMu AI Browser Cloud, and driving it using
 TypeScript/Puppeteer. In just a few minutes, you'll be programmatically

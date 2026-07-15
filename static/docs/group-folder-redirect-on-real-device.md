@@ -1,5 +1,7 @@
 # Group Folder Redirect On Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI supports **Group Folder Redirect** for iOS apps on Real Devices.
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 

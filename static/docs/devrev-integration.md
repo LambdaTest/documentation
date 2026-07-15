@@ -1,5 +1,7 @@
 # DevRev Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 DevRev is a customer relationship management (CRM) system that seamlessly integrates customer support conversations and tickets with developer issues and product enhancements.
 
 With the help of TestMu AI and DevRev Integration, you can file bugs while performing live-interactive testing of your web applications from the TestMu AI platform to your DevRev instance, thus saving time and effort.

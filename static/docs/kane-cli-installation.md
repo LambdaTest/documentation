@@ -1,8 +1,12 @@
 # Installing Kane CLI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Kane CLI is published to the public npm registry as `@testmuai/kane-cli`. Install it globally with `npm` to get the `kane-cli` command on your `PATH`.
 
 ## Install
+
+Requires Node.js 18 or higher.
 
 ```bash
 npm install -g @testmuai/kane-cli
@@ -10,7 +14,15 @@ npm install -g @testmuai/kane-cli
 
 Platform-specific native binaries are installed automatically for your OS. No additional configuration is needed.
 
-Kane CLI requires **Node.js 18 or higher** and **Google Chrome** installed on your system. Chrome is used as the automation browser and is launched automatically when you run a test.
+For macOS and Linux. Node.js is not required.
+
+```bash
+brew install LambdaTest/kane/kane-cli
+```
+
+Homebrew also installs Google Chrome automatically through the `google-chrome` cask, so no additional setup is needed.
+
+Kane CLI requires **Google Chrome** installed on your system. Chrome is used as the automation browser and is launched automatically when you run a test. The npm install additionally requires **Node.js 18 or higher**. The Homebrew install bundles Chrome for you and needs no Node.js.
 
 ## Verify
 

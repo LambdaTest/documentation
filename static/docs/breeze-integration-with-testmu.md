@@ -1,5 +1,7 @@
 # Breeze Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Breeze facilitates project management on-cloud through an intuitive platform, offering Gantt charts, kanban tool, task management, and time tracking to help you finish your release cycles on time. With Breeze, you can keep track of deadlines, an individual effort of your colleagues, and acknowledge who is doing what in a project.
 
 TestMu AI integration with Breeze will help you log UI bugs or observations in your Breeze project as you perform [cross browser testing](https://www.testmuai.com) on TestMu AI. You can capture a screenshot of your website over a browser discrepancy, highlight the UI bug, report that bug to your colleague, provide a summary of the issue, all from the middle of your test-session at TestMu AI. All of the details that you may mention around a bug would be auto-populated in your respective Breeze project.

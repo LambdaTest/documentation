@@ -1,5 +1,7 @@
 # Webex Teams Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Cisco Webex Teams is a collaboration platform designed to help you and your team get more done faster. It combines messaging, file sharing, video conferencing, whiteboarding, and calling into one simple-to-use solution that keeps everyone connected and working smarter.
 
 TestMu AI and Webex Teams can be integrated to create detailed test cards in Webex Team Spaces for logged bugs in TestMu AI. This will notify you and your team members every time a new bug is pushed while performing [cross browser testing](https://www.testmuai.com) of your website from the TestMu AI platform to your Webex Teams instance.

@@ -1,5 +1,7 @@
 # Taking Screenshots of Pages Behind Login
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.testmuai.com/feature) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
 
 This document will help you understand how you can capture bulk screenshots of your web-application **after the login page** for different browsers to measure the cross browser compatibility. Refer to our [Automated Screenshot](https://www.testmuai.com/automated-screenshot) testing document to know more.

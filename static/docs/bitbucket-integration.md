@@ -1,5 +1,7 @@
 # Bitbucket Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Bitbucket – A web-based repository hosting service owned by Atlassian for facilitating version control in development projects. It supports the project with a revision control system based on either Git or Mercurial. It is free to use, though they also offer a commercial plan. With Bitbucket, you can perform **access control** to your source-code, **workflow control** to impose a project workflow. Easy code revaluation through pull requests offering in-line annotation & Integration with Jira for end-to-end development tracing.
 
 The TestMu AI Bitbucket Integration allows you to create an issue directly in your repository from TestMu AI platform. Push an issue to your respective repository anytime, even in the middle of your test session. The fields populated by you when marking as a bug through TestMu AI are displayed as information on the issue in the repository for a testing instance.

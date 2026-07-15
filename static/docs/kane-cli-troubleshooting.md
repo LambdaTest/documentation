@@ -1,5 +1,7 @@
 # Troubleshooting
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Log Locations
 
 Before diagnosing, know where to look:

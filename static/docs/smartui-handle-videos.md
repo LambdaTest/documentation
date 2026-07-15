@@ -1,5 +1,7 @@
 # Handle Pages with Videos
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 
 Web pages often contain video content that plays dynamically, changing frame by frame. In visual regression testing, this dynamic content can cause false positives because each frame of the video appears different, even when the actual page design and layout remain unchanged.

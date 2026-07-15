@@ -1,5 +1,7 @@
 # Getting Started with AI CoPilot Dashboard
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The AI CoPilot Dashboard is an innovative feature designed to revolutionize the way you analyze and gain insights from your data. By leveraging the power of artificial intelligence, the dashboard provides intelligent recommendations, insights, and predictions tailored to your specific data, enabling you to make data-driven decisions faster than ever before.
 
 ## Prerequisites

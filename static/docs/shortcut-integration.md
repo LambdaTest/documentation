@@ -1,5 +1,7 @@
 # Shortcut Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 > Shortcut is a project management platform that would help everyone on your team to collaborate better for hastening the release process. Shortcut helps in finding the right balance for cross-functional collaboration. It is easy for everyone on the team to focus on their individual task, while also being able to envision the bigger picture by zooming out to get an idea about the overall progress of a project. From declaring a story to achieving huge milestones, everything is represented with an intuitive visual representation using simple drag and drop Kanban dashboard. With a simple API and robust set of integrations, Shortcut also seamlessly integrates with the tools you use every day, getting out of your way so that you can deliver quality software on time.
 
 The TestMu AI Shortcut integration helps you in filing issues to your project in Shortcut directly from TestMu AI platform. With one-click integration, you can push annotated issues to the project of your choice, assign it to the required teammate, and attach necessary screenshots. You can do all that while in the middle of a test session in TestMu AI platform. The fields populated by you when marking as a bug through TestMu AI are displayed as information on the Shortcut for a testing instance.

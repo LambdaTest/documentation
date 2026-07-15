@@ -1,5 +1,7 @@
 # Smart Locator Priority
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Smart Locator Priority lets your organization define the order in which KaneAI should prefer supported locator strategies while authoring test cases in KaneAI.
 
 This is useful when your application is more stable with one locator type over another and you want that preference applied consistently at the organization level.

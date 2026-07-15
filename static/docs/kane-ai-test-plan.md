@@ -1,5 +1,7 @@
 # Intelligent Test Planner - Automate your Test Generation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Intelligent Test Planner feature in KaneAI empowers you by simplifying the test generation process. Instead of manually writing test steps or scenarios, you can now provide high-level objectives, and KaneAI will automatically translate them into executable test scripts.
 
 This document will guide you through the end-to-end implementation for your web applications.

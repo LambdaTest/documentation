@@ -1,5 +1,7 @@
 # TestMu AI VS Code Extension
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI VS Code Extension enables you to perform real-time cross browser testing of your public and locally hosted websites and web applications right from VS Code. Using this extension, you can trigger real-time cross-browser testing from within VS Code Editor to test your web apps across 3000+ browsers, real devices, and operating systems.
 
 In this guide, learn how to configure TestMu AI VS Code Extension for real-time cross browser testing.

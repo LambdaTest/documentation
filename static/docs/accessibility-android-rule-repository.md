@@ -1,5 +1,7 @@
 # Android Rule Repository
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Use this repository to browse Android accessibility rules and remediation guidance.
 
 This repository organizes Android app accessibility rules so common mobile findings map clearly to WCAG and practical remediation. Use it when a report points to a specific Android rule and you need more than a high-level checklist to plan fixes and retests.

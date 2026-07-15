@@ -1,5 +1,7 @@
 # Smart Root Cause Analysis (RCA)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Smart Root Cause Analysis (RCA) in SmartUI helps you instantly identify the underlying reasons for visual mismatches. By analyzing the DOM differences between the baseline and the comparison screenshot, RCA pinpoints exactly what changed: whether it's a style update, content change, or layout shift.
 
 ## Why use Smart RCA?

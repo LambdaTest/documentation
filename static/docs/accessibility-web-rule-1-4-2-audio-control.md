@@ -1,5 +1,7 @@
 # Audio Control (1.4.2)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Audio that plays automatically for more than three seconds must provide a mechanism to pause, stop, or control the volume independently of the system volume.
 
 **WCAG Reference**

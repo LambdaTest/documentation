@@ -1,5 +1,7 @@
 # Virtual Device Integration with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This page outlines how to execute your Virtual Device tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
 **Note**

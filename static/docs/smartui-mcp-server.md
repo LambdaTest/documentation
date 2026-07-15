@@ -1,5 +1,7 @@
 # Getting Started with SmartUI MCP Tool
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 SmartUI MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It lets you debug visual regressions from SmartUI comparison runs by returning natural-language summaries of pixel, layout, DOM, and perceptual differences.
 
 ## How Does It Work?

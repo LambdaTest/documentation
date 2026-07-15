@@ -1,5 +1,7 @@
 # Getting Started with Accessibility Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI Accessibility Testing helps teams find, understand, and fix accessibility issues across websites, web apps, and mobile apps.
 
 ## What Accessibility Testing covers

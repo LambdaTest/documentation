@@ -1,5 +1,7 @@
 # Accessibility Testing on HyperExecute using Cypress v9
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This document provides a detailed, step-by-step walkthrough for executing automated accessibility tests using TestMu AI's Accessibility Tool on HyperExecute using Cypress v9 and below.
 
 This documentation is applicable for **Cypress v9** and **previous versions**.

@@ -1,5 +1,7 @@
 # Target Size (Minimum) (2.5.8)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Interactive targets must be at least 24 by 24 CSS pixels in size, with exceptions for inline links, targets whose size is determined by the user agent, and targets with sufficient spacing.
 
 **WCAG Reference**

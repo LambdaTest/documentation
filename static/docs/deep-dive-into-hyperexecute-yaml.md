@@ -1,5 +1,7 @@
 # Deep Dive into HyperExecute YAML
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
 
 ## Mandatory Parameters
@@ -619,6 +621,8 @@ commands:
 - "curl -X POST https://api.example.com/cleanup"
 runson: linux
 ```
+
+>📘 `globalPost` can also download every task's artifacts onto a VM, run custom commands against them, upload the processed output to the dashboard, and email the result. See [Download and Process Job Artifacts in Global Post](/support/docs/hyperexecute-global-post-artifacts/).
 
 #### Parameters
 | Parameter | Type | Description |

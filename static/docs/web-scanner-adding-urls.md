@@ -1,5 +1,7 @@
 # Adding URLs for Web Scanner
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Step 3: Add URLs to Your Scan
 
 After configuring the scan type (Step 2), the **Add URLs** section (Step 3) allows you to populate the test targets. You can choose from one of the following input methods.

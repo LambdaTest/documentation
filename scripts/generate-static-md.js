@@ -6,7 +6,9 @@
  *   1. Reads the YAML frontmatter to resolve the public slug.
  *   2. Strips frontmatter, MDX imports/exports, JSX/HTML tags and Docusaurus
  *      admonition fences to produce clean, LLM-friendly Markdown.
- *   3. Writes the result to /static/docs/<slug>.md so it is served at
+ *   3. Inserts an llms.txt blockquote directive after the H1 so AI agents can
+ *      discover the site index.
+ *   4. Writes the result to /static/docs/<slug>.md so it is served at
  *      <baseUrl>/docs/<slug>.md alongside the rendered page.
  *
  * The output files are gitignored and regenerated on every build (wired into
@@ -23,6 +25,13 @@ const path = require('path');
 
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
 const OUT_DIR = path.join(__dirname, '..', 'static', 'docs');
+
+// llms.txt is served by this docs site under the /support/ baseUrl.
+const LLMS_TXT_URL = 'https://www.testmuai.com/support/docs/llms.txt';
+
+// Agent-facing directive inserted near the top of every generated Markdown file
+// so LLMs/crawlers can discover the machine-readable index.
+const MD_DIRECTIVE = `> For the full site index for AI agents, see [llms.txt](${LLMS_TXT_URL}).`;
 
 /** Parse the leading `--- ... ---` YAML frontmatter block (shallow key: value). */
 function parseFrontmatter(raw) {
@@ -142,6 +151,29 @@ function toPlainMarkdown(body) {
   );
 }
 
+/**
+ * Insert the llms.txt directive as a blockquote just after the leading H1
+ * heading (or at the very top if the document has no heading).
+ * Idempotent: updates an existing directive instead of duplicating it.
+ */
+function insertLlmsDirective(markdown) {
+  const directivePattern =
+    /^>\s*For the full site index for AI agents, see \[llms\.txt\]\([^)]+\)\.\s*$/m;
+  if (directivePattern.test(markdown)) {
+    return markdown.replace(directivePattern, MD_DIRECTIVE);
+  }
+
+  const lines = markdown.split('\n');
+  const headingIdx = lines.findIndex((l) => /^#\s/.test(l));
+  if (headingIdx === -1) {
+    return `${MD_DIRECTIVE}\n\n${markdown}`;
+  }
+  const before = lines.slice(0, headingIdx + 1);
+  const after = lines.slice(headingIdx + 1);
+  while (after.length && after[0].trim() === '') after.shift();
+  return [...before, '', MD_DIRECTIVE, '', ...after].join('\n');
+}
+
 function generateForFile(absPath) {
   const raw = fs.readFileSync(absPath, 'utf8').replace(/^\uFEFF/, '');
   const { data, body } = parseFrontmatter(raw);
@@ -156,6 +188,8 @@ function generateForFile(absPath) {
   if (data.title && !/^#\s/.test(firstLine)) {
     markdown = `# ${data.title}\n\n${markdown}`;
   }
+
+  markdown = insertLlmsDirective(markdown);
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, `${slug}.md`), markdown, 'utf8');

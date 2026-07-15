@@ -1,5 +1,7 @@
 # Gatling Automation on HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Gatling is an open-source load and performance testing framework designed for testing web applications. It uses a powerful Scala-based DSL to define test scenarios and is capable of simulating thousands of concurrent users, making it ideal for stress and performance testing.
 
 ## 🚀 Why Choose HyperExecute for Gatling Performance Testing?

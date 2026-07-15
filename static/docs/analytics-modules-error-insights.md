@@ -1,5 +1,7 @@
 # Error Insights
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The `Error Insights` module enables the users to get all the insights into the test errors on TestMu AI in one place. The user can easily find information about the count, and type of the test errors through the highly customizable widgets.
 
 ## Error Stats

@@ -1,5 +1,7 @@
 # API Reference (Coming Soon)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The REST API will expose all TestMu AI Browser SDK capabilities over HTTP, making
 TestMu AI Browser Cloud accessible from any programming language. In the meantime, the [TestMu AI Browser SDK quickstart](/support/docs/launch-first-session/) provides full access to all these capabilities from Node.js.
 

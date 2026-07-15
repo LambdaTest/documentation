@@ -1,5 +1,7 @@
 # Test Intelligence - Flaky Test Detection
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Flaky Test Detection helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the reason behind the flakiness  of the test. You can also view the history of the flaky tests and the number of times the test has failed in the past. This helps you to identify the flaky tests and fix them to improve the quality of your test suite.
 
 Flaky Test Detection serves various use cases, including:

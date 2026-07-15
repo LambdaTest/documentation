@@ -1,5 +1,7 @@
 # On Focus (3.2.1)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Receiving focus on a component must not trigger an unexpected change of context such as a page navigation, form submission, or modal opening.
 
 **WCAG Reference**

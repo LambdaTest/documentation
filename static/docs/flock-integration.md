@@ -1,5 +1,7 @@
 # Flock Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Flock is a communication and collaboration platform for cross-functional teams. Using Flock, you can streamline all communication and decision-making processes. Flock provides top-notch features such as easy file sharing and management, simple onboarding, 24x7 support, and data security & privacy.
 
 Integrating Flock with TestMu AI, you can post bugs or issues to Flock's team channels directly from the TestMu AI platform and collaborate faster on websites and web apps issues.
