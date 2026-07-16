@@ -49,17 +49,23 @@ The Microsoft Teams integration with <BrandName /> enables seamless collaboratio
 
 ## Generate your Webhook URL
 
-**Step 1:** Visit your Teams account -> click on the **+** button and create a channel in which you want to recieve all your notifications.
+**Step 1:** In Microsoft Teams, click the **+** button and create the channel where you want to receive all your notifications.
 
-**Step 2:** Click on the **...** button in the top right section of your channel and select workflows.
+**Step 2:** Go to that channel, click the **...** (More options) icon next to the channel name, and select **Workflows**.
 
-**Step 3:** Provide the description and create a new workflow by selecting the channels 
+**Step 3:** In the Workflows panel, search for the **Post to a channel when a webhook request is received** template and select it.
 
-<img loading="lazy" src={require('../assets/images/integrations/microsoft-teams/3.png').default} alt="Image" className="doc_img img_center"/>
+**Step 4:** On the template's setup screen, under **Details**, select your **Microsoft Teams Team** and **Microsoft Teams Channel** from the two required dropdowns. These tell Teams where the incoming notifications should be posted.
 
-**Step 4:** Copy your generated workflow, you will need it in the next step.
+<img loading="lazy" src={require('../assets/images/integrations/microsoft-teams/3.png').default} alt="Selecting the Microsoft Teams Team and Channel dropdowns under the workflow Details screen" className="doc_img img_center"/>
 
-<img loading="lazy" src={require('../assets/images/integrations/microsoft-teams/4.png').default} alt="Image" className="doc_img img_center"/>
+**Step 5:** Click **Add workflow**.
+
+**Step 6:** Teams displays a **Workflow added successfully!** confirmation with the generated webhook URL. Click the copy icon next to the URL to copy it, then click **Done**. You will need this URL in the next step.
+
+<img loading="lazy" src={require('../assets/images/integrations/microsoft-teams/4.png').default} alt="Workflow added successfully confirmation showing the generated webhook URL with a copy icon" className="doc_img img_center"/>
+
+> Note: If you need the URL again later, reopen **Workflows** in that channel, select the workflow you created, click **Edit**, and expand the **When a Teams webhook request is received** trigger to view or copy the URL again.
 
 ## Integrate Teams with your <BrandName /> Account
 
