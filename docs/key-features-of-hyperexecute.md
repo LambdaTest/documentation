@@ -134,6 +134,20 @@ HyperExecute provides you with the tools that you need to run your tests at the 
     <p>Track your CPU, and Memory utilization of the virtual machines for a seamless user experience.</p>
   </div>
   </a>  
+
+  <a href="/support/docs/hyperexecute-workflows/">
+  <div className="support_inners">
+    <h3>Workflows</h3>
+    <p>Schedule and chain your HyperExecute jobs to automate recurring test runs and orchestrate multi-job pipelines.</p>
+  </div>
+  </a>
+
+  <a href="/support/docs/hyperexecute-rerun-failed-tests/">
+  <div className="support_inners">
+    <h3>Rerun Failed Tests</h3>
+    <p>Re-execute only the failed tests from a previous job to quickly validate fixes without rerunning the entire suite.</p>
+  </div>
+  </a>  
 </div>
 
 ## Availability
