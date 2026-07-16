@@ -153,8 +153,6 @@ To view the generated screenshots, click on **View Screenshot**.
 
 You can also download the screenshots as a zipped file by clicking on **Download All (Zip)**.
 
->You can also capture the screenshot through the Slack command in the integrated channel. <br/>**Syntax for Screenshot Slack Command**: `/screenshot [URL] [Optional ListName]`
-
 For more information about Screenshot testing, refer to the documentation [Automated Screenshot Testing](/docs/automated-screenshot-testing/).
 
 
