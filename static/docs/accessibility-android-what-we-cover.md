@@ -31,7 +31,7 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 
 ## Manual test checklist
 
-Reserve time for **TalkBack**, **Switch Access**, **font scaling**, and **real devices** even when automated rules pass. Use [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/) and [Material accessibility](https://m3.material.io/foundations/accessibility/overview) with this checklist.
+Reserve time for **TalkBack**, **Switch Access**, **font scaling**, and **real devices** even when automated rules pass. Use [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/) and Google's Material Design accessibility guidance with this checklist.
 
 | Area | Manual verification focus |
 |------|---------------------------|

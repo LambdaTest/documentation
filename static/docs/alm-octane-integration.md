@@ -45,7 +45,7 @@ For Java-based projects using Maven, add the ALM Octane SDK dependency:
 </dependency>
 ```
 
-For other languages, refer to the [ALM Octane API documentation](https://admhelp.microfocus.com/octane/en/latest/Online/Content/API/API_Authentication.htm).
+For other languages, refer to the ALM Octane API documentation in the Micro Focus online help.
 
 ### Step 3: Configure Test Result Reporting
 
