@@ -3599,6 +3599,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Appium Hooks",
+                id: "smartui-appium-hooks",
+              },
+              {
+                type: "doc",
                 label: "Puppeteer Hooks",
                 id: "puppeteer-visual-regression",
               },
