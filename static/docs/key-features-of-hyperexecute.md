@@ -42,6 +42,12 @@ HyperExecute provides you with the tools that you need to run your tests at the 
     Task Metrics
     Track your CPU, and Memory utilization of the virtual machines for a seamless user experience.
 
+    Workflows
+    Schedule and chain your HyperExecute jobs to automate recurring test runs and orchestrate multi-job pipelines.
+
+    Rerun Failed Tests
+    Re-execute only the failed tests from a previous job to quickly validate fixes without rerunning the entire suite.
+
 ## Availability
 
 HyperExecute is available on Windows, Linux and Mac. You can use HyperExecute in more than 60 regions that are supported by Microsoft Azure.
