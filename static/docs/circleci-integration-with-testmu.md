@@ -33,7 +33,7 @@ $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
 
 ## Integrating TestMu AI With CircleCI
 
-To integrate CircleCI with TestMu AI, you need to make minor tweaks in the [.circleci/config.](https://circleci.com/docs/2.0/sample-config/), which is the configuration file for your CircleCI instance. The changes you need to make will revolve around the environment variables such as access key, username, grid config and so on. Refer to [CircleCI documentation](https://circleci.com/docs/2.0/env-vars/) for more information regarding the set up of environment variables.
+To integrate CircleCI with TestMu AI, you need to make minor tweaks in the `.circleci/config.yml` file, which is the configuration file for your CircleCI instance. The changes you need to make will revolve around the environment variables such as access key, username, grid config and so on. Refer to the official CircleCI documentation on environment variables for more information regarding their set up.
 
 Below is a sample config file for integrating CircleCI with TestMu AI. You can use the sample file to test your own automation test suite by replacing the environment variables according to your need. All the code used for the demonstration of this topic can be found in our GitHub repository.
 

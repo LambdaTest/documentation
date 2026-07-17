@@ -11,7 +11,7 @@ Key benefits include:
 
 *   **Effortless Execution**: Run your entire test suite on the TestMu AI platform with a single, simple command. The SDK handles all the underlying complexity of connecting to the grid.
 *   **Zero Code Changes**: Integrate your existing Playwright tests without modifying your test scripts. All configuration is managed externally in the lambdatest.yml file.
-*   **Centralized Capabilities**: Define and manage all your test environments, including browser, platform, and resolution combinations, in a single, easy-to-read YAML file.
+*   **Centralized Capabilities**: Define and manage all your test environments—including browser, platform, and resolution combinations—in a single, easy-to-read YAML file.
 *   **Local & Private Testing**: Seamlessly test internal, pre-production, or locally hosted websites using the TestMu AI Tunnel, which can be managed automatically by the SDK.
 *   **CI/CD Integration**: The command-line nature of the SDK makes it trivial to integrate into any CI/CD pipeline (like Jenkins, GitHub Actions, CircleCI, etc.) for continuous testing.
 *   **Rich Test Artifacts**: All test runs are automatically reported to your TestMu AI Dashboard, complete with video recordings, step-by-step screenshots, browser logs, and network logs for easy debugging.
@@ -20,8 +20,8 @@ Key benefits include:
 
 Before proceeding, ensure the following requirements are met:
 
-*   A TestMu AI account. A free account can be created at [TestMu AI - AI Powered Testing Tool | AI Testing Agents On Cloud](https://accounts.lambdatest.com/register).
-*   Your TestMu AI username and access key, which are available in your [TestMu AI profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
+*   A TestMu AI account. A free account can be created from the TestMu AI website.
+*   Your TestMu AI username and access key, which are available in your [TestMu AI profile](https://www.testmuai.com/login/).
 *   A local installation of Node.js and npm.
 *   An existing Playwright project.
 

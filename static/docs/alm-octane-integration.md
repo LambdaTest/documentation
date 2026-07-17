@@ -18,7 +18,7 @@ This script-based approach offers several advantages:
 
 ## Prerequisites
 
-- An active [TestMu AI account](https://testmuai.com/register/)
+- An active [TestMu AI account](https://accounts.lambdatest.com/register)
 - An ALM Octane instance with API access
 - ALM Octane credentials (Client ID and Client Secret)
 - Your test automation framework configured with ALM Octane SDK/API
@@ -45,7 +45,7 @@ For Java-based projects using Maven, add the ALM Octane SDK dependency:
 </dependency>
 ```
 
-For other languages, refer to the [ALM Octane API documentation](https://admhelp.microfocus.com/octane/en/latest/Online/Content/API/API_Authentication.htm).
+For other languages, refer to the ALM Octane API documentation in the Micro Focus online help.
 
 ### Step 3: Configure Test Result Reporting
 
