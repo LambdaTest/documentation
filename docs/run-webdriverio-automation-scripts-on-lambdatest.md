@@ -65,7 +65,7 @@ Complete these steps before running WebDriverIO Selenium tests on TestMu AI.
 1. Create a [TestMu AI account](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
 2. Install **NodeJS** v6 or newer from [nodejs.org](https://nodejs.org/en/).
 3. Install **npm** from the [official npm website](https://www.npmjs.com/).
-4. Download [Selenium JavaScript bindings](http://www.seleniumhq.org/download/) from the official website.
+4. Download [Selenium JavaScript bindings](https://www.selenium.dev/downloads/) from the official website.
 
 ## Step 1: Clone the Sample Project
 ---
