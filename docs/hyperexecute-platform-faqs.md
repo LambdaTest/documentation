@@ -119,13 +119,13 @@ This will result in improved availability and a decrease in preemptions. Further
   HyperExecute virtual machines come preinstalled with a variety of open source utilities and language runtimes to ensure that they are ready to use the testing environment.
 
   - For MacOS:
-    https://github.com/actions/virtual-environments/blob/main/images/macos/macos-11-Readme.md
+    https://github.com/actions/runner-images/blob/main/images/macos/macos-15-Readme.md
 
   - For Windows:
-    https://github.com/actions/virtual-environments/blob/main/images/win/Windows2019-Readme.md
+    https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md
     
   - For Linux:
-    https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md
+    https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
 
 We use Github’s open source images for Github actions and pre-installed softwares. Visit the links to view the list of pre-installed softwares on our VMs.
 
