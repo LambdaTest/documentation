@@ -118,7 +118,7 @@ pre:
 # Dynamically discover all Robot Framework test files under tests/
 testDiscovery:
 type: raw
-mode: dynamic
+mode: remote
 command: find tests -name "*.robot" | sort
 
 # Register the X core-font dirs onto the recorded display so x3270 can render,
@@ -216,7 +216,7 @@ To run a single suite without editing the whole flow, narrow the discovery comma
 ```yaml title="hyperexecute.yaml"
 testDiscovery:
 type: raw
-mode: dynamic
+mode: remote
 command: find tests -name "06_tn3270_logon.robot"
 ```
 
