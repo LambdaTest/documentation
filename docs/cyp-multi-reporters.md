@@ -105,6 +105,37 @@ The reports are grouped on the basis of your session_id with a designated _brows
 
 <img loading="lazy" src={require('../assets/images/cypress-doc/multi.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
+## Send Reports to ReportPortal.io
+---
+
+By default the **Cypress-Multi-Reporter** mechanism above generates **mochawesome**. To send results to [**ReportPortal.io**](http://reportportal.io/) instead, create a separate reporter config file and point `reporter_config_file` at it. Make sure you have a [ReportPortal.io](http://reportportal.io/) account first.
+
+- Navigate to [ReportPortal.io](http://reportportal.io/) and log in, then open your **Report Portal Profile**.
+
+  <img loading="lazy" src={require('../assets/images/report-portal-cypress/report1.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+
+- Copy your Report Portal credentials.
+
+  <img loading="lazy" src={require('../assets/images/report-portal-cypress/report2.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+
+- In your Cypress project, create a new file defining the ReportPortal configuration/credentials.
+
+  <img loading="lazy" src={require('../assets/images/report-portal-cypress/report3.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+
+- Set that file name in the `reporter_config_file` capability of `lambdatest-config.json`.
+
+  <img loading="lazy" src={require('../assets/images/report-portal-cypress/report4.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+
+- Add the ReportPortal dependency (`@reportportal/agent-js-cypress`) to your `lambdatest-config.json` or `package.json`.
+
+  <img loading="lazy" src={require('../assets/images/report-portal-cypress/report5.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+
+- The integration is done. Open the Dashboard to see the results.
+
+  <img loading="lazy" src={require('../assets/images/report-portal-cypress/report6.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+
+  <img loading="lazy" src={require('../assets/images/report-portal-cypress/report7.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

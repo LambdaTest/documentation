@@ -55,7 +55,7 @@ canonical: https://www.testmuai.com/support/docs/supported-browsers-and-os/
 
 >**Note**: <BrandName /> Automation also supports Cypress testing on Electron browser and in WebKit.
 * **Electron**: Supported on all OS.
-* **WebKit**: Supported on - macOS Big Sur and macOS Monterey.
+* **WebKit**: Supported on Windows 10 and 11, and macOS Big Sur and Monterey. See [Test on WebKit](#test-on-webkit) below.
 
 You can run Cypress tests across multiple browsers and OS combinations using the following ways.
 
@@ -99,6 +99,34 @@ Below is the command for specifying the browser and platform using **--brs, --br
 ```js
 lambdatest-cypress run --browsers "platform:browser:version"
 ```
+
+## Test on WebKit
+---
+
+WebKit is Safari's browser engine, so running your Cypress tests on WebKit shows how your site behaves in Safari. To target it, set the browser to `Webkit` in the `browsers` array of `lambdatest-config.json`:
+
+```js
+"browsers": [
+   { "browser": "Webkit", "platform": "Windows 11",     "versions": ["latest"] },
+   { "browser": "Webkit", "platform": "Windows 10",     "versions": ["latest"] },
+   { "browser": "Webkit", "platform": "MacOS Monterey", "versions": ["latest"] },
+   { "browser": "Webkit", "platform": "MacOS Big Sur",  "versions": ["latest"] }
+]
+```
+
+WebKit runs on **Cypress v10.8.0 only**, so pin these under `run_settings.npm_dependencies`:
+
+```js
+"npm_dependencies": {
+   "cypress": "10.8.0",
+   "playwright-webkit": "^1.28.1"
+}
+```
+
+**Limitations:**
+- WebKit supports only the **latest** version.
+- Works only with **Cypress v10.8.0**.
+- Supported on **Windows 10 and 11**, and **macOS Big Sur and Monterey**.
 
 
 <nav aria-label="breadcrumbs">
