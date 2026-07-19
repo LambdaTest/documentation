@@ -1845,7 +1845,6 @@ module.exports = {
           { type: "doc", id: "lambdatest-running-your-first-selenium-test", label: "Run Your First Test" },
           { type: "doc", id: "selenium-agent-skills", label: "Run Tests With Agent Skills" },
            { type: "doc", id: "inside-lambdatest-automation-platform", label: "See Your Results (Dashboard)" },
-          { type: "doc", id: "selenium-bidi-integration", label: "Use the Selenium BiDi Protocol" },
           { type: "doc", id: "migrate-selenium-test-suite", label: "Migrate an Existing Suite" },
          
            { type: "doc", id: "selenium-automation-capabilities", label: "Desired Capabilities" },
@@ -1874,6 +1873,7 @@ module.exports = {
         items: [
           { type: "doc", id: "smart-wait", label: "Enable SmartWait" },
           { type: "doc", id: "auto-heal", label: "Auto-Heal Broken Locators" },
+            { type: "doc", id: "selenium-bidi-integration", label: "Use the Selenium BiDi Protocol" },
           { type: "doc", id: "custom-chrome", label: "Upload a Custom Chrome Profile" },
           { type: "doc", id: "mock-video-injection-web-automation-selenium-chromium", label: "Inject a Mock Video Stream" },
           { type: "doc", id: "network-data-masking", label: "Mask Sensitive Data" },
