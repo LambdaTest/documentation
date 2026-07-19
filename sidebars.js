@@ -1890,7 +1890,7 @@ module.exports = {
         label: "Monitor & Debug",
         items: [
           { type: "doc", id: "filter-your-selenium-tests", label: "Organize Tests & Builds" },
-          { type: "doc", id: "sharing-test-results", label: "Share Results & Report Bugs" },
+          { type: "doc", id: "mark-as-bug-in-automation-testing", label: "File a Bug From a Session" },
           { type: "doc", id: "live-interaction", label: "Take Over a Live Session" },
           { type: "doc", id: "debugging-options", label: "Set Debugging Options & Logs" },
           { type: "doc", id: "lighthouse-reports-hooks", label: "Measure Page Performance" },
