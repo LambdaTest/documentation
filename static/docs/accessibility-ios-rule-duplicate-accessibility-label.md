@@ -1,5 +1,7 @@
 # Duplicate Accessibility Label
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Interactive iOS elements within the same screen must have unique accessibility labels to avoid confusion when multiple controls sound identical to VoiceOver.
 
 **WCAG Reference**

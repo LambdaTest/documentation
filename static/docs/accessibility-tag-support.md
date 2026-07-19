@@ -1,5 +1,7 @@
 # Tag Support for Accessibility Scans
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Use tags to organize accessibility scans on mobile devices by screen, flow, or activity. This helps you label scans with names like `Login Screen`, `Cart Screen`, or `Profile Screen` so your team can quickly understand what each scan represents.
 
 You can use tags in two ways:

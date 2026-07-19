@@ -1,5 +1,7 @@
 # Android Accessibility Checklist
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Use this page to see **which rules App Scanner / automation can report** (with links to rule-level guidance) and a **manual test checklist** for areas best validated by people. For remediation detail, use the [Android Rule Repository](/support/docs/accessibility-android-rule-repository/).
 
 **Other platforms:** [Web checklist](/support/docs/accessibility-web-what-we-cover/) · [iOS checklist](/support/docs/accessibility-ios-what-we-cover/)
@@ -29,7 +31,7 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 
 ## Manual test checklist
 
-Reserve time for **TalkBack**, **Switch Access**, **font scaling**, and **real devices** even when automated rules pass. Use [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/) and [Material accessibility](https://m3.material.io/foundations/accessibility/overview) with this checklist.
+Reserve time for **TalkBack**, **Switch Access**, **font scaling**, and **real devices** even when automated rules pass. Use [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/) and Google's Material Design accessibility guidance with this checklist.
 
 | Area | Manual verification focus |
 |------|---------------------------|

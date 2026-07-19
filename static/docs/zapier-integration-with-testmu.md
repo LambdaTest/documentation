@@ -1,5 +1,7 @@
 # Zapier Integration With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Zapier is a cloud-based platform that allows you to easily automate workflows between your apps and your services without having to build this integration yourself or hire someone to do it for you. Zapier works with Zaps, which you can create by combining multiple apps and services. These Zaps help you streamline your workflow and save time and effort.
 
 TestMu AI and Zapier enable you to create a smarter and more customized workflow, helping you save time to focus on the important things to ship quality products at light speed.

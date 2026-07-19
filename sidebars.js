@@ -58,20 +58,113 @@ module.exports = {
         collapsed: true,
         label: "Configure Your YAML",
         items: [
-          "deep-dive-into-hyperexecute-yaml",
-          "hyperexecute-generate-sample-yaml",
-          "hyperexecute-yaml-version0.2",
-          "hyperexecute-inherit-config",
-          "hyperexecute-snooper",
-          "hyperexecute-yaml-capability-overrides",
-          "hyperexecute-how-to-configure-os-and-browser",
-          "hyperexecute-how-to-configure-sourcePayload",
-          "hyperexecute-gitignore",
-          "hyperexecute-how-to-save-and-manage-secrets",
-          "hyperexecute-build-mobile-apps-using-tools",
-          "hyperexecute-testng-use-cases",
-          "hyperexecute-yaml-creation-for-playwright",
-          "hyperexecute-how-to-perform-dependent-test-based-discovery",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Test Splitting and Multiplexing",
+            link: {
+              type: "doc",
+              id: "hyperexecute-test-splitting-and-multiplexing",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Auto Split Strategy",
+                id: "hyperexecute-auto-split-strategy",
+              },
+              {
+                type: "doc",
+                label: "Matrix Multiplexing Strategy",
+                id: "hyperexecute-matrix-multiplexing-strategy",
+              },
+              {
+                type: "doc",
+                label: "Hybrid Strategy",
+                id: "hyperexecute-hybrid-strategy",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Job Artifacts and Reports",
+            items: [
+              {
+                type: "doc",
+                label: "HyperExecute Job Artifacts ",
+                id: "hyperexecute-artifacts",
+              },
+              {
+                type: "doc",
+                label: "Test Artifact Management",
+                id: "hyperexecute-artifacts-url",
+              },
+              {
+                type: "doc",
+                label: "HyperExecute Job Reports ",
+                id: "hyperexecute-reports",
+              },
+              {
+                type: "doc",
+                label: "Receive the Job Reports as an Email",
+                id: "hyperexecute-email-reports",
+              },
+              {
+                type: "doc",
+                label: "Process Artifacts in Global Post",
+                id: "hyperexecute-global-post-artifacts",
+              },
+            ],
+          },
+          {
+            type: "doc",
+            label: "FailFast",
+            id: "hyperexecute-failfast",
+          },
+          {
+            type: "doc",
+            label: "Jobs Prioritization",
+            id: "hyperexecute-prioritize-tests",
+          },
+          {
+            type: "doc",
+            id: "rca",
+          },
+          {
+            type: "doc",
+            id: "hyperexecute-background-services",
+          },
+          {
+            type: "doc",
+            label: "Auto Healing",
+            id: "hyperexecute-auto-healing",
+          },
+          {
+            type: "doc",
+            label: "Hyperexecute Projects",
+            id: "hyperexecute-projects",
+          },
+          {
+            type: "doc",
+            label: "Workflows",
+            id: "hyperexecute-workflows",
+          },
+          {
+            type: "doc",
+            label: "Jobs Archiving",
+            id: "hyperexecute-jobs-archiving",
+          },
+          {
+            type: "doc",
+            label: "Test Muting",
+            id: "hyperexecute-test-muting",
+          },
+          {
+            type: "doc",
+            label: "Test Metrics",
+            id: "hyperexecute-task-metrics",
+          },
+          "hyperexecute-rerun-failed-tests"
         ],
       },
       {
@@ -2687,6 +2780,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Appium Hooks",
+                id: "smartui-appium-hooks",
+              },
+              {
+                type: "doc",
                 label: "Puppeteer Hooks",
                 id: "puppeteer-visual-regression",
               },
@@ -2797,6 +2895,11 @@ module.exports = {
             type: "doc",
             label: "Audit & Activity Logs",
             id: "smartui-audit-logs",
+          },
+          {
+            type: "doc",
+            label: "Annotations in Audit Logs",
+            id: "smartui-audit-logs-annotations",
           },
           {
             type: "doc",

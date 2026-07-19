@@ -1,5 +1,7 @@
 # Using Snooper Command on Hyperexecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 A `snooper` is a command that can be used to discover the list of Feature file scenarios that would be further executed using the value passed in the `testRunnerCommand`. The `snooper` command takes two arguments:
 
 - `featureFilePaths`: This argument specifies the path to the Feature files that you want to discover.

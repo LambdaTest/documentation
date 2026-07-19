@@ -1,5 +1,7 @@
 # Deque axe Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Deque's axe is a world-class digital accessibility toolkit that allows you to integrate functionality into your tests to scan content and generate an a11y score.
 
 Learn how to automate your Web Accessibility tests with TestMu AI and Deque using Webdriver IO framework.

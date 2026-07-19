@@ -1,5 +1,7 @@
 # Migrate Appium Tests From Local Grid
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI offers an online Appium automation grid to perform App automation. Therefore you can easily migrate Appium tests from your local grid to the TestMu AI platform.
 
 In this documentation, we look at how to leverage TestMu AI cloud for App automation and migrate your test scripts (or test suites) from your local grid. You can use TestMu AI's desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.

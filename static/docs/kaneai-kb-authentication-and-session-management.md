@@ -1,5 +1,7 @@
 # Authentication & Session Management
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Authentication testing is one of the most critical areas for any QA team. This guide covers how to test login flows, multi-factor authentication (MFA/2FA), TOTP, session handling, and authentication-related edge cases in KaneAI.
 
 ## Basic Login Flows

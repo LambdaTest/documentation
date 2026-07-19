@@ -1,5 +1,7 @@
 # Utilizing KaneAI Smart Variables Feature: A Step-by-Step Guide
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 KaneAI's Smart Variables feature enhances test automation by providing predefined, dynamic variables that can be used across test steps, modules, and test cases. These variables enable dynamic adaptation to various environments and conditions, improving test reliability, reusability, and efficiency.
 
 They cover categories such as date & time, system information, location, connectivity, randomization, and device-specific details, allowing users to create flexible and robust test scenarios that adapt to real-time conditions without manual input.

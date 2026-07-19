@@ -1,5 +1,7 @@
 # Test Instance Audit Logs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Test Manager now provides Audit Logs for test instance execution. Audit Logs bring visibility into the **who, what, and when** for every test execution. This is critical for teams working in regulated environments, or those needing high accountability in their QA processes.
 
 With Audit logs you can store the execution history of your tests and even run parallel execution sessions without losing the context on individual executions as every action will be logged with clear indication of time stamps & executor.

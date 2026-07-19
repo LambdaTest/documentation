@@ -1,5 +1,7 @@
 # Import Test Cases from CSV
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 CSV import in Test Manager allows seamless import of existing test cases from various sources, making the transition and consolidation of testing assets effortless.
 
 ## Steps for Importing Test Cases:

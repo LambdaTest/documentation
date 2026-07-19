@@ -1,5 +1,7 @@
 # Configure Accessibility Automation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This document details the configuration options available for your automated accessibility tests, ensuring comprehensive and efficient assessments.
 
 To enable the accessibility testing within your automated test suite, set the accessibility: true in your configuration file. You can also define other settings capabilities as described below.

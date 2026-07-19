@@ -1,5 +1,7 @@
 # Zebrunner Integration With TestMu AI’s Cloud Based Selenium Grid
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Zebrunner is a modern test reporting and analytics tool which offers very comprehensive automated test results and analysis with the help of a smart AI-based failure classification system. Through Zebrunner, you can easily detect failures with the help of rich artifacts, such as video, screens, logs, etc., and fix issues faster.
 
 Zebrunner now offers integration with TestMu AI to help you perform automated cross-browser testing taking advantage of the cloud-based Selenium Grid on over 2000 real browsers. TestMu AI [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) integration to Zebrunner will help you run your Selenium automation scripts from Zebrunner instance to our cloud-based Selenium Grid very easily. Lets see how.

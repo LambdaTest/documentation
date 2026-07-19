@@ -1,5 +1,7 @@
 # Handle Dynamic Data in Visual Tests
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## What is Dynamic Data?
 
 Dynamic data refers to content on your web pages that changes between test runs, such as timestamps, user IDs, session tokens, randomly generated content, or data that updates in real-time. When conducting visual regression tests, these dynamic elements can cause false positives because the content differs between the baseline and current screenshots, even when the actual UI design remains unchanged.

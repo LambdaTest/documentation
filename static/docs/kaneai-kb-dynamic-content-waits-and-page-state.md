@@ -1,5 +1,7 @@
 # Dynamic Content, Waits & Page State
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Modern web applications are heavily asynchronous: data loads from APIs, pages render progressively, notifications pop up and disappear, and content appears based on user interaction. This guide teaches you how to handle these dynamic behaviors reliably in KaneAI tests.
 
 ## Understanding Waits in KaneAI

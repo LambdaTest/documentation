@@ -1,5 +1,7 @@
 # HyperExecute how to guide
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Username and Access Key
       Understand the step by step process of how to get your username and access key.
 

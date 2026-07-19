@@ -1,5 +1,7 @@
 # Uploading app via Firebase
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Tutorial to test an app uploaded on Firebase
 
 **Firebase** is a platform developed by **Google** for creating mobile and web applications. **TestMu AI cloud platform** provides you various methods to upload your files on a real device like from playstore and appstore. Uploading an app through Firebase is one such method.

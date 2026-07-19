@@ -1,5 +1,7 @@
 # Lambda Hooks for Selenium Automation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Available Lambda Hooks
 
 Use these hooks via JavascriptExecutor to control test behavior, manage files, and capture logs.

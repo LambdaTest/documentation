@@ -1,5 +1,7 @@
 # How to Perform Group-Based Test Discovery in TestNG
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestNG provides group-based test discovery functionality. You can specify groups for your tests and execute or exclude specific groups during test runs.
 
 To perform group-based test discovery, you can use the ***@BeforeGroups*** and ***@AfterGroups*** annotations in your TestNG tests. These annotations allow you to specify setup and cleanup methods that run before and after specific groups of tests.

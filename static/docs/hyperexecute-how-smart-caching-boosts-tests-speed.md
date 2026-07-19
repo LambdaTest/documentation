@@ -1,5 +1,7 @@
 # How Smart Caching Boosts Your Tests Execution Speed
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Smart Caching significantly reduces test execution times by optimizing resource utilization and minimizing redundant processes. This document provides a comprehensive technical overview of Smart Caching, detailing its architecture, functionalities, and benefits for software development teams.
 
 ## Architecture

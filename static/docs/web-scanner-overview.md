@@ -1,5 +1,7 @@
 # Web Scanner Overview
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## What is TestMu AI Web Scanner?
 
 TestMu AI Web Scanner is an AI-powered, browser-based scanning platform designed to help teams identify and resolve visual and accessibility issues across web applications. It enables both automated Visual UI Regression Testing and WCAG-compliant Accessibility Testing, allowing organizations to proactively catch visual bugs and accessibility violations across thousands of URLs at scale.

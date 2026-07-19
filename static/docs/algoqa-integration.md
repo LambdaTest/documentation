@@ -1,5 +1,7 @@
 # algoQA Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 algoQA is an end-to-end automation testing platform powered by artificial intelligence. It lets you generate test cases, executable automation scripts and datasets in a jiffy, thereby saving your testing and test maintenance cost and enhance your overall test coverage.
 
 By integrating TestMu AI with algoQA, you can perform automated browser testing on an online browser farm of 3000+ real browsers and operating system combinations, and achieve greater test coverage.

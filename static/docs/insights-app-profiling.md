@@ -1,5 +1,7 @@
 # App Profiling Insights
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 
 The App Profiling dashboard provides comprehensive performance metrics to help you identify bottlenecks and optimize your application. This documentation explains each widget's purpose and how to interpret the data to improve app performance.

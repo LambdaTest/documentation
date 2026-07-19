@@ -1,5 +1,7 @@
 # Testing Your First AI Agent
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **Step 1:** Click on the **Create Agent** button in the left sidebar and give your Agent a name and a description. Once done, click on the **Create Agent** button.
 
 **Step 2:** Now, upload the required documents so that the testing system can understand the particular requirements of your agentic chatbot. This helps the platform analyse your requirements and generate relevant scenarios for your chatbot.

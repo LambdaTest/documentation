@@ -1,5 +1,7 @@
 # How to Integrate TestMu AI With n8n
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 If you use n8n to automate workflows between apps, you can give those workflows access to a real, cloud-hosted browser by adding the TestMu AI Agent node. The node connects your workflows to 3,000+ browser and OS environments, with no local driver setup or infrastructure to manage. It is available in n8n's built-in verified nodes panel and works in any workflow alongside n8n's 1,000+ built-in integrations.
 
 ## Prerequisites

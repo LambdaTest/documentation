@@ -1,5 +1,7 @@
 # Circle CI Pipeline Integration with SmartUI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 CircleCI is a popular CI/CD tool known for its speed, flexibility, and seamless integration with version control systems like GitHub and Bitbucket. It is cloud-native and also offers an on-premises solution.
 
 This guide explains how to integrate your project with the CircleCI CI/CD pipeline to trigger visual regression testing with TestMu AI SmartUI whenever changes are made to your repository.

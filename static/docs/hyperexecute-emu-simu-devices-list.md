@@ -1,5 +1,7 @@
 # HyperExecute Emulator and Simulator Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 HyperExecute supports a wide range of emulator and simulator devices for testing your applications. Below is the categorized list of available devices.
 
 ## Emulators

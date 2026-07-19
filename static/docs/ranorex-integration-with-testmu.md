@@ -1,5 +1,7 @@
 # Ranorex Integration With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Ranorex is a GUI test automation framework which helps to execute E2E(End-to-End) testing of web, desktop, and mobile applications. Ranorex Core API is powered with Selenium WebDriver helping you to maximize your cross browser testing in an efficient manner.
 
 Selenium, as we know, has 4 variants, RC, IDE, WebDriver, & Grid. [Selenium IDE](https://www.testmuai.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is built with the purpose of facilitating automated record-and-replay testing over Mozilla Firefox browsers. However, ever since Mozilla Firefox released its version 55, the IDE’s compatibility got disrupted and isn’t replaced till now. Ranorex helps you to overcome this scenario by optimizing their Core API in such manner that users of Selenium WebDriver could get to unleash the full potential of all Selenium variants irrespective of browser updates.

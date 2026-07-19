@@ -1,5 +1,7 @@
 # How to Bypass Proxy Domains
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 When running tests with Dedicated Proxy (DP) enabled, all outgoing requests are routed through the proxy. While this provides secure and controlled network access, it can sometimes cause issues when your tests need to access services running locally, such as localhost endpoints or specific internal domains.
 
 To solve this, you can use the `bypassProxyDomains` capability. This capability lets you define a list of domains that should bypass the dedicated proxy and instead be resolved directly from the test environment.

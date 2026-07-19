@@ -1,5 +1,7 @@
 # Shadow DOM
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Shadow DOM feature in SmartUI allows for testing and capturing assets from content encapsulated within web components. Web components often use Shadow DOM to encapsulate their internal structure and styling, isolating it from the main document. As a result, traditional DOM queries and asset capturing methods might not access or interact with content inside the shadow tree.
 
 SmartUI's Shadow DOM support ensures that assets and UI components rendered within shadow roots are correctly captured and tested, making it easier to handle and test web applications built using web components that leverage the Shadow DOM.

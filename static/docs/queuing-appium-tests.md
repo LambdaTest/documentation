@@ -1,5 +1,7 @@
 # Queuing Appium Tests
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 To avoid over-exploitation of TestMu AI, we have imposed a capacity constraint on the number of tests queued on our platform. The maximum number of queued items for your TestMu AI account is determined by the number of concurrent sessions you are registered for. Using the formula below, you can calculate the maximum number of Appium test cases you are entitled queue.
 
 ```js

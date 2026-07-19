@@ -1,5 +1,7 @@
 # HyperExecute General FAQs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 #### 1. **Which testing frameworks does HyperExecute support?**
 
   Though HyperExecute has a [very deep support](/support/docs/hyperexecute-supported-languages-and-frameworks/) for Selenium, Cypress, Playwright, CDP, Taiko and other web browser testing frameworks, nothing stops it from running any other tests over the HyperExecute platform using YAML. Core orchestration features and real time logs are native to the platform and will be available over any kind of testing.

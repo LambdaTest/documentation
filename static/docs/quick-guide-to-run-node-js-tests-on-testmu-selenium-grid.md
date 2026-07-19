@@ -1,5 +1,7 @@
 # Quick Guide To Run Node.js Tests On Cloud Selenium Grid
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI’s [Selenium grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium cloud infrastructure. You can run your Node.js automation test scripts on 3000+ browser and operating system environments giving you higher test coverage and significantly less built times. This document will help you quickly get started with running your Node.js test scripts on the TestMu AI Selenium automation grid.
 
 ## Prerequisites

@@ -1,5 +1,7 @@
 # Error Identification (3.3.1)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 When an input error is automatically detected, the item in error must be identified and the error described to the user in text.
 
 **WCAG Reference**

@@ -1,5 +1,7 @@
 # Automation Tests with Accessibility Tool using Playwright
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using TestMu AI's Accessibility Tool.
 
 > **Note:** Accessibility Testing for Playwright is currently supported on the **Chrome browser**. It is **not supported on `pw-chromium`**.

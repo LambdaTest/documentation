@@ -1,5 +1,7 @@
 # Export Test Cases
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Export your test cases in bulk as a CSV file for tracking, analysis, and sharing with your team. You can select which fields to include, choose how steps are structured in the output, and download the file in a few clicks.
 
 ## How to Export

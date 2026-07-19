@@ -1,5 +1,7 @@
 # Playwright SDK
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This document guides you through setting up and using the TestMu AI Playwright-Node.js SDK to run your Playwright tests on the TestMu AI platform.
 
 ## Overview
@@ -18,8 +20,8 @@ Key benefits include:
 
 Before proceeding, ensure the following requirements are met:
 
-*   A TestMu AI account. A free account can be created at [TestMu AI - AI Powered Testing Tool | AI Testing Agents On Cloud](https://www.lambdatest.com/signup).
-*   Your TestMu AI username and access key, which are available in your [TestMu AI profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
+*   A TestMu AI account. A free account can be created from the TestMu AI website.
+*   Your TestMu AI username and access key, which are available in your [TestMu AI profile](https://www.testmuai.com/login/).
 *   A local installation of Node.js and npm.
 *   An existing Playwright project.
 

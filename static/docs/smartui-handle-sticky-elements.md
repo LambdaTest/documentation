@@ -1,5 +1,7 @@
 # Handle Pages with Sticky Elements
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## What are Sticky Elements?
 
 Sticky elements are CSS-positioned elements that remain fixed in the viewport while the user scrolls through a page. Common examples include:

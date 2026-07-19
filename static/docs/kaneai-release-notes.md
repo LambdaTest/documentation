@@ -1,5 +1,7 @@
 # KaneAI Release Notes
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 KaneAI is an AI-powered next-gen testing assistant that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
 
 ## KaneAI Releases

@@ -1,5 +1,7 @@
 # LambdaMax XCode Plugin
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI have developed a new plugin to help developers execute tests on the TestMu AI Grid directly from the XCode (via LambdaMax). The all-new TestMu AI plugin will allow developers and testers to directly run automated tests based on XCUIT (XCode) framework on the TestMu AI real device cloud.
 
 XCUITest is a testing framework that can be used to automate UI tests for native iOS and macOS applications. The framework uses XCTest, an integrated testing framework developed by Apple. You can write automated UI tests using the XCUITest framework in Swift or Objective-C programming language.

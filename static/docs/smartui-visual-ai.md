@@ -1,5 +1,7 @@
 # Visual AI Agent
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The **Visual AI Agent** is an intelligent layer on top of SmartUI that reduces noise in visual testing. Unlike traditional pixel-by-pixel comparison, the AI Agent understands the context of visual elements, allowing it to distinguish between critical visual defects and insignificant rendering differences between your baseline and captured screenshots. This allows you to instantly focus on significant UI shifts and understand the context of the changes without getting lost in minor, irrelevant noise.
 
 ## What Problems Does SmartUI Visual Agent Solve?

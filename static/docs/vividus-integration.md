@@ -1,5 +1,7 @@
 # Vividus Tests On TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Vividus is a codeless test automation tool, developed with the aim to help testers perform automation testing for any application, test, or scenario, using a single tool and common language.
 
 TestMu AI now integrates with the Vividus tool to help you execute automation tests on its cloud-based Selenium Grid. This TestMu AI-Vividus integration will help you perform cross-browser testing of your website, web app, or your mobile website, over 3000+ real desktop devices, mobile viewports, and operating system combinations on TestMu AI platform. This document is a comprehensive guide to help you understand how to integrate Vividus with your TestMu AI account.

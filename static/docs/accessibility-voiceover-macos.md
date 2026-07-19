@@ -1,5 +1,7 @@
 # VoiceOver on macOS
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Use this page as the macOS-specific reference for **VoiceOver** when validating **Safari** or **Chrome** experiences after automated Accessibility findings.
 
 ## When to use this

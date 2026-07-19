@@ -1,5 +1,7 @@
 # Project Management Tools
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI offers integration to numerous third-party tools for project management and bug tracking to help you easily collaborate with your colleagues as you encounter a bug while performing cross browser testing. After integrating your TestMu AI account with your favourite project management tool or bug tracking tool, you can send any UI bug that you may encounter on your website, directly to your task management dashboard, in just a single click from TestMu AI.
 
 Asana Integration With TestMu AI

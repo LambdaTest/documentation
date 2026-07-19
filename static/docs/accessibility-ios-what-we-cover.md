@@ -1,5 +1,7 @@
 # iOS Accessibility Checklist
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Use this page to see **which rules App Scanner / automation can report** (with links to rule-level guidance) and a **manual test checklist** for areas best validated by people. For remediation detail, use the [iOS Rule Repository](/support/docs/accessibility-ios-rule-repository/).
 
 **Other platforms:** [Web checklist](/support/docs/accessibility-web-what-we-cover/) · [Android checklist](/support/docs/accessibility-android-what-we-cover/)

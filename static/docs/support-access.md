@@ -1,5 +1,7 @@
 # TestMu AI Support Access
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Support Access feature allows authorised TestMu AI support personnel to temporarily access your TestMu AI account for triaging and technical assistance purposes. This access is granted only with your consent and can be revoked at any time.
 
 **Quick Link**

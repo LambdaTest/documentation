@@ -1,5 +1,7 @@
 # HyperExecute Pricing FAQs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 #### 1. **Is there any limit on parallel testing on HyperExecute?**
 
   No, HyperExecute can provide virtually unlimited nodes to you for massive parallel testing as it is backed and spanned across multiple clouds. We have users distributing tests across thousands of nodes.

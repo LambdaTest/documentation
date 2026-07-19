@@ -1,5 +1,7 @@
 # List of TestMu AI Cypress CLI Commands
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The TestMu AI-Cypress CLI provides a set of commands to streamline and enhance your testing workflows on the TestMu AI platform. Below is a comprehensive list of supported commands and their usage.
 
 ## General Syntax

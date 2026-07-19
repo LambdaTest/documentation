@@ -1,5 +1,7 @@
 # Link Azure DevOps Issues with Test Manager
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Link Azure DevOps Issues with Test Manager
 
 Test Manager enhances its functionality by seamlessly linking test cases with Azure DevOps Work Items. This integration ensures a reliable connection between your testing activities and Azure DevOps Work Items, optimizing project management and collaboration across teams.

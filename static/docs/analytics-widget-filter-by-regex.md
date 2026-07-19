@@ -1,5 +1,7 @@
 # Analytics Widgets - Filter by Regex
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## About Regex Mode
 
 Our analytics platform now supports regular expressions (Regex) for advanced text searching, pattern matching, and data extraction. This feature enhances your ability to filter and analyze data with greater precision and flexibility.

@@ -43,6 +43,32 @@ module.exports = {
         },
       };
     },
+    // Injects a visually-hidden, server-rendered directive near the top of every
+    // page's HTML so AI agents/crawlers can discover llms.txt and the per-page
+    // Markdown (.md) versions. preBodyTags places it right after <body>.
+    function llmsTxtDirectivePlugin() {
+      return {
+        name: 'llms-txt-directive',
+        injectHtmlTags() {
+          return {
+            preBodyTags: [
+              {
+                tagName: 'div',
+                attributes: {
+                  'data-llms-txt': 'true',
+                  style:
+                    'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;',
+                },
+                innerHTML:
+                  'For AI agents and LLMs: a machine-readable index is available at ' +
+                  '<a href="https://www.testmuai.com/support/docs/llms.txt">llms.txt</a>. ' +
+                  'A plain-Markdown version of any documentation page is available by appending .md to its URL.',
+              },
+            ],
+          };
+        },
+      };
+    },
   ],
   themeConfig: {
     zoom: {
@@ -110,7 +136,21 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        sitemap: {},
+         sitemap: {
+          lastmod: 'date',
+          priority: 0.9,
+          ignorePatterns: [
+          '/support/',           // Exclude /support/ URL
+          '/support/api-doc/',    // Exclude /support/api-docs
+          '/support/docs/accessibility-rules-checklist/',
+          '/support/docs/kane-cli-getting-started/',
+          '/support/docs/accessibility-android-what-we-do-not-cover/',
+          '/support/docs/accessibility-getting-started-quick-setup/',
+          '/support/docs/kane-cli-agent-output/',
+          '/support/docs/accessibility-web-what-we-do-not-cover/',
+          '/support/docs/accessibility-ios-what-we-do-not-cover/'
+        ],
+        },
       },
     ],
   ],

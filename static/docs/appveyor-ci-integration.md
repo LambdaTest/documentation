@@ -1,5 +1,7 @@
 # AppVeyor CI Integration with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **AppVeyor CI** is a very popular continuous integration and deployment platform based on .NET applications. It can also be easily integrated with GitHub and BitBucket projects for CI/CD. It makes testing, deployment, and monitoring builds very easy for developers. It is free for open-source projects.
 
 **TestMu AI** now integrates with AppVeyor CI to boost your go-to-market delivery. You can perform automated cross-browser testing with TestMu AI to ensure seamless code render through an online Selenium grid. TestMu AI provides 3000+ real browsers running through machines, on the cloud. You can perform automation testing in parallel with TestMu AI’s Selenium grid, which can help you trim down your test cycles drastically.

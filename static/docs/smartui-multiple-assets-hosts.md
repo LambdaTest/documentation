@@ -1,5 +1,7 @@
 # Capturing Multiple Assets Hosts
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 In the SmartUI SDK, the `allowedHostnames` option is used to configure the capture of assets from specific hostnames during UI testing. By default, SmartUI captures only assets that are hosted on the same domain as the snapshot location. For example, if snapshots are taken on `https://xyz.com`, assets hosted on `https://cdn.xyz.com` will not be captured unless explicitly specified. The `allowedHostnames` configuration allows you to define multiple hostnames, ensuring assets from those sources are included during test execution.
 
 ## Purpose of `allowedHostnames`

@@ -1,5 +1,7 @@
 # Uploading Files and Media on Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI's file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to TestMu AI's cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use the `uploadMedia` capability while running your test scripts. The same capability works for both **App** and **Browser** (web) automation — no separate capability to learn.
 
 ## Objectives
@@ -24,9 +26,9 @@ Where an uploaded file lands on the device depends on whether it is an **App** o
 
 TestMu AI supports various file types for upload, ensuring flexibility in your testing scenarios. Below are the supported file types:
 
-- **Images**: JPG, JPEG, PNG, GIF, BMP, HEIC (Maximum size: 10 MB)
+- **Images**: JPG, JPEG, PNG, GIF, BMP (Maximum size: 10 MB)
 - **Videos**: MP4  (Maximum size: 50 MB)
-- **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED, GPX (Maximum size: 15 MB)
+- **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 
 ## Upload File and Media feature in App & Browser Automation
 

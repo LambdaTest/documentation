@@ -1,5 +1,7 @@
 # Variables & Context
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **Variables** keep credentials and test data out of your objectives. **Context files** give the agent persistent background information: guidance, conventions, and notes that apply across runs.
 
 ## Variables

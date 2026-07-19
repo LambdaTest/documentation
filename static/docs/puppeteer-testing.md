@@ -1,5 +1,7 @@
 # Getting Started With Puppeteer Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Puppeteer is a Node package that automates the Chrome browser for web testing. Over the DevTools Protocol, it provides a high-level API for controlling headless Chrome or Chromium. It may also be set to run full (non-headless) Chrome or Chromium.
 
 TestMu AI allows you to run Puppeteer tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Puppeteer testing on the TestMu AI platform.

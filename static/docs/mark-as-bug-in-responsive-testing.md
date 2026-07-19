@@ -1,5 +1,7 @@
 # Mark As Bug In Responsive Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 You can now avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. TestMu AI does it all for you.
 **Mark as Bug** is a feature that would help you highlight any UI observation from your test sessions on TestMu AI. And it let you share the same with your colleagues on their favorite project management/ bug tracking tools such as Jira and Trello, Hive, Paymo, etc. You can choose the assignee who handles your reported task or bug. You can even mention the description to help them understand your point better. You can do all that while testing on TestMu AI, without having to hop on to any other platform or tool.
 

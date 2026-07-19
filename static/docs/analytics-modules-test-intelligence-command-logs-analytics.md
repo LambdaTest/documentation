@@ -1,5 +1,7 @@
 # Command Logs Analytics with Test Intelligence
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ### Introduction to AI Native Command Logs Analytics
 
 TestMu AI Analytics help you intelligently analyze your test execution steps on the platform. It provides you with the insights on the errors that are causing your test runs to fail.

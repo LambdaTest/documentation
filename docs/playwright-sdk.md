@@ -36,8 +36,8 @@ Key benefits include:
 
 Before proceeding, ensure the following requirements are met:
 
-*   A <BrandName /> account. A free account can be created at [<BrandName /> - AI Powered Testing Tool | AI Testing Agents On Cloud](https://www.lambdatest.com/signup).
-*   Your <BrandName /> username and access key, which are available in your [<BrandName /> profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
+*   A <BrandName /> account. A free account can be created from the <BrandName /> website.
+*   Your <BrandName /> username and access key, which are available in your [<BrandName /> profile](https://www.testmuai.com/login/).
 *   A local installation of Node.js and npm.
 *   An existing Playwright project.
 

@@ -1,5 +1,7 @@
 # Environment Variables Supported By TestMu AI Tunnel
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 You can leverage these environment variables to define your proxy settings. If these proxy environment variables are set then the tunnel will automatically detect them. You can switch command-line flags through an environment variable or .lt.yaml==$0 file with the TestMu AI tunnel.
 To configure the .lt.yaml, you can refer to the section [Leverage .lt.yaml file](/docs/advanced-tunnel-features/#leverage-ltyaml-file) of the documentation [Advanced TestMu AI Tunnel Features](/docs/advanced-tunnel-features/).
 

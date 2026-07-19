@@ -1,5 +1,7 @@
 # How to GET Supported Browsers in HyperExecute via API
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Browser List API is a service provided by HyperExecute. It allows users to programmatically retrieve a list of all supported browsers and their versions on the HyperExecute platform. This information can be useful for compatibility checks and ensuring your web applications work across various browsers.
 
 It will provide you the details like:

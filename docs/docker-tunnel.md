@@ -161,7 +161,7 @@ On Linux, containers can run in a special network mode called host. This network
 
 Unfortunately, on both mac and windows, host networking mode is not available due to docker-machine implementation. The recommended approach to access services on the host machine is to use a special hostname *host.docker.internal*, which resolves to the host machine.
 
-> You can find more details on these, using [this link](https://docs.docker.com/docker-for-mac/networking/) for Mac, and [this link](https://docs.docker.com/docker-for-windows/networking/) for Windows respectively.
+> You can find more details on these in Docker's networking documentation for Docker Desktop on Mac and Windows respectively.
 
 The test scripts need to use this special hostname to access the web services running on the host machine. The most idiomatic way of testing docker infra is creating a custom bridge network and access services using their container names. This method works on all operating systems.
 

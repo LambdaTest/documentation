@@ -1,5 +1,7 @@
 # TestMu AI Analytics - Customizing Your Dashboard with the New Widget Management Feature
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Introduction
 
 TestMu AI insights is a powerful platform designed to provide custom insights for test execution on cloud-based web and mobile platforms. As a software QA tester or manager, you can now further personalize your insights experience with **Edit Layout** feature. This feature allows you to change the layout, resize, and reposition the widgets on your dashboard, providing an optimized view for your specific needs.

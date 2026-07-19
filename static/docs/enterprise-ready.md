@@ -1,5 +1,7 @@
 # Enterprise Readiness
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI is built for enterprise-scale testing. This page provides a comprehensive overview of how TestMu AI meets the requirements of enterprise buyers across security, compliance, access control, deployment, integrations, and more.
 
   Single Sign-On

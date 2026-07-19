@@ -1,5 +1,7 @@
 # SmartUI Capture Onboarding with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This comprehensive guide will walk you through setting up and running SmartUI Capture tests on HyperExecute. SmartUI Capture allows you to perform visual regression testing by capturing screenshots of static URLs across multiple browsers and devices, all orchestrated through HyperExecute's powerful test execution platform.
 
 ## Prerequisites

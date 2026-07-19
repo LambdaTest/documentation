@@ -1,5 +1,7 @@
 # Debugging in Selenium Using Telemetry Logs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI Automation allows you to perform parallel test execution through a standalone mode that connects to the Selenium server, where each test can have multiple requests.
 
 To trace each request, you can use Selenium 4 and OpenTelemetry integration to achieve greater visibility into request tracing and event logs. Tracing enables the monitoring of a request's life cycle and stores essential information about the request's critical operations. You can use this information to identify issues and optimize the performance of your web applications.

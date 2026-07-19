@@ -1,5 +1,7 @@
 # Multi Reporters Support
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 With TestMu AI, you can generate multiple reporters supported by Cypress for your tests. If you want to do so, follow the steps below and download the generated reports automatically.
 
 #### Step 1

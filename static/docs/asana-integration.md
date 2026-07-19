@@ -1,5 +1,7 @@
 # Asana Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 > Asana is a popular tool for teams following Agile methodology as a part of their Software Development Life Cycle. With Asana, you can coordinate all your team’s work by eliminating roadblocks and pinpointing risks. It offers a free flowing dashboard for sprint planning. Allowing everyone to acknowledge who is doing what and when! You can manipulate tasks freely from one state to another. You can also set out ambitious goals and create a path towards achieving it by different tasks displayed on the dashboard.
 
 The TestMu AI Asana Integration allows you to create a task directly to your specified Asana dashboard from TestMu AI platform. Share your UI observations and input with your teammates anytime, by capturing a screenshot, even in the middle of your test session. You can annotate the screenshot & highlight your issue or input. The fields populated by you when marking as bug through TestMu AI are displayed as information on Asana for that testing instance.

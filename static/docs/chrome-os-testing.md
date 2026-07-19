@@ -1,5 +1,7 @@
 # ChromeOS Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ChromeOS is a lightweight, Linux-kernel-based operating system designed for Chromebooks. It prioritizes speed, security, and manageability, with a focus on cloud-based applications and services. This makes it ideal for resource-constrained environments and cloud-centric workflows like ed-tech business.
 
       ChromeOS Web Browser Testing
