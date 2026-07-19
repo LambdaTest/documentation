@@ -41,7 +41,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-## Version 3.2.30 (19th July 2026)
+## Version 3.2.31 (19th July 2026)
 - **TCP Tunnel Reliability**
   - The tunnel now waits for a healthy data-path heartbeat before marking itself ready, and automatically falls back to WebSocket/SSH when the TCP data path is unhealthy. This prevents intermittent HTTP 502 errors caused by egress proxies that accept the initial connection upgrade but drop the multiplexed traffic.
 - **Auto-Update Stability**
