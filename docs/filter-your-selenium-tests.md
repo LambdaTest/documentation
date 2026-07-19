@@ -1,8 +1,8 @@
 ---
 id: filter-your-selenium-tests
-title: How to Filter Your Selenium Automation Tests
-sidebar_label: Filter Your Tests
-description: Filter automation tests by date, user, build, status, tags, and environment on the dashboard.
+title: How to Organize Your Selenium Tests and Builds
+sidebar_label: Organize Tests & Builds
+description: Filter, tag, and group Selenium tests and builds, split builds, edit test details, and share results from the automation dashboard.
 keywords:
   - filter selenium tests by status
   - automation dashboard test filters
@@ -15,6 +15,8 @@ site_name: TestMu AI
 slug: filter-your-selenium-tests/
 canonical: https://www.testmuai.com/support/docs/filter-your-selenium-tests/
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -35,18 +37,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Filtering Selenium Tests",
+          "name": "Organizing Selenium Tests and Builds",
           "item": `${BRAND_URL}/support/docs/filter-your-selenium-tests/`
         }]
       })
     }}
 ></script>
 
-# Filtering Your Selenium Tests
+# Organizing Your Selenium Tests and Builds
 
 * * *
 
-You can filter your tests on TestMu AI using the various filters available on the automation dashboard. On each of the tabs available on the automation dashboard (Timeline, Automation Logs, and Analytics), a _filter toolbar_ helps you filter your tests based on selected values. This document explains the filter toolbar of each tab and how you can filter your tests.
+Once your Selenium tests are running on TestMu AI, the automation dashboard gives you several ways to keep them organized. You can filter tests, group them with custom tags, tag and split builds, edit individual test details during a run, and share results with your team. This document covers each of these.
+
+On each of the tabs available on the automation dashboard (Timeline, Automation Logs, and Analytics), a _filter toolbar_ helps you filter your tests based on selected values. The sections below start with the filter toolbar of each tab, then cover tagging, build splitting, editing test details, and sharing.
 
 ## Filtering Tests on Timeline
 ---
@@ -145,7 +149,7 @@ The Build, Date, Users, Status, and Clear Filters components behave the same as 
 
 * * *
 
-You can filter your Selenium tests on TestMu AI using [custom tags](/docs/group-tests-using-custom-tags/). Click on the Tags option to select the tag by which you want to filter tests. You must have used the custom tags feature earlier to use this filter.
+You can filter your Selenium tests on TestMu AI using [custom tags](#group-tests-using-custom-tags). Click on the Tags option to select the tag by which you want to filter tests. You must have used the custom tags feature earlier to use this filter.
 
 Here is an example showing tests filtered using the _Demo1_ custom tag:
 
@@ -196,9 +200,500 @@ Select any of these, and the tests that ran in that period get filtered out.<img
 
 By default, the _THIS WEEK_ filter is selected. You can use the Date filter instead to filter tests in a custom date period. If you select the Date filter, this filter is automatically removed.
 
+## Group Tests Using Custom Tags
+---
+Group your automation tests with custom tags so you can view and filter them together on the dashboard.
+
+TestMu AI allows you to group your automation tests using custom tags. This section shows how to create custom tags and use them. For demonstration purposes, we use a [sample TestNG project](https://github.com/LambdaTest/Java-TestNG-Selenium) to run on the TestMu AI platform.
+
+### Create Custom Tags on the Selenium Grid
+
+You can create a custom tag while writing your Selenium automation tests. When you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code, add the below lines of code.
+
+1. Create a String array that contains the names of your custom tags, separated by a comma.
+
+```javascript
+// In case for just 1 tag, just add 1 element in the array
+String[] customTags = {"Custom Tag"};
+
+// In case for multiple tags, add them in the array separated by comma
+String[] customTags = {"Tag 1", "Tag 2", "Tag 3", ...};
+```
+
+2. Now add this custom tag in your Desired Capabilities instance:
+
+```javascript
+DesiredCapabilities caps = new DesiredCapabilities();
+.
+.
+
+// To create custom tags
+caps.setCapability("tags", customTags);
+```
+
+For example:
+
+<img loading="lazy" src={require('../assets/images/uploads/custom-tags-5-1.webp').default} alt="custom tags" width="1089" height="708" className="doc_img"/>
+
+You have successfully created the custom tags. Let us now see how to view and group tests based on custom tags.
+
+### View Custom Tags on Your Timeline
+
+Navigate to [Timeline](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/) view of your automation dashboard, and toggle the **Build View** to **Test View**:
+
+<img loading="lazy" src={require('../assets/images/uploads/build-view.webp').default} alt="Automation build" width="1024" height="414" className="doc_img"/>
+
+You can see the applied custom tags below the tests in this Test View. <img loading="lazy" src={require('../assets/images/uploads/test-view.webp').default} alt="Test View" width="1024" height="461" className="doc_img"/>
+
+### View Custom Tags on Your Automation Logs
+
+Navigate to [Automation Logs](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/logs) of your automation dashboard, and you can see the applied custom tags below the tests in the left panel. <img loading="lazy" src={require('../assets/images/uploads/tags-1.webp').default} alt="Automation logs" width="1024" height="407" className="doc_img"/>
+
+### Filter Tests Using Custom Tags
+
+You can filter tests on your automation dashboard with these custom tags.
+
+Navigate to [Automation Logs](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/logs) of your automation dashboard, and you can see a filter by name **Tags** in the filter toolbar. <img loading="lazy" src={require('../assets/images/uploads/tags-2.webp').default} alt="Automation tags" width="1024" height="399" className="doc_img"/>
+
+Click on it and select the Tag by which you want to filter the tests on your dashboard. For example, we have filtered the test using _Tag2_ custom tag:
+
+<img loading="lazy" src={require('../assets/images/uploads/tags-3.webp').default} alt="automation log tags" width="1838" height="790" className="doc_img"/>
+
+You can filter tests by selecting multiple custom tags at once from the filter toolbar:
+
+<img loading="lazy" src={require('../assets/images/uploads/custom-tags-13.webp').default} alt="custom automation tags" width="1024" height="429" className="doc_img"/>
+
+## Group and Filter Builds Using Build Tags
+---
+Tag your builds so you can group and filter test builds on the automation dashboard.
+
+With TestMu AI, you can group your test builds with Build tags. This section shows how to create Build tags and use them to group or filter your test builds on the TestMu AI Automation Dashboard.
+
+### Create Build Tags
+
+While writing your automation tests, add another capability when you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code. Follow the below steps:
+
+1. Create an array of Strings that contains your Build tags, each separated by a comma.
+
+```java
+// For example, when you have only 1 tag
+String[] buildTagList = {"Build Tag"};
+
+// For example, when you have multiple tags
+String[] buildTagList = {"Tag 1", "Tag 2", "Tag 3", ...};
+```
+
+2. Now add this Build tag array in your Desired Capabilities instance. For example, while creating a sample Desired Capabilities instance in Java, the code will be:
+
+```java
+// Creating the Build Tags
+String[] buildTagList = {"Tag1", "Tag2", "Tag3", "BuildTagRishabh"};
+
+DesiredCapabilities caps = new DesiredCapabilities();
+caps.setCapability("browser", "Safari");
+caps.setCapability("version", "13");
+caps.setCapability("platform", "macos Catalina");
+caps.setCapability("build", "Build Tags Demo");
+caps.setCapability("name", "Sample Test");
+
+// To create custom tags
+caps.setCapability("buildTags", buildTagList);
+
+System.out.println("Desired Caps: " + caps);
+driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
+```
+
+You have successfully created the Build tags. Run your test and navigate to [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/) to see the tags in that build:
+
+<img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags.webp').default} alt="Group/filter" width="1281" height="721" className="doc_img"/>
+
+### Guidelines for Creating Build Tags
+
+While creating Build Tags, follow the below guidelines:
+
+*   Add a maximum of 5 custom tags to a build.
+*   You can update the existing build by specifying different tags.
+*   If you change a tag name or number of tags, no new build is created. The existing build is updated with the new tag to avoid unnecessary build creation.
+
+### Filter Tests Using Build Tags
+
+To group or filter the tests on your automation dashboard with Build tags, navigate to [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags** on the right corner of the filter toolbar.
+
+<img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-2.webp').default} alt="Group/filter" width="1281" height="722" className="doc_img"/>
+
+Select the Build tag by which you want to filter your test. For example, if we choose _Tag1_, only the test builds with the tag "Tag1" appear:
+
+<img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-3.webp').default} alt="group/filter" width="930" height="524" className="doc_img"/>
+
+You can choose multiple Build tags to filter your tests, as shown in the image below:
+
+<img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-4.webp').default} alt="group/filter" width="1282" height="722" className="doc_img"/>
+
+## Split Builds with Build Inactivity Time
+---
+Set a build inactivity time so tests that run after a defined idle period start a new build automatically.
+
+Build Splitting (Build Inactivity Time) lets you organize tests more efficiently. Set a time interval after which the system waits for the defined time and marks the build as completed. Any new builds you run after this time period are created as a new build.
+
+### How It Works
+
+Previously, when you ran a build on TestMu AI, all tests merged into the same build, making it difficult to identify tests that ran at specific intervals. Build Splitting logic helps you organize your tests better.
+
+Build Splitting requires you to set Build Inactivity Time. For instance, if the Build Inactivity Time is set to 5 minutes, the system waits 5 minutes after the last test completes before marking the build as complete. If you run a test before the inactivity time, it runs in the existing build. If you run a test (even with the same name) after the specified inactivity time (i.e., 5 minutes), it appears under a new build.
+
+### Set the Build Inactivity Time
+
+:::info Note
+1. By default, the build inactivity time is six hours.
+2. Every user within the organization can set their own build inactivity time.
+:::
+
+1. Log in to your TestMu AI account. Don't have an account? [Sign up for free](https://www.testmuai.com/register/).
+
+2. From the top-right corner, click on the Profile avatar, and navigate to **Profile > Product Preferences**.
+
+3. Under the **Automation Build Preference**, select the **Build Inactivity Time** to choose your preferences.
+
+<img loading="lazy" src={require('../assets/images/build-split/inactivity.png').default} alt="image" className="doc_img" width="1341" height="498"/>
+
+Once you set the build inactivity time, a confirmation notification appears: *Build Time updated successfully.*
+
+<img loading="lazy" src={require('../assets/images/build-split/popup.png').default} alt="image" className="doc_img" width="1341" height="498"/>
+
+## Edit Individual Test Details
+---
+Mark a test's final status or rename it during execution using JavascriptExecutor hooks.
+
+You can modify individual test details from your automation test build while running Selenium tests on TestMu AI. This section covers marking test status and renaming tests during execution.
+
+### Mark Test Status as Pass or Fail
+
+When you run Selenium tests on the TestMu AI grid, a test that your local assertions marked as failed may show as completed on the dashboard. Use the `lambda-status` hook to explicitly set the correct status.
+
+You can set these status values: `passed`, `failed`, `skipped`, `ignored`, `unknown`, `error`.
+
+<Tabs className="docs__val">
+
+<TabItem value="java" label="Java" default>
+
+```java
+// Mark test as passed
+((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+
+// Mark test as failed
+((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+// Mark test as passed
+await driver.executeScript('lambda-status=passed');
+
+// Mark test as failed
+await driver.executeScript('lambda-status=failed');
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python
+# Mark test as passed
+driver.execute_script("lambda-status=passed")
+
+# Mark test as failed
+driver.execute_script("lambda-status=failed")
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp
+// Mark test as passed
+((IJavaScriptExecutor)driver).ExecuteScript("lambda-status=passed");
+
+// Mark test as failed
+((IJavaScriptExecutor)driver).ExecuteScript("lambda-status=failed");
+```
+
+</TabItem>
+
+<TabItem value="php" label="PHP">
+
+```php
+// Mark test as passed
+$driver->executeScript("lambda-status=passed");
+
+// Mark test as failed
+$driver->executeScript("lambda-status=failed");
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+# Mark test as passed
+driver.execute_script("lambda-status=passed")
+
+# Mark test as failed
+driver.execute_script("lambda-status=failed")
+```
+
+</TabItem>
+
+</Tabs>
+
+:::tip
+Place the `lambda-status` call inside your test's teardown or `@AfterMethod` block so the status is set before the session ends. For the full list of Lambda Hooks, see [Lambda Hooks](/support/docs/lambda-hooks/).
+:::
+
+### Rename Your Test
+
+You can rename a running test to reflect dynamic data such as iteration count or data-driven parameters. Pass the new name through JavascriptExecutor:
+
+<Tabs className="docs__val">
+
+<TabItem value="java" label="Java" default>
+
+```java
+((JavascriptExecutor) driver).executeScript("lambda-name=Your_test_name");
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+await driver.executeScript('lambda-name=Your_test_name');
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python
+driver.execute_script("lambda-name=Your_test_name")
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp
+((IJavaScriptExecutor)driver).ExecuteScript("lambda-name=Your_test_name");
+```
+
+</TabItem>
+
+<TabItem value="php" label="PHP">
+
+```php
+$driver->executeScript("lambda-name=Your_test_name");
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+driver.execute_script("lambda-name=Your_test_name")
+```
+
+</TabItem>
+
+</Tabs>
+
+## Share Test Results
+---
+Retrieve a test's Session ID and build a shareable URL for its logs or execution video.
+
+TestMu AI lets you share individual test results with team members. Retrieve the Session ID from your test script, then build a shareable URL for automation logs or execution videos.
+
+### Get the Session ID
+
+Every test session on TestMu AI has a unique Session ID. Use the code below to retrieve it in your preferred language:
+
+<Tabs className="docs__val">
+
+<TabItem value="java" label="Java" default>
+
+```java
+import org.openqa.selenium.remote.SessionId;
+
+SessionId session = ((RemoteWebDriver) driver).getSessionId();
+System.out.println("Session ID: " + session.toString());
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+const session = await driver.getSession();
+console.log("Session ID: " + session.getId());
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python
+session_id = driver.session_id
+print("Session ID: " + session_id)
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp
+var sessionId = ((RemoteWebDriver)driver).SessionId;
+Console.WriteLine("Session ID: " + sessionId);
+```
+
+</TabItem>
+
+<TabItem value="php" label="PHP">
+
+```php
+$sessionId = $driver->getSessionID();
+echo "Session ID: " . $sessionId;
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+session_id = driver.session_id
+puts "Session ID: #{session_id}"
+```
+
+</TabItem>
+
+</Tabs>
+
+Once you have the Session ID, share the automation logs URL with your colleague:
+
+```
+https://automation.lambdatest.com/logs/?sessionID=YOUR_SESSION_ID
+```
+
+### Share Your Test Execution Video
+
+You can share a video recording of any test execution. Build the URL in the following format:
+
+```
+https://automation.lambdatest.com/public/video?testID={testid/sessionid}&auth=AUTH_TOKEN
+```
+
+#### Get Your TestID or SessionID
+
+Go to the **Automation Dashboard** and click on the test whose ID you need. Click the **"i"** button on the status bar to access the test metadata.
+
+<img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-2.webp').default} alt="Automation dashboard showing test details" width="768" height="373" className="doc_img"/>
+
+After clicking the **"i"** button, you will see the test metadata including the SessionID.
+
+<img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-1.webp').default} alt="Test metadata with SessionID" width="768" height="373" className="doc_img"/>
+
+For example, if your SessionID is `HJKXM-RHZL1-SVPWY-AB8X6`, the URL becomes:
+
+```
+https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=AUTH_TOKEN
+```
+
+#### Generate the AUTH_TOKEN
+
+Create the AUTH_TOKEN by computing an MD5 hash of your `username:access_key` string.
+
+<Tabs className="docs__val">
+
+<TabItem value="java" label="Java" default>
+
+```java
+MessageDigest m = MessageDigest.getInstance("MD5");
+String s = "username:access_key";
+m.update(s.getBytes(), 0, s.length());
+System.out.println("MD5: " + new BigInteger(1, m.digest()).toString(16));
+```
+
+</TabItem>
+
+<TabItem value="javascript" label="JavaScript">
+
+```javascript
+var crypto = require('crypto');
+var token = crypto.createHash('md5').update("username:access_key").digest("hex");
+console.log("AUTH_TOKEN: " + token);
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python
+import hashlib
+token = hashlib.md5("username:access_key".encode('utf-8')).hexdigest()
+print("AUTH_TOKEN: " + token)
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp
+byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes("username:access_key");
+byte[] hashBytes = System.Security.Cryptography.MD5.Create().ComputeHash(inputBytes);
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i < hashBytes.Length; i++)
+{
+    sb.Append(hashBytes[i].ToString("X2"));
+}
+Console.WriteLine("AUTH_TOKEN: " + sb.ToString());
+```
+
+</TabItem>
+
+<TabItem value="php" label="PHP">
+
+```php
+$token = md5("username:access_key");
+echo "AUTH_TOKEN: " . $token;
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+require 'digest'
+token = Digest::MD5.hexdigest("username:access_key")
+puts "AUTH_TOKEN: #{token}"
+```
+
+</TabItem>
+
+</Tabs>
+
+For example, if the generated AUTH_TOKEN is `331k534uf3toef`, the final URL becomes:
+
+```
+https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=331k534uf3toef
+```
+
+:::note
+You must be logged into TestMu AI to access the sharing URL.
+:::
+
 * * *
 
->You can now filter your tests using the filter toolbar on your automation dashboard. If you have any questions, share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing us at [support@testmuai.com](mailto:support@testmuai.com).
+>You can now filter, tag, split, edit, and share your Selenium tests and builds from the automation dashboard. If you have any questions, share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or by mailing us at [support@testmuai.com](mailto:support@testmuai.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -214,7 +709,7 @@ By default, the _THIS WEEK_ filter is selected. You can use the Date filter inst
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Filtering Selenium Tests
+        Organizing Selenium Tests and Builds
       </span>
     </li>
   </ul>

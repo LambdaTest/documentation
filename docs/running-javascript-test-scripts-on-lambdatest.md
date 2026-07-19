@@ -2,13 +2,14 @@
 id: running-javascript-test-scripts-on-lambdatest
 title: Selenium With JavaScript
 sidebar_label: JavaScript
-description: Run JavaScript Selenium test scripts on TestMu AI cloud grid with 3000+ real browsers and operating systems.
+description: Run JavaScript Selenium test scripts on TestMu AI cloud grid with 3000+ real browsers and operating systems. Covers Mocha, Nightwatch, WebdriverIO, Jest, CucumberJS, Jasmine, Karma, TestCafe, NemoJS, and CodeceptJS.
 keywords:
   - javascript selenium grid testing
   - run javascript selenium tests cloud
   - selenium webdriver javascript setup
   - javascript browser automation tutorial
   - javascript selenium cloud execution
+  - mocha nightwatch webdriverio jest cucumberjs selenium
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
@@ -49,48 +50,26 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 ---
 
-Run JavaScript Selenium tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
-
-:::tip Sample repo
-All the code used in this guide is available in the sample repository.
-
-<div style={{display: 'flex', justifyContent: 'flex-start'}}>
-<a href="https://github.com/LambdaTest/nodejs-selenium-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-</div>
-:::
+Run your JavaScript Selenium tests on the TestMu AI cloud grid across 3000+ browser and OS combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
 ## Prerequisites
 ---
-Complete these steps before running JavaScript Selenium tests on TestMu AI.
 
-1. Create a [TestMu AI account](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and get your username and access key from the dashboard.
-2. Install **NodeJS** v6 or newer from [nodejs.org](https://nodejs.org/en/).
-3. Install **npm** from the [official npm website](https://www.npmjs.com/).
-4. Download [Selenium JavaScript bindings](https://www.selenium.dev/downloads/) from the official website.
+1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
+2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
+3. Install [Node.js](https://nodejs.org/en/) (v6 or newer) and npm.
+4. Install the [Selenium JavaScript bindings](https://www.selenium.dev/downloads/).
 
-## Step 1: Clone the Sample Project
+## Set your credentials
 ---
-Clone the TestMu AI JavaScript Selenium sample repository to your local machine.
 
-```bash
-git clone https://github.com/LambdaTest/nodejs-selenium-sample
-cd nodejs-selenium-sample
-```
+Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
-Install the required dependencies:
-```bash
-npm install selenium-webdriver
-```
+<Tabs className="docs__val" groupId="os">
 
-## Step 2: Set Your Credentials
----
-Set your TestMu AI username and access key as environment variables.
+<TabItem value="macos" label="macOS / Linux" default>
 
-<Tabs className="docs__val">
-
-<TabItem value="bash" label="macOS / Linux" default>
-
-  <div className="lambdatest__codeblock">
+<div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
@@ -99,87 +78,389 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 </TabItem>
 
-<TabItem value="powershell" label="Windows" default>
+<TabItem value="win-cmd" label="Windows (CMD)">
 
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+<div className="lambdatest__codeblock">
+    <CodeBlock className="language-batch">
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
+set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
   </CodeBlock>
 </div>
 
 </TabItem>
+
 </Tabs>
 
-## Step 3: Configure Your Test Capabilities
+## How the sample test works
 ---
-Update the capabilities object in your test script to define the browser and platform settings.
+
+Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities object. A minimal one looks like this:
 
 ```js
-// index.js
 const capabilities = {
-        build: 'NodeJS build',      // Name of the build
-        name: 'Test 1',             // Name of the test
-        platformName: 'Windows 10', // Name of Operating System
-        browserName: 'chrome',      // Name of the browser
-        browserVersion: 'latest',   // Version of the browser
-        resolution: '1280x800',     // Resolution of the screen 
-        network: true,              // Enable to capture browser network logs
-        visual: true,               // Enable to capture screenshot on every command
-        console: true,              // Enable to capture the console log
-        video: true                 // Enable to capture the video recording of the test
+  build: 'NodeJS build',
+  name: 'Test 1',
+  platformName: 'Windows 10',
+  browserName: 'chrome',
+  browserVersion: 'latest',
+  network: true,
+  visual: true,
+  console: true,
+  video: true
 }
 ```
 
+What changes between frameworks is only how those capabilities are wired in: an inline object, a `.conf.js` file, or a runner config. That is what each tab covers.
+
 :::tip
-Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 :::
 
-## Step 4: Run the Test
+## Run a test in your framework
 ---
-Execute the test using one of the following commands.
+
+Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), set your browser and OS in its config, then run.
+
+<Tabs className="docs__val" groupId="js-framework" queryString="framework">
+
+<TabItem value="mocha" label="Mocha" default>
+
+Mocha reads its capabilities from a `conf/single.conf.js` file.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/mocha-selenium-sample):
+
+```bash
+git clone https://github.com/LambdaTest/mocha-selenium-sample
+cd mocha-selenium-sample
+```
+
+2. Set your browser and OS in `conf/single.conf.js`:
+
+```js title="conf/single.conf.js"
+exports.capabilities = {
+  'build': 'Mocha-Selenium-Sample',
+  'name': 'Your Test Name',
+  'platformName':'Windows 10',
+  'browserName': 'chrome',
+  'browserVersion': 'latest',
+  'visual': false,
+  'network':false,
+  'console':false,
+  'tunnel': false
+};
+```
+
+3. Run the test:
+
+```bash
+npm run single
+```
+
+</TabItem>
+
+<TabItem value="nightwatch" label="Nightwatch">
+
+Nightwatch reads its grid setup from `nightwatch.conf.js` in the cloned project.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/nightwatch-selenium-sample):
+
+```bash
+git clone https://github.com/LambdaTest/nightwatch-selenium-sample
+cd nightwatch-selenium-sample
+```
+
+2. Set your browser and OS in `nightwatch.conf.js`.
+3. Run the test:
+
+```bash
+npm run single
+```
+
+</TabItem>
+
+<TabItem value="webdriverio" label="WebdriverIO">
+
+WebdriverIO reads user, key, and capabilities from `conf/single.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/webdriverio-selenium):
+
+```bash
+git clone https://github.com/LambdaTest/webdriverio-selenium
+cd webdriverio-selenium
+```
+
+2. Set your browser and OS in `conf/single.conf.js`:
+
+```js title="conf/single.conf.js"
+exports.config = {
+  user: process.env.LT_USERNAME || "<your username>",
+  key: process.env.LT_ACCESS_KEY || "<your accessKey>",
+  specs: ['./tests/specs/single_test.js'],
+  capabilities: [{
+    browserName: 'chrome',
+    browserVersion: 'latest',
+    platformName: 'Windows 10',
+    name: "Test webdriverio",
+    build: "build 1",
+  }],
+  path: '/wd/hub',
+  hostname: 'hub.lambdatest.com',
+  port: 80,
+  framework: 'mocha',
+  mochaOpts: { ui: 'bdd' }
+}
+```
+
+3. Run the test:
+
+```bash
+npm run single
+```
+
+</TabItem>
+
+<TabItem value="jest" label="Jest">
+
+Jest defines capabilities inline in the test file, so there is no separate config to edit.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/jest-selenium-webdriver-sample):
+
+```bash
+git clone https://github.com/LambdaTest/jest-selenium-webdriver-sample
+cd jest-selenium-webdriver-sample
+```
+
+2. Set your browser and OS in the capabilities object:
+
+```js
+const capabilities = {
+  build: 'jest-LambdaTest-Single',
+  browserName: 'chrome',
+  browserVersion: 'latest',
+  platformName: 'Windows 10',
+};
+```
+
+3. Run the test:
+
+```bash
+npm test single.test.js
+```
+
+</TabItem>
+
+<TabItem value="cucumberjs" label="CucumberJS">
+
+CucumberJS runs BDD feature files, with grid capabilities set in `conf/single.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/NodeJs-Cucumber-Selenium):
+
+```bash
+git clone https://github.com/LambdaTest/NodeJs-Cucumber-Selenium
+cd NodeJs-Cucumber-Selenium
+```
+
+2. Set your browser and OS in `conf/single.conf.js`:
+
+```js title="conf/single.conf.js"
+capabilities: [{
+  browserName: 'chrome',
+  platformName: 'Windows 10',
+  browserVersion: 'latest',
+  name: "cucumber-js-single-test",
+  build: "cucumber-js-LambdaTest-single"
+}]
+```
+
+3. Run the test:
+
+```bash
+npm run single
+```
+
+</TabItem>
+
+<TabItem value="jasmine" label="Jasmine">
+
+Jasmine runs through Karma, which defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/karma-jasmine-sample):
+
+```bash
+git clone https://github.com/LambdaTest/karma-jasmine-sample
+cd karma-jasmine-sample
+```
+
+2. Set your browser and OS in `karma.conf.js`:
+
+```js title="karma.conf.js"
+customLaunchers: {
+  chrome: {
+    base: 'WebDriver',
+    config: webdriverConfig,
+    browserName: 'chrome',
+    platform: 'windows 10',
+    version: '71.0',
+    name: 'Karma With Heartbeat',
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    pseudoActivityInterval: 15000
+  }
+}
+```
+
+3. Run the test:
+
+```bash
+karma start karma.conf.js
+```
+
+</TabItem>
+
+<TabItem value="karma" label="Karma">
+
+Karma with Angular CLI defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample):
+
+```bash
+git clone https://github.com/LambdaTest/angular-karma-sample
+cd angular-karma-sample
+```
+
+2. Set your browser and OS in `karma.conf.js`:
+
+```js title="karma.conf.js"
+customLaunchers: {
+  chrome: {
+    base: 'WebDriver',
+    config: webdriverConfig,
+    browserName: 'chrome',
+    platform: 'windows 10',
+    version: '71.0',
+    name: 'Karma With Heartbeat',
+    user: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    pseudoActivityInterval: 5000
+  }
+}
+```
+
+3. Run the test:
+
+```bash
+karma start karma.conf.js
+```
+
+</TabItem>
+
+<TabItem value="testcafe" label="TestCafe">
+
+TestCafe connects through an npm plugin rather than a sample repo, so there is nothing to clone.
+
+1. Install the plugin in your TestCafe project:
+
+```bash
+npm install testcafe-browser-provider-lambdatest
+```
+
+2. Run your test against the grid, naming the browser and OS in the command:
+
+```bash
+testcafe "lambdatest:Chrome@74.0:Windows 8" 'path/to/test/file.js'
+```
+
+</TabItem>
+
+<TabItem value="nemojs" label="NemoJS">
+
+NemoJS reads its capabilities from `nemo.config.js`.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/Nemo-Lambdatest-sample):
+
+```bash
+git clone https://github.com/LambdaTest/Nemo-Lambdatest-sample
+cd Nemo-Lambdatest-sample
+```
+
+2. Set your browser and OS in `nemo.config.js`:
+
+```js title="nemo.config.js"
+"withCapabilities": [{
+  "build": "LT Nemo Sample Tests",
+  "name": "LT Nemo sample test",
+  "platformName": "Windows 10",
+  "browserName": "Chrome",
+  "browserVersion": "latest",
+  "user": "env:LT_USERNAME",
+  "accessKey": "env:LT_ACCESS_KEY"
+}]
+```
+
+3. Run the test:
+
+```bash
+npx nemo -P chrome
+```
+
+</TabItem>
+
+<TabItem value="codeceptjs" label="CodeceptJS">
+
+CodeceptJS uses a WebDriver helper in `codecept.conf.js`, with an optional service to sync test names and statuses to the dashboard.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/lambdatest-codeceptjs-sample):
+
+```bash
+git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample
+cd lambdatest-codeceptjs-sample
+```
+
+2. Set your browser and OS in `codecept.conf.js`:
+
+```js title="codecept.conf.js"
+helpers: {
+  WebDriver: {
+    url: 'http://google.com/ncr',
+    browser: 'chrome',
+    host: 'hub.lambdatest.com',
+    port: 80,
+    user: process.env.LT_USERNAME,
+    key: process.env.LT_ACCESS_KEY,
+    desiredCapabilities: {
+      name: '[CodeceptJS] Automation Sample',
+      build: '[CodeceptJS] Automation Sample',
+      platformName: 'Windows 11',
+      browserName: 'Chrome',
+      browserVersion: 'dev'
+    }
+  }
+}
+```
+
+3. Run the test:
 
 ```bash
 npm test
 ```
 
-Or run the file directly:
+</TabItem>
 
-```bash
-node index.js
-```
+</Tabs>
 
-## Step 5: View Your Results
----
-After running the test, view your results on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
-
-The dashboard provides:
-- Video recordings of each test session
-- Screenshots captured at each step
-- Console logs from the browser
-- Network logs for debugging
-- Detailed command logs
-
-## Run JavaScript Selenium Tests Using Agent Skills
+## Legacy frameworks
 ---
 
-Use AI coding assistants to generate and run JavaScript Selenium tests with the TestMu AI Agent Skill.
+These frameworks are deprecated and kept only for existing suites. For new projects, use one of the frameworks above.
 
-The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+- **Protractor** (end-of-life August 2023): [sample GitHub project](https://github.com/LambdaTest/protractor-selenium-sample). Set capabilities in the config file, then run `npm run single`. Migrate to WebdriverIO or [Playwright](/support/docs/playwright-testing-guide/).
+- **WD** (unmaintained): [sample GitHub project](https://github.com/LambdaTest/wd-selenium-sample). Set capabilities in `conf/single.conf.js`, then run `npm run single`. Migrate to WebdriverIO.
+- **AngularJS** (end-of-life December 2021): [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample). Set browsers in `karma.conf.js`, then run `karma start karma.conf.js`. Migrate to Angular with Karma.
 
-Install the skill:
+## View your results
+---
 
-```bash
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/selenium-skill .claude/skills/
-
-# For Cursor / Copilot
-cp -r agent-skills/selenium-skill .cursor/skills/
-```
-
-:::tip
-Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
-:::
+Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -195,7 +476,7 @@ Install all available framework skills at once by cloning the repository directl
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Selenium With JavaScript  
+      Selenium With JavaScript
       </span>
     </li>
   </ul>

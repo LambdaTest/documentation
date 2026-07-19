@@ -2,7 +2,7 @@
 id: playwright-auto-heal
 title: How to use Auto Healing for your Playwright test suites
 hide_title: true
-sidebar_label: Playwright Auto Healing
+sidebar_label: Auto Healing
 description: Learn how to use TestMu AI Auto Healing feature in your Playwright tests to avoid test flakiness and increase reliability of your test suites.
 keywords:
   - auto heal testmu ai

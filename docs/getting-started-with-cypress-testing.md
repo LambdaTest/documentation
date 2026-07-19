@@ -300,6 +300,32 @@ lambdatest-cypress run
 <img loading="lazy" src={require('../assets/images/cypressten/cypress_results.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
 
+## Run Your Tests in Parallel
+---
+
+Once your first test runs, you can execute multiple Cypress tests at once, in either of two ways.
+
+**Using the CLI:** pass the `--parallels` flag with the number of sessions:
+
+```bash
+lambdatest-cypress run --parallels 5
+```
+
+**Using `lambdatest-config.json`:** set the `parallels` key under `run_settings`:
+
+```json
+{
+  "run_settings": {
+    "parallels": 5
+  }
+}
+```
+
+:::info NOTE
+The number of parallel tests running at a time depends on the concurrency plan of your <BrandName /> account. If you request more parallel tests than your plan allows, the extra tests are queued and run as running tests finish. For example, on a 5-session plan, running 50 tests runs 5 at a time and queues the other 45.
+:::
+
+
 ## Testing Locally Hosted or Privately Hosted Projects 
 ---
 
