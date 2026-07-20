@@ -10,16 +10,18 @@ Each branch can contain multiple steps, including regular actions, **modules**, 
 
 ## How It Works
 
-1. Insert a conditional block from the **/** slash command menu during authoring or from the **+ Add step** option during a paused state.
+1. Insert a conditional block from the **/** slash command menu while your authoring session is running.
 2. Define a condition using variables and comparison operators.
 3. Optionally add **Else‑If** branches for additional conditions.
 4. Add steps — including modules, JS, API, and DB steps — inside each branch.
 5. During authoring, only the branch whose condition is true gets executed — steps in the remaining branches are queued.
 6. In automation, KaneAI evaluates the conditions top‑to‑bottom at runtime and executes the first matching branch automatically.
 
+**Conditional blocks require a running session.** A conditional block can only be inserted while the authoring session is running, because KaneAI needs a running session to analyze the condition. Adding a conditional block from the **+ Add step** option while a test is paused is not currently supported. Conditional blocks that already exist in the test can still be extended while paused, for example by adding an Else‑If branch.
+
 ## Prerequisites
 
-- An active KaneAI authoring session.
+- A KaneAI authoring session that is running. Conditional blocks cannot be inserted while the session is paused.
 - Variables or element states available to build your conditions (e.g., smart variables, global variables, or extracted values).
 
 ## Step‑by‑step Guide
@@ -122,12 +124,13 @@ To add a module inside a branch:
 ## Limitations
 
 - **Nested conditions are not supported.** You cannot place an If / Else‑If / Else block inside another conditional block.
+- **New conditional blocks cannot be created while a test is paused.** The **/** slash command menu and the **+ Add step** option do not offer **Add If-Else** in the Draft state. Conditional blocks that already exist in the test can still be extended while paused.
 
 ## FAQ
 
 ### Can I add an Else‑If branch after I have already authored the test?
 
-Yes. When you pause the test or revisit it in the playground, you can edit the conditional block and add new Else‑If branches.
+Yes. On a conditional block that already exists in your test, you can add Else‑If branches, including while the test is paused. What you cannot do while paused is create a new conditional block, because **Add If-Else** is not offered in the **/** slash command menu or the **+ Add step** option in that state.
 
 ### How many Else‑If branches can I add?
 
