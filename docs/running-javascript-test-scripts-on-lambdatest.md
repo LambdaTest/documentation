@@ -453,7 +453,7 @@ npm test
 
 These frameworks are deprecated and kept only for existing suites. For new projects, use one of the frameworks above.
 
-- **Protractor** (end-of-life August 2023): [sample GitHub project](https://github.com/LambdaTest/protractor-selenium-sample). Set capabilities in the config file, then run `npm run single`. Migrate to WebdriverIO or [Playwright](/support/docs/playwright-testing-guide/).
+- **Protractor** (end-of-life August 2023): [sample GitHub project](https://github.com/LambdaTest/protractor-selenium-sample). Set capabilities in the config file, then run `npm run single`. Migrate to WebdriverIO or [Playwright](/support/docs/playwright-testing/).
 - **WD** (unmaintained): [sample GitHub project](https://github.com/LambdaTest/wd-selenium-sample). Set capabilities in `conf/single.conf.js`, then run `npm run single`. Migrate to WebdriverIO.
 - **AngularJS** (end-of-life December 2021): [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample). Set browsers in `karma.conf.js`, then run `karma start karma.conf.js`. Migrate to Angular with Karma.
 
