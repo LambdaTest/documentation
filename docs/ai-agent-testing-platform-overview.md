@@ -11,7 +11,7 @@ keywords:
  - agent quality thresholds
  - agent testing metrics
 url: https://www.testmu.ai/support/docs/ai-agent-testing-platform-overview/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: ai-agent-testing-platform-overview/
 canonical: https://www.testmu.ai/support/docs/ai-agent-testing-platform-overview/
 ---
