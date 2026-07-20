@@ -978,49 +978,84 @@ module.exports = {
         items: [
           {
             type: "doc",
-            label: "Getting Started",
+            label: "What is Agent Testing",
             id: "getting-started-with-agent-testing-platform",
           },
           {
             type: "doc",
-            label: "Platform Overview",
-            id: "ai-agent-testing-platform-overview",
+            label: "Architecture & Working",
+            id: "architecture-and-how-evaluation-works",
           },
         ],
       },
-      {
+
+       {
         type: "category",
-        label: "Setup & Integration",
+        label: "Supported Agent Types",
         collapsed: false,
         items: [
-
           {
             type: "doc",
-            label: "A2A CLI",
+            label: "Chat Agent Testing",
+            id: "chat-agent",
+          },
+          {
+            type: "doc",
+            label: "Phone Agent Testing",
+            id: "phone-agent",
+          },
+          {
+            type: "doc",
+            label: "Inbound Phone Agent Testing",
+            id: "inbound-phone-agent",
+          },
+          {
+            type: "doc",
+            label: "Outbound Phone Agent Testing",
+            id: "outbound-phone-agent",
+          },
+          {
+            type: "doc",
+            label: "Image Analyzer Testing",
+            id: "image-analyzer",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        label: "Getting Started",
+        collapsed: false,
+        items: [
+          {
+            type: "doc",
+            label: "Quickstart (UI)",
+            id: "testing-your-first-ai-agent",
+          },
+          {
+            type: "doc",
+            label: "Quickstart (CLI)",
             id: "testmu-a2a-cli",
           },
           {
             type: "doc",
-            label: "Chat Agent API Integration",
+            label: "Quickstart (API)",
             id: "chat-agent-api-integration",
           },
-          {
+
+           {
             type: "doc",
-            label: "Test Your First AI Agent",
-            id: "testing-your-first-ai-agent",
+            label: "Quality Dimensions",
+            id: "ai-agent-testing-platform-overview",
           },
         ],
       },
+     
       {
         type: "category",
-        label: "Reference",
+        label: "Frequently Asked Questions",
         collapsed: false,
         items: [
-          {
-            type: "doc",
-            label: "Features & Metrics",
-            id: "agent-features-and-metrics",
-          },
           {
             type: "doc",
             label: "FAQs",
@@ -1441,6 +1476,7 @@ module.exports = {
         },
         items: [
           "slack-integration",
+          "slack-app",
           "opsgenie-integration",
           "microsoft-teams-integration",
           "rocketchat-integration-with-lambdatest",
