@@ -5,14 +5,13 @@ hide_title: false
 sidebar_label: Platform Overview
 description: A purpose-built quality-assurance platform for verifying, benchmarking, and continuously monitoring AI-powered agents across voice, chat, and multimodal interaction channels.
 keywords:
- - ai agent testing platform
- - agent evaluation platform
- - voice agent testing
- - chat agent testing
- - agent testing
- - ai agent qa
-url: https://www.testmuai.com/support/docs/ai-agent-testing-platform-overview/
-site_name: LambdaTest
+ - quality dimensions
+ - ai agent evaluation metrics
+ - go-live readiness
+ - agent quality thresholds
+ - agent testing metrics
+url: https://www.testmu.ai/support/docs/ai-agent-testing-platform-overview/
+site_name: TestMu AI
 slug: ai-agent-testing-platform-overview/
 canonical: https://www.testmuai.com/support/docs/ai-agent-testing-platform-overview/
 ---
