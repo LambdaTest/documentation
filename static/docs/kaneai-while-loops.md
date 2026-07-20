@@ -212,6 +212,7 @@ The following nesting patterns are **not supported**:
 - **While Loops cannot live inside conditional branches.** A While Loop cannot be placed inside an If / Else branch.
 - **No Break / Continue commands.** There is no way to exit a loop early or skip to the next iteration; structure your condition to terminate naturally.
 - **Natural language cannot create a loop.** Phrases like "repeat this 10 times" or "while the spinner is visible, do X" will not create a loop. You must use the slash command and select **While Loop**. KaneAI surfaces this as the `WHILE_NOT_SUPPORTED_VIA_NL` error.
+- **New While Loops cannot be created while a test is paused.** The **/** slash command menu and the **+ Add step** option do not offer **Add While Loop** in the Draft state. A While Loop that already exists in the test can still be edited while paused.
 - **Both operands in a condition cannot be parameters at the same time.** At least one side must be a runtime‑updated value. See `BOTH_OPERANDS_AS_PARAMETERS` in [Error Messages and Troubleshooting](#error-messages-and-troubleshooting).
 - **Local variables must be defined inside the block.** If a local variable referenced inside a While block was created outside the block, KaneAI shows an error when you click **End While**.
 
