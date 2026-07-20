@@ -2,7 +2,7 @@
 id: slack-app
 title: Slack App Integration
 hide_title: true
-sidebar_label: Slack App
+sidebar_label: TestMu AI Slack App
 description: Integrate Slack App with TestMu AI and quickly launch the real-time and screenshot tests directly from Slack. Collaborate faster with your teammates on issues and fasten the feedback cycle.
 keywords:
 - integrate testmu ai with slack

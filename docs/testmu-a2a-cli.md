@@ -1,8 +1,8 @@
 ---
 id: testmu-a2a-cli
-title: Get Started With TestMu A2A CLI
+title: TestMu A2A CLI Quickstart for Chat and Phone Agents
 hide_title: false
-sidebar_label: Configure A2A CLI
+sidebar_label: Quickstart (CLI)
 description: Install and use TestMu A2A CLI to test chat and phone AI agents from your terminal with scenario generation, red team security, and CI/CD support.
 keywords:
   - testmu a2a cli
@@ -56,11 +56,13 @@ The TestMu A2A CLI lets you test chat agents and phone agents directly from your
 pip install testmu-a2a-cli
 ```
 
+Commands on this page are verified against the current `testmu-a2a-cli`. Run `testmu-a2a --version` to check your installed build.
+
 ## Quick Reference
 ---
 
-```
-testmu-a2a auth              Authenticate with TestMu
+```text
+testmu-a2a auth              Authenticate with TestMu AI
 testmu-a2a test              Quick chat agent test (one command)
 testmu-a2a init              Initialize testmu-a2a.yaml config
 testmu-a2a run               Run tests from testmu-a2a.yaml
@@ -70,6 +72,7 @@ testmu-a2a prompts           Set agent prompt and upload requirements
 testmu-a2a projects          Manage projects
 testmu-a2a results           View chat evaluation results
 testmu-a2a workflows         Manage chat testing workflows
+testmu-a2a sources           Upload documents and generate scenarios
 testmu-a2a scenarios         Manage chat test scenarios
 testmu-a2a phone-scenarios   Manage phone test scenarios
 testmu-a2a suites            Manage test suites
@@ -186,7 +189,7 @@ testmu-a2a init --endpoint https://my-bot.com/api/chat
 
 This creates `testmu-a2a.yaml` and supporting directories:
 
-```
+```text
 testmu-a2a.yaml          Project configuration
 specs/               Spec documents (PDF, DOCX, MD)
 scenarios/           Custom scenario YAML files
@@ -1069,3 +1072,24 @@ Shell completion works with bash, zsh, and fish:
 ```bash
 testmu-a2a --install-completion
 ```
+
+## Troubleshoot Common CLI Failures
+---
+
+Most failed runs come from authentication, network reach, or account limits. Each has a direct fix.
+
+- **What you see:** a command exits immediately or reports an authentication error. **Why:** the CLI is not logged in, or `TESTMU_USERNAME` and `TESTMU_ACCESS_KEY` are unset in CI. **Fix:** run `testmu-a2a auth status` locally, or set both environment variables in the pipeline.
+
+- **What you see:** the CLI cannot reach your agent. **Why:** the endpoint is private, behind a firewall, or not served over HTTPS. **Fix:** expose the agent over HTTPS, or reach it through the secure tunnel so the endpoint needs no public URL.
+
+- **What you see:** phone scenarios queue instead of running together. **Why:** each organization runs up to 5 parallel phone calls by default. **Fix:** reduce concurrent scenarios, or purchase additional parallel-call capacity.
+
+- **What you see:** a `call` command is rejected before it dials. **Why:** `--number` is not in E.164 format. **Fix:** pass the number with country code and no spaces, such as `+15551234567`.
+
+- **What you see:** a run stops partway with a credit-related message. **Why:** the account's monthly credits are exhausted. **Fix:** check the balance with `testmu-a2a credits`, then top up or wait for the monthly reset.
+
+## Related TestMu AI Guides
+---
+
+- See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).
+- See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
