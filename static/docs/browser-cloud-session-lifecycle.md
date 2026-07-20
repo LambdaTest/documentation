@@ -1,5 +1,7 @@
 # Handle Session Lifecycle
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Learn how sessions move from creation to release, and how to manage timeouts and cleanup.
 Understanding the session lifecycle helps you avoid leaked sessions, reduce wasted resources, and ensure clean recordings on your dashboard.
 

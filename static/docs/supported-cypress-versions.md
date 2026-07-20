@@ -1,5 +1,7 @@
 # Supported Cypress Versions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 With the newer versions of Cypress releasing, to gain the most from recent improvements and bug fixes, it is recommended that your test scripts use the latest version.
 
 TestMu AI supports every major, minor and patch versions for:

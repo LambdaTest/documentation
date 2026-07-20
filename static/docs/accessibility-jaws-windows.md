@@ -1,5 +1,7 @@
 # JAWS on Windows
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Use this page as the Windows-specific reference for **JAWS** when your accessibility program standardizes on Freedom Scientific tooling alongside or instead of NVDA.
 
 ## When to use this

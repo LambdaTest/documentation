@@ -1,5 +1,7 @@
 # Getting Started With Playwright Testing on Android Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Playwright Android automation is supported on TestMu AI across **Node.js, Java, C#, and Python**. Run Playwright tests on Chrome for Android across 100+ real Android devices. This guide covers getting started with Playwright testing on Android devices on the TestMu AI platform.
 
 **Supported Versions**

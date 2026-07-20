@@ -1,5 +1,7 @@
 # PDF Accessibility Scanning
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Use this page as the entry point for PDF-related Accessibility guidance and to understand how PDF workflows differ from standard web or mobile Accessibility testing.
 
 As you read on, you will see where document scanning sits in the broader Accessibility documentation. You will also learn what to verify before treating PDF results as equivalent to DOM-based web testing, because document flows follow different constraints than page markup.

@@ -1,5 +1,7 @@
 # Rename Slash Command Steps
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Rename test steps for API, JS, Database, Network Assertion and Visual Comparison to improve clarity and consistency without affecting functionality.
 
 ## Overview

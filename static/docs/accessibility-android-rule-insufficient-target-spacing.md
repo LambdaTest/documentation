@@ -1,5 +1,7 @@
 # Insufficient Target Spacing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Adjacent interactive Android elements must have adequate spacing between them to prevent accidental activation of neighboring controls.
 
 **WCAG Reference**

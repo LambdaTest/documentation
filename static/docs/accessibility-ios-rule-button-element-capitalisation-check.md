@@ -1,5 +1,7 @@
 # Button Element Capitalisation Check
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Button labels in iOS apps should follow standard capitalisation conventions to ensure VoiceOver reads them naturally and consistently.
 
 **WCAG Reference**

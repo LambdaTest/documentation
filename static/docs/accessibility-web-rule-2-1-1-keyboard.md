@@ -1,5 +1,7 @@
 # Keyboard (2.1.1)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 All interactive functionality must be operable through a keyboard interface without requiring specific timing for individual keystrokes.
 
 **WCAG Reference**

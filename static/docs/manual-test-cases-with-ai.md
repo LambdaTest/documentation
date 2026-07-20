@@ -1,5 +1,7 @@
 # Manual Test Cases with AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Test Manager enhances the process of manual test case creation by integrating AI capabilities. This feature enables users to efficiently generate and manage test cases, utilizing AI to automatically create titles and test steps, enhancing productivity and accuracy.
 
 **Steps for Creating Manual Test Cases with AI**

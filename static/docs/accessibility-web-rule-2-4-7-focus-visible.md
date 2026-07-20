@@ -1,5 +1,7 @@
 # Focus Visible (2.4.7)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Keyboard users need a visible focus indicator while moving through the interface.
 
 **WCAG Reference**

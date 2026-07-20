@@ -1,5 +1,7 @@
 # Chrome Options
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Chrome options, also known as Chrome arguments, are command-line switches that alter the default behavior of the Chrome browser. These options provide flexibility to users by enabling or disabling certain browser features, modifying settings, and configuring custom behaviors such as headless browsing or disabling GPU acceleration.
 
 In KaneAI Web Agent, Chrome options are used to tailor the testing environment to suit the specific needs of automated tests. By defining Chrome options, users can configure the browser behavior before initiating a test session, allowing for a more customized and controlled testing setup. This guide will walk you through the steps to configure and use Chrome options in the KaneAI Web Agent:

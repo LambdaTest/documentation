@@ -1,5 +1,7 @@
 # Selenium Testing With Concourse CI And TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Concourse CI is an open-source CI/CD tool which is triggered over Docker containers. It offers a scalable and straightforward solution to your CI/CD pipelines with an intuitive UI that allows you to analyze the dashboard and validate your build execution. Offering a container-centric approach, Concourse CI offers a sturdy pipeline as each task in every job is handled in its container, controlling its dependencies.
 
 Concourse CI can be integrated with TestMu AI to perform automation testing with a cloud Selenium Grid of 3000+ real browsers for mobile and desktop. This document will help you understand how you can integrate your Concourse CI instance with TestMu AI Selenium Grid for continuous testing.

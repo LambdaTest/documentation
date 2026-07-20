@@ -1,5 +1,7 @@
 # Configuring App Center on TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This article will guide you on how to configure App Center on TestMu AI & manage your applications.
 
 ## Objective

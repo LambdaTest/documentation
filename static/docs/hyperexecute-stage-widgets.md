@@ -1,5 +1,7 @@
 # HyperExecute Stage Widgets
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Stage Trends
 
 The `Stage Trends` widget enables the user to track the total Stages being run on the platform grouped by their status including **Completed**, **Skipped**, **Failed**, **Aborted**, etc.

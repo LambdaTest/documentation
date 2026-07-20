@@ -1,5 +1,7 @@
 # SpiraTeam Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 SpiraTeam is a software tool used for Application Lifecycle Management (ALM). It's designed to help teams manage various aspects of software development, from programs and portfolios to requirements, releases, test cases, issues, baselines, workflows, and tasks.
 
 It is very useful for managing teams programs, portfolios, requirements, releases, test cases, issues, baselines, workflows, and tasks in one unified environment.

@@ -1,5 +1,7 @@
 # Upload Contacts (.vcf) on Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Preload contacts on real devices before your test session begins. Upload `.vcf` (vCard) contact files using the Upload Media API, and they are automatically injected into the device's native Contacts app when your session starts.
 
 This is useful for testing:

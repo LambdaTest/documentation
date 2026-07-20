@@ -1,5 +1,7 @@
 # Inherit Your YAML Configurations
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 YAML inheritance in HyperExecute allows you to reuse common configuration settings across multiple [YAML](/support/docs/deep-dive-into-hyperexecute-yaml) files, improving efficiency, consistency, and flexibility.
 
 For example, you can create a base YAML file with common settings like **browsers**, **OS versions**, and **devices**, and then inherit from it in other YAML files for different environments or test types. This **reduces boilerplate code and errors** while making it easy to switch between environments and manage complex test execution configurations.

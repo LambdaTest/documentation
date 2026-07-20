@@ -1,5 +1,7 @@
 # XCResult on TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Apple’s **Native XCResult Bundles (`.xcresult`)** are comprehensive test reports generated when you run XCUITest cases. These bundles include **test hierarchy, logs, stack traces, screenshots, and performance data**, which can be directly viewed in Xcode. They provide developers with rich debugging information, making it easier to analyze why a test passed or failed.
 
 On TestMu AI, you can now **generate and download `.xcresult` bundles** for your XCUI test sessions. You can access them via the **REST API**.

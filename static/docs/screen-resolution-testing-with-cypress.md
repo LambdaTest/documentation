@@ -1,5 +1,7 @@
 # Cypress Testing On Different Screen Resolutions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 As part of a responsive design process, it is important to ensure that websites or web applications under test run properly on different screen sizes.
 
 TestMu AI lets you test websites with Cypress across different screen resolutions on over 50+ browser versions on cloud.

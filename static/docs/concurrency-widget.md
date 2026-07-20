@@ -1,5 +1,7 @@
 # Understanding Your TestMu AI Concurrency
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Your TestMu AI subscription is designed to be flexible, allowing you and your team to run different types of tests. This guide explains how your concurrency (the number of tests you can run in parallel) is managed.
 
 ## Key Concepts Made Simple

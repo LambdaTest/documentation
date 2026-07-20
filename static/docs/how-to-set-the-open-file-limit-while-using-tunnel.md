@@ -1,5 +1,7 @@
 # How To Set The Open File Limit While Using TestMu AI Tunnel?
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 If you are using a tunnel service with TestMu AI for cross browser testing then you may get the following warning.
 
 >

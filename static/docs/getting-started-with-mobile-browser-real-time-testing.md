@@ -1,5 +1,7 @@
 # Getting started with Mobile Web Browser Real Time Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Real-Time Mobile Web Browser Testing allows you to test websites and web applications across different mobile browsers and operating systems, such as Android, iOS, and ChromeOS, in real-time. This process helps ensure that your web applications are fully functional, visually consistent, and optimized for various mobile devices, enhancing the user experience across different platforms. Using TestMu AI, developers, testers, and QA professionals can validate their web applications without the need for physical devices, all from a unified, user-friendly interface.
 
 ## Launch the Virtual Machine

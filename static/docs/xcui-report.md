@@ -1,5 +1,7 @@
 # XCUI XML Reports
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 XML reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving XML reports for XCUI tests executed on the TestMu AI platform.
 
 ## Objective

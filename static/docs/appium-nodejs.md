@@ -1,5 +1,7 @@
 # Appium with Nodejs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 In this documentation, you will learn how to configure and run your **NodeJS** automation testing scripts with **Appium** on TestMu AI, set the desired capabilities for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites

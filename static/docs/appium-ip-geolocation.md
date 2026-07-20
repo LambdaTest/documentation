@@ -1,5 +1,7 @@
 # IP Geolocation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI's IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
 
 By the end of this document, you'll learn how to use this feature in both manual and automation tests. Additionally, this document will provide a list of all supported IP geolocations on TestMu AI.

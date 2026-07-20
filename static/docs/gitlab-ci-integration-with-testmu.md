@@ -1,5 +1,7 @@
 # GitLab CI Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 GitLab is one of the finest tools which facilitates continuous integration for Git projects from small to enterprise level clients. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to-market launch.
 
 TestMu AI now integrates with GitLab CI to boost your go-to-market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on our cloud servers. Perform automation testing in parallel with TestMu AI’s Selenium grid to drastically trim down your test cycles.

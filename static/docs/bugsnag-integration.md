@@ -1,5 +1,7 @@
 # Bugsnag Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Bugsnag is an error-monitoring tool that allows your developers to quickly find, prioritize, and reproduce errors. Individual crashes are gathered together by underlying cause and shown as discrete errors in Bugsnag to allow for easy prioritizing; the error inbox can be sorted by event count, impacted users, error severity, or it can be limited to provide a list of errors matching a specified search parameter.
 
 The TestMu AI and Bugsnag integration allows you to perform one-click bug logging from TestMu AI to your Bugsnag projects while perform [cross browser testing](https://www.testmuai.com/) of your websites (and web apps).

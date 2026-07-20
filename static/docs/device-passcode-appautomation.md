@@ -1,5 +1,7 @@
 # Device Passcode in App Automation on Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 For certain use cases, you may need to perform tests on devices that are **passcode-protected**. Apps handling sensitive data (for example, **banking apps**, **enterprise apps**, or apps distributed through **MDM**) often enforce device passcodes for enhanced security.
 
 TestMu AI’s **Device Passcode in Automation** enables you to run such automated tests seamlessly on real devices.

@@ -1,5 +1,7 @@
 # DevTools On Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 > To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
 
 Testing hybrid apps or mobile websites that rely on embedded web views often requires advanced debugging capabilities. With TestMu AI, you can inspect and debug these web views directly on **real Android and iOS devices** using familiar tools like [**Chrome DevTools**](https://developer.chrome.com/docs/devtools/) and [**Safari Web Inspector**](https://developer.apple.com/safari/tools/#current).

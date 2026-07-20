@@ -1,5 +1,7 @@
 # Integrations (JIRA / Slack)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Accessibility reporting often needs to move beyond the dashboard into issue tracking and team collaboration workflows.
 
 This guide explains when to use shared platform integrations alongside Accessibility reporting and how they fit into remediation workflows such as ticketing and team notifications. It focuses on how those capabilities support accessibility outcomes rather than duplicating full integration setup documentation elsewhere.

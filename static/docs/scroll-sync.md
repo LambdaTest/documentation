@@ -1,5 +1,7 @@
 # What Is Scroll Sync In LT Browser?
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 With [LT Browser](https://www.testmuai.com/lt-browser/), you can sync your scrolls from your device to web view and vice versa. It helps you to scroll through different devices so that scrolling on one device will scroll the same amount on another device. You can compare your website side-by-side over other devices via mirrored interactions.
 
 To get started, you need to download the executable file from here.

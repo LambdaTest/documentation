@@ -1,5 +1,7 @@
 # SmartUI SDK Advanced Configuration Options
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 This guide is designed to provide you with comprehensive information about the various configuration options available within the SmartUI SDK. Whether you're a new user seeking to customize your SmartUI integration or an experienced developer looking to optimize your testing workflows, this documentation will serve as your go-to resource for understanding and utilizing the configuration options effectively.

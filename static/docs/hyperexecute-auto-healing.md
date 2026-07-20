@@ -1,5 +1,7 @@
 # Auto Healing for HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 HyperExecute's Auto Healing feature automatically recovers from locator failures during test execution, reducing flaky tests and improving the reliability of your test suites.
 
 ## Enable Auto Healing

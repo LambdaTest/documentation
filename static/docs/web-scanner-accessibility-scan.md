@@ -1,5 +1,7 @@
 # Starting an Accessibility Scan with Web Scanner
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Web Scanner exposes Accessibility scanning as an integrated workflow for site-wide URL-based scans. It is separate from Accessibility DevTools and from Accessibility Test Scheduling, even though the configuration concepts can overlap.
 
 When you are already in Web Scanner, this page walks through configuring an Accessibility scan and interpreting the main options (WCAG target, review and best-practice toggles, local testing, and login settings) before you start the run. Use it to align scan settings with your environment and reporting goals on that product surface.

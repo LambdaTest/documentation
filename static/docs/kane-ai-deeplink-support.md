@@ -1,5 +1,7 @@
 # Deeplinks Support for Mobile App Authoring
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## What are Deeplinks?
 
 Deeplinks are URL-based mechanisms that allow you to directly access specific screens and functionalities within your mobile application, bypassing standard navigation flows. In the context of mobile app testing with KaneAI, deeplinks enable testers to quickly navigate to targeted screens and perform context-aware actions without manually navigating through the app interface.

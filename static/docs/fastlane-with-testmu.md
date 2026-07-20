@@ -1,5 +1,7 @@
 # Integration With fastlane Plugin
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 fastlane is a CI/CD tool to automate beta deployments and releases for Android and iOS apps. It is an open-source platform for Android and iOS app deployment. It will take care of all the tasks like testing, generating screenshots, dealing with code signing, and releasing your application. Provides integration support with all the major CI systems. Adding the TestMu AI fastlane plugin in Fastfile will help you upload the app to the server and run tests on TestMu AI real devices.
 
 ## Prerequisites

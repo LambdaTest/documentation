@@ -1,5 +1,7 @@
 # Rerun Failed Tests on HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **BETA**
 The feature is currently in **BETA**.
 

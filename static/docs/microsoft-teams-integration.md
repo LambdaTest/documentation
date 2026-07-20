@@ -1,5 +1,7 @@
 # Microsoft Teams Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Microsoft Teams is a leading communication and collaboration platform that combines workplace chat, video conferencing, file storage, and app integration. Designed for teamwork, it enables seamless interaction and productivity within organizations, making it an ideal tool for managing projects and workflows.
 
 The Microsoft Teams integration with TestMu AI enables seamless collaboration and real-time updates on your test automation workflows. With this integration, you can:

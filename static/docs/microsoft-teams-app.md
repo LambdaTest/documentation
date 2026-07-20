@@ -1,5 +1,7 @@
 # Microsoft Teams App Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Microsoft Teams or MS Teams is a cloud-based collaboration application that helps with the handy features for document sharing, online meetings, and marketing communications. It helps your team to stay organized and have interactions in one place.
 
 The TestMu AI-Microsoft Teams App integration helps you in,

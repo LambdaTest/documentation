@@ -1,5 +1,7 @@
 # KaneAI - Jira Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The "Jira integration" feature allows you to generate test cases from your Jira tickets automatically. This feature leverages AI to analyze the content of Jira tickets and transform written test case descriptions into executable test cases on the TestMu AI platform. This documentation provides a detailed guide to help you understand and utilize this feature effectively.
 
 ## Key Benefits of the KaneAI Jira Integration:

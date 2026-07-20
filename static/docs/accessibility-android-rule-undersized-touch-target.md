@@ -1,5 +1,7 @@
 # Undersized Touch Target
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Interactive Android elements must meet a minimum touch target size of 48x48 dp to ensure users with motor impairments can tap them reliably.
 
 **WCAG Reference**

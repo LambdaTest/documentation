@@ -1,5 +1,7 @@
 # Espresso JUnit XML Reports
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Introduction
 
 JUnit reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving JUnit reports for Espresso tests executed on the TestMu AI platform.

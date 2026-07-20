@@ -1,5 +1,7 @@
 # Custom DNS Mapping for Selenium Tests
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 
 The `customDnsMap` capability lets you define custom IP addresses for specific domains.

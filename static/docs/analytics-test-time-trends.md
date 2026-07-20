@@ -1,5 +1,7 @@
 # Time Insights
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Understanding The Setup Time Insights Widget
 
 The `Setup Time Insights` module enables the QA Managers to get an overview of the time taken for the setup of test environments.  This helps the QA Managers to identify the bottlenecks in the setup process and optimize the setup time for test environments.

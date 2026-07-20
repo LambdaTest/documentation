@@ -1,5 +1,7 @@
 # AI Test Case Generator
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## What is the AI Test Case Generator?
 The **AI Test Case Generator** is an intelligent feature within TestMu AI Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, Jira tickets and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
 

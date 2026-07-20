@@ -1,5 +1,7 @@
 # Interactive Role Undefined
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Interactive Android elements must expose a meaningful accessibility role so TalkBack can announce what the element is and how to interact with it.
 
 **WCAG Reference**

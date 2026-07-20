@@ -1,5 +1,7 @@
 # JumpCloud User Provisioning
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 JumpCloud is a cloud-based directory-as-a-service (DaaS) platform that provides comprehensive identity and access management (IAM) capabilities for organizations. It offers a centralized platform to manage and secure user identities, devices, and applications across a variety of environments, including cloud, on-premises, and hybrid infrastructures.
 
 In the documentation, we will discuss how to integrate JumpCloud with TestMu AI:

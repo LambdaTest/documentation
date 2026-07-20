@@ -1,5 +1,7 @@
 # ALM Octane Integration with TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 [ALM Octane](https://www.microfocus.com/en-us/products/alm-octane/overview) is an enterprise-grade Application Lifecycle Management (ALM) platform from Micro Focus. It provides comprehensive test management capabilities including test planning, test case management, defect tracking, and detailed analytics for your software development lifecycle.
 
 TestMu AI supports seamless integration with ALM Octane through your test automation scripts. If you already have ALM Octane configured in your test framework, your tests will work seamlessly when executed on TestMu AI's cloud infrastructure.
@@ -43,7 +45,7 @@ For Java-based projects using Maven, add the ALM Octane SDK dependency:
 </dependency>
 ```
 
-For other languages, refer to the [ALM Octane API documentation](https://admhelp.microfocus.com/octane/en/latest/Online/Content/API/API_Authentication.htm).
+For other languages, refer to the ALM Octane API documentation in the Micro Focus online help.
 
 ### Step 3: Configure Test Result Reporting
 

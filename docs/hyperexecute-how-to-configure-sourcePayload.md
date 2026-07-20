@@ -168,7 +168,9 @@ sourcePayload:
 5. **Copy and Save** your token securely.
 
 <p align="center">
-<img loading="lazy" src={require('../assets/images/tas/how-to-guides/gl-token.gif').default} alt="generating gitlab token" width="1340" height="617" className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/tas/how-to-guides/gl-token.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 </p>
 
 </details>

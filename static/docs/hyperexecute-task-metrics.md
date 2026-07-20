@@ -1,5 +1,7 @@
 # HyperExecute- Monitoring CPU and Memory Resource Consumption
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The effectiveness of your product directly influences your user experience and how they will adopt it. As a result, it is essential to recognize and address any performance issues before the product is made available to the users.
 
 Test Metrics feature helps you to track whether your product is making inefficient use of resources or not, such as the CPU, and memory utilization by your product at an early stage of the development process. By doing so, you can ensure that your product functions optimally and provides a seamless user experience, increasing its chances of successful adoption by users.

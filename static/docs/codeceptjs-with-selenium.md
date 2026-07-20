@@ -1,5 +1,7 @@
 # CodeceptJS With Selenium
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 CodeceptJS is a modern end-to-end testing framework with a human-readable syntax. It supports Selenium via the WebDriver helper, making it straightforward to run browser automation tests on TestMu AI cloud Selenium Grid across 3000+ browser and OS combinations.
 
 ## Prerequisites

@@ -1,5 +1,7 @@
 # Running Robot Framework Tests on HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Robot Framework is a powerful open-source automation framework for Selenium that supports keyword-driven and behavior-driven development. With an easy-to-read syntax and a rich set of libraries, it simplifies the creation and execution of Selenium test scripts.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
@@ -8,6 +10,9 @@ This guide details how to execute your **Robot** framework tests on **HyperExecu
 
 - [**Using Local System**](/support/docs/robot-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
 - [**Using Gitpod Platform**](/support/docs/robot-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
+
+**Mainframe 3270 suites**
+Testing a mainframe terminal with Robot Framework? See [Mainframe Testing with HyperExecute](/support/docs/mainframe-testing-with-hyperexecute/) for a suite that installs the `s3270`/`x3270` emulators, runs mock hosts as background services, and records the `x3270` GUI.
 
 ## 1. Testing Using Local System
 

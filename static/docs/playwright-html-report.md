@@ -1,5 +1,7 @@
 # Consolidated Playwright HTML Report
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Playwright offers built-in HTML reports to help visualize the results of your test runs. These reports are detailed, user-friendly, and interactive, allowing you to analyze each test's status, logs, and errors in an organized manner.
 
 ## Steps to Generate Consolidated HTML Report

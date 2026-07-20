@@ -1,5 +1,7 @@
 # Desired Capabilities in Selenium
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Desired Capabilities in Selenium test scripts, encoded as key-value pairs, allow you to define specific test environment requirements. These requirements include operating systems, browser combinations, versions, and other parameters supported by TestMu AI's Cloud Grid to run your [automation framework tests](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks).
 
 You can also use TestMu AI's [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to autogenerate your required capabilities class to run Selenium and Appium automation test scripts on the TestMu AI [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/).

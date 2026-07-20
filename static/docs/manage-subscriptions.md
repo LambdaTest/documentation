@@ -1,5 +1,7 @@
 # Manage Subscriptions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 It's easy to manage your subscriptions by upgrading, removing, and switching the current plan. For example - upgrading from a free plan to a premium plan, removing an existing plan or switch from a monthly plan to an annual plan.
 
 ## Upgrading From Free Plan

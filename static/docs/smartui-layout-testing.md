@@ -1,5 +1,7 @@
 # Layout Comparison in SmartUI SDK
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Layout testing is a specialized approach to visual testing that focuses on verifying the structural integrity and arrangement of UI elements rather than their specific content or styling. It ensures that your application's visual hierarchy and element positioning remain consistent across different environments and updates.
 
 The example below demonstrates localisation testing, one of the major use cases of layout testing, where a webpage is tested across languages and locales.

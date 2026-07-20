@@ -1,5 +1,7 @@
 # Apple TV With Appium
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Tutorial To Run Your First Test On TestMu AI
 
 As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Apple TV testing provides broader device coverage, enhances user experience by validating remote-based navigation, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Apple TV models.

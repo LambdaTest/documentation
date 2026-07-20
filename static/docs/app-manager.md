@@ -1,5 +1,7 @@
 # App Manager on Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The TestMu AI App Manager is a tool within the Real Device App Testing section. It lets you easily upload, manage, and test different versions of your mobile apps. This guide explains how to access the App Manager, upload apps, search and filter them, and run any version on Real Devices.
 
 **Currently in BETA**

@@ -1,5 +1,7 @@
 # Zalenium Integration With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Brought up by Zalando, Zalenium is open-source with the vision to eliminate the hassle of maintaining an in-house [Selenium Grid](https://www.testmuai.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). Zalenium does so by offering a Docker-based Selenium Grid on-cloud that gets auto-updated with the latest browsers and their driver versions.
 
 Zalenium offers capabilities to help you define your Desired Capabilities in your test automation suite. Zalenium also provides an intuitive dashboard representing all the detailed logs of your test script execution. Using Zalenium, you can even perform automation testing over your locally hosted web pages. However, you would only be able to perform automated cross browser testing over the browsers installed on your machine.

@@ -1,5 +1,7 @@
 # Custom Headers in KaneAI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Custom headers allow you to inject additional HTTP header information into your test sessions. You can use them to send tokens, session IDs, content-type overrides, or any other custom metadata with requests made during your tests.
 
 Custom headers are supported on both **Desktop Web** and **Mobile Browser** platforms.

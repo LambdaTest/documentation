@@ -1,5 +1,7 @@
 # Heatmap Widgets
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Heatmap widgets in LambdaTest Insights provide a powerful way to visualize complex data relationships and identify patterns across multiple dimensions. By representing data density and relationships through color intensity, heatmaps help you quickly spot trends, anomalies, and correlations in your test execution data.
 
 ## What is a Heatmap Widget?

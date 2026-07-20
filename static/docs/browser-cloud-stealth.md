@@ -1,5 +1,7 @@
 # Avoid Bot Detection with Stealth Mode
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Make your agent's browser look like a real human user to bot-detection systems. Stealth mode masks fingerprints, randomizes user-agents, and humanizes interactions automatically.
 
 ## Why Stealth Matters

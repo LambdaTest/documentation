@@ -1,5 +1,7 @@
 # GitHub CI Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 GitHub is one of the best solutions for supporting continuous integration for Git projects for clients of all sizes. Now, quickly deploy your code and extensively test it to ensure a reliable delivery for your easy release.
 
 This document will show you how to use HyperExecute Integration with GitHub Continuous Integration. We will use the WebdriverIO framework to execute our automation script.

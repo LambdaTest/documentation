@@ -1,4 +1,7 @@
 # Running PyTest Framework Tests on HyperExecute
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 PyTest is a testing framework for Python that is widely used with Selenium for automated testing. Known for its simplicity and powerful features, Pytest allows efficient test organization, parameterization, and fixtures.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.

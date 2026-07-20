@@ -1,5 +1,7 @@
 # TestMu AI GitHub App Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **Your pull requests should deliver proof, not just code.**
 
 The TestMu AI Cloud GitHub App brings KaneAI, our AI testing agent, directly into your GitHub workflow. When a developer opens a pull request, KaneAI analyzes the changes, generates targeted test cases, executes them at scale on HyperExecute, and reports back with AI-powered Root Cause Analysis. The entire cycle runs in minutes, and every update appears right inside your PR.

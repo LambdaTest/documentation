@@ -52,12 +52,16 @@ Use this page when you run **SmartUI Hooks** on LambdaTest (for example, Seleniu
 
 SmartUI Hooks split configuration between the session capabilities (`LT:Options`) and the per-screenshot hook:
 
+<div className="flat-table">
+
 | Goal | Where to configure | How |
 |------|--------------------|-----|
 | **Layout** comparison | `smartui.takeScreenshot` hook options | Pass `ignoreType: ["layout"]` in the options map for that screenshot. |
 | **Full-page** capture | `smartui.takeScreenshot` hook options | Pass `fullPage: true` in the options map for that screenshot. |
 | **Smart Ignore** | `LT:Options` | Set `smartUI.smartIgnore: true` on the session, for both baseline and comparison runs. |
 | **Project** | `LT:Options` | Set `smartUI.project` (with `visual` and credentials). |
+
+</div>
 
 Layout and full page are enabled per screenshot through the hook options, not through `LT:Options` capabilities. When you use Smart Ignore, choose either **Ignore DOM** or **Select DOM** in the dashboard for a given flow, not both.
 
@@ -249,6 +253,8 @@ These patterns do not turn on Smart Ignore:
 Set `smartUI.smartIgnore: true` instead.
 :::
 
+<div className="flat-table">
+
 | Problem | What to do |
 |---------|------------|
 | Layout never activates; only set in `LT:Options` | Move `ignoreType: ["layout"]` into the `smartui.takeScreenshot` options (see §2). |
@@ -256,6 +262,8 @@ Set `smartUI.smartIgnore: true` instead.
 | Tried `smartUI.layout` or nested `smartUI.options` layout blocks | These are not the Hooks switch for layout; use the hook options instead. |
 | Strict (pixel) comparison still applies | Align the dashboard comparison mode with the session capabilities. |
 | Relying on dashboard toggles only | Hooks still need the correct hook option and capability split shown above. |
+
+</div>
 
 ## Related Docs
 

@@ -1,5 +1,7 @@
 # Nested Control Issues
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Interactive Android elements should not be nested inside other interactive elements, as this creates ambiguous focus behavior for assistive technologies.
 
 **WCAG Reference**

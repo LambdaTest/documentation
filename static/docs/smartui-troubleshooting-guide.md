@@ -1,5 +1,7 @@
 # Comprehensive Troubleshooting Guide for SmartUI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This comprehensive troubleshooting guide covers common issues you may encounter when using SmartUI for visual regression testing. Each issue includes symptoms, possible causes, and step-by-step solutions.
 
 ## Quick Diagnostic Checklist

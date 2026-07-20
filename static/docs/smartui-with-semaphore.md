@@ -1,5 +1,7 @@
 # Semaphore Pipeline Integration with SmartUI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Semaphore is a modern CI/CD (Continuous Integration and Continuous Delivery) platform designed for developers to automate the process of building, testing, and deploying software.
 
 This guide explains how to integrate your project with the Semaphore CI/CD pipeline to trigger visual regression testing with TestMu AI SmartUI whenever changes are made to your repository.

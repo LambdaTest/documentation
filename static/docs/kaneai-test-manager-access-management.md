@@ -1,5 +1,7 @@
 # Access Management - KaneAI <> Test Manager
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This document provides guidelines on managing access to KaneAI and Test Manager within TestMu AI. The access management functionality is exclusive to **organization administrators**, allowing them to allocate licenses to users as per the organization's requirements.
 
 ## License Allocation Rules

@@ -1,5 +1,7 @@
 # Install NPM Packages via Tunnel
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## What is `npm_via_tunnel`?
 
 `npm_via_tunnel` is a flag that you can use to enable downloading npm dependencies through a tunnel. This can be useful if you need to install npm packages from a private registry or if you are working in a restricted environment where you cannot access the public npm registry directly.
