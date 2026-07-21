@@ -23,25 +23,22 @@ function AiIcon() {
 }
 
 export default function LinkWrapper(props) {
-  const customProps = props?.item?.customProps || {};
-  const hasAiIcon = customProps.icon === 'ai';
-  const beta = customProps.beta;
-
-  if (!hasAiIcon && !beta) {
+  const hasAiIcon = props?.item?.customProps?.icon === 'ai';
+  const beta = props?.item?.customProps?.beta;
+  if (!beta && !hasAiIcon) {
     return <Link {...props} />;
   }
-
-  const label = (
-    <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-      {props.item.label}
+  const originalLabel = props.item.label;
+  const labelWithBadge = (
+    <>
+      {originalLabel}
       {hasAiIcon && <AiIcon />}
       {beta && (
         <span className="newTagColor" style={{ marginLeft: '6px', verticalAlign: 'middle' }}>
           Beta
         </span>
       )}
-    </span>
+    </>
   );
-
-  return <Link {...props} item={{ ...props.item, label }} />;
+  return <Link {...props} item={{ ...props.item, label: labelWithBadge }} />;
 }

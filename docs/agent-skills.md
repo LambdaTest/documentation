@@ -1,5 +1,5 @@
 ---
-id: skills
+id: agent-skills
 title: TestMu AI Agent Skills for Test Automation Frameworks
 hide_title: true
 sidebar_label: AI Agent Skills
@@ -10,10 +10,10 @@ keywords:
   - install agent skills
   - selenium agent skill
   - playwright agent skill
-url: https://www.testmuai.com/support/docs/skills/
+url: https://www.testmuai.com/support/docs/agent-skills/
 site_name: TestMu AI
 slug: skills/
-canonical: https://www.testmuai.com/support/docs/skills/
+canonical: https://www.testmuai.com/support/docs/agent-skills/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
