@@ -3596,6 +3596,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Fetch Status Auto-Wait",
+                id: "smartui-hooks-fetch-status-timeout",
+              },
+              {
+                type: "doc",
                 label: "Comparison via Capabilities",
                 id: "smartui-comparison-capabilities",
               },
