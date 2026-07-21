@@ -12,7 +12,7 @@ function items(sidebar) {
 }
 
 const docsSidebar = [
-  { type: 'doc', id: 'skills', label: 'AI Agent Skills', customProps: { icon: 'ai' } },
+  { type: 'doc', id: 'agent-skills', label: 'AI Agent Skills', customProps: { icon: 'ai' } },
   {
     type: 'category', label: 'Web Automation', collapsible: true, collapsed: true,
     items: [
