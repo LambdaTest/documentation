@@ -2297,14 +2297,8 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Import Test Case Data",
-        items: [
-          { type: "doc", id: "csv-import", label: "Import from CSV" },
-          { type: "doc", id: "one-click-migration-from-testrail", label: "Migrate from TestRail" },
-          { type: "doc", id: "one-click-migration-from-xray", label: "Migrate from X-Ray" },
-          { type: "doc", id: "one-click-migration-from-zephyr-scale", label: "Migrate from Zephyr Scale" },
-          { type: "doc", id: "one-click-migration-from-qtest", label: "Migrate from qTest" },
-        ],
+        label: "Projects",
+        items: ["create-projects", "system-and-custom-fields"],
       },
       {
         type: "category",
