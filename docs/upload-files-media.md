@@ -94,7 +94,7 @@ Everything else is identical; only these behaviors differ:
 
 ### Automation
 
-Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximum 5) — to make the files available in your session. The capability is identical for **app** and **browser** (web) automation. Refer to the documentation for [Uploading Files and Media on Real Devices](upload-media.md).
+Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximum 5) — to make the files available in your session. The capability is identical for **app** and **browser** (web) automation. Refer to the documentation for [Uploading Files and Media on Real Devices](appium-upload-filemedia.md).
 
 ---
 
