@@ -65,6 +65,17 @@
                 ]
               },
               {
+                "group": "Assurance",
+                "pages": [
+                  "docs/kane-cli-assurance",
+                  "docs/kane-cli-assurance-context",
+                  "docs/kane-cli-assurance-design",
+                  "docs/kane-cli-assurance-coverage",
+                  "docs/kane-cli-assurance-maintain",
+                  "docs/kane-cli-assurance-automation"
+                ]
+              },
+              {
                 "group": "Integrations & Automation",
                 "pages": [
                   "docs/kane-cli-tms-integration",
