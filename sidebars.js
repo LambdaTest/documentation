@@ -3742,6 +3742,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Ignore Colors",
+                id: "smartui-ignore-colors",
+              },
+              {
+                type: "doc",
                 label: "Layout Testing",
                 id: "smartui-layout-testing",
               },
