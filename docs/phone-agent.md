@@ -1,6 +1,6 @@
 ---
 id: phone-agent
-title: Phone Agent Testing With TestMu AI
+title: How to Test Phone Agents With TestMu AI Agent Testing Platform
 hide_title: false
 sidebar_label: Phone Agents
 description: Test phone voice agents on TestMu AI with real calls. Live call monitoring, recording analysis, voice and noise simulation, and 30+ call quality metrics.
@@ -43,11 +43,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Phone Agent Testing With TestMu AI
+# How to Test Phone Agents With TestMu AI Agent Testing Platform
 
 ---
 
-TestMu AI tests phone voice agents by placing real telephone calls, not simulations. An AI-powered simulated caller follows a scenario, the platform records the full conversation, and it scores the call across 30+ call quality metrics. It covers inbound support lines, IVR flows, and outbound dialers.
+The Agent Testing Platform tests phone voice agents by placing real telephone calls, not simulations. An AI-powered simulated caller follows a scenario, the platform records the full conversation, and it scores the call across 30+ call quality metrics. It covers inbound support lines, IVR flows, and outbound dialers.
 
 Phone agents come in two directions, inbound and outbound, and each has its own workflow. This page covers what is shared across both. See the dedicated guides for [inbound phone agent testing](/support/docs/inbound-phone-agent/) and [outbound phone agent testing](/support/docs/outbound-phone-agent/).
 

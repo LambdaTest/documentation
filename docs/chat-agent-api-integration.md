@@ -1,6 +1,6 @@
 ---
 id: chat-agent-api-integration
-title: How to Integrate a Chat Agent API
+title: How to Test Chat Agent With TestMu AI Agent Testing API
 hide_title: false
 sidebar_label: Quickstart (API)
 description: Connect a chat agent to TestMu AI over its API. Request format, three connection methods, response schema, and the fields the platform scores.
@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-TestMu AI connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
+The Agent Testing Platform connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
 
 It works with any chatbot provider or framework. You provide the endpoint URL, the authentication, and the request and response shape, and the platform matches whatever structure your API uses.
 
@@ -52,7 +52,7 @@ It works with any chatbot provider or framework. You provide the endpoint URL, t
 
 ---
 
-TestMu AI sends each message as an HTTP POST request with a JSON body. The example below shows the shape, followed by a breakdown of each component.
+The platform sends each message as an HTTP POST request with a JSON body. The example below shows the shape, followed by a breakdown of each component.
 
 ```bash title="Example Request"
 curl -X POST https://api.examplechatbot.com/chat \
@@ -87,7 +87,7 @@ The platform sends the exact URL, token, and headers you configure. If your chat
 
 ---
 
-TestMu AI supports three connection methods, based on where your agent runs and how it is reachable. Choose the option that matches your environment.
+The platform supports three connection methods, based on where your agent runs and how it is reachable. Choose the option that matches your environment.
 
 ### Option A: Public API (Direct)
 
@@ -151,7 +151,7 @@ Whatever the connection method, the platform sends the exact authentication and 
 
 ---
 
-TestMu AI reads the reply from each response, uses it to continue the conversation, and scores the result. Response shapes vary by provider, and the platform adapts to yours.
+The platform reads the reply from each response, uses it to continue the conversation, and scores the result. Response shapes vary by provider, and the platform adapts to yours.
 
 ```json title="Example Response"
 {
@@ -202,7 +202,7 @@ To connect your agent, provide the following. No code changes or infrastructure 
 
 ---
 
-Once credentials are configured, TestMu AI runs the evaluation autonomously.
+Once credentials are configured, The platform runs the evaluation autonomously.
 
 `Credentials Configured` → `Test Scenarios Generated` → `API Calls Sent to Your Agent` → `Responses Captured` → `Quality Scored`
 
