@@ -1,6 +1,6 @@
 ---
 id: image-analyzer
-title: How to Test an Image Analyzer Agent on TestMu AI
+title: How to Test an Image Analyzer Agent With TestMu AI Agent Testing Platform
 hide_title: false
 sidebar_label: Image Analyzer Testing
 description: Test image generation and analysis agents on TestMu AI. Score images against a prompt with a 0 to 100 alignment score, brand rules, and technical specs.
@@ -43,11 +43,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test an Image Analyzer Agent on TestMu AI
+# How to Test an Image Analyzer Agent With TestMu AI Agent Testing Platform
 
 ---
 
-TestMu AI tests an image agent by submitting prompts or images and scoring the returned output against the prompt and any criteria you define. Each image gets a Quality Score from 0 to 100, plus a breakdown of what matched and what did not. It covers image generation, content moderation, and photo validation.
+The Agent Testing Platform tests an image agent by submitting prompts or images and scoring the returned output against the prompt and any criteria you define. Each image gets a Quality Score from 0 to 100, plus a breakdown of what matched and what did not. It covers image generation, content moderation, and photo validation.
 
 You upload images by file or URL, define what a correct image looks like, and the platform scores them. A single run analyzes up to 50 images, which suits regression testing after a model update.
 

@@ -1,9 +1,9 @@
 ---
 id: getting-started-with-agent-testing-platform
-title: Getting Started With the AI Agent Testing Platform
+title: Getting Started With the Agent Testing Platform
 hide_title: false
 sidebar_label: What is Agent Testing
-description: Get started with the AI Agent Testing Platform to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.
+description: Get started with the Agent Testing Platform to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.
 keywords:
  - ai agent testing platform
  - agent testing
@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Getting Started With the AI Agent Testing Platform
+# Getting Started With the Agent Testing Platform
 
 ***
 

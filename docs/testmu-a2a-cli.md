@@ -1,6 +1,6 @@
 ---
 id: testmu-a2a-cli
-title: TestMu A2A CLI Quickstart for Chat and Phone Agents
+title: How to Test Chat and Phone Agents With TestMu AI Agent Testing CLI
 hide_title: false
 sidebar_label: Quickstart (CLI)
 description: Install and use TestMu A2A CLI to test chat and phone AI agents from your terminal with scenario generation, red team security, and CI/CD support.
