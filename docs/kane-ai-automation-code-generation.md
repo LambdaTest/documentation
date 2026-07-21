@@ -53,69 +53,92 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 KaneAI generates automation scripts in multiple frameworks and languages based on natural language inputs from users. KaneAI is available for desktop web applications as well as native mobile applications currently.
 
+:::note
+KaneAI offers two authoring experiences, Classic and New Experience. New Experience is being rolled out in phases. To enable New Experience for your organization, reach out to our support team. The frameworks and languages supported by each experience are listed below.
+:::
+
 <img loading="lazy" src={require('../assets/images/kane-ai/generate-code-button.png').default} alt="generated-code-listing" className="doc_img"/>
 Click the `Generate New Code` button to go to code generation page where you can select desired framework and language.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/generate-code-page.png').default} alt="code-generation-dashboard" className="doc_img"/>
 
-## Web Frameworks
+## Supported Frameworks and Languages
 
-### Selenium
-Selenium is your go-to tool for cross-browser testing, enabling automated testing across different web browsers like Chrome, Firefox, Safari, and Edge. It's perfect for end-to-end testing of web applications. With Kane AI, you can generate Selenium code in:
+The table below shows the frameworks and languages KaneAI can generate code in, and the experience each is available under.
 
-- **Python:** PyTest is used to generate Selenium Python code.
+<table style={{width: '100%', borderCollapse: 'collapse', display: 'table', tableLayout: 'fixed'}}>
+  <thead>
+    <tr>
+      <th style={{textAlign: 'left', width: '16%'}}>Framework</th>
+      <th style={{textAlign: 'left', width: '13%'}}>Language</th>
+      <th style={{textAlign: 'left', width: '33%'}}>Availability</th>
+      <th style={{textAlign: 'center', width: '19%', backgroundColor: 'var(--ifm-color-emphasis-100)'}}>Classic</th>
+      <th style={{textAlign: 'center', width: '19%', backgroundColor: 'var(--ifm-color-emphasis-100)'}}>New Experience</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan={2}><strong>Selenium</strong></td>
+      <td>Python</td>
+      <td>Generally available (default)</td>
+      <td style={{textAlign: 'center'}}>&#10003;</td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+    </tr>
+    <tr>
+      <td>Java</td>
+      <td>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
+      <td style={{textAlign: 'center'}}>&#10003;</td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+    </tr>
+    <tr>
+      <td rowSpan={3}><strong>Playwright</strong></td>
+      <td>Python</td>
+      <td>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
+      <td style={{textAlign: 'center'}}>&#10003;</td>
+      <td style={{textAlign: 'center'}}>&#10003;</td>
+    </tr>
+    <tr>
+      <td>C#</td>
+      <td>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
+      <td style={{textAlign: 'center'}}>&#10003;</td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+    </tr>
+    <tr>
+      <td>JavaScript</td>
+      <td>Available on request <sup style={{color: 'var(--ifm-color-primary)'}}>&#42;</sup></td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td style={{textAlign: 'center'}}>&#10003;</td>
+    </tr>
+    <tr>
+      <td><strong>Cypress</strong></td>
+      <td>JavaScript</td>
+      <td>Coming soon</td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+    </tr>
+    <tr>
+      <td><strong>WebdriverIO</strong></td>
+      <td>JavaScript</td>
+      <td>Coming soon</td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+    </tr>
+    <tr>
+      <td><strong>Appium</strong></td>
+      <td>Python</td>
+      <td>Generally available (default)</td>
+      <td style={{textAlign: 'center'}}>&#10003;</td>
+      <td style={{textAlign: 'center'}}>&#10007;</td>
+    </tr>
+  </tbody>
+</table>
 
-:::info
-Support for Java language in Selenium has been restricted for major improvements and will be made available soon.
-:::
+<br/>
 
-:::tip
- By default all KaneAI authored tests automation scripts for Web are generated in Selenium Python.
-:::
-
-### Playwright
-Playwright is a fast and reliable end-to-end testing for complex modern web applications it uses a single API to automate Chromium, Firefox, and WebKit. You can generate Playwright code in:
-
-- **JavaScript**
-- **Python** 
-
-:::info
-Support for Playwright framework has been restricted for major improvements and will be made available soon.
-:::
-
-### Cypress
-Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA friendly tool. You can generate Cypress code in:
-
-- **JavaScript**
-
-:::info 
-Support for Cypress framework has been restricted for major improvements and will be made available soon. Additionally, Cypress won't be available for test cases where **Switching Tabs** or **File Upload** is present as it's not inherently supported by the framework.
-:::
-
-### WebdriverIO
-WebdriverIO is a popular automation testing framework for web and mobile applications. It is built on top of the WebDriver protocol and provides a simple and flexible API for writing tests. You can generate WebdriverIO code in:
-
-- **JavaScript**
-
-:::info 
-Support for WebdriverIO framework has been restricted for major improvements and will be made available soon.
-:::
-
-## App Frameworks
-
-### Appium
-Appium is an open-source automation tool for running scripts and testing native applications and mobile web apps on different platforms like iOS and Android. You can generate Appium code in:
-
-- **Python:**  PyTest is used to generate Appium Python script. 
-- **Java:** TestNG is used to generate Appium Java scripts.
-- **JavaScript** : The code generation for the Appium framework in JavaScript is being rolled out gradually and is not yet generally available.
-
-:::tip
-By default all KaneAI authored tests automation scripts for App are generated in Appium Python.
-:::
+**&#10003;** Supported &nbsp;&nbsp; **&#10007;** Not available. New Experience currently covers Desktop Web only. Mobile is supported in Classic.
 
 :::note
- For now test runs only work for code generation in Selenium - Python & Appium Python. The support for others will be rolled out shortly.
+**Available on request.** Please reach out to Support to enable it. These features are partially rolled out and will soon be generally available for all users.
 :::
 
 ## Understanding the Code Tab
@@ -137,17 +160,26 @@ After code generation completes, the **Code** tab shows the status of each gener
 
 Once code is generated, the following actions are available:
 
-- **Execute & Verify** — Triggers a Sample Run Execution on HyperExecute. This runs the generated code the same way a real KaneAI test run would, including respecting assertion outcomes. While the run is in progress, the status changes to **Verifying** and a **Sample execution in progress · View in HyperExecute** link appears. Once complete, the status updates to **Verified** and the button label changes to **Execute**.
-- **Download** — Downloads the generated code to your local machine.
+- **Execute & Verify**: Triggers a Sample Run Execution on HyperExecute. This runs the generated code the same way a real KaneAI test run would, including respecting assertion outcomes. While the run is in progress, the status changes to **Verifying** and a **Sample execution in progress · View in HyperExecute** link appears. Once complete, the status updates to **Verified** and the button label changes to **Execute**.
+- **Download**: Downloads the generated code to your local machine.
 
 ### Sample Run Execution Behavior
 
 - Sample Run Execution can only be initiated from the **Code** tab of a test case.
-- The **Execute** button is always enabled — you can proceed to run the test on HyperExecute regardless of whether a Sample Run Execution has passed, failed, or not been triggered.
+- The **Execute** button is always enabled. You can proceed to run the test on HyperExecute regardless of whether a Sample Run Execution has passed, failed, or not been triggered.
 
 ### Adding Test Cases to a Test Run
 
-Test cases with generated code can be added to a Test Run regardless of the Sample Run Execution status — whether it passed, failed, or was never triggered. The only cases where a test case is not available for selection in a Test Run are:
+Test cases with generated code can be added to a Test Run regardless of the Sample Run Execution status, whether it passed, failed, or was never triggered. The only cases where a test case is not available for selection in a Test Run are:
 
 - Code generation failed or was not initiated.
 - Code generation is still in progress.
+
+:::note
+KaneAI code export leverages public libraries. The generated automation scripts depend on these published packages:
+
+- Playwright Python: [testmu-playwright-python](https://pypi.org/project/testmu-playwright-python/)
+- Playwright C#: [TestmuAI.Playwright.Bindings](https://libraries.io/nuget/TestmuAI.Playwright.Bindings)
+- Playwright JavaScript: [@testmuai/playwright-bindings](https://www.npmjs.com/package/@testmuai/playwright-bindings)
+- Selenium Java: [testmuai-selenium-bindings](https://mvnrepository.com/artifact/io.github.lambdatest/testmuai-selenium-bindings)
+:::

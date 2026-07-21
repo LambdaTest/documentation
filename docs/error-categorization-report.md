@@ -60,4 +60,6 @@ This report does not depend on the [`report: true`](/support/docs/deep-dive-into
 
 Now trigger your job on HyperExecute, and if your job fails (encounters any failed tests), it will generate the Error Categorization Report. This report list down all the error summaries along with the specific details. You can also check for the particular error for the specific test.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/error-categorization-report.gif').default} alt="Image" className="doc_img"/> 
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/hyperexecute/knowledge-base/reports/error-categorization-report.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video> 

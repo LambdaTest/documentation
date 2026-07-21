@@ -15,10 +15,10 @@ keywords:
   - single build multiple tests
   - bulk approve
   - smartui tab
-url: https://www.testmu.ai/support/docs/smartui-group-by-test-cases/
+url: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 site_name: LambdaTest
 slug: smartui-group-by-test-cases/
-canonical: https://www.testmu.ai/support/docs/smartui-group-by-test-cases/
+canonical: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -34,12 +34,12 @@ It also covers how to get **one Automation / SmartUI build** with **multiple cap
 ## Audience & Prerequisites
 
 - **Audience:** QA Engineers and Developers running automated visual tests on <BrandName />.
-- **Prerequisites (recommended — Hooks):** 
+- **Prerequisites (recommended: Hooks):** 
   - **LambdaTest** username and access key: `LT_USERNAME`, `LT_ACCESS_KEY`.
   - SmartUI project wired through **`smartUI.project`** in Java `LT:Options` (same string as **Smart UI Project Name** in the dashboard, e.g. `sample` or `new`).
   - **`smartui.takeScreenshot`** with a **`screenshotName`** per capture when you want multiple named screenshots in one run.
   - For **SmartUI CLI** static or exec workflows, a **`PROJECT_TOKEN`** from that project (often ends with `#<projectSlug>` matching the project name).
-- **Prerequisites (optional — Node SDK + `visual: true`):** The SmartUI project must be **Web** type; **Omni** names with **`smartUIProjectName`** + **`visual: true`** cause hub `failed to validate project` — see [Omni vs Web](#omni-vs-web). Prefer the **Hooks** flow above for Omni / Hooks projects.
+- **Prerequisites (optional: Node SDK + `visual: true`):** The SmartUI project must be **Web** type; **Omni** names with **`smartUIProjectName`** + **`visual: true`** cause hub `failed to validate project`, see [Omni vs Web](#omni-vs-web). Prefer the **Hooks** flow above for Omni / Hooks projects.
 - On the **grid**, grouping metadata usually comes from session **`name`**, suite/project, or runner test titles. For **local** `smartui exec` + Cypress or Playwright, see the <a href={`${BRAND_URL}/support/docs/smartui-sdk-config-options/`}>SmartUI SDK docs</a>.
   
 :::note
@@ -121,14 +121,14 @@ Use this when you want **one Automation / SmartUI build** with **several** captu
 1. **Same `smartUI.project`** (and same **`PROJECT_TOKEN`** when using the CLI) for the whole run.
 2. **Same `build`** in `LT:Options` for every session that should belong to the same Automation build.
 3. **Distinct `screenshotName`** values for each **`smartui.takeScreenshot`** call so each capture is a separate asset in the build.
-4. **Test case folders:** vary the session **`name`** in `LT:Options` per test method or per parallel session when you need multiple **Test Case** groups (same pattern as multi-session Selenium suites). For **one session** with multiple hooks, grouping still uses automation metadata from that session — align **`name`** / suite with your runner (JUnit/TestNG method names, etc.) per your organization’s conventions.
+4. **Test case folders:** vary the session **`name`** in `LT:Options` per test method or per parallel session when you need multiple **Test Case** groups (same pattern as multi-session Selenium suites). For **one session** with multiple hooks, grouping still uses automation metadata from that session; align **`name`** / suite with your runner (JUnit/TestNG method names, etc.) per your organization’s conventions.
 5. You can run sessions **sequentially or in parallel** as long as **`build`** and **`smartUI.project`** stay consistent.
 
 ---
 
 ## Optional: Node SDK + `visual: true` (Web SmartUI projects only)
 
-Use **`@lambdatest/selenium-driver`** **`smartuiSnapshot`** + **`visual: true`** + **`smartUIProjectName`** only when the SmartUI project is **Web** type. **Omni** project names cause **`failed to validate project`** on the hub for this path — use the [Hooks flow](#hooks-java-webhook) instead.
+Use **`@lambdatest/selenium-driver`** **`smartuiSnapshot`** + **`visual: true`** + **`smartUIProjectName`** only when the SmartUI project is **Web** type. **Omni** project names cause **`failed to validate project`** on the hub for this path; use the [Hooks flow](#hooks-java-webhook) instead.
 
 Workspace sample (five sessions, five names, one build):
 
@@ -174,7 +174,7 @@ To view them hierarchically:
 
 You can review visual differences without leaving your test automation execution context.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/groupby_test_automationpage.png').default} alt="SmartUI Screenshots tab inside the Automation test detail page, showing project and build metadata, a thumbnail grid of captured screenshots, and the side video player — the page users land on when navigating from a SmartUI grouped test view" width="960" className="doc_img" />
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/groupby_test_automationpage.png').default} alt="SmartUI Screenshots tab inside the Automation test detail page, showing project and build metadata, a thumbnail grid of captured screenshots, and the side video player, the page users land on when navigating from a SmartUI grouped test view" width="960" className="doc_img" />
 
 1. Navigate to your **Automation** dashboard and select a test run.
 2. In the test detail view, locate the **SmartUI Screenshots** tab alongside the traditional Overview, Logs, and Network tabs.
@@ -202,7 +202,7 @@ If you are in the Automation dashboard and prefer the full-screen SmartUI review
 
 When reviewing a large number of screenshots, you can triage them efficiently using bulk actions at the test case group level.
 
-**Group by Test Case** uses the **same bulk-action workflow** as the standard (flat) build view: select screenshots via the **group checkbox** on a test-case folder (or pick individual thumbnails), then use **Approve All** / **Reject All** on the floating action bar. You are only changing how screenshots are **organized**—not which bulk controls are available.
+**Group by Test Case** uses the **same bulk-action workflow** as the standard (flat) build view: select screenshots via the **group checkbox** on a test-case folder (or pick individual thumbnails), then use **Approve All** / **Reject All** on the floating action bar. You are only changing how screenshots are **organized**, not which bulk controls are available.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/groupby_test_bulkops.png').default} alt="SmartUI build grouped by test case with group checkbox selected and the standard bulk Approve All and Reject All action bar visible" width="960" className="doc_img" />
 

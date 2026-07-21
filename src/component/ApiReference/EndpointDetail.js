@@ -667,13 +667,15 @@ function UrlBar({ endpoint, onTryIt }) {
         )}
       </button>
 
-      <button
-        className={styles.tryItBtn}
-        style={{ background: btnColor }}
-        onClick={() => onTryIt?.(effectiveEndpoint)}
-      >
-        Try it <span className={styles.playIcon}>&#9654;</span>
-      </button>
+      {!effectiveEndpoint.deprecated && (
+        <button
+          className={styles.tryItBtn}
+          style={{ background: btnColor }}
+          onClick={() => onTryIt?.(effectiveEndpoint)}
+        >
+          Try it <span className={styles.playIcon}>&#9654;</span>
+        </button>
+      )}
     </div>
   );
 }
@@ -709,6 +711,14 @@ export default function EndpointDetail({ endpoint, apiName, onTryIt, mobileCodeS
       >
         {endpoint.name}
       </h1>
+
+      {/* Deprecated banner */}
+      {endpoint.deprecated && (
+        <div className={styles.deprecatedBanner}>
+          <span style={{ fontSize: '18px', flexShrink: 0 }}>&#9888;</span>
+          <span><strong>Deprecated</strong> — This endpoint is deprecated and may be removed in a future version.</span>
+        </div>
+      )}
 
       {/* Description */}
       {endpoint.description && (
@@ -764,23 +774,38 @@ export default function EndpointDetail({ endpoint, apiName, onTryIt, mobileCodeS
         </section>
       )}
 
-      {/* Request Body */}
-      {endpoint.requestBody && Array.isArray(endpoint.requestBody.properties) && endpoint.requestBody.properties.length > 0 && (
-        <section className={styles.section}>
-          <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-200 dark:border-white/10">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Body</h2>
-            {endpoint.requestBody.contentType && (
-              <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">{endpoint.requestBody.contentType}</span>
+      {/* Request Body — one section per variant when present, otherwise the
+          plain body. Variants stack vertically so users see all payload shapes
+          (e.g. PUT folder rename/move) without a tab interaction. */}
+      {endpoint.requestBody && (() => {
+        const variants = endpoint.requestBody.variants;
+        const summary = endpoint.name || endpoint.summary || 'Body';
+        const blocks = (variants && variants.length > 0)
+          ? variants.map((v) => ({
+              title: `${summary} (${v.name})`,
+              props: v.properties,
+            }))
+          : (Array.isArray(endpoint.requestBody.properties) && endpoint.requestBody.properties.length > 0
+              ? [{ title: 'Body', props: endpoint.requestBody.properties }]
+              : []);
+        if (blocks.length === 0) return null;
+        return blocks.map((block) => (
+          <section key={block.title} className={styles.section}>
+            <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-200 dark:border-white/10">
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">{block.title}</h2>
+              {endpoint.requestBody.contentType && (
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-mono">{endpoint.requestBody.contentType}</span>
+              )}
+            </div>
+            {endpoint.requestBody.description && (
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4"><InlineText text={endpoint.requestBody.description} /></p>
             )}
-          </div>
-          {endpoint.requestBody.description && (
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4"><InlineText text={endpoint.requestBody.description} /></p>
-          )}
-          {endpoint.requestBody.properties.map((prop, i) => (
-            <ParamRow key={i} param={prop} />
-          ))}
-        </section>
-      )}
+            {block.props.map((prop, i) => (
+              <ParamRow key={i} param={prop} />
+            ))}
+          </section>
+        ));
+      })()}
 
       {/* Response section */}
       <ResponseSection responses={endpoint.responses} responseSchema={endpoint.responseSchema} />

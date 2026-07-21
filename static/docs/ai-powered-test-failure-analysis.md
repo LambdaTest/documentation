@@ -1,0 +1,19 @@
+# AI Native Test Failure Analysis in HyperExecute
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+The AI Native Root Cause Analysis (RCA) and Error Detection for HyperExecute testing helps you to quickly identify various error categories and offers a comprehensive overview of their underlying causes. It analyzes your test logs and identify the root cause of failures, so you can take corrective action quickly and efficiently.
+
+## Why Test Failure Analysis?
+
+Conventional test failure resolution demands manual analysis of logs and data sources, resulting in substantial delays. These inefficiencies hinder productivity and disrupt software development. HyperExecute's AI Native Test Failure Analysis seamlessly addresses these challenges, offering a proactive approach to identifying and fixing test case failures along with other benefits including:
+
+- **Reduced time to identify and fix failures:** The AI Native analysis can quickly identify the root cause of failures, so you can take corrective action quickly and efficiently. This can save you a significant amount of time, which can be used to focus on other tasks.
+- **Improved accuracy of failure analysis:** The AI Native analysis is more accurate than manual analysis, which can help you to identify and fix failures more effectively. This can lead to a higher quality product.
+- **Increased productivity of testing teams:** The AI Native analysis can free up testing teams to focus on other tasks, such as creating new test cases or debugging code. This can lead to a more efficient testing process.
+
+## Generate the RCA of your failed Jobs
+
+To use the AI Native Test Failure Analysis feature, simply click on the Failure Analysis" (Beta) tab of your failed Job. Click on the **Generate RCA** Button. This usually takes around 20-30 seconds to generate the RCA.
+
+After categorizing errors, we offer a structured approach to address each failure type. You can efficiently get to the precise corrective measures or **Remedies** recommended alng with **Additional suggestions** for the particular error. This targeted approach expedites the issue resolution process, eliminating unnecessary steps and optimizing efficiency.

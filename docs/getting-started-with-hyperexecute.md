@@ -92,7 +92,7 @@ HyperExecute seamlessly supports all major test automation frameworks as shown b
   </div>
 
 ## Let's Run your First Test
-Ready to experience the power of HyperExecute? Getting started is easy—we’ve simplified the process so you can effortlessly launch your first test with three flexible approaches and experience the speed by yourself:
+Ready to experience the power of HyperExecute? Getting started is easy. We’ve simplified the process so you can effortlessly launch your first test with three flexible approaches and experience the speed by yourself:
 
 :::note RUN SAMPLE TEST
 <Tabs>

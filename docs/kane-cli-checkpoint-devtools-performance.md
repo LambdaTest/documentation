@@ -2,7 +2,7 @@
 id: kane-cli-checkpoint-devtools-performance
 title: Performance Assertions
 sidebar_label: Performance
-description: "Verify Core Web Vitals and other performance metrics — LCP, CLS, INP, FCP, TTFB — captured during test execution."
+description: "Verify Core Web Vitals and other performance metrics (LCP, CLS, INP, FCP, TTFB) captured during test execution."
 keywords:
   - performance assertion
   - core web vitals
@@ -45,7 +45,7 @@ Performance assertions let you verify [Core Web Vitals](https://web.dev/articles
 
 ## How Capture Works
 
-Performance data is **navigation-based** — metrics are measured for the most recent page navigation:
+Performance data is **navigation-based**. Metrics are measured for the most recent page navigation:
 
 - **Automatic measurement**: KaneAI uses the [web-vitals](https://github.com/GoogleChrome/web-vitals) library to capture metrics
 - **Per-navigation scope**: Metrics reflect the last full page load. If you navigate to a new page, the metrics reset for that navigation
@@ -53,7 +53,7 @@ Performance data is **navigation-based** — metrics are measured for the most r
 
 ### What This Means for Your Tests
 
-- Performance metrics describe the **last navigation** — if you navigate to Page A then Page B, the metrics reflect Page B
+- Performance metrics describe the **last navigation**. If you navigate to Page A then Page B, the metrics reflect Page B
 - Place performance assertions **after** the page you want to measure has fully loaded
 - Use a wait step if the page needs time to settle before measuring
 
@@ -61,11 +61,11 @@ Performance data is **navigation-based** — metrics are measured for the most r
 
 | Metric | What It Measures | Good Threshold | Learn More |
 |--------|-----------------|----------------|------------|
-| **LCP** | Largest Contentful Paint — when the largest visible element finishes rendering | < 2,500ms | [web.dev/lcp](https://web.dev/articles/lcp) |
-| **CLS** | Cumulative Layout Shift — visual stability, how much the page layout shifts | < 0.1 | [web.dev/cls](https://web.dev/articles/cls) |
-| **INP** | Interaction to Next Paint — responsiveness to user input | < 200ms | [web.dev/inp](https://web.dev/articles/inp) |
-| **FCP** | First Contentful Paint — when the first content appears on screen | < 1,800ms | [web.dev/fcp](https://web.dev/articles/fcp) |
-| **TTFB** | Time to First Byte — server response time | < 800ms | [web.dev/ttfb](https://web.dev/articles/ttfb) |
+| **LCP** | Largest Contentful Paint: when the largest visible element finishes rendering | < 2,500ms | [web.dev/lcp](https://web.dev/articles/lcp) |
+| **CLS** | Cumulative Layout Shift: visual stability, how much the page layout shifts | < 0.1 | [web.dev/cls](https://web.dev/articles/cls) |
+| **INP** | Interaction to Next Paint: responsiveness to user input | < 200ms | [web.dev/inp](https://web.dev/articles/inp) |
+| **FCP** | First Contentful Paint: when the first content appears on screen | < 1,800ms | [web.dev/fcp](https://web.dev/articles/fcp) |
+| **TTFB** | Time to First Byte: server response time | < 800ms | [web.dev/ttfb](https://web.dev/articles/ttfb) |
 
 > **Note**: Not all metrics are available for every page. INP requires user interaction to trigger. Some metrics may be `null` if the browser hasn't measured them yet.
 
@@ -96,5 +96,5 @@ If LCP is under 2500ms then continue, else report performance issue
 ## Tips
 
 - **Wait for load**: Place a wait step before performance assertions to ensure the page has fully loaded and metrics are available
-- **Navigate first**: Metrics are per-navigation — make sure you've navigated to the target page before asserting
+- **Navigate first**: Metrics are per-navigation. Make sure you've navigated to the target page before asserting
 - **Not all metrics are instant**: CLS accumulates over time, INP requires interaction. LCP and FCP are typically available after the page visually completes loading

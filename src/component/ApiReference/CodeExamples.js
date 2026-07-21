@@ -74,6 +74,57 @@ function CodeHighlight({ code, language }) {
   );
 }
 
+// One stacked code panel — title bar with copy button (and optional language
+// selector on the first panel of a multi-variant code section), code body below.
+function CodePanel({
+  title, code, language,
+  showLangSelector, selectedLang, setSelectedLang,
+  langDropdownOpen, setLangDropdownOpen, closeLangDropdown, langBtnRef,
+  onCopy,
+}) {
+  const [copied, setCopied] = useState(false);
+  function handleCopy() {
+    onCopy(setCopied);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  }
+  return (
+    <div style={{ border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '12px', overflow: 'hidden' }}>
+      <div className="flex items-center gap-2 px-4 py-2.5" style={{ background: 'var(--ifm-color-emphasis-100)', borderBottom: '1px solid var(--ifm-color-emphasis-200)' }}>
+        <span className="flex-1 text-sm font-medium text-gray-900 dark:text-gray-100 truncate">{title}</span>
+        {showLangSelector && (
+          <>
+            <LangSelectorButton
+              selectedLang={selectedLang}
+              open={langDropdownOpen}
+              onClick={() => setLangDropdownOpen((o) => !o)}
+              btnRef={langBtnRef}
+            />
+            <LangDropdownPortal
+              open={langDropdownOpen}
+              anchorRef={langBtnRef}
+              langs={LANGUAGES}
+              selected={selectedLang}
+              onSelect={setSelectedLang}
+              onClose={closeLangDropdown}
+            />
+          </>
+        )}
+        <button
+          onClick={handleCopy}
+          className="p-1.5 rounded-md border-0 bg-transparent appearance-none cursor-pointer text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+          aria-label="Copy code"
+        >
+          {copied ? <CheckIcon /> : <CopyIcon />}
+        </button>
+      </div>
+      <div style={{ background: 'var(--ifm-background-color)' }}>
+        <CodeHighlight code={code} language={language} />
+      </div>
+    </div>
+  );
+}
+
 function formatResponse(value) {
   if (value == null) return '';
   if (typeof value === 'string') {
@@ -99,8 +150,28 @@ export default function CodeExamples({ endpoint, selectedLang: selectedLangProp,
 
   if (!endpoint) return null;
 
+  // When the endpoint ships requestBody.variants (e.g. PUT folder rename/move),
+  // render one code panel per variant stacked vertically. Each panel gets the
+  // variant's example + properties as a shimmed endpoint so the snippet matches
+  // that payload shape. Plain endpoints render a single panel as before.
+  const variants = endpoint.requestBody?.variants;
+  const summary = endpoint.name || endpoint.summary || '';
+  const codePanels = (variants && variants.length > 0)
+    ? variants.map((v) => ({
+        title: `${summary} (${v.name})`,
+        code: generateCodeExample(
+          {
+            ...endpoint,
+            requestBody: { ...endpoint.requestBody, properties: v.properties, example: v.example },
+          },
+          selectedLang,
+        ),
+      }))
+    : [{ title: endpoint.name, code: generateCodeExample(endpoint, selectedLang) }];
   const langDef = LANGUAGES.find((l) => l.label === selectedLang) || LANGUAGES[0];
-  const code = generateCodeExample(endpoint, selectedLang);
+  // Keep `code` available for the existing single-pane copy handler (used by
+  // the first panel's copy button when there are no variants).
+  const code = codePanels[0].code;
 
   const responses = endpoint.responses || {};
   const responseTabs = Object.keys(responses).filter(
@@ -129,36 +200,25 @@ export default function CodeExamples({ endpoint, selectedLang: selectedLangProp,
 
   return (
     <div className="space-y-4">
-      {/* Code Examples Panel */}
-      <div style={{ border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '12px', overflow: 'hidden' }}>
-        <div className="flex items-center gap-2 px-4 py-2.5" style={{ background: 'var(--ifm-color-emphasis-100)', borderBottom: '1px solid var(--ifm-color-emphasis-200)' }}>
-          <span className="flex-1 text-sm font-medium text-gray-900 dark:text-gray-100 truncate">{endpoint.name}</span>
-          <LangSelectorButton
-            selectedLang={selectedLang}
-            open={langDropdownOpen}
-            onClick={() => setLangDropdownOpen((o) => !o)}
-            btnRef={langBtnRef}
-          />
-          <LangDropdownPortal
-            open={langDropdownOpen}
-            anchorRef={langBtnRef}
-            langs={LANGUAGES}
-            selected={selectedLang}
-            onSelect={setSelectedLang}
-            onClose={closeLangDropdown}
-          />
-          <button
-            onClick={copyCode}
-            className="p-1.5 rounded-md border-0 bg-transparent appearance-none cursor-pointer text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-            aria-label="Copy code"
-          >
-            {codeCopied ? <CheckIcon /> : <CopyIcon />}
-          </button>
-        </div>
-        <div style={{ background: 'var(--ifm-background-color)' }}>
-          <CodeHighlight code={code} language={langDef.prism} />
-        </div>
-      </div>
+      {/* Code Examples Panel(s). When the endpoint has variants we render one
+          panel per variant, stacked vertically. The language selector lives in
+          the first panel's header and applies to all panels. */}
+      {codePanels.map((panel, idx) => (
+        <CodePanel
+          key={panel.title}
+          title={panel.title}
+          code={panel.code}
+          language={langDef.prism}
+          showLangSelector={idx === 0}
+          selectedLang={selectedLang}
+          setSelectedLang={setSelectedLang}
+          langDropdownOpen={langDropdownOpen}
+          setLangDropdownOpen={setLangDropdownOpen}
+          closeLangDropdown={closeLangDropdown}
+          langBtnRef={idx === 0 ? langBtnRef : null}
+          onCopy={(setCopied) => copyText(panel.code, setCopied)}
+        />
+      ))}
 
       {/* Response Panel */}
       {responseTabs.length > 0 && (

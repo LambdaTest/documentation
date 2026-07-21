@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # How to Integrate TestMu AI With n8n
 ***
 
-If you use n8n to automate workflows between apps, you can give those workflows access to a real, cloud-hosted browser by adding the TestMu AI Agent node. The node connects your workflows to 3,000+ browser and OS environments, with no local driver setup or infrastructure to manage. It installs once from the n8n Community Nodes panel, and once installed, it works in any workflow alongside n8n's 1,000+ built-in integrations.
+If you use n8n to automate workflows between apps, you can give those workflows access to a real, cloud-hosted browser by adding the TestMu AI Agent node. The node connects your workflows to 3,000+ browser and OS environments, with no local driver setup or infrastructure to manage. It is available in n8n's built-in verified nodes panel and works in any workflow alongside n8n's 1,000+ built-in integrations.
 
 
 ## Prerequisites
@@ -54,8 +54,8 @@ Before you install the node, confirm you have the following in place.
 
 1. A TestMu AI account. [Sign up for a free TestMu AI account](https://www.testmuai.com/register/) if you do not have one.
 2. An n8n account on n8n Cloud or a self-hosted n8n instance running n8n 1.0 or later. 
-3. Admin access on the n8n instance to install community nodes, or permission from your instance admin to do so.
-4. Before installing, check the **TestMu AI Agent** listing in the [n8n Community Nodes directory](https://www.n8n.io/integrations/) for the current version number and any reported compatibility notes.
+3. Admin access on the n8n instance, or permission from your instance admin to install nodes.
+4. Before installing, check the **TestMu AI Agent** listing in the [n8n integrations directory](https://www.n8n.io/integrations/) for the current version number and any reported compatibility notes.
 
 ## How to Add TestMu AI Credentials to n8n
 ***
@@ -100,12 +100,12 @@ Installing the node once makes it available to every workflow on the instance. Y
 
 
 :::note
-If the node does not appear in search results, go to **Settings > Community Nodes** and confirm that community nodes are enabled on your instance. If the toggle is missing, your instance admin has restricted community node access - ask them to enable it or install the node on your behalf.
+If the node does not appear in search results, confirm you are searching in the built-in verified nodes panel. The TestMu AI Agent node is a verified node and does not require community node access to install.
 :::
 
 **Step 4:** Click **Install node** on the confirmation prompt. n8n downloads the node and makes it available to all workflows on the instance.
 
-<img loading="lazy" src={require('../assets/images/n8n-integration/n8n-testmu-ai-node-details-install.webp').default} alt="n8n install confirmation prompt for the TestMu AI Agent community node" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/n8n-integration/n8n-testmu-ai-node-details-install.webp').default} alt="n8n install confirmation prompt for the TestMu AI Agent verified node" className="doc_img"/>
 
 **Step 5:** The **TestMu AI Agent** node now appears in the **Nodes panel**, ready to add to any workflow on the instance.
 
@@ -148,6 +148,12 @@ Now click **Execute step** to run the workflow. TestMu AI opens a real browser i
 <img loading="lazy" src={require('../assets/images/n8n-integration/n8n-testmuai-test-execution.webp').default} alt="TestMu AI Web Automation dashboard showing the test session result from the n8n workflow" className="doc_img"/>
 
 
+
+:::tip
+Running n8n on a local or self-hosted instance? The [`n8n-nodes-browsercloud`](https://www.npmjs.com/package/n8n-nodes-browsercloud) community package gives you two additional nodes: a browser automation node and a script runner that runs test scripts directly on TestMu AI infrastructure.
+
+Both use the browsercloud SDK, which executes faster and makes fewer server calls than the verified agent node. Install it via **Settings > Community Nodes** by entering the package name `n8n-nodes-browsercloud`. These nodes are not available on n8n Cloud.
+:::
 
 ## How to Uninstall the TestMu AI Agent Node
 ***

@@ -12,6 +12,12 @@
 /src/data/api/all-apis.json
 /src/pages/api-doc/*/
 
+# Auto-generated docs Markdown + llms.txt index + skills discovery index
+# (regenerated on every build by scripts/generate-static-md.js,
+
+
+/static/.well-known/
+
 # Claude
 CLAUDE.md
 

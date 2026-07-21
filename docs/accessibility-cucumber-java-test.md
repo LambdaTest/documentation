@@ -2,7 +2,7 @@
 id: accessibility-cucumber-java-test
 title: Cucumber (Java)
 sidebar_label: Cucumber (Java)
-description: Run Accessibility Automation with Java Cucumber and Selenium—hooks, step defs, shared driver, and Accessibility reports.
+description: "Run Accessibility Automation with Java Cucumber and Selenium: hooks, step defs, shared driver, and Accessibility reports."
 keywords:
   - TestMu AI
   - Accessibility

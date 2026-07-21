@@ -2,7 +2,7 @@
 id: accessibility-talkback-android
 title: TalkBack on Android
 sidebar_label: TalkBack on Android
-description: TalkBack on Android devices—enablement, gestures, and what to validate for mobile accessibility.
+description: "TalkBack on Android devices: enablement, gestures, and what to validate for mobile accessibility."
 slug: accessibility-talkback-android/
 url: https://www.testmuai.com/support/docs/accessibility-talkback-android/
 site_name: TestMu AI
@@ -21,7 +21,7 @@ Use TalkBack when validating Android accessibility behavior on mobile devices, e
 
 1. On the device, open **Settings → Accessibility → TalkBack** (path varies by OEM) and toggle **On**.
 2. Complete the **tutorial** gesture set (swipe right then up for default navigation) in a safe test build first.
-3. Enable **Developer options → Show layout bounds** only if your policy allows—helps compare focus rectangles with visuals.
+3. Enable **Developer options → Show layout bounds** only if your policy allows, helps compare focus rectangles with visuals.
 4. Open your app under test; swipe **right** to move to the next focusable element, **double-tap** to activate.
 5. Use **local context menu** (swipe up then right) to jump by headings or controls when available.
 

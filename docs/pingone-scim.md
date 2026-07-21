@@ -52,7 +52,7 @@ In this guide, we will walk through integrating PingOne SCIM provisioning with <
 
 ## Integrating SCIM User Provisioning with PingOne
 
-### Step 1 — Copy SCIM Credentials from <BrandName />
+### Step 1: Copy SCIM Credentials from <BrandName />
 
 Sign in to your <BrandName /> account. Don't have an account, [register for free](https://www.testmuai.com/register/).
 
@@ -60,7 +60,7 @@ Head to **Settings** > **Organization Settings** > **Security** > **SCIM Provisi
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/10.png').default} alt="Copy SCIM Base URL and Bearer Token from LambdaTest" className="doc_img"/>
 
-### Step 2 — Create a SAML Application in PingOne (if not already done)
+### Step 2: Create a SAML Application in PingOne (if not already done)
 
 If you already have a PingOne SAML application configured for <BrandName /> SSO, skip to [Step 3](#step-3).
 
@@ -70,7 +70,7 @@ Enter a name (e.g., your org name), select **SAML Application**, and click **Sav
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/3.png').default} alt="Create SAML Application in PingOne" className="doc_img"/>
 
-### Step 3 — Create SCIM Provisioning Connection {#step-3}
+### Step 3: Create SCIM Provisioning Connection {#step-3}
 
 In PingOne, go to **Integrations** > **Provisioning** > **Connections** tab.
 
@@ -92,7 +92,7 @@ Enter a **Name** for the connection (e.g., your org name) and click **Next**.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/9.png').default} alt="Name the SCIM connection" className="doc_img"/>
 
-### Step 4 — Configure Authentication
+### Step 4: Configure Authentication
 
 | Field | Value |
 |---|---|
@@ -108,7 +108,7 @@ Click **Test Connection** to verify, then click **Next**.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/12.png').default} alt="Configure SCIM authentication in PingOne" className="doc_img"/>
 
-### Step 5 — Configure Preferences
+### Step 5: Configure Preferences
 
 | Field | Value |
 |---|---|
@@ -118,9 +118,9 @@ Click **Test Connection** to verify, then click **Next**.
 | **Group Membership Handling** | `Merge` (recommended) |
 
 Enable the following user actions:
-- **Create Users** — checked
-- **Update Users** — checked
-- **Disable Users** — checked
+- **Create Users**: checked
+- **Update Users**: checked
+- **Disable Users**: checked
 
 Click **Save**.
 
@@ -130,7 +130,7 @@ Click **Save**.
 Add `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User` to the **Custom Attribute Schema URNs** field to enable sending `OrganizationRole` and `LambdatestGroup` from PingOne.
 :::
 
-### Step 6 — Create a User Provisioning Rule
+### Step 6: Create a User Provisioning Rule
 
 Go to the **Rules** tab in your provisioning connection and click **Add Rule**.
 
@@ -155,7 +155,7 @@ Review the **Attribute Mapping**. PingOne maps the following attributes by defau
 | Formatted | `formattedName` |
 
 :::warning Important
-Make sure **Email Address** is mapped to **`userName`**. This is required — <BrandName /> uses `userName` as the unique identifier for SCIM users, and it must be a valid email address.
+Make sure **Email Address** is mapped to **`userName`**. This is required. <BrandName /> uses `userName` as the unique identifier for SCIM users, and it must be a valid email address.
 :::
 
 Click **Save** to create the rule.
@@ -178,7 +178,7 @@ Group provisioning is **not enabled by default**. Before proceeding, reach out t
 
 Once group provisioning is enabled and user provisioning is working, follow these steps to push PingOne groups to <BrandName />.
 
-### Step 1 — Add Groups to Your Provisioning Rule in PingOne
+### Step 1: Add Groups to Your Provisioning Rule in PingOne
 
 Go back to your SCIM provisioning connection in PingOne > **Rules** tab > edit your provisioning rule.
 
@@ -190,7 +190,7 @@ Select the groups you want to push and click **Save**.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/16.png').default} alt="Select groups to provision" className="doc_img"/>
 
-### Step 2 — Configure Mapping Rules in <BrandName />
+### Step 2: Configure Mapping Rules in <BrandName />
 
 In <BrandName />, go to **Settings** > **Organization Settings** > **SCIM Group Provisioning** > **Mapping Rules** tab.
 
@@ -199,9 +199,9 @@ Click **Add Mapping Rule** to create a rule that determines how incoming groups 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/1.png').default} alt="Mapping rules tab in LambdaTest" className="doc_img"/>
 
 Configure the rule:
-- **Pattern** — match group names by prefix, regex, or match all
-- **Target Entity Type** — Team, Concurrency Group, or Sub-Organization
-- **Auto Approve** — toggle ON to automatically approve matching groups
+- **Pattern**: match group names by prefix, regex, or match all
+- **Target Entity Type**: Team, Concurrency Group, or Sub-Organization
+- **Auto Approve**: toggle ON to automatically approve matching groups
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/pingone/2.png').default} alt="Add mapping rule modal" className="doc_img"/>
 
@@ -209,7 +209,7 @@ Configure the rule:
 Set a **Match All → Team** rule with auto-approve enabled to automatically map all incoming groups to teams without manual intervention.
 :::
 
-### Step 3 — Verify Groups in <BrandName />
+### Step 3: Verify Groups in <BrandName />
 
 Once PingOne pushes the groups, go to **SCIM Group Provisioning** > **SCIM Groups** tab to see the synced groups.
 

@@ -2,7 +2,7 @@
 id: kane-cli-checkpoints
 title: Checkpoints
 sidebar_label: Overview
-description: "Checkpoints are verification points KaneAI evaluates during test execution — assert conditions, branch on results, or extract values for later use."
+description: "Checkpoints are verification points KaneAI evaluates during test execution: assert conditions, branch on results, or extract values for later use."
 keywords:
   - kane cli checkpoints
   - assertions
@@ -45,7 +45,7 @@ Checkpoints are verification points that KaneAI evaluates during test execution.
 
 | Type | What it does |
 |------|-------------|
-| **Assertion** | Verify a condition is true — fails the test if not |
+| **Assertion** | Verify a condition is true, fails the test if not |
 | **If/Else** | Branch execution based on a condition |
 | **Extraction** | Store a value for use in later steps |
 
@@ -61,7 +61,7 @@ Each checkpoint uses an analyze method to determine *where* to look for the data
 | [Textual (DOM)](/support/docs/kane-cli-checkpoint-textual/) | Page DOM elements | Element states (disabled, checked), CSS properties, HTML attributes |
 | [URL](/support/docs/kane-cli-checkpoint-url/) | Browser URL bar | URL path, query params, redirects |
 | [Title](/support/docs/kane-cli-checkpoint-title/) | Page title | Document title verification |
-| [DevTools](/support/docs/kane-cli-checkpoint-devtools/) | Browser internals | Network traffic, console logs, performance, cookies, localStorage |
+| [DevTools](/support/docs/kane-cli-checkpoint-devtools/) | Browser internals | Network traffic, console logs, performance, cookies, localStorage, clipboard |
 
 ## How to Use
 
@@ -77,6 +77,7 @@ Assert: no console errors                      → DevTools (Console)
 Assert: page LCP is under 2500ms               → DevTools (Performance)
 Assert: session cookie exists                  → DevTools (Cookies)
 Assert: auth_token exists in localStorage      → DevTools (localStorage)
+Assert: the clipboard has the copied link      → DevTools (Clipboard)
 ```
 
 Extractions work the same way:
@@ -103,8 +104,8 @@ Assertions support these comparison operators:
 
 ## Learn More
 
-- [Visual Assertions](/support/docs/kane-cli-checkpoint-visual/) — screenshot-based text and visibility checks
-- [Textual (DOM) Assertions](/support/docs/kane-cli-checkpoint-textual/) — element states and attributes
-- [URL Assertions](/support/docs/kane-cli-checkpoint-url/) — URL-based checks
-- [Title Assertions](/support/docs/kane-cli-checkpoint-title/) — page title checks
-- [DevTools Assertions](/support/docs/kane-cli-checkpoint-devtools/) — network, console, performance, cookies, localStorage
+- [Visual Assertions](/support/docs/kane-cli-checkpoint-visual/): screenshot-based text and visibility checks
+- [Textual (DOM) Assertions](/support/docs/kane-cli-checkpoint-textual/): element states and attributes
+- [URL Assertions](/support/docs/kane-cli-checkpoint-url/): URL-based checks
+- [Title Assertions](/support/docs/kane-cli-checkpoint-title/): page title checks
+- [DevTools Assertions](/support/docs/kane-cli-checkpoint-devtools/): network, console, performance, cookies, localStorage, clipboard

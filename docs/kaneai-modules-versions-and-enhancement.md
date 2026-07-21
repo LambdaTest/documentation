@@ -3,7 +3,7 @@ id: kaneai-modules-versions-and-enhancement
 title: Module Versioning and Enhancements
 hide_title: false
 sidebar_label: Versioning and Enhancements
-description: Learn how module versioning works in KaneAI — track changes, compare versions, and revert to previous versions of your test modules.
+description: Learn how module versioning works in KaneAI, track changes, compare versions, and revert to previous versions of your test modules.
 keywords:
   - module versioning
   - version history
@@ -55,14 +55,14 @@ For an overview of creating, using, and managing modules, see [Modules](/support
 
 ## How Versioning Works
 
-When you edit an existing module — for example, by adding, removing, or modifying a test step — KaneAI automatically increments the version number (e.g., from 1.1 to 1.2). You do not need to manually create versions.
+When you edit an existing module (for example, by adding, removing, or modifying a test step), KaneAI automatically increments the version number (e.g., from 1.1 to 1.2). You do not need to manually create versions.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image8.png').default} alt="version-increment" className="doc_img img_center"/>
 
 After a new version is created, test cases that use the module can either:
 
-- **Accept the new version** — Update the test case to use the latest module version
-- **Continue using the current version** — Keep the existing version without changes
+- **Accept the new version**: Update the test case to use the latest module version
+- **Continue using the current version**: Keep the existing version without changes
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image9.png').default} alt="version-selection" className="doc_img img_center"/>
 
@@ -91,7 +91,7 @@ You can compare any two versions of a module to see exactly what changed between
 
 1. Open the module and navigate to the **Version History** section.
 2. Select the two versions you want to compare.
-3. Review the differences — added, removed, or modified steps are highlighted.
+3. Review the differences: added, removed, or modified steps are highlighted.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image3.png').default} alt="compare-versions" className="doc_img img_center"/>
 
@@ -123,5 +123,5 @@ From this tab you can navigate directly to individual test case summary pages.
 
 ## Related Guides
 
-- [Modules](/support/docs/kane-ai-modules/) — Create, use, and manage modules
-- [Bulk Module Update](/support/docs/kaneai-bulk-module-update/) — Update a module version across multiple test cases in one action
+- [Modules](/support/docs/kane-ai-modules/): Create, use, and manage modules
+- [Bulk Module Update](/support/docs/kaneai-bulk-module-update/): Update a module version across multiple test cases in one action

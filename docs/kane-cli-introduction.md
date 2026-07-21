@@ -1,6 +1,6 @@
 ---
 id: kane-cli-introduction
-title: Kane CLI
+title: Kane CLI Documentation - Getting Started
 sidebar_label: Introduction
 description: "Kane CLI is an AI-powered command-line tool that runs browser automation tests in plain English: from your terminal, IDE, or CI pipeline."
 keywords:
@@ -60,6 +60,18 @@ kane-cli login
 # Run your first test
 kane-cli run --url https://example.com "Click the 'More information' link and verify the page loads"
 ```
+
+## Supported IDEs
+
+Kane CLI runs from the integrated terminal of your editor, so you can drive browser tests without leaving your development environment. It is supported in:
+
+* Cursor
+* Antigravity
+* VS Code
+* Codex
+* Kiro (AWS)
+* Eclipse-based IDEs
+* Web-based IDEs
 
 ## Three Modes
 

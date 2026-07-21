@@ -1,7 +1,7 @@
 ---
 id: playwright-ios-guide
 title: How To Run Playwright Tests On TestMu AI iOS Devices
-sidebar_label: Test on iOS Device
+sidebar_label: Test on iOS
 description: Here you can learn how to run Playwright tests on the TestMu AI iOS real devices.
 keywords:
   - playwright testing
@@ -54,9 +54,15 @@ Playwright test automation on real iOS devices is now supported on <BrandName />
 
 This guide will cover the basics of getting started with Playwright testing on iOS devices on the <BrandName /> platform.
 
+:::info Currently in BETA
+
+Playwright testing on real iOS devices is currently in **Beta**. To enable this feature for your organization, please contact your <span className="doc__lt" onClick={() => window.openLTChatWidget()}>account team</span> to have the feature flag turned on.
+
+:::
+
 :::tip Supported Versions
-- Playwright versions **v1.53.0** and above (until **v1.57.0**) are supported for iOS real device testing.
-- All languages use the **stock Playwright packages** — no custom forks or client-side changes required.
+- Playwright versions **v1.53.0** and above (until **v1.6.0**) are supported for iOS real device testing.
+- All languages use the **stock Playwright packages**, with no custom forks or client-side changes required.
 - Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 :::
 
@@ -437,7 +443,7 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Playwright 
 
 :::note
 
-- Safari is the supported browser for iOS real device testing. All four languages — **Node.js, Java, C#, and Python** — are supported using stock Playwright packages.
+- Safari is the supported browser for iOS real device testing. All four languages (**Node.js, Java, C#, and Python**) are supported using stock Playwright packages.
 
 - Playwright testing on real iOS devices is currently supported on latest iOS versions (iOS 17, iOS 18, and iOS 26) across both iPhones and iPads.
 

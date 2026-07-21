@@ -15,10 +15,10 @@ keywords:
   - smartui pdf
   - feature flags
   - a/b test ui
-url: https://www.testmu.ai/support/docs/smartui-ab-testing-variations/
+url: https://www.testmuai.com/support/docs/smartui-ab-testing-variations/
 site_name: TestMu AI
 slug: smartui-ab-testing-variations/
-canonical: https://www.testmu.ai/support/docs/smartui-ab-testing-variations/
+canonical: https://www.testmuai.com/support/docs/smartui-ab-testing-variations/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # A/B Testing and Baseline Variations
 
-In <BrandName /> **SmartUI**, **A/B testing** lets one **screenshot or PDF page** keep **multiple approved reference images** (called **variations**). Each new capture is compared against **every active variation**; the UI shows which one **matched** (closest visual agreement). That cuts false failures when the same page can look different but still be correct—A/B tests, feature flags, themes, locales, or PDF layout variants—without splitting into separate names in automation or upload flows.
+In <BrandName /> **SmartUI**, **A/B testing** lets one **screenshot or PDF page** keep **multiple approved reference images** (called **variations**). Each new capture is compared against **every active variation**; the UI shows which one **matched** (closest visual agreement). That cuts false failures when the same page can look different but still be correct (A/B tests, feature flags, themes, locales, or PDF layout variants) without splitting into separate names in automation or upload flows.
 
 This guide walks through the **review** flow in the SmartUI dashboard: the **A/B** panel, the **default** variation, **Add new**, **Matched with**, managing variations, and **ending** A/B by picking a single winner.
 
@@ -60,7 +60,7 @@ A/B variations use the **same in-product panel** whether the asset is a **standa
 | Capture type | Typical source | Notes |
 |--------------|----------------|--------|
 | **Web / app screenshots** | Automation (Selenium, Playwright, Cypress, Hooks, SDK, CLI), manual capture, Storybook, and similar | Use a stable **screenshot name** per page or state; open that screenshot in a build to manage variations. |
-| **PDF pages** | [PDF comparison](/support/docs/smartui-pdf-comparison/) projects (upload, Java SDK, CLI, or API) | A/B applies **per PDF page** in the build—the same **Add new**, **Matched with**, and **End A/B testing** controls as for web screenshots. |
+| **PDF pages** | [PDF comparison](/support/docs/smartui-pdf-comparison/) projects (upload, Java SDK, CLI, or API) | A/B applies **per PDF page** in the build: the same **Add new**, **Matched with**, and **End A/B testing** controls as for web screenshots. |
 
 You do **not** need a separate project type for A/B. Create or open the screenshot or PDF page in your existing SmartUI build, then use the **A/B** icon on that asset’s review screen.
 
@@ -73,7 +73,7 @@ Set up PDF ingestion first if you are new to PDF comparison: [PDF Comparison in 
 | Term | Meaning |
 |------|--------|
 | **Variation** | An approved reference image for this screenshot. The **default** variation tracks the platform baseline; you can add up to **19** more. |
-| **Default variation** | The reference tied to the **current SmartUI baseline** for this build (dynamic—not a user-created slot you rename as “default”). |
+| **Default variation** | The reference tied to the **current SmartUI baseline** for this build (dynamic, not a user-created slot you rename as “default”). |
 | **Matched with** | The variation that best matches the latest capture (typically lowest diff % within threshold). |
 | **End A/B testing** | Pick one variation as the **only** baseline going forward; other variations are removed. |
 
@@ -121,7 +121,7 @@ For **build-level** baselines (branches, approvals, Smart Git), see [Baseline Ma
 - A <BrandName /> account with **SmartUI** access and an existing **project** with at least one build.
 - At least one **screenshot** or **PDF page** in that build to open in review.
 - Permission to **review** and update baselines in that project.
-- No extra automation flags are required to **start** A/B from the UI—for web tests, keep the same **`screenshotName`**; for PDFs, keep the same page identity in your upload or SDK flow.
+- No extra automation flags are required to **start** A/B from the UI: for web tests, keep the same **`screenshotName`**; for PDFs, keep the same page identity in your upload or SDK flow.
 
 ---
 
@@ -144,7 +144,7 @@ When the pane opens, you see the **default variation**:
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-defaultvariation.png').default} alt="A/B testing panel showing the default variation derived from the current build baseline" width="960" className="doc_img" />
 
 - It reflects the **current baseline** for this screenshot in this **build context**, per your project’s **SmartUI baseline rules** (for example the latest **approved** reference for that build strategy).
-- It is **dynamic**: if the governing baseline changes (approval, move to baseline, branch rules), the default variation **follows** that reference—it is not a separate image you pin manually.
+- It is **dynamic**: if the governing baseline changes (approval, move to baseline, branch rules), the default variation **follows** that reference; it is not a separate image you pin manually.
 
 You **cannot** assign another variation to replace this **default** slot. **Default** means the **platform baseline** for this screenshot, not a renameable card in your list.
 
@@ -172,7 +172,7 @@ When a new build processes this screenshot, the pane shows **Matched with** and 
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/a-b-testing/a-b-test-matchedwithvariation.png').default} alt="Matched with label in the A/B panel showing which variation the latest capture matched" width="960" className="doc_img" />
 
-Only **one** variation is shown as the match for triage at a time—the best fit for that capture.
+Only **one** variation is shown as the match for triage at a time, the best fit for that capture.
 
 :::note Unmatched captures
 If **no** variation is within threshold, the screenshot may still show as **changes found** or unmatched. Add a new variation from that capture, adjust thresholds, or **end A/B** once you know the intended winner. See [Mismatch Thresholds](/support/docs/smartui-mismatch-thresholds/).

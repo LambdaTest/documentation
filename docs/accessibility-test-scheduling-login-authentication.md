@@ -65,7 +65,7 @@ If the site is not reachable from the public internet, combine login with **loca
 
 ### From the scheduler (create or edit)
 
-1. In **Create scan** or **Edit scan**, go to the step where you **add URLs** (manual URLs, CSV, sitemap, or crawler—depending on your setup).
+1. In **Create scan** or **Edit scan**, go to the step where you **add URLs** (manual URLs, CSV, sitemap, or crawler, depending on your setup).
 2. Expand **Advanced options**.
 3. Under login settings, use **Add** next to **Add login configurations** to open the modal.
 
@@ -85,9 +85,9 @@ In the modal:
 1. Choose **New configuration** (or equivalent) to open the editor.
 2. Enter a **configuration name** you will recognize in the list (for example `Staging Microsoft login`).
 3. Select **Authentication type**:
-   - **Basic** — HTTP Basic auth (no HTML form).
-   - **Form** — Username and password on **one** page.
-   - **Multi-page** — Username step, then **Next**, then password (same or different URL).
+   - **Basic**: HTTP Basic auth (no HTML form).
+   - **Form**: Username and password on **one** page.
+   - **Multi-page**: Username step, then **Next**, then password (same or different URL).
 
 4. Fill the fields for that type (see tables below) and **Save**.
 
@@ -101,7 +101,7 @@ Confirm every CSS selector in Chrome (or Edge) DevTools on the real login page: 
 
 ### Basic authentication
 
-Use when the server responds with **HTTP Basic** authentication (browser-style username/password challenge), not when you only have a custom HTML login page—in that case use **Form** or **Multi-page**.
+Use when the server responds with **HTTP Basic** authentication (browser-style username/password challenge), not when you only have a custom HTML login page. In that case use **Form** or **Multi-page**.
 
 | Field | Required | Description |
 |--------|----------|-------------|
@@ -129,9 +129,9 @@ Use when, after opening the **Login Page URL**, the username field, password fie
 
 ### Multi-page authentication
 
-Use for **sequential** flows: enter the username, click **Next** (or equivalent), then enter the password—common with many enterprise identity providers.
+Use for **sequential** flows: enter the username, click **Next** (or equivalent), then enter the password, common with many enterprise identity providers.
 
-#### Step 1 — Login or username page
+#### Step 1: Login or username page
 
 | Field | Required | Description |
 |--------|----------|-------------|
@@ -142,7 +142,7 @@ Use for **sequential** flows: enter the username, click **Next** (or equivalent)
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/multi-page-username.png').default} className="doc_img" alt="Multi-page login step one: username page fields" />
 
-#### Step 2 — Password page
+#### Step 2: Password page
 
 | Field | Required | Description |
 |--------|----------|-------------|
@@ -153,7 +153,7 @@ Use for **sequential** flows: enter the username, click **Next** (or equivalent)
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/login/multi-page-password.png').default} className="doc_img" alt="Multi-page login step two: password page fields" />
 
-#### Step 3 — After login
+#### Step 3: After login
 
 | Field | Required | Description |
 |--------|----------|-------------|
@@ -173,9 +173,9 @@ Open **Login configurations** from the dashboard (or the same modal from a scan)
 
 ## Best practices
 
-- **Stable selectors** — Prefer `id`, `name`, `data-testid`, or short attribute-based selectors over long positional paths.
-- **Least privilege** — Use automation or QA accounts, not personal admin accounts.
-- **Post-login URL** — Point at a route that only appears after a successful login so failures are easier to interpret.
+- **Stable selectors**: Prefer `id`, `name`, `data-testid`, or short attribute-based selectors over long positional paths.
+- **Least privilege**: Use automation or QA accounts, not personal admin accounts.
+- **Post-login URL**: Point at a route that only appears after a successful login so failures are easier to interpret.
 
 ## Limitations
 
@@ -194,7 +194,7 @@ Use staging environments with simplified auth, or other supported access paths, 
 | Symptom | What to check |
 |--------|----------------|
 | Scan fails on the first URL | Correct profile selected; **Login Page URL** is the real start of the flow. |
-| Timeout or “element not found” | Selectors, spelling, or UI that loads late—verify in DevTools with throttling if needed. |
+| Timeout or “element not found” | Selectors, spelling, or UI that loads late. Verify in DevTools with throttling if needed. |
 | Multi-page fails after username | **Next Button CSS Selector** targets the visible control; add **Password Page URL** if the path changes. |
 | Works locally, fails on schedule | Cookie banners, geo restrictions, or MFA triggered for automated sessions. |
 

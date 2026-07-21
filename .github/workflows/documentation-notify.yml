@@ -1,0 +1,118 @@
+# =============================================================================
+# INSTALL THIS FILE IN: LambdaTest/documentation  ->  .github/workflows/documentation-notify.yml
+# (It does NOT belong in product-context's own .github/workflows — it is the
+#  *sender* that lives in the docs repo. It is kept here only as the canonical copy.)
+#
+# Purpose: when `stage` is updated (i.e. a PR merges into it), notify the
+#          product-context repo to re-crawl the affected product docs
+#          (Loop 2 of the auto-update system).
+#
+# Why `push` (not `pull_request: closed`):
+#   - A `push` to `stage` runs in the BASE repo context, so repository secrets
+#     are always available — including when the merged PR came from a fork.
+#     `pull_request` workflows do NOT receive secrets for fork PRs, which is the
+#     usual cause of "Parameter token or opts.auth is required".
+#   - A PR merge produces a push to `stage`, so this still fires once per merge
+#     (and also on any direct push to stage, which we also want to re-crawl).
+#
+# One-time setup in LambdaTest/documentation:
+#   Settings -> Secrets and variables -> Actions -> *Repository secrets* (NOT Environment)
+#     Name:  PRODUCT_CONTEXT_DISPATCH_TOKEN   (exact)
+#     Value: a fine-grained PAT / GitHub App token with contents:write (dispatch)
+#            on the product-context repo that hosts crawl-docs.yml.
+#   If you use an Organization secret instead, grant THIS repo access to it.
+#
+# Set DISPATCH_REPO below to the product-context repo that holds crawl-docs.yml
+# (the receiver). The token must have dispatch rights on THAT repo.
+# =============================================================================
+name: Notify product-context on docs merge
+
+on:
+  push:
+    branches: [stage]
+  # Optional: lets you test the dispatch by hand from the Actions tab.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DISPATCH_REPO: LambdatestIncPrivate/product-context   # <-- set to the repo holding crawl-docs.yml
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Preflight — ensure dispatch token is present
+        env:
+          DISPATCH_TOKEN: ${{ secrets.PRODUCT_CONTEXT_DISPATCH_TOKEN }}
+        run: |
+          if [ -z "$DISPATCH_TOKEN" ]; then
+            echo "::error::Secret PRODUCT_CONTEXT_DISPATCH_TOKEN is empty for this run."
+            echo "::error::Add it as a *Repository* secret on this repo (Settings → Secrets and variables → Actions)."
+            echo "::error::If it is an Organization secret, grant this repo access. Environment secrets are NOT used here."
+            exit 1
+          fi
+          echo "Dispatch token present."
+
+      - name: Checkout (for changed-file detection)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Derive changed product areas
+        id: products
+        run: |
+          # Determine the files changed by this push.
+          BEFORE='${{ github.event.before }}'
+          AFTER='${{ github.sha }}'
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            # First push to branch / manual run: just look at the tip commit.
+            FILES=$(git show --name-only --pretty=format: "$AFTER" || true)
+          else
+            FILES=$(git diff --name-only "$BEFORE" "$AFTER" || true)
+          fi
+          echo "Changed files:"; echo "$FILES"
+
+          PRODUCTS=""
+          add() { case ",$PRODUCTS," in *",$1,"*) ;; *) PRODUCTS="${PRODUCTS:+$PRODUCTS,}$1";; esac; }
+
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            case "$f" in
+              *kaneai*|*kane-ai*)                          add "KaneAI" ;;
+              *test-manager*|*test-management*)            add "Test Manager" ;;
+              *hyperexecute*)                              add "HyperExecute" ;;
+              *smartui*|*smart-ui*|*visual-regression*)    add "SmartUI" ;;
+              *insights*|*dashboard*|*analytics*|*widget*) add "Insights" ;;
+              *accessibility*)                             add "Accessibility Testing" ;;
+              *agent-to-agent*|*a2a*)                      add "Agent To Agent" ;;
+              *real-time*|*realtime*)                      add "Real Time" ;;
+              *real-device*)                               add "Real Device" ;;
+              *appium*|*virtual-device*|*app-automation*)  add "App Automation" ;;
+              *cypress*|*playwright*|*puppeteer*|*web-automation*) add "Web Automation" ;;
+              *scanner*)                                   add "Web Scanner" ;;
+              *tunnel*|*local*)                            add "Testing Locally" ;;
+              *sso*|*scim*|*security*|*settings*)          add "Settings and Security" ;;
+              *integration*|*ci-cd*)                       add "Integrations" ;;
+            esac
+          done <<< "$FILES"
+
+          # Fall back to a full crawl if nothing mapped (e.g. only nav/config changed).
+          [ -z "$PRODUCTS" ] && PRODUCTS="all"
+          echo "Mapped products: $PRODUCTS"
+          echo "list=$PRODUCTS" >> "$GITHUB_OUTPUT"
+
+      - name: Dispatch to product-context
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PRODUCT_CONTEXT_DISPATCH_TOKEN }}
+          repository: ${{ env.DISPATCH_REPO }}
+          event-type: documentation-updated
+          client-payload: |
+            {
+              "products": "${{ steps.products.outputs.list }}",
+              "source_commit": "${{ github.sha }}",
+              "pusher": "${{ github.actor }}",
+              "branch": "stage"
+            }

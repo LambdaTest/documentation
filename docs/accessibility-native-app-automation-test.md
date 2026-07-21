@@ -25,7 +25,7 @@ Use this page when your team **already runs Appium** for functional tests and wa
 
 ## Onboarding: first automated mobile accessibility run
 
-1. **Reuse a green Appium suite** without accessibility first—confirm install, locators, and hub connectivity.
+1. **Reuse a green Appium suite** without accessibility first: confirm install, locators, and hub connectivity.
 2. **Add accessibility capability** on the session (exact key names align with your Appium server version; mirror the examples in [Appium TestNG](/support/docs/accessibility-appium-testng/) or [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)).
 3. After each **stable screen** (post-navigation waits), call:
 
@@ -50,6 +50,7 @@ This page is for direct Appium-based automation. If you are authoring the flow i
 
 ## Related docs
 
+- [Scan Configurations via Capabilities (Automation)](/support/docs/accessibility-automation-scan-configurations/)
 - [Appium TestNG](/support/docs/accessibility-appium-testng/)
 - [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)
 - [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/)

@@ -1,0 +1,199 @@
+# Playwright Testing With Playwright Test Runner
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Playwright Test Runner is used for end-to-end automated testing of websites and web apps across all major browsers. You can run parallel tests, get context isolation out of the box, capture videos, screenshots, and other test artifacts on test failure, and use fixtures with Playwright test runner.
+
+TestMu AI enables you to run Playwright tests with the Playwright test runner across 40+ real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the TestMu AI platform using the Playwright test runner.
+
+## Prerequisites
+
+>Note: All the code samples in this documentation can be found in the TestMu AI's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+ View on GitHub
+
+1. Clone the TestMu AI-Playwright repository on your system.
+
+2. Install the npm dependencies.
+
+```
+npm install
+```
+
+3. In order to run your Playwright tests with Playwright test runner, you will need to set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+
+**Windows**
+
+```js
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+
+**macOS/Linux**
+
+```js
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
+
+## Running Playwright Tests With Playwright Test Runner
+
+In your `playwright.config.js` file, add the browserName, browserVersion, and platform in the below projects configuration.
+
+```js
+const { devices } = require('@playwright/test')
+// Playwright config to run tests on LambdaTest platform and local
+const config = {
+testDir: 'tests',
+testMatch: '**/*.spec.js',
+timeout: 60000,
+projects: [
+// -- LambdaTest Config --
+// name in the format: browserName:browserVersion:platform@lambdatest
+// Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+// Use additional configuration options provided by Playwright if required: https://playwright.dev/docs/api/class-testconfig
+{
+name: 'chrome:latest:MacOS Catalina@lambdatest',
+use: {
+viewport: { width: 1920, height: 1080 }
+}
+},
+{
+name: 'MicrosoftEdge:90:Windows 10@lambdatest',
+use: {
+...devices['iPhone 12 Pro Max']
+}
+},
+]
+}
+
+module.exports = config
+```
+Pass the below command to run the test.
+
+```
+npm run test
+```
+
+Visit the TestMu AI Automation dashboard to view the results of your executed test with Playwright test runner.
+
+## Testing With Playwright Test When Migrating To TestMu AI
+
+If you are migrating test suites to TestMu AI, then follow the below steps.
+
+1. Add the `lambdatest-setup.js` to your project route.
+
+2. Include the `playwright.config.js` in your project in the below format.
+
+```js
+const { devices } = require('@playwright/test')
+
+// Playwright config to run tests on LambdaTest platform and local
+const config = {
+testDir: 'tests',
+testMatch: '**/*.spec.js',
+timeout: 60000,
+use: {
+viewport: null
+},
+projects: [
+// -- LambdaTest Config --
+// name in the format: browserName:browserVersion:platform@lambdatest
+// Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+// Use additional configuration options provided by Playwright if required: https://playwright.dev/docs/api/class-testconfig
+{
+name: 'chrome:latest:MacOS Catalina@lambdatest',
+use: {
+viewport: { width: 1920, height: 1080 }
+}
+},
+{
+name: 'chrome:latest:Windows 10@lambdatest',
+use: {
+viewport: { width: 1280, height: 720 }
+}
+},
+{
+name: 'MicrosoftEdge:90:Windows 10@lambdatest',
+use: {
+...devices['iPhone 12 Pro Max']
+}
+},
+{
+name: 'pw-firefox:latest:Windows 10@lambdatest',
+use: {
+viewport: { width: 1280, height: 720 }
+}
+},
+{
+name: 'pw-webkit:latest:Windows 10@lambdatest',
+use: {
+viewport: { width: 1920, height: 1080 }
+}
+}
+
+]
+}
+
+```
+
+3. Add your test script path in `playwright.config.js`.
+
+4. Import the test object from `lambdatest-setup.js` and run your tests.
+
+```js
+const { test } = require('../lambdatest-setup')
+const { expect } = require('@playwright/test')
+
+test.describe('Browse LambdaTest in different search engines', () => {
+test('Search LambdaTest on Bing', async ({ page }) => {
+await page.goto('https://www.bing.com')
+const element = await page.$('[aria-label="Enter your search term"]')
+await element.click()
+await element.type('LambdaTest')
+await element.press('Enter')
+const title = await page.title()
+
+console.log('Page title:: ', title)
+// Use the expect API for assertions provided by playwright
+expect(title).toEqual(expect.stringContaining('LambdaTest'))
+})
+})
+```
+
+## Using the Playwright Agent Skill with TestMu AI
+
+The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The playwright-skill package includes:
+
+```
+playwright-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing Playwright Agent Skill
+
+Install a Playwright Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/playwright-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/playwright-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

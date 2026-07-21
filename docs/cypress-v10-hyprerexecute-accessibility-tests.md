@@ -188,4 +188,6 @@ OR use this command if you have not exported your username and access key in the
 
 Now visit the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) and click on the Accessibility tab to check the report generated.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/cypress/hyp-cyp10.gif').default} alt="automation-dashboard" className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/accessibility-testing/cypress/hyp-cyp10.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>

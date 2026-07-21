@@ -2,12 +2,12 @@
 id: slack-app
 title: Slack App Integration
 hide_title: true
-sidebar_label: Slack App
+sidebar_label: TestMu AI Slack App
 description: Integrate Slack App with TestMu AI and quickly launch the real-time and screenshot tests directly from Slack. Collaborate faster with your teammates on issues and fasten the feedback cycle.
 keywords:
 - integrate testmu ai with slack
 - integrate testmu ai with slack app
-- run realtime and screenshot tests with slack app
+- run realtime tests with slack app
 - how to integrate slack app with testmu ai
 url: https://www.testmuai.com/support/docs/slack-app/
 site_name: TestMu AI
@@ -46,15 +46,14 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 * * *
 
-The <BrandName /> Slack App allows you to initiate real-time tests and screenshot tests directly from Slack. Your team can collaborate more effectively by easily communicating on bugs, reducing the feedback loop, and troubleshooting web elements in real-time.
+The <BrandName /> Slack App allows you to initiate real-time tests directly from Slack. Your team can collaborate more effectively by easily communicating on bugs, reducing the feedback loop, and troubleshooting web elements in real-time.
 
 By integrating <BrandName /> with Slack App,
 
 * Perform Real time testing with access to 3000+ browser and operating systems on the <BrandName /> cloud.
-* Run Screenshot testing to capture bulk screenshots of websites and web apps from the saved list. 
 * Reuse the generated test cards and relaunch the test with the same configuration.
 
-*To perform the Real-time testing and Screenshot testing, you will need to login with your <BrandName /> Account. If you don’t have an account on <BrandName />, visit the <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}><BrandName /> register page</a>.*
+*To perform the Real-time testing, you will need to login with your <BrandName /> Account. If you don’t have an account on <BrandName />, visit the <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}><BrandName /> register page</a>.*
 
 
 ## Integrating Slack With Your <BrandName /> Account
@@ -125,37 +124,13 @@ To know more about Real-time Testing, refer to the documentation [Real Time Brow
 ## Running Screenshot Tests From Slack App
 * * *
 
-**Step 1**: Click on the <BrandName /> App icon from the left menu and select **Run Screenshot Test**.
+:::info Deprecated
 
-<img loading="lazy" src={require('../assets/images/slack-app-integration/added-app1.webp').default} alt="Slack App" width="1366" height="721" className="doc_img"/>
+Screenshot testing through the Slack App has been deprecated and is no longer available. This includes both the **Run Screenshot Test** button flow and the earlier `/screenshot` slash command.
 
-**Step 2**: A pop-up box will appear. Enter the Test URL and select the List on which you wish to run the Screenshot tests. You can run screenshot tests on the default list (Popular) for most popular configurations or choose from your saved lists (List 1, List 2 and List 3).
+To capture screenshots of a URL, use [Web Scanner](/support/docs/web-scanner-getting-started/) instead, which runs Visual UI scans across browsers and viewports.
 
-<img loading="lazy" src={require('../assets/images/slack-app-integration/selectscreenshot-config.webp').default} alt="Slack App" width="1366" height="724" className="doc_img"/>
-
-*You can save your favorite browser-OS combinations as a list from the <BrandName /> Screenshot console page.*
-
-**Step 3**: Click on **Submit**.
-
-<img loading="lazy" src={require('../assets/images/slack-app-integration/submit-screenshot.webp').default} alt="Slack App" width="1366" height="724" className="doc_img"/>
-
-**Step 4**: After clicking on Submit button, you'll receive a Slack notification. 
-
-After few moments, you'll receive another Slack notification containing a Screenshot test card. The Screenshot test card includes the entered test URL and Test ID. 
-
-To view the generated screenshots, click on **View Screenshot**.
-
-<img loading="lazy" src={require('../assets/images/slack-app-integration/view-screenshot.webp').default} alt="Slack App" width="1263" height="621" className="doc_img"/>
-
-**Step 6**: You will be routed to a <BrandName /> Screenshot console page where you can view, download and share the captured screenshots of your websites (and web apps).
-
-<img loading="lazy" src={require('../assets/images/slack-app-integration/captured-screenshot.webp').default} alt="Slack App" width="1263" height="621" className="doc_img"/>
-
-You can also download the screenshots as a zipped file by clicking on **Download All (Zip)**.
-
->You can also capture the screenshot through the Slack command in the integrated channel. <br/>**Syntax for Screenshot Slack Command**: `/screenshot [URL] [Optional ListName]`
-
-For more information about Screenshot testing, refer to the documentation [Automated Screenshot Testing](/docs/automated-screenshot-testing/).
+:::
 
 
 ## Removing/Uninstalling The Slack App

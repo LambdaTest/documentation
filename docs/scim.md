@@ -1,9 +1,9 @@
 ---
 id: scim
-title: SCIM Provisioning — Users & Groups
+title: "SCIM Provisioning: Users & Groups"
 hide_title: false
 sidebar_label: SCIM
-description: Automate user and group lifecycle management with SCIM 2.0. Provision users, sync groups, map to teams, concurrency groups, and sub-organizations — all from your Identity Provider.
+description: Automate user and group lifecycle management with SCIM 2.0. Provision users, sync groups, map to teams, concurrency groups, and sub-organizations, all from your Identity Provider.
 keywords:
     - TestMu AI SCIM
     - SCIM Provisioning
@@ -50,7 +50,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-SCIM (System for Cross-domain Identity Management) lets your Identity Provider (IDP) automatically manage users and groups within your <BrandName /> organization — no manual account setup required.
+SCIM (System for Cross-domain Identity Management) lets your Identity Provider (IDP) automatically manage users and groups within your <BrandName /> organization, no manual account setup required.
 
 | Capability | What it does |
 |---|---|
@@ -68,13 +68,13 @@ SCIM (System for Cross-domain Identity Management) lets your Identity Provider (
 
 **What you need:** Enterprise plan, SSO configured, Admin access, and an IDP that supports SCIM 2.0 (Okta, Azure AD, JumpCloud, etc.).
 
-### Step 1 — Copy SCIM Credentials
+### Step 1: Copy SCIM Credentials
 
 Go to **Settings** > **Organization Settings** > **Security** tab. Copy the **SCIM Base URL** and **Bearer Token**.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/scim-base-url.png').default} alt="SCIM Base URL and Bearer Token" width="404" height="206" className="doc_img img_center"/><br/>
 
-### Step 2 — Configure Your IDP
+### Step 2: Configure Your IDP
 
 Paste the SCIM Base URL and Bearer Token into your IDP's provisioning settings.
 
@@ -121,7 +121,7 @@ Full walkthrough: [PingOne SCIM Guide](/support/docs/pingone-scim/)
 
 1. In PingOne, go to **Integrations** > **Provisioning** > create a new **SCIM Outbound** connection
 2. Enter the **SCIM Base URL** and **Bearer Token** from <BrandName />
-3. Configure preferences — set **User Identifier** to `workEmail` and enable **Create**, **Update**, **Disable** users
+3. Configure preferences: set **User Identifier** to `workEmail` and enable **Create**, **Update**, **Disable** users
 4. Create a provisioning **Rule** to select which users and groups to sync
 
 </TabItem>
@@ -137,7 +137,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 | **Users Resource** | `/Users` |
 | **Groups Resource** | `/Groups` |
 
-**Custom Attribute Schema URNs** — add these to your IDP's SCIM custom attribute configuration to send role and group assignments:
+**Custom Attribute Schema URNs**: add these to your IDP's SCIM custom attribute configuration to send role and group assignments:
 
 | Purpose | Schema URN |
 |---|---|
@@ -145,7 +145,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 | **Group extension** | `urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group` |
 
 - **User extension attributes:** `OrganizationRole` (Admin / User / Guest), `LambdatestGroup` (concurrency group name)
-- **Group extension attributes:** `LambdatestRoles` (array of Admin / User / Guest — applied to all group members)
+- **Group extension attributes:** `LambdatestRoles` (array of Admin / User / Guest, applied to all group members)
 
 </TabItem>
 </Tabs>
@@ -162,7 +162,7 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 |---|---|
 | New user (email doesn't exist) | Account created and added to your org |
 | Existing user (same org) | Attributes (role, active) updated |
-| Existing user (different org) | **Not** provisioned — invite via team invite first |
+| Existing user (different org) | **Not** provisioned, invite via team invite first |
 
 ### Schema & Attributes
 
@@ -324,7 +324,7 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 }
 ```
 
-**Response:** `200 OK` — returns the full updated user object.
+**Response:** `200 OK`, returns the full updated user object.
 
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
 
@@ -352,7 +352,7 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 | `urn:ietf:params:scim:schemas:extension:`<br/>`LambdaTest:2.0:User:OrganizationRole` | `Admin`, `User`, `Guest` |
 | `urn:ietf:params:scim:schemas:extension:`<br/>`LambdaTest:2.0:User:LambdatestGroup` | _(concurrency group name)_ |
 
-**Response:** `200 OK` — returns the full updated user object.
+**Response:** `200 OK`, returns the full updated user object.
 
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
 
@@ -370,7 +370,7 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 }
 ```
 
-**Response:** `200 OK` — returns user object with `"active": false`.
+**Response:** `200 OK`, returns user object with `"active": false`.
 
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
 
@@ -382,7 +382,7 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 **Response:** `204 No Content`
 
 :::warning
-DELETE only **deactivates** the account — it does not permanently delete it. For permanent deletion, the user must request it from <BrandName /> Account Settings.
+DELETE only **deactivates** the account. It does not permanently delete it. For permanent deletion, the user must request it from <BrandName /> Account Settings.
 :::
 
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
@@ -402,19 +402,19 @@ Push groups from your IDP → approve the mapping in the **SCIM Group Provisioni
 
 ### How It Works
 
-Groups and members are stored **as soon as your IDP pushes them** — even before any mapping is configured. Mapping only controls **where** members are assigned.
+Groups and members are stored **as soon as your IDP pushes them**, even before any mapping is configured. Mapping only controls **where** members are assigned.
 
 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0', margin: '2rem 0'}}>
 
   <div style={{border: '1px solid #d1d5db', borderRadius: '10px', padding: '16px 28px', textAlign: 'center', width: '100%', maxWidth: '500px', background: '#f9fafb'}}>
-    <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 1 — Your IDP (automatic)</div>
+    <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 1: Your IDP (automatic)</div>
     <div style={{fontSize: '15px', fontWeight: 600, color: '#111827'}}>Groups & members pushed via SCIM</div>
   </div>
 
   <div style={{fontSize: '22px', lineHeight: '1', color: '#9ca3af', userSelect: 'none'}}>↓</div>
 
   <div style={{border: '1px solid #d1d5db', borderRadius: '10px', padding: '16px 28px', textAlign: 'center', width: '100%', maxWidth: '500px', background: '#f9fafb'}}>
-    <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 2 — LambdaTest (automatic)</div>
+    <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 2: LambdaTest (automatic)</div>
     <div style={{fontSize: '15px', fontWeight: 600, color: '#111827'}}>Group stored & roles applied to members</div>
     <div style={{fontSize: '12px', color: '#6b7280', marginTop: '4px'}}>Members get roles immediately, even without mapping</div>
   </div>
@@ -422,7 +422,7 @@ Groups and members are stored **as soon as your IDP pushes them** — even befor
   <div style={{fontSize: '22px', lineHeight: '1', color: '#9ca3af', userSelect: 'none'}}>↓</div>
 
   <div style={{border: '1px solid #d1d5db', borderRadius: '10px', padding: '16px 28px', textAlign: 'center', width: '100%', maxWidth: '500px', background: '#f9fafb'}}>
-    <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 3 — Admin (manual) or Mapping Rules (automatic)</div>
+    <div style={{fontSize: '11px', textTransform: 'uppercase', letterSpacing: '1px', color: '#6b7280', marginBottom: '4px'}}>Step 3: Admin (manual) or Mapping Rules (automatic)</div>
     <div style={{fontSize: '15px', fontWeight: 600, color: '#111827'}}>Group mapped to a LambdaTest entity</div>
   </div>
 
@@ -462,7 +462,7 @@ Once activated, you can control it from **Settings** > **Organization Settings**
 
 <!-- <img loading="lazy" src={require('../assets/images/lambdatest-scim/group-provisioning-toggle.png').default} alt="SCIM Group Provisioning toggle" width="404" height="206" className="doc_img img_center"/><br/> -->
 
-> **When toggled OFF:** New IDP group operations (create/update/delete) are rejected with `403`. Existing groups, mappings, and assignments are preserved — nothing is deleted. Toggle back ON to resume syncing.
+> **When toggled OFF:** New IDP group operations (create/update/delete) are rejected with `403`. Existing groups, mappings, and assignments are preserved. Nothing is deleted. Toggle back ON to resume syncing.
 
 ### Group Schema & Attributes
 
@@ -509,40 +509,40 @@ Once a group is pushed, it needs to be **mapped** to tell <BrandName /> what to 
 <Tabs className="docs__val" groupId="entity-type" queryString="entity">
 <TabItem value="team" label="Team" default>
 
-**Teams are additive** — a user can belong to multiple teams at once, so there are no conflicts.
+**Teams are additive**: a user can belong to multiple teams at once, so there are no conflicts.
 
 | | |
 |---|---|
-| **Auto-create** | Yes — if the team doesn't exist, it's created automatically |
+| **Auto-create** | Yes, if the team doesn't exist, it's created automatically |
 | **On member removal** | Removed from team (unless another SCIM group also maps them there) |
 | **On group rename** | Team is **automatically renamed** to match the IDP group name |
-| **Conflicts** | None — teams are never exclusive |
+| **Conflicts** | None, teams are never exclusive |
 
 This is the simplest and most common mapping. If you're just starting out, **Team is the recommended choice**.
 
 </TabItem>
 <TabItem value="group" label="Concurrency Group">
 
-**Concurrency groups are exclusive** — a user can only belong to one at a time.
+**Concurrency groups are exclusive**: a user can only belong to one at a time.
 
 | | |
 |---|---|
-| **Auto-create** | Yes — if the group doesn't exist, it's created automatically |
+| **Auto-create** | Yes, if the group doesn't exist, it's created automatically |
 | **On member removal** | User moved back to the org's **default concurrency group** |
 | **On group rename** | Concurrency group is **automatically renamed** to match the IDP group name |
-| **Conflicts** | Yes — if the same user is in two SCIM groups mapped to **different** concurrency groups. See [Conflicts](#conflicts). |
+| **Conflicts** | Yes, if the same user is in two SCIM groups mapped to **different** concurrency groups. See [Conflicts](#conflicts). |
 
 </TabItem>
 <TabItem value="suborg" label="Sub-Organization">
 
-**Sub-organizations are exclusive** — a user can only belong to one at a time. Sub-orgs also **conflict with concurrency groups and teams** from other SCIM groups (cross-type conflict).
+**Sub-organizations are exclusive**: a user can only belong to one at a time. Sub-orgs also **conflict with concurrency groups and teams** from other SCIM groups (cross-type conflict).
 
 | | |
 |---|---|
-| **Auto-create** | No — sub-orgs must be created manually first (they have billing and setup requirements) |
+| **Auto-create** | No, sub-orgs must be created manually first (they have billing and setup requirements) |
 | **On member removal** | User moved back to the **root organization** |
 | **On group rename** | Sub-org is **not** renamed (sub-orgs have independent naming) |
-| **Conflicts** | Yes — two types: (1) same user in two groups mapped to **different** sub-orgs, or (2) same user in a sub-org group **and** a concurrency group/team group from a different SCIM group |
+| **Conflicts** | Yes, two types: (1) same user in two groups mapped to **different** sub-orgs, or (2) same user in a sub-org group **and** a concurrency group/team group from a different SCIM group |
 
 **Why cross-type conflicts?** Moving a user to a sub-org takes them out of the parent org's resource pool entirely. Team and concurrency group assignments in the parent org become invalid.
 
@@ -610,7 +610,7 @@ Matches **every group**. Use as a low-priority catch-all fallback.
 
 ### Role Assignment {#roles}
 
-Roles can be set per-user (User extension `OrganizationRole`) or per-group (Group extension `LambdatestRoles`). Roles work **independently of mappings** — even unmapped groups apply their roles to members immediately.
+Roles can be set per-user (User extension `OrganizationRole`) or per-group (Group extension `LambdatestRoles`). Roles work **independently of mappings**, even unmapped groups apply their roles to members immediately.
 
 When a user is in **multiple groups with different roles**, the highest-priority role wins: **Admin > User > Guest**
 
@@ -620,38 +620,38 @@ When a user is in **multiple groups with different roles**, the highest-priority
 | `org-admins` | Admin |
 | **Effective role** | **Admin** (highest wins) |
 
-**Roles can be upgraded and downgraded.** The effective role is always the **highest** across all current group memberships — removing a user from one group only downgrades their role if no other group provides it.
+**Roles can be upgraded and downgraded.** The effective role is always the **highest** across all current group memberships. Removing a user from one group only downgrades their role if no other group provides it.
 
 | Scenario | What happens |
 |---|---|
 | User added to a group with `Admin` role | Role upgraded to Admin (if currently lower) |
-| User removed from the `Admin` group | Role recomputed — drops to next highest (e.g., User) if no other group gives Admin |
+| User removed from the `Admin` group | Role recomputed, drops to next highest (e.g., User) if no other group gives Admin |
 | All groups removed, or no roles set | Role defaults to **User** |
-| Group's `LambdatestRoles` changed from `Admin` to `Guest` | All members' roles recomputed — may downgrade |
+| Group's `LambdatestRoles` changed from `Admin` to `Guest` | All members' roles recomputed, may downgrade |
 
 ### One Group per Entity
 
-Each <BrandName /> entity (team, concurrency group, or sub-org) can only be mapped from **one SCIM group at a time**. If you try to create a second mapping to the same entity, the request is rejected. This ensures a clear ownership model — one IDP group controls one <BrandName /> entity.
+Each <BrandName /> entity (team, concurrency group, or sub-org) can only be mapped from **one SCIM group at a time**. If you try to create a second mapping to the same entity, the request is rejected. This ensures a clear ownership model: one IDP group controls one <BrandName /> entity.
 
 ### Conflicts {#conflicts}
 
 :::note Teams don't have conflicts
-If you're only mapping to **Teams**, you can skip this section entirely. Teams are additive — no conflicts possible.
+If you're only mapping to **Teams**, you can skip this section entirely. Teams are additive: no conflicts possible.
 :::
 
-Conflicts happen when a user belongs to multiple SCIM groups that compete for the **same exclusive slot**. When a conflict occurs, the user **keeps their current assignment** until an admin resolves it — nothing changes automatically.
+Conflicts happen when a user belongs to multiple SCIM groups that compete for the **same exclusive slot**. When a conflict occurs, the user **keeps their current assignment** until an admin resolves it. Nothing changes automatically.
 
 **When do conflicts happen?**
 
 <Tabs className="docs__val" groupId="entity-type" queryString="entity">
 <TabItem value="group" label="Concurrency Group" default>
 
-When the same user is in two SCIM groups mapped to **different** concurrency groups. Example: Group A → "QA Pool" and Group B → "Dev Pool" — the user can only be in one.
+When the same user is in two SCIM groups mapped to **different** concurrency groups. Example: Group A → "QA Pool" and Group B → "Dev Pool". The user can only be in one.
 
 </TabItem>
 <TabItem value="suborg" label="Sub-Organization">
 
-When the same user is in two SCIM groups mapped to **different** sub-orgs. Example: Group X → "US Team" and Group Y → "EU Team" — the user can only be in one.
+When the same user is in two SCIM groups mapped to **different** sub-orgs. Example: Group X → "US Team" and Group Y → "EU Team". The user can only be in one.
 
 </TabItem>
 <TabItem value="crosstype" label="Cross-Type">
@@ -670,12 +670,12 @@ When a user is mapped to a **sub-organization** from one SCIM group and a **conc
 1. Go to **SCIM Group Provisioning** dashboard > **Conflicts** tab
 2. Each conflict card shows the **Current** group (where the user is now) and the **Incoming** group (the one trying to claim the user)
 3. Click **Keep Current** or **Use Incoming**
-4. <BrandName /> remembers this decision — the same combination won't create a new conflict
+4. <BrandName /> remembers this decision. The same combination won't create a new conflict
 
 <!-- <img loading="lazy" src={require('../assets/images/lambdatest-scim/conflict-resolution.png').default} alt="Resolving a SCIM group conflict" width="404" height="206" className="doc_img img_center"/><br/> -->
 
 :::tip To avoid conflicts
-Prefer **teams** when users need to be in multiple groups — teams never create conflicts. Only use concurrency groups and sub-orgs when you need exclusive assignment.
+Prefer **teams** when users need to be in multiple groups. Teams never create conflicts. Only use concurrency groups and sub-orgs when you need exclusive assignment.
 :::
 
 ### Deleted Target {#target-deleted}
@@ -683,7 +683,7 @@ Prefer **teams** when users need to be in multiple groups — teams never create
 If an admin deletes a team, concurrency group, or sub-org that has an active SCIM mapping, the mapping is flagged as `target_deleted` and the status changes to **Pending**.
 
 :::warning Manual re-mapping required
-When a target is deleted, the mapping **will not auto-create a replacement** — even if a matching mapping rule with auto-approve exists. This is intentional: auto-creating the same entity that was just deleted would cause a loop. An admin must manually update the mapping to point to a new (or recreated) target.
+When a target is deleted, the mapping **will not auto-create a replacement**, even if a matching mapping rule with auto-approve exists. This is intentional: auto-creating the same entity that was just deleted would cause a loop. An admin must manually update the mapping to point to a new (or recreated) target.
 :::
 
 **To fix a `target_deleted` mapping:**
@@ -691,7 +691,7 @@ When a target is deleted, the mapping **will not auto-create a replacement** —
 1. Go to **SCIM Group Provisioning** dashboard
 2. Find the group with `target_deleted` status
 3. Click the group and select a **new target entity**
-4. Click **Approve** — members will be synced to the new target
+4. Click **Approve**: members will be synced to the new target
 
 ### Group API Operations
 
@@ -787,7 +787,7 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 </TabItem>
 <TabItem value="update-group" label="Update">
 
-**PUT** (full replace) to `https://auth.lambdatest.com/api/scim/Groups/{id}` — replaces entire membership list. Members removed from the list are unassigned from all mapped entities.
+**PUT** (full replace) to `https://auth.lambdatest.com/api/scim/Groups/{id}`. Replaces entire membership list. Members removed from the list are unassigned from all mapped entities.
 
 **PATCH** (partial) to `https://auth.lambdatest.com/api/scim/Groups/{id}`:
 
@@ -858,7 +858,7 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 </TabItem>
 </Tabs>
 
-**Response:** `200 OK` — returns the updated group object with new membership and `meta.lastModified` timestamp.
+**Response:** `200 OK`, returns the updated group object with new membership and `meta.lastModified` timestamp.
 
 **Errors:** `404 Not Found` if group doesn't exist. `409 Conflict` if renamed to an existing `displayName`.
 
@@ -882,7 +882,7 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 ## What Happens When... {#sync-behavior}
 
-Quick reference for common scenarios. Everything below is handled automatically — no action needed unless noted.
+Quick reference for common scenarios. Everything below is handled automatically, no action needed unless noted.
 
 <Tabs className="docs__val" groupId="sync-source" queryString="sync">
 <TabItem value="idp-changes" label="Your IDP changes" default>
@@ -903,7 +903,7 @@ Quick reference for common scenarios. Everything below is handled automatically 
 |---|---|---|
 | **Rename a team / group / sub-org** | Works fine, but the next IDP group rename will overwrite it. | To control names, rename **in your IDP** |
 | **Delete a mapped entity** | Mapping flagged as `target_deleted`, reverts to Pending. Auto-create is blocked. | [Manually re-map](#target-deleted) to a new target |
-| **Manually remove a member from a team** | Removal is immediate but **temporary** — next IDP sync re-adds them. | Remove **in your IDP** instead |
+| **Manually remove a member from a team** | Removal is immediate but **temporary**. Next IDP sync re-adds them. | Remove **in your IDP** instead |
 | **Manually assign user to concurrency group / sub-org** | SCIM overrides non-SCIM assignments on next sync. | Use SCIM groups for exclusive assignments |
 | **Manually change a SCIM-managed user's role** | May be overwritten on next IDP sync. | Manage roles **in your IDP** |
 
@@ -932,7 +932,7 @@ Quick reference for common scenarios. Everything below is handled automatically 
 |---|---|
 | Members not appearing in teams or sub-orgs | Group mapping is still **Pending**. Approve it in the dashboard or create an auto-approve mapping rule. |
 | Members are in the SCIM group but not in the sub-org | Check for [conflicts](#conflicts). The user may belong to another group with a competing exclusive mapping. |
-| User has an unexpected role | Check **all** SCIM group memberships — roles follow highest-wins (Admin > User > Guest). The user may inherit Admin from another group. |
+| User has an unexpected role | Check **all** SCIM group memberships. Roles follow highest-wins (Admin > User > Guest). The user may inherit Admin from another group. |
 | User keeps getting re-added after manual removal | SCIM is the source of truth. Remove the user **in your IDP** instead. |
 | Group mapping reverted to Pending | The group was renamed (rules re-evaluated) or the target entity was deleted (`target_deleted`). If renamed, rules may auto-approve. If deleted, [manual re-mapping](#target-deleted) is required. |
 | Auto-approve didn't create my sub-organization | Sub-orgs are never auto-created (billing/setup required). Create the sub-org first, then approve manually. |
@@ -945,7 +945,7 @@ Quick reference for common scenarios. Everything below is handled automatically 
 | Can a group be mapped to multiple targets? | No. A single SCIM group can only map to **one** entity (team, concurrency group, or sub-org). To assign the same users to multiple entities, use separate IDP groups. |
 | Can two SCIM groups map to the same entity? | No. Each entity can only be owned by one SCIM group. This prevents conflicting membership lists. |
 | Can I disable group provisioning without losing data? | Yes. The toggle only blocks new IDP operations. Existing groups, mappings, and assignments are preserved. Toggle back ON to resume. |
-| Can I restore a deleted group? | Yes. Push a group with the same `displayName` from your IDP — the soft-deleted record is restored. Members need to be re-pushed. |
+| Can I restore a deleted group? | Yes. Push a group with the same `displayName` from your IDP. The soft-deleted record is restored. Members need to be re-pushed. |
 | Can roles be downgraded? | Yes. Roles are recomputed across all groups. If the highest role is removed, the effective role drops to the next highest. Defaults to **User** if none set. |
 | What happens to a conflict when one group is deleted? | The conflict is **auto-resolved** in favor of the remaining group. No admin action needed. |
 | What's the difference between Approved and Auto-Approved? | Both sync members identically. **Auto-Approved** = mapping rule matched automatically. **Approved** = admin approved manually. |

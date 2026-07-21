@@ -52,7 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 ---
 
-Optimize your [app automation testing](https://www.testmuai.com/blog/mobile-app-testing-tools/) with <BrandName />'s Real Devices UI Inspector. Now access unparalleled live debugging capabilities right from the app automation dashboard, enabling direct interaction with the test device—not just viewing the script's video. 
+Optimize your [app automation testing](https://www.testmuai.com/blog/mobile-app-testing-tools/) with <BrandName />'s Real Devices UI Inspector. Now access unparalleled live debugging capabilities right from the app automation dashboard, enabling direct interaction with the test device, not just viewing the script's video. 
 
 With features like real-time navigation, detailed UI element inspection, and the ability to capture screenshots, now significantly enhance both the efficiency and effectiveness of your [automated tests](https://www.testmuai.com/automation-testing).
 

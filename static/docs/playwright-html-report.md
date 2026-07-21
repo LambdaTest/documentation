@@ -1,0 +1,40 @@
+# Consolidated Playwright HTML Report
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Playwright offers built-in HTML reports to help visualize the results of your test runs. These reports are detailed, user-friendly, and interactive, allowing you to analyze each test's status, logs, and errors in an organized manner.
+
+## Steps to Generate Consolidated HTML Report
+Follow these steps to generate a consolidated Playwright HTML report:
+
+### Step 1: Update Your Playwright Configuration
+
+In your Playwright configuration file `playwright.config.js`, add the following code to enable the reporter:
+
+```javascript title="playwright.config.js"
+import { devices } from '@playwright/test';
+
+const config = {
+...//
+reporter: [['html', { open: 'never' }]],
+...//
+};
+```
+
+- In the case of HyperExecute, we always have to set the value of `open: never`.
+
+- By default, the report is written into the **playwright-report folder** in the current working directory. The same location can be used in the report parameters in the YAML file.
+
+### Step 2: Configure the HyperExecute YAML File
+In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+frameworkName: playwright
+location: playwright-report
+type: html
+```
+
+### Step 3: Execute Your Tests
+Run your Playwright tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated Plywright HTML report.

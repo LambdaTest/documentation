@@ -89,7 +89,7 @@ Custom roles give you the flexibility to tailor access permissions to match your
 
 **Step 2:** In the **Create New Role** dialog, enter a **Role Name** that clearly describes the role's purpose (e.g., "SmartUI Tester", "KaneAI Developer", "QA Lead").
 
-**Step 3:** You can configure product-level access or entity-level access based on your requirements.
+**Step 3:** You can configure [product-level access](#product-level-access) or entity-level access based on your requirements. Entity-level access is covered in detail below.
 
 <img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/create-new-role.png').default} alt="Create New Role dialog with entity dropdown showing Select Specific, Product Access, and Granular Control sections" className="doc_img"/>
 
@@ -104,6 +104,73 @@ Custom roles give you the flexibility to tailor access permissions to match your
 - **To assign to a team:** Navigate to **Organization Settings** > **Teams**, select a team, and assign the desired custom role. All members of the team will automatically inherit the same permissions.
 
 <img loading="lazy" src={require('../assets/images/rbac-roles-and-permissions/team-custom-role-access.png').default} alt="Assign custom roles to teams" className="doc_img"/>
+
+### Entity Level Access
+
+Entity-level access allows you to configure granular permissions for specific items and product areas within the platform. Each product exposes its own set of entities, and you can grant specific permissions on each one.
+
+Entity-level access is available for the following products:
+
+| Product | Entities |
+|---------|----------|
+| **Test Manager** | Projects, Test Runs, Test Cases and Test Case Instances |
+| **Automation** | Projects, Builds, Test Case Instances |
+| **HyperExecute** | Projects, Workflows, Organization Settings |
+| **SmartUI** | Projects, Builds |
+| **Analytics & Insights** | Projects (applied to dashboards and reports, read-only) |
+
+Each product exposes a different set of entities. Here is what each one represents.
+
+**Test Manager**
+
+- **Projects**: A workspace that groups all test cases, test runs, and related assets for one application or team.
+- **Test Runs**: A grouping of test cases with chosen browser, device, and OS configurations, created to execute and track them together.
+- **Test Cases**: Individual test scenarios stored in a centralized repository and reused across multiple test runs.
+- **Test Case Instances**: The per-configuration executions of a test case inside a test run, each tracked with its own status.
+
+**Automation**
+
+- **Projects**: A container that groups related automation builds and sessions and serves as the unit you scope access to.
+- **Builds**: A named grouping of automation test sessions, set through the build capability, used to collect and filter related executions.
+- **Test Case Instances**: Individual automation test sessions executed on a specific browser, OS, or device configuration within a build.
+
+**HyperExecute**
+
+- **Projects**: A centralized space for organizing and managing test executions by grouping similar tests, controlling access, and tracking progress.
+- **Workflows**: Schedule-driven orchestration that runs HyperExecute jobs on a defined schedule, without requiring CI/CD integration.
+- **Organization Settings**: Organization-level HyperExecute preferences, such as auto-mute tests and test viewing preferences.
+
+**SmartUI**
+
+- **Projects**: A container that groups all visual regression builds and screenshots for a single application.
+- **Builds**: A named collection of screenshots grouped for visual comparison and baseline management within a project.
+
+**Analytics & Insights**
+
+- **Projects**: The read-only reporting scope that controls which dashboards and reports a user can view.
+
+:::info
+Entity-level access for **App Automation** is planned for an upcoming release. The exact set of entities, and the actions available on each, can vary from one product to another.
+:::
+
+#### Select Specific Entities
+
+When creating or editing a role, you can assign permissions to specific items rather than to all items of a type, for example, granting access only to selected Test Manager projects or to specific HyperExecute projects.
+
+#### Granular Control
+
+For supported products, you can configure fine-grained permissions on each entity using the following permission levels:
+
+- **List**: View items in a list.
+- **Read**: View item details.
+- **Create**: Create new items.
+- **Update**: Modify existing items.
+- **Delete**: Remove items.
+- **Execute**: Run or trigger items (for example, abort a build or trigger a HyperExecute job).
+
+:::note
+Not every permission level applies to every entity. For example, Analytics & Insights is a read-only reporting surface, so only **List** and **Read** apply there.
+:::
 
 ## Product Level Access
 
@@ -122,43 +189,6 @@ When creating or editing a role, add **List of Products** as an entity and selec
 - **Security & compliance**:Restrict sensitive products like Insights or Settings to admins and leads only, ensuring regular testers don't have access to org-level analytics or configurations.
 - **Onboarding new members**:New team members can be given a limited role with access to only Real Time and Automation while they ramp up, then gradually expanded to include KaneAI and HyperExecute.
 - **Client or vendor access**:External contractors working on a specific product area (e.g., mobile testing) can be restricted to only Real Device and Automation without exposing the rest of the platform.
-
-## Entity Level Access
-
-Entity-level access allows you to configure granular permissions for specific items and product areas within the platform. Each product exposes its own set of entities, and you can grant specific permissions on each one.
-
-Entity-level access is available for the following products:
-
-| Product | Entities |
-|---------|----------|
-| **Test Manager** | Projects, Test Runs, Test Cases and Test Case Instances |
-| **Automation** | Projects, Builds, Test Case Instances |
-| **HyperExecute** | Projects, Workflows, Organization Settings |
-| **SmartUI** | Projects, Builds |
-| **Analytics & Insights** | Projects (applied to dashboards and reports, read-only) |
-
-:::info
-Entity-level access for **App Automation** is planned for an upcoming release. The exact set of entities, and the actions available on each, can vary from one product to another.
-:::
-
-### Select Specific Entities
-
-When creating or editing a role, you can assign permissions to specific items rather than to all items of a type, for example, granting access only to selected Test Manager projects or to specific HyperExecute projects.
-
-### Granular Control
-
-For supported products, you can configure fine-grained permissions on each entity using the following permission levels:
-
-- **List**: View items in a list.
-- **Read**: View item details.
-- **Create**: Create new items.
-- **Update**: Modify existing items.
-- **Delete**: Remove items.
-- **Execute**: Run or trigger items (for example, abort a build or trigger a HyperExecute job).
-
-:::note
-Not every permission level applies to every entity. For example, Analytics & Insights is a read-only reporting surface, so only **List** and **Read** apply there.
-:::
 
 
 <nav aria-label="breadcrumbs">

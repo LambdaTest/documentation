@@ -58,7 +58,7 @@ The KaneAI Knowledge Base is your go-to resource for writing effective test case
 
 ## Authoring Guides
 
-Start here to learn how to write reliable test instructions for any scenario — from finding elements on the page to handling complex form interactions.
+Start here to learn how to write reliable test instructions for any scenario, from finding elements on the page to handling complex form interactions.
 
 <div className="support_main">
   <a href="/support/docs/kaneai-kb-finding-and-interacting-with-elements/">
@@ -92,7 +92,7 @@ Start here to learn how to write reliable test instructions for any scenario —
   <a href="/support/docs/kaneai-kb-mobile-app-testing-patterns/">
     <div className="support_inners">
       <h3>Mobile Patterns</h3>
-      <p>Android & iOS specific patterns — keyboard handling, OTP fields, native pickers, gestures, deep links, permission dialogs, and spannable text.</p>
+      <p>Android & iOS specific patterns: keyboard handling, OTP fields, native pickers, gestures, deep links, permission dialogs, and spannable text.</p>
     </div>
   </a>
 </div>
@@ -119,14 +119,14 @@ Guides for complex testing scenarios involving authentication, API validation, a
   <a href="/support/docs/kaneai-kb-js-snippets-and-workarounds/">
     <div className="support_inners">
       <h3>JS Workarounds</h3>
-      <p>When natural language isn't enough — JS snippets for date pickers, CSS validation, string manipulation, table cells, and more.</p>
+      <p>When natural language isn't enough: JS snippets for date pickers, CSS validation, string manipulation, table cells, and more.</p>
     </div>
   </a>
 
   <a href="/support/docs/kaneai-failure-conditions/">
     <div className="support_inners">
       <h3>Failure Conditions</h3>
-      <p>Configure how assertion failures behave — fail immediately, fail and continue, or warn and continue. Set defaults at organization or step level.</p>
+      <p>Configure how assertion failures behave: fail immediately, fail and continue, or warn and continue. Set defaults at organization or step level.</p>
     </div>
   </a>
 </div>
@@ -178,7 +178,7 @@ Manage dynamic data, secrets, and parameterized test inputs.
   <a href="/support/docs/kane-ai-command-guide/">
     <div className="support_inners">
       <h3>Command Types</h3>
-      <p>Complete reference of all supported KaneAI commands — navigation, clicks, typing, waits, tab management, scrolling, assertions, conditional logic, and queries.</p>
+      <p>Complete reference of all supported KaneAI commands: navigation, clicks, typing, waits, tab management, scrolling, assertions, conditional logic, and queries.</p>
     </div>
   </a>
 
@@ -201,11 +201,11 @@ Manage dynamic data, secrets, and parameterized test inputs.
 
 New to KaneAI? Here's the recommended reading order:
 
-1. **[Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)** — Get started by authoring your first desktop browser test
-2. **[Author Your First Mobile Browser Test](/support/docs/author-your-first-mobile-browser-test/)** — Learn to author mobile browser tests with device selection and configuration
-3. **[Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)** — Build your first mobile app test with app upload and device configuration
-4. **[Element Interactions](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)** — Learn how to describe elements so KaneAI can find them reliably
-5. **[Forms & Inputs](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)** — Handle every type of form element
-6. **[Assertions Guide](/support/docs/kaneai-kb-assertions-and-validation/)** — Verify your app works correctly
-7. **[Waits & Timing](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)** — Handle async behavior and timing
-8. **[JS Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds/)** — When natural language isn't enough
+1. **[Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)**: Get started by authoring your first desktop browser test
+2. **[Author Your First Mobile Browser Test](/support/docs/author-your-first-mobile-browser-test/)**: Learn to author mobile browser tests with device selection and configuration
+3. **[Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)**: Build your first mobile app test with app upload and device configuration
+4. **[Element Interactions](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
+5. **[Forms & Inputs](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
+6. **[Assertions Guide](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
+7. **[Waits & Timing](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
+8. **[JS Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds/)**: When natural language isn't enough

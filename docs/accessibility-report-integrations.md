@@ -27,7 +27,7 @@ Many integrations are shared platform capabilities. This page exists to explain 
 
 ## Onboarding: wire Jira or Slack for Accessibility
 
-1. Complete the **global** integration setup first—see **[Jira Integration](/support/docs/jira-integration/)** or **[Slack Integration](/support/docs/slack-integration/)** for credentials, OAuth, and workspace allowlists.
+1. Complete the **global** integration setup first. See **[Jira Integration](/support/docs/jira-integration/)** or **[Slack Integration](/support/docs/slack-integration/)** for credentials, OAuth, and workspace allowlists.
 2. In the **Accessibility** report or workspace settings (exact menu depends on UI version), choose the integration you want to **receive** new issues or notifications.
 3. Map **severity or tags** to Jira priorities if the UI offers mapping; otherwise agree a default priority in your triage playbook.
 4. Send a **test ticket** from a non-production report to confirm fields populate correctly.

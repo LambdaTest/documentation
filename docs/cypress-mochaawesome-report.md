@@ -69,7 +69,7 @@ In your Cypress configuration file `cypress.config.js`, add the following code t
 :::note
 - The `overwrite` parameter should be set to `true` to ensure the report is replaced with the latest run results.
 - The `html` option should be set to `false` because we will be merging JSON files later, and the mocha-merge utility does not support HTML files.
-- Ensure the `reportDir` path is set to `"cypress/results"` —this path is used to generate logs that will be visible on the dashboard. **Do not change this path.**
+- Ensure the `reportDir` path is set to `"cypress/results"`. This path is used to generate logs that will be visible on the dashboard. **Do not change this path.**
 :::
 
 ### Step 2: Configure the HyperExecute YAML File
@@ -86,4 +86,6 @@ partialReports:
 ### Step 3: Execute Your Tests
 Run your Cypress tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated Mochawesome report.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/cypress-mochawesome-report.gif').default} alt="Image" className="doc_img"/> 
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/hyperexecute/knowledge-base/reports/cypress-mochawesome-report.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video> 

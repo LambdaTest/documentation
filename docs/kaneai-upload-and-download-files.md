@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - Supported file formats:
   - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
   - **Videos :** MP4 (Maximum size: 50 MB)
-  - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
+  - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 
 ## Steps to Upload a File
 ### Step 1: Initiate a Test Session
@@ -70,7 +70,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 > - Supported file formats:
 >    - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
 >    - **Videos :** MP4 (Maximum size: 50 MB)
->    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED (Maximum size: 15 MB)
+>    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 - Click **Add File** to confirm your selection.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/upload-download-files/image3.png').default} alt="Image" className="doc_img"/>
@@ -94,7 +94,7 @@ The `FILE_` variable behavior described above applies to **Web tests**. In **App
 
 ## File Upload in App Tests
 
-File upload behaves differently in App tests than in Web tests. In a Web test, <BrandName /> creates a file variable for each upload. App tests skip this step entirely — no file variable is created, so you never reference uploaded files with double-curly-brace syntax.
+File upload behaves differently in App tests than in Web tests. In a Web test, <BrandName /> creates a file variable for each upload. App tests skip this step entirely. No file variable is created, so you never reference uploaded files with double-curly-brace syntax.
 
 ### How it works
 

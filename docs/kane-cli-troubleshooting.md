@@ -183,7 +183,7 @@ Get credentials from the <BrandName /> [dashboard](https://www.testmuai.com/logi
 
 **Fix:**
 1. **JSON syntax.** Variable files are JSON. A missing comma or unquoted key will cause the file to be skipped silently.
-2. **File location.** Confirm your file is in the right place — see [loading order](/support/docs/kane-cli-variables-and-context/#loading-order).
+2. **File location.** Confirm your file is in the right place, see [loading order](/support/docs/kane-cli-variables-and-context/#loading-order).
 3. **Inline test.** Bypass file loading by passing the variable on the command line:
    ```bash
    kane-cli run "log in as {{user}}" \
@@ -276,13 +276,39 @@ echo 'export PATH="$(npm config get prefix)/bin:$PATH"' >> ~/.zshrc
 node --version   # Must be 18 or higher
 ```
 
+### Install fails with "sharp: Please add node-addon-api"
+
+**Symptom:** `npm install -g @testmuai/kane-cli` fails with `sharp: Please add node-addon-api to your dependencies` (any Node version, any platform).
+
+:::note
+Kane CLI 0.3.4+ treats `sharp` as an optional dependency, so the install still succeeds even if sharp fails. Screenshots simply upload as PNG instead of WebP (about 30% larger, no functional impact). On an older version, upgrade first with `npm install -g @testmuai/kane-cli@latest`.
+:::
+
+**Cause:** `sharp` powers optional PNG to WebP screenshot compression. When it cannot load its prebuilt binary it tries to build from source, which fails. The most common trigger on macOS is a system-wide libvips (often pulled in by `brew install appium`, `imagemagick`, or `gdal`).
+
+**Fix (most common, macOS):**
+```bash
+# Diagnose: a printed version means libvips is the cause
+pkg-config --modversion vips-cpp
+
+# Bypass libvips detection. Uninstall first, since npm considers
+# kane-cli already installed and will not re-resolve sharp otherwise.
+npm uninstall -g @testmuai/kane-cli
+SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install -g @testmuai/kane-cli
+
+# Make it permanent
+echo 'export SHARP_IGNORE_GLOBAL_LIBVIPS=1' >> ~/.zshrc && source ~/.zshrc
+```
+
+Two other triggers: npm configured to skip optional dependencies (`npm config get omit` should not contain `optional`, so clear it with `npm config delete omit` and reinstall), and a proxy or private registry that does not forward the `@img` scope (add an `@img:registry=https://registry.npmjs.org/` pass-through). If you are fine with PNG screenshots, no action is needed.
+
 ---
 
 ## "Update available" Notice
 
 Kane CLI checks the public npm registry for a newer release once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
 
-The notice is informational — your current version still works. To upgrade, follow the steps in [Updates](/support/docs/kane-cli-installation/#update).
+The notice is informational, your current version still works. To upgrade, follow the steps in [Updates](/support/docs/kane-cli-installation/#update).
 
 ---
 
