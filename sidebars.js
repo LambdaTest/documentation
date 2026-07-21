@@ -4514,6 +4514,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Native App Automation",
+            id: "native-app-automation-mcp",
+          },
+          {
+            type: "doc",
             label: "SmartUI MCP",
             id: "smartui-mcp-server",
           },
