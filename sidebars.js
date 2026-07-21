@@ -5095,6 +5095,43 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Assurance",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-assurance",
+          },
+          {
+            type: "doc",
+            label: "Context Graph",
+            id: "kane-cli-assurance-context",
+          },
+          {
+            type: "doc",
+            label: "Designing Tests",
+            id: "kane-cli-assurance-design",
+          },
+          {
+            type: "doc",
+            label: "Coverage",
+            id: "kane-cli-assurance-coverage",
+          },
+          {
+            type: "doc",
+            label: "Maintaining the Suite",
+            id: "kane-cli-assurance-maintain",
+          },
+          {
+            type: "doc",
+            label: "Agents & CI",
+            id: "kane-cli-assurance-automation",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Checkpoints",
         items: [
           {
