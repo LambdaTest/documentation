@@ -1,5 +1,7 @@
 # Selenium With Tesbo
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Run [Tesbo](https://tesbo.io/) keyword-driven automation scripts on the TestMu AI cloud grid. Tesbo is a hybrid framework built on Selenium that lets you write automation scripts in plain English using a keyword-driven approach.
 
 **Sample repo**

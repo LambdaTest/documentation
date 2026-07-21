@@ -1,5 +1,7 @@
 # Scan Configurations for Mobile App Accessibility (Manual)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Scan Configurations let users decide exactly which accessibility rules run on a **manual** mobile app scan before it starts. Instead of always running the full built-in rule set, users choose a WCAG conformance target, turn rule groups on or off, and hand-pick individual rules. TestMu AI remembers each user's choices and pre-fills them on the next scan.
 
 This brings mobile app accessibility to **parity with web accessibility**, where configurable scans already existed.

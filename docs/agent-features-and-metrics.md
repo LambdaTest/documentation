@@ -12,10 +12,10 @@ keywords:
  - phone caller agent
  - image analyzer agent
  - agent testing
-url: https://www.testmu.ai/support/docs/agent-features-and-metrics/
+url: https://www.testmuai.com/support/docs/agent-features-and-metrics/
 site_name: LambdaTest
 slug: agent-features-and-metrics/
-canonical: https://www.testmu.ai/support/docs/agent-features-and-metrics/
+canonical: https://www.testmuai.com/support/docs/agent-features-and-metrics/
 ---
 
 import Tabs from '@theme/Tabs';

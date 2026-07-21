@@ -1,5 +1,7 @@
 # Cypress Integration with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 In the realm of the software development and testing, developers and QA engineers embarked on a quest to ensure the reliability and efficiency of their applications.
 
 They needed a robust end-to-end testing framework that can help them to deal with issues like flaky tests, time travel debugging, parallel test execution, etc. Hence they turned to Cypress, that provides the following advantages:

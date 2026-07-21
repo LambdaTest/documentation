@@ -1,5 +1,7 @@
 # TestMo Integration With TestMu AI Grid
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMo is a unified test management software that helps teams manage and track all their testing activity and efforts in one place. It combines manual testing, exploratory & ad-hoc testing and test automation in one platform, so teams can work smarter and more productively.
 
 TestMo also offers integration with TestMu AI to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **TestMu AI integration to TestMo**  will help you run your automation scripts from TestMo instance to our cloud-based Grid.

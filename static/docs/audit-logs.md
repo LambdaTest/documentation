@@ -1,5 +1,7 @@
 # Audit Logs
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Audit logs serve as a record of every **User** and **Organization** Level activities in a TestMu AI account.
 
 > **Note:** Only organization administrators are able to view and manage the audit logs.

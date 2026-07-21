@@ -1,5 +1,7 @@
 # Insights Dashboard
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The insights section provides a comprehensive project level data overview of key Test Manager features, including Projects, Test Plans, Builds, and Test Cases, available at both the project and organizational levels.
 
 1. The insights is segregated on various parameters such as

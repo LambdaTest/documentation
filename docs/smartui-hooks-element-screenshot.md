@@ -51,7 +51,7 @@ Make sure you have:
 
 - A LambdaTest account with Web Automation access, such as Selenium on the LambdaTest Grid.
 - SmartUI enabled for the session. Your SmartUI project and build must be configured on the test session.
-- A locator for the target element, such as a CSS selector, XPath, or HTML `id`.
+- A locator for the target element, such as a CSS selector, XPath, or HTML `id`. You can also pass an already-resolved element handle, see [Capture by Resolved Element Handle](#capture-by-resolved-element-handle-webelement).
 
 :::note
 Do not store usernames or access keys in your source repository. Use environment variables or your CI secret manager instead.
@@ -71,34 +71,27 @@ This helps ensure the correct region is ready for capture. Use your framework's 
 
 ## Step 3: Call the SmartUI Element Screenshot Hook
 
-Run a JavaScript string in the browser context, for example using Selenium `executeScript()`.
+Call the SmartUI hook through your driver's script executor, passing `"smartui.takeScreenshot"` as the command and a config object with your screenshot options:
 
-Use the following format:
+```js
+const config = {
+  screenshotName: "Checkout_Summary_Block",
+  elementType: "css_selector",
+  element: "section.checkout-summary",
+  fullPage: false
+};
 
-```text
-smartui.takeScreenshot,<JSON>
+await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-The JSON must include at least these fields:
+The config object must include at least these fields:
 
 | Field | Purpose |
 |---|---|
 | `screenshotName` | Stable name for the screenshot in SmartUI. Used for baselines and comparisons. |
-| `elementType` | Locator type. Supported values: `css_selector`, `xpath`, `id`, `class` |
-| `element` | Locator value for the target element |
+| `elementType` | Locator type. Supported values: `css_selector`, `xpath`, `id`, `class`, `webElement` |
+| `element` | Locator value for the target element. When `elementType` is `webElement`, this is a resolved element handle instead of a locator string. See [Capture by Resolved Element Handle](#capture-by-resolved-element-handle-webelement). |
 | `fullPage` | Set to `false` to capture only the target element |
-
-Example JSON:
-
-```json
-{"screenshotName":"Checkout_Summary_Block","elementType":"css_selector","element":"section.checkout-summary","fullPage":false}
-```
-
-Full script string passed to `executeScript()`:
-
-```text
-smartui.takeScreenshot,{"screenshotName":"Checkout_Summary_Block","elementType":"css_selector","element":"section.checkout-summary","fullPage":false}
-```
 
 Update `elementType` and `element` to match the locator used in your test.
 
@@ -107,6 +100,40 @@ Update `elementType` and `element` to match the locator used in your test.
 If you want to capture more than one component, call the hook again with a different `screenshotName` for each one.
 
 Keep screenshot names stable across runs so SmartUI compares against the correct baseline.
+
+## Capture by Resolved Element Handle (webElement)
+
+The locator-based flow above re-resolves your selector at the moment the screenshot runs. On pages where the DOM is rewritten after you locate the element, for example a workspace that rebuilds its layout every time a new tab is added, the selector can go stale before capture and the element screenshot fails.
+
+To avoid this, set `elementType` to `webElement` and pass an already-resolved element reference as `element`. SmartUI uses that live handle directly and skips locator re-resolution, so the capture stays reliable even when the surrounding DOM changes after the element was located.
+
+:::note
+When `elementType` is `webElement`, you pass a real element object, not a string. Call the hook with the command name and a config object as two separate arguments so your automation framework serializes the element handle correctly. Do not use the `smartui.takeScreenshot,<JSON>` string form for `webElement`, because a serialized string cannot carry a live element reference.
+:::
+
+First resolve the element in your test, then pass it to the hook:
+
+```javascript
+const el = await driver.findElement(By.className('hero-heading'));
+
+const config = {
+  screenshotName: 'region-screenshot',
+  elementType: 'webElement',
+  element: el
+};
+
+await driver.executeScript('smartui.takeScreenshot', config);
+```
+
+| Field | Purpose |
+|---|---|
+| `screenshotName` | Stable name for the captured screenshot in SmartUI. |
+| `elementType` | Set to `webElement` to pass a resolved element handle instead of a locator. |
+| `element` | The resolved element reference to scope the capture to, for example the return value of `driver.findElement(...)`. |
+
+:::tip
+Use `webElement` when the element is present and stable when you locate it, but the page mutates the DOM before the screenshot runs. If your locator stays valid through capture, the locator-based flow in Step 3 is simpler.
+:::
 
 ## Optional: Capture Many Elements Automatically
 
@@ -189,14 +216,12 @@ for (const item of elements) {
 
   const screenshotName = `element_${label}`.replace(/[^a-zA-Z0-9_-]+/g, '_').slice(0, 80);
 
-  await driver.executeScript(
-    `smartui.takeScreenshot,${JSON.stringify({
-      screenshotName,
-      elementType: 'xpath',
-      element: item.xpath,
-      fullPage: false
-    })}`
-  );
+  await driver.executeScript("smartui.takeScreenshot", {
+    screenshotName,
+    elementType: 'xpath',
+    element: item.xpath,
+    fullPage: false
+  });
 }
 ```
 
@@ -231,6 +256,7 @@ for (const item of elements) {
 | CSS selector | `css_selector` | `main article:first-of-type` |
 | XPath | `xpath` | `//div[@data-testid='invoice-panel']` |
 | HTML `id` | `id` | `sidebar` |
+| Resolved element handle | `webElement` | `await driver.findElement(By.className('hero-heading'))` |
 
 ## Related Docs
 

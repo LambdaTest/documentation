@@ -1,5 +1,7 @@
 # Run Automation Tests Using Cypress v9
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 > **NOTE :** This documentation is applicable for **Cypress v9** and **previous versions**.
 
 HyperExecute is a smart test orchestration platform that allows you to run end-to-end Cypress tests as quickly as possible by providing a test infrastructure with optimal speed, test orchestration, and detailed execution logs.

@@ -86,6 +86,8 @@ It displays:
 
 Use the action buttons next to the test ID to copy the ID, create an issue, rename, share, or delete the test.
 
+Use the **Re-Run** button to execute the test again from the dashboard. See [Re-Run Automation Tests](/support/docs/rerun-automation-tests/).
+
 <img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testSummary.png').default} alt="Test summary section" className="doc_img" style={{ width: '100%' }}/>
 
 ### Command Logs and Network

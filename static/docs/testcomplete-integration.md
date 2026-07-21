@@ -1,5 +1,7 @@
 # TestComplete
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
 TestMu AI integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.

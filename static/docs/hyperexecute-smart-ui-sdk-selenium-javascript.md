@@ -1,5 +1,7 @@
 # UI Testing with Node.js using HyperExecute and SmartUI SDK
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This documentation will guide you step-by-step to execute the SmartUI SDK tests on the HyperExecute platform using **Selenium - JavaScript**
 
 ## Prerequisites

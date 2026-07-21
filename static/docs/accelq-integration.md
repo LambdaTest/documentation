@@ -1,5 +1,7 @@
 # ACCELQ Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ACCELQ is an AI Native Codeless automation testing and management platform. It enables you automate web, mobile, API, database, and packaged applications.
 
 By integrating TestMu AI with ACCELQ, you can perform web and mobile app automation on an online device farm of 3000+ real browsers, devices, and OS combinations, and accelerate your end-to-end digital testing efforts.

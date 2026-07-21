@@ -1,5 +1,7 @@
 # Understanding Unique Test Instances and Retry Detection
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 
 When executing automated tests with retry mechanisms, your results often contain multiple executions of the same test under identical conditions. This can distort metrics and obscure the true health of your test suite. TestMu AI Analytics addresses this challenge with **Intelligent Unique Instance Detection**, which automatically consolidates retry attempts and surfaces only the definitive outcome.

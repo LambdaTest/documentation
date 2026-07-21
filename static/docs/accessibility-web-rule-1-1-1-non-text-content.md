@@ -1,5 +1,7 @@
 # Non-text Content (1.1.1)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Meaningful images and non-text elements need accessible text alternatives.
 
 **WCAG Reference**

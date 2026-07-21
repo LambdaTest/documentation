@@ -1,5 +1,7 @@
 # Accessibility Compliance Guide (ADA / WCAG / EAA / 508)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This page explains how common accessibility compliance frameworks relate to Accessibility Testing outputs.
 
 Teams working under ADA, WCAG, Section 508, or the EAA still need a practical bridge between legal frameworks and day-to-day testing signals. This guide explains how Accessibility Testing reports, manual verification, and rule-level remediation guidance fit into those broader compliance conversations without standing in for legal certification. Use it when stakeholders ask how the product supports their framework language at a high level.

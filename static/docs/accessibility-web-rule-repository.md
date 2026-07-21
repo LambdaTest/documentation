@@ -1,5 +1,7 @@
 # Web Rule Repository
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Use this repository to browse web accessibility rules, their WCAG mappings, and related remediation guidance.
 
 This repository links web-focused rule pages that explain what each check covers, why it matters for users, and how to begin remediation. Reach for it when you already know you are fixing a web accessibility issue and want a rule-level reference instead of a broad coverage summary alone.

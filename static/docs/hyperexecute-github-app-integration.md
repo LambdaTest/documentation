@@ -1,5 +1,7 @@
 # GitHub App Integration Support for HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 > This is currently in the **Beta** version.
 
 HyperExecute supports integration with GitHub App, enabling secure, fine-grained, and scalable access to your GitHub repositories without relying on long-lived Personal Access Tokens (PATs).

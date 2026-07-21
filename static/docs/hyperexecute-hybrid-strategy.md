@@ -1,5 +1,7 @@
 # Hybrid Strategy in HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 HyperExecute’s Hybrid Strategy is a combination of AutoSplit and Matrix Strategy. You can run all of the combinations of [Matrix Strategy](/support/docs/hyperexecute-matrix-multiplexing-strategy/), and use the [AutoSplit Strategy](/support/docs/hyperexecute-auto-split-strategy/) to run them in parallel on our virtual machines.
 
 ## Why do you need the Hybrid Strategy?

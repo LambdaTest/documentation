@@ -1,5 +1,7 @@
 # Debugging Your Espresso Tests
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Learn how to debug Espresso tests for your mobile applications to resolve different kinds of bugs for your failed tests/builds.
 
 ## Objective

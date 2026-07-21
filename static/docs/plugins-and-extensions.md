@@ -1,5 +1,7 @@
 # Plugins and Extensions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI offers you plugins with various third-party application to help you perform cross browser testing on 3000+ real browsers with pace and convenience. Here are all the plugins and extensions available to integrate TestMu AI and perform testing in a jiffy.
 
 Chrome Extension

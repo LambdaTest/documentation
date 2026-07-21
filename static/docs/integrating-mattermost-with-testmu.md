@@ -1,5 +1,7 @@
 # Integrating Mattermost With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Mattermost is a Communication platform, written in Golang and React, and is open-source, self-hostable, easy to deploy, manage, and upgrade. It is a secure workplace which allows messaging from behind your firewall. Mattermost is a famous alternative to proprietary SaaS messaging apps, as it allows you to bring all your team communication into a single place, making it anywhere searchable and accessible.
 
 The TestMu AI Mattermost Integration allows you to share or push a bug to your specified Mattermost channel from the TestMu AI platform in a single click. You can share any UI observations and input with your team on Mattermost anytime, by just capturing a screenshot in the middle of your test session through TestMu AI. You can also annotate the screenshot or highlight your issue or input. The fields populated by you while marking as a bug through TestMu AI gets displayed as information on Mattermost for that testing instance.

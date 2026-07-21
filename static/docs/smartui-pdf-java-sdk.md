@@ -1,5 +1,7 @@
 # Upload PDFs via Java SDK
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo).
 
 ## Prerequisites for Using SmartUI

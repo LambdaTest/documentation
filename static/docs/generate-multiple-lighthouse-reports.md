@@ -1,5 +1,7 @@
 # Generating Multiple Lighthouse Reports Using Lambda Hooks
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI lets you perform Selenium automation while generating multiple Lighthouse reports through Lambda Hooks. This guide covers the hook structure, expected behavior, and conditions under which the reports are generated or errors are thrown.
 
 ## Hook Structure

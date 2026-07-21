@@ -1,5 +1,7 @@
 # Troubleshooting iOS App Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 While uploading `.app` files on Simulators, you may encounter issues such as the app crashing immediately or the error *"No .app found inside zip"*. These problems typically occur when the app is not built correctly for the Simulator platform.
 
 For a complete step-by-step guide on building your iOS app for Simulator testing, see [Building Your iOS App for Simulator Testing](/docs/build-ios-app-for-simulator-testing/).

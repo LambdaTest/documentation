@@ -1,5 +1,7 @@
 # Applitools Integration With TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Applitools offers a cloud-based platform to help you perform AI Native, end-to-end visual testing and monitoring. The platform is designed to make life easier for automation testers by delivering a flexible way to directly integrate their test scripts without worrying about learning a new language or creating a new automation script.
 
 TestMu AI integration with Applitools will help you perform automated cross browser testing on more than 2000 real browsers running on real operating systems hosted on a cloud-based Selenium Grid. You can execute your automation test script on TestMu AI Selenium Grid directly from your Applitools instance.

@@ -1,5 +1,7 @@
 # Keyboard Accessibility Scan (Beta)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 
 The Assistive Keyboard Accessibility Test combines automated tab simulation with guided manual verification to identify keyboard accessibility issues. It helps ensure all interactive elements on your web page are accessible via keyboard navigation.

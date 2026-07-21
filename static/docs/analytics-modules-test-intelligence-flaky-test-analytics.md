@@ -1,5 +1,7 @@
 # Flaky Test Analytics with Test Intelligence
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The best way to analyze your flaky tests is to use Test Intelligence. Test Intelligence is a machine learning-based algorithm that helps you identify flaky tests and get insights on the flaky tests that are causing your test runs to fail. By observing the historical test runs, Test Intelligence can identify the flaky tests and provide you with the insights to help you fix them.
 
 **Get Flaky Alerts on Slack**

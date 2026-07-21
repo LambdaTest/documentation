@@ -1,5 +1,7 @@
 # Python with Playwright: Running Your First Test
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Learn how to use Playwright with Python to automate web application testing across 50+ real browsers and operating systems on TestMu AI cloud platform.
 
 ## Prerequisites

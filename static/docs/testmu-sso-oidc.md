@@ -1,5 +1,7 @@
 # TestMu AI SSO Integration Using OIDC
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI provides seamless Single Sign-On (SSO) integration with various identity providers using OpenID Connect (OIDC), enabling your team to access TestMu AI using their existing organizational credentials. This managed SSO solution streamlines user management and enhances security by centralizing authentication through your identity provider.
 
 This comprehensive guide will walk you through configuring OIDC-based SSO between your TestMu AI organization and your identity provider, using Azure AD as the example throughout the documentation.

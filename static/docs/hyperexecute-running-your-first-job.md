@@ -1,5 +1,7 @@
 # Running Your First Job on HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This page outlines how you can run your first test execution job on HyperExecute.
 
 ## Before you start
@@ -8,7 +10,7 @@ We recommend running your first test execution job using a sample project on Hyp
 
 1. [**Using Quick Run**](/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run): Execute tests directly from the HyperExecute Portal. ([Recommended](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) for new users)
 2. [**Using Local System**](/support/docs/hyperexecute-running-your-first-job/#2-using-local-system): Execute tests from your Local System. (Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/))
-3. [**Using GitPod**](/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod): Execute tests using GitPod. (Requires a [GitPod](https://gitpod.io/login/) account)
+3. [**Using the HyperExecute Agent Skill**](/support/docs/getting-started-with-hyperexecute/#using-the-hyperexecute-agent-skill-with-testmu-ai): Generate and run tests using an AI coding assistant with the HyperExecute Agent Skill.
 
 ## 1. Using Quick Run
 
@@ -60,17 +62,10 @@ In case of MAC, if you get a permission denied warning while executing CLI, simp
 
 > If you are facing any issues in running your first job? Watch our [Webinar Video](/support/docs/hyperexecute-running-your-first-job/#hyperexecute-webinar-video)
 
-## 3. Using Gitpod
+## 3. Using the HyperExecute Agent Skill
 
-**Step 1:** Go to the [Quickstart](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) page.
+You can generate production-ready HyperExecute tests and run them directly from your AI coding assistant (such as Claude or Cursor) using the HyperExecute Agent Skill — no manual YAML or CLI setup required.
 
-**Step 2:** Choose your test automation framework, select **Run test on Gitpod** and click on **Get Started**.
-
-**Step 3:** You will need to login into your Gitpod account, or create a new one.
-  (If you are creating a new account, choose your preferred editor. We recommend VS Code)
-
-**Step 4:** As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated.
-
-**Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
+For installation and usage, refer to [Using the HyperExecute Agent Skill with TestMu AI](/support/docs/getting-started-with-hyperexecute/#using-the-hyperexecute-agent-skill-with-testmu-ai).
 
 ## HyperExecute Webinar Video

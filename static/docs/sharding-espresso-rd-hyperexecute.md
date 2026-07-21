@@ -1,5 +1,7 @@
 # Sharding for Espresso
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.
 
 Furthermore, this document provides insights on executing Espresso Tests on real devices using the innovative **HyperExecute** platform. Designed with precision, HyperExecute stands out as a test orchestration solution, tailored to execute end-to-end tests at breakneck speed. To streamline its setup and configuration, a user-friendly `YAML` file is employed. Dive into this guide to make your testing process more agile and efficient.

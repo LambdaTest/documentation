@@ -1,5 +1,7 @@
 # Issue Summary
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Issue Summary gives you the high-level breakdown of a completed Accessibility run before you move into issue-level triage.
 
 Read on for the summary metrics surfaced after each run. Each signal is meant to help you prioritize remediation before you drill into individual issues, so you can align fixes with severity and coverage first.

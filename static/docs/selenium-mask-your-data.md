@@ -1,5 +1,7 @@
 # Mask Your Sensitive Data in Selenium Tests
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 
 Use the **maskCommands** capability to hide sensitive data sent to or retrieved from remote browsers at TestMu AI.

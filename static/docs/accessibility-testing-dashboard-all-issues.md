@@ -1,5 +1,7 @@
 # All Issues
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The All Issues view lists every issue found in a report and helps teams move from high-level summary to detailed triage.
 
 The rest of this page walks through using All Issues to inspect findings and interpret grouping. It also explains how to decide whether to fix, hide, or escalate each item so your triage flow stays consistent across reviewers.

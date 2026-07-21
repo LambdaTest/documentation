@@ -1,5 +1,7 @@
 # Link Jira Issues with Test Manager
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Test Manager enhances its functionality by seamlessly linking test cases with Jira issues. This integration ensures a reliable connection between your testing activities and Jira tasks, optimizing project management and collaboration across teams.
 
 ### Initial Setup and Configuration

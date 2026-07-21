@@ -1,5 +1,7 @@
 # Starting a Visual UI Scan with Web Scanner
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Purpose of Visual UI Scan
 
 Visual UI scans identify layout shifts, broken styles, font mismatches, and other design anomalies across web pages. It compares page screenshots taken during each run against a previously saved baseline (initial scan).

@@ -1,5 +1,7 @@
 # Getting Started With Single Sign On (SSO)
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Single sign-on is an authentication feature that allows you to access multiple applications with one set of login credentials. Once you log in, you don't need to login repeatedly for every application linked to a particular application. TestMu AI supports Security Assertion Markup Language (SAML) that allows you to create a team account and authenticate to the TestMu AI dashboard with Identity Provider (IdP).
 
 > SSO is supported in our Enterprise Plans. Please reach out to your account manager or [support@testmuai.com](mailto:support@testmuai.com) for questions.

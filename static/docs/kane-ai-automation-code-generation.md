@@ -1,5 +1,7 @@
 # KaneAI Automation Code Generation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 KaneAI generates automation scripts in multiple frameworks and languages based on natural language inputs from users. KaneAI is available for desktop web applications as well as native mobile applications currently.
 
 Click the `Generate New Code` button to go to code generation page where you can select desired framework and language.

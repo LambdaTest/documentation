@@ -1,5 +1,7 @@
 # TestMu AI SSO & OneLogin Using SAML
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI allows you to integrate an external user directory with your TestMu AI Organization through an IDP so that your team could leverage the Single Sign-on setup. This document will help you integrate your TestMu AI organization with your OneLogin identity provider to configure SSO(Single sign-on).
 
 ## Prerequisites

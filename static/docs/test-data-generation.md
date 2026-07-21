@@ -1,5 +1,7 @@
 # Test Data Generation
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI provides built-in capabilities to generate, manage, and protect the test data your teams use across automation. You can author synthetic datasets for data-driven tests, mask sensitive payloads in network logs and test recordings, and parameterize tests so the same flow runs across environments and inputs without rework.
 
 This page summarizes the three capabilities and points you to the deeper documentation for each.

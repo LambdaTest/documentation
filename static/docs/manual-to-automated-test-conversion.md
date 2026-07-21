@@ -1,5 +1,7 @@
 # AI Test Generation: Requirements to Code
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI provides a complete workflow to convert your manual test requirements into fully automated test scripts,from requirement input to executable code. This guide walks through the end-to-end flow using **Test Manager** and **KaneAI**.
 
 ## Overview

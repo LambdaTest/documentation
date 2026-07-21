@@ -1,5 +1,7 @@
 # Run Your Puppeteer Tests Using Agent Skills
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Instead of manually setting up your Puppeteer project, you can use **Agent Skills** to let your AI coding assistant generate production-ready Puppeteer automation for you.
 
 The [puppeteer-skill](https://github.com/LambdaTest/agent-skills/tree/main/puppeteer-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation code.

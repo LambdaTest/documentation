@@ -1,5 +1,7 @@
 # Fire TV With Appium
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Tutorial To Run Your First Test On TestMu AI
 
 In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **TestMu AI Real Device Cloud platform**.

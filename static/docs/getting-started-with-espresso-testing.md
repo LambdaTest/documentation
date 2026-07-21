@@ -1,5 +1,7 @@
 # Espresso Testing On TestMu AI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
 
 In this documentation, you will learn how to trigger a automation script of Java for application testing with Appium on TestMu AI, set the desired capabilities for appium testing, and other advanced features of TestMu AI.

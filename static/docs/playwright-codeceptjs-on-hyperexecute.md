@@ -1,4 +1,7 @@
 # Running Codecept Framework Tests on HyperExecute
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 CodeceptJS is a versatile end-to-end testing framework for JavaScript that allows testing web applications using various libraries like Puppeteer and WebDriver. It stands out for its simplicity and ability to write tests in a more human-readable and expressive manner, making it accessible for both developers and non-developers.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.

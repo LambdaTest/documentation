@@ -1,5 +1,7 @@
 # Consolidated Mochawesome Report for Cypress
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Mochawesome reporter is a custom Cypress reporter designed to generate standalone HTML reports. These reports are clean, modern, and interactive, making it easier to visualize test results. With features like filtering tests and displaying stack traces for failures, the Mochawesome report is an essential tool in Cypress for clear and concise test insights.
 
 ## Generating a Consolidated HTML Report

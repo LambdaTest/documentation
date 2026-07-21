@@ -1,5 +1,7 @@
 # Use Cases of KaneAI Across Business Domains
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ### Application Suites
 
 KaneAI accelerates testing and validation across complex application suites by auto-generating test cases, simulating user journeys, detecting integration failures, and continuously validating performance and reliability across modules and releases.

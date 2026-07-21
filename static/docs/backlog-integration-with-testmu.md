@@ -1,5 +1,7 @@
 # Backlog Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Backlog provides an online platform for project & code management. Using Backlog, you can collaborate with your teams working in different parts of SDLC(Software Development Life Cycle). It lets you organize, discuss, and track all the work in one place. It offers out-of-the-box features to help you orchestrate your release cycles better. Some of the important features include Git hosting, Git version control, and issue tracking.
 
 TestMu AI integration with Backlog will help you file any UI bug on your Backlog project instance, directly from TestMu AI. If you ever come across a [browser compatibility](https://www.testmuai.com/feature) bug while cross browser testing on TestMu AI, all you need to do is hit a single click and the bug will be logged into your Backlog project.

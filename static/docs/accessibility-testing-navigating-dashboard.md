@@ -1,5 +1,7 @@
 # Navigating the Dashboard
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Accessibility dashboard is the main place to review completed scans, open detailed reports, and act on findings.
 
 Continue reading to understand the dashboard's purpose and how to navigate between reports. You will also see where to access issue-level views, exports, and supporting actions that close the loop after a scan completes.

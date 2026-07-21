@@ -1,4 +1,7 @@
 # Running Behave Framework Tests on HyperExecute
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Behave is a behavior-driven development (BDD) framework for Python that is commonly used with Selenium for automated testing. It allows teams to write test scenarios in a natural language format using Gherkin syntax.
 
 HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.

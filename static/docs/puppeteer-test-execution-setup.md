@@ -1,5 +1,7 @@
 # Puppeteer - Test Execution Setup
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Whenever you run a Puppeteer test, you must specify the operating system and the browser you wish to use. The TestMu AI Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on TestMu AI.
 
 In this guide, learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Puppeteer tests.

@@ -1,5 +1,7 @@
 # Configurations in KaneAI & Test Manager
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Configurations in Test Manager allow you to define reusable environment setups for your test runs. You can specify platform, browser, OS, and device combinations once and apply them across multiple test runs.
 
 **Key Benefits:**

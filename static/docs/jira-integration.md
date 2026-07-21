@@ -1,5 +1,7 @@
 # Jira Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The TestMu AI Jira integration helps you create issues in Jira directly from the TestMu AI platform itself. With simple one-click integration, you can push annotated issues to the project of your choice, assign them to the required teammate, and attach screenshots. You can do all that while in the middle of a test session in the TestMu AI platform. The fields populated by you when marking as a bug through TestMu AI are displayed as information on the Jira ticket for a testing instance.
 
 **Jira Integration with TestMu AI, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.**

@@ -1,5 +1,7 @@
 # Build Comparison - Compare Test Builds and Track Regressions
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Overview
 
 Build Comparison allows you to compare two builds side by side to instantly see what changed - which tests started failing, which got fixed, and which remain stable. Use it to validate releases, debug regressions, and track test stability.

@@ -1,4 +1,7 @@
 # Responsive Testing
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 > This feature is **deprecated** and as a result, no further support will be provided for this feature by the TestMu AI Organization.
 
 As the word responsive suggests, this type of testing is used to check the appearance of a website with RWD(Responsive Web Design). This design helps a website render the content in a flexible yet appropriate manner based on the devices & OS on which it gets summoned. At TestMu AI, you can [check RWD](https://www.testmuai.com/responsive-test-online) through 50+ different devices in a single go!

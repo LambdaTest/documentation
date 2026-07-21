@@ -1,5 +1,7 @@
 # Private Device Allocation to Teams
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Teams feature for Private Cloud Devices enables organization admins to divide and allocate private cloud devices among teams within their organization which ensures effective resource management. Team members then gain exclusive access to the allocated devices, ensuring efficient and secure testing workflows.
 
 > To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.

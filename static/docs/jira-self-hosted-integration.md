@@ -1,5 +1,7 @@
 # Self-Hosted Jira Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Many organizations consistently choose to self host their application as it gives them complete control of almost everything. If you want to place Jira behind your corporate firewall and restrict access to someone who isn't on your private network, you can do the same.
 
 TestMu AI-Jira integration allows you to integrate your self-hosted Jira instance and create the issues directly from the TestMu AI platform. You can send annotated issues to the project of your choice, assign them to a colleague, and add a screenshot straight from the TestMu AI platform.

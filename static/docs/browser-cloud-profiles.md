@@ -1,5 +1,7 @@
 # Stay Logged In Across Runs with Profiles
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Persist and reuse browser state - cookies, auth, and settings - across separate script runs. Profiles auto-save when the browser closes and auto-load when you use the same profile ID.
 
 ## Why You Need This

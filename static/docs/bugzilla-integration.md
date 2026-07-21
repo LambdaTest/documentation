@@ -1,5 +1,7 @@
 # Bugzilla Integration
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Bugzilla is an open-source bug tracking tool that allows you to keep track of software bugs. It is coded in Perl and uses the MYSQL database. By leveraging Bugzilla, users can stay linked with their customers or employees in order to communicate effectively about the product's issues. 
 
 In this documentation, we look at how to integrate Bugzilla with TestMu AI and perform one-click bug logging right away from the TestMu AI platform to your Bugzilla products.

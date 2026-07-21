@@ -1,5 +1,7 @@
 # Katalon Reports on HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 HyperExecute provides seamless integration with Katalon Studio, enabling you to generate and view detailed execution reports directly from your test runs. These reports include details such as:
 
 - Test case execution status (Pass/Fail/Skipped)

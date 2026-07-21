@@ -1,5 +1,7 @@
 # How to configure sourcePayload
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 When you run your tests on HyperExecute, the test scripts are zipped, encrypted and uploaded to our secure servers temporarily for execution through the [HyperExecute CLI binary](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/). However, to make this process seamlessly fit in your pipeline you can use the `sourcePayload` Yaml parameter.
 
 Once you set `sourcePayload`, your test scripts are directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and sent through the HyperExecute CLI. Learn more detailed documentation below.

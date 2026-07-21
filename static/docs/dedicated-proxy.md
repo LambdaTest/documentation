@@ -1,5 +1,7 @@
 # Dedicated Proxy - IP Whitelisting
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This article will guide you on how does TestMu AI cloud access network restricted resources using a dedicated proxy server.
 
 ## Prerequisites

@@ -1,5 +1,7 @@
 # Performance Tips
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Running Selenium tests on a cloud grid introduces network latency compared to local execution. These tips help you reduce total execution time on TestMu AI.
 
 ## Disable Unnecessary Logging

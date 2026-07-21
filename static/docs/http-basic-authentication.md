@@ -1,5 +1,7 @@
 # HTTP Basic Authentication
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 HTTP basic authentication represents a challenge and response mechanism to help the server make a request authentication from a client, passing the User ID and password in the URL as the standard HTTP "Authorization" header.
 
 For example: `https://username:password@www.example.com/example-page.php`

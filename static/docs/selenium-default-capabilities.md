@@ -1,5 +1,7 @@
 # Selenium Default Capabilities
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Default Capabilities Reference
 
 These are the built-in capabilities that Selenium supports for browser session configuration.

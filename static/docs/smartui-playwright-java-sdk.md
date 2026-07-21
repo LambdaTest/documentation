@@ -1,5 +1,7 @@
 # Integrate SmartUI SDK with Playwright - Java
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The SmartUI SDK is a powerful tool that simplifies the process of capturing, comparing, and analyzing screenshots across multiple browsers and resolutions. By combining the strengths of Playwright's automation capabilities with SmartUI's visual testing features, you can:
 
 - Ensure your application's UI is consistent across all supported environments.

@@ -1,5 +1,7 @@
 # Advanced TestMu AI Tunnel Features
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **TestMu AI Tunnel** feature allows you to test your **private server URLs** or **locally hosted web-apps** or **websites** on **3000+** real browsers through TestMu AI. However, sometimes corporate firewalls and proxy settings may have restricted you to leverage the TestMu AI Tunnel binary. Not anymore though, as we’ve come up with a new binary for TestMu AI Tunnel. TestMu AI Tunnel follows various protocols such as **Web Socket, TCP** etc. to help you establish a secure and unique tunnel connection between your system and TestMu AI cloud servers.
 
 You can download the **TestMu AI Tunnel binary** that will help you establish a secure connection through corporate firewalls between your computer and [LambdaTest](https://www.testmuai.com/) cloud servers for a testing locally hosted website or web-applications. You can test plain **HTML, CSS, PHP, Python** or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on TestMu AI.

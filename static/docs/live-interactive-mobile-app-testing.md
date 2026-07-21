@@ -1,5 +1,7 @@
 # Realtime Native Mobile App Testing
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Mobile app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With TestMu AI, you can test mobile applications manually to ensure they perform seamlessly across all Android emulators and iOS simulators.
 
 ## Uploading An App

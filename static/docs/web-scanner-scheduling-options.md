@@ -1,5 +1,7 @@
 # Scheduling Options in Web Scanner
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 ## Step 4: Schedule Scan
 
 Once scan configuration and URLs are complete, you’ll be prompted to set your scan frequency and runtime preferences.

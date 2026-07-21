@@ -1,5 +1,7 @@
 # FailFast
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 HyperExecute's FailFast feature lets you to optimize your testing regimen by automatically aborting jobs that surpass a specified number of consecutive failures. This intelligent feature ensures that you receive prompt feedback and maintain a well-orchestrated testing process.
 
 ## `maxNumberOfTests`

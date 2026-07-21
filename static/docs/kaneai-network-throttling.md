@@ -1,5 +1,7 @@
 # Network Throttling
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 The Network Throttling feature in Kane AI enables users to simulate various network conditions during mobile app testing.
 This document outlines how to configure and use network throttling in Kane AI for mobile test creation & execution.
 

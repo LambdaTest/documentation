@@ -1,5 +1,7 @@
 # Explore Visual Regression tests with SmartUI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 SmartUI is a visual testing tool that helps in identifying visual regressions in web applications. It uses advanced image comparison techniques to detect differences between baseline images and those captured during subsequent test runs.
 
 You can perform following Visual Regression tests using SmartUI:

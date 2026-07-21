@@ -1,5 +1,7 @@
 # Login to Google account on Android
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This documentation will guide you to log in to your Google Account on an Android Device on TestMu AI so you can test features/services that are linked to your Google Account.
 
 ## Objective

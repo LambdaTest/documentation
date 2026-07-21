@@ -1,5 +1,7 @@
 # Settings and Security
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 This page empowers you to manage your account's security settings, ensuring the confidentiality and integrity of your data.
 
 ## Key Features:

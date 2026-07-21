@@ -1,5 +1,7 @@
 # Kane CLI Documentation - Getting Started
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **Kane CLI** `kane-cli` is an AI-powered browser automation tool that runs from your terminal. Describe what you want to test in plain English: Kane CLI navigates websites, clicks elements, fills forms, extracts data, and validates outcomes in a real Chrome browser.
 
 - **Run browser tests from any terminal or IDE**: no test scripts, no selectors, no framework boilerplate
@@ -21,10 +23,13 @@ kane-cli run --url https://example.com "Click the 'More information' link and ve
 
 Kane CLI runs from the integrated terminal of your editor, so you can drive browser tests without leaving your development environment. It is supported in:
 
-- **Eclipse-based IDEs**: run Kane CLI from the integrated terminal in Eclipse and Eclipse-based plugins.
-- **Visual Studio**: run Kane CLI from the Visual Studio integrated terminal.
-- **Xcode**: for mobile testing on Xcode, use the dedicated [TestMu Xcode plugin](https://www.testmuai.com/support/docs/xcode-plugin-testmu/).
-- **Web-based IDEs**: run Kane CLI from browser-based editors with an integrated terminal.
+* Cursor
+* Antigravity
+* VS Code
+* Codex
+* Kiro (AWS)
+* Eclipse-based IDEs
+* Web-based IDEs
 
 ## Three Modes
 

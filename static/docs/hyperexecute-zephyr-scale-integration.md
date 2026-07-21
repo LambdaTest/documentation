@@ -1,5 +1,7 @@
 # Integrate Zephyr Scale with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Zephyr Scale is a test management platform that helps you plan, manage, and measure your tests inside Jira. It's designed from the ground up to support large test libraries and scaling teams
 
 This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by TestMu AI.

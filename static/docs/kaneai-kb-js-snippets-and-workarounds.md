@@ -1,5 +1,7 @@
 # JS Snippets & Workarounds
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 KaneAI's natural language engine handles the vast majority of web testing scenarios. However, some interactions require direct DOM manipulation or precise programmatic control that natural language can't reliably express. For these cases, KaneAI provides **JS Snippets**: the ability to execute JavaScript code directly on the page.
 
 This guide is organized by common QA scenario, showing you **when** natural language falls short and **exactly what JS snippet** to use as a workaround.
