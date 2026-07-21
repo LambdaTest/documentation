@@ -1,6 +1,6 @@
 ---
 id: inbound-phone-agent
-title: Inbound Phone Agent Testing With TestMu AI
+title: How to Test an Inbound Phone Agent With TestMu AI Agent Testing Platform
 hide_title: false
 sidebar_label: Inbound Phone Agents
 description: Test an inbound phone agent with TestMu AI. Live test calls, production recording analysis, voice and noise simulation, and 30+ call quality metrics.
@@ -43,11 +43,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Inbound Phone Agent Testing With TestMu AI
+# How to Test an Inbound Phone Agent With TestMu AI Agent Testing Platform
 
 ---
 
-An inbound phone agent answers calls. To test one, the Agent Testing Platform places a real call to the agent's phone number, and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
+An inbound phone agent answers calls. To test one, the Agent Testing Platform places a real call to the agent's phone number and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
 
 Inbound testing runs in two modes: **pre-evaluation** with live simulated calls, and **post-evaluation** on recordings from real production calls.
 
