@@ -1,51 +1,6 @@
----
-id: inbound-phone-agent
-title: Inbound Phone Agent Testing With TestMu AI
-hide_title: false
-sidebar_label: Inbound Phone Agents
-description: Test an inbound phone agent on TestMu AI. Create a phone project, set the prompt, generate scenarios, run a call suite, and check the go-live assessment.
-keywords:
- - inbound phone agent testing
- - ivr testing
- - inbound voice agent evaluation
- - phone caller inbound
- - call suite testing
-url: https://www.testmuai.com/support/docs/inbound-phone-agent/
-site_name: TestMu AI
-slug: inbound-phone-agent/
-canonical: https://www.testmuai.com/support/docs/inbound-phone-agent/
----
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Inbound Phone Agent Testing",
-          "item": `${BRAND_URL}/support/docs/inbound-phone-agent`
-        }]
-      })
-    }}
-></script>
-
 # Inbound Phone Agent Testing With TestMu AI
 
----
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 An inbound phone agent answers calls. To test one, the Agent Testing Platform places a real call to the agent's phone number and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
 
@@ -53,20 +8,16 @@ This guide runs the full CLI workflow, from creating a phone project to a go-liv
 
 ## Create an Inbound Phone Project
 
----
-
 Create a project with the `phone_caller_inbound` type. Note the project ID from the output, since later steps need it.
 
 ```bash
 testmu-a2a projects create \
-    --name "Airline Support Agent" \
-    --description "Testing our IVR booking agent" \
-    --type phone_caller_inbound
+--name "Airline Support Agent" \
+--description "Testing our IVR booking agent" \
+--type phone_caller_inbound
 ```
 
 ## Set the Agent Prompt
-
----
 
 The prompt is the most important input. It drives scenario generation, evaluation criteria, and the go-live assessment. Define it in a YAML file so the prompt, context, and requirement documents live in one place.
 
@@ -76,44 +27,40 @@ testmu-a2a prompts set --project <project_id> --from-file prompt.yaml
 
 ```yaml
 prompt: |
-  You are an airline booking assistant. You help customers find flights,
-  make reservations, handle cancellations, and process refunds.
-  Always verify the customer's identity before making changes.
+You are an airline booking assistant. You help customers find flights,
+make reservations, handle cancellations, and process refunds.
+Always verify the customer's identity before making changes.
 context: "Agent must comply with DOT airline passenger rights regulations"
 files:
-  - ./compliance_rules.pdf
-  - ./fare_structure.docx
+- ./compliance_rules.pdf
+- ./fare_structure.docx
 ```
 
-Verify what was saved with `testmu-a2a prompts get --project <project_id>`.
+Verify what was saved with `testmu-a2a prompts get --project `.
 
 ## Generate and Review Scenarios
-
----
 
 Generate inbound scenarios across the caller personas you want to cover. You can generate up to 20 scenarios per run.
 
 ```bash
 testmu-a2a phone-scenarios generate \
-    --project <project_id> \
-    --count 5 \
-    --personas "frustrated,confused,elderly,rushed" \
-    --instructions "Test flight booking, cancellation, and rebooking"
+--project <project_id> \
+--count 5 \
+--personas "frustrated,confused,elderly,rushed" \
+--instructions "Test flight booking, cancellation, and rebooking"
 ```
 
-Review them with `testmu-a2a phone-scenarios list --project <project_id>`, and add manual scenarios with `testmu-a2a phone-scenarios create` when you need a specific case.
+Review them with `testmu-a2a phone-scenarios list --project `, and add manual scenarios with `testmu-a2a phone-scenarios create` when you need a specific case.
 
 ## Create and Run a Call Suite
-
----
 
 Group scenarios into a suite, then run it. Use a YAML file when you need per-scenario call settings such as the number, voice, and background sound.
 
 ```bash
 testmu-a2a suites create \
-    --project <project_id> \
-    --name "Booking Flow Regression" \
-    --scenarios "<scenario_id_1>,<scenario_id_2>,<scenario_id_3>"
+--project <project_id> \
+--name "Booking Flow Regression" \
+--scenarios "<scenario_id_1>,<scenario_id_2>,<scenario_id_3>"
 
 testmu-a2a suites run --project <project_id> --name "Booking Flow Regression"
 ```
@@ -121,8 +68,6 @@ testmu-a2a suites run --project <project_id> --name "Booking Flow Regression"
 Each scenario in a suite YAML accepts `phone_number`, `voice`, `voice_provider`, `background_sound_enabled`, `background_sound_url`, `first_speaker`, `wait_seconds` (0.5 to 5.0), and `max_duration_seconds` (60 to 1800).
 
 ## Check Results and Go-Live Readiness
-
----
 
 List the call results, open a single call, or summarize the suite. Then run a go-live assessment for a production readiness verdict.
 
@@ -132,11 +77,9 @@ testmu-a2a call-results summary <suite_id>
 testmu-a2a assessments create --project <project_id> --type phone
 ```
 
-To run the suite on a schedule, add `testmu-a2a schedules create --project <project_id> --suite <suite_id> --frequency daily --time 09:00`.
+To run the suite on a schedule, add `testmu-a2a schedules create --project  --suite  --frequency daily --time 09:00`.
 
 ## Features
-
----
 
 Inbound testing runs in two modes: pre-evaluation with live simulated calls, and post-evaluation on uploaded production recordings.
 
@@ -159,8 +102,6 @@ Inbound testing runs in two modes: pre-evaluation with live simulated calls, and
 **Scheduled Runs.** Automate runs with cron scheduling, IANA timezones, pause and resume, and run history.
 
 ## Metrics
-
----
 
 Phone agents are evaluated across 8 metric categories with 30+ individual metrics.
 
@@ -237,8 +178,6 @@ Phone agents are evaluated across 8 metric categories with 30+ individual metric
 | Average Pitch | 85 to 300 Hz | n/a | under 85 or over 300 Hz |
 
 ## Related TestMu AI Guides
-
----
 
 - See the [phone agent testing overview](/support/docs/phone-agent/) for live and recording modes.
 - See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/).

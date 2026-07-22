@@ -1,51 +1,6 @@
----
-id: chat-agent
-title: Chat Agent Testing With TestMu AI
-hide_title: false
-sidebar_label: Chat Agents
-description: Test chat agents on TestMu AI. How multi-turn conversations are simulated, which quality metrics are scored, and how to run an evaluation from UI, CLI, or API.
-keywords:
- - chat agent testing
- - chatbot testing
- - chat agent evaluation
- - conversational ai testing
- - multi-turn conversation testing
-url: https://www.testmuai.com/support/docs/chat-agent/
-site_name: TestMu AI
-slug: chat-agent/
-canonical: https://www.testmuai.com/support/docs/chat-agent/
----
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Chat Agent Testing",
-          "item": `${BRAND_URL}/support/docs/chat-agent`
-        }]
-      })
-    }}
-></script>
-
 # Chat Agent Testing With TestMu AI
 
----
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 The Agent Testing Platform tests a chat agent by holding multi-turn conversations with it through its API, following AI-generated scenarios, and scoring each conversation across quality metrics. It covers text chatbots, virtual assistants, IT helpdesks, and FAQ bots.
 
@@ -53,23 +8,17 @@ You provide the endpoint, the agent's intended behavior, and any requirement doc
 
 ## How Chat Agent Testing Works
 
----
-
 The platform generates 60 to 100+ scenarios from your prompt and uploaded documents, then runs each one as a full conversation. Testing agents send multi-turn HTTP messages to your endpoint, read the reply from each response, and decide the next message based on the scenario goal and prior context.
 
 A conversation ends when the goal is met, the maximum turn count is reached, or an unrecoverable error occurs. Each completed conversation is then scored. For the request and response mechanics, see how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
 
 ## What Chat Testing Evaluates
 
----
-
 Every chat conversation is scored across the 9 chat and voice quality metrics, such as hallucination, bias, completeness, context awareness, response quality, and conversation flow. Each metric is scored on a 0.0 to 1.0 scale against the thresholds you set.
 
 Scenarios are drawn from behavioral test categories, including intent recognition, context and memory, multi-turn reasoning, error handling, and compliance.
 
 ## Run a Chat Agent Test
-
----
 
 You can test a chat agent three ways. All three run the same evaluation and produce the same scored results.
 
@@ -79,15 +28,11 @@ You can test a chat agent three ways. All three run the same evaluation and prod
 
 ## Read the Results
 
----
-
 Each run produces per-metric scores with pass or fail badges, full transcripts for failing conversations annotated with the evidence that drove the score, and score deltas against previous runs. The scores roll up into a Green, Yellow, or Red go-live verdict.
 
 For how thresholds and the verdict are decided, see [quality dimensions and the go-live verdict](/support/docs/ai-agent-testing-platform-overview/).
 
 ## Features
-
----
 
 The chat agent workflow includes the following features.
 
@@ -126,8 +71,6 @@ The chat agent workflow includes the following features.
 
 ## Metrics
 
----
-
 Chat agents are evaluated on 9 quality metrics, each scored on a 0 to 100% scale.
 
 | # | Metric | What it measures |
@@ -145,7 +88,5 @@ Chat agents are evaluated on 9 quality metrics, each scored on a 0 to 100% scale
 Every evaluation result includes the overall score, per-metric scores with pass or fail badges, detailed analysis, the full multi-turn transcript, identified strengths, areas for improvement, actionable recommendations, and validation criteria results.
 
 ## Related TestMu AI Guides
-
----
 
 - See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
