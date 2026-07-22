@@ -116,7 +116,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
 
 #### Default Usage
-If no filename is specified, results will be stored in `results.json`:
+If no filename is specified, results are written to `<build-id>.json` in the current directory:
 
 ```bash
 npx smartui --config .smartui.json exec --fetch-results -- <execution-command>

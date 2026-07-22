@@ -92,7 +92,7 @@ Add the SmartUI Java SDK to your `pom.xml`:
 <dependency>
     <groupId>io.github.lambdatest</groupId>
     <artifactId>lambdatest-java-sdk</artifactId>
-    <version>1.0.18</version>
+    <version>1.0.23</version>
 </dependency>
 ```
 
@@ -182,7 +182,7 @@ public class SmartuiPdfCloudTest {
         String projectToken = System.getenv(PROJECT_TOKEN");
 
         // Download PDF from cloud session
-        String base64Content = (String) ((JavaScriptExecutor) driver)
+        String base64Content = (String) ((JavascriptExecutor) driver)
             .executeAsyncScript("lambda-file-content=LambdaTest.pdf");
 
         // Convert base64 to PDF file
