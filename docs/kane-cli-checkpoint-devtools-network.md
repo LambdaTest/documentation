@@ -2,7 +2,7 @@
 id: kane-cli-checkpoint-devtools-network
 title: Network Assertions
 sidebar_label: Network
-description: "Verify HTTP traffic — API responses, status codes, headers, response bodies, and request timing — captured by KaneAI in the background."
+description: "Verify HTTP traffic (API responses, status codes, headers, response bodies, and request timing) captured by KaneAI in the background."
 keywords:
   - network assertion
   - http response
@@ -39,7 +39,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-ne
       }) }}
 ></script>
 
-Network assertions let you verify HTTP traffic — API responses, status codes, headers, response bodies, and request timing.
+Network assertions let you verify HTTP traffic: API responses, status codes, headers, response bodies, and request timing.
 
 ## How Capture Works
 

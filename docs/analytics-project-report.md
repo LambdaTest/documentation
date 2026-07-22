@@ -23,7 +23,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Project - Reports and C-Suite Insights 
 
 <Admonition title="Executive Summary">
-The Project Analytics Dashboard is not just a tool for QA teams—it's a strategic asset for C-Suite executives. With real-time, high-level insights, it empowers leadership to make data-driven decisions, monitor release readiness, and communicate quality metrics to stakeholders and boards with confidence.
+The Project Analytics Dashboard is not just a tool for QA teams, it's a strategic asset for C-Suite executives. With real-time, high-level insights, it empowers leadership to make data-driven decisions, monitor release readiness, and communicate quality metrics to stakeholders and boards with confidence.
 </Admonition>
 
 ## Introduction
@@ -67,7 +67,7 @@ The Project Analytics Dashboard is a comprehensive platform designed to provide 
 ## Feature Overview & Widgets
 
 <Admonition title="C-Suite Value">
-The dashboard’s visualizations and health indicators are designed for rapid executive consumption—enabling quick identification of risk, ROI, and release readiness without deep technical dives.
+The dashboard’s visualizations and health indicators are designed for rapid executive consumption, enabling quick identification of risk, ROI, and release readiness without deep technical dives.
 </Admonition>
 
 ### 1. Testing Velocity

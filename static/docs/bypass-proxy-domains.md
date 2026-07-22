@@ -1,0 +1,30 @@
+# How to Bypass Proxy Domains
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+When running tests with Dedicated Proxy (DP) enabled, all outgoing requests are routed through the proxy. While this provides secure and controlled network access, it can sometimes cause issues when your tests need to access services running locally, such as localhost endpoints or specific internal domains.
+
+To solve this, you can use the `bypassProxyDomains` capability. This capability lets you define a list of domains that should bypass the dedicated proxy and instead be resolved directly from the test environment.
+
+With `bypassProxyDomains`, you can configure specific domains (like localhost) to skip the proxy hop and resolve locally. This ensures that local APIs, servers, or background services started during tests remain accessible.
+
+## Capability Reference
+
+| Capability           | Type      | Required | Description                                                                    |
+| -------------------- | --------- | -------- | ------------------------------------------------------------------------------ |
+| `dedicatedProxy`     | `boolean` | Yes      | Must be set to `true` for `bypassProxyDomains` to take effect.                 |
+| `bypassProxyDomains` | `array`   | Optional | List of domains (hostnames) to bypass the dedicated proxy and resolve locally. |
+
+> `dedicatedProxy: true` is mandatory for bypassProxyDomains to take effect.
+
+## Example Usage
+
+```java title="test1.java"
+DesiredCapabilities capabilities = new DesiredCapabilities();
+String bypassProxyDomains[] = { "127.0.0.1", "localhost", "todomvc" };
+
+capabilities.setCapability("dedicatedProxy", true);
+capabilities.setCapability("bypassProxyDomains", bypassProxyDomains);
+```
+
+> **Note :** Cypress currently does not support bypassing the domains `127.0.0.1` and `localhost` when using the `bypassProxyDomains` capability

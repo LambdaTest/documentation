@@ -338,7 +338,7 @@ Add the following **Webhook** to your test cases where we need to capture the sc
 <TabItem value="nodejs" label="NodeJS" default>
 
 ```javascript
-driver.executeScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
+await driver.executeScript("smartui.takeScreenshot", { screenshotName: "<Your Screenshot Name>", fullPage: true });
 ```
 
 </TabItem>
@@ -346,28 +346,31 @@ driver.executeScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
 <TabItem value="python" label="Python" default>
 
 ```python
-driver.execute_script("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
+driver.execute_script("smartui.takeScreenshot", {"screenshotName": "<Your Screenshot Name>", "fullPage": True})
 ```
 
 </TabItem>
 <TabItem value="ruby" label="Ruby" default>
 
 ```ruby
-driver.execute_script("smartui.takeFullPageScreenshot=<Your Screenshot Name>")
+driver.execute_script("smartui.takeScreenshot", {"screenshotName" => "<Your Screenshot Name>", "fullPage" => true})
 ```
 
 </TabItem>
 <TabItem value="csharp" label="C#" default>
 
 ```csharp
-driver.ExecuteScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>");
+driver.ExecuteScript("smartui.takeScreenshot", new Dictionary<string, object> { { "screenshotName", "<Your Screenshot Name>" }, { "fullPage", true } });
 ```
 
 </TabItem>
 <TabItem value="java" label="Java" default>
 
 ```java
-((JavascriptExecutor)driver).executeScript("smartui.takeFullPageScreenshot=<Your Screenshot Name>");
+Map<String, Object> config = new HashMap<>();
+config.put("screenshotName", "<Your Screenshot Name>");
+config.put("fullPage", true);
+((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
 </TabItem>
@@ -386,34 +389,38 @@ For browsers other than chrome (Mozilla, Safari etc.) and for websites `Full Pag
 <TabItem value="nodejs" label="NodeJS" default>
 
 ```javascript
-await driver.executeScript("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }");
+await driver.executeScript("smartui.takeScreenshot", { screenshotName: "<screenshot-name>", fullPage: true, smartScroll: true });
 ```
 </TabItem>
 
 <TabItem value="python" label="Python" default>
 
 ```python
-driver.execute_script("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }")
+driver.execute_script("smartui.takeScreenshot", {"screenshotName": "<screenshot-name>", "fullPage": True, "smartScroll": True})
 ```
 </TabItem>
 <TabItem value="ruby" label="Ruby" default>
 
 ```ruby
-driver.execute_script("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }")
+driver.execute_script("smartui.takeScreenshot", {"screenshotName" => "<screenshot-name>", "fullPage" => true, "smartScroll" => true})
 ```
 </TabItem>
 
 <TabItem value="csharp" label="C#" default>
 
 ```csharp
-driver.ExecuteScript("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }");
+driver.ExecuteScript("smartui.takeScreenshot", new Dictionary<string, object> { { "screenshotName", "<screenshot-name>" }, { "fullPage", true }, { "smartScroll", true } });
 ```
 
 </TabItem>
 <TabItem value="java" label="Java" default>
 
 ```java
-((JavascriptExecutor)driver).executeScript("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<screenshot-name>\", \"smartScroll\":true }");
+Map<String, Object> config = new HashMap<>();
+config.put("screenshotName", "<screenshot-name>");
+config.put("fullPage", true);
+config.put("smartScroll", true);
+((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
 </TabItem>

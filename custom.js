@@ -178,7 +178,7 @@
             });
           }
           if (typeof window.logAmplitude === 'function') {
-            window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
+            window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Documentation header" });
           }
 
           // Append cookies to the URL before navigation
@@ -446,5 +446,88 @@ setTimeout(function () {
     overflowMainScreen()
   }
 }, 500);
+
+/* AGENT_CALLOUT_START — Coding-agent callout, injected just below each doc's
+   title on the client (no docusaurus.config.js change; works for both body-`#`
+   and front-matter titles because it targets the rendered <header>). */
+(function () {
+  if (typeof window === "undefined") return;
+
+  var SKILL_URL = "https://www.testmuai.com/support/docs/SKILL.md";
+  var PROMPT = "Read " + SKILL_URL + " to set up TestMu AI (formerly LambdaTest) cloud testing.";
+  var INFO_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>';
+  var COPY_SVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+  var CHECK_SVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+  function copyText(text) {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text);
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+    } catch (e) { /* clipboard unavailable */ }
+  }
+
+  function buildCallout() {
+    var aside = document.createElement("aside");
+    aside.className = "agentSkillCallout";
+    aside.setAttribute("aria-label", "Using a coding agent");
+    aside.innerHTML =
+      '<span class="agentSkillCallout__icon" aria-hidden="true">' + INFO_SVG + "</span>" +
+      '<div class="agentSkillCallout__body">' +
+        '<p class="agentSkillCallout__lead"><strong>Using Claude Code, Cursor, or another coding agent?</strong> ' +
+        "Paste this into your prompt to run cross-browser and real-device tests, debug sessions, and wire up CI on the TestMu AI cloud:</p>" +
+        '<div class="agentSkillCallout__snippet">' +
+          '<code class="agentSkillCallout__code"></code>' +
+          '<button type="button" class="agentSkillCallout__copy" aria-label="Copy prompt" title="Copy prompt">' + COPY_SVG + "</button>" +
+        "</div>" +
+        '<span class="agentSkillCallout__sr" role="status" aria-live="polite"></span>' +
+      "</div>";
+    aside.querySelector(".agentSkillCallout__code").textContent = PROMPT;
+    var btn = aside.querySelector(".agentSkillCallout__copy");
+    var sr = aside.querySelector(".agentSkillCallout__sr");
+    btn.addEventListener("click", function () {
+      copyText(PROMPT);
+      btn.innerHTML = CHECK_SVG;
+      sr.textContent = "Prompt copied to clipboard";
+      setTimeout(function () {
+        btn.innerHTML = COPY_SVG;
+        sr.textContent = "";
+      }, 2000);
+    });
+    return aside;
+  }
+
+  function injectAgentCallout() {
+    if (typeof document === "undefined") return;
+    var md = document.querySelector("article .theme-doc-markdown") || document.querySelector(".theme-doc-markdown");
+    if (!md) return;                                     // not a doc page
+    if (md.querySelector(".agentSkillCallout")) return;  // already injected
+    var header = md.querySelector("header");
+    var node = buildCallout();
+    if (header) header.insertAdjacentElement("afterend", node);
+    else md.insertBefore(node, md.firstElementChild);
+  }
+
+  // Exposed so the route hook (and tests) can call it; run once after hydration.
+  window.__injectAgentCallout = injectAgentCallout;
+  setTimeout(injectAgentCallout, 300);
+})();
+/* AGENT_CALLOUT_END */
+
+// Re-inject after client-side (SPA) navigation between docs.
+export function onRouteDidUpdate() {
+  if (typeof window !== "undefined" && window.__injectAgentCallout) {
+    setTimeout(window.__injectAgentCallout, 0);
+  }
+}
 
 

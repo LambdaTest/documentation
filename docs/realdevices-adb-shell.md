@@ -65,7 +65,7 @@ The integration of Android Debug Bridge (ADB) shell support within the <BrandNam
 - Click the ADB Shell icon to open the terminal and start running supported ADB shell commands.
 - With a single click, you can clear the terminal content or download the terminal output as a `.txt` file.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/adbmanual.webp').default} alt="ADB Shell Access"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/adbmanual.webp').default} alt="ADB Shell Access"  className="doc_img" width="1366" height="928"/>
 
 ## Supported ADB Commands
 To ensure security and compatibility, we have a list of ADB commands that can be executed within our Real Device Cloud. Please refer to the following list of supported commands:

@@ -201,7 +201,7 @@ export default function Home() {
             </div>
           </div>
           <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Testing Platform &nbsp;<NewTag value="BETA" /></h2>
+            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Testing Platform </h2>
             <div className="home_inners">
               <a href="/support/docs/getting-started-with-agent-testing-platform/"><p className="p_home_inners">Getting Started</p></a>
               <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First AI Agent</p></a>

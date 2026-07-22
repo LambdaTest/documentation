@@ -19,7 +19,7 @@ keywords:
 url: https://www.testmuai.com/support/docs/
 site_name: TestMu AI
 slug: /
-canonical: https://www.testmuai.com/support/docs///
+canonical: https://www.testmuai.com/support/docs/
 ---
 
 import AutomationLightIcon from '../assets/images/support/automation-light-icon.svg';
@@ -93,7 +93,7 @@ import NewTag from '../src/component/newTag';
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><AutomationLightIcon className="home_icons home_light_icon" role="presentation"/> <AutomationDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Automation</h2>
       <div className="home_inners">
-        <a href="/support/docs/getting-started-with-testmu-automation/"><p className="p_home_inners">Selenium Testing</p></a>
+        <a href="/support/docs/testmu-running-your-first-selenium-test/"><p className="p_home_inners">Selenium Testing</p></a>
         <a href="/support/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
         <a href="/support/docs/playwright-testing/"><p className="p_home_inners">Playwright Testing</p></a>
         <a href="/support/docs/puppeteer-testing/"><p className="p_home_inners">Puppeteer Testing</p></a>

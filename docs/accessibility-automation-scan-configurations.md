@@ -2,7 +2,7 @@
 id: accessibility-automation-scan-configurations
 title: Scan Configurations via Capabilities (Automation)
 sidebar_label: Scan Configurations (Capabilities)
-description: Configure mobile app accessibility scans in automation through Appium capabilities—master toggle, WCAG version, and Best Practice, Beta, and AI rule groups.
+description: "Configure mobile app accessibility scans in automation through Appium capabilities: master toggle, WCAG version, and Best Practice, Beta, and AI rule groups."
 keywords:
   - mobile accessibility automation
   - accessibility capabilities
@@ -58,7 +58,7 @@ Per-rule enable/disable picking is a **Manual-only** feature and is not used in 
 
 ## When to use this
 
-Use these capabilities when users **already run Appium** against <BrandName /> real devices and want each accessibility scan scoped to a specific WCAG target and set of rule groups—without opening a UI. See [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/) for the surrounding test setup and the `lambda-accessibility-scan` hook.
+Use these capabilities when users **already run Appium** against <BrandName /> real devices and want each accessibility scan scoped to a specific WCAG target and set of rule groups, without opening a UI. See [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/) for the surrounding test setup and the `lambda-accessibility-scan` hook.
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ Use these capabilities when users **already run Appium** against <BrandName /> r
 
 | Capability | Type | Allowed values | Default (RD App Automation) |
 |---|---|---|---|
-| `accessibility` | boolean | `true` / `false` | — (master toggle; must be `true` to enable a11y scanning) |
+| `accessibility` | boolean | `true` / `false` | - (master toggle, must be `true` to enable a11y scanning) |
 | `accessibility.wcagVersion` | string | `wcag2a`, `wcag2aa`, `wcag2aaa`, `wcag21a`, `wcag21aa`, `wcag21aaa`, `wcag22a`, `wcag22aa`, `wcag22aaa` | `wcag21aa` |
 | `accessibility.bestPractice` | boolean | `true` / `false` | `true` |
 | `accessibility.betaRules` | boolean | `true` / `false` | `true` |
@@ -159,11 +159,11 @@ Only the rules in the effective set are evaluated, and the report for that build
 
 - **Scoped results.** Each scan reports violations only for the rules in the test's effective set. Rules outside the WCAG range or behind an off group toggle do not appear and do not affect the accessibility score for that scan.
 - **Configuration recorded with the test.** The WCAG version and group toggles are stored alongside the scan, so the team can always see how a given result was produced.
-- **Applied rules are visible in the report.** The report header shows the applied configuration as tags (for example, **WCAG 2.1 AA**, **Best Practices**, **Beta Rules**), and the **Applied Settings** panel lists every rule that was evaluated—grouped by category and searchable—so the exact selected rules can be confirmed for any scan.
+- **Applied rules are visible in the report.** The report header shows the applied configuration as tags (for example, **WCAG 2.1 AA**, **Best Practices**, **Beta Rules**), and the **Applied Settings** panel lists every rule that was evaluated, grouped by category and searchable, so the exact selected rules can be confirmed for any scan.
 
 The report shows the applied WCAG target and group tags, and the **Applied Settings** panel lists the selected rules by category:
 
-{/* IMAGE PLACEHOLDER — report Applied Settings panel showing the rules evaluated for the scan. Save the screenshot at the path below, then uncomment.
+{/* IMAGE PLACEHOLDER: report Applied Settings panel showing the rules evaluated for the scan. Save the screenshot at the path below, then uncomment.
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/scan-configurations/applied-settings-report.png').default} alt="Accessibility report header with WCAG 2.1 AA, Best Practices and Beta Rules tags, and the Applied Settings panel listing evaluated rules grouped by category such as Accessibility Labels" className="doc_img"/>
 */}
 

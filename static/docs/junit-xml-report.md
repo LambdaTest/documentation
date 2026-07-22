@@ -1,0 +1,25 @@
+# JUnit XML Report
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+A JUnit XML report is an XML-based test result file format used to represent the results of test executions, particularly unit tests. The XML report provides detailed information about the tests run, including which tests passed, failed, were skipped, and any associated error messages.
+
+## Steps to Generate Consolidated JUnit XML Report
+Follow these steps to generate a consolidated JUnit XML report:
+
+### Step 1: Update Your Project Configuration
+Configure all the necessary dependencies and configurations to your project.
+
+### Step 2: Configure the HyperExecute YAML File
+In your HyperExecute YAML configuration, define the [report](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+```yaml
+report: true
+partialReports:
+frameworkName: junit
+location: reports/
+type: xml
+```
+
+### Step 3: Execute Your Tests
+Run your tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated junit xml report.

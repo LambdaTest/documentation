@@ -3,15 +3,17 @@ id: appium-upload-media
 title: Upload File and Media
 hide_title: true
 sidebar_label: Upload Files and Media
-description: Seamlessly upload media and files on Real Devices to enhance your testing scenarios and ensure comprehensive validation of your application's functionalities.
+description: Seamlessly upload media and files on Real Devices during app and browser automation to enhance your testing scenarios and ensure comprehensive validation of your application's functionalities.
 keywords:
   - files upload
   - app test automation
+  - browser test automation
   - media upload
   - upload automate
   - framework on testmu ai
   - app testing appium
   - app testing
+  - browser testing
   - real devices
 url: https://www.testmuai.com/support/docs/uploadMedia/
 site_name: TestMu AI
@@ -55,38 +57,39 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Uploading Files and Media on Real Devices
 <RealDeviceTag value="Real Device" />
-<BrandName />'s file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to <BrandName />'s cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
+<BrandName />'s file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to <BrandName />'s cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use the `uploadMedia` capability while running your test scripts. The same capability works for both **App** and **Browser** (web) automation — no separate capability to learn.
 
 ## Objectives
 By the end of this topic, you will be able to:
 
 1. Use Upload File and Media feature in Manual App testing.
 2. Use Upload File and Media feature in App Automation.
+3. Use Upload File and Media feature in Browser (web) Automation.
 
 -----
 
 ## File Storage Paths on Devices
 
+Where an uploaded file lands on the device depends on whether it is an **App** or **Browser** session. Everything else about the upload flow is identical.
 
-| Category        | Platform | Location                                             | File Type      |
-|-----------------|----------|------------------------------------------------------|----------------|
-| Media Files     | Android  | Default gallery app, `/sdcard/Pictures`              | Images         |
-|                 |          | Default gallery app, `/sdcard/Movies`                | Videos         |
-|                 | iOS      | Camera Roll, `/private/var/mobile/Media/DCIM/`       | Images and Videos |
-| Non-Media Files | Android  | Default Downloads folder of the device               | Files          |
-|                 | iOS      | App’s directory: Files app → On My iPhone → Your app's directory | Files          |
+| Category        | Platform | App session location                             | Browser session location                                        | File Type         |
+|-----------------|----------|--------------------------------------------------|-----------------------------------------------------------------|-------------------|
+| Media Files     | Android  | Default gallery app, `/sdcard/Pictures` / `/sdcard/Movies` | Downloads (reachable from the browser file picker)     | Images, Videos    |
+|                 | iOS      | Camera Roll, `/private/var/mobile/Media/DCIM/`   | Photo Library (reachable from the native *Photo Library* picker) | Images, Videos    |
+| Non-Media Files | Android  | Default Downloads folder of the device           | Downloads (reachable from the browser file picker)              | Files             |
+|                 | iOS      | App’s directory: Files app → On My iPhone → Your app's directory | Files app → On My iPhone → **Chrome** (even in Safari) | Files             |
 
 ### Supported File Types
 
 <BrandName /> supports various file types for upload, ensuring flexibility in your testing scenarios. Below are the supported file types:
 
-- **Images**: JPG, JPEG, PNG, GIF, BMP, HEIC (Maximum size: 10 MB)
+- **Images**: JPG, JPEG, PNG, GIF, BMP (Maximum size: 10 MB)
 - **Videos**: MP4  (Maximum size: 50 MB)
-- **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, GED, GPX (Maximum size: 15 MB)
+- **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB)
 
-## Upload File and Media feature in App Automation
+## Upload File and Media feature in App & Browser Automation
 
-This section provides a comprehensive guide on leveraging this feature within automation tests. It comprises two fundamental steps:
+This section provides a comprehensive guide on leveraging this feature within automation tests. The steps are identical for **app automation** and **browser (web) automation** on real devices. It comprises two fundamental steps:
 
 - Uploading the files and obtaining the `media_url`.
 - Using `media_url` into your tests using `uploadMedia` capability.
@@ -162,9 +165,16 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
 :::note
 
 - Each automation session permits a maximum of five file uploads.
+- The `uploadMedia` capability is set the same way for **app** and **browser (web)** automation.
 - In manual testing, iOS app needs to installed first to upload non-media files.
 - For non-media files, make sure your iOS app's Info.plist file includes the UIFileSharingEnabled and LSSupportsOpeningDocumentsInPlace keys set to true. This configuration is necessary to enable your app's folder accessibility within the Files app.
 
+:::
+
+:::info Browser automation — differences to note
+- **iOS documents** uploaded in a browser session appear under **Chrome** in the Files app, even when testing in Safari. This is by design, as only Chrome on iOS exposes a browsable file container. Pick the file via *Choose File → On My iPhone → Chrome*.
+- **iOS images and videos** appear in the **Photo Library** and are picked from the native *Photo Library* picker.
+- On Android, all uploaded files land in **Downloads**, reachable from the browser file picker. Inputs using `accept="image/*"` may open the photo picker instead; the default file input works across the board.
 :::
 
 

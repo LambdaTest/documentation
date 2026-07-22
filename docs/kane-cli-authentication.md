@@ -54,8 +54,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 Kane CLI authenticates against your <BrandName /> account before it can run tests, upload sessions, or interact with Test Manager. There are two authentication methods:
 
-- **OAuth** — recommended for everyday local use. Opens a browser, you approve once, and tokens are stored on your machine.
-- **Basic auth** — your <BrandName /> username and access key. Use this in CI and other non-interactive environments where no browser is available.
+- **OAuth**: recommended for everyday local use. Opens a browser, you approve once, and tokens are stored on your machine.
+- **Basic auth**: your <BrandName /> username and access key. Use this in CI and other non-interactive environments where no browser is available.
 
 ---
 
@@ -65,7 +65,7 @@ Kane CLI authenticates against your <BrandName /> account before it can run test
 kane-cli login --oauth
 ```
 
-Kane CLI opens your default browser to the <BrandName /> consent page. Sign in and approve the request. When the browser hands control back, Kane CLI stores your tokens locally and you are signed in. You usually do not need to log in again on the same machine — Kane CLI reuses the stored session on subsequent runs.
+Kane CLI opens your default browser to the <BrandName /> consent page. Sign in and approve the request. When the browser hands control back, Kane CLI stores your tokens locally and you are signed in. You usually do not need to log in again on the same machine. Kane CLI reuses the stored session on subsequent runs.
 
 If you run `kane-cli login` interactively without flags, Kane CLI launches a guided login wizard that walks you through choosing a method, profile, and (for basic auth) entering credentials.
 
@@ -103,7 +103,7 @@ Saved basic auth is used automatically for subsequent commands run under that pr
 
 ### Where to Find Your Access Key
 
-Sign in to the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials** and copy your access key. Treat it like a password — anyone with your username and access key can run tests on your account.
+Sign in to the <BrandName /> [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials** and copy your access key. Treat it like a password. Anyone with your username and access key can run tests on your account.
 
 ---
 
@@ -120,7 +120,7 @@ kane-cli login --oauth --profile work
 kane-cli login --oauth --profile personal
 ```
 
-You can mix methods — one profile can use OAuth and another can use basic auth.
+You can mix methods. One profile can use OAuth and another can use basic auth.
 
 ### List Profiles
 
@@ -158,7 +158,7 @@ A few commands accept `--profile <name>` so you can target a profile for a singl
 kane-cli whoami
 ```
 
-`whoami` prints an identity card showing the active profile, environment, authentication method (OAuth or basic), the username (when known), and — for OAuth — whether the stored token is valid, expired, or missing, along with its expiry date.
+`whoami` prints an identity card showing the active profile, environment, authentication method (OAuth or basic), the username (when known), and (for OAuth) whether the stored token is valid, expired, or missing, along with its expiry date.
 
 Pass `--profile <name>` to inspect a profile other than the active one.
 
@@ -182,4 +182,4 @@ Credentials live under your home directory:
 ~/.testmuai/kaneai/profiles/<profile>/<env>/credentials
 ```
 
-The file is created with restricted permissions (mode `0600`) so only your user account can read it. There is no need to inspect or edit this file by hand — use `kane-cli login`, `kane-cli logout`, and the `kane-cli profiles` commands to manage it.
+The file is created with restricted permissions (mode `0600`) so only your user account can read it. There is no need to inspect or edit this file by hand. Use `kane-cli login`, `kane-cli logout`, and the `kane-cli profiles` commands to manage it.

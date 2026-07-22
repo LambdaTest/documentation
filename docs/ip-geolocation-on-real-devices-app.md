@@ -55,7 +55,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Location-specific behavior is crucial to ensure your mobile apps and websites deliver accurate and localized experiences to users worldwide. Whether it's testing region-based content, geo-restricted features, or local SEO implementations, manually simulating different geolocations is essential for a robust QA process.
 
-<BrandName />'s Geolocation Simulation feature allows you to manually set and update the GPS location on real Android devices during live app testing sessions. This empowers you to verify how your app behaves for users across various regions—without needing to physically move devices or use external GPS spoofing tools.
+<BrandName />'s Geolocation Simulation feature allows you to manually set and update the GPS location on real Android devices during live app testing sessions. This empowers you to verify how your app behaves for users across various regions, without needing to physically move devices or use external GPS spoofing tools.
 
 
 ## Update Geolocation for Real Devices on <BrandName />

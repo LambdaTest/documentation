@@ -13,10 +13,10 @@ keywords:
   - pdf viewer screenshots
   - data grid screenshots
   - visual testing
-url: https://www.testmu.ai/support/docs/smartui-customscroll/
+url: https://www.testmuai.com/support/docs/smartui-customscroll/
 site_name: TestMu AI
 slug: smartui-customscroll/
-canonical: https://www.testmu.ai/support/docs/smartui-customscroll/
+canonical: https://www.testmuai.com/support/docs/smartui-customscroll/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

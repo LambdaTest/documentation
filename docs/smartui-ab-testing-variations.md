@@ -15,10 +15,10 @@ keywords:
   - smartui pdf
   - feature flags
   - a/b test ui
-url: https://www.testmu.ai/support/docs/smartui-ab-testing-variations/
+url: https://www.testmuai.com/support/docs/smartui-ab-testing-variations/
 site_name: TestMu AI
 slug: smartui-ab-testing-variations/
-canonical: https://www.testmu.ai/support/docs/smartui-ab-testing-variations/
+canonical: https://www.testmuai.com/support/docs/smartui-ab-testing-variations/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

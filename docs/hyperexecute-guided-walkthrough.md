@@ -67,12 +67,12 @@ The top panel contains multiple items:
 
 The Jobs page provides a filter bar to narrow down the job list based on the following criteria:
 
-- **Status** — Filter jobs by their current status (Running, Completed, Failed, Aborted, etc.)
-- **Label** — Filter by job labels defined in your YAML configuration.
-- **Users** — Filter jobs by the user who triggered them. This is useful when multiple team members share the same organization and you want to view only your jobs.
-- **Type** — Filter by job type (Selenium, Playwright, Cypress, etc.)
-- **Date** — Filter jobs by date range.
-- **View** — Toggle between different view options (e.g., archived jobs).
+- **Status**: Filter jobs by their current status (Running, Completed, Failed, Aborted, etc.)
+- **Label**: Filter by job labels defined in your YAML configuration.
+- **Users**: Filter jobs by the user who triggered them. This is useful when multiple team members share the same organization and you want to view only your jobs.
+- **Type**: Filter by job type (Selenium, Playwright, Cypress, etc.)
+- **Date**: Filter jobs by date range.
+- **View**: Toggle between different view options (e.g., archived jobs).
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/job-list/filters-panel.png').default} alt="Job Filters" className="doc_img"/>
 

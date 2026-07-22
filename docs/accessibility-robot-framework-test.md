@@ -2,7 +2,7 @@
 id: accessibility-robot-framework-test
 title: Robot Framework
 sidebar_label: Robot Framework
-description: Run Accessibility Automation when Robot Framework drives Selenium—variables, Open Browser keywords, hooks, and reports.
+description: "Run Accessibility Automation when Robot Framework drives Selenium: variables, Open Browser keywords, hooks, and reports."
 keywords:
   - TestMu AI
   - Accessibility
@@ -37,7 +37,7 @@ Define suite or global variables so every test uses the same grid options:
 ${LT_OPTIONS}    {"accessibility": true, "accessibility.wcagVersion": "wcag21aa"}
 ```
 
-Exact syntax depends on how you merge JSON into capabilities for your `Open Browser` keyword—some teams use a **custom keyword** that builds the options dict in Python and passes it to `Create Dictionary` / `Evaluate`.
+Exact syntax depends on how you merge JSON into capabilities for your `Open Browser` keyword. Some teams use a **custom keyword** that builds the options dict in Python and passes it to `Create Dictionary` / `Evaluate`.
 
 ### 2. Open Browser with Accessibility on
 

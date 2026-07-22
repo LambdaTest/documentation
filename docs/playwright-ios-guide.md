@@ -1,7 +1,7 @@
 ---
 id: playwright-ios-guide
 title: How To Run Playwright Tests On TestMu AI iOS Devices
-sidebar_label: Test on iOS Device
+sidebar_label: Test on iOS
 description: Here you can learn how to run Playwright tests on the TestMu AI iOS real devices.
 keywords:
   - playwright testing

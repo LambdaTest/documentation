@@ -1,7 +1,7 @@
 ---
 id: playwright-android-guide
 title: How To Run Playwright Tests On TestMu AI Android Devices
-sidebar_label: Getting Started
+sidebar_label: Test on Android
 description: Here you can learn how to run Playwright tests on the TestMu AI android devices.
 keywords:
   - playwright testing
@@ -518,5 +518,51 @@ The <BrandName /> Automation Dashboard is where you can see the results of your 
 The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
 <img loading="lazy" src={require('../assets/images/playwright-android-build-view.png').default} alt="Playwright Android build and session details on TestMu AI Automation Dashboard" width="1444" height="703"  className="doc_img"/>
+
+## Capabilities Reference
+***
+
+Configure these capabilities to control your Playwright Android tests.
+
+:::tip
+Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+:::
+
+| Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
+|-----------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| platform        | android                        | Specify the platform name                                                                                                                                                                          | `const capability = { "LT:Options": {"platform": "android",}}`                       |
+| platformVersion | 12                             | Specify the platform version                                                                                                                                                                       | `const capability = { "LT:Options": {"platformVersion": "12",}}`                     |
+| deviceName      | Pixel 5                        | Specify the device name.  | `const capability = { "LT:Options": {"deviceName": "Pixel 5",}}`                     |
+| build           | Playwright Android Build       | Represent the build number for your test                                                                                                                                                           | ```const capability = {"LT:Options": {"build": "<build_name>",}}```                  |
+| name            | Playwright Android Test        | Represents the name of a test                                                                                                                                                                      | `const capability = {"LT:Options": {"name": "<test_name>",}}`                        |
+| projectName     | Playwright Sample Project      | Represents the name of a project                                                                                                                                                                   | `const capability = {"LT:Options": {"projectName": "<project_name>",}}`              |
+| tags            | ["tag1", "tag2", "tag3"]       | Group your Playwright tests                                                                                                                                                                        | ``const capability = {"LT:Options": { "tags": ["tag1", "tag2", "tag3"], }}``         |
+| buildTags       | ["build1", "build2", "build3"] | Group your Playwright builds                                                                                                                                                                       | `const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
+| network         | true/false                     | Enable network logs                                                                                                                                                                                | `const capability = { "LT:Options": {"network": true,}}`                             |
+| console         | true/false                     | Enable browser console logs                                                                                                                                                                        | `const capabilities = { "LT:Options": {"console": true,}}`                           |
+| video           | true/false                     | Enable video recording of the entire screen                                                                                                                                                        | `const capability = { "LT:Options": {"video": true,}}`                               |
+| tunnel          | true/false                     | Enable tunnel for local testing                                                                                                                                                                    | `const capability = { "LT:Options": {"tunnel": true,}}`                              |
+| tunnelName      | true/false                     | Specify tunnel name                                                                                                                                                                                | `const capability = { "LT:Options": {"tunnelName": "<tunnel_name>",}}`               |
+| geoLocation     | AR (Argentina)                 | Specify country code                                                                                                                                                                               | `const capability = { "LT:Options": {"geoLocation": "AR",}}`                         |
+
+### Using REGEX for device name
+When you run a test on a specific device, the exact device you selected may not be available. A regular expression (REGEX) widens the device search so you get any matching device. For example, to run on any Pixel device rather than one specific model, use a REGEX for `deviceName`. See [REGEX for App/Browser Automation](/support/docs/regular-expression-appium/) for details.
+
+## WebView Testing
+***
+
+To test embedded WebViews on a real Android device, add the mandatory `isPwMobileWebviewTest` capability to your options ([sample script](https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js)):
+
+```javascript title="playwrightwebview.js"
+const capabilities = {
+  "LT:Options": {
+    "platformName": "android",
+    "isRealMobile": true, //if true, test will run on real devices
+    // highlight-next-line
+    "isPwMobileWebviewTest": true, //mandatory capability to enable WebView testing
+  },
+```
+
+Run the test as usual (for example, `node playwrightwebview.js`) and check the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for results.
 
 

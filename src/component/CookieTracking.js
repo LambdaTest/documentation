@@ -153,8 +153,10 @@ export default function CookieTrackingLogin(e) {
         'eventLabel': window.location.href,
       });
     }
-    if (typeof window.logAmplitude === 'function') {
-      window.logAmplitude("click CTA - web pages", { "cta_text": "Login", "cta_type": "page header", "page_category": "Website header" });
+    // `logAmplitude` is only defined by the main website's header, not on the docs
+    // site, so calls to it never fired. `sendAmplitudeEvents` is defined in custom.js.
+    if (typeof window.sendAmplitudeEvents === 'function') {
+      window.sendAmplitudeEvents("click CTA - web pages", { "cta_text": "Login", "cta_type": "page header", "page_category": "Documentation header" });
     }
 
     // Get the current href from the anchor element (which may already have GA parameters)
@@ -179,8 +181,10 @@ export default function CookieTrackingLogin(e) {
         'eventLabel': window.location.href,
       });
     }
-    if (typeof window.logAmplitude === 'function') {
-      window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
+    // `logAmplitude` is only defined by the main website's header, not on the docs
+    // site, so calls to it never fired. `sendAmplitudeEvents` is defined in custom.js.
+    if (typeof window.sendAmplitudeEvents === 'function') {
+      window.sendAmplitudeEvents("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Documentation header" });
     }
 
     // // Get the current href from the anchor element (which may already have GA parameters)

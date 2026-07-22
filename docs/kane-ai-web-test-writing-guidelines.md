@@ -48,7 +48,7 @@ The KaneAI Web Agent is an automation tool that executes web interactions based 
 ## General Instruction
 
 ### 1. Clarity and Specificity
-Always provide clear and specific instructions for the action you wish to perform. Use the appropriate terminology from the list of supported commands. Avoid vague terms such as `do this` or `click that`—be explicit about which element to interact with.
+Always provide clear and specific instructions for the action you wish to perform. Use the appropriate terminology from the list of supported commands. Avoid vague terms such as `do this` or `click that`. Be explicit about which element to interact with.
 
 ### 2. Context
 When the action is dependent on a specific element or section of a webpage, provide enough context to help identify the element. Example: `Click the 'Submit' button on the top right corner of the form`.

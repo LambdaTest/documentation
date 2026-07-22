@@ -8,7 +8,7 @@ slug: accessibility-web-rule-1-4-12-text-spacing/
 
 # Text Spacing (1.4.12)
 
-Content must remain readable and functional when users override text spacing properties — line height, paragraph spacing, letter spacing, and word spacing — up to specified thresholds.
+Content must remain readable and functional when users override text spacing properties (line height, paragraph spacing, letter spacing, and word spacing) up to specified thresholds.
 
 
 :::info WCAG Reference

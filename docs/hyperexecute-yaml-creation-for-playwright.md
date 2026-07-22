@@ -2,7 +2,7 @@
 id: hyperexecute-yaml-creation-for-playwright
 title: HyperExecute YAML Creation for Playwright
 sidebar_label: YAML Creation for Playwright
-description: A step-by-step guide to creating a HyperExecute YAML configuration for Playwright tests—matrix strategy, dependencies, and parallel runs.
+description: "A step-by-step guide to creating a HyperExecute YAML configuration for Playwright tests: matrix strategy, dependencies, and parallel runs."
 keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help

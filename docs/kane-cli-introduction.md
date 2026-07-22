@@ -61,6 +61,18 @@ kane-cli login
 kane-cli run --url https://example.com "Click the 'More information' link and verify the page loads"
 ```
 
+## Supported IDEs
+
+Kane CLI runs from the integrated terminal of your editor, so you can drive browser tests without leaving your development environment. It is supported in:
+
+* Cursor
+* Antigravity
+* VS Code
+* Codex
+* Kiro (AWS)
+* Eclipse-based IDEs
+* Web-based IDEs
+
 ## Three Modes
 
 | Mode | Command | Best For |

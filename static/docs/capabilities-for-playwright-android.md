@@ -1,0 +1,36 @@
+# Capabilities for Playwright Android Testing
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+The TestMu AI Capability Generator allows you to automatically create the capabilities class needed to run your
+Playwright automation scripts on TestMu AI. Here are a few capabilities that you can configure to run your Playwright
+Android tests.
+
+You can use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+
+| Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
+|-----------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| platform        | android                        | Specify the platform name                                                                                                                                                                          | `const capability = { "LT:Options": {"platform": "android",}}`                       |
+| platformVersion | 12                             | Specify the platform version                                                                                                                                                                       | `const capability = { "LT:Options": {"platformVersion": "12",}}`                     |
+| deviceName      | Pixel 5                        | Specify the device name.  | `const capability = { "LT:Options": {"deviceName": "Pixel 5",}}`                     |
+| build           | Playwright Android Build       | Represent the build number for your test                                                                                                                                                           | ```const capability = {"LT:Options": {"build": "",}}```                  |
+| name            | Playwright Android Test        | Represents the name of a test                                                                                                                                                                      | `const capability = {"LT:Options": {"name": "",}}`                        |
+| projectName     | Playwright Sample Project      | Represents the name of a project                                                                                                                                                                   | `const capability = {"LT:Options": {"projectName": "",}}`              |
+| tags            | ["tag1", "tag2", "tag3"]       | Group your Playwright tests                                                                                                                                                                        | ``const capability = {"LT:Options": { "tags": ["tag1", "tag2", "tag3"], }}``         |
+| buildTags       | ["build1", "build2", "build3"] | Group your Playwright builds                                                                                                                                                                       | `const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
+| projectName     | My Test                        | Represent the name of your project                                                                                                                                                                 | `const capability = { "LT:Options": {"projectName": "",}}`             |
+| network         | true/false                     | Enable network logs                                                                                                                                                                                | `const capability = { "LT:Options": {"network": true,}}`                             |
+| console         | true/false                     | Enable browser console logs                                                                                                                                                                        | `const capabilities = { "LT:Options": {"console": true,}}`                           |
+| video           | true/false                     | Enable video recording of the entire screen                                                                                                                                                        | `const capability = { "LT:Options": {"video": true,}}`                               |
+| tunnel          | true/false                     | Enable tunnel for local testing                                                                                                                                                                    | `const capability = { "LT:Options": {"tunnel": true,}}`                              |
+| tunnelName      | true/false                     | Specify tunnel name                                                                                                                                                                                | `const capability = { "LT:Options": {"tunnelName": "",}}`               |
+| geoLocation     | AR (Argentina)                 | Specify country code                                                                                                                                                                               | `const capability = { "LT:Options": {"geoLocation": "AR",}}`                         |
+
+## Using REGEX for device name
+Regular Expression or REGEX is widely used to make searching/find characters in a string.
+
+When you run a test on TestMu AI using a specific device, there may be scenarios, in which the particular device that you selected isn’t available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.
+
+To quote an example, consider you want to run the test on an Pixel. It doesn’t matter which one, but it’s got to be an Pixel. In these cases, we can use REGEX to specify exactly that. You’ll now be allotted any Pixel device that’s available which widens the search of devices considerably.
+
+Refer [REGEX for App/Browser Automation](/support/docs/regular-expression-appium/) to read more on this.

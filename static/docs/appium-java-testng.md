@@ -1,0 +1,370 @@
+# Appium With TestNG
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+In this documentation, you will learn how to trigger a automation script of **TestNG** for application testing with **Appium** on TestMu AI, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of TestMu AI.
+
+## Prerequisites
+
+- Your TestMu AI [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
+- You should have [Java client library](https://github.com/appium/java-client) installed for Selenium and Appium.
+- Download and install **Maven** from [the official website](https://maven.apache.org/). For **Linux/macOS** you can use [Homebrew](https://brew.sh/) package manager.
+
+## Try our Sample Repository
+
+### Step 1: Get a Sample Project
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+**Sample repo**
+All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
+
+### Step 2: Setup the Environment Variables
+
+You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+### Step 3: Upload your Application
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
+
+Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
+
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on TestMu AI by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+
+- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
+
+### Step 4: Update your Automation Script
+
+An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
+
+```java title="AndroidApp.java"
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+import java.net.URL;
+import java.util.List;
+
+public class AndroidApp {
+
+String userName = System.getenv("LT_USERNAME") == null ?
+"username" : System.getenv("LT_USERNAME"); //Add username here
+String accessKey = System.getenv("LT_ACCESS_KEY") == null ?
+"accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
+
+public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
+
+AppiumDriver driver;
+
+@Test
+@org.testng.annotations.Parameters(value = {"device", "version", "platform"})
+public void AndroidApp1(String device, String version, String platform) {
+try {
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("build","Java TestNG Android");
+capabilities.setCapability("name",platform+" "+device+" "+version);
+capabilities.setCapability("deviceName", device);
+capabilities.setCapability("platformVersion",version);
+capabilities.setCapability("platformName", platform);
+capabilities.setCapability("isRealMobile", true);
+// highlight-next-line
+capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
+capabilities.setCapability("deviceOrientation", "PORTRAIT");
+capabilities.setCapability("console", true);
+capabilities.setCapability("network", false);
+capabilities.setCapability("visual", true);
+capabilities.setCapability("devicelog", true);
+
+String hub = "https://" + userName + ":" + accessKey + gridURL;
+driver = new AppiumDriver(new URL(hub), capabilities);
+
+MobileElement color = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/color");
+//Changes color to pink
+color.click();
+Thread.sleep(1000);
+//Back to original color
+color.click();
+
+MobileElement text = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/Text");
+//Changes the text to "Proverbial"
+text.click();
+
+//toast will be visible
+MobileElement toast = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/toast");
+toast.click();
+
+//notification will be visible
+MobileElement notification = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/notification");
+notification.click();
+Thread.sleep(2000);
+
+//Opens the geolocation page
+MobileElement geo = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/geoLocation");
+geo.click();
+Thread.sleep(5000);
+
+//takes back to home page
+MobileElement home = (MobileElement) driver.findElementByAccessibilityId("Home");
+home.click();
+
+//Takes to speed test page
+MobileElement speedtest = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/speedTest");
+speedtest.click();
+Thread.sleep(5000);
+
+MobileElement Home = (MobileElement) driver.findElementByAccessibilityId("Home");
+Home.click();
+
+//Opens the browser
+MobileElement browser = (MobileElement) driver.findElementByAccessibilityId("Browser");
+browser.click();
+
+MobileElement url = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/url");
+url.sendKeys("https://www.testmuai.com");
+
+MobileElement find = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/find");
+find.click();
+
+driver.quit();
+
+} catch (Exception e) {
+e.printStackTrace();
+try{
+driver.quit();
+}catch(Exception e1){
+e.printStackTrace();
+}
+}
+}
+}
+```
+
+```java title="iOSApp.java"
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import java.net.URL;
+import org.testng.annotations.Test;
+
+public class iOSApp {
+
+String userName = System.getenv("LT_USERNAME") == null ?
+"username" : System.getenv("LT_USERNAME"); //Add username here
+String accessKey = System.getenv("LT_ACCESS_KEY") == null ?
+"accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
+
+public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
+
+AppiumDriver driver;
+
+@Test
+@org.testng.annotations.Parameters(value = {"device", "version", "platform"})
+public void iOSApp1(String device, String version, String platform) {
+
+try {
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("build","Java TestNG iOS");
+capabilities.setCapability("name",platform+" "+device+" "+version);
+capabilities.setCapability("deviceName", device);
+capabilities.setCapability("platformVersion",version);
+capabilities.setCapability("platformName", platform);
+capabilities.setCapability("isRealMobile", true);
+// highlight-next-line
+capabilities.setCapability("app", "APP_URL"); //Enter your app (.ipa) url
+capabilities.setCapability("deviceOrientation", "PORTRAIT");
+capabilities.setCapability("console", true);
+capabilities.setCapability("network", false);
+capabilities.setCapability("visual", true);
+capabilities.setCapability("devicelog", true);
+//capabilities.setCapability("geoLocation", "HK");
+
+String hub = "https://" + userName + ":" + accessKey + gridURL;
+driver = new AppiumDriver(new URL(hub), capabilities);
+
+WebDriverWait Wait = new WebDriverWait(driver,30);
+
+//Changes the color of the text
+Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("color"))).click();
+Thread.sleep(1000);
+
+//Changes the text to "Proverbial"
+Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Text"))).click();
+Thread.sleep(1000);
+
+//Toast will be visible
+Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("toast"))).click();
+Thread.sleep(1000);
+
+//Notification will be visible
+Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("notification"))).click();
+Thread.sleep(4000);
+
+//Opens the geolocation page
+Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("geoLocation"))).click();
+Thread.sleep(4000);
+
+//Takes back
+driver.navigate().back();
+
+//Takes to speedtest page
+Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("speedTest"))).click();
+Thread.sleep(4000);
+
+driver.navigate().back();
+
+//Opens the browser
+Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Browser"))).click();
+Thread.sleep(1000);
+
+MobileElement url = (MobileElement) driver.findElementByAccessibilityId("url");
+url.click();
+url.sendKeys("https://www.testmuai.com");
+
+Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("find"))).click();
+Thread.sleep(1000);
+
+driver.quit();
+
+} catch (Exception e) {
+e.printStackTrace();
+try{
+driver.quit();
+}catch(Exception e1){
+e.printStackTrace();
+}
+}
+
+}
+}
+```
+
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+
+### Step 5: Configure the Test Capabilities
+
+You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
+
+The capabilities object in the sample code are defined as:
+
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("build","Java TestNG Android");
+capabilities.setCapability("name",platform+" "+device+" "+version);
+capabilities.setCapability("deviceName", device);
+capabilities.setCapability("platformVersion",version);
+capabilities.setCapability("platformName", platform);
+capabilities.setCapability("isRealMobile", true);
+// highlight-next-line
+capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
+capabilities.setCapability("deviceOrientation", "PORTRAIT");
+capabilities.setCapability("console", true);
+capabilities.setCapability("network", false);
+capabilities.setCapability("visual", true);
+capabilities.setCapability("devicelog", true);
+```
+
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("build","Java TestNG iOS");
+capabilities.setCapability("name",platform+" "+device+" "+version);
+capabilities.setCapability("deviceName", device);
+capabilities.setCapability("platformVersion",version);
+capabilities.setCapability("platformName", platform);
+capabilities.setCapability("isRealMobile", true);
+// highlight-next-line
+capabilities.setCapability("app", "APP_URL"); //Enter your app (.ipa) url
+capabilities.setCapability("deviceOrientation", "PORTRAIT");
+capabilities.setCapability("console", true);
+capabilities.setCapability("network", false);
+capabilities.setCapability("visual", true);
+capabilities.setCapability("devicelog", true);
+```
+
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+
+- You must add the generated **APP_URL** to the `app` capability in the config file.
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+
+### Step 6: Execute and Monitor your Tests
+
+- Run the following commands to install the required dependencies:
+
+```bash
+mvn clean install
+```
+
+- The tests can be executed in the terminal using the following command:
+
+```bash
+mvn test -P android-single
+```
+
+```bash
+mvn test -P ios-single
+```
+
+  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
+
+## Using the TestNG Agent Skill with TestMu AI
+
+The [testng-skill](https://github.com/LambdaTest/agent-skills/tree/main/testng-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The testng-skill package includes:
+
+```
+testng-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing TestNG Agent Skill
+
+Install a TestNG Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/testng-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/testng-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only testng-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
+## Reference Guides
+
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
+- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+- [How to integrate TestMu AI with CI/CD](/support/docs/integrations-with-ci-cd-tools/)

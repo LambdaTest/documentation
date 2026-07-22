@@ -1,13 +1,13 @@
 ---
 id: chat-agent-api-integration
-title: Chat Agent API — Integration Guide
+title: How to Test Chat Agent With TestMu AI Agent Testing API
 hide_title: false
-sidebar_label: Chat Agent API Integration
-description: Learn how the platform communicates with your chatbot via API — request format, connection methods, response schema, and integration requirements.
+sidebar_label: Quickstart (API)
+description: Connect a chat agent to TestMu AI over its API. Request format, three connection methods, response schema, and the fields the platform scores.
 keywords:
- - chat agent api
- - agent integration
- - chatbot api
+ - chat agent api integration
+ - connect chatbot to testmu ai
+ - chatbot api testing
  - agent testing
  - api integration guide
 url: https://www.testmuai.com/support/docs/chat-agent-api-integration/
@@ -44,18 +44,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-This document outlines the API request format, required credentials, and response schema the platform uses to communicate with your chatbot — regardless of provider or framework.
+The Agent Testing Platform connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
+
+It works with any chatbot provider or framework. You provide the endpoint URL, the authentication, and the request and response shape, and the platform matches whatever structure your API uses.
+
+## How the Platform Sends Requests to Your Chat Agent
 
 ---
 
-## Request Format
-
-The platform communicates with your chatbot via standard HTTP POST requests. Below is a representative example using curl notation, followed by a breakdown of each component.
+The platform sends each message as an HTTP POST request with a JSON body. The example below shows the shape, followed by a breakdown of each component.
 
 ```bash title="Example Request"
-curl -X POST https://api.examplechatbot.com/chat
-  -H "Authorization: Bearer sk-example-a1b2c3d4e5f6"
-  -H "Content-Type: application/json"
+curl -X POST https://api.examplechatbot.com/chat \
+  -H "Authorization: Bearer sk-example-a1b2c3d4e5f6" \
+  -H "Content-Type: application/json" \
   -d '{
     "assistantId": "asst_7xG9kPqR2mN4",
     "input": "Hi, I need help with my account"
@@ -63,78 +65,78 @@ curl -X POST https://api.examplechatbot.com/chat
 ```
 
 :::info
-The field names above (`assistantId`, `input`) are illustrative. Your chatbot may use different field names (e.g., `message`, `query`, `botId`, `agentId`). The platform adapts to whatever request structure your API expects.
+The field names above (`assistantId`, `input`) are illustrative. Your chat agent may use different field names (for example `message`, `query`, `botId`, `agentId`). The platform adapts to whatever request structure your API expects.
 :::
 
 ### Request Components
 
 | Component | Value in Example | Description |
 |-----------|-----------------|-------------|
-| **Method** | `POST` | HTTP method — all chat requests use POST. |
-| **Endpoint URL** *(Required)* | `https://api.examplechatbot.com/chat` | Your chatbot's API endpoint — the URL that accepts incoming messages. This varies by provider. |
-| **Authorization** *(Required)* | `Bearer sk-example-a1b2c3d4e5f6` | Authentication token. The platform uses the token you provide to authenticate each request. Format may vary (Bearer token, API key header, etc.). |
+| **Method** | `POST` | HTTP method. All chat requests use POST. |
+| **Endpoint URL** *(Required)* | `https://api.examplechatbot.com/chat` | Your chat agent's API endpoint, the URL that accepts incoming messages. This varies by provider. |
+| **Authorization** *(Required)* | `Bearer sk-example-a1b2c3d4e5f6` | Authentication token. The platform uses the token you provide to authenticate each request. The format may vary (Bearer token, API key header, and similar). |
 | **Content-Type** *(Required)* | `application/json` | Indicates a JSON-formatted request body. |
-| **Additional Headers** *(Optional)* | Any extra `-H "…"` entries | If your chatbot requires additional headers (e.g., session ID, API version, workspace ID, custom tracking headers), they are fully supported. **Include as many as needed.** |
-| **Request Body** | JSON payload | Contains the fields your chatbot expects — typically a bot/assistant identifier and the user message. Field names vary by provider. |
+| **Additional Headers** *(Optional)* | Any extra `-H "…"` entries | If your chat agent requires extra headers (session ID, API version, workspace ID, custom tracking headers), they are supported. Include as many as needed. |
+| **Request Body** | JSON payload | Contains the fields your chat agent expects, typically a bot or assistant identifier and the user message. Field names vary by provider. |
 
 :::tip Header Flexibility
-The platform sends the exact URL, token, and headers you configure. If your chatbot requires headers beyond Authorization and Content-Type, simply provide them — the platform forwards all configured headers with every request.
+The platform sends the exact URL, token, and headers you configure. If your chat agent requires headers beyond Authorization and Content-Type, provide them, and the platform forwards all configured headers with every request.
 :::
+
+## How to Connect Your Chat Agent
 
 ---
 
-## Connection Methods
+The platform supports three connection methods, based on where your agent runs and how it is reachable. Choose the option that matches your environment.
 
-The platform supports three ways to connect to your chatbot, depending on where it is hosted and how it is accessible. Choose the option that matches your environment.
+### Option A: Public API (Direct)
 
-### Option A — Public API (Direct)
+The simplest path. If your chat agent exposes a publicly reachable HTTPS endpoint, the platform connects to it directly using the URL, auth headers, and any additional headers you provide.
 
-The simplest path. If your chatbot exposes a publicly reachable HTTPS endpoint, the platform connects to it directly using the URL, auth headers, and any additional headers you provide.
-
-**Flow:** `Testing Platform` → `Internet (HTTPS)` → `Your Chatbot API`
+**Flow:** `Testing Platform` → `Internet (HTTPS)` → `Your Chat Agent API`
 
 | You Provide | Details |
 |-------------|---------|
-| **Endpoint URL** *(Required)* | The public HTTPS URL of your chatbot (e.g., `https://api.yourcompany.com/chat`). |
+| **Endpoint URL** *(Required)* | The public HTTPS URL of your chat agent (for example `https://api.yourcompany.com/chat`). |
 | **Auth Headers** *(Required)* | Authorization token, API key, or any authentication headers your API requires. |
-| **Additional Headers** *(Optional)* | Any extra headers (session ID, API version, workspace ID, etc.). No limit on count. |
+| **Additional Headers** *(Optional)* | Any extra headers (session ID, API version, workspace ID). No limit on count. |
 
-> **Best for:** Production / cloud-hosted bots
+> **Best for:** Production and cloud-hosted bots
 
-### Option B — Secure Proxy (Private Network)
+### Option B: Secure Proxy (Private Network)
 
-If your chatbot is not publicly reachable — e.g., it sits behind a corporate firewall, within a VPC, or on an internal network — the platform provides a lightweight **proxy agent** that you install inside your network. The agent establishes a secure outbound tunnel to our platform, allowing test traffic to reach your chatbot without exposing it to the public internet.
+If your chat agent is not publicly reachable (it sits behind a corporate firewall, within a VPC, or on an internal network), TestMu AI provides a lightweight proxy agent that you install inside your network. The agent establishes a secure outbound tunnel to TestMu AI, so test traffic reaches your agent without exposing it to the public internet.
 
-**Flow:** `Testing Platform` → `Secure Tunnel` → `Proxy Agent (Your Network)` → `Your Chatbot (Internal)`
+**Flow:** `Testing Platform` → `Secure Tunnel` → `Proxy Agent (Your Network)` → `Your Chat Agent (Internal)`
 
 | You Provide | Details |
 |-------------|---------|
-| **Internal Endpoint** *(Required)* | The internal URL or hostname of your chatbot (e.g., `https://chatbot.internal:8443/chat`). |
-| **Auth Headers** *(Required)* | Same authentication headers your chatbot expects. The proxy handles *network access*, not authentication — your chatbot still validates credentials on every request. |
-| **Additional Headers** *(Optional)* | Any extra headers your chatbot requires. |
-| **Proxy Agent** | Provided by us. A lightweight service installed on a machine within your network that has access to the chatbot. Only outbound connectivity is needed — no inbound firewall rules required. |
+| **Internal Endpoint** *(Required)* | The internal URL or hostname of your chat agent (for example `https://chatbot.internal:8443/chat`). |
+| **Auth Headers** *(Required)* | The same authentication headers your chat agent expects. The proxy handles network access, not authentication. Your agent still validates credentials on every request. |
+| **Additional Headers** *(Optional)* | Any extra headers your chat agent requires. |
+| **Proxy Agent** | Provided by TestMu AI. A lightweight service installed on a machine in your network that can reach the agent. Only outbound connectivity is needed, with no inbound firewall rules. |
 
-> **Best for:** Enterprise / on-premise deployments
+> **Best for:** Enterprise and on-premise deployments
 
-### Option C — Localhost (Dev / Staging)
+### Option C: Localhost (Dev / Staging)
 
-For chatbots running on a local development machine (e.g., `localhost:3000`), the same proxy agent is installed locally. It creates a secure tunnel from our platform to your machine, allowing the platform to reach your locally running chatbot.
+For chat agents running on a local development machine (for example `localhost:3000`), the same proxy agent is installed locally. It creates a secure tunnel from TestMu AI to your machine, so the platform reaches your locally running agent.
 
 **Flow:** `Testing Platform` → `Secure Tunnel` → `Proxy Agent (Your Machine)` → `localhost:port`
 
 | You Provide | Details |
 |-------------|---------|
-| **Local Endpoint** *(Required)* | The localhost URL and port your chatbot runs on (e.g., `http://localhost:3000/chat`). |
-| **Auth Headers** *(If applicable)* | If your local chatbot enforces authentication, provide the same auth headers. If auth is disabled in dev mode, this can be skipped. |
-| **Proxy Agent** | Provided by us. Installed on your local machine — runs as a background process during testing. |
+| **Local Endpoint** *(Required)* | The localhost URL and port your chat agent runs on (for example `http://localhost:3000/chat`). |
+| **Auth Headers** *(If applicable)* | If your local agent enforces authentication, provide the same auth headers. If auth is disabled in dev mode, skip this. |
+| **Proxy Agent** | Provided by TestMu AI. Installed on your local machine, running as a background process during testing. |
 
-> **Best for:** Development / pre-deployment testing
+> **Best for:** Development and pre-deployment testing
 
 ### Comparison at a Glance
 
 | | Option A: Public API | Option B: Proxy | Option C: Localhost |
 |---|---|---|---|
-| **Chatbot reachable from internet?** | Yes | No | No |
+| **Chat agent reachable from internet?** | Yes | No | No |
 | **Proxy agent needed?** | No | Yes (installed in your network) | Yes (installed on your machine) |
 | **Auth headers required?** | Required | Required | If enforced |
 | **Additional headers supported?** | Yes | Yes | Yes |
@@ -142,14 +144,14 @@ For chatbots running on a local development machine (e.g., `localhost:3000`), th
 | **Typical use case** | Production, cloud-hosted | Enterprise, on-premise | Development, staging |
 
 :::tip
-Regardless of connection method, the platform sends the exact authentication and custom headers you configure with every request. The proxy agent handles *network reachability* only — it does not bypass or replace your chatbot's authentication.
+Whatever the connection method, the platform sends the exact authentication and custom headers you configure with every request. The proxy agent handles network reachability only. It does not bypass or replace your agent's authentication.
 :::
+
+## How the Platform Reads Your Chat Agent's Response
 
 ---
 
-## Response Schema
-
-The response structure varies by provider. Below is a representative example showing common fields. Your chatbot's response may include different or additional fields — the platform adapts to your specific schema.
+The platform reads the reply from each response, uses it to continue the conversation, and scores the result. Response shapes vary by provider, and the platform adapts to yours.
 
 ```json title="Example Response"
 {
@@ -167,47 +169,70 @@ The response structure varies by provider. Below is a representative example sho
 
 ### Common Response Fields
 
-Most chatbot APIs return some variation of the following. The exact field names and structure depend on your provider.
+Most chat agent APIs return some variation of the following. The exact field names and structure depend on your provider.
 
 | Field (typical) | Type | Description |
 |-----------------|------|-------------|
 | `id` | string | Unique identifier for the conversation exchange. |
 | `input` / `messages` | array or string | Echo of the user message that was sent. May include a `role` and `content` pair, or a plain string. |
-| `output` / `response` | array or string | The chatbot's reply. **This is the primary field the platform evaluates.** May be nested under `role: "assistant"` or returned as a top-level string. |
-| `assistantId` / `botId` | string | Identifies which assistant or bot handled the request (if applicable). |
+| `output` / `response` | array or string | The agent's reply. **This is the primary field the platform evaluates.** May be nested under `role: "assistant"` or returned as a top-level string. |
+| `assistantId` / `botId` | string | Identifies which assistant or bot handled the request, if applicable. |
 | `createdAt` / `timestamp` | ISO 8601 / epoch | When the exchange occurred. |
-| `cost` / `usage` | number or object | Cost or token usage for this exchange (if the provider exposes it). |
+| `cost` / `usage` | number or object | Cost or token usage for this exchange, if the provider exposes it. |
 
 :::info Provider Flexibility
-The platform is not tied to any specific chatbot provider. Whether your bot runs on a third-party platform or a custom-built API, we configure the request and parse the response to match your exact schema.
+The platform is not tied to any specific chat agent provider. Whether your bot runs on a third-party platform or a custom-built API, TestMu AI configures the request and parses the response to match your schema.
 :::
+
+## What You Provide to Connect a Chat Agent
 
 ---
 
-## Integration Requirements
-
-To connect your chatbot, provide the following. No code changes or infrastructure modifications are required on your side.
+To connect your agent, provide the following. No code changes or infrastructure changes are required on your side.
 
 | Item | Required? | Description |
 |------|-----------|-------------|
-| **Chatbot URL** (API endpoint) | Required | The HTTPS endpoint where your chatbot receives messages. Example: `https://your-domain.com/chat` |
-| **Authentication Credentials** | Required | The token or key needed to access your chatbot API. This could be a Bearer token, API key, or any other auth mechanism your API uses. |
-| **Bot / Assistant Identifier** | Required | The identifier for the specific chatbot to be tested — applicable if your platform hosts multiple bots under one API. |
-| **Additional Headers** | Optional | Any extra headers your chatbot requires — such as a session token, API version, workspace ID, or custom tracking header. Provide as many as needed. |
-| **Request Body Format** | Optional | If your chatbot expects a different body structure (field names, extra fields), let us know and we will match it exactly. |
+| **Chat agent URL** (API endpoint) | Required | The HTTPS endpoint where your agent receives messages. Example: `https://your-domain.com/chat` |
+| **Authentication Credentials** | Required | The token or key needed to access your agent API. This can be a Bearer token, API key, or any other auth mechanism your API uses. |
+| **Bot / Assistant Identifier** | Required | The identifier for the specific agent to test, if your platform hosts multiple bots under one API. |
+| **Additional Headers** | Optional | Any extra headers your agent requires, such as a session token, API version, workspace ID, or custom tracking header. Provide as many as needed. |
+| **Request Body Format** | Optional | If your agent expects a different body structure (field names, extra fields), provide it and TestMu AI matches it exactly. |
+
+## How the Platform Runs a Chat Evaluation
 
 ---
 
-## How the Platform Uses This
+Once credentials are configured, The platform runs the evaluation autonomously.
 
-Once credentials are configured, the platform handles everything autonomously:
-
-`Credentials Configured` → `Test Scenarios Generated` → `API Calls Sent to Your Chatbot` → `Responses Captured` → `Quality Scored`
+`Credentials Configured` → `Test Scenarios Generated` → `API Calls Sent to Your Agent` → `Responses Captured` → `Quality Scored`
 
 - The platform sends requests using the exact URL, token, and headers you provide.
-- Multi-turn conversations are executed — the platform reads the `output` field from each response and continues the dialogue across multiple exchanges.
-- Each completed conversation is evaluated across 18+ quality dimensions and results are surfaced in the dashboard.
+- It runs multi-turn conversations, reading the `output` field from each response to continue the dialogue across exchanges.
+- Each completed conversation is scored across the 9 chat and voice quality metrics, and results appear in the dashboard.
 
 :::caution Security
 All credentials are encrypted at rest and decrypted only at runtime during test execution. They are never exposed in reports or logs.
 :::
+
+## Troubleshoot Chat Agent Connection Failures
+
+---
+
+Most connection failures come from authentication, the response path, or network reach. Each has a direct fix.
+
+- **What you see:** the platform reports an authentication error and no conversation runs. **Why:** the auth header or token is missing, expired, or wrong. **Fix:** confirm the Authorization header and token, and that the same credentials succeed in a direct curl call.
+
+- **What you see:** requests succeed but the reply is empty or scored as blank. **Why:** the platform is reading the wrong response field. **Fix:** point the response path at the field that holds the reply. For the example above, that is `output`.
+
+- **What you see:** every request fails to reach a private or local agent. **Why:** the proxy agent is not running, or the internal endpoint is wrong. **Fix:** confirm the proxy agent is installed and connected, and that the internal or localhost URL and port are correct.
+
+- **What you see:** requests are rejected before a reply. **Why:** the endpoint returns a non-2xx status such as 401 unauthorized, 404 not found, or 429 rate limited. **Fix:** verify the endpoint URL and method, and that the agent accepts the request body shape you configured.
+
+- **What you see:** the connection fails on a public endpoint. **Why:** the URL is not served over HTTPS, or the TLS certificate is invalid. **Fix:** serve the endpoint over HTTPS with a valid certificate, or use the proxy method for internal agents.
+
+## Related TestMu AI Guides
+
+---
+
+- See how to [test chat agents from the terminal](/support/docs/testmu-a2a-cli/), including custom body templates and response paths.
+- See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

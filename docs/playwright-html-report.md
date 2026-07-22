@@ -82,4 +82,6 @@ partialReports:
 ### Step 3: Execute Your Tests
 Run your Playwright tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated Plywright HTML report.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/playwright-html-report.gif').default} alt="Image" className="doc_img"/> 
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/hyperexecute/knowledge-base/reports/playwright-html-report.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video> 

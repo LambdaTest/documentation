@@ -51,7 +51,9 @@ Every edit to a test case whether it’s updating steps, descriptions, or fields
  
 - In the `Version History` tab, you can view all commits made to that test case.
 
-<img loading="lazy" src={require('../assets/videos/test-manager/test-cases/commit-changes.gif').default} alt="Image" className="doc_img" style={{width: '80%'}}/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/videos/test-manager/test-cases/commit-changes.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ---
 
