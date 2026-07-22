@@ -77,9 +77,9 @@ On launch, Kane CLI runs a short boot sequence (auth check, environment resoluti
 
 Use the arrow keys to navigate, Enter to select, and Esc to back out of a submenu.
 
-### Chat Mode
+### TUI Mode
 
-Selecting **Run > Start Run** switches the TUI into chat mode. Type your objective at the prompt and press Enter. The agent begins streaming steps into the scrollback: each step shows the action taken, a short rationale, and a status icon. When the run finishes, a result summary block appears.
+In your terminal, type `kane-cli --tui` and this switches to TUI mode. Type your objective at the prompt and press Enter. The agent begins streaming steps into the scrollback: each step shows the action taken, a short rationale, and a status icon. When the run finishes, a result summary block appears.
 
 Subsequent runs in the same TUI session reuse the same browser, so you can iterate on objectives without re-logging in or re-navigating.
 
