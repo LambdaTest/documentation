@@ -272,7 +272,7 @@ npx smartui exec -- npm test
 ```
 
 ### For SDK Integration
-```javascript
+```java
 // Set capability explicitly for baseline marking
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("smartUI.baseline", true);

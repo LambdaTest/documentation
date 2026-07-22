@@ -150,7 +150,7 @@ Upload pre-existing PDFs from your local machine:
 
 public class SmartuiPdfLocalTest {
     public void uploadLocalPdf() throws Exception {
-        String projectToken = System.getenv(PROJECT_TOKEN");
+        String projectToken = System.getenv("PROJECT_TOKEN");
 
         SmartUIConfig config = new SmartUIConfig()
             .withProjectToken(projectToken)
@@ -179,7 +179,7 @@ Upload PDFs downloaded during <BrandName /> cloud test execution:
 
 public class SmartuiPdfCloudTest {
     public void uploadCloudPdf(WebDriver driver) throws Exception {
-        String projectToken = System.getenv(PROJECT_TOKEN");
+        String projectToken = System.getenv("PROJECT_TOKEN");
 
         // Download PDF from cloud session
         String base64Content = (String) ((JavaScriptExecutor) driver)
@@ -300,7 +300,7 @@ public class SmartuiPdfErrorHandling {
 **Example:**
 ```java
 String[] pdfPaths = {
-    documents/reports/report-v1.0.pdf",
+    "documents/reports/report-v1.0.pdf",
     "documents/specs/spec-v2.1.pdf"
 };
 ```
@@ -326,7 +326,7 @@ String[] pdfPaths = {
 
 **Example:**
 ```java
-config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
+config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 ```
 
 </TabItem>
@@ -386,7 +386,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 
 2. Check file path is correct:
    ```java
-   File pdfFile = new File(path/to/document.pdf");
+   File pdfFile = new File("path/to/document.pdf");
    if (!pdfFile.exists()) {
        throw new FileNotFoundException("PDF file not found");
    }
@@ -489,7 +489,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
    for (String pdfPath : pdfPaths) {
        try {
            FormattedResults result = pdfUploader.uploadPDF(pdfPath);
-           System.out.println(Uploaded: " + pdfPath);
+           System.out.println("Uploaded: " + pdfPath);
        } catch (Exception e) {
            System.err.println("Failed: " + pdfPath + " - " + e.getMessage());
        }

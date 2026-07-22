@@ -245,7 +245,7 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-```js title="This is a sample for your configuration for Puppeteer to ignore by" ID"
+```js title="This is a sample for your configuration for Puppeteer to ignore by ID"
 let options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
@@ -258,7 +258,7 @@ let options = {
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
 
-```js title="This is a sample for your configuration for Puppeteer to ignore by" Class"
+```js title="This is a sample for your configuration for Puppeteer to ignore by Class"
 let options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
@@ -271,7 +271,7 @@ let options = {
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-```js title="This is a sample for your configuration for Puppeteer to ignore by" XPath"
+```js title="This is a sample for your configuration for Puppeteer to ignore by XPath"
 let options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -285,7 +285,7 @@ let options = {
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
 
-```js title="This is a sample for your configuration for Puppeteer to ignore by CSS" Selector"
+```js title="This is a sample for your configuration for Puppeteer to ignore by CSS Selector"
 let options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -314,7 +314,7 @@ let options = {
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
 
-```js title="This is a sample for your configuration for Puppeteer to select by" Class"
+```js title="This is a sample for your configuration for Puppeteer to select by Class"
 let options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
@@ -327,7 +327,7 @@ let options = {
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-```js title="This is a sample for your configuration for Puppeteer to select by" XPath"
+```js title="This is a sample for your configuration for Puppeteer to select by XPath"
 let options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -341,7 +341,7 @@ let options = {
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
 
-```js title="This is a sample for your webhook configuration for Puppeteer to select by CSS" Selector"
+```js title="This is a sample for your webhook configuration for Puppeteer to select by CSS Selector"
 let options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -374,7 +374,7 @@ let options = {
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
 
-```js title="This is a sample for your configuration for Puppeteer to capture an element by" Class"
+```js title="This is a sample for your configuration for Puppeteer to capture an element by Class"
 let options = {
       element: {
           class: 'Required Class',
@@ -387,7 +387,7 @@ let options = {
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-```js title="This is a sample for your configuration for Puppeteer to capture an element by" XPath"
+```js title="This is a sample for your configuration for Puppeteer to capture an element by XPath"
 let options = {
       element: {
           xpath: 'Required Xpath',
@@ -401,7 +401,7 @@ let options = {
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
 
-```js title="This is a sample for your webhook configuration for Puppeteer to capture an element by CSS" Selector"
+```js title="This is a sample for your webhook configuration for Puppeteer to capture an element by CSS Selector"
 let options = {
       element: {
           cssSelector: 'Required CSS Selector',
@@ -481,7 +481,7 @@ const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver');
 
 **Example:**
 ```javascript
-await smartuiSnapshot(page, HomePage-Header");
+await smartuiSnapshot(page, "HomePage-Header");
 await smartuiSnapshot(page, "ProductPage-MainContent");
 ```
 
@@ -500,7 +500,7 @@ await smartuiSnapshot(page, "ProductPage-MainContent");
 await page.goto('https://example.com');
 await page.waitForSelector('#main-content', { visible: true });
 await page.waitForLoadState('networkidle');
-await smartuiSnapshot(page, Page Loaded");
+await smartuiSnapshot(page, "Page Loaded");
 ```
 
 </TabItem>
@@ -610,7 +610,7 @@ await smartuiSnapshot(page, Page Loaded");
 2. Enable JavaScript in configuration:
    ```json
    {
-     enableJavaScript": true
+     "enableJavaScript": true
    }
    ```
 

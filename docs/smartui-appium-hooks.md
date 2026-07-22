@@ -469,6 +469,10 @@ config = {
   'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 }
 driver.execute("smartui.takeScreenshot", config)
+```
+
+</TabItem>
+
 <TabItem value='ruby-2' label='Ruby' default>
 
 ```ruby

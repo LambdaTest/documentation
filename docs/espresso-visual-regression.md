@@ -471,7 +471,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 1. Verify `visual: true` is set in API request:
    ```json
    {
-     visual": true,
+     "visual": true,
      "smartUI.project": "ProjectName"
    }
    ```
@@ -540,8 +540,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Increase `queueTimeout` and `IdleTimeout`:
    ```json
    {
-     queueTimeout: 600,
-     IdleTimeout: 60
+     "queueTimeout": 600,
+     "IdleTimeout": 60
    }
    ```
 
