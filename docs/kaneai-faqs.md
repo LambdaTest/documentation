@@ -85,3 +85,17 @@ No. Whitelisting <BrandName />'s cloud IPs in your existing setup is a configura
 ### How do I test an app on a private network or localhost?
 
 Whitelisting only works for applications reachable on the public internet. If your environment is on a private network, behind a VPN, or on localhost, use the [<BrandName /> Tunnel](/support/docs/network-whitelisting-and-tunnel-guide/) instead.
+
+## Billing and plans
+
+### What payment methods does KaneAI billing support, and how do I get an invoice?
+
+TestMu AI accepts all types of credit and debit cards for KaneAI billing, and PayPal is available for annual subscriptions. An invoice is generated for every subscription and sent by default to the email address you used at signup; you can also download invoices anytime from your account. Since KaneAI billing is per active agent, each invoice reflects the agent licenses active on your plan for that period. If something looks wrong, raise it quickly: under the Terms of Service, billing discrepancies must be reported within 30 days of appearing on an invoice, or the right to dispute them is waived. For payment-method or invoice questions you cannot resolve in the dashboard, email support@testmuai.com or use the 24/7 chat portal.
+
+### How do I upgrade or downgrade my KaneAI plan, and how do seats and usage limits work?
+
+You can upgrade or downgrade your KaneAI plan at any time, with changes taking effect from your next billing cycle; plan changes are self-serve via the Upgrade button in the dashboard or Subscriptions & Billings > Edit, where the Monthly-to-Yearly toggle is advertised as saving up to 20% platform-wide. Because KaneAI is licensed per agent, adding seats means adding agent licenses, and each paid agent includes 500 AI test authoring sessions per month, so usage limits scale with your license count. If you have seen credits mentioned, that unit belongs to Kane CLI, a separate developer product. Compare the Web plan ($249/agent/month, or $199/agent/month billed annually) and Mobile + Web ($349/agent/month, or $299/agent/month billed annually) on the [KaneAI per-agent pricing page](/pricing/?product=kane-ai-group), or contact sales about enterprise plans.
+
+### Does KaneAI auto-renew, and how do I cancel my subscription or delete my account?
+
+Yes, KaneAI subscriptions auto-renew at the end of each monthly or annual billing cycle unless you act before the term ends: per the Terms of Service, you can terminate with thirty (30) days' prior written notice, or turn off auto-renewal by logging into TestMu Services or emailing support@testmuai.com. To cancel in-app, open your profile avatar (top-right), go to Billing, scroll to CANCEL SUBSCRIPTION, select a cancellation reason, and click Complete Cancellation; a Resume your subscription option stays available if you change your mind. Fees already paid are non-refundable under the Terms of Service, so time the change around your renewal date. Cancelling a subscription is separate from deleting your TestMu AI account entirely; for full account deletion, contact support@testmuai.com or the 24/7 chat portal. Before you go, export your generated tests to Selenium, Playwright, Cypress, or Appium so your work leaves with you as standard framework code.
