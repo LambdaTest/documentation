@@ -1,4 +1,4 @@
-# TestMu A2A CLI Quickstart for Chat and Phone Agents
+# How to Test Chat and Phone Agents With TestMu AI Agent Testing CLI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

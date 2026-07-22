@@ -1,8 +1,8 @@
-# How to Test an Inbound Phone Agent on TestMu AI
+# How to Test an Inbound Phone Agent With TestMu AI Agent Testing Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-An inbound phone agent answers calls. To test one, TestMu AI places a real call to the agent's phone number and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
+An inbound phone agent answers calls. To test one, the Agent Testing Platform places a real call to the agent's phone number and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
 
 This guide runs the full CLI workflow, from creating a phone project to a go-live assessment. Commands are verified against the current `testmu-a2a-cli`. Run `testmu-a2a --version` to check your installed build.
 

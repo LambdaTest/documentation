@@ -1,4 +1,4 @@
-# Getting Started With the AI Agent Testing Platform
+# Getting Started With the Agent Testing Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
