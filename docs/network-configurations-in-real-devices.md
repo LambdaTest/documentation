@@ -93,7 +93,7 @@ Use this to exclude certain domains from network logs. This works similarly to *
 ---
 
 :::info 
-- Available only on **Pro Plans** for manual testing.  
+- Available only on **Plus Plans** for manual testing.  
 - Apps from the App Store or Play Store may not support network capture.  
 - Certificate-pinned apps may fail unless pinned hosts are excluded.  
 ::
