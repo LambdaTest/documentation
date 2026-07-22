@@ -66,3 +66,19 @@ Extracted 14 entries for 0OETA-BPSP3-XZVX4-EAPWB
 ```
 
 The reports are grouped on the basis of your session_id with a designated _browser name_, _browser version_, and a _test id_.
+
+## Send Reports to ReportPortal.io
+
+By default the **Cypress-Multi-Reporter** mechanism above generates **mochawesome**. To send results to [**ReportPortal.io**](http://reportportal.io/) instead, create a separate reporter config file and point `reporter_config_file` at it. Make sure you have a [ReportPortal.io](http://reportportal.io/) account first.
+
+- Navigate to [ReportPortal.io](http://reportportal.io/) and log in, then open your **Report Portal Profile**.
+
+- Copy your Report Portal credentials.
+
+- In your Cypress project, create a new file defining the ReportPortal configuration/credentials.
+
+- Set that file name in the `reporter_config_file` capability of `lambdatest-config.json`.
+
+- Add the ReportPortal dependency (`@reportportal/agent-js-cypress`) to your `lambdatest-config.json` or `package.json`.
+
+- The integration is done. Open the Dashboard to see the results.

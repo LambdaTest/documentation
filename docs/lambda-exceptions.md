@@ -82,7 +82,7 @@ Walk through a sample script that visits a URL, fetches the title, and asserts i
 
 For demo purposes, this script will:
 
-* Visit www.testmuai.com
+* Visit [www.testmuai.com](https://www.testmuai.com)
 * Fetch the title
 * Assert the title with the expected value
 

@@ -38,6 +38,9 @@ Once uploaded, files are stored in the device’s default locations. **This is t
 | Non-Media Files | Android  | Downloads folder                                  | Downloads (reachable from the browser file picker)          |
 |                 | iOS      | Files app → On My iPhone → Your app's directory   | Files app → On My iPhone → **Chrome** (even when testing in Safari) |
 
+* **Target App Must Be Installed:** In manual testing, your iOS app must be installed on the device before you can upload non-media files.
+* **Info.plist Configuration:** For non-media files, ensure your iOS app’s `Info.plist` file sets both `UIFileSharingEnabled` and `LSSupportsOpeningDocumentsInPlace` to `true`. This makes your app’s directory accessible in the native **Files** app under **On My iPhone → Your App’s Directory**.
+
 ### Download
 
 Switch to the **Download** tab in the Files & Media panel and select the files you want to export. Click the **Download** button to save them to your system as a `.zip`, which you can then extract and verify. In a browser session, this retrieves the files the website saved on the device (Android: `Downloads`; iOS: the browser’s Downloads).
@@ -55,14 +58,14 @@ Everything else is identical; only these behaviors differ:
 
 ### Automation
 
-Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximum 5) — to make the files available in your session. The capability is identical for **app** and **browser** (web) automation, so there is no new capability to learn.
+Pass the **`uploadMedia`** capability — an array of uploaded media IDs (maximum 5) — to make the files available in your session. The capability is identical for **app** and **browser** (web) automation. Refer to the documentation for [Uploading Files and Media on Real Devices](appium-upload-filemedia.md).
 
 ## Supported File Types
 
 The same formats and size limits apply to both **App** and **Browser** sessions:
 
-- **Images**: JPG, JPEG, PNG, GIF (Max: 10 MB)
+- **Images**: JPG, JPEG, PNG, GIF, BMP (Max: 10 MB)
 - **Videos**: MP4 (Max: 50 MB)
-- **Documents**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Max: 15 MB)
+- **Documents**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Max: 15 MB)
 
 You can upload up to **5 files per session**. Files uploaded to or downloaded on the device exist only for the duration of the session and are wiped when the device is recycled.

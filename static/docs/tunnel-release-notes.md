@@ -2,6 +2,12 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+## Version 3.2.31 (19th July 2026)
+- **TCP Tunnel Reliability**
+  - The tunnel now waits for a healthy data-path heartbeat before marking itself ready, and automatically falls back to WebSocket/SSH when the TCP data path is unhealthy. This prevents intermittent HTTP 502 errors caused by egress proxies that accept the initial connection upgrade but drop the multiplexed traffic.
+- **Auto-Update Stability**
+  - Bounded the client auto-update retries to prevent restart loops when an update cannot be applied (e.g. a read-only binary path or an unpublished version). The client now retries a limited number of times and keeps running the current binary instead of restarting indefinitely.
+
 ## Version 3.2.29 (14th June 2026)
 - **gRPC / HTTP/2 Tunnel Fix**
   - Fixed gRPC-over-HTTP/2 traffic hanging through the tunnel for strict HTTP/1.1 CONNECT clients (e.g. Flutter / grpc-dart apps on real devices). The tunnel now replies `HTTP/1.1 200` on the passthrough CONNECT path, so these clients establish the tunnel instead of timing out.

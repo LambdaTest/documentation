@@ -1,19 +1,70 @@
-# Getting Started With Agent Testing Platform
+# Getting Started With the Agent Testing Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI's Agent Testing Platform is the industry's first complete solution built specifically for testing AI systems. We use AI agents to test other AI agents, creating an intelligent testing approach that can handle the complexity of modern AI systems.
+TestMu AI's Agent Testing Platform validates AI agents the way real users interact with them. It deploys 15+ autonomous AI testing agents to evaluate any chat, voice, phone, or image agent against standardized quality metrics, then returns a Green, Yellow, or Red production readiness verdict before and after you deploy.
 
-This unified platform enables comprehensive testing of AI agents including chatbots, voice assistants, and autonomous systems across real-world scenarios, ensuring precision and relevance in performance validation. By matching intelligent systems with equally sophisticated testing frameworks, organizations can achieve the thorough validation that traditional testing methods simply cannot provide for AI applications.
+It is the first platform to test chat, voice, phone, and image agents in one place. Connecting an agent takes three inputs and no SDK: upload the documents that describe it, define its intended behavior, and point the platform at its endpoint or phone number.
 
-## The Need for Agent Testing Platform
+## Why AI Agents Need a Dedicated Testing Platform
 
-- **Manual Testing Slows Development:** Manual AI testing takes weeks, creating bottlenecks that delay releases and increase costs while teams struggle to validate infinite response variations.
+Traditional QA tests deterministic software: a selector either matches or it does not. AI agents return a different answer every run, so the old assertions no longer apply. Five gaps appear when teams ship agents without agent-specific testing.
 
-- **Limited Test Coverage Creates Vulnerabilities:** Human teams create only a fraction of needed test scenarios, leaving AI systems with validation gaps that cause production failures and security breaches.
+- **Manual testing does not scale.** A QA engineer reviews 50 to 200 scenarios a week. Agents need thousands to cover the input space, so coverage stays a fraction of what production sees.
 
-- **Slow Feedback Cycles Kill Competitive Edge:** Days-long testing workflows create lengthy feedback loops that prevent rapid iteration, causing organizations to miss market opportunities.
+- **Non-determinism breaks scripted checks.** The same prompt produces different reasoning each run. There is no fixed string to assert against, so pass/fail scripts miss real failures.
 
-- **Quality Risks Create Operational Problems:** Inadequate testing leads to unpredictable AI behavior, customer service failures, and system reliability issues that increase support costs and customer churn.
+- **Failure is asymmetric.** A broken button is a bug. A hallucinating healthcare bot or a biased financial agent is a liability and a compliance exposure.
 
-- **Resource Constraints Force Quality Compromises:** AI testing complexity requires significant human resources that become cost-prohibitive, forcing organizations to compromise validation quality due to budget limitations.
+- **Feedback loops are slow.** Days-long manual review blocks iteration and delays every release that changes the model or the prompt.
+
+- **Evaluation is subjective.** Reviewers disagree on whether a response is complete or biased. Scores drift between people and cannot be audited.
+
+## Start by Understanding the Platform
+
+Learn what the platform tests and how it scores an agent before you run anything.
+
+    Architecture &amp; How Evaluation Works
+    The five-phase evaluation loop and the 15+ testing agents that score your agent.
+
+## Run Your First Test
+
+Pick the interface that matches how you work and run an evaluation end to end.
+
+    Quickstart (UI)
+    Create an agent, generate scenarios, and run an evaluation from the dashboard.
+
+    Quickstart (CLI)
+    Test chat and phone agents from your terminal and wire them into CI/CD.
+
+    Quickstart (API)
+    Connect a chat agent over its API: request format, authentication, and response schema.
+
+    Quality Dimensions
+    How scoring, thresholds, and the Green, Yellow, or Red go-live verdict work.
+
+## Test by Agent Type
+
+Go deeper into the workflow and metrics for your specific agent type.
+
+    Chat Agent Testing
+    How multi-turn chat conversations are simulated and scored.
+
+    Phone Agent Testing
+    Real calls, voice and noise simulation, and the two phone directions.
+
+    Inbound Phone Agent Testing
+    The full workflow for an agent that answers calls.
+
+    Outbound Phone Agent Testing
+    The workflow for an agent that places calls.
+
+    Image Analyzer Testing
+    Score generated images against a prompt, brand rules, and technical specs.
+
+## Get Help
+
+Find answers to common questions about the platform.
+
+    Agent Testing FAQs
+    Answers on multilingual support, model governance, and data connectors.

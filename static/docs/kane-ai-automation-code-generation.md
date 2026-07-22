@@ -4,53 +4,68 @@
 
 KaneAI generates automation scripts in multiple frameworks and languages based on natural language inputs from users. KaneAI is available for desktop web applications as well as native mobile applications currently.
 
+KaneAI offers two authoring experiences, Classic and New Experience. New Experience is being rolled out in phases. To enable New Experience for your organization, reach out to our support team. The frameworks and languages supported by each experience are listed below.
+
 Click the `Generate New Code` button to go to code generation page where you can select desired framework and language.
 
-## Web Frameworks
+## Supported Frameworks and Languages
 
-### Selenium
-Selenium is your go-to tool for cross-browser testing, enabling automated testing across different web browsers like Chrome, Firefox, Safari, and Edge. It's perfect for end-to-end testing of web applications. With Kane AI, you can generate Selenium code in:
+The table below shows the frameworks and languages KaneAI can generate code in, and the experience each is available under.
 
-- **Python:** PyTest is used to generate Selenium Python code.
+      Framework
+      Language
+      Availability
+      Classic
+      New Experience
 
-Support for Java language in Selenium has been restricted for major improvements and will be made available soon.
+      Selenium
+      Python
+      Generally available (default)
+      &#10003;
+      &#10007;
 
- By default all KaneAI authored tests automation scripts for Web are generated in Selenium Python.
+      Java
+      Available on request &#42;
+      &#10003;
+      &#10007;
 
-### Playwright
-Playwright is a fast and reliable end-to-end testing for complex modern web applications it uses a single API to automate Chromium, Firefox, and WebKit. You can generate Playwright code in:
+      Playwright
+      Python
+      Available on request &#42;
+      &#10003;
+      &#10003;
 
-- **JavaScript**
-- **Python**
+      C#
+      Available on request &#42;
+      &#10003;
+      &#10007;
 
-Support for Playwright framework has been restricted for major improvements and will be made available soon.
+      JavaScript
+      Available on request &#42;
+      &#10007;
+      &#10003;
 
-### Cypress
-Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA friendly tool. You can generate Cypress code in:
+      Cypress
+      JavaScript
+      Coming soon
+      &#10007;
+      &#10007;
 
-- **JavaScript**
+      WebdriverIO
+      JavaScript
+      Coming soon
+      &#10007;
+      &#10007;
 
-Support for Cypress framework has been restricted for major improvements and will be made available soon. Additionally, Cypress won't be available for test cases where **Switching Tabs** or **File Upload** is present as it's not inherently supported by the framework.
+      Appium
+      Python
+      Generally available (default)
+      &#10003;
+      &#10007;
 
-### WebdriverIO
-WebdriverIO is a popular automation testing framework for web and mobile applications. It is built on top of the WebDriver protocol and provides a simple and flexible API for writing tests. You can generate WebdriverIO code in:
+**&#10003;** Supported &nbsp;&nbsp; **&#10007;** Not available. New Experience currently covers Desktop Web only. Mobile is supported in Classic.
 
-- **JavaScript**
-
-Support for WebdriverIO framework has been restricted for major improvements and will be made available soon.
-
-## App Frameworks
-
-### Appium
-Appium is an open-source automation tool for running scripts and testing native applications and mobile web apps on different platforms like iOS and Android. You can generate Appium code in:
-
-- **Python:**  PyTest is used to generate Appium Python script.
-- **Java:** TestNG is used to generate Appium Java scripts.
-- **JavaScript** : The code generation for the Appium framework in JavaScript is being rolled out gradually and is not yet generally available.
-
-By default all KaneAI authored tests automation scripts for App are generated in Appium Python.
-
- For now test runs only work for code generation in Selenium - Python & Appium Python. The support for others will be rolled out shortly.
+**Available on request.** Please reach out to Support to enable it. These features are partially rolled out and will soon be generally available for all users.
 
 ## Understanding the Code Tab
 
@@ -83,3 +98,10 @@ Test cases with generated code can be added to a Test Run regardless of the Samp
 
 - Code generation failed or was not initiated.
 - Code generation is still in progress.
+
+KaneAI code export leverages public libraries. The generated automation scripts depend on these published packages:
+
+- Playwright Python: [testmu-playwright-python](https://pypi.org/project/testmu-playwright-python/)
+- Playwright C#: [TestmuAI.Playwright.Bindings](https://libraries.io/nuget/TestmuAI.Playwright.Bindings)
+- Playwright JavaScript: [@testmuai/playwright-bindings](https://www.npmjs.com/package/@testmuai/playwright-bindings)
+- Selenium Java: [testmuai-selenium-bindings](https://mvnrepository.com/artifact/io.github.lambdatest/testmuai-selenium-bindings)

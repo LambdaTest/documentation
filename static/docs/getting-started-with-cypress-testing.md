@@ -207,6 +207,29 @@ lambdatest-cypress run
 
 6. Visit TestMu AI Automation dashboard to view your test results. The CLI also has a link to view the Cypress test build.
 
+## Run Your Tests in Parallel
+
+Once your first test runs, you can execute multiple Cypress tests at once, in either of two ways.
+
+**Using the CLI:** pass the `--parallels` flag with the number of sessions:
+
+```bash
+lambdatest-cypress run --parallels 5
+```
+
+**Using `lambdatest-config.json`:** set the `parallels` key under `run_settings`:
+
+```json
+{
+"run_settings": {
+"parallels": 5
+}
+}
+```
+
+**NOTE**
+The number of parallel tests running at a time depends on the concurrency plan of your TestMu AI account. If you request more parallel tests than your plan allows, the extra tests are queued and run as running tests finish. For example, on a 5-session plan, running 50 tests runs 5 at a time and queues the other 45.
+
 ## Testing Locally Hosted or Privately Hosted Projects
 
 To tests locally hosted websites on the TestMu AI platform, you need to setup [TestMu AI tunnel](/docs/testing-locally-hosted-pages/), and execute commands using the CLI, or [Download UnderPass](/docs/underpass-tunnel-application/), our GUI based desktop app. Once you have the TestMu AI tunnel or Underpass set up and started, you can use Cypress to test locally hosted websites.

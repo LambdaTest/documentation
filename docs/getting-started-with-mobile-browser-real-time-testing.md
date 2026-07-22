@@ -56,7 +56,9 @@ Real-Time Mobile Web Browser Testing allows you to test websites and web applica
 - To test a website, enter its URL and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
 - Afterwards click on the **Start** button to initiate the testing process.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/getting-started-with-mobile-browser.gif').default} alt="Image" className="doc_img"/>
+<video class="right-side" width="80%" controls id="vid">
+<source src= {require('../assets/images/real-time-testing/mobile-browser/getting-started-with-mobile-browser.mp4').default} style={{ height: '300px' }} type="video/mp4" />
+</video>
 
 ## Understanding the Dashboard
 The <BrandName /> dashboard is designed to simplify the testing process. Here's a breakdown of its key components:

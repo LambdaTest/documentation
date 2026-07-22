@@ -178,7 +178,7 @@
             });
           }
           if (typeof window.logAmplitude === 'function') {
-            window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
+            window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Documentation header" });
           }
 
           // Append cookies to the URL before navigation
