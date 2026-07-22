@@ -129,7 +129,8 @@ smartui upload-pdf <directory_or_filename> [options]
 ### Options:
 - `--fetch-results [filename]`: Fetch test results after upload. Optionally specify an output file (e.g., `results.json`).
 - `--buildName <string>`: Assign a custom name to the build.
-- `--projectToken <token>`: Specify the project token (if not set as environment variable).
+- `--markBaseline`: Mark this build as the baseline.
+- `--pdfNames <string>`: Comma-separated list of PDF file names to upload.
 
 ### Example Usage:
 
@@ -220,7 +221,7 @@ Example for GitHub Actions:
 
 **Example:**
 ```bash
-smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
+smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 ```
 
 </TabItem>

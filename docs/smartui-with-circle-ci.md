@@ -160,7 +160,7 @@ workflows:
 **Example:**
 ```yaml
 environment:
-  BUILD_NAME: ${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:7}"
+  BUILD_NAME: "${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:7}"
 ```
 
 </TabItem>

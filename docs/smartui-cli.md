@@ -335,10 +335,10 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 ```yaml
 steps:
   - name: Running SmartUI CLI Tests
-    - run: |
-       npm install -g @lambdatest/smartui-cli
-       npx playwright install-deps
-       smartui capture urls.json --config smartui-web.json
+    run: |
+      npm install -g @lambdatest/smartui-cli
+      npx playwright install-deps
+      smartui capture urls.json --config smartui-web.json
 ```
 
 ## SmartUI CLI Options and Keys

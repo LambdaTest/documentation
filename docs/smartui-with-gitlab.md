@@ -131,7 +131,7 @@ only:
 **Example:**
 ```yaml
 variables:
-  BUILD_NAME: MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
+  BUILD_NAME: "MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
 ```
 
 </TabItem>

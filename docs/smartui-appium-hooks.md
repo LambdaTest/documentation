@@ -348,7 +348,7 @@ ignoreBoxes.put("xpath", new String[]{
 });
 
 configIgnore.put("ignoreBoxes", ignoreBoxes);
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
 
 ```
 </TabItem>
@@ -436,7 +436,7 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 <TabItem value='java-1' label='Java' default>
 
 ```java
-((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
+((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 </TabItem>
@@ -500,7 +500,7 @@ Map<String, Object> config = new HashMap<>();
 config.put("screenshotName", "<Your Screenshot Name>");
 config.put("fullPage", true);
 config.put("pageCount", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
+((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
 </TabItem>
