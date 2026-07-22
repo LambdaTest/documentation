@@ -1001,6 +1001,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Voice Agent Testing",
+            id: "voice-agent",
+          },
+          {
+            type: "doc",
             label: "Phone Agent Testing",
             id: "phone-agent",
           },
