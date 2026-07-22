@@ -1,6 +1,6 @@
 ---
 id: chat-agent-api-integration
-title: Chat Agent API Integration Guide for AI Agent Testing
+title: How to Integrate a Chat Agent API
 hide_title: false
 sidebar_label: Quickstart (API)
 description: Connect a chat agent to TestMu AI over its API. Request format, three connection methods, response schema, and the fields the platform scores.
