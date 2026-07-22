@@ -1,5 +1,7 @@
 # Agent Skills
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 **Agent Skills** are instruction packages that teach an AI coding assistant how to write and run test automation on TestMu AI. Install one, and your assistant works like an SDET who already knows that framework's project layout, dependency versions, cloud execution config, and CI wiring.
 
 Each skill is open source and framework-specific. A skill covers one framework or platform, so the agent uses that tool's own idioms instead of generic automation code. The full set lives in the [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills) repository.

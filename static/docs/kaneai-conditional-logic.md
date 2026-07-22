@@ -17,7 +17,8 @@ Each branch can contain multiple steps, including regular actions, **modules**, 
 5. During authoring, only the branch whose condition is true gets executed. Steps in the remaining branches are queued.
 6. In automation, KaneAI evaluates the conditions top‑to‑bottom at runtime and executes the first matching branch automatically.
 
-**Conditional blocks require a running session.** A conditional block can only be inserted while the authoring session is running, because KaneAI needs a running session to analyze the condition. Adding a conditional block from the **+ Add step** option while a test is paused is not currently supported. Conditional blocks that already exist in the test can still be extended while paused, for example by adding an Else‑If branch.
+**Conditional blocks require a running session**
+A conditional block can only be inserted while the authoring session is running, because KaneAI needs a running session to analyze the condition. Adding a conditional block from the **+ Add step** option while a test is paused is not currently supported. Conditional blocks that already exist in the test can still be extended while paused, for example by adding an Else‑If branch.
 
 ## Prerequisites
 

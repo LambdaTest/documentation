@@ -1750,6 +1750,7 @@ module.exports = {
           { type: "doc", id: "one-click-migration-from-testrail", label: "Migrate from TestRail" },
           { type: "doc", id: "one-click-migration-from-xray", label: "Migrate from X-Ray" },
           { type: "doc", id: "one-click-migration-from-zephyr-scale", label: "Migrate from Zephyr Scale" },
+          { type: "doc", id: "one-click-migration-from-qtest", label: "Migrate from qTest" },
         ],
       },
 
@@ -2805,6 +2806,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Fetch Status Auto-Wait",
+                id: "smartui-hooks-fetch-status-timeout",
+              },
+              {
+                type: "doc",
                 label: "Comparison via Capabilities",
                 id: "smartui-comparison-capabilities",
               },
@@ -2965,6 +2971,11 @@ module.exports = {
                 type: "doc",
                 label: "Smart Ignore",
                 id: "smartui-smartignore",
+              },
+              {
+                type: "doc",
+                label: "Ignore Colors",
+                id: "smartui-ignore-colors",
               },
               {
                 type: "doc",
@@ -3751,6 +3762,11 @@ module.exports = {
             label: "Accessibility MCP",
             id: "accessibility-mcp-server",
           },
+          {
+            type: "doc",
+            label: "Test Manager MCP",
+            id: "test-manager-mcp-server",
+          },
         ],
       },
     ],
@@ -4303,6 +4319,43 @@ module.exports = {
             type: "doc",
             label: "Workflow",
             id: "kane-cli-generate-workflow",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Assurance",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-assurance",
+          },
+          {
+            type: "doc",
+            label: "Context Graph",
+            id: "kane-cli-assurance-context",
+          },
+          {
+            type: "doc",
+            label: "Designing Tests",
+            id: "kane-cli-assurance-design",
+          },
+          {
+            type: "doc",
+            label: "Coverage",
+            id: "kane-cli-assurance-coverage",
+          },
+          {
+            type: "doc",
+            label: "Maintaining the Suite",
+            id: "kane-cli-assurance-maintain",
+          },
+          {
+            type: "doc",
+            label: "Agents & CI",
+            id: "kane-cli-assurance-automation",
           },
         ],
       },

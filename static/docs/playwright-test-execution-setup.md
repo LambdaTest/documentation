@@ -53,6 +53,43 @@ Following is a list of compatible Playwright bundled browsers that you can use t
 | v1.16               | **Chromium** 97.0  **Firefox** 93.0  **WebKit** 15.4   |
 | v1.15               | **Chromium** 96.0  **Firefox** 92.0  **WebKit** 15.0   |
 
+### Bundled Browser Versions
+When you set the `useSpecificBundleVersion: true` capability, TestMu AI selects the browser (Chromium, Firefox, WebKit) version that matches your local machine's Playwright version:
+
+```yaml
+const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}
+```
+
+| Playwright Versions | Chromium | Firefox | Webkit |
+|---------------------|----------|---------|--------|
+|1.50| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
+|1.49| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
+|1.48| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
+|1.47| 129 except - 132, 126, 122 | 130, except - 131,133,126,122,120 | 18.0 |
+|1.46| 119-133, except - 132, 126, 122 | 118-134, except - 131,133, 126,122,120 | 17.4, 18.2 |
+|1.45| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
+|1.44| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
+|1.43| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
+|1.42| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
+|1.41| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
+|1.40| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
+|1.39| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
+|1.38| 114-117 | 113-117 | 17 |
+|1.37| 114-117 | 113-117 | 17 |
+|1.36| 114-117 | 113-117 | 17 |
+|1.35| 114-117 | 113-117 | 16.4 |
+|1.34| 114-117 | 113-117 | 16.4 |
+|1.33| 104-113 | 103-112 | 16.4 |
+|1.32| 104-113 | 103-112 | 16.4 |
+|1.31| 104-113 | 103-112 | 16.4 |
+|1.30| 104-113 | 103-112 | 16.4 |
+|1.29| 104-113 | 103-112 | 16.4 |
+|1.28| 104-113 | 103-112 | 16.4 |
+|1.27| 104-113 | 103-112 | 16.4 |
+|1.26| 104-113 | 103-112 | 16 |
+|1.25| 104-113 | 103-112 | 16 |
+|1.24| 103-104 | 100-102 | 16 |
+
 ## Organizing Tests
 
 You can name your test cases and categorize your Playwright builds by build number, build name, test and build tags for easier analysis. Use the following capabilities to organize your Playwright tests.
@@ -226,3 +263,31 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)
 ```
+
+## Capabilities Reference
+
+The TestMu AI Capability Generator can auto-create the capabilities class for your Playwright scripts. The full set of capabilities you can configure:
+
+| Key | Expected Values | Description |Capability|
+|----|----------|----------|------------|
+| browserName| Chrome, Microsoft Edge **Playwright Bundled Browsers**: pw-chromium, pw-webkit, and pw-firefox| Specify the browser to test on | `const capability = {"browserName": "pw-webkit"}`                                    |
+| browserVersion | Chrome 83 & above, Edge 83 & above | Specify the browser version to test on                        | `const capability = {"browserVersion": "latest"}` |
+| platform | **Windows**: 11, 10, 8, 8.1, 7  **macOS**: Monterey, Big Sur, Catiline, Mojave| Specify the platform name | `const capability = { "LT:Options": {"platform": "Windows 10",}}`|
+| build | Playwright Sample Build | Represent the build number for your test | ```const capability = {"LT:Options": {"build": "",}}```                  |
+| name| Playwright Sample Test| Represents the name of a test| `const capability = {"LT:Options": {"name": "",}}`|
+| projectName | Playwright Sample Project| Represents the name of a project | `const capability = {"LT:Options": {"projectName": "",}}`|
+| tags| ["tag1", "tag2", "tag3"]| Group your Playwright tests | ``const capability = {"LT:Options": { "tags": ["tag1", "tag2", "tag3"], }}``|
+| buildTags| ["build1", "build2","build3"]| Group your Playwright builds| `const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
+| resolution| String, **Default value**: 1920x1080   **Windows 11 & 10**: `1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080 and 2048x1536`  **macOS**: `1024x768, 1280x960, 1280x1024, 1600x1200 and 1920x1080` | Specifying your desktop resolution before initiating the test | `const capabilities = { "LT:Options": {"resolution": "2048x1536",}}`|
+| projectName| My Test| Represent the name of your project| `const capability = { "LT:Options": {"projectName": "",}}`|
+| network| true/false| Enable network logs| `const capability = { "LT:Options": {"network": true,}}`|
+| console| true/false| Enable browser console logs| `const capabilities = { "LT:Options": {"console": true,}}`|
+| video| true/false| Enable video recording of the entire screen| `const capability = { "LT:Options": {"video": true,}}`|
+| visual| true/false| Captures screenshot for every command| `const capability = { "LT:Options": {"visual": true,}}`|
+| tunnel| true/false| Enable tunnel for local testing| `const capability = { "LT:Options": {"tunnel": true,}}`|
+| tunnelName | true /false | Specify tunnel name | `const capability = { "LT:Options": {"tunnelName": "",}}`|
+| geoLocation | AR (Argentina) | Specify country code | `const capability = { "LT:Options": {"geoLocation": "AR",}}`|
+| idleTimeout | number| Specifies the timeout of the commands in seconds.  Default value: 300  Max value: 1800 If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "",}}`|
+| lambdaMaskCommands | array |  `sendType` or `sendFill`  Masks the type method of the ElementHandle and Locator class.  `sendPress` Masks the press method of the ElementHandle and Locator class.  `setHTTPCredentials` Masks the HTTP credentials parameter in the newContext and newPage method of the browser class.  `setStorageState` Masks the storage state parameter in the newContext and newPage method of the browser class  `setGeolocation` Masks the Geolocation parameter in the newContext and newPage method of the browser class.|`const capability = { "LT:Options": {'lambdaMaskCommands': ["sendType", "sendFill", "sendPress", "setHTTPCredentials", "setStorageState", "setGeolocation"]}}`  |
+| useSpecificBundleVersion | Boolean | If set **`true`:** TestMu AI will select the playwright server version as per the browser version you have passed in the capabilities. Check the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers).  If the value set in the `browser version` capability is supported by multiple Playwright versions, TestMu AI checks your Playwright client version and sets the Playwright version accordingly.  If set **`false` :** TestMu AI will run your playwright tests with the same version as setup in your local system and the browser version will also be used the compatible one as per the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers) and not your defined one. | `const capability = { "LT:Options": {"useSpecificBundleVersion": true,}}` |
+| lambdaSetBrowserPosition | | The `lambdaSetBrowserPosition` function is designed to arrange two browser windows on the screen, ensuring each occupies exactly half of the available screen space. This layout facilitates side-by-side browser comparisons or multitasking workflows.   OS Supported - Windows  Browsers supported : Chrome, Microsoft Edge , pw-chroium, pw-webkit & pw-firefox | `const capability = {action: 'lambdaSetBrowserPosition',}` |

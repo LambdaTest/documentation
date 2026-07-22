@@ -1030,7 +1030,6 @@ testmu-a2a --install-completion
 
 ## Troubleshoot Common CLI Failures
 
-
 Most failed runs come from authentication, network reach, or account limits. Each has a direct fix.
 
 - **What you see:** a command exits immediately or reports an authentication error. **Why:** the CLI is not logged in, or `TESTMU_USERNAME` and `TESTMU_ACCESS_KEY` are unset in CI. **Fix:** run `testmu-a2a auth status` locally, or set both environment variables in the pipeline.
@@ -1044,7 +1043,6 @@ Most failed runs come from authentication, network reach, or account limits. Eac
 - **What you see:** a run stops partway with a credit-related message. **Why:** the account's monthly credits are exhausted. **Fix:** check the balance with `testmu-a2a credits`, then top up or wait for the monthly reset.
 
 ## Related TestMu AI Guides
-
 
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).
 - See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
