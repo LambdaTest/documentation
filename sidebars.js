@@ -4548,6 +4548,11 @@ module.exports = {
             label: "Accessibility MCP",
             id: "accessibility-mcp-server",
           },
+          {
+            type: "doc",
+            label: "Test Manager MCP",
+            id: "test-manager-mcp-server",
+          },
         ],
       },
     ],
