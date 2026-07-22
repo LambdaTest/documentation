@@ -265,13 +265,13 @@ env_vars:
          jobs:
            - name: Run Tests
              commands:
-               - npx smartui exec -- <command">
+               - npx smartui exec -- <your-test-command>
      - name: Test Group 2
        task:
          jobs:
            - name: Run Tests
              commands:
-               - npx smartui exec -- <command">
+               - npx smartui exec -- <your-test-command>
    ```
 
 3. Optimize test execution

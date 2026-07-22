@@ -599,7 +599,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 2. Check configuration file syntax
 3. Try different port if default is in use:
    ```bash
-   npx smartui exec -P 5000 -- <command">
+   npx smartui exec -P 5000 -- <your-test-command>
    ```
 4. Check file permissions for configuration and project files
 
