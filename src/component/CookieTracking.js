@@ -154,7 +154,7 @@ export default function CookieTrackingLogin(e) {
       });
     }
     if (typeof window.logAmplitude === 'function') {
-      window.logAmplitude("click CTA - web pages", { "cta_text": "Login", "cta_type": "page header", "page_category": "Website header" });
+      window.logAmplitude("click CTA - web pages", { "cta_text": "Login", "cta_type": "page header", "page_category": "Documentation header" });
     }
 
     // Get the current href from the anchor element (which may already have GA parameters)
@@ -180,7 +180,7 @@ export default function CookieTrackingLogin(e) {
       });
     }
     if (typeof window.logAmplitude === 'function') {
-      window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Website header" });
+      window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Documentation header" });
     }
 
     // // Get the current href from the anchor element (which may already have GA parameters)

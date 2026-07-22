@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from '@docusaurus/router';
 import SearchBar from '@theme/SearchBar';
+import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 import styles from './styles.module.css';
 
 function getStoredTheme() {
@@ -268,8 +269,8 @@ export default function Navbar() {
             <GithubIcon />
             <span>Github</span>
           </a>
-          <a href="/login/" className={styles.loginLink}>Login</a>
-          <a id="signbtn" href="/register/" className={styles.getStartedBtn}>
+          <a href="/login/" className={styles.loginLink} onClick={CookieTrackingLogin}>Login</a>
+          <a id="signbtn" href="/register/" className={styles.getStartedBtn} onClick={CookieTrackingSignup}>
             <span>Get Started Free</span> <span className={styles.arrow}>&rsaquo;</span>
           </a>
           <button className={styles.gearBtn} onClick={toggleColorMode} aria-label="Toggle dark mode">
@@ -357,7 +358,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <a id="signbtn-mobile" href="/register/" className={styles.mobileMenuGetStarted}>
+            <a id="signbtn-mobile" href="/register/" className={styles.mobileMenuGetStarted} onClick={CookieTrackingSignup}>
               Get Started
             </a>
 
@@ -388,7 +389,10 @@ export default function Navbar() {
               <a
                 href="/login/"
                 className={styles.mobileMenuLink}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  CookieTrackingLogin(e);
+                  setMobileMenuOpen(false);
+                }}
               >
                 <span>Login</span>
               </a>
