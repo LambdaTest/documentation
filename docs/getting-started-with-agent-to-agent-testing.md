@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ***
 
-TestMu AI's Agent Testing Platform validates AI agents the way real users interact with them. It deploys 15+ autonomous AI testing agents to evaluate any chat, voice, phone, or image agent against standardized quality metrics, then returns a Green, Yellow, or Red production readiness verdict before and after you deploy.
+TestMu AI [Agent Testing](https://www.testmuai.com/agent-testing/) Platform validates AI agents the way real users interact with them. It deploys 15+ autonomous AI testing agents to evaluate any chat, voice, phone, or image agent against standardized quality metrics, then returns a Green, Yellow, or Red production readiness verdict before and after you deploy.
 
 It is the first platform to test chat, voice, phone, and image agents in one place. Connecting an agent takes three inputs and no SDK: upload the documents that describe it, define its intended behavior, and point the platform at its endpoint or phone number.
 

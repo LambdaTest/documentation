@@ -1,4 +1,4 @@
-# How to Test an Inbound Phone Agent With TestMu AI Agent Testing Platform
+# Inbound Phone Agent Testing With TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

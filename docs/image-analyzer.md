@@ -1,8 +1,8 @@
 ---
 id: image-analyzer
-title: How to Test an Image Analyzer Agent With TestMu AI Agent Testing Platform
+title: Image Analyzer Testing With TestMu AI
 hide_title: false
-sidebar_label: Image Analyzer Testing
+sidebar_label: Image Analyzer
 description: Test image generation and analysis agents on TestMu AI. Score images against a prompt with a 0 to 100 alignment score, brand rules, and technical specs.
 keywords:
  - image analyzer testing
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test an Image Analyzer Agent With TestMu AI Agent Testing Platform
+# Image Analyzer Testing With TestMu AI
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 id: chat-agent
-title: How to Test Chat Agents With TestMu AI Agent Testing Platform
+title: Chat Agent Testing With TestMu AI
 hide_title: false
-sidebar_label: Chat Agent Testing
+sidebar_label: Chat Agents
 description: Test chat agents on TestMu AI. How multi-turn conversations are simulated, which quality metrics are scored, and how to run an evaluation from UI, CLI, or API.
 keywords:
  - chat agent testing
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test Chat Agents With TestMu AI Agent Testing Platform
+# Chat Agent Testing With TestMu AI
 
 ---
 

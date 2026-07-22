@@ -1,8 +1,8 @@
 ---
 id: phone-agent
-title: How to Test Phone Agents With TestMu AI Agent Testing Platform
+title: Phone Agent Testing With TestMu AI
 hide_title: false
-sidebar_label: Phone Agent Testing
+sidebar_label: Phone Agents
 description: Test phone voice agents on TestMu AI with real calls. Live call monitoring, recording analysis, voice and noise simulation, and 30+ call quality metrics.
 keywords:
  - phone agent testing
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test Phone Agents With TestMu AI Agent Testing Platform
+# Phone Agent Testing With TestMu AI
 
 ---
 

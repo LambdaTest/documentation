@@ -1,4 +1,4 @@
-# How to Test Chat Agents With TestMu AI Agent Testing Platform
+# Chat Agent Testing With TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

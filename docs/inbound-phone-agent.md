@@ -1,8 +1,8 @@
 ---
 id: inbound-phone-agent
-title: How to Test an Inbound Phone Agent With TestMu AI Agent Testing Platform
+title: Inbound Phone Agent Testing With TestMu AI
 hide_title: false
-sidebar_label: Inbound Phone Agent Testing
+sidebar_label: Inbound Phone Agents
 description: Test an inbound phone agent on TestMu AI. Create a phone project, set the prompt, generate scenarios, run a call suite, and check the go-live assessment.
 keywords:
  - inbound phone agent testing
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test an Inbound Phone Agent With TestMu AI Agent Testing Platform
+# Inbound Phone Agent Testing With TestMu AI
 
 ---
 

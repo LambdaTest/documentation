@@ -1,4 +1,4 @@
-# How to Test Phone Agents With TestMu AI Agent Testing Platform
+# Phone Agent Testing With TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

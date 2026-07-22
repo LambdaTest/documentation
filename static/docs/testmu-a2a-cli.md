@@ -6,6 +6,7 @@ The TestMu A2A CLI lets you test chat agents and phone agents directly from your
 
 ## Install the CLI
 
+
 ```bash
 pip install testmu-a2a-cli
 ```
@@ -13,6 +14,7 @@ pip install testmu-a2a-cli
 Commands on this page are verified against the current `testmu-a2a-cli`. Run `testmu-a2a --version` to check your installed build.
 
 ## Quick Reference
+
 
 ```text
 testmu-a2a auth              Authenticate with TestMu AI
@@ -43,6 +45,7 @@ testmu-a2a credits           View credit balance
 ```
 
 ## Authenticate Your Account
+
 
 All CLI commands require authentication with your TestMu AI credentials.
 
@@ -92,6 +95,7 @@ testmu-a2a auth logout
 Credentials are stored in `~/.testmu-a2a/credentials.json` with owner-only permissions (600).
 
 ## Test a Chat Agent
+
 
 The fastest way to test a chat agent is with a single `test` command. Point it at your agent endpoint, describe what the agent does, and the CLI generates scenarios and evaluates responses automatically.
 
@@ -200,6 +204,7 @@ testmu-a2a run --format junit --output results.xml
 
 ## Manage Workflows
 
+
 Workflows are the execution context for chat test scenarios within a project.
 
 ```bash
@@ -244,6 +249,7 @@ testmu-a2a sources upload-and-generate \
 ```
 
 ## Test a Phone Agent
+
 
 The CLI can place real phone calls to test inbound and outbound voice agents. You can either run a quick one-shot call or build a full suite-based workflow.
 
@@ -497,6 +503,7 @@ testmu-a2a suites run --project <project_id> --name "Outbound Sales Test"
 
 ## Run Red Team Security Tests
 
+
 The `redteam` command runs adversarial attacks across 9 categories at 3 difficulty levels, then grades your agent's resilience from A+ to F.
 
 ```bash
@@ -521,6 +528,7 @@ Intensity levels: `basic`, `intermediate`, `advanced`
 Output includes a letter grade (A+ through F) and per-category breakdown.
 
 ## Set Agent Prompts and Requirements
+
 
 The prompt is the single most important input - it tells TestMu AI what your agent does so it can generate relevant scenarios and evaluate correctly.
 
@@ -600,6 +608,7 @@ testmu-a2a prompts delete --project <project_id> --id <prompt_id>
 
 ## Manage Projects
 
+
 Projects organize your agents and tests. Each project has a type that determines the available testing features.
 
 ```bash
@@ -624,6 +633,7 @@ testmu-a2a projects delete <project_id> --yes   # skip confirmation
 Project types: `chat`, `phone_caller_inbound`, `phone_caller_outbound`, `image_analyzer`
 
 ## Manage Scenarios
+
 
 ### Chat Scenarios
 
@@ -701,6 +711,7 @@ testmu-a2a phone-scenarios template --project <project_id>
 
 ## Manage Test Suites
 
+
 Suites group scenarios for repeatable test runs.
 
 ```bash
@@ -732,6 +743,7 @@ testmu-a2a suites update \
 
 ## Schedule Recurring Runs
 
+
 Automate recurring test runs by attaching a schedule to a suite.
 
 ```bash
@@ -759,6 +771,7 @@ testmu-a2a schedules delete <schedule_id>
 
 ## View Test Results
 
+
 ### View Call Results
 
 ```bash
@@ -784,6 +797,7 @@ testmu-a2a results <workflow_id> --project <project_id> --format junit --output 
 
 ## Analyze Call Recordings
 
+
 Upload and analyze existing call recordings without placing new calls.
 
 ```bash
@@ -802,6 +816,7 @@ testmu-a2a recordings delete <recording_id>
 ```
 
 ## Manage Profiles
+
 
 Profiles store reusable test data, agent configurations, and endpoint details.
 
@@ -838,6 +853,7 @@ testmu-a2a profiles endpoint create \
 
 ## Configure Pass/Fail Thresholds
 
+
 Set pass/fail criteria for evaluations.
 
 ```bash
@@ -857,6 +873,7 @@ testmu-a2a thresholds set \
 
 ## Run Go-Live Assessments
 
+
 Get a production-readiness verdict for your agent before deploying.
 
 ```bash
@@ -867,6 +884,7 @@ testmu-a2a assessments history --project <project_id> --type phone
 ```
 
 ## Browse the Voice Library
+
 
 Browse available voices to use in phone tests. Use the Name column value as `providerId` when configuring per-scenario voice in a suite.
 
@@ -891,6 +909,7 @@ testmu-a2a voices list --format json
 
 ## Manage Personas
 
+
 Built-in personas are always available: neutral, frustrated, confused, elderly, tech-savvy, rushed, and 25+ more. You can also create custom personas:
 
 ```bash
@@ -904,6 +923,7 @@ testmu-a2a personas create \
 
 ## Manage Phone Numbers
 
+
 ```bash
 testmu-a2a phone-numbers list --org <org_id>
 
@@ -916,6 +936,7 @@ testmu-a2a phone-numbers delete --org <org_id>
 
 ## Check System Health and Credits
 
+
 ```bash
 testmu-a2a health
 testmu-a2a health info       # detailed system info
@@ -926,6 +947,7 @@ testmu-a2a credits totals    # detailed breakdown
 ```
 
 ## Integrate with CI/CD
+
 
 Add the CLI to your pipeline to test agents on every push. Use `--format junit` to produce standard test reports.
 
@@ -977,6 +999,7 @@ reporter: java-junit
 
 ## Choose an Output Format
 
+
 | Format | Flag | Use Case |
 |--------|------|----------|
 | table | `--format table` | Human-readable terminal output |
@@ -991,6 +1014,7 @@ testmu-a2a test --agent <url> --format json --output results.json
 ```
 
 ## Global Options
+
 
 | Flag | Description |
 |------|-------------|

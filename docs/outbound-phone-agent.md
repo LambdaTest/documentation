@@ -1,8 +1,8 @@
 ---
 id: outbound-phone-agent
-title: How to Test an Outbound Phone Agent With TestMu AI Agent Testing Platform
+title: Outbound Phone Agent Testing With TestMu AI
 hide_title: false
-sidebar_label: Outbound Phone Agent Testing
+sidebar_label: Outbound Phone Agents
 description: Test an outbound phone agent on TestMu AI. Provision a number the agent calls, generate outbound scenarios, run a call suite, and score the conversations.
 keywords:
  - outbound phone agent testing
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test an Outbound Phone Agent With TestMu AI Agent Testing Platform
+# Outbound Phone Agent Testing With TestMu AI
 
 ---
 
