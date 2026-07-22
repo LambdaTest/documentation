@@ -1,6 +1,6 @@
 ---
 id: agent-testing-platform-faqs
-title: "AI Agent Testing Platform FAQs: Setup, Security, Pricing"
+title: "Agent Testing Platform FAQs: Setup, Security, Pricing"
 hide_title: false
 sidebar_label: FAQs
 description: Answers to common Agent Testing questions on the free tier, connecting an agent, firewall testing, HIPAA, phone testing, and evaluation accuracy.
@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Common questions about the TestMu AI Agent Testing Platform, grouped by plans, setup, security, and evaluation quality.
+Common questions about TestMu AI's Agent Testing Platform, grouped by plans, setup, security, and evaluation quality.
 
 ## Plans and Pricing
 
