@@ -110,6 +110,10 @@ params = {"Permission Settings":{"Location":"While using the app", "Precise Loca
 
 These are the settings added by the app developer using the [iOS Settings Bundle](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html#//apple_ref/doc/uid/10000059i-CH6-SW11).
 
+:::note
+For a step-by-step guide on adding a Settings Bundle to your app, refer to Apple's official documentation: [Building a settings bundle for your app](https://developer.apple.com/documentation/foundation/building-a-settings-bundle-for-your-app).
+:::
+
 **Supported custom settings**
 
 Currently, App Automate supports the following custom settings:
@@ -212,6 +216,7 @@ The keys and values follow the same rules as the hook: setting **titles must mat
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+- [Building a settings bundle for your app (Apple Developer)](https://developer.apple.com/documentation/foundation/building-a-settings-bundle-for-your-app)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
