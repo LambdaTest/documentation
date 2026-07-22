@@ -153,7 +153,7 @@ Execute your test script using your preferred automation framework with the abov
 
 :::tip
 - **Certificate-pinned apps** may fail if pinned hosts are not excluded.
-- Available only on **Pro Plan**.
+- Available only on **Plus Plan**.
 - Certain HTTPS connections (e.g., using custom certificate pinning) cannot be intercepted even with MITM.
 
 :::
