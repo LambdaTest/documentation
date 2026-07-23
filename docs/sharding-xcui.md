@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
