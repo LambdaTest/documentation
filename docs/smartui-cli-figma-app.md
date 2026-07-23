@@ -162,11 +162,11 @@ The file must have a `.json` extension, and the command refuses to overwrite a f
 | `mobile[].name` | Device name. This must be an exact match for a supported device, and the same device you run your Appium test on. An unsupported value fails validation with `unsupported mobile device name`. The generated config seeds valid examples you can start from. | Mandatory |
 | `mobile[].platform` | Operating system and version for the device, for example `["android 14"]` or `["ios 17"]`. | Optional |
 | `mobile[].orientation` | Either `portrait` or `landscape`. No other value is accepted. | Optional |
-| `figma.depth` | Positive integer representing how deep into the Figma document tree to traverse. Setting it to `2` returns pages and all top level objects on each page. Leaving it out returns all nodes. | Optional |
+| `figma.depth` | Positive integer controlling how deep into the Figma document tree the fetch traverses. The generated config uses `1`. | Optional |
 | `figma.configs[].figma_file_token` | File token for your Figma file. You can list multiple files in the same configuration. | Mandatory |
 | `figma.configs[].figma_ids` | List of node or frame IDs you want to compare. Values must be unique. | Mandatory |
 | `figma.configs[].screenshot_names` | Names given to the uploaded frames. If you supply this array it must have exactly the same number of entries as `figma_ids`, in the same order. Names must be unique across the whole file. | Optional |
-| `smartIgnore` | Top level boolean that enables SmartUI's automatic ignore behavior for dynamic content. | Optional |
+| `smartIgnore` | Top level boolean accepted by the config schema and forwarded with the upload. | Optional |
 
 :::note
 
@@ -229,7 +229,7 @@ Uploaded frames are stored with a `.png` suffix. A frame named `homepage` in `sc
 | ---------------- | ------------------------------------------------- |
 | `--markBaseline` | Mark this build as a new baseline for future runs |
 | `--buildName`    | Assign a custom name to this comparison build     |
-| `--fetch-results [filename]` | Poll for build results and print them. Pass a file name such as `results.json` to also write them to disk, which is useful in CI |
+| `--fetch-results [filename]` | Poll for build results after the upload. Accepts an optional output file name, for example `results.json` |
 
 #### Example
 
@@ -256,7 +256,7 @@ The response contains an `app_url` field, already in `lt://APP...` form, which i
 
 ### 7. Configure your Appium capabilities
 
-This is the half that produces the app screenshots. The device you set here must match the device in `designs.json`, otherwise the frames and the screenshots are captured at different viewports and every comparison reports a mismatch.
+This is the half that produces the app screenshots. Use the same device here as in `designs.json` so both sides are captured at the same viewport.
 
 ```javascript title="NodeJS example"
 let capabilities = {
@@ -347,7 +347,8 @@ await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"})
 <TabItem value='appium-java' label='Appium Java'>
 
 ```java
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=homepage.png");
+// the Selenium interface is JavascriptExecutor, with a lower case s in script
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=homepage.png");
 ```
 
 </TabItem>
@@ -359,12 +360,6 @@ driver.execute_script("smartui.takeScreenshot=homepage.png")
 
 </TabItem>
 </Tabs>
-
-:::note
-
-Appium with SmartUI supports viewport based screenshot comparisons only. Crop your Figma frames to a single viewport so they line up with what the device captures.
-
-:::
 
 Run your test suite as you normally would.
 
@@ -434,7 +429,7 @@ npx smartui upload-figma-app designs.json --buildName "v1.0.0"
 **CI Runs**
 
 - Set all four environment variables as secrets in your pipeline
-- Use `--fetch-results results.json` so the pipeline can read the outcome instead of relying on console output
+- Use `--fetch-results` so the pipeline polls for the build outcome after the upload returns
 - Refresh the Figma baseline as a separate job, not on every commit, so design changes are a deliberate step
 
 </TabItem>
@@ -497,6 +492,36 @@ If you supply `screenshot_names`, it must have the same number of entries as `fi
 <TabItem value='unknown-keys' label='Unknown Properties' >
 
 An unrecognised key does not stop the upload, it only logs `Additional property "<name>" is not allowed` and is then ignored. If a setting seems to have no effect, look for that warning and check it against the Configuration Options table above.
+
+</TabItem>
+</Tabs>
+
+### The upload fails while fetching from Figma
+
+<Tabs className='docs__val' groupId='troubleshooting-figma-api'>
+<TabItem value='rate-limit' label='Figma rate limit' default>
+
+The upload authenticates and then fails during **Processing App Figma** with a message like:
+
+```
+Failed to retrieve figma files, Figma API rate limit reached for your token.
+Your file is on the 'starter' plan tier, and your token's rate-limit bucket is 'low'.
+```
+
+Figma applies the lowest rate-limit bucket to tokens that act as a Viewer or Collab seat on a file, which includes free Starter workspaces. A handful of uploads in quick succession is enough to exhaust it.
+
+What helps:
+
+- Wait before retrying. Short backoff often is not enough, so leave a longer gap between attempts
+- Reduce how many `figma_ids` you fetch per run, and avoid re-running the upload while iterating on unrelated config
+- Use a token belonging to an Editor seat on a paid Figma tier, which is placed in a higher bucket
+
+A direct call to the Figma REST API can still succeed while the upload fails, because the upload makes several calls per run.
+
+</TabItem>
+<TabItem value='figma-access' label='Token cannot see the file' >
+
+If the message is `Invalid token` rather than a rate limit, the token itself is being rejected. Regenerate it from [Figma Settings](https://www.figma.com/settings) and make sure it carries the `file_content:read` scope, which is what allows reading file contents and rendering images.
 
 </TabItem>
 </Tabs>
