@@ -201,7 +201,8 @@ framework:
       video: true
       deviceLog: true
     
-      # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
+      # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+      # Both examples are given below.
       #highlight-next-line
       appPath: Proverbial.apk
       testSuitePath: ProverbialExpressoTest.apk
@@ -261,7 +262,8 @@ framework:
     video: true
     deviceLog: true
 
-    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
     #highlight-next-line
     appPath: Proverbial.apk
     testSuitePath: ProverbialExpressoTest.apk
@@ -343,8 +345,9 @@ framework:
       buildName: "Espresso"
       video: true
       deviceLog: true
-    
-      # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
+
+      # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+      # Both examples are given below.
       #highlight-next-line
       appPath: Proverbial.apk
       testSuitePath: ProverbialExpressoTest.apk
@@ -381,7 +384,8 @@ framework:
     video: true
     deviceLog: true
 
-    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
     #highlight-next-line
     appPath: Proverbial.apk
     testSuitePath: ProverbialExpressoTest.apk
