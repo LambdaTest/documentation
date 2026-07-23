@@ -188,20 +188,10 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 <CodeBlock className="lamguage-powershell">
 
 ```bash
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" \
---header "Authorization: Basic BASIC_AUTH_TOKEN" \
---header "Content-Type: application/json" \
---data-raw "{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
-  "device" :  ["Pixel 6-12"],
-  "queueTimeout": 10800,
-  "IdleTimeout": 150,
-  "deviceLog": true,
-  "network": false,
-  "build" : "Proverbial-Espresso",
-  "geoLocation" : "FR"
-}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
+--header "Authorization: Basic BASIC_AUTH_TOKEN" ^
+--header "Content-Type: application/json" ^
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Pixel 6-12\"],\"isVirtualDevice\":true,\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
 ```
 </CodeBlock>
 </div>
@@ -245,21 +235,10 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 <CodeBlock className="lamguage-powershell">
 
 ```bash
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" \
---header "Authorization: Basic BASIC_AUTH_TOKEN" \
---header "Content-Type: application/json" \
---data-raw "{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
-  "device" :  ["Pixel 6-12"],
-  "isVirtualDevice": true,
-  "queueTimeout": 10800,
-  "IdleTimeout": 150,
-  "deviceLog": true,
-  "network": false,
-  "build" : "Proverbial-Espresso",
-  "geoLocation" : "FR"
-}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
+--header "Authorization: Basic BASIC_AUTH_TOKEN" ^
+--header "Content-Type: application/json" ^
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Pixel 6-12\"],\"isVirtualDevice\":true,\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
 ```
 
 </CodeBlock>
@@ -316,20 +295,10 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 <CodeBlock className="lamguage-powershell">
 
 ```bash
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" \
---header "Authorization: Basic BASIC_AUTH_TOKEN" \
---header "Content-Type: application/json" \
---data-raw "{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
-  "device" :  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
-  "queueTimeout": 10800,
-  "IdleTimeout": 150,
-  "deviceLog": true,
-  "network": false,
-  "build" : "Proverbial-Espresso",
-  "geoLocation" : "FR"
-}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
+--header "Authorization: Basic BASIC_AUTH_TOKEN" ^
+--header "Content-Type: application/json" ^
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Galaxy S20-10\",\"Galaxy S20-10\",\"Redmi Note 9-10\",\"Galaxy S10+-10\",\"Galaxy S7 edge-8\",\"Galaxy S9+-8\"],\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
 ```
 </CodeBlock>
 </div>
@@ -373,21 +342,10 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 <CodeBlock className="lamguage-powershell">
 
 ```bash
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" \
---header "Authorization: Basic BASIC_AUTH_TOKEN" \
---header "Content-Type: application/json" \
---data-raw "{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
-  "device" :  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
-  "isVirtualDevice": true,
-  "queueTimeout": 10800,
-  "IdleTimeout": 150,
-  "deviceLog": true,
-  "network": false,
-  "build" : "Proverbial-Espresso",
-  "geoLocation" : "FR"
-}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
+--header "Authorization: Basic BASIC_AUTH_TOKEN" ^
+--header "Content-Type: application/json" ^
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Galaxy S20-10\",\"Galaxy S20-10\",\"Redmi Note 9-10\",\"Galaxy S10+-10\",\"Galaxy S7 edge-8\",\"Galaxy S9+-8\"],\"isVirtualDevice\":true,\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
 ```
 
 </CodeBlock>
