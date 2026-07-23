@@ -30,6 +30,10 @@ With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. Fr
 
 > To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
 
+:::info Automating with Playwright?
+This guide covers the **Appium** flow. Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
+:::
+
 ---
 ## Use Cases
 
