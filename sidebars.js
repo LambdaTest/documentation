@@ -417,11 +417,6 @@ module.exports = {
             id: "chat-agent-api-integration",
           },
 
-           {
-            type: "doc",
-            label: "Quality Dimensions",
-            id: "ai-agent-testing-platform-overview",
-          },
         ],
       },
      

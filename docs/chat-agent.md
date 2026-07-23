@@ -83,8 +83,6 @@ You can test a chat agent three ways. All three run the same evaluation and prod
 
 Each run produces per-metric scores with pass or fail badges, full transcripts for failing conversations annotated with the evidence that drove the score, and score deltas against previous runs. The scores roll up into a Green, Yellow, or Red go-live verdict.
 
-For how thresholds and the verdict are decided, see [quality dimensions and the go-live verdict](/support/docs/ai-agent-testing-platform-overview/).
-
 ## Features
 
 ---
