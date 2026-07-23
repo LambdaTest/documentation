@@ -183,7 +183,10 @@ Refer to the sample `.yaml` file here
 version: "0.2"
 concurrency: 2
 runson: ios
-autosplit: true
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
+autosplit: false
 maxRetries: 2
 retryOnFailure: true
 globalTimeout: 180 #MAXQUEUETIMEOUT
@@ -208,9 +211,7 @@ framework:
     #highlight-next-line
 
     deviceSelectionStrategy: all
-    devices:
-      - "iPhone 12 Pro-14"
-      - "iPad Air (2019)-16"
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
 
     shards:
       mappings:
@@ -244,7 +245,10 @@ framework:
 version: "0.2"
 concurrency: 2
 runson: ios
-autosplit: true
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
+autosplit: false
 maxRetries: 2
 retryOnFailure: true
 globalTimeout: 180 #MAXQUEUETIMEOUT
@@ -269,9 +273,7 @@ framework:
     #highlight-next-line
 
     deviceSelectionStrategy: all
-    devices:
-      - "iPhone 12 Pro-14.0"
-      - "iPad Air (2019)-16.0"
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
     isVirtualDevice: true
 
     shards:
@@ -292,7 +294,6 @@ framework:
         # The strategy for this shard is based on "only-testing/skip-testing".
         # This shard will either execute only the specified test(s) or skip the specified test(s),
         # depending on the strategy value configured.
-
 ```
 
 </CodeBlock>
