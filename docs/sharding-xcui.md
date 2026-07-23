@@ -270,8 +270,8 @@ framework:
 
     deviceSelectionStrategy: all
     devices:
-      - "iPhone 12 Pro-14"
-      - "iPad Air (2019)-16"
+      - "iPhone 12 Pro-14.0"
+      - "iPad Air (2019)-16.0"
     isVirtualDevice: true
 
     shards:
