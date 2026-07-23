@@ -3261,6 +3261,7 @@ module.exports = {
         },
         items: [
           "smartui-running-your-first-project",
+          "smartui-agent-skills",
           "smartui-guided-walkthrough",
           "smartui-cli-env-variables",
           "smartui-approval-workflow-guide",
