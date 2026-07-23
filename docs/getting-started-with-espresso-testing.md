@@ -194,7 +194,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
 --header "Authorization: Basic BASIC_AUTH_TOKEN" ^
 --header "Content-Type: application/json" ^
---data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Pixel 6-12\"],\"isVirtualDevice\":true,\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Pixel 6-12\"],\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
 ```
 </CodeBlock>
 </div>
