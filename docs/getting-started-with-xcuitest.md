@@ -154,8 +154,11 @@ Take note of the base64 encoded authentication which needs to be added in the 
 
 <Tabs className="docs__val">
 
-<TabItem value="bash" label="Linux / MacOS" default>
+<TabItem value="real-device" label="Real Device" default>
 
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
 
@@ -178,11 +181,9 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 </CodeBlock>
 </div>
-
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="lamguage-powershell">
 
@@ -204,6 +205,67 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 ```
   </CodeBlock>
 </div>
+</TabItem>
+
+</Tabs>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device" default>
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14"],
+  "isVirtualDevice": true,
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
+}'
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="lamguage-powershell">
+
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
+--header "Authorization: Basic BASIC_AUTH_TOKEN" \
+--header "Content-Type: application/json" \
+--data-raw "{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14"],
+  "isVirtualDevice": true,
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
+}"
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+</Tabs>
 
 </TabItem>
 </Tabs>
@@ -218,6 +280,16 @@ Once you have run your tests, you can view the test execution along with logs. Y
 
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
 
+<Tabs className="docs__val">
+
+<TabItem value="real-device" label="Real Device" default>
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
@@ -226,18 +298,105 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
   "app" : "APP_ID",
   "testSuite": "TEST_SUITE_ID",
   "device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
+  "video" : true,
   "queueTimeout": 10800,
-  "IdleTimeout": 150,
-  "deviceLog": true,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
   "build" : "Proverbial-XCUITest"
 }'
 ```
 
-:::info
-- For Virtual Devices, both the App file and Test-suite should be in the `Zip format`.
-- We need to pass the following capability `isvirtualdevice:true` as well when we are running test for Virtual Devices.
-:::
+</CodeBlock>
+</div>
+</TabItem>
 
+<TabItem value="powershell" label="Windows" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="lamguage-powershell">
+
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
+--header "Authorization: Basic BASIC_AUTH_TOKEN" \
+--header "Content-Type: application/json" \
+--data-raw "{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
+}"
+```
+  </CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device" default>
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
+  "isVirtualDevice": true,
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
+}'
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="lamguage-powershell">
+
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
+--header "Authorization: Basic BASIC_AUTH_TOKEN" \
+--header "Content-Type: application/json" \
+--data-raw "{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
+  "isVirtualDevice": true,
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
+}"
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+</Tabs>
+
+</TabItem>
+</Tabs>
 
 
 ## Using the XCUITest Agent Skill with TestMu AI
