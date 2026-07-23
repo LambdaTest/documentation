@@ -186,7 +186,7 @@ runson: ios
 autosplit: true
 maxRetries: 2
 retryOnFailure: true
-globalTimeout: 180    #MAXQUEUETIMEOUT
+globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
   name: "ios/xcui"
@@ -208,16 +208,28 @@ framework:
     #highlight-next-line
 
     deviceSelectionStrategy: all
-    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+    devices:
+      - "iPhone 12 Pro-14"
+      - "iPad Air (2019)-16"
 
     shards:
       mappings:
-      - name: shard1
-        strategy: "only-testing/skip-testing"
-        values: ["<className>/<className/testName>"]
-      - name: shard2
-        strategy: "only-testing/skip-testing"
-        values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+        - name: shard1
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
+        #highlight-next-line
+        - name: shard2
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
 ```
 
 </CodeBlock>
@@ -235,7 +247,7 @@ runson: ios
 autosplit: true
 maxRetries: 2
 retryOnFailure: true
-globalTimeout: 180    #MAXQUEUETIMEOUT
+globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
   name: "ios/xcui"
@@ -244,7 +256,7 @@ framework:
     video: true
     networkLog: true
     deviceLog: true
-    
+
     # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
     #highlight-next-line
     appPath: Proverbial.ipa
@@ -257,17 +269,30 @@ framework:
     #highlight-next-line
 
     deviceSelectionStrategy: all
-    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+    devices:
+      - "iPhone 12 Pro-14"
+      - "iPad Air (2019)-16"
     isVirtualDevice: true
 
     shards:
       mappings:
-      - name: shard1
-        strategy: "only-testing/skip-testing"
-        values: ["<className>/<className/testName>"]
-      - name: shard2
-        strategy: "only-testing/skip-testing"
-        values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+        - name: shard1
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
+        #highlight-next-line
+        - name: shard2
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
+
 ```
 
 </CodeBlock>
