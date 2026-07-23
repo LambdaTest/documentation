@@ -195,18 +195,17 @@ framework:
     video: true
     networkLog: true
     deviceLog: true
-    
-    # You can use either the APP ID (APP1234567) or provide the path of the application using appPath.
 
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
     #highlight-next-line
-    appPath: LambdaUiKitIOS.ipa
-    # We have used the appPath here instead of appId
-
-    # You can use either the APP ID (APP1234567) or provide the path of the application.
-
+    appPath: Proverbial.ipa
+    testSuitePath: ProverbialExpressoTest.ipa
+    # We have used the appPath and testSuitePath here.
     #highlight-next-line
-    testSuiteAppId: lt://APP10160202521675167637685231
-    # We have used the testSuiteAppID here instead of testSuitePath
+    appId: lt://APP1010461471690377432133206
+    testSuiteAppId: lt://APP10104592261690377454846669
+    # We have used the appId and testSuiteAppID here.
+    #highlight-next-line
 
     deviceSelectionStrategy: all
     devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
