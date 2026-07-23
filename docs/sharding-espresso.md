@@ -213,9 +213,7 @@ framework:
       #highlight-next-line
     
       deviceSelectionStrategy: all
-      devices:
-        - "Galaxy.*"
-        - "Pixel.*"
+      devices: ["Galaxy.*", "Pixel.*"]
     
       shards:
         mappings:
@@ -275,9 +273,7 @@ framework:
     #highlight-next-line
 
     deviceSelectionStrategy: all
-    devices:
-      - "Galaxy.*"
-      - "Pixel.*"
+    devices: ["Galaxy.*", "Pixel.*"]
     isVirtualDevice: true
 
     shards:
@@ -328,12 +324,55 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 Refer to the sample `.yaml` file here
 
-```bash title="SampleYamlFile.yaml"
+<Tabs className="docs__val">
+
+<TabItem value="real-device" label="Real Device" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
 runson: android
 autosplit: true
-globalTimeout: 180  #MAXQUEUETIMEOUT
+globalTimeout: 180 #MAXQUEUETIMEOUT
+
+framework:
+  name: "android/espresso"
+  args:
+      buildName: "Espresso"
+      video: true
+      deviceLog: true
+    
+      # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
+      #highlight-next-line
+      appPath: Proverbial.apk
+      testSuitePath: ProverbialExpressoTest.apk
+      # We have used the appPath and testSuitePath here.
+      #highlight-next-line
+      appId: lt://APP1010461471690377432133206
+      testSuiteAppId: lt://APP10104592261690377454846669
+      # We have used the appId and testSuiteAppID here.
+      #highlight-next-line
+    
+      deviceSelectionStrategy: all
+      devices: ["Galaxy.*", "Pixel.*"]
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
+version: "0.2"
+concurrency: 2
+runson: android
+autosplit: true
+globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
   name: "android/espresso"
@@ -341,25 +380,28 @@ framework:
     buildName: "Espresso"
     video: true
     deviceLog: true
-    
+
     # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
-
     #highlight-next-line
-    appPath: Proverbial.apk 
-
+    appPath: Proverbial.apk
     testSuitePath: ProverbialExpressoTest.apk
-    # We have used the appPath and testSuitePath here. 
-
-    
+    # We have used the appPath and testSuitePath here.
     #highlight-next-line
     appId: lt://APP1010461471690377432133206
     testSuiteAppId: lt://APP10104592261690377454846669
     # We have used the appId and testSuiteAppID here.
+    #highlight-next-line
 
     deviceSelectionStrategy: all
     devices: ["Galaxy.*", "Pixel.*"]
-
+    isVirtualDevice: true
 ```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 
 :::tip When shards aren't added
@@ -378,12 +420,12 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the s
 
 ```bash
 chmod u+x <cliFileNAme>
-./<cliFileNAme> --user <userName> --key <accessKey> --verbose -i <yamlFileName>.yaml
+./<cliFileNAme> -user <userName> -key <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
 ```
-./hyperexecute --user my_user_name --key xyx123abc --verbose -i hyperexecute.yaml
+./hyperexecute -user my_user_name -key xyx123abc --verbose -i hyperexecute.yaml
 ```
 <img loading="lazy" src={require('../assets/images/app-automation/example-folder.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
