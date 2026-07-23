@@ -173,7 +173,13 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 Refer to the sample `.yaml` file here
 
-```bash title="SampleYamlFile.yaml"
+<Tabs className="docs__val">
+
+<TabItem value="real-device" label="Real Device" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
 runson: ios
@@ -190,7 +196,7 @@ framework:
     networkLog: true
     deviceLog: true
     
-    # You can use either the appId (APP1234567) or provide the path of the application using appPath.
+    # You can use either the APP ID (APP1234567) or provide the path of the application using appPath.
 
     #highlight-next-line
     appPath: LambdaUiKitIOS.ipa
@@ -210,10 +216,66 @@ framework:
       - name: shard1
         strategy: "only-testing/skip-testing"
         values: ["<className>/<className/testName>"]
-     - name: shard2
-       strategy: "only-testing/skip-testing"
-       values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+      - name: shard2
+        strategy: "only-testing/skip-testing"
+        values: ["<className>/<className/testName>", "<className>/<className/testName>"]
 ```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
+version: "0.2"
+concurrency: 2
+runson: ios
+autosplit: true
+maxRetries: 2
+retryOnFailure: true
+globalTimeout: 180    #MAXQUEUETIMEOUT
+
+framework:
+  name: "ios/xcui"
+  args:
+    buildName: "XCUIT"
+    video: true
+    networkLog: true
+    deviceLog: true
+    
+    # You can use either the APP ID (APP1234567) or provide the path of the application using appPath.
+
+    #highlight-next-line
+    appPath: LambdaUiKitIOS.ipa
+    # We have used the appPath here instead of appId
+
+    # You can use either the APP ID (APP1234567) or provide the path of the application.
+
+    #highlight-next-line
+    testSuiteAppId: lt://APP10160202521675167637685231
+    # We have used the testSuiteAppID here instead of testSuitePath
+
+    deviceSelectionStrategy: all
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+
+    shards:
+      mappings:
+      - name: shard1
+        strategy: "only-testing/skip-testing"
+        values: ["<className>/<className/testName>"]
+      - name: shard2
+        strategy: "only-testing/skip-testing"
+        values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 :::tip When shards are added
 
