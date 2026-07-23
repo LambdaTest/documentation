@@ -218,7 +218,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --data-raw '{
   "app" : "APP_ID",
   "testSuite": "TEST_SUITE_ID",
-  "device" :  ["iPhone 11-14"],
+  "device" :  ["iPhone 11-14.0"],
   "isVirtualDevice": true,
   "video" : true,
   "queueTimeout": 10800,
@@ -241,7 +241,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
 --header "Authorization: Basic BASIC_AUTH_TOKEN" ^
 --header "Content-Type: application/json" ^
---data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"iPhone 15-17\"],\"isVirtualDevice\":true,\"video\":true,\"queueTimeout\":10800,\"isVirtualDevice\":true,\"idleTimeout\":150,\"devicelog\":true,\"network\":false,\"build\":\"Proverbial-XCUITest\"}"
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"iPhone 15-17.0\"],\"isVirtualDevice\":true,\"video\":true,\"queueTimeout\":10800,\"idleTimeout\":150,\"devicelog\":true,\"network\":false,\"build\":\"Proverbial-XCUITest\"}"
 ```
 
 </CodeBlock>
@@ -330,7 +330,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --data-raw '{
   "app" : "APP_ID",
   "testSuite": "TEST_SUITE_ID",
-  "device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
+  "device" :  ["iPhone 11-14.0","iPhone 12 Pro-15.0","iPhone X-13.0"],
   "isVirtualDevice": true,
   "video" : true,
   "queueTimeout": 10800,
@@ -353,7 +353,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
 --header "Authorization: Basic BASIC_AUTH_TOKEN" ^
 --header "Content-Type: application/json" ^
---data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"iPhone 11-14\",\"iPhone 12 Pro-15\",\"iPhone X-13\"],\"video\":true,\"queueTimeout\":10800,\"isVirtualDevice\":true,\"idleTimeout\":150,\"devicelog\":true,\"network\":false,\"build\":\"Proverbial-XCUITest\"}"
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"iPhone 11-14.0\",\"iPhone 12 Pro-15\",\"iPhone X-13\"],\"video\":true,\"queueTimeout\":10800,\"isVirtualDevice\":true,\"idleTimeout\":150,\"devicelog\":true,\"network\":false,\"build\":\"Proverbial-XCUITest\"}"
 ```
 
 </CodeBlock>
