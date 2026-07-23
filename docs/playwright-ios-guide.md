@@ -439,7 +439,7 @@ Automate the Apple Pay checkout flow on a real iOS device using Playwright over 
 
 :::info
 
-- Apple Pay support for Playwright is **WebKit/Safari + Node.js only**.
+- Apple Pay runs on **WebKit/Safari** and is supported across **all languages** available for Playwright iOS testing. The hook calls use the same `lambdatest_action` server-side channel shown under [Run Your First Test](#run-your-first-test), so the same syntax applies in every language.
 - To enable Apple Pay for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or drop a mail to **support@testmuai.com**.
 
 :::
@@ -467,23 +467,18 @@ const capabilities = {
 
 #### Passcode Capabilities
 
-Adding a card to Wallet requires a device passcode. Which capability you use depends on your cloud — add it inside `LT:Options` alongside `applePay`:
+Adding a card to Wallet requires a device passcode:
 
-| Cloud | Capability | Behaviour |
-|-------|------------|-----------|
-| **Private cloud** | `passcode` | Sets a custom passcode value directly on the device. |
-| **Public cloud** | `enablePasscode: true \| false` | Toggles the passcode. The value is the fixed default `123456` (custom values are not supported on public cloud). |
+- **Public cloud** — no extra capability is needed. The confirm hook handles the passcode automatically.
+- **Private cloud** — use the `passcode` capability to set a custom passcode value directly on the device. Add it inside `LT:Options` alongside `applePay`:
 
 ```javascript
-// Private cloud — set a custom passcode
+// Private cloud only — set a custom passcode
 "LT:Options": { /* ...other caps */, "applePay": true, "passcode": "654321" }
-
-// Public cloud — provision the default passcode (123456)
-"LT:Options": { /* ...other caps */, "applePay": true, "enablePasscode": true }
 ```
 
 :::note
-On **iOS 26**, the `lambda-applepay` confirm hook enters whichever passcode is set above automatically — the custom `passcode` on private cloud, or `123456` on public cloud. No separate passcode step is required.
+On **iOS 26**, the `lambda-applepay` confirm hook enters the device passcode automatically — the custom `passcode` on private cloud, or the default passcode on public cloud. No separate passcode step is required.
 :::
 
 ### Validation
