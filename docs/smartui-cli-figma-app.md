@@ -67,20 +67,23 @@ The workflow has two halves. First you upload your Figma frames to SmartUI as th
 
 ## Understanding the Tokens and Credentials
 
-The Figma-App workflow needs four values. Three of them are environment variables and one goes inside your config file.
+The Figma-App workflow needs four values across its two halves. Two are used by the CLI upload, two by the Appium run.
 
 | Token                | Where It Is Used | Description                                                                 |
 |----------------------|------------------|-----------------------------------------------------------------------------|
-| `PROJECT_TOKEN`      | Env Variable     | Your SmartUI project token, copied from the project on the SmartUI dashboard |
+| `PROJECT_TOKEN`      | Env Variable     | Your SmartUI project token. Authenticates the **CLI upload**                 |
 | `FIGMA_TOKEN`        | Env Variable     | Your Figma **Personal Access Token** to authenticate with the Figma API      |
-| `LT_USERNAME`        | Env Variable     | Your <BrandName /> username, used to authenticate the upload                 |
-| `LT_ACCESS_KEY`      | Env Variable     | Your <BrandName /> access key, used to authenticate the upload               |
+| `LT_USERNAME`        | Env Variable     | Your <BrandName /> username. Used in the **Appium grid URL**                 |
+| `LT_ACCESS_KEY`      | Env Variable     | Your <BrandName /> access key. Used in the **Appium grid URL**               |
 | `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                         |
 | `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                   |
 
 :::warning
 
-`LT_USERNAME` and `LT_ACCESS_KEY` are mandatory. The `upload-figma-app` command signs its request with them, and it exits with `Missing LT_USERNAME in Environment Variables` or `Missing LT_ACCESS_KEY in Environment Variables` if either one is unset.
+Do not set any of these to an empty string. The CLI treats an empty value as an error and exits with
+`Missing FIGMA_TOKEN in Environment Variables` (or the matching `LT_USERNAME` / `LT_ACCESS_KEY` message),
+while leaving the same variable unset is accepted. If you hit that message, check for a stray
+`export FIGMA_TOKEN=` in your shell.
 
 :::
 
@@ -101,10 +104,10 @@ The Figma-App workflow needs four values. Three of them are environment variable
 2. Click **New Project**
 3. Select **Real Devices** as the platform
 4. Enter:
-   - Project Name
-   - Approvers (optional)
+   - Project Name (required)
+   - Approver(s) (required, pre-filled with your own user)
    - Tags (optional)
-5. Click **Submit**
+5. Click **Continue**
 
 Note down both the **project name** and the **project token**. You need the token for the CLI upload and the name for your Appium capabilities.
 
@@ -167,7 +170,7 @@ The file must have a `.json` extension, and the command refuses to overwrite a f
 
 :::note
 
-The config schema rejects unknown keys. If you add a property that is not listed above, the CLI logs `Additional property "<name>" is not allowed` and the upload fails validation.
+If you add a property that is not listed above, the CLI logs `Additional property "<name>" is not allowed` as a warning and then continues with the upload. The extra key is ignored rather than applied, so check for this warning if a setting you added appears to have no effect.
 
 :::
 
@@ -247,7 +250,7 @@ curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
 -F "name=YourAppName"
 ```
 
-The response contains an `app_id` that you use as `lt://APP_ID`. For other upload options see [Upload your app](/support/docs/upload-apps-on-real-device-cloud/).
+The response contains an `app_url` field, already in `lt://APP...` form, which is the value you pass as the `app` capability in the next step. For other upload options see [Upload your app](/support/docs/upload-apps-on-real-device-cloud/).
 
 ---
 
@@ -308,31 +311,50 @@ Add the screenshot hook after the point in your script where the screen you care
 
 ```javascript
 // ❌ Wrong, will not match the Figma frame
-await driver.execute("smartui.takeScreenshot", {name: "homepage"});
+await driver.execute("smartui.takeScreenshot=homepage");
 
 // ✅ Correct, matches the Figma frame homepage.png
-await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
+await driver.execute("smartui.takeScreenshot=homepage.png");
 ```
+
+:::warning
+
+When you pass a config object, the screenshot name key is `screenshotName`. Passing `name` throws
+`Error response status: 1` and the test fails.
+
+```javascript
+// ❌ Wrong, throws
+await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
+
+// ✅ Correct
+await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"});
+```
+
+:::
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='appium' label='Appium NodeJS' default>
 
 ```javascript
-await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
+// simple form
+await driver.execute("smartui.takeScreenshot=homepage.png");
+
+// config form
+await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"});
 ```
 
 </TabItem>
 <TabItem value='appium-java' label='Appium Java'>
 
 ```java
-driver.execute("smartui.takeScreenshot", Map.of("name", "homepage.png"));
+((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=homepage.png");
 ```
 
 </TabItem>
 <TabItem value='appium-python' label='Appium Python'>
 
 ```python
-driver.execute_script("smartui.takeScreenshot", {"name": "homepage.png"})
+driver.execute_script("smartui.takeScreenshot=homepage.png")
 ```
 
 </TabItem>
@@ -474,7 +496,7 @@ If you supply `screenshot_names`, it must have the same number of entries as `fi
 </TabItem>
 <TabItem value='unknown-keys' label='Unknown Properties' >
 
-The schema rejects keys it does not recognize. Check the Configuration Options table above and remove anything that is not listed.
+An unrecognised key does not stop the upload, it only logs `Additional property "<name>" is not allowed` and is then ignored. If a setting seems to have no effect, look for that warning and check it against the Configuration Options table above.
 
 </TabItem>
 </Tabs>
