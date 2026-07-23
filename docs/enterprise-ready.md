@@ -130,6 +130,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - **SOC 2 Type II** certified: security, availability, processing integrity, confidentiality, and privacy (report available under NDA)
 - **ISO 27001** certified: information security management
 - **GDPR** compliant: data privacy and protection
+- **HIPAA** compliant: safeguards for protected health information (PHI)
 
 **Encryption:**
 - **Data in transit**: TLS 1.2 or higher for all communications
@@ -168,6 +169,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - [HyperExecute Private Cloud Setup](/support/docs/hyperexecute-private-cloud-setup/)
 - [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/)
 - [Public IP Ranges](/support/docs/testmu-public-ip/)
+
+### Data residency & deployment isolation
+
+TestMu AI supports regional data residency and tenant isolation for regulated deployments. Each organization's data is isolated by tenant ID within its own VPC, with production segregated from non-production. Private-cloud and on-premise (including Private Real Device Cloud) keep test data, app binaries and session content inside the customer boundary. Test execution can run fully air-gapped; note that AI-agent features require connectivity to TestMu AI APIs. Regional residency options (e.g. US, EU) and sovereign-cloud deployments are available on enterprise contracts.
 
 ---
 
@@ -252,6 +257,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 - [Custom Widgets](/support/docs/dashboards-custom-widgets/)
 - [AI Root Cause Analysis](/support/docs/analytics-ai-root-cause-analysis/)
 - [Defect Analysis and Prediction](/support/docs/defect-analysis-prediction/)
+
+### Machine-readable outputs
+
+<BrandName /> emits JUnit XML and JSON for CI, NDJSON event streams for agents, and framework report schemas (Allure, Extent, Cucumber, Mochawesome). OpenTelemetry spans are available via Selenium telemetry logs. SARIF is not emitted natively; security findings export as JSON via REST/MCP and can be transformed to SARIF where a consumer requires it.
 
 ---
 

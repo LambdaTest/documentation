@@ -84,6 +84,15 @@ As your project grows, so do your tests. And with scale come challenges:
 | Debug logs & reports  | Scattered         | Unified dashboard & rich logs |
 | Retry support         | Full suite reruns | Scenario-level retry logic    |
 
+# Service Virtualization
+
+TestMu AI supports service virtualization at two layers, without dedicated mock infrastructure to maintain.
+
+- **Framework-level request stubbing** - intercept requests and return controlled responses at the network layer using your framework's native tooling: Playwright `route`, Cypress `intercept`, WebdriverIO `mock`, and Selenium CDP/BiDi. Stubs run on our CDP/BiDi-capable grids and live in your test code, versioned in Git.
+- **Karate mock servers** - stand up Karate mock servers as part of a HyperExecute run to deliver controlled responses to the system under test, defined in the same Gherkin feature files as your tests; scale them across parallel nodes with autosplit.
+
+In agentic workflows, a coding agent using Kane CLI or Agent Skills can generate stub definitions from an API spec and execute the flow with those responses injected. Note: TestMu AI does not host a standalone, spec-driven virtual-service generator - virtualization is delivered through framework stubbing and in-run Karate mocks.
+
 ## Example Use Case: Scaling Karate API Tests with HyperExecute
 A QA team executes 100+ Karate feature files nightly. Over time, they face:
 
