@@ -40,6 +40,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script> 
 
+:::note
+**Note:** The IP addresses listed below are static Public IPs. If your application or network is protected by IP-based firewall rules, you can whitelist the relevant <BrandName /> IP ranges to allow <BrandName /> cloud devices to access your environment.
+:::
+
 These are the list of the IP ranges that you need to whitelist with respect to the specific <BrandName /> products.
 
 | Subnet Range | Standard Grid and Real Time | Real Device | KaneAI |
@@ -110,3 +114,15 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 
 ## <BrandName /> Integration Tools
 - **3.208.126.109**
+
+:::tip
+- **Need a dedicated IP instead?** If you prefer not to whitelist the product-specific public IP ranges listed below, consider using a **Dedicated Proxy**.
+
+- It provides a unique static IP exclusively for your organization, making firewall management, auditing, and access control simpler. This is especially useful for organizations with strict security or compliance requirements that want to whitelist a single dedicated IP instead of multiple product-specific IP ranges.
+
+- For more information, refer to the documentation links provided below.
+:::
+
+## Additional Links
+- [Network Whitelisting Guide](/support/docs/desired-capabilities-in-appium/)
+- [Dedicated Proxy - IP Whitelisting](/support/docs/testing-locally-hosted-pages/)
