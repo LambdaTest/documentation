@@ -110,6 +110,10 @@ params = {"Permission Settings":{"Location":"While using the app", "Precise Loca
 
 These are the settings added by the app developer using the [iOS Settings Bundle](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html#//apple_ref/doc/uid/10000059i-CH6-SW11).
 
+:::note
+For a step-by-step guide on adding a Settings Bundle to your app, refer to Apple's official documentation: [Building a settings bundle for your app](https://developer.apple.com/documentation/foundation/building-a-settings-bundle-for-your-app).
+:::
+
 **Supported custom settings**
 
 Currently, App Automate supports the following custom settings:
@@ -143,6 +147,67 @@ If any key is not present, we should get an error saying one of the keys is miss
 The title of the keys displayed on your iOS app settings page must be unique.
 
 
+## Apply iOS app settings with the `updateAppSettings` capability
+
+---
+
+Besides the in-session `lambda-ios-settings` hook, which applies settings **on demand** during a running test, you can now apply the same iOS Settings Bundle values **automatically at session start** by passing the `updateAppSettings` capability. <BrandName /> applies the settings right after the app is installed and **before it launches**, so the app reads the desired values on its very first launch, with no in-test hook call required.
+
+**When to use which**
+
+| | `updateAppSettings` capability | `lambda-ios-settings` hook |
+|---|---|---|
+| Applied | Once, pre-launch (at session start) | On demand, any time during the test |
+| Best for | Baseline settings the app should have before first launch | Changing settings mid-run |
+
+:::tip
+You can use both in the same session. The hook applies over the capability values if you change them later.
+:::
+
+### Requirements
+
+- iOS **real device**, **App Automation** (Appium) session.
+- The app under test must include a **Settings Bundle** (`Settings.bundle`).
+- The payload uses the **same structure** as the `lambda-ios-settings` hook (see [iOS app settings Supported by Lambda Hook](#ios-app-settings-supported-by-lambda-hook) above).
+
+### Usage
+
+Pass `updateAppSettings` inside `lt:options` (W3C). Below shown is an example written in python3.
+
+```python
+options = {
+    "platformName": "iOS",
+    "lt:options": {
+        "deviceName": "iPhone 15",
+        "platformVersion": "17",
+        "isRealMobile": True,
+        "app": "lt://APP_ID",
+        "updateAppSettings": {
+            "Permission Settings": {
+                "Location": "While using the app",
+                "Precise Location": "On"
+            },
+            "Allow Cross-Website Tracking": "On",
+            "Environment": "QA_1",
+            "Slider-1": "0.5",
+            "TextField-1": "sample text"
+        }
+    }
+}
+```
+
+The keys and values follow the same rules as the hook: setting **titles must match the app's iOS Settings page exactly** and be unique, sliders use a 0–1 decimal scale, and textfields and sliders are indexed (e.g. `Slider-1`, `TextField-2`).
+
+### Errors and validation
+
+`updateAppSettings` is validated when the session is created and **fails fast** (no device is allocated) if the target is not applicable:
+
+| Scenario | Error message |
+|---|---|
+| App has no Settings Bundle | `Invalid test parameters: updateAppSettings capability is not supported for the app_id <app> specified in the 'app' params - the app does not have a Settings Bundle. Remove the updateAppSettings capability or upload a build that includes Settings.bundle.` |
+| Web / no-app session | `updateAppSettings capability is only supported for iOS real device app automation tests` |
+| Android session | `updateAppSettings capability is not supported with android platform` |
+
 
 ## Additional Links
 
@@ -151,6 +216,7 @@ The title of the keys displayed on your iOS app settings page must be unique.
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+- [Building a settings bundle for your app (Apple Developer)](https://developer.apple.com/documentation/foundation/building-a-settings-bundle-for-your-app)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

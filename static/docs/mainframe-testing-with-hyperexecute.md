@@ -1,5 +1,7 @@
 # Mainframe Testing with HyperExecute
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Run a Robot Framework suite that drives a mainframe 3270 terminal on TestMu AI HyperExecute. This guide uses the [FNB mainframe sample repo](https://github.com/alif-laam-Meem/mainframe-robot), which exercises a mocked bank host over the 3270 protocol.
 
 Mainframe suites depend on the `s3270` and `x3270` 3270 emulator binaries. Those do not install cleanly on Windows or macOS. HyperExecute provisions Ubuntu VMs where they do, installs them from one YAML file, starts the mock hosts, autosplits the suites across parallel machines, and merges the Robot Framework report.

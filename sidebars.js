@@ -370,6 +370,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Voice Agent Testing",
+            id: "voice-agent",
+          },
+          {
+            type: "doc",
             label: "Phone Agent Testing",
             id: "phone-agent",
           },
@@ -412,11 +417,6 @@ module.exports = {
             id: "chat-agent-api-integration",
           },
 
-           {
-            type: "doc",
-            label: "Quality Dimensions",
-            id: "ai-agent-testing-platform-overview",
-          },
         ],
       },
      
@@ -1745,6 +1745,7 @@ module.exports = {
           { type: "doc", id: "one-click-migration-from-testrail", label: "Migrate from TestRail" },
           { type: "doc", id: "one-click-migration-from-xray", label: "Migrate from X-Ray" },
           { type: "doc", id: "one-click-migration-from-zephyr-scale", label: "Migrate from Zephyr Scale" },
+          { type: "doc", id: "one-click-migration-from-qtest", label: "Migrate from qTest" },
         ],
       },
 
@@ -2020,6 +2021,7 @@ module.exports = {
           { type: "doc", id: "filter-your-selenium-tests", label: "Organize Tests & Builds" },
           { type: "doc", id: "mark-as-bug-in-automation-testing", label: "File a Bug From a Session" },
           { type: "doc", id: "live-interaction", label: "Take Over a Live Session" },
+          { type: "doc", id: "rerun-automation-tests", label: "Re-Run & Reproduce a Test" },
           { type: "doc", id: "debugging-options", label: "Set Debugging Options & Logs" },
           { type: "doc", id: "lighthouse-reports-hooks", label: "Measure Page Performance" },
           { type: "doc", id: "lambda-hooks", label: "Use Lambda Hooks & Metadata" },
@@ -2641,6 +2643,7 @@ module.exports = {
         },
         items: [
           "smartui-running-your-first-project",
+          "smartui-agent-skills",
           "smartui-guided-walkthrough",
           "smartui-cli-env-variables",
           "smartui-approval-workflow-guide",
@@ -2797,6 +2800,11 @@ module.exports = {
                 type: "doc",
                 label: "Hooks Layout + Full Page",
                 id: "smartui-hooks-layout-fullpage-smartignore",
+              },
+              {
+                type: "doc",
+                label: "Fetch Status Auto-Wait",
+                id: "smartui-hooks-fetch-status-timeout",
               },
               {
                 type: "doc",
@@ -2960,6 +2968,11 @@ module.exports = {
                 type: "doc",
                 label: "Smart Ignore",
                 id: "smartui-smartignore",
+              },
+              {
+                type: "doc",
+                label: "Ignore Colors",
+                id: "smartui-ignore-colors",
               },
               {
                 type: "doc",
@@ -3746,6 +3759,11 @@ module.exports = {
             label: "Accessibility MCP",
             id: "accessibility-mcp-server",
           },
+          {
+            type: "doc",
+            label: "Test Manager MCP",
+            id: "test-manager-mcp-server",
+          },
         ],
       },
     ],
@@ -4298,6 +4316,43 @@ module.exports = {
             type: "doc",
             label: "Workflow",
             id: "kane-cli-generate-workflow",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Assurance",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-assurance",
+          },
+          {
+            type: "doc",
+            label: "Context Graph",
+            id: "kane-cli-assurance-context",
+          },
+          {
+            type: "doc",
+            label: "Designing Tests",
+            id: "kane-cli-assurance-design",
+          },
+          {
+            type: "doc",
+            label: "Coverage",
+            id: "kane-cli-assurance-coverage",
+          },
+          {
+            type: "doc",
+            label: "Maintaining the Suite",
+            id: "kane-cli-assurance-maintain",
+          },
+          {
+            type: "doc",
+            label: "Agents & CI",
+            id: "kane-cli-assurance-automation",
           },
         ],
       },

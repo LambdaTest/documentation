@@ -1,6 +1,6 @@
 ---
 id: testing-your-first-ai-agent
-title: How to Test Your First AI Agent on the TestMu AI Platform
+title: How to Test Your First AI Agent With TestMu AI Agent Testing Platform
 hide_title: false
 sidebar_label: Quickstart (UI)
 description: "Step-by-step guide to setting up and running your first AI agent test on TestMu AI: configure inputs, run validations, and review results."

@@ -1,8 +1,8 @@
 ---
 id: chat-agent
-title: How to Test Chat Agents on the AI Agent Testing Platform
+title: Chat Agent Testing With TestMu AI
 hide_title: false
-sidebar_label: Chat Agent Testing
+sidebar_label: Chat Agents
 description: Test chat agents on TestMu AI. How multi-turn conversations are simulated, which quality metrics are scored, and how to run an evaluation from UI, CLI, or API.
 keywords:
  - chat agent testing
@@ -43,11 +43,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test Chat Agents on the AI Agent Testing Platform
+# Chat Agent Testing With TestMu AI
 
 ---
 
-TestMu AI tests a chat agent by holding multi-turn conversations with it through its API, following AI-generated scenarios, and scoring each conversation across quality metrics. It covers text chatbots, virtual assistants, IT helpdesks, and FAQ bots.
+The Agent Testing Platform tests a chat agent by holding multi-turn conversations with it through its API, following AI-generated scenarios, and scoring each conversation across quality metrics. It covers text chatbots, virtual assistants, IT helpdesks, and FAQ bots.
 
 You provide the endpoint, the agent's intended behavior, and any requirement documents. The platform generates the scenarios and runs the conversations. No code changes to your agent are required.
 
@@ -82,8 +82,6 @@ You can test a chat agent three ways. All three run the same evaluation and prod
 ---
 
 Each run produces per-metric scores with pass or fail badges, full transcripts for failing conversations annotated with the evidence that drove the score, and score deltas against previous runs. The scores roll up into a Green, Yellow, or Red go-live verdict.
-
-For how thresholds and the verdict are decided, see [quality dimensions and the go-live verdict](/support/docs/ai-agent-testing-platform-overview/).
 
 ## Features
 

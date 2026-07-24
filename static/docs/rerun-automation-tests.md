@@ -9,9 +9,8 @@ Re-Run offers two options:
 - **Replay** - runs the test again on the grid.
 - **Reproduce** - replays the test against the data captured from the original run. Requires HAR logging.
 
-**Limited availability**
-
-Re-Run is not generally available. It may not be enabled for your account, and its behavior may change before general availability. Contact TestMu AI support if you need access.
+**Limited Availability**
+Re-Run is not generally available yet and may not be enabled for your account. Its behavior may change before general availability. To get it enabled for your organization, reach out to our **24/7 chat support** or email us at [support@testmuai.com](mailto:support@testmuai.com).
 
 ## Re-Run a Test
 

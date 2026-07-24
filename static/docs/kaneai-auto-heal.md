@@ -38,6 +38,10 @@ The core logic of Auto-Heal integrates several sophisticated systems working in 
 4. **Scope of Auto-Heal:**
    - Any command that requires the use of an element locator, such as **Click**, **Type**, or **Hover**, falls under the purview of auto-heal.
 
+## Human-in-the-loop review & approval
+
+Self-heal and agent-driven test modifications are surfaced for human review before they become permanent. When KaneAI adapts a locator or refactors a step, the change is captured with a before/after diff and an attributed audit-log entry. A reviewer can accept, reject, or edit the adaptation from the test summary; changes are never silently committed. Confidence-scored element matching automatically blocks low-confidence actions, and every accepted or rejected modification is recorded in Audit Logs for compliance.
+
 ## Benefits of Auto-Heal
 
 - ✅ **Reduced Test Maintenance Effort:**

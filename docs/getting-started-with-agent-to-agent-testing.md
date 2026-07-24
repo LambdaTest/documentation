@@ -1,9 +1,9 @@
 ---
 id: getting-started-with-agent-testing-platform
-title: Getting Started With the AI Agent Testing Platform
+title: Getting Started With the Agent Testing Platform
 hide_title: false
 sidebar_label: What is Agent Testing
-description: Get started with the AI Agent Testing Platform to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.
+description: Get started with the Agent Testing Platform to validate chat, voice, phone, and image AI agents against standardized quality metrics before you ship.
 keywords:
  - ai agent testing platform
  - agent testing
@@ -45,11 +45,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Getting Started With the AI Agent Testing Platform
+# Getting Started With the Agent Testing Platform
 
 ***
 
-TestMu AI's Agent Testing Platform validates AI agents the way real users interact with them. It deploys 15+ autonomous AI testing agents to evaluate any chat, voice, phone, or image agent against standardized quality metrics, then returns a Green, Yellow, or Red production readiness verdict before and after you deploy.
+TestMu AI [Agent Testing](https://www.testmuai.com/agent-testing/) Platform validates AI agents the way real users interact with them. It deploys 15+ autonomous AI testing agents to evaluate any chat, voice, phone, or image agent against standardized quality metrics, then returns a Green, Yellow, or Red production readiness verdict before and after you deploy.
 
 It is the first platform to test chat, voice, phone, and image agents in one place. Connecting an agent takes three inputs and no SDK: upload the documents that describe it, define its intended behavior, and point the platform at its endpoint or phone number.
 
