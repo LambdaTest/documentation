@@ -59,9 +59,7 @@ In this documentation, you will learn how to trigger a automation script of Java
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
 
 :::tip
-
 If you do not have any **Android** app (.apk) and an **Espresso Test** app (.apk) file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk).
-
 :::
 
 ## Running Your First Test: A Step-by-Step Guide
@@ -220,7 +218,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --data-raw '{
     "app": "APP_ID",
     "testSuite": "TEST_SUITE_ID",
-    "device":  ["Galaxy S21 5G-12.0"],
+    "device": ["Galaxy S21 5G-12.0"],
     "isVirtualDevice": true,
     "queueTimeout": 10800,
     "IdleTimeout": 150,
@@ -286,7 +284,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --data-raw '{
     "app": "APP_ID",
     "testSuite": "TEST_SUITE_ID",
-    "device":  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
+    "device": ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
     "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
@@ -332,7 +330,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --data-raw '{
     "app": "APP_ID",
     "testSuite": "TEST_SUITE_ID",
-    "device":  ["Galaxy S20-10.0","Galaxy S20-10.0","Redmi Note 9-10.0","Galaxy S10+-10.0","Galaxy S7 edge-8.0","Galaxy S9+-8.0"],
+    "device": ["Galaxy S20-10.0","Galaxy S20-10.0","Redmi Note 9-10.0","Galaxy S10+-10.0","Galaxy S7 edge-8.0","Galaxy S9+-8.0"],
     "isVirtualDevice": true,
     "queueTimeout": 10800,
     "IdleTimeout": 150,
