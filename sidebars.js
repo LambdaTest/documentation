@@ -419,7 +419,30 @@ module.exports = {
 
         ],
       },
-     
+
+      {
+        type: "category",
+        label: "Guides",
+        collapsed: true,
+        items: [
+          { type: "doc", label: "Test Retell Agents", id: "test-retell-agents" },
+          { type: "doc", label: "Test Vapi Agents", id: "test-vapi-agents" },
+          { type: "doc", label: "Test Bland Agents", id: "test-bland-agents" },
+          { type: "doc", label: "Test ElevenLabs Agents", id: "test-elevenlabs-agents" },
+          { type: "doc", label: "Test LiveKit Agents", id: "test-livekit-agents" },
+          { type: "doc", label: "Test Pipecat Agents", id: "test-pipecat-agents" },
+          { type: "doc", label: "Test Synthflow Agents", id: "test-synthflow-agents" },
+          { type: "doc", label: "Test Voiceflow Agents", id: "test-voiceflow-agents" },
+          { type: "doc", label: "Test Twilio IVR", id: "test-twilio-ivr" },
+          { type: "doc", label: "Test Amazon Connect Bots", id: "test-amazon-connect-bots" },
+          { type: "doc", label: "Test LangGraph Agents", id: "test-langgraph-agents" },
+          { type: "doc", label: "Test Vertex Agent Builder Agents", id: "test-vertex-agent-builder-agents" },
+          { type: "doc", label: "Test Copilot Studio Agents", id: "test-copilot-studio-agents" },
+          { type: "doc", label: "Test Amazon Lex Bots", id: "test-amazon-lex-bots" },
+          { type: "doc", label: "Test watsonx Assistant Bots", id: "test-watsonx-assistant-bots" },
+        ],
+      },
+
       {
         type: "category",
         label: "Frequently Asked Questions",
