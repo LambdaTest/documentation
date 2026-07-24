@@ -40,6 +40,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script> 
 
+:::note
+**Note:** The IP addresses listed below are static Public IPs. If your application or network is protected by IP-based firewall rules, you can whitelist the relevant <BrandName /> IP ranges to allow <BrandName /> cloud devices to access your environment.
+:::
+
 These are the list of the IP ranges that you need to whitelist with respect to the specific <BrandName /> products.
 
 | Subnet Range | Standard Grid and Real Time | Real Device | KaneAI |
@@ -49,7 +53,7 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**23.105.12.32/27**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**23.106.34.192/26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**209.58.137.40/29**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
-|**23.83.156.64/26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**23.83.156.64/26**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**23.105.162.225**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**23.105.174.26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**199.7.167.8/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
@@ -81,6 +85,11 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**3.111.139.20**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**54.255.17.88**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**3.64.247.89**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
+|**23.106.127.152/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**4.247.183.49**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**20.234.234.192**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**137.174.189.0/26**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
+|**104.45.207.170**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**4.224.6.32/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**20.253.69.48/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**20.242.202.160/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
@@ -110,3 +119,15 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 
 ## <BrandName /> Integration Tools
 - **3.208.126.109**
+
+:::note
+- If you prefer not to whitelist the product-specific public IP ranges listed below, consider using a **Dedicated Proxy**.
+
+- It provides a unique static IP exclusively for your organization, making firewall management, auditing, and access control simpler. This is especially useful for organizations with strict security or compliance requirements that want to whitelist a single dedicated IP instead of multiple product-specific IP ranges.
+
+- For more information, refer to the documentation links provided below.
+:::
+
+## Additional Links
+- [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/#2-when-dedicated-proxy-whitelisting-has-to-be-done/)
+- [Dedicated Proxy - IP Whitelisting](/support/docs/dedicated-proxy/)
