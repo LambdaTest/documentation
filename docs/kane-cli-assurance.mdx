@@ -42,7 +42,7 @@ Every stage is a separate command, so you can stop, review, and resume at any po
 | Review | [`kane-cli context review`](/docs/kane-cli-assurance-context/#review) | You promote proposals to **trusted**, edit them, or reject them |
 | Design | [`kane-cli design tests`](/docs/kane-cli-assurance-design/) | Turn one use-case into acceptance criteria, scenarios, and runnable tests — each test tagged with the criteria it verifies |
 | Review the design | [`kane-cli context review`](/docs/kane-cli-assurance-context/#review) | Design output is `derived` too — approve, edit, or reject the generated ACs, scenarios, and tests |
-| Execute | `kane-cli testmd run`, `kane-cli testrun run` | Author and replay the designed tests; every run seals an evidence pack |
+| Execute | [`kane-cli testmd run`](/docs/kane-cli-testmd/), `kane-cli testrun run` | Author and replay the designed tests; every run seals an evidence pack |
 | Measure | [`kane-cli cover`](/docs/kane-cli-assurance-coverage/) | Two axes: what a pack **proved** vs what the design still **owes** |
 | Maintain | [`kane-cli maintain`](/docs/kane-cli-assurance-maintain/) | Reconcile the suite when a source document changes |
 
@@ -64,7 +64,7 @@ Every stage is a separate command, so you can stop, review, and resume at any po
 
 kane-cli has two ways to author tests, for two different jobs:
 
-- **`kane-cli generate`** — quick test cases from a plain-language description. One prompt in, scenarios and cases out. Great for exploring coverage of a feature you can describe in a sentence.
+- **[`kane-cli generate`](/docs/kane-cli-generate/)** — quick test cases from a plain-language description. One prompt in, scenarios and cases out. Great for exploring coverage of a feature you can describe in a sentence.
 - **The assurance lifecycle** — tests derived from your actual requirement documents, with every claim cited, every proposal reviewed, and a permanent, auditable link from each test back to the criteria it verifies. Use it when you need to answer "what exactly is covered, and how do we know?"
 
 If you have a PRD and care about coverage accounting, start with assurance. If you want ten good test ideas in a minute, start with `generate`.

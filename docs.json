@@ -59,9 +59,20 @@
                 "group": "Core Concepts",
                 "pages": [
                   "docs/kane-cli-modes",
-                  "docs/kane-cli-configuration",
                   "docs/kane-cli-writing-objectives",
-                  "docs/kane-cli-variables-and-context"
+                  "docs/kane-cli-api-calls",
+                  "docs/kane-cli-browser-state",
+                  "docs/kane-cli-variables-and-context",
+                  "docs/kane-cli-configuration",
+                  "docs/kane-cli-tms-integration",
+                  "docs/kane-cli-testmd"
+                ]
+              },
+              {
+                "group": "Generate Test Cases",
+                "pages": [
+                  "docs/kane-cli-generate",
+                  "docs/kane-cli-generate-workflow"
                 ]
               },
               {
@@ -76,17 +87,38 @@
                 ]
               },
               {
-                "group": "Integrations & Automation",
+                "group": "Checkpoints",
                 "pages": [
-                  "docs/kane-cli-tms-integration",
-                  "docs/kane-cli-cicd",
-                  "docs/kane-cli-parallel-execution"
+                  "docs/kane-cli-checkpoints",
+                  "docs/kane-cli-checkpoint-visual",
+                  "docs/kane-cli-checkpoint-textual",
+                  "docs/kane-cli-checkpoint-url",
+                  "docs/kane-cli-checkpoint-title",
+                  {
+                    "group": "DevTools",
+                    "pages": [
+                      "docs/kane-cli-checkpoint-devtools",
+                      "docs/kane-cli-checkpoint-devtools-network",
+                      "docs/kane-cli-checkpoint-devtools-console",
+                      "docs/kane-cli-checkpoint-devtools-performance",
+                      "docs/kane-cli-checkpoint-devtools-cookies",
+                      "docs/kane-cli-checkpoint-devtools-localstorage",
+                      "docs/kane-cli-checkpoint-devtools-clipboard"
+                    ]
+                  }
                 ]
               },
               {
                 "group": "Agent Mode",
                 "pages": [
                   "docs/kane-cli-agent-mode",
+                  "docs/kane-cli-parallel-execution"
+                ]
+              },
+              {
+                "group": "CI/CD & Skills",
+                "pages": [
+                  "docs/kane-cli-cicd",
                   "docs/kane-cli-skills"
                 ]
               },
