@@ -115,7 +115,7 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 ## <BrandName /> Integration Tools
 - **3.208.126.109**
 
-:::Note
+:::note
 - If you prefer not to whitelist the product-specific public IP ranges listed below, consider using a **Dedicated Proxy**.
 
 - It provides a unique static IP exclusively for your organization, making firewall management, auditing, and access control simpler. This is especially useful for organizations with strict security or compliance requirements that want to whitelist a single dedicated IP instead of multiple product-specific IP ranges.
