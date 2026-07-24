@@ -202,15 +202,14 @@ framework:
 
     # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
     # Both examples are given below.
-    #highlight-next-line
-    appPath: Proverbial.ipa
-    testSuitePath: ProverbialExpressoTest.ipa
+    
+    appPath: ProverbialTest.ipa
+    testSuitePath: LambdaUiKitIOS.ipa
     # We have used the appPath and testSuitePath here.
-    #highlight-next-line
+    
     appId: lt://APP1010461471690377432133206
     testSuiteAppId: lt://APP10104592261690377454846669
     # We have used the appId and testSuiteAppID here.
-    #highlight-next-line
 
     deviceSelectionStrategy: all
     devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
@@ -224,7 +223,6 @@ framework:
         # The strategy for this shard is based on "only-testing/skip-testing".
         # This shard will either execute only the specified test(s) or skip the specified test(s),
         # depending on the strategy value configured.
-        #highlight-next-line
         - name: shard2
           strategy: "only-testing/skip-testing"
           values:
@@ -265,18 +263,18 @@ framework:
 
     # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
     # Both examples are given below.
-    #highlight-next-line
-    appPath: Proverbial.ipa
-    testSuitePath: ProverbialExpressoTest.ipa
+
+    appPath: ProverbialTest.ipa
+    testSuitePath: LambdaUiKitIOS.ipa
     # We have used the appPath and testSuitePath here.
-    #highlight-next-line
+
     appId: lt://APP1010461471690377432133206
     testSuiteAppId: lt://APP10104592261690377454846669
     # We have used the appId and testSuiteAppID here.
-    #highlight-next-line
 
     deviceSelectionStrategy: all
     devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+    #highlight-next-line
     isVirtualDevice: true
 
     shards:
@@ -288,7 +286,6 @@ framework:
         # The strategy for this shard is based on "only-testing/skip-testing".
         # This shard will either execute only the specified test(s) or skip the specified test(s),
         # depending on the strategy value configured.
-        #highlight-next-line
         - name: shard2
           strategy: "only-testing/skip-testing"
           values:
