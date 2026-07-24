@@ -55,7 +55,7 @@ Use this to exclude certain domains from network logs. This works similarly to *
 - Avoid broad patterns that may capture excessive traffic.
 - Save your settings for reuse in future sessions.
 
-- Available only on **Pro Plans** for manual testing.
+- Available only on **Plus Plans** for manual testing.
 - Apps from the App Store or Play Store may not support network capture.
 - Certificate-pinned apps may fail unless pinned hosts are excluded.
 ::

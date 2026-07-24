@@ -69,14 +69,17 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 Refer to the sample `.yaml` file here
 
-```bash title="SampleYamlFile.yaml"
+```yaml title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
 runson: ios
-autosplit: true
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
+autosplit: false
 maxRetries: 2
 retryOnFailure: true
-globalTimeout: 180    #MAXQUEUETIMEOUT
+globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
 name: "ios/xcui"
@@ -86,17 +89,17 @@ video: true
 networkLog: true
 deviceLog: true
 
-# You can use either the appId (APP1234567) or provide the path of the application using appPath.
-
+# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+# Both examples are given below.
 #highlight-next-line
-appPath: LambdaUiKitIOS.ipa
-# We have used the appPath here instead of appId
-
-# You can use either the APP ID (APP1234567) or provide the path of the application.
-
+appPath: Proverbial.ipa
+testSuitePath: ProverbialExpressoTest.ipa
+# We have used the appPath and testSuitePath here.
 #highlight-next-line
-testSuiteAppId: lt://APP10160202521675167637685231
-# We have used the testSuiteAppID here instead of testSuitePath
+appId: lt://APP1010461471690377432133206
+testSuiteAppId: lt://APP10104592261690377454846669
+# We have used the appId and testSuiteAppID here.
+#highlight-next-line
 
 deviceSelectionStrategy: all
 devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
@@ -105,10 +108,76 @@ shards:
 mappings:
 - name: shard1
 strategy: "only-testing/skip-testing"
-values: ["<className>/<className/testName>"]
+values:
+- "<className>/<className/testName>"
+# The strategy for this shard is based on "only-testing/skip-testing".
+# This shard will either execute only the specified test(s) or skip the specified test(s),
+# depending on the strategy value configured.
+#highlight-next-line
 - name: shard2
 strategy: "only-testing/skip-testing"
-values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+values:
+- "<className>/<className/testName>"
+- "<className>/<className/testName>"
+# The strategy for this shard is based on "only-testing/skip-testing".
+# This shard will either execute only the specified test(s) or skip the specified test(s),
+# depending on the strategy value configured.
+```
+
+```yaml title="SampleYamlFile.yaml"
+version: "0.2"
+concurrency: 2
+runson: ios
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
+autosplit: false
+maxRetries: 2
+retryOnFailure: true
+globalTimeout: 180 #MAXQUEUETIMEOUT
+
+framework:
+name: "ios/xcui"
+args:
+buildName: "XCUIT"
+video: true
+networkLog: true
+deviceLog: true
+
+# You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+# Both examples are given below.
+#highlight-next-line
+appPath: Proverbial.ipa
+testSuitePath: ProverbialExpressoTest.ipa
+# We have used the appPath and testSuitePath here.
+#highlight-next-line
+appId: lt://APP1010461471690377432133206
+testSuiteAppId: lt://APP10104592261690377454846669
+# We have used the appId and testSuiteAppID here.
+#highlight-next-line
+
+deviceSelectionStrategy: all
+devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+isVirtualDevice: true
+
+shards:
+mappings:
+- name: shard1
+strategy: "only-testing/skip-testing"
+values:
+- "<className>/<className/testName>"
+# The strategy for this shard is based on "only-testing/skip-testing".
+# This shard will either execute only the specified test(s) or skip the specified test(s),
+# depending on the strategy value configured.
+#highlight-next-line
+- name: shard2
+strategy: "only-testing/skip-testing"
+values:
+- "<className>/<className/testName>"
+- "<className>/<className/testName>"
+# The strategy for this shard is based on "only-testing/skip-testing".
+# This shard will either execute only the specified test(s) or skip the specified test(s),
+# depending on the strategy value configured.
 ```
 
 **When shards are added**
