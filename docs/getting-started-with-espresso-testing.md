@@ -154,7 +154,7 @@ Take note of the base64 encoded authentication which needs to be added in the 
 
 :::note
 * On Windows, run the following `curl` command from **Command Prompt (cmd.exe)**. The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell.
-* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs.
+* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.
   :::
 
 <Tabs className="docs__val">
@@ -172,15 +172,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "app" : "APP_ID",
+    "app": "APP_ID",
     "testSuite": "TEST_SUITE_ID",
-    "device" :  ["Galaxy S21 5G-12"],
+    "device": ["Galaxy S21 5G-12"],
     "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
     "network": false,
-    "build" : "Proverbial-Espresso",
-    "geoLocation" : "FR"
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
@@ -218,16 +218,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "app" : "APP_ID",
+    "app": "APP_ID",
     "testSuite": "TEST_SUITE_ID",
-    "device" :  ["Galaxy S21 5G-12.0"],
+    "device":  ["Galaxy S21 5G-12.0"],
     "isVirtualDevice": true,
     "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
     "network": false,
-    "build" : "Proverbial-Espresso",
-    "geoLocation" : "FR"
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
@@ -266,7 +266,7 @@ You can run tests in parallel on multiple devices by passing the device name in 
 
 :::note
 * On Windows, run the following `curl` command from **Command Prompt (cmd.exe)**. The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell.
-* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs.
+* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.
 :::
 
 <Tabs className="docs__val">
@@ -284,15 +284,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "app" : "APP_ID",
+    "app": "APP_ID",
     "testSuite": "TEST_SUITE_ID",
-    "device" :  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
+    "device":  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
     "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
     "network": false,
-    "build" : "Proverbial-Espresso",
-    "geoLocation" : "FR"
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
@@ -330,16 +330,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "app" : "APP_ID",
+    "app": "APP_ID",
     "testSuite": "TEST_SUITE_ID",
-    "device" :  ["Galaxy S20-10.0","Galaxy S20-10.0","Redmi Note 9-10.0","Galaxy S10+-10.0","Galaxy S7 edge-8.0","Galaxy S9+-8.0"],
+    "device":  ["Galaxy S20-10.0","Galaxy S20-10.0","Redmi Note 9-10.0","Galaxy S10+-10.0","Galaxy S7 edge-8.0","Galaxy S9+-8.0"],
     "isVirtualDevice": true,
     "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
     "network": false,
-    "build" : "Proverbial-Espresso",
-    "geoLocation" : "FR"
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
