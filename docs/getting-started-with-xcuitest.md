@@ -152,7 +152,7 @@ Take note of the base64 encoded authentication which needs to be added in the 
 
 :::note
 * On Windows, run the following `curl` command from **Command Prompt (cmd.exe)**. The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell.
-* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs.
+* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs obtained from the above curl command.
   :::
 
 <Tabs className="docs__val">
@@ -170,15 +170,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "app" : "APP_ID",
+  "app": "APP_ID",
   "testSuite": "TEST_SUITE_ID",
-  "device" :  ["iPhone 11-14"],
-  "video" : true,
+  "device":  ["iPhone 11-14"],
+  "video": true,
   "queueTimeout": 10800,
   "idleTimeout": 150,
   "devicelog": true,
   "network": false,
-  "build" : "Proverbial-XCUITest"
+  "build": "Proverbial-XCUITest"
 }'
 ```
 
@@ -216,16 +216,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "app" : "APP_ID",
+  "app": "APP_ID",
   "testSuite": "TEST_SUITE_ID",
-  "device" :  ["iPhone 11-14.0"],
+  "device":  ["iPhone 11-14.0"],
   "isVirtualDevice": true,
-  "video" : true,
+  "video": true,
   "queueTimeout": 10800,
   "idleTimeout": 150,
   "devicelog": true,
   "network": false,
-  "build" : "Proverbial-XCUITest"
+  "build": "Proverbial-XCUITest"
 }'
 ```
 
@@ -264,7 +264,7 @@ You can run tests in parallel on multiple devices by passing the device name in 
 
 :::note
 * On Windows, run the following `curl` command from **Command Prompt (cmd.exe)**. The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell.
-* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs.
+* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs obtained from the above curl command.
   :::
 
 <Tabs className="docs__val">
@@ -282,15 +282,15 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "app" : "APP_ID",
+  "app": "APP_ID",
   "testSuite": "TEST_SUITE_ID",
-  "device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
-  "video" : true,
+  "device": ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
+  "video": true,
   "queueTimeout": 10800,
   "idleTimeout": 150,
   "devicelog": true,
   "network": false,
-  "build" : "Proverbial-XCUITest"
+  "build": "Proverbial-XCUITest"
 }'
 ```
 
@@ -328,16 +328,16 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "app" : "APP_ID",
+  "app": "APP_ID",
   "testSuite": "TEST_SUITE_ID",
-  "device" :  ["iPhone 11-14.0","iPhone 12 Pro-15.0","iPhone X-13.0"],
+  "device":  ["iPhone 11-14.0","iPhone 12 Pro-15.0","iPhone X-13.0"],
   "isVirtualDevice": true,
-  "video" : true,
+  "video": true,
   "queueTimeout": 10800,
   "idleTimeout": 150,
   "devicelog": true,
   "network": false,
-  "build" : "Proverbial-XCUITest"
+  "build": "Proverbial-XCUITest"
 }'
 ```
 
@@ -353,7 +353,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
 --header "Authorization: Basic BASIC_AUTH_TOKEN" ^
 --header "Content-Type: application/json" ^
---data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"iPhone 11-14.0\",\"iPhone 12 Pro-15\",\"iPhone X-13\"],\"video\":true,\"queueTimeout\":10800,\"isVirtualDevice\":true,\"idleTimeout\":150,\"devicelog\":true,\"network\":false,\"build\":\"Proverbial-XCUITest\"}"
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"iPhone 11-14.0\",\"iPhone 12 Pro-15.0\",\"iPhone X-13.0\"],\"video\":true,\"queueTimeout\":10800,\"isVirtualDevice\":true,\"idleTimeout\":150,\"devicelog\":true,\"network\":false,\"build\":\"Proverbial-XCUITest\"}"
 ```
 
 </CodeBlock>
