@@ -7,8 +7,11 @@ keywords: ['kane cli cicd', 'github actions browser testing', 'kaneai', 'testmu 
 ---
 
 import { BrandName } from "/snippets/BrandName.mdx";
+import AgentSkillCallout from "/snippets/AgentSkillCallout.mdx";
 
 ---
+
+<AgentSkillCallout />
 
 Kane CLI runs headlessly in CI/CD pipelines using credentials passed as environment variables or inline flags. Tests fail fast on assertion errors and return standard exit codes for pipeline control flow.
 
@@ -35,8 +38,8 @@ Pass credentials directly on the run command using environment variables from yo
 ```bash
 kane-cli run "Verify checkout flow completes" \
   --url https://staging.myapp.com \
-  --username "$LT_USERNAME" \
-  --access-key "$LT_ACCESS_KEY" \
+  --username "YOUR_LT_USERNAME" \
+  --access-key "YOUR_LT_ACCESS_KEY" \
   --headless \
   --agent \
   --timeout 300
