@@ -61,7 +61,7 @@ Typing `/` in chat mode opens an autocomplete palette. Continue typing to filter
 | `/whoami` | `[--profile name]` | Show profile info |
 | `/balance` | | Show credit balance |
 | `/profiles` | `list\|switch\|delete` | Manage profiles |
-| `/config` | `show\|set-window\|set-mode\|chrome-profile\|project\|folder` | Manage configuration |
+| `/config` | `show\|set-window\|set-url\|set-mode\|chrome-profile\|project\|folder` | Manage configuration |
 | `/new` | | Start a fresh session (uploads the current session first) |
 | `/summary` | `[index]` | View detailed run summaries |
 | `/cancel` | | Abort the current run |
@@ -166,7 +166,7 @@ When stdin is not a TTY, Kane CLI automatically switches to plain NDJSON mode (t
 | Exit Code | Meaning |
 |-----------|---------|
 | `0` | Test passed |
-| `1` | Test failed (assertion not met) |
+| `1` | Test failed (agent reached an unrecoverable failure, or the upload failed) |
 | `2` | Error (auth failure, Chrome crash) |
 | `3` | Timeout or cancelled |
 

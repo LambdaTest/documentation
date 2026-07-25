@@ -67,7 +67,7 @@ A freshly designed test has never been executed, and the tooling is honest about
 
 1. `kane-cli design tests` writes `t-…_test.md` files — runnable, but with no recording yet.
 2. `kane-cli testrun` preflight refuses never-authored members (`missing_meta`).
-3. So the first run of each designed test is `kane-cli testmd run <file>` — the agent authors it in a real browser and commits the recording.
+3. So the first run of each designed test is [`kane-cli testmd run <file>`](/docs/kane-cli-testmd/) — the agent authors it in a real browser and commits the recording.
 4. From then on the test replays like any other: batch it with `testrun`, and its verdicts join the pack via `definition_id`.
 
 Until step 3 happens, `cover` reads the test's criteria as *covered on paper, unproven in execution* (`covered_by` present, execution `not-run`). That is a deliberate reading, not a bug — a designed test is a claim until a run proves it.
