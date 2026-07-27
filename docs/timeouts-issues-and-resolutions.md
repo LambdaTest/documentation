@@ -54,7 +54,10 @@ There are several common reasons you may encounter a **Timeout error**.
 
 If the TestMu AI Selenium grid detects inactivity for 120 seconds, you may encounter the below error:
 
-**Idle Timeout:** Test was terminated because the grid has not received any requests for 120 seconds. To avoid this, use idleTimeout in desired capabilities. e.g: set 'idleTimeout':'270'.  
+
+**Idle Timeout:** Test was terminated because grid hasn't received any requests for 120 second. To avoid this use idleTimeout using desired capabilities. e.g: set 'idleTimeout':'270′.  
+Once the default or user-defined idle timeout period is reached, our platform marks the test in the `idle_timeout` state. This will not necessarily happen exactly at the idle timeout duration. The system identifies and marks such tests on a best-effort basis, so it may take some additional time in certain cases. We recommend defining the `idleTimeout` capability according to your requirements.
+
 The timeout could also occur due to network latency, or due to improper declaration of driver.quit().
 
 **Resolution:** You can extend the 120-second idle timeout limit up to 1800 seconds by declaring the idleTimeout capability in your desired capabilities.
