@@ -43,10 +43,11 @@
         "tab": "Docs",
         "icon": "book-open-lines",
         "pages": [
+          "docs/index",
           {
             "group": "Kane CLI",
             "pages": [
-              "docs/index",
+              "docs/kane-cli-introduction",
               {
                 "group": "Getting Started",
                 "pages": [
