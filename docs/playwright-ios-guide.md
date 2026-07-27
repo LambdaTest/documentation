@@ -432,6 +432,177 @@ dotnet run
 
 </Tabs>
 
+## Apple Pay Automation
+---
+
+Automate the Apple Pay checkout flow on a real iOS device using Playwright over the <BrandName /> CDP endpoint (`wss://cdp.lambdatest.com/playwright`). When enabled, the platform provisions Wallet, a sandbox card, and the device passcode on the real iPhone — so you never interact with Face ID / Touch ID or set up Wallet manually.
+
+:::info
+
+- Apple Pay runs on **WebKit/Safari** and is supported across **all languages** available for Playwright iOS testing. The hook calls use the same `lambdatest_action` server-side channel shown under [Run Your First Test](#run-your-first-test), so the same syntax applies in every language.
+- To enable Apple Pay for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or drop a mail to **support@testmuai.com**.
+
+:::
+
+### Capabilities
+
+| Capability | Type | Default | Required / Optional | Description |
+|------------|------|---------|---------------------|-------------|
+| **applePay** | Boolean | false | Mandatory | Enables Apple Pay on the session — provisions Wallet, a sandbox card, and the device passcode on supported real iOS devices. |
+| **applePayCardType** | Array | None | Optional | Preferred payment network(s) in priority order. Supported values: `["master", "visa", "amex", "discover"]`. The first network is preferred; the rest act as fallbacks. If omitted, a default sandbox card is provisioned. |
+
+Add the Apple Pay keys to the **same `LT:Options` object** you already use to start your Playwright session (see [Run Your First Test](#run-your-first-test)):
+
+```javascript
+const capabilities = {
+  "LT:Options": {
+    // ...your existing iOS capabilities (platformName, deviceName, platformVersion, user, accessKey, etc.)
+    // highlight-start
+    "applePay": true,
+    "applePayCardType": ["master", "visa"], // priority order — master preferred, visa as fallback
+    // highlight-end
+  },
+};
+```
+
+#### Passcode Capabilities
+
+Adding a card to Wallet requires a device passcode:
+
+- **Public cloud** — no extra capability is needed. The confirm hook handles the passcode automatically.
+- **Private cloud** — use the `passcode` capability to set a custom passcode value directly on the device. Add it inside `LT:Options` alongside `applePay`:
+
+```javascript
+// Private cloud only — set a custom passcode
+"LT:Options": { /* ...other caps */, "applePay": true, "passcode": "654321" }
+```
+
+:::note
+On **iOS 26**, the `lambda-applepay` confirm hook enters the device passcode automatically — the custom `passcode` on private cloud, or the default passcode on public cloud. No separate passcode step is required.
+:::
+
+### Validation
+
+Before either Apple Pay hook executes, the gateway validates:
+
+1. **iOS version ≥ 14** — Apple Pay hooks are rejected on older platform versions.
+2. **Apple Pay capability present** — `applePay: true` must be set in `LT:Options`.
+
+If either check fails, the hook is not executed and an error is returned to the session.
+
+### Hooks
+
+Apple Pay hooks are invoked through the <BrandName /> server-side action channel — the native Apple Pay sheet is not reachable by Playwright directly. A small reusable wrapper keeps the calls readable:
+
+```javascript
+async function ltAction(page, action, args = {}) {
+  return page.evaluate(
+    (_) => {},
+    `lambdatest_action: ${JSON.stringify({ action, arguments: args })}`
+  );
+}
+```
+
+#### Hook 1 — `lambda-applepay-details` (pre-fill the sheet)
+
+Sets shipping, billing, and contact details on the Apple Pay sheet. Call it **before** launching the sheet. Optional — use it when your merchant requires shipping/contact info.
+
+```javascript
+await ltAction(page, "lambda-applepay-details", {
+  shippingDetails: {
+    firstName: "John", lastName: "Doe",
+    street: "1 Infinite Loop", city: "Cupertino",
+    state: "California", postalCode: "95014", country: "United States",
+  },
+  billingDetails: {
+    firstName: "John", lastName: "Doe",
+    street: "1 Infinite Loop", city: "Cupertino",
+    state: "California", postalCode: "95014", country: "United States",
+    email: "john.doe@example.com", phone: "+14085551234",
+  },
+  contact: {
+    firstName: "John", lastName: "Doe",
+    email: "john.doe@example.com", phone: "+14085551234",
+  },
+});
+```
+
+#### Hook 2 — `lambda-applepay` (confirm / authorize payment)
+
+Confirms the native Apple Pay sheet to authorize the transaction.
+
+```javascript
+await ltAction(page, "lambda-applepay", { confirm: true });
+```
+
+:::note
+On **iOS 26**, the confirm hook automatically enters the device passcode — one call confirms the sheet and authorizes the payment end to end. On earlier iOS versions, the passcode is entered as a separate step after confirm.
+:::
+
+### End-to-End Example
+
+```javascript title="apple-pay.spec.js"
+const { webkit } = require("playwright");
+
+// Reusable wrapper for any TestMu AI server-side action.
+async function ltAction(page, action, args = {}) {
+  return page.evaluate(
+    (_) => {},
+    `lambdatest_action: ${JSON.stringify({ action, arguments: args })}`
+  );
+}
+
+(async () => {
+  const capabilities = {
+    "LT:Options": {
+      platformName: "ios",
+      deviceName: "iPhone 16",
+      platformVersion: "26",
+      isRealMobile: true,
+      user: process.env.LT_USERNAME,
+      accessKey: process.env.LT_ACCESS_KEY,
+      build: "Apple Pay 26.0",
+      name: "Apple Pay via Playwright",
+      applePay: true,
+      applePayCardType: ["master", "visa"],
+    },
+  };
+
+  const browser = await webkit.connect(
+    `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+      JSON.stringify(capabilities)
+    )}`
+  );
+
+  const context = await browser.newContext();
+  const page = await context.newPage();
+
+  // Navigate to your checkout page and trigger the Apple Pay sheet here...
+
+  // Optional: pre-fill shipping / billing / contact on the sheet.
+  await ltAction(page, "lambda-applepay-details", {
+    billingDetails: {
+      firstName: "John", lastName: "Doe",
+      street: "1 Infinite Loop", city: "Cupertino",
+      state: "California", postalCode: "95014", country: "United States",
+      email: "john.doe@example.com", phone: "+14085551234",
+    },
+  });
+
+  // Confirm the sheet. On iOS 26 the passcode is entered automatically.
+  await ltAction(page, "lambda-applepay", { confirm: true });
+
+  // Assert your post-payment state (swap for a real locator on your app).
+  // await page.getByText(/order confirmed/i).waitFor();
+
+  await page.close();
+  await context.close();
+  await browser.close();
+})();
+```
+
+The `ltAction` helper is generic — reuse it for `setTestStatus`, `smartui.takeScreenshot`, or any other <BrandName /> action.
+
 ## View your Playwright test results
 ***
 
