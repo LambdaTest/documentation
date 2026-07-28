@@ -202,8 +202,11 @@ import NewTag from '../src/component/newTag';
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Agent Testing Platform </h2>
             <div className="home_inners">
-              <a href="/support/docs/getting-started-with-agent-testing-platform/"><p className="p_home_inners">Getting Started</p></a>
-              <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First AI Agent</p></a>
+              <a href="/support/docs/getting-started-with-agent-testing-platform/"><p className="p_home_inners">Overview</p></a>
+              <a href="/support/docs/chat-agent/"><p className="p_home_inners">Supported Agent Types</p></a>
+              <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First Agent</p></a>
+              <a href="/support/docs/testmu-a2a-cli/"><p className="p_home_inners">Test With Agent Testing CLI</p></a>
+              <a href="/support/docs/chat-agent-api-integration/"><p className="p_home_inners">Integrate a Chat Agent API</p></a>
               <a href="/support/docs/agent-testing-platform-faqs/"><p className="p_home_inners">FAQs</p></a>
             </div>
           </div>
