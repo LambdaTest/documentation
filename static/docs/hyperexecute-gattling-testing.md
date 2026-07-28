@@ -52,7 +52,7 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 
 ### Step 3: Configure your hyperexecute.yml file
-The core of HyperExecute configuration lies in the `hyperexecute.yaml` file. Let’s understand how it is constructed — step by step:
+The core of HyperExecute configuration lies in the `hyperexecute.yaml` file. Let’s understand how it is constructed, step by step:
 
 #### 1. Define Test Environment and Execution Strategy
 The first step is to define the environment your tests will run on using the runson parameter. You can also configure intelligent parallelization and test exit conditions.

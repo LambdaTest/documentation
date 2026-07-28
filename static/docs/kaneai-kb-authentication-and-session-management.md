@@ -120,7 +120,7 @@ assert the current URL contains "/dashboard"
 assert "Welcome, Admin" is visible
 ```
 
-The `{{totp}}` smart variable generates a time-based 6-digit code based on the registered secret key. KaneAI calculates the correct code at the moment the step executes, so you get a valid code for each step run. Since TOTP codes refresh every 30 seconds, ensure that the step entering the code and the step submitting it execute in quick succession — avoid placing long waits between them.
+The `{{totp}}` smart variable generates a time-based 6-digit code based on the registered secret key. KaneAI calculates the correct code at the moment the step executes, so you get a valid code for each step run. Since TOTP codes refresh every 30 seconds, ensure that the step entering the code and the step submitting it execute in quick succession. Avoid placing long waits between them.
 
 ### TOTP on Mobile
 

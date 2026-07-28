@@ -30,7 +30,7 @@ Refine:  kane-cli generate "<refinement>" --refine --req 23271
 Save:    kane-cli generate --save --req 23271
 ```
 
-Keep the request id — every later command uses it.
+Keep the request id, every later command uses it.
 
 Bound the size with limits when you want a tighter or broader set:
 
@@ -53,13 +53,13 @@ Each refine returns the updated result. Repeat until the set looks right.
 
 ### When generation asks a question
 
-Sometimes a turn ends by asking you something instead of finishing — for example, *"Which environment should these target, staging or production?"* This is a normal outcome, not a failure (the command exits `0`). Answer it by refining with your answer:
+Sometimes a turn ends by asking you something instead of finishing, for example, *"Which environment should these target, staging or production?"* This is a normal outcome, not a failure (the command exits `0`). Answer it by refining with your answer:
 
 ```bash
 kane-cli generate "target staging" --refine --req 23271
 ```
 
-(Driving this from a script or agent? Add `--agent` — or rely on it being auto-on when stdin is not a TTY — and read the answer-needed signal from the NDJSON, then re-invoke the same way.)
+(Driving this from a script or agent? Add `--agent` (or rely on it being auto-on when stdin is not a TTY) and read the answer-needed signal from the NDJSON, then re-invoke the same way.)
 
 ## 3. Save
 
@@ -88,7 +88,7 @@ Choose a different location with `--out`, and name the suite with `--name`:
 kane-cli generate --save --req 23271 --out ./tests --name checkout-suite
 ```
 
-Only functional cases are written — non-functional cases (Security, Performance, …) are part of the generated result but are not saved as runnable tests. See [Saving is functional-only](/support/docs/kane-cli-generate/#saving-is-functional-only).
+Only functional cases are written: non-functional cases (Security, Performance, …) are part of the generated result but are not saved as runnable tests. See [Saving is functional-only](/support/docs/kane-cli-generate/#saving-is-functional-only).
 
 ## 4. Run
 
@@ -98,7 +98,7 @@ The saved files are ordinary `_test.md` tests. Run any of them with `testmd`:
 kane-cli testmd run .testmuai/tests/checkout-23271/checkout/guest-checkout_test.md
 ```
 
-From here, everything in the [testmd docs](/support/docs/kane-cli-testmd/) applies — replay from cache, edit steps, compose with `@import`, and commit the output to git.
+From here, everything in the [testmd docs](/support/docs/kane-cli-testmd/) applies: replay from cache, edit steps, compose with `@import`, and commit the output to git.
 
 ## Automating it (agents / CI)
 
@@ -116,15 +116,15 @@ Each command prints one JSON object per line; the final line is the terminal eve
 
 | Code | Meaning |
 |---|---|
-| `0` | Turn completed — including a turn that ended with a clarification question |
+| `0` | Turn completed, including a turn that ended with a clarification question |
 | `1` | Generation failed |
-| `2` | Error — authentication / setup / transport, or an invalid combination of flags |
+| `2` | Error: authentication / setup / transport, or an invalid combination of flags |
 | `3` | Generation stopped or cancelled |
 | `130` | Interrupted (Ctrl-C) |
 
-Invalid flag combinations exit `2` with a message explaining the fix — for example using `--refine` without `--req`, passing a description with `--save`, using `--out` without `--save`, or `--req` without `--refine` or `--save`.
+Invalid flag combinations exit `2` with a message explaining the fix, for example using `--refine` without `--req`, passing a description with `--save`, using `--out` without `--save`, or `--req` without `--refine` or `--save`.
 
 ## Next steps
 
-- [Generating test cases with AI](/support/docs/kane-cli-generate/) — overview, modes, and the full option reference.
-- [Running tests with testmd](/support/docs/kane-cli-testmd/) — run and replay the files `--save` produces.
+- [Generating test cases with AI](/support/docs/kane-cli-generate/): overview, modes, and the full option reference.
+- [Running tests with testmd](/support/docs/kane-cli-testmd/): run and replay the files `--save` produces.

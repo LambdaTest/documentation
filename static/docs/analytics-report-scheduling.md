@@ -33,9 +33,9 @@ In the **Dashboard Settings** panel, expand the **Email Notifications** section 
 ### Step 3: Set the Delivery Schedule
 
 1. Under **Frequency**, select your preferred schedule from the dropdown:
-   - **Daily** — Receive reports every day at your chosen time.
-   - **Weekly** — Receive reports once a week.
-   - **Monthly** — Receive reports once a month.
+   - **Daily**: Receive reports every day at your chosen time.
+   - **Weekly**: Receive reports once a week.
+   - **Monthly**: Receive reports once a month.
 
 2. Under **Time**, select the hour from the dropdown (e.g., `9:00`).
 
@@ -45,8 +45,8 @@ In the **Dashboard Settings** panel, expand the **Email Notifications** section 
 
 Select the date range for the data included in each report:
 
-- **Default** — Uses the platform's default date range.
-- **Custom** — Specify a custom number of days. For example, setting this to `7` includes data from the last 7 days in each report.
+- **Default**: Uses the platform's default date range.
+- **Custom**: Specify a custom number of days. For example, setting this to `7` includes data from the last 7 days in each report.
 
 ### Step 5: Add Recipients
 

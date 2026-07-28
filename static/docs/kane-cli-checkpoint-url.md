@@ -38,4 +38,4 @@ If URL contains /login then enter credentials, else go to profile
 
 1. KaneAI reads the current `page.url` value directly
 2. The URL string is compared against the expected value using the specified operator
-3. No screenshot or DOM analysis needed — this is a direct read
+3. No screenshot or DOM analysis needed, this is a direct read

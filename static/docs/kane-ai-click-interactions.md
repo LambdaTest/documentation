@@ -8,14 +8,14 @@ KaneAI supports advanced click variants beyond a standard single click: **press 
 
 You can author any of the three click variants in two ways:
 
-- **Natural Language (NL)** — describe the click in plain English (e.g. `long press the menu icon for 5 seconds`).
-- **Manual Interaction** — perform the gesture on the device or browser viewport and have it captured as a step.
+- **Natural Language (NL)**: describe the click in plain English (e.g. `long press the menu icon for 5 seconds`).
+- **Manual Interaction**: perform the gesture on the device or browser viewport and have it captured as a step.
 
 | Click Type | Pill Label | Typical Use |
 |------------|------------|-------------|
 | **Press and Hold** | LONG PRESS | Developer mode entry, context menus, multi-select, hidden settings, push-to-talk |
 | **Multi-Click** | MULTI CLICK | Text selection, zoom, list opening, counter interactions |
-| **Right Click** | RIGHT CLICK | Context menus on web — duplicate, rename, delete, custom actions |
+| **Right Click** | RIGHT CLICK | Context menus on web: duplicate, rename, delete, custom actions |
 
 ## Supported Platforms
 
@@ -26,7 +26,7 @@ You can author any of the three click variants in two ways:
 | **iOS App** | ✅ | ✅ | ❌ | ✅ (Portrait only) |
 | **Mobile Web** | ✅ | ✅ | ❌ | ❌ (NL only) |
 
-**Right click is web-only.** On mobile, use **long press** to open context menus — KaneAI does not silently convert one to the other because they have different semantics.
+**Right click is web-only.** On mobile, use **long press** to open context menus. KaneAI does not silently convert one to the other because they have different semantics.
 
 ## Press and Hold (Long Press)
 
@@ -166,9 +166,9 @@ The three click modifiers cannot be combined on a single operation. Attempting t
 
 | Combination | Result |
 |-------------|--------|
-| Long press + Multi-click | Invalid — duration and frequency cannot both be set |
-| Right click + Long press | Invalid — right click cannot combine with duration |
-| Right click + Multi-click | Invalid — right click cannot combine with frequency |
+| Long press + Multi-click | Invalid: duration and frequency cannot both be set |
+| Right click + Long press | Invalid: right click cannot combine with duration |
+| Right click + Multi-click | Invalid: right click cannot combine with frequency |
 
 **NL examples that fail:**
 - `long press the button 3 times`
@@ -189,12 +189,12 @@ Each click type displays a distinct icon and pill label in the **Sidebar**, **Te
 
 ## Best Practices
 
-- **Use NL for most interactions** — fastest authoring path; produces element-first steps.
-- **Use Manual Interaction for precise timing** — when exact hold duration matters (e.g. 10 s developer mode).
+- **Use NL for most interactions**: fastest authoring path; produces element-first steps.
+- **Use Manual Interaction for precise timing**: when exact hold duration matters (e.g. 10 s developer mode).
 - **On mobile, use `long press` instead of `right click`** to open context menus.
-- **Don't combine modifiers** in a single instruction — they are mutually exclusive.
+- **Don't combine modifiers** in a single instruction, they are mutually exclusive.
 - For `click N times`, ensure the target element stays **stable** (doesn't move, disappear, or change) between clicks.
-- Allow **1–2 seconds after navigation** before performing a click — gives the page time to stabilize.
+- Allow **1–2 seconds after navigation** before performing a click, gives the page time to stabilize.
 - Use **variables** to parameterize: `long press the button for ${hold_duration} seconds`.
 - Use **conditionals** to apply click types contextually: `if popup is visible then right click on it`.
 
@@ -216,7 +216,7 @@ Yes. `double click` and `double tap` are interchangeable on mobile.
 20 clicks per instruction. Higher values are rejected as `INVALID_PARAMETER`.
 
 **Why does right click fail on mobile?**
-Right click is a mouse-specific interaction that doesn't exist on touchscreens. Use `long press` instead — it opens context menus in most apps.
+Right click is a mouse-specific interaction that doesn't exist on touchscreens. Use `long press` instead. It opens context menus in most apps.
 
 **Does `click the right panel` trigger a right click?**
 No. KaneAI treats positional `right` as a description of the panel, not a gesture modifier.
@@ -234,18 +234,18 @@ Yes. `long press the button for ${hold_duration} seconds` and `click the button 
 Yes. Autoheal re-locates the element on a modified page; the click modifier (duration, frequency, right-click flag) is preserved.
 
 **Can I use these click types inside a Module?**
-Yes. All three work inside Modules — create, import, edit, and version-bump as usual.
+Yes. All three work inside Modules: create, import, edit, and version-bump as usual.
 
 ## Limitations
 
 1. **Right click is web-only.** Returns `UNSUPPORTED_OPERATION` on mobile.
 2. **Mutual exclusivity.** Long press, multi-click, and right click cannot be combined in a single instruction.
 3. **Long press duration range.** Limited to 0.5–30 seconds only.
-4. **Multi-click frequency cap.** Maximum 20 clicks per instruction. The literal phrase `triple click X` is not supported — use `click X 3 times` instead.
-5. **Mobile Web — no Manual Interaction.** Only NL instructions are available for long press and multi-click on mobile browsers.
-6. **iOS Landscape — no Manual Interaction.** Long press and multi-click MI capture are not supported in Landscape orientation.
+4. **Multi-click frequency cap.** Maximum 20 clicks per instruction. The literal phrase `triple click X` is not supported. Use `click X 3 times` instead.
+5. **Mobile Web: no Manual Interaction.** Only NL instructions are available for long press and multi-click on mobile browsers.
+6. **iOS Landscape: no Manual Interaction.** Long press and multi-click MI capture are not supported in Landscape orientation.
 7. **Duration accuracy.** Long press is accurate to ±200 ms. Use cases requiring millisecond precision should account for this tolerance.
 8. **Multi-click on dynamic elements.** If the target moves, disappears, or changes between clicks, later clicks may miss. Ensure element stability.
 9. **Nested if-else not supported.** Single-level if-else with click modifiers works (e.g. `if popup is visible then right click on it`), but nested if-else inside another conditional is not supported.
-10. **Secrets as duration values.** `long press for {{secrets.user.DURATION}} seconds` is not supported — secret values cannot be parsed as numeric durations.
+10. **Secrets as duration values.** `long press for {{secrets.user.DURATION}} seconds` is not supported. Secret values cannot be parsed as numeric durations.
 11. **No silent conversion.** Right click is not auto-converted to long press on mobile, and long press is not auto-converted to right click on web. Each gesture must be authored explicitly.

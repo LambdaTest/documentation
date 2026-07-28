@@ -28,4 +28,4 @@ Store the page title
 
 1. KaneAI reads `page.title()` directly
 2. The title string is compared against the expected value
-3. No screenshot or DOM analysis needed — this is a direct read
+3. No screenshot or DOM analysis needed, this is a direct read

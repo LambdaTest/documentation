@@ -53,7 +53,7 @@ assert "Welcome" is visible
 
 ## OTP & PIN Fields
 
-Mobile apps frequently use individual digit boxes for OTP entry. Use the `OTP` keyword — KaneAI automatically distributes digits across the boxes.
+Mobile apps frequently use individual digit boxes for OTP entry. Use the `OTP` keyword. KaneAI automatically distributes digits across the boxes.
 
 ```
 enter OTP "123456"
@@ -75,7 +75,7 @@ assert "Phone verified" is visible
 
 ## Scrolling on Mobile
 
-Mobile scrolling works differently from web — there's no pixel-based scroll. Use count-based or directional scrolling.
+Mobile scrolling works differently from web. There's no pixel-based scroll. Use count-based or directional scrolling.
 
 ```
 scroll down 3 times
@@ -149,7 +149,7 @@ If a picker doesn't respond to natural language:
 
 ## Partially Clickable Text (Spannable Text)
 
-In mobile apps, text labels often contain partially clickable links — for example, "By signing up, you agree to our **Terms and Conditions** and **Privacy Policy**" where only "Terms and Conditions" is tappable.
+In mobile apps, text labels often contain partially clickable links, for example, "By signing up, you agree to our **Terms and Conditions** and **Privacy Policy**" where only "Terms and Conditions" is tappable.
 
 Use the `spannable text` keyword:
 
@@ -246,11 +246,11 @@ assert the profile button's background color is blue
 
 KaneAI supports deep links for navigating directly to specific screens in your app, bypassing the normal navigation flow using the slash command.
 
-Deep links are excellent for test setup — jump directly to the screen you want to test instead of navigating through the entire app flow. See [Deep Link Support](/support/docs/kane-ai-deeplink-support).
+Deep links are excellent for test setup. Jump directly to the screen you want to test instead of navigating through the entire app flow. See [Deep Link Support](/support/docs/kane-ai-deeplink-support).
 
 ## Mobile-Specific Testing Scenarios
 
-### Scenario: E-Commerce App — Browse and Purchase
+### Scenario: E-Commerce App - Browse and Purchase
 
 ```
 -- Handle initial permissions --
@@ -279,7 +279,7 @@ assert "Wireless Earbuds" is visible in the cart
 click on "Checkout" button
 ```
 
-### Scenario: Banking App — Check Balance with Biometric
+### Scenario: Banking App - Check Balance with Biometric
 
 ```
 -- App launches with biometric authentication enabled from advanced settings --
@@ -299,7 +299,7 @@ wait for 2 seconds
 assert "Recent Transactions" section is visible
 ```
 
-### Scenario: Social Media App — Post with Image
+### Scenario: Social Media App - Post with Image
 
 ```
 click on the "New Post" button

@@ -80,7 +80,7 @@ You can create your own `.smartui.json` file for full control over:
 After running your tests, the **Visual Build** becomes available in the dashboard.
 
 ### Build Status
-Easily track the state of each screenshot — **Approved**, **Changes Found**, **New**, **Under Review**, and more.
+Easily track the state of each screenshot: **Approved**, **Changes Found**, **New**, **Under Review**, and more.
 
 ### Three-Dot Menu Options
 Access additional functions for your build:

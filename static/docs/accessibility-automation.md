@@ -16,7 +16,7 @@ Use this workflow when your team already runs automated web tests and wants repe
 - supported framework integrations
 - automation settings such as WCAG version, best practices, and needs review
 - reporting through the Accessibility dashboard
-- optional CI/CD and HyperExecute orchestration (see **[HyperExecute integration — Selenium accessibility](/support/docs/selenium-hyperexecute-accessibility-tests/)** when running on HyperExecute with Selenium)
+- optional CI/CD and HyperExecute orchestration (see **[HyperExecute integration: Selenium accessibility](/support/docs/selenium-hyperexecute-accessibility-tests/)** when running on HyperExecute with Selenium)
 
 ## Product boundary
 
@@ -29,6 +29,6 @@ For Playwright Accessibility Automation, use Chrome. `pw-chromium` is currently 
 ## Related docs
 
 - [Selenium](/support/docs/accessibility-automation-test/)
-- [HyperExecute integration — Selenium accessibility](/support/docs/selenium-hyperexecute-accessibility-tests/)
+- [HyperExecute integration: Selenium accessibility](/support/docs/selenium-hyperexecute-accessibility-tests/)
 - [Configure Accessibility Automation](/support/docs/accessibility-automation-settings/)
 - [CI/CD Integration Guide](/support/docs/accessibility-cicd-integration-guide/)

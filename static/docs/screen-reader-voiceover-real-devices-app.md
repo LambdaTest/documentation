@@ -34,7 +34,7 @@ The VoiceOver feature is currently supported on selected iOS devices, allowing a
 
 ## How to Navigate using Keyboard Shortcuts
 
-The navigation behavior on iOS—such as moving to the next or previous element, auto-reading from the start of the page, and interacting with UI elements—can be performed using keyboard shortcuts when **VoiceOver** is enabled.
+The navigation behavior on iOS, such as moving to the next or previous element, auto-reading from the start of the page, and interacting with UI elements, can be performed using keyboard shortcuts when **VoiceOver** is enabled.
 
 On a real iOS device, VoiceOver navigation can be executed via keyboard shortcuts and touch gestures as well . However, when performing  accessibility testing, using keyboard shortcuts is the most efficient way to validate VoiceOver interactions.
 

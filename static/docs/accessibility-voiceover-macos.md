@@ -11,7 +11,7 @@ Use VoiceOver on macOS when your team needs to understand how desktop macOS user
 ## Onboarding: enable VoiceOver and browse the web
 
 1. Open **System Settings → Accessibility → VoiceOver** (names vary slightly by macOS version) and turn VoiceOver **On**, or press **Command + F5**.
-2. Accept the quick-start tutorial the first time—it teaches the **VO** modifier (Control + Option by default).
+2. Accept the quick-start tutorial the first time. It teaches the **VO** modifier (Control + Option by default).
 3. Open **Safari**, load your URL, and use **VO + Right Arrow** to move by rotor setting (start with **DOM** or **auto** mode for web).
 4. Practice the **rotor** (VO + U) to jump by headings, links, or form controls.
 5. Use **Tab** and **Shift+Tab** alongside VoiceOver to confirm focus order matches visual order.

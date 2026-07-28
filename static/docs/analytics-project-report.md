@@ -29,7 +29,7 @@ The Project Analytics Dashboard is a comprehensive platform designed to provide 
 
 ## Feature Overview & Widgets
 
-The dashboard’s visualizations and health indicators are designed for rapid executive consumption—enabling quick identification of risk, ROI, and release readiness without deep technical dives.
+The dashboard’s visualizations and health indicators are designed for rapid executive consumption, enabling quick identification of risk, ROI, and release readiness without deep technical dives.
 
 ### 1. Testing Velocity
 - **Test Volume:** Total tests executed in the selected period. Useful for demonstrating testing scale and resource utilization to leadership.

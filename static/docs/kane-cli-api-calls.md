@@ -14,7 +14,7 @@ Hit GET https://api.example.com/orders/123, save the response as fetched
 Call DELETE https://api.example.com/orders/123
 ```
 
-A pasted `curl` works too and is kept exactly as written — method, headers, body, and auth:
+A pasted `curl` works too and is kept exactly as written: method, headers, body, and auth:
 
 ```
 curl -X POST https://api.example.com/login -H 'Content-Type: application/json' -d '{"u":"a","p":"b"}', save the response as login
@@ -30,7 +30,7 @@ Once you've saved a response under a name, reference it elsewhere in the objecti
 | `{{order.response_body}}` | the whole response body |
 | `{{order.response_body.}}` | a field from the JSON response body |
 
-Assert on it, or feed it into later actions — API calls and browser actions mix freely in one objective:
+Assert on it, or feed it into later actions. API calls and browser actions mix freely in one objective:
 
 ```
 Call POST https://api.example.com/login with body {"u": "{{user}}", "p": "{{password}}"}, save the response as login,
@@ -56,7 +56,7 @@ curl -X DELETE https://api.example.com/records/42 -H "Authorization: Bearer {{ap
 
 These are two different things:
 
-- **Make a call (this page)** — *you* tell the agent to send a request: seed a record, call a backend, set up state.
-- **[Network assertions](/support/docs/kane-cli-checkpoint-devtools-network/)** — *observe* the requests the page itself makes during a UI flow (status codes, bodies, timing).
+- **Make a call (this page)**: *you* tell the agent to send a request: seed a record, call a backend, set up state.
+- **[Network assertions](/support/docs/kane-cli-checkpoint-devtools-network/)**: *observe* the requests the page itself makes during a UI flow (status codes, bodies, timing).
 
 They compose: seed state with a direct call, drive the UI, then assert on the page's own network traffic.

@@ -116,4 +116,3 @@ cp -r agent-skills/karma-skill .cursor/skills/
 ```
 
 Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
-

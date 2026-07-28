@@ -2,13 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The Agent Testing Platform connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
+TestMu AI connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
 
 It works with any chatbot provider or framework. You provide the endpoint URL, the authentication, and the request and response shape, and the platform matches whatever structure your API uses.
 
 ## How the Platform Sends Requests to Your Chat Agent
 
-The platform sends each message as an HTTP POST request with a JSON body. The example below shows the shape, followed by a breakdown of each component.
+TestMu AI sends each message as an HTTP POST request with a JSON body. The example below shows the shape, followed by a breakdown of each component.
 
 ```bash title="Example Request"
 curl -X POST https://api.examplechatbot.com/chat \
@@ -38,9 +38,9 @@ The platform sends the exact URL, token, and headers you configure. If your chat
 
 ## How to Connect Your Chat Agent
 
-The platform supports three connection methods, based on where your agent runs and how it is reachable. Choose the option that matches your environment.
+TestMu AI supports three connection methods, based on where your agent runs and how it is reachable. Choose the option that matches your environment.
 
-### Option A — Public API (Direct)
+### Option A: Public API (Direct)
 
 The simplest path. If your chat agent exposes a publicly reachable HTTPS endpoint, the platform connects to it directly using the URL, auth headers, and any additional headers you provide.
 
@@ -54,7 +54,7 @@ The simplest path. If your chat agent exposes a publicly reachable HTTPS endpoin
 
 > **Best for:** Production and cloud-hosted bots
 
-### Option B — Secure Proxy (Private Network)
+### Option B: Secure Proxy (Private Network)
 
 If your chat agent is not publicly reachable (it sits behind a corporate firewall, within a VPC, or on an internal network), TestMu AI provides a lightweight proxy agent that you install inside your network. The agent establishes a secure outbound tunnel to TestMu AI, so test traffic reaches your agent without exposing it to the public internet.
 
@@ -69,7 +69,7 @@ If your chat agent is not publicly reachable (it sits behind a corporate firewal
 
 > **Best for:** Enterprise and on-premise deployments
 
-### Option C — Localhost (Dev / Staging)
+### Option C: Localhost (Dev / Staging)
 
 For chat agents running on a local development machine (for example `localhost:3000`), the same proxy agent is installed locally. It creates a secure tunnel from TestMu AI to your machine, so the platform reaches your locally running agent.
 
@@ -98,7 +98,7 @@ Whatever the connection method, the platform sends the exact authentication and 
 
 ## How the Platform Reads Your Chat Agent's Response
 
-The platform reads the reply from each response, uses it to continue the conversation, and scores the result. Response shapes vary by provider, and the platform adapts to yours.
+TestMu AI reads the reply from each response, uses it to continue the conversation, and scores the result. Response shapes vary by provider, and the platform adapts to yours.
 
 ```json title="Example Response"
 {
@@ -144,7 +144,7 @@ To connect your agent, provide the following. No code changes or infrastructure 
 
 ## How the Platform Runs a Chat Evaluation
 
-Once credentials are configured, The platform runs the evaluation autonomously.
+Once credentials are configured, TestMu AI runs the evaluation autonomously.
 
 `Credentials Configured` → `Test Scenarios Generated` → `API Calls Sent to Your Agent` → `Responses Captured` → `Quality Scored`
 

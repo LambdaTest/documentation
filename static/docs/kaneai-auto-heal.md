@@ -4,7 +4,7 @@
 
 ## What is Auto-Heal in KaneAI & HyperExecute?
 
-KaneAI, the GenAI Native testing assistant from TestMu AI, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, TestMu AI’s high-performance test orchestration platform, they come with an added layer of reliability—the **Auto-Heal** feature.
+KaneAI, the GenAI Native testing assistant from TestMu AI, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, TestMu AI’s high-performance test orchestration platform, they come with an added layer of reliability: the **Auto-Heal** feature.
 
 **Auto-Heal** ensures your automation scripts remain robust, even when the application under test undergoes changes like modified element locators (IDs, XPaths, CSS selectors). Instead of failing the test immediately when locators break, KaneAI dynamically finds new locators at runtime by leveraging the original natural language instruction used to execute the test case.
 
@@ -37,6 +37,10 @@ The core logic of Auto-Heal integrates several sophisticated systems working in 
 
 4. **Scope of Auto-Heal:**
    - Any command that requires the use of an element locator, such as **Click**, **Type**, or **Hover**, falls under the purview of auto-heal.
+
+## Human-in-the-loop review & approval
+
+Self-heal and agent-driven test modifications are surfaced for human review before they become permanent. When KaneAI adapts a locator or refactors a step, the change is captured with a before/after diff and an attributed audit-log entry. A reviewer can accept, reject, or edit the adaptation from the test summary; changes are never silently committed. Confidence-scored element matching automatically blocks low-confidence actions, and every accepted or rejected modification is recorded in Audit Logs for compliance.
 
 ## Benefits of Auto-Heal
 

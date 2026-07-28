@@ -2,6 +2,8 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+**Note:** The IP addresses listed below are static Public IPs. If your application or network is protected by IP-based firewall rules, you can whitelist the relevant TestMu AI IP ranges to allow TestMu AI cloud devices to access your environment.
+
 These are the list of the IP ranges that you need to whitelist with respect to the specific TestMu AI products.
 
 | Subnet Range | Standard Grid and Real Time | Real Device | KaneAI |
@@ -11,7 +13,7 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**23.105.12.32/27**| ✅ | ❌ | ❌ |
 |**23.106.34.192/26**| ✅ | ❌ | ❌ |
 |**209.58.137.40/29**| ❌ | ✅ | ❌ |
-|**23.83.156.64/26**| ✅ | ❌ | ❌ |
+|**23.83.156.64/26**| ✅ | ✅ | ❌ |
 |**23.105.162.225**| ✅ | ❌ | ❌ |
 |**23.105.174.26**| ✅ | ❌ | ❌ |
 |**199.7.167.8/29**| ✅ | ❌ | ❌ |
@@ -43,6 +45,11 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**3.111.139.20**| ✅ | ✅ | ❌ |
 |**54.255.17.88**| ✅ | ✅ | ❌ |
 |**3.64.247.89**| ✅ | ✅ | ❌ |
+|**23.106.127.152/29**| ✅ | ❌ | ❌ |
+|**4.247.183.49**| ✅ | ❌ | ❌ |
+|**20.234.234.192**| ✅ | ❌ | ❌ |
+|**137.174.189.0/26**| ✅ | ✅ | ❌ |
+|**104.45.207.170**| ✅ | ❌ | ❌ |
 |**4.224.6.32/28**| ❌ | ❌ | ✅ |
 |**20.253.69.48/28**| ❌ | ❌ | ✅ |
 |**20.242.202.160/28**| ❌ | ❌ | ✅ |
@@ -71,3 +78,13 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 
 ## TestMu AI Integration Tools
 - **3.208.126.109**
+
+- If you prefer not to whitelist the product-specific public IP ranges listed below, consider using a **Dedicated Proxy**.
+
+- It provides a unique static IP exclusively for your organization, making firewall management, auditing, and access control simpler. This is especially useful for organizations with strict security or compliance requirements that want to whitelist a single dedicated IP instead of multiple product-specific IP ranges.
+
+- For more information, refer to the documentation links provided below.
+
+## Additional Links
+- [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/#2-when-dedicated-proxy-whitelisting-has-to-be-done/)
+- [Dedicated Proxy - IP Whitelisting](/support/docs/dedicated-proxy/)

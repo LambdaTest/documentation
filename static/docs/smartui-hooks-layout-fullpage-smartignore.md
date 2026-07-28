@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Use this page when you run **SmartUI Hooks** on LambdaTest (for example, Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
+Use this page when you run **SmartUI Hooks** on LambdaTest (for example Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
 
 **Capability vs hook, read this first**
 For **Hooks**, engineering behavior is:

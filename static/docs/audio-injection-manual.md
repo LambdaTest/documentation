@@ -57,40 +57,40 @@ Once enabled, the device list is filtered to show **only the devices that suppor
 
 You will see two options:
 
-- **Select Files** — inject a pre-recorded audio file
-- **Inject Live Input** — stream audio from your system microphone in real time
+- **Select Files**: inject a pre-recorded audio file
+- **Inject Live Input**: stream audio from your system microphone in real time
 
 ### Step 4a: Inject an Audio File
 
-Use this mode when you want a deterministic, repeatable input — for example, the same voice command run across many devices.
+Use this mode when you want a deterministic, repeatable input, for example, the same voice command run across many devices.
 
 1. In the **Audio** tab, select **Select Files**.
 2. Click **Upload** and choose an `.mp3` or `.wav` file (up to **200 MB**, one file at a time).
 3. Once uploaded, the file appears in your audio library (latest 5 uploaded)
 4. In the app under test, navigate to the screen that captures microphone input (e.g., tap **Record** or **Start Voice Search**).
 5. Select the uploaded file and click **Inject**.
-6. Once a file is injected, the controls are limited to **Play** and **Pause** — clicking **Play** streams the audio into the device's microphone pipeline as live mic input, and the app captures it as if a user were speaking.
+6. Once a file is injected, the controls are limited to **Play** and **Pause**. Clicking **Play** streams the audio into the device's microphone pipeline as live mic input, and the app captures it as if a user were speaking.
 7. To switch audio, select a different file and click **Inject** on it. Only **one file can be injected at a time**, and the new file replaces the previously injected one.
 
 Inject and start playback **after** the app has opened the mic. Some recognizers need 1–2 seconds of silence to initialize before they accept speech.
 
 ### Step 4b: Use Live Input
 
-Use this mode when you want to drive the device microphone interactively — for example, holding an unscripted conversation with a voice assistant or testing custom prompts on the fly.
+Use this mode when you want to drive the device microphone interactively, for example, holding an unscripted conversation with a voice assistant or testing custom prompts on the fly.
 
 1. In the **Audio** tab, select **Inject Live Input**.
 2. Grant microphone access to your browser when prompted.
 3. In the app under test, open the screen that captures microphone input.
-4. Click **Start** — your system microphone is now streamed directly into the device's mic.
+4. Click **Start**. Your system microphone is now streamed directly into the device's mic.
 5. Speak into your mic. The app receives your voice in real time.
 6. Click **Stop** to end the live stream.
 
-Live Input streams from the same browser tab running App Live. Avoid muting your system mic or switching tabs mid-session — the stream will be interrupted.
+Live Input streams from the same browser tab running App Live. Avoid muting your system mic or switching tabs mid-session. The stream will be interrupted.
 
 ## Execution Rules
 
 - The app must be granted microphone permission. Audio Injection does **not** bypass permission prompts.
-- Only one audio source is active at a time — switching from **Files** to **Live Input** (or vice versa) replaces the previous source.
+- Only one audio source is active at a time. Switching from **Files** to **Live Input** (or vice versa) replaces the previous source.
 - For files, only one file can be injected and played at a time.
 - The last injected audio is the active source until you stop it or inject another.
 
@@ -103,7 +103,7 @@ Live Input streams from the same browser tab running App Live. Avoid muting your
 
 ## Related Resources
 
-- [Audio Injection on Real Devices (Automation)](/docs/audio-injection/) — Inject audio via Appium / Selenium tests
+- [Audio Injection on Real Devices (Automation)](/docs/audio-injection/): Inject audio via Appium / Selenium tests
 - [Camera Image Injection on Real Devices](/docs/camera-image-injection-on-real-devices/)
 - [Biometric Authentication on Real Devices](/docs/biometric-authentication-on-real-devices/)
 

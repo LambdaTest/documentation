@@ -10,11 +10,11 @@ The Test Manager Widgets module is currently in  . If you have any feedback or s
 Every widget supports configurable filters. Click the **three-dot menu** on any widget to apply filters and narrow down the displayed results based on your specific criteria.
 
 **Drill Down into Data**
-All widgets support drill-down. Click on any data point in a chart — such as a segment in a pie chart, a bar in a bar chart, or a status value — to view the underlying list of associated records (e.g., test cases, test runs, or issues) that make up that data point.
+All widgets support drill-down. Click on any data point in a chart (such as a segment in a pie chart, a bar in a bar chart, or a status value) to view the underlying list of associated records (e.g., test cases, test runs, or issues) that make up that data point.
 
 ## Test Cases Summary
 
-The Test Cases Summary widget displays the total count of test cases and the split between **Automated** and **Manual** test cases. The classification is determined by the **Automation Status** field on each test case — if set to *Automated*, it is counted under Automated; all others fall into the Manual category.
+The Test Cases Summary widget displays the total count of test cases and the split between **Automated** and **Manual** test cases. The classification is determined by the **Automation Status** field on each test case. If set to *Automated*, it is counted under Automated; all others fall into the Manual category.
 
 ### How it works?
 
@@ -100,9 +100,9 @@ The Execution Progress widget displays overall test execution progress as a perc
 * The gauge shows the completion percentage, computed as **(Total test run instances − Not Started instances) / Total test run instances**.
 * Any test instance in a status other than *Not Started* (such as Passed, Failed, Skipped, Blocked, or custom statuses) is counted under **Executed**.
 * A side panel next to the gauge displays three counters:
-    * **Total** — the total number of test run instances in scope.
-    * **Executed** — instances that have moved out of the *Not Started* status.
-    * **Remaining** — instances still in the *Not Started* status.
+    * **Total**: the total number of test run instances in scope.
+    * **Executed**: instances that have moved out of the *Not Started* status.
+    * **Remaining**: instances still in the *Not Started* status.
 * Apply filters from the three-dot menu to scope the widget to a specific test run, phase, or stage.
 
 ### Value Proposition
@@ -117,17 +117,17 @@ The Test Execution Burndown widget tracks how remaining test executions trend do
 
 * The **X-axis** represents dates across the selected execution window, and the **Y-axis** represents the number of remaining test run instances (instances still in *Not Started* status).
 * Three trend lines are plotted:
-    * **Actual** (solid blue) — remaining *Not Started* instances per day, reflecting real execution progress up to today.
-    * **Expected** (dashed grey) — an ideal linear burndown from the total instance count on Day 0 down to zero on the final day.
-    * **Projected** (dashed blue) — a forward-looking extrapolation from today to the end date, based on your current velocity, so you can see where execution will land if the current pace holds.
+    * **Actual** (solid blue): remaining *Not Started* instances per day, reflecting real execution progress up to today.
+    * **Expected** (dashed grey): an ideal linear burndown from the total instance count on Day 0 down to zero on the final day.
+    * **Projected** (dashed blue): a forward-looking extrapolation from today to the end date, based on your current velocity, so you can see where execution will land if the current pace holds.
 * A **Today** marker highlights the current date on the chart, making it easy to see where the Actual line hands off to the Projected line relative to the Expected ideal.
 * Hovering over any point on the chart opens a tooltip showing, for that day:
-    * **Remaining** — remaining instances on that date.
-    * **Ideal** — the expected remaining count for that date.
-    * **Gap** — how far ahead or behind the ideal line you are.
-    * **Executed today** — the number of instances executed on that day.
-    * **7-day avg** — the trailing 7-day execution velocity.
-* The **footer strip** below the chart summarises execution health at a glance — **Total**, **Executed**, **Remaining**, **Complete** (percentage), **Status** (ahead or behind by N instances), **Velocity** (instances/day), projected **Finish** date, and the **Pace needed** (instances/day required to hit the target).
+    * **Remaining**: remaining instances on that date.
+    * **Ideal**: the expected remaining count for that date.
+    * **Gap**: how far ahead or behind the ideal line you are.
+    * **Executed today**: the number of instances executed on that day.
+    * **7-day avg**: the trailing 7-day execution velocity.
+* The **footer strip** below the chart summarises execution health at a glance: **Total**, **Executed**, **Remaining**, **Complete** (percentage), **Status** (ahead or behind by N instances), **Velocity** (instances/day), projected **Finish** date, and the **Pace needed** (instances/day required to hit the target).
 * Use the **date range picker** in the widget header to change the execution window. Use the **filter icon** (next to the *Test Manager* badge) or the three-dot menu to filter by test run, phase, or stage.
 
 ### Drill down into remaining instances
@@ -135,13 +135,13 @@ The Test Execution Burndown widget tracks how remaining test executions trend do
 Clicking any point on the Actual line opens a drill-down modal titled **Test Execution Burndown**, which lists every test run instance that was still *Remaining* as of that date. From the modal you can:
 
 * See the exact count of remaining instances for the selected date (e.g. *Remaining as of Mar 14: 1000*).
-* Adjust the date range and apply additional filters — **Project**, **Test Run Instance Name**, and **Milestone Name**.
+* Adjust the date range and apply additional filters: **Project**, **Test Run Instance Name**, and **Milestone Name**.
 * Browse the paginated list of instances with their current status, project, and last-updated timestamp.
 * **Export** the list for sharing or offline analysis.
 
 ### Value Proposition
 
-By comparing the actual burndown against the expected line and watching the footer metrics, you can quickly see whether execution is ahead, on track, or slipping — enabling early course correction, better capacity planning, and more reliable release predictions. The drill-down makes it easy to go from a high-level slip directly to the specific instances that are holding the run back.
+By comparing the actual burndown against the expected line and watching the footer metrics, you can quickly see whether execution is ahead, on track, or slipping, enabling early course correction, better capacity planning, and more reliable release predictions. The drill-down makes it easy to go from a high-level slip directly to the specific instances that are holding the run back.
 
 ## Defects by Severity
 
@@ -149,7 +149,7 @@ The Defects by Severity widget displays a bar chart of Jira defects linked to yo
 
 ### How it works?
 
-* Each bar represents a severity level — **Critical**, **High**, **Medium**, and **Low** — with its value showing the count of linked Jira defects at that severity.
+* Each bar represents a severity level (**Critical**, **High**, **Medium**, and **Low**) with its value showing the count of linked Jira defects at that severity.
 * Defects are sourced from Jira issues linked to test cases or raised during test runs in Test Manager.
 * Click any bar to drill down into the underlying list of issues for that severity.
 * Apply filters from the three-dot menu to scope the widget to a specific test run, phase, or stage.
@@ -165,7 +165,7 @@ The Tester Assignment widget displays a horizontal stacked bar chart with one ba
 ### How it works?
 
 * Each bar represents a tester, and its length reflects the total number of test run instances assigned to them.
-* Each bar is broken down into stacked segments by test instance status — **Not Started**, **Passed**, **Failed**, **Skipped**, as well as any **custom statuses** created for your manual test runs.
+* Each bar is broken down into stacked segments by test instance status: **Not Started**, **Passed**, **Failed**, **Skipped**, as well as any **custom statuses** created for your manual test runs.
 * Click any segment to drill down into the underlying list of test run instances for that tester and status.
 * Apply filters from the three-dot menu to scope the widget to a specific test run, phase, or stage.
 

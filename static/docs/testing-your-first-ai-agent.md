@@ -1,4 +1,4 @@
-# How to Test Your First AI Agent With TestMu AI Agent Testing Platform
+# How to Test Your First AI Agent on the TestMu AI Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

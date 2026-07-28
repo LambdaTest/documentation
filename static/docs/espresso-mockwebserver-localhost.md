@@ -6,7 +6,7 @@ TestMu AI supports testing apps that use MockWebServer or similar localhost-base
 
 ## Why Special Configuration is Needed
 
-When network capture (`network: true`) is enabled, HTTP requests from the device route through proxy. Localhost requests fail because the proxy runs on the host machine, not the device — so `http://localhost:{port}` resolves to the host's localhost instead of the device's.
+When network capture (`network: true`) is enabled, HTTP requests from the device route through proxy. Localhost requests fail because the proxy runs on the host machine, not the device, so `http://localhost:{port}` resolves to the host's localhost instead of the device's.
 
 Platform provides two solutions: **Localhost Bypass** and **Port Forwarding**.
 
@@ -71,10 +71,10 @@ Port forwarding works at the network level, so **all HTTP libraries are supporte
 - Maximum 5 unique ports. No duplicate ports allowed.
 - Invalid port formats (e.g., strings like `"abc"`) are rejected.
 - Cannot be used together with `localhost`.
-- `network: true` is **not** required for port forwarding — it works independently.
+- `network: true` is **not** required for port forwarding. It works independently.
 
 ## Troubleshooting
 
-- **Connection errors** — Ensure `network: true` is set when using `localhost: true`. For `portForwarding`, `network: true` is optional.
-- **Cannot use localhost and portForwarding together** — These are mutually exclusive. Pick one.
-- **Port validation errors** — Ports must be 1024–65535, max 5 unique ports, no duplicates allowed.
+- **Connection errors**: Ensure `network: true` is set when using `localhost: true`. For `portForwarding`, `network: true` is optional.
+- **Cannot use localhost and portForwarding together**: These are mutually exclusive. Pick one.
+- **Port validation errors**: Ports must be 1024–65535, max 5 unique ports, no duplicates allowed.

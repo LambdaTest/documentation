@@ -47,7 +47,7 @@ For individual steps that need more time, set a custom timeout via the step menu
 - Waiting for third-party payment gateways to respond
 
 **Recommendation**
-Prefer **custom step timeout** over explicit waits when you're waiting for a specific element to appear. Custom timeouts are dynamic — they proceed as soon as the element is ready, while explicit waits always wait the full duration.
+Prefer **custom step timeout** over explicit waits when you're waiting for a specific element to appear. Custom timeouts are dynamic: they proceed as soon as the element is ready, while explicit waits always wait the full duration.
 
 **Supported platforms**
 Step Timeout is available for **Web**, **Mobile Web**, and **App (Android and iOS)** testing. It applies only to element-based interactions (click, type, search, clear); fixed `wait` steps and assertions are unaffected.

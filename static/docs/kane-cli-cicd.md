@@ -10,7 +10,7 @@ These patterns apply to every CI system; the platform-specific recipes below dif
 
 - **Always pass `--headless`**. CI runners have no display.
 - **Always set `--timeout `**. A hung run cannot be allowed to block the pipeline.
-- **Authenticate with `--username` and `--access-key`** from CI secrets. Do not call `kane-cli login` in CI — that flow opens a browser for OAuth and will not work on a runner.
+- **Authenticate with `--username` and `--access-key`** from CI secrets. Do not call `kane-cli login` in CI. That flow opens a browser for OAuth and will not work on a runner.
 - **Load test data with `--variables-file `**. Check the file into your repo (without secret values), or generate it before the step.
 - **Check the exit code**. `0` passed, `1` failed, `2` error, `3` timeout or cancellation.
 
@@ -203,7 +203,7 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
 --variables-file ./tests/variables.json
 ```
 
-If your CI image cannot install Chrome — for example, a minimal Node Alpine image — point Kane CLI at a remote browser instead:
+If your CI image cannot install Chrome (for example, a minimal Node Alpine image), point Kane CLI at a remote browser instead:
 
 ```bash
 kane-cli run "Open the pricing page and verify the Pro plan is listed" \

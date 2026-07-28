@@ -6,11 +6,11 @@ TestMu AI Test Manager supports one-click migration from **X-Ray (Jira Cloud)**,
 
 ## Key Benefits
 
-- **Zero manual effort** — All test cases, steps, attachments, and folder structures are automatically migrated.
-- **Handles both Manual and BDD tests** — Manual step definitions and Gherkin/BDD scenarios are both fully supported.
-- **Custom fields carried over** — Custom fields in your X-Ray tests are automatically detected and created in Test Manager.
-- **Attachments included** — File attachments are downloaded from Jira and re-uploaded to Test Manager, including step-level references.
-- **Real-time progress tracking** — A progress bar shows migration status so you know exactly where things stand.
+- **Zero manual effort**: All test cases, steps, attachments, and folder structures are automatically migrated.
+- **Handles both Manual and BDD tests**: Manual step definitions and Gherkin/BDD scenarios are both fully supported.
+- **Custom fields carried over**: Custom fields in your X-Ray tests are automatically detected and created in Test Manager.
+- **Attachments included**: File attachments are downloaded from Jira and re-uploaded to Test Manager, including step-level references.
+- **Real-time progress tracking**: A progress bar shows migration status so you know exactly where things stand.
 
 This migration supports **X-Ray Cloud (Jira Cloud)** only. X-Ray Server and Data Center are not supported at this time.
 
@@ -84,7 +84,7 @@ Click **Continue**. The system validates both your Jira and X-Ray credentials in
 - A **progress bar** shows real-time migration status.
 - The migration processes test cases in batches. Depending on the size of your test library, the complete process may take some time.
 
-- You can navigate away from the page and continue other work — the migration continues in the background. Once the migration is complete, you will receive an email notification.
+- You can navigate away from the page and continue other work. The migration continues in the background. Once the migration is complete, you will receive an email notification.
 
 ### Step 5: Review the Results
 
@@ -106,7 +106,7 @@ The following entities and data are transferred from X-Ray to Test Manager durin
 | **Manual Test Steps** | Each step's **Step Description** and **Expected Result** are migrated directly. Step ordering is preserved. |
 | **BDD/Gherkin Scenarios** | Full Gherkin scenario text is extracted and stored under the BDD Scenarios template. |
 | **Attachments** | Both test case-level and test step-level attachments are downloaded and re-uploaded to Test Manager. |
-| **Rich Text Fields** | Rich text content — including embedded screenshots, tables, lists, and other supported formatting — is preserved. |
+| **Rich Text Fields** | Rich text content (including embedded screenshots, tables, lists, and other supported formatting) is preserved. |
 | **Custom Fields** | Custom fields are automatically detected in X-Ray and created in Test Manager with matching names. |
 | **Linked Issues / Requirements** | Jira issue links and requirement associations are preserved. Requires [Jira integration](https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/) to be configured. |
 | **X-Ray Test Key** | The original X-Ray test key is imported within tags, enabling quick reference and filtering in Test Manager. |
@@ -118,7 +118,7 @@ Test Data from X-Ray steps is migrated as a single textarea custom field at the 
 
 ## What Does Not Get Migrated
 
-The migration focuses exclusively on your **test library** — definitions, structure, and metadata. The following entities are not included:
+The migration focuses exclusively on your **test library**: definitions, structure, and metadata. The following entities are not included:
 
 | Entity | Reason |
 |---|---|

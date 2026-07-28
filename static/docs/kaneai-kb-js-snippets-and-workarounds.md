@@ -86,7 +86,7 @@ throw new Error('FAIL: Got "' + lowercase + '"');
 
 ```javascript
 const orderText = document.querySelector('.order-id').textContent;
-// Text is "Order #12345" — extract just the number
+// Text is "Order #12345", extract just the number
 const orderId = orderText.replace('Order #', '');
 if (orderId.length === 5 && !isNaN(orderId)) {
 return 'PASS: Order ID is valid: ' + orderId;

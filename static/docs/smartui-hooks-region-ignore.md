@@ -15,7 +15,7 @@ This gives the Web Hooks path the same region controls already available on RD H
 
 Pass a `coordinates` entry (a list of `"x1,y1,x2,y2"` strings) under `ignoreDOM`. SmartUI excludes those rectangles from the comparison. The four values are the left, top, right, and bottom edges of the rectangle in pixels.
 
-For example, `"50,50,300,300"` defines the region whose top-left corner is at `(left=50, top=50)` and whose bottom-right corner is at `(right=300, bottom=300)` — a 250 × 250 rectangle.
+For example, `"50,50,300,300"` defines the region whose top-left corner is at `(left=50, top=50)` and whose bottom-right corner is at `(right=300, bottom=300)`, a 250 × 250 rectangle.
 
 ```java
 import java.util.HashMap;

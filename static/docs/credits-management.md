@@ -73,7 +73,7 @@ The **AI Test Case Generator** converts diverse inputs (text, PDFs, audio, video
 * If fewer scenarios are produced (e.g., **4**), **10 credits are credited back**, so you only pay for what’s actually generated.
 * **Regeneration** also consumes credits at **10 credits per scenario**.
 
->This ensures fair usage—you are charged only for **actual output** produced by the AI.
+>This ensures fair usage. You are charged only for **actual output** produced by the AI.
 
 #### Conversational Layer
 

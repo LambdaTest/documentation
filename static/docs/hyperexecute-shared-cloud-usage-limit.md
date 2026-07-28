@@ -5,7 +5,7 @@
 To ensure fair usage, maintain system stability, and promote optimal test practices across all our users, TestMu AI enforces a daily usage limit on test execution time at the organization level. Each organization is allocated a maximum allowable test duration per day, calculated based on the number of concurrent (parallel) sessions provisioned to the account. This safeguard helps prevent overutilization and ensures equitable access to resources across the platform.
 
 ## Why This Matters
-Running long-duration test sessions—especially those exceeding 120 minutes—can cause memory and CPU spikes that impact system performance and reliability. To prevent such disruptions and improve the efficiency of test execution, we encourage users to:
+Running long-duration test sessions, especially those exceeding 120 minutes, can cause memory and CPU spikes that impact system performance and reliability. To prevent such disruptions and improve the efficiency of test execution, we encourage users to:
 
 - Split long-running tests into smaller, modular suites.
 - Implement test retries, timeouts, and teardown routines to handle edge cases and resource leaks.

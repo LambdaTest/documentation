@@ -8,12 +8,12 @@ For an overview of creating, using, and managing modules, see [Modules](/support
 
 ## How Versioning Works
 
-When you edit an existing module — for example, by adding, removing, or modifying a test step — KaneAI automatically increments the version number (e.g., from 1.1 to 1.2). You do not need to manually create versions.
+When you edit an existing module (for example, by adding, removing, or modifying a test step), KaneAI automatically increments the version number (e.g., from 1.1 to 1.2). You do not need to manually create versions.
 
 After a new version is created, test cases that use the module can either:
 
-- **Accept the new version** — Update the test case to use the latest module version
-- **Continue using the current version** — Keep the existing version without changes
+- **Accept the new version**: Update the test case to use the latest module version
+- **Continue using the current version**: Keep the existing version without changes
 
 To update a module version across many test cases at once, use the [Bulk Module Update](/support/docs/kaneai-bulk-module-update/) feature.
 
@@ -32,7 +32,7 @@ You can compare any two versions of a module to see exactly what changed between
 
 1. Open the module and navigate to the **Version History** section.
 2. Select the two versions you want to compare.
-3. Review the differences — added, removed, or modified steps are highlighted.
+3. Review the differences: added, removed, or modified steps are highlighted.
 
 ## Reverting to a Previous Version
 
@@ -52,5 +52,5 @@ From this tab you can navigate directly to individual test case summary pages.
 
 ## Related Guides
 
-- [Modules](/support/docs/kane-ai-modules/) — Create, use, and manage modules
-- [Bulk Module Update](/support/docs/kaneai-bulk-module-update/) — Update a module version across multiple test cases in one action
+- [Modules](/support/docs/kane-ai-modules/): Create, use, and manage modules
+- [Bulk Module Update](/support/docs/kaneai-bulk-module-update/): Update a module version across multiple test cases in one action

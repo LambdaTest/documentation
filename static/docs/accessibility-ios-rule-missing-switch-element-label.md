@@ -26,7 +26,7 @@ Hearing "Switch, off" tells the user the state but not what the switch controls.
 
 - set `accessibilityLabel` on the `UISwitch` to describe the setting (e.g., "Dark mode", "Push notifications")
 - use `UITableViewCell`'s built-in `textLabel` as the accessibility label for the cell when the switch is the cell's accessory view
-- in SwiftUI, the `Toggle("Label text")` initializer automatically provides a label — ensure it is always populated
+- in SwiftUI, the `Toggle("Label text")` initializer automatically provides a label. Ensure it is always populated
 - test with VoiceOver to confirm the full announcement includes both the setting name and the state
 
 ## Related docs

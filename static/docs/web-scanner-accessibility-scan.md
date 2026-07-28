@@ -4,7 +4,7 @@
 
 Web Scanner exposes Accessibility scanning as an integrated workflow for site-wide URL-based scans. It is separate from Accessibility DevTools and from Accessibility Test Scheduling, even though the configuration concepts can overlap.
 
-When you are already in Web Scanner, this page walks through configuring an Accessibility scan and interpreting the main options—WCAG target, review and best-practice toggles, local testing, and login settings—before you start the run. Use it to align scan settings with your environment and reporting goals on that product surface.
+When you are already in Web Scanner, this page walks through configuring an Accessibility scan and interpreting the main options (WCAG target, review and best-practice toggles, local testing, and login settings) before you start the run. Use it to align scan settings with your environment and reporting goals on that product surface.
 
 ## When to use this
 
@@ -16,7 +16,7 @@ Use this page when you are already in Web Scanner and want to run an Accessibili
 2. You have a **URL list** or plan to add URLs through the wizard, and permission to scan those hosts.
 3. For private environments, install or enable **TestMu AI Tunnel** per [Testing Locally Hosted Pages](/support/docs/testing-locally-hosted-pages/) **before** starting a scan that depends on local routing.
 4. For authenticated sites, collect **login steps** or credentials formats the wizard supports (see **Login Configurations** on this page).
-5. Decide the **WCAG target** and whether **best-practice** or **needs-review** items belong in the first run—narrower scopes make first triage faster.
+5. Decide the **WCAG target** and whether **best-practice** or **needs-review** items belong in the first run. Narrower scopes make first triage faster.
 
 ## Key configuration options
 

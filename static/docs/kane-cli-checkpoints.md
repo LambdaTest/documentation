@@ -8,7 +8,7 @@ Checkpoints are verification points that KaneAI evaluates during test execution.
 
 | Type | What it does |
 |------|-------------|
-| **Assertion** | Verify a condition is true — fails the test if not |
+| **Assertion** | Verify a condition is true, fails the test if not |
 | **If/Else** | Branch execution based on a condition |
 | **Extraction** | Store a value for use in later steps |
 
@@ -67,8 +67,8 @@ Assertions support these comparison operators:
 
 ## Learn More
 
-- [Visual Assertions](/support/docs/kane-cli-checkpoint-visual/) — screenshot-based text and visibility checks
-- [Textual (DOM) Assertions](/support/docs/kane-cli-checkpoint-textual/) — element states and attributes
-- [URL Assertions](/support/docs/kane-cli-checkpoint-url/) — URL-based checks
-- [Title Assertions](/support/docs/kane-cli-checkpoint-title/) — page title checks
-- [DevTools Assertions](/support/docs/kane-cli-checkpoint-devtools/) — network, console, performance, cookies, localStorage, clipboard
+- [Visual Assertions](/support/docs/kane-cli-checkpoint-visual/): screenshot-based text and visibility checks
+- [Textual (DOM) Assertions](/support/docs/kane-cli-checkpoint-textual/): element states and attributes
+- [URL Assertions](/support/docs/kane-cli-checkpoint-url/): URL-based checks
+- [Title Assertions](/support/docs/kane-cli-checkpoint-title/): page title checks
+- [DevTools Assertions](/support/docs/kane-cli-checkpoint-devtools/): network, console, performance, cookies, localStorage, clipboard

@@ -27,4 +27,4 @@ Wait for the file to upload and process. A success message will indicate when yo
 - **Copy the App URL :** After uploading, an `app_url` will be generated (format: `"lt://"`). Copy this app_url and use it in your test scripts to identify your application.
 
 - The **App Automation Dashboard** supports both **Real** and **Virtual Devices**.
-- To perform testing on Virtual Devices, simply select the **Virtual Device** option during upload — the rest of the flow remains identical.
+- To perform testing on Virtual Devices, simply select the **Virtual Device** option during upload. The rest of the flow remains identical.

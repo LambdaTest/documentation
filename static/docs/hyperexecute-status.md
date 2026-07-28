@@ -26,9 +26,9 @@ All the tests on HyperExecute get executed as a Job. Each Job has a Status, a un
 
 You can abort a running job directly from the HyperExecute portal. Once a job is in **Running** state, click on the job to open the Job Details page. You will see an **Abort** option that provides the following choices:
 
-- **Abort Current Job** — Stops only the selected running job.
-- **Abort All Jobs** — Stops all currently running jobs.
-- **Abort Selected Jobs** — Allows you to select specific jobs to abort.
+- **Abort Current Job**: Stops only the selected running job.
+- **Abort All Jobs**: Stops all currently running jobs.
+- **Abort Selected Jobs**: Allows you to select specific jobs to abort.
 
 When a job is aborted, all active test sessions within that job are terminated immediately and no residual processes remain. The remaining tests that were not yet executed will be marked as **Cancelled**.
 

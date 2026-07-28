@@ -26,7 +26,7 @@ VoiceOver uses punctuation to determine pacing and intonation. A label that ends
 
 - end accessibility labels with a period when they form a complete phrase or sentence
 - use punctuation consistent with the label's tone: period for statements, question mark for questions
-- keep labels concise — a label should describe the element, not be a paragraph
+- keep labels concise: a label should describe the element, not be a paragraph
 - test with VoiceOver to confirm the speech rhythm sounds natural between consecutive elements
 
 ## Related docs

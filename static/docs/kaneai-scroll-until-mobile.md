@@ -57,7 +57,7 @@ Please be aware of the following constraints in the current version.
 ### Mobile App Authoring
 
 **Now Supported**
-Mobile app authoring now supports **horizontal scrolling** and **scrolling inside nested containers** (element scrolling). You can scroll left or right — for example inside carousels — and scroll within specific container elements such as dropdowns, lists, and subsections instead of only the main viewport.
+Mobile app authoring now supports **horizontal scrolling** and **scrolling inside nested containers** (element scrolling). You can scroll left or right, for example inside carousels, and scroll within specific container elements such as dropdowns, lists, and subsections instead of only the main viewport.
 
 - **Scroll Limit**:
   Maximum of **20 scroll attempts** are performed. If the element is not found, the action fails.

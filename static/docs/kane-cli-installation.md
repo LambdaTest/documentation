@@ -1,5 +1,7 @@
 # Installing Kane CLI
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Kane CLI is published to the public npm registry as `@testmuai/kane-cli` and to a Homebrew tap. Install it with `npm` or `brew` to get the `kane-cli` command on your `PATH`.
 
 ## Install
@@ -63,7 +65,7 @@ This removes the `kane-cli` binary but leaves your local data in place. Kane CLI
 rm -rf ~/.testmuai/kaneai
 ```
 
-Only do this if you want a clean reset — it logs you out of all profiles and deletes saved configuration, session history, and command history.
+Only do this if you want a clean reset, it logs you out of all profiles and deletes saved configuration, session history, and command history.
 
 ## Troubleshooting Installation
 

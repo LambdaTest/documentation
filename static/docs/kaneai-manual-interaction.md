@@ -38,13 +38,13 @@ While you are in a Manual Interaction session, you can temporarily pause recordi
 
 3. If a confirmation dialog appears, confirm to proceed. The dialog is shown by default and is suppressed once you select **Don't show again** on it.
 
-4. Interact with the application freely. Pages load, forms accept input, and navigation works as expected, but the step list stops growing — the session transitions to Draft state.
+4. Interact with the application freely. Pages load, forms accept input, and navigation works as expected, but the step list stops growing. The session transitions to Draft state.
 
 5. Click **Start recording** when you are ready to capture steps again.
 
 **What to expect while paused**
 
-- The application is fully interactable — only the recorder is paused.
+- The application is fully interactable. Only the recorder is paused.
 - The step list stays exactly as it was at the moment you paused.
 
 ### Limitations of Instructions
@@ -210,7 +210,7 @@ Sliders are often easier to handle using Manual Interaction rather than describi
 - Always validate the outcome using an assertion rather than relying only on the recorded movement.
 
 ### Use Case 6: Reaching a setup state without recording it
-This use case applies when you need to navigate your app to a specific starting point — for example, logging in, accepting a cookie banner, or opening a particular screen — but you do not want any of those preparatory steps to appear in your test.
+This use case applies when you need to navigate your app to a specific starting point (for example, logging in, accepting a cookie banner, or opening a particular screen), but you do not want any of those preparatory steps to appear in your test.
 
 **Steps:**
 
@@ -254,6 +254,6 @@ System level popups are not supported through Manual Interaction. These flows ne
 After turning off Manual Interaction, give the application a moment to stabilize before adding new steps or assertions. This helps avoid inconsistencies in recorded steps.
 
 ### My actions stopped getting recorded mid-session
-Check whether recording is paused. When Pause Recording is active, the session is in a draft state — your interactions affect the application but are not captured as test steps. Click Start recording in the Manual Interaction toolbar to resume.
+Check whether recording is paused. When Pause Recording is active, the session is in a draft state. Your interactions affect the application but are not captured as test steps. Click Start recording in the Manual Interaction toolbar to resume.
 
 ## Video Tutorial

@@ -160,5 +160,5 @@ The following limitations apply currently to the Bulk Module Update Feature:
 
 ## Related Guides
 
-- [Modules](/support/docs/kane-ai-modules/) — Create, use, and manage modules
-- [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/) — Track changes, compare versions, and revert modules
+- [Modules](/support/docs/kane-ai-modules/): Create, use, and manage modules
+- [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/): Track changes, compare versions, and revert modules

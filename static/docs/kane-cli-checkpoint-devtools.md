@@ -19,12 +19,12 @@ DevTools assertions let you verify data that isn't visible on the page: HTTP net
 
 Each DevTools domain follows the same pattern:
 
-1. **Capture** — KaneAI captures the data automatically during your test run
-2. **Generate** — When a checkpoint triggers, the AI generates code to query the captured data
-3. **Execute** — The code runs in an isolated sandbox and returns a result
-4. **Assert** — The result is compared against your expected value
+1. **Capture**: KaneAI captures the data automatically during your test run
+2. **Generate**: When a checkpoint triggers, the AI generates code to query the captured data
+3. **Execute**: The code runs in an isolated sandbox and returns a result
+4. **Assert**: The result is compared against your expected value
 
-You don't write code — you write natural language objectives, and KaneAI handles the rest.
+You don't write code. You write natural language objectives, and KaneAI handles the rest.
 
 ## Examples
 
@@ -40,12 +40,12 @@ Assert: auth_token is stored in localStorage
 
 DevTools assertions support all three checkpoint types:
 
-- **Assert**: "Assert: no console errors" — fails the test if there are errors
-- **Extract**: "Store all cookies" — saves the data for later steps
-- **If/Else**: "If the API returned 200 then proceed, else retry" — branch on the result
+- **Assert**: "Assert: no console errors", fails the test if there are errors
+- **Extract**: "Store all cookies", saves the data for later steps
+- **If/Else**: "If the API returned 200 then proceed, else retry", branch on the result
 
 ## Important Notes
 
-- DevTools data is **not visible in a screenshot** — KaneAI will never try to open the browser DevTools panel
-- Each domain captures data differently — see individual pages for details on timing and scope
-- All assertions run in an isolated sandbox — generated code cannot access the file system or network
+- DevTools data is **not visible in a screenshot**. KaneAI will never try to open the browser DevTools panel
+- Each domain captures data differently. See individual pages for details on timing and scope
+- All assertions run in an isolated sandbox. Generated code cannot access the file system or network

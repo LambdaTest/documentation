@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-When reviewing SmartUI visual comparisons, small differences can be easy to miss on dense or zoomed-out screens. The **Diff Highlighter** feature helps you **discover every change** quickly using in-view navigation and an optional highlight animation, so you spend less time scanning and more time deciding what to accept or reject.
+When reviewing SmartUI visual comparisons, small differences can be easy to miss on dense or zoomed-out screens. The **Diff Highlighter** feature helps you **discover every change** quickly using in-view navigation and an optional highlight animation—so you spend less time scanning and more time deciding what to accept or reject.
 
 ## What You Get
 

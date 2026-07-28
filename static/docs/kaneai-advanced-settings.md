@@ -10,8 +10,8 @@ This feature is supported across all platforms: **Desktop Web**, **Mobile App**,
 
 When you edit advanced settings for a test case, you have two options:
 
-- **Apply Settings** — Saves the updated settings and generates a new version of the test case with regenerated code. Use this when the setting changes do not affect the test steps themselves.
-- **Edit Test Steps** — Saves the updated settings and opens the playground so you can make relevant changes to your test steps. Use this when the updated settings may require modifications to the test flow.
+- **Apply Settings**: Saves the updated settings and generates a new version of the test case with regenerated code. Use this when the setting changes do not affect the test steps themselves.
+- **Edit Test Steps**: Saves the updated settings and opens the playground so you can make relevant changes to your test steps. Use this when the updated settings may require modifications to the test flow.
 
 ## Platform-Specific Advanced Settings
 
@@ -86,14 +86,14 @@ For more details on mobile app capabilities like biometric authentication, image
 
 Android Web test cases share most settings with [Android App](#android-app), with the following differences:
 
-- **Custom Headers** is available (Toggle + multi-input — add up to 10 custom HTTP headers)
+- **Custom Headers** is available (Toggle + multi-input, add up to 10 custom HTTP headers)
 - **Biometric Authentication**, **Image Injection**, and **Video Injection** are **not** available
 
 ### iOS Web
 
 iOS Web test cases share most settings with [iOS App](#ios-app), with the following differences:
 
-- **Custom Headers** is available (Toggle + multi-input — add up to 10 custom HTTP headers)
+- **Custom Headers** is available (Toggle + multi-input, add up to 10 custom HTTP headers)
 - **Biometric Authentication**, **Image Injection**, and **Video Injection** are **not** available
 
 ## How to Edit Advanced Settings
@@ -121,17 +121,17 @@ Settings that have been modified will display an **Edited** badge next to them.
 
 Choose one of the two actions at the bottom of the dialog:
 
-- **Apply Settings** — Saves the settings and generates a new version with updated code. The test case remains on the Test Summary page.
-- **Edit Test Steps** — Saves the settings and opens the playground so you can adjust the test steps to reflect the new configuration.
+- **Apply Settings**: Saves the settings and generates a new version with updated code. The test case remains on the Test Summary page.
+- **Edit Test Steps**: Saves the settings and opens the playground so you can adjust the test steps to reflect the new configuration.
 
 ## Version History
 
 Every time you apply updated settings, a new version of the test case is created. You can view and compare changes between versions from the **Version History** tab.
 
-The version comparison view shows a diff of what changed — for example, updated network configuration or timezone values — so you can track exactly what was modified in each version.
+The version comparison view shows a diff of what changed, for example, updated network configuration or timezone values, so you can track exactly what was modified in each version.
 
 ## Limitations
 
-- **Advanced settings only** — Only advanced settings (network configuration, timezone, Chrome options, custom headers, and mobile session settings) can be edited from the test summary page. To change test steps, OS, browser, or device configurations, you need to open the playground.
-- **New version generated on every apply** — Applying updated settings always creates a new version of the test case with regenerated code. There is no way to update settings in-place without generating a new version.
-- **Version history diff for pre-rollout versions** — If you compare a version created after this feature was rolled out with a version created before it, the diff will have no advanced settings changes to display since the older version never tracked them. Similarly, if you open a pre-rollout version and click on advanced settings, only the latest settings are shown as the original settings were not recorded for that version.
+- **Advanced settings only**: Only advanced settings (network configuration, timezone, Chrome options, custom headers, and mobile session settings) can be edited from the test summary page. To change test steps, OS, browser, or device configurations, you need to open the playground.
+- **New version generated on every apply**: Applying updated settings always creates a new version of the test case with regenerated code. There is no way to update settings in-place without generating a new version.
+- **Version history diff for pre-rollout versions**: If you compare a version created after this feature was rolled out with a version created before it, the diff will have no advanced settings changes to display since the older version never tracked them. Similarly, if you open a pre-rollout version and click on advanced settings, only the latest settings are shown as the original settings were not recorded for that version.
