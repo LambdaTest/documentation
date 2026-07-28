@@ -21,6 +21,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import RealDeviceTag from '../src/component/realDevice';
 
 
 <script type="application/ld+json"
