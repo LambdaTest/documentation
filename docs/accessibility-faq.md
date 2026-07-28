@@ -115,6 +115,14 @@ Yes. Mobile app accessibility testing is supported through:
 
 Mobile web browser accessibility testing through automation is not currently supported.
 
+## Can I schedule accessibility scans for native mobile apps?
+No. [Test Scheduling](/support/docs/accessibility-test-scheduling/) is supported on **desktop only**. Scheduled scans run against websites and web apps on desktop browsers, and native Android or iOS apps cannot be added to a scheduled scan.
+
+To cover a mobile app, use one of the mobile surfaces instead:
+
+- **App Scanner (Manual):** [Accessibility App Scanner](/support/docs/accessibility-app-scanner/)
+- **Native App Automation:** [Native App Automation](/support/docs/accessibility-native-app-automation-test/)
+
 ## Do you support accessibility testing for PDFs?
 Yes. PDF Accessibility Scanning is available as part of the Accessibility product. See [PDF Accessibility Scanning](/support/docs/accessibility-pdf-accessibility-scanning/) for details on supported capabilities and how to use this feature.
 
