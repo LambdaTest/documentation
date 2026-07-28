@@ -65,7 +65,7 @@ Code export converts a completed test case into runnable Playwright code that yo
 
 ### What It Produces
 
-Currently the only supported language is **Python with Playwright**. Code export runs server-side after the test case is finalised. Kane CLI polls Test Manager until generation is complete, then downloads the resulting files.
+The supported languages are **Python with Playwright** and **JavaScript with Playwright**. Code export runs server-side after the test case is finalised. Kane CLI polls Test Manager until generation is complete, then downloads the resulting files.
 
 ### Enabling Code Export
 
@@ -92,7 +92,7 @@ kane-cli run "Add an item to the cart" \
 --skip-code-validation
 ```
 
-`--no-skip-code-validation` forces validation on for that run. `--code-language` only accepts `python`.
+`--no-skip-code-validation` forces validation on for that run. `--code-language` accepts `python` or `javascript`.
 
 ### Where to Find the Output
 
