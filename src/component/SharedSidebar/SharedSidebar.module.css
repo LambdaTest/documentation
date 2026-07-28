@@ -1,12 +1,13 @@
 .sidebar {
-  width: 100% !important;
+  flex: 0 0 18rem;
+  width: 18rem;
   position: sticky;
-  top: 112px;
+  top: 96px;
   align-self: flex-start;
-  max-height: calc(100vh - 112px);
+  max-height: calc(100vh - 96px);
   overflow-y: auto;
-  padding: 20px 20px 16px 0 !important;
-  margin: 0 !important;
+  padding: 20px 20px 16px 16px;
+  margin: 0;
   box-sizing: border-box;
   scrollbar-width: none;
   list-style: none;
@@ -27,6 +28,22 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  background-color: #9ca3af;
+}
+
+.topLink:hover .icon {
+  background-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .icon {
+  background-color: #78716c;
 }
 
 .topLink {

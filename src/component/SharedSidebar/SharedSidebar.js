@@ -1,4 +1,5 @@
-﻿import React from 'react';
+import React from 'react';
+import styles from './SharedSidebar.module.css';
 
 const TOP_LINKS = [
   {
@@ -20,15 +21,17 @@ const TOP_LINKS = [
 
 function MaskIcon({ url }) {
   return (
-    <svg
-      className="h-4 w-4 secondary-opacity bg-gray-400 dark:bg-gray-500 group-hover:bg-gray-900 dark:group-hover:bg-gray-300"
+    <span
+      className={styles.icon}
       style={{
         WebkitMaskImage: `url(${url})`,
         WebkitMaskRepeat: 'no-repeat',
         WebkitMaskPosition: 'center',
+        WebkitMaskSize: 'contain',
         maskImage: `url(${url})`,
         maskRepeat: 'no-repeat',
         maskPosition: 'center',
+        maskSize: 'contain',
       }}
     />
   );
@@ -36,38 +39,28 @@ function MaskIcon({ url }) {
 
 export default function SharedSidebar({ children }) {
   return (
-    <aside
-      id="sidebar-content"
-      className="hidden sticky shrink-0 w-[18rem] lg:flex flex-col left-0 top-[7rem] bottom-0 right-auto border-r border-gray-100 dark:border-white/10 transition-transform duration-100"
-      style={{ top: '6rem', height: 'calc(100vh - 6rem)' }}
-    >
-      <div
-        className="flex-1 pl-4 pr-5 pt-5 pb-4 overflow-y-auto stable-scrollbar-gutter"
-        id="navigation-items"
-        style={{ maskImage: 'linear-gradient(transparent, black 32px)' }}
-      >
-        <div className="text-sm relative">
-          <div className="pl-2" />
-          <ul className="list-none pl-0 m-0">
-            {TOP_LINKS.map(({ label, href, icon }) => (
-              <li key={label} className="list-none">
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="no-underline hover:no-underline nav-anchor pl-4 group flex items-center lg:text-sm lg:leading-6 mb-3 gap-3.5 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300"
-                >
-                  <MaskIcon url={icon} />
-                  <span>{label}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-          {children && (
-            <div>{children}</div>
-          )}
-        </div>
+    <aside id="sidebar-content" className={styles.sidebar}>
+      <div className={styles.topLinks}>
+        {TOP_LINKS.map(({ label, href, icon }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.topLink}
+          >
+            <MaskIcon url={icon} />
+            <span>{label}</span>
+          </a>
+        ))}
       </div>
+
+      {children && (
+        <>
+          <div className={styles.divider} />
+          <div className={styles.sidebarContent}>{children}</div>
+        </>
+      )}
     </aside>
   );
 }
