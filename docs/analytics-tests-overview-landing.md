@@ -2,7 +2,7 @@
 id: analytics-widgets-tests-overview-landing
 title: Test Overview Widgets
 sidebar_label: Tests Overview
-description: Unlock valuable insights with TestMu AI Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
+description: Compare Test Overview widgets across TestMu AI products - Web Automation, App Automation, HyperExecute and Realtime - and jump to the metrics for each.
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-widgets-tests-overview-landing/

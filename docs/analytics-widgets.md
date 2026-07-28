@@ -2,7 +2,7 @@
 id: analytics-widgets
 title: Widgets
 sidebar_label: Widgets
-description: Unlock valuable insights with TestMu AI Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
+description: Browse every TestMu AI Analytics widget - Concurrency Usage, Error Insights, Flaky Tests AI and product widgets for Web, App, HyperExecute and Real Device.
 keywords:
   - analytics
 url: https://www.testmuai.com/support/docs/analytics-widgets/
