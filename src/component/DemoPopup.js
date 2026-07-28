@@ -211,7 +211,7 @@ const DemoPopup = ({ show, open_modal, preselectedProductType, sub_source }) => 
             window.dataLayer?.push({ event: "book_a_demo_form_submitted" });
 
             if (formdata.email && formdata.email.toLowerCase().endsWith('gmail.com')) {
-                window.sendAnalytics?.('Demo_Schedule_Gmail');
+                window.sendAmplitudeEvents?.('Demo_Schedule_Gmail');
                 window.location.href = `https://www.testmuai.com/thank-you`;
                 return;
             }
@@ -221,7 +221,7 @@ const DemoPopup = ({ show, open_modal, preselectedProductType, sub_source }) => 
                 'eventAction': 'success',
                 'eventLabel': window.location.href,
             })
-            window.sendAnalytics?.('Demo_Schedule');
+            window.sendAmplitudeEvents?.('Demo_Schedule');
 
             // Add RevenueHero scheduling logic here
             const revenueHeroFormDataToSend = {
