@@ -194,14 +194,15 @@
       }
     });
 
-    window.sendAnalytics = async (eventName) => {
+    window.sendAnalytics = async (eventName, extraProperties = {}) => {
 
       let URL = "https://backend.lambdatest.com/api/analytics/event";
       let payload = {
         event: eventName,
         properties: {
           source: window.location.href,
-          userAgent: window.navigator.userAgent
+          userAgent: window.navigator.userAgent,
+          ...extraProperties,
         }
       };
       if (getLTUserID() && getLTUserID() !== '') {
