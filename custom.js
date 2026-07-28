@@ -122,6 +122,32 @@
 
     window.addEventListener('DOMContentLoaded', (event) => {
       getUsernameToken('dom');
+
+      // Attach CookieTrackingSignup handler to the navbar "Get Started" button
+      const signBtn = document.getElementById('signbtn');
+      if (signBtn) {
+        signBtn.addEventListener('click', function (e) {
+          if (typeof window.sendAnalytics === 'function') {
+            window.sendAnalytics('signup_button_clicked', {
+              'event': 'signup_button_clicked',
+              'eventCategory': 'Click',
+              'eventAction': 'header',
+              'eventLabel': window.location.href,
+            });
+          }
+          if (typeof window.logAmplitude === 'function') {
+            window.logAmplitude("click CTA - web pages", { "cta_text": "Get Started Free", "cta_type": "page header", "page_category": "Documentation header" });
+          }
+
+          // Append cookies to the URL before navigation
+          const anchorElement = e.currentTarget;
+          const currentHref = anchorElement?.href || 'https://www.testmuai.com/register/';
+          const urlWithCookies = getLoginUrlWithCookies(currentHref);
+          if (anchorElement) {
+            anchorElement.href = urlWithCookies;
+          }
+        });
+      }
     });
 
     function selectText(htmlelement) {
