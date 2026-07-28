@@ -3,7 +3,7 @@ id: real-device-app-testing
 title: Getting started with Real Device App Testing
 hide_title: true
 sidebar_label: Getting Started
-description: With TestMu AI, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
+description: Get started with app testing on TestMu AI - install your app from the Play Store, App Store, TestFlight or App Center, and set up a tunnel for local pages.
 keywords:
 - real device app testing 
 - testmu ai real device app testing 
