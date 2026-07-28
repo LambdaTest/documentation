@@ -211,11 +211,10 @@
       try {
         await fetch(URL, {
           method: "POST",
-          body: JSON.stringify(payload),
           headers: {
             "Content-Type": "application/json",
           },
-          "mode": "no-cors",
+          body: JSON.stringify(payload),
         });
         if (eventName == 'Download LT Browser 2.0') {
           dataLayer.push({
