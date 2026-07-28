@@ -13,6 +13,10 @@ canonical: https://www.testmuai.com/support/docs/accessibility-app-scanner/
 
 Accessibility App Scanner is the **manual** mobile app workflow for reviewing accessibility issues on **real Android or iOS devices**, screen by screen, without writing Appium code.
 
+:::warning
+Accessibility scanning supports **native** Android and iOS apps only. **Hybrid apps**, meaning native apps with embedded webview content, are **not supported**. This applies to both App Scanner and [Native App Automation](/support/docs/accessibility-native-app-automation-test/). To check the web content itself, test the web application directly with [Manual Testing (DevTools)](/support/docs/accessibility-devtools/) or [web Automation](/support/docs/accessibility-automation-test/).
+:::
+
 ## When to use this
 
 Use App Scanner when you want to **inspect** Android or iOS app screens interactively and validate findings as you move through the app, ideal for exploratory passes, design reviews, or reproducing issues filed by users.
@@ -20,6 +24,7 @@ Use App Scanner when you want to **inspect** Android or iOS app screens interact
 ## Prerequisites
 
 - Access to **Accessibility** and **App Scanner** for your organization
+- A **native** Android or iOS app. Hybrid apps with embedded webview content are not supported
 - A **build** of the app you are authorized to test (store build, enterprise IPA/APK, or uploaded artifact per your workflow)
 - A **device profile** that matches your audience (OS version, screen size)
 

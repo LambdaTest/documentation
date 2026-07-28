@@ -19,6 +19,7 @@ Use this page when your team **already runs Appium** for functional tests and wa
 
 ## Prerequisites
 
+- A **native** Android or iOS app. Hybrid apps with embedded webview content are not supported
 - Appium client and test project targeting TestMu AI **real devices** or emulators per your subscription
 - `LT_USERNAME` / `LT_ACCESS_KEY` available to the process
 - Accessibility enabled on the mobile session (see framework guides below for capability examples)
@@ -47,6 +48,10 @@ driver.executeScript("lambda-accessibility-scan");
 ## Product boundary
 
 This page is for direct Appium-based automation. If you are authoring the flow in KaneAI, use [Mobile App Accessibility Testing](/support/docs/kaneai-mobile-app-accessibility/). If you want manual screen-by-screen testing, use [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/).
+
+:::warning
+Accessibility scanning supports **native** Android and iOS apps only. **Hybrid apps**, meaning native apps with embedded webview content, are **not supported**. This applies to both Native App Automation and [App Scanner](/support/docs/accessibility-app-scanner/). To check the web content itself, test the web application directly with [Manual Testing (DevTools)](/support/docs/accessibility-devtools/) or [web Automation](/support/docs/accessibility-automation-test/).
+:::
 
 ## Related docs
 
