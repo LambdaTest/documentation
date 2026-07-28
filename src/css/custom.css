@@ -2010,7 +2010,7 @@ h6[id]::before {
     position: relative;
 }
 .demo_popup_select {
-    width: 130px;
+    /* width: 130px; */
     height: 38px;
     border: 1px solid #D3D2CD;
     padding: 0 12px;
