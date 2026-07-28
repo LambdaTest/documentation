@@ -183,7 +183,7 @@
 
           // Append cookies to the URL before navigation
           const anchorElement = e.currentTarget;
-          const currentHref = anchorElement?.href || 'https://stage-accounts.lambdatestinternal.com/register';
+          const currentHref = anchorElement?.href || 'https://www.testmuai.com/register/';
           const urlWithCookies = getLoginUrlWithCookies(currentHref);
           if (anchorElement) {
             anchorElement.href = urlWithCookies;
