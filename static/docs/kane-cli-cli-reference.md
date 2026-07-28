@@ -36,7 +36,7 @@ kane-cli run "<objective>" [options]
 | `--agent` | Output structured NDJSON (for AI coding agents) | Off |
 | `--mode ` | Run mode: `action` (strict) or `testing` (lenient) | Config value, otherwise `testing` |
 | `--code-export` | Generate code export after run uploads | Off |
-| `--code-language ` | Code export language (currently `python`) | `python` |
+| `--code-language ` | Code export language: `python` or `javascript` | `python` |
 | `--skip-code-validation` | Skip post-codegen worker-side validation | On |
 | `--no-skip-code-validation` | Force post-codegen worker-side validation | Off |
 | `--username ` | Basic auth username (overrides stored profile) | N/A |

@@ -53,7 +53,7 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 | `folder_name` | string \| null | `null` | Display name of the selected folder | Set by `kane-cli config folder` |
 | `mode` | `"action"` \| `"testing"` | `"testing"` | Agent behaviour on auth walls, blocked pages, or error pages. | `kane-cli config set-mode ` |
 | `code_export.enabled` | boolean | `false` | Generate code export after upload completes. | TUI menu, or `--code-export` flag |
-| `code_export.language` | `"python"` | `"python"` | Output language for generated code. Only `python` is supported. | `--code-language ` |
+| `code_export.language` | `"python"` \| `"javascript"` | `"python"` | Output language for generated code. Accepts `python` or `javascript`. | `--code-language ` |
 | `code_export.skip_validation` | boolean | `true` | Skip post-codegen worker-side validation. | TUI menu, or `--skip-code-validation` |
 
 ## Updating Settings
@@ -123,7 +123,7 @@ The `code_export` block enables and configures generated code output produced af
 - **The TUI** — open the config menu, choose Code Export, and toggle the `enabled` and `skip_validation` switches.
 - **Per-run flags** on `kane-cli run`:
   - `--code-export` to enable for this run only
-  - `--code-language ` to pick the output language (only `python` is supported)
+  - `--code-language ` to pick the output language (`python` or `javascript`)
   - `--skip-code-validation` / `--no-skip-code-validation` to control post-codegen validation
 
 Code export requires a Test Manager upload, so it is only meaningful when a project is configured. See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for the full upload pipeline.
