@@ -2,24 +2,31 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Use this page when you run **SmartUI Hooks** on LambdaTest (for example, Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
+Use this page when you run **SmartUI Hooks** on LambdaTest (for example Selenium `executeScript` without the `smartui exec` CLI wrapper) and need **layout** comparison, **full-page** capture, or **Smart Ignore**.
 
-## How configuration is split
+**Capability vs hook, read this first**
+For **Hooks**, engineering behavior is:
 
-SmartUI Hooks split configuration between the session capabilities (`LT:Options`) and the per-screenshot hook:
+| Goal | Where to configure | Notes |
+|------|-------------------|--------|
+| **Layout** comparison | **`smartui.takeScreenshot` hook options** (per screenshot) | Pass `ignoreType: ["layout"]` (and related layout flags) in the **Map/object** passed to `executeScript("smartui.takeScreenshot", options)`. **Layout is not enabled for Hooks by setting layout fields only in `LT:Options` capabilities**. That path is not supported the way teams often expect. |
+| **Smart Ignore** | **`LT:Options`** | Set **`smartUI.smartIgnore`: `true`** on the session for baseline and comparison runs. |
+| **Project** | **`LT:Options`** | Set **`smartUI.project`** (and `visual`, auth) as usual. |
 
-| Goal | Where to configure | How |
-|------|--------------------|-----|
-| **Layout** comparison | `smartui.takeScreenshot` hook options | Pass `ignoreType: ["layout"]` in the options map for that screenshot. |
-| **Full-page** capture | `smartui.takeScreenshot` hook options | Pass `fullPage: true` in the options map for that screenshot. |
-| **Smart Ignore** | `LT:Options` | Set `smartUI.smartIgnore: true` on the session, for both baseline and comparison runs. |
-| **Project** | `LT:Options` | Set `smartUI.project` (with `visual` and credentials). |
+If you need **layout via capabilities alone** (no hook options), treat that as a feature request and raise it with your account team. This doc reflects **current** Hooks behavior.
 
-Layout and full page are enabled per screenshot through the hook options, not through `LT:Options` capabilities. When you use Smart Ignore, choose either **Ignore DOM** or **Select DOM** in the dashboard for a given flow, not both.
+**Smart Ignore vs Ignore DOM / Select DOM**
+With **Smart Ignore**, use either **Ignore DOM** or **Select DOM** in the dashboard where applicable, not both on the same flow.
 
 ## 1. Session capabilities (`LT:Options`)
 
-Every Hooks session needs `username`, `accessKey`, `visual: true`, and `smartUI.project`. For Smart Ignore, also set `smartUI.smartIgnore: true` on both the baseline and comparison sessions.
+### Always (Hooks)
+
+- `username`, `accessKey`, `visual: true`, **`smartUI.project`**
+
+### Smart Ignore (Hooks)
+
+Set on **`LT:Options`** for the whole session (baseline **and** comparison):
 
 ```java
 import java.util.HashMap;
@@ -36,6 +43,8 @@ ltOptions.put("smartUI.smartIgnore", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
+**JavaScript / Node**
+
 ```javascript
 'LT:Options': {
 user: process.env.LT_USERNAME,
@@ -46,16 +55,7 @@ visual: true,
 },
 ```
 
-```python
-lt_options = {
-"username": os.getenv("LT_USERNAME"),
-"accessKey": os.getenv("LT_ACCESS_KEY"),
-"visual": True,
-"smartUI.project": "Your_Project_Name",
-"smartUI.smartIgnore": True,
-}
-options.set_capability("LT:Options", lt_options)
-```
+**C#**
 
 ```csharp
 capabilities.SetCapability("visual", true);
@@ -63,9 +63,23 @@ capabilities.SetCapability("smartUI.project", "Your_Project_Name");
 capabilities.SetCapability("smartUI.smartIgnore", true);
 ```
 
-## 2. Layout comparison
+**Do not use these for Smart Ignore (Hooks + Java)**
+These patterns **do not** turn on Smart Ignore reliably:
 
-Pass a single options map to `smartui.takeScreenshot` with a `screenshotName` and `ignoreType: ["layout"]`. Add `fullPage: true` to the same map for a full-page layout shot.
+- `ltOptions.put("ignoreType", Arrays.asList("smartignore"));` without `smartUI.smartIgnore`
+- `ltOptions.put("smartignore", true);` at the root of `LT:Options`
+
+Use **`smartUI.smartIgnore`: `true`** only.
+
+### Layout: not via standalone layout capabilities for Hooks
+
+Do **not** expect **`ignoreType: ["layout"]`**, **`smartUI.layout`**, or nested **`smartUI.options`** layout blocks **alone** in `LT:Options` to enable layout comparison for Hooks. Validated behavior is: **pass layout in the hook** (next section).
+
+## 2. Layout comparison: pass options to `smartui.takeScreenshot`
+
+Pass a **single map** to `executeScript("smartui.takeScreenshot", options)` including **`screenshotName`** and **`ignoreType`**.
+
+### Java (validated pattern)
 
 ```java
 import java.util.Arrays;
@@ -74,11 +88,15 @@ import java.util.Map;
 import org.openqa.selenium.JavascriptExecutor;
 
 Map<String, Object> options = new HashMap<>();
-options.put("screenshotName", "my-layout-screenshot-01");
 options.put("ignoreType", Arrays.asList("layout"));
+options.put("screenshotName", "my-layout-screenshot-01");
 
 ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", options);
 ```
+
+Session **`LT:Options`** for this flow typically needs at least **`smartUI.project`** (and `visual`, credentials), **not** a separate layout capability block for the same effect.
+
+### JavaScript
 
 ```javascript
 await driver.executeScript('smartui.takeScreenshot', {
@@ -87,12 +105,7 @@ ignoreType: ['layout'],
 });
 ```
 
-```python
-driver.execute_script("smartui.takeScreenshot", {
-"screenshotName": "my-layout-screenshot-01",
-"ignoreType": ["layout"],
-})
-```
+### C#
 
 ```csharp
 var options = new Dictionary<string, object>
@@ -103,69 +116,43 @@ var options = new Dictionary<string, object>
 ((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeScreenshot", options);
 ```
 
-## 3. Full-page screenshot
+Add **`fullPage: true`** in the same map when you need a full-page capture for that shot.
 
-Pass `fullPage: true` to `smartui.takeScreenshot` along with a `screenshotName`. For a full-page layout shot in the same call, add `ignoreType: ["layout"]` to the map.
+## 3. Full-page screenshot (name-only hook)
 
 ```java
-Map<String, Object> options = new HashMap<>();
-options.put("screenshotName", "Home_Page_Desktop");
-options.put("fullPage", true);
-
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", options);
-```
-
-```javascript
-await driver.executeScript('smartui.takeScreenshot', {
-screenshotName: 'Home_Page_Desktop',
-fullPage: true,
-});
-```
-
-```python
-driver.execute_script("smartui.takeScreenshot", {
-"screenshotName": "Home_Page_Desktop",
-"fullPage": True,
-})
+((JavascriptExecutor) driver).executeScript("smartui.takeFullPageScreenshot=Home_Page_Desktop");
 ```
 
 ```csharp
-var options = new Dictionary<string, object>
-{
-{ "screenshotName", "Home_Page_Desktop" },
-{ "fullPage", true }
-};
-((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeScreenshot", options);
+((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeFullPageScreenshot=Home_Page_Desktop");
 ```
+
+For **layout + full page** in one call, prefer the **config object** form in §2 with `fullPage: true` and `ignoreType: ["layout"]`.
 
 ## 4. Baseline and comparison
 
-- Use the same `smartUI.project` and screenshot names on both runs.
-- **Smart Ignore:** set the same `smartUI.smartIgnore` on the baseline and comparison sessions.
-- **Layout:** pass the same `ignoreType: ["layout"]` in the hook for matching screenshot names.
-- Changing the strategy or options usually requires a new baseline.
+1. Same **`smartUI.project`** and screenshot **names**.
+2. **Smart Ignore:** same **`smartUI.smartIgnore`** on baseline and comparison sessions.
+3. **Layout:** same **`ignoreType: ["layout"]`** (and other layout flags) in the **hook** for matching screenshot names on baseline and comparison runs.
+4. Changing strategy or options usually requires a **new baseline**.
 
-## 5. Build attribution
+## 5. Strict comparison vs Smart Ignore
 
-Runs that use a project token may show the project creator as the build author. Use the intended automation `username`, `accessKey`, and `project` where the product allows.
+If the project or build is still effectively in **strict (pixel) comparison**, some Smart Ignore–specific UI flows behave differently. Align dashboard **comparison mode** with session capabilities.
 
-## 6. Common failures and what not to do
+## 6. Build attribution (creator name)
 
-**Smart Ignore (Hooks + Java)**
-These patterns do not turn on Smart Ignore:
+Runs using a **project token** may show the **project creator**. Use the intended automation **username** / **access key** / **project** where the product allows.
 
-- `ltOptions.put("ignoreType", Arrays.asList("smartignore"));` without `smartUI.smartIgnore`
-- `ltOptions.put("smartignore", true);` at the root of `LT:Options`
-
-Set `smartUI.smartIgnore: true` instead.
+## 7. Troubleshooting
 
 | Problem | What to do |
-|---------|------------|
-| Layout never activates; only set in `LT:Options` | Move `ignoreType: ["layout"]` into the `smartui.takeScreenshot` options (see §2). |
-| Smart Ignore never activates | Set `smartUI.smartIgnore: true` in `LT:Options`, then confirm it in the session metadata. |
-| Tried `smartUI.layout` or nested `smartUI.options` layout blocks | These are not the Hooks switch for layout; use the hook options instead. |
-| Strict (pixel) comparison still applies | Align the dashboard comparison mode with the session capabilities. |
-| Relying on dashboard toggles only | Hooks still need the correct hook option and capability split shown above. |
+|--------|------------|
+| Layout never activates; only tried `LT:Options` | Move **`ignoreType: ["layout"]`** into **`smartui.takeScreenshot`** options (§2). |
+| Smart Ignore never activates | Set **`smartUI.smartIgnore`: true** in **`LT:Options`**; verify in session metadata. |
+| Tried `smartUI.layout` | Not the supported Hooks switch for layout; use hook **options** instead. |
+| Want to rely on dashboard toggles only | Hooks still need the correct **hook** + **capability** split per this page. |
 
 ## Related Docs
 

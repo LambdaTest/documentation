@@ -87,7 +87,7 @@ Once approved diffs represent the new expected UI, promote them to Baseline:
 Apply filters (approver, status, tab) before using Select All.
 Confirm the selected count matches expectations to avoid cross-build approvals.
 
-Bulk actions are powerful: always double-check each screenshot thumbnail.
+Bulk actions are powerful—always double-check each screenshot thumbnail.
 Use single selection for high-risk diffs (checkout, payments, authentication).
 
 After approving or rejecting, verify the activity log for transparency.
@@ -116,7 +116,7 @@ Symptoms: Move to Baseline button disabled or no visible changes after promotion
 Fixes:
 
 Only Approved screenshots can be promoted; re-approve if needed.
-Baseline updates can take a minute to propagate: refresh or reopen the build.
+Baseline updates can take a minute to propagate—refresh or reopen the build.
 Ensure the associated branch/build is not locked by automated workflows.
 
 ## Next steps

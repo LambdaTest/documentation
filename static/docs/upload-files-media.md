@@ -1,5 +1,7 @@
 # Upload & Download Files and Media on Real Devices
 
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 TestMu AI’s **Files & Media** feature allows you to seamlessly upload files or media from your system to real devices and download files the app or website generated back for verification. This ensures comprehensive validation of workflows such as document generation, media export, and file handling across Android and iOS devices — during both **App** and **Browser** testing sessions.
 
 The same upload and download experience is available whether you are testing a native app or a website in a mobile browser, so there is nothing new to relearn when switching between the two.

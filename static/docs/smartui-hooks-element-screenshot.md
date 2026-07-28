@@ -28,15 +28,20 @@ This helps ensure the correct region is ready for capture. Use your framework's 
 
 ## Step 3: Call the SmartUI Element Screenshot Hook
 
-Run a JavaScript string in the browser context, for example using Selenium `executeScript()`.
+Call the SmartUI hook through your driver's script executor, passing `"smartui.takeScreenshot"` as the command and a config object with your screenshot options:
 
-Use the following format:
+```js
+const config = {
+screenshotName: "Checkout_Summary_Block",
+elementType: "css_selector",
+element: "section.checkout-summary",
+fullPage: false
+};
 
-```text
-smartui.takeScreenshot,<JSON>
+await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-The JSON must include at least these fields:
+The config object must include at least these fields:
 
 | Field | Purpose |
 |---|---|
@@ -44,18 +49,6 @@ The JSON must include at least these fields:
 | `elementType` | Locator type. Supported values: `css_selector`, `xpath`, `id`, `class` |
 | `element` | Locator value for the target element |
 | `fullPage` | Set to `false` to capture only the target element |
-
-Example JSON:
-
-```json
-{"screenshotName":"Checkout_Summary_Block","elementType":"css_selector","element":"section.checkout-summary","fullPage":false}
-```
-
-Full script string passed to `executeScript()`:
-
-```text
-smartui.takeScreenshot,{"screenshotName":"Checkout_Summary_Block","elementType":"css_selector","element":"section.checkout-summary","fullPage":false}
-```
 
 Update `elementType` and `element` to match the locator used in your test.
 
@@ -146,14 +139,12 @@ const label = item.id
 
 const screenshotName = `element_${label}`.replace(/[^a-zA-Z0-9_-]+/g, '_').slice(0, 80);
 
-await driver.executeScript(
-`smartui.takeScreenshot,${JSON.stringify({
+await driver.executeScript("smartui.takeScreenshot", {
 screenshotName,
 elementType: 'xpath',
 element: item.xpath,
 fullPage: false
-})}`
-);
+});
 }
 ```
 

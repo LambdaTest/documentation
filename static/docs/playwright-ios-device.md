@@ -6,10 +6,6 @@ Playwright test automation on real iOS devices is now supported on TestMu AI acr
 
 This guide will cover the basics of getting started with Playwright testing on iOS devices on the TestMu AI platform.
 
-**Currently in BETA**
-
-Playwright testing on real iOS devices is currently in **Beta**. To enable this feature for your organization, please contact your account team to have the feature flag turned on.
-
 **Supported Versions**
 - Playwright versions **v1.53.0** and above (until **v1.6.0**) are supported for iOS real device testing.
 - All languages use the **stock Playwright packages**, with no custom forks or client-side changes required.

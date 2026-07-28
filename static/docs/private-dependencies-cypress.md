@@ -29,7 +29,7 @@ lambdatest-cypress --version
 
 You can either add private dependency in the `package.json` file or in the `lambdatest-config.json` file. Refer to the below steps for both approaches.
 
-- **If passing private dependency in package.json file **
+- **If passing private dependency in package.json file**
 
   Add the private dependency and create `.npmrc` file in the root directory of your project as highlighted below and define the same in `.npmrc` file as well.
 

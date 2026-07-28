@@ -5,160 +5,169 @@
 TestMu AI Documentation and Knowledge Hub
 Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mobile Platforms
 
-       Web Automation
+             Web Automation
 
-        Selenium Testing
-        Cypress Testing
-        Playwright Testing
-        Puppeteer Testing
-        K6 Testing
+              Selenium Testing
+              Cypress Testing
+              Playwright Testing
+              Puppeteer Testing
+              K6 Testing
 
-       App Automation
+             App Automation
 
-        Appium Testing
-        Espresso Testing
-        XCUI Testing
-        Flutter Testing
-        Virtual Devices
+              Appium Testing
+              Espresso Testing
+              XCUI Testing
+              Flutter Testing
+              Virtual Devices
 
-       HyperExecute
+             HyperExecute
 
-        Getting Started
-        HyperExecute YAML
-        HyperExecute CLI
-        HyperExecute GUI &nbsp;
-        HyperExecute MCP Server
-        Features
-    Integrations
-     Private Cloud
+              Getting Started
+              HyperExecute YAML
+              HyperExecute CLI
+              HyperExecute GUI &nbsp;
+              HyperExecute MCP Server
+              Features
+              Integrations
+              Private Cloud
 
-       Insights
+             Insights
 
-        Pre-built Dashboards
-        Custom Dashboards
-        Widgets
-        Dashboard CoPilot AI
-        Test Case Insights
-        Build Insights
-        Flaky Test Insights
-        Command Logs Insights
+              Pre-built Dashboards
+              Custom Dashboards
+              Widgets
+              Dashboard CoPilot AI
+              Test Case Insights
+              Build Insights
+              Flaky Test Insights
+              Command Logs Insights
 
-       Browser Cloud &nbsp;
+             Browser Cloud &nbsp;
 
-        What is Browser Cloud
-        Launch Session With SDK
-        Launch Session With Agent Skills
-        Connect to a Session
+              What is Browser Cloud
+              Launch Session With SDK
+              Launch Session With Agent Skills
+              Connect to a Session
 
-       SmartUI
+             SmartUI
 
-        Getting Started
-        Explore SDKs
-        CLI
-        Upload Screenshots
-        Smart PDF Comparison
-        Build Config and Options
-        Advance Comparison Options
-        Handling Dynamic Data
+              Getting Started
+              Explore SDKs
+              CLI
+              Upload Screenshots
+              Smart PDF Comparison
+              Build Config and Options
+              Advance Comparison Options
+              Handling Dynamic Data
 
-     Web Scanner
+             KaneAI
 
-    Overview
-    Getting Started
-    Visual UI Scans
-    Accessibility Scans
-    Adding URLs
-    Scheduling Options
+              Getting Started
+              Author Desktop Browser Test
+              Author Mobile App Test
+              API Testing
+              Command Types
+              Test Automation with CI/CD
+              FAQs
 
-        KaneAI &nbsp;
+             Kane CLI &nbsp;
 
-        Getting Started
-        Author Desktop Browser Test
-         Author Mobile App Test
-        API Testing
-        Command Types
-         Test Automation with CI/CD
+              Getting Started
+              Installation
+              Quick Start
+              Writing Objectives
+              Generate Test Cases
+              Checkpoints
+              Agent Mode
+              CLI Reference
 
-        Agent Testing Platform &nbsp;
+             Web Scanner &nbsp;
 
-        Getting Started
-        Test Your First AI Agent
-        FAQs
+              Overview
+              Getting Started
+              Visual UI Scans
+              Accessibility Scans
+              Adding URLs
+              Scheduling Options
 
-        Real Time
+             Agent Testing Platform
 
-        Web Browser Testing
-        Mobile Browser Testing
-        Mobile App Testing
-        ChromeOS Web Browser Testing
-        ChromeOS App Testing
-        Key Features
+              Getting Started
+              Test Your First AI Agent
+              FAQs
 
-        Real Device
+             Real Time
 
-        Real Device App Testing
+              Web Browser Testing
+              Mobile Browser Testing
+              Mobile App Testing
+              ChromeOS Web Browser Testing
+              ChromeOS App Testing
+              Key Features
 
-        Real Device Browser Testing
+             Real Device
 
-        Private Cloud
+              Real Device App Testing
+              Real Device Browser Testing
+              Private Cloud
 
-        Test Manager &nbsp;
+             Test Manager &nbsp;
 
-        Create Projects
-        Insights Dashboard
-        Manual Test Cases
-        Automated Test Cases
-        Test Run
-        Milestones
-        Issue Tracker Integration
+              Create Projects
+              Insights Dashboard
+              Manual Test Cases
+              Automated Test Cases
+              Test Run
+              Milestones
+              Issue Tracker Integration
 
-        TestMu AI MCP Server &nbsp;
+             TestMu AI MCP Server &nbsp;
 
-        Setting up TestMu AI MCP Server
+              Setting up TestMu AI MCP Server
 
-       Integrations
+             Integrations
 
-        Bug Tracking
-        Project Management
-        CI / CD Integration
-        Test Reporting
-        Communication Tools
-        Plugin and Extensions
+              Bug Tracking
+              Project Management
+              CI / CD Integration
+              Test Reporting
+              Communication Tools
+              Plugin and Extensions
 
-       Accessibility Testing
+             Accessibility Testing
 
-        Getting Started
-        Choose Your Tool
-        Manual Testing
-        Automation
-        Test Scheduling
-        Web Scanner
-        Reports
-        Mobile App Testing
+              Getting Started
+              Accessibility DevTools
+              Accessibility Web Automation
+              Sitemap Scheduling
+              Native App Scanner
+              Native App Automation
+              Screen Reader
 
-        Testing Locally
+             Testing Locally
 
-        Testing Locally Hosted Pages
-        TestMu AI Tunnel Modifiers
-        Docker Tunnel
-        Troubleshooting Tunnel
-        Load Balancing in Tunnel
-        IP Whitelisting
-        Charles Proxy
+              Testing Locally Hosted Pages
+              TestMu AI Tunnel Modifiers
+              Docker Tunnel
+              Troubleshooting Tunnel
+              Load Balancing in Tunnel
+              IP Whitelisting
+              Charles Proxy
 
-   Settings and Security
+             Settings and Security
 
-    Account Management
-    Network Whitelisting Guide
-    TestMu AI Public IP
-    Single Sign On
-    SCIM
+              Account Management
+              Network Whitelisting Guide
+              TestMu AI Public IP
+              Single Sign On
+              SCIM
 
-       Other Docs
+             Other Docs
 
-        LT Browser
-        Test Logs
-        Test Intelligence
-        Screenshot Testing
-        Responsive Testing
-        Concurrency Widget
+              LT Browser
+              Test Logs
+              Test Intelligence
+              Screenshot Testing
+              Responsive Testing
+              Concurrency Widget

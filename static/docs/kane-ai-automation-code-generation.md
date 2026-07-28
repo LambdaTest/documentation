@@ -4,7 +4,7 @@
 
 KaneAI generates automation scripts in multiple frameworks and languages based on natural language inputs from users. KaneAI is available for desktop web applications as well as native mobile applications currently.
 
-> **Note:** KaneAI offers two authoring experiences, Classic and New Experience. New Experience is being rolled out in phases. To enable New Experience for your organization, reach out to our support team. The frameworks and languages supported by each experience are listed below.
+KaneAI offers two authoring experiences, Classic and New Experience. New Experience is being rolled out in phases. To enable New Experience for your organization, reach out to our support team. The frameworks and languages supported by each experience are listed below.
 
 Click the `Generate New Code` button to go to code generation page where you can select desired framework and language.
 
@@ -12,20 +12,60 @@ Click the `Generate New Code` button to go to code generation page where you can
 
 The table below shows the frameworks and languages KaneAI can generate code in, and the experience each is available under.
 
-| Framework | Language | Availability | Classic | New Experience |
-|---|---|---|:--:|:--:|
-| Selenium | Python | Generally available (default) | Yes | No |
-| Selenium | Java | Available on request * | Yes | No |
-| Playwright | Python | Available on request * | Yes | Yes |
-| Playwright | C# | Available on request * | Yes | No |
-| Playwright | JavaScript | Available on request * | No | Yes |
-| Cypress | JavaScript | Coming soon | No | No |
-| WebdriverIO | JavaScript | Coming soon | No | No |
-| Appium | Python | Generally available (default) | Yes | No |
+      Framework
+      Language
+      Availability
+      Classic
+      New Experience
 
-New Experience currently covers Desktop Web only. Mobile is supported in Classic.
+      Selenium
+      Python
+      Generally available (default)
+      &#10003;
+      &#10007;
 
-> **Note:** **Available on request.** Please reach out to Support to enable it. These features are partially rolled out and will soon be generally available for all users.
+      Java
+      Available on request &#42;
+      &#10003;
+      &#10007;
+
+      Playwright
+      Python
+      Available on request &#42;
+      &#10003;
+      &#10003;
+
+      C#
+      Available on request &#42;
+      &#10003;
+      &#10007;
+
+      JavaScript
+      Available on request &#42;
+      &#10007;
+      &#10003;
+
+      Cypress
+      JavaScript
+      Coming soon
+      &#10007;
+      &#10007;
+
+      WebdriverIO
+      JavaScript
+      Coming soon
+      &#10007;
+      &#10007;
+
+      Appium
+      Python
+      Generally available (default)
+      &#10003;
+      &#10007;
+
+**&#10003;** Supported &nbsp;&nbsp; **&#10007;** Not available. New Experience currently covers Desktop Web only. Mobile is supported in Classic.
+
+**Available on request.** Please reach out to Support to enable it. These features are partially rolled out and will soon be generally available for all users.
 
 ## Understanding the Code Tab
 
@@ -59,4 +99,9 @@ Test cases with generated code can be added to a Test Run regardless of the Samp
 - Code generation failed or was not initiated.
 - Code generation is still in progress.
 
-> **Note:** KaneAI code export leverages public libraries. The generated automation scripts depend on these published packages: Playwright Python (https://pypi.org/project/testmu-playwright-python/), Playwright C# (https://libraries.io/nuget/TestmuAI.Playwright.Bindings), Playwright JavaScript (https://www.npmjs.com/package/@testmuai/playwright-bindings), and Selenium Java (https://mvnrepository.com/artifact/io.github.lambdatest/testmuai-selenium-bindings).
+KaneAI code export leverages public libraries. The generated automation scripts depend on these published packages:
+
+- Playwright Python: [testmu-playwright-python](https://pypi.org/project/testmu-playwright-python/)
+- Playwright C#: [TestmuAI.Playwright.Bindings](https://libraries.io/nuget/TestmuAI.Playwright.Bindings)
+- Playwright JavaScript: [@testmuai/playwright-bindings](https://www.npmjs.com/package/@testmuai/playwright-bindings)
+- Selenium Java: [testmuai-selenium-bindings](https://mvnrepository.com/artifact/io.github.lambdatest/testmuai-selenium-bindings)

@@ -1,8 +1,8 @@
-# How the TestMu AI Agent Testing Platform Evaluates Agents
+# How the AI Agent Testing Platform Evaluates Agents
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The Agent Testing Platform runs every evaluation through five phases: configure context, generate scenarios, run the testing agents, score each interaction, and return a production readiness verdict. 15+ specialized testing agents drive it, each probing one quality dimension, all in parallel against your agent's real endpoint.
+The AI Agent Testing Platform runs every evaluation through five phases: configure context, generate scenarios, run the testing agents, score each interaction, and return a production readiness verdict. 15+ specialized testing agents drive it, each probing one quality dimension, all in parallel against your agent's real endpoint.
 
 You run it from one hosted web application, the REST API, the CLI, or a CI/CD pipeline. There is no SDK to install and no local infrastructure to operate.
 
@@ -43,6 +43,10 @@ The platform does not rely on a single evaluator. 15+ testing agents each own on
 | Accessibility Specialist | Evaluates responses for accessibility |
 | Performance Monitor | Tracks latency and response completeness under load |
 | User Experience Evaluator | Assesses overall user journey quality |
+
+## Security & red-teaming
+
+Agent Testing red-teams AI agents with adversarial scenario suites aligned to the OWASP Top 10 for LLM applications: prompt injection (LLM01), insecure output handling (LLM02), sensitive-information disclosure and PII leakage (LLM06), data exfiltration, jailbreak, and policy violations. Toxicity, bias and harmful-content generation are evaluated as first-class metrics across the tested persona set. Every finding is evidence-backed - the specific conversation turns that triggered a flag are preserved with per-turn attribution and confidence intervals, exportable for regulatory documentation - and the A2A CLI runs the same scenarios in CI so security testing gates every release.
 
 ## Platform Architecture Layers
 

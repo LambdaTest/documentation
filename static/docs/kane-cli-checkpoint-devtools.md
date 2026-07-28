@@ -13,7 +13,6 @@ DevTools assertions let you verify data that isn't visible on the page: HTTP net
 | [Performance](/support/docs/kane-cli-checkpoint-devtools-performance/) | Core Web Vitals | LCP, CLS, INP, FCP, TTFB |
 | [Cookies](/support/docs/kane-cli-checkpoint-devtools-cookies/) | Browser cookies | Names, values, flags (httpOnly, secure, sameSite) |
 | [localStorage](/support/docs/kane-cli-checkpoint-devtools-localstorage/) | Browser localStorage | Key-value pairs stored in the browser |
-| [Clipboard](/support/docs/kane-cli-checkpoint-devtools-clipboard/) | Browser clipboard | Copied text, HTML, image, and formats present |
 
 ## How It Works
 

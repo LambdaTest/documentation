@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-When reviewing SmartUI visual comparisons, small differences can be easy to miss on dense or zoomed-out screens. The **Diff Highlighter** feature helps you **discover every change** quickly using in-view navigation and an optional highlight animation, so you spend less time scanning and more time deciding what to accept or reject.
+When reviewing SmartUI visual comparisons, small differences can be easy to miss on dense or zoomed-out screens. The **Diff Highlighter** feature helps you **discover every change** quickly using in-view navigation and an optional highlight animation—so you spend less time scanning and more time deciding what to accept or reject.
 
 ## What You Get
 
@@ -29,9 +29,9 @@ On the comparison view, open the **actions menu** (e.g. the 3-dot or actions dro
 
 In the actions menu you’ll see:
 
-- **Previous**: moves focus to the **previous** diff (above the current one).
-- **Highlight**: runs the **highlight animation**: popping circles traverse each diff from **top to bottom**, so you can see every change location in sequence.
-- **Next**: moves focus to the **next** diff (below the current one).
+- **Previous** — moves focus to the **previous** diff (above the current one).
+- **Highlight** — runs the **highlight animation**: popping circles traverse each diff from **top to bottom**, so you can see every change location in sequence.
+- **Next** — moves focus to the **next** diff (below the current one).
 
 Use **Highlight** when you want to quickly see all diffs without clicking through. Use **Previous** and **Next** when you want to step through differences one by one.
 
@@ -40,7 +40,7 @@ Use **Highlight** when you want to quickly see all diffs without clicking throug
 - On clicking the **Previous** or **Next** buttons, the view will zoom into that specific diff and highlight it with a bounded box.
 
 - You can continue to use overlay toggles, zoom, slider/side-by-side, and **Mark as bug** or approval actions as usual.
-- Diff navigation and highlight do **not** replace existing comparison tools, they only make it easier to find where the changes are.
+- Diff navigation and highlight do **not** replace existing comparison tools—they only make it easier to find where the changes are.
 
 ## Highlight animation
 
@@ -78,6 +78,6 @@ To use diff navigation and highlight, ensure the screenshot is compared with **S
 
 ## Related docs
 
-- [Smart Ignore](/support/docs/smartui-smartignore): Reduce noise and use diff regions for navigation.
-- [Layout Testing](/support/docs/smartui-layout-testing): Compare layout structure (diff navigation for this mode coming later).
-- [View comparison and issues](/support/docs/smart-visual-testing#view-comparison-and-issues): Basics of the comparison view.
+- [Smart Ignore](/support/docs/smartui-smartignore) — Reduce noise and use diff regions for navigation.
+- [Layout Testing](/support/docs/smartui-layout-testing) — Compare layout structure (diff navigation for this mode coming later).
+- [View comparison and issues](/support/docs/smart-visual-testing#view-comparison-and-issues) — Basics of the comparison view.

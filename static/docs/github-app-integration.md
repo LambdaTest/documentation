@@ -101,9 +101,8 @@ Create a `.lambdatest/config.yaml` file in the root directory of your repository
 project_id: "your_project_id"
 folder_id: "your_folder_id"
 assignee: your_user_id
-configuration_id: configuration_id
+environment_id: environment_id
 test_url: "https://your-deployed-app-url.com/"
-tunnel_name: "your_tunnel_name"  # Optional: set if using the same tunnel across PRs
 ```
 
 #### Configuration Parameters
@@ -113,9 +112,8 @@ tunnel_name: "your_tunnel_name"  # Optional: set if using the same tunnel across
 | `project_id` | The unique identifier for your TestMu AI Test Manager project |
 | `folder_id` | The folder where generated test cases will be organized |
 | `assignee` | The TestMu AI user ID who will be assigned to test runs for executions |
-| `configuration_id` | The target testing environment (browser, OS, device configurations) |
+| `environment_id` | The target testing environment (browser, OS, device configurations) |
 | `test_url` | The base URL of your application under test (your staging or testing environment URL) |
-| `tunnel_name` | *(Optional)* The name of the LambdaTest tunnel to use for testing. Set this when the same tunnel is reused across all PRs. Can be overridden per PR using the `--tunnel` flag in the trigger comment. |
 
 After installing the GitHub App, you are redirected to the [integration settings page](https://integrations.lambdatest.com/githubci/install) where all configuration values (project ID, folder ID, assignee, and environment ID) are displayed with a **copy button**. Use these to populate your `.lambdatest/config.yaml` file directly.
 

@@ -45,7 +45,7 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 | `window_size.width` | integer | `1920` | Chrome window width in pixels (800–3840) | `kane-cli config set-window ` |
 | `window_size.height` | integer | `1080` | Chrome window height in pixels (600–2160) | `kane-cli config set-window ` |
 | `chrome_profile_path` | string | `""` | Path to a Chrome user-data dir. Empty means a fresh profile per run. | `kane-cli config chrome-profile [path]` |
-| `default_url` | string \| null | `https://kaneai-playground.lambdatest.io` | Starting URL when a run begins. | `kane-cli config set-url ` |
+| `default_url` | string \| null | `https://kaneai-playground.lambdatest.io` | Starting URL when a run begins. | Internal default |
 | `model` | string | `"v16-alpha"` | Reasoning + vision model used by the agent. | Internal default |
 | `project_id` | string \| null | `null` | TestMu AI Test Manager project ID for upload | `kane-cli config project [id]` |
 | `project_name` | string \| null | `null` | Display name of the selected project | Set by `kane-cli config project` |

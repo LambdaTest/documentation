@@ -154,4 +154,4 @@ When you ask your AI agent to test something on the web, the skill:
 | Codex CLI | `~/.codex/AGENTS.md` (appended section) | `AGENTS.md` (appended section) |
 | Gemini CLI | `~/.gemini/skills/kane-cli/SKILL.md` | `.gemini/skills/kane-cli/SKILL.md` |
 
-Source files: [github.com/LambdaTest/kane-cli/tree/main/skill-installer/skills](https://github.com/LambdaTest/kane-cli/tree/main/skill-installer/skills)
+Source files: [github.com/LambdaTest/kane-cli/tree/main/skills](https://github.com/LambdaTest/kane-cli/blob/main/docs/user-guide/getting-started.md)

@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The **Accessibility Score** is a single number from **0 to 100** that represents the accessibility health of a scanned page or screen. Instead of only reading long reports, the score gives you a **clear, actionable signal** for where the product stands relative to the issues found in that scan. Use it to **track progress over time**, **compare releases**, and **show improvement trends** to stakeholders—**together** with issue detail and any manual testing your program requires.
+The **Accessibility Web Score** is a unified metric that represents the accessibility health of your website or application workflow. Instead of only reading long reports, the score gives you a **clear, actionable number** for where the product stands relative to the issues found in that scan. Use it to **track progress over time**, **compare releases**, and **show improvement trends** to stakeholders, **together** with issue detail and any manual testing your program requires.
 
 **Not legal or WCAG certification**
 The score is **not** the same as WCAG conformance sign-off, VPAT completion, or legal accessibility certification. A score of 100 means **no automated findings were detected**—automated tools catch roughly 30–40% of WCAG issues, so a manual audit is still required for full conformance. Always interpret the score with **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)**, **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)**, and your own manual coverage ([compliance guide](/support/docs/accessibility-compliance-guide/)).
@@ -33,21 +33,7 @@ The Accessibility Score helps:
 - **Accessibility teams** monitoring problem areas and regression risk
 - **Developers** who want quick feedback on whether a change **improved or hurt** accessibility before merge
 
-If you ship digital products for real users, the score is a useful **signal**—not the only bar for "done."
-
-## Score bands
-
-Every score maps to a label and color band for an at-a-glance read of accessibility health:
-
-| Score range | Label | What it means |
-| --- | --- | --- |
-| **90–100** | **Excellent** | Few or no automated findings. In great shape from an automated-testing perspective; keep monitoring each release. |
-| **70–89** | **Good** | Some issues found, but manageable in scope. Review and plan remediation in upcoming sprints. |
-| **50–69** | **Needs Work** | Significant issues that likely affect users of assistive technologies. Prioritize fixing these. |
-| **1–49** | **Poor** | Major accessibility barriers. Users with disabilities will face serious difficulty. Immediate remediation recommended. |
-| **0** | **Keyboard scan** | A keyboard-only scan—no visual score is assigned. |
-
-Exact cutoffs are **guidance**; your product's risk tolerance may differ.
+If you ship digital products for real users, the score is a useful **signal**, not the only bar for “done.”
 
 ## Where to find it
 
@@ -213,26 +199,17 @@ Density is why the **same 2 critical issues** produce different scores by page s
 
 ## What impacts your score
 
-- **Severity distribution** — More weight on critical/serious issues lowers the score faster than many minor-only findings.
-- **Issue density** — More issues **per scored element** lowers the score; a small critical flow is penalized more than a large page with the same issues.
-- **Scored element count** — Larger, meaningful DOMs/screens change the density denominator so the score stays fair across page sizes.
-
-## When the score updates
-
-The score is not static. It recomputes automatically when the underlying issue data changes:
-
-- **Hiding an issue** (e.g. marking a known exception) recomputes the score from the remaining visible issues—the dashboard updates in real time. See **[Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/)**.
-- **Restoring a hidden issue** recomputes again and the score decreases to include it.
-- **Toggling "Needs Review"** updates issue counts but **does not change the score**, because needs-review items are excluded from scoring.
+- **Severity distribution**: More weight on critical/serious issues lowers the score faster than many minor-only findings.
+- **Issue density**: More issues **per element** lowers the score; a complex page with more elements affects **y** relative to a tiny page.
+- **Total element count**: Larger DOMs change the density denominator; the formula is built so density stays meaningful across page sizes.
 
 ## Improving your score
 
 Focus on **high-impact** changes:
 
-1. **Fix critical issues first** — They carry the most weight and usually block real users.
-2. **Reduce density** — Systematic patterns (wrong component-library defaults, shared header issues) hurt more than one-off edge cases.
-3. **Prioritize by page** — Use per-page/per-screen scores to fix the lowest-scoring critical flows (login, checkout, registration) first.
-4. **Re-scan after meaningful fixes** — Compare score **and** issue lists run-over-run; use **[Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)** for audit trails.
+1. **Fix critical issues first**: They carry the most weight and usually block real users.
+2. **Reduce density**: Systematic patterns (wrong component library defaults, shared header issues) hurt more than one-off edge cases.
+3. **Re-scan after meaningful fixes**: Compare score **and** issue lists run-over-run; use **[Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)** for audit trails.
 
 For fix order and rule context, use the **[Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)** and platform checklists: [Web](/support/docs/accessibility-web-what-we-cover/) · [iOS](/support/docs/accessibility-ios-what-we-cover/) · [Android](/support/docs/accessibility-android-what-we-cover/).
 
@@ -240,69 +217,7 @@ For fix order and rule context, use the **[Accessibility Issue Remediation Guide
 
 1. Open the report from **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)** and note the score **vs** the previous comparable build.
 2. Open **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** to see **which severities and rules** moved.
-3. Only then decide if the score alone is enough for a stakeholder update—or if you need **[Passed Test Cases](/support/docs/accessibility-passed-test-cases/)** and manual notes.
-
-## API response
-
-When the score is enabled, these fields appear in accessibility test API responses for **every product**:
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `accessibility_score` | integer | The score from 0 to 100. 0 means a keyboard-only scan; 1–100 is the density-adjusted score. |
-| `score_label` | string | `Excellent`, `Good`, `Needs Work`, `Poor`, or `Keyboard scan`. |
-| `scored_element_count` | integer | Meaningful elements evaluated after excluding decorative/structural elements. |
-
-The fields appear at **two levels**: the **test level** (aggregate across all pages/screens) and the **per-scan level** (each URL on web, each screen on mobile).
-
-```json
-{
-"test_info": { "test_id": "AUT_abc123", "status": "completed" },
-"accessibility_score": 72,
-"score_label": "Good",
-"scored_element_count": 1627,
-"scan_info": [
-{
-"page_url": "https://example.com/login",
-"issue_count": 5,
-"accessibility_score": 43,
-"score_label": "Poor",
-"scan_id": "AUT_abc123_1"
-},
-{
-"page_url": "https://example.com/dashboard",
-"issue_count": 8,
-"accessibility_score": 88,
-"score_label": "Good",
-"scan_id": "AUT_abc123_2"
-}
-]
-}
-```
-
-If a test ran before the score was enabled, or `scored_element_count` is unavailable, these fields are omitted. The existing `accessibility_level` (Critical / Serious / Moderate / Minor) is still returned and can be used as a fallback.
-
-## FAQ
-
-**What does a score of 100 mean?**
-No automated issues were detected by the scanning engine. It does **not** mean full WCAG conformance—automated tools catch roughly 30–40% of WCAG issues. A manual audit is still recommended.
-
-**Why is my score different from before?**
-The old ratio-based score counted decorative and structural elements as "passing," which inflated results. The density-adjusted model only weighs meaningful, functional elements—so scores are generally lower but more honest.
-
-**Why don't I see a score on my test?**
-The score requires `scored_element_count`, collected by newer versions of the scanning extensions and SDKs. Tests run before the feature was enabled show the existing accessibility level instead.
-
-**Does hiding issues change the score?**
-Yes. Hiding an issue recomputes the score from the remaining visible issues, and the dashboard updates in real time. Restoring a hidden issue recomputes again.
-
-**Is the score the same across web and mobile?**
-Yes. The formula is identical everywhere; only the exclusion rules that decide which elements count differ (web uses DOM rules, Android uses `AccessibilityNodeInfo`, iOS uses `XCUIElement`).
-
-**Does toggling "Needs Review" change the score?**
-No. Needs-review items are excluded from scoring because they require manual verification. Toggling updates issue counts but not the score.
-
-**What is the minimum score?**
-1. A score of 0 is reserved exclusively for keyboard-only scans.
+3. Only then decide if the score alone is enough for a stakeholder update, or if you need **[Passed Test Cases](/support/docs/accessibility-passed-test-cases/)** and manual notes.
 
 ## Remember
 

@@ -116,7 +116,7 @@ This is the intended path: **generate authors test cases → testmd runs them.**
 
 ## Limits and scope
 
-- **Input is a text description, optionally with attached files.** Attach local files with `--files` (a spec, screenshot, PDF, or CSV) to give the generator more context. Issue-link inputs and the web product's "Create / Create and Automate" are not part of the CLI.
+- **Input is a text description.** File, PDF, audio, and issue-link inputs (and the web product's "Create / Create and Automate") are not part of the CLI.
 - **Refinement is whole-request.** You refine the request as a whole in plain language; targeting an individual scenario or case from the CLI is not yet supported.
 - **Scenario and per-scenario counts** are bounded by `--scenario-limit` / `--per-scenario-limit`.
 

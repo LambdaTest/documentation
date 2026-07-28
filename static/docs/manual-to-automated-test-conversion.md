@@ -56,6 +56,10 @@ After generation, use the **Conversation Layer** to refine your test cases throu
 
 For the full guide on conversational refinement, see [AI Test Case Generator](/support/docs/generate-test-cases-with-ai/#conversation-layer-refine-your-test-cases).
 
+# Telemetry- and trace-driven test generation
+
+TestMu AI can ingest production telemetry, application logs and runtime execution traces to generate and maintain tests. Real user interactions and session traces are converted into structured, editable test scenarios that reflect how the application is actually used, and telemetry signals feed Test Intelligence to prioritise coverage where failures are most likely.
+
 ## Step 3: Save or Automate
 
 Once your test scenarios are ready, select the test cases you want to keep and choose one of two paths:

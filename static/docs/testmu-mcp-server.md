@@ -2,16 +2,17 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI MCP Server is a remote MCP server that connects MCP-compatible AI clients to your TestMu AI testing environment. It gives you access to tools for different TestMu AI products - HyperExecute, Automation, SmartUI, and Accessibility - which you can invoke through natural language prompts in your IDE or AI client.
+TestMu AI MCP Server is a remote MCP server that connects MCP-compatible AI clients to your TestMu AI testing environment. It gives you access to tools for different TestMu AI products - HyperExecute, Automation, SmartUI, Accessibility, and Test Manager - which you can invoke through natural language prompts in your IDE or AI client.
 
 ## Available Tools
 
-TestMu AI MCP Server provides four tools, each covering a different area of testing:
+TestMu AI MCP Server provides five tools, each covering a different area of testing:
 
 1. **[HyperExecute Tool:](/support/docs/hyperexecute-mcp-server/)** AI-native test orchestration. Auto-generates test runner commands and HyperExecute YAML, monitors jobs, and surfaces session details.
 2. **[Automation Tool:](/support/docs/automation-mcp-server/)** Triage and debug automation test failures. Pulls execution data, command/network/console logs, and helps identify root cause directly inside your IDE.
 3. **[SmartUI Tool:](/support/docs/smartui-mcp-server/)** Debug visual regressions. Returns natural-language summaries of pixel, layout, DOM, and perceptual differences from any SmartUI comparison run.
 4. **[Accessibility Tool:](/support/docs/accessibility-mcp-server/)** Run accessibility checks on hosted URLs or local React apps and get detailed remediation guidance.
+5. **[Test Manager Tool:](/support/docs/test-manager-mcp-server/)** Run the complete test management lifecycle. Generate test cases with AI, build configured test runs, record results in bulk, and track milestones and coverage.
 
 ## Connecting to TestMu AI MCP Server
 
@@ -220,6 +221,7 @@ You can also ask questions like:
 - "Triage the last failed test on TestID `XXXXX`."
 - "Run a SmartUI analysis on comparisonId `YYYYY`."
 - "Run an accessibility report on `https://example.com`."
+- "Generate test cases from this requirement into my Regression folder in Test Manager."
 
 ## Troubleshooting
 

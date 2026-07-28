@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Smart Comments enables real-time collaboration on SmartUI visual test results. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions, all without leaving the SmartUI dashboard.
+Smart Comments enables real-time collaboration on SmartUI visual test results. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions—all without leaving the SmartUI dashboard.
 
 **Key Benefits:**
 - **Contextual Discussions**: Comment directly on specific screenshots and builds
@@ -242,7 +242,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 
 - Mention relevant team members when their input is needed
 - Use @mentions to bring attention to critical visual issues
-- Avoid over-mentioning: only tag people who need to be involved
+- Avoid over-mentioning—only tag people who need to be involved
 - Combine mentions with clear action items in your comments
 
 **Organize with Threads**
@@ -298,7 +298,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 **Symptoms**: Draft comment disappears after closing modal or navigating.
 
 **Solutions**:
-1. Drafts are session-based: ensure you haven't refreshed the page
+1. Drafts are session-based—ensure you haven't refreshed the page
 2. Drafts persist only during the active browser session
 3. Try posting the draft immediately if you need to preserve it
 4. Check browser console for any JavaScript errors
@@ -388,7 +388,7 @@ Comments are specific to each screenshot variant (viewport + browser combination
 1. Open Accept modal and start typing: "This looks good, but..."
 2. Close the modal without posting
 3. Navigate to screenshot drawer
-4. Open comment textbox, your draft appears
+4. Open comment textbox—your draft appears
 5. Complete the comment and post it
 6. Draft is cleared after posting
 

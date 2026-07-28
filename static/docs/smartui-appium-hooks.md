@@ -244,7 +244,7 @@ driver.execute_script("smartui.takeScreenshot", config)
 **Best Practices**
 - Use `ignoreBoxes` for elements that change frequently (e.g., ads, timestamps, user avatars).
 - Use `selectBoxes` when you want to focus comparison only on critical UI sections.
-- Avoid using both `ignoreBoxes` and `selectBoxes` in the same config; they are mutually exclusive.
+- Avoid using both `ignoreBoxes` and `selectBoxes` in the same config — they are mutually exclusive.
 - Ensure XPath expressions are unique and stable across test runs.
 - Test your XPath locators using Appium Inspector or similar tools before integrating.
 

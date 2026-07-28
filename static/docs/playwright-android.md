@@ -6,7 +6,7 @@ Playwright Android automation is supported on TestMu AI across **Node.js, Java, 
 
 **Supported Versions**
 - Playwright versions **v1.20.0** to **v1.59.0** are supported for Android real device testing (excluding `v1.54.0`).
-- **Java, C#, and Python** use the `chromium.connect()` API. **Node.js** supports both `chromium.connect()` and the Android-native `_android.connect()` API. All use stock Playwright packages, no custom forks required.
+- **Node.js** uses the `_android.connect()` API. **Java, C#, and Python** use `chromium.connectOverCDP()`. All use stock Playwright packages, no custom forks required.
 - Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 
 ## Prerequisites
@@ -153,11 +153,12 @@ playwrightClientVersion: "1.53.0",
 },
 };
 
-const cdpUrl = `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+const device = await _android.connect(
+`wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
 JSON.stringify(capabilities)
-)}`;
+)}`
+);
 
-const device = await _android.connect(cdpUrl);
 console.log(`Model: ${device.model()}, Serial: ${device.serial()}`);
 await device.shell("am force-stop com.android.chrome");
 
@@ -194,6 +195,7 @@ arguments: { status: "failed", remark: e.message },
 }
 
 await page.close();
+await context.close();
 await device.close();
 })();
 ```
@@ -237,7 +239,7 @@ f"{urllib.parse.quote(json.dumps(capabilities))}"
 )
 
 with sync_playwright() as p:
-browser = p.chromium.connect(cdp_url)
+browser = p.chromium.connect_over_cdp(cdp_url)
 context = browser.contexts[0] if browser.contexts else browser.new_context()
 page = context.pages[0] if context.pages else context.new_page()
 
@@ -262,6 +264,7 @@ f'lambdatest_action: {json.dumps({"action": "setTestStatus", "arguments": {"stat
 )
 
 page.close()
+context.close()
 browser.close()
 
 if __name__ == "__main__":
@@ -281,7 +284,6 @@ import com.microsoft.playwright.*;
 import com.google.gson.Gson;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class PlaywrightAndroidTest {
@@ -303,12 +305,13 @@ ltOptions.put("playwrightClientVersion", "1.53.0");
 Map<String, Object> capabilities = new LinkedHashMap<>();
 capabilities.put("LT:Options", ltOptions);
 
+Map<String, Object> capabilities = Map.of("LT:Options", ltOptions);
 String capsJson = new Gson().toJson(capabilities);
 String cdpUrl = "wss://cdp.lambdatest.com/playwright?capabilities="
 + URLEncoder.encode(capsJson, StandardCharsets.UTF_8);
 
 try (Playwright playwright = Playwright.create()) {
-Browser browser = playwright.chromium().connect(cdpUrl);
+Browser browser = playwright.chromium().connectOverCDP(cdpUrl);
 BrowserContext context = browser.contexts().size() > 0
 ? browser.contexts().get(0) : browser.newContext();
 Page page = context.pages().size() > 0
@@ -334,6 +337,7 @@ page.evaluate("_ => {}",
 }
 
 page.close();
+context.close();
 browser.close();
 }
 }
@@ -349,6 +353,7 @@ mvn compile exec:java -Dexec.mainClass="com.lambdatest.PlaywrightAndroidTest"
 ```csharp title="PlaywrightAndroidTest.cs"
 using Microsoft.Playwright;
 using System.Text.Json;
+using System.Web;
 
 var capabilities = new Dictionary<string, object>
 {
@@ -370,10 +375,10 @@ var capabilities = new Dictionary<string, object>
 };
 
 var capsJson = JsonSerializer.Serialize(capabilities);
-var cdpUrl = $"wss://cdp.lambdatest.com/playwright?capabilities={Uri.EscapeDataString(capsJson)}";
+var cdpUrl = $"wss://cdp.lambdatest.com/playwright?capabilities={HttpUtility.UrlEncode(capsJson)}";
 
 using var playwright = await Playwright.CreateAsync();
-var browser = await playwright.Chromium.ConnectAsync(cdpUrl);
+var browser = await playwright.Chromium.ConnectOverCDPAsync(cdpUrl);
 var context = browser.Contexts.Count > 0
 ? browser.Contexts[0] : await browser.NewContextAsync();
 var page = context.Pages.Count > 0
@@ -402,6 +407,7 @@ $"lambdatest_action: {{\"action\": \"setTestStatus\", \"arguments\": {{\"status\
 }
 
 await page.CloseAsync();
+await context.CloseAsync();
 await browser.CloseAsync();
 ```
 

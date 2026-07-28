@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-**Audit Logs** give you a permanent, searchable record of every important action in your SmartUI projects: who did it, when, and what changed. Use them for compliance, accountability, and tracing baseline history across projects, builds, and individual screenshots.
+**Audit Logs** give you a permanent, searchable record of every important action in your SmartUI projects—who did it, when, and what changed. Use them for compliance, accountability, and tracing baseline history across projects, builds, and individual screenshots.
 
 ## Why use Audit Logs
 
@@ -43,11 +43,11 @@ For a **single screenshot**, the **screenshot-level** log is that asset’s base
 
 ## What each level shows
 
-**Project history**: Project created/deleted; settings updated; builds merged to baseline.
+**Project history** — Project created/deleted; settings updated; builds merged to baseline.
 
-**Build history**: Build created/completed/failed; re-runs (re-execute vs re-run comparison); bulk approve/reject; build deleted.
+**Build history** — Build created/completed/failed; re-runs (re-execute vs re-run comparison); bulk approve/reject; build deleted.
 
-**Screenshot history**: Approvals and rejections (single and bulk); live comparisons; ignore zones/annotations; screenshot added/deleted.
+**Screenshot history** — Approvals and rejections (single and bulk); live comparisons; ignore zones/annotations; screenshot added/deleted.
 
 ## What each log entry contains
 
@@ -65,15 +65,15 @@ Every event shows **who**, **when**, and **what**:
 
 Use filters to narrow by **who** (user or system), **what** (event type), **branch**, or **screenshot name**.
 
-**By user or system**: Filter by specific users for accountability, or by **System** to see only automated events (e.g. auto-approvals).
+**By user or system** — Filter by specific users for accountability, or by **System** to see only automated events (e.g. auto-approvals).
 
-**By event type**: e.g. Approve, Reject, Merged to Baseline, Build Re-executed.
+**By event type** — e.g. Approve, Reject, Merged to Baseline, Build Re-executed.
 
-**By branch**: Restrict to a Git branch.
+**By branch** — Restrict to a Git branch.
 
-**By screenshot name**: Search for a specific snapshot.
+**By screenshot name** — Search for a specific snapshot.
 
-**Bulk actions**: One event per bulk approve/reject; hover or click to see a visual preview of the screenshots included.
+**Bulk actions** — One event per bulk approve/reject; hover or click to see a visual preview of the screenshots included.
 
 ## Common scenarios: how to get the answer
 
@@ -113,5 +113,5 @@ Use the **Event type** filter in the UI to restrict to these categories.
 
 ## Related documentation
 
-- [Approval & Baseline Management](/support/docs/smartui-approval-workflow-guide/): How approve, reject, move, and merge affect baselines.
-- [Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/): How bulk actions work and how they appear in audit logs.
+- [Approval & Baseline Management](/support/docs/smartui-approval-workflow-guide/) — How approve, reject, move, and merge affect baselines.
+- [Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/) — How bulk actions work and how they appear in audit logs.

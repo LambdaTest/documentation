@@ -46,3 +46,12 @@ use the value of {{secrets.user.email}} in the email text field
 **Step 2:** Click on the settings icon > Secrets.
 **Step 3:** Click on the **delete** icon to update that respective secret value.
 **Step 4:** Provide the secret value and click on the confirmation button.
+
+# Data Masking & Anonymization
+
+TestMu AI protects sensitive data in tests through synthetic substitution and capture-time masking.
+
+- **AI Autofill (synthetic substitution)** - generates realistic substitute values against your real dataset structure, so production values are replaced rather than encoded. No mapping between original and substituted values is retained, removing the re-identification vector.
+- **Secret variables (HashiCorp Vault)** - values marked as secret are resolved at runtime from HashiCorp Vault and are never written to action logs, session logs, screenshots (known secret values are redacted from screenshot OCR before upload), video recordings, run summaries, or reports.
+- **Lambda Masking** - hides sensitive data in recorded test commands and session recordings.
+- **SmartUI PII masking** - masks PII regions in visual snapshots. Masking is enforced at capture time, not applied post-hoc, so masked data is never persisted in artifacts.
