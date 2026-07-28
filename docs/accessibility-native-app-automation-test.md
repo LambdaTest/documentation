@@ -13,6 +13,10 @@ canonical: https://www.testmuai.com/support/docs/accessibility-native-app-automa
 
 Native App Automation uses **Appium** with the **`lambda-accessibility-scan`** hook to generate accessibility results during **Android** or **iOS** test runs on the TestMu AI grid.
 
+:::warning
+Scans on real devices are **hook driven only**. The `accessibility.autoscan` capability used in web automation is **not supported on real devices**, so a full app flow cannot be scanned automatically. Call `lambda-accessibility-scan` at every screen you want covered. See [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
+:::
+
 ## When to use this
 
 Use this page when your team **already runs Appium** for functional tests and wants accessibility checks in the **same execution path** with deterministic checkpoints.

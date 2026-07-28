@@ -56,6 +56,12 @@ In automation there is no scan-configuration panel. The scan scope is supplied t
 Per-rule enable/disable picking is a **Manual-only** feature and is not used in automation. In automation, the rule set is computed from the WCAG version plus the group toggles.
 :::
 
+:::warning
+**autoScan is not supported on real devices.** The `accessibility.autoscan` capability is a **web automation** capability only. It cannot be used to scan a whole app flow on a real device the way it scans a whole web flow on desktop.
+
+On real devices, every scan must be triggered explicitly with the `lambda-accessibility-scan` hook at each stable screen. A screen that is never followed by a hook call is never scanned. See [Automating Accessibility Testing with Selenium](/support/docs/accessibility-automation-test/) for autoScan on web.
+:::
+
 ## When to use this
 
 Use these capabilities when users **already run Appium** against <BrandName /> real devices and want each accessibility scan scoped to a specific WCAG target and set of rule groups, without opening a UI. See [Native App Automation Appium (Overview)](/support/docs/accessibility-native-app-automation-test/) for the surrounding test setup and the `lambda-accessibility-scan` hook.
@@ -79,6 +85,7 @@ Use these capabilities when users **already run Appium** against <BrandName /> r
 Notes:
 
 - Defaults apply only when `accessibility` is `true` and the specific capability is omitted.
+- `accessibility.autoscan` is deliberately absent from this table. It is a web automation capability and is **not supported for app automation on real devices**. Use the `lambda-accessibility-scan` hook instead.
 - `accessibility.aiEnabled` is the same AI toggle used elsewhere in accessibility; it is reused here.
 - A backend capability `accessibility.needsReview` also exists but is not part of the standard automation scan config (defaults off).
 

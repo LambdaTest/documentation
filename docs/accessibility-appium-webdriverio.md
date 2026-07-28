@@ -30,13 +30,16 @@ export const config = {
     'appium:deviceName': 'Pixel.*',
     'appium:app': 'lt://APP_ID',
     'accessibility': true,
-    // 'accessibility.autoscan': true,
   }],
   // host/user/key per your standard WDIO LambdaTest preset
 };
 ```
 
 Match keys to your Appium server version (`appium:` prefix for W3C caps).
+
+:::warning
+`accessibility.autoscan` is a **web automation** capability and is **not supported on real devices**. On real devices, each screen you want covered has to be scanned with the `lambda-accessibility-scan` hook. See [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
+:::
 
 ### 2. Call the hook after screens load
 
