@@ -58,9 +58,14 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **<BrandName /> Real Device Cloud platform**.
 
-## Objective
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+To upgrade or enable this feature for your account, please contact your <BrandName /> support representative. Alternatively, you can reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span> or email us at **support@testmuai.com**.
+:::
 
 ---
+
+## Objective
 
 By the end of this topic, you will be able to:
 

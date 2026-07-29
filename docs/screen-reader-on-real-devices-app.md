@@ -56,7 +56,12 @@ Manual accessibility testing is crucial to ensure that your mobile apps and webs
 
 <BrandName />'s Live Screen Reader feature empowers you to perform manual accessibility testing on real Android devices, allowing you to navigate through app elements with spoken descriptions of the UI, similar to the [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845) functionality. This feature enables comprehensive accessibility testing to ensure compliance with WCAG standards.
 
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Live** Plan.
+To upgrade or enable this feature for your account, please contact your <BrandName /> support representative. Alternatively, you can reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span> or email us at **support@testmuai.com**.
+:::
 
+---
 
 ## Accessing Screen Reader in Real Device App Testing
 

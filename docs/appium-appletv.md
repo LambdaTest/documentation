@@ -59,11 +59,14 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Apple TV testing provides broader device coverage, enhances user experience by validating remote-based navigation, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Apple TV models. 
 In this guide, you will learn how to set up and run your **Apple TV** automation testing scripts with **Appium** on the **<BrandName /> Real Device Cloud platform**.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br /> 
-
-## Objective
+:::note Plus Plan Feature
+This feature is available exclusively with the **Private Cloud** Plan.
+To upgrade or enable this feature for your account, please contact your <BrandName /> support representative. Alternatively, you can reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span> or email us at **support@testmuai.com**.
+:::
 
 ---
+
+## Objective
 
 By the end of this topic, you will be able to:
 
