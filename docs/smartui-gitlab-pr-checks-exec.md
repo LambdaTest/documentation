@@ -125,7 +125,7 @@ visual_regression_tests:
   
   before_script:
     - npm ci
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
   
   script:
     # Get GitLab project ID and commit SHA
@@ -182,7 +182,7 @@ visual_regression_tests:
   
   before_script:
     - mvn clean install -DskipTests
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
   
   script:
     # Get GitLab project ID and commit SHA
@@ -234,7 +234,7 @@ visual_regression_tests:
   
   before_script:
     - pip install -r requirements.txt
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
   
   script:
     # Get GitLab project ID and commit SHA
@@ -287,7 +287,7 @@ visual_regression_tests:
   
   before_script:
     - bundle install
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
   
   script:
     # Get GitLab project ID and commit SHA
@@ -429,7 +429,7 @@ visual_regression_tests:
   
   before_script:
     - npm ci
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
   
   script:
     - |
@@ -475,7 +475,7 @@ visual_regression_tests:
   
   before_script:
     - mvn clean install -DskipTests
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
   
   script:
     - |
@@ -523,7 +523,7 @@ visual_regression_tests:
   
   before_script:
     - npm ci
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
   
   script:
     - |
@@ -570,7 +570,7 @@ visual_regression_tests:
   
   before_script:
     - mvn clean install -DskipTests
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
   
   script:
     - |
@@ -643,7 +643,7 @@ visual_regression_tests:
 **Symptoms**: `npx smartui exec` command fails or doesn't run tests.
 
 **Solutions**:
-1. Verify SmartUI CLI is installed: `npm install -g @lambdatest/smartui-cli`
+1. Verify SmartUI CLI is installed: `npm install -g @lambdatest/smartui-cli@latest`
 2. Check that `PROJECT_TOKEN` environment variable is set
 3. Verify `.smartui.json` configuration file exists and is valid
 4. Ensure test command after `--` is correct

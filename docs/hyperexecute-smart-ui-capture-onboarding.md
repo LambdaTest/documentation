@@ -137,13 +137,13 @@ Install the required SmartUI CLI package. You can install it globally or locally
 ### Global Installation (Recommended)
 
 ```bash
-npm install -g @lambdatest/smartui-cli@4.1.54-beta.0
+npm install -g @lambdatest/smartui-cli@latest
 ```
 
 ### Local Installation
 
 ```bash
-npm install @lambdatest/smartui-cli@4.1.54-beta.0
+npm install @lambdatest/smartui-cli@latest
 ```
 
 :::tip Sample Repository
@@ -398,7 +398,7 @@ cacheDirectories:
 
 pre:
   # Install SmartUI CLI and dependencies
-  - npm install @lambdatest/smartui-cli@4.1.54-beta.0
+  - npm install @lambdatest/smartui-cli@latest
   - npm install playwright@1.57.0
   - npx playwright install
 
@@ -435,7 +435,7 @@ cacheDirectories:
   - ${CACHE_DIR}
 
 pre:
-  - npm install @lambdatest/smartui-cli@4.1.54-beta.0
+  - npm install @lambdatest/smartui-cli@latest
   - npm install playwright@1.57.0
   - npx playwright install
 
@@ -689,7 +689,7 @@ env:
   SMART_GIT: true  # Enable Smart Git for branch management
 
 pre:
-  - npm install @lambdatest/smartui-cli@4.1.54-beta.0
+  - npm install @lambdatest/smartui-cli@latest
 
 matrix:
   section: ["section1_category_a", "section2_category_b", "section3_category_c", "section4_category_d", "section5_category_e"]
@@ -795,7 +795,7 @@ env:
   PROJECT_TOKEN: ${PROJECT_TOKEN_CATEGORY_A}  # Unique token per project
 
 pre:
-  - npm install @lambdatest/smartui-cli@4.1.54-beta.0
+  - npm install @lambdatest/smartui-cli@latest
 
 testSuites:
   - npx smartui capture urls_category_a.json --config config.json --buildName "CategoryA-Build"
@@ -1171,7 +1171,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install @lambdatest/smartui-cli@4.1.54-beta.0
+          npm install @lambdatest/smartui-cli@latest
           npm install playwright@1.57.0
           npx playwright install
 

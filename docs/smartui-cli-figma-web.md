@@ -104,12 +104,12 @@ Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your pro
 
 **Global Installation (Recommended):**
 ```bash
-npm install -g @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli@latest
 ```
 
 **Local Installation:**
 ```bash
-npm install @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli@latest
 ```
 
 ### **Step 2:** Create the design configuration file

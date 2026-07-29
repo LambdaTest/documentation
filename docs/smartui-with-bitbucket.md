@@ -330,7 +330,7 @@ variables:
 3. Install SmartUI CLI explicitly:
    ```yaml
    script:
-     - npm install -g @lambdatest/smartui-cli
+     - npm install -g @lambdatest/smartui-cli@latest
    ```
 
 **Getting Help**

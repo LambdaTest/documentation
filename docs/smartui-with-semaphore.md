@@ -338,7 +338,7 @@ env_vars:
 3. Install SmartUI CLI explicitly:
    ```yaml
    commands:
-     - npm install -g @lambdatest/smartui-cli
+     - npm install -g @lambdatest/smartui-cli@latest
    ```
 
 **Getting Help**

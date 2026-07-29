@@ -92,7 +92,7 @@ cd smartui-puppeteer-sample/sdk
 Install required NPM modules for `TestMu AI SmartUI Puppeteer SDK` in your **Frontend** project.
 
 ```bash
-npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
+npm install @lambdatest/smartui-cli@latest @lambdatest/puppeteer-driver puppeteer
 ```
 
 :::note

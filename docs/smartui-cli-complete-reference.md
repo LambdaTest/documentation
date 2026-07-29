@@ -735,7 +735,7 @@ $env:LT_SDK_DEBUG="true"
 **Basic Static URL Capture**
 ```bash
 # 1. Install CLI
-npm install -g @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli@latest
 
 # 2. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -833,7 +833,7 @@ npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
   env:
     PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
   run: |
-    npm install -g @lambdatest/smartui-cli
+    npm install -g @lambdatest/smartui-cli@latest
     npx smartui exec --buildName "${{ github.sha }}" -- npm test
 ```
 **GitLab CI Example:**
@@ -842,7 +842,7 @@ test:
   variables:
     PROJECT_TOKEN: $PROJECT_TOKEN
   script:
-    - npm install -g @lambdatest/smartui-cli
+    - npm install -g @lambdatest/smartui-cli@latest
     - npx smartui exec --buildName "$CI_COMMIT_SHA" -- npm test
 ```
 </TabItem>

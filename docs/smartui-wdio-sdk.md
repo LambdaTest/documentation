@@ -91,7 +91,7 @@ cd smartui-wdio-sample
 Install required NPM modules for `LambdaTest SmartUI WebdriverIO SDK` in your **Frontend** project.
 
 ```bash
-npm install @lambdatest/smartui-cli @lambdatest/wdio-driver webdriverio wdio-lambdatest-service
+npm install @lambdatest/smartui-cli@latest @lambdatest/wdio-driver webdriverio wdio-lambdatest-service
 ```
 
 :::note

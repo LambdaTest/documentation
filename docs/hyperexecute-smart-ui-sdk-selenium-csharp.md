@@ -227,7 +227,7 @@ cacheDirectories:
 pre:
   - dotnet clean
   - dotnet build
-  - npm install @lambdatest/smartui-cli
+  - npm install @lambdatest/smartui-cli@latest
   - dotnet restore
   - npx smartui config:create .smartui.json
 

@@ -338,7 +338,7 @@ on:
 
 3. Install SmartUI CLI explicitly:
    ```yaml
-   - run: npm install -g @lambdatest/smartui-cli
+   - run: npm install -g @lambdatest/smartui-cli@latest
    ```
 
 **Getting Help**

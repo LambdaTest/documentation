@@ -90,7 +90,7 @@ steps:
       - git clone <REPO_URL>
       - cd <PROJECT_DIRECTORY>
       - echo "Installing SmartUI CLI"
-      - npm install @lambdatest/smartui-cli
+      - npm install @lambdatest/smartui-cli@latest
       - echo "Running SmartUI tests"
       - npx smartui --version
       - npx smartui config:create smartui-web.json
@@ -350,7 +350,7 @@ env:
 3. Install SmartUI CLI explicitly:
    ```yaml
    commands:
-     - npm install -g @lambdatest/smartui-cli
+     - npm install -g @lambdatest/smartui-cli@latest
    ```
 
 **Getting Help**

@@ -170,7 +170,7 @@ env:
   PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
 
 pre:
-  - npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+  - npm install @lambdatest/smartui-cli@latest @lambdatest/playwright-driver playwright
   - npx smartui config:create smartui-web.json
 
 post:
@@ -191,7 +191,7 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-  - npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+  - npm install @lambdatest/smartui-cli@latest @lambdatest/playwright-driver playwright
   - npx smartui config:create smartui-web.json
 ```
 :::

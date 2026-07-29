@@ -92,7 +92,7 @@ cd smartui-cypress-sdk-sample
 1. Install required NPM modules for `TestMu AI SmartUI Cypress SDK` in your **Frontend** project.
 
 ```bash
-npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
+npm install @lambdatest/smartui-cli@latest @lambdatest/cypress-driver cypress@v13
 ```
 
 :::note

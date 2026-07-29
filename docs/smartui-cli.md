@@ -86,12 +86,12 @@ Install required NPM modules for `TestMu AI SmartUI CLI` globally or in your pro
 
 **Global Installation (Recommended):**
 ```bash
-npm install -g @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli@latest
 ```
 
 **Local Installation:**
 ```bash
-npm install @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli@latest
 ```
 
 :::note
@@ -336,7 +336,7 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 steps:
   - name: Running SmartUI CLI Tests
     - run: |
-       npm install -g @lambdatest/smartui-cli
+       npm install -g @lambdatest/smartui-cli@latest
        npx playwright install-deps
        smartui capture urls.json --config smartui-web.json
 ```

@@ -93,7 +93,7 @@ cd smartui-k6-sample
 2. Install the required dependencies:
 
 ```bash
-npm install @lambdatest/smartui-cli @lambdatest/k6-driver
+npm install @lambdatest/smartui-cli@latest @lambdatest/k6-driver
 ```
 
 3. Install k6 by referring to the installation guide `https://k6.io/docs/get-started/installation/`:
@@ -355,7 +355,7 @@ smartuiSnapshot(response, "Page-Loaded");
 **Solutions**:
 1. Install required dependencies:
    ```bash
-   npm install @lambdatest/smartui-cli @lambdatest/k6-driver
+   npm install @lambdatest/smartui-cli@latest @lambdatest/k6-driver
    ```
 
 2. Set PROJECT_TOKEN environment variable:

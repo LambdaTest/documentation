@@ -92,7 +92,7 @@ cd smartui-testcafe-sample
 Install required NPM modules for `LambdaTest SmartUI Testcafe SDK` in your **Frontend** project.
 
 ```bash
-npm install @lambdatest/smartui-cli @lambdatest/testcafe-driver testcafe
+npm install @lambdatest/smartui-cli@latest @lambdatest/testcafe-driver testcafe
 ```
 
 :::note

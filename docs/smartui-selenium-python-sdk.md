@@ -109,7 +109,7 @@ source venv/bin/activate
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm install @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli@latest
 ```
 
 :::note

@@ -98,7 +98,7 @@ You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository
 - Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the `pom.xml` file:
 
 ```zsh
-npm install -g @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli@latest
 mvn clean compile
 ```
 
