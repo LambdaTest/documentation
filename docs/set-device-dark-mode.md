@@ -53,6 +53,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 <BrandName /> now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 
+:::note 🚀 Plus Plan Feature
+
+This feature is available exclusively on the **Plus Plan**.
+
+To upgrade or enable this feature for your account, please contact your <BrandName /> support representative. Alternatively, you can reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span> or email us at **support@testmuai.com**.
+
+:::
+
 ---
 
 ## Use Cases
