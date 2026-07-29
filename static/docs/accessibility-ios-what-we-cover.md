@@ -19,11 +19,11 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 | Dynamic Type Support | 1.4.4 | [Rule →](/support/docs/accessibility-ios-rule-dynamic-type-support/) |
 | Accessibility Label Not Punctuated | 3.3.2 | [Rule →](/support/docs/accessibility-ios-rule-accessibility-label-not-punctuated/) |
 | Missing Image Element Label | 1.1.1 | [Rule →](/support/docs/accessibility-ios-rule-missing-image-element-label/) |
-| Missing Button Element Label | 1.3.1 | [Rule →](/support/docs/accessibility-ios-rule-missing-button-element-label/) |
+| Missing Button Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-missing-button-element-label/) |
 | Button Element Capitalisation Check | 3.1.6 | [Rule →](/support/docs/accessibility-ios-rule-button-element-capitalisation-check/) |
-| Missing Checkbox Element Label | 1.3.1 | [Rule →](/support/docs/accessibility-ios-rule-missing-checkbox-element-label/) |
-| Missing Editable Element Label | 1.3.1 | [Rule →](/support/docs/accessibility-ios-rule-missing-editable-element-label/) |
-| Missing Switch Element Label | 1.3.1 | [Rule →](/support/docs/accessibility-ios-rule-missing-switch-element-label/) |
+| Missing Checkbox Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-missing-checkbox-element-label/) |
+| Missing Editable Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-missing-editable-element-label/) |
+| Missing Switch Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-missing-switch-element-label/) |
 | Duplicate Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-duplicate-accessibility-label/) |
 
 ## Manual test checklist
