@@ -90,15 +90,15 @@ These two navigation methods function similarly, performing the same actions wit
 
 For the **Screen Reader** feature on android devices , use the following keyboard shortcuts to trigger the different actions :
 
-| TalkBack Action | MacOS Keyboard Shortcut | Windows Keyboard Shortcut |
-|-----------------|-------------------------|---------------------------|
-| Move to previous/next item | Control + Option + Left/Right Arrow | Ctrl + Alt + Left/Right Arrow |
-| Activate/open element | Control + Option + Space | Ctrl + Alt + Space |
-| Go back | Esc | Esc |
-| Pause or resume speech | Control + Option + Z | Ctrl + Alt + Z |
-| Read from next item | Control + Option + P | Ctrl + Alt + P |
-| Move up the slider | Control + Option + U | Ctrl + Alt + U |
-| Move down the slider | Control + Option + D | Ctrl + Alt + D |
-| Go to Home screen | Control + Option + H | Ctrl + Alt + H |
-| Go to Recents | Control + Option + R | Ctrl + Alt + R |
-| Go to Quick Settings | Control + Option + Q | Ctrl + Alt + Q |
+| TalkBack Action               | MacOS Keyboard Shortcut                 | Windows Keyboard Shortcut        |
+|-------------------------------|-----------------------------------------|----------------------------------|
+| Move to previous/next item    | Control + Option + (Left/Right Arrow)   | Ctrl + Alt + (Left/Right Arrow)  |
+| Activate/open element         | Control + Option + Space                | Ctrl + Alt + Space               |
+| Go back                       | Esc                                     | Esc                              |
+| Pause or resume speech        | Control + Option + Z                    | Ctrl + Alt + Z                   |
+| Read from next item           | Control + Option + P                    | Ctrl + Alt + P                   |
+| Move up the slider            | Control + Option + U                    | Ctrl + Alt + U                   |
+| Move down the slider          | Control + Option + D                    | Ctrl + Alt + D                   |
+| Go to Home screen             | Control + Option + H                    | Ctrl + Alt + H                   |
+| Go to Recents                 | Control + Option + R                    | Ctrl + Alt + R                   |
+| Go to Quick Settings          | Control + Option + Q                    | Ctrl + Alt + Q                   |
