@@ -65,6 +65,12 @@ The invocation syntax differs by framework.
 ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
 ```
 
+Some Selenium hooks (AutoHeal, Lighthouse, accessibility scan) instead take a JSON payload via the `lambdatest_executor` form:
+
+```java
+driver.executeScript("lambdatest_executor:{\"action\":\"lambda-heal-start\"}");
+```
+
 **Playwright** — pass a `lambdatest_action` JSON payload as the argument of an (empty) `page.evaluate` call:
 
 ```javascript
@@ -81,6 +87,8 @@ These capabilities are available in both frameworks. Note that the hook name and
 | **Group commands into test cases** (annotations in the command-logs view) | `driver.executeScript("lambda-testCase-start=login flow");`<br />`// ...test steps...`<br />`driver.executeScript("lambda-testCase-end=login flow");` | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-start", "arguments": {"name": "login flow"}}');`<br />`// ...test steps...`<br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-end", "arguments": {"name": "login flow"}}');` |
 | **Update the test name during execution** | `driver.executeScript("lambdaUpdateName=TestName");` | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambdaUpdateName", "arguments": {"name": "TestName"}}');` |
 | **Fetch IPs from the outbound domain** | `driver.executeScript("lambda-unbound-ping=lambdatest.com");` | Use the `lambda-unbound-ping` action via the `lambdatest_action` pattern. |
+| **Generate a Lighthouse performance report** | `driver.executeScript("lambdatest_executor:{\"action\":\"lighthouseReport\"}");`<br /><br />Lighthouse reports are also generated automatically on navigation when the `performance` capability is enabled. | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lighthouseReport"}');` |
+| **Run an accessibility scan** | `driver.executeScript("lambdatest_executor:{\"action\":\"lambda-accessibility-scan\"}");` | Use the `lambda-accessibility-scan` action via the `lambdatest_action` pattern. |
 
 ## Selenium-only Lambda Hooks
 ---
@@ -107,6 +115,7 @@ These hooks work only through the Selenium JavascriptExecutor and are not availa
 | *lambda-clear-clipboard*     | Clears the data of the clipboard.<br/>`driver.executeScript("lambda-clear-clipboard");`|
 | *lambda:network*        | Fetches the network log entries in array format during session.<br/><br/>`driver.execute_script("lambda:network");`- Fetch the network log from last fetch request time to current time.<br/><br/>`driver.execute_script("lambda:network=all");`- Fetch from start of test session to current time.
 | *lambda-test-tags* | Dynamically update your test tags for a test session which can be used to organize and filter your test results. <br /> **Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");` <br /> <br /> **Limitations :** <br /> **1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.  <br /> **2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
+| *lambda-heal-start* / *lambda-heal-stop* | Enables / disables [AutoHeal](/support/docs/autoheal-with-hooks/) for the portion of the test between the two calls, so locator failures are healed automatically.<br/>`driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')`<br/>`// ...steps with dynamic locators...`<br/>`driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')` |
 
 ## Playwright-only Lambda Hooks
 ---
@@ -116,7 +125,6 @@ These hooks are available only in Playwright (and other CDP-based) sessions, usi
 | ------------- | ------------ |
 | *getTestDetails* | Returns details of the running test, such as the test ID and session information.<br/>`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "getTestDetails"}');` |
 | *lambdaSetBrowserPosition* | Sets the browser window position (useful when running multiple browser windows in a single session). |
-| *lighthouseReport* | Generates a Lighthouse performance report for the current page. (In Selenium sessions, Lighthouse reports are generated automatically on navigation when the `performance` capability is enabled — no hook is needed.) |
 
 > **Note**: These hooks only work if you are connected to your [TestMu AI Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment` 
 
