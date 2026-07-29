@@ -3254,7 +3254,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Smart TV Automation",
-            items: ["appium-appletv", "appium-firetv", "appium-rokutv", "appium-androidtv"],
+            items: ["appium-appletv", "appium-firetv", "appium-androidtv"],
           },
           {
             type: "category",
