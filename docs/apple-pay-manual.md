@@ -27,7 +27,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 With <BrandName /> App Live, you can test Apple Pay flows on **Real iOS Devices**. This guide walks you through enabling Apple Pay, configuring wallets, running the application, and completing transactions manually.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Live** Plan.
+To upgrade or enable this feature for your account, please contact your <BrandName /> support representative. Alternatively, you can reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span> or email us at **support@testmuai.com**.
+:::
+
 
 ---
 

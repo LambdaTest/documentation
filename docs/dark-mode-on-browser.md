@@ -54,6 +54,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName />’s **Dark Mode** feature allows you to manually toggle between light and dark themes on **real iOS and Android devices** during manual testing sessions.  
 This enables testers to validate UI appearance, color contrast, and theme switching for both mobile apps and web applications without writing automation scripts.
 
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Live** Plan.
+To upgrade or enable this feature for your account, please contact your <BrandName /> support representative. Alternatively, you can reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span> or email us at **support@testmuai.com**.
+:::
+
+---
+
 ## Use Cases
 
 - Validate app UI elements render correctly in dark mode.

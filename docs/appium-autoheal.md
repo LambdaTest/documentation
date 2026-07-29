@@ -42,7 +42,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 > Smart Heal is currently in **closed beta**. To enable it for your organization, reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email **support@testmuai.com**.
 
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+To upgrade or enable this feature for your account, please contact your <BrandName /> support representative. Alternatively, you can reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span> or email us at **support@testmuai.com**.
+:::
+
 ---
+
 ## Use Cases
 
 - **Frequent UI Updates**: When product teams ship fast and locator changes are common, Smart Heal prevents brittle tests from breaking on every release and make shipments fast.
