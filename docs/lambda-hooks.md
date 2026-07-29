@@ -51,7 +51,7 @@ TestMu AI offers a set of hooks (Lambda Hooks) that you can use to modify your a
 
 Hooks are grouped into three categories so you can quickly find what applies to your framework:
 
-- **Common Lambda Hooks** — available in both Selenium and Playwright sessions
+- **Common Lambda Hooks** — capabilities available in both Selenium and Playwright sessions
 - **Selenium-only Lambda Hooks** — available only via the Selenium JavascriptExecutor
 - **Playwright-only Lambda Hooks** — available only in Playwright (and other CDP-based) sessions
 
@@ -73,17 +73,29 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 
 ## Common Lambda Hooks (Selenium & Playwright)
 ---
-These hooks are implemented for both Selenium and Playwright sessions. The examples below use the Selenium JavascriptExecutor syntax; in Playwright, invoke the same hook through the `lambdatest_action` pattern shown above, using the hook name as the `action`.
+These capabilities are available in both frameworks. Note that the hook name and syntax differ per framework — use the form shown for your framework.
+
+| Capability | Selenium | Playwright |
+| ------------- | ------------ | ------------ |
+| **Set test status** | `driver.executeScript("lambda-status=passed");`<br /><br />Supported values: `passed`, `failed`, `skipped`, `ignored`, `unknown`, `error` | Use the `setTestStatus` action (also supports a remark shown on the dashboard):<br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title matched"}}');` |
+| **Group commands into test cases** (annotations in the command-logs view) | `driver.executeScript("lambda-testCase-start=login flow");`<br />`// ...test steps...`<br />`driver.executeScript("lambda-testCase-end=login flow");` | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-start", "arguments": {"name": "login flow"}}');`<br />`// ...test steps...`<br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-end", "arguments": {"name": "login flow"}}');` |
+| **Update the test name during execution** | `driver.executeScript("lambdaUpdateName=TestName");` | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambdaUpdateName", "arguments": {"name": "TestName"}}');` |
+| **Fetch IPs from the outbound domain** | `driver.executeScript("lambda-unbound-ping=lambdatest.com");` | Use the `lambda-unbound-ping` action via the `lambdatest_action` pattern. |
+
+## Selenium-only Lambda Hooks
+---
+These hooks work only through the Selenium JavascriptExecutor and are not available in Playwright sessions.
 
 | Lambda Hooks | Descriptions |
 | ------------- | ------------ |
-| *lambda-status* | Check whether the test is passed or failed.<br />For Passed Test:<br />`driver.executeScript("lambda-status=passed");`<br />For Failed Test:<br />`driver.executeScript('lambda-status=failed');`<br />  <br /> `((JavascriptExecutor) driver).executeScript("lambda-status=" + "passed");` <br /><br /> Here are some newly added status you can use for interpreting test execution results: `skipped`, `ignored`, `unknown`, `error` |
 | *lambda-file-exists*  | Check whether the downloaded file exists in the test machine.<br />`((JavascriptExecutor) driver).executeScript("lambda-file-exists=file-name.file_format");` |
 | *lambda-file-stats*  |  Retrieve file metadata such as md5 code, modified time, name and size.<br />`((JavascriptExecutor) driver).executeScript("lambda-file-stats=file-name.file_format");` |
 | *lambda-file-content*  |  Download file content using base64 encoding.<br />`((JavascriptExecutor) driver).executeScript("lambda-file-content=file-name.file_format");` |
 | *lambda-file-list*  |  List down the file in download directory.<br />`print driver.execute_script("lambda-file-list={match string with filename}");` <br />`ie:print driver.execute_script("lambda-file-list=sample");Response: List of files in downloads dir starting with sample` |
+| *lambda-files-delete*        | Deletes the file in the download directory in the virtual machines (VMs).<br/>`driver.executeScript("lambda-files-delete=file1.csv,file2.csv);`|
 | *lambda-name*  |  For changing the test name.<br />`((JavascriptExecutor) driver).executeScript("lambda-name=TestName");` <br /> <br />`((JavascriptExecutor) driver).executeScript("lambda-name=" + "name from hooks");` |
 | *lambda-build*  |  For updating the build name.<br />`executeScript("lambda-build=BUILD_NAME");` |
+| *lambda-action*  |  Used to mark a test as passed/failed. Moreover, it allows the option to include a failure reason, which will be visible on the TestMu AI Automation Dashboard inside the session view.<br />`Map<String, String> action = new HashMap();action.put("status", "failed"); action.put("reason", "tmp reason"); driver.executeScript("lambda-action", action);` <br /> <br />`((JavascriptExecutor) driver).executeScript("lambda-action=" + "Lambda Error");` |
 | *lambda-perform-keyboard-events* | You can simulate keyboard shortcuts like **ctrl + c**, **ctrl + v** in automation test scenarios. This hook is supported on both Windows and MacOS. <br /> `js.executeScript("lambda-perform-keyboard-events:tab");`|
 | *lambda-breakpoint*          | Aborts the test execution to use the live interaction feature. <br/>`driver.executeScript("lambda-breakpoint=true");`|
 | *lambda-screenshot*          | Captures the async screenshot during test execution. <br/>`driver.executeScript("lambda-screenshot=true");`|
@@ -93,17 +105,6 @@ These hooks are implemented for both Selenium and Playwright sessions. The examp
 | *lambda-get-clipboard*       | Prints the clipboard data on the console.<br/>`driver.executeScript("lambda-get-clipboard");`|
 | *lambda-set-clipboard*       | Sets the clipboard data.<br/>`driver.executeScript("lambda-set-clipboard= Amit");`|
 | *lambda-clear-clipboard*     | Clears the data of the clipboard.<br/>`driver.executeScript("lambda-clear-clipboard");`|
-| *lambda-unbound-ping*        | Fetches the IPs from the outbound domain.<br/>`driver.executeScript("lambda-unbound-ping=lambdatest.com");`     
-| *lambdaUpdateName*        | Sets the test name during test execution.<br/><br/>`driver.executeScript("lambdaUpdateName=TestName");` | 
-
-## Selenium-only Lambda Hooks
----
-These hooks work only through the Selenium JavascriptExecutor and are not available in Playwright sessions.
-
-| Lambda Hooks | Descriptions |
-| ------------- | ------------ |
-| *lambda-action*  |  Used to mark a test as passed/failed. Moreover, it allows the option to include a failure reason, which will be visible on the TestMu AI Automation Dashboard inside the session view.<br />`Map<String, String> action = new HashMap();action.put("status", "failed"); action.put("reason", "tmp reason"); driver.executeScript("lambda-action", action);` <br /> <br />`((JavascriptExecutor) driver).executeScript("lambda-action=" + "Lambda Error");` |
-| *lambda-files-delete*        | Deletes the file in the download directory in the virtual machines (VMs).<br/>`driver.executeScript("lambda-files-delete=file1.csv,file2.csv);`|
 | *lambda:network*        | Fetches the network log entries in array format during session.<br/><br/>`driver.execute_script("lambda:network");`- Fetch the network log from last fetch request time to current time.<br/><br/>`driver.execute_script("lambda:network=all");`- Fetch from start of test session to current time.
 | *lambda-test-tags* | Dynamically update your test tags for a test session which can be used to organize and filter your test results. <br /> **Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");` <br /> <br /> **Limitations :** <br /> **1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.  <br /> **2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
 
@@ -113,11 +114,9 @@ These hooks are available only in Playwright (and other CDP-based) sessions, usi
 
 | Lambda Hooks | Descriptions |
 | ------------- | ------------ |
-| *setTestStatus* | Marks the test as passed or failed, with an optional remark shown on the Automation Dashboard.<br/>`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title matched"}}');` |
-| *lambda-testCase-start* / *lambda-testCase-end* | Groups the commands executed between the two calls under a named test case (annotation) in the command logs view of the Automation Dashboard.<br/>`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-start", "arguments": {"name": "login flow"}}');`<br/>`// ...test steps...`<br/>`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-end", "arguments": {"name": "login flow"}}');` |
 | *getTestDetails* | Returns details of the running test, such as the test ID and session information.<br/>`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "getTestDetails"}');` |
 | *lambdaSetBrowserPosition* | Sets the browser window position (useful when running multiple browser windows in a single session). |
-| *lighthouseReport* | Generates a Lighthouse performance report for the current page. |
+| *lighthouseReport* | Generates a Lighthouse performance report for the current page. (In Selenium sessions, Lighthouse reports are generated automatically on navigation when the `performance` capability is enabled — no hook is needed.) |
 
 > **Note**: These hooks only work if you are connected to your [TestMu AI Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment` 
 
