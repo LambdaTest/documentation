@@ -29,7 +29,8 @@ With <BrandName /> App Live, you can test Apple Pay flows on **Real iOS Devices*
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Real Device Plus Live** Plan.
-To upgrade or enable this feature for your account, please contact your <BrandName /> support representative. Alternatively, you can reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span> or email us at **support@testmuai.com**.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
 :::
 
 
