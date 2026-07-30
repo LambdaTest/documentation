@@ -279,6 +279,8 @@ This sits between Ignore Region, which drops the area from validation completely
 
 > **Note:** The Layout Region option is available for web captures and PDF comparisons. It is not offered for real device tests, app SDK tests, Storybook projects, Figma projects, or single image uploads through the API.
 
+> **Important:** On **web** comparisons this works only when the DOM was recorded at capture time. SmartUI CLI and SDK captures record it automatically. Captures taken inside an automation session need DOM recording enabled for your organization, and builds made from an uploaded image never carry a DOM. When it is missing the region quietly behaves like an Ignore Region. See [DOM Recording Requirement](/support/docs/smartui-layout-regions/#dom-recording-requirement-for-web-comparisons). PDF comparisons are not affected.
+
 **Example**
 
 Validating that an order summary table still has all of its rows and columns, while the order numbers and timestamps inside it change on every run.
@@ -528,6 +530,7 @@ Follow these best practices to get the most out of the annotation tool:
 
 **Solutions:**
 - This is expected for content only changes. A layout region reports elements that were added, removed, or moved, not text or value changes
+- On a web comparison, confirm the DOM was recorded for the build. Without it the region can only behave like an ignore region. See [DOM Recording Requirement](/support/docs/smartui-layout-regions/#dom-recording-requirement-for-web-comparisons)
 - Verify the region covers the elements you expect. An element belongs to the region when its center falls inside the box
 - Reduce very large regions. A region drawn over an element heavy page falls back to plain ignore behavior
 - See [Layout Regions](/support/docs/smartui-layout-regions/) for the full behavior and limitations
