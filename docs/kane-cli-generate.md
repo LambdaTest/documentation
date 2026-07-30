@@ -110,7 +110,7 @@ kane-cli generate "test the login flow described in the attached spec" --files .
 
 The files are sent along with your description and reflected in the generated scenarios and cases: attach a spec, a screenshot of the UI, a PDF or Word document, or a CSV of inputs.
 
-- **Supported types**: documents (`.txt`, `.json`, `.xml`, `.csv`, `.pdf`, `.docx`, `.xlsx`), images (`.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.webp`), audio (`.mp3`, `.wav`, `.m4a`), and video (`.mp4`, `.mov`, `.webm`, `.mpeg`, `.mpga`).
+- **Supported types**: documents (`.txt`, `.md`, `.json`, `.xml`, `.csv`, `.pdf`, `.docx`, `.xlsx`), images (`.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`, `.webp`), audio (`.mp3`, `.wav`, `.m4a`), and video (`.mp4`, `.mov`, `.webm`, `.mpeg`, `.mpga`).
 - **Limits**: up to **10 files**, each **50 MB** or smaller.
 - **Checked before anything is sent**: all paths are validated as a set. If any is missing, an unsupported type, too large, or over the count, the command stops and lists the offending paths so nothing is uploaded by mistake. Files outside the current directory are allowed but flagged with a warning.
 - **Not with `--save`**: files attach to a generation or refine, not a save (`--files` with `--save` is rejected).
