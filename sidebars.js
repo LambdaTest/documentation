@@ -1708,6 +1708,11 @@ module.exports = {
             label: "Choose Your Tool",
             id: "accessibility-choosing-the-right-tool",
           },
+          {
+            type: "doc",
+            label: "Agent Skills",
+            id: "accessibility-agent-skills",
+          },
         ],
       },
       {
