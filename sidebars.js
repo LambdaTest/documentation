@@ -2984,6 +2984,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Layout Regions",
+            id: "smartui-layout-regions",
+          },
+          {
+            type: "doc",
             label: "customCSS",
             id: "smartui-custom-css",
           },
