@@ -20,7 +20,7 @@ On-screen text should be sized in scale-independent pixels (`sp`) so it responds
 The scanner examines whether on-screen text is sized in `sp` (scale-independent pixels) — the only Android text unit that responds to the user's system-wide font-size preference. Text sized in fixed units (`dp`, `px`, `pt`, `in`, `mm`) renders at a fixed size no matter what the user configures.
 
 :::note
-The required device data is available on Android 11+ only; on older devices the rule reports **Incomplete** rather than passing silently.
+The required device data is available on Android 11+ only; on older devices the rule passes silently rather than flagging an issue.
 :::
 
 ## Why it matters
