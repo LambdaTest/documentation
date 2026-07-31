@@ -4,7 +4,7 @@
 
 TestMu AI now offers you the chance to integrate HyperExecute with products like Tosca, Katalon and more. You can go through the links below to see the integrations we offer at the moment.
 
-    Accelq
+    ACCELQ
     Perform codeless automated functional and API testing using Acceelq.
 
     algoQA

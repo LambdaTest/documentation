@@ -92,7 +92,7 @@ Use the following arguments in your command line.
 |**ARGUMENTS**|**EXAMPLES**|**DESCRIPTION**|
 | --- | --- | --- |
 |`--proxy-host`|abc.wonderproxy.com|Full hostname for the proxy you’d like to use.|
-|`--key`|123asd123|Helps Lambdatest to map a tunnel connection with the right user.|
+|`--key`|123asd123|Helps LambdaTest to map a tunnel connection with the right user.|
 |`--proxy-port`|12345|The port declared by you for fetching the proxy.|
 |`--proxy-pass`|hijklmnop|WonderProxy password of the user.|
 |`--proxy-user`|abcdefg|WonderProxy username of the user.|

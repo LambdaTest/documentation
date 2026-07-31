@@ -10,7 +10,7 @@ By integrating UiPath with TestMu AI's real device cloud, you can enhance your m
 
 **Step 1:** Log in to your UiPath account. From the right side, click on **Download Studio Desktop**.
 
-**Step 2:** Download and install the UIPath Studio and ensure that your Chrome and Edge browser are closed as it scans for them. After successful installation the dashboard will open up.
+**Step 2:** Download and install the UiPath Studio and ensure that your Chrome and Edge browser are closed as it scans for them. After successful installation the dashboard will open up.
 
 **Step 3:** Now head to the **"New from template"** section and click on Mobile Testing.
 

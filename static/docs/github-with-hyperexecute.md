@@ -52,7 +52,7 @@ $ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
 
 ## Integrating HyperExecute With GitHub CI
 
-To integrate GitHub CI with HyperExecute, you need to make use of the Hyperexecute CLI. HyperExecute CLI is a command line client to interact and run tests on HyperExecute and provides a host of other useful features that accelerate test execution.
+To integrate GitHub CI with HyperExecute, you need to make use of the HyperExecute CLI. HyperExecute CLI is a command line client to interact and run tests on HyperExecute and provides a host of other useful features that accelerate test execution.
 
 For triggering tests using HyperExecute CLI, you have to download the HyperExecute CLI binary corresponding to the platform (or OS) from where the tests are triggered: Below are the HyperExecute CLI download links for different operating systems:
 
