@@ -100,7 +100,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.testmuai.com/support/docs/accelq-integration/">Accelq Integration With <BrandName /></a>
+<a href="https://www.testmuai.com/support/docs/accelq-integration/">ACCELQ Integration With <BrandName /></a>
 </div>
 
 <div className="download_btn mb-10">

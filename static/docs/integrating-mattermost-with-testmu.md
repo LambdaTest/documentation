@@ -54,7 +54,7 @@ Now click on **"Create Bug"** button to send the bug directly to Mattermost work
 
 **Step 6:** After you click on **"Create Bug"**, you will be able to observe it being successfully marked through a single click effort. You will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message "**Bug successfully marked**" indicating that the screenshot has been pushed to your Mattermost workspace.
 
-Login to your workspace on Mattermost and you will be able to notice the marked bug in the set channel assigned to the set person. All the data you provided through Lambdatest form would already be presented in it. TestMu AI automatically includes test environment details and related screenshots in the screenshot as attachments.
+Login to your workspace on Mattermost and you will be able to notice the marked bug in the set channel assigned to the set person. All the data you provided through LambdaTest form would already be presented in it. TestMu AI automatically includes test environment details and related screenshots in the screenshot as attachments.
 
 A clickable link will be provided in the Mattermost channel along with the screenshot to instantly route users on their browser for a full screen view of the bug.
 

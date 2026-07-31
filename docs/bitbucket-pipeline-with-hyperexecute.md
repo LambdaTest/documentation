@@ -55,7 +55,7 @@ This document will show you how to integrate Bitbucket Pipelines with HyperExecu
 -	You need to have a Bitbucket Cloud account.
 -	Your workspace must have at least one repository.
  
-## How To Integrate Bitbucket Pipeline with Hyperexecute
+## How To Integrate Bitbucket Pipeline with HyperExecute
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -120,7 +120,7 @@ After configuring your environment variables, select **Commit file** at the bott
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-successful.png').default} alt="Create New Project" width="" height=""/>
 
 
-**Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
+**Below is an example of a HyperExecute job that was triggered through the above pipeline:**
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
 
 ## Sample Bitbucket Workflow File

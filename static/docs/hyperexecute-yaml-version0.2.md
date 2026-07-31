@@ -16,7 +16,7 @@ This version introduces several new features and improvements over Version 0.1. 
 
 ## ```framework```
 
-The ```framework``` field in Hyperexecute YAML Version 0.2 allows you to configure the test framework settings. It provides more flexibility and customization options for your testing needs with the following parameters.
+The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configure the test framework settings. It provides more flexibility and customization options for your testing needs with the following parameters.
 
 | Parameters | Type | Mandatory | Description|
 |:---|:--|:---|:---|

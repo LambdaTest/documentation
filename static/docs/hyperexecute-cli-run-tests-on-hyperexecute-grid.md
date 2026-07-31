@@ -343,9 +343,9 @@ chmod +x hyperexecute
 
 ## Running HyperExecute CLI in Quiet Mode
 
-Each time a job is run in Hyperexecute, a large number of logs are produced. These logs are sometimes beneficial for thorough debugging and analysis, it occasionally overwhelms Continuous Integration (CI) systems with an excessive amount of logs, especially when handling a large number of test executions.
+Each time a job is run in HyperExecute, a large number of logs are produced. These logs are sometimes beneficial for thorough debugging and analysis, it occasionally overwhelms Continuous Integration (CI) systems with an excessive amount of logs, especially when handling a large number of test executions.
 
-Hyperexecute provides a **"Quiet mode"** as a solution to this issue and to give users more control over the logging output. By only displaying significant updates during the test execution, this enables you to run tests with less logs.
+HyperExecute provides a **"Quiet mode"** as a solution to this issue and to give users more control over the logging output. By only displaying significant updates during the test execution, this enables you to run tests with less logs.
 
 To enable the **Quiet Mode**, you need to paas these commands in your terminal and then trigger the command to execute your job.
 

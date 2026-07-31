@@ -19,10 +19,10 @@ HyperExecute serves as the backbone for managing and executing SikuliX automatio
 
 ## Benefits of Automating SikuliX with HyperExecute
 
-- **Build Visual UI tests:** SikuliX handles element identification, while Hyperexecute orchestrates test execution and reporting.
+- **Build Visual UI tests:** SikuliX handles element identification, while HyperExecute orchestrates test execution and reporting.
 
-- **Run tests across different machines:** Hyperexecute ensures consistent environments regardless of local configurations.
+- **Run tests across different machines:** HyperExecute ensures consistent environments regardless of local configurations.
 
-- **Automate legacy applications:** SikuliX tackles even outdated UIs, making Hyperexecute your vintage automation champion.
+- **Automate legacy applications:** SikuliX tackles even outdated UIs, making HyperExecute your vintage automation champion.
 
-- **Leverage multiple languages:** Choose your preferred scripting language for SikuliX, knowing Hyperexecute handles the execution infrastructure.
+- **Leverage multiple languages:** Choose your preferred scripting language for SikuliX, knowing HyperExecute handles the execution infrastructure.

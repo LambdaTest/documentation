@@ -215,7 +215,7 @@ axios.request(config)
 
 Trigger your test plan on HyperExecute.
 
-- Download the Hyperexecute CLI Binary based on the OS you use.
+- Download the HyperExecute CLI Binary based on the OS you use.
 
 | Platform | Download Link |
 |-----------|--------------|

@@ -58,7 +58,7 @@ After you click on **"Create personal access token",** you will get a prompt mes
 
 Your **API token** is now ready. Copy the token & store it safely with you, as you will not be able to find it again. Paste the copied token into TestMu AI GitLab Authentication.
 
-That’s it! Go to Integrations again and you will be able to notice a **green tick** indicating that GitLab is successfully installed. You can now experience bug logging in a fly from any of your running test session in Lambdatest to your repository directly by a single click.
+That’s it! Go to Integrations again and you will be able to notice a **green tick** indicating that GitLab is successfully installed. You can now experience bug logging in a fly from any of your running test session in LambdaTest to your repository directly by a single click.
 
 ## Logging Your First Bug Through GitLab Integration?
 

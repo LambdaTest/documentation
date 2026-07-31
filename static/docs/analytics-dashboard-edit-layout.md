@@ -10,16 +10,16 @@ This technical support document will walk you through the steps to utilize this 
 
 ## Prerequisites
 
-To use the new widget management feature in Lambdatest insights, ensure that you have the following:
+To use the new widget management feature in LambdaTest insights, ensure that you have the following:
 
-- An active Lambdatest account
+- An active LambdaTest account
 - Existing dashboards with widgets
 
 ## Step by Step Process to Use the Feature
 
-Follow these steps to utilize the new widget management feature in Lambdatest insights:
+Follow these steps to utilize the new widget management feature in LambdaTest insights:
 
-1. Log in to your Lambdatest account.
+1. Log in to your LambdaTest account.
 2. Go to Insights section in the sidebar menu.
 3. Navigate to the dashboard you want to customize.
 4. Click the 'Edit' button located at the top-right corner of the dashboard to enter the edit mode.

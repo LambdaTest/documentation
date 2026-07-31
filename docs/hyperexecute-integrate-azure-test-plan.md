@@ -84,7 +84,7 @@ testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filt
 
 **Step 5:** Trigger your test plan on HyperExecute.
 
-- Download the Hyperexecute CLI Binary based on the OS you use.
+- Download the HyperExecute CLI Binary based on the OS you use.
 
 | Platform | Download Link |
 |-----------|--------------|

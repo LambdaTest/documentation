@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Azure DevOps Pipeline Integration with Hyperexecute
+# Azure DevOps Pipeline Integration with HyperExecute
 * * *
 
 Azure DevOps offers developer services that enable teams to plan their work, collaborate on code development, and build and deploy applications. Azure DevOps fosters a collaborative culture and set of processes that bring together software developers, project managers, and contributors. It enables organizations to create and improve products at a much faster rate than traditional software development approaches allow.
@@ -56,7 +56,7 @@ Azure DevOps offers developer services that enable teams to plan their work, col
 
 This document will show you how to integrate Azure Devops Pipeline with HyperExecute to greatly shorten your test cycles.
 
-## How To Integrate Azure DevOps Pipeline with Hyperexecute
+## How To Integrate Azure DevOps Pipeline with HyperExecute
 
 ***
 
@@ -85,7 +85,7 @@ Next, you need to create a new pipeline. To create a new pipeline, click the **P
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/azure/2.png').default} alt="Create New Pipeline" width="" height=""/>
 
-### 4. Configure the Azure Pipeline YAML to Execute Hyperexecute CLI Binary:
+### 4. Configure the Azure Pipeline YAML to Execute HyperExecute CLI Binary:
 
 To configure the Azure DevOps pipeline YAML to execute the HyperExecute CLI Binary, run the following command: 
 
@@ -120,7 +120,7 @@ Here, the **main** branch is selected as the test repository to commit the Azure
 - **Steps:** In the **steps** section, declare the flow of the pipeline execution. 
 - **Script:** In the **script** section, state the command that you would like to execute in the following steps: 
     - Download a fresh version of the HyperExecute CLI binary
-    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains <BrandName /> username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
+    - Execute the HyperExecute CLI binary. (The HyperExecute CLI binary contains <BrandName /> username, access key and path   of the Yaml created for HyperExecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
 
 > **Note**: Ensure that your username and access key for your <BrandName /> account is visible in the script. 
 
@@ -141,7 +141,7 @@ To run the new pipeline that you just created, click the **Run** or **Save and R
 
 <p></p>
 
-**An example of a Hyperexecute job that was triggered through the above pipeline:**
+**An example of a HyperExecute job that was triggered through the above pipeline:**
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/azure/azure_execution2.png').default} alt="Create New Project" width="" height=""/>
 
 

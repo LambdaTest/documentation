@@ -207,7 +207,7 @@ Unlock the full potential of HyperExecute Analytics today and take your testing 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Hyperexecute 
+      HyperExecute 
       </span>
     </li>
   </ul>

@@ -8,7 +8,7 @@
 
 #### Rebranding & Package Updates
 
-- **MCP Hyperexecute** is now **MCP TestMu AI** to better reflect our expanded capabilities
+- **MCP HyperExecute** is now **MCP TestMu AI** to better reflect our expanded capabilities
 - Updated package name to `mcp-lambdatest` on NPM
 - Stable 1.0.0 release with comprehensive feature set
 

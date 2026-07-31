@@ -1,13 +1,13 @@
 ﻿---
 id: saucelabs-to-hyperexecute-migrate
-title: SauceLabs to HyperExecute
+title: Sauce Labs to HyperExecute
 hide_title: true
-sidebar_label: SauceLabs to HyperExecute
-description: Understand how to migrate from SauceLabs to HyperExecute
+sidebar_label: Sauce Labs to HyperExecute
+description: Understand how to migrate from Sauce Labs to HyperExecute
 keywords:
-  - TestMu AI Hyperexecute
-  - TestMu AI Hyperexecute help
-  - TestMu AI Hyperexecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migrate/
 site_name: TestMu AI
@@ -37,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "SauceLabs to HyperExecute",
+          "name": "Sauce Labs to HyperExecute",
           "item": `${BRAND_URL}/support/docs/saucelabs-to-hyperexecute-migrate/`
         }]
       })
@@ -64,13 +64,13 @@ There are several benefits to migrating your tests from Sauce Labs to HyperExecu
 
 - **Cost-Efficiency :** HyperExecute doesn't just offer superior [features](/support/docs/key-features-of-hyperexecute); it's also cost-effective. By reducing testing time and enhancing productivity, you can optimize your testing budget, allocating resources to other critical areas of your project.
 
-- **Seamless Integration :** HyperExecute provides out-of-the-box support for popular tools such as [Tosca](/support/docs/tosca-integration-with-hyperexecute/), [Katalon](/support/docs/katalon-integration-with-hyperexecute/), and [Accelq](/support/docs/hyperexecute-accelq-integration/). This means you can effortlessly integrate your testing workflow with your preferred tools, streamlining your testing processes.
+- **Seamless Integration :** HyperExecute provides out-of-the-box support for popular tools such as [Tosca](/support/docs/tosca-integration-with-hyperexecute/), [Katalon](/support/docs/katalon-integration-with-hyperexecute/), and [ACCELQ](/support/docs/hyperexecute-accelq-integration/). This means you can effortlessly integrate your testing workflow with your preferred tools, streamlining your testing processes.
 
 - **CI/CD Tools :** We offer robust support for [CI/CD](/support/docs/hyperexecute-integration-with-ci-cd-tools/) tools, allowing you to automate testing and release processes seamlessly, resulting in faster software delivery.
 
 ## Steps to Migrate
 
-To migrate your Test from SauceLabs to HyperExecute, you need to follow the below mentioned steps:
+To migrate your Test from Sauce Labs to HyperExecute, you need to follow the below mentioned steps:
 
 > For demonstration purposes, we'll be using Selenium with the TestNG framework in our examples.
 
@@ -166,8 +166,8 @@ jobLabel: [selenium-testng, mac, autosplit, migration]
 
 ```
 
-- Replace the SauceLabs Hooks with [<BrandName /> Hooks](/support/docs/lambda-hooks/) (if required). 
-- Update the SauceLabs Dependencies and Capabilities.
+- Replace the Sauce Labs Hooks with [<BrandName /> Hooks](/support/docs/lambda-hooks/) (if required). 
+- Update the Sauce Labs Dependencies and Capabilities.
 
 **Sauce Labs** 
 

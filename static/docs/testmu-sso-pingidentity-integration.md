@@ -42,7 +42,7 @@ Log in to your Ping Identity account using admin credentials.
 - In Pingidentity, select the **Manually Enter** option in **SAML Configuration** and enter **ACS URLs** and **Entity ID** copied from above step.
 
 ### Step 5: Configure Attribute Mappings
-- Copy following attribute from Lambdatest SSO setup.
+- Copy following attribute from LambdaTest SSO setup.
 
 - Go to the Attribute Mappings tab of the created application in PingIdentity.
 - Update the saml_object attribute value from user_ID to emailaddress.
