@@ -37,6 +37,13 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 | Traversal Order Does Not Match Visual Layout *(Beta)* | 2.4.3 | [Rule →](/support/docs/accessibility-android-rule-traversal-order-mismatch/) |
 | Dynamic Type Support | 1.4.4 | [Rule →](/support/docs/accessibility-android-rule-dynamic-type-support/) |
 | Non-Responsive Container Clips Text | 1.4.10 | [Rule →](/support/docs/accessibility-android-rule-non-responsive-container/) |
+| Unique Option Names | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-unique-option-names/) |
+| Invalid Range Values | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-invalid-range-values/) |
+| Images with Text | 1.1.1 | [Rule →](/support/docs/accessibility-android-rule-images-with-text/) |
+| Meaningful Sequence | 1.3.2 | [Rule →](/support/docs/accessibility-android-rule-meaningful-sequence/) |
+| Non-Focusable Interactive Element | 2.1.1 | [Rule →](/support/docs/accessibility-android-rule-non-focusable-interactive-element/) |
+| Minimum Text Size | Best Practice | [Rule →](/support/docs/accessibility-android-rule-minimum-text-size/) |
+| Text Spacing | 1.4.12 | [Rule →](/support/docs/accessibility-android-rule-text-spacing/) |
 
 ## Manual test checklist
 

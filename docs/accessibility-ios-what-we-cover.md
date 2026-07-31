@@ -42,6 +42,24 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 | Missing Editable Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-missing-editable-element-label/) |
 | Missing Switch Element Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-missing-switch-element-label/) |
 | Duplicate Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-duplicate-accessibility-label/) |
+| Emoji or Symbol Used in Accessibility Label | Best Practice | [Rule →](/support/docs/accessibility-ios-rule-emoji-symbol-label/) |
+| Fixed Orientation Lock | 1.3.4 | [Rule →](/support/docs/accessibility-ios-rule-fixed-orientation-lock/) |
+| Images with Text | 1.1.1 | [Rule →](/support/docs/accessibility-ios-rule-images-with-text/) |
+| Insufficient Touch Target Spacing | 2.5.8 | [Rule →](/support/docs/accessibility-ios-rule-insufficient-touch-target-spacing/) |
+| Interactive Role Undefined | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-interactive-role-undefined/) |
+| Invalid Range Values | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-invalid-range-values/) |
+| Meaningful Sequence | 1.3.2 | [Rule →](/support/docs/accessibility-ios-rule-meaningful-sequence/) |
+| Minimum Text Size | Best Practice | [Rule →](/support/docs/accessibility-ios-rule-minimum-text-size/) |
+| Mismatched Label Text | 2.5.3 | [Rule →](/support/docs/accessibility-ios-rule-mismatched-label-text/) |
+| Misplaced Field Label | 3.3.2 | [Rule →](/support/docs/accessibility-ios-rule-misplaced-field-label/) |
+| Non-accessible Interaction | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-non-accessible-interaction/) |
+| Non-Descriptive Link Text | 2.4.4 | [Rule →](/support/docs/accessibility-ios-rule-non-descriptive-link-text/) |
+| Overlapping Interactive Elements | 2.5.5 | [Rule →](/support/docs/accessibility-ios-rule-overlapping-interactive-elements/) |
+| Redundant Role Keyword in Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-redundant-role-label/) |
+| Redundant State Keyword in Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-redundant-state-label/) |
+| Traversal Order Does Not Match Visual Layout | 2.4.3 | [Rule →](/support/docs/accessibility-ios-rule-traversal-order-mismatch/) |
+| Two-Dimensional Scrolling Required | 1.4.10 | [Rule →](/support/docs/accessibility-ios-rule-two-dimensional-scrolling/) |
+| Unique Option Names | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-unique-option-names/) |
 
 ---
 

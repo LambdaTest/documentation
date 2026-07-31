@@ -30,9 +30,9 @@ TalkBack appends the role to every announcement. A Button labeled "Submit button
 
 ## Remediation guidance
 
-- identify nouns — find words like "button", "link", or "icon" in the label
-- strip the string — remove the noun (e.g., "Settings Icon" becomes "Settings")
-- assign a programmatic role instead — use the `Button` class, or `role = Role.Button` in Compose, so TalkBack announces it once, correctly
+- identify role keywords — find words like "button", "link", or "icon" in the label that describe the control's type
+- remove them — "Settings Icon" becomes "Settings"
+- assign the role programmatically instead — use the `Button` class, or `role = Role.Button` in Compose, so TalkBack announces it once, correctly
 
 ## Related docs
 

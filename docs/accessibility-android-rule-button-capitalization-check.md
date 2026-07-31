@@ -17,7 +17,7 @@ Button labels on Android should use consistent, sentence-style capitalization so
 
 ## What this rule checks
 
-The scanner reviews button labels — including clickable containers acting as buttons — for irregular capitalization: labels that begin with a lowercase letter, mid-word capitalization (e.g., "SubMit", "LogIn"), or a lowercase letter after a hyphen in hyphenated labels (e.g., "Sign-in" instead of "Sign-In").
+The scanner reviews button labels — including clickable containers acting as buttons — for irregular capitalization: labels that begin with a lowercase letter, mid-word capitalization (e.g., "SubMit", "LogIn"), or an unnecessary capital after a hyphen in hyphenated labels (e.g., "Sign-In" instead of "Sign-in").
 
 ## Why it matters
 
@@ -26,13 +26,13 @@ Screen readers use capitalization as a pronunciation cue. Irregular casing — a
 ## Common failure patterns
 
 - marketing-driven all-caps or camel-case strings ("BUY NOW", "LogIn") baked into the source text
-- hyphenated labels with inconsistent casing ("Sign-in", "Check-out")
+- hyphenated labels with inconsistent casing ("Sign-In", "Check-Out")
 
 ## Remediation guidance
 
 - use sentence case (e.g., "Save changes") in the underlying string instead of all caps or inconsistent capitalization
 - if a stylized all-caps look is desired visually, apply it through styling (`android:textAllCaps`) rather than in the source string, so the underlying accessible text remains normally cased
-- check hyphenated labels render as "Sign-In" style, not "Sign-in"
+- keep hyphenated labels in sentence case too — "Sign-in", not "Sign-In"
 
 ## Related docs
 
