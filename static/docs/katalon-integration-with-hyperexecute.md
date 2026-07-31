@@ -65,6 +65,6 @@ maxRetries: 1
 
 Paste the command that you generated from the Katalon UI to fill the **testRunnerCommand** field in the _hyperexecute.yaml_ file.
 
-5. Run the Hyperexecute CLI commands from the same path as your Katalon project.
+5. Run the HyperExecute CLI commands from the same path as your Katalon project.
 
 You have successfully integrated your Katalon Studio project with HyperExecute.

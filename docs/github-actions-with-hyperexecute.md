@@ -43,14 +43,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# GitHub Actions Pipeline Integration with Hyperexecute
+# GitHub Actions Pipeline Integration with HyperExecute
 * * *
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
 
 This document will show you how to integrate GitHub Actions Pipeline with HyperExecute to greatly shorten your test cycles.
 
-## How To Integrate GitHub Actions Pipeline with Hyperexecute
+## How To Integrate GitHub Actions Pipeline with HyperExecute
 
 ***
 
@@ -120,7 +120,7 @@ jobs:
 In the steps section, you should declare the execution commands.  
   - The first step in the above sample YAML changes the path of the root directory.
   - In the second step it downloads the HyperExecute CLI binary. 
-  - The third step is the execution command which executes The Hyperexecute CLI binary. This contains <BrandName /> username, access key, and path of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
+  - The third step is the execution command which executes The HyperExecute CLI binary. This contains <BrandName /> username, access key, and path of the Yaml created for HyperExecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 
 
 
@@ -137,7 +137,7 @@ To run the new pipeline that you just created, click the **Run workflow** button
 
 <p></p>
 
-**Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
+**Below is an example of a HyperExecute job that was triggered through the above pipeline:**
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/github/githubactions_execution.png').default} alt="Create New Project" width="" height=""/>
 
 >

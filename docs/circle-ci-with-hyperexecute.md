@@ -47,7 +47,7 @@ CircleCI allows you to build fully automated pipelines from testing to deploymen
 
 This document will show you how to integrate CircleCI Pipeline with HyperExecute to greatly shorten your test cycles.
 
-## How To Integrate CircleCI Pipeline with Hyperexecute
+## How To Integrate CircleCI Pipeline with HyperExecute
 
 ***
 
@@ -136,7 +136,7 @@ To make changes to your pipeline, either edit the .circleci/config.yml file in y
 
 
 
-**Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
+**Below is an example of a HyperExecute job that was triggered through the above pipeline:**
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/circle-ci/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
 
 >

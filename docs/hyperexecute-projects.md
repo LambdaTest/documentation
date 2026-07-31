@@ -157,7 +157,7 @@ In addition to custom projects, HyperExecute supports integration with specializ
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Hyperexecute Projects
+        HyperExecute Projects
       </span>
     </li>
   </ul>

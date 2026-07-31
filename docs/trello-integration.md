@@ -88,7 +88,7 @@ If you are not logged into Trello then you will be redirected to the below scree
 
 <img loading="lazy" src={require('../assets/images/trello-integration/trello-3.webp').default} alt="trello-integration"  width="1363" height="647" className="doc_img"/>
 
-**Step 5:** That's it! Go to Integrations again and you will be able to notice a **green tick** indicating that Trello is successfully **installed**. You can now create cards in a fly from any of your running test session in Lambdatest to your Trello dashboard directly by a single click.
+**Step 5:** That's it! Go to Integrations again and you will be able to notice a **green tick** indicating that Trello is successfully **installed**. You can now create cards in a fly from any of your running test session in LambdaTest to your Trello dashboard directly by a single click.
 
 <img loading="lazy" src={require('../assets/images/trello-integration/trello-4.webp').default} alt="trello-integration"  width="1349" height="653" className="doc_img"/>
 
@@ -129,7 +129,7 @@ If you are not logged into Trello then you will be redirected to the below scree
 
 <img loading="lazy" src={require('../assets/images/trello-integration/trello-integration-10.webp').default} alt="trello-integration"  width="800" className="doc_img"/>
 
-Click on the recent card and you will find all the data that you provided through Lambdatest already presented in it. <BrandName /> automatically includes test environment details and related screenshots in the card as attachments.
+Click on the recent card and you will find all the data that you provided through LambdaTest already presented in it. <BrandName /> automatically includes test environment details and related screenshots in the card as attachments.
 
 <img loading="lazy" src={require('../assets/images/trello-integration/trello-integration-11.webp').default} alt="trello-integration"   width="800" className="doc_img"/>
 

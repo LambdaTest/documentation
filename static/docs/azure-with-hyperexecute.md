@@ -1,4 +1,4 @@
-# Azure DevOps Pipeline Integration with Hyperexecute
+# Azure DevOps Pipeline Integration with HyperExecute
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,7 +6,7 @@ Azure DevOps offers developer services that enable teams to plan their work, col
 
 This document will show you how to integrate Azure Devops Pipeline with HyperExecute to greatly shorten your test cycles.
 
-## How To Integrate Azure DevOps Pipeline with Hyperexecute
+## How To Integrate Azure DevOps Pipeline with HyperExecute
 
 To integrate Azure DevOps Pipeline with HyperExecute, follow the below steps:
 
@@ -28,7 +28,7 @@ Follow the prompts to successfully create a new project.
 
 Next, you need to create a new pipeline. To create a new pipeline, click the **Pipelines** button from the left panel or from the main page.
 
-### 4. Configure the Azure Pipeline YAML to Execute Hyperexecute CLI Binary:
+### 4. Configure the Azure Pipeline YAML to Execute HyperExecute CLI Binary:
 
 To configure the Azure DevOps pipeline YAML to execute the HyperExecute CLI Binary, run the following command:
 
@@ -63,7 +63,7 @@ Here, the **main** branch is selected as the test repository to commit the Azure
 - **Steps:** In the **steps** section, declare the flow of the pipeline execution.
 - **Script:** In the **script** section, state the command that you would like to execute in the following steps:
     - Download a fresh version of the HyperExecute CLI binary
-    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains TestMu AI username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
+    - Execute the HyperExecute CLI binary. (The HyperExecute CLI binary contains TestMu AI username, access key and path   of the Yaml created for HyperExecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
 
 > **Note**: Ensure that your username and access key for your TestMu AI account is visible in the script.
 
@@ -72,7 +72,7 @@ To run the new pipeline that you just created, click the **Run** or **Save and R
 
 **An example of how a test that is run on the Azure DevOps pipeline gets executed:**
 
-**An example of a Hyperexecute job that was triggered through the above pipeline:**
+**An example of a HyperExecute job that was triggered through the above pipeline:**
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

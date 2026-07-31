@@ -5,9 +5,9 @@ description: This document will help you debug your failed job if you are facing
 hide_title: true
 sidebar_label: Scenario Errors
 keywords:
-  - TestMu AI Hyperexecute
-  - TestMu AI Hyperexecute help
-  - TestMu AI Hyperexecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - How to Debug a Failed Job
 url: https://www.testmuai.com/support/docs/hyperexecute-scenario-steps-error/
 site_name: TestMu AI

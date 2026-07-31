@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Travis CI Integration with Hyperexecute
+# Travis CI Integration with HyperExecute
 * * *
 
 Travis CI is a continuous integration (CI) service that allows to automate the process of testing and deploying their code. It is widely used for projects hosted on GitHub and other version control platforms like Bitbucket, and GitLab.
@@ -52,7 +52,7 @@ Using Travis CI, you can automate your entire testing suite for new commits, red
 
 This document will show you how to integrate Travis CI Pipeline with HyperExecute to greatly shorten your test cycles.
 
-## Steps to Integrate Travis CI Pipeline with Hyperexecute
+## Steps to Integrate Travis CI Pipeline with HyperExecute
 
 ***
 

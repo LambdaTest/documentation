@@ -72,7 +72,7 @@ To open a new tab in your browser, use the following command:
 Switching between tabs lets you interact with different pages or elements within the same session. You can switch by tab number or by the tab's name:
 
 - **Switch to 2nd tab:** This switches focus to the second tab (index starts at 1), allowing you to perform actions on that page.
-- **Switch to Lambdatest tab:** Switch to the tab named "Lambdatest", regardless of its position in the tab order.
+- **Switch to LambdaTest tab:** Switch to the tab named "LambdaTest", regardless of its position in the tab order.
 
 Use these commands when you have multiple pages open and need to shift focus between them.
 
@@ -80,7 +80,7 @@ Use these commands when you have multiple pages open and need to shift focus bet
 
 You can close tabs either by position or by name when you're done with them:
 
-- **Close Lambdatest tab:** Closes the tab named "Lambdatest". This is useful when you’ve finished interacting with a specific page and want to clean up the session.
+- **Close LambdaTest tab:** Closes the tab named "LambdaTest". This is useful when you’ve finished interacting with a specific page and want to clean up the session.
 - **Close 2nd tab:** Closes the second tab in the current session. This command is useful when you want to manage tab resources and focus on a single page.
 
 **Tips for Managing Tabs**

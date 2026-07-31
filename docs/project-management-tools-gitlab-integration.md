@@ -127,7 +127,7 @@ Your **API token** is now ready. Copy the token & store it safely with you, as y
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-apitoken.webp').default} alt="api token"  className="doc_img" width="1346" height="620"/>
 
-That’s it! Go to Integrations again and you will be able to notice a **green tick** indicating that GitLab is successfully installed. You can now experience bug logging in a fly from any of your running test session in Lambdatest to your repository directly by a single click.
+That’s it! Go to Integrations again and you will be able to notice a **green tick** indicating that GitLab is successfully installed. You can now experience bug logging in a fly from any of your running test session in LambdaTest to your repository directly by a single click.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-integrationcomplete.webp').default} alt="integration complete"  className="doc_img" width="1348" height="627"/>
 

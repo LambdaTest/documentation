@@ -60,7 +60,7 @@ By integrating UiPath with <BrandName />'s real device cloud, you can enhance yo
 
 <img loading="lazy" src={require('../assets/images/uipath-integration/uipath-one.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 2:** Download and install the UIPath Studio and ensure that your Chrome and Edge browser are closed as it scans for them. After successful installation the dashboard will open up.
+**Step 2:** Download and install the UiPath Studio and ensure that your Chrome and Edge browser are closed as it scans for them. After successful installation the dashboard will open up.
 
 **Step 3:** Now head to the **"New from template"** section and click on Mobile Testing. 
 

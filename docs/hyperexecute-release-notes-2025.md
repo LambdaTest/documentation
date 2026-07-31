@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: 2025 Releases
 description: HyperExecute Release Notes 2025
 keywords:
-  - TestMu AI Hyperexecute
-  - TestMu AI Hyperexecute help
-  - TestMu AI Hyperexecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-2025/
 site_name: TestMu AI
@@ -54,7 +54,7 @@ HyperExecute now supports generating Lighthouse reports using Playwright, enabli
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/lighthouse-report.png').default} alt="Image" className="doc_img"/>
 
-> Learn more about [Lighthuouse PlayWright Reports](/support/docs/playwright-lighthouse-library/)
+> Learn more about [Lighthuouse Playwright Reports](/support/docs/playwright-lighthouse-library/)
 
 ---
 
