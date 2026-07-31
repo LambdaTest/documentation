@@ -6,7 +6,7 @@ GitLab is a web-based Git repository that provides free open and private reposit
 
 This document will show you how to integrate GitLab Pipeline with HyperExecute to greatly shorten your test cycles.
 
-## How To Integrate GitLab Pipeline with Hyperexecute
+## How To Integrate GitLab Pipeline with HyperExecute
 
 To integrate GitLab Pipeline with HyperExecute, follow the below steps:
 
@@ -67,7 +67,7 @@ script: |
 ### 5. Run Your Job
 - To commit your changes and run your job, click the **Commit Changes** button.
 
-**Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
+**Below is an example of a HyperExecute job that was triggered through the above pipeline:**
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

@@ -33,7 +33,7 @@ Hover over the app, click on the settings icon for the app settings to open.
 
 - Set the **App Name** to easily identify it on the dashboard.
 
-- Use the **App ID** provided by Lambdatest to execute your automation scripts.
+- Use the **App ID** provided by LambdaTest to execute your automation scripts.
 
 - Control **Visibility** to manage who in your team can view or edit the app.
 

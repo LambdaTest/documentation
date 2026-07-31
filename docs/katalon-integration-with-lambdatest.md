@@ -108,7 +108,7 @@ If you have any questions, feel free to reach out to us through our **24×7 chat
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Katalon Integration With Lambdatest</span>
+      <span className="breadcrumbs__link">Katalon Integration With LambdaTest</span>
     </li>
   </ul>
 </nav>

@@ -1,4 +1,4 @@
-# Accelq Integration with HyperExecute
+# ACCELQ Integration with HyperExecute
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,12 +6,12 @@ ACCELQ is a cloud-based, continuous testing platform for functional and API test
 
 ## Integrate Accleq with HyperExecute
 
-Accelq is the most powerful software testing tool to achieve Codeless test automation and accelerate continuous testing.
+ACCELQ is the most powerful software testing tool to achieve Codeless test automation and accelerate continuous testing.
 
 ### Prerequisites
 
-- Sample scripts in Accelq
-- Ensure that you have integrated [Accelq with TestMu AI](/support/docs/accelq-integration/) Cloud Selenium Grid
+- Sample scripts in ACCELQ
+- Ensure that you have integrated [ACCELQ with TestMu AI](/support/docs/accelq-integration/) Cloud Selenium Grid
 - Parameters- accelq url, userId, apiKey, tenant code, Job Id
 - Agent.properties file for you configured agent with TestMu AI
 
@@ -21,7 +21,7 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 
 **Step 2:** Update your YAML file with your account credentials.
 
-**Step 3:** Execute HyperExcute job using the command:
+**Step 3:** Execute HyperExecute job using the command:
 
 ```
 ./hyperexecute --config hyperdemo.yaml -u <lambdausername> -k <lambda accesskey>
@@ -30,7 +30,7 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 ## Additional Details
 ### Where to Find the Parameters?
 
-#### AccelQ - URL, User-ID, API key, Tenant Code
+#### ACCELQ - URL, User-ID, API key, Tenant Code
 
 #### How to create a Job ID?
 
@@ -41,9 +41,9 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 **Step 3:** Copy the Job ID
 
 ### Agent.properties file
-Agent.property file is a type of file that gets generated when you configures the agents from the Accelq to the TestMu AI.
+Agent.property file is a type of file that gets generated when you configures the agents from the ACCELQ to the TestMu AI.
 
-- You can configure your [TestMu AI from Accelq Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
+- You can configure your [TestMu AI from ACCELQ Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
 - You can also find the same at the location `(ACCELQAgent/AgentInstances//agent.properties)` in your local system.
 
 #### Sample File

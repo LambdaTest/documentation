@@ -137,7 +137,7 @@ Use the following arguments in your command line.
 
 | ARGUMENTS | EXAMPLES | DESCRIPTION |
 |---------|-------|-------------|
-| --key | 123asd123 | Helps Lambdatest to map a secure shell connection with the right user. |
+| --key | 123asd123 | Helps LambdaTest to map a secure shell connection with the right user. |
 | --proxy-host | abc.wonderproxy.com | Full hostname for the proxy you’d like to use. |
 | --proxy-port | 12345 | The port declared by you for fetching the proxy. |
 | --proxy-user | abcdefg | WonderProxy username of the user. |

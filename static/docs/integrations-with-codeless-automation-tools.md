@@ -28,7 +28,7 @@ Tricentis Tosca Integration With TestMu AI
 
 Ghost Inspector Integration With TestMu AI
 
-Accelq Integration With TestMu AI
+ACCELQ Integration With TestMu AI
 
 algoQA Integration With TestMu AI
 

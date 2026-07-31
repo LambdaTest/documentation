@@ -75,7 +75,7 @@ By the end of this topic, you will know:
 
 ---
 
-Before you can start performing App automation using Katalon Studio with Lambdatest, you would need to follow these steps:
+Before you can start performing App automation using Katalon Studio with LambdaTest, you would need to follow these steps:
 
 - You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
 - [Katalon Studio](https://katalon.com/)

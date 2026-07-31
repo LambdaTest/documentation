@@ -6,7 +6,7 @@
 ### Lighthouse Report Support with Playwright on HyperExecute
 HyperExecute now supports generating Lighthouse reports using Playwright, enabling teams to measure and track web performance, accessibility, SEO, and best practices directly within their Playwright test workflows.
 
-> Learn more about [Lighthuouse PlayWright Reports](/support/docs/playwright-lighthouse-library/)
+> Learn more about [Lighthuouse Playwright Reports](/support/docs/playwright-lighthouse-library/)
 
 ## Version 3.1.6
 ### Chrome for Testing Browser Support

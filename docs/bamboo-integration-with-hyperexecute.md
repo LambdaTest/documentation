@@ -51,7 +51,7 @@ Bamboo is a continuous integration (CI) and continuous delivery (CD) server from
 
 This document will show you how to integrate Bamboo CI Pipeline with HyperExecute to greatly shorten your test cycles.
 
-## How To Integrate Bamboo CI Pipeline with Hyperexecute
+## How To Integrate Bamboo CI Pipeline with HyperExecute
 ***
 
 To integrate CircleCI Pipeline with HyperExecute, follow the below steps:

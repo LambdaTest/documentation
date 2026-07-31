@@ -53,7 +53,7 @@ Your <BrandName /> subscription is designed to be flexible, allowing you and you
 
 **Concurrency:** The number of tests you can run at the same time. If you have 10 parallels, you can run 10 tests simultaneously. These are determined by the sum of all subscriptions that have been purchased.
 
-**Plans (Your Subscriptions):** These are the packages you purchase, like "Web & Mobile Browser Automation on Real Device" or "Hyperexecute Linux" Each plan comes with a specific number of parallels.
+**Plans (Your Subscriptions):** These are the packages you purchase, like "Web & Mobile Browser Automation on Real Device" or "HyperExecute Linux" Each plan comes with a specific number of parallels.
 
 **Intents (Types of Tests):** These are the specific test types you can run, such as Realtime Testing, Desktop Automation, or Mobile Automation.
 
@@ -162,7 +162,7 @@ This is where the system's flexibility shines.
 
 **Setup:** Your organization has two subscriptions:  
 - "Web & Mobile Automation on Real Devices" with 10 parallels, which includes Web Automation Desktop and Real Mobile Automation and more.  
-- "Hyperexecute (Linux Only)" with 5 parallels, which includes Web Automation Desktop and Hyperexecute Linux and more.  
+- "HyperExecute (Linux Only)" with 5 parallels, which includes Web Automation Desktop and HyperExecute Linux and more.  
 
 **The Overlap:** Web Automation Desktop is in both plans, giving you a combined total of 15 parallels (10 + 5) specifically for web automation desktop testing.
 
@@ -182,7 +182,7 @@ This is where the system's flexibility shines.
 
 <img loading="lazy" src={require('../assets/images/concurrency-widget/7.png').default} alt="Image" className="doc_img"/>
 
-- **HyperExecute (Linux) (unique to Hyperexecute Linux plan)**  
+- **HyperExecute (Linux) (unique to HyperExecute Linux plan)**  
   Available only in the HyperExecute (Linux Only) plan.  
   The system again shows 3 available slots, since concurrency dynamically balances across plans.  
 

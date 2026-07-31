@@ -50,7 +50,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 #### Rebranding & Package Updates
 
-- **MCP Hyperexecute** is now **MCP <BrandName />** to better reflect our expanded capabilities
+- **MCP HyperExecute** is now **MCP <BrandName />** to better reflect our expanded capabilities
 - Updated package name to `mcp-lambdatest` on NPM
 - Stable 1.0.0 release with comprehensive feature set
 

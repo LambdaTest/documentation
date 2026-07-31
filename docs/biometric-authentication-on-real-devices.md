@@ -117,6 +117,6 @@ After uploading your application, please wait atleast for 1-2 minutes for the ap
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/biometric-authentication/biometric-authentication.png').default} className="doc_img"/>
 
-**Step 4:** Once your session starts and biometric authentication is enabled for the app, use Lambdatest's **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.
+**Step 4:** Once your session starts and biometric authentication is enabled for the app, use LambdaTest's **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/biometric-authentication/biometric-ss.png').default} className="doc_img"/>

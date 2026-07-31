@@ -37,7 +37,7 @@ https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read&r
 
 If you are not logged into Trello then you will be redirected to the below screen. Kindly login to your account via gmail or create your account by given option.
 
-**Step 5:** That's it! Go to Integrations again and you will be able to notice a **green tick** indicating that Trello is successfully **installed**. You can now create cards in a fly from any of your running test session in Lambdatest to your Trello dashboard directly by a single click.
+**Step 5:** That's it! Go to Integrations again and you will be able to notice a **green tick** indicating that Trello is successfully **installed**. You can now create cards in a fly from any of your running test session in LambdaTest to your Trello dashboard directly by a single click.
 
 ## How To Log Your First Bug Through Trello Integration?
 
@@ -60,7 +60,7 @@ If you are not logged into Trello then you will be redirected to the below scree
 
 **Step 7:** Visit your dashboard. You will be able to notice the logged issue right away!
 
-Click on the recent card and you will find all the data that you provided through Lambdatest already presented in it. TestMu AI automatically includes test environment details and related screenshots in the card as attachments.
+Click on the recent card and you will find all the data that you provided through LambdaTest already presented in it. TestMu AI automatically includes test environment details and related screenshots in the card as attachments.
 
 ## How To Remove Trello Integration?
 

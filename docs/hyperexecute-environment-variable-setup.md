@@ -3,12 +3,12 @@ id: hyperexecute-environment-variable-setup
 title: HyperExecute Environment Variable Setup
 hide_title: true
 sidebar_label: HyperExecute Environment Variable Setup
-description: Find out how to get access to Hyperexecute authentication credentials, fetching them from the Automation tab in your TestMu AI profile, and configuring them on Mac OSX/Linux, Windows systems.
+description: Find out how to get access to HyperExecute authentication credentials, fetching them from the Automation tab in your TestMu AI profile, and configuring them on Mac OSX/Linux, Windows systems.
 keywords:
 - TestMu AI automation
 - TestMu AI environment variables
 - TestMu AI setup
-- Hyperexecute environment variables
+- HyperExecute environment variables
 url: https://www.testmuai.com/support/docs/hyperexecute-environment-variable-setup/
 site_name: TestMu AI
 slug: hyperexecute-environment-variable-setup/
@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Hyperexecute Environment Variable Setup",
+          "name": "HyperExecute Environment Variable Setup",
           "item": `${BRAND_URL}/support/docs/hyperexecute-environment-variable-setup/`
         }]
       })
