@@ -2,6 +2,10 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+## Version 3.1.8
+### Firefox Support for Console Logs with Playwright and Selenium
+HyperExecute now captures browser console logs on **Firefox** for both **Playwright** and **Selenium** test runs, extending existing console log support beyond Chrome and Edge. Enable the `console` capability in your test configuration to capture JavaScript and DOM console output when running your tests on Firefox.
+
 ## Version 3.1.7
 ### Lighthouse Report Support with Playwright on HyperExecute
 HyperExecute now supports generating Lighthouse reports using Playwright, enabling teams to measure and track web performance, accessibility, SEO, and best practices directly within their Playwright test workflows.
