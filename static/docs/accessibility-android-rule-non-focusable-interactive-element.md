@@ -10,23 +10,25 @@ Clickable elements must be able to receive keyboard or d-pad focus so external-k
 
 ## What this rule checks
 
-The scanner examines visible, enabled interactive elements and reports any that cannot receive input (keyboard/d-pad) focus and have no focusable interactive ancestor or descendant handling the action on their behalf.
+The scanner examines visible, enabled interactive elements and reports any that respond to touch but cannot receive input (keyboard/d-pad) focus, and have no focusable interactive ancestor or descendant handling the action on their behalf.
 
 ## Why it matters
 
-Users navigating with an external keyboard, d-pad, or switch access move focus between focusable elements and activate the focused one. An interactive element that cannot take focus is simply unreachable for them — the action exists for touch users only.
+Users navigating with an external keyboard, D-pad, or switch access move focus between focusable elements and activate the focused one. An element that responds to touch but cannot receive input focus is simply unreachable for them — the action exists for touch users only.
 
 ## Common failure patterns
 
-- a click listener on a plain `View` or layout without `android:focusable="true"`
+- `setOnClickListener` sets `clickable=true` but does not set `focusable=true` — both are required, and it's easy to add one without the other
 - custom controls that intercept touch events but never became focusable
 - a clickable child inside a focusable container that does not actually delegate the click
 
 ## Remediation guidance
 
-- use native controls (`Button`, `EditText`, `CheckBox`, `Switch`), which are focusable by default, or set `android:focusable="true"` on custom clickable views
-- if a container handles the click for its children (e.g., a list row), make the container focusable and clickable so keyboard users can reach the action
-- in Compose, `Modifier.clickable` makes the element focusable automatically — avoid bypassing it with raw pointer handling
+Every clickable element must also be focusable.
+
+- add `android:focusable="true"` or `view.isFocusable = true` on custom clickable views, or use native controls (`Button`, `EditText`, `CheckBox`, `Switch`), which are focusable by default
+- in Compose, use `Modifier.clickable {}` inside a `Button`, or add `.focusable()` to custom clickable containers
+- where a container handles its children's click (e.g., a list row), make the container both focusable and clickable so keyboard users can reach the action
 
 ## Related docs
 

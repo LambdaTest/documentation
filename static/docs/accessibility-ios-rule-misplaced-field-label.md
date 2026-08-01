@@ -5,8 +5,8 @@
 A control's visible text should lead its accessible name, not trail behind other context, so Voice Control matching stays fast and reliable.
 
 **WCAG Reference**
-**Maps to:** WCAG 3.3.2 Labels or Instructions | **Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
-**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html)
+**Maps to:** WCAG 2.5.3 Label in Name | **Applies to:** WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.1 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html)
 
 ## What this rule checks
 
@@ -14,7 +14,7 @@ This is the companion to [Mismatched Label Text](/support/docs/accessibility-ios
 
 ## Why it matters
 
-Voice Control is tolerant of extra words at the end of a label but not at the beginning. A button reading "Next" labelled "Proceed to payment, Next" technically satisfies label-in-name, yet the user saying "Tap Next" gets slower, less reliable matching than if the label began with the visible word. Placing the visible text first also means VoiceOver users hear the word that matches what a sighted colleague sees, before any supplementary context.
+Voice control matches names from the front, and screen reader users hear extra context before the label they can see on screen. A button reading "Next" labelled "Proceed to payment, Next" technically satisfies label-in-name, yet the user saying "Tap Next" gets slower, less reliable matching than if the label began with the visible word.
 
 ## Common failure patterns
 
@@ -23,8 +23,8 @@ Voice Control is tolerant of extra words at the end of a label but not at the be
 
 ## Remediation guidance
 
-- reorder so the visible text leads: "Edit, order summary" rather than "Order summary, Edit"
-- keep supplementary context in `accessibilityHint` where it does not participate in name matching at all
+- start the accessible name with the visible label; put any extra context after it ("Edit, order summary", not "Order summary, Edit")
+- **iOS:** begin `accessibilityLabel` with the control's visible text; keep supplementary detail after it or in `accessibilityHint`
 
 ## Related docs
 

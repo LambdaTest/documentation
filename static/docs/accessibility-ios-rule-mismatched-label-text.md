@@ -14,19 +14,20 @@ For interactive elements, the scanner compares the text visibly rendered on the 
 
 ## Why it matters
 
-WCAG 2.5.3 exists for speech input. Voice Control users say what they see: a button reading "Send" is activated by saying "Tap Send". If that button's accessibility label was set to "Submit message", the spoken command matches nothing, and the control cannot be operated by voice at all. The label is not merely suboptimal — it silently removes the control from an entire input modality. The visible text is the contract with the speaking user, and the accessible name must honour it.
+Voice Control users speaking the visible label cannot activate the control, and VoiceOver users hear something different from what is on screen. A button reading "Send" is activated by saying "Tap Send". If that button's accessibility label was set to "Submit message", the spoken command matches nothing, and the control cannot be operated by voice at all. The label is not merely suboptimal — it silently removes the control from an entire input modality.
 
 ## Common failure patterns
 
 - a button reading "Sign in" whose label was set to "Log in" or "Authenticate"
 - localized visible text with an English accessibility label left over from development
 - an accessible name written to describe the outcome ("Proceed to payment") on a button that visibly reads "Next"
+- developer identifiers (`accountExists`, `user_action_login`) used as the accessible name
 
 ## Remediation guidance
 
-- make the accessible name contain the visible text, ideally beginning with it: a button reading "Next" may be labelled "Next, proceed to payment", but not "Proceed to payment"
-- where the visible text is sufficient, simply do not override the label — UIKit derives it from the title
-- when adding context, append it rather than replacing the visible string
+- the accessible name must contain the visible label as a substring, ignoring case and punctuation. Prefer an exact match; where extra context is needed, put the visible label first: a button reading "Next" may be labelled "Next" or "Next, proceed to payment", but not "Proceed to payment"
+- never use developer identifiers as accessible names
+- **iOS:** where the visible text is sufficient, simply do not override `accessibilityLabel` — UIKit derives it from the title
 
 ## Related docs
 
