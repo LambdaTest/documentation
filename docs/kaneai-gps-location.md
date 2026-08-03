@@ -51,8 +51,6 @@ The GPS Location Override feature solves this problem by allowing users to expli
 
 This feature is supported for both **Mobile App** and **Mobile Browser** sessions. For both sessions, GPS location can also be changed within a running session.
 
-This feature is supported for both **Mobile App** and **Mobile Browser** sessions. For both sessions, GPS location can also be changed within a running session.
-
 ## How To Use
 
 ### Select GPS location while Authoring App Test
