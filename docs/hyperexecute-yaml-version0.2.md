@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-yaml-version0.2
-title: HyperExecute Yaml Version 0.2
+title: "HyperExecute YAML v0.2: framework, flags and discovery config"
 hide_title: false
 sidebar_label: HyperExecute Yaml Version 0.2
 description: Learn more about HyperExecute YAML 0.2

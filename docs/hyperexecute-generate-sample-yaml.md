@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-generate-sample-yaml
-title: Generate your HyperExecute YAML file
+title: "HyperExecute YAML generator: create your config file"
 hide_title: false
 sidebar_label: Generate your HyperExecute YAML
 description: This document helps you to understand how to generate the HyperExecute YAML files using the HyperExecute dashboard and then a sample yaml file for understanding the YAML
