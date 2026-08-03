@@ -50,8 +50,8 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 | Invalid Range Values | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-invalid-range-values/) |
 | Meaningful Sequence | 1.3.2 | [Rule →](/support/docs/accessibility-ios-rule-meaningful-sequence/) |
 | Minimum Text Size | Best Practice | [Rule →](/support/docs/accessibility-ios-rule-minimum-text-size/) |
-| Mismatched Label Text | 2.5.3 | [Rule →](/support/docs/accessibility-ios-rule-mismatched-label-text/) |
-| Misplaced Field Label | 3.3.2 | [Rule →](/support/docs/accessibility-ios-rule-misplaced-field-label/) |
+| Mismatched Label Text *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-ios-rule-mismatched-label-text/) |
+| Misplaced Field Label *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-ios-rule-misplaced-field-label/) |
 | Non-accessible Interaction | 4.1.2 | [Rule →](/support/docs/accessibility-ios-rule-non-accessible-interaction/) |
 | Non-Descriptive Link Text | 2.4.4 | [Rule →](/support/docs/accessibility-ios-rule-non-descriptive-link-text/) |
 | Overlapping Interactive Elements | 2.5.5 | [Rule →](/support/docs/accessibility-ios-rule-overlapping-interactive-elements/) |
