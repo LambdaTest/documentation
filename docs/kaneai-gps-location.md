@@ -1,6 +1,6 @@
 ﻿---
 id: kaneai-gps-location
-title: GPS Location Mocking for Mobile App and Browser Authoring
+title: GPS Location Mocking for Mobile App and Mobile Browser Authoring
 hide_title: false
 sidebar_label: GPS Location
 description: Learn how to use GPS Location Override feature in KaneAI for testing location-based functionalities in Mobile App and Mobile Browser sessions
@@ -48,6 +48,8 @@ canonical: https://www.testmuai.com/support/docs/kaneai-gps-location/
 Testing location-based application behavior (such as geo-restricted content, regional UI, compliance flows, or location-aware features) is challenging when device GPS coordinates are dynamic or tied to the physical location of the tester.
 
 The GPS Location Override feature solves this problem by allowing users to explicitly define latitude and longitude values both during session initialization and while an authoring session is in progress. This ensures consistent, repeatable, and deterministic testing of location-dependent scenarios on supported mobile devices.
+
+This feature is supported for both **Mobile App** and **Mobile Browser** sessions. For both sessions, GPS location can also be changed within a running session.
 
 This feature is supported for both **Mobile App** and **Mobile Browser** sessions. For both sessions, GPS location can also be changed within a running session.
 
