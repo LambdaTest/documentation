@@ -143,7 +143,7 @@ driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 <TabItem value='python' label='Python'>
 
 ```python
-driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
+driver.execute_script("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </TabItem>
@@ -188,7 +188,7 @@ config = {
   'fullPage': True,
   'pageCount': 15  # Minimum 1, Maximum 20
 }
-driver.execute("smartui.takeScreenshot", config)
+driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 </TabItem>
