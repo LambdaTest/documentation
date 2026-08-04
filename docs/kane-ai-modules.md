@@ -146,7 +146,7 @@ Hovering the edit icon on one of these steps shows *Editing Kane instructions is
 
 These steps are part of a larger flow. A variable step feeds values to later steps, and a control flow block carries branches and nested steps that must change together. To modify them, open the test case the module was authored from, make the change there, and save. The module receives a new version automatically. All other steps can be edited, deleted, and reordered as usual.
 
-Modules authored in a KaneAI session also show an **Author Module to Update Test Cases** banner on the Overview tab. Its **View test cases** button opens the Linked Test Cases tab so you can review what a change affects before updating the module.
+Modules authored in a KaneAI session also show an **Author Module to Update Test Cases** banner on the Linked Test Cases tab, noting that linked test cases are updated by authoring and validating the module in a KaneAI session.
 
 ---
 
