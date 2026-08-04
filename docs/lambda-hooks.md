@@ -86,14 +86,14 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 
 These capabilities are available in both frameworks. Note that the hook name and syntax differ per framework — use the form shown for your framework.
 
-| Capability | Selenium | Playwright |
-| ---------- | -------- | ---------- |
-| **Set test status** | `driver.executeScript("lambda-status=passed");`<br /><br />Supported values: `passed`, `failed`, `skipped`, `ignored`, `unknown`, `error` | Use the `setTestStatus` action (also supports a remark shown on the dashboard):<br /><br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title matched"}}');` |
-| **Group commands into test cases**<br /><br />(annotations in the command-logs view) | `driver.executeScript("lambda-testCase-start=login flow");`<br /><br />`// ...test steps...`<br /><br />`driver.executeScript("lambda-testCase-end=login flow");` | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-start", "arguments": {"name": "login flow"}}');`<br /><br />`// ...test steps...`<br /><br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-end", "arguments": {"name": "login flow"}}');` |
-| **Update the test name during execution** | `driver.executeScript("lambdaUpdateName=TestName");` | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambdaUpdateName", "arguments": {"name": "TestName"}}');` |
-| **Fetch IPs from the outbound domain** | `driver.executeScript("lambda-unbound-ping=lambdatest.com");` | Use the `lambda-unbound-ping` action via the `lambdatest_action` pattern. |
-| **Generate a Lighthouse performance report** | `driver.executeScript("lambdatest_executor:{\"action\":\"lighthouseReport\"}");`<br /><br />Lighthouse reports are also generated automatically on navigation when the `performance` capability is enabled. | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lighthouseReport"}');` |
-| **Run an accessibility scan** | `driver.executeScript("lambdatest_executor:{\"action\":\"lambda-accessibility-scan\"}");` | Use the `lambda-accessibility-scan` action via the `lambdatest_action` pattern. |
+| Hook | Selenium | Playwright | Description |
+| ---- | --------- | ---------- | ----------- |
+| **lambda-status** | `driver.executeScript("lambda-status=passed");`<br /><br />Supported values: `passed`, `failed`, `skipped`, `ignored`, `unknown`, `error` | Use the `setTestStatus` action (also supports a remark shown on the dashboard):<br /><br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "setTestStatus", "arguments": {"status": "passed", "remark": "Title matched"}}');` | Mark the test passed / failed (also skipped, ignored, unknown, error). |
+| **lambda-testCase-start / lambda-testCase-end** | `driver.executeScript("lambda-testCase-start=login flow");`<br /><br />`// ...test steps...`<br /><br />`driver.executeScript("lambda-testCase-end=login flow");` | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-start", "arguments": {"name": "login flow"}}');`<br /><br />`// ...test steps...`<br /><br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambda-testCase-end", "arguments": {"name": "login flow"}}');` | Group commands into test cases<br /><br />(annotations in the command-logs view). |
+| **lambdaUpdateName** | `driver.executeScript("lambdaUpdateName=TestName");` | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambdaUpdateName", "arguments": {"name": "TestName"}}');` | Update the test name during execution. |
+| **lambda-unbound-ping** | `driver.executeScript("lambda-unbound-ping=lambdatest.com");` | Use the `lambda-unbound-ping` action via the `lambdatest_action` pattern. | Fetch IPs from the outbound domain. |
+| **lighthouseReport** | `driver.executeScript("lambdatest_executor:{\"action\":\"lighthouseReport\"}");`<br /><br />Lighthouse reports are also generated automatically on navigation when the `performance` capability is enabled. | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lighthouseReport"}');` | Generate a Lighthouse performance report. |
+| **lambda-accessibility-scan** | `driver.executeScript("lambdatest_executor:{\"action\":\"lambda-accessibility-scan\"}");` | Use the `lambda-accessibility-scan` action via the `lambdatest_action` pattern. | Run an accessibility scan. |
 
 ## Selenium-only Lambda Hooks
 
@@ -101,28 +101,28 @@ These capabilities are available in both frameworks. Note that the hook name and
 
 These hooks work only through the Selenium JavascriptExecutor and are not available in Playwright sessions.
 
-| Lambda Hooks | Descriptions |
-| ------------ | ------------ |
-| *lambda-file-exists* | Check whether the downloaded file exists in the test machine.<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-file-exists=file-name.file_format");` |
-| *lambda-file-stats* | Retrieve file metadata such as md5 code, modified time, name and size.<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-file-stats=file-name.file_format");` |
-| *lambda-file-content* | Download file content using base64 encoding.<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-file-content=file-name.file_format");` |
-| *lambda-file-list* | List down the file in download directory.<br /><br />`print driver.execute_script("lambda-file-list={match string with filename}");`<br /><br />`ie:print driver.execute_script("lambda-file-list=sample");Response: List of files in downloads dir starting with sample` |
-| *lambda-files-delete* | Deletes the file in the download directory in the virtual machines (VMs).<br /><br />`driver.executeScript("lambda-files-delete=file1.csv,file2.csv);` |
-| *lambda-name* | For changing the test name.<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-name=TestName");`<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-name=" + "name from hooks");` |
-| *lambda-build* | For updating the build name.<br /><br />`executeScript("lambda-build=BUILD_NAME");` |
-| *lambda-action* | Used to mark a test as passed/failed. Moreover, it allows the option to include a failure reason, which will be visible on the TestMu AI Automation Dashboard inside the session view.<br /><br />`Map<String, String> action = new HashMap();action.put("status", "failed"); action.put("reason", "tmp reason"); driver.executeScript("lambda-action", action);`<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-action=" + "Lambda Error");` |
-| *lambda-perform-keyboard-events* | You can simulate keyboard shortcuts like **ctrl + c**, **ctrl + v** in automation test scenarios. This hook is supported on both Windows and MacOS.<br /><br />`js.executeScript("lambda-perform-keyboard-events:tab");` |
-| *lambda-breakpoint* | Aborts the test execution to use the live interaction feature.<br /><br />`driver.executeScript("lambda-breakpoint=true");` |
-| *lambda-screenshot* | Captures the async screenshot during test execution.<br /><br />`driver.executeScript("lambda-screenshot=true");` |
-| *lambda-throttle-network* | Throttles network speed during test execution.<br /><br />`executeScript("lambda-throttle-network","Regular 4G")` |
-| *lambda-ping* | Fetches the IPs of the domain.<br /><br />`driver.executeScript("lambda-ping=lambdatest.com");` |
-| *lambda-exceptions* | Uploads the exceptions for tests that are captured on the console.<br /><br />`driver.executeScript('lambda-exceptions', [[message]])` |
-| *lambda-get-clipboard* | Prints the clipboard data on the console.<br /><br />`driver.executeScript("lambda-get-clipboard");` |
-| *lambda-set-clipboard* | Sets the clipboard data.<br /><br />`driver.executeScript("lambda-set-clipboard= Amit");` |
-| *lambda-clear-clipboard* | Clears the data of the clipboard.<br /><br />`driver.executeScript("lambda-clear-clipboard");` |
-| *lambda:network* | Fetches the network log entries in array format during session.<br /><br />`driver.execute_script("lambda:network");`- Fetch the network log from last fetch request time to current time.<br /><br />`driver.execute_script("lambda:network=all");`- Fetch from start of test session to current time. |
-| *lambda-test-tags* | Dynamically update your test tags for a test session which can be used to organize and filter your test results.<br /><br />**Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");`<br /><br />**Limitations :**<br /><br />**1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.<br /><br />**2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
-| *lambda-heal-start* / *lambda-heal-stop* | Enables / disables [AutoHeal](/support/docs/autoheal-with-hooks/) for the portion of the test between the two calls, so locator failures are healed automatically.<br /><br />`driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')`<br /><br />`// ...steps with dynamic locators...`<br /><br />`driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')` |
+| Hook | Description | Example |
+| ---- | ----------- | ------- |
+| **lambda-file-exists** | Check whether the downloaded file exists in the test machine. | `((JavascriptExecutor) driver).executeScript("lambda-file-exists=file-name.file_format");` |
+| **lambda-file-stats** | Retrieve file metadata such as md5 code, modified time, name and size. | `((JavascriptExecutor) driver).executeScript("lambda-file-stats=file-name.file_format");` |
+| **lambda-file-content** | Download file content using base64 encoding. | `((JavascriptExecutor) driver).executeScript("lambda-file-content=file-name.file_format");` |
+| **lambda-file-list** | List down the file in download directory. | `print driver.execute_script("lambda-file-list={match string with filename}");`<br /><br />`ie:print driver.execute_script("lambda-file-list=sample");`<br /><br />**Response:** List of files in downloads dir starting with sample |
+| **lambda-files-delete** | Deletes the file in the download directory in the virtual machines (VMs). | `driver.executeScript("lambda-files-delete=file1.csv,file2.csv);` |
+| **lambda-name** | For changing the test name. | `((JavascriptExecutor) driver).executeScript("lambda-name=TestName");`<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-name=" + "name from hooks");` |
+| **lambda-build** | For updating the build name. | `executeScript("lambda-build=BUILD_NAME");` |
+| **lambda-action** | Used to mark a test as passed/failed. Moreover, it allows the option to include a failure reason, which will be visible on the TestMu AI Automation Dashboard inside the session view. | `Map<String, String> action = new HashMap();action.put("status", "failed"); action.put("reason", "tmp reason"); driver.executeScript("lambda-action", action);`<br /><br />`((JavascriptExecutor) driver).executeScript("lambda-action=" + "Lambda Error");` |
+| **lambda-perform-keyboard-events** | You can simulate keyboard shortcuts like **ctrl + c**, **ctrl + v** in automation test scenarios. This hook is supported on both Windows and MacOS. | `js.executeScript("lambda-perform-keyboard-events:tab");` |
+| **lambda-breakpoint** | Aborts the test execution to use the live interaction feature. | `driver.executeScript("lambda-breakpoint=true");` |
+| **lambda-screenshot** | Captures the async screenshot during test execution. | `driver.executeScript("lambda-screenshot=true");` |
+| **lambda-throttle-network** | Throttles network speed during test execution. | `executeScript("lambda-throttle-network","Regular 4G")` |
+| **lambda-ping** | Fetches the IPs of the domain. | `driver.executeScript("lambda-ping=lambdatest.com");` |
+| **lambda-exceptions** | Uploads the exceptions for tests that are captured on the console. | `driver.executeScript('lambda-exceptions', [[message]])` |
+| **lambda-get-clipboard** | Prints the clipboard data on the console. | `driver.executeScript("lambda-get-clipboard");` |
+| **lambda-set-clipboard** | Sets the clipboard data. | `driver.executeScript("lambda-set-clipboard= Amit");` |
+| **lambda-clear-clipboard** | Clears the data of the clipboard. | `driver.executeScript("lambda-clear-clipboard");` |
+| **lambda:network** | Fetches the network log entries in array format during session. | `driver.execute_script("lambda:network");`- Fetch the network log from last fetch request time to current time.<br /><br />`driver.execute_script("lambda:network=all");`- Fetch from start of test session to current time. |
+| **lambda-test-tags** | Dynamically update your test tags for a test session which can be used to organize and filter your test results. | **Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");`<br /><br />**Limitations :**<br />**1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.<br />**2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
+| **lambda-heal-start* / *lambda-heal-stop** | Enables / disables [AutoHeal](/support/docs/autoheal-with-hooks/) for the portion of the test between the two calls, so locator failures are healed automatically. | `driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')`<br /><br />`// ...steps with dynamic locators...`<br /><br />`driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')` |
 
 ## Playwright-only Lambda Hooks
 
@@ -130,8 +130,8 @@ These hooks work only through the Selenium JavascriptExecutor and are not availa
 
 These hooks are available only in Playwright (and other CDP-based) sessions, using the `lambdatest_action` pattern.
 
-| Lambda Hooks | Descriptions |
-| ------------ | ------------ |
+| Hook | Description |
+| ---- | ----------- |
 | *getTestDetails* | Returns details of the running test, such as the test ID and session information.<br /><br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "getTestDetails"}');` |
 | *lambdaSetBrowserPosition* | Sets the browser window position (useful when running multiple browser windows in a single session). |
 
