@@ -113,6 +113,7 @@ We support multiple input formats, including:
 - **Videos**
 - **Spreadsheets** (CSV or XLSX)
 - **Documents**
+- **Markdown files** (.md)
 - **JSON or XML**
 
 **Public URLs Only**
@@ -408,6 +409,10 @@ Create and Automate is currently an experimental feature. Review your test steps
 | File upload fails | Verify the file does not exceed the 50 MB size limit and that you have not exceeded the 10-file session limit. |
 | Credits deducted but no changes appeared | This can occur if the AI could not interpret your request or if there was a connection interruption. Check the conversation history for an error message. |
 | Regeneration removed refined scenarios | Regeneration replaces all current output. Use targeted conversational messages instead to preserve specific scenarios. |
+
+## Video Walkthrough
+
+Watch the video below for a quick walkthrough of the AI Test Case Generator in action.
 
 ## Video Walkthrough
 

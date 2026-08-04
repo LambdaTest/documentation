@@ -1,4 +1,4 @@
-# HyperExecute Yaml Version 0.2
+# HyperExecute YAML v0.2: framework, flags and discovery config
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

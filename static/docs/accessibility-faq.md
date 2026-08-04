@@ -18,7 +18,21 @@ See [Screen Reader Overview](/support/docs/screen-reader-on-accessibility/) for 
 Our accessibility testing tools are optimized for **Chromium-based** browsers, **version 90 and above**. This includes **Google Chrome, Microsoft Edge, and other Chromium-based browsers**. Using the latest version ensures the best compatibility and performance with our tools.
 
 ## Do I need to add explicit wait time to scan for accessibility?
-No, you don't need to add explicit wait times. Our advanced tools are designed with built-in intelligence to detect when DOM elements are loaded automatically. They then immediately initiate accessibility scans for these elements. This feature ensures a seamless and efficient testing process without manual intervention for timing.
+For static pages, no. Our tools detect when DOM elements are loaded and initiate the accessibility scan for those elements without manual intervention for timing.
+
+For **dynamic pages**, add a wait before you trigger the scan. When content arrives asynchronously, for example after an API response, a lazy loaded section, or an animation, the scan can run before that content is present in the DOM. See [Why do accessibility results differ between runs of the same test flow?](#why-do-accessibility-results-differ-between-runs-of-the-same-test-flow) below.
+
+## Why do accessibility results differ between runs of the same test flow?
+Run to run variation on dynamic pages is almost always a **timing** effect, not a change in the rules. AutoScan is triggered by interactive automation commands such as navigation and clicks, so it can fire **before asynchronous content has fully loaded**. Each run then captures a slightly different DOM state and reports a different set of issues.
+
+For dynamic applications we recommend **hook based scanning**:
+
+- Use `lambda-accessibility-scan` instead of autoScan so you decide exactly when each scan runs.
+- Add an **element check** before the scan, for example wait for the main content container or the last widget on the screen to render.
+- Add a **network or DOM idle check** before the scan when the page loads its data in stages.
+- Keep the scan points identical across runs so reports stay comparable.
+
+AutoScan remains a good fit for stable, mostly static pages where you want coverage without writing hooks. See [Automating Accessibility Testing with Selenium](/support/docs/accessibility-automation-test/) for both approaches.
 
 ## How can I enable accessibility for my account/organization?
 Accessibility testing is a premium feature that requires activation. To enable it, contact our sales team through our [website](https://www.testmuai.com/accessibility-automation) or your account manager. They will provide you with pricing details and plan options. Once you've chosen a plan, our team will activate the feature for your account.
@@ -68,6 +82,14 @@ Yes. Mobile app accessibility testing is supported through:
 - **KaneAI:** Insert accessibility scan instructions into KaneAI-authored mobile test flows. See [KaneAI Mobile Accessibility](/support/docs/kaneai-mobile-app-accessibility/).
 
 Mobile web browser accessibility testing through automation is not currently supported.
+
+## Can I schedule accessibility scans for native mobile apps?
+No. [Test Scheduling](/support/docs/accessibility-test-scheduling/) is supported on **desktop only**. Scheduled scans run against websites and web apps on desktop browsers, and native Android or iOS apps cannot be added to a scheduled scan.
+
+To cover a mobile app, use one of the mobile surfaces instead:
+
+- **App Scanner (Manual):** [Accessibility App Scanner](/support/docs/accessibility-app-scanner/)
+- **Native App Automation:** [Native App Automation](/support/docs/accessibility-native-app-automation-test/)
 
 ## Do you support accessibility testing for PDFs?
 Yes. PDF Accessibility Scanning is available as part of the Accessibility product. See [PDF Accessibility Scanning](/support/docs/accessibility-pdf-accessibility-scanning/) for details on supported capabilities and how to use this feature.

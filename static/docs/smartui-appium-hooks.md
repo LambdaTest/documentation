@@ -214,7 +214,7 @@ ignoreBoxes.put("xpath", new String[]{
 });
 
 configIgnore.put("ignoreBoxes", ignoreBoxes);
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
 
 ```
 
@@ -263,7 +263,7 @@ driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
 ```python
-driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
+driver.execute_script("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 ```ruby
@@ -275,7 +275,7 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 ```java
-((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
+((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 ### For capturing full page screenshot in Native Apps
@@ -299,52 +299,38 @@ config = {
 'fullPage': True,
 'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 }
-driver.execute("smartui.takeScreenshot", config)
-<TabItem value='ruby-2' label='Ruby' default>
+driver.execute_script("smartui.takeScreenshot", config)
+```
 
 ```ruby
 config = {
-  'screenshotName' => '',
-  'fullPage': true,
-  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+'screenshotName' => '<Your Screenshot Name>',
+'fullPage': true,
+'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 }
 driver.execute("smartui.takeScreenshot", config)
 ```
 
-</TabItem>
-<TabItem value='csharp-2' label='C#' default>
-
 ```csharp
-var config = new Dictionary {
-  {"screenshotName", ""},
-  {"fullPage", true},
-  {"pageCount", 15} // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+var config = new Dictionary<string, string> {
+{"screenshotName", "<Your Screenshot Name>"},
+{"fullPage", true},
+{"pageCount", 15} // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 };
 driver.Execute("smartui.takeScreenshot", config);
 ```
 
-</TabItem>
-<TabItem value='java-2' label='Java' default>
-
 ```java
-Map config = new HashMap<>();
-config.put("screenshotName", "");
+Map<String, Object> config = new HashMap<>();
+config.put("screenshotName", "<Your Screenshot Name>");
 config.put("fullPage", true);
 config.put("pageCount", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
+((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
-</TabItem>
-</Tabs>
-
-:::note
-Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
-:::
+Please note that this webhook is only applicable to native app screenshots and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
 
 ## Best Practices
-
-<Tabs className='docs__val' groupId='best-practices'>
-<TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
 **Screenshot Naming**
 
@@ -359,9 +345,6 @@ await driver.execute("smartui.takeScreenshot=HomeScreen-Header");
 await driver.execute("smartui.takeScreenshot=CheckoutScreen-PaymentForm");
 ```
 
-</TabItem>
-<TabItem value='wait-for-screen-load' label='Wait for Screen Load'>
-
 **Wait for Screen Load**
 
 - Always wait for screens to fully load before taking screenshots
@@ -375,17 +358,11 @@ await driver.wait(until.elementLocated(By.id('main-content')), 10000);
 await driver.execute("smartui.takeScreenshot=Screen Loaded");
 ```
 
-</TabItem>
-<TabItem value='handle-dynamic-content' label='Handle Dynamic Content'>
-
 **Handle Dynamic Content**
 
 - Use `ignoreBoxes` for elements that change between runs (ads, timestamps, user avatars)
 - Use `selectBoxes` when you only need to compare specific regions
 - Test XPath locators using Appium Inspector before integrating
-
-</TabItem>
-<TabItem value='smart-crop-configuration' label='Smart Crop Configuration'>
 
 **Smart Crop Configuration**
 
@@ -393,31 +370,13 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Enable `cropNavigationBar` for Android devices
 - Test cropped screenshots to ensure important content isn't removed
 
-</TabItem>
-<TabItem value='test-organization' label='Test Organization'>
-
 **Test Organization**
 
 - Group related screenshots in the same build
 - Use meaningful build names
 - Run tests on consistent device configurations
-
-</TabItem>
-<TabItem value='test-organization-1' label='Test Organization'>
-
-**Test Organization**
-
-- Group related screenshots in the same build
-- Use meaningful build names
-- Run tests on consistent device configurations
-
-</TabItem>
-</Tabs>
 
 ## Troubleshooting
-
-<Tabs className='docs__val' groupId='troubleshooting'>
-<TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
 
 **Issue: Screenshots Not Captured**
 
@@ -432,27 +391,24 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 **Solutions**:
 1. Verify `visual: true` is set in capabilities:
 ```javascript
-   let capabilities = {
-     visual: true, // Must be set
-     // ... other capabilities
-   };
+let capabilities = {
+visual: true, // Must be set
+// ... other capabilities
+};
 ```
 
 2. Check project name matches exactly (case-sensitive):
 ```javascript
-   "smartUI.project": "ExactProjectName"
+"smartUI.project": "ExactProjectName"
 ```
 
 3. Verify credentials are set:
 ```bash
-   echo $LT_USERNAME
-   echo $LT_ACCESS_KEY
+echo $LT_USERNAME
+echo $LT_ACCESS_KEY
 ```
 
 4. Check network connectivity to LambdaTest
-
-</TabItem>
-<TabItem value='project-not-found-error' label='Project Not Found Error'>
 
 **Issue: "Project Not Found" Error**
 
@@ -469,9 +425,6 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 3. Check credentials match the account with the project
 4. Ensure project name is in capabilities, not just in dashboard
 
-</TabItem>
-<TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
-
 **Issue: Screenshots Show Blank or Incorrect Content**
 
 **Symptoms**: Screenshots captured but show blank screens or incorrect content
@@ -485,20 +438,17 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 **Solutions**:
 1. Add explicit waits before screenshots:
 ```javascript
-   await driver.wait(until.elementLocated(By.id('content')), 10000);
+await driver.wait(until.elementLocated(By.id('content')), 10000);
 ```
 
 2. Wait for specific elements to be visible:
 ```javascript
-   await driver.wait(until.elementIsVisible(By.id('main-content')), 10000);
+await driver.wait(until.elementIsVisible(By.id('main-content')), 10000);
 ```
 
 3. Increase wait time for slow-loading screens
 
 4. Verify app is in correct state before screenshot
-
-</TabItem>
-<TabItem value='full-page-screenshot-issues' label='Full Page Screenshot Issues'>
 
 **Issue: Full Page Screenshot Issues**
 
@@ -512,19 +462,16 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 **Solutions**:
 1. Increase `pageCount` value (between 1-20):
 ```javascript
-   let config = {
-     screenshotName: 'Full Page',
-     fullPage: true,
-     pageCount: 15  // Increase if needed
-   };
+let config = {
+screenshotName: 'Full Page',
+fullPage: true,
+pageCount: 15  // Increase if needed
+};
 ```
 
 2. Verify app supports scrolling functionality
 
 3. Test with different `pageCount` values to find optimal setting
-
-</TabItem>
-<TabItem value='ignoreboxes-selectboxes-not-working' label='ignoreBoxes/selectBoxes Not Working'>
 
 **Issue: ignoreBoxes/selectBoxes Not Working**
 
@@ -540,10 +487,10 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 2. Ensure elements exist at screenshot time
 3. Check JSON string formatting:
 ```javascript
-   ignoreBoxes: JSON.stringify({
-     xpath: ["//*[@text='Dynamic Ad']"]
-   })
-   ```
+ignoreBoxes: JSON.stringify({
+xpath: ["//*[@text='Dynamic Ad']"]
+})
+```
 
 4. Test XPath locators in isolation before using in config
 

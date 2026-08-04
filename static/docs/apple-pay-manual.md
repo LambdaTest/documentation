@@ -6,7 +6,10 @@
 
 With TestMu AI App Live, you can test Apple Pay flows on **Real iOS Devices**. This guide walks you through enabling Apple Pay, configuring wallets, running the application, and completing transactions manually.
 
-> To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
+**Plus Plan Feature**
+This feature is available exclusively with the **Real Device Plus Live** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
 ## Use Cases
 

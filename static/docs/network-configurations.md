@@ -6,7 +6,10 @@ Network logs record every network interaction during your test session, from API
 
 On TestMu AI, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 
-> To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
+**Plus Plan Feature**
+This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
 ## Use Cases
 
@@ -95,5 +98,4 @@ Execute your test script using your preferred automation framework with the abov
 - Keep `captureContent: false` if you only need headers for performance gains.
 
 - **Certificate-pinned apps** may fail if pinned hosts are not excluded.
-- Available only on **Plus Plan**.
 - Certain HTTPS connections (e.g., using custom certificate pinning) cannot be intercepted even with MITM.
