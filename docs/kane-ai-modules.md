@@ -109,7 +109,7 @@ Type a **slash (/)** to invoke the command menu and select **Add Module**.
 Browse the list of available modules and select the one you need.
 
 :::note
-Modules that contain control flow can be imported only into KaneAI test cases, not into manual test cases in Test Manager. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
 :::
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/6.png').default} alt="import-module" className="doc_img"/>
