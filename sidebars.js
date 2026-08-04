@@ -2086,7 +2086,7 @@ module.exports = {
           { type: "doc", id: "mark-as-bug-in-automation-testing", label: "File a Bug From a Session" },
           { type: "doc", id: "live-interaction", label: "Take Over a Live Session" },
           { type: "doc", id: "rerun-automation-tests", label: "Re-Run & Reproduce a Test" },
-          { type: "doc", id: "mute-test-scenarios", label: "Mute Test Scenarios" },
+          // { type: "doc", id: "mute-test-scenarios", label: "Mute Test Scenarios" },
           { type: "doc", id: "debugging-options", label: "Set Debugging Options & Logs" },
           { type: "doc", id: "lighthouse-reports-hooks", label: "Measure Page Performance" },
           { type: "doc", id: "lambda-hooks", label: "Use Lambda Hooks & Metadata" },
@@ -2493,7 +2493,7 @@ module.exports = {
               "button-text-click",
               "ios-shake-gesture-appautomation",
               "appium-terminal-logs",
-              "mute-test-scenarios-appium"
+              // "mute-test-scenarios-appium"
             ],
           },
           {
