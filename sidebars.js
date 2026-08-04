@@ -2788,7 +2788,7 @@ module.exports = {
           "group-and-filter-your-test-builds-using-build-tags",
           "change-individual-test-details",
           "rerun-automation-tests",
-          "mute-test-scenarios",
+          // "mute-test-scenarios",
           "sharing-test-results",
           "mark-as-bug-in-automation-testing",
           "live-interaction",
@@ -3313,7 +3313,7 @@ module.exports = {
               "button-text-click",
               "ios-shake-gesture-appautomation",
               "appium-terminal-logs",
-              "mute-test-scenarios-appium"
+              // "mute-test-scenarios-appium"
             ],
           },
           {
