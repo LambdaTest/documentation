@@ -57,8 +57,12 @@ From there, you'll be able to select and import the specific module you need.
 :::
 
 :::note
-Modules that contain control flow (an If-Else block or a While Loop) run only in KaneAI test cases. In the module picker of a manual test case these modules appear with a **Control-flow** badge and cannot be selected.
+Modules that contain KaneAI instructions run only in KaneAI test cases. This covers steps that create or use a variable or parameter, If-Else blocks, and While Loops.
 :::
+
+The **Add Module** dialog lists the modules available to the test case and selects the first one by default. When the selected module contains KaneAI instructions, the dialog shows *This module can't be imported as it contains a few specific KaneAI instructions* and **Add in step** stays disabled. **Edit Module** is locked for the same module.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/add-module-kane-instructions.png').default} alt="The Add Module dialog with a module that cannot be imported into a manual test case" width="1600" height="877" className="doc_img"/>
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/import_module_in_manual_testcases.png').default} alt="import-module" className="doc_img"/>
 
