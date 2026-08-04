@@ -128,15 +128,21 @@ Click on an existing module from the Module listing page to modify its steps or 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image6.png').default} alt="edit-module" className="doc_img img_center"/>
 
+Editing a step opens it inline, where you can change the test step and its expected outcome. **Update** applies the change to the step, and the module header then shows an **Unsaved changes** label. Click **Save Changes** to commit them, or **Discard** to drop them.
+
 When you save changes to a module, a new version is created automatically. See [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/) for details on how version history works.
 
 ### Editing Restrictions
 
-Inline editing and drag-to-reorder are disabled on the Modules page for:
+Some steps carry a **Read-Only** label on the module's step listing. Editing is disabled for:
 
 - Steps that create or use a **variable** or **parameter**
 - **If-Else** blocks
 - **While Loop** blocks
+
+Hovering the edit icon on one of these steps shows *Editing Kane instructions is not allowed*.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/editing-restrictions.png').default} alt="A While Loop step marked Read-Only with the edit action disabled" width="1600" height="831" className="doc_img"/>
 
 These steps are part of a larger flow. A variable step feeds values to later steps, and a control flow block carries branches and nested steps that must change together. To modify them, open the test case the module was authored from, make the change there, and save. The module receives a new version automatically. All other steps can be edited, deleted, and reordered as usual.
 
@@ -161,7 +167,9 @@ Only modules that are **not linked to any test cases** can be deleted. If a modu
 
 ### Deleting Steps Inside a Module
 
-On the module's step listing, the delete action is disabled for If-Else blocks, While Loops, and steps that create or use a **variable** or **parameter**. These steps can be deleted only while authoring, in the KaneAI test case the module was authored from. All other steps can be deleted directly.
+The delete action is disabled for the same steps. Hovering it shows *Deleting Kane instructions is not allowed*. These steps can be deleted only while authoring, in the KaneAI test case the module was authored from. All other steps can be deleted directly.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/delete-restrictions.png').default} alt="The delete action disabled on a While Loop step inside a module" width="1600" height="827" className="doc_img"/>
 
 ---
 
