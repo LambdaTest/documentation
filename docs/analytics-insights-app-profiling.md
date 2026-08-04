@@ -103,12 +103,33 @@ Your filter selections, the selected date range, and the widget layout — inclu
 
 ## Average and p90 views <NewTag/>
 
-An **Average / p90** toggle in the top bar switches every widget on the dashboard between two aggregations:
+An **Average / p90** toggle in the top bar of the **Trends** tab switches its widgets between two aggregations:
 
 - **Average** — the mean value of each metric across the sessions in scope.
 - **p90** — the 90th-percentile value: the level at or below which 90% of sessions fall.
 
-p90 is useful for performance-regression analysis because averages can hide spikes and outliers — a metric with an acceptable average can still fail one session in ten. Switching to **p90** re-renders the Performance Overview cards, Performance Trends, per-metric trend widgets and the Device Performance Matrix using the 90th-percentile value for every metric. The same p90 values are also available through the App Profiling API.
+Switching to **p90** re-renders the Performance Overview cards, Performance Trends, the per-metric trend widgets and the Device Performance Matrix using the 90th-percentile value for every metric. The same p90 values are also available through the App Profiling API.
+
+### Which one to read
+
+Average answers *"what does a typical run cost?"*. p90 answers *"how bad does it get for the unlucky one run in ten?"*. They are complementary, and a metric can look healthy on one and fail on the other.
+
+| Read | When you are |
+|---|---|
+| **Average** | Tracking a trend over time, comparing builds or devices at a glance, or reporting a headline number |
+| **p90** | Investigating a regression, sizing an SLA, or explaining complaints that the dashboard's averages don't reflect |
+
+Averages hide spikes. A build whose CPU averages 12% but reaches 45% on every tenth run will look green on Average and breach on p90 — and it is the p90 run your users notice. The reverse is also informative: if Average and p90 sit close together, the metric is stable and the average is trustworthy.
+
+:::note
+p90 is computed per session at ingestion and then averaged across the sessions in scope — it is *the mean of each session's own 90th percentile*, not the 90th percentile of the whole window. Metrics with no pre-computed p90 — cold and hot startup, and the crash and ANR counts — are dropped in p90 mode and render as `—`. Frozen and janky frame counts stay on their average, because they are companion counts to the frame-rate series rather than percentile-able metrics in their own right.
+:::
+
+### p90 on the Comparison tab
+
+The Comparison tab has **no Average / p90 toggle** — the Trends toggle does not carry across, and switching tabs will not change what Comparison shows.
+
+It does not need one: every stats table on that tab reports **Avg, Min, Max and P90 side by side, always**, for each selected session. Where the Trends toggle makes you choose one aggregation for the whole dashboard, Comparison shows you all four at once for the handful of runs you have selected — which is the more useful shape when you are looking at individual runs rather than a population.
 
 {/* TODO screenshot: top bar showing the Average / P90 toggle, date range and Export As — save as assets/images/analytics/app-profiling-p90-toggle.png and embed here */}
 
@@ -194,7 +215,7 @@ The **Comparison** tab plots individual test sessions against one another instea
 
 Where the Trends tab charts a metric over calendar time, Comparison charts it over **elapsed time within each run** — every session starts at `0:00`, so runs of different lengths and different start times line up and can be read against each other.
 
-<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison.png').default} alt="App Profiling Comparison view with three test sessions overlaid" width="768" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison.webp').default} alt="App Profiling Comparison view with three test sessions overlaid" width="768" className="doc_img"/>
 
 ### Complete flow
 
@@ -219,7 +240,7 @@ The rail lists every session that matches the current filters, newest first, wit
 | Checkbox | Adds or removes that session from the comparison |
 | **Set as Baseline** | Makes that session the reference every other session is measured against |
 
-<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison-filters.png').default} alt="Test Sessions rail with the More filter menu open showing OS, App Build Version, Device and Status" width="768" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison-filters.webp').default} alt="Test Sessions rail with the More filter menu open showing OS, App Build Version, Device and Status" width="768" className="doc_img"/>
 
 :::note
 You can compare up to five sessions at once — deselect one to add another — and at least one session must stay selected, so the charts are never left empty.
@@ -234,11 +255,11 @@ Each metric renders as its own card, in this order: **CPU Utilization**, **Memor
 - **Legend toggles.** Click a session in a card's legend to hide or show that series in that card. The last visible series cannot be hidden.
 - **Variant toggles** where a metric has more than one dimension: Application / System on CPU and Memory, Read / Write on Disk, Upload / Download on Network, and Startup Time / Load Time on the startup card.
 - **SLA bands and threshold lines** are drawn from the same org-level thresholds used everywhere else on the dashboard.
-- **A stats table** under every chart with **Avg**, **Min**, **Max** and **P90** per session.
+- **A stats table** under every chart with **Avg**, **Min**, **Max** and **P90** per session — all four at once, with no toggle. See [p90 on the Comparison tab](#p90-on-the-comparison-tab).
 
 **Startup Time** is a grouped bar chart rather than a line — it reports one Cold and one Hot value per run, with the Cold and Hot SLA lines drawn across it. Its **Load Time** variant switches to per-page-label load times, plotted by label instead of by elapsed time.
 
-<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison-startup.png').default} alt="Startup Time comparison showing Cold and Hot bars per session with SLA lines and baseline deltas" width="768" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison-startup.webp').default} alt="Startup Time comparison showing Cold and Hot bars per session with SLA lines and baseline deltas" width="768" className="doc_img"/>
 
 ### Baseline and Baseline Diff
 
