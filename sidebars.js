@@ -5204,6 +5204,11 @@ module.exports = {
           },
         ],
       },
+{
+            type: "doc",
+            label: "Use Cases",
+            id: "kane-cli-use-cases",
+          },
       {
         type: "category",
         collapsed: true,
