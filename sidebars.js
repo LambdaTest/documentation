@@ -1820,6 +1820,7 @@ module.exports = {
           { type: "doc", id: "manual-test-case-creation", label: "Create and Manage Test Cases" },
           { type: "doc", id: "test-case-versioning", label: "Manage Versions" },
           { type: "doc", id: "create-modules", label: "Modules: Share Test steps" },
+          { type: "doc", id: "modules-in-manual-testcases", label: "Import Modules into Test Cases" },
           { type: "doc", id: "system-and-custom-fields", label: "Manage System & Custom fields" },
           { type: "doc", id: "copy-and-move-support-for-test-cases", label: "Copy & Move Test Cases" },
           { type: "doc", id: "update-fields", label: "Bulk Update Test Case fields" },

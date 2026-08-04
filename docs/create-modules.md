@@ -102,6 +102,10 @@ Modules support duplication, editing and versioning; however, a new version is o
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_page.png').default} alt="module-page" className="doc_img"/>
 
+:::note
+For modules authored in KaneAI, steps that use a variable or parameter and If-Else or While Loop blocks cannot be edited, deleted, or reordered from the Modules page. Edit them from the KaneAI test case the module was authored from.
+:::
+
 ## 3. Module Versions
 
 ### Revert to previous Version
@@ -119,5 +123,5 @@ You will be redirected to the Version Comparison page where you can track change
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_comparision.png').default} alt="modules-version-comparision" className="doc_img"/>
 
 :::note
-Project linking is only added for manual tests in test cases. Hence, modules linked to a particular project are only available to be added in a manual test case. However, for KaneAI test cases, all modules in all projects will be available for selection.
+Project linking is only added for manual tests in test cases. Hence, modules linked to a particular project are only available to be added in a manual test case. However, for KaneAI test cases, all modules in all projects will be available for selection. Modules that contain control flow (If-Else or While Loop) can be selected only in KaneAI test cases. In a manual test case they appear with a **Control-flow** badge and are disabled.
 :::
