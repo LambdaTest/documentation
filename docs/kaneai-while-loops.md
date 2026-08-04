@@ -258,7 +258,7 @@ Once a While Loop has been finalized, you can still change it. The loop itself s
 - **Add, remove, or reorder body steps.** Use the edit instruction action on any step inside the loop; the loop updates automatically to reflect the change.
 - **Change the condition.** Edit the While Loop step directly. The new condition applies on the next test run.
 - **Finalize later.** If you closed the authoring view before clicking **End While**, the loop remains unfinalized. Re‑open the test, add the remaining body steps, and click **End While** when ready.
-- **Loops inside modules.** When a While Loop is part of a [module](/support/docs/kane-ai-modules/), any change to the loop condition or body bumps the module version so other tests using that module pick up the new behavior on their next run.
+- **Loops inside modules.** When a While Loop is part of a [module](/support/docs/kane-ai-modules/), any change to the loop condition or body bumps the module version so other tests using that module pick up the new behavior on their next run. The loop is read-only on the module's Overview tab. Make changes from the test case the module was authored from. Modules containing While Loops cannot be added to manual test cases in Test Manager.
 
 ## Nesting Rules
 
