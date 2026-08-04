@@ -19,7 +19,7 @@ These use cases cover API testing end to end: verifying that a service is alive,
 A smoke test is the fastest way to confirm that a service is alive and responding correctly before deeper testing. This use case shows how to check a health endpoint end to end in a single Kane CLI command.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/smoke-test-an-endpoint.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/smoke-test-an-endpoint.mp4" type="video/mp4" />
 </video>
 
 1. Open a terminal and start your command with `kane-cli run` followed by your full instruction in quotes.
@@ -36,7 +36,7 @@ A smoke test is the fastest way to confirm that a service is alive and respondin
 Many APIs require you to log in first and then use the returned token to call a protected endpoint. Kane CLI can describe this entire login-then-call flow as one instruction, automatically passing the token from the first response into the second request.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/auth-token-chaining.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/auth-token-chaining.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/health/login with JSON body {"email":"...","password":"..."}"`.
@@ -52,7 +52,7 @@ Many APIs require you to log in first and then use the returned token to call a 
 Checking a status code is not enough on its own. This use case validates that a response body has the right structure, the right top-level fields, and the right values nested inside an array.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/schema-and-field-validation.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/schema-and-field-validation.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a GET request to /api/shop/products?category=gaming"`.
@@ -67,7 +67,7 @@ Checking a status code is not enough on its own. This use case validates that a 
 Some endpoints apply computed business rules rather than just storing data, for example routing a submitted symptom to the correct type of specialist. This use case confirms that the server-side logic produces the expected outcome.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/server-side-business-logic.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/server-side-business-logic.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/health/consult with header Content-Type: application/json and this raw JSON body: {"symptom":"itchy skin rash and acne","phone":"9876543210"}"`.
@@ -83,7 +83,7 @@ Some endpoints apply computed business rules rather than just storing data, for 
 Good API coverage also proves that invalid requests are correctly rejected rather than accidentally accepted. This use case sends deliberately wrong credentials and confirms the API fails closed.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/negative-path-testing-401.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/negative-path-testing-401.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/insurance/login with header Content-Type: application/json and this raw JSON body: {"email":"notauser@example.com","password":"x"}"`.
@@ -97,7 +97,7 @@ Good API coverage also proves that invalid requests are correctly rejected rathe
 A correct response is not useful if it arrives too slowly. This use case adds a response-time assertion alongside the usual functional checks, turning a normal test into an SLA gate.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/latency-and-sla-gate-testing.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/latency-and-sla-gate-testing.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a GET request to /api/telecom/plans"`.
@@ -111,7 +111,7 @@ A correct response is not useful if it arrives too slowly. This use case adds a 
 If you already have a working curl command from Postman, documentation, or a teammate, Kane CLI can run it exactly as written instead of you having to translate it into a new format.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/migrating-an-existing-curl-command.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/migrating-an-existing-curl-command.mp4" type="video/mp4" />
 </video>
 
 1. Copy your existing curl command exactly as it is, including its headers and JSON payload.
@@ -132,7 +132,7 @@ If you already have a working curl command from Postman, documentation, or a tea
 Boundary testing checks both sides of a validation rule in one flow: an invalid input that should be rejected, and a corrected input that should then succeed.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/input-validation-boundaries.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/input-validation-boundaries.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/gov/report with header Content-Type: application/json and this raw JSON body: {"category":"identity-theft","details":"too short"}"`.
@@ -147,7 +147,7 @@ Boundary testing checks both sides of a validation rule in one flow: an invalid 
 This use case confirms that a value returned by one endpoint, such as a listed price, matches the value used or returned by a second, related endpoint, such as a booking total, catching mismatches between services or caches.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/cross-endpoint-data-consistency.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/cross-endpoint-data-consistency.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a GET request to /api/travel/listings?city=Rishikesh"`.
@@ -162,7 +162,7 @@ This use case confirms that a value returned by one endpoint, such as a listed p
 A very common real-world flow is searching or filtering a catalog and then performing an action on one of the returned items, such as picking a title from search results and starting playback.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/filter-a-catalog-then-act-on-a-result.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/filter-a-catalog-then-act-on-a-result.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a GET request to /api/stream/titles?genre=Comedy"`.
@@ -177,7 +177,7 @@ A very common real-world flow is searching or filtering a catalog and then perfo
 Sometimes you simply need to create a brand-new record and confirm it was stored correctly, useful for seeding test data or verifying a creation endpoint on its own.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/create-a-record-seed-data.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/create-a-record-seed-data.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/travel/book with a JSON body containing the listing id, check-in date, check-out date, and number of guests"`.
@@ -191,7 +191,7 @@ Sometimes you simply need to create a brand-new record and confirm it was stored
 Real-world workflows often span several dependent API calls, for example logging in, adding an item to a cart, and then placing an order. Kane CLI can chain all of these into a single end-to-end test, passing data forward automatically at each step.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/images/kane-cli/use-cases/multi-step-api-transaction.mp4" type="video/mp4" />
+<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/multi-step-api-transaction.mp4" type="video/mp4" />
 </video>
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/shop/login with a JSON body of {"email":"...","password":"..."}"`.
