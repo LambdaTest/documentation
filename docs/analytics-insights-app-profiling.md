@@ -2,7 +2,7 @@
 id: insights-app-profiling
 title: App Profiling Insights
 sidebar_label: App Profiling
-description: App Profiling Insights surface CPU, memory, frame rate, battery, network, disk and startup metrics across devices, builds and page transitions, with Average and p90 views, session-level Comparison against a baseline run, org-level SLA thresholds, saved filters and email/Slack breach alerts.
+description: App Profiling Insights surfaces CPU, memory, FPS, battery, network and startup metrics per device and build, with p90 views, session Comparison and SLA alerts.
 keywords:
   - analytics
   - test insights
@@ -19,7 +19,7 @@ keywords:
   - baseline diff
 
 url: https://www.testmuai.com/support/docs/insights-app-profiling/
-site_name: LambdaTest
+site_name: TestMu AI
 slug: insights-app-profiling/
 canonical: https://www.testmuai.com/support/docs/insights-app-profiling/
 ---
@@ -65,7 +65,7 @@ The data on this dashboard comes from the App Profiling capability on Appium tes
 App Profiling Insights is available for Appium tests on iOS and Android (version 9+). Set `appProfiling: true` and `resignApp: true` in your capabilities. Battery Utilization and Battery Temperature widgets are populated for Android sessions only.
 :::
 
-<img loading="lazy" src={require('../assets/images/analytics/app-profiling-screenshot.webp').default} alt="App Profiling dashboard" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-screenshot.webp').default} alt="App Profiling dashboard" width="768" height="594" className="doc_img"/>
 
 ## How to access
 
@@ -131,8 +131,6 @@ The Comparison tab has **no Average / p90 toggle** — the Trends toggle does no
 
 It does not need one: every stats table on that tab reports **Avg, Min, Max and P90 side by side, always**, for each selected session. Where the Trends toggle makes you choose one aggregation for the whole dashboard, Comparison shows you all four at once for the handful of runs you have selected — which is the more useful shape when you are looking at individual runs rather than a population.
 
-{/* TODO screenshot: top bar showing the Average / P90 toggle, date range and Export As — save as assets/images/analytics/app-profiling-p90-toggle.png and embed here */}
-
 ## Performance Overview
 
 A strip of KPI cards summarising the headline metrics over the selected window.
@@ -156,8 +154,6 @@ A single time-series chart that overlays selected metrics on dual Y-axes. The **
 **Disk Read** and **Disk Write** report the total data the application read from and wrote to disk during a session, giving visibility into storage-heavy workflows. Like every other metric, they honour the Average / p90 toggle.
 
 The X-axis bucket size is derived from the selected date range — sub-day windows render at 5-minute or 15-minute buckets, multi-week windows aggregate to hours, and multi-month windows aggregate to days.
-
-{/* TODO screenshot: Performance Trends KPI selector open, showing the full metric list including Disk Read / Disk Write — save as assets/images/analytics/app-profiling-kpi-metrics.png and embed here */}
 
 ## Device Performance Matrix
 
@@ -316,11 +312,11 @@ When a session breaches a configured App Profiling threshold, <BrandName /> auto
 
 Each alert identifies the run (Test ID, Test Name, Build Name, OS, Device and date) and lists every breached metric with its observed value against the configured threshold, along with a **View Test Details** link that opens the run's App Profiling tab. Metrics that can trigger an alert include Cold Startup, Hot Startup, CPU Utilization, Frame Rate, Memory Usage, Temperature and per-label Page Load.
 
-<img loading="lazy" src={require('../assets/images/analytics/app-profiling-email-alert.png').default} alt="App Profiling threshold breach email alert" width="768" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-email-alert.webp').default} alt="App Profiling threshold breach email alert" width="768" className="doc_img"/>
 
 The Slack notification carries the same details:
 
-<img loading="lazy" src={require('../assets/images/analytics/app-profiling-slack-alert.png').default} alt="App Profiling threshold breach Slack alert" width="480" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-slack-alert.webp').default} alt="App Profiling threshold breach Slack alert" width="480" className="doc_img"/>
 
 :::note
 Alerts fire against the same SLA thresholds described above, which are configured at the organisation level by an admin.
