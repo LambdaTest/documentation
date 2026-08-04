@@ -106,7 +106,7 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
 :::note
-Modules that contain control flow (an If-Else block or a While Loop) run only in KaneAI test cases. In the module picker they appear with a **Control-flow** badge and cannot be selected. See [Import Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Import Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
 :::
 
 #### Add New Step:
