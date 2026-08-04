@@ -2,7 +2,7 @@
 id: insights-app-profiling
 title: App Profiling Insights
 sidebar_label: App Profiling
-description: App Profiling Insights surface CPU, memory, frame rate, battery, network, disk and startup metrics across devices, builds and page transitions, with Average and p90 views, org-level SLA thresholds, saved filters and email/Slack breach alerts.
+description: App Profiling Insights surface CPU, memory, frame rate, battery, network, disk and startup metrics across devices, builds and page transitions, with Average and p90 views, session-level Comparison against a baseline run, org-level SLA thresholds, saved filters and email/Slack breach alerts.
 keywords:
   - analytics
   - test insights
@@ -15,6 +15,8 @@ keywords:
   - p90 metrics
   - disk read write
   - threshold breach alerts
+  - session comparison
+  - baseline diff
 
 url: https://www.testmuai.com/support/docs/insights-app-profiling/
 site_name: LambdaTest
@@ -72,6 +74,11 @@ App Profiling Insights is available for Appium tests on iOS and Android (version
 3. Click a test name to open its dashboard.
 
 The page is always scoped to the test you opened. Use the **Test Name** filter to add more tests to the comparison without leaving the dashboard.
+
+The dashboard opens on two tabs:
+
+- **Trends** — the aggregated view described below: KPI cards, trend widgets and the device matrix, averaged across every session in the filtered scope.
+- **[Comparison](#comparison)** — an overlay view that plots individual test sessions against one another, run by run.
 
 ## Filter bar
 
@@ -181,6 +188,78 @@ Compare dimensions:
 
 Compare is scoped to the widget — enabling it on one chart does not affect others. Performance Overview, Performance Trends and Device Performance Matrix do not expose Compare: the first two are summary widgets (use filters to change the data scope instead), and the matrix already breaks data down per device.
 
+## Comparison <NewTag/>
+
+The **Comparison** tab plots individual test sessions against one another instead of averaging them. Use it to answer run-level questions the Trends tab cannot: whether a build regressed against the run before it, whether one device is slower than another on the same app, or why a single run behaved differently from the rest.
+
+Where the Trends tab charts a metric over calendar time, Comparison charts it over **elapsed time within each run** — every session starts at `0:00`, so runs of different lengths and different start times line up and can be read against each other.
+
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison.png').default} alt="App Profiling Comparison view with three test sessions overlaid" width="768" className="doc_img"/>
+
+### Complete flow
+
+1. Open a test's App Profiling dashboard and select the **Comparison** tab. The run you opened is selected automatically and becomes the baseline.
+2. Narrow the **Test Sessions** rail on the left with the search box and filters until you can see the runs you care about.
+3. Tick the checkbox on each session you want to overlay — up to **five** at a time.
+4. Pick which run everything is measured against with **Set as Baseline**.
+5. Read the charts and the per-metric stats tables. Leave **Baseline Diff.** on to see each session's delta against the baseline.
+6. Drag on the timeline at the top to zoom into a slice of the run; every chart follows.
+
+### Test Sessions rail
+
+The rail lists every session that matches the current filters, newest first, with a running count in the header. Each card shows the pass/fail status, the test name, when it ran, a truncated Test ID, and the OS version, device and app build version it ran on.
+
+| Control | What it does |
+|---|---|
+| **Search test name** | Free-text filter over the listed session names |
+| **Test Name** | Multi-select of test names. At least one must stay selected — **Apply** is disabled otherwise |
+| **Date range** | The same picker the Trends tab uses, with presets and a custom range including a time-of-day picker |
+| **More** | **OS**, **App Build Version**, **Device** and **Status** multi-selects |
+| **Clear Filters** | Resets the filters back to the opened test. The date range is deliberately preserved |
+| Checkbox | Adds or removes that session from the comparison |
+| **Set as Baseline** | Makes that session the reference every other session is measured against |
+
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison-filters.png').default} alt="Test Sessions rail with the More filter menu open showing OS, App Build Version, Device and Status" width="768" className="doc_img"/>
+
+:::note
+You can compare up to five sessions at once — deselect one to add another — and at least one session must stay selected, so the charts are never left empty.
+:::
+
+### How the graphs are drawn
+
+Each metric renders as its own card, in this order: **CPU Utilization**, **Memory Utilization**, **Frame Rate**, **Disk**, **Network**, and **Startup Time**.
+
+- **One series per selected session**, coloured consistently across every card — a session keeps its colour everywhere, so you can follow one run down the page.
+- **A shared elapsed-time X-axis.** Dragging on the **Comparison of Test Sessions** timeline at the top zooms every chart to the same window at once, which is what makes a spike in one metric comparable against another.
+- **Legend toggles.** Click a session in a card's legend to hide or show that series in that card. The last visible series cannot be hidden.
+- **Variant toggles** where a metric has more than one dimension: Application / System on CPU and Memory, Read / Write on Disk, Upload / Download on Network, and Startup Time / Load Time on the startup card.
+- **SLA bands and threshold lines** are drawn from the same org-level thresholds used everywhere else on the dashboard.
+- **A stats table** under every chart with **Avg**, **Min**, **Max** and **P90** per session.
+
+**Startup Time** is a grouped bar chart rather than a line — it reports one Cold and one Hot value per run, with the Cold and Hot SLA lines drawn across it. Its **Load Time** variant switches to per-page-label load times, plotted by label instead of by elapsed time.
+
+<img loading="lazy" src={require('../assets/images/analytics/app-profiling-comparison-startup.png').default} alt="Startup Time comparison showing Cold and Hot bars per session with SLA lines and baseline deltas" width="768" className="doc_img"/>
+
+### Baseline and Baseline Diff
+
+One session is always the baseline, marked with a **Baseline** chip in the rail and in every stats table.
+
+With **Baseline Diff.** enabled — it is on by default — every other session's stats show a coloured delta against the baseline: green where the session is better, red where it is worse. The direction that counts as "better" follows the metric, so a lower CPU figure and a higher frame rate are both green. In the Startup Time screenshot above, the two non-baseline runs start `142 ms` and `94 ms` faster than the baseline's cold start.
+
+Turn **Baseline Diff.** off to read raw values with no deltas.
+
+### Saved comparisons <NewTag/>
+
+Your Comparison setup is **auto-saved per test at the organisation level**, the same way the Trends tab saves its filters and layout. There is no Save button. Reopening the tab restores:
+
+- the rail filters — test names, OS, device, status and app build version,
+- which sessions were selected for comparison,
+- which session was the baseline,
+- the **Baseline Diff.** toggle,
+- any series you hid from a card's legend.
+
+The date range is not part of the saved comparison — it is owned by the page's date picker and shared with the Trends tab, so both tabs always report over the same window.
+
 ## SLA thresholds
 
 SLA thresholds are configured at the **organisation level** by an admin. Once set, the same threshold is applied everywhere a metric is rendered — Performance Overview cards, Performance Trends overlays, Device Performance Matrix cells, Label Page Load Time, and the per-metric trend widgets.
@@ -228,7 +307,7 @@ Alerts fire against the same SLA thresholds described above, which are configure
 
 ## Sharing a dashboard
 
-The URL of the dashboard preserves the test it was opened against. To share a specific view with a teammate, apply the filters you want and copy the URL — the shared dashboard opens with the same test in scope. Filter selections beyond Test Name are not round-tripped through the URL.
+The URL of the dashboard preserves the test it was opened against, and which of the two tabs you are on — a link copied from the Comparison tab reopens on Comparison. To share a specific view with a teammate, apply the filters you want and copy the URL — the shared dashboard opens with the same test in scope. Filter selections beyond Test Name are not round-tripped through the URL; they are restored from your own saved filters instead.
 
 ## Related
 
