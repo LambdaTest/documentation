@@ -2541,6 +2541,7 @@ module.exports = {
               "device-passcode-on-realdevice",
               "assistive-touch-on-real-ios-devices",
               "dark-mode-on-real-devices",
+              "low-power-mode-on-real-devices",
               "group-folder-redirect-on-real-device",
               "apple-pay-manual",
               "audio-injection-manual",
