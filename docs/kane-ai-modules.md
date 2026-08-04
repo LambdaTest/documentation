@@ -104,12 +104,13 @@ Create a new test or open an existing one in the KaneAI web agent.
 
 ### Step 2: Import the Module
 
-Use either method to access the modules menu:
-
-- Click the **plus (+)** icon in the test interface
-- Type a **slash (/)** to invoke the command menu and select **Add Module**
+Type a **slash (/)** to invoke the command menu and select **Add Module**.
 
 Browse the list of available modules and select the one you need.
+
+:::note
+Modules that contain control flow can be imported only into KaneAI test cases, not into manual test cases in Test Manager. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+:::
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/6.png').default} alt="import-module" className="doc_img"/>
 
@@ -129,6 +130,18 @@ Click on an existing module from the Module listing page to modify its steps or 
 
 When you save changes to a module, a new version is created automatically. See [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/) for details on how version history works.
 
+### Editing Restrictions
+
+Inline editing and drag-to-reorder are disabled on the Modules page for:
+
+- Steps that create or use a **variable** or **parameter**
+- **If-Else** blocks
+- **While Loop** blocks
+
+These steps are part of a larger flow. A variable step feeds values to later steps, and a control flow block carries branches and nested steps that must change together. To modify them, open the test case the module was authored from, make the change there, and save. The module receives a new version automatically. All other steps can be edited, deleted, and reordered as usual.
+
+Modules authored in a KaneAI session also show an **Author Module to Update Test Cases** banner on the Overview tab. Its **View test cases** button opens the Linked Test Cases tab so you can review what a change affects before updating the module.
+
 ---
 
 ## Delete a Module
@@ -145,6 +158,10 @@ You can delete modules that are no longer needed from the module listing page.
 :::warning Important
 Only modules that are **not linked to any test cases** can be deleted. If a module is currently used in one or more test cases, the delete option will be disabled. You must first remove the module from all linked test cases before deleting it.
 :::
+
+### Deleting Steps Inside a Module
+
+On the module's step listing, the delete action is disabled for If-Else blocks, While Loops, and steps that create or use a **variable** or **parameter**. These steps can be deleted only while authoring, in the KaneAI test case the module was authored from. All other steps can be deleted directly.
 
 ---
 

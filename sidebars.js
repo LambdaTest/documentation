@@ -2403,6 +2403,7 @@ module.exports = {
           "manual-test-case-creation",
           "test-case-versioning",
           "create-modules",
+          "modules-in-manual-testcases",
           "copy-and-move-support-for-test-cases",
           "update-fields",
           "export-test-cases",
