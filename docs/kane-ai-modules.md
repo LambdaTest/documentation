@@ -134,7 +134,7 @@ When you save changes to a module, a new version is created automatically. See [
 
 ### Editing Restrictions
 
-Some steps carry a **Read-Only** label on the module's step listing. Editing is disabled for:
+Some steps carry a **Read-Only** label on the module's step listing. Editing, deleting, and reordering are all disabled for:
 
 - Steps that create or use a **variable** or **parameter**
 - **If-Else** blocks
