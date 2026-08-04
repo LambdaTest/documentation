@@ -109,7 +109,7 @@ If a module update introduces problems, you can revert to any earlier version.
 
 Reverting creates a new version (it does not delete the intermediate versions), so you maintain a complete audit trail.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image3.png').default} alt="revert-version" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/revert-version.png').default} alt="revert-version" className="doc_img img_center"/>
 
 ---
 
