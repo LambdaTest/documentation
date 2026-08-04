@@ -219,7 +219,7 @@ Where the Trends tab charts a metric over calendar time, Comparison charts it ov
 
 ### Complete flow
 
-1. Open a test's App Profiling dashboard and select the **Comparison** tab. The run you opened is selected automatically and becomes the baseline.
+1. Open a test's App Profiling dashboard and select the **Comparison** tab. The **most recent** run of that test is selected automatically and becomes the baseline — note that this is the newest run, not necessarily the specific run you opened the dashboard from.
 2. Narrow the **Test Sessions** rail on the left with the search box and filters until you can see the runs you care about.
 3. Tick the checkbox on each session you want to overlay — up to **five** at a time.
 4. Pick which run everything is measured against with **Set as Baseline**.
@@ -228,7 +228,7 @@ Where the Trends tab charts a metric over calendar time, Comparison charts it ov
 
 ### Test Sessions rail
 
-The rail lists every session that matches the current filters, newest first, with a running count in the header. Each card shows the pass/fail status, the test name, when it ran, a truncated Test ID, and the OS version, device and app build version it ran on.
+The rail lists every session that matches the current filters, with a running count in the header. Sessions you have selected for comparison are **pinned to the top** so they stay visible as you filter; everything else follows, newest first. Each card shows the pass/fail status, the test name, when it ran, a truncated Test ID, and the OS version, device and app build version it ran on.
 
 | Control | What it does |
 |---|---|
@@ -236,7 +236,7 @@ The rail lists every session that matches the current filters, newest first, wit
 | **Test Name** | Multi-select of test names. At least one must stay selected — **Apply** is disabled otherwise |
 | **Date range** | The same picker the Trends tab uses, with presets and a custom range including a time-of-day picker |
 | **More** | **OS**, **App Build Version**, **Device** and **Status** multi-selects |
-| **Clear Filters** | Resets the filters back to the opened test. The date range is deliberately preserved |
+| **Clear Filters** | Resets the filters back to the opened test and the comparison back to that test's most recent run. The date range is deliberately preserved — it belongs to the shared picker, not to this filter set |
 | Checkbox | Adds or removes that session from the comparison |
 | **Set as Baseline** | Makes that session the reference every other session is measured against |
 
