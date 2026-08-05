@@ -4401,7 +4401,15 @@ module.exports = {
         "analytics-smart-tags-test-intelligence",
         "analytics-test-failure-classification",
         "analytics-ai-root-cause-analysis",
-        "insights-app-profiling",
+        {
+          type: "category",
+          collapsed: true,
+          label: "App Profiling",
+          items: [
+            "insights-app-profiling",
+            "insights-app-profiling-comparison",
+          ],
+        },
       ],
     },
     {
