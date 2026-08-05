@@ -47,10 +47,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 TestMu AI is a scalable browser designed for AI agents to handle scraping, testing, and automation, without the overhead of managing infrastructure.
 
-
 Find all the guides, resources, and examples you need to build on <BrandName /> Browser Cloud.
 
-<iframe src="https://assets.testmuai.com/resources/images/testmu-ai/sectionFold/browser-cloud-final-home-video.webm" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen height="400" width="710"></iframe>
+<video width="710" height="400" controls autoPlay muted loop playsInline>
+  <source src="https://assets.testmuai.com/resources/images/testmu-ai/sectionFold/browser-cloud-final-home-video.webm" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Get Started
 ***
