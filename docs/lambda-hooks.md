@@ -121,10 +121,10 @@ These hooks work only through the Selenium JavascriptExecutor and are not availa
 ---
 These hooks are available only in Playwright (and other CDP-based) sessions, using the `lambdatest_action` pattern.
 
-| Lambda Hooks | Descriptions |
-| ------------- | ------------ |
-| *getTestDetails* | Returns details of the running test, such as the test ID and session information.<br/>`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "getTestDetails"}');` |
-| *lambdaSetBrowserPosition* | Sets the browser window position (useful when running multiple browser windows in a single session). |
+| Lambda Hooks | Description |
+|--------------|-------------|
+| **getTestDetails** | Returns details of the running test, including the test ID and session information.<br/><br/>```js\nawait page.evaluate(() => {}, 'lambdatest_action: {"action": "getTestDetails"}');\n``` |
+| **lambdaSetBrowserPosition** | Sets the browser window position, useful when running multiple browser windows in a single session.<br/><br/>```js\nawait Page_1.evaluate(\n  () => {},\n  `lambdatest_action: ${JSON.stringify({\n    action: 'lambdaSetBrowserPosition',\n  })}`\n);\n``` |
 
 > **Note**: These hooks only work if you are connected to your [TestMu AI Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment` 
 

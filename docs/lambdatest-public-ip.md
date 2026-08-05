@@ -46,20 +46,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 These are the list of the IP ranges that you need to whitelist with respect to the specific <BrandName /> products.
 
-| Subnet Range | Standard Grid and Real Time | Real Device | KaneAI |
-|--------------|-----------------------------|-------------|--------|
-|**103.231.42.40/29**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
-|**103.231.79.40/29**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
+| Subnet Range | Standard Grid and Real Time | Real Device | HyperExecute |
+|--------------|-----------------------------|-------------|--------------|
+|**103.231.42.40/29**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|
+|**103.231.79.40/29**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|
 |**23.105.12.32/27**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**23.106.34.192/26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**209.58.137.40/29**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
-|**23.83.156.64/26**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
+|**23.83.156.64/26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**23.105.162.225**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**23.105.174.26**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**199.7.167.8/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**208.78.110.56/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**207.254.54.32/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**207.254.53.0/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**199.7.167.8/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
+|**208.78.110.56/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
+|**207.254.54.32/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
+|**207.254.53.0/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**207.254.30.104/29**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**217.112.145.88/29**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**149.6.5.8/29**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
@@ -90,35 +90,59 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**20.234.234.192**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**137.174.189.0/26**|<p align="center"> ✅ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**104.45.207.170**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**4.224.6.32/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**20.253.69.48/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**20.242.202.160/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**20.102.24.108/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**4.224.143.208/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**20.204.184.92/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**52.224.184.10/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**20.204.224.62/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**172.199.71.240/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 
 
-## Tunnel IP ranges
 
-- **199.58.84.59**
-- **23.82.88.184**
-- **23.106.34.219**
-- **23.106.54.77**
-- **3.214.241.254**
-- **52.36.84.247**
-- **13.126.37.58**
-- **3.66.78.89**
-- **20.106.137.134**
-- **20.28.8.59**
-- **20.235.62.15**
-- **50.85.251.115**
-- **20.171.1.172**
+## KaneAI IPs {#kaneai-ips}
 
-## <BrandName /> Integration Tools
-- **3.208.126.109**
+| IP / CIDR |
+|------------|
+| `4.224.6.32/28` |
+| `20.253.69.48/28` |
+| `20.242.202.160/28` |
+| `20.102.24.108/31` |
+| `4.224.143.208/28` |
+| `20.204.184.92/31` |
+| `52.224.184.10/31` |
+| `20.204.224.62/31` |
+| `172.199.71.240/28` |
+
+## Tunnel Server IPs {#tunnel--server-ips}
+
+| IP Address |
+|------------|
+| `3.214.241.254` |
+| `52.36.84.247` |
+| `3.66.78.89` |
+| `13.126.37.58` |
+
+## Integration Tools IPs {#integration-tools-ips}
+
+
+| IP Address |
+|------------|
+| `3.208.126.109` |
+
+## HyperExecute IPs {#hyperexecute-ips}
+
+| IP / CIDR |
+|-----------|
+| `137.135.87.44` |
+| `20.84.36.156/31` |
+| `207.254.54.36` |
+| `199.7.167.10` |
+
+## AWS Account NAT IPs {#aws-account-nat-ips}
+
+| IP Address |
+|------------|
+| `3.208.126.109` |
+| `54.177.212.181` |
+| `50.18.14.238` |
+| `35.163.118.144` |
+| `15.207.32.1` |
+| `18.142.218.202` |
+| `3.73.193.68` |
 
 :::note
 - If you prefer not to whitelist the product-specific public IP ranges listed below, consider using a **Dedicated Proxy**.
@@ -126,8 +150,9 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 - It provides a unique static IP exclusively for your organization, making firewall management, auditing, and access control simpler. This is especially useful for organizations with strict security or compliance requirements that want to whitelist a single dedicated IP instead of multiple product-specific IP ranges.
 
 - For more information, refer to the documentation links provided below.
-:::
+  :::
 
 ## Additional Links
+
 - [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/#2-when-dedicated-proxy-whitelisting-has-to-be-done/)
 - [Dedicated Proxy - IP Whitelisting](/support/docs/dedicated-proxy/)
