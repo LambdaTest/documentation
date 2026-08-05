@@ -78,7 +78,7 @@ The page is always scoped to the test you opened. Use the **Test Name** filter t
 The dashboard opens on two tabs:
 
 - **Trends** — the aggregated view described on this page: KPI cards, trend widgets and the device matrix, averaged across every session in the filtered scope.
-- **[Comparison](/support/docs/insights-app-profiling-comparison/)** — an overlay view that plots individual test sessions against one another, run by run.
+- **Comparison** — an overlay view that plots individual test sessions against one another, run by run. See [App Profiling Comparison](/support/docs/insights-app-profiling-comparison/).
 
 ## Filter bar
 
@@ -127,7 +127,7 @@ p90 is computed per session at ingestion and then averaged across the sessions i
 
 ### p90 and the Comparison view
 
-The toggle applies to this view only. The [Comparison](/support/docs/insights-app-profiling-comparison/) view has no Average / p90 toggle — it reports Avg, Min, Max and P90 side by side for every selected session instead.
+The toggle applies to this view only. The Comparison view has no Average / p90 toggle — it reports [Avg, Min, Max and P90](/support/docs/insights-app-profiling-comparison/#avg-min-max-and-p90) side by side for every selected session instead.
 
 ## Performance Overview
 
@@ -201,7 +201,7 @@ Compare dimensions:
 - **App Build Version** — for build-over-build comparisons
 - **Label** — for page-transition-level breakdowns
 
-Compare mode overlays a **dimension** on a single widget. It is a different feature from the [Comparison](/support/docs/insights-app-profiling-comparison/) view, which overlays whole **test sessions** across every metric at once.
+Compare mode overlays a **dimension** on a single widget. It is a different feature from the [App Profiling Comparison](/support/docs/insights-app-profiling-comparison/) view, which overlays whole **test sessions** across every metric at once.
 
 Compare is scoped to the widget — enabling it on one chart does not affect others. Performance Overview, Performance Trends and Device Performance Matrix do not expose Compare: the first two are summary widgets (use filters to change the data scope instead), and the matrix already breaks data down per device.
 

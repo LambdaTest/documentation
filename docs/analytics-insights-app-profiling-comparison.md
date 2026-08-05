@@ -52,7 +52,7 @@ import NewTag from '../src/component/newTag';
 
 ## Overview
 
-The **Comparison** view plots individual test sessions against one another instead of averaging them. Use it to answer run-level questions the [Trends](/support/docs/insights-app-profiling/) view cannot: whether a build regressed against the run before it, whether one device is slower than another on the same app, or why a single run behaved differently from the rest.
+The **Comparison** view plots individual test sessions against one another instead of averaging them. Use it to answer run-level questions the [App Profiling Trends](/support/docs/insights-app-profiling/) view cannot: whether a build regressed against the run before it, whether one device is slower than another on the same app, or why a single run behaved differently from the rest.
 
 Where Trends charts a metric over calendar time, Comparison charts it over **elapsed time within each run** — every session starts at `0:00`, so runs of different lengths and different start times line up and can be read against each other.
 
@@ -116,7 +116,7 @@ Each metric renders as its own card, in this order: **CPU Utilization**, **Memor
 
 Every stats table reports all four aggregations **side by side, always**, for each selected session.
 
-There is no Average / p90 toggle on this view. The toggle on the [Trends](/support/docs/insights-app-profiling/#average-and-p90-views) view does not carry across, and switching between the two will not change what Comparison shows — it does not need to, because Comparison already shows you every aggregation at once for the handful of runs you have selected. That is the more useful shape when you are looking at individual runs rather than a population.
+There is no Average / p90 toggle on this view. The [Average and p90 views](/support/docs/insights-app-profiling/#average-and-p90-views) toggle on the Trends view does not carry across, and switching between the two will not change what Comparison shows — it does not need to, because Comparison already shows you every aggregation at once for the handful of runs you have selected. That is the more useful shape when you are looking at individual runs rather than a population.
 
 ## Baseline and Baseline Diff
 
