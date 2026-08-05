@@ -104,12 +104,13 @@ Create a new test or open an existing one in the KaneAI web agent.
 
 ### Step 2: Import the Module
 
-Use either method to access the modules menu:
-
-- Click the **plus (+)** icon in the test interface
-- Type a **slash (/)** to invoke the command menu and select **Add Module**
+Type a **slash (/)** to invoke the command menu and select **Add Module**.
 
 Browse the list of available modules and select the one you need.
+
+:::note
+Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+:::
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/6.png').default} alt="import-module" className="doc_img"/>
 
@@ -127,7 +128,25 @@ Click on an existing module from the Module listing page to modify its steps or 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/modules-versioning/image6.png').default} alt="edit-module" className="doc_img img_center"/>
 
+Editing a step opens it inline, where you can change the test step and its expected outcome. **Update** applies the change to the step, and the module header then shows an **Unsaved changes** label. Click **Save Changes** to commit them, or **Discard** to drop them.
+
 When you save changes to a module, a new version is created automatically. See [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/) for details on how version history works.
+
+### Editing Restrictions
+
+Some steps carry a **Read-Only** label on the module's step listing. Editing, deleting, and reordering are all disabled for:
+
+- Steps that create or use a **variable** or **parameter**
+- **If-Else** blocks
+- **While Loop** blocks
+
+Hovering the edit icon on one of these steps shows *Editing Kane instructions is not allowed*.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/editing-restrictions.png').default} alt="A While Loop step marked Read-Only with the edit action disabled" width="1600" height="831" className="doc_img"/>
+
+These steps are part of a larger flow. A variable step feeds values to later steps, and a control flow block carries branches and nested steps that must change together. To modify them, open the test case the module was authored from, make the change there, and save. The module receives a new version automatically. All other steps can be edited, deleted, and reordered as usual.
+
+Modules authored in a KaneAI session also show an **Author Module to Update Test Cases** banner on the Linked Test Cases tab, noting that linked test cases are updated by authoring and validating the module in a KaneAI session.
 
 ---
 
@@ -145,6 +164,12 @@ You can delete modules that are no longer needed from the module listing page.
 :::warning Important
 Only modules that are **not linked to any test cases** can be deleted. If a module is currently used in one or more test cases, the delete option will be disabled. You must first remove the module from all linked test cases before deleting it.
 :::
+
+### Deleting Steps Inside a Module
+
+The delete action is disabled for the same steps. Hovering it shows *Deleting Kane instructions is not allowed*. These steps can be deleted only while authoring, in the KaneAI test case the module was authored from. All other steps can be deleted directly.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/delete-restrictions.png').default} alt="The delete action disabled on a While Loop step inside a module" width="1600" height="827" className="doc_img"/>
 
 ---
 
