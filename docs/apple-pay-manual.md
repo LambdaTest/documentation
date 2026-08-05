@@ -89,6 +89,23 @@ Within the App Live session, you can use Apple Pay via the **Assistive Touch** o
 :::info
 - If the **Wallet** is not set up on the device, the **Apple Pay** option will not appear through **Assistive Touch**. Please ensure Wallet is configured before attempting to access Apple Pay.
 :::
+
+:::tip
+Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session with the desired card.
+:::
+
+---
+
+## FAQs
+
+**Q: Why does adding my card to Apple Wallet time out?**
+
+This is a known Apple-side issue affecting sandbox/demo cards, including Visa and Mastercard. It isn’t specific to LambdaTest. See Apple’s community discussion for more details.
+
+**Q: Why is Apple Pay missing from Assistive Touch?**
+
+Use the Confirm Payment button in the left-side panel instead - it automates the payment confirmation flow.
+
 ---
 
 ## Additional Links
@@ -97,8 +114,3 @@ Within the App Live session, you can use Apple Pay via the **Assistive Touch** o
 - [<BrandName /> App Live Overview](https://www.testmuai.com/app-live)
 - [iOS Assistive Touch Guide](https://support.apple.com/guide/iphone/assistive-touch-iph3e2e4157/ios)
 
----
-
-:::tip
-Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session with the desired card. 
-:::
