@@ -5,8 +5,8 @@ import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/C
 import styles from './styles.module.css';
 
 function getStoredTheme() {
-  if (typeof document === 'undefined') return 'light';
-  return document.documentElement.getAttribute('data-theme') || 'light';
+  if (typeof document === 'undefined') return 'dark';
+  return document.documentElement.getAttribute('data-theme') || 'dark';
 }
 
 function applyTheme(theme) {
@@ -14,11 +14,40 @@ function applyTheme(theme) {
   try { localStorage.setItem('theme', theme); } catch {}
 }
 
+// Three-way color mode: the user's explicit choice ('system' | 'light' | 'dark')
+// is stored under 'theme-choice'; the resolved theme is written to 'theme'
+// (which Docusaurus' inline script reads on next load). 'system' follows the OS.
+const THEME_CHOICES = ['system', 'light', 'dark'];
+function getStoredChoice() {
+  if (typeof localStorage === 'undefined') return 'dark';
+  try {
+    const c = localStorage.getItem('theme-choice');
+    if (THEME_CHOICES.includes(c)) return c;
+    // migrate a prior light/dark preference so existing users aren't reset
+    const legacy = localStorage.getItem('theme');
+    if (legacy === 'light' || legacy === 'dark') return legacy;
+    return 'dark';
+  } catch { return 'dark'; }
+}
+function systemTheme() {
+  if (typeof window === 'undefined') return 'light';
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+function applyThemeChoice(choice) {
+  const theme = choice === 'system' ? systemTheme() : choice;
+  document.documentElement.setAttribute('data-theme', theme);
+  try {
+    localStorage.setItem('theme', theme);
+    localStorage.setItem('theme-choice', choice);
+  } catch {}
+}
+
 const NAV_LINKS = [
   { to: '/support/docs/', label: 'Home', icon: HomeIcon },
   { to: '/support/docs/getting-started-with-testmu-automation/', label: 'Docs', icon: DocsIcon },
   { to: '/support/api-doc/', label: 'API Reference', icon: ApiIcon },
   { to: '/support/faq/', label: 'FAQ', icon: FaqIcon },
+  { to: '/support/changelog/', label: 'Changelog', icon: ChangelogIcon },
 ];
 
 function HomeIcon() {
@@ -60,6 +89,15 @@ function FaqIcon() {
   );
 }
 
+function ChangelogIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 11l16-5v12L3 13z" />
+      <path d="M11.5 17.5a2.5 2.5 0 0 1-4.8-.9" />
+    </svg>
+  );
+}
+
 function GithubIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -92,6 +130,16 @@ function MoonIcon() {
   );
 }
 
+function MonitorIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="3" width="20" height="14" rx="2" />
+      <line x1="8" y1="21" x2="16" y2="21" />
+      <line x1="12" y1="17" x2="12" y2="21" />
+    </svg>
+  );
+}
+
 function isActiveLink(pathname, to, label) {
   if (!pathname || !to) return false;
   const normalizedPath = pathname.toLowerCase();
@@ -111,6 +159,8 @@ function isActiveLink(pathname, to, label) {
   if (normalizedTo.startsWith('/support/api-doc/')) return normalizedPath.startsWith('/support/api-doc/');
   // FAQ should match any /support/faq/* path
   if (normalizedTo.startsWith('/support/faq/')) return normalizedPath.startsWith('/support/faq/');
+  // Changelog should match any /support/changelog/* path
+  if (normalizedTo.startsWith('/support/changelog/')) return normalizedPath.startsWith('/support/changelog/');
   return normalizedPath.startsWith(normalizedTo);
 }
 
@@ -172,6 +222,7 @@ function useMediaQuery(query) {
 export default function Navbar() {
   const location = useLocation();
   const [colorMode, setColorModeState] = useState(getStoredTheme);
+  const [themeChoice, setThemeChoice] = useState(getStoredChoice);
   const [dotsOpen, setDotsOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT}px)`);
@@ -183,6 +234,18 @@ export default function Navbar() {
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     return () => observer.disconnect();
   }, []);
+
+  // Re-apply the stored choice on mount (so 'system' resolves against the OS).
+  useEffect(() => { applyThemeChoice(getStoredChoice()); }, []);
+
+  // While on 'system', follow live OS light/dark changes.
+  useEffect(() => {
+    if (themeChoice !== 'system' || typeof window === 'undefined') return undefined;
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const onChange = () => applyThemeChoice('system');
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, [themeChoice]);
 
   // Close menus on route change
   useEffect(() => {
@@ -223,10 +286,10 @@ export default function Navbar() {
   }, [dotsOpen]);
   */
 
-  function toggleColorMode() {
-    const next = colorMode === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    setColorModeState(next);
+  function selectTheme(choice) {
+    applyThemeChoice(choice);
+    setThemeChoice(choice);
+    setColorModeState(getStoredTheme());
   }
 
   function triggerSearch() {
@@ -273,9 +336,35 @@ export default function Navbar() {
           <a id="signbtn" href="/register/" className={styles.getStartedBtn} onClick={CookieTrackingSignup}>
             <span>Get Started Free</span> <span className={styles.arrow}>&rsaquo;</span>
           </a>
-          <button className={styles.gearBtn} onClick={toggleColorMode} aria-label="Toggle dark mode">
-            {colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
-          </button>
+          <div className={styles.themeSegment} role="group" aria-label="Color theme">
+            <button
+              type="button"
+              className={`${styles.themeSegmentBtn} ${themeChoice === 'system' ? styles.themeSegmentBtnActive : ''}`}
+              onClick={() => selectTheme('system')}
+              aria-label="System theme"
+              aria-pressed={themeChoice === 'system'}
+            >
+              <MonitorIcon />
+            </button>
+            <button
+              type="button"
+              className={`${styles.themeSegmentBtn} ${themeChoice === 'light' ? styles.themeSegmentBtnActive : ''}`}
+              onClick={() => selectTheme('light')}
+              aria-label="Light mode"
+              aria-pressed={themeChoice === 'light'}
+            >
+              <SunIcon />
+            </button>
+            <button
+              type="button"
+              className={`${styles.themeSegmentBtn} ${themeChoice === 'dark' ? styles.themeSegmentBtnActive : ''}`}
+              onClick={() => selectTheme('dark')}
+              aria-label="Dark mode"
+              aria-pressed={themeChoice === 'dark'}
+            >
+              <MoonIcon />
+            </button>
+          </div>
         </div>
 
         {/* Mobile-only: search */}
@@ -337,16 +426,24 @@ export default function Navbar() {
                 <div className={styles.mobileThemeToggle}>
                   <button
                     type="button"
-                    className={`${styles.mobileThemeToggleBtn} ${colorMode === 'light' ? styles.mobileThemeToggleBtnActive : ''}`}
-                    onClick={() => { if (colorMode !== 'light') toggleColorMode(); }}
+                    className={`${styles.mobileThemeToggleBtn} ${themeChoice === 'system' ? styles.mobileThemeToggleBtnActive : ''}`}
+                    onClick={() => selectTheme('system')}
+                    aria-label="System theme"
+                  >
+                    <MonitorIcon />
+                  </button>
+                  <button
+                    type="button"
+                    className={`${styles.mobileThemeToggleBtn} ${themeChoice === 'light' ? styles.mobileThemeToggleBtnActive : ''}`}
+                    onClick={() => selectTheme('light')}
                     aria-label="Light mode"
                   >
                     <SunIcon />
                   </button>
                   <button
                     type="button"
-                    className={`${styles.mobileThemeToggleBtn} ${colorMode === 'dark' ? styles.mobileThemeToggleBtnActive : ''}`}
-                    onClick={() => { if (colorMode !== 'dark') toggleColorMode(); }}
+                    className={`${styles.mobileThemeToggleBtn} ${themeChoice === 'dark' ? styles.mobileThemeToggleBtnActive : ''}`}
+                    onClick={() => selectTheme('dark')}
                     aria-label="Dark mode"
                   >
                     <MoonIcon />
