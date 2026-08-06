@@ -194,6 +194,45 @@
   background: rgba(237, 95, 0, 0.08);
 }
 
+/* Three-way color-mode segmented control (System / Light / Dark) */
+.themeSegment {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  overflow: hidden;
+}
+[data-theme='dark'] .themeSegment {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.themeSegmentBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 8px;
+  line-height: 0;
+  color: #9ca3af;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.themeSegmentBtn svg {
+  width: 16px;
+  height: 16px;
+}
+.themeSegmentBtn:hover {
+  color: var(--ifm-color-emphasis-800);
+}
+.themeSegmentBtnActive {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
+}
+[data-theme='dark'] .themeSegmentBtnActive {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
 /* Row 2 */
 .row2 {
   background-color: #ffffff;
@@ -608,7 +647,8 @@
     gap: 8px;
   }
 
-  .gearBtn {
+  .gearBtn,
+  .themeSegment {
     display: none;
   }
 }
