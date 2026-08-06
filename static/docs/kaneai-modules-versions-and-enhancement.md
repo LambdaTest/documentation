@@ -10,7 +10,7 @@ For an overview of creating, using, and managing modules, see [Modules](/support
 
 When you edit an existing module (for example, by adding, removing, or modifying a test step), KaneAI automatically increments the version number (e.g., from 1.1 to 1.2). You do not need to manually create versions.
 
-In the Classic experience, some steps are locked on the Modules page and must be changed from the test case the module was authored from. See [Editing Restrictions](/support/docs/kane-ai-modules/#editing-restrictions). Editing them there still increments the module version in the same way.
+Some steps are locked on the Modules page and must be changed from the test case the module was authored from. See [Editing Restrictions](/support/docs/kane-ai-modules/#editing-restrictions). Editing them there still increments the module version in the same way.
 
 After a new version is created, test cases that use the module can either:
 

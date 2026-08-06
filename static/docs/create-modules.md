@@ -41,7 +41,7 @@ Modules support duplication, editing and versioning; however, a new version is o
 
  Only **Test Step** or **Expected Outcome** updation will create a new version of the module.
 
-In the Classic experience, for modules authored in KaneAI, steps that use a variable or parameter and If-Else or While Loop blocks cannot be edited, deleted, or reordered from the Modules page. Edit them from the KaneAI test case the module was authored from.
+For modules authored in KaneAI, steps that use a variable or parameter and If-Else or While Loop blocks cannot be edited, deleted, or reordered from the Modules page. Edit them from the KaneAI test case the module was authored from.
 
 ## 3. Module Versions
 
