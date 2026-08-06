@@ -57,7 +57,7 @@ From there, you'll be able to select and import the specific module you need.
 :::
 
 :::note
-Modules that contain KaneAI instructions run only in KaneAI test cases. This covers steps that create or use a variable or parameter, If-Else blocks, and While Loops.
+In the Classic experience, modules that contain KaneAI instructions run only in KaneAI test cases. This covers steps that create or use a variable or parameter, If-Else blocks, and While Loops.
 :::
 
 The **Add Module** dialog lists the modules available to the test case and selects the first one by default. When the selected module contains KaneAI instructions, the dialog shows *This module can't be imported as it contains a few specific KaneAI instructions* and **Add in step** stays disabled. **Edit Module** is locked for the same module.
@@ -71,7 +71,7 @@ Notice that imported modules will appear visually distinct from other individual
 You can also edit or delete imported modules directly from this view. Making changes creates a new version of that module.
 
 :::note
-**Edit Module** is disabled for modules that contain variables, an If-Else block, or a While Loop. Edit these from the KaneAI test case they were authored from.
+In the Classic experience, **Edit Module** is disabled for modules that contain variables, an If-Else block, or a While Loop. Edit these from the KaneAI test case they were authored from.
 :::
 
 :::note
