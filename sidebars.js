@@ -5186,9 +5186,20 @@ module.exports = {
         ],
       },
       {
-        type: "doc",
+        type: "category",
+        collapsed: true,
         label: "Use Cases",
-        id: "kane-cli-use-cases",
+        link: {
+          type: "doc",
+          id: "kane-cli-use-cases",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "API Testing",
+            id: "api-testing-with-kane-cli",
+          },
+        ],
       },
       {
         type: "category",
