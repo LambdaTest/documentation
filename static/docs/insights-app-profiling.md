@@ -20,8 +20,8 @@ The page is always scoped to the test you opened. Use the **Test Name** filter t
 
 The dashboard opens on two tabs:
 
-- **Trends** — the aggregated view described below: KPI cards, trend widgets and the device matrix, averaged across every session in the filtered scope.
-- **[Comparison](#comparison)** — an overlay view that plots individual test sessions against one another, run by run.
+- **Trends** — the aggregated view described on this page: KPI cards, trend widgets and the device matrix, averaged across every session in the filtered scope.
+- **Comparison** — an overlay view that plots individual test sessions against one another, run by run. See [App Profiling Comparison](/support/docs/insights-app-profiling-comparison/).
 
 ## Filter bar
 
@@ -66,11 +66,9 @@ Averages hide spikes. A build whose CPU averages 12% but reaches 45% on every te
 
 p90 is computed per session at ingestion and then averaged across the sessions in scope — it is *the mean of each session's own 90th percentile*, not the 90th percentile of the whole window. Metrics with no pre-computed p90 — cold and hot startup, and the crash and ANR counts — are dropped in p90 mode and render as `—`. Frozen and janky frame counts stay on their average, because they are companion counts to the frame-rate series rather than percentile-able metrics in their own right.
 
-### p90 on the Comparison tab
+### p90 and the Comparison view
 
-The Comparison tab has **no Average / p90 toggle** — the Trends toggle does not carry across, and switching tabs will not change what Comparison shows.
-
-It does not need one: every stats table on that tab reports **Avg, Min, Max and P90 side by side, always**, for each selected session. Where the Trends toggle makes you choose one aggregation for the whole dashboard, Comparison shows you all four at once for the handful of runs you have selected — which is the more useful shape when you are looking at individual runs rather than a population.
+The toggle applies to this view only. The Comparison view has no Average / p90 toggle — it reports [Avg, Min, Max and P90](/support/docs/insights-app-profiling-comparison/#avg-min-max-and-p90) side by side for every selected session instead.
 
 ## Performance Overview
 
@@ -144,71 +142,9 @@ Compare dimensions:
 - **App Build Version** — for build-over-build comparisons
 - **Label** — for page-transition-level breakdowns
 
+Compare mode overlays a **dimension** on a single widget. It is a different feature from the [App Profiling Comparison](/support/docs/insights-app-profiling-comparison/) view, which overlays whole **test sessions** across every metric at once.
+
 Compare is scoped to the widget — enabling it on one chart does not affect others. Performance Overview, Performance Trends and Device Performance Matrix do not expose Compare: the first two are summary widgets (use filters to change the data scope instead), and the matrix already breaks data down per device.
-
-## Comparison
-
-The **Comparison** tab plots individual test sessions against one another instead of averaging them. Use it to answer run-level questions the Trends tab cannot: whether a build regressed against the run before it, whether one device is slower than another on the same app, or why a single run behaved differently from the rest.
-
-Where the Trends tab charts a metric over calendar time, Comparison charts it over **elapsed time within each run** — every session starts at `0:00`, so runs of different lengths and different start times line up and can be read against each other.
-
-### Complete flow
-
-1. Open a test's App Profiling dashboard and select the **Comparison** tab. The **most recent** run of that test is selected automatically and becomes the baseline — note that this is the newest run, not necessarily the specific run you opened the dashboard from.
-2. Narrow the **Test Sessions** rail on the left with the search box and filters until you can see the runs you care about.
-3. Tick the checkbox on each session you want to overlay — up to **five** at a time.
-4. Pick which run everything is measured against with **Set as Baseline**.
-5. Read the charts and the per-metric stats tables. Leave **Baseline Diff.** on to see each session's delta against the baseline.
-6. Drag on the timeline at the top to zoom into a slice of the run; every chart follows.
-
-### Test Sessions rail
-
-The rail lists every session that matches the current filters, with a running count in the header. Sessions you have selected for comparison are **pinned to the top** so they stay visible as you filter; everything else follows, newest first. Each card shows the pass/fail status, the test name, when it ran, a truncated Test ID, and the OS version, device and app build version it ran on.
-
-| Control | What it does |
-|---|---|
-| **Search test name** | Free-text filter over the listed session names |
-| **Test Name** | Multi-select of test names. At least one must stay selected — **Apply** is disabled otherwise |
-| **Date range** | The same picker the Trends tab uses, with presets and a custom range including a time-of-day picker |
-| **More** | **OS**, **App Build Version**, **Device** and **Status** multi-selects |
-| **Clear Filters** | Resets the filters back to the opened test and the comparison back to that test's most recent run. The date range is deliberately preserved — it belongs to the shared picker, not to this filter set |
-| Checkbox | Adds or removes that session from the comparison |
-| **Set as Baseline** | Makes that session the reference every other session is measured against |
-
-You can compare up to five sessions at once — deselect one to add another — and at least one session must stay selected, so the charts are never left empty.
-
-### How the graphs are drawn
-
-Each metric renders as its own card, in this order: **CPU Utilization**, **Memory Utilization**, **Frame Rate**, **Disk**, **Network**, and **Startup Time**.
-
-- **One series per selected session**, coloured consistently across every card — a session keeps its colour everywhere, so you can follow one run down the page.
-- **A shared elapsed-time X-axis.** Dragging on the **Comparison of Test Sessions** timeline at the top zooms every chart to the same window at once, which is what makes a spike in one metric comparable against another.
-- **Legend toggles.** Click a session in a card's legend to hide or show that series in that card. The last visible series cannot be hidden.
-- **Variant toggles** where a metric has more than one dimension: Application / System on CPU and Memory, Read / Write on Disk, Upload / Download on Network, and Startup Time / Load Time on the startup card.
-- **SLA bands and threshold lines** are drawn from the same org-level thresholds used everywhere else on the dashboard.
-- **A stats table** under every chart with **Avg**, **Min**, **Max** and **P90** per session — all four at once, with no toggle. See [p90 on the Comparison tab](#p90-on-the-comparison-tab).
-
-**Startup Time** is a grouped bar chart rather than a line — it reports one Cold and one Hot value per run, with the Cold and Hot SLA lines drawn across it. Its **Load Time** variant switches to per-page-label load times, plotted by label instead of by elapsed time.
-
-### Baseline and Baseline Diff
-
-One session is always the baseline, marked with a **Baseline** chip in the rail and in every stats table.
-
-With **Baseline Diff.** enabled — it is on by default — every other session's stats show a coloured delta against the baseline: green where the session is better, red where it is worse. The direction that counts as "better" follows the metric, so a lower CPU figure and a higher frame rate are both green. In the Startup Time screenshot above, the two non-baseline runs start `142 ms` and `94 ms` faster than the baseline's cold start.
-
-Turn **Baseline Diff.** off to read raw values with no deltas.
-
-### Saved comparisons
-
-Your Comparison setup is **auto-saved per test at the organisation level**, the same way the Trends tab saves its filters and layout. There is no Save button. Reopening the tab restores:
-
-- the rail filters — test names, OS, device, status and app build version,
-- which sessions were selected for comparison,
-- which session was the baseline,
-- the **Baseline Diff.** toggle,
-- any series you hid from a card's legend.
-
-The date range is not part of the saved comparison — it is owned by the page's date picker and shared with the Trends tab, so both tabs always report over the same window.
 
 ## SLA thresholds
 
@@ -253,5 +189,6 @@ The URL of the dashboard preserves the test it was opened against, and which of 
 
 ## Related
 
+- [App Profiling Comparison](/support/docs/insights-app-profiling-comparison/) — compare individual test sessions run by run against a baseline.
 - [App Performance Analytics](/support/docs/appium-app-performance-analytics/) — how to enable App Profiling on Appium tests and review per-session metrics.
 - [Analytics Overview](/support/docs/analytics-overview/) — the broader Insights module.
