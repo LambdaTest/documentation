@@ -47,7 +47,6 @@ const NAV_LINKS = [
   { to: '/support/docs/getting-started-with-testmu-automation/', label: 'Docs', icon: DocsIcon },
   { to: '/support/api-doc/', label: 'API Reference', icon: ApiIcon },
   { to: '/support/faq/', label: 'FAQ', icon: FaqIcon },
-  { to: '/support/changelog/', label: 'Changelog', icon: ChangelogIcon },
 ];
 
 function HomeIcon() {
@@ -85,15 +84,6 @@ function FaqIcon() {
       <circle cx="12" cy="12" r="10" />
       <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
       <line x1="12" y1="17" x2="12.01" y2="17" />
-    </svg>
-  );
-}
-
-function ChangelogIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 11l16-5v12L3 13z" />
-      <path d="M11.5 17.5a2.5 2.5 0 0 1-4.8-.9" />
     </svg>
   );
 }
@@ -159,8 +149,6 @@ function isActiveLink(pathname, to, label) {
   if (normalizedTo.startsWith('/support/api-doc/')) return normalizedPath.startsWith('/support/api-doc/');
   // FAQ should match any /support/faq/* path
   if (normalizedTo.startsWith('/support/faq/')) return normalizedPath.startsWith('/support/faq/');
-  // Changelog should match any /support/changelog/* path
-  if (normalizedTo.startsWith('/support/changelog/')) return normalizedPath.startsWith('/support/changelog/');
   return normalizedPath.startsWith(normalizedTo);
 }
 
