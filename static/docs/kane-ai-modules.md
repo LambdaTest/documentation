@@ -52,7 +52,7 @@ Type a **slash (/)** to invoke the command menu and select **Add Module**.
 
 Browse the list of available modules and select the one you need.
 
-Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. This applies to the Classic experience. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
 
 ### Step 3: Execute
 
@@ -67,6 +67,8 @@ Editing a step opens it inline, where you can change the test step and its expec
 When you save changes to a module, a new version is created automatically. See [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/) for details on how version history works.
 
 ### Editing Restrictions
+
+The editing, reordering, and deletion restrictions described in this section and in [Deleting Steps Inside a Module](#deleting-steps-inside-a-module) apply to the Classic experience.
 
 Some steps carry a **Read-Only** label on the module's step listing. Editing, deleting, and reordering are all disabled for:
 
