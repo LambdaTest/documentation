@@ -103,7 +103,7 @@ Modules support duplication, editing and versioning; however, a new version is o
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_page.png').default} alt="module-page" className="doc_img"/>
 
 :::note
-For modules authored in KaneAI, steps that use a variable or parameter and If-Else or While Loop blocks cannot be edited, deleted, or reordered from the Modules page. Edit them from the KaneAI test case the module was authored from.
+In the Classic experience, for modules authored in KaneAI, steps that use a variable or parameter and If-Else or While Loop blocks cannot be edited, deleted, or reordered from the Modules page. Edit them from the KaneAI test case the module was authored from.
 :::
 
 ## 3. Module Versions
