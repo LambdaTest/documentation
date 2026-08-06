@@ -103,7 +103,7 @@ export default function Home() {
             alt="TESTµ CONF '26 - World's Largest Virtual Agentic Engineering and Quality Conference. August 19-21. Register now."
             loading="eager"
             className="no-zoom"
-            style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }}
+            style={{ width: '80%', height: 'auto', display: 'block', borderRadius: '8px', margin: 'auto' }}
           />
         </a>
       </div>
