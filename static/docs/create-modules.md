@@ -32,14 +32,16 @@ Don't worry if you don't have all the details now; you can always edit or add th
 
  You must provide **Module name** & create at **least one test step** to be able to create a new module.
 
- Keep in mind Modules can't be deleted but only updated after creation.
+Only modules that are **not linked to any test cases** can be deleted. If a module is used in one or more test cases, the delete option is disabled. See [Delete a Module](/support/docs/kane-ai-modules/#delete-a-module).
 
 ## 2. Update Module
 Modules support duplication, editing and versioning; however, a new version is only triggered when specific fields are edited.
 - Add a step by clicking on `Add Step` or update a step through edit icon.
-- Click on `update` on top right to save changes.
+- In the inline editor, click `Update` to apply your change to the step. The header then shows **Unsaved changes**: click `Save Changes` on the top right to save them, or `Discard` to drop them.
 
  Only **Test Step** or **Expected Outcome** updation will create a new version of the module.
+
+For modules authored in KaneAI, steps that use a variable or parameter and If-Else or While Loop blocks cannot be edited, deleted, or reordered from the Modules page. Edit them from the KaneAI test case the module was authored from.
 
 ## 3. Module Versions
 
@@ -53,4 +55,4 @@ Compare your version history side-by-side to easily identify differences and tra
 
 You will be redirected to the Version Comparison page where you can track changes:
 
-Project linking is only added for manual tests in test cases. Hence, modules linked to a particular project are only available to be added in a manual test case. However, for KaneAI test cases, all modules in all projects will be available for selection.
+Project linking is only added for manual tests in test cases. Hence, modules linked to a particular project are only available to be added in a manual test case. However, for KaneAI test cases, all modules in all projects will be available for selection. Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases. In a manual test case the **Add Module** dialog blocks them from being added.
