@@ -72,8 +72,8 @@ module.exports = {
   ],
   themeConfig: {
     colorMode: {
-      defaultMode: 'dark',            // new visitors default to dark (no light flash)
-      respectPrefersColorScheme: false,
+      defaultMode: 'dark',            // fallback when the OS expresses no preference
+      respectPrefersColorScheme: true, // new visitors follow their system theme
     },
     zoom: {
       selector: 'img:not(.no-zoom)',
