@@ -19,15 +19,15 @@ function applyTheme(theme) {
 // (which Docusaurus' inline script reads on next load). 'system' follows the OS.
 const THEME_CHOICES = ['system', 'light', 'dark'];
 function getStoredChoice() {
-  if (typeof localStorage === 'undefined') return 'dark';
+  if (typeof localStorage === 'undefined') return 'system';
   try {
     const c = localStorage.getItem('theme-choice');
     if (THEME_CHOICES.includes(c)) return c;
     // migrate a prior light/dark preference so existing users aren't reset
     const legacy = localStorage.getItem('theme');
     if (legacy === 'light' || legacy === 'dark') return legacy;
-    return 'dark';
-  } catch { return 'dark'; }
+    return 'system';
+  } catch { return 'system'; }
 }
 function systemTheme() {
   if (typeof window === 'undefined') return 'light';
