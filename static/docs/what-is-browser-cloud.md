@@ -6,6 +6,8 @@ TestMu AI is a scalable browser designed for AI agents to handle scraping, testi
 
 Find all the guides, resources, and examples you need to build on TestMu AI Browser Cloud.
 
+  Your browser does not support the video tag.
+
 ## Get Started
 
       🛠️ Set Up the SDK

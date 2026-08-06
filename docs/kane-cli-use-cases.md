@@ -1,11 +1,10 @@
 ---
 id: kane-cli-use-cases
 title: Kane CLI Use Cases
-sidebar_label: Use Cases
-description: "Real-world Kane CLI use cases, from smoke tests and auth-token chaining to schema validation, SLA gates, and multi-step API transactions, each with the exact steps to follow."
+sidebar_label: Overview
+description: "Browse Kane CLI use cases by category, from API testing to everything you can drive with a single natural-language command."
 keywords:
   - kane cli use cases
-  - api testing
   - kane cli
   - kaneai
   - natural language testing
@@ -41,197 +40,16 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-use-cases/
 
 Kane CLI is a natural-language command line tool for testing. Instead of writing test scripts, you describe what you want to test in plain English inside a `kane-cli run "..."` command. Kane CLI opens a real browser session, performs the described navigation and API calls, evaluates your assertions, and prints a live step-by-step log together with a plain-language pass or fail summary. Every successful run can be saved as a structured, shareable test case inside KaneAI Test Manager for future reuse.
 
-The pages below walk through the most common scenarios you can cover with Kane CLI, each with the exact steps to follow. Every use case is a single command you can copy, adapt to your own endpoints, and drop straight into a CI pipeline.
+The categories below group the most common scenarios you can cover with Kane CLI, each with the exact steps to follow. Every use case is a single command you can copy, adapt to your own endpoints, and drop straight into a CI pipeline.
 
-## API Testing Use Cases
+## Browse by Category
+***
 
-These use cases cover API testing end to end: verifying that a service is alive, chaining authenticated requests, validating response schemas and business logic, proving that invalid requests fail closed, gating on latency, and running full multi-step transactions. Each one runs as a single `kane-cli run` command and produces a rerunnable test case in KaneAI Test Manager.
-
-### Smoke Test an Endpoint
-
-A smoke test is the fastest way to confirm that a service is alive and responding correctly before deeper testing. This use case shows how to check a health endpoint end to end in a single Kane CLI command.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/smoke-test-an-endpoint.mp4" type="video/mp4" />
-</video>
-
-1. Open a terminal and start your command with `kane-cli run` followed by your full instruction in quotes.
-2. Tell it which page to open, for example `Go to https://your-app.com`.
-3. Describe the API call to make next, for example `then call GET https://your-app.com/api/shop/health`.
-4. Ask it to store the response for reuse, for example `save the response as h`.
-5. Add plain-English assertions, for example `assert {{h.status}} is 200, assert {{h.response_body.status}} is 'ok'`.
-6. Press **Enter** to run the command. Kane CLI launches a real Chrome session, performs the navigation and API call, and streams a live step-by-step log with elapsed time for each step.
-7. Read the pass or fail summary card, which explains in plain language what was retrieved and confirmed, for example that the health check returned status `200` and an `ok` status.
-8. When prompted **Save session?**, confirm to save. Kane CLI uploads the session and generates a structured, rerunnable test case inside KaneAI Test Manager.
-
-### Auth-Token Chaining
-
-Many APIs require you to log in first and then use the returned token to call a protected endpoint. Kane CLI can describe this entire login-then-call flow as one instruction, automatically passing the token from the first response into the second request.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/auth-token-chaining.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a POST request to /api/health/login with JSON body {"email":"...","password":"..."}"`.
-2. Assert the login worked and capture the token, for example `confirm the response status is 200 and the token is non-empty`.
-3. Chain the next request using that captured token, for example `then send a GET request to /api/health/doctors with an Authorization header of 'Bearer ' plus that token`.
-4. Add a final assertion on the protected response, for example `confirm it returns 200`.
-5. Run the command. Kane CLI executes the login request first, extracts the token from the response body, then automatically substitutes it into the `Authorization` header of the second request.
-6. Review the pass or fail summary, which confirms both that the login succeeded with a valid token and that the protected endpoint accepted the token.
-7. Save the session to keep a reusable test case that documents the full authentication and access flow.
-
-### Schema and Field Validation
-
-Checking a status code is not enough on its own. This use case validates that a response body has the right structure, the right top-level fields, and the right values nested inside an array.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/schema-and-field-validation.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a GET request to /api/shop/products?category=gaming"`.
-2. Add a status assertion, for example `confirm the response status is 200`.
-3. Add a top-level field assertion, for example `the count field is 4`.
-4. Add a nested assertion that checks an array for a specific object and value, for example `the products list contains a product with id 'sku_console' whose price is 499.99`.
-5. Run the command. Kane CLI records each value it checks, including the status, the `count` field, and the matching array entry, and reports pass or fail for every individual assertion.
-6. Open the generated test case in KaneAI Test Manager to see each assertion listed as its own verifiable step, which makes it easy to spot schema drift or a broken field mapping later.
-
-### Server-Side Business Logic
-
-Some endpoints apply computed business rules rather than just storing data, for example routing a submitted symptom to the correct type of specialist. This use case confirms that the server-side logic produces the expected outcome.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/server-side-business-logic.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a POST request to /api/health/consult with header Content-Type: application/json and this raw JSON body: {"symptom":"itchy skin rash and acne","phone":"9876543210"}"`.
-2. Assert the request was accepted, for example `confirm the response status is 201`.
-3. Assert the resulting record status, for example `the status field is 'booked'`.
-4. Assert the computed business outcome, for example `the specialty field is 'Dermatologist'`.
-5. Run the command. Kane CLI sends the raw JSON body, waits for the server to apply its business rules, and checks the derived field against your expected value.
-6. Read the pass or fail summary to confirm the server correctly mapped the input to the expected outcome, for example that a skin-related symptom was routed to a `Dermatologist`.
-7. Save the session so the scenario can be rerun automatically whenever the underlying business logic changes.
-
-### Negative Path Testing (401 Unauthorized)
-
-Good API coverage also proves that invalid requests are correctly rejected rather than accidentally accepted. This use case sends deliberately wrong credentials and confirms the API fails closed.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/negative-path-testing-401.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a POST request to /api/insurance/login with header Content-Type: application/json and this raw JSON body: {"email":"notauser@example.com","password":"x"}"`.
-2. Add the negative assertion, for example `confirm the request is rejected with response status 401 and the error field is 'invalid credentials'`.
-3. Run the command. Kane CLI sends the deliberately invalid payload and checks that the API rejects it instead of returning a success response.
-4. Review the summary, which confirms the rejection happened with the expected status code and error message.
-5. Save the test case as a permanent regression guard, so you will be alerted if invalid logins ever start returning a success response by mistake.
-
-### Latency and SLA Gate Testing
-
-A correct response is not useful if it arrives too slowly. This use case adds a response-time assertion alongside the usual functional checks, turning a normal test into an SLA gate.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/latency-and-sla-gate-testing.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a GET request to /api/telecom/plans"`.
-2. Add a functional assertion, for example `confirm the response status is 200 and the count field is 5`.
-3. Add a performance assertion, for example `confirm the response time is less than 2000 ms`.
-4. Run the command. Kane CLI records the elapsed time of the request alongside the usual status and body checks.
-5. Review the summary, which explicitly states whether the call met the latency target, giving you a simple, reusable SLA gate you can add to any test.
-
-### Migrating an Existing curl Command
-
-If you already have a working curl command from Postman, documentation, or a teammate, Kane CLI can run it exactly as written instead of you having to translate it into a new format.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/migrating-an-existing-curl-command.mp4" type="video/mp4" />
-</video>
-
-1. Copy your existing curl command exactly as it is, including its headers and JSON payload.
-2. Run `kane-cli run "Open [your site], then run this exact request:"` followed by the full curl command in quotes, for example:
-
-   ```bash
-   curl -X POST https://your-app.com/api/telecom/recharge \
-     -H 'Content-Type: application/json' \
-     -d '{"mobile":"9876543210","amount":299,"type":"prepaid"}'
-   ```
-
-3. Append your assertions in plain English right after the curl command, for example `confirm the response status is 201, the status field is 'success', and the amount is 299`.
-4. Run the command. Kane CLI parses the curl syntax, executes the identical request, and layers structured assertions on top of it.
-5. Review the pass or fail summary and the generated test case, which is now stored in KaneAI Test Manager as a maintainable, rerunnable test instead of a one-off curl snippet.
-
-### Input Validation Boundaries (400 then 201)
-
-Boundary testing checks both sides of a validation rule in one flow: an invalid input that should be rejected, and a corrected input that should then succeed.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/input-validation-boundaries.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a POST request to /api/gov/report with header Content-Type: application/json and this raw JSON body: {"category":"identity-theft","details":"too short"}"`.
-2. Assert the rejection, for example `confirm it is rejected with response status 400 and an error mentioning min 10 chars`.
-3. Chain a second request in the same command with a corrected payload, for example `then send a POST request to the same endpoint with header Content-Type: application/json and this raw JSON body: {"category":"identity-theft","details":"a longer, valid description of the issue"}`.
-4. Assert the success, for example `confirm the response status is 201 and the status field is 'received'`.
-5. Run the command. Kane CLI sends the invalid request first, confirms it is rejected, then immediately sends the corrected request and confirms it succeeds.
-6. Check the summary to confirm the API enforces the validation boundary correctly in both directions, catching cases where validation is too strict or missing entirely.
-
-### Cross-Endpoint Data Consistency
-
-This use case confirms that a value returned by one endpoint, such as a listed price, matches the value used or returned by a second, related endpoint, such as a booking total, catching mismatches between services or caches.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/cross-endpoint-data-consistency.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a GET request to /api/travel/listings?city=Rishikesh"`.
-2. Assert on the listing data, for example `confirm the response status is 200, the count field is 3, and the listings list contains a listing with id 'rk1' whose price is 7800`.
-3. Chain a booking request that uses the same listing, for example `then send a POST request to /api/travel/book with a JSON body referencing that listing id, the check-in and check-out dates, and the guest count`.
-4. Assert that the booking reflects the same price, for example `confirm the response status is 201, the status field is 'confirmed', the currency field is 'INR', and the total field is 7800`.
-5. Run the command. Kane CLI checks that the price quoted by the listings endpoint is exactly what the booking endpoint charges.
-6. Save the session as a repeatable consistency check between the two endpoints, useful for catching pricing or data-sync bugs across services.
-
-### Filter a Catalog, Then Act on a Result
-
-A very common real-world flow is searching or filtering a catalog and then performing an action on one of the returned items, such as picking a title from search results and starting playback.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/filter-a-catalog-then-act-on-a-result.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a GET request to /api/stream/titles?genre=Comedy"`.
-2. Assert on the filtered results, for example `confirm the response status is 200, the count is 8, and the titles include the id 'Friends'`.
-3. Chain an action on the specific result, for example `then send a POST request to /api/stream/play with a JSON body of {"titleId":"Friends"}`.
-4. Assert the outcome of the action, for example `confirm the response status is 201, the status field is 'playing', the title is 'FRIENDS', and the sessionId starts with 'PLAY-'`.
-5. Run the command. Kane CLI filters the catalog first, confirms the target item is present in the results, then performs and validates the follow-up action.
-6. Review the generated test case, which is a useful pattern for validating any search-then-select flow such as streaming, e-commerce, or bookings.
-
-### Create a Record (Seed Data)
-
-Sometimes you simply need to create a brand-new record and confirm it was stored correctly, useful for seeding test data or verifying a creation endpoint on its own.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/create-a-record-seed-data.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a POST request to /api/travel/book with a JSON body containing the listing id, check-in date, check-out date, and number of guests"`.
-2. Add your assertions, for example `confirm the response status is 201, the status field is 'confirmed', and the bookingId starts with 'BKG-'`.
-3. Run the command. Kane CLI submits the new record and inspects the response for both the success status and the format of the generated identifier.
-4. Review the pass or fail summary, which confirms a new record was created successfully.
-5. Save the session. The generated test case can be rerun any time you need to seed a fresh record or verify the creation endpoint still works after a change.
-
-### Multi-Step API Transaction
-
-Real-world workflows often span several dependent API calls, for example logging in, adding an item to a cart, and then placing an order. Kane CLI can chain all of these into a single end-to-end test, passing data forward automatically at each step.
-
-<video class="right-side" width="100%" controls id="vid">
-<source src="https://assets.testmuai.com/resources/videos/kane-cli/use-cases/multi-step-api-transaction.mp4" type="video/mp4" />
-</video>
-
-1. Run `kane-cli run "Open [your site], then send a POST request to /api/shop/login with a JSON body of {"email":"...","password":"..."}"`.
-2. Assert the login succeeded and capture the token, for example `confirm the response status is 200 and the token is non-empty`.
-3. Chain a cart request using that token, for example `then send a POST request to /api/shop/cart with an Authorization header of 'Bearer ' plus that token and a JSON body listing the product id and quantity`.
-4. Assert the cart total, for example `confirm the response status is 201 and the lineTotal is 159.98`.
-5. Chain a final order request, for example `then send a POST request to /api/shop/orders with a JSON body referencing the cart items and total`.
-6. Assert the order was placed, for example `confirm the response status is 201, the status field is 'placed', and the itemCount is 2`.
-7. Run the command. Kane CLI executes all three requests in order, automatically passing the token and cart data forward, and validates each step along the way.
-8. Review the full pass or fail summary and the generated multi-step test case, which documents the entire transaction from login to order confirmation and can be rerun as a single, reliable end-to-end check.
+<div className="row">
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/api-testing-with-kane-cli/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🔗 API Testing</h3>
+      <p>Smoke tests, auth-token chaining, schema and field validation, negative paths, SLA gates, and multi-step transactions.</p>
+    </a>
+  </div>
+</div>

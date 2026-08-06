@@ -4382,11 +4382,22 @@ module.exports = {
           },
         ],
       },
-{
+      {
+        type: "category",
+        collapsed: true,
+        label: "Use Cases",
+        link: {
+          type: "doc",
+          id: "kane-cli-use-cases",
+        },
+        items: [
+          {
             type: "doc",
-            label: "Use Cases",
-            id: "kane-cli-use-cases",
+            label: "API Testing",
+            id: "api-testing-with-kane-cli",
           },
+        ],
+      },
       {
         type: "category",
         collapsed: true,
