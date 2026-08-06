@@ -33,3 +33,84 @@ mvn test -Dmode=discover -Dplatname=win -Dframework=testng -Ddiscovery=dependent
 ```
 
 This command will provide a Test Discovery Result that lists the tests and their dependencies, ensuring that dependent tests are executed in the correct order, such as ["Test1#SignIn,Test1#LogOut,Test1#OpenBrowser"].
+
+## Group-Based Test Discovery in TestNG
+
+TestNG provides group-based test discovery functionality. You can specify groups for your tests and execute or exclude specific groups during test runs.
+
+To perform group-based test discovery, you can use the ***@BeforeGroups*** and ***@AfterGroups*** annotations in your TestNG tests. These annotations allow you to specify setup and cleanup methods that run before and after specific groups of tests.
+
+For example:
+
+```java
+public class GroupIntegrationTest {
+
+@BeforeGroups("database")
+public void setupDB() {
+System.out.println("setupDB()");
+}
+
+@AfterGroups("database")
+public void cleanDB() {
+System.out.println("cleanDB()");
+}
+
+@Test(groups = "selenium-test")
+public void runSelenium() {
+System.out.println("runSelenium()");
+}
+
+@Test(groups = "selenium-test")
+public void runSelenium1() {
+System.out.println("runSelenium()1");
+}
+
+@Test(groups = "database")
+public void testConnectOracle() {
+System.out.println("testConnectOracle()");
+}
+
+@Test(groups = "database")
+public void testConnectMsSQL() {
+System.out.println("testConnectMsSQL");
+}
+
+}
+```
+
+In the HyperExecute YAML Version 0.2 configuration, you can use the ```discoveryFlags``` parameter to specify the groups to discover during test discovery.
+
+```yaml
+framework:
+name: "maven/testng"
+discoveryFlags: ["-Dgroups=database"]
+```
+
+Here it will only discover tests belonging to the group database. Use comma-separated values if you want to specify multiple groups.
+
+Similarly, you can use the ```excludedGroups``` parameter that can be used to run all test groups except for the defined set of groups.
+
+```yaml
+framework:
+name: "maven/testng"
+discoveryFlags: ["-DexcludedGroups=database"]
+```
+
+This discovers all test of groups except database.
+
+Alternatively, you can also specify the groups or excluded groups directly in the pom.xml file using the Maven Surefire Plugin
+
+```yaml
+<plugins>
+[...]
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.22.1</version>
+<configuration>
+<groups>database,selenium-test</groups>
+</configuration>
+</plugin>
+[...]
+</plugins>
+```

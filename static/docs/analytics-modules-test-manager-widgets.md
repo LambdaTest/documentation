@@ -145,18 +145,19 @@ By comparing the actual burndown against the expected line and watching the foot
 
 ## Defects by Severity
 
-The Defects by Severity widget displays a bar chart of Jira defects linked to your test cases and test runs, grouped by their severity level.
+The Defects by Severity widget displays a bar chart of Jira defects linked to your test cases and test runs, grouped by their Jira priority.
 
 ### How it works?
 
-* Each bar represents a severity level (**Critical**, **High**, **Medium**, and **Low**) with its value showing the count of linked Jira defects at that severity.
+* Each bar represents a priority from your Jira project's own priority scheme (for example **Critical**, **High**, **Medium**, and **Low**, or custom values such as **Blocker**, **Major**, and **Minor**) with its value showing the count of linked Jira defects at that priority.
+* Only priorities present in the selected range are charted. Defects with no priority set are grouped under **Unknown**, shown last.
 * Defects are sourced from Jira issues linked to test cases or raised during test runs in Test Manager.
-* Click any bar to drill down into the underlying list of issues for that severity.
+* Click any bar to drill down into the underlying list of issues for that priority.
 * Apply filters from the three-dot menu to scope the widget to a specific test run, phase, or stage.
 
 ### Value Proposition
 
-This widget helps you assess release risk at a glance by surfacing how many high-impact defects are outstanding. By focusing on Critical and High severity bars first, you can prioritize the issues most likely to block a release.
+This widget helps you assess release risk at a glance by surfacing how many high-impact defects are outstanding. By focusing on your highest priority bars first, you can prioritize the issues most likely to block a release.
 
 ## Tester Assignment
 

@@ -93,8 +93,11 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
 
              Agent Testing Platform
 
-              Getting Started
-              Test Your First AI Agent
+              Overview
+              Supported Agent Types
+              Test Your First Agent
+              Test With Agent Testing CLI
+              Integrate a Chat Agent API
               FAQs
 
              Real Time

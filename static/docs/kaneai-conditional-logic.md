@@ -126,6 +126,7 @@ To add a module inside a branch:
 
 - **Nested conditions are not supported.** You cannot place an If / Else‑If / Else block inside another conditional block.
 - **New conditional blocks cannot be created while a test is paused.** The **/** slash command menu and the **+ Add step** option do not offer **Add If-Else** in the Draft state. Conditional blocks that already exist in the test can still be extended while paused.
+- **Conditional blocks are read-only on the Modules page.** In the Classic experience, a module can contain a conditional block, but changes to it must be made in the KaneAI test case it was authored from. Modules containing conditional blocks cannot be added to manual test cases in Test Manager.
 
 ## FAQ
 
