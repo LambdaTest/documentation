@@ -153,6 +153,22 @@ Whitelist these IP addresses for browser-based remote access sessions falls back
 | `3.64.247.89` |
 
 
+## WebSocket Connections {#websocket-connections-ips}
+
+Whitelist these IP addresses to allow WebSocket (WS/WSS) communication for device interaction and DevTools functionality. Configure them as **outbound** allow rules.
+
+| IP Address |
+|------------|
+| `3.73.105.110/32` |
+| `3.72.144.221/32` |
+| `18.235.85.58/32` |
+| `44.207.198.148/32` |
+| `3.109.252.59` |
+| `43.205.182.101` |
+| `18.138.79.89` |
+| `54.254.173.86` |
+
+
 :::note
 - If you prefer not to whitelist the product-specific public IP ranges listed below, consider using a **Dedicated Proxy**.
 
