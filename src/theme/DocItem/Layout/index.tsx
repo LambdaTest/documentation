@@ -9,8 +9,13 @@ import styles from './styles.module.css';
 
 type Props = WrapperProps<typeof LayoutType>;
 
+function isDocsHomePage(pathname: string): boolean {
+  return /^\/support\/docs\/?$/.test(pathname);
+}
+
 export default function LayoutWrapper(props: Props): ReactNode {
   const location = useLocation();
+  const hideCopyButton = isDocsHomePage(location.pathname);
 
   // Build canonical using testmu.ai + current path
   const canonical = `https://www.testmuai.com${location.pathname}`;
@@ -22,9 +27,11 @@ export default function LayoutWrapper(props: Props): ReactNode {
         </Head>
       )}
       <div className={styles.docLayoutWrapper}>
-        <div className={styles.copyBtnRow}>
-          <CopyPageButton />
-        </div>
+        {!hideCopyButton && (
+          <div className={styles.copyBtnRow}>
+            <CopyPageButton />
+          </div>
+        )}
         <Layout {...props} />
       </div>
     </>
