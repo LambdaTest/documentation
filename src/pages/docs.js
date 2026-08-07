@@ -90,7 +90,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container" style={{ padding: '30px 16px 0' }}>
+      <div className="container testmuconf-cta-wrap">
         <a
           href="https://www.testmuai.com/testmuconf-2026/#register-form"
           target="_blank"
@@ -102,8 +102,7 @@ export default function Home() {
             src="https://assets.testmuai.com/resources/images/testmu-corepage-cta.png"
             alt="TESTµ CONF '26 - World's Largest Virtual Agentic Engineering and Quality Conference. August 19-21. Register now."
             loading="eager"
-            className="no-zoom"
-            style={{ width: '70%', height: 'auto', display: 'block', borderRadius: '8px', margin: 'auto' }}
+            className="no-zoom testmuconf-cta-img"
           />
         </a>
       </div>

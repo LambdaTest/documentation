@@ -2278,6 +2278,9 @@ h6[id]::before {
 [data-theme=dark] .home_dark_cta{display:block;}
 [data-theme=dark] .home_light_cta{display:none;}
 
+.testmuconf-cta-wrap{padding:30px 16px 0;}
+.testmuconf-cta-img{width:70%;height:auto;display:block;border-radius:8px;margin:auto;}
+
 .Doc_intro_cta{background-color:#F7F7F7;display:flex;padding:25px 0;align-items:center;flex-wrap:wrap;position:relative;overflow:hidden;}
 [data-theme=dark] .Doc_intro_cta{background:#171A21;}
 [data-theme=dark] .Doc_intro_cta .Doc_intro_cta_text h1{color:var(--ifm-color-primary)!important;}
@@ -2312,6 +2315,8 @@ h6[id]::before {
   .Doc_intro_cta .Doc_intro_cta_text{width:100%!important;}
   .Doc_intro_cta_image{display:none;}
   .Doc_intro_cta .Doc_intro_cta_text p{font-size:20px!important;margin-right:0!important;}
+  .testmuconf-cta-wrap{padding:16px 16px 0;}
+  .testmuconf-cta-img{width:100%;border-radius:0;}
 }
 
 /* ── Docs sidebar: match ApiSidebar active style ── */
