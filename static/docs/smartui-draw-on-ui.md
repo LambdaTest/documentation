@@ -4,7 +4,7 @@
 
 Web applications often have dynamic elements that can cause unnecessary noise in your visual testing. Take a social media platform, for instance. The number of unread notifications displayed might change with each test run. While these variations are expected, you don't necessarily want them to trigger alerts as potential regressions.
 
-The SmartUI Annotation tool allows you to interact directly with your screenshots through detailed annotations. You can draw over screenshots, define regions with boxes, and choose to ignore or select these regions for current and future comparisons. With advanced features like **Ignore Colors**, **Floating Regions**, and **Select Ignore**, you can handle even the most complex dynamic content scenarios.
+The SmartUI Annotation tool allows you to interact directly with your screenshots through detailed annotations. You can draw over screenshots, define regions with boxes, and choose to ignore or select these regions for current and future comparisons. With advanced features like **Ignore Colors**, **Floating Regions**, **Layout Regions**, and **Select Ignore**, you can handle even the most complex dynamic content scenarios.
 
 By utilizing ignored/selected regions, you can keep your test results focused on the truly important changes, streamlining your workflow and saving you time from chasing irrelevant discrepancies.
 
@@ -20,7 +20,7 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 
 1. **Click the annotation icon** to open the annotation tool
 2. **Click "Add Region"** and draw a box around the area you want to annotate
-3. **Select the annotation type** (Ignore Region, Select Region, Floating Region, or Ignore Colors)
+3. **Select the annotation type** (Ignore Region, Select Region, Floating Region, Ignore Colors, or Layout Region)
 4. **Click "Save"** to apply the annotation
 5. **Choose application scope**: Apply to current screenshot only or all browser variants
 
@@ -28,7 +28,7 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 
 ## Annotation Methods
 
-All four annotation methods are accessible from the same **Actions** button (annotation icon). Click on the annotation icon to open the annotation tool, then select your desired annotation type from the available options.
+All annotation methods are accessible from the same **Actions** button (annotation icon). Click on the annotation icon to open the annotation tool, then select your desired annotation type from the available options.
 
 **What is Ignore Region?**
 
@@ -154,6 +154,41 @@ Testing a notification badge that may appear in different positions based on con
 
 Ignoring color differences in a themed navigation bar while testing its structure and layout across different theme configurations.
 
+**What is Layout Region?**
+
+**Layout Region** compares a single area for structure only. Inside the region SmartUI reports elements that were added, removed, or moved, while text, values, and colors inside those elements are not compared. Everything outside the region keeps the build's normal comparison mode.
+
+This sits between Ignore Region, which drops the area from validation completely, and [Layout Comparison](/support/docs/smartui-layout-testing/), which applies structure-only matching to the whole capture.
+
+**When to Use**
+
+- Validating that a section with live data still has its rows, cards, or columns intact
+- Regulated PDF documents where timestamps and generated IDs change every run but the structure must stay fixed
+- Localized pages where translated text varies in length and the surrounding structure has to hold
+- Any area you are ignoring today only because the content is noisy, when you still want to know if it breaks
+
+**How to Use**
+
+**Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
+
+**Step 2:** Click on the **Add Region** button and draw a box around the section whose structure you want to validate.
+
+**Step 3:** Select **Layout Region** from the annotation type dropdown and click **Save**.
+
+**Step 4:** Choose whether to apply to the current screenshot only or all browser variants.
+
+**What Happens:** Inside the region only structural differences are highlighted, and content churn is suppressed. Outside the region the comparison is unchanged.
+
+> **Note:** The Layout Region option is available for web captures and PDF comparisons. It is not offered for real device tests, app SDK tests, Storybook projects, Figma projects, or single image uploads through the API.
+
+> **Important:** On **web** comparisons this works only when the DOM was recorded at capture time. SmartUI CLI and SDK captures record it automatically. Captures taken inside an automation session need DOM recording enabled for your organization, and builds made from an uploaded image never carry a DOM. When it is missing the region quietly behaves like an Ignore Region. See [DOM Recording Requirement](/support/docs/smartui-layout-regions/#dom-recording-requirement-for-web-comparisons). PDF comparisons are not affected.
+
+**Example**
+
+Validating that an order summary table still has all of its rows and columns, while the order numbers and timestamps inside it change on every run.
+
+See [Layout Regions](/support/docs/smartui-layout-regions/) for how the matching works and what it does not catch.
+
 ## Advanced: Select Ignore
 
 **Select Ignore** is an advanced feature that combines selection and ignoring. You first select a region to focus on, then within that selected region, you can ignore specific sub-regions. This is perfect for scenarios where you want to test most of a component but ignore certain dynamic elements within it.
@@ -275,10 +310,11 @@ To propagate more than one region, select each region and choose **Apply to all 
 
 When viewing annotations, different colors indicate their type:
 - **Red boxes:** Ignore regions
-- **Green boxes:** Select regions
+- **Grey boxes:** Select regions
 - **Blue boxes:** Floating area boundaries
 - **Yellow boxes:** Elements within floating regions
-- **Purple boxes:** Ignore colors regions
+- **Light blue boxes:** Ignore colors regions
+- **Green boxes:** Layout regions
 
 ## Keyboard Shortcuts
 
@@ -303,6 +339,7 @@ Follow these best practices to get the most out of the annotation tool:
 - **Use Select Region** when you only care about specific UI components
 - **Use Floating Region** for elements that move within a boundary
 - **Use Ignore Colors** when structure matters more than color variations
+- **Use Layout Region** when the content in a section is expected to change but its structure must stay intact
 - **Use Select Ignore** for granular control within larger components
 
 ### General Guidelines
@@ -363,10 +400,22 @@ Follow these best practices to get the most out of the annotation tool:
 - Check if annotations were deleted accidentally
 - Verify you're viewing the correct screenshot variant
 
+**Layout Region Not Flagging Changes**
+
+**Issue:** Content changed inside a layout region and nothing was reported.
+
+**Solutions:**
+- This is expected for content only changes. A layout region reports elements that were added, removed, or moved, not text or value changes
+- On a web comparison, confirm the DOM was recorded for the build. Without it the region can only behave like an ignore region. See [DOM Recording Requirement](/support/docs/smartui-layout-regions/#dom-recording-requirement-for-web-comparisons)
+- Verify the region covers the elements you expect. An element belongs to the region when its center falls inside the box
+- Reduce very large regions. A region drawn over an element heavy page falls back to plain ignore behavior
+- See [Layout Regions](/support/docs/smartui-layout-regions/) for the full behavior and limitations
+
 For more comprehensive troubleshooting, refer to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide).
 
 ## Additional Resources
 
+- [Layout Regions](/support/docs/smartui-layout-regions/) - Compare a single area for structure only
 - [SmartUI Project Settings](/support/docs/smartui-project-settings) - Configure comparison settings
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) - Code-based solutions for dynamic content
 - [Smart Ignore](/support/docs/smartui-smartignore) - Automatic layout shift handling

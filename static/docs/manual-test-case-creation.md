@@ -42,6 +42,8 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
+In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+
 #### Add New Step:
 
 To add a new step click on on the `Add Test Step` button.

@@ -113,6 +113,7 @@ We support multiple input formats, including:
 - **Videos**
 - **Spreadsheets** (CSV or XLSX)
 - **Documents**
+- **Markdown files** (.md)
 - **JSON or XML**
 
 **Public URLs Only**
