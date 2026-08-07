@@ -84,7 +84,22 @@ import NewTag from '../src/component/newTag';
 <img  loading="eager" src={require('../assets/images/support/home_dark.png').default} alt="Image" width="701" height="576" className="home_dark_cta no-zoom" role="presentation"/>
 </div>
 </div>
-
+<div className="container testmuconf-cta-wrap">
+  <a
+    href="https://www.testmuai.com/testmuconf-2026/#register-form"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Register for TESTµ CONF '26"
+    style={{ display: 'block' }}
+  >
+    <img
+      src="https://assets.testmuai.com/resources/images/testmu-corepage-cta.png"
+      alt="TESTµ CONF '26 - World's Largest Virtual Agentic Engineering and Quality Conference. August 19-21. Register now."
+      loading="eager"
+      className="no-zoom testmuconf-cta-img"
+    />
+  </a>
+</div>
 <div className="primary_main">
 
 <div className="home_main">
