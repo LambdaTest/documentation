@@ -77,7 +77,10 @@ thead th .copy-ips {
   font-size: 1rem;
 }
 
-thead th {
+/* Scoped with :has() so this never touches tables elsewhere on the site.
+   Older browsers simply skip the rule; the icon still renders, just top-aligned
+   in the two-line firewall headers. */
+thead th:has(.copy-ips) {
   vertical-align: middle;
 }
 
