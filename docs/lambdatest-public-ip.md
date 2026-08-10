@@ -48,12 +48,11 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 
 Whitelist these Firewall IPs to allow <BrandName /> cloud infrastructure to access your firewall-protected application or environment. Configure them as **inbound** allow rules.
 
-| Subnet Range | Real Time (Virtual Device)<br />(Desktop & Mobile - Automation) | Real Time (Virtual Device)<br />(Desktop & Mobile - Manual) | Real Device<br />(Manual & Automation) |
+| Subnet Range | Desktop & Emulators &<br>Simulators - Automation | Desktop & Emulators &<br>Simulators (Real Time) | Real Device<br />(Manual & Automation) |
 |--------------|----------------------------------------------|------------------------------------------|----------------------------------------|
 | **103.231.42.40/29** | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> | <p align="center"> ✅ </p> |
 | **103.231.79.40/29** | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> | <p align="center"> ✅ </p> |
 | **23.105.12.32/27** | <p align="center"> ✅ </p> | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> |
-| **23.106.34.192/26** | <p align="center"> ✅ </p> | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> |
 | **23.106.34.192/26** | <p align="center"> ✅ </p> | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> |
 | **209.58.137.40/29** | <p align="center"> ❌ </p> | <p align="center"> ❌ </p> | <p align="center"> ✅ </p> |
 | **23.83.156.64/26** | <p align="center"> ✅ </p> | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> |
