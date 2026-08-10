@@ -1,59 +1,88 @@
-.copy-ips-bar {
+/* Mirrors @docusaurus/theme-classic CodeBlock/Buttons styles so the button is
+   indistinguishable from the one on code snippets. */
+
+.copy-ips {
   display: inline-flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 0.4em;
+  padding: 0.4rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  line-height: 0;
+  opacity: 0.4;
+  transition: opacity var(--ifm-transition-fast) ease-in-out;
+}
+
+/* Code blocks reveal on .theme-code-block:hover — same idea, keyed to the
+   heading or the table's header row instead. */
+h1:hover .copy-ips,
+h2:hover .copy-ips,
+h3:hover .copy-ips,
+thead:hover .copy-ips {
+  opacity: 0.6;
+}
+
+.copy-ips:hover,
+.copy-ips:focus-visible,
+.copy-ips--copied {
+  opacity: 1 !important;
+}
+
+.copy-ips__icons {
+  position: relative;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.copy-ips__icon,
+.copy-ips__icon-success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  fill: currentColor;
+  opacity: inherit;
+  transition: all var(--ifm-transition-fast) ease;
+}
+
+.copy-ips__icon-success {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.33);
+  opacity: 0;
+  color: #00d600;
+}
+
+.copy-ips--copied .copy-ips__icon {
+  transform: scale(0.33);
+  opacity: 0;
+}
+
+.copy-ips--copied .copy-ips__icon-success {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition-delay: 0.075s;
+}
+
+/* Keep the button off the heading's bold/size inheritance */
+h1 .copy-ips,
+h2 .copy-ips,
+h3 .copy-ips,
+thead th .copy-ips {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+thead th {
   vertical-align: middle;
 }
 
-/* Sits on the heading line, right-aligned */
-h1 > .copy-ips-bar,
-h2 > .copy-ips-bar,
-h3 > .copy-ips-bar {
-  float: right;
-  margin-top: 4px;
-}
-
-/* Standalone bar above a table that has no heading of its own */
-.markdown > .copy-ips-bar {
-  margin: 0 0 8px;
-}
-
-.copy-ips {
-  font-family: var(--ifm-font-family-base);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.4;
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  background: var(--ifm-background-surface-color);
-  color: var(--ifm-color-emphasis-800);
-  cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-}
-
-.copy-ips:hover {
-  border-color: var(--ifm-color-primary);
-  color: var(--ifm-color-primary);
-}
-
-.copy-ips:focus-visible {
-  outline: 2px solid var(--ifm-color-primary);
-  outline-offset: 2px;
-}
-
-.copy-ips--done {
-  border-color: var(--ifm-color-success);
-  background: var(--ifm-color-success-contrast-background);
-  color: var(--ifm-color-success-darkest);
-}
-
-@media (max-width: 640px) {
-  h1 > .copy-ips-bar,
-  h2 > .copy-ips-bar,
-  h3 > .copy-ips-bar {
-    float: none;
-    display: flex;
-    margin-top: 8px;
+@media (hover: none) {
+  .copy-ips {
+    opacity: 0.7;
   }
 }
