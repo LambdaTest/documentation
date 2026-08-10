@@ -201,10 +201,10 @@ Everything you can do in the UI, you can do over the API — which is usually wh
 
 ### Base URL
 
-Policy routes sit under a `/logistics` path prefix on your HyperExecute API host:
+Policy routes sit under a `/logistics` path prefix on the HyperExecute API host:
 
 ```text
-https://<your-hyperexecute-host>/logistics
+https://api.hyperexecute.cloud/logistics
 ```
 
 ### Authentication
@@ -214,10 +214,10 @@ Policy endpoints use HTTP Basic authentication with your <BrandName /> **usernam
 ```bash
 curl -u "<YOUR_USERNAME>:<YOUR_ACCESS_KEY>" \
   -H "Content-Type: application/json" \
-  "https://<your-hyperexecute-host>/logistics/v1.0/policies?limit=5"
+  "https://api.hyperexecute.cloud/logistics/v1.0/policies?limit=5"
 ```
 
-Run that list call first to confirm your host and credentials work. A `200` with a list — possibly empty — means you are set.
+Run that list call first to confirm your credentials work. A `200` with a list — possibly empty — means you are set.
 
 ### Endpoints
 
