@@ -13,6 +13,7 @@ module.exports = {
   trailingSlash: true,
   clientModules: [
     require.resolve('./custom.js'),
+    require.resolve('./src/js/copy-ips.js')
   ],
   scripts: [
   
