@@ -53,8 +53,8 @@ import TabItem from '@theme/TabItem';
 Playwright Android automation is supported on <BrandName /> across **Node.js, Java, C#, and Python**. Run Playwright tests on Chrome for Android across 100+ real Android devices. This guide covers getting started with Playwright testing on Android devices on the <BrandName /> platform.
 
 :::tip Supported Versions
-- Playwright versions **v1.20.0** to **v1.59.0** are supported for Android real device testing (excluding `v1.54.0`).
-- **Node.js** uses the `_android.connect()` API. **Java, C#, and Python** use `chromium.connectOverCDP()`. All use stock Playwright packages, no custom forks required.
+- Playwright versions **v1.53.0** to **v1.61.0** are supported for Android real device testing.
+- **Java, C#, and Python** use the `chromium.connect()` API. **Node.js** supports both `chromium.connect()` and the Android-native `_android.connect()` API. All use stock Playwright packages, no custom forks required.
 - Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 :::
 
