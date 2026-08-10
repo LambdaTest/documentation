@@ -50,6 +50,7 @@
               {
                 "group": "Getting Started",
                 "pages": [
+                  "docs/kane-cli-introduction",
                   "docs/kane-cli-installation",
                   "docs/kane-cli-quickstart",
                   "docs/kane-cli-authentication"
