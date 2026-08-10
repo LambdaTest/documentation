@@ -24,11 +24,25 @@
 
 import './copy-ips.css';
 
-// Limit to the public IP page. Set to null to run site-wide.
-const PATH_MATCH = /testmu-public-ip/;
+// Limit to the public IP page. Anchored so it can't match unrelated slugs that
+// merely contain this string. Set to null to run site-wide.
+const PATH_MATCH = /\/testmu-public-ip\/?$/;
 
 const TICK = '✅';
-const clean = (s) => s.replace(/`/g, '').trim();
+
+// Whatever ends up here gets pasted into firewalls and terminals, so every
+// value must look like an IP, a CIDR range, or a hostname. textContent decodes
+// HTML entities (&#10; becomes a real newline), so a single markdown cell could
+// otherwise smuggle extra lines into the clipboard.
+const VALID_VALUE = /^(?:\d{1,3}(?:\.\d{1,3}){3}(?:\/\d{1,2})?|[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+)$/i;
+
+function clean(s) {
+  return s
+      .replace(/`/g, '')
+      .replace(/[\u00a0\u2000-\u200b\ufeff]/g, ' ') // NBSP and friends -> space
+      .replace(/[\u0000-\u001f\u007f]/g, ' ') // control chars, incl. newline
+      .trim();
+}
 
 // Icon paths lifted verbatim from @theme/Icon/Copy and @theme/Icon/Success.
 const ICONS = `
@@ -43,12 +57,19 @@ function tableRows(table) {
 
 /** First-column values. colIndex > 0 keeps only rows ticked in that column. */
 function valuesFor(table, colIndex) {
+  const seen = new Set();
   const out = [];
   for (const tr of tableRows(table)) {
     const cells = tr.children;
     if (colIndex > 0 && !(cells[colIndex]?.textContent || '').includes(TICK)) continue;
     const value = clean(cells[0]?.textContent || '');
-    if (value && !out.includes(value)) out.push(value); // dedupe repeated ranges
+    if (!value || seen.has(value)) continue; // dedupe repeated ranges
+    if (!VALID_VALUE.test(value)) {
+      console.warn('[copy-ips] skipped non-IP value:', value);
+      continue;
+    }
+    seen.add(value);
+    out.push(value);
   }
   return out;
 }
@@ -100,9 +121,19 @@ function makeButton(table, colIndex, label) {
   return btn;
 }
 
+// Tracks the buttons we added per table. A dataset flag alone is not enough:
+// React can re-render a header cell and drop our appended nodes while leaving
+// the attribute in place, which would make the button disappear for good.
+const decorated = new WeakMap();
+
+function alreadyDecorated(table) {
+  const buttons = decorated.get(table);
+  return !!buttons && buttons.length > 0 && buttons.every((b) => b.isConnected);
+}
+
 function decorateTable(table) {
-  if (table.dataset.copyIps) return;
-  table.dataset.copyIps = '1';
+  if (alreadyDecorated(table)) return;
+  const added = [];
 
   const ths = [...table.querySelectorAll('thead th')];
   const headers = ths.map((th) => th.textContent.trim());
@@ -114,11 +145,16 @@ function decorateTable(table) {
       .map((_, i) => i)
       .filter((i) => i > 0 && rows.some((r) => /[✅❌]/.test(r.children[i]?.textContent || '')));
 
+  const attach = (host, colIndex, label) => {
+    const btn = makeButton(table, colIndex, label);
+    host.appendChild(btn);
+    added.push(btn);
+  };
+
   if (flagCols.length) {
-    ths[0].appendChild(makeButton(table, -1, 'Copy all IPs'));
-    flagCols.forEach((i) => {
-      ths[i].appendChild(makeButton(table, i, `Copy ${shortLabel(headers[i], i)} IPs`));
-    });
+    attach(ths[0], -1, 'Copy all IPs');
+    flagCols.forEach((i) => attach(ths[i], i, `Copy ${shortLabel(headers[i], i)} IPs`));
+    decorated.set(table, added);
     return;
   }
 
@@ -135,16 +171,16 @@ function decorateTable(table) {
     prev = prev.previousElementSibling;
   }
 
-  const btn = makeButton(table, -1, 'Copy all IPs');
-  if (heading && !heading.querySelector('.copy-ips')) heading.appendChild(btn);
-  else ths[0].appendChild(btn);
+  if (heading && !heading.querySelector('.copy-ips')) attach(heading, -1, 'Copy all IPs');
+  else attach(ths[0], -1, 'Copy all IPs');
+  decorated.set(table, added);
 }
 
 function decorate() {
   if (PATH_MATCH && !PATH_MATCH.test(window.location.pathname)) return;
-  const root = document.querySelector('.markdown');
-  if (!root) return;
-  root.querySelectorAll('table').forEach(decorateTable);
+  const roots = document.querySelectorAll('.markdown');
+  if (!roots.length) return;
+  roots.forEach((root) => root.querySelectorAll('table').forEach(decorateTable));
 }
 
 export function onRouteDidUpdate() {
