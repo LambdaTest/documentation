@@ -203,6 +203,12 @@ module.exports = {
             label: "Test Metrics",
             id: "hyperexecute-task-metrics",
           },
+          {
+            type: "doc",
+            label: "Global Policies",
+            id: "hyperexecute-global-policies",
+            customProps: { beta: true },
+          },
           "hyperexecute-rerun-failed-tests"
         ],
       },
