@@ -455,6 +455,27 @@ setTimeout(function () {
 
   var SKILL_URL = "https://www.testmuai.com/support/docs/SKILL.md";
   var PROMPT = "Read " + SKILL_URL + " to set up TestMu AI (formerly LambdaTest) cloud testing.";
+
+  // Only these docs get the callout. Keys are the doc slugs (no /support/docs
+  // prefix, no trailing slash) so the lookup is independent of baseUrl.
+  var ALLOWED_SLUGS = {
+    "testmu-running-your-first-selenium-test": true,
+    "getting-started-with-cypress-testing": true,
+    "playwright-testing": true,
+    "puppeteer-testing": true,
+    "getting-started-with-appium-testing": true,
+    "getting-started-with-espresso-testing": true,
+    "getting-started-with-xcuitest": true,
+    "testing-flutter-apps": true,
+    "smartui-running-your-first-project": true,
+    "accessibility-testing": true
+  };
+
+  function isAllowedPage() {
+    var path = window.location.pathname.replace(/\/+$/, "");
+    var slug = path.slice(path.lastIndexOf("/") + 1);
+    return ALLOWED_SLUGS[slug] === true;
+  }
   var INFO_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>';
   var COPY_SVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
   var CHECK_SVG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
@@ -510,6 +531,11 @@ setTimeout(function () {
     if (typeof document === "undefined") return;
     var md = document.querySelector("article .theme-doc-markdown") || document.querySelector(".theme-doc-markdown");
     if (!md) return;                                     // not a doc page
+    if (!isAllowedPage()) {                              // drop any callout left over from SPA nav
+      var stale = md.querySelector(".agentSkillCallout");
+      if (stale) stale.remove();
+      return;
+    }
     if (md.querySelector(".agentSkillCallout")) return;  // already injected
     var header = md.querySelector("header");
     var node = buildCallout();
