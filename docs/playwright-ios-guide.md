@@ -61,7 +61,7 @@ Playwright testing on real iOS devices is currently in **Beta**. To enable this 
 :::
 
 :::tip Supported Versions
-- Playwright versions **v1.53.0** and above (until **v1.6.0**) are supported for iOS real device testing.
+- Playwright versions **v1.53.0** to **v1.60.0** are supported for iOS real device testing (excluding **v1.54.0**).
 - All languages use the **stock Playwright packages**, with no custom forks or client-side changes required.
 - Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 :::
