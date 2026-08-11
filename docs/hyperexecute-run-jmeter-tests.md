@@ -2,7 +2,7 @@
 id: hyperexecute-run-jmeter-tests
 title: Unleash the Power of JMeter Performance Testing with HyperExecute
 hide_title: false
-sidebar_label: "JMeter"
+sidebar_label: JMeter
 description: Perform the steps to learn how to do the performance testing on HyperExecute using the jmeter tests plans
 keywords:
   - hyperexecute performance testing
