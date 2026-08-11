@@ -15,6 +15,23 @@ canonical: https://www.testmuai.com/support/docs/testmu-public-ip/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+{/*
+Copy buttons on this page are injected at runtime — there is no markup for them here.
+Source: src/js/copy-ips.js + src/js/copy-ips.css, registered via clientModules in docusaurus.config.js.
+
+Behaviour:
+- Tables with ✅/❌ columns get a copy button per column header (copies only that column's
+ticked rows), plus a copy-all button on the first header cell.
+- All other tables get a single copy button next to their heading.
+Values are read from the rendered table at click time, so tables can be edited freely here —
+no IP list needs updating anywhere else.
+
+Constraints:
+- The script only runs on this page, gated by PATH_MATCH = /\/testmu-public-ip\/?$/ in copy-ips.js.
+If this page's slug changes, update that regex or the buttons silently stop appearing.
+- Values must look like an IP, CIDR, or hostname to be copied. Anything else is skipped with a
+console warning (see VALID_VALUE in copy-ips.js) — extend it before adding IPv6 or ranges.
+*/}
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -48,12 +65,11 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 
 Whitelist these Firewall IPs to allow <BrandName /> cloud infrastructure to access your firewall-protected application or environment. Configure them as **inbound** allow rules.
 
-| Subnet Range | Real Time (Virtual Device)<br />(Desktop & Mobile - Automation) | Real Time (Virtual Device)<br />(Desktop & Mobile - Manual) | Real Device<br />(Manual & Automation) |
+| Subnet Range | Desktop & Emulators &<br>Simulators - Automation | Desktop & Emulators &<br>Simulators (Real Time) | Real Device<br />(Manual & Automation) |
 |--------------|----------------------------------------------|------------------------------------------|----------------------------------------|
 | **103.231.42.40/29** | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> | <p align="center"> ✅ </p> |
 | **103.231.79.40/29** | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> | <p align="center"> ✅ </p> |
 | **23.105.12.32/27** | <p align="center"> ✅ </p> | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> |
-| **23.106.34.192/26** | <p align="center"> ✅ </p> | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> |
 | **23.106.34.192/26** | <p align="center"> ✅ </p> | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> |
 | **209.58.137.40/29** | <p align="center"> ❌ </p> | <p align="center"> ❌ </p> | <p align="center"> ✅ </p> |
 | **23.83.156.64/26** | <p align="center"> ✅ </p> | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> |
