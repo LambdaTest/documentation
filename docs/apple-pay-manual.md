@@ -88,7 +88,31 @@ Within the App Live session, you can use Apple Pay via the **Assistive Touch** o
 
 :::info
 - If the **Wallet** is not set up on the device, the **Apple Pay** option will not appear through **Assistive Touch**. Please ensure Wallet is configured before attempting to access Apple Pay.
+- Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session with the desired card.
 :::
+
+---
+
+## FAQs
+
+**Q: Why does adding my card to Apple Wallet time out (could not add card failure)?**
+
+Adding a sandbox or demo card to Apple Wallet may occasionally time out during the provisioning process. This can happen for several reasons, including temporary card-network or wallet-service availability issues.
+
+Please try adding a different card and attempt the process again. If the issue continues, please contact our support team for further assistance.
+
+**Q: Why am I unable to enter the PIN on the payment screen?**
+
+On iOS 26, a keyboard is not available for PIN entry on the payment screen. To proceed, open the **Confirm Payment** dialog from the left-side menu option (**iOS Settings** > **Apple Pay Wallet**) and tap **Confirm** to confirm the card and complete the payment.
+
+**Q: Why does “Hold Near Reader” appear?**
+
+The **Hold Near Reader** prompt appears when Apple Pay is opened directly through **Assistive Touch** without first initiating a payment from an app or website.
+
+For example, when visiting the Apple Pay Demo website, opening Apple Pay directly before clicking the **Pay** button and reaching the screen that displays the final checkout amount will trigger the **Hold Near Reader** prompt.
+
+To avoid this, first initiate the payment flow on a supported website or application, then select **Apple Pay** at checkout.
+
 ---
 
 ## Additional Links
@@ -96,9 +120,3 @@ Within the App Live session, you can use Apple Pay via the **Assistive Touch** o
 - [Apple Pay Demo Website](https://developer.apple.com/apple-pay/sandbox-testing/)
 - [<BrandName /> App Live Overview](https://www.testmuai.com/app-live)
 - [iOS Assistive Touch Guide](https://support.apple.com/guide/iphone/assistive-touch-iph3e2e4157/ios)
-
----
-
-:::tip
-Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session with the desired card. 
-:::
