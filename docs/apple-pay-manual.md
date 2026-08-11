@@ -98,13 +98,23 @@ Within a single session, only one card can be selected. To switch cards, you’l
 
 ## FAQs
 
-**Q: Why does adding my card to Apple Wallet time out?**
+**Q: Why does adding my card to Apple Wallet time out (could not add card failure)?**
 
-This is a known Apple-side issue affecting sandbox/demo cards, including Visa and Mastercard. It isn’t specific to LambdaTest. See Apple’s community discussion for more details.
+Adding a sandbox or demo card to Apple Wallet may occasionally time out during the provisioning process. This can happen for several reasons, including temporary card-network or wallet-service availability issues.
 
-**Q: Why is Apple Pay missing from Assistive Touch?**
+Please try adding a different card and attempt the process again. If the issue continues, please contact our support team for further assistance.
 
-Use the Confirm Payment button in the left-side panel instead - it automates the payment confirmation flow.
+**Q: Why am I unable to enter the PIN on the payment screen?**
+
+On iOS 26, a keyboard is not available for PIN entry on the payment screen. To proceed, open the **Confirm Payment** dialog from the left-side menu option (**iOS Settings** > **Apple Pay Wallet**) and tap **Confirm** to confirm the card and complete the payment.
+
+**Q: Why does “Hold Near Reader” appear?**
+
+The **Hold Near Reader** prompt appears when Apple Pay is opened directly through **Assistive Touch** without first initiating a payment from an app or website.
+
+For example, when visiting the Apple Pay Demo website, opening Apple Pay directly before clicking the **Pay** button and reaching the screen that displays the final checkout amount will trigger the **Hold Near Reader** prompt.
+
+To avoid this, first initiate the payment flow on a supported website or application, then select **Apple Pay** at checkout.
 
 ---
 
