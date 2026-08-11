@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
 
 :::info
-- Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
+- Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, **gradle/spock**, **wdio/mocha**, and **wdio/jasmine** framework.
 - Version 0.2 supports all the fields available in Version 0.1, except for [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand)
 - The new [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) flag has been introduced to configure the test framework.
 :::
@@ -65,6 +65,7 @@ The ```framework``` field in Hyperexecute YAML Version 0.2 allows you to configu
 | [discoveryFlags](#discoveryFlags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
 | [runnerFlags](#runnerFlags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
 | [discoveryType](#discoveryType) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
+| [discoveryMode](#discoveryMode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
 | [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
 | [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
 | [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
@@ -88,6 +89,30 @@ appium: true
 framework: 
   name: "maven/testng"
 ```
+
+Both **Maven** and **Gradle** build tools are supported for the Java runners:
+
+| Runner | Build tool | Test framework |
+|:--|:--|:--|
+| `maven/testng` | Maven | TestNG |
+| `maven/junit4` | Maven | JUnit 4 |
+| `maven/junit5` | Maven | JUnit 5 |
+| `maven/spock` | Maven | Spock |
+| `gradle/testng` | Gradle | TestNG |
+| `gradle/junit4` | Gradle | JUnit 4 |
+| `gradle/junit5` | Gradle | JUnit 5 |
+| `gradle/spock` | Gradle | Spock |
+
+```yaml
+framework:
+  name: gradle/testng
+```
+
+:::info Prerequisites for the Gradle runners
+- **Gradle 7.0 or higher** and **JDK 8 or higher**.
+- Apply the `java` plugin in your `build.gradle`.
+- For **gradle/spock**, also apply the `groovy` plugin, since Spock specifications are written in Groovy.
+:::
 
 ### `flags`
 Specifies the command line flags to pass to the custom runner for both test discovery and execution.
@@ -132,6 +157,23 @@ framework:
 - For **maven/testng** the supported discovery types are **method, class** and **xmltest**. The default is **method**.
 - For **maven/junit4** and **maven/junit5**  the supported discovery types are **method** and **class**. The default is **method**.
 - For **wdio/mocha** and **wdio/jasmine** the supported discovery types are **test, spec, suite** and **wdiosuite**. The default is **spec**. 
+:::
+
+### `discoveryMode`
+Specifies where the test discovery runs. Supported values are `local` and `remote`.
+
+- **`local`**: Test discovery runs on the same machine as the HyperExecute CLI and needs the framework dependencies available locally.
+- **`remote`**: Test discovery runs on a dedicated remote Virtual Machine instead of your local machine. This centralizes discovery, shares the cache across execution tasks, and removes the need to install the framework dependencies locally. See [discovery modes](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) for more details.
+
+```yaml
+framework:
+  name: gradle/testng
+  #highlight-next-line
+  discoveryMode: remote
+```
+
+:::info
+Remote discovery is supported for all Java runners: **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, and **gradle/spock**.
 :::
 
 ### `workingDirectory`
@@ -241,6 +283,7 @@ framework:
   discoveryFlags: ["-Dgroups=selenium-test"]
   runnerFlags: ["-Dgroups=database"]
   discoveryType: method
+  discoveryMode: remote
   workingDirectory: src/main
   defaultReports: false
   args:
