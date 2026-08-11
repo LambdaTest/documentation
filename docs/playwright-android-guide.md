@@ -53,7 +53,7 @@ import TabItem from '@theme/TabItem';
 Playwright Android automation is supported on <BrandName /> across **Node.js, Java, C#, and Python**. Run Playwright tests on Chrome for Android across 100+ real Android devices. This guide covers getting started with Playwright testing on Android devices on the <BrandName /> platform.
 
 :::tip Supported Versions
-- Playwright versions **v1.53.0** to **v1.61.0** are supported for Android real device testing.
+- Playwright versions **v1.53.0** to **v1.61.0** are supported for Android Real Device testing (excluding **v1.54.0**).
 - **Java, C#, and Python** use the `chromium.connect()` API. **Node.js** supports both `chromium.connect()` and the Android-native `_android.connect()` API. All use stock Playwright packages, no custom forks required.
 - Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 :::
@@ -78,13 +78,6 @@ set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
-
-### Language-Specific Setup
-
-| Language | Supported Playwright Versions |
-|----------|-------------------------------|
-| **JavaScript (Node.js)** | Up to **v1.59.0** |
-| **Java, Python, C#** | Up to **v1.53.0** |
 
 <Tabs className="docs__val">
 
@@ -116,7 +109,7 @@ Add the Playwright dependency to your `pom.xml`:
 <dependency>
     <groupId>com.microsoft.playwright</groupId>
     <artifactId>playwright</artifactId>
-    <version>1.54.0</version>
+    <version>1.61.0</version>
 </dependency>
 ```
 
@@ -162,7 +155,7 @@ const { chromium } = require("playwright");
       network: true,
       video: true,
       console: true,
-      playwrightClientVersion: "1.53.0",
+      playwrightClientVersion: "1.61.0",
     },
   };
 
@@ -226,7 +219,7 @@ const { _android } = require("playwright");
       network: true,
       video: true,
       console: true,
-      playwrightClientVersion: "1.53.0",
+      playwrightClientVersion: "1.61.0",
     },
   };
 
@@ -385,7 +378,7 @@ public class PlaywrightAndroidTest {
         ltOptions.put("network", true);
         ltOptions.put("video", true);
         ltOptions.put("console", true);
-        ltOptions.put("playwrightClientVersion", "1.53.0");
+        ltOptions.put("playwrightClientVersion", "1.61.0");
 
         Map<String, Object> capabilities = new LinkedHashMap<>();
         capabilities.put("LT:Options", ltOptions);
@@ -456,7 +449,7 @@ var capabilities = new Dictionary<string, object>
         ["network"] = true,
         ["video"] = true,
         ["console"] = true,
-        ["playwrightClientVersion"] = "1.53.0",
+        ["playwrightClientVersion"] = "1.61.0",
     }
 };
 
