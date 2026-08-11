@@ -88,10 +88,7 @@ Within the App Live session, you can use Apple Pay via the **Assistive Touch** o
 
 :::info
 - If the **Wallet** is not set up on the device, the **Apple Pay** option will not appear through **Assistive Touch**. Please ensure Wallet is configured before attempting to access Apple Pay.
-:::
-
-:::tip
-Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session with the desired card.
+- Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session with the desired card.
 :::
 
 ---
@@ -123,4 +120,3 @@ To avoid this, first initiate the payment flow on a supported website or applica
 - [Apple Pay Demo Website](https://developer.apple.com/apple-pay/sandbox-testing/)
 - [<BrandName /> App Live Overview](https://www.testmuai.com/app-live)
 - [iOS Assistive Touch Guide](https://support.apple.com/guide/iphone/assistive-touch-iph3e2e4157/ios)
-
