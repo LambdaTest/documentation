@@ -45,8 +45,10 @@ function applyThemeChoice(choice) {
 const NAV_LINKS = [
   { to: '/support/docs/', label: 'Home', icon: HomeIcon },
   { to: '/support/docs/getting-started-with-testmu-automation/', label: 'Docs', icon: DocsIcon },
+  { to: '/support/docs/agent-skills/', label: 'Skills', icon: SkillsIcon },
   { to: '/support/api-doc/', label: 'API Reference', icon: ApiIcon },
   { to: '/support/faq/', label: 'FAQ', icon: FaqIcon },
+  { to: 'https://changelog.testmuai.com/', label: 'Changelog', icon: ChangelogIcon, external: true },
 ];
 
 function HomeIcon() {
@@ -84,6 +86,25 @@ function FaqIcon() {
       <circle cx="12" cy="12" r="10" />
       <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
       <line x1="12" y1="17" x2="12.01" y2="17" />
+    </svg>
+  );
+}
+
+function SkillsIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2l2.09 5.26L19.5 9l-5.41 1.74L12 16l-2.09-5.26L4.5 9l5.41-1.74L12 2z" />
+      <path d="M18.5 14l.95 2.55L22 17.5l-2.55.95L18.5 21l-.95-2.55L15 17.5l2.55-.95L18.5 14z" />
+    </svg>
+  );
+}
+
+function ChangelogIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 3v5h5" />
+      <path d="M3.05 13A9 9 0 1 0 6 5.3L3 8" />
+      <path d="M12 7v5l4 2" />
     </svg>
   );
 }
@@ -135,15 +156,21 @@ function isActiveLink(pathname, to, label) {
   const normalizedPath = pathname.toLowerCase();
   const normalizedTo = to.toLowerCase();
 
+  const AGENT_SKILLS_PATHS = ['/support/docs/agent-skills/', '/support/docs/agent-skills'];
   // Home link (/support/docs/) - only match exact /support/docs/ or /support/docs
   if (label === 'Home') {
     return normalizedPath === '/support/docs/' || normalizedPath === '/support/docs';
   }
-  // Docs link - match any /support/docs/* path EXCEPT /support/docs/ itself
+  // Skills link - only match the agent-skills doc itself
+  if (label === 'Skills') {
+    return AGENT_SKILLS_PATHS.includes(normalizedPath);
+  }
+  // Docs link - match any /support/docs/* path EXCEPT /support/docs/ and the Skills doc
   if (label === 'Docs') {
     return normalizedPath.startsWith('/support/docs/') &&
            normalizedPath !== '/support/docs/' &&
-           normalizedPath !== '/support/docs';
+           normalizedPath !== '/support/docs' &&
+           !AGENT_SKILLS_PATHS.includes(normalizedPath);
   }
   // API Reference should match any /support/api-doc/* path
   if (normalizedTo.startsWith('/support/api-doc/')) return normalizedPath.startsWith('/support/api-doc/');
@@ -382,10 +409,11 @@ export default function Navbar() {
       {/* ── Desktop Row 2 (nav links) ── */}
       <div className={styles.row2}>
         <div className={styles.row2Inner}>
-          {NAV_LINKS.map(({ to, label, icon: Icon }) => (
+          {NAV_LINKS.map(({ to, label, icon: Icon, external }) => (
             <a
               key={to}
               href={to}
+              {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               className={`${styles.navLink} ${isActiveLink(location.pathname, to, label) ? styles.navLinkActive : ''}`}
             >
               <Icon />
@@ -448,10 +476,11 @@ export default function Navbar() {
             </a>
 
             <nav className={styles.mobileDrawerNav}>
-              {NAV_LINKS.map(({ to, label }) => (
+              {NAV_LINKS.map(({ to, label, external }) => (
                 <a
                   key={to}
                   href={to}
+                  {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className={`${styles.mobileMenuLink} ${isActiveLink(location.pathname, to, label) ? styles.mobileMenuLinkActive : ''}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
