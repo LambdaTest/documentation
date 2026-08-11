@@ -28,6 +28,7 @@ const API_SPECS = [
   { name: 'Analytics',                         url: 'https://swagger-api-support.lambdatest.com/analytics/openapi.yaml' },
   { name: 'Performance Testing',               url: 'https://swagger-api-support.lambdatest.com/performance_testing/openapi.yaml' },
   { name: 'Audit logs',                        url: 'https://swagger-api-support.lambdatest.com/audit-logs/openapi.yaml' },
+  { name: 'Agent Testing API',                 url: 'https://agent-testing.lambdatest.com/api/openapi.portal.yaml' },
 ];
 
 // Fetch a URL and return the body as a string (follows redirects)
