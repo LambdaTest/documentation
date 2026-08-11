@@ -61,7 +61,7 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 
 Whitelist these Firewall IPs to allow <BrandName /> cloud infrastructure to access your firewall-protected application or environment. Configure them as **inbound** allow rules.
 
-| Subnet Range | Desktop & Emulators &<br>Simulators - Automation | Desktop & Emulators &<br>Simulators (Real Time) | Real Device<br />(Manual & Automation) |
+| Subnet Range | Desktop & Emulators &<br />Simulators - Automation | Desktop & Emulators &<br />Simulators (Real Time) | Real Device<br />(Manual & Automation) |
 |--------------|----------------------------------------------|------------------------------------------|----------------------------------------|
 | **103.231.42.40/29** | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> | <p align="center"> ✅ </p> |
 | **103.231.79.40/29** | <p align="center"> ✅ </p> | <p align="center"> ❌ </p> | <p align="center"> ✅ </p> |
