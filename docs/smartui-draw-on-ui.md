@@ -19,6 +19,9 @@ keywords:
   - Select Regions
   - Floating Regions
   - Ignore Colors
+  - Element Based Anchoring
+  - PDF Regions
+  - PDF Visual Testing
 
 url: https://www.testmuai.com/support/docs/smartui-ignore-regions/
 slug: smartui-draw-on-ui/
@@ -58,7 +61,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Web applications often have dynamic elements that can cause unnecessary noise in your visual testing. Take a social media platform, for instance. The number of unread notifications displayed might change with each test run. While these variations are expected, you don't necessarily want them to trigger alerts as potential regressions.
 
-The SmartUI Annotation tool allows you to interact directly with your screenshots through detailed annotations. You can draw over screenshots, define regions with boxes, and choose to ignore or select these regions for current and future comparisons. With advanced features like **Ignore Colors**, **Floating Regions**, **Layout Regions**, and **Select Ignore**, you can handle even the most complex dynamic content scenarios.
+The SmartUI Annotation tool allows you to interact directly with your screenshots through detailed annotations. You can draw over screenshots, define regions with boxes, and choose to ignore or select these regions for current and future comparisons. With advanced features like **Ignore Colors**, **Floating Regions**, **Layout Regions**, **Select Ignore**, and **Element Based Anchoring** for multi-page PDFs, you can handle even the most complex dynamic content scenarios.
 
 By utilizing ignored/selected regions, you can keep your test results focused on the truly important changes, streamlining your workflow and saving you time from chasing irrelevant discrepancies.
 
@@ -349,6 +352,98 @@ This is useful when you already know an area is dynamic at the moment you establ
 > **Note:** Baseline Regions and the [per-region **Apply to all variants**](/support/docs/smartui-draw-on-ui/#applying-annotations) scope are independent. A baseline region controls the builds a region applies to (from the baseline forward), while the variant scope controls the browser and viewport combinations a region is copied to.
 
 > **Tip:** Use a baseline region for content you already know is dynamic before the first comparison ever runs. For areas you discover later while reviewing a comparison, a normal region on that build is the simpler choice.
+
+## Element Based Anchoring for PDF Regions <NewTag value="New" />
+
+When you draw a region on a PDF and apply it to every page, the region normally keeps the coordinates you drew it at. PDFs reflow, so the same heading, label or footer usually sits at a slightly different position on each page, and a region pinned to page 1's coordinates will not line up with it on the other pages.
+
+**Element based anchoring** changes what the region is attached to. Instead of remembering *where* you drew the box, SmartUI remembers *what* was inside it, captures the text under the box as an anchor, and then locates that same content on every other page of the PDF. The region is placed wherever the anchor is actually found on that page.
+
+Matching is done on the text content itself, so the font family, size, weight and style of the anchored content do not affect whether it is found.
+
+### The Problem It Solves
+
+Teams running visual tests on generated documents such as statements, invoices, policy packs and regulatory filings all hit the same wall. The document is reviewed page by page, and the parts of it that are genuinely dynamic (a generation timestamp, an account holder's name, a running header) sit in a slightly different place on every page because the content above them reflows.
+
+Without anchoring, there are only two ways to handle that, and both cost you something:
+
+| Approach | What it costs |
+| --- | --- |
+| Draw the region once and apply it to all pages | The box lands on the coordinates from the page you drew it on, so on other pages it sits beside the content instead of on it |
+| Redraw the region manually on every page | Minutes per document, repeated every time the template changes, and it does not survive a new document with a different page count |
+
+For a 40-page statement, that is 40 manual regions to place and re-place. Teams either spend the time, or they stop annotating and accept the noise.
+
+### Product Impact
+
+- **Annotation effort drops from per-page to per-document.** One region, drawn once, covers every page of the PDF. The saving scales with page count, so it is largest on exactly the long documents that were most painful before.
+- **Fewer false positives to triage.** A region that actually sits on the dynamic content suppresses the noise it was meant to suppress, so reviewers spend their time on real changes rather than dismissing the same reflow difference on every page.
+- **Fewer missed regressions.** When a mispositioned region covers the wrong part of the page, it can hide a genuine change while leaving the intended one exposed. Anchoring to content keeps the region on the thing you chose.
+- **Annotations survive template changes.** Because the region is tied to content rather than coordinates, a layout change that moves the anchored element does not require the region to be redrawn.
+- **Consistent results across renditions.** Since matching ignores font family, size, weight and style, the same annotation behaves the same way across documents rendered with different typography.
+
+### When to Use
+
+- Anchoring a company name, report title or letterhead in a statement whose header shifts from page to page
+- Keeping an ignore region on a running footer or document strap line across a long PDF
+- Annotating a repeated label in an invoice, policy document or financial statement where the vertical position drifts as content reflows
+- Any multi-page PDF where you would otherwise redraw the same region page by page
+
+### How to Use
+
+**Step 1:** Open a PDF comparison in an [Omni project](/support/docs/smartui-omni-projects/) and click on the **Actions** button (annotation icon) to open the annotation tool.
+
+> **Note:** Element based anchoring, and page level region propagation generally, are available on PDF comparisons in **Omni projects**. In a standard PDF project the region settings panel offers the region types only, and a region applies to the page it was drawn on.
+
+**Step 2:** Draw a box around the content you want to anchor to, and pick the region type you want (for example, **Ignore Region** or **Floating Region**).
+
+**Step 3:** Under **Apply region to**, choose **Apply to all the pages of this PDF**, then tick the **Element based anchoring** checkbox.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/elementbasedanchoring.png').default} alt="Element based anchoring with search area in the region settings panel" width="1538" height="784" className='doc_img'/>
+
+**Step 4:** Set the **Search area** value in pixels. This is how far out from the drawn box SmartUI will look for the anchor content on each of the other pages. The default is `50` px, and you can set any value between `0` and `500` px.
+
+**Step 5:** Click **Save**, then confirm with **Apply Changes**. SmartUI resolves the anchor on every page and reports how many pages the region was applied to.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/elementanchoring_sourcepage.png').default} alt="Anchored regions on the page the region was drawn on" width="1538" height="784" className='doc_img'/>
+
+**What Happens:** On each page of the PDF, SmartUI looks for the anchor content within the search area around the drawn position and places the region where that content is found. Open any other page of the PDF to see the region sitting on the same content, at that page's own position.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofelementanchoring.png').default} alt="Anchored region placed on the same content on a later page of the PDF" width="1538" height="784" className='doc_img'/>
+
+### Choosing a Search Area
+
+The search area controls how far the anchor content is allowed to have moved and still be matched on a given page.
+
+- **Smaller values** keep the match close to where you drew the region. Use these when the content only shifts slightly between pages, or when similar text appears elsewhere on the page and you want to be sure the nearest occurrence is the one that is used.
+- **Larger values** let SmartUI find the anchor further from the drawn position. Use these when the content moves further down or across the page as the document reflows.
+- **`0`** turns the search off, so the region stays at the coordinates you drew it at, which is the same behaviour as a region without element based anchoring.
+
+> **Tip:** Start with the default of `50` px. If a page's content sits further from the drawn position than that, raise the search area and apply the region again.
+
+### Propagating Regions on PDFs and Websites
+
+Regions propagate on both PDF and website comparisons, but the axis they propagate along is different, so the control you use is different too.
+
+| | PDF comparisons | Website and app comparisons |
+| --- | --- | --- |
+| What a region propagates across | The pages of the PDF | The browser and viewport variants of the screenshot |
+| Scope control | **Apply to all the pages of this PDF** | **Apply to all variants** |
+| Available region types | Ignore, Select, Floating, Ignore Colors, Layout | Ignore, Select, Floating, Ignore Colors |
+| Element based anchoring | Available, on every region type | Not applicable |
+| Project type required | Omni | Any |
+
+**On a PDF**, the same document flows across many pages, so the same element lands at a different position on each one. This is what element based anchoring is for: tick the checkbox, set a search area, and the region is placed on the anchored content page by page.
+
+**On a website or app screenshot**, a region propagates across the browser and viewport variants of that screenshot instead. Draw the region, choose [**Apply to all variants**](/support/docs/smartui-draw-on-ui/#applying-annotations), and it is copied to every browser and viewport combination for that screenshot. Each region carries its own scope, so applying one region to all variants leaves your other annotations untouched.
+
+> **Tip:** If you are annotating a multi-page PDF, reach for **Apply to all the pages of this PDF** with **Element based anchoring**. If you are annotating a website across Chrome, Firefox and Safari or across desktop and mobile viewports, reach for **Apply to all variants**.
+
+> **Note:** In an [Omni project](/support/docs/smartui-omni-projects/), where PDF, website, app, Figma, Storybook and image sources all co-exist in one project, both propagation controls are available in the same place. The one you see for a given comparison follows the source of the screenshot you are annotating: PDF artifacts offer **Apply to all the pages of this PDF** together with **Element based anchoring**, and website and app artifacts offer **Apply to all variants**.
+
+### Example
+
+A six-page quarterly statement where the company name in the header sits at a slightly different position on every page. Draw an ignore region around the company name on page 1, choose **Apply to all the pages of this PDF**, tick **Element based anchoring**, and the region lands on the company name on each page rather than on the blank space where page 1's header used to be.
 
 ## Managing Annotations
 
