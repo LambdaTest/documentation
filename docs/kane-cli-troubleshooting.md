@@ -278,6 +278,23 @@ node --version   # Must be 18 or higher
 
 ---
 
+## Mobile Issues
+
+Mobile testing is supported on **macOS Apple Silicon (arm64) only**. Start every mobile problem with `doctor`, which prints one line per required check, each with a fix:
+
+```bash
+kane-cli doctor              # required checks, each with a fix if it fails
+kane-cli doctor --install    # install the test tooling Kane CLI manages
+kane-cli doctor --targets    # list the emulators and simulators available
+```
+
+The common setup failures for each platform, and their fixes, are listed on the setup pages:
+
+- [iOS Simulator setup](/support/docs/kane-cli-mobile-simulator/#common-failures)
+- [Android Emulator setup](/support/docs/kane-cli-mobile-emulator/#common-failures)
+
+---
+
 ## "Update available" Notice
 
 Kane CLI checks the public npm registry for a newer release once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).

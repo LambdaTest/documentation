@@ -95,6 +95,10 @@ If the command is not found, your shell is not seeing the npm global `bin` direc
 | Linux | x64 | ✅ |
 | Windows | x64 | ✅ |
 
+:::note
+**Mobile testing**, the iOS Simulator and the Android Emulator, is supported on **macOS Apple Silicon (arm64) only** for the initial release. See [Mobile Testing](/support/docs/kane-cli-mobile/) for the simulator and emulator prerequisites.
+:::
+
 ## Update
 
 Kane CLI checks the npm registry once every 24 hours when you launch it. When a newer version is available, the CLI prints a one-line notification on startup with the current and latest versions. The check runs in the background and never blocks startup.

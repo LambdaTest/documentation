@@ -119,6 +119,31 @@ headless: true
 | `code_export` | root + step | Generate Playwright code after the run |
 | `code_language` | root + step | `python` or `javascript` for code export |
 | `global_context` / `local_context` | root + step | Inline Markdown or file path for agent context |
+| `target` | root | Where the test runs: a browser transport (`chrome`, the default, `cdp`, or `ws`) or a mobile target (`emulator` or `simulator`, macOS Apple Silicon). See [Mobile Target](#mobile-target). |
+| `app` | root | Mobile only. The app under test: a build path (emulator `.apk`, simulator `.zip`) or an uploaded `APP…` id. Required with a mobile target, rejected with a browser target. |
+| `no_reset` | root | Mobile only. Keep the app's existing state between runs instead of resetting it. |
+
+### Mobile Target
+
+On macOS Apple Silicon, `target:` also accepts the two mobile values, `emulator` for a virtual Android device and `simulator` for a virtual iOS device, with the app under test as its own root key:
+
+```yaml
+---
+target: emulator             # emulator (Android) | simulator (iOS)
+app: ./builds/app-debug.apk
+no_reset: false              # optional
+---
+```
+
+- **`target`**: `emulator` runs on an Android emulator, `simulator` on an iOS simulator. The platform never appears separately, the target implies it.
+- **`app`**: the app under test, required with a mobile target and rejected with a browser one. A build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, `APP` followed by six or more digits. On-device package ids are not accepted.
+- **`no_reset`**: optional. Keep the app's existing state between runs instead of resetting it.
+
+:::warning
+The nested form, `target: {platform, app}`, is not accepted. The parser refuses it and spells out the flat shape above.
+:::
+
+Mobile tests run with `kane-cli testmd run`. A batch run does not support mobile members: a `_test.md` with a mobile target is rejected up front, before the suite runs. Setup is covered in [Mobile Testing](/support/docs/kane-cli-mobile/).
 
 ### Title and Steps
 
