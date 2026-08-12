@@ -83,7 +83,7 @@ If your runs do not currently send branch information, add it before migrating, 
 
 **A different baseline mental model in the dashboard.** A standard project separates its build list into a **Baseline Build** and **Non Baseline Build** section, so the baseline is a specific build you can point at. An Omni project shows one chronological list, and the baseline is resolved per branch rather than being a single pinned build. Teams with a documented approval process that references "the baseline build" will want to revisit that wording.
 
-**Document annotation is materially better on Omni.** In a standard PDF project a region applies only to the page you drew it on, so a 40 page document means 40 regions placed by hand. Omni adds page level propagation plus [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring-for-pdf-regions), so one region can cover the whole document and follow the anchored content as the pages reflow. For teams testing statements, invoices or policy packs this is usually the single biggest reason to move.
+**Document annotation is materially better on Omni.** In a standard PDF project a region applies only to the page you drew it on, so a 40 page document means 40 regions placed by hand. Omni adds page level propagation plus [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring), so one region can cover the whole document and follow the anchored content as the pages reflow. For teams testing statements, invoices or policy packs this is usually the single biggest reason to move.
 
 **Nothing changes for how you capture.** The CLI commands, SDK hooks and APIs are the same. Omni changes which project accepts the artifact and how baselines are resolved, not how the screenshot is taken, so existing test code does not need rewriting.
 
@@ -196,7 +196,7 @@ Similarly, two artifacts that share a name but were captured at different resolu
 
 Annotations behave the same way in an Omni project as anywhere else, and the [region types and scope controls](/support/docs/smartui-draw-on-ui/) are unchanged. What differs is the axis a region propagates along, which follows the source of the screenshot you drew it on:
 
-- On a **PDF** artifact, a region can be applied to every page of that PDF, and [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring-for-pdf-regions) places it on the anchored content page by page. Both controls are specific to Omni; in a standard PDF project a region stays on the page it was drawn on.
+- On a **PDF** artifact, a region can be applied to every page of that PDF, and [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring) places it on the anchored content page by page. Page level propagation is specific to Omni: in a standard PDF project a region stays on the page it was drawn on. Anchoring itself is not limited to Omni, and is available on web comparisons in any project.
 - On a **website or app** artifact, a region can be applied to every browser and viewport variant of that screenshot.
 
 ## Availability and Access
