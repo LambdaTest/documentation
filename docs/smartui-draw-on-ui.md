@@ -361,6 +361,27 @@ When you draw a region on a PDF and apply it to every page, the region normally 
 
 Matching is done on the text content itself, so the font family, size, weight and style of the anchored content do not affect whether it is found.
 
+### The Problem It Solves
+
+Teams running visual tests on generated documents — statements, invoices, policy packs, regulatory filings — hit the same wall. The document is reviewed page by page, and the parts of it that are genuinely dynamic (a generation timestamp, an account holder's name, a running header) sit in a slightly different place on every page because the content above them reflows.
+
+Without anchoring, there are only two ways to handle that, and both cost you something:
+
+| Approach | What it costs |
+| --- | --- |
+| Draw the region once and apply it to all pages | The box lands on the coordinates from the page you drew it on, so on other pages it sits beside the content instead of on it |
+| Redraw the region manually on every page | Minutes per document, repeated every time the template changes, and it does not survive a new document with a different page count |
+
+For a 40-page statement, that is 40 manual regions to place and re-place. Teams either spend the time, or they stop annotating and accept the noise.
+
+### Product Impact
+
+- **Annotation effort drops from per-page to per-document.** One region, drawn once, covers every page of the PDF. The saving scales with page count, so it is largest on exactly the long documents that were most painful before.
+- **Fewer false positives to triage.** A region that actually sits on the dynamic content suppresses the noise it was meant to suppress, so reviewers spend their time on real changes rather than dismissing the same reflow difference on every page.
+- **Fewer missed regressions.** When a mispositioned region covers the wrong part of the page, it can hide a genuine change while leaving the intended one exposed. Anchoring to content keeps the region on the thing you chose.
+- **Annotations survive template changes.** Because the region is tied to content rather than coordinates, a layout change that moves the anchored element does not require the region to be redrawn.
+- **Consistent results across renditions.** Since matching ignores font family, size, weight and style, the same annotation behaves the same way across documents rendered with different typography.
+
 ### When to Use
 
 - Anchoring a company name, report title or letterhead in a statement whose header shifts from page to page
@@ -398,7 +419,22 @@ The search area controls how far the anchor content is allowed to have moved and
 
 > **Tip:** Start with the default of `50` px. If a page's content sits further from the drawn position than that, raise the search area and apply the region again.
 
-> **Note:** Element based anchoring is available for PDF comparisons and works with every region type, including Ignore, Select, Floating, Ignore Colors and Layout regions. For website and app screenshots, use the [**Apply to all variants**](/support/docs/smartui-draw-on-ui/#applying-annotations) scope instead.
+### Propagating Regions on PDFs and Websites
+
+Regions propagate on both PDF and website comparisons, but the axis they propagate along is different, so the control you use is different too.
+
+| | PDF comparisons | Website and app comparisons |
+| --- | --- | --- |
+| What a region propagates across | The pages of the PDF | The browser and viewport variants of the screenshot |
+| Scope control | **Apply to all the pages of this PDF** | **Apply to all variants** |
+| Available region types | Ignore, Select, Floating, Ignore Colors, Layout | Ignore, Select, Floating, Ignore Colors |
+| Element based anchoring | Available, on every region type | — |
+
+**On a PDF**, the same document flows across many pages, so the same element lands at a different position on each one. This is what element based anchoring is for: tick the checkbox, set a search area, and the region is placed on the anchored content page by page.
+
+**On a website or app screenshot**, a region propagates across the browser and viewport variants of that screenshot instead. Draw the region, choose [**Apply to all variants**](/support/docs/smartui-draw-on-ui/#applying-annotations), and it is copied to every browser and viewport combination for that screenshot. Each region carries its own scope, so applying one region to all variants leaves your other annotations untouched.
+
+> **Tip:** If you are annotating a multi-page PDF, reach for **Apply to all the pages of this PDF** with **Element based anchoring**. If you are annotating a website across Chrome, Firefox and Safari or across desktop and mobile viewports, reach for **Apply to all variants**.
 
 ### Example
 
