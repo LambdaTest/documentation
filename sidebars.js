@@ -4391,6 +4391,27 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Mobile Testing",
+        link: {
+          type: "doc",
+          id: "kane-cli-mobile",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "iOS Simulator Setup",
+            id: "kane-cli-mobile-simulator",
+          },
+          {
+            type: "doc",
+            label: "Android Emulator Setup",
+            id: "kane-cli-mobile-emulator",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Use Cases",
         link: {
           type: "doc",
@@ -4401,11 +4422,6 @@ module.exports = {
             type: "doc",
             label: "API Testing",
             id: "api-testing-with-kane-cli",
-          },
-          {
-            type: "doc",
-            label: "UI Testing",
-            id: "ui-testing-with-kane-cli",
           },
           {
             type: "doc",
