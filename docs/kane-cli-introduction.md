@@ -2,7 +2,7 @@
 id: kane-cli-introduction
 title: Kane CLI Documentation - Getting Started
 sidebar_label: Introduction
-description: "Kane CLI is an AI-powered command-line tool that runs browser automation tests in plain English: from your terminal, IDE, or CI pipeline."
+description: "Kane CLI is an AI-powered command-line tool that runs browser and native mobile app tests in plain English: from your terminal, IDE, or CI pipeline."
 keywords:
   - kane cli
   - kaneai
@@ -44,11 +44,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-**Kane CLI** `kane-cli` is an AI-powered browser automation tool that runs from your terminal. Describe what you want to test in plain English: Kane CLI navigates websites, clicks elements, fills forms, extracts data, and validates outcomes in a real Chrome browser.
+**Kane CLI** `kane-cli` is an AI-powered test automation tool that runs from your terminal. Describe what you want to test in plain English: Kane CLI navigates, clicks elements, fills forms, extracts data, and validates outcomes in a real Chrome browser, or in a native mobile app on a virtual device.
 
-- **Run browser tests from any terminal or IDE**: no test scripts, no selectors, no framework boilerplate
+- **Run tests from any terminal or IDE**: no test scripts, no selectors, no framework boilerplate
+- **Test the web and native mobile apps**: the default target is the desktop browser, and on macOS Apple Silicon you can point the same objective at an Android Emulator or iOS Simulator. See [Mobile Testing](/support/docs/kane-cli-mobile/)
 - **Integrate into CI/CD pipelines**: headless mode with structured JSON output and standard exit codes
-- **Use as a skill in AI coding agents**: Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI directly to test and verify web UIs on your behalf
+- **Use as a skill in AI coding agents**: Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI directly to test and verify UIs on your behalf
 
 ```bash
 # Install
@@ -88,6 +89,7 @@ Kane CLI runs from the integrated terminal of your editor, so you can drive brow
 - [Authentication](/support/docs/kane-cli-authentication/): OAuth, basic auth, and profile management
 - [Writing Objectives](/support/docs/kane-cli-writing-objectives/): Learn how to write effective natural language objectives
 - [Configuration](/support/docs/kane-cli-configuration/): Window size, Chrome profiles, Test Manager project, and run mode
+- [Mobile Testing](/support/docs/kane-cli-mobile/): Run tests against a native app on the Android Emulator or iOS Simulator
 - [Test Manager Integration](/support/docs/kane-cli-tms-integration/): Uploads, share links, code export, and session history
 - [Agent Mode](/support/docs/kane-cli-agent-mode/): Use Kane CLI with AI coding agents
 - [CI/CD Integration](/support/docs/kane-cli-cicd/): Add Kane CLI to your pipeline
