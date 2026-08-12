@@ -69,7 +69,13 @@
                   "docs/kane-cli-testmd"
                 ]
               },
-              "docs/kane-cli-use-cases",
+              {
+                "group": "Use Cases",
+                "pages": [
+                  "docs/kane-cli-use-cases",
+                  "docs/api-testing-with-kane-cli"
+                ]
+              },
               {
                 "group": "Generate Test Cases",
                 "pages": [
