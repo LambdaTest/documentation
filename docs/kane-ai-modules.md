@@ -122,6 +122,50 @@ Click **Add in Queue** to execute the module's test steps. The steps run automat
 
 ---
 
+## Include a Network Assertion in a Module
+
+A [Network Logs Assertion](/support/docs/kane-ai-network-assertions/) can be included in a module, so a network-layer check you author once is reused across every test that imports the module instead of being re-authored in each one.
+
+:::note
+Available on **Desktop Web**, **Mobile Web**, and **Mobile App** sessions in the Classic experience. On Mobile Web and Mobile App, enable **Capture Network Logs** before starting the session, as described in [Network Logs Assertions](/support/docs/kane-ai-network-assertions/).
+:::
+
+### Select the Assertion
+
+Author the assertion as usual, then click **Pause Test** and tick its checkbox along with the other steps you want in the module. A network assertion travels as a single step: every **Verify if** condition it carries is included, and the conditions cannot be split across modules.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/network-assertion-select.webp').default} alt="A Network Assertion step selected along with the other test steps in the module selection view" className="doc_img"/>
+
+Click **Create Module** and the assertion appears in the step list of the creation drawer with its conditions, alongside the rest of the selected steps.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/network-assertion-create-module.webp').default} alt="The Create a module drawer listing a Network Assertion step with its Verify if condition" className="doc_img"/>
+
+Once saved, the module carries the assertion as one of its steps.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/network-assertion-in-module.webp').default} alt="A saved module containing a Network Assertion step with its conditions" className="doc_img"/>
+
+### Include the Step That Triggers the Traffic
+
+An assertion can only check a request that the test actually makes. Include the step that triggers the network call in the same module as the assertion that checks it.
+
+If you create a module that contains the assertion but not its triggering step, KaneAI warns you at creation. The module is still valid, but it will check whatever traffic the importing test happens to produce, so it is not self-sufficient.
+
+### Mobile Sessions
+
+The same flow works in Mobile Web and Mobile App sessions. Enable **Capture Network Logs** under **Advanced Settings** > **Session Settings** before starting the session, author the assertion, then select it into a module exactly as you would on desktop.
+
+The example below is a module built in a mobile browser session, carrying an assertion with two conditions combined with **AND**: one on the response status and one on the request method.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/network-assertion-mobile.webp').default} alt="A saved module in a mobile browser session containing a Network Assertion with two conditions combined with AND" className="doc_img"/>
+
+### Keep the Module Platform-Specific
+
+Modules are platform-specific, and a module containing a network assertion is no exception. Create a separate module for each platform you test, and name it accordingly, for example `[Web] Checkout API Check` and `[Android-App] Checkout API Check`. See [Create Platform-Specific Modules](#create-platform-specific-modules).
+
+A network assertion can only be added from a KaneAI session, so it cannot be added to a simple module created directly on the Modules page. Where the assertion cannot apply, KaneAI blocks the action and states the reason inline rather than adding a step that would check nothing.
+
+---
+
 ## Edit a Module
 
 Click on an existing module from the Module listing page to modify its steps or properties.
