@@ -52,11 +52,43 @@ Type a **slash (/)** to invoke the command menu and select **Add Module**.
 
 Browse the list of available modules and select the one you need.
 
-Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. This applies to the Classic experience. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
 
 ### Step 3: Execute
 
 Click **Add in Queue** to execute the module's test steps. The steps run automatically as part of the test.
+
+## Include a Network Assertion in a Module
+
+A [Network Logs Assertion](/support/docs/kane-ai-network-assertions/) can be included in a module, so a network-layer check you author once is reused across every test that imports the module instead of being re-authored in each one.
+
+Available on **Desktop Web**, **Mobile Web**, and **Mobile App** sessions in the Classic experience. On Mobile Web and Mobile App, enable **Capture Network Logs** before starting the session, as described in [Network Logs Assertions](/support/docs/kane-ai-network-assertions/).
+
+### Select the Assertion
+
+Author the assertion as usual, then click **Pause Test** and tick its checkbox along with the other steps you want in the module. A network assertion travels as a single step: every **Verify if** condition it carries is included, and the conditions cannot be split across modules.
+
+Click **Create Module** and the assertion appears in the step list of the creation drawer with its conditions, alongside the rest of the selected steps.
+
+Once saved, the module carries the assertion as one of its steps.
+
+### Include the Step That Triggers the Traffic
+
+An assertion can only check a request that the test actually makes. Include the step that triggers the network call in the same module as the assertion that checks it.
+
+If you create a module that contains the assertion but not its triggering step, KaneAI warns you at creation. The module is still valid, but it will check whatever traffic the importing test happens to produce, so it is not self-sufficient.
+
+### Mobile Sessions
+
+The same flow works in Mobile Web and Mobile App sessions. Enable **Capture Network Logs** under **Advanced Settings** > **Session Settings** before starting the session, author the assertion, then select it into a module exactly as you would on desktop.
+
+The example below is a module built in a mobile browser session, carrying an assertion with two conditions combined with **AND**: one on the response status and one on the request method.
+
+### Keep the Module Platform-Specific
+
+Modules are platform-specific, and a module containing a network assertion is no exception. Create a separate module for each platform you test, and name it accordingly, for example `[Web] Checkout API Check` and `[Android-App] Checkout API Check`. See [Create Platform-Specific Modules](#create-platform-specific-modules).
+
+A network assertion can only be added from a KaneAI session, so it cannot be added to a simple module created directly on the Modules page. Where the assertion cannot apply, KaneAI blocks the action and states the reason inline rather than adding a step that would check nothing.
 
 ## Edit a Module
 
@@ -67,6 +99,8 @@ Editing a step opens it inline, where you can change the test step and its expec
 When you save changes to a module, a new version is created automatically. See [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/) for details on how version history works.
 
 ### Editing Restrictions
+
+The editing, reordering, and deletion restrictions described in this section and in [Deleting Steps Inside a Module](#deleting-steps-inside-a-module) apply to the Classic experience.
 
 Some steps carry a **Read-Only** label on the module's step listing. Editing, deleting, and reordering are all disabled for:
 

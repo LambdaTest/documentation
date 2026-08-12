@@ -17,20 +17,12 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 - Ensure authentication flows function correctly when the device is protected by a passcode.
 - Automate enterprise test cases where passcodes are enforced by MDM policies.
 
-## Supported Devices
+## Supported Platforms
 
-### iOS Devices
-
-| Device Model          | iOS Version |
-|-----------------------|-------------|
-| iPhone 16            | 18 |
-| iPhone 16 Pro        | 18 |
-| iPhone 15            | 17 |
-| iPhone 14            | 16 |
-| iPhone 13            | 15 |
-| iPad Air 11 (2024)   | 18 |
-
-> We are actively working on expanding coverage to all supported iOS devices on TestMu AI Real Device Cloud.
+| Platform | Version      |
+|----------|--------------|
+| iOS      | 14 and above |
+| Android  | 11 and above |
 
 ### Android Devices
 Available on **all real devices** running on **version 11 and above**.

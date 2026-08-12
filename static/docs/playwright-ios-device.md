@@ -11,7 +11,7 @@ This guide will cover the basics of getting started with Playwright testing on i
 Playwright testing on real iOS devices is currently in **Beta**. To enable this feature for your organization, please contact your account team to have the feature flag turned on.
 
 **Supported Versions**
-- Playwright versions **v1.53.0** and above (until **v1.6.0**) are supported for iOS real device testing.
+- Playwright versions **v1.53.0** to **v1.60.0** are supported for iOS Real Device testing (excluding **v1.54.0**).
 - All languages use the **stock Playwright packages**, with no custom forks or client-side changes required.
 - Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 
@@ -33,13 +33,6 @@ export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-### Language-Specific Setup
-
-| Language | Supported Playwright Versions |
-|----------|-------------------------------|
-| **JavaScript (Node.js)** | Up to **v1.59.0** |
-| **Java, Python, C#** | Up to **v1.53.2** |
-
 Install the Playwright package:
 
 ```bash
@@ -58,7 +51,7 @@ Add the Playwright dependency to your `pom.xml`:
 <dependency>
 <groupId>com.microsoft.playwright</groupId>
 <artifactId>playwright</artifactId>
-<version>1.54.0</version>
+<version>1.60.0</version>
 </dependency>
 ```
 
@@ -292,7 +285,7 @@ var capabilities = new Dictionary<string, object>
 ["network"] = true,
 ["video"] = true,
 ["console"] = true,
-["playwrightClientVersion"] = "1.53.0",
+["playwrightClientVersion"] = "1.60.0",
 }
 };
 

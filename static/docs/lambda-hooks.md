@@ -69,6 +69,7 @@ These hooks work only through the Selenium JavascriptExecutor and are not availa
 | **lambda-set-clipboard** | Sets the clipboard data. | `driver.executeScript("lambda-set-clipboard= Amit");` |
 | **lambda-clear-clipboard** | Clears the data of the clipboard. | `driver.executeScript("lambda-clear-clipboard");` |
 | **lambda:network** | Fetches the network log entries in array format during session. | `driver.execute_script("lambda:network");`- Fetch the network log from last fetch request time to current time.`driver.execute_script("lambda:network=all");`- Fetch from start of test session to current time. |
+| **lambda:network=full.har** | Fetches the complete network HAR log at runtime during the test session. | **Syntax :** `driver.execute_script("lambda:network=full.har");`**Note :****Required Capabilities:** Both `network` and `network.full.har` must be set to `true` in your test capabilities |
 | **lambda-test-tags** | Dynamically update your test tags for a test session which can be used to organize and filter your test results. | **Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");`**Limitations :****1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.**2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
 | **lambda-heal-start* / *lambda-heal-stop** | Enables / disables [AutoHeal](/support/docs/autoheal-with-hooks/) for the portion of the test between the two calls, so locator failures are healed automatically. | `driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')``// ...steps with dynamic locators...``driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')` |
 
@@ -79,6 +80,6 @@ These hooks are available only in Playwright (and other CDP-based) sessions, usi
 | Hook | Description |
 | ---- | ----------- |
 | *getTestDetails* | Returns details of the running test, such as the test ID and session information.`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "getTestDetails"}');` |
-| *lambdaSetBrowserPosition* | Sets the browser window position (useful when running multiple browser windows in a single session). |
+| *lambdaSetBrowserPosition* | Sets the browser window position (useful when running multiple browser windows in a single session).`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambdaSetBrowserPosition"}');` |
 
 > **Note**: These hooks only work if you are connected to your [TestMu AI Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment`
