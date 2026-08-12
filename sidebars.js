@@ -5222,11 +5222,6 @@ module.exports = {
           },
           {
             type: "doc",
-            label: "UI Testing",
-            id: "ui-testing-with-kane-cli",
-          },
-          {
-            type: "doc",
             label: "AI Coding Agents",
             id: "kane-cli-with-ai-coding-agents",
           },
