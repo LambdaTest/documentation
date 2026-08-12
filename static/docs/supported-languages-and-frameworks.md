@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) supports all the languages & frameworks that are compatible with [Selenium](https://www.testmuai.com/selenium). Below mentioned are the ones for which we either already have documentation ready or are a work in progress.
+Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) supports all the languages & frameworks that are compatible with [Selenium](https://www.testmuai.com/selenium/). Below mentioned are the ones for which we either already have documentation ready or are a work in progress.
 
           Java
 
@@ -92,7 +92,7 @@ Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) sup
 
 ## Our Selenium Grid Also Support Hybrid Frameworks
 
-There are [test automation](https://www.testmuai.com/automation-testing) frameworks which provide out-of-the-box features & functionality to help users perform [Selenium test automation](https://www.testmuai.com/selenium-automation) in a convenient manner. We support those frameworks too.
+There are [test automation](https://www.testmuai.com/automation-testing/) frameworks which provide out-of-the-box features & functionality to help users perform [Selenium test automation](https://www.testmuai.com/selenium-automation/) in a convenient manner. We support those frameworks too.
 
 ### Tesbo
 

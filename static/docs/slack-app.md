@@ -48,7 +48,7 @@ Upon successful integration, the TestMu AI App will be added to Slack.
 
 To launch the Realtime test, click on **Run Test**.
 
-**Step 6**: You'll be redirected to the TestMu AI cloud-based VM where you can perform real-time testing of your websites and web apps. You can also perform one-click bug logging, capture full page screenshots, [geolocation testing](https://www.testmuai.com/geolocation-testing), and more.
+**Step 6**: You'll be redirected to the TestMu AI cloud-based VM where you can perform real-time testing of your websites and web apps. You can also perform one-click bug logging, capture full page screenshots, [geolocation testing](https://www.testmuai.com/geolocation-testing/), and more.
 
 To know more about Real-time Testing, refer to the documentation [Real Time Browser Testing](/docs/getting-started-with-desktop-browser-real-time-testing/).
 

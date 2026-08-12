@@ -21,7 +21,7 @@ It can be used to decrease the manual effort of uploading the app & **automate**
 
 Before getting started with the setup, you would need access to the following:
 
-1. Access to TestMu AI [Real Devices](https://www.testmuai.com/pricing).
+1. Access to TestMu AI [Real Devices](https://www.testmuai.com/pricing/).
 2. Access to App Center & permissions to be able to generate API Token on App Center.
 
 ## Generating API Token on App Center

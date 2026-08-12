@@ -1,118 +1,113 @@
-# Boost Your API Testing Efficiency with HyperExeucte
+# How to Perform API Testing With REST Assured on HyperExecute
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-An API acts as a middleman between different software applications, allowing them to communicate and exchange data. Just like any other part of a software system, APIs need to be thoroughly tested to ensure they function as intended.
+To run REST Assured API tests on HyperExecute, download the HyperExecute CLI, set your TestMu AI credentials, point the CLI at a `hyperexecute.yaml` configuration, and trigger the run. REST Assured is a Java library for testing REST APIs, and HyperExecute is the TestMu AI test orchestration platform that discovers your tests, runs the suite on its cloud grid, and reports the results in the dashboard.
 
-## Why is API Testing Important?
+Run your own REST Assured (Java + Maven) project or the ready-made sample used in the steps below.
 
-API testing is crucial for several reasons:
+## Prerequisites
 
-- **Ensures application functionality:** It verifies that the API delivers the correct data and behaves as expected under various conditions.
-- **Catches bugs early:** By testing APIs early in the development process, you can identify and fix issues before they impact the overall application.
-- **Improves application reliability:** Robust API testing leads to a more stable and reliable application for end users.
+Before you start, make sure you have:
 
-## How to Automate API Testing with Rest Assured?
+- **Java (JDK 8 or above)** and **Maven** installed and on your `PATH` (`java -version` and `mvn -version` should both succeed). REST Assured is a Java library, so the suite builds with Maven.
+- **Git**, to clone the sample repository.
+- **A TestMu AI account.** Get your `LT_USERNAME` and `LT_ACCESS_KEY` from the [TestMu AI Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile). You will export them in Step 3.
 
-REST-Assured, a robust Java library, simplifies interacting with RESTful web services for testing purposes. It provides intuitive syntax for constructing requests and validating responses, streamlining API testing within Java environments.
+## How the REST Assured sample works
 
-It is majorly used for:
-- Writing automated API tests
-- Validating REST API endpoints
-- Ensuring API reliability, performance, and security
+The sample is a Java + Maven project that uses REST Assured with TestNG. REST Assured sends HTTP requests (GET, POST, PUT, DELETE) and asserts on the responses using a readable `given().when().then()` syntax. For example, this call fetches a resource and asserts that the API returns a `200` status code:
 
-REST-Assured seamlessly integrates with popular testing frameworks like JUnit and TestNG, enabling organized and efficient test execution with its core capabilities:
-
-- Sending various HTTP requests (GET, POST, PUT, DELETE, etc.)
-- Parsing various response formats (JSON, XML, etc.)
-- Asserting response status codes and body content
-- Handling authentication mechanisms
-- Supporting data-driven testing with external data sources
-
-For e.g. REST-Assured provides function to write get method such as `given().when().get(url).then().log().all();` This will help you to call a get request to fetch all the data from the API. Once the Call is complete you can either verify using the response of that call or by checking the status of the request.
-
-```bash
+```java
 given().when().get(url).then().assertThat().statusCode(200);
 ```
 
-- **Setting Base URI:** `RestAssured.baseURI` specifies the common part of API endpoints, avoiding repetition.
+- `RestAssured.baseURI` sets the common part of your endpoints so you don't repeat it.
+- `given()` sets up the request, `when()` sends it, and `then()` handles the response and assertions.
+- `log().all()` prints the request and response for debugging, and `extract().response().asString()` returns the response body as a string.
 
-- **Constructing Request:**
-    - **given()** initiates test case setup.
-    - **when()** sends the HTTP request (GET in this case).
-- **Capturing Response:**
-    - **then()** handles response handling and assertions.
-    - **log().all()** logs request and response details for debugging.
-    - **extract().response().asString()** extracts the response body as a string.
+You don't need to change the test code to run it on HyperExecute. The steps below build the suite with Maven and hand execution to the HyperExecute grid through `hyperexecute.yaml`.
 
-## How to Test API on HyperExecute?
+## Run the REST Assured suite on HyperExecute
 
-### Step 1: Setup Your Test Suite
+### Step 1: Clone the sample repository
 
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+Clone the REST Assured API testing sample from the TestMu AI GitHub repository, or use your own project.
 
 **Sample repo**
 
-Download or Clone the code sample for the Maestro framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.
+Download or clone the REST Assured API testing sample from the TestMu AI GitHub repository to run the tests on HyperExecute.
 
  View on GitHub
 
-### Step 2: Setup the CLI in your Test Suite
+### Step 2: Download the HyperExecute CLI
 
-After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
-
-#### Download the HyperExecute CLI
-
-The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
-
-You can download the CLI for your desired platform from the below mentioned links:
+The CLI triggers your tests on HyperExecute. Download the binary for your platform and keep it in the **root directory** of the test suite.
 
 | Platform | HyperExecute CLI |
 | ---------| ---------------- |
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
-| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-#### Setup Environment Variable
+### Step 3: Set your TestMu AI credentials
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
-
-Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+Export the `LT_USERNAME` and `LT_ACCESS_KEY` from your TestMu AI Profile (linked in the [Prerequisites](#prerequisites)) as environment variables. The CLI reads these to authenticate your run.
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  {`$env:LT_USERNAME = "${ YOUR_LAMBDATEST_USERNAME()}"
+$env:LT_ACCESS_KEY = "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-### Step 3: Configure YAML in your Test Suite
+### Step 4: Review the hyperexecute.yaml
+
+The `hyperexecute.yaml` at the repository root tells HyperExecute how to build the suite, discover tests, and run them. It ships ready to use. Review it to see the `pre` (Maven build), `testDiscovery`, and `testRunnerCommand` steps.
 
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/hyp-api-testing/blob/master/hyperexecute.yaml
 ```
 
-### Step 4: Execute your Test Suite
+### Step 5: Trigger the run from the CLI
 
-> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-
-Run the below command in your terminal at the root folder of the project:
+From the root folder of the project, run the CLI against your YAML file:
 
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
-OR use this command if you have not exported your username and access key in the step 2.
+If you did not export your credentials in Step 3, pass them inline instead:
 
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
 
-### Step 5: Monitor and Validate the Test Execution
+**macOS permissions**
 
-Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
+If macOS reports **permission denied** when you run the CLI, make it executable with `chmod u+x ./hyperexecute`. If a security popup appears, allow the binary from **System Preferences** → **Security & Privacy** → **General**.
 
-You can validate the tested API via the pre, post, and scenrios logs in the dashboard.
+### Step 6: Monitor the run in the dashboard
 
-#### pre
+Open the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and find your job. A successful run shows the job as **Completed** with passing tests, and the **pre**, **scenario**, and **post** stages available as logs. Open each stage to validate the API responses your suite tested.
 
-#### scenario
+#### Pre-run logs
 
-#### post
+#### Scenario logs
+
+#### Post-run logs
+
+## Related resources
+
+### Getting started with HyperExecute
+
+Set up HyperExecute and trigger your first job on the grid.
+
+### hyperexecute.yaml parameters
+
+Reference for every YAML key, with examples you can copy.
+
+### Auto-split test execution
+
+Distribute tests across parallel machines automatically.
+
+### HyperExecute FAQs
+
+Common questions on YAML, the CLI, and the platform.

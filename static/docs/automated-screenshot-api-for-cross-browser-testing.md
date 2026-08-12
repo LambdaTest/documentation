@@ -2,9 +2,9 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Automated Screenshot API will help you [capture full-page screenshots](https://www.testmuai.com/full-page-screen-capture) of any URL by invoking an API call to TestMu AI cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing regularly. You can do that without logging into TestMu AI, by executing a JSON file in your preferred API development environment such as Postman.
+Automated Screenshot API will help you [capture full-page screenshots](https://www.testmuai.com/full-page-screen-capture/) of any URL by invoking an API call to TestMu AI cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing regularly. You can do that without logging into TestMu AI, by executing a JSON file in your preferred API development environment such as Postman.
 
-This document will help you leverage TestMu AI [Automated Screenshot](https://www.testmuai.com/automated-screenshot). You would learn how to:
+This document will help you leverage TestMu AI [Automated Screenshot](https://www.testmuai.com/automated-screenshot/). You would learn how to:
 
 * Fetch all OS + Browser combinations.
 * Fetch all Screen Resolutions.

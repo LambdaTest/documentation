@@ -15,7 +15,7 @@ Once you have your project set up in the QMetry app and test suite ready, you ne
 
 >To get your Username and Access Key, go to your TestMu AI automation dashboard and click on the "key" icon left to the help button, on the top right corner.
 
->If you are on _[Lite](https://www.testmuai.com/pricing)_ or _[Live](https://www.testmuai.com/pricing)_ plan, and your provided automation minutes have been exhausted; the above step will throw an error. In such a case, you can wait for the next availability of automation minutes, or you can [upgrade](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/billing/plans) your account. To learn more about how to manage and upgrade your account, refer [this guide](/docs/manage-subscriptions/).
+>If you are on _[Lite](https://www.testmuai.com/pricing/)_ or _[Live](https://www.testmuai.com/pricing/)_ plan, and your provided automation minutes have been exhausted; the above step will throw an error. In such a case, you can wait for the next availability of automation minutes, or you can [upgrade](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/billing/plans) your account. To learn more about how to manage and upgrade your account, refer [this guide](/docs/manage-subscriptions/).
 6.  Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to [this guide](/docs/selenium-automation-capabilities/).
 
 7.  Click on **Save**, once you have selected the desired capabilities. The current account info and the capabilities will be saved with a name that you provide.

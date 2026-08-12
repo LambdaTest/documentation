@@ -26,7 +26,7 @@ Once you have established TestMu AI-Jira integration, you can directly mark and 
 
 **Step 2**: Enter the test URL of the website/web app in the URL field. Select the browser and OS combinations that you wish to perform the test on and then click on **'Start'**.
 
-**Step 3**: A TestMu AI virtual machine will fire up where you can perform real-time testing of your websites and web-apps to find bugs/issues. If you encounter a bug, you can click on the Spider icon from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same.
+**Step 3**: A TestMu AI virtual machine will fire up where you can perform real-time testing of your websites and web-apps to find bugs/issues. If you encounter a bug, you can click on the Spider icon from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture/) of the same.
 
 **Step 4**: Once the screenshot is captured, you can annotate any bugs or a task with an in-built image editor. After highlighting the bug, click on **'Mark as Bug'**.
 
