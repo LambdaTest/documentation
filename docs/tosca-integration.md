@@ -158,7 +158,7 @@ Shown below is the final test case view.
 <img loading="lazy" src={require('../assets/images/tosca-integration/mba-real.webp').default} alt="Image" width="1252" height="532" className="doc_img"/>
 
 
-*You can refer our [Desired Capability Generator](https://www.testmuai.com/capabilities-generator)
+*You can refer our [Desired Capability Generator](https://www.testmuai.com/capabilities-generator/)
  to choose different browser combination.*
 
 

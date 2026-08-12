@@ -1,6 +1,6 @@
 ---
 id: accessibility-ios-rule-dynamic-type-support
-title: Dynamic Type Support
+title: Dynamic Type Support (iOS)
 sidebar_label: Dynamic Type Support
 description: Rule-level Accessibility guidance for Dynamic Type Support on iOS.
 slug: accessibility-ios-rule-dynamic-type-support/

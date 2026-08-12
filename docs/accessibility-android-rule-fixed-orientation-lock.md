@@ -1,6 +1,6 @@
 ---
 id: accessibility-android-rule-fixed-orientation-lock
-title: Fixed Orientation Lock
+title: Fixed Orientation Lock (Android)
 sidebar_label: Fixed Orientation Lock
 description: Rule-level Accessibility guidance for Fixed Orientation Lock on Android.
 slug: accessibility-android-rule-fixed-orientation-lock/

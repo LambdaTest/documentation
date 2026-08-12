@@ -63,7 +63,7 @@ To get started, you need to download the executable file from here.
 <a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.deb" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser For Linux</a>
 </div>
 
-**Step 1:** To [capture full page screenshots](https://www.testmuai.com/full-page-screen-capture), navigate to the settings button from the top-left and click on the **'Screenshot Full Page'** button.
+**Step 1:** To [capture full page screenshots](https://www.testmuai.com/full-page-screen-capture/), navigate to the settings button from the top-left and click on the **'Screenshot Full Page'** button.
 
 <img loading="lazy" src={require('../assets/images/full-page-screenshots/image1.webp').default} alt="screenshot" width="1024" height="540" className="doc_img"/>
 

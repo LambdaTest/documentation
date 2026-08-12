@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Command Guide",
-          "item": "https://www.testmuai.com/support/docs/kane-ai-command-guide"
+          "item": "https://www.testmuai.com/support/docs/kane-ai-command-guide/"
         }]
       })
     }}

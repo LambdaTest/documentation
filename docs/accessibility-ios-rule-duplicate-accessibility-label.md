@@ -1,6 +1,6 @@
 ---
 id: accessibility-ios-rule-duplicate-accessibility-label
-title: Duplicate Accessibility Label
+title: Duplicate Accessibility Label (iOS)
 sidebar_label: Duplicate Accessibility Label
 description: Rule-level Accessibility guidance for Duplicate Accessibility Label on iOS.
 slug: accessibility-ios-rule-duplicate-accessibility-label/

@@ -53,7 +53,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 :::caution
-This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo).
+This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo/).
 :::
 
 ## Prerequisites for Using SmartUI

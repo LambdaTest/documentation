@@ -1,6 +1,6 @@
 ---
 id: real-device-app-testing
-title: Getting started with Real Device App Testing
+title: Install and Test Your App on Real Devices
 hide_title: true
 sidebar_label: Getting Started
 description: Get started with app testing on TestMu AI - install your app from the Play Store, App Store, TestFlight or App Center, and set up a tunnel for local pages.
