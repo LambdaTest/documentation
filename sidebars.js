@@ -2716,6 +2716,7 @@ module.exports = {
         },
         items: [
           "smartui-running-your-first-project",
+          "smartui-omni-projects",
           "smartui-agent-skills",
           "smartui-guided-walkthrough",
           "smartui-cli-env-variables",

@@ -436,6 +436,8 @@ Regions propagate on both PDF and website comparisons, but the axis they propaga
 
 > **Tip:** If you are annotating a multi-page PDF, reach for **Apply to all the pages of this PDF** with **Element based anchoring**. If you are annotating a website across Chrome, Firefox and Safari or across desktop and mobile viewports, reach for **Apply to all variants**.
 
+> **Note:** In an [Omni project](/support/docs/smartui-omni-projects/), where PDF, website, app, Figma, Storybook and image sources all co-exist in one project, both propagation controls are available in the same place. The one you see for a given comparison follows the source of the screenshot you are annotating: PDF artifacts offer **Apply to all the pages of this PDF** together with **Element based anchoring**, and website and app artifacts offer **Apply to all variants**.
+
 ### Example
 
 A six-page quarterly statement where the company name in the header sits at a slightly different position on every page. Draw an ignore region around the company name on page 1, choose **Apply to all the pages of this PDF**, tick **Element based anchoring**, and the region lands on the company name on each page rather than on the blank space where page 1's header used to be.
