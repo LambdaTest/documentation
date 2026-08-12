@@ -399,17 +399,17 @@ For a 40-page statement, that is 40 manual regions to place and re-place. Teams 
 
 **Step 3:** Under **Apply region to**, choose **Apply to all the pages of this PDF**, then tick the **Element based anchoring** checkbox.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/elementbasedanchoring.png').default} alt="Element based anchoring with search area in the region settings panel" width="1538" height="784" className='doc_img'/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/elementbasedanchoring.png').default} alt="Element based anchoring with search area in the region settings panel" width="1180" height="511" className='doc_img'/>
 
 **Step 4:** Set the **Search area** value in pixels. This is how far out from the drawn box SmartUI will look for the anchor content on each of the other pages. The default is `50` px, and you can set any value between `0` and `500` px.
 
 **Step 5:** Click **Save**, then confirm with **Apply Changes**. SmartUI resolves the anchor on every page and reports how many pages the region was applied to.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/elementanchoring_sourcepage.png').default} alt="Anchored regions on the page the region was drawn on" width="1538" height="784" className='doc_img'/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/elementanchoring_sourcepage.png').default} alt="Anchored regions on the page the region was drawn on" width="1180" height="479" className='doc_img'/>
 
 **What Happens:** On each page of the PDF, SmartUI looks for the anchor content within the search area around the drawn position and places the region where that content is found. Open any other page of the PDF to see the region sitting on the same content, at that page's own position.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofelementanchoring.png').default} alt="Anchored region placed on the same content on a later page of the PDF" width="1538" height="784" className='doc_img'/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofelementanchoring.png').default} alt="Anchored region placed on the same content on a later page of the PDF" width="1180" height="511" className='doc_img'/>
 
 ### Choosing a Search Area
 
