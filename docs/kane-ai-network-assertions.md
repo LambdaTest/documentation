@@ -85,3 +85,13 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/child-variables.png').default} alt="Image" className="doc_img img_center" style={{width: '60%'}}/>
 
 
+
+## Reuse an Assertion Across Tests
+
+A network assertion can be included in a reusable **module**, so the same network-layer check runs in every test that imports it instead of being authored again each time. The assertion travels as a single step with all of its conditions, and it is re-evaluated against each importing test's own live traffic on every run.
+
+:::note
+Available on **Desktop Web**, **Mobile Web**, and **Mobile App** sessions in the Classic experience.
+:::
+
+See [Include a Network Assertion in a Module](/support/docs/kane-ai-modules/#include-a-network-assertion-in-a-module).
