@@ -101,8 +101,11 @@ Create a `.lambdatest/config.yaml` file in the root directory of your repository
 project_id: "your_project_id"
 folder_id: "your_folder_id"
 assignee: your_user_id
-environment_id: environment_id
+configuration_name: "Chrome on Windows"   # Name of the KaneAI Web configuration
 test_url: "https://your-deployed-app-url.com/"
+tunnel_name: "your_tunnel_name"  # Optional: set if using the same tunnel across PRs
+scenario_limit: 3                # Optional: how many scenarios to generate (1-20)
+test_cases_per_scenario: 5       # Optional: test cases per scenario (1-20, defaults to 10)
 ```
 
 #### Configuration Parameters
@@ -112,12 +115,40 @@ test_url: "https://your-deployed-app-url.com/"
 | `project_id` | The unique identifier for your TestMu AI Test Manager project |
 | `folder_id` | The folder where generated test cases will be organized |
 | `assignee` | The TestMu AI user ID who will be assigned to test runs for executions |
-| `environment_id` | The target testing environment (browser, OS, device configurations) |
+| `configuration_name` | *(Recommended)* The name of the KaneAI Web configuration to run tests against, exactly as it appears in Test Manager (for example, `"Chrome on Windows"`). Matching is case-insensitive. |
+| `configuration_id` | *(Legacy)* The numeric ID of the target testing environment. Still supported for existing repositories, but `configuration_name` takes precedence when both are set. |
 | `test_url` | The base URL of your application under test (your staging or testing environment URL) |
+| `tunnel_name` | *(Optional)* The name of the LambdaTest tunnel to use for testing. Set this when the same tunnel is reused across all PRs. Can be overridden per PR using the `--tunnel` flag in the trigger comment. |
+| `scenario_limit` | *(Optional)* Caps how many test scenarios KaneAI generates for a PR. Accepts a value between **1 and 20**. Can be overridden per PR using the `--max-scenarios` flag. |
+| `test_cases_per_scenario` | *(Optional)* Caps how many test cases are generated within each scenario. Accepts a value between **1 and 20**, and defaults to **10** when not set. Can be overridden per PR using the `--max-test-cases` flag. |
 
 After installing the GitHub App, you are redirected to the [integration settings page](https://integrations.lambdatest.com/githubci/install) where all configuration values (project ID, folder ID, assignee, and environment ID) are displayed with a **copy button**. Use these to populate your `.lambdatest/config.yaml` file directly.
 
 > **Note:** All configuration IDs can also be retrieved programmatically from the [TestMu AI Test Manager API Documentation](https://www.testmuai.com/support/api-doc/?key=test-management).
+
+#### How the Test Configuration Is Selected
+
+KaneAI resolves which configuration to run your tests on in the following order:
+
+1. The `--config` flag in the trigger comment, if provided
+2. `configuration_name` in `.lambdatest/config.yaml`
+3. `configuration_id` (or the deprecated `environment_id`) in `.lambdatest/config.yaml`
+4. **Auto-selection**, when none of the above is set
+
+With auto-selection, KaneAI picks a runnable KaneAI Web configuration from your account on its own, so you can start validating pull requests without configuring an environment first. The chosen configuration is reported in the progress tracker comment, along with the exact `configuration_name` value to add to your config file if you want to pin it for future runs.
+
+KaneAI Web supports **desktop** configurations only. Only configurations that are complete and runnable are considered, whether you name one explicitly or let KaneAI auto-select.
+
+#### Configuration Error Handling
+
+When a run cannot start because of a configuration problem, KaneAI posts a comment on the pull request explaining exactly what went wrong and how to fix it, instead of failing silently:
+
+| Situation | What you get in the PR |
+|-----------|------------------------|
+| The `configuration_name` (or `--config` value) does not match any configuration | A table of the available KaneAI Web configurations in your account, plus the options to correct the config file, re-run with `--config`, or remove the key to let KaneAI auto-select |
+| The legacy `configuration_id` is not found | A list of available configurations with their names and IDs, and a prompt to migrate to `configuration_name` |
+| No runnable configuration exists in your account | Steps to create a KaneAI Web configuration in Test Manager, along with any existing configurations that are incomplete and only need to be finished |
+| `.lambdatest/config.yaml` cannot be parsed | The parsing error, followed by a complete, ready-to-copy config template with every supported field |
 
 **Maximize AI Context**
 KaneAI uses your `README.md` and `agent.md` to improve test quality. Keep your README comprehensive (app overview, key workflows, tech stack) and use `agent.md` for custom instructions like testing priorities, scenarios to cover or skip, and domain-specific rules.
@@ -141,6 +172,7 @@ your-repo/
 - **Environment Segregation**: Use separate `project_id` and `folder_id` values for different branches (e.g., staging vs. production) to maintain test organization
 - **Team Assignment**: Configure `assignee` to route test runs to the appropriate QA team member or use a shared team account for visibility
 - **Dynamic URLs**: For teams with ephemeral preview environments, consider parameterizing `test_url` or updating it per deployment
+- **Tune Coverage Depth**: Use `scenario_limit` and `test_cases_per_scenario` to balance breadth against turnaround time. Keep them low for fast-moving repositories with frequent small PRs, and raise them for critical repositories where deeper coverage matters more than speed
 - **Version Control**: Commit `.lambdatest/config.yaml` to your repository so all team members use consistent configuration
 
 ## Try It Out: Sample Repository
@@ -190,6 +222,9 @@ You can extend any trigger command with optional parameters to customize test ex
 |-----------|-------------|
 | `--url ` | Overrides the `test_url` set in `.lambdatest/config.yaml` for this PR. Useful for ephemeral preview environments where the deployment URL changes per PR. |
 | `--tunnel ` | Routes test traffic through a named LambdaTest tunnel. Required when testing against a locally hosted or privately accessible environment that is not publicly reachable. |
+| `--config ` | Overrides the configuration for this run. Pass the configuration name as shown in Test Manager, wrapping multi-word names in double quotes (for example, `--config "Chrome on Windows"`). A purely numeric value is treated as a legacy configuration ID. |
+| `--max-scenarios ` | Overrides `scenario_limit` for this run. Accepts a value between **1 and 20**. |
+| `--max-test-cases ` | Overrides `test_cases_per_scenario` for this run. Accepts a value between **1 and 20**. |
 
 **Example:**
 
@@ -197,7 +232,13 @@ You can extend any trigger command with optional parameters to customize test ex
 @TestMuAI Validate this PR --url https://preview-123.your-app.com --tunnel my-tunnel-name
 ```
 
-Both parameters are independent. Use `--url` alone to override the URL, `--tunnel` alone for private environments, or combine them when both apply.
+```
+@TestMuAI Validate this PR --config "Chrome on Windows" --max-scenarios 3 --max-test-cases 5
+```
+
+All parameters are independent. Use any one of them on its own, or combine the ones that apply to a given run. Every flag takes precedence over the corresponding value in `.lambdatest/config.yaml`, and applies only to that run, so you can experiment on a single pull request without editing the config file.
+
+If `--max-scenarios` or `--max-test-cases` is given a value outside the supported 1-20 range, the flag is ignored and KaneAI posts a comment telling you so. The run continues using the value from `.lambdatest/config.yaml`, or the default.
 
 #### Setting Up Tunnel Testing
 
@@ -253,6 +294,10 @@ Each entry includes:
 **Access Permissions**
 - **Test Case links** (TC-XXXXX) can be accessed by any user in your organization who has TestMu AI Test Manager access.
 - **Authoring status links** can only be accessed by the user who integrated the GitHub App, as they redirect to that user's live KaneAI session.
+
+When a PR produces more than one scenario, the test cases are grouped by scenario instead of being listed in a single flat table, so it is clear which scenario each test case belongs to. Test cases stay numbered sequentially across all scenarios, and only the first group is expanded by default to keep the comment compact.
+
+Test cases that KaneAI could not convert into executable automation are marked as **Not automated**, with a note explaining how many were affected. These test cases still exist in Test Manager, but they are not part of the test run, so the comment reflects what actually gets executed.
 
 This comment updates dynamically as test authoring progresses, so you can monitor the transition from conceptual test cases to executable automation.
 

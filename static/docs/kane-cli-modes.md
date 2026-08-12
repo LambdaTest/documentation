@@ -51,7 +51,10 @@ Typing `/` in chat mode opens an autocomplete palette. Continue typing to filter
 | `/whoami` | `[--profile name]` | Show profile info |
 | `/balance` | | Show credit balance |
 | `/profiles` | `list\|switch\|delete` | Manage profiles |
-| `/config` | `show\|set-window\|set-mode\|chrome-profile\|project\|folder` | Manage configuration |
+| `/config` | `show\|set-window\|set-url\|set-mode\|chrome-profile\|project\|folder` | Manage configuration |
+| `/mobile` | | Switch the session to an emulator or simulator |
+| `/desktop` | | Switch the session back to desktop (Chrome) |
+| `/doctor` | | Check mobile tooling and devices |
 | `/new` | | Start a fresh session (uploads the current session first) |
 | `/summary` | `[index]` | View detailed run summaries |
 | `/cancel` | | Abort the current run |

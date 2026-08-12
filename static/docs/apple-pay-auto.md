@@ -171,7 +171,7 @@ All parameters are optional. You can provide only the details you need to update
 
 ```python
 driver.execute_script(
-'lambda_executor: {"action": "applePay", "arguments": {"confirmPayment": "true"}}'
+'lambda_executor: {"action": "lambda-applepay", "arguments": {"confirmPayment": "true"}}'
 )
 ```
 
