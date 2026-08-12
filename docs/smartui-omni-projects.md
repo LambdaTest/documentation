@@ -23,7 +23,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-omni-projects/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -63,12 +63,8 @@ Standard project types work the other way around. A standard project is created 
 | Sending another source type | Accepted | Rejected with a project type mismatch error |
 | Projects needed for a web + mobile + PDF release | One | One per source |
 | Configuration screen | One tab per capture source | Instructions for the project's own source |
-| Baseline selection | Per git branch | One baseline for the project |
+| Baseline selection | Per git branch | One baseline for the project, except CLI projects, which are also per git branch |
 | Build list | One chronological list across all sources | Grouped into **Baseline Build** and **Non Baseline Build** |
-| Status tabs inside a build | **All** and **New** | **All** and **Added To Baseline** |
-| How PDF pages are counted | As variants of a screenshot | As pages of a PDF |
-| Region propagation on a PDF | **Apply to this page** or **Apply to all the pages of this PDF** | Not offered; a region applies to the page it was drawn on |
-| Element Based Anchoring on a PDF | Available, with a configurable search area | Not available |
 
 The practical difference is consolidation. A team shipping a feature across a web app, a mobile app and a generated PDF statement can run all three into one Omni project and read one build list, instead of aggregating status by hand from three projects.
 
@@ -78,7 +74,12 @@ For an enterprise team weighing a move, the differences that actually change day
 
 **Fewer projects, and one place to look.** A release that spans a web app, a mobile app and generated documents needs one Omni project rather than three. Approvers, tags and settings are configured once rather than kept in step across projects, and the release status is read from one build list.
 
-**Branch aware baselines.** This is the change most likely to affect an existing pipeline. Omni resolves the baseline per git branch, in the same way CLI projects already do, so a feature branch compares against its own branch's baseline rather than against whatever the project's single baseline happens to be. Standard Website, App and PDF projects resolve against one baseline for the whole project. If your runs do not currently send branch information, add it before migrating, because Omni treats a build with no branch as being on the default branch.
+**Branch aware baselines.** This is the change most likely to affect an existing pipeline, and how much it affects you depends on where you are coming from.
+
+- Coming from a **CLI** project, nothing changes. CLI projects already resolve baselines per git branch, and Omni behaves the same way.
+- Coming from a **Website**, **App** or **PDF** project, this is new. Those resolve against one baseline for the whole project, whereas Omni resolves per branch, so a feature branch compares against its own branch's baseline rather than against whatever the project's single baseline happens to be.
+
+If your runs do not currently send branch information, add it before migrating, because Omni treats a build with no branch as being on the default branch.
 
 **A different baseline mental model in the dashboard.** A standard project separates its build list into a **Baseline Build** and **Non Baseline Build** section, so the baseline is a specific build you can point at. An Omni project shows one chronological list, and the baseline is resolved per branch rather than being a single pinned build. Teams with a documented approval process that references "the baseline build" will want to revisit that wording.
 
@@ -198,19 +199,25 @@ Annotations behave the same way in an Omni project as anywhere else, and the [re
 - On a **PDF** artifact, a region can be applied to every page of that PDF, and [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring-for-pdf-regions) places it on the anchored content page by page. Both controls are specific to Omni; in a standard PDF project a region stays on the page it was drawn on.
 - On a **website or app** artifact, a region can be applied to every browser and viewport variant of that screenshot.
 
-## Enabling Omni Projects
+## Availability and Access
 
-Omni is enabled for your organisation as a whole. Once it is on, projects you create are Omni projects regardless of which creation flow you use, and they accept every capture source from the start.
+Omni projects are released behind a feature flag and are rolled out progressively.
 
-Existing projects created before Omni was enabled keep their original type and continue to behave exactly as they did, accepting the single source they were created for.
+:::info Enabled per organisation
+Omni is switched on for an organisation as a whole, not per user or per project. Once it is enabled, every project you create is an Omni project regardless of which creation flow you use, and it accepts all six capture sources from the start.
+:::
 
-If you would like Omni enabled for your organisation, get in touch over the <span className="doc_content_link" onClick={() => { window.openLTChatWidget(); }}>24/7 Chat Support</span> or write to <BrandName type="support-email" />.
+- **Existing projects are not converted.** Projects created before Omni was enabled keep their original type and continue to behave exactly as they did, accepting the single source they were created for. There is no in place conversion, so plan for new projects rather than a switch on existing ones.
+- **You can tell the two apart from the dashboard URL.** An Omni project opens under `/test/omni/`, while a standard project opens under its own platform, for example `/test/pdf/`.
+- **If you expect Omni and do not see it**, your organisation may not be enabled yet.
+
+To have Omni enabled for your organisation, contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support).
 
 ## Best Practices
 
 - **Group by release, not by source.** The value of an Omni project comes from one project covering a whole release. Splitting by source recreates the silos Omni exists to remove.
 - **Keep screenshot names stable across sources.** Names are part of every matching key, so a rename is read as a new artifact rather than a change to an existing one.
-- **Keep git branch information accurate on every run.** Omni resolves baselines per branch, so a missing or wrong branch sends a build to compare against the wrong baseline.
+- **Keep git branch information accurate on every run.** Omni resolves baselines per branch, as CLI projects do, so a missing or wrong branch sends a build to compare against the wrong baseline.
 - **Keep viewports consistent between runs.** A changed resolution produces a new entry rather than a comparison.
 
 ## Additional Resources
