@@ -118,5 +118,5 @@ To avoid this, first initiate the payment flow on a supported website or applica
 ## Additional Links
 
 - [Apple Pay Demo Website](https://developer.apple.com/apple-pay/sandbox-testing/)
-- [<BrandName /> App Live Overview](https://www.testmuai.com/app-live)
+- [<BrandName /> App Live Overview](https://www.testmuai.com/app-live/)
 - [iOS Assistive Touch Guide](https://support.apple.com/guide/iphone/assistive-touch-iph3e2e4157/ios)

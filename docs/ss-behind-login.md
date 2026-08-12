@@ -47,7 +47,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 # Taking Screenshots of Pages Behind Login
 ***
-<BrandName /> offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.testmuai.com/feature) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
+<BrandName /> offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.testmuai.com/feature/) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="HT8ODEExxZM">
@@ -55,7 +55,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 </div>
 </div>
 
-This document will help you understand how you can capture bulk screenshots of your web-application **after the login page** for different browsers to measure the cross browser compatibility. Refer to our [Automated Screenshot](https://www.testmuai.com/automated-screenshot) testing document to know more.
+This document will help you understand how you can capture bulk screenshots of your web-application **after the login page** for different browsers to measure the cross browser compatibility. Refer to our [Automated Screenshot](https://www.testmuai.com/automated-screenshot/) testing document to know more.
 
 
 ## How This Works?
@@ -104,7 +104,7 @@ For the demonstration, let us capture the details for <a href="https://www.testm
 >
 **Note:** If you are already logged in to [LambdaTest](https://www.testmuai.com), make sure to perform this drill in **incognito mode**.
 
-**Step 1:** Go to <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}>https://www.testmuai.com/login/</a>. Right-click and select the option to open the inspection tools. For demonstration, we are using Google Chrome’s Dev Tools.
+**Step 1:** Go to <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}>https://www.testmuai.com/login/</a/>. Right-click and select the option to open the inspection tools. For demonstration, we are using Google Chrome’s Dev Tools.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-5.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 

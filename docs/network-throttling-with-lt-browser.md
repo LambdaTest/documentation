@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Network Throttling To Test Website Responsiveness
 * * *
-[LT Browser](https://www.testmuai.com/lt-browser/) allows you to test your [mobile website view](https://www.testmuai.com/mobile-view-website) over different networks such as fast 3G, slow 3G, online, or even offline. With network throttling, you can change your network profile to test its functionality when exposed to different network environments.
+[LT Browser](https://www.testmuai.com/lt-browser/) allows you to test your [mobile website view](https://www.testmuai.com/mobile-view-website/) over different networks such as fast 3G, slow 3G, online, or even offline. With network throttling, you can change your network profile to test its functionality when exposed to different network environments.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="8clqakSKI7Q">
