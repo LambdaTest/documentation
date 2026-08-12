@@ -52,4 +52,10 @@ The categories below group the most common scenarios you can cover with Kane CLI
       <p>Smoke tests, auth-token chaining, schema and field validation, negative paths, SLA gates, and multi-step transactions.</p>
     </a>
   </div>
+  <div className="col col--4 margin-bottom--lg">
+    <a className="card padding--lg" href="/support/docs/kane-cli-with-ai-coding-agents/" style={{height: '100%', textDecoration: 'none'}}>
+      <h3>🤖 AI Coding Agents</h3>
+      <p>Give Claude Code, Codex CLI, or Gemini CLI a real browser: verify a change, reproduce a bug, diagnose failures, and commit verified runs as tests.</p>
+    </a>
+  </div>
 </div>
