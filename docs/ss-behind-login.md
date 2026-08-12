@@ -104,7 +104,7 @@ For the demonstration, let us capture the details for <a href="https://www.testm
 >
 **Note:** If you are already logged in to [LambdaTest](https://www.testmuai.com), make sure to perform this drill in **incognito mode**.
 
-**Step 1:** Go to <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}>https://www.testmuai.com/login/</a/>. Right-click and select the option to open the inspection tools. For demonstration, we are using Google Chrome’s Dev Tools.
+**Step 1:** Go to <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}>https://www.testmuai.com/login/</a>. Right-click and select the option to open the inspection tools. For demonstration, we are using Google Chrome’s Dev Tools.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-5.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 
