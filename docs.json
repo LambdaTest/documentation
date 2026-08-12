@@ -70,10 +70,19 @@
                 ]
               },
               {
+                "group": "Mobile Testing",
+                "pages": [
+                  "docs/kane-cli-mobile",
+                  "docs/kane-cli-mobile-simulator",
+                  "docs/kane-cli-mobile-emulator"
+                ]
+              },
+              {
                 "group": "Use Cases",
                 "pages": [
                   "docs/kane-cli-use-cases",
-                  "docs/api-testing-with-kane-cli"
+                  "docs/api-testing-with-kane-cli",
+                  "docs/kane-cli-with-ai-coding-agents"
                 ]
               },
               {
