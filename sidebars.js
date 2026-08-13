@@ -1,261 +1,339 @@
 module.exports = {
 
-  // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', { type: "html", value: "<span class=\"sidebar-stub\">Playwright Testing Guide</span>" }, { type: "html", value: "<span class=\"sidebar-stub\">Puppeteer Testing Guide</span>" }, 'k6-browser-testing', { type: "html", value: "<span class=\"sidebar-stub\">App Automation App Sim</span>" },'getting-started-with-appium-testing', 'getting-started-with-espresso-testing', { type: "html", value: "<span class=\"sidebar-stub\">Getting Started With Xcui Testing</span>" }, { type: "html", value: "<span class=\"sidebar-stub\">Record And Replay</span>" },
+  // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay',
 
   HyperExecuteSidebar: [
     {
-      "type": "link",
-      "label": "Back",
-      "href": "/docs/",
-      "customProps": {
-        "className": "back-to-main-menu"
-      }
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
+      customProps: {
+        className: "back-to-main-menu",
+      },
     },
     [
       {
-        "type": "category",
-        "collapsed": false,
-        "label": "Get Started",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Run First Test",
-            "id": "getting-started-with-hyperexecute"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Run Tests With Agent Skills</span>"
-          },
-          {
-            "type": "doc",
-            "label": "Run Tests With GUI",
-            "id": "hyperexecute-cli-gui"
-          },
-          {
-            "type": "doc",
-            "label": "Migrate from SauceLabs",
-            "id": "saucelabs-to-hyperexecute-migrate"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">View Test Results</span>"
-          },
-          {
-            "type": "doc",
-            "label": "Generate HyperExecute YAML File",
-            "id": "hyperexecute-generate-sample-yaml"
-          },
-          {
-            "type": "doc",
-            "label": "Troubleshoot Errors",
-            "id": "hyperexecute-how-to-debug-job"
-          },
-          {
-            "type": "doc",
-            "label": "Languages & Frameworks",
-            "id": "hyperexecute-supported-languages-and-frameworks"
-          }
-        ]
+        type: "category",
+        collapsed: true,
+        label: "Getting Started",
+        items: [
+          "getting-started-with-hyperexecute",
+          "hyperexecute-vs-traditional-test-grids",
+          "key-features-of-hyperexecute",
+        ],
       },
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Features",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Test Splitting and Multiplexing",
-            "id": "hyperexecute-test-splitting-and-multiplexing"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Job Artifacts and Reports</span>"
-          },
-          {
-            "type": "doc",
-            "label": "FailFast",
-            "id": "hyperexecute-failfast"
-          },
-          {
-            "type": "doc",
-            "label": "Jobs Prioritization",
-            "id": "hyperexecute-prioritize-tests"
-          },
-          {
-            "type": "doc",
-            "label": "AI Native Root Cause Analysis",
-            "id": "rca"
-          },
-          {
-            "type": "doc",
-            "label": "Background Services",
-            "id": "hyperexecute-background-services"
-          },
-          {
-            "type": "doc",
-            "label": "Auto Heal",
-            "id": "hyperexecute-auto-healing"
-          },
-          {
-            "type": "doc",
-            "label": "Projects",
-            "id": "hyperexecute-projects"
-          },
-          {
-            "type": "doc",
-            "label": "Workflows",
-            "id": "hyperexecute-workflows"
-          },
-          {
-            "type": "doc",
-            "label": "Jobs Archiving",
-            "id": "hyperexecute-jobs-archiving"
-          },
-          {
-            "type": "doc",
-            "label": "Test Muting",
-            "id": "hyperexecute-test-muting"
-          },
-          {
-            "type": "doc",
-            "label": "Task Metrics",
-            "id": "hyperexecute-task-metrics"
-          },
-          {
-            "type": "doc",
-            "label": "Rerun Failed Tests",
-            "id": "hyperexecute-rerun-failed-tests"
-          }
-        ]
+        type: "category",
+        collapsed: true,
+        label: "Set Up & Authenticate",
+        items: [
+          "hyperexecute-environment-variable-setup",
+          "hyperexecute-how-to-configure-tunnel",
+        ],
       },
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Knowledge Base",
-        "link": {
-          "type": "doc",
-          "id": "hyperexecute-knowledge-base"
-        },
-        "items": [
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Secrets Management</span>"
-          },
-          {
-            "type": "doc",
-            "label": "Configure Tunnel",
-            "id": "hyperexecute-how-to-configure-tunnel"
-          },
-          {
-            "type": "doc",
-            "label": "Configure Browser/OS",
-            "id": "hyperexecute-how-to-configure-os-and-browser"
-          },
-          {
-            "type": "doc",
-            "label": "Find Correct Concurrency",
-            "id": "hyperexecute-how-to-find-correct-concurrency"
-          },
-          {
-            "type": "doc",
-            "label": "Configure sourcePayload",
-            "id": "hyperexecute-how-to-configure-sourcePayload"
-          },
-          {
-            "type": "doc",
-            "label": "List Supported Browsers via API",
-            "id": "hyperexecute-browser-list-api"
-          },
-          {
-            "type": "doc",
-            "label": "Tests With Local Selenium WebDriver",
-            "id": "hyperexecute-how-to-run-tests-using-local-selenium-drivers"
-          },
-          {
-            "type": "doc",
-            "label": "Dependent Test Case Discovery",
-            "id": "hyperexecute-how-to-perform-dependent-test-based-discovery"
-          },
-          {
-            "type": "doc",
-            "label": "Group-Based Test Discovery",
-            "id": "hyperexecute-how-to-perform-group-based-test-discovery-in-testng"
-          },
-          {
-            "type": "doc",
-            "label": "Resolve Version Conflict Issues",
-            "id": "hyperexecute-how-to-resolve-version-conflict"
-          },
-          {
-            "type": "doc",
-            "label": "Build Mobile Apps",
-            "id": "hyperexecute-build-mobile-apps-using-tools"
-          },
-          {
-            "type": "doc",
-            "label": "Access Org Product Preferences",
-            "id": "hyperexecute-org-product-preferences"
-          }
-        ]
+        type: "category",
+        collapsed: true,
+        label: "Run Your First Job",
+        items: [
+          "hyperexecute-running-your-first-job",
+          "hyperexecute-guided-walkthrough",
+          "hyperexecute-cli-gui",
+          "saucelabs-to-hyperexecute-migrate",
+          "hyperexecute-supported-languages-and-frameworks",
+        ],
       },
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Integrations",
-        "link": {
-          "type": "doc",
-          "id": "integration-he"
-        },
-        "items": [
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Integrate with Tools</span>"
-          }
-        ]
+        type: "category",
+        collapsed: true,
+        label: "Performance Testing",
+        items: [
+          "hyperexecute-performance-testing",
+          "hyperexecute-run-jmeter-tests",
+          "hyperexecute-gattling-testing",
+        ],
       },
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Private Cloud",
-        "link": {
-          "type": "doc",
-          "id": "hyperexecute-private-cloud-setup"
-        },
-        "items": [
+        type: "category",
+        collapsed: true,
+        label: "Configure Your YAML",
+        items: [
           {
-            "type": "doc",
-            "label": "HyperExecute Private Cloud Benefits",
-            "id": "hyperexecute-private-cloud-benefits"
-          },
-          {
-            "type": "category",
-            "collapsed": true,
-            "label": "Setup with Azure",
-            "link": {
-              "type": "doc",
-              "id": "hyperexecute-private-cloud-setup-with-azure"
+            type: "category",
+            collapsed: true,
+            label: "Test Splitting and Multiplexing",
+            link: {
+              type: "doc",
+              id: "hyperexecute-test-splitting-and-multiplexing",
             },
-            "items": [
+            items: [
               {
-                "type": "doc",
-                "label": "HyperExecute Private Cloud on JumpHost",
-                "id": "hyperexecute-private-cloud-on-jumphost"
+                type: "doc",
+                label: "Auto Split Strategy",
+                id: "hyperexecute-auto-split-strategy",
               },
               {
-                "type": "doc",
-                "label": "VNet Peering and VNet Links",
-                "id": "hyperexecute-vnet-peering-for-private-cloud"
-              }
-            ]
+                type: "doc",
+                label: "Matrix Multiplexing Strategy",
+                id: "hyperexecute-matrix-multiplexing-strategy",
+              },
+              {
+                type: "doc",
+                label: "Hybrid Strategy",
+                id: "hyperexecute-hybrid-strategy",
+              },
+            ],
           },
           {
-            "type": "doc",
-            "label": "Setup with AWS",
-            "id": "hyperexecute-private-cloud-setup-with-aws"
-          }
-        ]
-      }
-    ]
+            type: "category",
+            collapsed: true,
+            label: "Job Artifacts and Reports",
+            items: [
+              {
+                type: "doc",
+                label: "HyperExecute Job Artifacts ",
+                id: "hyperexecute-artifacts",
+              },
+              {
+                type: "doc",
+                label: "Test Artifact Management",
+                id: "hyperexecute-artifacts-url",
+              },
+              {
+                type: "doc",
+                label: "HyperExecute Job Reports ",
+                id: "hyperexecute-reports",
+              },
+              {
+                type: "doc",
+                label: "Receive the Job Reports as an Email",
+                id: "hyperexecute-email-reports",
+              },
+              {
+                type: "doc",
+                label: "Process Artifacts in Global Post",
+                id: "hyperexecute-global-post-artifacts",
+              },
+            ],
+          },
+          {
+            type: "doc",
+            label: "FailFast",
+            id: "hyperexecute-failfast",
+          },
+          {
+            type: "doc",
+            label: "Jobs Prioritization",
+            id: "hyperexecute-prioritize-tests",
+          },
+          {
+            type: "doc",
+            id: "rca",
+          },
+          {
+            type: "doc",
+            id: "hyperexecute-background-services",
+          },
+          {
+            type: "doc",
+            label: "Auto Healing",
+            id: "hyperexecute-auto-healing",
+          },
+          {
+            type: "doc",
+            label: "Hyperexecute Projects",
+            id: "hyperexecute-projects",
+          },
+          {
+            type: "doc",
+            label: "Workflows",
+            id: "hyperexecute-workflows",
+          },
+          {
+            type: "doc",
+            label: "Jobs Archiving",
+            id: "hyperexecute-jobs-archiving",
+          },
+          {
+            type: "doc",
+            label: "Test Muting",
+            id: "hyperexecute-test-muting",
+          },
+          {
+            type: "doc",
+            label: "Test Metrics",
+            id: "hyperexecute-task-metrics",
+          },
+          {
+            type: "doc",
+            label: "Global Policies",
+            id: "hyperexecute-global-policies",
+            customProps: { beta: true },
+          },
+          "hyperexecute-rerun-failed-tests"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Scale Your Test Runs",
+        items: [
+          "hyperexecute-test-splitting-and-multiplexing",
+          "hyperexecute-auto-split-strategy",
+          "hyperexecute-matrix-multiplexing-strategy",
+          "hyperexecute-hybrid-strategy",
+          "hyperexecute-how-to-find-correct-concurrency",
+          "hyperexecute-prioritize-tests",
+          "hyperexecute-failfast",
+          "hyperexecute-test-muting",
+          "hyperexecute-rerun-failed-tests",
+          "hyperexecute-background-services",
+          "hyperexecute-auto-healing",
+          "hyperexecute-projects",
+          "hyperexecute-workflows",
+          "hyperexecute-test-chains",
+          "hyperexecute-jobs-archiving",
+          "hyperexecute-how-smart-caching-boosts-tests-speed",
+          "hyperexecute-org-product-preferences",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "View Results & Reports",
+        items: [
+          "hyperexecute-status",
+          "hyperexecute-reports",
+          "hyperexecute-artifacts",
+          "error-categorization-report",
+          "hyperexecute-task-metrics",
+          "rca",
+          "hyperexecute-widgets",
+          "hyperexecute-test-widgets",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Debug Failed Jobs",
+        items: [
+          "hyperexecute-how-to-debug-job",
+          "hyperexecute-cli-error",
+          "hyperexecute-pre-steps-error",
+          "hyperexecute-scenario-steps-error",
+          "hyperexecute-how-to-resolve-version-conflict",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Set Up Private Cloud",
+        items: [
+          "hyperexecute-private-cloud-benefits",
+          "hyperexecute-private-cloud-setup-with-azure",
+          "hyperexecute-private-cloud-setup-with-aws",
+          "hyperexecute-private-cloud-on-jumphost",
+          "hyperexecute-vnet-peering-for-private-cloud",
+          "hyperexecute-github-app-integration",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrate With SmartUI (Visual Testing)",
+        items: [
+          "smart-ui-testing",
+          "hyperexecute-smart-ui-capture-onboarding",
+          "hyperexecute-smart-ui-testing-using-selenium",
+          "hyperexecute-smart-ui-testing-using-cypress",
+          "hyperexecute-smart-ui-test-using-playwright",
+          "hyperexecute-smart-ui-sdk-selenium-javascript",
+          "hyperexecute-smart-ui-sdk-maestro",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrate with CI/CD",
+        items: [
+          "hyperexecute-integration-with-ci-cd-tools",
+          "github-actions-with-hyperexecute",
+          "gitlab-integration-with-hyperexecute",
+          "jenkins-with-hyperexecute",
+          "bitbucket-pipeline-with-hyperexecute",
+          "circle-ci-with-hyperexecute",
+          "azure-with-hyperexecute",
+          "aws-codepipeline-with-hyperexecute",
+          "travis-ci-with-hyperexecute",
+          "teamcity-with-hyperexecute",
+          "gocd-integration-with-hyperexecute",
+          "bamboo-integration-with-hyperexecute",
+          "semaphore-integration-with-hyperexecute",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrate Test Tools",
+        items: [
+          "hyperexecute-integration-with-products",
+          "hyperexecute-azure-test-plan",
+          "tosca-integration-with-hyperexecute-using-commander",
+          "tosca-integration-with-hyperexecute-using-dex",
+          "tosca-integration-with-hyperexecute-for-sap",
+          "hyperexecute-accelq-integration",
+          "hyperexecute-algoqa-integration",
+          "katalon-integration-with-hyperexecute",
+          "hyperexecute-provar-integration",
+          "hyperexecute-qtest-integration",
+          "hyperexecute-sikuli-integration",
+          "hyperexecute-testim-integration",
+          "hyperexecute-testsigma-integration",
+          "hyperexecute-winapp-integration",
+          "hyperexecute-zephyr-scale-integration",
+          "hyperexecute-slack-integration",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Reference",
+        items: [
+          "hyperexecute-cli-run-tests-on-hyperexecute-grid",
+          "hyperexecute-browser-list-api",
+          "hyperexecute-supported-languages-and-packages",
+          "hyperexecute-emu-simu-devices-list",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Troubleshoot & FAQs",
+        items: [
+          "he-general-faqs",
+          "hyperexecute-yaml-faqs",
+          "he-cli-faqs",
+          "he-feature-faqs",
+          "he-platform-faqs",
+          "he-pricing-faqs",
+          "he-security-faqs",
+          "he-enterprise-faqs",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Release Notes",
+        items: [
+          "hyperexecute-release-notes",
+          "hyperexecute-release-notes-2025",
+          "hyperexecute-release-notes-2024",
+          "hyperexecute-release-notes-2023",
+          "hyperexecute-cli-release-notes-0-2-249",
+          "hyperexecute-mcp-server-release-notes-1-0-0",
+        ],
+      },
+    ],
   ],
 
   AgentToAgentSidebar: [
@@ -273,7 +351,11 @@ module.exports = {
         label: "Overview",
         collapsed: false,
         items: [
-          { type: "html", value: "<span class=\"sidebar-stub\">What is Agent Testing</span>" },
+          {
+            type: "doc",
+            label: "What is Agent Testing",
+            id: "getting-started-with-agent-testing-platform",
+          },
           {
             type: "doc",
             label: "Architecture & Working",
@@ -372,7 +454,11 @@ module.exports = {
         label: "Frequently Asked Questions",
         collapsed: false,
         items: [
-          { type: "html", value: "<span class=\"sidebar-stub\">FAQs</span>" },
+          {
+            type: "doc",
+            label: "FAQs",
+            id: "agent-testing-platform-faqs",
+          },
         ],
       },
     ],
@@ -380,311 +466,248 @@ module.exports = {
 
   KaneAISidebar: [
     {
-      "type": "link",
-      "label": "Back",
-      "href": "/docs/",
-      "customProps": {
-        "className": "back-to-main-menu"
-      }
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
     },
     [
+      // 1. Getting Started
       {
-        "type": "doc",
-        "label": "Overview",
-        "id": "getting-started-with-kane-ai"
+        type: "category",
+        collapsed: true,
+        label: "Getting Started",
+        items: [
+          // why-we-need-kane-ai & use-cases-of-kane-ai merged into the intro
+          // page. Files retained on disk (to be deleted later); removed from nav.
+          "getting-started-with-kane-ai",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Author Your First Test",
+            items: [
+              "author-your-first-desktop-browser-test",
+              "author-your-first-mobile-browser-test",
+              "author-your-first-mobile-app-test",
+            ],
+          },
+        ],
       },
+
+      // 2. Writing Tests (KB index repurposed as landing page)
       {
-        "type": "category",
-        "collapsed": false,
-        "label": "Getting Started",
-        "items": [
+        type: "category",
+        collapsed: true,
+        label: "Writing Tests",
+        items: [
+          "kaneai-kb-knowledge-base-index",
           {
-            "type": "doc",
-            "label": "Author Desktop Browser Test",
-            "id": "author-your-first-desktop-browser-test"
+            type: "doc",
+            id: "kane-ai-command-guide",
+            label: "Command Types",
           },
           {
-            "type": "doc",
-            "label": "Author Mobile Browser Test",
-            "id": "author-your-first-mobile-browser-test"
+            type: "category",
+            collapsed: true,
+            label: "Authoring Guides",
+            items: [
+              "kaneai-kb-finding-and-interacting-with-elements",
+              "kaneai-kb-forms-inputs-and-data-entry",
+              "kaneai-kb-assertions-and-validation",
+              "kaneai-kb-dynamic-content-waits-and-page-state",
+            ],
           },
           {
-            "type": "doc",
-            "label": "Author Mobile App Test",
-            "id": "author-your-first-mobile-app-test"
-          }
-        ]
+            type: "category",
+            collapsed: true,
+            label: "Interactions",
+            items: [
+              "kane-ai-click-interactions",
+              "kane-ai-scroll-in-feature",
+              "kane-ai-drag-drop",
+              "kaneai-manual-interaction",
+              "kaneai-upload-and-download-files",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Logic & Control Flow",
+            items: [
+              "kaneai-conditional-logic",
+              "kaneai-while-loops",
+              "kane-ai-javascript-execution",
+              "kaneai-kb-js-snippets-and-workarounds",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Session Configuration",
+            items: [
+              "kaneai-advanced-settings",
+              "kaneai-chrome-options",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Mobile Testing",
+            items: [
+              "kaneai-kb-mobile-app-testing-patterns",
+              "kaneai-scroll-until-mobile",
+            ],
+          },
+        ],
       },
+
+      // 3. Test Data & Variables
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Knowledge Base",
-        "link": {
-          "type": "doc",
-          "id": "kaneai-kb-knowledge-base-index"
-        },
-        "items": [
-          {
-            "type": "doc",
-            "label": "Commands",
-            "id": "kane-ai-command-guide"
-          },
-          {
-            "type": "doc",
-            "label": "Elements",
-            "id": "kaneai-kb-finding-and-interacting-with-elements"
-          },
-          {
-            "type": "doc",
-            "label": "Smart Locators",
-            "id": "kaneai-smart-locator-priority"
-          },
-          {
-            "type": "doc",
-            "label": "Forms",
-            "id": "kaneai-kb-forms-inputs-and-data-entry"
-          },
-          {
-            "type": "doc",
-            "label": "Waits",
-            "id": "kaneai-kb-dynamic-content-waits-and-page-state"
-          },
-          {
-            "type": "doc",
-            "label": "Assertions",
-            "id": "kaneai-kb-assertions-and-validation"
-          },
-          {
-            "type": "doc",
-            "label": "Authentication",
-            "id": "kaneai-kb-authentication-and-session-management"
-          },
-          {
-            "type": "doc",
-            "label": "API & Network",
-            "id": "kaneai-kb-api-testing-and-network-assertions"
-          },
-          {
-            "type": "doc",
-            "label": "Failure Rules",
-            "id": "kaneai-failure-conditions"
-          },
-          {
-            "type": "doc",
-            "label": "JS Snippets",
-            "id": "kaneai-kb-js-snippets-and-workarounds"
-          },
-          {
-            "type": "doc",
-            "label": "Mobile Patterns",
-            "id": "kaneai-kb-mobile-app-testing-patterns"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Variables & Secrets</span>"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Parameters & Datasets</span>"
-          },
-          {
-            "type": "doc",
-            "label": "Code Generation",
-            "id": "kane-ai-automation-code-generation"
-          },
-          {
-            "type": "doc",
-            "label": "Errors",
-            "id": "error-handling-kaneai"
-          }
-        ]
+        type: "category",
+        collapsed: true,
+        label: "Test Data & Variables",
+        items: [
+          "kaneai-variables-and-parameters",
+          "kane-ai-using-variables",
+          "kane-ai-secrets",
+          "kane-ai-smart-variables",
+          "kane-ai-using-parameters",
+          "kane-ai-using-datasets",
+        ],
       },
+
+      // 4. Advanced Testing
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Test Configuration",
-        "items": [
+        type: "category",
+        collapsed: true,
+        label: "Advanced Testing",
+        items: [
+          "kane-ai-geolocation-tunnel-proxy",
           {
-            "type": "doc",
-            "label": "Advanced Settings",
-            "id": "kaneai-advanced-settings"
+            type: "category",
+            collapsed: true,
+            label: "API & Network",
+            items: [
+              "kane-ai-api-testing",
+              "kaneai-kb-api-testing-and-network-assertions",
+              "kane-ai-network-assertions",
+              "kaneai-custom-headers",
+            ],
           },
           {
-            "type": "doc",
-            "label": "Chrome Options",
-            "id": "kaneai-chrome-options"
+            type: "category",
+            collapsed: true,
+            label: "Authentication & Security",
+            items: [
+              "kaneai-kb-authentication-and-session-management",
+              "kaneai-totp",
+            ],
           },
+          "kaneai-database",
+          "kaneai-smartui-visual-testing",
           {
-            "type": "doc",
-            "label": "Custom Headers",
-            "id": "kaneai-custom-headers"
+            type: "category",
+            collapsed: true,
+            label: "Mobile",
+            items: [
+              "kane-ai-mobile-app-capabilities",
+              "kane-ai-deeplink-support",
+              "kaneai-network-throttling",
+              "kaneai-gps-location",
+              "kaneai-mobile-app-accessibility",
+            ],
           },
-          {
-            "type": "doc",
-            "label": "Dynamic URL Replacement",
-            "id": "kaneai-dynamic-url-replacement"
-          },
-          {
-            "type": "doc",
-            "label": "Geolocation, Tunnel, and Proxy",
-            "id": "kane-ai-geolocation-tunnel-proxy"
-          },
-          {
-            "type": "doc",
-            "label": "Auto-Heal",
-            "id": "kaneai-auto-heal"
-          }
-        ]
+        ],
       },
+
+      // 5. Modules & Reusability
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Test Steps",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Click Interactions",
-            "id": "kane-ai-click-interactions"
-          },
-          {
-            "type": "doc",
-            "label": "Drag and Drop",
-            "id": "kane-ai-drag-drop"
-          },
-          {
-            "type": "doc",
-            "label": "Scroll in Element",
-            "id": "kane-ai-scroll-in-feature"
-          },
-          {
-            "type": "doc",
-            "label": "Scroll Until Element",
-            "id": "kaneai-scroll-until-mobile"
-          },
-          {
-            "type": "doc",
-            "label": "Upload and Download Files",
-            "id": "kaneai-upload-and-download-files"
-          },
-          {
-            "type": "doc",
-            "label": "Manual Interaction",
-            "id": "kaneai-manual-interaction"
-          },
-          {
-            "type": "doc",
-            "label": "Rename Steps",
-            "id": "kaneai-rename-instructions"
-          }
-        ]
+        type: "category",
+        collapsed: true,
+        label: "Modules & Reusability",
+        items: [
+          "kane-ai-modules",
+          "kaneai-modules-versions-and-enhancement",
+          "kaneai-bulk-module-update",
+          "kaneai-rename-instructions",
+        ],
       },
+
+      // 6. Running Tests
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Logic & Data",
-        "items": [
+        type: "category",
+        collapsed: true,
+        label: "Running Tests",
+        items: [
+          "test-runs-configurations",
           {
-            "type": "doc",
-            "label": "Conditional Logic",
-            "id": "kaneai-conditional-logic"
+            type: "category",
+            collapsed: true,
+            label: "Execution",
+            items: [
+              "kaneai-hyperexecute-test-run-execution",
+              "kaneai-sequential-test-runs",
+              "kaneai-scheduled-test-runs",
+              "kaneai-dynamic-url-replacement",
+            ],
           },
           {
-            "type": "doc",
-            "label": "While Loops",
-            "id": "kaneai-while-loops"
+            type: "category",
+            collapsed: true,
+            label: "Code Export & CI/CD",
+            items: [
+              "kane-ai-automation-code-generation",
+              "kaneai-ci-cd-automation",
+            ],
           },
           {
-            "type": "doc",
-            "label": "Modules",
-            "id": "kane-ai-modules"
+            type: "category",
+            collapsed: true,
+            label: "Results",
+            items: [
+              "kaneai-test-run-instance-view",
+            ],
           },
-          {
-            "type": "doc",
-            "label": "JavaScript Execution",
-            "id": "kane-ai-javascript-execution"
-          },
-          {
-            "type": "doc",
-            "label": "Network Logs Assertions",
-            "id": "kane-ai-network-assertions"
-          },
-          {
-            "type": "doc",
-            "label": "Database",
-            "id": "kaneai-database"
-          },
-          {
-            "type": "doc",
-            "label": "TOTP Authentication",
-            "id": "kaneai-totp"
-          }
-        ]
+        ],
       },
+
+      // 7. Debugging & Reliability
       {
-        "type": "doc",
-        "label": "API Testing",
-        "id": "kane-ai-api-testing"
+        type: "category",
+        collapsed: true,
+        label: "Debugging & Reliability",
+        items: [
+          "kaneai-auto-heal",
+          "kaneai-smart-locator-priority",
+          "kaneai-failure-conditions",
+          "error-handling-kaneai",
+        ],
       },
+
+      // 8. Integrations
       {
-        "type": "doc",
-        "label": "Visual Testing",
-        "id": "kaneai-smartui-visual-testing"
+        type: "category",
+        collapsed: true,
+        label: "Integrations",
+        items: [
+          "kane-ai-jira-integration",
+          {
+            type: "doc",
+            id: "github-app-integration",
+            label: "KaneAI GitHub App Integration",
+          },
+        ],
       },
+
+      // 9. FAQs
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Manage Test Cases",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Test Planner",
-            "id": "kane-ai-test-plan"
-          },
-          {
-            "type": "doc",
-            "label": "Test Runs",
-            "id": "kaneai-hyperexecute-test-run-execution"
-          },
-          {
-            "type": "doc",
-            "label": "CI/CD",
-            "id": "kaneai-ci-cd-automation"
-          },
-          {
-            "type": "doc",
-            "label": "Configurations",
-            "id": "test-runs-configurations"
-          },
-          {
-            "type": "doc",
-            "label": "Scheduled Test Runs",
-            "id": "kaneai-scheduled-test-runs"
-          },
-          {
-            "type": "doc",
-            "label": "Test Run Instance View",
-            "id": "kaneai-test-run-instance-view"
-          }
-        ]
+        type: "doc",
+        label: "FAQs",
+        id: "kaneai-faqs",
       },
-      {
-        "type": "category",
-        "collapsed": true,
-        "label": "Integrations",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Jira",
-            "id": "kane-ai-jira-integration"
-          },
-          {
-            "type": "doc",
-            "label": "GitHub App",
-            "id": "github-app-integration"
-          }
-        ]
-      }
-    ]
+    ],
   ],
 
   RealTimeBrowserTestingSiebar: [
@@ -751,7 +774,7 @@ module.exports = {
         label: "Key Features",
         items: [
           "developer-tools",
-          { type: "html", value: "<span class=\"sidebar-stub\">Pre Loaded Extension</span>" },
+          "pre-loaded-extension",
           "real-time-testing-troubleshooting",
           "http-basic-authentication",
           "webview-testing-in-android",
@@ -760,8 +783,8 @@ module.exports = {
           "real-time-upload-and-download-files",
         ],
       },
-      { type: "html", value: "<span class=\"sidebar-stub\">Troubleshooting Ios Apps</span>" },
-      { type: "html", value: "<span class=\"sidebar-stub\">Entitlements</span>" },
+      "troubleshooting-ios-apps",
+      "entitlements",
     ],
   ],
 
@@ -814,7 +837,7 @@ module.exports = {
           "assembla-integration",
           "taiga-integration",
           "servicenow-integration",
-          { type: "html", value: "<span class=\"sidebar-stub\">Zohoproject Integration</span>" },
+          "zohoproject-integration",
           "rally-integration",
         ],
       },
@@ -829,8 +852,8 @@ module.exports = {
         items: [
           "clickup-integration",
           "project-management-tools-github-integration",
-          { type: "html", value: "<span class=\"sidebar-stub\">Github Repo Based Oauth</span>" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Clubhouse Integration</span>" },
+          "github-repo-based-oauth",
+          "clubhouse-integration",
           "project-management-tools-gitlab-integration",
           "redmine-integration",
           "asana-integration",
@@ -859,7 +882,7 @@ module.exports = {
         label: "Analytics Tools",
         items: [
           "datadog-integration",
-          { type: "html", value: "<span class=\"sidebar-stub\">Sumo Logic Integration</span>" },
+          "sumo-logic-integration",
           "new-relic-integration",
         ],
       },
@@ -873,7 +896,7 @@ module.exports = {
         },
         items: [
           "slack-integration",
-          { type: "html", value: "<span class=\"sidebar-stub\">Slack App</span>" },
+          "slack-app",
           "opsgenie-integration",
           "microsoft-teams-integration",
           "rocketchat-integration-with-lambdatest",
@@ -932,8 +955,8 @@ module.exports = {
           "drone-ci",
           "appveyor-ci-integration",
           "google-cloud-ci-integration",
-          { type: "html", value: "<span class=\"sidebar-stub\">Appium Bitrise</span>" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Espresso Bitrise</span>" },
+          "appium-bitrise",
+          "espresso-bitrise",
           "bitrise-integration-xcuitest",
           "buildkite-integration",
         ],
@@ -966,7 +989,7 @@ module.exports = {
           "cerberus-integration",
           "testingwhiz-integration",
           "testsigma-integration",
-          { type: "html", value: "<span class=\"sidebar-stub\">Tricentis Tosca Integration</span>" },
+          "tricentis-tosca-integration",
           "ghost-inspector-integration",
           "accelq-integration",
           "algoshack-integration",
@@ -990,7 +1013,7 @@ module.exports = {
         items: [
           "testrail-integration-with-lambdatest-selenium-grid",
           "zebrunner-integration",
-          { type: "html", value: "<span class=\"sidebar-stub\">Zephyr Scale</span>" },
+          "zephyr-scale",
           "testmo-integration",
           "alm-octane-integration"
         ],
@@ -1000,7 +1023,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Code Coverage Tools",
-        items: [{ type: "html", value: "<span class=\"sidebar-stub\">Rktracer Integration</span>" }],
+        items: ["rktracer-integration"],
       },
       {
         type: "category",
@@ -1011,7 +1034,7 @@ module.exports = {
           id: "plugins-and-extensions",
         },
         items: [
-          { type: "html", value: "<span class=\"sidebar-stub\">Chrome Extensions</span>" },
+          "chrome-extensions",
           {
             type: "category",
             collapsed: true,
@@ -1019,12 +1042,12 @@ module.exports = {
             items: [
               "jenkins-plugin",
               "integrating-lambdaTest-with-jenkins-freestyle-project",
-              { type: "html", value: "<span class=\"sidebar-stub\">Lambdatest Report With Jenkins Pipeline</span>" },
+              "lambdatest-report-with-jenkins-pipeline",
             ],
           },
           "wordpress-plugin",
           "npm-plugin-for-testcafe-integration-with-lambdatest",
-          { type: "html", value: "<span class=\"sidebar-stub\">Fastlane Plugin</span>" },
+          "fastlane-plugin",
           "azure-pipeline",
           "teamcity-plugin",
           // "shopify-integration",
@@ -1034,13 +1057,17 @@ module.exports = {
           "gradle-integration-with-lambdatest",
         ],
       },
-      { type: "html", value: "<span class=\"sidebar-stub\">LT Debug</span>" },
+      {
+        type: "doc",
+        label: "LT Debug",
+        id: "record-and-replay",
+      },
       "zalenium-integration-with-lambdatest",
       "applitools-integration-with-lambdatest",
       "selenified-integration-with-lambdatest",
       "microsoft-team",
       "app-center-integration",
-      { type: "html", value: "<span class=\"sidebar-stub\">App Center Automation</span>" },
+      "app-center-automation",
       "siesta-integration",
       "testcomplete-integration",
       "testrigor-integration",
@@ -1056,151 +1083,654 @@ module.exports = {
 
   AccessibilityTestingSidebar: [
     {
-      "type": "link",
-      "label": "Back",
-      "href": "/docs/",
-      "customProps": {
-        "className": "back-to-main-menu"
-      }
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
+      customProps: {
+        className: "back-to-main-menu",
+      },
     },
     [
       {
-        "type": "category",
-        "collapsed": false,
-        "label": "Getting Started",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Overview",
-            "id": "accessibility-testing"
-          },
-          {
-            "type": "doc",
-            "label": "Test With Browser DevTools",
-            "id": "accessibility-devtools"
-          },
-          {
-            "type": "doc",
-            "label": "Test With Native App Scanner",
-            "id": "accessibility-app-scanner"
-          },
-          {
-            "type": "doc",
-            "label": "Automate First Accessibility Test",
-            "id": "accessibility-automation"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Run Tests With Agent Skills</span>"
-          },
-          {
-            "type": "doc",
-            "label": "Supported Automation Capabilities",
-            "id": "accessibility-automation-scan-configurations"
-          },
-          {
-            "type": "doc",
-            "label": "Assistive Technologies",
-            "id": "screen-reader-on-accessibility"
-          }
-        ]
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Supported Languages & Frameworks</span>"
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Features</span>"
-      },
-      {
-        "type": "doc",
-        "label": "Checklist",
-        "id": "accessibility-rules-checklist"
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Rule Repository</span>"
-      },
-      {
-        "type": "category",
-        "collapsed": true,
-        "label": "Reports",
-        "link": {
-          "type": "doc",
-          "id": "accessibility-testing-navigating-dashboard"
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "accessibility-testing",
         },
-        "items": [
+        items: [
           {
-            "type": "doc",
-            "label": "Accessibility Score",
-            "id": "accessibility-web-score"
+            type: "doc",
+            label: "Choose Your Tool",
+            id: "accessibility-choosing-the-right-tool",
           },
           {
-            "type": "doc",
-            "label": "Issue Summary",
-            "id": "accessibility-testing-dashboard-issue-summary"
+            type: "doc",
+            label: "Agent Skills",
+            id: "accessibility-agent-skills",
           },
-          {
-            "type": "doc",
-            "label": "All Issues",
-            "id": "accessibility-testing-dashboard-all-issues"
-          },
-          {
-            "type": "doc",
-            "label": "Exporting & Sharing Reports",
-            "id": "accessibility-exporting-sharing-reports"
-          },
-          {
-            "type": "doc",
-            "label": "Passed Test Cases",
-            "id": "accessibility-passed-test-cases"
-          },
-          {
-            "type": "doc",
-            "label": "Bug Report",
-            "id": "accessibility-report-bug"
-          }
-        ]
+        ],
       },
       {
-        "type": "doc",
-        "label": "Test Scheduling",
-        "id": "accessibility-test-scheduling"
+        type: "category",
+        collapsed: true,
+        label: "Manual Testing (DevTools)",
+        link: {
+          type: "doc",
+          id: "accessibility-devtools",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "Install Toolkit",
+            id: "accessibility-testing-install-devtools",
+          },
+          {
+            type: "doc",
+            label: "Run a Quick Scan",
+            id: "accessibility-testing-run-quick-scan",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Scanning Methods",
+            items: [
+              {
+                type: "doc",
+                label: "Full Page Scan",
+                id: "accessibility-testing-full-page-scanner",
+              },
+              {
+                type: "doc",
+                label: "Partial Page Scan",
+                id: "accessibility-testing-partial-page-scanner",
+              },
+              {
+                type: "doc",
+                label: "Multi-Page Scan",
+                id: "accessibility-testing-multi-page-scanner",
+              },
+              {
+                type: "doc",
+                label: "Workflow Scan",
+                id: "accessibility-testing-workflow-scanner",
+              },
+              {
+                type: "doc",
+                label: "Keyboard Scan",
+                id: "accessibility-keyboard-scan",
+              },
+            ],
+          },
+          {
+            type: "doc",
+            label: "DevTools Settings",
+            id: "accessibility-devtools-settings",
+          },
+          {
+            type: "doc",
+            label: "Update DevTools",
+            id: "accessibility-update-devtools-extension",
+          },
+        ],
       },
       {
-        "type": "doc",
-        "label": "Integrations",
-        "id": "accessibility-report-integrations"
+        type: "category",
+        collapsed: true,
+        label: "Automation",
+        link: {
+          type: "doc",
+          id: "accessibility-automation",
+        },
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Framework Setup Guides",
+            items: [
+              {
+                type: "doc",
+                label: "Selenium",
+                id: "accessibility-automation-test",
+              },
+              {
+                type: "doc",
+                label: "Cypress v10",
+                id: "cypress-v10-accessibility-test",
+              },
+              {
+                type: "doc",
+                label: "Cypress v9 (Legacy)",
+                id: "cypress-v9-accessibility-test",
+              },
+              {
+                type: "doc",
+                label: "Playwright",
+                id: "playwright-accessibility-test",
+              },
+              {
+                type: "doc",
+                label: "TestNG",
+                id: "accessibility-testng-test",
+              },
+              {
+                type: "doc",
+                label: "JUnit 5",
+                id: "accessibility-junit5-test",
+              },
+              {
+                type: "doc",
+                label: "NUnit (C#)",
+                id: "accessibility-nunit-csharp-test",
+              },
+              {
+                type: "doc",
+                label: "Robot Framework",
+                id: "accessibility-robot-framework-test",
+              },
+              {
+                type: "doc",
+                label: "Cucumber (Java)",
+                id: "accessibility-cucumber-java-test",
+              },
+            ],
+          },
+          {
+            type: "doc",
+            label: "Automation Settings",
+            id: "accessibility-automation-settings",
+          },
+        ],
       },
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "References",
-        "items": [
+        type: "category",
+        collapsed: true,
+        label: "Test Scheduling",
+        link: {
+          type: "doc",
+          id: "accessibility-test-scheduling",
+        },
+        items: [
           {
-            "type": "doc",
-            "label": "FAQs",
-            "id": "accessibility-faq"
+            type: "doc",
+            label: "Sitemap Extraction & URL Import",
+            id: "accessibility-sitemap-extraction-url-import",
           },
           {
-            "type": "doc",
-            "label": "Supported WCAG Versions & Browsers",
-            "id": "accessibility-supported-wcag-browsers"
+            type: "doc",
+            label: "Login & Authentication",
+            id: "accessibility-test-scheduling-login-authentication",
           },
           {
-            "type": "doc",
-            "label": "Accessibility Compliance Guide (ADA / WCAG / EAA / 508)",
-            "id": "accessibility-compliance-guide"
+            type: "doc",
+            label: "Create Scheduled Scan",
+            id: "accessibility-test-scheduling-scan",
           },
           {
-            "type": "doc",
-            "label": "VPAT & ACR evidence",
-            "id": "accessibility-vpat-report-generation"
-          }
-        ]
-      }
-    ]
+            type: "doc",
+            label: "Edit Scheduled Scan",
+            id: "accessibility-test-scheduling-edit",
+          },
+          {
+            type: "doc",
+            label: "Crawler",
+            id: "accessibility-test-crawler",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrations with TestMu AI products",
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Web Scanner",
+            link: {
+              type: "doc",
+              id: "web-scanner-getting-started",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Starting an Accessibility Scan",
+                id: "web-scanner-accessibility-scan",
+              },
+              {
+                type: "doc",
+                label: "Adding URLs",
+                id: "web-scanner-adding-urls",
+              },
+              {
+                type: "doc",
+                label: "Scheduling Options",
+                id: "web-scanner-scheduling-options",
+              },
+              {
+                type: "doc",
+                label: "Advanced Features",
+                id: "web-scanner-advanced-features",
+              },
+            ],
+          },
+          {
+            type: "doc",
+            label: "KaneAI Mobile App Testing",
+            id: "kaneai-mobile-app-accessibility",
+          },
+          {
+            type: "doc",
+            label: "HyperExecute (Selenium)",
+            id: "selenium-hyperexecute-accessibility-tests",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "External integrations",
+        items: [
+          {
+            type: "doc",
+            label: "CI/CD Integration Guide",
+            id: "accessibility-cicd-integration-guide",
+          },
+          {
+            type: "doc",
+            label: "Integrations (Jira / Slack)",
+            id: "accessibility-report-integrations",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Mobile App Testing",
+        items: [
+          {
+            type: "doc",
+            label: "Manual App Scanner",
+            id: "accessibility-app-scanner",
+          },
+          {
+            type: "doc",
+            label: "Scan Configurations",
+            id: "accessibility-app-scanner-scan-configurations",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Appium Automation",
+            link: {
+              type: "doc",
+              id: "accessibility-native-app-automation-test",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Scan Configurations",
+                id: "accessibility-automation-scan-configurations",
+              },
+              {
+                type: "doc",
+                label: "Appium TestNG",
+                id: "accessibility-appium-testng",
+              },
+              {
+                type: "doc",
+                label: "Appium WebdriverIO",
+                id: "accessibility-appium-webdriverio",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Reports",
+        link: {
+          type: "doc",
+          id: "accessibility-testing-navigating-dashboard",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "Accessibility Score",
+            id: "accessibility-web-score",
+          },
+          {
+            type: "doc",
+            label: "Issue Summary",
+            id: "accessibility-testing-dashboard-issue-summary",
+          },
+          {
+            type: "doc",
+            label: "All Issues",
+            id: "accessibility-testing-dashboard-all-issues",
+          },
+          {
+            type: "doc",
+            label: "Exporting & Sharing Reports",
+            id: "accessibility-exporting-sharing-reports",
+          },
+          {
+            type: "doc",
+            label: "Passed Test Cases",
+            id: "accessibility-passed-test-cases",
+          },
+          {
+            type: "doc",
+            label: "Bug Report",
+            id: "accessibility-report-bug",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Features",
+        link: {
+          type: "doc",
+          id: "accessibility-hide-restore-issues",
+        },
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Web",
+            link: {
+              type: "doc",
+              id: "accessibility-hide-restore-issues",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Hide and Restore Issues",
+                id: "accessibility-hide-restore-issues",
+              },
+              {
+                type: "doc",
+                label: "AI Issue Detection Agent",
+                id: "accessibility-ai-issue-detection-agent",
+              },
+              {
+                type: "doc",
+                label: "Capture Screenshot",
+                id: "accessibility-capture-screenshot",
+              },
+              {
+                type: "doc",
+                label: "Fragment Identifier",
+                id: "accessibility-fragment-identifier",
+              },
+              {
+                type: "doc",
+                label: "PDF Accessibility Scanning",
+                id: "accessibility-pdf-accessibility-scanning",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Mobile",
+            link: {
+              type: "doc",
+              id: "accessibility-tag-support",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Tag Support",
+                id: "accessibility-tag-support",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Common",
+            link: {
+              type: "doc",
+              id: "accessibility-issue-remediation-guide",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Issue Remediation Guide",
+                id: "accessibility-issue-remediation-guide",
+              },
+              {
+                type: "doc",
+                label: "Analytics Widgets",
+                id: "analytics-modules-accessibility-widgets",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Checklists",
+        items: [
+          {
+            type: "doc",
+            label: "Web Checklist",
+            id: "accessibility-web-what-we-cover",
+          },
+          {
+            type: "doc",
+            label: "iOS Checklist",
+            id: "accessibility-ios-what-we-cover",
+          },
+          {
+            type: "doc",
+            label: "Android Checklist",
+            id: "accessibility-android-what-we-cover",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Web Rule Repository",
+            link: {
+              type: "doc",
+              id: "accessibility-web-rule-repository",
+            },
+            items: [
+              "accessibility-web-rule-1-1-1-non-text-content",
+              "accessibility-web-rule-1-3-1-info-and-relationships",
+              "accessibility-web-rule-1-3-4-orientation",
+              "accessibility-web-rule-1-4-1-use-of-color",
+              "accessibility-web-rule-1-4-2-audio-control",
+              "accessibility-web-rule-1-4-3-contrast-minimum",
+              "accessibility-web-rule-1-4-10-reflow",
+              "accessibility-web-rule-1-4-11-non-text-contrast",
+              "accessibility-web-rule-1-4-12-text-spacing",
+              "accessibility-web-rule-2-1-1-keyboard",
+              "accessibility-web-rule-2-1-2-no-keyboard-trap",
+              "accessibility-web-rule-2-1-4-character-key-shortcuts",
+              "accessibility-web-rule-2-2-1-timing-adjustable",
+              "accessibility-web-rule-2-2-2-pause-stop-hide",
+              "accessibility-web-rule-2-3-1-three-flashes",
+              "accessibility-web-rule-2-4-1-bypass-blocks",
+              "accessibility-web-rule-2-4-2-page-titled",
+              "accessibility-web-rule-2-4-3-focus-order",
+              "accessibility-web-rule-2-4-4-link-purpose",
+              "accessibility-web-rule-2-4-7-focus-visible",
+              "accessibility-web-rule-2-4-11-focus-not-obscured",
+              "accessibility-web-rule-2-5-1-pointer-gestures",
+              "accessibility-web-rule-2-5-2-pointer-cancellation",
+              "accessibility-web-rule-2-5-3-label-in-name",
+              "accessibility-web-rule-2-5-4-motion-actuation",
+              "accessibility-web-rule-2-5-7-dragging-movements",
+              "accessibility-web-rule-2-5-8-target-size",
+              "accessibility-web-rule-3-2-1-on-focus",
+              "accessibility-web-rule-3-2-2-on-input",
+              "accessibility-web-rule-3-2-6-consistent-help",
+              "accessibility-web-rule-3-3-1-error-identification",
+              "accessibility-web-rule-3-3-2-labels-or-instructions",
+              "accessibility-web-rule-3-3-7-redundant-entry",
+              "accessibility-web-rule-3-3-8-accessible-authentication",
+              "accessibility-web-rule-4-1-1-parsing",
+              "accessibility-web-rule-4-1-2-name-role-value",
+              "accessibility-web-rule-4-1-3-status-messages",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Android Rule Repository",
+            link: {
+              type: "doc",
+              id: "accessibility-android-rule-repository",
+            },
+            items: [
+              "accessibility-android-rule-missing-image-alt",
+              "accessibility-android-rule-missing-field-label",
+              "accessibility-android-rule-interactive-role-undefined",
+              "accessibility-android-rule-missing-view-accessibility",
+              "accessibility-android-rule-unlabeled-checkbox-element",
+              "accessibility-android-rule-insufficient-color-ratio",
+              "accessibility-android-rule-non-accessible-interaction",
+              "accessibility-android-rule-missing-screen-title",
+              "accessibility-android-rule-unlabeled-toggle-control",
+              "accessibility-android-rule-mismatched-label-text",
+              "accessibility-android-rule-missing-input-value",
+              "accessibility-android-rule-inaccessible-text-focus",
+              "accessibility-android-rule-misplaced-field-label",
+              "accessibility-android-rule-nested-control-issues",
+              "accessibility-android-rule-unnamed-nested-element",
+              "accessibility-android-rule-fixed-orientation-lock",
+              "accessibility-android-rule-undersized-touch-target",
+              "accessibility-android-rule-insufficient-target-spacing",
+              "accessibility-android-rule-duplicate-accessibility-label",
+              "accessibility-android-rule-button-capitalization-check",
+              "accessibility-android-rule-emoji-symbol-label",
+              "accessibility-android-rule-redundant-state-label",
+              "accessibility-android-rule-redundant-role-label",
+              "accessibility-android-rule-non-descriptive-link-text",
+              "accessibility-android-rule-traversal-order-mismatch",
+              "accessibility-android-rule-dynamic-type-support",
+              "accessibility-android-rule-non-responsive-container",
+              "accessibility-android-rule-unique-option-names",
+              "accessibility-android-rule-invalid-range-values",
+              "accessibility-android-rule-images-with-text",
+              "accessibility-android-rule-meaningful-sequence",
+              "accessibility-android-rule-non-focusable-interactive-element",
+              "accessibility-android-rule-minimum-text-size",
+              "accessibility-android-rule-text-spacing",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "iOS Rule Repository",
+            link: {
+              type: "doc",
+              id: "accessibility-ios-rule-repository",
+            },
+            items: [
+              "accessibility-ios-rule-missing-accessibility-labels",
+              "accessibility-ios-rule-touch-target-sizing",
+              "accessibility-ios-rule-color-contrast-issues",
+              "accessibility-ios-rule-assistive-technology-access",
+              "accessibility-ios-rule-text-truncation-issues",
+              "accessibility-ios-rule-accessibility-role-definition",
+              "accessibility-ios-rule-dynamic-type-support",
+              "accessibility-ios-rule-accessibility-label-not-punctuated",
+              "accessibility-ios-rule-missing-image-element-label",
+              "accessibility-ios-rule-missing-button-element-label",
+              "accessibility-ios-rule-button-element-capitalisation-check",
+              "accessibility-ios-rule-missing-checkbox-element-label",
+              "accessibility-ios-rule-missing-editable-element-label",
+              "accessibility-ios-rule-missing-switch-element-label",
+              "accessibility-ios-rule-duplicate-accessibility-label",
+              "accessibility-ios-rule-emoji-symbol-label",
+              "accessibility-ios-rule-fixed-orientation-lock",
+              "accessibility-ios-rule-images-with-text",
+              "accessibility-ios-rule-insufficient-touch-target-spacing",
+              "accessibility-ios-rule-interactive-role-undefined",
+              "accessibility-ios-rule-invalid-range-values",
+              "accessibility-ios-rule-meaningful-sequence",
+              "accessibility-ios-rule-minimum-text-size",
+              "accessibility-ios-rule-mismatched-label-text",
+              "accessibility-ios-rule-misplaced-field-label",
+              "accessibility-ios-rule-non-accessible-interaction",
+              "accessibility-ios-rule-non-descriptive-link-text",
+              "accessibility-ios-rule-overlapping-interactive-elements",
+              "accessibility-ios-rule-redundant-role-label",
+              "accessibility-ios-rule-redundant-state-label",
+              "accessibility-ios-rule-traversal-order-mismatch",
+              "accessibility-ios-rule-two-dimensional-scrolling",
+              "accessibility-ios-rule-unique-option-names",
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Assistive technology (manual)",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "screen-reader-on-accessibility",
+          },
+          {
+            type: "doc",
+            label: "NVDA on Windows",
+            id: "accessibility-nvda-windows",
+          },
+          {
+            type: "doc",
+            label: "VoiceOver on macOS",
+            id: "accessibility-voiceover-macos",
+          },
+          {
+            type: "doc",
+            label: "JAWS on Windows",
+            id: "accessibility-jaws-windows",
+          },
+          {
+            type: "doc",
+            label: "TalkBack on Android",
+            id: "accessibility-talkback-android",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "FAQs & Reference",
+        items: [
+          {
+            type: "doc",
+            label: "Accessibility FAQs",
+            id: "accessibility-faq",
+          },
+          {
+            type: "doc",
+            label: "Supported WCAG Versions & Browsers",
+            id: "accessibility-supported-wcag-browsers",
+          },
+          {
+            type: "doc",
+            label: "Compliance Guide (ADA / WCAG / EAA / 508)",
+            id: "accessibility-compliance-guide",
+          },
+          {
+            type: "doc",
+            label: "VPAT & ACR evidence",
+            id: "accessibility-vpat-report-generation",
+          },
+        ],
+      },
+    ],
   ],
 
 
@@ -1296,15 +1826,20 @@ module.exports = {
           { type: "doc", id: "manual-test-case-creation", label: "Create and Manage Test Cases" },
           { type: "doc", id: "test-case-versioning", label: "Manage Versions" },
           { type: "doc", id: "create-modules", label: "Modules: Share Test steps" },
+          { type: "doc", id: "modules-in-manual-testcases", label: "Importing Modules into Test Cases" },
           { type: "doc", id: "system-and-custom-fields", label: "Manage System & Custom fields" },
           { type: "doc", id: "copy-and-move-support-for-test-cases", label: "Copy & Move Test Cases" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Bulk Update Test Case fields</span>" },
+          { type: "doc", id: "update-fields", label: "Bulk Update Test Case fields" },
           { type: "doc", id: "export-test-cases", label: "Export Test Cases" },
         ],
       },
 
       // 5. AI Test Case Generator (direct doc)
-      { type: "html", value: "<span class=\"sidebar-stub\">AI Test Case Generator</span>" },
+      {
+        type: "doc",
+        id: "generate-test-cases-with-ai",
+        label: "AI Test Case Generator",
+      },
 
       // 6. Run Tests and Track Execution
       {
@@ -1411,7 +1946,7 @@ module.exports = {
               "network-configurations-in-real-devices",
               "sim-support-realdevices",
               "contacts-on-real-devices",
-              { type: "html", value: "<span class=\"sidebar-stub\">Real Device Adb Shell</span>" },
+              "real-device-adb-shell",
               "ui-inspector",
               {
                 type: "category",
@@ -1424,11 +1959,12 @@ module.exports = {
               },
               "accessibility-settings-ios",
               "devtools-on-real-devices-app",
-              { type: "html", value: "<span class=\"sidebar-stub\">Set Date Time Hour Format Real Devices</span>" },
+              "set-date-time-hour-format-real-devices",
               "device-passcode-on-realdevice",
               "assistive-touch-on-real-ios-devices",
               "dark-mode-on-real-devices",
-              { type: "html", value: "<span class=\"sidebar-stub\">Group Folder Redirect On Real Device</span>" },
+              "low-power-mode-on-real-devices",
+              "group-folder-redirect-on-real-device",
               "apple-pay-manual",
               "audio-injection-manual",
               "upload-files-media",
@@ -1446,7 +1982,7 @@ module.exports = {
         collapsed: true,
         label: "Browser Testing",
         items: [
-          { type: "html", value: "<span class=\"sidebar-stub\">Browser Testing On Real Devices</span>" },
+          "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
           {
             type: "category",
@@ -1465,6 +2001,7 @@ module.exports = {
               "ip-geolocation-on-real-devices-browser",
               "assistive-touch-on-real-ios-browser",
               "dark-mode-on-browser",
+              "low-power-mode-on-browser",
               "network-configurations-in-browser",
               "contacts-on-real-devices-browser",
               "set-date-time-hour-format-real-devices-browser",
@@ -1499,61 +2036,77 @@ module.exports = {
       },
     },
     [
+      
       {
         type: "category",
         collapsed: false,
         label: "Get Started",
         items: [
-          { type: "doc", label: "Run First Test", id: "lambdatest-running-your-first-selenium-test" },
-          { type: "doc", label: "Run Tests With Agent Skills", id: "selenium-agent-skills" },
-          { type: "doc", label: "View Test Results", id: "inside-lambdatest-automation-platform" },
-          { type: "doc", label: "Set Debugging Options", id: "debugging-options" },
-          { type: "doc", label: "Filter Your Tests", id: "filter-your-selenium-tests" },
-          { type: "doc", label: "Migrate Test Suites", id: "migrate-selenium-test-suite" },
-          { type: "doc", label: "Automation Capabilities", id: "selenium-automation-capabilities" },
-          { type: "doc", label: "Languages & Frameworks", id: "selenium-supported-languages-and-frameworks" },
+          { type: "doc", id: "lambdatest-running-your-first-selenium-test", label: "Run Your First Test" },
+          { type: "doc", id: "selenium-agent-skills", label: "Run Tests With Agent Skills" },
+           { type: "doc", id: "inside-lambdatest-automation-platform", label: "See Your Results (Dashboard)" },
+          { type: "doc", id: "migrate-selenium-test-suite", label: "Migrate an Existing Suite" },
+         
+           { type: "doc", id: "selenium-automation-capabilities", label: "Desired Capabilities" },
+           { type: "doc", id: "supported-browsers-and-operating-systems-for-the-web-interface", label: "Supported Browsers & OS" },
+         
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Features",
+        label: "Languages & Frameworks",
         items: [
-          { type: "doc", label: "Local Testing", id: "test-locally-hosted-websites-with-selenium" },
-          { type: "doc", label: "Geolocation Testing", id: "selenium-geolocation-capabilities" },
-          { type: "doc", label: "Network Throttling", id: "network-throttling" },
-          { type: "doc", label: "Test Across Timezones", id: "configure-timezones" },
-          { type: "doc", label: "SmartWait", id: "smart-wait" },
-          { type: "doc", label: "Auto-Healing", id: "auto-heal" },
-          { type: "doc", label: "WebDriver BiDi Testing", id: "selenium-bidi-integration" },
-          { type: "doc", label: "Custom HTTP Headers", id: "custom-header" },
-          { type: "doc", label: "Custom DNS Entry", id: "custom-dns-map" },
-          { type: "doc", label: "Mock Video Stream", id: "mock-video-injection-web-automation-selenium-chromium" },
+          { type: "doc", id: "java-framework", label: "Java With Selenium" },
+          { type: "doc", id: "running-javascript-test-scripts-on-lambdatest", label: "JavaScript With Selenium" },
+          { type: "doc", id: "csharp-with-selenium", label: "C# With Selenium" },
+          { type: "doc", id: "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid", label: "Python With Selenium" },
+          { type: "doc", id: "php-framework", label: "PHP With Selenium" },
+          { type: "doc", id: "ruby", label: "Ruby With Selenium" },
+        ],
+      },
+    
+      {
+        type: "category",
+        collapsed: true,
+        label: "Advanced Capabilities",
+        items: [
+          { type: "doc", id: "smart-wait", label: "Enable SmartWait" },
+          { type: "doc", id: "auto-heal", label: "Auto-Heal Broken Locators" },
+            { type: "doc", id: "selenium-bidi-integration", label: "Use the Selenium BiDi Protocol" },
+          { type: "doc", id: "custom-chrome", label: "Upload a Custom Chrome Profile" },
+          { type: "doc", id: "mock-video-injection-web-automation-selenium-chromium", label: "Inject a Mock Video Stream" },
+          { type: "doc", id: "network-data-masking", label: "Mask Sensitive Data" },
+          { type: "doc", id: "selenium-geolocation-capabilities", label: "Test Location & Timezone" },
+          { type: "doc", id: "perform-selenium-automation-on-headless-browsers", label: "Run Headless Tests" },
+          { type: "doc", id: "network-throttling", label: "Simulate Network Conditions" },
+          { type: "doc", id: "upload-files-using-lambdatest", label: "Upload & Download Files" },
+          { type: "doc", id: "setup-pre-run-executable", label: "Run a Pre-Test Script" },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Guides",
+        label: "Monitor & Debug",
         items: [
-          { type: "doc", label: "Upload and Download Files", id: "upload-files-using-lambdatest" },
-          { type: "doc", label: "Test in Headless Mode", id: "perform-selenium-automation-on-headless-browsers" },
-          { type: "doc", label: "Test in IE Mode on Edge", id: "ie-mode-on-edge" },
-          { type: "doc", label: "Upload Custom Chrome Profile", id: "custom-chrome" },
-          { type: "doc", label: "Run a Pre-Test Script", id: "setup-pre-run-executable" },
-          { type: "doc", label: "Run Tests Behind a Proxy", id: "run-selenium-test-behind-the-proxy" },
-          { type: "doc", label: "Mask Test Data", id: "selenium-mask-your-data" },
+          { type: "doc", id: "filter-your-selenium-tests", label: "Organize Tests & Builds" },
+          { type: "doc", id: "mark-as-bug-in-automation-testing", label: "File a Bug From a Session" },
+          { type: "doc", id: "live-interaction", label: "Take Over a Live Session" },
+          { type: "doc", id: "rerun-automation-tests", label: "Re-Run & Reproduce a Test" },
+          // { type: "doc", id: "mute-test-scenarios", label: "Mute Test Scenarios" },
+          { type: "doc", id: "debugging-options", label: "Set Debugging Options & Logs" },
+          { type: "doc", id: "lighthouse-reports-hooks", label: "Measure Page Performance" },
+          { type: "doc", id: "lambda-hooks", label: "Use Lambda Hooks & Metadata" },
+      
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Reference",
+        label: "Troubleshoot & Optimize",
         items: [
-          { type: "doc", label: "Generate Lighthouse Reports", id: "lighthouse-reports-hooks" },
-          { type: "doc", label: "Speed Up Your Tests", id: "performance-tips" },
-          { type: "doc", label: "Lambda Hooks", id: "lambda-hooks" },
-        
+          { type: "doc", id: "error-messages", label: "Fix Errors & Timeouts" },
+          { type: "doc", id: "performance-tips", label: "Speed Up Your Tests" },
         ],
       },
     ],
@@ -1574,9 +2127,17 @@ module.exports = {
         collapsed: false,
         label: "Getting Started",
         items: [
-          { type: "doc", label: "Run First Test", id: "getting-started-with-cypress-testing" },
-          { type: "doc", label: "Run Test With Agent Skills", id: "cypress-agent-skills" },
-          { type: "doc", label: "CLI Reference", id: "cypress-cli-commands" },
+          {
+            type: "doc",
+            label: "Cypress Testing",
+            id: "getting-started-with-cypress-testing",
+          },
+          {
+            type: "doc",
+            label: "Run Your Test With Agent Skills",
+            id: "cypress-agent-skills",
+          },
+       
         ],
       },
       {
@@ -1584,10 +2145,36 @@ module.exports = {
         collapsed: true,
         label: "Test Capabilities",
         items: [
-          { type: "doc", label: "Browsers & OS", id: "supported-browsers-and-os" },
-          { type: "doc", label: "Test Configuration", id: "run-settings" },
-          { type: "doc", label: "Private Dependencies", id: "private-dependencies-cypress" },
-          { type: "doc", label: "Download Artefacts", id: "download-artefacts-cypress" },
+          {
+            type: "doc",
+            label: "Specify Browsers and OS",
+            id: "supported-browsers-and-os",
+          },
+          {
+            type: "doc",
+            label: "Supported Cypress Versions",
+            id: "supported-cypress-versions",
+          },
+          {
+            type: "doc",
+            label: "Cypress CLI Commands",
+            id: "cypress-cli-commands",
+          },
+          {
+            type: "doc",
+            label: "Configure Cypress Test Execution",
+            id: "run-settings",
+          },
+          {
+            type: "doc",
+            label: "Execute Including Private Dependencies",
+            id: "private-dependencies-cypress",
+          },
+          {
+            type: "doc",
+            label: "Download Artefacts For Cypress Project",
+            id: "download-artefacts-cypress",
+          },
         ],
       },
       {
@@ -1595,10 +2182,26 @@ module.exports = {
         collapsed: true,
         label: "Integrations",
         items: [
-          { type: "doc", label: "Cypress Dashboard", id: "integrate-lambdatest-with-cypress" },
-          { type: "doc", label: "Applitools", id: "applitools-integration-cypress" },
-          { type: "doc", label: "Reporters", id: "cyp-multi-reporters" },
-          { type: "doc", label: "Command Logs", id: "cypress-detailed-command-logs" },
+          {
+            type: "doc",
+            label: "Integrate TestMu AI with Cypress Dashboard",
+            id: "integrate-lambdatest-with-cypress",
+          },
+          {
+            type: "doc",
+            label: "Applitools Integration For Cypress",
+            id: "applitools-integration-cypress",
+          },
+          {
+            type: "doc",
+            label: "Multi Reporters Support",
+            id: "cyp-multi-reporters",
+          },
+          {
+            type: "doc",
+            label: "Cypress Terminal Reports",
+            id: "cypress-detailed-command-logs",
+          },
         ],
       },
     ],
@@ -1617,16 +2220,24 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Get Started",
+        label: "Getting Started",
         items: [
-          { type: "doc", label: "Run First Test", id: "playwright-testing-guide" },
-          { type: "doc", label: "Run Test With Agent Skills", id: "playwright-agent-skills" },
-          { type: "doc", label: "Run Test With SDK", id: "playwright-sdk" },
-          { type: "doc", label: "Migrate Playwright Tests", id: "migrate-playwright-tests" },
-          { type: "doc", label: "Set up Test Environment", id: "playwright-test-execution-setup" },
-          { type: "doc", label: "Supported Automation Capabilities", id: "playwright-caps" },
-          { type: 'html', value: '<span class="sidebar-stub">Languages & Frameworks</span>' }
-
+          "playwright-testing-guide",
+          "playwright-agent-skills",
+          "playwright-sdk",
+           "migrate-playwright-tests",
+             "playwright-test-execution-setup",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Languages & Frameworks",
+        items: [
+          { type: "doc", id: "java-with-playwright", label: "Java With Playwright" },
+          { type: "doc", id: "javascript-with-playwright", label: "JavaScript With Playwright" },
+          { type: "doc", id: "csharp-with-playwright", label: "C# With Playwright" },
+          { type: "doc", id: "python-with-playwright", label: "Python With Playwright" },
         ],
       },
     
@@ -1635,10 +2246,9 @@ module.exports = {
         collapsed: true,
         label: "Features",
         items: [
-          { type: "doc", label: "Auto Healing", id: "playwright-auto-heal" },
-          { type: "doc", label: "Android Testing", id: "playwright-android-guide" },
-          { type: "doc", label: "WebView Testing", id: "playwright-webview-test" },
-          { type: "doc", label: "iOS Testing", id: "playwright-ios-guide" },
+          "playwright-android-guide",
+          "playwright-ios-guide",
+          "playwright-auto-heal",
         ],
       },
       {
@@ -1646,8 +2256,10 @@ module.exports = {
         collapsed: true,
         label: "Integrations",
         items: [
-          { type: "doc", label: "Playwright Test Runner", id: "playwright-playwrighttest" },
-          { type: "doc", label: "Playwright Lighthouse Library", id: "playwright-lighthouse-library" },
+          "playwright-playwrighttest",
+          "playwright-cucumberjs",
+          "playwright-cicd",
+          "playwright-lighthouse-library",
         ],
       },
     ],
@@ -1666,24 +2278,25 @@ module.exports = {
       {
         type: "category",
         collapsed: false,
-        label: "Get Started",
+        label: "Getting Started",
         items: [
-          { type: "doc", label: "Run First Test", id: "puppeteer-testing-guide" },
-          { type: "doc", label: "Run Test With Agent Skills", id: "puppeteer-agent-skills" },
-          { type: "doc", label: "Set up Test Environment", id: "puppeteer-test-execution" },
-          { type: "doc", label: "Supported Automation Capabilities", id: "puppeteer-capabilities" },
+          "puppeteer-testing-guide",
+          "puppeteer-agent-skills",
+          "puppeteer-test-execution",
         ],
       },
+  
       {
         type: "category",
         collapsed: true,
-        label: "Integrations",
+        label: "Frameworks",
         items: [
-          { type: "doc", label: "Mocha", id: "puppeteer-mocha" },
-          { type: "doc", label: "Jest", id: "puppeteer-jest" },
-          { type: "doc", label: "Pyppeteer", id: "puppeteer-pytest-pyppeteer" },
+          "puppeteer-mocha",
+          "puppeteer-jest",
+          "puppeteer-pytest-pyppeteer",
         ],
       },
+     
     ],
   ],
 
@@ -1698,12 +2311,9 @@ module.exports = {
     },
     [
       {
-        type: "category",
-        collapsed: false,
-        label: "Get Started",
-        items: [
-          { type: "doc", id: "k6-browser-testing", label: "Run First Test" },
-        ],
+        type: "doc",
+        id: "k6-browser-testing",
+        label: "K6 Browser Testing ",
       },
     ],
   ],
@@ -1718,16 +2328,9 @@ module.exports = {
       },
     },
     [
-      {
-        type: "category",
-        collapsed: false,
-        label: "Virtual Devices",
-        items: [
-          { type: "doc", label: "Run First Test", id: "app-automation-app-sim" },
-          { type: "doc", label: "Build iOS App for Simulators", id: "build-ios-app-for-simulator-testing" },
-          { type: "doc", label: "Test Flutter Apps", id: "virtual-device-flutter-apps" },
-        ],
-      },
+      "app-automation-app-sim",
+      "build-ios-app-for-simulator-testing",
+      "virtual-device-flutter-apps",
     ],
   ],
 
@@ -1743,83 +2346,182 @@ module.exports = {
     [
       {
         type: "category",
-        collapsed: false,
-        label: "Get Started",
-        items: [
-          { type: "doc", label: "Run First Test", id: "getting-started-with-appium-testing" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Run Tests With Agent Skills</span>" },
-          { type: "doc", label: "Migrate Appium Tests", id: "migrate-appium-tests-from-browserstack-and-saucelabs" },
-          { type: "doc", label: "Automation Capabilities", id: "desired-capabilities-in-appium" },
-          { type: "doc", label: "Languages & Frameworks", id: "appium-languages-and-frameworks" },
-        ],
-      },
-      {
-        type: "category",
         collapsed: true,
-        label: "Configure Your Tests",
+        label: "Appium Testing",
+        link: {
+          type: "doc",
+          id: "getting-started-with-appium-testing",
+        },
         items: [
-          { type: "html", value: "<span class=\"sidebar-stub\">Upload Apps</span>" },
-          { type: "doc", label: "Supported Versions & Plugins", id: "supported-appium-versions" },
-          { type: "doc", label: "Locales & Timezones", id: "list-of-supported-locales" },
-          { type: "doc", label: "App Testing APIs", id: "app-testing-apis" },
-          { type: "doc", label: "Appium Hooks", id: "appium-lambdatest-hooks" },
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Features",
-        items: [
-          { type: "doc", label: "Camera Image Injection", id: "camera-image-injection" },
-          { type: "doc", label: "Video Injection", id: "video-injection" },
-          { type: "doc", label: "Biometric Authentication", id: "biometric-authentication" },
-          { type: "doc", label: "Audio Injection", id: "audio-injection" },
-          { type: "doc", label: "Regular Expression", id: "regular-expression-appium" },
-          { type: "doc", label: "Upload Files and Media", id: "appium-upload-media" },
-          { type: "doc", label: "Upload Contacts", id: "appium-upload-contacts" },
-          { type: "doc", label: "Network Configurations", id: "network-configurations" },
-          { type: "doc", label: "Network Throttling", id: "app-auto-network-throttling" },
-          { type: "doc", label: "Enable SIM", id: "sim-support" },
-          { type: "doc", label: "IP Geolocation", id: "appium-ip-geolocation" },
-          { type: "doc", label: "App Performance Analytics", id: "appium-app-performance" },
-          { type: "doc", label: "Slack Notifications", id: "app-automation-slack-notifications" },
-          { type: "doc", label: "iOS App Settings", id: "appium-ios-app-settings" },
-          { type: "doc", label: "iOS Keychain Cleanup", id: "ios-keychain-cleanup" },
-          { type: "doc", label: "Group Folder Redirect", id: "group-folder-redirects" },
-          { type: "doc", label: "ADB Commands Support", id: "adb-commands-support" },
-          { type: "doc", label: "Login To Google Account (Android)", id: "login-google-android" },
-          { type: "doc", label: "Disable Screenshot Block", id: "disable-screenshot-block" },
-          { type: "doc", label: "CustomHeaders", id: "appium-custom-header" },
-          { type: "doc", label: "Safari Basic Authentication", id: "basic-authentication-for-web-automation" },
-          { type: "doc", label: "Live Inspect", id: "live-debug-in-app-automation" },
-          { type: "doc", label: "Set Date and Time", id: "appium-date-and-time" },
-          { type: "doc", label: "Device Passcode", id: "device-passcode-appautomation" },
-          { type: "doc", label: "Set Dark Mode", id: "set-device-dark-mode" },
-          { type: "doc", label: "Smart Heal", id: "smart-heal-appium" },
-          { type: "doc", label: "Apple Pay", id: "apple-pay-auto" },
-          { type: "doc", label: "Button Click By Text", id: "button-text-click" },
-          { type: "doc", label: "Shake Gesture (iOS)", id: "ios-shake-gesture-appautomation" },
-          { type: "doc", label: "Terminal Logs", id: "appium-terminal-logs" },
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Smart TV Automation",
-        items: [
-          { type: "doc", label: "Apple TV", id: "appium-appletv" },
-          { type: "doc", label: "Fire TV Stick", id: "appium-firetv" },
-          { type: "doc", label: "Android TV", id: "appium-androidtv" },
-          { type: "doc", label: "Roku TV", id: "appium-rokutv" },
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Integrations",
-        items: [
-          { type: "doc", label: "Appium Inspector", id: "appium-inspector" },
-          { type: "doc", label: "AltTester (Unity)", id: "alttester-unity-game-automation" },
+
+          {
+            type: "category",
+            collapsed: true,
+            label: "Languages and Frameworks",
+            link: {
+              type: "doc",
+              id: "appium-languages-and-frameworks",
+            },
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "Java",
+                link: {
+                  type: "doc",
+                  id: "appium-java",
+                },
+                items: [
+                  "appium-java-junit",
+                  "appium-java-jbehave",
+                  "appium-java-cucumber",
+                  "appium-java-testng",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "JavaScript",
+                link: {
+                  type: "doc",
+                  id: "appium-nodejs",
+                },
+                items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Python",
+                link: {
+                  type: "doc",
+                  id: "appium-python",
+                },
+                items: [
+                  "appium-python-behave",
+                  "appium-python-robot",
+                  "appium-python-gauge",
+                  "appium-python-pytest",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Ruby",
+                link: {
+                  type: "doc",
+                  id: "appium-ruby",
+                },
+                items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "PHP",
+                link: {
+                  type: "doc",
+                  id: "appium-php",
+                },
+                items: ["appium-php-behat"],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "C#",
+                link: {
+                  type: "doc",
+                  id: "appium-csharp",
+                },
+                items: ["appium-csharp-nunit"],
+              },
+              "appium-kotlin",
+              "test-flutter-apps",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Setup",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "Application",
+                items: [
+                  "application-setup-via-api",
+                  "application-setup-via-gui",
+                ],
+              },
+              "desired-capabilities-in-appium",
+              "supported-appium-versions",
+              "supported-appium-plugins",
+              "list-of-supported-locales",
+              //"appium-ip-geolocation",
+              "supported-timezone",
+              "app-testing-apis",
+              "appium-lambdatest-hooks",
+              "appium-install-uninstall-lambdatest-hooks",
+              "appium-uploading-retrieving-files",
+              "appium-firebase-app-upload",
+              "appium-flutter-integration",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Features",
+            items: [
+              "camera-image-injection",
+              "video-injection",
+              "biometric-authentication",
+              "audio-injection",
+              "regular-expression-appium",
+              "appium-upload-media",
+              "appium-upload-contacts",
+              "network-configurations",
+              "app-auto-network-throttling",
+              "sim-support",
+              "appium-ip-geolocation",
+              "appium-app-performance",
+              "app-automation-slack-notifications",
+              "appium-ios-app-settings",
+              "ios-keychain-cleanup",
+              "group-folder-redirects",
+              "adb-commands-support",
+              "login-google-android",
+              "disable-screenshot-block",
+              "appium-custom-header",
+              "basic-authentication-for-web-automation",
+              "live-debug-in-app-automation",
+              "appium-date-and-time",
+              "device-passcode-appautomation",
+              "set-device-dark-mode",
+              "smart-heal-appium",
+              "apple-pay-auto",
+              "button-text-click",
+              "ios-shake-gesture-appautomation",
+              "appium-terminal-logs",
+              // "mute-test-scenarios-appium"
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Smart TV Automation",
+            items: ["appium-appletv", "appium-firetv", "appium-androidtv"],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Integrations",
+            items: ["appium-inspector", "alttester-unity-game-automation"],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Local Testing",
+            items: ["testing-apps-locally"],
+          },
+          "migrate-appium-tests-from-browserstack-and-saucelabs",
         ],
       },
     ],
@@ -1836,21 +2538,63 @@ module.exports = {
     },
     [
       {
+        type: "doc",
+        label: "Getting Started with Espresso Testing",
+        id: "getting-started-with-espresso-testing",
+      },
+
+      {
         type: "category",
-        collapsed: false,
-        label: "Get Started",
+        collapsed: true,
+        label: "Supported Capabilities",
+        link: {
+          type: "doc",
+          id: "espresso-supported-capabilities",
+        },
+        items: ["espresso-env-variables-settings"],
+      },
+      {
+        type: "doc",
+        label: "RegEx in Espresso",
+        id: "regular-expression-espresso",
+      },
+      {
+        type: "doc",
+        label: "Supported Locales",
+        id: "supported-locales-espresso",
+      },
+      {
+        type: "doc",
+        label: "Debug Espresso Tests",
+        id: "debug-espresso-tests",
+      },
+      {
+        type: "doc",
+        label: "Troubleshoot Espresso Tests",
+        id: "troubleshoot-espresso-tests",
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Speedup Espresso Tests",
         items: [
-          { type: "doc", label: "Run First Test", id: "getting-started-with-espresso-testing" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Run Tests With Agent Skills</span>" },
-          { type: "doc", label: "Supported Capabilities", id: "espresso-supported-capabilities" },
-          { type: "doc", label: "Debug Espresso Tests", id: "debug-espresso-tests" },
-          { type: "doc", label: "Regular Expression", id: "regular-expression-espresso" },
-          { type: "doc", label: "Supported Locales And Languages", id: "supported-locales-espresso" },
-          { type: "doc", label: "Sharding", id: "sharding-espresso" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Test Filters</span>" },
-          { type: "doc", label: "JUnit XML Reports", id: "espresso-junit-report" },
-          { type: "doc", label: "MockWebServer & Localhost", id: "espresso-mockwebserver-localhost" },
+          {
+            type: "doc",
+            label: "Sharding for Espresso",
+            id: "sharding-espresso",
+          },
+          "speedup-espresso",
         ],
+      },
+      {
+        type: "doc",
+        label: "JUnit Report",
+        id: "espresso-junit-report",
+      },
+      {
+        type: "doc",
+        label: "MockWebServer & Localhost",
+        id: "espresso-mockwebserver-localhost",
       },
     ],
   ],
@@ -1866,25 +2610,93 @@ module.exports = {
     },
     [
       {
+        type: "doc",
+        label: "Getting Started with XCUI Testing",
+        id: "getting-started-with-xcui-testing",
+      },
+      {
+        type: "doc",
+        label: "Supported Capabilities",
+        id: "xcui-supported-capabilities",
+      },
+      {
+        type: "doc",
+        label: "RegEx in XCUI",
+        id: "regular-expression-xcui",
+      },
+      {
+        type: "doc",
+        label: "Supported Locales",
+        id: "supported-locales-xcui",
+      },
+      {
+        type: "doc",
+        label: "Creating iOS Applications",
+        id: "ios-ipa-files-xcui",
+      },
+      {
         type: "category",
-        collapsed: false,
-        label: "Get Started",
-        items: [
-          { type: "doc", label: "Run First Test", id: "getting-started-with-xcui-testing" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Run Tests With Agent Skills</span>" },
-          { type: "doc", label: "Supported Capabilities", id: "xcui-supported-capabilities" },
-          { type: "doc", label: "Regular Expression", id: "regular-expression-xcui" },
-          { type: "doc", label: "Supported Locales And Languages", id: "supported-locales-xcui" },
-          { type: "doc", label: "Creating iOS Applications", id: "ios-ipa-files-xcui" },
-          { type: "doc", label: "Sharding", id: "sharding-xcui" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Test Filters</span>" },
-          { type: "doc", label: "Reports", id: "xcui-xml-report" },
-        ],
+        collapsed: true,
+        label: "Speedup XCUI Tests",
+        items: ["sharding-xcui", "speedup-xcui"],
+      },
+      {
+        type: "doc",
+        label: "XCTestPlan",
+        id: "xctestplan",
+      },
+      {
+        type: "doc",
+        label: "Xml Report",
+        id: "xcui-xml-report",
+      },
+      {
+        type: "doc",
+        label: "XCResult",
+        id: "xcresult",
+      },
+      {
+        type: "doc",
+        label: "SmartUI Visual Regression",
+        id: "xcui-visual-regression",
       },
     ],
   ],
 
   FlutterTestingSidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "doc",
+        label: "Getting Started with Flutter Integration Driver",
+        id: "appium-flutter-integration",
+      },
+      {
+        type: "doc",
+        label: "Getting Started with Flutter Android",
+        id: "getting-started-with-flutter-dart-android-automation",
+      },
+      {
+        type: "doc",
+        label: "Getting Started with Flutter iOS",
+        id: "getting-started-with-flutter-dart-ios-automation",
+      },
+      {
+        type: "doc",
+        label: "Flutter Supported Capabilities",
+        id: "flutter-supported-capabilities",
+      },
+    ],
+  ],
+
+  VisualRegressionTestingSidebar: [
     {
       type: 'link',
       label: 'Back',
@@ -1897,259 +2709,909 @@ module.exports = {
       {
         type: "category",
         collapsed: false,
-        label: "Get Started",
+        label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "smart-visual-regression-testing",
+        },
         items: [
-          { type: "html", value: "<span class=\"sidebar-stub\">Run First Test</span>" },
-          { type: "html", value: "<span class=\"sidebar-stub\">Run Tests With Agent Skills</span>" },
-          { type: "doc", label: "Supported Capabilities", id: "flutter-supported-capabilities" },
-          { type: "doc", label: "Appium Flutter Integration Driver Testing", id: "appium-flutter-integration" },
-          { type: "doc", label: "Flutter Dart Testing", id: "getting-started-with-flutter-dart-android-automation" },
+          "smartui-running-your-first-project",
+          "smartui-omni-projects",
+          "smartui-agent-skills",
+          "smartui-guided-walkthrough",
+          "smartui-cli-env-variables",
+          "smartui-approval-workflow-guide",
         ],
+      },
+      {
+        type: "category",
+        collapsed: false,
+        label: "Testing Frameworks",
+        items: [
+          {
+            type: "category",
+            label: "SDK Integration",
+            collapsed: true,
+            items: [
+              {
+                type: "category",
+                label: "Selenium SDKs",
+                collapsed: true,
+                items: [
+                  {
+                    type: "doc",
+                    label: "Java SDK",
+                    id: "smartui-selenium-java-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "JavaScript SDK",
+                    id: "smartui-selenium-js-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "C# SDK",
+                    id: "smartui-selenium-csharp-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Python SDK",
+                    id: "smartui-selenium-python-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Ruby SDK",
+                    id: "smartui-selenium-ruby-sdk",
+                  },
+                ],
+              },
+              {
+                type: "category",
+                label: "Playwright SDKs",
+                collapsed: true,
+                items: [
+                  {
+                    type: "doc",
+                    label: "Java SDK",
+                    id: "smartui-playwright-java-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "JavaScript SDK",
+                    id: "smartui-playwright-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Python SDK",
+                    id: "smartui-playwright-python-sdk",
+                  },
+                ],
+              },
+              {
+                type: "doc",
+                label: "Cypress SDK",
+                id: "smartui-cypress-sdk",
+              },
+              {
+                type: "doc",
+                label: "Puppeteer SDK",
+                id: "smartui-puppeteer-sdk",
+              },
+              {
+                type: "doc",
+                label: "TestCafe SDK",
+                id: "smartui-testcafe-sdk",
+              },
+              {
+                type: "doc",
+                label: "WebdriverIO SDK",
+                id: "smartui-wdio-sdk",
+              },
+              {
+                type: "doc",
+                label: "K6 Setup",
+                id: "smartui-k6-setup",
+              },
+              {
+                type: "category",
+                label: "Mobile Testing",
+                collapsed: true,
+                items: [
+                  {
+                    type: "category",
+                    label: "Mobile SDKs",
+                    collapsed: true,
+                    items: [
+                      {
+                        type: "doc",
+                        label: "Appium Java SDK",
+                        id: "smartui-appium-java-sdk",
+                      },
+                    ],
+                  },
+                  {
+                    type: "category",
+                    label: "Native Apps",
+                    collapsed: true,
+                    items: [
+                      {
+                        type: "doc",
+                        label: "Espresso",
+                        id: "espresso-visual-regression",
+                      },
+                      {
+                        type: "doc",
+                        label: "XCUITest",
+                        id: "xcui-visual-regression",
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "category",
+            label: "Lambda Hooks",
+            collapsed: true,
+            items: [
+              {
+                type: "doc",
+                label: "Selenium Hooks",
+                id: "selenium-visual-regression",
+              },
+              {
+                type: "doc",
+                label: "Element Screenshot",
+                id: "smartui-hooks-element-screenshot",
+              },
+              {
+                type: "doc",
+                label: "Region Ignore + Select",
+                id: "smartui-hooks-region-ignore",
+              },
+              {
+                type: "doc",
+                label: "Hooks Layout + Full Page",
+                id: "smartui-hooks-layout-fullpage-smartignore",
+              },
+              {
+                type: "doc",
+                label: "Fetch Status Auto-Wait",
+                id: "smartui-hooks-fetch-status-timeout",
+              },
+              {
+                type: "doc",
+                label: "Comparison via Capabilities",
+                id: "smartui-comparison-capabilities",
+              },
+              {
+                type: "doc",
+                label: "Playwright Hooks",
+                id: "playwright-visual-regression",
+              },
+              {
+                type: "doc",
+                label: "Cypress Hooks",
+                id: "smart-ui-cypress",
+              },
+              {
+                type: "doc",
+                label: "Appium Hooks",
+                id: "smartui-appium-hooks",
+              },
+              {
+                type: "doc",
+                label: "Puppeteer Hooks",
+                id: "puppeteer-visual-regression",
+              },
+            ],
+          },
+          {
+            type: "doc",
+            label: "Storybook Integration",
+            id: "smart-ui-storybook",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Figma Integration",
+            items: [
+              {
+                type: "doc",
+                label: "Figma Web CLI",
+                id: "smartui-cli-figma-web",
+              },
+              {
+                type: "doc",
+                label: "Figma App CLI",
+                id: "smartui-cli-figma-app",
+              },
+              {
+                type: "doc",
+                label: "Figma CLI",
+                id: "smartui-cli-figma",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: false,
+            label: "PDF Testing",
+            link: {
+              type: "doc",
+              id: "smartui-pdf-comparison",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "PDF Upload via API",
+                id: "smartui-pdf-api-upload",
+              },
+              {
+                type: "doc",
+                label: "PDF Upload via SDK",
+                id: "smartui-pdf-java-sdk",
+              },
+              {
+                type: "doc",
+                label: "PDF Upload via CLI",
+                id: "smartui-pdf-cli-upload",
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Core Features",
+        items: [
+          {
+            type: "doc",
+            label: "SmartUI in Automation Dashboard",
+            id: "smartui-automation-dashboard",
+          },
+          {
+            type: "doc",
+            label: "Baseline Management",
+            id: "smartui-baseline-management",
+          },
+          {
+            type: "doc",
+            label: "A/B Testing & Variations",
+            id: "smartui-ab-testing-variations",
+          },
+          {
+            type: "doc",
+            label: "Smart RCA (Root Cause Analysis)",
+            id: "smartui-root-cause-analysis",
+          },
+          {
+            type: "doc",
+            label: "Visual AI Agent",
+            id: "smartui-visual-ai",
+          },
+          {
+            type: "doc",
+            label: "Multiselect & Bulk Operations",
+            id: "smartui-multiselect-bulkops",
+          },
+          {
+            type: "doc",
+            label: "Group by Test Cases",
+            id: "smartui-group-by-test-cases",
+          },
+          {
+            type: "doc",
+            label: "Export Build Data",
+            id: "smartui-export-build-data",
+          },
+          {
+            type: "doc",
+            label: "Audit & Activity Logs",
+            id: "smartui-audit-logs",
+          },
+          {
+            type: "doc",
+            label: "Annotations in Audit Logs",
+            id: "smartui-audit-logs-annotations",
+          },
+          {
+            type: "doc",
+            label: "Smart Comments",
+            id: "smartui-smart-comments",
+          },
+          {
+            type: "doc",
+            label: "Draw on UI",
+            id: "smartui-draw-on-ui",
+          },
+          {
+            type: "doc",
+            label: "Layout Regions",
+            id: "smartui-layout-regions",
+          },
+          {
+            type: "doc",
+            label: "customCSS",
+            id: "smartui-custom-css",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Smart Comparison Options",
+            items: [
+              {
+                type: "doc",
+                label: "Smart Ignore",
+                id: "smartui-smartignore",
+              },
+              {
+                type: "doc",
+                label: "Ignore Colors",
+                id: "smartui-ignore-colors",
+              },
+              {
+                type: "doc",
+                label: "Layout Testing",
+                id: "smartui-layout-testing",
+              },
+              {
+                type: "doc",
+                label: "Mismatch Thresholds",
+                id: "smartui-mismatch-thresholds",
+              },
+              {
+                type: "doc",
+                label: "Diff Highlighter",
+                id: "smartui-diff-highlighter",
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Upload & Capture",
+        items: [
+          {
+            type: "doc",
+            label: "CLI Upload",
+            id: "smartui-cli-upload",
+          },
+          {
+            type: "doc",
+            label: "API Upload",
+            id: "smartui-upload-api-v2",
+          },
+          {
+            type: "doc",
+            label: "Capture Static URLs via CLI",
+            id: "smartui-cli",
+          },
+          {
+            type: "doc",
+            label: "CLI Complete Reference",
+            id: "smartui-cli-complete-reference",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Project Configuration",
+        items: [
+          {
+            type: "doc",
+            label: "Project Settings",
+            id: "smartui-project-settings",
+          },
+          {
+            type: "doc",
+            label: "Test Settings",
+            id: "test-settings-options",
+          },
+          {
+            type: "doc",
+            label: "HTML DOM Options",
+            id: "html-dom-smartui-options",
+          },
+          {
+            type: "doc",
+            label: "Build Config & Options",
+            id: "smart-ui-build-options",
+          },
+          {
+            type: "doc",
+            label: "Multiple Projects per Repo",
+            id: "smartui-multiple-projects-per-repo",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Git & Branching",
+        items: [
+          {
+            type: "doc",
+            label: "Default Branching Strategy",
+            id: "smartui-cli-git-branching-strategy",
+          },
+          {
+            type: "doc",
+            label: "Smart Git Strategy",
+            id: "smartui-smart-git-strategy",
+          },
+          {
+            type: "doc",
+            label: "Merging Branches",
+            id: "smartui-branch-merging",
+          },
+          {
+            type: "doc",
+            label: "Build Merging",
+            id: "smartui-build-merging",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Stabilize Screenshots",
+        items: [
+          {
+            type: "doc",
+            label: "Handling Dynamic Data",
+            id: "smartui-handle-dynamic-data",
+          },
+          {
+            type: "doc",
+            label: "Freezing Animations",
+            id: "smartui-freeze-animations",
+          },
+          {
+            type: "doc",
+            label: "Handle Videos",
+            id: "smartui-handle-videos",
+          },
+          {
+            type: "doc",
+            label: "Handle Lazy Loading",
+            id: "smartui-handle-lazy-loading",
+          },
+          {
+            type: "doc",
+            label: "Handle Sticky Elements",
+            id: "smartui-handle-sticky-elements",
+          },
+          {
+            type: "doc",
+            label: "CustomScroll Screenshots",
+            id: "smartui-customscroll",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Advanced CLI",
+        items: [
+          {
+            type: "doc",
+            label: "Exec Command",
+            id: "smartui-cli-exec",
+          },
+          {
+            type: "doc",
+            label: "Groups Screenshots by Build Names",
+            id: "smartui-sdk-build-name",
+          },
+          {
+            type: "doc",
+            label: "Fetch Results",
+            id: "smartui-sdk-fetch-results",
+          },
+          {
+            type: "doc",
+            label: "Configuration Options",
+            id: "smartui-sdk-config-options",
+          },
+          {
+            type: "doc",
+            label: "SmartUI SDK Capabilities",
+            id: "smartui-sdk-capabilities",
+          },
+          {
+            type: "doc",
+            label: "Advanced Comparison Settings",
+            id: "smartui-cli-responsive-dom",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Technical Configuration",
+        items: [
+          {
+            type: "doc",
+            label: "Tunnel Configuration",
+            id: "smartui-sdk-tunnel",
+          },
+          {
+            type: "doc",
+            label: "Shadow DOM",
+            id: "smartui-shadow-dom",
+          },
+          {
+            type: "doc",
+            label: "Capturing Multiple Asset Hosts",
+            id: "smartui-multiple-assets-hosts",
+          },
+          {
+            type: "doc",
+            label: "Custom Request Headers",
+            id: "smartui-cli-request-headers",
+          },
+          {
+            type: "doc",
+            label: "Basic Authentication",
+            id: "smartui-cli-basic-auth",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrations",
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "CI/CD Tools",
+            items: [
+              {
+                type: "doc",
+                label: "GitHub Actions",
+                id: "smartui-with-github-actions",
+              },
+              {
+                type: "doc",
+                label: "GitLab",
+                id: "smartui-with-gitlab",
+              },
+              {
+                type: "doc",
+                label: "Bitbucket",
+                id: "smartui-with-bitbucket",
+              },
+              {
+                type: "doc",
+                label: "Semaphore",
+                id: "smartui-with-semaphore",
+              },
+              {
+                type: "doc",
+                label: "Azure",
+                id: "smartui-with-azure",
+              },
+              {
+                type: "doc",
+                label: "Buildkite",
+                id: "smartui-with-buildkite",
+              },
+              {
+                type: "doc",
+                label: "Circle CI",
+                id: "smartui-with-circle-ci",
+              },
+              {
+                type: "doc",
+                label: "Travis CI",
+                id: "smartui-with-travis-ci",
+              },
+              {
+                type: "doc",
+                label: "Netlify",
+                id: "smartui-with-netlify",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "TestMu AI Products",
+            items: [
+              {
+                type: "doc",
+                label: "KaneAI Integration",
+                id: "kaneai-smartui-visual-testing",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "HyperExecute Integration",
+                items: [
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "SmartUI Hooks",
+                    items: [
+                      {
+                        type: "doc",
+                        label: "SmartUI Capture Onboarding",
+                        id: "hyperexecute-smart-ui-capture-onboarding",
+                      },
+                      {
+                        type: "doc",
+                        label: "Selenium",
+                        id: "hyperexecute-smart-ui-testing-using-selenium",
+                      },
+                      {
+                        type: "doc",
+                        label: "Cypress",
+                        id: "hyperexecute-smart-ui-testing-using-cypress",
+                      },
+                      {
+                        type: "doc",
+                        label: "Playwright",
+                        id: "hyperexecute-smart-ui-test-using-playwright",
+                      },
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "SmartUI SDK",
+                    items: [
+                      {
+                        type: "category",
+                        collapsed: true,
+                        label: "Selenium",
+                        items: [
+                          {
+                            type: "doc",
+                            label: "JavaScript",
+                            id: "hyperexecute-smart-ui-sdk-selenium-javascript",
+                          },
+                          {
+                            type: "doc",
+                            label: "C#",
+                            id: "hyperexecute-smart-ui-sdk-selenium-csharp",
+                          },
+                        ],
+                      },
+                      {
+                        type: "doc",
+                        label: "Cypress",
+                        id: "hyperexecute-smart-ui-sdk-using-cypress",
+                      },
+                      {
+                        type: "doc",
+                        label: "Maestro",
+                        id: "hyperexecute-smart-ui-sdk-maestro",
+                      },
+                      {
+                        type: "doc",
+                        label: "Playwright",
+                        id: "hyperexecute-smart-ui-sdk-using-playwright",
+                      },
+                      {
+                        type: "doc",
+                        label: "Puppeteer",
+                        id: "hyperexecute-smart-ui-sdk-using-puppeteer",
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "WebScanner Integration",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Visual Scan",
+                    id: "web-scanner-visual-scan",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Third-Party Products",
+            items: [
+              {
+                type: "doc",
+                label: "Katalon Plugin",
+                id: "smartui-katalon-plugin",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Pull Request Testing",
+            items: [
+              {
+                type: "doc",
+                label: "GitHub App",
+                id: "smartui-github-app-integration",
+              },
+              {
+                type: "doc",
+                label: "GitLab PR Checks (Hooks)",
+                id: "smartui-gitlab-pr-checks-hooks",
+              },
+              {
+                type: "doc",
+                label: "GitLab PR Checks (Exec)",
+                id: "smartui-gitlab-pr-checks-exec",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Communication",
+            items: [
+              {
+                type: "doc",
+                label: "Slack Integration",
+                id: "smartui-slack-integration",
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        type: "doc",
+        label: "Troubleshooting Guide",
+        id: "smartui-troubleshooting-guide",
       },
     ],
   ],
 
-  VisualRegressionTestingSidebar: [
-    {
-      "type": "link",
-      "label": "Back",
-      "href": "/docs/",
-      "customProps": {
-        "className": "back-to-main-menu"
-      }
-    },
-    [
-      {
-        "type": "category",
-        "collapsed": false,
-        "label": "Getting Started",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Run First Test",
-            "id": "smartui-running-your-first-project"
-          },
-          {
-            "type": "doc",
-            "label": "Run Test With Agent Skills",
-            "id": "smartui-agent-skills"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">View Test Results</span>"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Upload & Capture</span>"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Test With SDKs</span>"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Test With Hooks</span>"
-          },
-          {
-            "type": "doc",
-            "label": "Storybook Testing",
-            "id": "smart-ui-storybook"
-          },
-          {
-            "type": "html",
-            "value": "<span class=\"sidebar-stub\">Figma Testing</span>"
-          },
-          {
-            "type": "doc",
-            "label": "PDF Testing",
-            "id": "smartui-pdf-comparison"
-          }
-        ]
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Features</span>"
-      },
-      {
-        "type": "category",
-        "collapsed": true,
-        "label": "Project Configuration",
-        "items": [
-          "smartui-project-settings",
-          "test-settings-options",
-          "html-dom-smartui-options",
-          "smart-ui-build-options",
-          "smartui-multiple-projects-per-repo"
-        ]
-      },
-      {
-        "type": "category",
-        "collapsed": true,
-        "label": "Git & Branching",
-        "items": [
-          "smartui-cli-git-branching-strategy",
-          "smartui-smart-git-strategy",
-          "smartui-branch-merging",
-          "smartui-build-merging"
-        ]
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Stabilize Screenshots</span>"
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Advanced CLI</span>"
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Technical Configuration</span>"
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Integrations</span>"
-      },
-      {
-        "type": "doc",
-        "label": "Troubleshooting Guide",
-        "id": "smartui-troubleshooting-guide"
-      }
-    ]
-  ],
-
   Analytics: [
     {
-      "type": "link",
-      "label": "Back",
-      "href": "/docs/",
-      "customProps": {
-        "className": "back-to-main-menu"
-      }
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
     },
-    [
-      {
-        "type": "category",
-        "collapsed": false,
-        "label": "Getting Started",
-        "link": {
-          "type": "doc",
-          "id": "analytics-overview"
+    {
+      type: "doc",
+      id: "analytics-overview",
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Getting Started",
+
+      items: ["analytics-dashboard-templates", "analytics-create-dashboard"],
+    },
+    {
+      type: "category",
+      collapsed: true,
+      label: "Dashboards",
+      items: [
+        "analytics-dashboard-copilot",
+        "analytics-dashboard-edit-layout",
+        "analytics-dashboard-features",
+        "analytics-widget-drill-down-export",
+        "analytics-widget-filter-by-regex",
+        "analytics-filter-by-custom-data",
+        "analytics-dashboard-settings",
+        "analytics-report-scheduling",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Widgets",
+      link: {
+        type: "doc",
+        id: "analytics-widgets",
+      },
+      items: [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Overview",
+          items: [
+            "analytics-modules-automation-test-overview",
+            "analytics-modules-hyperexecute",
+            "analytics-modules-manual-test-overview",
+            "analytics-modules-smartui-analytics",
+            "analytics-modules-accessibility-widgets",
+            "analytics-modules-test-manager-widgets",
+          ],
         },
-        "items": [
-          {
-            "type": "doc",
-            "label": "Create with Pre-Built templates",
-            "id": "analytics-dashboard-templates"
+        {
+          type: "category",
+          collapsed: false,
+          label: "Custom Widgets",
+          link: {
+            type: "doc",
+            id: "dashboards-custom-widgets",
           },
-          {
-            "type": "doc",
-            "label": "Create your Custom Dashboard",
-            "id": "analytics-create-dashboard"
-          }
-        ]
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Dashboards</span>"
-      },
-      {
-        "type": "doc",
-        "label": "Widgets",
-        "id": "analytics-widgets"
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Types of Insights</span>"
-      },
-      {
-        "type": "category",
-        "collapsed": true,
-        "label": "Test Intelligence - AI",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Test Insights",
-            "id": "analytics-test-insights"
-          },
-          {
-            "type": "doc",
-            "label": "Flaky Test Analytics",
-            "id": "analytics-modules-test-intelligence-flaky-test-analytics"
-          },
-          {
-            "type": "doc",
-            "label": "Build Insights",
-            "id": "analytics-build-insights"
-          },
-          {
-            "type": "doc",
-            "label": "Build Comparison",
-            "id": "analytics-build-comparison"
-          },
-          {
-            "type": "doc",
-            "label": "Unique Instances & Retry Detection",
-            "id": "analytics-unique-instances-retry-detection"
-          },
-          {
-            "type": "doc",
-            "label": "Smart Tags",
-            "id": "analytics-smart-tags-test-intelligence"
-          },
-          {
-            "type": "doc",
-            "label": "Failure Categorization AI",
-            "id": "analytics-test-failure-classification"
-          },
-          {
-            "type": "doc",
-            "label": "AI Root Cause Analysis",
-            "id": "analytics-ai-root-cause-analysis"
-          },
-          {
-            "type": "doc",
-            "label": "App Profiling Insights",
-            "id": "insights-app-profiling"
-          }
-        ]
-      },
-      {
-        "type": "html",
-        "value": "<span class=\"sidebar-stub\">Reports</span>"
-      },
-      {
-        "type": "category",
-        "collapsed": true,
-        "label": "References",
-        "items": [
-          {
-            "type": "doc",
-            "label": "Insights Best Practices",
-            "id": "insights-best-practices"
-          },
-          {
-            "type": "doc",
-            "label": "Test Intelligence",
-            "id": "test-intelligence-overview"
-          },
-          {
-            "type": "doc",
-            "label": "Flaky Test Detection",
-            "id": "test-intelligence-modules-flaky-test-detection"
-          },
-          {
-            "type": "doc",
-            "label": "Error Logs Analytics",
-            "id": "test-intelligence-command-error-logs-analytics"
-          },
-          {
-            "type": "doc",
-            "label": "FAQs",
-            "id": "analytics-faqs"
-          }
-        ]
-      }
-    ]
+          items: [
+            "analytics-heatmap-widgets",
+            "analytics-bar-line-widgets",
+            "analytics-table-widgets",
+          ],
+        },
+        "analytics-test-case-insights",
+        "analytics-modules-resource-utilization",
+        "analytics-test-time-trends",
+        {
+          type: "category",
+          collapsed: true,
+          label: "Error Insights",
+          items: [
+            "analytics-modules-test-intelligence-command-logs-analytics",
+            "analytics-modules-error-insights",
+          ],
+        },
+        "analytics-allure-api-widgets",
+        "analytics-modules-groups",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Test Intelligence - AI",
+      items: [
+        "analytics-test-insights",
+        "analytics-modules-test-intelligence-flaky-test-analytics",
+        "analytics-build-insights",
+        "analytics-build-comparison",
+        "analytics-unique-instances-retry-detection",
+        "analytics-smart-tags-test-intelligence",
+        "analytics-test-failure-classification",
+        "analytics-ai-root-cause-analysis",
+        {
+          type: "category",
+          collapsed: true,
+          label: "App Profiling",
+          items: [
+            "insights-app-profiling",
+            "insights-app-profiling-comparison",
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Reports",
+      items: [
+        "insights-usage-report",
+        "analytics-project-report",
+        "insights-private-real-devices",
+        "insights-private-desktop",
+        "analytics-sub-organization-widgets",
+      ],
+    },
+    "insights-best-practices",
+    "analytics-faqs",
   ],
 
   TestIntelligence: [
@@ -2167,8 +3629,16 @@ module.exports = {
         label: "Overview",
         id: "test-intelligence-overview",
       },
-      { type: "html", value: "<span class=\"sidebar-stub\">Flaky Tests Detection</span>" },
-      { type: "html", value: "<span class=\"sidebar-stub\">Command Error Logs Analytics</span>" },
+      {
+        type: "doc",
+        label: "Flaky Tests Detection",
+        id: "test-intelligence-modules-flaky-test-detection",
+      },
+      {
+        type: "doc",
+        label: "Command Error Logs Analytics",
+        id: "test-intelligence-command-error-logs-analytics",
+      },
     ],
   ],
 
@@ -2182,7 +3652,11 @@ module.exports = {
       },
     },
     [
-      { type: "html", value: "<span class=\"sidebar-stub\">TestMu AI Migration Guide</span>" },
+      {
+        type: "doc",
+        label: "TestMu AI Migration Guide",
+        id: "capability-map",
+      },
       {
         type: "doc",
         label: "BrowserStack To TestMu AI Migration",
@@ -2193,7 +3667,11 @@ module.exports = {
         label: "Sauce Labs To TestMu AI Migration",
         id: "saucelabs-to-lambdatest-migration-guide",
       },
-      { type: "html", value: "<span class=\"sidebar-stub\">Legacy Platform To TestMu AI Migration</span>" },
+      {
+        type: "doc",
+        label: "Legacy Platform To TestMu AI Migration",
+        id: "migrate-legacy-lambdatest",
+      },
     ],
   ],
 
@@ -2290,13 +3768,21 @@ module.exports = {
         label: "LT Browser",
         id: "lt-browser",
       },
-      { type: "html", value: "<span class=\"sidebar-stub\">Getting Started With LT Browser 2.0</span>" },
+      {
+        type: "doc",
+        label: "Getting Started With LT Browser 2.0",
+        id: "lt-browser-two",
+      },
       {
         type: "doc",
         label: "Performance Report",
         id: "performance-report",
       },
-      { type: "html", value: "<span class=\"sidebar-stub\">Network Throttling</span>" },
+      {
+        type: "doc",
+        label: "Network Throttling",
+        id: "network-throttling-for-responsive-testing",
+      },
       {
         type: "doc",
         label: "Scroll Sync",
@@ -2395,7 +3881,7 @@ module.exports = {
           "local-testing-windows",
           "local-testing-macos",
           "real-time-locally-hosted-pages",
-          { type: "html", value: "<span class=\"sidebar-stub\">Testing Apps Locally</span>" },
+          "testing-apps-locally",
         ],
       },
       {
@@ -2440,7 +3926,7 @@ module.exports = {
           "charles-proxy",
           "dedicated-proxy",
           "bypass-proxy-domains",
-          { type: "html", value: "<span class=\"sidebar-stub\">Socks5 Proxy Support</span>" },
+          "socks5-proxy-support",
           "http2-support",
           "site-to-site-ipsec-vpn-setup",
         ],
@@ -2454,7 +3940,11 @@ module.exports = {
           "set-open-file-limit-while-using-proxy",
         ],
       },
-      { type: "html", value: "<span class=\"sidebar-stub\">Release Notes</span>" },
+      {
+        type: "doc",
+        label: "Release Notes",
+        id: "tunnel-release-notes",
+      },
     ],
   ],
 
@@ -2501,7 +3991,11 @@ module.exports = {
         label: "Credits Management",
         id: "credits-management",
       },
-      { type: "html", value: "<span class=\"sidebar-stub\">Service Accounts</span>" },
+      {
+        type: "doc",
+        label: "Service Accounts",
+        id: "service-accounts",
+      },
       {
         type: "doc",
         label: "Sub Organizations",
@@ -2686,94 +4180,130 @@ module.exports = {
 
   BrowserCloudSidebar: [
     {
-      "type": "link",
-      "label": "Back",
-      "href": "/docs/",
-      "customProps": {
-        "className": "back-to-main-menu"
-      }
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
+      customProps: {
+        className: "back-to-main-menu",
+      },
     },
     [
       {
-        "type": "doc",
-        "label": "Overview",
-        "id": "browser-cloud-intro"
+        type: "category",
+        collapsed: true,
+        label: "Get Started",
+        items: [
+          {
+            type: "doc",
+            label: "What is Browser Cloud",
+            id: "browser-cloud-intro",
+          },
+          {
+            type: "doc",
+            label: "Launch Session With SDK",
+            id: "browser-cloud-quickstart",
+          },
+          {
+            type: "doc",
+            label: "Launch Session With Agent Skills",
+            id: "browser-cloud-skills",
+          },
+          {
+            type: "doc",
+            label: "Connect to a Session",
+            id: "browser-cloud-connect",
+          },
+        ],
       },
       {
-        "type": "category",
-        "collapsed": false,
-        "label": "Get Started",
-        "items": [
+        type: "category",
+        collapsed: true,
+        label: "Manage Your Sessions",
+        items: [
           {
-            "type": "doc",
-            "label": "Test With SDK",
-            "id": "browser-cloud-quickstart"
+            type: "doc",
+            label: "Understand the Sessions API",
+            id: "browser-cloud-sessions-overview",
           },
           {
-            "type": "doc",
-            "label": "Test With Skills",
-            "id": "browser-cloud-skills"
+            type: "doc",
+            label: "Handle Session Lifecycle",
+            id: "browser-cloud-session-lifecycle",
           },
           {
-            "type": "doc",
-            "label": "Debug and Troubleshoot",
-            "id": "browser-cloud-debugging"
-          }
-        ]
+            type: "doc",
+            label: "Configure Session Options",
+            id: "browser-cloud-session-configuration",
+          },
+        ],
       },
       {
-        "type": "category",
-        "collapsed": true,
-        "label": "Guides",
-        "items": [
+        type: "category",
+        collapsed: true,
+        label: "Preserve Browser State",
+        items: [
           {
-            "type": "doc",
-            "label": "Manage Sessions",
-            "id": "browser-cloud-sessions-overview"
+            type: "doc",
+            label: "Transfer Cookies & Storage",
+            id: "browser-cloud-context",
           },
           {
-            "type": "doc",
-            "label": "Transfer Cookies & Storage",
-            "id": "browser-cloud-context"
+            type: "doc",
+            label: "Stay Logged in Across Runs",
+            id: "browser-cloud-profiles",
           },
-          {
-            "type": "doc",
-            "label": "Stay Logged in Across Runs",
-            "id": "browser-cloud-profiles"
-          },
-          {
-            "type": "doc",
-            "label": "Stealth Mode to Avoid Bot Detection",
-            "id": "browser-cloud-stealth"
-          },
-          {
-            "type": "doc",
-            "label": "Upload and Download Files",
-            "id": "browser-cloud-files"
-          },
-          {
-            "type": "doc",
-            "label": "Load Chrome Extensions",
-            "id": "browser-cloud-extensions"
-          },
-          {
-            "type": "doc",
-            "label": "Access Localhost and Internal Networks",
-            "id": "browser-cloud-tunnel"
-          },
-          {
-            "type": "doc",
-            "label": "One-Liner Scrape, Screenshot, and PDF",
-            "id": "browser-cloud-quick-actions"
-          }
-        ]
+        ],
       },
       {
-        "type": "doc",
-        "label": "API Reference",
-        "id": "browser-cloud-api-reference"
-      }
-    ]
+        type: "category",
+        collapsed: true,
+        label: "Extend Your Browser",
+        items: [
+          {
+            type: "doc",
+            label: "Stealth Mode to Avoid Bot Detection",
+            id: "browser-cloud-stealth",
+          },
+          {
+            type: "doc",
+            label: "Upload and Download Files",
+            id: "browser-cloud-files",
+          },
+          {
+            type: "doc",
+            label: "Load Chrome Extensions",
+            id: "browser-cloud-extensions",
+          },
+          {
+            type: "doc",
+            label: "Access Localhost and Internal Networks",
+            id: "browser-cloud-tunnel",
+          },
+          {
+            type: "doc",
+            label: "One-Liner Scrape, Screenshot, and PDF",
+            id: "browser-cloud-quick-actions",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Debug and Troubleshoot",
+        items: [
+          {
+            type: "doc",
+            label: "Replay and Debug Sessions",
+            id: "browser-cloud-debugging",
+          },
+          {
+            type: "doc",
+            label: "API Reference",
+            id: "browser-cloud-api-reference",
+          },
+        ],
+      },
+    ],
   ],
 
   KaneCLISidebar: [
@@ -2856,6 +4386,48 @@ module.exports = {
             type: "doc",
             label: "Test.md",
             id: "kane-cli-testmd",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Mobile Testing",
+        link: {
+          type: "doc",
+          id: "kane-cli-mobile",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "iOS Simulator Setup",
+            id: "kane-cli-mobile-simulator",
+          },
+          {
+            type: "doc",
+            label: "Android Emulator Setup",
+            id: "kane-cli-mobile-emulator",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Use Cases",
+        link: {
+          type: "doc",
+          id: "kane-cli-use-cases",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "API Testing",
+            id: "api-testing-with-kane-cli",
+          },
+          {
+            type: "doc",
+            label: "AI Coding Agents",
+            id: "kane-cli-with-ai-coding-agents",
           },
         ],
       },
