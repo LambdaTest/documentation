@@ -1099,97 +1099,88 @@ module.exports = {
       },
       {
         type: "category",
-        label: "Agent Assurance",
+        label: "Autonomous Agent Testing with Rook",
         collapsed: false,
         items: [
-          { type: "doc", label: "Overview", id: "agent-assurance-overview" },
-          { type: "doc", label: "Getting Started", id: "agent-assurance-quickstart" },
-           { type: "doc", label: "Command Reference", id: "agent-assurance-command-reference" },
+          {
+            type: "category",
+            label: "Overview",
+            collapsed: false,
+            items: [
+              { type: "doc", label: "What is Rook", id: "rook-overview" },
+              { type: "doc", label: "Real-world Use Cases", id: "rook-use-cases" },
+            ],
+          },
+          {
+            type: "category",
+            label: "Getting Started",
+            collapsed: false,
+            items: [
+              { type: "doc", label: "Install the CLI", id: "rook-installation" },
+              { type: "doc", label: "Test Your First Agent", id: "rook-quickstart" },
+            ],
+          },
           {
             type: "category",
             label: "Configure",
             collapsed: true,
             items: [
-              { type: "doc", label: "Connect and Explore Agents", id: "agent-assurance-connect-and-explore-agents" },
-              { type: "doc", label: "Invocation Profiles", id: "agent-assurance-profiles" },
-              { type: "doc", label: "Scenarios", id: "agent-assurance-scenarios" },
-              { type: "doc", label: "MCP Servers", id: "agent-assurance-mcp" },
+              { type: "doc", label: "Connect and Explore Agents", id: "rook-connect-and-explore-agents" },
+              { type: "doc", label: "Invocation Profiles", id: "rook-profiles" },
+              { type: "doc", label: "Scenarios", id: "rook-scenarios" },
+              { type: "doc", label: "MCP Servers", id: "rook-mcp" },
             ],
           },
           {
             type: "category",
-            label: "Run & Review",
+            label: "Execute and Review",
             collapsed: true,
             items: [
-              { type: "doc", label: "Run Tests", id: "agent-assurance-run-tests" },
-              { type: "doc", label: "Results and Evidence", id: "agent-assurance-results-and-evidence" },
-              { type: "doc", label: "CI/CD and Automation", id: "agent-assurance-ci-cd" },
+              { type: "doc", label: "Run Tests", id: "rook-run-tests" },
+              { type: "doc", label: "Results and Evidence", id: "rook-results-and-evidence" },
+              { type: "doc", label: "CI/CD and Automation", id: "rook-ci-cd" },
             ],
           },
-
-           { type: "doc", label: "Troubleshooting", id: "agent-assurance-troubleshooting" },
-         
-        
-        ],
-      },
-    ],
-  ],
-
-  RookSidebar: [
-    {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
-      customProps: {
-        className: "back-to-main-menu",
-      },
-    },
-    [
-      {
-        type: "category",
-        label: "Overview",
-        collapsed: false,
-        items: [
-          { type: "doc", label: "What is Rook", id: "rook-overview" },
-        ],
-      },
-      {
-        type: "category",
-        label: "Getting Started",
-        collapsed: false,
-        items: [
-          { type: "doc", label: "Installation and Authentication", id: "rook-installation" },
-          { type: "doc", label: "Test Your First Agent", id: "rook-quickstart" },
-        ],
-      },
-      {
-        type: "category",
-        label: "Configure",
-        collapsed: false,
-        items: [
-          { type: "doc", label: "Connect and Explore Agents", id: "rook-connect-and-explore-agents" },
-          { type: "doc", label: "Invocation Profiles", id: "rook-profiles" },
-          { type: "doc", label: "Scenarios", id: "rook-scenarios" },
-          { type: "doc", label: "MCP Servers", id: "rook-mcp" },
-        ],
-      },
-      {
-        type: "category",
-        label: "Execute and Review",
-        collapsed: false,
-        items: [
-          { type: "doc", label: "Run Tests", id: "rook-run-tests" },
-          { type: "doc", label: "Results and Evidence", id: "rook-results-and-evidence" },
-        ],
-      },
-      {
-        type: "category",
-        label: "Automate and Reference",
-        collapsed: false,
-        items: [
-          { type: "doc", label: "CI/CD and Automation", id: "rook-ci-cd" },
-          { type: "doc", label: "Command Reference", id: "rook-command-reference" },
-          { type: "doc", label: "Troubleshooting and FAQ", id: "rook-troubleshooting" },
+          {
+            type: "category",
+            label: "Command Guides",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "All Commands", id: "rook-command-reference" },
+              { type: "doc", label: "rook", id: "rook-command-start" },
+              { type: "doc", label: "rook ask", id: "rook-command-ask" },
+              { type: "doc", label: "/explore", id: "rook-command-explore" },
+              { type: "doc", label: "/agent", id: "rook-command-agent" },
+              { type: "doc", label: "/generate", id: "rook-command-generate" },
+              { type: "doc", label: "/profile", id: "rook-command-profile" },
+              { type: "doc", label: "/scenarios", id: "rook-command-scenarios" },
+              { type: "doc", label: "/run", id: "rook-command-run" },
+              { type: "doc", label: "/ui", id: "rook-command-ui" },
+              { type: "doc", label: "rook report", id: "rook-command-report" },
+              { type: "doc", label: "/plan", id: "rook-command-plan" },
+              { type: "doc", label: "/auth", id: "rook-command-auth" },
+              { type: "doc", label: "rook whoami", id: "rook-command-whoami" },
+              { type: "doc", label: "/login", id: "rook-command-login" },
+              { type: "doc", label: "/logout", id: "rook-command-logout" },
+              { type: "doc", label: "/env", id: "rook-command-env" },
+              { type: "doc", label: "/mcp", id: "rook-command-mcp" },
+              { type: "doc", label: "/budget", id: "rook-command-budget" },
+              { type: "doc", label: "/doctor", id: "rook-command-doctor" },
+              { type: "doc", label: "/guide", id: "rook-command-guide" },
+              { type: "doc", label: "/help", id: "rook-command-help" },
+              { type: "doc", label: "/clear", id: "rook-command-clear" },
+              { type: "doc", label: "/new", id: "rook-command-new" },
+              { type: "doc", label: "/exit", id: "rook-command-exit" },
+            ],
+          },
+          {
+            type: "category",
+            label: "Help",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Troubleshooting and FAQ", id: "rook-troubleshooting" },
+            ],
+          },
         ],
       },
     ],
