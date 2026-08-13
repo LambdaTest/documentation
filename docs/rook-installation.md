@@ -1,212 +1,156 @@
 ---
 id: rook-installation
-title: Install and Authenticate Rook
+title: Install the Rook CLI
 hide_title: false
-sidebar_label: Installation and Authentication
-description: Install the Rook CLI, authenticate it, verify its environment, update it, or use an isolated local development configuration.
+sidebar_label: Install the CLI
+description: Install and authenticate the published Rook CLI without cloning or building the Rook source code.
 keywords:
   - install rook cli
   - rook authentication
-  - rook github installation
-  - rook local mode
+  - rook installer
 url: https://www.testmuai.com/support/docs/rook-installation/
 site_name: TestMu AI
 slug: rook-installation/
 canonical: https://www.testmuai.com/support/docs/rook-installation/
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+# Install the Rook CLI
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
-      { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Install Rook", "item": `${BRAND_URL}/support/docs/rook-installation/` }
-    ]
-  }) }}
-/>
+This page installs the packaged Rook CLI. You do not need to clone the Rook repository, install its source dependencies, start a controller, or build any code.
 
-# Install and Authenticate Rook
-
-Install Rook on macOS or Linux, then run it from the workspace containing the agent you want to test.
-
-:::note Availability
-Rook is currently distributed from a private GitHub repository. Your GitHub account must have access to `LambdatestIncPrivate/rook`.
+:::note Current access
+Rook is currently distributed from a private GitHub repository. Your GitHub account must be allowed to read <code>LambdatestIncPrivate/rook</code>. This requirement is for downloading the packaged CLI, not for accessing the source during normal use.
 :::
 
 ## Prerequisites
 
+- macOS or Linux.
 - Node.js 20 or newer.
 - A LambdaTest account with Rook access.
-- GitHub CLI (`gh`) authenticated to an account that can read the private repository, or a GitHub personal access token with repository read access.
-- The runtime required by your target agent. For example, an HTTP agent must already be running, and a command profile must reference an executable available on `PATH`.
+- GitHub CLI authenticated to an approved GitHub account, or a GitHub token with private-repository read access.
+- The runtime needed by your own target agent. For example, a remote HTTP agent must be reachable and a local command agent must be installed on <code>PATH</code>.
 
-Verify Node.js and GitHub authentication:
+Check Node.js:
 
-```bash
+~~~bash
 node --version
-gh auth status
-```
+~~~
 
-## Install the Latest Stage Build
+The major version must be 20 or newer.
+
+## Step 1: Authenticate GitHub CLI
+
+If <code>gh</code> is already authenticated, confirm it:
+
+~~~bash
+gh auth status
+~~~
+
+Otherwise run:
+
+~~~bash
+gh auth login
+~~~
+
+This login only authorizes the package download from the private repository.
+
+## Step 2: Install the Packaged CLI
 
 Run:
 
-```bash
+~~~bash
 curl -fsSL -H "Authorization: Bearer $(gh auth token)" \
   https://raw.githubusercontent.com/LambdatestIncPrivate/rook/stage/scripts/install.sh | bash
-```
+~~~
 
-The installer downloads the latest stage release and unpacks it below `~/.testmuai/rook/versions/<version>`. Installed versions sit side by side, so installing a new version does not overwrite the old directory.
+The installer:
 
-When `/usr/local/bin` or `/opt/homebrew/bin` is writable, the installer links `rook` there. Otherwise, it leaves the executable at `~/.testmuai/rook/bin/rook` and prints an exact command to either add that directory to `PATH` or create a link. Run one of those printed commands; opening a new terminal alone does not change `PATH`.
+1. Checks for Node.js 20 or newer.
+2. Finds the newest Rook CLI release.
+3. Downloads and verifies the release archive.
+4. Installs it below <code>~/.testmuai/rook/versions/&lt;version&gt;</code>.
+5. Links the <code>rook</code> executable into a writable directory on <code>PATH</code>.
 
-Then verify the installation:
+If the final message prints a PATH command, run that exact command and open a new terminal.
 
-```bash
+## Step 3: Verify the CLI
+
+~~~bash
 rook --version
 rook doctor
-```
+~~~
 
-`rook doctor` reports the CLI version, Node.js version, workspace, environment, controller URL, controller reachability, provider availability, authentication state, and TTY status.
+<code>rook doctor</code> checks the CLI version, Node.js, workspace, selected environment, controller reachability, authentication, and terminal support.
+
+## Step 4: Sign In to Rook
+
+Start browser authentication:
+
+~~~bash
+rook login
+~~~
+
+Or start the interactive terminal and enter <code>/login</code>:
+
+~~~bash
+rook
+~~~
+
+After the browser flow, verify the account:
+
+~~~bash
+rook whoami
+~~~
+
+Authentication is global. Multiple Rook terminals on the same machine use the credentials stored below <code>~/.testmuai/rook/</code>.
+
+<img loading="lazy" src={require('../assets/images/rook/commands/rook-command-whoami.png').default} alt="Rook whoami command help in a terminal" width="1556" height="956" className="doc_img"/>
 
 ## Install Without GitHub CLI
 
-Export a token that can read the private repository and pass it to the download request:
+Use a GitHub token with repository read access:
 
-```bash
+~~~bash
 export ROOK_GITHUB_TOKEN="<github-token>"
 
-curl -fsSL -H "Authorization: Bearer ${ROOK_GITHUB_TOKEN}" \
+curl -fsSL -H "Authorization: Bearer $ROOK_GITHUB_TOKEN" \
   https://raw.githubusercontent.com/LambdatestIncPrivate/rook/stage/scripts/install.sh | bash
-```
+~~~
 
-Avoid saving the token in shell history, project files, or screenshots.
+Avoid putting the token in project files, screenshots, or shared shell history.
 
-## Install a Specific Version
+## Install a Specific Release
 
-Rook release versions use the commit SHA. Pin a known build by setting `ROOK_VERSION` before the installer:
+Rook release identifiers use a commit SHA. Pin a known version for CI or a controlled rollout:
 
-```bash
+~~~bash
 export ROOK_VERSION="<commit-sha>"
 
 curl -fsSL -H "Authorization: Bearer $(gh auth token)" \
   https://raw.githubusercontent.com/LambdatestIncPrivate/rook/stage/scripts/install.sh | bash
-```
+~~~
 
-To install under another directory, also set `ROOK_PREFIX`:
+Installed versions remain side by side, so installing a new build does not overwrite the previous version directory.
 
-```bash
-export ROOK_VERSION="<commit-sha>"
-export ROOK_PREFIX="$PWD/.tools/rook"
+## Update Rook
 
-curl -fsSL -H "Authorization: Bearer $(gh auth token)" \
-  https://raw.githubusercontent.com/LambdatestIncPrivate/rook/stage/scripts/install.sh | bash
-```
+Run the same installer again, then verify the selected version:
 
-## Install from a Release Tarball
+~~~bash
+rook --version
+rook doctor
+~~~
 
-Download the newest release with GitHub CLI:
+## Troubleshooting
 
-```bash
-gh release download --repo LambdatestIncPrivate/rook --pattern '*.tar.gz'
-gh release download --repo LambdatestIncPrivate/rook --pattern '*.sha256'
-```
-
-Verify the checksum and unpack it:
-
-```bash
-shasum -a 256 -c rook-<sha>.tar.gz.sha256
-tar -xzf rook-<sha>.tar.gz
-./rook-<sha>/bin/rook --version
-```
-
-Link the executable onto your `PATH`:
-
-```bash
-# macOS with Homebrew
-ln -sfn "$PWD/rook-<sha>/bin/rook" /opt/homebrew/bin/rook
-
-# Common Linux location
-ln -sfn "$PWD/rook-<sha>/bin/rook" /usr/local/bin/rook
-```
-
-Use a directory you can write, or run the link command with the permissions required by your environment.
-
-## Sign In
-
-Start the browser-based authentication flow:
-
-```bash
-rook login
-```
-
-From the interactive TUI, use:
-
-```text
-/login
-```
-
-Verify the stored token against the controller:
-
-```bash
-rook auth status
-```
-
-`rook whoami` is an alias for the same check. To view the current plan and credit balance, run:
-
-```bash
-rook plan
-```
-
-Authentication is global. Multiple Rook terminals share the state stored in `~/.testmuai/rook/`. Logging out from one terminal affects the others:
-
-```bash
-rook logout
-```
-
-## Use an Isolated Home Directory
-
-Set `ROOK_HOME` when CI, a second account, or a documentation demo must not share your normal Rook state:
-
-```bash
-export ROOK_HOME="$PWD/.rook-ci-home"
-rook auth status
-```
-
-This redirects global Rook state. Project evidence still goes to `<project>/.testmuai/rook/`.
-
-## Local Development Mode
-
-Local mode bypasses OAuth and uses stubbed credits. It is intended for Rook development, not production agent testing.
-
-Start a locally configured controller, then launch the CLI with:
-
-```bash
-export ROOK_ENV=local
-export ROOK_AUTH_MODE=local
-rook
-```
-
-The local controller listens on `http://localhost:8080` by default and still needs at least one configured model provider. `ROOK_AUTH_MODE=local` removes authentication; it does not supply a model key.
-
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-doctor.png').default} alt="Rook doctor output in local development mode" width="1227" height="520" className="doc_img"/>
-
-## Update or Change Versions
-
-Re-run the installer to install the latest stage build. Use `rook --version` afterward to confirm which version the symlink selects.
-
-Because versions are installed side by side, you can point the symlink back to an earlier directory if a pre-alpha build regresses. Pinning `ROOK_VERSION` is recommended for CI.
-
-## Remove Rook
-
-Remove the executable link and the installed version directory selected by that link. Keep `~/.testmuai/rook/` if you want to preserve authentication, settings, environment values, and session history.
-
-Delete global state only when you intentionally want to remove all Rook credentials and settings. Project evidence under `.testmuai/rook/` is separate and is not removed by uninstalling the executable.
+| Symptom | What to do |
+|---|---|
+| <code>rook: command not found</code> | Run the PATH or link command printed by the installer, then open a new terminal. |
+| Node.js version error | Install Node.js 20 or newer and rerun the installer. |
+| GitHub returns 401 or 404 | Confirm that the authenticated account can read the private repository. |
+| Release asset connection resets | Retry outside the VPN or corporate proxy; the download uses GitHub's release asset CDN. |
+| Rook account is not recognized | Run <code>rook login</code>, then <code>rook whoami</code>. |
 
 ## Next Step
 
-Continue with [Test Your First Agent With Rook](/support/docs/rook-quickstart/).
+Continue with [Test Your First Agent](/support/docs/rook-quickstart/). You only need your own PRD, documentation, source workspace, or live endpoint from this point onward.

@@ -99,7 +99,7 @@ If the token was revoked, logging in again is required. Nothing signs in automat
 
 Check `rook doctor`. A network failure is not evidence that the token is invalid. Verify VPN, DNS, proxy, and controller availability before repeating login.
 
-In local development, confirm the controller listens on `http://localhost:8080` and has a configured model provider.
+If the controller remains unreachable, confirm the network, VPN, or proxy requirements with your Rook administrator.
 
 ### Credits or budget are exhausted
 

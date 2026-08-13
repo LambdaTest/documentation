@@ -1,255 +1,188 @@
 ---
 id: rook-quickstart
-title: Test Your First AI Agent With Rook
+title: Test Your First Autonomous Agent with Rook
 hide_title: false
 sidebar_label: Test Your First Agent
-description: Run a complete Rook test journey against the sample triage agent, from discovery to evidence review.
+description: Test an existing remote agent from a PRD and API request without cloning or building Rook.
 keywords:
   - rook quickstart
-  - test ai agent cli
-  - ai agent testing tutorial
-  - agent test scenarios
+  - autonomous agent testing tutorial
+  - test remote ai agent
 url: https://www.testmuai.com/support/docs/rook-quickstart/
 site_name: TestMu AI
 slug: rook-quickstart/
 canonical: https://www.testmuai.com/support/docs/rook-quickstart/
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+# Test Your First Autonomous Agent with Rook
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
-      { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Rook Quickstart", "item": `${BRAND_URL}/support/docs/rook-quickstart/` }
-    ]
-  }) }}
-/>
+This walkthrough tests a refund agent from its PRD and a staging API. It represents a common end-user setup: you have product requirements and access to a live endpoint, but the agent source code is not in your workspace.
 
-# Test Your First AI Agent With Rook
+Replace the example filenames, URL, token, and JSON fields with values from your own agent.
 
-This guide tests the sample `triage-service` end to end. It is a local HTTP agent that reads support tickets, assigns a severity and team, and drafts a reply. The model behavior inside the sample is stubbed, so the target service itself needs no model key.
-
-You will use Rook to discover the service, generate scenarios, create an HTTP invocation profile, run the scenarios, and inspect evidence.
-
-## Prerequisites
+## What You Need
 
 - [Rook installed and authenticated](/support/docs/rook-installation/).
-- Access to the Rook source repository, which contains `sample/triage-service`.
-- Node.js 20 or newer.
-- A test environment. Do not use a production agent for this walkthrough.
+- A local PRD or specification for the agent.
+- A working staging cURL request.
+- Test data that the agent is allowed to read or change.
 
-## Step 1: Start the Sample Agent
+Do not use a production refund endpoint for this walkthrough.
 
-Open a terminal and run:
+## Step 1: Open the Specification Workspace
 
-```bash
-git clone https://github.com/LambdatestIncPrivate/rook.git
-cd rook/sample/triage-service
-npm start
-```
+Open a terminal in the folder that contains your product materials:
 
-The service listens on `http://127.0.0.1:9110`. Check it from a second terminal:
+~~~text
+refund-agent-test/
+├── refund-agent-prd.md
+└── knowledge/
+    └── refund-policy.md
+~~~
 
-```bash
-curl -s http://127.0.0.1:9110/healthz
-```
+The folder does not need to contain agent code.
 
-Expected response:
+Start Rook:
 
-```json
-{"ok":true}
-```
-
-Keep the service running during the test.
-
-## Step 2: Start Rook in the Agent Workspace
-
-In the second terminal:
-
-```bash
-cd rook/sample/triage-service
+~~~bash
+cd refund-agent-test
 rook
-```
+~~~
 
-Rook shows the six-step journey. Run `/guide` at any time for an explanation or `/help <command>` for flags.
+<img loading="lazy" src={require('../assets/images/rook/rook-terminal-home.png').default} alt="Rook terminal home before the first autonomous agent test" width="1111" height="911" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-guide.png').default} alt="Rook interactive guide explaining the agent testing sequence" width="835" height="1066" className="doc_img"/>
-
-## Step 3: Explore the Codebase
+## Step 2: Explore the PRD and Knowledge Base
 
 At the Rook prompt, enter:
 
-```text
-/explore .
-```
+~~~text
+/explore . -- focus on refund-agent-prd.md and knowledge/refund-policy.md
+~~~
 
-Rook scans the current workspace, proposes a plan before spending credits, and asks before tool calls that need permission. Review the proposed read scope and approve it only if it is the directory you intended to inspect.
+For one standalone document, use:
 
-When discovery completes, Rook registers the triage agent and writes its record below:
+~~~text
+/explore refund-agent-prd.md
+~~~
 
-```text
-.testmuai/rook/agents/<agent-id>/
-```
+Rook reads the selected local materials and proposes the agent it found. Confirm the agent only if the name, purpose, rules, and source files match your intended target.
 
-If Rook finds multiple agents, list or select them:
+The discovered record describes expected behavior. It does not prove the live service implements the PRD.
 
-```text
-/agent
-/agent use <id>
-```
+## Step 3: Generate Focused Scenarios
 
-## Step 4: Generate Scenarios
+Start with a small, reviewable set:
 
-Generate the default mix:
+~~~text
+/generate --total 12 -- verify eligibility, required identity checks, duplicate requests, and receipt creation
+~~~
 
-```text
-/generate
-```
+List the scenarios:
 
-Rook uses the discovered features, tools, policies, and known data to generate three classes of scenarios:
-
-- Functional scenarios such as happy paths, invalid requests, and ticket boundaries.
-- Non-functional scenarios such as quality, repeatability, and performance.
-- Adversarial scenarios such as prompt injection, hallucination, and policy violations.
-
-For a smaller first run, request a fixed total:
-
-```text
-/generate --total 12
-```
-
-Review what was produced:
-
-```text
+~~~text
 /scenarios list
-```
+~~~
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-scenarios.png').default} alt="Rook scenario list showing categories and runnability reasons" width="1100" height="999" className="doc_img"/>
+Review the exact order IDs, policy thresholds, and expected artifacts. Exclude a scenario that is unsafe for the current environment:
 
-## Step 5: Add an Invocation Profile
+~~~text
+/scenarios exclude SC-009
+~~~
+
+## Step 4: Add the Staging Profile and Store Its Token
 
 Enter:
 
-```text
+~~~text
 /profile add
-```
+~~~
 
-Name the profile `local-http`, choose or paste a cURL request, and use this request:
+Name the profile <code>refund-staging</code> and paste a working request such as:
 
-```bash
-curl http://127.0.0.1:9110/v1/triage \
+~~~bash
+curl https://refund-agent.staging.example.com/v1/chat \
   -H 'content-type: application/json' \
-  -d '{"input":"please look at T-1043","session_id":"demo"}'
-```
+  -H 'authorization: Bearer replace-with-your-token' \
+  -d '{"message":"check refund status for order ORD-1042","session_id":"quickstart"}'
+~~~
 
-Rook identifies which value should receive `{{goal}}`, which fields remain fixed, and where the answer lives in the response. Confirm the mapping only after it shows:
+During setup, map:
 
-- `input` as the scenario text.
-- `session_id` as the per-scenario session handle.
-- `$.output` as the extracted result.
+- <code>message</code> to the scenario goal.
+- <code>session_id</code> to the per-scenario conversation handle.
+- The actual response field, such as <code>$.reply.text</code>, to the result.
 
-Rook invokes the agent once with a harmless goal before making the profile active. If the service is unavailable or the result path is wrong, save the profile and retry later with:
+Rook lifts the Authorization credential out of the profile, replaces it with <code>$&#123;ROOK_AGENT_TOKEN&#125;</code>, and securely asks for the value. Use <code>/env list</code> afterward to confirm the generated variable name without printing the secret.
 
-```text
-/profile test local-http
-```
+Rook invokes the profile once with a harmless goal. Confirm the extracted answer only if it is the agent's real response, not a request ID or status field.
 
-Inspect the active profile:
+Inspect the saved profile:
 
-```text
-/profile show local-http
-/profile curl local-http
-```
+~~~text
+/profile show refund-staging
+/profile curl refund-staging
+~~~
 
-## Step 6: Run One Scenario First
+## Step 5: Run One Safe Scenario
 
-List the scenario IDs and select a harmless functional scenario:
+Choose one read-only scenario from <code>/scenarios list</code>:
 
-```text
-/run --only <selected-scenario-id> --concurrency 1 --no-narrative
-```
+~~~text
+/run --only SC-001 --concurrency 1 --no-narrative
+~~~
 
-Replace `<selected-scenario-id>` with the ID shown by `/scenarios list`. IDs are assigned as generation batches finish, so a particular category is not guaranteed to receive `SC-001`.
+Before confirming, check:
 
-Before execution, Rook prints:
+- The selected agent and profile.
+- The staging hostname.
+- The scenario count.
+- The estimated credits.
+- Any warning about write-capable tools.
 
-- The selected scenario count.
-- The exact profile target.
-- Effective concurrency.
-- Estimated credits.
-- A warning when the discovered agent declares write-capable tools.
+Rook cannot roll back a refund, message, ticket, or other action taken by the agent.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-run-permission.png').default} alt="Rook permission prompt before running a scenario against an agent with write tools" width="1225" height="676" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/rook/rook-terminal-run-permission.png').default} alt="Rook run confirmation showing the live target and write warning" width="1225" height="676" className="doc_img"/>
 
-Choose **yes** for a one-time grant after confirming the target is the local sample. Do not choose **always** until you understand the exact stored permission.
+## Step 6: Run the Approved Set
 
-## Step 7: Run the Suite
+After the first scenario behaves correctly:
 
-After the one-scenario check succeeds, run all runnable scenarios:
-
-```text
-/run
-```
-
-Rook uses concurrency `3` by default. Set it to `1` when file changes must be attributed to an individual scenario or the target has shared mutable state:
-
-```text
+~~~text
 /run --concurrency 1
-```
+~~~
 
-Press `Esc` to interrupt. Rook stops at a scenario boundary and preserves completed results on disk.
+Use concurrency 1 while scenarios share accounts, order records, or mutable state. Increase it only after the target and fixtures are isolated.
 
-## Step 8: Open the Browser Report
+Press <code>Esc</code> to abort the active operation. Rook preserves completed scenario results, but the in-flight target call is cancelled and may already have produced an external effect. Inspect target state before retrying a write.
 
-Enter:
+## Step 7: Review Evidence
 
-```text
+Open the local viewer:
+
+~~~text
 /ui
-```
+~~~
 
-The local, read-only viewer opens on a loopback URL. It reads `.testmuai/rook/`; it does not upload the report or mutate the workspace.
+<img loading="lazy" src={require('../assets/images/rook/rook-browser-run-detail.png').default} alt="Rook browser run detail with verdicts and verification coverage" width="1440" height="900" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-agents.png').default} alt="Rook browser view listing discovered agents and their test history" width="1440" height="900" className="doc_img"/>
+Open each failure or **Unable to Verify** result. Check the request, response, criterion evidence, artifacts, and verification gaps.
 
-Open the agent, select a run, and then open a scenario to see its request, response, acceptance criteria, evidence, artifacts, and verification gaps.
+- **Fail** means Rook observed a failed criterion.
+- **Unable to Verify** means the current profile did not expose enough evidence.
+- A claim such as “refund issued” in the agent's text is not independent proof that the refund exists.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-run-detail.png').default} alt="Rook browser run detail showing pass fail and verification coverage" width="1440" height="900" className="doc_img"/>
+Add read-only MCP verification or another safe observation when state changes must be proven.
 
-## Step 9: Read the Result Correctly
+## Step 8: End the Session
 
-- Treat **Fail** as an observed agent defect.
-- Treat **Unable to Verify** as a harness or observation gap, not as an agent failure.
-- Check coverage before trusting the pass rate.
-- Open the criterion evidence instead of relying only on the run summary.
-- Run the unchanged scenario more than once before calling nondeterministic behavior fixed or flaky.
-
-For a deeper investigation of failures, run:
-
-```text
-/run --only SC-001,SC-004 --rca
-```
-
-RCA runs after failure clustering and may consume additional credits. The produced remedy is a hypothesis grounded in the run evidence and source, not an automatically applied fix.
-
-## Step 10: Stop the Sample
-
-Exit Rook:
-
-```text
+~~~text
 /exit
-```
+~~~
 
-Return to the terminal running `triage-service` and press `Ctrl+C`.
-
-The evidence remains under `sample/triage-service/.testmuai/rook/` until you remove or archive it.
+Results remain below <code>.testmuai/rook/</code> in your specification workspace.
 
 ## Next Steps
 
-- [Connect other agent types](/support/docs/rook-connect-and-explore-agents/)
-- [Configure HTTP, command, async, multimodal, or MCP profiles](/support/docs/rook-profiles/)
-- [Generate and curate scenarios](/support/docs/rook-scenarios/)
-- [Run targeted suites safely](/support/docs/rook-run-tests/)
+- [Use Rook with PRDs, knowledge bases, source code, remote agents, and multiple profiles](/support/docs/rook-use-cases/)
+- [Configure more profile shapes](/support/docs/rook-profiles/)
+- [Open the full command index](/support/docs/rook-command-reference/)

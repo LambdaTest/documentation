@@ -40,7 +40,7 @@ Before running a suite, confirm:
 
 1. The intended agent is active: `/agent`.
 2. The intended verified profile is active: `/profile list`.
-3. The target URL or command points at test or staging. Direct MCP profiles can be invoked once with `/profile test`, but `/run` cannot drive them yet.
+3. The target URL or command points at test or staging. Direct MCP profiles cannot currently be invoked by `/profile test` or `/run`; use an HTTP or command adapter.
 4. Required fixtures and reset behavior are ready.
 5. Required MCP verification servers are enabled and approved: `/mcp`.
 6. Scenario runnability is understood: `/scenarios list`.
@@ -163,9 +163,9 @@ RCA is off by default because it consumes additional credits and its cost depend
 
 ## Interrupt and Resume Safely
 
-Press `Esc` during a TUI operation or `Ctrl+C` in a headless process. Rook stops at a scenario boundary instead of abandoning an in-flight record. Completed requests, responses, and verdicts remain on disk.
+Press `Esc` during a TUI operation or `Ctrl+C` in a headless process. Rook aborts the in-flight HTTP request or command process and preserves completed requests, responses, and verdicts on disk. The target may already have produced an external effect even when no response was recorded.
 
-Authentication revocation, controller failure, and exhausted budget also halt new work at boundaries. Rook does not silently resume a run after authentication returns.
+Authentication revocation, controller failure, and exhausted budget also halt work. Rook does not silently resume a run after authentication returns.
 
 ## Test Common Agent Types Deeply
 

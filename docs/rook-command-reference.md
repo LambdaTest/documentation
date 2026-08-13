@@ -1,258 +1,103 @@
 ---
 id: rook-command-reference
-title: Rook Command Reference
+title: Rook Command Guides
 hide_title: false
-sidebar_label: Command Reference
-description: Complete reference for Rook interactive slash commands, headless commands, flags, aliases, output, and exit codes.
+sidebar_label: All Commands
+description: Index of every Rook interactive and headless command with links to detailed, screenshot-based guides.
 keywords:
   - rook commands
   - rook cli reference
   - rook slash commands
-  - rook flags
 url: https://www.testmuai.com/support/docs/rook-command-reference/
 site_name: TestMu AI
 slug: rook-command-reference/
 canonical: https://www.testmuai.com/support/docs/rook-command-reference/
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+# Rook Command Guides
 
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org", "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
-      { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Rook Commands", "item": `${BRAND_URL}/support/docs/rook-command-reference/` }
-    ]
-  }) }}
-/>
+Rook has an interactive terminal for guided human testing and headless commands for shell scripts and CI. This index covers all 24 top-level command families in the current CLI.
 
-# Rook Command Reference
+<img loading="lazy" src={require('../assets/images/rook/rook-terminal-help.png').default} alt="Rook interactive help grouped by testing sequence workspace and session" width="1227" height="1222" className="doc_img"/>
 
-Run `rook` without a subcommand for the interactive TUI. Enter `/help` for the complete list or `/help <command>` for command-specific flags.
+## Start and Ask
 
-<img loading="lazy" src={require('../assets/images/rook/rook-terminal-help.png').default} alt="Rook interactive help listing all slash commands" width="1227" height="1222" className="doc_img"/>
+| Command | Purpose | Detailed guide |
+|---|---|---|
+| <code>rook</code> | Start the interactive testing terminal. | [Open guide](/support/docs/rook-command-start/) |
+| <code>rook ask</code> | Run one natural-language orchestrator turn without the TUI. | [Open guide](/support/docs/rook-command-ask/) |
 
-## Interactive Workflow Commands
+## Autonomous Testing Sequence
 
-### `/explore [path] [--force] [-- instruction]`
+| Interactive command | Headless equivalent | Purpose | Detailed guide |
+|---|---|---|---|
+| <code>/explore</code> | <code>rook explore</code> | Discover agents from local PRDs, knowledge bases, or source. | [Open guide](/support/docs/rook-command-explore/) |
+| <code>/agent</code> | <code>rook agent</code> | List and select discovered agents. | [Open guide](/support/docs/rook-command-agent/) |
+| <code>/generate</code> | <code>rook generate</code> | Generate functional, non-functional, and adversarial scenarios. | [Open guide](/support/docs/rook-command-generate/) |
+| <code>/profile</code> | <code>rook profile</code> for read/use/remove operations | Configure and verify how Rook invokes the live target. | [Open guide](/support/docs/rook-command-profile/) |
+| <code>/scenarios</code> | <code>rook scenarios</code> | Review runnability and curate scenarios. | [Open guide](/support/docs/rook-command-scenarios/) |
+| <code>/run</code> | <code>rook run</code> | Execute the live agent and judge evidence. | [Open guide](/support/docs/rook-command-run/) |
+| <code>/ui</code> | — | Open the local evidence viewer. | [Open guide](/support/docs/rook-command-ui/) |
+| — | <code>rook report</code> | Print stored verdicts in a shell or CI. | [Open guide](/support/docs/rook-command-report/) |
 
-Reads a local workspace, discovers agents, or refreshes the active agent.
+## Account and Workspace
 
-- `path`: current directory by default.
-- `--force`: re-read even when files appear unchanged.
-- Text after `--`: guidance for what discovery should emphasize or ignore.
+| Interactive command | Headless equivalent | Purpose | Detailed guide |
+|---|---|---|---|
+| <code>/plan</code> | <code>rook plan</code> | Show the account plan and credit balance. | [Open guide](/support/docs/rook-command-plan/) |
+| <code>/auth</code> | <code>rook auth status</code> | Verify stored authentication. | [Open guide](/support/docs/rook-command-auth/) |
+| — | <code>rook whoami</code> | Headless alias for authentication status. | [Open guide](/support/docs/rook-command-whoami/) |
+| <code>/login</code> | <code>rook login</code> | Start browser authentication. | [Open guide](/support/docs/rook-command-login/) |
+| <code>/logout</code> | <code>rook logout</code> | Revoke and clear credentials. | [Open guide](/support/docs/rook-command-logout/) |
+| <code>/env</code> | — | Store variables referenced by profiles. | [Open guide](/support/docs/rook-command-env/) |
+| <code>/mcp</code> | <code>rook mcp</code> | Manage MCP servers and trust. | [Open guide](/support/docs/rook-command-mcp/) |
+| <code>/budget</code> | — | View session spending and phase limits. | [Open guide](/support/docs/rook-command-budget/) |
+| <code>/doctor</code> | <code>rook doctor</code> | Diagnose installation, connection, authentication, and workspace. | [Open guide](/support/docs/rook-command-doctor/) |
 
-### `/agent [use|rm]`
+## Interactive Session
 
-- `/agent`: list registered agents.
-- `/agent use <id>`: set the active agent.
-- `/agent rm <id>`: forget the agent and its stored project data.
+| Command | Purpose | Detailed guide |
+|---|---|---|
+| <code>/guide</code> | Show the testing journey in order. | [Open guide](/support/docs/rook-command-guide/) |
+| <code>/help</code> | List commands or explain one command. | [Open guide](/support/docs/rook-command-help/) |
+| <code>/clear</code> | Clear visible TUI scrollback only. | [Open guide](/support/docs/rook-command-clear/) |
+| <code>/new</code> | Start a new conversation session while keeping project data. | [Open guide](/support/docs/rook-command-new/) |
+| <code>/exit</code> | Stop the Rook session and local viewer cleanly. | [Open guide](/support/docs/rook-command-exit/) |
 
-### `/generate`
+## Discover Syntax from the CLI
 
-```text
-/generate [--total <n>] [--class <list>] [--category <list>]
-          [--no-validate] [--force] [-- instruction]
-```
+Inside the TUI:
 
-- `--total`: total scenario budget, integer from 1 to 100000.
-- `--class`: `functional`, `non_functional`, or `adversarial`; comma-separated.
-- `--category`: one or more of the 18 category names; comma-separated.
-- `--no-validate`: skip model-based runnability validation.
-- `--force`: generate even when the agent and scenarios appear current.
-- Text after `--`: generation focus.
+~~~text
+/help
+/help profile
+/help run
+~~~
 
-### `/profile`
+From a normal shell:
 
-- `/profile add`: create and verify an HTTP or command profile.
-- `/profile list`: list profiles and the active profile.
-- `/profile use <name>`: switch to a verified profile.
-- `/profile show <name>`: show invocation and scenario capability information.
-- `/profile edit <name>`: edit fields and observation behavior.
-- `/profile test <name>`: invoke once and verify result extraction.
-- `/profile curl <name>`: render an HTTP profile as cURL.
-- `/profile rm <name>`: remove a profile.
+~~~bash
+rook --help
+rook explore --help
+rook mcp add --help
+~~~
 
-### `/run`
+Human-readable text can evolve during pre-alpha. Prefer <code>--json</code> for automation where a headless command supports it.
 
-```text
-/run [--only <ids>] [--class <list>] [--category <list>]
-     [--tag <list>] [--concurrency <n>] [--no-narrative]
-     [--rca] [-- description]
-```
-
-- `--only`: scenario IDs, comma-separated.
-- `--class`: scenario classes, comma-separated.
-- `--category`: scenario categories, comma-separated.
-- `--tag`: scenarios containing any requested tag.
-- `--concurrency`: positive integer; default `3`.
-- `--no-narrative`: skip the run-level model summary.
-- `--rca`: investigate failure clusters and write remedy files.
-- Text after `--`: natural-language scenario selection from the deterministic filtered list.
-
-### `/ui [--no-open]`
-
-Opens the read-only browser viewer. `--no-open` prints the loopback URL without launching the browser.
-
-## Interactive Workspace Commands
-
-| Command | Purpose |
-|---|---|
-| `/scenarios list` | List scenarios and current runnability |
-| `/scenarios exclude <ids>` | Mark scenarios excluded without deleting them |
-| `/scenarios include <ids>` | Re-include excluded scenarios |
-| `/scenarios delete <ids>` | Delete live scenario definitions |
-| `/plan` | Show LambdaTest plan and credit balance |
-| `/auth status` or `/auth` | Verify the stored token against the controller |
-| `/env list` | List variable names with masked values |
-| `/env set <key> [value]` | Store a value; securely prompt when value is omitted |
-| `/env show <key>` | Print the complete value into terminal scrollback |
-| `/env rm <key>` | Delete a stored value |
-| `/mcp list` or `/mcp` | List MCP definitions and states |
-| `/mcp enable <name>` | Enable a server name for the project |
-| `/mcp disable <name>` | Disable a server name for the project |
-| `/mcp approve <name>` | Review and approve a project or discovered definition |
-| `/budget` | Show session spend, remaining credits, budget level, and phase caps |
-| `/doctor` | Show environment, controller, authentication, workspace, and agents |
-
-## Interactive Session Commands
-
-| Command | Purpose |
-|---|---|
-| `/guide` | Explain the recommended workflow and key concepts |
-| `/help [command]` | List commands or explain one command's flags |
-| `/clear` | Clear terminal scrollback inside Rook |
-| `/new` | Start a fresh Rook conversation session and clear a process halt |
-| `/login` | Start browser authentication |
-| `/logout` | Revoke and clear stored credentials |
-| `/exit` | Stop the viewer and exit Rook |
-
-## Headless Commands
-
-### General
-
-```text
-rook [--no-animation]
-rook --version
-rook ask <prompt...> [--verbose] [--json]
-rook doctor
-```
-
-`rook ask` runs one orchestrator turn without the TUI.
-
-### Agents and Profiles
-
-```text
-rook agent list [--json]
-rook agent use <id>
-
-rook profile list [name] [--entity <id>] [--json]
-rook profile show [name] [--entity <id>] [--json]
-rook profile use [name] [--entity <id>] [--json]
-rook profile rm [name] [--entity <id>] [--json]
-```
-
-### Explore
-
-```text
-rook explore [path]
-  [--allow <rule> ...]
-  [--all]
-  [--force]
-  [--instruction <text>]
-  [--json]
-```
-
-- `--all`: register every candidate without the selection question.
-- `--allow`: temporary exact permission rule; repeatable.
-
-### Generate
-
-```text
-rook generate
-  [--allow <rule> ...]
-  [--entity <id>]
-  [--class <classes> ...]
-  [--category <categories> ...]
-  [--total <n> ...]
-  [--no-validate]
-  [--verbose]
-  [--json]
-```
-
-Class and category options are comma-separated and repeatable. Repeating `--total` is accepted by the CLI parser so invalid or conflicting occurrences can be diagnosed consistently; supply one total in normal use.
-
-### Scenarios
-
-```text
-rook scenarios list [--entity <id>] [--json]
-rook scenarios exclude <ids...> [--entity <id>]
-rook scenarios include <ids...> [--entity <id>]
-rook scenarios delete <ids...> [--entity <id>]
-```
-
-### Run and Report
-
-```text
-rook run
-  [--allow <rule> ...]
-  [--entity <id>]
-  [--only <ids> ...]
-  [--no-narrative]
-  [--verbose]
-  [--json]
-
-rook report [runId] [--entity <id>] [--json]
-```
-
-`--only` is comma-separated and repeatable.
-
-### Authentication and Account
-
-```text
-rook login [--json]
-rook logout [--json]
-rook auth status [--json]
-rook whoami [--json]
-rook plan [--json]
-```
-
-`rook whoami` is an alias for `rook auth status`.
-
-### MCP
-
-```text
-rook mcp list [--json]
-rook mcp get <name> [--json]
-rook mcp add <name> [command...]
-  [--scope local|project|user]
-  [--transport stdio|http|sse|ws]
-  [--url <url>]
-  [--env <KEY=VALUE> ...]
-  [--header <NAME: VALUE> ...]
-  [--json]
-rook mcp remove <name> [--scope local|project|user] [--json]
-rook mcp enable <name> [--json]
-rook mcp disable <name> [--json]
-rook mcp approve <name> [--origin project|discovered] [--json]
-```
-
-For stdio, place the command after `--` so command flags are not parsed as Rook flags.
-
-## JSON and Verbose Output
-
-- `--json` emits NDJSON events or machine-readable line envelopes, depending on the command. Read one JSON object per line.
-- `--verbose` prints subagent or tool activity and cost information on supported commands.
-- Human output can change during pre-alpha; automation should prefer JSON and exit codes.
-
-## Exit Codes
+## Headless Exit Codes
 
 | Code | Meaning |
 |---|---|
-| `0` | No defect recorded in the verdicts that were produced; inspect `run.yaml` to confirm the requested run completed |
-| `1` | Rook could not perform the requested test or state change |
-| `2` | Agent defect or adversarial compromise |
-| `3` | Authentication required or invalid |
-| `4` | Budget or credits exhausted |
+| <code>0</code> | No defect was recorded in the verdicts that were produced; also confirm that the requested run completed. |
+| <code>1</code> | Rook could not perform the requested operation. |
+| <code>2</code> | An agent defect or adversarial compromise was observed. |
+| <code>3</code> | Authentication is missing or invalid. |
+| <code>4</code> | Credits or a budget boundary prevented continuation. |
+
+## Recommended First Journey
+
+~~~text
+/explore → /agent → /generate → /profile add → /scenarios list → /run → /ui
+~~~
+
+See the [end-user quickstart](/support/docs/rook-quickstart/) or choose a setup in [real-world use cases](/support/docs/rook-use-cases/).

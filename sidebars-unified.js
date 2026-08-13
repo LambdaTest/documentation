@@ -73,10 +73,6 @@ const docsSidebar = [
     items: items(s.AgentToAgentSidebar),
   },
   {
-    type: 'category', label: 'Rook', collapsible: true, collapsed: true,
-    items: items(s.RookSidebar),
-  },
-  {
     type: 'category', label: 'Real Device', collapsible: true, collapsed: true,
     items: s.RealDeviceSidebar.slice(1).flat(),
   },

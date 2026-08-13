@@ -205,17 +205,6 @@ export default function Home() {
             </div>
           </div>
           <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Rook &nbsp;<NewTag value="PRE-ALPHA" /></h2>
-            <div className="home_inners">
-              <a href="/support/docs/rook-overview/"><p className="p_home_inners">Overview</p></a>
-              <a href="/support/docs/rook-installation/"><p className="p_home_inners">Installation</p></a>
-              <a href="/support/docs/rook-quickstart/"><p className="p_home_inners">Test Your First Agent</p></a>
-              <a href="/support/docs/rook-profiles/"><p className="p_home_inners">Invocation Profiles</p></a>
-              <a href="/support/docs/rook-run-tests/"><p className="p_home_inners">Run Tests</p></a>
-              <a href="/support/docs/rook-command-reference/"><p className="p_home_inners">Command Reference</p></a>
-            </div>
-          </div>
-          <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="webscanner-light-icon.svg" dark="webscanner-dark-icon.svg" alt="" />Web Scanner &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
               <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>
@@ -233,6 +222,9 @@ export default function Home() {
               <a href="/support/docs/chat-agent/"><p className="p_home_inners">Supported Agent Types</p></a>
                <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First Agent</p></a>
                 <a href="/support/docs/testmu-a2a-cli/"><p className="p_home_inners">Test With Agent Testing CLI</p></a>
+              <a href="/support/docs/rook-overview/"><p className="p_home_inners">Autonomous Agent Testing With Rook</p></a>
+              <a href="/support/docs/rook-use-cases/"><p className="p_home_inners">Rook Use Cases</p></a>
+              <a href="/support/docs/rook-command-reference/"><p className="p_home_inners">Rook Command Guides</p></a>
                      <a href="/support/docs/chat-agent-api-integration/"><p className="p_home_inners">Integrate a Chat Agent API</p></a>
 
                       <a href="/support/docs/agent-assurance-overview/"><p className="p_home_inners">Agent Assurance &nbsp;<NewTag value="NEW" /></p></a>
