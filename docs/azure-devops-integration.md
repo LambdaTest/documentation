@@ -171,9 +171,16 @@ To review a connection's health and setup, open the **•••** menu and selec
 
 A badge at the top shows whether it's a **Personal** connection (your own install) or an **Organization** connection (a shared one).
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-personal.webp').default} alt="Personal Azure DevOps connection details"  className="doc_img" width="1365" height="624"/>
-
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-organization.webp').default} alt="Organization (shared) Azure DevOps connection details"  className="doc_img" width="1365" height="624"/>
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', alignItems: 'flex-start'}}>
+  <figure style={{flex: '1 1 340px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-personal.webp').default} alt="Personal Azure DevOps connection details" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Personal connection</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 340px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-organization.webp').default} alt="Organization (shared) Azure DevOps connection details" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Organization (shared) connection</figcaption>
+  </figure>
+</div>
 
 ## How To Log Your First Bug Through Azure DevOps Integration?
 

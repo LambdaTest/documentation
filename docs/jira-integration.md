@@ -147,9 +147,16 @@ To review a connection's health and setup, open the **•••** menu and selec
 
 A badge at the top shows whether it's a **Personal** connection (your own install) or an **Organization** connection (a shared one).
 
-<img loading="lazy" src={require('../assets/images/jira-integration/info-personal.webp').default} alt="Personal Jira connection details"  className="doc_img" width="1365" height="624"/>
-
-<img loading="lazy" src={require('../assets/images/jira-integration/info-organization.webp').default} alt="Organization (shared) Jira connection details"  className="doc_img" width="1365" height="624"/>
+<div style={{display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center', alignItems: 'flex-start'}}>
+  <figure style={{flex: '1 1 340px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/jira-integration/info-personal.webp').default} alt="Personal Jira connection details" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Personal connection</figcaption>
+  </figure>
+  <figure style={{flex: '1 1 340px', margin: 0}}>
+    <img loading="lazy" src={require('../assets/images/jira-integration/info-organization.webp').default} alt="Organization (shared) Jira connection details" className="doc_img" style={{width: '100%'}}/>
+    <figcaption style={{textAlign: 'center', marginTop: '8px', fontWeight: 600}}>Organization (shared) connection</figcaption>
+  </figure>
+</div>
 
 ## How To Log Your First Bug Through Jira Integration?
 
@@ -198,6 +205,13 @@ find 3rd party applications, available to integrate with your <BrandName /> acco
 :::note
 If the connection is currently shared with your organization, **Unshare** it first. Only the admin who installed the connection can remove it.
 :::
+
+## Related resources
+
+- [TestMu AI Jira App](/support/docs/testmu-jira-app/) — create and view <BrandName /> test cases directly inside Jira.
+- [Link Jira Issues with Test Manager](/support/docs/link-jira-issues-with-test-manager/) — associate Jira issues with your Test Manager test cases.
+- [KaneAI Jira Integration](/support/docs/kane-ai-jira-integration/) — connect Jira with KaneAI.
+- [Self-Hosted Jira Integration](/support/docs/jira-self-hosted-integration/) — set up Jira Data Center / Server instances.
 
 ---
 
