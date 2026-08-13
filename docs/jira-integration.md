@@ -123,19 +123,19 @@ One admin-owned connection means consistent projects for everyone, no repeated s
 
 **Step 1:** On the **Integrations** page, find your connected Jira card under **My Integrations**. Click the ellipsis (**•••**) and select **Share**.
 
-<img loading="lazy" src={require('../assets/images/jira-integration/share-menu.png').default} alt="Share Jira integration"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/jira-integration/share-menu.webp').default} alt="Share Jira integration"  className="doc_img" width="1365" height="624"/>
 
 **Step 2:** You'll see a **Jira plugin shared successfully** confirmation. The card now shows a **Shared** badge and also appears under **Shared Integrations** marked **Shared by You**.
 
-<img loading="lazy" src={require('../assets/images/jira-integration/shared-success.png').default} alt="Jira integration shared successfully"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/jira-integration/shared-success.webp').default} alt="Jira integration shared successfully"  className="doc_img" width="1365" height="624"/>
 
 **What your teammates see:** the shared Jira connection shows up in their **Shared Integrations** list as **Shared by \<admin name>**, with an **Info** button to view its details. Members can use the connection but can't manage it — that stays with the admin owner.
 
-<img loading="lazy" src={require('../assets/images/jira-integration/member-shared.png').default} alt="Shared Jira integration as seen by a member"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/jira-integration/member-shared.webp').default} alt="Shared Jira integration as seen by a member"  className="doc_img" width="1365" height="624"/>
 
 **To stop sharing:** open the **•••** menu on the Jira card and select **Unshare**. You'll see a **Jira plugin unshared successfully** message, and members will no longer have access to the connection.
 
-<img loading="lazy" src={require('../assets/images/jira-integration/unshare-menu.png').default} alt="Unshare Jira integration"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/jira-integration/unshare-menu.webp').default} alt="Unshare Jira integration"  className="doc_img" width="1365" height="624"/>
 
 ## View Connection Details (Info)
 
@@ -147,9 +147,9 @@ To review a connection's health and setup, open the **•••** menu and selec
 
 A badge at the top shows whether it's a **Personal** connection (your own install) or an **Organization** connection (a shared one).
 
-<img loading="lazy" src={require('../assets/images/jira-integration/info-personal.jpeg').default} alt="Personal Jira connection details"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/jira-integration/info-personal.webp').default} alt="Personal Jira connection details"  className="doc_img" width="1365" height="624"/>
 
-<img loading="lazy" src={require('../assets/images/jira-integration/info-organization.jpeg').default} alt="Organization (shared) Jira connection details"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/jira-integration/info-organization.webp').default} alt="Organization (shared) Jira connection details"  className="doc_img" width="1365" height="624"/>
 
 ## How To Log Your First Bug Through Jira Integration?
 

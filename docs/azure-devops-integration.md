@@ -65,7 +65,7 @@ We recently added support for custom fields to our integration. From now on, all
 
 **Step 3:** Open the **Bug Tracker** category (or use the search bar), find **Azure DevOps**, and click **Connect**.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-catalog.png').default} alt="Azure DevOps in the integrations catalog" width="1365" height="624" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-catalog.webp').default} alt="Azure DevOps in the integrations catalog" width="1365" height="624" className="doc_img"/>
 
 **Step 4:** In the **Setup Azure DevOps** panel, choose your **Instance**:
 
@@ -74,7 +74,7 @@ We recently added support for custom fields to our integration. From now on, all
 
 The integration needs these scopes: **Project and Team — Read** and **Work Items — Read & Write**.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-instance.png').default} alt="Setup Azure DevOps — choose instance" width="1365" height="624" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-instance.webp').default} alt="Setup Azure DevOps — choose instance" width="1365" height="624" className="doc_img"/>
 
 :::note
 For a Cloud instance, make sure **Third-party application access via OAuth** hasn't been disabled by your organization's admin (under `https://dev.azure.com/{your-org-name}/_settings/organizationPolicy`).
@@ -82,11 +82,11 @@ For a Cloud instance, make sure **Third-party application access via OAuth** has
 
 **Step 5:** For a **Cloud** instance, click **Install** and grant permission to <BrandName /> when prompted (**Allow**). Then **select your organization** from the dropdown and click **Install**.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-organization.png').default} alt="Select your Azure DevOps organization" width="1365" height="624" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-organization.webp').default} alt="Select your Azure DevOps organization" width="1365" height="624" className="doc_img"/>
 
 **Step 6:** The connection begins setting up. You'll see **Integration in progress** while <BrandName /> completes the setup, and you'll get a confirmation once it's ready.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-inprogress.png').default} alt="Azure DevOps integration in progress" width="1365" height="624" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-inprogress.webp').default} alt="Azure DevOps integration in progress" width="1365" height="624" className="doc_img"/>
 
 ### Self-Hosted Azure DevOps (Personal Access Token)
 
@@ -94,7 +94,7 @@ If you chose **Self Hosted**, you'll connect using your **Azure DevOps URL** and
 
 > **Note:** For a Self-Hosted Azure DevOps instance, you need to whitelist the IP addresses shown in the setup panel for your privately hosted projects. If you need help, please contact our customer support.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-selfhosted.png').default} alt="Setup Azure DevOps — Self Hosted (URL + access token)" width="1365" height="624" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-selfhosted.webp').default} alt="Setup Azure DevOps — Self Hosted (URL + access token)" width="1365" height="624" className="doc_img"/>
 
 **What is my Azure DevOps URL?**
 
@@ -151,13 +151,13 @@ One admin-owned connection means consistent projects for everyone, no repeated s
 
 **Step 1:** On the **Integrations** page, find your connected Azure DevOps card under **My Integrations**. Click the ellipsis (**•••**) and select **Share**.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-share-menu.png').default} alt="Share Azure DevOps integration"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-share-menu.webp').default} alt="Share Azure DevOps integration"  className="doc_img" width="1365" height="624"/>
 
 **Step 2:** You'll see an **Azure DevOps plugin shared successfully** confirmation. The card now shows a **Shared** badge and also appears under **Shared Integrations** marked **Shared by You**.
 
 **What your teammates see:** the shared Azure DevOps connection shows up in their **Shared Integrations** list as **Shared by \<admin name>**, with an **Info** button to view its details. Members can use the connection but can't manage it — that stays with the admin owner.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-member-shared.png').default} alt="Shared Azure DevOps integration as seen by a member"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-member-shared.webp').default} alt="Shared Azure DevOps integration as seen by a member"  className="doc_img" width="1365" height="624"/>
 
 **To stop sharing:** open the **•••** menu on the Azure DevOps card and select **Unshare**. You'll see an **Azure DevOps plugin unshared successfully** message, and members will no longer have access to the connection.
 
@@ -171,9 +171,9 @@ To review a connection's health and setup, open the **•••** menu and selec
 
 A badge at the top shows whether it's a **Personal** connection (your own install) or an **Organization** connection (a shared one).
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-personal.png').default} alt="Personal Azure DevOps connection details"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-personal.webp').default} alt="Personal Azure DevOps connection details"  className="doc_img" width="1365" height="624"/>
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-organization.png').default} alt="Organization (shared) Azure DevOps connection details"  className="doc_img" width="1365" height="624"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-organization.webp').default} alt="Organization (shared) Azure DevOps connection details"  className="doc_img" width="1365" height="624"/>
 
 ## How To Log Your First Bug Through Azure DevOps Integration?
 
@@ -233,11 +233,11 @@ A badge at the top shows whether it's a **Personal** connection (your own instal
 
 **Step 3:** Under **My Integrations**, find the **Azure DevOps** card. Click the ellipsis (**•••**) and select **Remove**.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-remove-menu.png').default} alt="Remove Azure DevOps integration" width="1365" height="624" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-remove-menu.webp').default} alt="Remove Azure DevOps integration" width="1365" height="624" className="doc_img"/>
 
 **Step 4:** You'll see a **You have successfully uninstalled Azure DevOps** confirmation, and the Azure DevOps card returns to the **Connect** state.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-remove-success.png').default} alt="Azure DevOps uninstalled successfully" width="1365" height="624" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-remove-success.webp').default} alt="Azure DevOps uninstalled successfully" width="1365" height="624" className="doc_img"/>
 
 :::note
 If the connection is currently shared with your organization, **Unshare** it first. Only the admin who installed the connection can remove it.
