@@ -206,6 +206,17 @@ export default function Home() {
             </div>
           </div>
           <div className="home_inners_box">
+            <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Rook &nbsp;<NewTag value="PRE-ALPHA" /></h2>
+            <div className="home_inners">
+              <a href="/support/docs/rook-overview/"><p className="p_home_inners">Overview</p></a>
+              <a href="/support/docs/rook-installation/"><p className="p_home_inners">Installation</p></a>
+              <a href="/support/docs/rook-quickstart/"><p className="p_home_inners">Test Your First Agent</p></a>
+              <a href="/support/docs/rook-profiles/"><p className="p_home_inners">Invocation Profiles</p></a>
+              <a href="/support/docs/rook-run-tests/"><p className="p_home_inners">Run Tests</p></a>
+              <a href="/support/docs/rook-command-reference/"><p className="p_home_inners">Command Reference</p></a>
+            </div>
+          </div>
+          <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="webscanner-light-icon.svg" dark="webscanner-dark-icon.svg" alt="" />Web Scanner &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
               <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>

@@ -464,6 +464,66 @@ module.exports = {
     ],
   ],
 
+  RookSidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        label: "Overview",
+        collapsed: false,
+        items: [
+          { type: "doc", label: "What is Rook", id: "rook-overview" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Getting Started",
+        collapsed: false,
+        items: [
+          { type: "doc", label: "Installation and Authentication", id: "rook-installation" },
+          { type: "doc", label: "Test Your First Agent", id: "rook-quickstart" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Configure",
+        collapsed: false,
+        items: [
+          { type: "doc", label: "Connect and Explore Agents", id: "rook-connect-and-explore-agents" },
+          { type: "doc", label: "Invocation Profiles", id: "rook-profiles" },
+          { type: "doc", label: "Scenarios", id: "rook-scenarios" },
+          { type: "doc", label: "MCP Servers", id: "rook-mcp" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Execute and Review",
+        collapsed: false,
+        items: [
+          { type: "doc", label: "Run Tests", id: "rook-run-tests" },
+          { type: "doc", label: "Results and Evidence", id: "rook-results-and-evidence" },
+        ],
+      },
+      {
+        type: "category",
+        label: "Automate and Reference",
+        collapsed: false,
+        items: [
+          { type: "doc", label: "CI/CD and Automation", id: "rook-ci-cd" },
+          { type: "doc", label: "Command Reference", id: "rook-command-reference" },
+          { type: "doc", label: "Troubleshooting and FAQ", id: "rook-troubleshooting" },
+        ],
+      },
+    ],
+  ],
+
   KaneAISidebar: [
     {
       type: "link",
