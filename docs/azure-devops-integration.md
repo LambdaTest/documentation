@@ -47,6 +47,8 @@ Azure DevOps, previously known as **VSTS: Visual Studio Team Services** – A so
 
 The <BrandName /> Azure DevOps Integration allows you to create a work item directly in your project from <BrandName /> platform. Push a bug, epic, task, story to your respective project anytime, even in the middle of your test session. The fields populated by you when marking as a bug through <BrandName /> are displayed as information on the work item in Azure DevOps project for that testing instance.
 
+For teams, we recommend **sharing the Azure DevOps connection across your organization** — an admin connects once and everyone logs work items through it. See [Share your Azure DevOps integration across your organization](#share-your-azure-devops-integration-across-your-organization).
+
 :::info
 We recently added support for custom fields to our integration. From now on, all required custom fields in your Azure Devops account will be visible in your bug marking form on lambdatest.
 :::
@@ -61,74 +63,117 @@ We recently added support for custom fields to our integration. From now on, all
 
 **Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
-**Step 3:** Click on **'Add'** under the block that says 'Azure DevOps'.
+**Step 3:** Open the **Bug Tracker** category (or use the search bar), find **Azure DevOps**, and click **Connect**.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-1.webp').default} alt="azure-devops-integration" width="1350" height="621" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-catalog.webp').default} alt="Azure DevOps in the integrations catalog" width="1365" height="624" className="doc_img"/>
 
-**Step 4:** As you hit **"INSTALL"**, you will be directed to a page where you have to provide your **Azure DevOps URL**, your **Azure DevOps Email** & your **Azure DevOps Access Token**. By doing so you will grant <BrandName /> the access to your user-owned resources on Microsoft's Visual Studio Team Services account. This is necessary for authorization purpose between APIs of two different applications.
+**Step 4:** In the **Setup Azure DevOps** panel, choose your **Instance**:
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-282.webp').default} alt="azure-devops-integration" width="1345" height="622" className="doc_img"/>
+- **Cloud** — connect securely with **OAuth 2.0** (recommended).
+- **Self Hosted** — connect using a **Personal Access Token (PAT)**.
 
-> **Note:** For **Self-Hosted** Azure DevOps instance, you need to whitelisted IP address of your privately hosted projects. To get your IP whitelisted, please contact our customer support. 
+The integration needs these scopes: **Project and Team — Read** and **Work Items — Read & Write**.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-3.webp').default} alt="azure-devops-integration" width="1891" height="705" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-instance.webp').default} alt="Setup Azure DevOps — choose instance" width="1365" height="624" className="doc_img"/>
 
----
-* **What is my Azure DevOps URL?**
+:::note
+For a Cloud instance, make sure **Third-party application access via OAuth** hasn't been disabled by your organization's admin (under `https://dev.azure.com/{your-org-name}/_settings/organizationPolicy`).
+:::
 
-**Azure DevOps URL** would be the domain name. Log into your Azure DevOps account and you will find it under your organization.
- ---
+**Step 5:** For a **Cloud** instance, click **Install** and grant permission to <BrandName /> when prompted (**Allow**). Then **select your organization** from the dropdown and click **Install**.
+
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-organization.webp').default} alt="Select your Azure DevOps organization" width="1365" height="624" className="doc_img"/>
+
+**Step 6:** The connection begins setting up. You'll see **Integration in progress** while <BrandName /> completes the setup, and you'll get a confirmation once it's ready.
+
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-inprogress.webp').default} alt="Azure DevOps integration in progress" width="1365" height="624" className="doc_img"/>
+
+### Self-Hosted Azure DevOps (Personal Access Token)
+
+If you chose **Self Hosted**, you'll connect using your **Azure DevOps URL** and a **Personal Access Token**. By doing so you grant <BrandName /> access to your user-owned resources on your Azure DevOps account — this is required for authorization between the two applications.
+
+> **Note:** For a Self-Hosted Azure DevOps instance, you need to whitelist the IP addresses shown in the setup panel for your privately hosted projects. If you need help, please contact our customer support.
+
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-setup-selfhosted.webp').default} alt="Setup Azure DevOps — Self Hosted (URL + access token)" width="1365" height="624" className="doc_img"/>
+
+**What is my Azure DevOps URL?**
+
+Your **Azure DevOps URL** is the domain name. Log into your Azure DevOps account and you'll find it under your organization.
+
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-286.webp').default} alt="azure-devops-integration" width="1919" height="800" className="doc_img"/>
 
-**Step 5:** If you are already inside a project in your Azure DevOps account, then you will find it in the URL. For example: https://dev.azure.com/ **salmank0856**
+If you are already inside a project in your Azure DevOps account, you'll find it in the URL. For example: `https://dev.azure.com/`**salmank0856**
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-284.webp').default} alt="azure-devops-integration" width="1919" height="987" className="doc_img"/>
 
----
-* **What is my Azure DevOps Email?**
+**What is my Azure DevOps Access Token?**
 
-In this field you need to specify the **email id** through which you sign into your **Azure DevOps account**.
-* **What is my Azure DevOps Access Token?**
----
-You can generate your Azure DevOps access token under **'Personal access tokens'** by clicking on setiings icon next to top right corner where your user avatar is displayed and click on **'+ New Token'**.
+You can generate your Azure DevOps access token under **'Personal access tokens'** — click the settings icon near the top-right corner (next to your user avatar) and click **'+ New Token'**.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-277.webp').default} alt="azure-devops-integration" width="1364" height="623" className="doc_img"/>
 
----
+**What are access tokens?**
 
-* **What are access tokens?**
-
-Access tokens are strings with authorization key required to access an API. They are issued to the client server and are usually opaque. They are used for requesting access to protected, user-specific resources. Access tokens are vital from a security point of view & can be generated in different formats, depending upon security requirements specified on the resource server.
-
----
+Access tokens are strings with an authorization key required to access an API. They are issued to the client server and are usually opaque. They are used for requesting access to protected, user-specific resources. Access tokens are vital from a security point of view & can be generated in different formats, depending upon the security requirements specified on the resource server.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-278.webp').default} alt="azure-devops-integration" width="1365" height="648" className="doc_img"/>
 
-**Step 6:** After you click on **'+ New Token'**, mention a **name** for the access token. Define the **scopes** for authorizing access. By doing so, you will be providing the level of access you want to provide to any 3rd party API. For TestMu AI integration with Azure DevOps, select the radio button for **'Full access'** & click on **'Create'**.
+After you click on **'+ New Token'**, give the access token a **name** and define the **scopes** for authorizing access — the level of access you grant to any 3rd party API. For <BrandName /> integration with Azure DevOps, select **'Full access'** & click on **'Create'**.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-279.webp').default} alt="azure-devops-integration" width="1365" height="650" className="doc_img"/>
 
-* A token is generated, copy the token to your clipboard and make sure to store it safely with you.
+A token is generated — copy it to your clipboard and make sure to store it safely.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-280.webp').default} alt="azure-devops-integration" width="1350" height="544" className="doc_img"/>
 
-Access tokens are just as important as your passwords and shall not be misplaced into wrong hands. If by any chance you lose it in future or it gets shared to someone whom you don't trust, then you can always revoke the token and create a new one.
-
-For revoking a token, click on any personal access token and hit the **'Revoke'**.
+Access tokens are just as important as your passwords and should not be misplaced into the wrong hands. If you lose it in future or it gets shared with someone you don't trust, you can always revoke the token and create a new one. To revoke a token, click on any personal access token and hit **'Revoke'**.
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-281.webp').default} alt="azure-devops-integration" width="1365" height="537" className="doc_img"/>
 
-**Step 7:** Enter your Azure DevOps URL, E-mail and Access token in the provided field and & press **Install**.
-
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-282.webp').default} alt="azure-devops-integration" width="1345" height="622" className="doc_img"/>
-
-**Step 8:** Now, you will notice a success message as below.
-
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-275.webp').default} alt="azure-devops-integration" width="311" height="96" className="doc_img"/>
+Finally, enter your Azure DevOps URL and access token into the setup panel and click **Install**.
 
 That's it! Go to Integrations again and you will be able to see Azure DevOps under 'My Integrations' section. You can now experience bug logging in a fly from any of your running test session in TestMu AI to your project directly by a single click.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-13.webp').default} alt="azure-devops-integration" width="1347" height="623" className="doc_img"/>
+## Share Your Azure DevOps Integration Across Your Organization
+
+Instead of every teammate connecting their own Azure DevOps, an admin shares one connection with the entire organization. Members then create work items through it without installing or authenticating Azure DevOps themselves.
+
+:::tip Recommended for teams
+One admin-owned connection means consistent projects for everyone, no repeated setup, and a single place to manage access. Members can still install their own connection if they need one.
+:::
+
+:::note Who can share and manage a connection
+- Installing and managing an integration requires **Admin** access.
+- Only the **admin who installed** the connection (the owner) can manage it — share, unshare, re-sync, reconnect, or disconnect.
+- A connection can be **shared only once**. Sharing applies to the **whole organization**, not to individual members, and there is a single shared connection at a time.
+- If a member installs **their own** Azure DevOps connection on top of a shared one, their personal connection takes **priority** for them.
+:::
+
+**Step 1:** On the **Integrations** page, find your connected Azure DevOps card under **My Integrations**. Click the ellipsis (**•••**) and select **Share**.
+
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-share-menu.webp').default} alt="Share Azure DevOps integration"  className="doc_img" width="1365" height="624"/>
+
+**Step 2:** You'll see an **Azure DevOps plugin shared successfully** confirmation. The card now shows a **Shared** badge and also appears under **Shared Integrations** marked **Shared by You**.
+
+**What your teammates see:** the shared Azure DevOps connection shows up in their **Shared Integrations** list as **Shared by \<admin name>**, with an **Info** button to view its details. Members can use the connection but can't manage it — that stays with the admin owner.
+
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-member-shared.webp').default} alt="Shared Azure DevOps integration as seen by a member"  className="doc_img" width="1365" height="624"/>
+
+**To stop sharing:** open the **•••** menu on the Azure DevOps card and select **Unshare**. You'll see an **Azure DevOps plugin unshared successfully** message, and members will no longer have access to the connection.
+
+## View Connection Details (Info)
+
+To review a connection's health and setup, open the **•••** menu and select **Info** (members can use the **Info** button on the shared card). The connection drawer shows:
+
+- **Connection** — who connected it, the connected Azure DevOps account, organization/site, auth method, and deployment (Azure DevOps Services or Server).
+- **Health & Activity** — access-token lifecycle (with the last refresh time), installed-on date, and last-synced time.
+- **Connected projects** — the Azure DevOps projects available through this connection.
+
+A badge at the top shows whether it's a **Personal** connection (your own install) or an **Organization** connection (a shared one).
+
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-personal.webp').default} alt="Personal Azure DevOps connection details"  className="doc_img" width="1365" height="624"/>
+
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-info-organization.webp').default} alt="Organization (shared) Azure DevOps connection details"  className="doc_img" width="1365" height="624"/>
 
 ## How To Log Your First Bug Through Azure DevOps Integration?
 
@@ -186,9 +231,17 @@ That's it! Go to Integrations again and you will be able to see Azure DevOps und
 
 **Step 2:** Select '**Settings**' from the left navigation menu bar & click on '**Integrations**'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
-**Step 3:** Under '**My Integrations**',you'll now see '**Azure Devops**'. Click on '**REMOVE**'. You can find the remove button right next to **'Azure DevOps'.**
+**Step 3:** Under **My Integrations**, find the **Azure DevOps** card. Click the ellipsis (**•••**) and select **Remove**.
 
-<img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-21.webp').default} alt="azure-devops-integration" width="1347" height="623" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-remove-menu.webp').default} alt="Remove Azure DevOps integration" width="1365" height="624" className="doc_img"/>
+
+**Step 4:** You'll see a **You have successfully uninstalled Azure DevOps** confirmation, and the Azure DevOps card returns to the **Connect** state.
+
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/ado-remove-success.webp').default} alt="Azure DevOps uninstalled successfully" width="1365" height="624" className="doc_img"/>
+
+:::note
+If the connection is currently shared with your organization, **Unshare** it first. Only the admin who installed the connection can remove it.
+:::
 
 ---
 
