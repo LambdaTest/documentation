@@ -2,7 +2,7 @@
 id: python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid
 title: Selenium With Python
 sidebar_label: Python
-description: Run Python Selenium test scripts on TestMu AI cloud grid with 3000+ browser and OS combinations. Step-by-step setup guide included.
+description: Run Python Selenium test scripts on TestMu AI cloud grid with 10,000+ browser/device combinations. Covers unittest, pytest, Robot Framework, and Behave.
 keywords:
 - python selenium cloud testing
 - run python selenium tests online
@@ -49,15 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-Run Python tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
-
-:::tip Sample repo
-All the code used in this guide is available in the sample repository.
-
-<div style={{display: 'flex', justifyContent: 'flex-start'}}>
-<a href="https://github.com/LambdaTest/python-selenium-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-</div>
-:::
+Run your Python Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
 ## Prerequisites
 ---

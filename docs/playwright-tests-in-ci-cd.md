@@ -3,7 +3,7 @@ id: playwright-cicd
 title: Running Playwright Tests In CI/CD
 hide_title: true
 sidebar_label: Playwright Testing In CI/CD
-description: Learn how to perform Playwright testing through CI/CD across 40+ browser versions on the TestMu AI platform.
+description: Learn how to perform Playwright testing through CI/CD across multiple browser versions on the TestMu AI platform.
 keywords:
  -  playwright testing 
   - playwright e2e testing 
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Playwright Testing With CI/CD
 ***
 
-<BrandName /> integrates with a variety of CI/CD solutions to help you speed up your go-to-market launch by automating your delivery pipeline. Similarly, you can run Playwright tests in CI/CD across 40+ browsers in the cloud, reducing lead time by multiple folds and shipping quality builds faster.
+<BrandName /> integrates with a variety of CI/CD solutions to help you speed up your go-to-market launch by automating your delivery pipeline. Similarly, you can run Playwright tests in CI/CD across real browsers in the cloud, reducing lead time by multiple folds and shipping quality builds faster.
 
 Running Playwright tests through CI/CD pipeline involves three stages:
 

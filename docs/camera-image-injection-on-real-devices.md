@@ -66,7 +66,7 @@ The Image and Video Injection processes leverages **Sensor Instrumentation** tec
 
 ### Key Features
 
-- Extensive device compatibility (10000+ real devices)
+- Extensive device compatibility (5000+ real devices)
 - Comprehensive support for image and video based functionalities
 - Effortless integration with existing test environments
 

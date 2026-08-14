@@ -3,7 +3,7 @@ id: accelq-integration
 title: ACCELQ Integration
 hide_title: true
 sidebar_label: ACCELQ
-description: Accelerate your end-to-end digital testing journey with TestMu AI and ACCELQ.  Automate your web and mobile apps across 3000+ real browsers, devices and operating system combinations.
+description: Automate web and mobile apps across 5000+ real devices and 10,000+ browser/device combinations with TestMu AI and ACCELQ for end-to-end testing.
 keywords:
   - testmu ai integration with accelq
   - testmu ai and accelq integration 
@@ -46,7 +46,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 ACCELQ is an AI Native Codeless automation testing and management platform. It enables you automate web, mobile, API, database, and packaged applications.
 
-By integrating <BrandName /> with ACCELQ, you can perform web and mobile app automation on an online device farm of 3000+ real browsers, devices, and OS combinations, and accelerate your end-to-end digital testing efforts.
+By integrating <BrandName /> with ACCELQ, you can perform web and mobile app automation on an online device farm of 5000+ real devices and 10,000+ browser/device combinations, and accelerate your end-to-end digital testing efforts.
 
 ## Prerequisites
 ---

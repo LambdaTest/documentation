@@ -2,7 +2,7 @@
 id: run-parallel-tests-with-selenium
 title: Run Parallel Tests With Selenium
 sidebar_label: Run Parallel Tests
-description: Run Selenium tests in parallel on the TestMu AI cloud grid to cut build times across 3000+ browser and OS combinations.
+description: Run Selenium tests in parallel on the TestMu AI cloud grid to cut build times across 10,000+ browser/device combinations.
 keywords:
   - selenium parallel testing
   - run tests in parallel

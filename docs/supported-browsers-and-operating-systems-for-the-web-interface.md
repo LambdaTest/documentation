@@ -45,7 +45,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-TestMu AI supports 3000+ browser and OS combinations for Selenium and Appium testing. Use `"latest"` as the browser version to always test on the most recent stable release.
+TestMu AI supports 10,000+ browser/device combinations for Selenium and Appium testing. Use `"latest"` as the browser version to always test on the most recent stable release.
 
 ## Desktop Browsers for Selenium
 ---

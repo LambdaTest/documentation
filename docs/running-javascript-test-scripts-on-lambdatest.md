@@ -49,15 +49,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 ---
 
-Run JavaScript Selenium tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
-
-:::tip Sample repo
-All the code used in this guide is available in the sample repository.
-
-<div style={{display: 'flex', justifyContent: 'flex-start'}}>
-<a href="https://github.com/LambdaTest/nodejs-selenium-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-</div>
-:::
+Run your JavaScript Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
 ## Prerequisites
 ---

@@ -46,7 +46,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. You can run tests in browsers, Node.js, and Deno on Linux, macOS, and Windows.
 
-<BrandName /> and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 3000+ real browsers and OS combinations.
+<BrandName /> and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 10,000+ browser/device combinations.
 
 ## Prerequisites
 ***

@@ -3,7 +3,7 @@ id: ruby-rspec
 title: Selenium With RSpec
 hide_title: false
 sidebar_label: RSpec
-description: Run RSpec Ruby Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
+description: Run RSpec Ruby Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.
 keywords:
   - rspec selenium grid setup
   - run rspec tests on cloud

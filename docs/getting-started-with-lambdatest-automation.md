@@ -2,7 +2,7 @@
 id: getting-started-with-lambdatest-automation
 title: Get Started With Selenium Testing
 sidebar_label: Overview
-description: Run Selenium tests on TestMu AI's cloud grid. 3000+ browser and OS combinations, parallel execution, video recordings, and built-in debugging.
+description: Run Selenium tests on TestMu AI's cloud grid. 10,000+ browser/device combinations, parallel execution, video recordings, and built-in debugging.
 keywords:
   - testmu ai automation
   - selenium automation grid
@@ -50,7 +50,7 @@ import DocCard from '@site/src/component/DocCard';
 ></script>
 ---
 
-Run your Selenium tests on TestMu AI's cloud grid of 3000+ browser and OS combinations. Point your tests at the hub URL, add capabilities, and get parallel execution, video recordings, logs, and screenshots for every session - no infrastructure to maintain.
+Run your Selenium tests on TestMu AI's cloud grid of 10,000+ browser/device combinations. Point your tests at the hub URL, add capabilities, and get parallel execution, video recordings, logs, and screenshots for every session - no infrastructure to maintain.
 
 
 ## Before You Begin

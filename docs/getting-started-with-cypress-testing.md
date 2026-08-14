@@ -3,7 +3,7 @@ id: getting-started-with-cypress-testing
 title: Getting Started With Cypress Testing On TestMu AI Platform
 sidebar_label: Run Your First Test
 hide_title: true
-description: In this documentation, learn how to perform end-to-end Cypress testing on the TestMu AI Automation Cloud across 40+ browser versions.
+description: In this documentation, learn how to perform end-to-end Cypress testing on the TestMu AI Automation Cloud across multiple browser versions.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide
@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA-friendly tool.
 
-Integrating <BrandName /> with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.
+Integrating <BrandName /> with Cypress allows you to perform Cypress testing across multiple browser versions on cloud.
 
 In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypress kitchen sink sample app to execute our tests. 
 

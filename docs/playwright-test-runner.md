@@ -3,7 +3,7 @@ id: playwright-playwrighttest
 title: Running Playwright Tests With Playwright Test Runner
 hide_title: true
 sidebar_label: Integrate With Playwright Test Runner
-description: Learn how to perform Playwright testing using Playwright test runner across 40+ browser versions on the TestMu AI platform.
+description: Learn how to perform Playwright testing using Playwright test runner across multiple browser versions on the TestMu AI platform.
 keywords:
  -  playwright testing with Playwright test runner
   - playwright e2e testing with Playwright test runner
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Playwright Test Runner is used for end-to-end automated testing of websites and web apps across all major browsers. You can run parallel tests, get context isolation out of the box, capture videos, screenshots, and other test artifacts on test failure, and use fixtures with Playwright test runner.
 
-<BrandName /> enables you to run Playwright tests with the Playwright test runner across 40+ real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the <BrandName /> platform using the Playwright test runner.
+<BrandName /> enables you to run Playwright tests with the Playwright test runner across real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the <BrandName /> platform using the Playwright test runner.
 
 ## Prerequisites
 ***
