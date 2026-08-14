@@ -3,7 +3,7 @@ id: puppeteer-pytest-pyppeteer
 title: Run Puppeteer Tests Using Pytest-Pyppeteer
 hide_title: true
 sidebar_label: Integrate With Pytest-Pyppeteer
-description: Learn how to integrate and run your Puppeteer tests using Pytest-Pyppeteer across 40+ browser versions on the TestMu AI platform.
+description: Learn how to integrate and run your Puppeteer tests using Pytest-Pyppeteer across multiple browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing with pyppeteer
   - pyppeteer
@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Puppeteer Testing With CodeceptJS
 * * *
 
-Learn how to run your Puppeteer tests with CodeceptJS across 40+ real browsers and operating systems on the <BrandName /> platform. 
+Learn how to run your Puppeteer tests with CodeceptJS across real browsers and operating systems on the <BrandName /> platform. 
 
 ## Prerequisites
 ***

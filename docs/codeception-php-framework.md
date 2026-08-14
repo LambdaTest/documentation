@@ -3,7 +3,7 @@ id: codeception-php-framework
 title: Selenium With Codeception
 hide_title: false
 sidebar_label: Codeception
-description: Run Codeception PHP Selenium tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
+description: Run Codeception PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.
 keywords:
   - codeception selenium grid setup
   - run codeception tests on cloud

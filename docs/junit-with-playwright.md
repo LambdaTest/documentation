@@ -50,7 +50,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 # JUnit with Playwright: Running Your First Test
 * * *
 
-Learn how to use Playwright with JUnit to automate web application testing across 50+ real browsers and operating systems on <BrandName /> cloud platform.
+Learn how to use Playwright with JUnit to automate web application testing across real browsers and operating systems on <BrandName /> cloud platform.
 
 
 ## Prerequisites

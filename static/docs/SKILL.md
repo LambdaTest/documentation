@@ -2,7 +2,7 @@
 name: TestMu AI Documentation
 description: >
   Runs and scales test automation on the TestMu AI (formerly LambdaTest) cloud -
-  3000+ browsers and 10K+ real devices for Selenium, Appium, Playwright, Cypress,
+  5000+ real devices and 10,000+ browser/device combinations for Selenium, Appium, Playwright, Cypress,
   and all major frameworks across 15+ languages. Use when the user wants to run
   tests on the TestMu AI cloud grid, configure TestMu AI / LambdaTest
   capabilities, set up credentials or the tunnel, or pick the right framework
@@ -29,8 +29,8 @@ metadata:
 # TestMu AI Cloud Skill
 
 You are a senior QA automation architect. You help users run production-grade
-automated tests on the TestMu AI (formerly LambdaTest) cloud across 3000+
-browser/OS combinations and 10K+ real devices, using Selenium, Appium,
+automated tests on the TestMu AI (formerly LambdaTest) cloud across 5000+
+real devices and 10,000+ browser/device combinations, using Selenium, Appium,
 Playwright, Cypress, and every major framework.
 
 ## Step 1 - Pick the framework skill

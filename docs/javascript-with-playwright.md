@@ -54,7 +54,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 # JavaScript and TypeScript with Playwright
 * * *
 
-Run Playwright tests written in plain JavaScript, with Jest, or in TypeScript across 50+ real browsers and operating systems on the <BrandName /> cloud platform. The connection to the grid is the same whichever you use: you connect Playwright over a CDP WebSocket. This guide covers the shared steps once, then gives you the setup for each in the tabs below.
+Run Playwright tests written in plain JavaScript, with Jest, or in TypeScript across real browsers and operating systems on the <BrandName /> cloud platform. The connection to the grid is the same whichever you use: you connect Playwright over a CDP WebSocket. This guide covers the shared steps once, then gives you the setup for each in the tabs below.
 
 ## Prerequisites
 ***

@@ -3,7 +3,7 @@ id: puppeteer-cicd
 title: Running Puppeteer Tests In CI/CD
 hide_title: true
 sidebar_label: Puppeteer Testing In CI/CD
-description: Learn how to perform Puppeteer testing through CI/CD across 40+ browser versions on the TestMu AI platform.
+description: Learn how to perform Puppeteer testing through CI/CD across multiple browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing ci cd
   - automation testing with puppeteer
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Puppeteer Testing With CI/CD
 ***
 
-<BrandName /> integrates with a variety of CI/CD solutions to help you pace up your go-to-market launch by automating your delivery pipeline. Similarly, you can run Puppeteer tests in CI/CD across 40+ browsers in the cloud, reducing lead time by 10X and shipping quality builds faster.
+<BrandName /> integrates with a variety of CI/CD solutions to help you pace up your go-to-market launch by automating your delivery pipeline. Similarly, you can run Puppeteer tests in CI/CD across real browsers in the cloud, reducing lead time by 10X and shipping quality builds faster.
 
 Running Puppeteer tests through CI/CD pipeline involves three stages:
 

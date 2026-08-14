@@ -3,7 +3,7 @@ id: playwright-testing-guide
 title: How To Run Playwright Tests On TestMu AI Platform
 hide_title: true
 sidebar_label: Run Your First Test
-description: Here you can learn how to run Playwright tests on the TestMu AI test automation platform on over 40+ browsers and operating systems.
+description: Here you can learn how to run Playwright tests on the TestMu AI test automation platform on real browsers and operating systems.
 keywords:
   - playwright testing
   - playwright e2e testing 
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 * * *
 Playwright is a Node.js library that uses a single API to automate Chromium, Firefox, and WebKit. It is designed to enable powerful, reliable, and efficient [automated browser testing](https://www.lambdatest.com/automated-browser-testing). Playwright can also automate Microsoft Edge since it is built on the open-source Chromium web framework.
 
-<BrandName /> allows you to run Playwright tests across 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Playwright testing on the <BrandName /> platform.
+<BrandName /> allows you to run Playwright tests across real browsers and operating system combinations. This guide will cover the basics of getting started with Playwright testing on the <BrandName /> platform.
 
 
 *You can run tests using Playwright versions **v1.15.0** to the latest.*
