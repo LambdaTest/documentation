@@ -149,6 +149,16 @@ store the order number as 'order_id'"
 | Always provide `--url` | Assume the agent knows where to start |
 | Split objectives with >15 steps | Cram 30 steps into one objective |
 
+## Objectives on Mobile
+
+Objectives are written the same way for a native mobile app as for the browser. The difference is what the run points at: a mobile run installs an **app you supply** with `--app`, so the objective describes app screens and controls rather than a URL.
+
+```bash
+kane-cli run "Sign in and open the account tab" --target simulator --app ./builds/MyApp.zip
+```
+
+Pointing a mobile run at a website is not supported yet. WebViews inside the app under test are handled. See [Mobile Testing](/support/docs/kane-cli-mobile/).
+
 ## Splitting Long Objectives
 
 Objectives with more than 15 steps drift and become unreliable. Split them into multiple runs.

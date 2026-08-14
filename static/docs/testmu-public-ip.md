@@ -2,18 +2,35 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+{/*
+Copy buttons on this page are injected at runtime — there is no markup for them here.
+Source: src/js/copy-ips.js + src/js/copy-ips.css, registered via clientModules in docusaurus.config.js.
+
+Behaviour:
+- Tables with ✅/❌ columns get a copy button per column header (copies only that column's
+ticked rows), plus a copy-all button on the first header cell.
+- All other tables get a single copy button next to their heading.
+Values are read from the rendered table at click time, so tables can be edited freely here —
+no IP list needs updating anywhere else.
+
+Constraints:
+- The script only runs on this page, gated by PATH_MATCH = /\/testmu-public-ip\/?$/ in copy-ips.js.
+If this page's slug changes, update that regex or the buttons silently stop appearing.
+- Values must look like an IP, CIDR, or hostname to be copied. Anything else is skipped with a
+console warning (see VALID_VALUE in copy-ips.js) — extend it before adding IPv6 or ranges.
+*/}
+
 **Note:** The IP addresses listed below are static Public IPs. If your application or network is protected by IP-based firewall rules, you can whitelist the relevant TestMu AI IP ranges to allow TestMu AI cloud devices to access your environment.
 
 These are the list of the IP ranges that you need to whitelist with respect to the specific TestMu AI products.
 
 Whitelist these Firewall IPs to allow TestMu AI cloud infrastructure to access your firewall-protected application or environment. Configure them as **inbound** allow rules.
 
-| Subnet Range | Real Time (Virtual Device)(Desktop & Mobile - Automation) | Real Time (Virtual Device)(Desktop & Mobile - Manual) | Real Device(Manual & Automation) |
+| Subnet Range | Desktop & Emulators &Simulators - Automation | Desktop & Emulators &Simulators (Real Time) | Real Device(Manual & Automation) |
 |--------------|----------------------------------------------|------------------------------------------|----------------------------------------|
 | **103.231.42.40/29** |  ✅  |  ❌  |  ✅  |
 | **103.231.79.40/29** |  ✅  |  ❌  |  ✅  |
 | **23.105.12.32/27** |  ✅  |  ✅  |  ❌  |
-| **23.106.34.192/26** |  ✅  |  ✅  |  ❌  |
 | **23.106.34.192/26** |  ✅  |  ✅  |  ❌  |
 | **209.58.137.40/29** |  ❌  |  ❌  |  ✅  |
 | **23.83.156.64/26** |  ✅  |  ✅  |  ❌  |

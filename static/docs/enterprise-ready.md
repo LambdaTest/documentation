@@ -239,7 +239,7 @@ TestMu AI is GDPR compliant and provides comprehensive data protection controls 
 
 **Documentation:**
 - [Data Retention Policy](/support/docs/data-retention-policy/)
-- [Privacy Policy](https://www.testmuai.com/legal/privacy)
+- [Privacy Policy](https://www.testmuai.com/legal/privacy/)
 - [Data Processing Agreement](https://www.testmuai.com/resources/LambdaTest_DPA_with_SCC_V2.4.pdf)
 
 ## Change Management
@@ -278,7 +278,7 @@ TestMu AI offers multiple product tiers designed for different organizational ne
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing)
+**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing/)
 
 ## Need More Information?
 

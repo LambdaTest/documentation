@@ -49,12 +49,13 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 Currently, Apple Pay manual testing in App Live is supported on these iOS real devices:
 
-| iOS Device   | iOS Version |
-|--------------|-------------|
-| iPhone 16    | 18          |
-| iPhone 15    | 17          |
-| iPhone 14    | 16          |
-| iPhone 13    | 15          |
+| iOS Device  | iOS Version |
+|-------------|-------------|
+| iPhone 17   | 26          |
+| iPhone 16   | 18          |
+| iPhone 15   | 17          |
+| iPhone 14   | 16          |
+| iPhone 13   | 15          |
 
 > We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
 
@@ -64,7 +65,7 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
 
 ### Step 1: Enable Apple Pay in Advanced Settings
 
-1. Open **App Live** and select your desired iOS device.
+1. Open **App Testing Live** or **Browser Testing Live** and select your desired iOS device.
 2. Navigate to **Advanced Settings**.
 3. Locate the **Apple Pay** toggle and enable it, and confirm the device selection accordingly.
    - ![Apple Pay Toggle](../assets/images/real-device-app-testing/Apple_Pay/Apple-Pay-Filter.png)
@@ -87,8 +88,7 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
 Within the App Live session, you can use Apple Pay via the **Assistive Touch** option. Simply click on Apple Pay, and you will be prompted to enter the device passcode (default is `123456`). Once the passcode is entered, you can complete a payment through Apple Pay, simulating a real user transaction.
 
 :::info
-- If the **Wallet** is not set up on the device, the **Apple Pay** option will not appear through **Assistive Touch**. Please ensure Wallet is configured before attempting to access Apple Pay.
-- Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session with the desired card.
+- Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session and continue adding your desired card.
 :::
 
 ---
@@ -118,5 +118,5 @@ To avoid this, first initiate the payment flow on a supported website or applica
 ## Additional Links
 
 - [Apple Pay Demo Website](https://developer.apple.com/apple-pay/sandbox-testing/)
-- [<BrandName /> App Live Overview](https://www.testmuai.com/app-live)
+- [<BrandName /> App Live Overview](https://www.testmuai.com/app-live/)
 - [iOS Assistive Touch Guide](https://support.apple.com/guide/iphone/assistive-touch-iph3e2e4157/ios)

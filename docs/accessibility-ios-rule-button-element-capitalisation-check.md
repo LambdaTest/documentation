@@ -1,6 +1,6 @@
 ---
 id: accessibility-ios-rule-button-element-capitalisation-check
-title: Button Element Capitalisation Check
+title: Button Element Capitalisation Check (iOS)
 sidebar_label: Button Element Capitalisation Check
 description: Rule-level Accessibility guidance for Button Element Capitalisation Check on iOS.
 slug: accessibility-ios-rule-button-element-capitalisation-check/

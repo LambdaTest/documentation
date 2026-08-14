@@ -1,6 +1,6 @@
 ---
 id: accessibility-android-rule-mismatched-label-text
-title: Mismatched Label Text
+title: Mismatched Label Text (Android)
 sidebar_label: Mismatched Label Text
 description: Rule-level Accessibility guidance for Mismatched Label Text on Android.
 slug: accessibility-android-rule-mismatched-label-text/

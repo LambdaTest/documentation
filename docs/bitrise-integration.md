@@ -53,7 +53,7 @@ Using <BrandName /> with Bitrise, you can effortlessly perform [Appium testing](
 ## Prerequisites
 ***
 
-1. Ensure you have access to <BrandName /> [real device cloud](https://www.testmuai.com/real-device-cloud). If not, please [contact sales](https://www.testmuai.com/contact-us).
+1. Ensure you have access to <BrandName /> [real device cloud](https://www.testmuai.com/real-device-cloud/). If not, please [contact sales](https://www.testmuai.com/contact-us/).
 
 2. A Bitrise account.
 

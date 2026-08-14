@@ -12,7 +12,7 @@ Download LT Browser For macOS
 
 Download LT Browser For Linux
 
-**Step 1:** To [capture full page screenshots](https://www.testmuai.com/full-page-screen-capture), navigate to the settings button from the top-left and click on the **'Screenshot Full Page'** button.
+**Step 1:** To [capture full page screenshots](https://www.testmuai.com/full-page-screen-capture/), navigate to the settings button from the top-left and click on the **'Screenshot Full Page'** button.
 
 **Step 2:** Click on the **'Screenshot'** icon.
 

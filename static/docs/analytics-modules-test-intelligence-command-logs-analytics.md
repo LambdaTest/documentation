@@ -9,7 +9,7 @@ TestMu AI Analytics help you intelligently analyze your test execution steps on 
 ### Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
 1. You should have a TestMu AI account. If you don't have one, you can sign up here.
-2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.testmuai.com/test-intelligence).
+2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.testmuai.com/test-intelligence/).
 3. Go to `Analytics` from the left navigation menu and create a new Dashboard by clicking on the `Create New Dashboard` button.
 4. Select the `Create Custom Dashboard` option from the `Create New Dashboard` dropdown.
 5. Select the `Command Logs` option from the `Analytics Modules` section.

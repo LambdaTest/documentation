@@ -49,7 +49,7 @@ For more information, refer to **[Real Time Testing documentation](/docs/getting
 
 **Step 1:** Launch your website that you want to test and click on TestMu AI icon.
 
-**Step 2:** Select the configurations on which you want to [generate screenshots](https://www.testmuai.com/full-page-screen-capture) and click on **'CAPTURE'**.
+**Step 2:** Select the configurations on which you want to [generate screenshots](https://www.testmuai.com/full-page-screen-capture/) and click on **'CAPTURE'**.
 
 You will be routed to TestMu AI Screenshot Console where your screenshots will be generated. You can perform multiple operation on the screenshots like download screenshots as a zipped file into your local machine, share the screenshots, perform one-click bug logging and even more. Visit [**TestMu AI Screenshot Testing documentation**](/docs/automated-screenshot-testing/) for more details.
 
@@ -67,7 +67,7 @@ To retest on the same configuration, select the desired configuration and you wi
 
 **Step 1**: Launch your website that you want to test and click on the TestMu AI icon. Select the configurations on which you want to generate screenshots. After that, click on **'Schedule Screenshot'**.
 
-**Step 2**: After clicking, a pop-up will appear. Enter the desired time, frequency and the day you want to [schedule a screenshot](https://www.testmuai.com/automated-screenshot-scheduler) and then click on **'Schedule'**.
+**Step 2**: After clicking, a pop-up will appear. Enter the desired time, frequency and the day you want to [schedule a screenshot](https://www.testmuai.com/automated-screenshot-scheduler/) and then click on **'Schedule'**.
 
 ## How To Perform Geolocation Testing
 

@@ -311,7 +311,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 
 **Documentation:**
 - [Data Retention Policy](/support/docs/data-retention-policy/)
-- [Privacy Policy](https://www.testmuai.com/legal/privacy)
+- [Privacy Policy](https://www.testmuai.com/legal/privacy/)
 - [Data Processing Agreement](https://www.testmuai.com/resources/LambdaTest_DPA_with_SCC_V2.4.pdf)
 
 ---
@@ -354,7 +354,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing)
+**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing/)
 
 ---
 

@@ -212,7 +212,7 @@ const DemoPopup = ({ show, open_modal, preselectedProductType, sub_source }) => 
 
             if (formdata.email && formdata.email.toLowerCase().endsWith('gmail.com')) {
                 window.sendAmplitudeEvents?.('Demo_Schedule_Gmail');
-                window.location.href = `https://www.testmuai.com/thank-you`;
+                window.location.href = `https://www.testmuai.com/thank-you/`;
                 return;
             }
 

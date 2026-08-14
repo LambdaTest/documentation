@@ -248,8 +248,8 @@ If you encounter issues not covered here:
 
 - Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 ## Additional Resources
 

@@ -19,6 +19,9 @@ keywords:
   - Select Regions
   - Floating Regions
   - Ignore Colors
+  - Element Based Anchoring
+  - PDF Regions
+  - PDF Visual Testing
 
 url: https://www.testmuai.com/support/docs/smartui-ignore-regions/
 slug: smartui-draw-on-ui/
@@ -58,7 +61,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Web applications often have dynamic elements that can cause unnecessary noise in your visual testing. Take a social media platform, for instance. The number of unread notifications displayed might change with each test run. While these variations are expected, you don't necessarily want them to trigger alerts as potential regressions.
 
-The SmartUI Annotation tool allows you to interact directly with your screenshots through detailed annotations. You can draw over screenshots, define regions with boxes, and choose to ignore or select these regions for current and future comparisons. With advanced features like **Ignore Colors**, **Floating Regions**, **Layout Regions**, and **Select Ignore**, you can handle even the most complex dynamic content scenarios.
+The SmartUI Annotation tool allows you to interact directly with your screenshots through detailed annotations. You can draw over screenshots, define regions with boxes, and choose to ignore or select these regions for current and future comparisons. With advanced features like **Ignore Colors**, **Floating Regions**, **Layout Regions**, **Select Ignore**, and **Element Based Anchoring** for multi-page PDFs and multi-variant web screenshots, you can handle even the most complex dynamic content scenarios.
 
 By utilizing ignored/selected regions, you can keep your test results focused on the truly important changes, streamlining your workflow and saving you time from chasing irrelevant discrepancies.
 
@@ -350,6 +353,112 @@ This is useful when you already know an area is dynamic at the moment you establ
 
 > **Tip:** Use a baseline region for content you already know is dynamic before the first comparison ever runs. For areas you discover later while reviewing a comparison, a normal region on that build is the simpler choice.
 
+## Element Based Anchoring <NewTag value="New" />
+
+When you draw a region and propagate it, the region normally keeps the coordinates you drew it at. The same content rarely sits at the same coordinates on the target: a PDF reflows, so a heading or footer lands slightly differently on each page, and a web page reflows across browsers and viewports, so the same element sits somewhere else in each variant. A region pinned to the coordinates you drew it at will not line up with it there.
+
+**Element based anchoring** changes what the region is attached to. Instead of remembering *where* you drew the box, SmartUI remembers *what* was inside it, captures that content as an anchor, and then locates the same content on every target. The region is placed wherever the anchor is actually found, and it is sized from the content that was matched rather than copied from the box you drew.
+
+Anchoring works on **both PDF and web comparisons**. The mechanics of the match differ by source:
+
+- **PDF comparisons** anchor on the text under the box, and the region propagates across the pages of the document. Because the match reads the text itself, the font family, size, weight and style of the anchored content do not affect whether it is found.
+- **Web comparisons** anchor on the DOM elements under the box, scored on their path, classes, applied styles, id, size and tag, and the region propagates across the browser and viewport variants of the screenshot.
+
+> **Note:** Anchoring is not offered on real device and app screenshots, which carry neither a DOM nor an extractable document. On those the region propagates by coordinates as before.
+
+### The Problem It Solves
+
+Teams running visual tests on generated documents such as statements, invoices, policy packs and regulatory filings all hit the same wall. The document is reviewed page by page, and the parts of it that are genuinely dynamic (a generation timestamp, an account holder's name, a running header) sit in a slightly different place on every page because the content above them reflows. Web suites hit the same wall along a different axis: a region drawn on Chrome at one viewport lands beside its element on Firefox, or on a narrower viewport where the page has reflowed.
+
+Without anchoring, there are only two ways to handle that, and both cost you something:
+
+| Approach | What it costs |
+| --- | --- |
+| Draw the region once and propagate it | The box lands on the coordinates from the page or variant you drew it on, so elsewhere it sits beside the content instead of on it |
+| Redraw the region manually on every page or variant | Minutes per document or per screenshot, repeated every time the template or the layout changes, and it does not survive a new document with a different page count |
+
+For a 40-page statement, that is 40 manual regions to place and re-place. Teams either spend the time, or they stop annotating and accept the noise.
+
+### Product Impact
+
+- **Annotation effort drops from per-page to per-document, and from per-variant to per-screenshot.** One region, drawn once, covers every page of the PDF or every browser and viewport variant of the screenshot. The saving scales with the number of targets, so it is largest on exactly the long documents and wide browser matrices that were most painful before.
+- **Fewer false positives to triage.** A region that actually sits on the dynamic content suppresses the noise it was meant to suppress, so reviewers spend their time on real changes rather than dismissing the same reflow difference on every page.
+- **Fewer missed regressions.** When a mispositioned region covers the wrong part of the page, it can hide a genuine change while leaving the intended one exposed. Anchoring to content keeps the region on the thing you chose.
+- **Annotations survive layout changes.** Because the region is tied to content rather than coordinates, a template or layout change that moves the anchored element does not require the region to be redrawn.
+- **Consistent results across renditions.** On PDFs, matching ignores font family, size, weight and style, so the same annotation behaves the same way across documents rendered with different typography.
+
+### When to Use
+
+- Anchoring a company name, report title or letterhead in a statement whose header shifts from page to page
+- Keeping an ignore region on a running footer or document strap line across a long PDF
+- Annotating a repeated label in an invoice, policy document or financial statement where the vertical position drifts as content reflows
+- Propagating a region across browsers or viewports where the element sits at a different position in each variant
+- Any multi-page PDF or multi-variant screenshot where you would otherwise redraw the same region target by target
+
+### How to Use
+
+**Step 1:** Open a comparison and click on the **Actions** button (annotation icon) to open the annotation tool.
+
+**Step 2:** Draw a box around the content you want to anchor to, and pick the region type you want (for example, **Ignore Region** or **Floating Region**).
+
+**Step 3:** Under **Apply region to**, choose the propagation scope for the source you are annotating, then tick the **Element based anchoring** checkbox.
+
+- On a **PDF** comparison, choose **Apply to all the pages of this PDF**.
+- On a **web** comparison, choose **Apply to all variants**.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/elementbasedanchoring.png').default} alt="Element based anchoring with search area in the region settings panel" width="1180" height="511" className='doc_img'/>
+
+> **Note:** Page level propagation on PDFs is available in **Omni projects**. In a standard PDF project a region applies to the page it was drawn on, so there is nothing to propagate it across.
+
+**Step 4:** Set the **Search area** value in pixels. This is how far out from the drawn box SmartUI will look for the anchor content on each of the other targets. The default is `50` px, and you can set any value between `0` and `500` px.
+
+**Step 5:** Click **Save**, then confirm with **Apply Changes**. SmartUI resolves the anchor on every target and reports how many of them the region was applied to.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/elementanchoring_sourcepage.png').default} alt="Anchored regions on the page the region was drawn on" width="1180" height="479" className='doc_img'/>
+
+**What Happens:** On each target, SmartUI looks for the anchor content within the search area around the drawn position and places the region where that content is found. Open any other page of the PDF, or any other variant of the screenshot, to see the region sitting on the same content at that target's own position.
+
+> **Important:** Where the anchor cannot be found within the search area, the region is **not placed on that target at all**, and the result is reported back to you. SmartUI never falls back to stamping the box at the drawn coordinates, because a mask in the wrong place hides real differences.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofelementanchoring.png').default} alt="Anchored region placed on the same content on a later page of the PDF" width="1180" height="511" className='doc_img'/>
+
+### Choosing a Search Area
+
+The search area controls how far the anchor content is allowed to have moved and still be matched on a given target.
+
+- **Smaller values** keep the match close to where you drew the region. Use these when the content only shifts slightly between targets, or when similar content appears elsewhere and you want to be sure the nearest occurrence is the one that is used.
+- **Larger values** let SmartUI find the anchor further from the drawn position. Use these when the content moves further down or across the page as the document or layout reflows.
+- **`0`** turns the search off. SmartUI looks for the anchored content only inside the drawn box itself: if it is there, the region is placed, and if it is not, the region is not placed on that target. This is **not** the same as a region without element based anchoring, which is copied to the drawn coordinates on every target without checking what is there.
+
+> **Tip:** Start with the default of `50` px. If a target's content sits further from the drawn position than that, raise the search area and apply the region again.
+
+### Propagating Regions on PDFs and Websites
+
+Regions propagate on both PDF and website comparisons, but the axis they propagate along is different, so the control you use is different too.
+
+| | PDF comparisons | Website comparisons | App and real device comparisons |
+| --- | --- | --- | --- |
+| What a region propagates across | The pages of the PDF | The browser and viewport variants of the screenshot | The variants of the screenshot |
+| Scope control | **Apply to all the pages of this PDF** | **Apply to all variants** | **Apply to all variants** |
+| Available region types | Ignore, Select, Floating, Ignore Colors, Layout | Ignore, Select, Floating, Ignore Colors, Layout | Ignore, Select, Floating, Ignore Colors |
+| Element based anchoring | Available, on every region type | Available, on every region type | Not offered |
+| What the anchor matches on | The text under the drawn box | The DOM elements under the drawn box | Not applicable |
+| Project type required | Omni, for page level propagation | Any | Any |
+
+**On a PDF**, the same document flows across many pages, so the same element lands at a different position on each one. Tick the checkbox, set a search area, and the region is placed on the anchored content page by page.
+
+**On a website screenshot**, a region propagates across the browser and viewport variants of that screenshot instead. Draw the region, choose [**Apply to all variants**](/support/docs/smartui-draw-on-ui/#applying-annotations), and tick **Element based anchoring** so that it lands on its element in each variant rather than at the coordinates from the variant you drew it on. Each region carries its own scope, so applying one region to all variants leaves your other annotations untouched.
+
+> **Note:** Anchoring on web reads the DOM element data recorded alongside the screenshot, the same data that [Layout Regions](/support/docs/smartui-layout-regions/#dom-recording-requirement-for-web-comparisons) use. A build made from an uploaded image carries no DOM, so there is nothing to anchor to. PDF comparisons are not affected, since they read the structure out of the document itself.
+
+> **Note:** In an [Omni project](/support/docs/smartui-omni-projects/), where PDF, website, app, Figma, Storybook and image sources all co-exist in one project, both propagation controls are available in the same place. The one you see for a given comparison follows the source of the screenshot you are annotating: PDF artifacts offer **Apply to all the pages of this PDF**, and website and app artifacts offer **Apply to all variants**.
+
+### Example
+
+A six-page quarterly statement where the company name in the header sits at a slightly different position on every page. Draw an ignore region around the company name on page 1, choose **Apply to all the pages of this PDF**, tick **Element based anchoring**, and the region lands on the company name on each page rather than on the blank space where page 1's header used to be.
+
+The web equivalent is a cookie banner or a promo strip that sits at a different height on Chrome and Firefox, or at a different position once the page reflows on a narrow viewport. Draw the ignore region on one variant, choose **Apply to all variants** with **Element based anchoring**, and it lands on the banner in each variant.
+
 ## Managing Annotations
 
 Once you've created annotations, you can view, edit, and delete them as needed.
@@ -385,9 +494,11 @@ You can always edit or delete pre-configured areas or add new ones according to 
 
 **Step 1:** Click on the **Actions** button (annotation icon).
 
-**Step 2:** Click on the annotation box you want to delete, or click **Delete All** to remove all annotations.
+**Step 2:** Click on the annotation box you want to delete, then remove it with the `Delete` or `Backspace` key.
 
 **Step 3:** Click on the **Save** button to confirm deletion.
+
+> **Note:** Annotations are deleted one at a time. There is no control that removes every annotation on a screenshot in a single action, so repeat the steps above for each box you want to remove.
 
 > **Note:** Deleting annotations will trigger a re-run of the comparison, and the previously ignored/selected areas will be included in future comparisons.
 

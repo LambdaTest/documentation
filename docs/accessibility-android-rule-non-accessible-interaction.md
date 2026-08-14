@@ -1,6 +1,6 @@
 ---
 id: accessibility-android-rule-non-accessible-interaction
-title: Non-accessible Interaction
+title: Non-accessible Interaction (Android)
 sidebar_label: Non-accessible Interaction
 description: Rule-level Accessibility guidance for Non-accessible Interaction on Android.
 slug: accessibility-android-rule-non-accessible-interaction/

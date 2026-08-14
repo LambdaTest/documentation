@@ -1,6 +1,6 @@
 ---
 id: accessibility-android-rule-misplaced-field-label
-title: Misplaced Field Label
+title: Misplaced Field Label (Android)
 sidebar_label: Misplaced Field Label
 description: Rule-level Accessibility guidance for Misplaced Field Label on Android.
 slug: accessibility-android-rule-misplaced-field-label/
