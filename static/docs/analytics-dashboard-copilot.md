@@ -2,66 +2,131 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The AI CoPilot Dashboard is an innovative feature designed to revolutionize the way you analyze and gain insights from your data. By leveraging the power of artificial intelligence, the dashboard provides intelligent recommendations, insights, and predictions tailored to your specific data, enabling you to make data-driven decisions faster than ever before.
+AI CoPilot lets you work with your TestMu AI Analytics dashboards in plain language. Ask it what your test data is telling you, and — with the widget builder — describe the visualization you want and get a working widget back, refined through conversation.
 
 ## Prerequisites
 
-To access and utilize the full potential of the AI CoPilot Dashboard, ensure that you meet the following requirements:
+1. **TestMu AI Paid Account**: An active TestMu AI paid account with AI features enabled for your organization. To get access, contact [support@testmuai.com](mailto:support@testmuai.com).
 
-1. **TestMu AI Paid Account**: You must have an active TestMu AI paid account to unlock the AI CoPilot Dashboard feature, please contact our support team at [support@testmuai.com](mailto:support@testmuai.com).
+This feature is exclusively available to our valued paid users. Users with the **Guest** role cannot open CoPilot.
 
-This feature is exclusively available to our valued paid users.
+2. **Data and Dashboard Setup**: CoPilot works against the data in your account and the widgets on the dashboard you open it from. To learn about widgets and dashboards, see the [Analytics Widgets](/docs/analytics-widgets/) documentation.
 
-2. **Data and Dashboard Setup**: To maximize the benefits of the AI CoPilot Dashboard, ensure that you have relevant data and a well-structured dashboard created with the necessary widgets in your account. The AI CoPilot relies on the existing data and dashboard configuration to generate accurate and meaningful insights.
+## Opening AI CoPilot
 
-To know about the widgets and how to create a dashboard, refer to the [Analytics Widgets](/docs/analytics-widgets/) documentation.
+1. **Login**: Sign in to your TestMu AI account.
+2. **Navigate to Insights**: From the left navigation menu, click **Insights**.
+3. **Select or Create Dashboard**: Open the dashboard you want to work on.
+4. **Launch AI CoPilot**: Click the **CoPilot** button in the dashboard action bar, next to **Add Widget**. CoPilot opens as a side panel beside the dashboard.
+5. **Start a conversation**: Type your question or a description of the widget you want.
 
-## Accessing the AI CoPilot Dashboard
+## Analyzing a Dashboard with CoPilot
 
-Follow these step-by-step instructions to access the AI CoPilot Dashboard:
+Ask CoPilot about the data already on your dashboard and it answers in natural language — no configuration, no query syntax.
 
-1. **Login**: Sign in to your TestMu AI account using your registered credentials.
+- **Natural language queries**: Ask questions the way you would ask a teammate, such as *"Why did the pass rate drop this week?"*
+- **Trend and comparative analysis**: Surface patterns over time, or compare metrics, environments and time periods.
+- **Widget-aware answers**: CoPilot reads the data behind the custom widgets on the dashboard, so answers stay grounded in what you are looking at.
 
-2. **Navigate to Insights**: From the left navigation menu, locate and click on the "Insights" section to access the analytics and dashboard features.
+CoPilot can read the data behind **custom widgets**. For prebuilt module widgets it can see that the widget exists, but not the data inside it.
 
-3. **Select or Create Dashboard**: Choose the desired dashboard you want to analyze using the AI CoPilot. If you haven't created a dashboard yet, take a moment to set one up with the required widgets and data.
+## Building Widgets with CoPilot
 
-4. **Launch AI CoPilot**: Once you have selected the dashboard, click on the "AI CoPilot" button located at the top right corner of the dashboard options. This action will initiate the AI CoPilot feature for the selected dashboard.
+Building a widget normally means knowing the schema — pick a product, a field, an aggregation and a visualization. With the CoPilot widget builder you describe the question you want answered, and CoPilot assembles the widget configuration for you using the same [custom widget](/docs/dashboards-custom-widgets/) engine.
 
-5. **Start Analyzing**: Begin exploring your data and gaining valuable insights by asking questions or entering queries in natural language. The AI CoPilot is designed to understand and interpret your input, providing relevant recommendations and insights based on your data.
+This capability is in **beta**. Always verify a generated widget against your data before relying on it.
 
-## Key Features of AI CoPilot
+### Describe the widget you want
 
-The AI CoPilot Dashboard offers a wide range of powerful features to enhance your data analysis experience:
+With CoPilot open, type what you want in the composer, for example:
 
-1. **Natural Language Query**: Communicate with the AI CoPilot using natural language. Ask questions, seek clarifications, and express your data analysis requirements in a conversational manner, just as you would with a human expert.
+- `Show test status broken down by operating system`
+- `Which browsers are dragging the pass rate down?`
+- `Add a table of the flakiest tests`
+- `Show run volume over time`
 
-2. **Intelligent Recommendations**: Benefit from data-driven recommendations generated by the AI CoPilot. These recommendations are based on patterns, trends, and insights identified within your data, helping you make informed decisions and uncover hidden opportunities.
+If the dashboard is empty, CoPilot shows a few starter prompts matched to your data — click one to use it.
 
-3. **Actionable Insights**: Gain valuable insights derived from your data through the AI CoPilot's advanced analytics capabilities. These insights provide a deeper understanding of your data, enabling you to identify key drivers, anomalies, and areas for improvement.
+### Review the proposal before it is added
 
-4. **Predictive Analytics**: Harness the predictive power of the AI CoPilot to forecast future trends and outcomes based on historical data patterns. By leveraging machine learning algorithms, the AI CoPilot helps you anticipate potential challenges and make proactive decisions.
+CoPilot never edits your dashboard on its own. Each turn returns a **proposal card** containing:
 
-5. **Trend Analysis**: Identify and visualize trends within your data using the AI CoPilot's trend analysis feature. Uncover patterns, seasonality, and significant changes over time, empowering you to adapt your strategies accordingly.
+- A **live preview** of the widget rendered with your real data.
+- A **What changes** summary explaining the configuration it chose.
+- Any **assumptions** it had to make, shown as `term → mapping (assumed)`.
 
-6. **Comparative Analysis**: Conduct comprehensive comparisons between different metrics, segments, or time periods using the AI CoPilot's comparison capabilities. Gain insights into performance variations, identify outliers, and benchmark your data against relevant industry standards.
+Choose what happens next:
 
-7. **Customization and Flexibility**: Tailor the AI CoPilot's analysis to your specific requirements. Customize data ranges, filter criteria, and visualization preferences to align with your unique business needs and objectives.
+| Action | What it does |
+|--------|--------------|
+| **Add to dashboard** | Saves the proposed widget to the dashboard |
+| **Replace** | Replaces the existing widget the proposal updates |
+| **Keep both** | Saves the new widget and keeps the original |
+| **Refine** | Pre-fills the composer so you can adjust the widget |
+| **Discard** | Drops the proposal; nothing is saved |
 
-8. **Seamless Collaboration**: Share insights, reports, and dashboards generated by the AI CoPilot with your team members effortlessly. Foster a culture of data-driven decision-making by enabling collaboration and knowledge sharing within your organization.
+If a turn proposes more than one widget, CoPilot asks you to pick which ones to keep.
 
-## AI CoPilot Dashboard Widgets
+### Refine through conversation
 
-All the widgets available within the dashboard's widget library are AI CoPilot enabled, allowing you to interact with them seamlessly. Simply ask questions or enter queries related to a specific widget, and the AI CoPilot will provide relevant insights and recommendations based on the data represented in that widget.
+A follow-up message edits the widget already on screen instead of starting over. Each refinement adds a **version** to the same proposal card, and you can step between `v1`, `v2` and so on to compare before deciding. On a replacement, a **Before / After** toggle shows the original widget beside the proposed one.
 
-## Rate Limit and Usage Guidelines
+CoPilot also suggests follow-up chips such as *split by browser*, *failed only*, *compare with last month* or *as a table* — click one instead of typing it.
 
-To ensure optimal performance and availability of the AI CoPilot Dashboard, we have implemented rate limits and usage guidelines. These measures are designed to prevent abuse, maintain system stability, and provide a consistent user experience for all customers.
+### Ask without changing anything
 
-We currently allow a maximum of **5 prompts per day** for each organization account. This limit is subject to change based on usage patterns and system load. If you exceed the daily query limit, you may experience temporary restrictions on AI CoPilot functionality until the limit resets.
+Prefix a message with a slash command to get an answer only — no widget is added or changed:
+
+| Command | Use it to |
+|---------|-----------|
+| `/summary` | Summarize what the dashboard is showing |
+| `/ask` | Ask a direct question about the data |
+| `/explain` | Explain a metric or a widget |
+| `/why` | Dig into the cause behind a change |
+
+Start typing `/` and press **Tab** to complete a command.
+
+### Working with generated widgets
+
+Widgets built by CoPilot are ordinary custom widgets — they are saved, edited, shared and scheduled through the same options as any other widget. Two things mark them out:
+
+- An **AI** badge on the widget header, with the tooltip *Built with CoPilot*.
+- **Configure with AI** in the widget's three-dot menu, which reopens CoPilot with the composer pre-filled to change that widget.
+
+### Supported products and visualizations
+
+CoPilot builds widgets for **Web Automation** (the default), **App Automation**, **HyperExecute**, **Real Time Testing**, **Real Device Testing**, **Smart UI Testing**, **Accessibility** and **Test Manager**. If your request belongs to a different product than the one in use, CoPilot switches to it and rebuilds.
+
+Supported visualizations are line chart, bar chart (including stacked and grouped), area chart, pie chart, gauge chart, heatmap, table and billboard.
+
+### What CoPilot cannot do
+
+- Modify or delete widgets that were not built by CoPilot.
+- Export, download, email or schedule a report or CSV.
+- Read any data outside the dashboard you opened it from, or connect an external data source.
+
+Your organization's data scoping and field validation are always enforced on the server. CoPilot can only build on data you already have access to.
+
+## Credits and Usage Guidelines
+
+CoPilot requests consume **AI credits** from your organization's balance.
+
+- Each request costs a minimum of **5 AI credits**, so you need at least 5 credits available to send one.
+- The panel shows the credits used by each turn and a running total for the conversation.
+- A single turn proposes at most **4 widgets**.
+- CoPilot considers up to the **last 12 turns** of the conversation for context. On a dashboard with many widgets, the oldest widget data may not fit in context — CoPilot tells you when that happens.
+- The conversation transcript is stored in your browser for **7 days** on that device only. Widgets you already added stay on the dashboard when you clear the chat.
+
+## Troubleshooting
+
+| Message | What to do |
+|---------|-----------|
+| *You need at least 5 AI credits for a CoPilot request.* | Top up your organization's AI credits. |
+| *AI features have been disabled for your organization.* | Contact your account admin or TestMu AI support to enable AI features. |
+| *Could not build that step. Try naming the metric and the breakdown you want.* | Rephrase with an explicit metric and grouping, for example *"count of failed tests by browser"*. |
+| *Could not load the field list for this product.* | The selected product has no data to build from. Switch products or run tests first. |
+| *Could not reach the widget service.* | A transient service issue — retry in a moment. |
 
 ## Support and Assistance
 
-We understand that adopting new technologies can sometimes be challenging. If you encounter any difficulties or have questions regarding the AI CoPilot Dashboard, our dedicated support team is here to assist you. Feel free to reach out to our [24/7 customer support](mailto:support@testmuai.com) for expert guidance and troubleshooting. We are committed to ensuring your success and providing you with the best possible experience while using the AI CoPilot Dashboard.
-
-Embrace the future of data analysis with the AI CoPilot Dashboard and unlock the full potential of your data. Start exploring, asking questions, and discovering valuable insights today!
+If you run into difficulties or have questions about AI CoPilot, reach out to our [24/7 customer support](mailto:support@testmuai.com) for guidance and troubleshooting.

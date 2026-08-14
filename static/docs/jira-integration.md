@@ -4,6 +4,8 @@
 
 The TestMu AI Jira integration helps you create issues in Jira directly from the TestMu AI platform itself. With simple one-click integration, you can push annotated issues to the project of your choice, assign them to the required teammate, and attach screenshots. You can do all that while in the middle of a test session in the TestMu AI platform. The fields populated by you when marking as a bug through TestMu AI are displayed as information on the Jira ticket for a testing instance.
 
+For teams, we recommend **sharing the Jira connection across your organization** — an admin connects once and everyone logs bugs through it. See [Share your Jira integration across your organization](#share-your-jira-integration-across-your-organization).
+
 **Jira Integration with TestMu AI, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.**
 
 ## How to Establish Integration with Jira from Your TestMu AI Account?
@@ -25,6 +27,41 @@ The TestMu AI Jira integration helps you create issues in Jira directly from the
 **Step 8:** When you click on the **Select and Proceed button**, you will be redirected to the below screen, where you have to select projects that you want to integrate and click on the **Integrate Projects and Install button.**
 
 That's it! Go to Integrations again, and you will be able to notice a **green tick** indicating that Jira is successfully **installed**. You are all set to experience **one-click bug logging** to share your issues directly from your TestMu AI account with our teammates on the Jira project.
+
+## Share Your Jira Integration Across Your Organization
+
+Instead of every teammate connecting their own Jira, an admin shares one connection with the entire organization. Members then create Jira issues through it without installing or authenticating Jira themselves.
+
+**Recommended for teams**
+One admin-owned connection means consistent projects for everyone, no repeated setup, and a single place to manage access. Members can still install their own connection if they need one.
+
+**Who can share and manage a connection**
+- Installing and managing an integration requires **Admin** access.
+- Only the **admin who installed** the connection (the owner) can manage it — share, unshare, re-sync, reconnect, or disconnect.
+- A connection can be **shared only once**. Sharing applies to the **whole organization**, not to individual members, and there is a single shared connection at a time.
+- If a member installs **their own** Jira connection on top of a shared one, their personal connection takes **priority** for them.
+
+**Step 1:** On the **Integrations** page, find your connected Jira card under **My Integrations**. Click the ellipsis (**•••**) and select **Share**.
+
+**Step 2:** You'll see a **Jira plugin shared successfully** confirmation. The card now shows a **Shared** badge and also appears under **Shared Integrations** marked **Shared by You**.
+
+**What your teammates see:** the shared Jira connection shows up in their **Shared Integrations** list as **Shared by \**, with an **Info** button to view its details. Members can use the connection but can't manage it — that stays with the admin owner.
+
+**To stop sharing:** open the **•••** menu on the Jira card and select **Unshare**. You'll see a **Jira plugin unshared successfully** message, and members will no longer have access to the connection.
+
+## View Connection Details (Info)
+
+To review a connection's health and setup, open the **•••** menu and select **Info** (members can use the **Info** button on the shared card). The connection drawer shows:
+
+- **Connection** — who connected it, the connected Jira account, Jira site, auth method (OAuth 2.0), and deployment (Jira Cloud or Self-hosted).
+- **Health & Activity** — access-token lifecycle (with the last refresh time), installed-on date, and last-synced time.
+- **Connected projects** — the Jira projects available through this connection.
+
+A badge at the top shows whether it's a **Personal** connection (your own install) or an **Organization** connection (a shared one).
+
+    Personal connection
+
+    Organization (shared) connection
 
 ## How To Log Your First Bug Through Jira Integration?
 
@@ -57,5 +94,14 @@ That's it! Go to Integrations again, and you will be able to notice a **green ti
 find 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3:** Click on '**Remove**'. You can find the **Remove** button when you click on  ellipsis in **‘Jira’** block.
+
+If the connection is currently shared with your organization, **Unshare** it first. Only the admin who installed the connection can remove it.
+
+## Related resources
+
+- [TestMu AI Jira App](/support/docs/testmu-jira-app/) — create and view TestMu AI test cases directly inside Jira.
+- [Link Jira Issues with Test Manager](/support/docs/link-jira-issues-with-test-manager/) — associate Jira issues with your Test Manager test cases.
+- [KaneAI Jira Integration](/support/docs/kane-ai-jira-integration/) — connect Jira with KaneAI.
+- [Self-Hosted Jira Integration](/support/docs/jira-self-hosted-integration/) — set up Jira Data Center / Server instances.
 
 That was all you need to know for TestMu AI + Jira Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on **chat** to help you out with any roadblock regarding our product. Happy testing!

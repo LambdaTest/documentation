@@ -79,19 +79,19 @@ Ask CoPilot about the data already on your dashboard and it answers in natural l
 
 - **Natural language queries**: Ask questions the way you would ask a teammate, such as *"Why did the pass rate drop this week?"*
 - **Trend and comparative analysis**: Surface patterns over time, or compare metrics, environments and time periods.
-- **Widget-aware answers**: CoPilot reads the data behind the custom widgets on the dashboard, so answers stay grounded in what you are looking at.
+- **Widget-aware answers**: CoPilot reads the data behind the widgets on your dashboard, so answers stay grounded in what you are looking at.
 
 <img loading="lazy" src={require('../assets/images/analytics/dashboard-copilot-chat-response.webp').default} alt="AI CoPilot answering a question about dashboard data" width="800" height="400" className="doc_img"/>
 
 :::note
-CoPilot can read the data behind **custom widgets**. For prebuilt module widgets it can see that the widget exists, but not the data inside it.
+CoPilot reads the data behind **custom widgets**. For prebuilt module widgets it can see the widget, but not the data inside it.
 :::
 
 ## Building Widgets with CoPilot
 
 <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
-Building a widget normally means knowing the schema — pick a product, a field, an aggregation and a visualization. With the CoPilot widget builder you describe the question you want answered, and CoPilot assembles the widget configuration for you using the same [custom widget](/docs/dashboards-custom-widgets/) engine.
+Building a widget normally means picking a product, a field, an aggregation and a chart type. With CoPilot you can instead describe the question you want answered, and get a working [custom widget](/docs/dashboards-custom-widgets/) back.
 
 :::note
 This capability is in **beta**. Always verify a generated widget against your data before relying on it.
@@ -112,9 +112,9 @@ If the dashboard is empty, CoPilot shows a few starter prompts matched to your d
 
 CoPilot never edits your dashboard on its own. Each turn returns a **proposal card** containing:
 
-- A **live preview** of the widget rendered with your real data.
-- A **What changes** summary explaining the configuration it chose.
-- Any **assumptions** it had to make, shown as `term → mapping (assumed)`.
+- A **live preview** of the widget with your real data.
+- A **What changes** summary of what it built.
+- Any **assumptions** it had to make.
 
 Choose what happens next:
 
@@ -130,7 +130,7 @@ If a turn proposes more than one widget, CoPilot asks you to pick which ones to 
 
 ### Refine through conversation
 
-A follow-up message edits the widget already on screen instead of starting over. Each refinement adds a **version** to the same proposal card, and you can step between `v1`, `v2` and so on to compare before deciding. On a replacement, a **Before / After** toggle shows the original widget beside the proposed one.
+A follow-up message edits the widget already on screen instead of starting over. Each refinement adds a new version to the same card, so you can step back and forth to compare before deciding. When CoPilot updates an existing widget, a **Before / After** toggle shows both.
 
 CoPilot also suggests follow-up chips such as *split by browser*, *failed only*, *compare with last month* or *as a table* — click one instead of typing it.
 
@@ -158,37 +158,30 @@ Widgets built by CoPilot are ordinary custom widgets — they are saved, edited,
 
 CoPilot builds widgets for **Web Automation** (the default), **App Automation**, **HyperExecute**, **Real Time Testing**, **Real Device Testing**, **Smart UI Testing**, **Accessibility** and **Test Manager**. If your request belongs to a different product than the one in use, CoPilot switches to it and rebuilds.
 
-Supported visualizations are line chart, bar chart (including stacked and grouped), area chart, pie chart, gauge chart, heatmap, table and billboard.
+Supported visualizations are line chart, bar chart, area chart, pie chart, gauge chart, heatmap, table and billboard.
 
 ### What CoPilot cannot do
 
 - Modify or delete widgets that were not built by CoPilot.
-- Export, download, email or schedule a report or CSV.
-- Read any data outside the dashboard you opened it from, or connect an external data source.
+- Export, download or schedule a report.
+- Read data outside the dashboard you opened it from.
 
 :::note
-Your organization's data scoping and field validation are always enforced on the server. CoPilot can only build on data you already have access to.
+CoPilot can only build on data you already have access to.
 :::
 
 ## Credits and Usage Guidelines
 
-CoPilot requests consume **AI credits** from your organization's balance.
+CoPilot requests use **AI credits** from your organization's balance. Each request costs a minimum of 5 credits, and the panel shows how many a conversation has used. A single request adds at most four widgets.
 
-- Each request costs a minimum of **5 AI credits**, so you need at least 5 credits available to send one.
-- The panel shows the credits used by each turn and a running total for the conversation.
-- A single turn proposes at most **4 widgets**.
-- CoPilot considers up to the **last 12 turns** of the conversation for context. On a dashboard with many widgets, the oldest widget data may not fit in context — CoPilot tells you when that happens.
-- The conversation transcript is stored in your browser for **7 days** on that device only. Widgets you already added stay on the dashboard when you clear the chat.
+Your conversation stays in the browser you started it in for 7 days. Clearing the chat does not remove widgets you already added to the dashboard.
 
 ## Troubleshooting
 
-| Message | What to do |
-|---------|-----------|
-| *You need at least 5 AI credits for a CoPilot request.* | Top up your organization's AI credits. |
-| *AI features have been disabled for your organization.* | Contact your account admin or <BrandName /> support to enable AI features. |
-| *Could not build that step. Try naming the metric and the breakdown you want.* | Rephrase with an explicit metric and grouping, for example *"count of failed tests by browser"*. |
-| *Could not load the field list for this product.* | The selected product has no data to build from. Switch products or run tests first. |
-| *Could not reach the widget service.* | A transient service issue — retry in a moment. |
+- **Out of credits**: top up your organization's AI credits.
+- **AI features disabled**: contact your account admin or <BrandName /> support.
+- **CoPilot could not build the widget**: rephrase with an explicit metric and breakdown, for example *"count of failed tests by browser"*.
+- **No fields available for this product**: run some tests on that product first, or switch products.
 
 ## Support and Assistance
 
