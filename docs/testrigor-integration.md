@@ -3,7 +3,7 @@ id: testrigor-integration
 title: testRigor Integration
 hide_title: true
 sidebar_label: testRigor
-description: Integrate TestMu AI with testRigor to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
+description: Integrate TestMu AI with testRigor to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.
 keywords:
   - testmu ai integration with testrigor
   - testmu ai and testrigor integration 
@@ -44,7 +44,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 # testRigor Integration
 testRigor is a Generative AI-based codeless test automation tool that helps companies empower manual testers to create test automation through executable specifications in plain English. This innovative system enables your team to easily build and maintain tests, while its AI Native features significantly reduce the effort required for test maintenance.
 
-<BrandName /> integration with testRigor enables you to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
+<BrandName /> integration with testRigor enables you to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.
 
 ## Prerequisites
 ---

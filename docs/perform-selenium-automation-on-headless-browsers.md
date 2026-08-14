@@ -3,7 +3,7 @@ id: perform-selenium-automation-on-headless-browsers
 title: How To Perform Headless Browser Testing
 hide_title: true
 sidebar_label: Run Headless Tests
-description: Run headless browser tests on the TestMu AI cloud Selenium Grid across 3000+ browser and OS combinations.
+description: Run headless browser tests on the TestMu AI cloud Selenium Grid across 10,000+ browser/device combinations.
 keywords:
   - headless browser testing selenium
   - run headless chrome selenium

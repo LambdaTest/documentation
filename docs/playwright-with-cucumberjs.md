@@ -3,7 +3,7 @@ id: playwright-cucumberjs
 title: Running Playwright Tests With Cucumber.js
 hide_title: true
 sidebar_label: Integrate With Cucumber.js 
-description: Learn how to perform Playwright testing using Cucumber.js across 40+ browser versions on the TestMu AI platform.
+description: Learn how to perform Playwright testing using Cucumber.js across multiple browser versions on the TestMu AI platform.
 keywords:
  -  playwright testing with Playwright test runner
   - playwright e2e testing with Playwright test runner
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Cucumber.js is a JavaScript-based open-source framework for web automation testing. It runs on Node.js and latest web browsers. Cucumber.js allows you to write and execute tests in Gherkin - a non-technical and human-readable language.
 
-<BrandName /> enables you to run Playwright tests with Cucumber.js test runner on a browser farm of 40+ real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the <BrandName /> platform using the Cucumber.js test runner.
+<BrandName /> enables you to run Playwright tests with Cucumber.js test runner on a browser farm of real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the <BrandName /> platform using the Cucumber.js test runner.
 
 ## Prerequisites
 ***

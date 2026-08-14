@@ -3,7 +3,7 @@ id: parallel-playwright-test
 title: How To Run Playwright Tests In Parallel
 hide_title: true
 sidebar_label: Parallel Testing
-description: Here you can learn how to run parallel tests with Playwright across 40+ browser versions on the TestMu AI automation platform.
+description: Here you can learn how to run parallel tests with Playwright across multiple browser versions on the TestMu AI automation platform.
 keywords:
  -  playwright testing
   - playwright e2e testing 
@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Parallel Testing With Playwright
 * * *
 
-<BrandName /> allows you to perform parallel testing with Playwright across 40+ browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
+<BrandName /> allows you to perform parallel testing with Playwright across real browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 
 
 Shown below are the steps on running parallel tests with Playwright on the <BrandName /> platform. 

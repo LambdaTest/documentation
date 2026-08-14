@@ -2,7 +2,7 @@
 id: puppeteer-visual-regression
 title: Getting started with SmartUI using Puppeteer
 sidebar_label: Puppeteer
-description: Learn Puppeteer Visual Regression Set up SmartUI, run tests on TestMu AI Cloud across 40+ browsers. Step-by-step guide for seamless testing.
+description: Learn Puppeteer Visual Regression Set up SmartUI, run tests on TestMu AI Cloud across real browsers. Step-by-step guide for seamless testing.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

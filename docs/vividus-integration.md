@@ -3,7 +3,7 @@ id: vividus-integration
 title: How to Perform Vividus Automation Tests Using TestMu AI?
 hide_title: true
 sidebar_label: Vividus
-description: With this integration, run your tests from Vividus tool, directly on TestMu AI cloud-based Selenium Grid, on 3000+ desktop &amp; mobile browser and OS combinations
+description: With this integration, run your tests from Vividus tool, directly on TestMu AI cloud-based Selenium Grid, on 10,000+ browser/device combinations
 keywords:
 - testmu ai integrations
 - vividus
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 * * *
 Vividus is a codeless test automation tool, developed with the aim to help testers perform automation testing for any application, test, or scenario, using a single tool and common language.
 
-<BrandName /> now integrates with the Vividus tool to help you execute automation tests on its cloud-based Selenium Grid. This <BrandName />-Vividus integration will help you perform cross-browser testing of your website, web app, or your mobile website, over 3000+ real desktop devices, mobile viewports, and operating system combinations on <BrandName /> platform. This document is a comprehensive guide to help you understand how to integrate Vividus with your <BrandName /> account.
+<BrandName /> now integrates with the Vividus tool to help you execute automation tests on its cloud-based Selenium Grid. This <BrandName />-Vividus integration will help you perform cross-browser testing of your website, web app, or your mobile website, over 5000+ real devices and 10,000+ browser/device combinations on <BrandName /> platform. This document is a comprehensive guide to help you understand how to integrate Vividus with your <BrandName /> account.
 
 ## How To Setup Your <BrandName /> Account With Vividus?
 

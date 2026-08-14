@@ -3,7 +3,7 @@ id: local-testing-puppeteer
 title: Run Local Tests Using Puppeteer
 hide_title: true
 sidebar_label:  Local Testing
-description: Learn how to perform local testing with Puppeteer across 40+ browser versions on the TestMu AI platform.
+description: Learn how to perform local testing with Puppeteer across multiple browser versions on the TestMu AI platform.
 keywords:
   - local testing
   - testmu ai tunnel features
@@ -45,9 +45,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Local Testing Using Puppeteer
 * * *
 
-<BrandName /> tunnel feature lets you test private server URLs, locally hosted web apps, and websites on 3000+ real browsers and operating systems. On <BrandName />, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new <BrandName /> tunnel binary. To establish a secure and unique tunnel connection between your system and <BrandName /> cloud servers, the <BrandName /> tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
+<BrandName /> tunnel feature lets you test private server URLs, locally hosted web apps, and websites on real browsers and operating systems. On <BrandName />, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new <BrandName /> tunnel binary. To establish a secure and unique tunnel connection between your system and <BrandName /> cloud servers, the <BrandName /> tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
 
-Learn how to perform local testing using Puppeteer across 40+ real browsers and operating systems.
+Learn how to perform local testing using Puppeteer across real browsers and operating systems.
 
 ## Puppeteer Testing Of Locally Hosted Websites
 ***

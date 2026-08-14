@@ -2,7 +2,7 @@
 id: reqnroll-with-selenium-appium
 title: Selenium With Reqnroll
 sidebar_label: Reqnroll
-description: Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 10000+ browsers and real devices.
+description: Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 5000+ real devices and 10,000+ browser/device combinations.
 keywords:
   - run Reqnroll Selenium tests cloud
   - Reqnroll Appium mobile testing

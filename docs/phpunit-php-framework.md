@@ -3,7 +3,7 @@ id: phpunit-php-framework
 title: Selenium With PHPUnit
 hide_title: false
 sidebar_label: PHPUnit
-description: Run PHPUnit Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
+description: Run PHPUnit Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.
 keywords:
   - phpunit selenium grid setup
   - run phpunit tests on cloud

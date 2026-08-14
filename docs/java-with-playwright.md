@@ -50,7 +50,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 # Java with Playwright: Running Your First Test
 * * *
 
-Learn how to use Playwright with Java to automate web application testing across 50+ real browsers and operating systems on <BrandName /> cloud platform.
+Run Playwright tests written in Java, either with plain Playwright or with JUnit, across real browsers and operating systems on the <BrandName /> cloud platform. The setup is the same for both: you connect Playwright to the grid over a CDP WebSocket. This guide covers the shared steps once, then gives you a per-framework setup in the tabs below.
 
 ## Prerequisites
 ***

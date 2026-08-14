@@ -3,7 +3,7 @@ id: ruby-capybara
 title: Selenium With Capybara
 hide_title: false
 sidebar_label: Capybara
-description: Run Capybara Ruby Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
+description: Run Capybara Ruby Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.
 keywords:
   - capybara selenium grid setup
   - run capybara tests on cloud

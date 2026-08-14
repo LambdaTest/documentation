@@ -3,7 +3,7 @@ id: behat-php-framework
 title: Selenium With Behat
 hide_title: false
 sidebar_label: Behat
-description: Run Behat PHP Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
+description: Run Behat PHP Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.
 keywords:
   - behat selenium grid setup
   - run behat tests on cloud

@@ -3,7 +3,7 @@ id: puppeteer-testing-guide
 title: How To Run Puppeteer Tests On TestMu AI Platform
 hide_title: true
 sidebar_label: Run Your First Test
-description: Learn how to run your Puppeteer tests across 40+ browsers and operating systems on the TestMu AI automation platform
+description: Learn how to run your Puppeteer tests across real browsers and operating systems on the TestMu AI automation platform
 keywords:
   - puppeteer testing
   - automation testing with puppeteer
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 * * *
 Puppeteer is a Node package that automates the Chrome browser for web testing. Over the DevTools Protocol, it provides a high-level API for controlling headless Chrome or Chromium. It may also be set to run full (non-headless) Chrome or Chromium.
 
-<BrandName /> allows you to run Puppeteer tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Puppeteer testing on the <BrandName /> platform.
+<BrandName /> allows you to run Puppeteer tests on a browser farm of real browsers and operating system combinations. This guide will cover the basics of getting started with Puppeteer testing on the <BrandName /> platform.
 
 ## Prerequisites
 ***

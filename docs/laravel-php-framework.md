@@ -3,7 +3,7 @@ id: laravel-php-framework
 title: Selenium With Laravel Dusk
 hide_title: false
 sidebar_label: Laravel
-description: Run Laravel Dusk Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
+description: Run Laravel Dusk Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.
 keywords:
   - laravel dusk selenium grid setup
   - run laravel dusk tests on cloud

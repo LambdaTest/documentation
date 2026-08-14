@@ -3,7 +3,7 @@ id: qmetry-integration
 title: How to Run QMetry Automation Tests using TestMu AI?
 hide_title: true
 sidebar_label: QMetry
-description: With this integration, run your tests from QMetry app, directly on TestMu AI's cloud-based Selenium Grid, on 3000+ desktop & mobile browser and OS combinations
+description: With this integration, run your tests from QMetry app, directly on TestMu AI's cloud-based Selenium Grid, on 10,000+ browser/device combinations
 keywords:
  - TestMu AI integrations
  - QMetry
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 * * *
 QMetry is a codeless platform tailored for DevOps and Agile testing teams. It can be used to prepare and execute test scenarios on multiple platforms very easily. Not only that, but QMetry also allows you to record test cases in almost all major languages and frameworks, including the QMetry framework.
-<BrandName /> now integrates with the QMetry platform to help you execute cross-browser testing of your website, web app, or your mobile website, over 3000+ real desktop devices, mobile viewports, and operating system combinations on its cloud-based selenium grid. This document is a comprehensive guide to help you understand how to integrate QMetry with your <BrandName /> account.
+<BrandName /> now integrates with the QMetry platform to help you execute cross-browser testing of your website, web app, or your mobile website, over 5000+ real devices and 10,000+ browser/device combinations on its cloud-based selenium grid. This document is a comprehensive guide to help you understand how to integrate QMetry with your <BrandName /> account.
 ## How To Setup Your <BrandName /> Account With QMetry?
 * * *
 Once you have your project set up in the QMetry app and test suite ready, you need to specify and activate your <BrandName /> account in the QMetry app to execute it over the <BrandName />'s cloud-based Selenium Grid. Below is the step by step guide to help you do just that:

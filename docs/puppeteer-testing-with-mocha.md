@@ -3,7 +3,7 @@ id: puppeteer-mocha
 title: Run Puppeteer Tests Using Mocha
 hide_title: true
 sidebar_label: Integrate With Mocha
-description: Learn how to integrate and run your Puppeteer tests using Mocha across 40+ browser versions on the TestMu AI platform.
+description: Learn how to integrate and run your Puppeteer tests using Mocha across multiple browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing with mocha test runner
   - puppeteer testing with mocha test runner
@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Mocha is a JavaScript automation testing framework to run the tests on Node.js and the browser. It enables you to run test cases serially, providing greater flexibility and accurate test reporting while mapping unidentified bugs to the correct test cases.
 
-<BrandName /> allows you to run Puppeteer tests with Mocha on a browser farm of 40+ real browsers and operating system combinations. 
+<BrandName /> allows you to run Puppeteer tests with Mocha on a browser farm of real browsers and operating system combinations. 
 
 This guide will cover the basics of getting started with Puppeteer testing with Mocha on the <BrandName /> platform.
 
