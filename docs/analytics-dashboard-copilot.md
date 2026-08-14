@@ -41,9 +41,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-# Getting Started with AI CoPilot Dashboard  <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+# AI CoPilot for Analytics Dashboards  <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
-AI CoPilot lets you work with your <BrandName /> Analytics dashboards in plain language. Ask it what your test data is telling you, and — with the widget builder — describe the visualization you want and get a working widget back, refined through conversation.
+AI CoPilot lets you work with your <BrandName /> Analytics dashboards in plain language. Ask it what your test data is telling you, and it answers in plain English. With the widget builder, you can also describe the visualization you want and get a working widget back, refined through conversation.
 
 <div className="ytframe">
 <div className="youtube" data-embed="0CwsyCZOzYU" data-loading-attribute="eager">
@@ -54,12 +54,11 @@ AI CoPilot lets you work with your <BrandName /> Analytics dashboards in plain l
 ## Prerequisites
 
 1. **<BrandName /> Paid Account**: An active <BrandName /> paid account with AI features enabled for your organization. To get access, contact [support@testmuai.com](mailto:support@testmuai.com).
+2. **Data and Dashboard Setup**: CoPilot works against the data in your account and the widgets on the dashboard you open it from. To learn about widgets and dashboards, see the [Analytics Widgets](/docs/analytics-widgets/) documentation.
 
 :::note
-This feature is exclusively available to our valued paid users. Users with the **Guest** role cannot open CoPilot.
+This feature is available to paid users. Users with the **Guest** role cannot open CoPilot.
 :::
-
-2. **Data and Dashboard Setup**: CoPilot works against the data in your account and the widgets on the dashboard you open it from. To learn about widgets and dashboards, see the [Analytics Widgets](/docs/analytics-widgets/) documentation.
 
 <img loading="lazy" src={require('../assets/images/analytics/dashboard-copilot-main.webp').default} alt="Analytics dashboard with the AI CoPilot option" width="800" height="400" className="doc_img"/>
 
@@ -101,7 +100,7 @@ Always verify a generated widget against your data before relying on it.
 
 ### Describe the widget you want
 
-With CoPilot open, type what you want in the composer, for example:
+With CoPilot open, type what you want in the message box, for example:
 
 - `Show test status broken down by operating system`
 - `Which browsers are dragging the pass rate down?`
@@ -112,7 +111,7 @@ If the dashboard is empty, CoPilot shows a few starter prompts matched to your d
 
 ### Review the proposal before it is added
 
-CoPilot never edits your dashboard on its own. Each turn returns a **proposal card** containing:
+CoPilot never edits your dashboard on its own. Each request returns a **proposal card** containing:
 
 - A **live preview** of the widget with your real data.
 - A **What changes** summary of what it built.
@@ -125,23 +124,23 @@ Choose what happens next:
 | **Add to dashboard** | Saves the proposed widget to the dashboard |
 | **Replace** | Replaces the existing widget the proposal updates |
 | **Keep both** | Saves the new widget and keeps the original |
-| **Refine** | Pre-fills the composer so you can adjust the widget |
+| **Refine** | Fills in the message box so you can adjust the widget |
 | **Discard** | Drops the proposal; nothing is saved |
 
-If a turn proposes more than one widget, CoPilot asks you to pick which ones to keep.
+If a request proposes more than one widget, CoPilot asks you to pick which ones to keep.
 
 ### Refine through conversation
 
 A follow-up message edits the widget already on screen instead of starting over. Each refinement adds a new version to the same card, so you can step back and forth to compare before deciding. When CoPilot updates an existing widget, a **Before / After** toggle shows both.
 
-CoPilot also suggests follow-up chips such as *split by browser*, *failed only*, *compare with last month* or *as a table* — click one instead of typing it.
+CoPilot also offers suggested follow-ups such as *split by browser*, *failed only*, *compare with last month* or *as a table* — click one instead of typing it.
 
 ### Ask without changing anything
 
 Prefix a message with a slash command to get an answer only — no widget is added or changed:
 
-| Command | Use it to |
-|---------|-----------|
+| Command | What it does |
+|---------|--------------|
 | `/summary` | Summarize what the dashboard is showing |
 | `/ask` | Ask a direct question about the data |
 | `/explain` | Explain a metric or a widget |
@@ -154,33 +153,32 @@ Start typing `/` and press **Tab** to complete a command.
 Widgets built by CoPilot are ordinary custom widgets — they are saved, edited, shared and scheduled through the same options as any other widget. Two things mark them out:
 
 - An **AI** badge on the widget header, with the tooltip *Built with CoPilot*.
-- **Configure with AI** in the widget's three-dot menu, which reopens CoPilot with the composer pre-filled to change that widget.
+- **Configure with AI** in the widget's three-dot menu, which reopens CoPilot ready to change that widget.
 
 ### Supported products and visualizations
 
-CoPilot builds widgets for **Web Automation** (the default), **App Automation**, **HyperExecute**, **Real Time Testing**, **Real Device Testing**, **Smart UI Testing**, **Accessibility** and **Test Manager**. If your request belongs to a different product than the one in use, CoPilot switches to it and rebuilds.
+CoPilot builds widgets for **Web Automation** (the default), **App Automation**, **HyperExecute**, **Real Time Testing**, **Real Device Testing**, **Smart UI Testing**, **Accessibility** and **Test Manager**. Ask for data from another product and CoPilot switches to it automatically.
 
 Supported visualizations are line chart, bar chart, area chart, pie chart, gauge chart, heatmap, table and billboard.
 
-### What CoPilot cannot do
-
-- Modify or delete widgets that were not built by CoPilot.
-- Export, download or schedule a report.
-- Read data outside the dashboard you opened it from.
-
-:::note
-CoPilot can only build on data you already have access to.
-:::
-
 ## Credits and Usage Guidelines
 
-CoPilot requests use **AI credits** from your organization's balance. Each request costs a minimum of 5 credits, and the panel shows how many a conversation has used. A single request adds at most four widgets.
+CoPilot requests use **AI credits** from your organization's balance. Each request uses a minimum of 5 credits, and the CoPilot panel shows how many a conversation has used so far. A single request adds at most four widgets.
+
+To check your balance or top up, see [Credits Management](/docs/credits-management/).
 
 Your conversation stays in the browser you started it in for 7 days. Clearing the chat does not remove widgets you already added to the dashboard.
 
+## Current Limitations
+
+- CoPilot can modify widgets it built, but not widgets created another way.
+- It cannot export, download or schedule a report.
+- It reads only the dashboard you opened it from, and only data you already have access to.
+
 ## Troubleshooting
 
-- **Out of credits**: top up your organization's AI credits.
+- **You don't see the CoPilot button**: the widget builder is enabled on request — contact [support@testmuai.com](mailto:support@testmuai.com). Users with the **Guest** role cannot open CoPilot.
+- **Out of credits**: top up your organization's [AI credits](/docs/credits-management/).
 - **AI features disabled**: contact your account admin or <BrandName /> support.
 - **CoPilot could not build the widget**: rephrase with an explicit metric and breakdown, for example *"count of failed tests by browser"*.
 - **No fields available for this product**: run some tests on that product first, or switch products.
