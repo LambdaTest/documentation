@@ -117,6 +117,8 @@ CoPilot never edits your dashboard on its own. Each request returns a **proposal
 - A **What changes** summary of what it built.
 - Any **assumptions** it had to make.
 
+<img loading="lazy" src={require('../assets/images/analytics/dashboard-copilot-widget-proposal.webp').default} alt="CoPilot panel showing a new widget proposal with a live preview, a What changes summary, and Add to dashboard, Refine and Discard actions" width="1400" height="724" className="doc_img"/>
+
 Choose what happens next:
 
 | Action | What it does |
