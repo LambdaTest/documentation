@@ -54,7 +54,7 @@ Custom widgets in <BrandName /> Analytics Dashboards allow you to create persona
 </div>
 
 :::tip
-You can also build a custom widget by describing it in plain language. See [Building Widgets with CoPilot](/docs/analytics-dashboard-copilot/#building-widgets-with-copilot) <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+You can also build a custom widget by describing it in plain language. See [Building Widgets with CoPilot](/docs/analytics-dashboard-copilot/#building-widgets-with-copilot) <NewTag value="BETA" bgColor="#ffec02" color="#000" /> — contact [support@testmuai.com](mailto:support@testmuai.com) to have it enabled for your organization.
 :::
 
 ## Prerequisites

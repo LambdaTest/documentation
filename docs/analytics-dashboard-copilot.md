@@ -94,7 +94,9 @@ CoPilot reads the data behind **custom widgets**. For prebuilt module widgets it
 Building a widget normally means picking a product, a field, an aggregation and a chart type. With CoPilot you can instead describe the question you want answered, and get a working [custom widget](/docs/dashboards-custom-widgets/) back.
 
 :::note
-This capability is in **beta**. Always verify a generated widget against your data before relying on it.
+This capability is in **beta** and is enabled on request. To get access for your organization, contact our support team at [support@testmuai.com](mailto:support@testmuai.com).
+
+Always verify a generated widget against your data before relying on it.
 :::
 
 ### Describe the widget you want
