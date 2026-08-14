@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 * * *
 
-The [<BrandName /> Chrome Extension](https://chrome.google.com/webstore/detail/lambdatest/fjcjehbiabkhkdbpkenkhaahhopildlh) enables you to perform cross-browser testing across 3000+ browser environments on the cloud more quickly and easily. Pick your favorite configurations, frequently used lists, and launch tests directly from your browser tab to save time. 
+The [<BrandName /> Chrome Extension](https://chrome.google.com/webstore/detail/lambdatest/fjcjehbiabkhkdbpkenkhaahhopildlh) enables you to perform cross-browser testing across 10,000+ browser/device combinations on the cloud more quickly and easily. Pick your favorite configurations, frequently used lists, and launch tests directly from your browser tab to save time. 
 
 <BrandName /> Chrome Extension provides the following features:
 

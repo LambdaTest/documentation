@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-CodeceptJS is a modern end-to-end testing framework with a human-readable syntax. It supports Selenium via the WebDriver helper, making it straightforward to run browser automation tests on TestMu AI cloud Selenium Grid across 3000+ browser and OS combinations.
+CodeceptJS is a modern end-to-end testing framework with a human-readable syntax. It supports Selenium via the WebDriver helper, making it straightforward to run browser automation tests on TestMu AI cloud Selenium Grid across 10,000+ browser/device combinations.
 
 ## Prerequisites
 

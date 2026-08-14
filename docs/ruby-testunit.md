@@ -3,7 +3,7 @@ id: ruby-testunit
 title: Selenium With Test::Unit
 hide_title: false
 sidebar_label: Test::Unit
-description: Run Test::Unit Ruby Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations.
+description: Run Test::Unit Ruby Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.
 keywords:
   - testunit selenium grid setup
   - run testunit tests on cloud

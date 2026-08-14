@@ -3,7 +3,7 @@ id: testcomplete-integration
 title: TestComplete
 hide_title: false
 sidebar_label: TestComplete
-description: TestMu AI offers integration with TestComplete to help you perform web and app automation testing on 3000+ real browsers, devices, and operating systems combinations.
+description: TestMu AI offers integration with TestComplete to help you perform web and app automation testing on 5000+ real devices and 10,000+ browser/device combinations.
 keywords:
 - testmu ai integrations
 - testmu ai integrations with testcomplete
@@ -49,7 +49,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 ></script>
 TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
-<BrandName /> integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
+<BrandName /> integration with TestComplete lets you perform web and app automation testing across 5000+ real devices and 10,000+ browser/device combinations.
 
 > The TestComplete application will only work on the **Windows** operating system.
 

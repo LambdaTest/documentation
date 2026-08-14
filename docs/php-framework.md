@@ -3,7 +3,7 @@ id: php-framework
 title: Selenium With PHP
 hide_title: false
 sidebar_label: PHP
-description: Learn to run PHP Selenium automation tests on the TestMu AI cloud grid with 3000+ browser and OS combinations. Covers Behat, Laravel Dusk, Codeception, and PHPUnit.
+description: Run PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. Covers Behat, Laravel Dusk, Codeception, and PHPUnit.
 keywords:
   - php selenium grid setup
   - run php tests on cloud
@@ -52,7 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-Run your PHP Selenium tests on the TestMu AI cloud grid across 3000+ browser and OS combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
+Run your PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
 ## Prerequisites
 ---
