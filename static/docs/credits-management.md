@@ -87,37 +87,6 @@ The AI Test Case Generator includes a **Conversational Layer** that lets you ref
 * Credits are deducted **per message** based on the scope of the change.
 * If your message affects multiple scenarios, credits are deducted for each scenario impacted.
 
-### KaneAI Authoring
-
-**KaneAI** lets you author and edit automated tests in natural language. With the new pricing model, **authoring is metered in credits** — a single subscription plus a single credit balance covers each step you generate or edit, along with any remote browser or real‑device time and AI assists (vision validation, auto‑heal). [Learn more](/support/docs/getting-started-with-kane-ai/).
-
-#### How credits are consumed
-
-| What draws credits | Rate |
-|--------------------|------|
-| **Step authoring / editing** (natural‑language step generated or edited) | **\~1.5–2.5 credits / step** |
-| **KaneAI Web Cloud** (remote browser time) | **0.17 credits / min** |
-| **KaneAI Mobile Cloud** (real‑device time) | **10 / 8 / 6 / 4 credits / min**, depending on the **device category** |
-| **Vision validation during execution** | **\~1.5–2.5 credits / step** |
-| **Auto‑heal during execution** | **\~1.5–2.5 credits / step** |
-
-* **Local authoring with Kane CLI** uses **step credits only** — you author on local browsers and local emulators / simulators with no cloud infrastructure, so no per‑minute cloud time is charged.
-* **KaneAI Web Cloud** and **KaneAI Mobile Cloud** add per‑minute credits for the remote browser or real‑device session while you author or edit test case in the cloud.
-* **Vision validation and auto‑heal** draw credits even when they run **during execution** — they are **not** bundled into execution.
-
-#### Real‑device rates by device category
-
-Real devices in the TestMu AI cloud are grouped into four **device categories** based on how new the device is. Newer devices are in higher demand, so they consume more credits per minute. Choosing an older device for the same test lowers your credit spend.
-
-| Device category | What it includes | Credits / min |
-|-----------------|------------------|---------------|
-| **Newest devices** | Latest‑generation flagships, typically released within the last year | **10** |
-| **Recent devices** | Recent‑generation devices, still widely used | **8** |
-| **Older devices** | Previous‑generation devices | **6** |
-| **Oldest devices** | Long‑standing legacy devices | **4** |
-
-Credits are charged **per minute of real‑device time while you author or edit**, so a 10‑minute session on a newest device costs 100 credits, while the same session on an oldest device costs 40. If a test does not need the newest hardware, pick a lower device category.
-
 ## FAQs
 
 **Q: What happens when my credits run out?**
@@ -139,10 +108,6 @@ When fewer scenarios than the selected Max Scenarios are generated, the differen
 **Q: Can I cap my organization’s usage?**
 
 Yes, set **Soft** and **Hard** limits (Admins only).
-
-**Q: Is KaneAI test execution charged in credits?**
-
-No. **Authoring** (step generation/editing, cloud browser or real‑device time) and **AI assists** (vision validation, auto‑heal, AI RCA) are metered in credits. Test **execution** is billed separately on HyperExecute.
 
 **Q: Does the platform offer AI FinOps tools to control and manage AI testing costs?**
 
