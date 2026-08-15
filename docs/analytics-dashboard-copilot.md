@@ -2,10 +2,11 @@
 id: analytics-dashboard-copilot
 title: Analytics Dashboard AI CoPilot
 sidebar_label: CoPilot - AI
-description: Analytics - Dashboard CoPilot to analyze your data, answer questions and build widgets from plain language
+description: AI CoPilot - an AI agent that analyzes your test data, answers questions and builds Analytics dashboard widgets from plain language
 keywords:
   - analytics
   - dashboard copilot
+  - ai agent
   - ai widgets
   - natural language widgets
 url: https://www.testmuai.com/support/docs/analytics-dashboard-copilot/
@@ -43,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 # AI CoPilot for Analytics Dashboards  <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
-AI CoPilot lets you work with your <BrandName /> Analytics dashboards in plain language. Ask it what your test data is telling you, and it answers in plain English. With the widget builder, you can also describe the visualization you want and get a working widget back, refined through conversation.
+AI CoPilot is an AI agent for your <BrandName /> Analytics dashboards. Ask it what your test data is telling you and it reasons over that data to answer in plain language. With the widget builder, describe the insight you want and CoPilot plans a widget, builds it, and proposes it for your approval — you stay in the loop on every change.
 
 <div className="ytframe">
 <div className="youtube" data-embed="0CwsyCZOzYU" data-loading-attribute="eager">
@@ -77,8 +78,8 @@ This feature is available to paid users. Users with the **Guest** role cannot op
 Ask CoPilot about the data already on your dashboard and it answers in natural language — no configuration, no query syntax.
 
 - **Natural language queries**: Ask questions the way you would ask a teammate, such as *"Why did the pass rate drop this week?"*
-- **Trend and comparative analysis**: Surface patterns over time, or compare metrics, environments and time periods.
-- **Widget-aware answers**: CoPilot reads the data behind the widgets on your dashboard, so answers stay grounded in what you are looking at.
+- **Trend and comparative analysis**: CoPilot surfaces patterns over time, and compares metrics, environments and time periods.
+- **Grounded in your data**: CoPilot reads the data behind the widgets on your dashboard, so every answer is grounded in what you are looking at rather than guessed.
 
 <img loading="lazy" src={require('../assets/images/analytics/dashboard-copilot-chat-response.webp').default} alt="AI CoPilot answering a question about dashboard data" width="800" height="400" className="doc_img"/>
 
@@ -90,7 +91,7 @@ CoPilot reads the data behind **custom widgets**. For prebuilt module widgets it
 
 <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
-Building a widget normally means picking a product, a field, an aggregation and a chart type. With CoPilot you can instead describe the question you want answered, and get a working [custom widget](/docs/dashboards-custom-widgets/) back.
+Building a widget normally means picking a product, a field, an aggregation and a chart type. With CoPilot you describe the question you want answered instead, and the agent works out the configuration for you and returns a working [custom widget](/docs/dashboards-custom-widgets/).
 
 :::note
 This capability is in **beta** and is enabled on request. To get access for your organization, contact our support team at [support@testmuai.com](mailto:support@testmuai.com).
@@ -98,9 +99,9 @@ This capability is in **beta** and is enabled on request. To get access for your
 Always verify a generated widget against your data before relying on it.
 :::
 
-### Describe the widget you want
+### Describe the outcome you want
 
-With CoPilot open, type what you want in the message box, for example:
+With CoPilot open, describe the insight you are after in the message box — you do not need to know which field or chart type answers it. For example:
 
 - `Show test status broken down by operating system`
 - `Which browsers are dragging the pass rate down?`
@@ -109,13 +110,13 @@ With CoPilot open, type what you want in the message box, for example:
 
 If the dashboard is empty, CoPilot shows a few starter prompts matched to your data — click one to use it.
 
-### Review the proposal before it is added
+### Approve before anything changes
 
-CoPilot never edits your dashboard on its own. Each request returns a **proposal card** containing:
+CoPilot proposes; you decide. Nothing reaches your dashboard until you approve it. Each request returns a **proposal card** showing its work:
 
-- A **live preview** of the widget with your real data.
-- A **What changes** summary of what it built.
-- Any **assumptions** it had to make.
+- A **live preview** of the widget running on your real data.
+- A **What changes** summary of what the agent built and why.
+- Any **assumptions** it had to make to interpret your request.
 
 <img loading="lazy" src={require('../assets/images/analytics/dashboard-copilot-widget-proposal.webp').default} alt="CoPilot panel showing a new widget proposal with a live preview, a What changes summary, and Add to dashboard, Refine and Discard actions" width="1400" height="724" className="doc_img"/>
 
@@ -133,13 +134,13 @@ If a request proposes more than one widget, CoPilot asks you to pick which ones 
 
 ### Refine through conversation
 
-A follow-up message edits the widget already on screen instead of starting over. Each refinement adds a new version to the same card, so you can step back and forth to compare before deciding. When CoPilot updates an existing widget, a **Before / After** toggle shows both.
+CoPilot keeps the context of your conversation, so a follow-up message refines the widget already on screen instead of starting over. Each refinement adds a new version to the same card, so you can step back and forth to compare before deciding. When CoPilot updates an existing widget, a **Before / After** toggle shows both.
 
 CoPilot also offers suggested follow-ups such as *split by browser*, *failed only*, *compare with last month* or *as a table* — click one instead of typing it.
 
 ### Ask without changing anything
 
-Prefix a message with a slash command to get an answer only — no widget is added or changed:
+Prefix a message with a slash command to keep CoPilot in answer-only mode — it reasons over your dashboard and replies, but adds and changes nothing:
 
 | Command | What it does |
 |---------|--------------|
@@ -159,7 +160,7 @@ Widgets built by CoPilot are ordinary custom widgets — they are saved, edited,
 
 ### Supported products and visualizations
 
-CoPilot builds widgets for **Web Automation** (the default), **App Automation**, **HyperExecute**, **Real Time Testing**, **Real Device Testing**, **Smart UI Testing**, **Accessibility** and **Test Manager**. Ask for data from another product and CoPilot switches to it automatically.
+CoPilot builds widgets for **Web Automation** (the default), **App Automation**, **HyperExecute**, **Real Time Testing**, **Real Device Testing**, **Smart UI Testing**, **Accessibility** and **Test Manager**. Ask for data from another product and the agent recognises it and switches products for you.
 
 Supported visualizations are line chart, bar chart, area chart, pie chart, gauge chart, heatmap, table and billboard.
 
@@ -173,7 +174,9 @@ Your conversation stays in the browser you started it in for 7 days. Clearing th
 
 ## Current Limitations
 
-- CoPilot can modify widgets it built, but not widgets created another way.
+The agent works inside a deliberately narrow boundary:
+
+- It can modify widgets it built, but not widgets created another way.
 - It cannot export, download or schedule a report.
 - It reads only the dashboard you opened it from, and only data you already have access to.
 
