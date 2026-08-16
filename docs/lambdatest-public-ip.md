@@ -149,14 +149,16 @@ Configure it as an **outbound** allow rule.
 
 ### Hostnames
 
-| Hostname |
-|----------|
+| Hostname                   |
+|----------------------------|
 | `stun-us-2.lambdatest.com` |
 | `stun-ap-2.lambdatest.com` |
 | `stun-eu-2.lambdatest.com` |
 | `stun-us-1.lambdatest.com` |
 | `stun-as-1.lambdatest.com` |
 | `stun-eu-1.lambdatest.com` |
+
+Instead of adding each hostname individually, you can whitelist the wildcard domain **`*.lambdatest.com`** to allow all of them at once.
 
 
 ## Guacamole Servers {#guacamole-servers-ips}
@@ -187,6 +189,19 @@ Whitelist these IP addresses to allow WebSocket (WS/WSS) communication for devic
 | `43.205.182.101` |
 | `18.138.79.89` |
 | `54.254.173.86` |
+
+
+## SSE Connections {#sse-connections-ips}
+
+Whitelist these domains to allow Server-Sent Events (SSE) streaming, which delivers real-time session, device, and test execution updates to your browser or client. Configure them as **outbound** allow rules.
+
+| Hostname                        |
+|---------------------------------|
+| `kaneaivm-india.lambdatest.com` |
+| `kaneaivm-us.lambdatest.com`    |
+| `device.lambdatest.com`         |
+
+Instead of adding each hostname individually, you can whitelist the wildcard domain **`*.lambdatest.com`** to allow all of them at once.
 
 
 :::note
