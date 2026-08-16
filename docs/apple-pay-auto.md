@@ -47,12 +47,13 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 ## Supported Devices
 Currently, the Device Passcode feature in App Automation is enabled on the following iOS real devices:
 
-| iOS Device   | iOS Version |
-|--------------|-------------|
-| iPhone 16    | 18      |
-| iPhone 15    | 17      |
-| iPhone 14    | 16      |
-| iPhone 13    | 15      |
+| iOS Device  | iOS Version |
+|-------------|-------------|
+| iPhone 17   | 26          |
+| iPhone 16   | 18          |
+| iPhone 15   | 17          |
+| iPhone 14   | 16          |
+| iPhone 13   | 15          |
 
 > We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
 ---
@@ -98,7 +99,7 @@ To enable Apple Pay automation, include the following capability in your automat
     // highlight-next-line
     "applePay": true,
     // highlight-next-line
-    "applePayCardType": ["visa", "master"],
+    "applePayCardType": ["visa", "master"]
 }`}
     </CodeBlock>
   </TabItem>
