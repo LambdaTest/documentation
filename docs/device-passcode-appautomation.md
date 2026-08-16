@@ -82,9 +82,6 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 ---
 
-### Android Devices
-Available on **all real devices** running on **version 11 and above**.
-
 ## Default Passcode
 - **iOS:**  `123456`  
 - **Android:**  `1234`  
