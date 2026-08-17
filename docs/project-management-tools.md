@@ -84,6 +84,22 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <center><a href="/support/docs/goodday-integration/"><button name="button">GoodDay Integration</button></a></center>
 
+<center><a href="/support/docs/redmine-integration/"><button name="button">Redmine Integration With <BrandName /></button></a></center>
+
+<center><a href="/support/docs/spirateam-integration/"><button name="button">SpiraTeam Integration With <BrandName /></button></a></center>
+
+<center><a href="/support/docs/alm-octane-integration/"><button name="button">ALM Octane Integration With <BrandName /></button></a></center>
+
+<center><a href="/support/docs/zenkit-integration/"><button name="button">Zenkit Integration With <BrandName /></button></a></center>
+
+<center><a href="/support/docs/userback-integration/"><button name="button">Userback Integration With <BrandName /></button></a></center>
+
+<center><a href="/support/docs/zoho-cliq-integration/"><button name="button">Zoho Cliq Integration With <BrandName /></button></a></center>
+
+<center><a href="/support/docs/servicenow-integration/"><button name="button">ServiceNow Integration With <BrandName /></button></a></center>
+
+<center><a href="/support/docs/webex-teams-integration/"><button name="button">Webex Teams Integration With <BrandName /></button></a></center>
+
 >If your favourite project management or bug tracking tool is not in the above mentioned, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**shout**</span> and we will have it ready shortly for you.
 
 

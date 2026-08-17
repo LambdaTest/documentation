@@ -130,3 +130,14 @@ https://{username}:{accessKey}@hub.lambdatest.com/wd/hub
     </li>
   </ul>
 </nav>
+
+## Related Selenium guides
+
+- [Getting Started with Selenium 4](/support/docs/getting-started-with-selenium-4/) — set up and run Selenium 4 tests on the TestMu AI cloud grid.
+- [Test Locally Hosted Websites with Selenium](/support/docs/test-locally-hosted-websites-with-selenium/) — run Selenium tests against locally hosted or staging sites using Tunnel.
+- [Run PHP tests on the Selenium grid](/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid/) — a quick guide to running PHP Selenium tests on TestMu AI.
+- [IE mode on Edge](/support/docs/ie-mode-on-edge/) — test legacy Internet Explorer behavior using IE mode on Microsoft Edge.
+
+## Migrating to TestMu AI
+
+- [Migrate from a Legacy Platform to TestMu AI](/support/docs/migrate-from-legacy-platform-to-testmu/) — move your existing tests from a legacy platform to TestMu AI.
