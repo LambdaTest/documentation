@@ -2442,7 +2442,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Import Test Cases",
-            items: ["csv-import", "one-click-migration-from-testrail", "one-click-migration-from-xray", "one-click-migration-from-zephyr-scale", "one-click-migration-from-qtest"],
+            items: ["csv-import", "one-click-migration-from-testrail", "one-click-migration-from-xray", "one-click-migration-from-zephyr-scale", "migrate-from-zephyr-enterprise", "one-click-migration-from-qtest"],
           },
           "generate-test-cases-with-ai",
           // "create-manage-test-cases",
