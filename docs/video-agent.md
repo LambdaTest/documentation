@@ -46,7 +46,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test Video Agent Testing With TestMu AI Agent Testing
+# How to Test Video Agents With TestMu AI Agent Testing
 
 ---
 
