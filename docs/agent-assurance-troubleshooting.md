@@ -1,18 +1,18 @@
 ---
-id: rook-troubleshooting
-title: Troubleshoot Rook
+id: agent-assurance-troubleshooting
+title: Troubleshoot Agent Assurance
 hide_title: false
-sidebar_label: Troubleshooting and FAQ
-description: Diagnose Rook installation, authentication, controller, profile, scenario, MCP, evidence, tmux, and browser-viewer problems.
+sidebar_label: Troubleshooting
+description: Diagnose Agent Assurance installation, authentication, controller, profile, scenario, MCP, evidence, tmux, and browser-viewer problems.
 keywords:
   - rook troubleshooting
   - rook cli errors
   - rook agent unreachable
   - rook faq
-url: https://www.testmuai.com/support/docs/rook-troubleshooting/
+url: https://www.testmuai.com/support/docs/agent-assurance-troubleshooting/
 site_name: TestMu AI
-slug: rook-troubleshooting/
-canonical: https://www.testmuai.com/support/docs/rook-troubleshooting/
+slug: agent-assurance-troubleshooting/
+canonical: https://www.testmuai.com/support/docs/agent-assurance-troubleshooting/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -23,12 +23,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Troubleshoot Rook", "item": `${BRAND_URL}/support/docs/rook-troubleshooting/` }
+      { "@type": "ListItem", "position": 3, "name": "Troubleshoot Agent Assurance", "item": `${BRAND_URL}/support/docs/agent-assurance-troubleshooting/` }
     ]
   }) }}
 />
 
-# Troubleshoot Rook
+# Troubleshoot Agent Assurance
+
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
 
 Start with diagnostics:
 
@@ -38,7 +42,13 @@ rook doctor
 rook auth status
 ```
 
-In the TUI, run `/doctor`. It reports the active environment, controller, authentication state, project storage directory, and registered agents.
+In the TUI, run `/doctor`. It reports:
+
+- The active environment
+- The controller
+- The authentication state
+- The project storage directory
+- Registered agents
 
 <img loading="lazy" src={require('../assets/images/rook/rook-terminal-doctor.png').default} alt="Rook doctor diagnostics showing local environment and controller reachability" width="1227" height="520" className="doc_img"/>
 
@@ -78,7 +88,7 @@ Then retry the installer using `gh auth token`.
 
 ### Download resets after the release lookup
 
-Release assets are served from a different GitHub asset domain. A VPN or corporate proxy can allow the repository request and reset the redirected asset download. Try the installer off VPN or use:
+Release assets are served from a different GitHub asset domain. A VPN or corporate proxy can allow the repository request but reset the redirected asset download. Run the installer off VPN, or use:
 
 ```bash
 gh release download --repo LambdatestIncPrivate/rook --pattern '*.tar.gz'
@@ -93,11 +103,16 @@ rook login
 rook auth status
 ```
 
-If the token was revoked, logging in again is required. Nothing signs in automatically.
+If the token was revoked, log in again. Nothing signs in automatically.
 
 ### Controller is unreachable
 
-Check `rook doctor`. A network failure is not evidence that the token is invalid. Verify VPN, DNS, proxy, and controller availability before repeating login.
+Check `rook doctor`. A network failure is not evidence that the token is invalid. Before repeating login, verify:
+
+- VPN
+- DNS
+- Proxy
+- Controller availability
 
 If the controller remains unreachable, confirm the network, VPN, or proxy requirements with your Rook administrator.
 
@@ -108,7 +123,13 @@ If the controller remains unreachable, confirm the network, VPN, or proxy requir
 /budget
 ```
 
-Rook warns at 70%, stops starting new work at 90%, and halts at 100%. In-flight work finishes and completed scenarios remain on disk. Narrow the suite before increasing the budget.
+Rook enforces these budget thresholds:
+
+- **70%:** Rook warns you.
+- **90%:** Rook stops starting new work.
+- **100%:** Rook halts.
+
+In-flight work finishes, and completed scenarios remain on disk. Narrow the suite before increasing the budget.
 
 ## Discovery Problems
 
@@ -152,7 +173,7 @@ Create and verify a profile:
 
 ### The profile invokes successfully but extracts the wrong value
 
-Run `/profile show <name>` and `/profile test <name>`. Paste a representative response and set `result.path` to the actual answer, not a status, ID, or metadata field.
+Run `/profile show <name>` and `/profile test <name>`. Paste a representative response, then set `result.path` to the actual answer, not a status, ID, or metadata field.
 
 ### A required environment variable is missing
 
@@ -172,7 +193,7 @@ The profile should keep `${VARIABLE_NAME}`, not the literal secret.
 
 ### TLS works in cURL but not Rook
 
-The machine may trust a private certificate that Node.js does not. Configure `tls.trust: system` or an explicit `ca_file`. Preserve `-k` only when disabling verification is an intentional test-environment decision.
+The machine may trust a private certificate that Node.js does not. Configure `tls.trust: system` or an explicit `ca_file`. Keep `-k` only when disabling verification is an intentional test-environment decision.
 
 ### Async agent never completes
 
@@ -199,7 +220,15 @@ Run `/scenarios list`. Rook also prints the available classes, categories, and t
 
 ### Nothing can be attempted
 
-Read the grouped skip reasons. Fix the first execution blocker: verified profile, supported text or URL input, readable response type, conversation mapping, or required MCP verifier. Native attachment, PR-reference, and image-input delivery are not implemented in the current pre-alpha release.
+Read the grouped skip reasons, then fix the first execution blocker:
+
+- Verified profile
+- Supported text or URL input
+- Readable response type
+- Conversation mapping
+- Required MCP verifier
+
+Native attachment, PR-reference, and image-input delivery are not implemented in the current pre-alpha release.
 
 Usage reporting, tool-call observation, and filesystem observation normally do not prevent invocation. Their affected criteria become **Unable to Verify**, so improve those evidence sources before treating the result as a complete gate.
 
@@ -219,13 +248,13 @@ Concurrent scenarios can write the same observed path, so attribution would othe
 
 ### Run stopped midway
 
-Check `run.yaml` for status and stop reason. Budget, authentication, interrupt, and controller failures halt at scenario boundaries. Completed evidence is preserved; Rook does not invent verdicts for scenarios that never ran.
+Check `run.yaml` for the status and stop reason. Budget, authentication, interrupt, and controller failures halt at scenario boundaries. Completed evidence is preserved. Rook does not invent verdicts for scenarios that never ran.
 
 ## Result and Evidence Problems
 
 ### Why is Unable to Verify not Fail?
 
-It means Rook did not have evidence to decide. Marking it Fail would claim the agent violated a criterion that the harness never observed. Improve observation and rerun.
+It means Rook did not have evidence to decide. Marking it Fail would claim the agent violated a criterion that the harness never observed. Improve observation, then rerun.
 
 ### The agent says it created something, but Rook cannot verify it
 
@@ -249,7 +278,7 @@ Use:
 
 Open the printed `http://127.0.0.1:<port>` URL manually. Rook tries a range of loopback ports beginning at 7757. Check whether local security software blocks the process.
 
-The viewer exists only while the Rook TUI process is running.
+The viewer runs only while the Rook TUI process is running.
 
 ## MCP Problems
 
@@ -263,7 +292,7 @@ Only stdio connections execute today. HTTP, SSE, and WebSocket definitions remai
 
 ### Server is enabled but a call still prompts
 
-Registry enablement and call permission are separate gates. The registry makes the server eligible; the permission prompt authorizes that specific start or tool call.
+Registry enablement and call permission are separate gates. The registry makes the server eligible. The permission prompt authorizes that specific start or tool call.
 
 ### Server disappeared behind another definition
 
@@ -298,7 +327,7 @@ Capture recent terminal output without attaching:
 tmux capture-pane -p -S -200 -t rook-test
 ```
 
-Stop the application normally with `/exit`. If the session contains only disposable test processes and must be terminated:
+Stop the application normally with `/exit`. If the session contains only disposable test processes and must be terminated, run:
 
 ```bash
 tmux kill-session -t rook-test
@@ -310,7 +339,7 @@ Killing a session is abrupt. Prefer `/exit` so Rook can close its browser viewer
 
 ### Does Rook require source code?
 
-No. A PRD-only workspace can be explored and tested against a remote profile, but source gives better implementation, tool, and verification context.
+No. You can explore and test a PRD-only workspace against a remote profile, but source gives better implementation, tool, and verification context.
 
 ### Can Rook test a remote agent?
 
@@ -322,11 +351,17 @@ Not currently. Clone the repository first.
 
 ### Can Rook test production?
 
-Technically a profile can point there, but Rook provides no rollback or write virtualization. The documented and recommended workflow is a disposable test or staging environment.
+Technically a profile can point there, but Rook provides no rollback or write virtualization. The recommended workflow is a disposable test or staging environment.
 
 ### Does a passing report prove the agent is safe?
 
-No. It proves only what the selected scenarios and available evidence established. Review scenario breadth, coverage, verification gaps, repeatability, and target configuration.
+No. It proves only what the selected scenarios and available evidence established. Review:
+
+- Scenario breadth
+- Coverage
+- Verification gaps
+- Repeatability
+- Target configuration
 
 ### Where is my data stored?
 

@@ -1,18 +1,18 @@
 ---
-id: rook-connect-and-explore-agents
-title: Connect and Explore AI Agents With Rook
+id: agent-assurance-connect-and-explore-agents
+title: Connect and Explore AI Agents
 hide_title: false
 sidebar_label: Connect and Explore Agents
-description: Explore agents from a workspace, external checkout, PRD, or GitHub repository and manage multiple discovered agents in Rook.
+description: Explore agents from a workspace, external checkout, PRD, or GitHub repository and manage multiple discovered agents in Agent Assurance.
 keywords:
   - rook explore agent
   - connect ai agent
   - test agent github repository
   - ai agent prd testing
-url: https://www.testmuai.com/support/docs/rook-connect-and-explore-agents/
+url: https://www.testmuai.com/support/docs/agent-assurance-connect-and-explore-agents/
 site_name: TestMu AI
-slug: rook-connect-and-explore-agents/
-canonical: https://www.testmuai.com/support/docs/rook-connect-and-explore-agents/
+slug: agent-assurance-connect-and-explore-agents/
+canonical: https://www.testmuai.com/support/docs/agent-assurance-connect-and-explore-agents/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -23,16 +23,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Explore Agents", "item": `${BRAND_URL}/support/docs/rook-connect-and-explore-agents/` }
+      { "@type": "ListItem", "position": 3, "name": "Explore Agents", "item": `${BRAND_URL}/support/docs/agent-assurance-connect-and-explore-agents/` }
     ]
   }) }}
 />
 
-# Connect and Explore AI Agents With Rook
+# Connect and Explore AI Agents
+
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
 
 Exploration tells Rook what an agent is supposed to do before you tell it how to invoke the agent. Rook reads local material such as source code, prompts, skills, manifests, tool declarations, tests, README files, and product requirements.
 
-The target can be a complete application, one agent directory, or a documentation-only workspace. Rook does not require a particular agent framework.
+The target can be a complete application, one agent directory, or a documentation-only workspace. Rook works with any agent framework.
 
 ## Explore the Current Workspace
 
@@ -54,7 +58,10 @@ Use a narrower path when a monorepo contains a specific agent package:
 /explore packages/travel-agent
 ```
 
-Rook scans deterministically first, then gives its discovery subagent read tools scoped to the authorized workspace. If it finds one candidate, it asks whether to register it. If it finds several, choose the candidates you want.
+Rook scans deterministically first, then gives its discovery subagent read tools scoped to the authorized workspace. The result depends on how many candidates it finds:
+
+- **One candidate:** Rook asks whether to register it.
+- **Several candidates:** Choose the candidates you want.
 
 ## What Rook Looks For
 
@@ -70,7 +77,7 @@ Rook can identify agents from evidence including:
 - Tests, fixtures, examples, and user-facing documentation.
 - PRDs and other text describing intended behavior.
 
-Discovery does not invent missing facts. If a tool's write behavior cannot be established, Rook records it as unknown instead of guessing from its name.
+Discovery does not invent missing facts. If a tool's write behavior cannot be established, Rook records it as unknown rather than guessing from its name.
 
 ## Give Exploration Extra Context
 
@@ -87,7 +94,7 @@ rook explore . \
   --instruction "focus on the refund approval threshold and identity checks"
 ```
 
-The instruction guides the discovery model. It does not widen the filesystem scope.
+The instruction guides the discovery model, but it does not widen the filesystem scope.
 
 Use `--force` after a substantial change or when you want to ignore the incremental freshness check:
 
@@ -122,9 +129,9 @@ Then run:
 /explore . -- the deployed agent is a multi-turn travel planner
 ```
 
-If no structural agent signal is found, Rook can ask whether to register the directory anyway. A documentation-only exploration can generate requirement-grounded scenarios, but it has less evidence about implementation details, tool behavior, and side effects than a source-backed exploration.
+If no structural agent signal is found, Rook can ask whether to register the directory anyway. A documentation-only exploration generates requirement-grounded scenarios, but it has less evidence about implementation details, tool behavior, and side effects than a source-backed exploration.
 
-You still need an invocation profile that reaches the deployed agent. See [Configure Rook Profiles](/support/docs/rook-profiles/).
+You still need an invocation profile that reaches the deployed agent. See [Configure Rook Profiles](/support/docs/agent-assurance-profiles/).
 
 ## Explore a GitHub Repository
 
@@ -153,7 +160,11 @@ gh pr checkout <number>
 rook
 ```
 
-This keeps the source state, scenario evidence, and tested revision reproducible. Never clone or check out untrusted code and then run its setup scripts without reviewing them.
+This keeps the source state, scenario evidence, and tested revision reproducible.
+
+:::warning
+Never clone or check out untrusted code and then run its setup scripts without reviewing them first.
+:::
 
 ## Explore an External Local Directory
 
@@ -169,7 +180,10 @@ The path must be typed by a human. A model suggestion or stored record cannot gr
 Rook can read and report an external directory, but the current pre-alpha release does not persist an external agent record. To keep discovery state and generate scenarios, `cd` into that checkout and start Rook there.
 :::
 
-Rook refuses a parent directory that contains the current workspace because that would mix evaluator files with target files. It also refuses a single external file because granting its entire parent directory would be broader than the path you selected.
+Rook also refuses two paths to keep read scope tight:
+
+- **A parent directory that contains the current workspace:** This would mix evaluator files with target files.
+- **A single external file:** Granting its entire parent directory would be broader than the path you selected.
 
 ## Manage Multiple Agents
 
@@ -209,10 +223,10 @@ Use `--allow` only for a narrowly reviewed tool call:
 rook explore . --allow 'bash(npm test)'
 ```
 
-`--allow` is additive authorization. It does not create a sandbox or restrict commands through any other already approved grant.
+`--allow` is additive authorization. It does not create a sandbox, and it does not restrict any other already approved grant.
 
 ## Re-Explore After Changes
 
-Run `/explore` again when prompts, tools, policies, skills, or agent source changes. Rook compares the current files with the stored index and updates the existing record instead of abandoning its scenario and run history.
+Run `/explore` again when prompts, tools, policies, skills, or agent source change. Rook compares the current files with the stored index and updates the existing record, so it keeps your scenario and run history.
 
-After exploration, run `/generate` to refresh scenarios. Rook shows a plan and explains which prerequisite is stale before it spends credits.
+After exploration, run `/generate` to refresh scenarios. Rook shows a plan and names the stale prerequisite before it spends credits.

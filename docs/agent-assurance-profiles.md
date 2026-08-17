@@ -1,18 +1,18 @@
 ---
-id: rook-profiles
-title: Configure Rook Agent Invocation Profiles
+id: agent-assurance-profiles
+title: Configure Agent Assurance Invocation Profiles
 hide_title: false
 sidebar_label: Invocation Profiles
-description: Configure HTTP, command, asynchronous, multi-turn, attachment, TLS, and MCP invocation profiles for Rook.
+description: Configure HTTP, command, asynchronous, multi-turn, attachment, TLS, and MCP invocation profiles for Agent Assurance.
 keywords:
   - rook profile
   - ai agent http testing
   - ai agent curl profile
   - multimodal agent testing
-url: https://www.testmuai.com/support/docs/rook-profiles/
+url: https://www.testmuai.com/support/docs/agent-assurance-profiles/
 site_name: TestMu AI
-slug: rook-profiles/
-canonical: https://www.testmuai.com/support/docs/rook-profiles/
+slug: agent-assurance-profiles/
+canonical: https://www.testmuai.com/support/docs/agent-assurance-profiles/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -23,16 +23,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Rook Profiles", "item": `${BRAND_URL}/support/docs/rook-profiles/` }
+      { "@type": "ListItem", "position": 3, "name": "Invocation Profiles", "item": `${BRAND_URL}/support/docs/agent-assurance-profiles/` }
     ]
   }) }}
 />
 
-# Configure Rook Agent Invocation Profiles
+# Configure Agent Assurance Invocation Profiles
 
-A profile is a fixed, reviewable recipe for invoking one agent. Discovery can learn what an agent does, but it cannot know whether you intend to test a local process, staging endpoint, production endpoint, fast model, or careful model. The profile supplies that missing choice.
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
 
-An agent can have several profiles. Runs pin the profile ID so renaming a profile does not detach its history.
+A profile is a fixed, reviewable recipe for invoking one agent. Discovery learns what an agent does, but it cannot know whether you intend to test a local process, staging endpoint, production endpoint, fast model, or careful model. The profile supplies that choice.
+
+An agent can have several profiles. Runs pin the profile ID, so renaming a profile does not detach its history.
 
 ## Add a Profile Interactively
 
@@ -42,9 +46,9 @@ Start with:
 /profile add
 ```
 
-Rook asks for a name and an invocation. Paste a working cURL request when possible; it preserves the method, URL, headers, body, multipart file fields, and TLS choices you already tested manually.
+Rook asks for a name and an invocation. Paste a working cURL request when possible. It preserves the method, URL, headers, body, multipart file fields, and TLS choices you already tested manually.
 
-Rook then:
+Rook then does the following:
 
 1. Classifies request fields as scenario input, session handles, run metadata, or fixed values.
 2. Shows the proposed mapping for confirmation.
@@ -53,7 +57,7 @@ Rook then:
 5. Extracts the answer and asks you to confirm it.
 6. Marks the profile verified and active only after the probe succeeds.
 
-An unverified profile can be saved for later, but it cannot become active and a run cannot reach it accidentally.
+You can save an unverified profile for later, but it cannot become active, and a run cannot reach it accidentally.
 
 ## HTTP Profile Example
 
@@ -88,7 +92,7 @@ verified: true
 
 Rook fills templates from fixed bindings. It does not ask a model to compose each invocation.
 
-Supported bindings include the scenario goal and run-specific identifiers. Environment references are expanded before goal bindings, so a scenario containing text such as `${AWS_SECRET_ACCESS_KEY}` cannot cause Rook to substitute the real credential into the goal.
+Supported bindings include the scenario goal and run-specific identifiers. Rook expands environment references before goal bindings, so a scenario containing text such as `${AWS_SECRET_ACCESS_KEY}` cannot cause Rook to substitute the real credential into the goal.
 
 ## Command Profile Example
 
@@ -118,7 +122,7 @@ reset:
 verified: true
 ```
 
-Command profiles can put `{{goal}}` in an argument, stdin, or both. A non-zero exit is an invocation error even when the command printed partial output.
+Command profiles can put `{{goal}}` in an argument, stdin, or both. A non-zero exit is an invocation error, even when the command printed partial output.
 
 ## Asynchronous Agent Example
 
@@ -172,7 +176,7 @@ Without a usable conversation declaration, multi-turn scenarios are skipped. Roo
 
 ## Attachments and Multimodal Inputs
 
-> **Native attachment input is not implemented:** The profile schema can record the intended attachment shape, but the current run executor does not transmit `scenario.input.attachments` or call a configured upload endpoint. Do not treat a `text+file` scenario as an executed file test, even if capability validation labels it runnable. Use a test URL in the scenario goal or an agent-specific HTTP or command adapter that resolves the file before invoking Rook.
+> **Native attachment input is not implemented.** The profile schema can record the intended attachment shape, but the current run executor does not transmit `scenario.input.attachments` or call a configured upload endpoint. Do not treat a `text+file` scenario as an executed file test, even if capability validation labels it runnable. Instead, use a test URL in the scenario goal, or use an agent-specific HTTP or command adapter that resolves the file before invoking Rook.
 
 The forward-compatible profile shapes are a field in the main request:
 
@@ -195,9 +199,9 @@ attachments:
   link_path: $.file_url
 ```
 
-These declarations describe the intended contract; they do not enable delivery in the current pre-alpha release. Text and URL values are passed in the goal today. Native `text+file`, `pr_ref`, and image inputs are not executable.
+These declarations describe the intended contract. They do not enable delivery in the current pre-alpha release. Text and URL values are passed in the goal today. Native `text+file`, `pr_ref`, and image inputs are not executable.
 
-For outputs, Rook can collect text, JSON, local files, and downloadable links. It recognizes common PDF, image, CSV, spreadsheet, JSON, YAML, Markdown, HTML, and archive paths. Rook can confirm that an image exists and record its byte size and dimensions, but it cannot currently judge what the pixels depict. That content criterion becomes **Unable to Verify**.
+For outputs, Rook can collect text, JSON, local files, and downloadable links. It recognizes common PDF, image, CSV, spreadsheet, JSON, YAML, Markdown, HTML, and archive paths. Rook can confirm that an image exists and record its byte size and dimensions, but it cannot judge what the pixels depict. That content criterion becomes **Unable to Verify**.
 
 ## Response Types and Result Extraction
 
@@ -220,7 +224,7 @@ The result can come from:
 - `text`
 - `file`
 
-Paste a representative response during profile setup. Rook proposes the answer path from the sample and verifies it with a live call. Avoid selecting a status or request ID merely because it is the first non-empty string.
+Paste a representative response during profile setup. Rook proposes the answer path from the sample and verifies it with a live call. Do not select a status or request ID just because it is the first non-empty string.
 
 ## Secrets and Environment Values
 
@@ -240,7 +244,7 @@ Manage values interactively:
 /env rm AGENT_TOKEN
 ```
 
-`/env list` masks values. `/env show` prints the complete value into terminal scrollback; use it only when that exposure is intentional.
+`/env list` masks values. `/env show` prints the complete value into terminal scrollback, so use it only when that exposure is intentional.
 
 ## TLS and Private Certificates
 
@@ -253,7 +257,7 @@ invoke:
     ca_file: ./certs/staging-ca.pem
 ```
 
-Rook also preserves cURL's `-k` choice as `insecure: true`, but never invents it. Prefer a trusted CA over disabling certificate verification.
+Rook also preserves cURL's `-k` choice as `insecure: true`, but never invents it. Prefer a trusted CA over disabled certificate verification.
 
 ## Observation and Reset
 
@@ -274,7 +278,7 @@ observe:
 
 At concurrency greater than one, shared file changes cannot be attributed reliably to a scenario. Run with `--concurrency 1` when filesystem evidence matters.
 
-A reset command runs between scenarios to prevent state leakage. It is a real command and passes through the permission gate.
+A reset command runs between scenarios to prevent state leakage. It is a real command, and it passes through the permission gate.
 
 ## Manage Profiles
 

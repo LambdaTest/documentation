@@ -1,18 +1,18 @@
 ---
-id: rook-ci-cd
-title: Run Rook in CI/CD
+id: agent-assurance-ci-cd
+title: Run Agent Assurance in CI/CD
 hide_title: false
 sidebar_label: CI/CD and Automation
-description: Run Rook headlessly in CI, consume NDJSON output, handle exit codes, isolate state, and build a safe agent testing gate.
+description: Run Agent Assurance headlessly in CI, consume NDJSON output, handle exit codes, isolate state, and build a safe agent testing gate.
 keywords:
   - rook ci cd
   - ai agent testing github actions
   - rook headless
   - agent testing pipeline
-url: https://www.testmuai.com/support/docs/rook-ci-cd/
+url: https://www.testmuai.com/support/docs/agent-assurance-ci-cd/
 site_name: TestMu AI
-slug: rook-ci-cd/
-canonical: https://www.testmuai.com/support/docs/rook-ci-cd/
+slug: agent-assurance-ci-cd/
+canonical: https://www.testmuai.com/support/docs/agent-assurance-ci-cd/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -23,14 +23,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Rook CI/CD", "item": `${BRAND_URL}/support/docs/rook-ci-cd/` }
+      { "@type": "ListItem", "position": 3, "name": "CI/CD", "item": `${BRAND_URL}/support/docs/agent-assurance-ci-cd/` }
     ]
   }) }}
 />
 
-# Run Rook in CI/CD
+# Run Agent Assurance in CI/CD
 
-Rook's headless commands use the same discovery, generation, profile, permission, execution, judging, and evidence paths as the interactive TUI. Use them to create a release gate after you have proved the workflow interactively against the same agent and profile.
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+
+Rook's headless commands use the same discovery, generation, profile, permission, execution, judging, and evidence paths as the interactive TUI. Use them to build a release gate after you have proved the workflow interactively against the same agent and profile.
 
 ## Prepare the Project Interactively
 
@@ -43,7 +47,7 @@ Before enabling a pipeline:
 5. Keep global credentials, environment values, permission grants, and sessions out of the repository.
 6. Seed test fixtures and verify the profile reset command.
 
-> **Authentication in unattended environments:** The current pre-alpha release uses the interactive LambdaTest login flow and does not expose a dedicated service-token login flag. Use a protected persistent runner with a pre-authenticated `ROOK_HOME`, or follow your organization's approved secret provisioning process. Do not commit or upload a personal Rook credential store as a repository artifact.
+> **Authentication in unattended environments:** The current pre-alpha release uses the interactive LambdaTest login flow and exposes no dedicated service-token login flag. Use a protected persistent runner with a pre-authenticated `ROOK_HOME`, or follow your organization's approved secret provisioning process. Never commit or upload a personal Rook credential store as a repository artifact.
 
 ## Isolate Global State
 
@@ -53,7 +57,7 @@ Set `ROOK_HOME` to a protected runner directory:
 export ROOK_HOME="$RUNNER_TEMP/rook-home"
 ```
 
-For a persistent self-hosted runner, choose a stable protected path so token renewal can be retained. Ensure only the runner identity can read it.
+For a persistent self-hosted runner, choose a stable protected path so token renewal is retained. Ensure only the runner identity can read it.
 
 Project evidence continues to be written under:
 
@@ -70,7 +74,7 @@ rook auth status
 rook plan --json
 ```
 
-An unreachable controller is not evidence that a token is invalid, so `rook auth status` can return success with a warning when it cannot reach the controller. The next real operation will still fail if connectivity is unavailable.
+An unreachable controller does not mean a token is invalid. When `rook auth status` cannot reach the controller, it can return success with a warning. The next real operation still fails if connectivity is unavailable.
 
 ## Run a Deterministic Suite
 
@@ -100,7 +104,7 @@ rook run \
   --json
 ```
 
-The allowance applies only to that process. Repeat `--allow` for multiple exact rules.
+The allowance applies only to that process. Repeat `--allow` for each exact rule.
 
 Avoid broad shell or MCP allowances. `--allow` adds authority; it does not remove a broader permission already stored in the selected `ROOK_HOME`.
 
@@ -132,7 +136,7 @@ Do not assume every command returns one aggregate JSON object. Preserve the NDJS
 
 An observed agent failure outranks an invocation error if both occur in one run.
 
-> **Exit code `0` does not prove suite completion:** In the current pre-alpha release, `rook run` and `rook report` derive their exit status from recorded verdicts. An interrupted or partial run can therefore exit `0` when its completed scenarios contain no recorded defect. A release gate must also inspect the saved `run.yaml`: require a completed status, review the stop reason, and compare selected scenario counts with completed verdict counts. Fail closed when the requested suite did not finish.
+> **Exit code `0` does not prove suite completion:** In the current pre-alpha release, `rook run` and `rook report` derive their exit status from recorded verdicts. An interrupted or partial run can therefore exit `0` when its completed scenarios contain no recorded defect. A release gate must also inspect the saved `run.yaml`: require a completed status, review the stop reason, and compare selected scenario counts against completed verdict counts. Fail closed when the requested suite did not finish.
 
 ## Example GitHub Actions Job
 
@@ -195,13 +199,11 @@ jobs:
           path: .testmuai/rook/agents/refund-desk/runs/
 ```
 
-Pin Rook by commit SHA and review updates before changing it. Scope the repository token to read access for the private release repository.
+**Pin Rook by commit SHA** and review updates before changing it. Scope the repository token to read access for the private release repository.
 
 ## Separate Generation From the Gate
 
-Scenario generation uses models and can change the suite. A stable release gate should normally run reviewed, committed scenario IDs.
-
-Use a separate scheduled or manually approved workflow to:
+Scenario generation uses models and can change the suite. A stable release gate should run reviewed, committed scenario IDs. Move generation into a separate scheduled or manually approved workflow:
 
 ```bash
 rook explore . --force --all --json
@@ -214,4 +216,4 @@ Review the resulting scenario diff before it changes the required gate.
 
 Upload the NDJSON stream and the run directory with `if: always()`. A failed invocation still records the request, and a budget or controller stop preserves completed scenarios.
 
-Review artifacts for secrets and personal data before granting broad access to CI logs or artifacts.
+**Before granting broad access to CI logs or artifacts, review them for secrets and personal data.**

@@ -1,18 +1,18 @@
 ---
-id: rook-run-tests
-title: Run Deep Functional Tests With Rook
+id: agent-assurance-run-tests
+title: Run Deep Functional Tests With Agent Assurance
 hide_title: false
 sidebar_label: Run Tests
-description: Run complete or targeted AI agent test suites safely with Rook selectors, concurrency, permissions, budgets, and RCA.
+description: Run complete or targeted AI agent test suites safely with Agent Assurance selectors, concurrency, permissions, budgets, and RCA.
 keywords:
   - rook run tests
   - functional ai agent testing
   - ai agent test automation
   - agent red team testing
-url: https://www.testmuai.com/support/docs/rook-run-tests/
+url: https://www.testmuai.com/support/docs/agent-assurance-run-tests/
 site_name: TestMu AI
-slug: rook-run-tests/
-canonical: https://www.testmuai.com/support/docs/rook-run-tests/
+slug: agent-assurance-run-tests/
+canonical: https://www.testmuai.com/support/docs/agent-assurance-run-tests/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -23,16 +23,22 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Run Rook Tests", "item": `${BRAND_URL}/support/docs/rook-run-tests/` }
+      { "@type": "ListItem", "position": 3, "name": "Run Tests", "item": `${BRAND_URL}/support/docs/agent-assurance-run-tests/` }
     ]
   }) }}
 />
 
-# Run Deep Functional Tests With Rook
+# Run Deep Functional Tests With Agent Assurance
+
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
 
 `/run` selects runnable scenarios, displays the target and estimated cost, asks for permission, invokes the live agent, and records evidence for every completed scenario.
 
 > **Use a test target:** Rook does not undo the target agent's actions. Refunds, messages, tickets, deployments, database updates, and file writes are real.
+>
+> Point every run at a test or staging environment.
 
 ## Preflight Checklist
 
@@ -53,7 +59,9 @@ Before running a suite, confirm:
 /run
 ```
 
-Rook skips scenarios that cannot be attempted and groups the reasons. A partially observable scenario should still run when it can establish useful evidence; individual criteria that cannot be checked become **Unable to Verify**.
+Rook skips scenarios that cannot be attempted and groups the reasons.
+
+A partially observable scenario still runs when it can establish useful evidence. Individual criteria that cannot be checked become **Unable to Verify**.
 
 The default concurrency is `3`.
 
@@ -95,7 +103,7 @@ You can also describe the desired subset after `--`:
 /run --class adversarial -- the scenarios about refund approval
 ```
 
-Natural-language selection uses a model to choose from the already filtered list. Rook prints the matched IDs before the permission gate. Prefer ID, class, category, and tag selectors in CI because they are deterministic.
+Natural-language selection uses a model to choose from the already filtered list, and Rook prints the matched IDs before the permission gate. In CI, prefer ID, class, category, and tag selectors because they are deterministic.
 
 If no scenario matches, Rook prints the classes, categories, and tags that actually exist instead of running the full suite.
 
@@ -131,7 +139,7 @@ The answers mean:
 | `never` | Store a denial for this tool and target in this project. |
 | `no` | Decline without storing a decision. |
 
-Deny rules override allow rules, and more specific rules win. Permission state is stored globally under a per-project section so a repository cannot grant itself permission.
+Deny rules override allow rules, and more specific rules win. Permission state is stored globally under a per-project section, so a repository cannot grant itself permission.
 
 ## Run Without a Narrative
 
@@ -159,11 +167,13 @@ Rook clusters related failures first, then investigates each cause using the ver
 .testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/
 ```
 
-RCA is off by default because it consumes additional credits and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
+RCA is off by default. It consumes additional credits, and its cost depends on the number of distinct failure clusters. A remedy is an evidence-grounded hypothesis, not a verified patch.
 
 ## Interrupt and Resume Safely
 
-Press `Esc` during a TUI operation or `Ctrl+C` in a headless process. Rook aborts the in-flight HTTP request or command process and preserves completed requests, responses, and verdicts on disk. The target may already have produced an external effect even when no response was recorded.
+**To interrupt a run:** Press `Esc` during a TUI operation or `Ctrl+C` in a headless process. Rook aborts the in-flight HTTP request or command process and preserves completed requests, responses, and verdicts on disk.
+
+The target may already have produced an external effect even when no response was recorded.
 
 Authentication revocation, controller failure, and exhausted budget also halt work. Rook does not silently resume a run after authentication returns.
 
@@ -171,7 +181,12 @@ Authentication revocation, controller failure, and exhausted budget also halt wo
 
 Use scenarios that exercise both the user journey and externally visible effects.
 
-The lists below include file-input journeys that teams commonly need. Native attachment delivery is not implemented in the current pre-alpha release. Execute those cases only through a reviewed adapter that incorporates the file into the agent invocation, or place a reachable test-file URL in the goal. Otherwise keep them documented but excluded from release-gating runs.
+The lists below include file-input journeys that teams commonly need. Native attachment delivery is not implemented in the current pre-alpha release, so run file-input cases in one of these ways:
+
+- Use a reviewed adapter that incorporates the file into the agent invocation.
+- Place a reachable test-file URL in the goal.
+
+Otherwise, keep these cases documented but exclude them from release-gating runs.
 
 ### Refund Agent
 
@@ -242,4 +257,6 @@ Current headless syntax is:
 rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]
 ```
 
-Interactive-only run controls currently include class, category, tag, concurrency, free-form selection, and `--rca`. For deterministic CI selection, resolve IDs before invoking `rook run --only`.
+Interactive-only run controls currently include class, category, tag, concurrency, free-form selection, and `--rca`.
+
+For deterministic CI selection, resolve IDs before invoking `rook run --only`.

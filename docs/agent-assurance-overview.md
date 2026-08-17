@@ -1,27 +1,131 @@
 ---
-id: rook-use-cases
-title: Rook Autonomous Agent Testing Use Cases
+id: agent-assurance-overview
+title: What is TestMu AI Agent Assurance
 hide_title: false
-sidebar_label: Real-world Use Cases
-description: Real examples for testing agents from PRDs, knowledge bases, code, remote APIs, local commands, artifacts, multiple agents, and profiles.
+sidebar_label: Overview
+description: Learn how TestMu AI Agent Assurance autonomously discovers, tests, and evaluates AI agents with evidence-backed verdicts from your terminal, plus real-world setups for PRDs, knowledge bases, source code, remote APIs, and local commands.
 keywords:
+  - rook cli
+  - autonomous agent testing
+  - ai agent testing cli
+  - test ai agents
   - rook use cases
   - test agent from prd
   - black box agent testing
   - multimodal agent testing
-url: https://www.testmuai.com/support/docs/rook-use-cases/
+url: https://www.testmuai.com/support/docs/agent-assurance-overview/
 site_name: TestMu AI
-slug: rook-use-cases/
-canonical: https://www.testmuai.com/support/docs/rook-use-cases/
+slug: agent-assurance-overview/
+canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
 ---
 
-# Rook Autonomous Agent Testing Use Cases
+# What is TestMu AI Agent Assurance
 
-You do not need the Rook source code, and your workspace does not need to contain the source code of the agent under test. Rook can start from a PRD, knowledge base, checked-out implementation, or another local specification, then invoke a live remote or local target through a profile.
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
 
-Use this page to choose the journey that matches the access you actually have.
+TestMu AI Agent Assurance is the product for proving an AI agent you own is safe to ship. This page covers its **Autonomous Agent** category, for agents that *act*: they call tools, write files, hit APIs, and change external state.
 
-## Access Matrix
+Agent Assurance runs from your terminal as <code>rook</code>. Give it the materials that describe the agent and connect a live test target. It can then:
+
+- Discover capabilities.
+- Generate scenarios.
+- Execute multi-step behavior.
+- Collect evidence.
+- Judge the results.
+
+You install only the <code>rook</code> CLI. You do not need the source repository, a dedicated development environment, Docker, or your own model API key.
+
+:::caution Pre-alpha
+Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
+:::
+
+<img loading="lazy" src={require('../assets/images/rook/rook-terminal-home.png').default} alt="Rook terminal home showing the autonomous agent testing workflow" width="1111" height="911" className="doc_img"/>
+
+## Conversation Testing and Autonomous Testing
+
+Agent Assurance covers both forms of agent testing, but they solve different problems.
+
+| Choose | When it fits |
+|---|---|
+| **Conversation-based agent testing** | You want to test chat, voice, or phone conversations through configured turns, intents, assertions, and conversation quality. |
+| **Autonomous agent testing with Agent Assurance** | Your agent plans, calls tools, changes external state, creates files, asks for missing information, delegates to subagents, or returns mixed outputs that require evidence beyond the final message. |
+
+For example, a refund assistant may ask for an order ID, verify eligibility, issue a refund through a tool, and return both an explanation and a PDF receipt. Rook tests the whole behavior it can observe, not only whether the final sentence sounds correct.
+
+## What You Can Give Rook
+
+Rook works with different levels of access:
+
+| What you have | How to begin | What it contributes |
+|---|---|---|
+| A PRD only | Run <code>/explore path/to/PRD.md</code> | Intended behavior, rules, constraints, examples, and open questions |
+| PRD plus knowledge-base files | Run <code>/explore docs -- focus on the PRD and knowledge base</code> | Intended answers, policies, domain facts, and boundaries |
+| Agent source code | Run <code>/explore .</code> in your checked-out repository | Prompts, tools, subagents, feature paths, and implementation evidence |
+| A live remote API but no source | Explore a local PRD or specification, then add an HTTP profile | Black-box execution of the live target |
+| A local agent CLI | Add a command profile | stdout, stderr, exit status, files, and resumable sessions when configured |
+
+Rook does not natively explore a GitHub URL. If you want source-aware testing, check out your own repository locally and run Rook inside it. You never need to clone the Rook repository.
+
+Documentation is specification evidence, not proof of implementation. A PRD tells Rook what should happen. A live invocation profile is still required to test what actually happens.
+
+## The End-to-End Journey
+
+1. <code>/explore</code> reads the selected local material and identifies one or more agents.
+2. <code>/agent</code> lets you confirm or switch the active agent.
+3. <code>/generate</code> creates functional, non-functional, and adversarial scenarios.
+4. <code>/profile add</code> records a fixed HTTP or command invocation.
+5. <code>/scenarios list</code> shows which scenarios are runnable with that profile.
+6. <code>/run</code> invokes the live target and judges observable criteria.
+7. <code>/ui</code> opens the local evidence viewer.
+
+Rook stores project results as plain files below:
+
+~~~text
+<your-workspace>/.testmuai/rook/
+~~~
+
+Credentials, variables, and session settings are stored separately below <code>~/.testmuai/rook/</code>. Stored variables are partitioned by the workspace's absolute path.
+
+## Evidence and Verdicts
+
+Rook can use the raw response, extracted JSON or text, command output, exit status, observed file changes, downloadable artifacts, and read-only MCP verification. The available evidence depends on the profile you configure.
+
+| Verdict | Meaning |
+|---|---|
+| **Pass** | Every criterion Rook could verify passed. |
+| **Fail** | At least one criterion was observed to fail. |
+| **Unable to Verify** | The available profile and evidence could not establish the result. It is not counted as a failure. |
+
+Always read coverage together with pass rate. A high pass rate with low verification coverage is not strong release evidence.
+
+## Supported Outputs and Current Limits
+
+Rook can collect text, JSON, local files, and downloadable links. This supports agents that produce PDFs, images, CSV files, Markdown, reports, or archives.
+
+Current pre-alpha limits include:
+
+- Text and URL inputs can be passed in the scenario goal. Native file, image, and pull-request attachment delivery is not yet implemented.
+- Rook can record image dimensions and file evidence, but it cannot judge image pixels. Visual correctness may be **Unable to Verify**.
+- HTTP JSON and text responses are executable. SSE, NDJSON, and WebSocket transports can be recorded but are not executed.
+- Direct MCP profiles are not executable by <code>/profile test</code> or <code>/run</code>. Use an HTTP or command adapter for the target agent.
+
+## Safety
+
+:::warning Target actions are real
+Rook does not sandbox or roll back the agent under test. Refunds, emails, tickets, database updates, and filesystem writes happen in the target environment.
+:::
+
+For the first run, use staging endpoints, disposable fixtures, and <code>--concurrency 1</code>. Start with one harmless scenario, and approve only the exact target you intended.
+
+## Real-World Use Cases
+
+You do not need the Rook source code, and your workspace does not need the source code of the agent under test. Rook can start from a PRD, knowledge base, checked-out implementation, or another local specification, then invoke a live remote or local target through a profile.
+
+Use the following journeys to choose the setup that matches the access you have.
+
+### Access Matrix
 
 | Your access | Explore | Invoke | What Rook can establish |
 |---|---|---|---|
@@ -34,7 +138,7 @@ Use this page to choose the journey that matches the access you actually have.
 | Artifact-producing agent | PRD, docs, or code | Sync or async profile | Text, JSON, local files, and downloadable result links |
 | Several environments or models | Explore once | One profile per variant | Repeatable comparison while each run stays pinned to one profile |
 
-## Use Case 1: Only a PRD, No Agent Code
+### Use Case 1: Only a PRD, No Agent Code
 
 **Situation:** A QA engineer receives <code>refund-agent-prd.md</code> and a staging endpoint. Engineering does not provide the implementation repository.
 
@@ -71,7 +175,7 @@ curl https://refund-agent.staging.example.com/v1/chat \
 
 **Interpretation:** The PRD supplies expected behavior. The API response and observations supply actual evidence. Rook should not infer implementation tools or mark a backend refund successful merely because the PRD says that tool exists.
 
-## Use Case 2: PRD Plus a Knowledge Base
+### Use Case 2: PRD Plus a Knowledge Base
 
 **Situation:** A support agent answers from product policies, warranty tables, and escalation instructions. The workspace contains documents but no executable agent.
 
@@ -102,7 +206,7 @@ Connect the remote support endpoint with <code>/profile add</code>. Add read-onl
 
 **Limit:** Documentation can show what the agent should know. It does not prove which documents the deployed agent retrieved.
 
-## Use Case 3: Remote Agent with No Workspace Code
+### Use Case 3: Remote Agent with No Workspace Code
 
 **Situation:** A vendor gives you an API URL, credentials, a request example, and an API specification.
 
@@ -135,7 +239,7 @@ For both HTTP examples, <code>/profile add</code> replaces the Authorization val
 
 Rook cannot explore the remote URL itself. It explores local material and invokes the remote target through the profile.
 
-## Use Case 4: Full Agent Source Workspace
+### Use Case 4: Full Agent Source Workspace
 
 **Situation:** The team owns a coding agent with prompts, tool definitions, subagents, skills, and implementation code.
 
@@ -163,9 +267,9 @@ If the repository is a monorepo, prefer:
 /explore services/code-review-agent
 ~~~
 
-This narrows discovery and makes the proposed agent boundary easier to review. It is not a filesystem access boundary: discovery tools remain rooted at the workspace where Rook was launched. Use an isolated checkout when sibling files must not be inspected.
+This narrows discovery and makes the proposed agent boundary easier to review. It is not a filesystem access boundary. Discovery tools remain rooted at the workspace where Rook was launched, so use an isolated checkout when sibling files must not be inspected.
 
-## Use Case 5: A GitHub URL Is All You Were Given
+### Use Case 5: A GitHub URL Is All You Were Given
 
 Rook does not clone or explore a GitHub URL directly. Clone the repository yourself so you control the branch, credentials, submodules, and files Rook may read:
 
@@ -175,9 +279,9 @@ cd refund-agent
 rook
 ~~~
 
-Then use <code>/explore .</code>. For a private repository, authenticate Git using your organization's normal process. This is your agent repository; it is unrelated to installing or cloning Rook.
+Then use <code>/explore .</code>. For a private repository, authenticate Git using your organization's normal process. This is your agent repository. It is unrelated to installing or cloning Rook.
 
-## Use Case 6: A Local Command Agent
+### Use Case 6: A Local Command Agent
 
 **Situation:** A research or coding agent runs as a command and may write files.
 
@@ -195,9 +299,9 @@ Configure:
 - An output folder such as <code>./reports</code> for filesystem observation.
 - A reset command if fixtures must be restored between scenarios.
 
-Run one scenario with concurrency 1. A non-zero exit status is an invocation error even when the command prints partial output.
+Run one scenario with concurrency 1. A non-zero exit status is an invocation error, even when the command prints partial output.
 
-## Use Case 7: Async Reports, PDFs, Images, and Mixed Results
+### Use Case 7: Async Reports, PDFs, Images, and Mixed Results
 
 **Situation:** A report agent returns a job ID, asks the caller to poll, and eventually returns explanatory text plus a PDF or image link.
 
@@ -222,7 +326,7 @@ Rook can collect the result text and common files such as PDF, image, CSV, JSON,
 
 **Current image limit:** Rook does not judge what pixels depict. A visual-content criterion can be **Unable to Verify** even when the image artifact exists.
 
-## Use Case 8: Several Agents in One Workspace
+### Use Case 8: Several Agents in One Workspace
 
 **Situation:** A customer-service system contains a router, refund agent, order agent, and escalation agent.
 
@@ -235,11 +339,11 @@ Rook can collect the result text and common files such as PDF, image, CSV, JSON,
 /run
 ~~~
 
-Repeat <code>/agent use</code>, generation, and profile setup for each independently invokable agent. If a subagent is only reachable through the router, test it through the router and make that boundary explicit in the profile and scenarios.
+Repeat <code>/agent use</code>, generation, and profile setup for each independently invokable agent. If a subagent is only reachable through the router, test it through the router, and make that boundary explicit in the profile and scenarios.
 
 Project data is stored under each registered agent. Removing an agent with <code>/agent rm</code> also removes Rook's stored project data for that agent, so review the ID carefully.
 
-## Use Case 9: Several Profiles for One Agent
+### Use Case 9: Several Profiles for One Agent
 
 Profiles represent ways to invoke the same discovered behavior:
 
@@ -262,7 +366,7 @@ Switch to another verified profile and repeat the same scenario IDs. Runs retain
 
 Do not use a production profile for scenarios that can write. Rook does not provide rollback.
 
-## Use Case 10: Continuous Regression Testing
+### Use Case 10: Continuous Regression Testing
 
 After the interactive journey is verified, use headless commands:
 
@@ -275,12 +379,13 @@ rook report --json
 
 Pin the CLI version, use an isolated Rook home for CI, and provide explicit permission rules only for exact calls the job should make.
 
-Exit code 0 means no defect was recorded in the verdicts that were produced. Also inspect the run record to confirm the requested suite completed; interruption or exhausted resources can leave a valid partial run.
+Exit code 0 means no defect was recorded in the verdicts that were produced. Also inspect the run record to confirm the requested suite completed. Interruption or exhausted resources can leave a valid partial run.
 
-## Choose the Next Guide
+## Next Steps
 
-- [Connect and explore agents](/support/docs/rook-connect-and-explore-agents/)
-- [Configure invocation profiles](/support/docs/rook-profiles/)
-- [Generate and curate scenarios](/support/docs/rook-scenarios/)
-- [Run tests safely](/support/docs/rook-run-tests/)
-- [Open the command index](/support/docs/rook-command-reference/)
+- [Get started with Agent Assurance](/support/docs/agent-assurance-quickstart/)
+- [Connect and explore agents](/support/docs/agent-assurance-connect-and-explore-agents/)
+- [Configure invocation profiles](/support/docs/agent-assurance-profiles/)
+- [Generate and curate scenarios](/support/docs/agent-assurance-scenarios/)
+- [Run tests safely](/support/docs/agent-assurance-run-tests/)
+- [Browse every command](/support/docs/agent-assurance-command-reference/)
