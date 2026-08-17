@@ -183,7 +183,7 @@
 
           // Append cookies to the URL before navigation
           const anchorElement = e.currentTarget;
-          const currentHref = anchorElement?.href || 'https://stage-accounts.lambdatestinternal.com/register';
+          const currentHref = anchorElement?.href || 'https://www.testmuai.com/register/';
           const urlWithCookies = getLoginUrlWithCookies(currentHref);
           if (anchorElement) {
             anchorElement.href = urlWithCookies;
@@ -324,6 +324,7 @@
                   var iframe = document.createElement("iframe");
                   iframe.setAttribute("frameborder", "0");
                   iframe.setAttribute("allowfullscreen", "");
+                  iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
                   iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=1");
                   this.innerHTML = "";
                   this.appendChild(iframe);
