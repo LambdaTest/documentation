@@ -2,7 +2,7 @@
 id: run-tests-with-chrome-devtools-protocol
 title: Run Web Automation Tests With CDP on TestMu AI
 hide_title: true
-sidebar_label: Run Web Automation Tests With CDP
+sidebar_label: CDP Testing
 description: Run web automation over the Chrome DevTools Protocol on TestMu AI, and drive the same session from an AI agent with the Browser Cloud SDK.
 keywords:
   - run web automation tests with cdp
