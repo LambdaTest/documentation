@@ -16,6 +16,7 @@ const VideoEmbed = ({ src, title }) => (
       allowFullScreen
       allow="encrypted-media; fullscreen;"
       loading="lazy"
+      referrerPolicy="strict-origin-when-cross-origin"
     />
   </div>
 );
