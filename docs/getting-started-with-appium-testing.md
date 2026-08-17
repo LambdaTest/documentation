@@ -369,4 +369,10 @@ We support all languages and frameworks that are compatible with Selenium, so in
 
   </ul>
 
+## Related app automation guides
+
+- [App Automation Dashboard](/support/docs/app-automation-dashboard/) — navigate build and session results for your app automation runs.
+- [Flutter Supported Capabilities](/support/docs/flutter-supported-capabilities/) — capabilities supported for automating Flutter apps on TestMu AI.
+- [Manual App Profiling](/support/docs/manual-app-profiling/) — capture performance profiles while manually testing your app.
+
 </nav>

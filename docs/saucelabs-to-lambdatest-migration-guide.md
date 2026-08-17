@@ -404,3 +404,7 @@ Visit <BrandName /> Web Automation dashboard to view your test execution result.
     </li>
   </ul>
 </nav>
+
+## Related migration guides
+
+- [Migrate Appium Tests from Sauce Labs](/support/docs/migrate-appium-tests-from-sauce-labs/) — move your Appium mobile test suite from Sauce Labs to TestMu AI.

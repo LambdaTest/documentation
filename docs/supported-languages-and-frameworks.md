@@ -207,6 +207,9 @@ Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) sup
          <li>
           <a href="/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/">Protractor</a>
         </li>
+        <li>
+          <a href="/support/docs/siesta-integration/">Siesta</a>
+        </li>
       </ul>
     </div>
   </div>
