@@ -60,7 +60,6 @@ It is the first platform to test chat, voice, phone, and image agents in one pla
     title="Agent Testing by TestMu AI: The QA Layer AI Agents Never Had"
     loading="lazy"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
     allowFullScreen
   ></iframe>
 </div>
