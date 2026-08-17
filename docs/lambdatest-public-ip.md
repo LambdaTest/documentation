@@ -194,7 +194,7 @@ Whitelist these domains to allow Server-Sent Events (SSE) streaming, which deliv
 | Hostname                        |
 |---------------------------------|
 | `kaneaivm-india.lambdatest.com` |
-| `kaneaivm-us.lambdatest.com`    |
+| `kaneaivm.lambdatest.com`       |
 | `device.lambdatest.com`         |
 
 Instead of adding each hostname individually, you can whitelist the wildcard domain **`*.lambdatest.com`** to allow all of them at once.
