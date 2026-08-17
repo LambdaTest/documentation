@@ -1,18 +1,18 @@
 ---
-id: rook-scenarios
-title: Generate and Manage Rook Test Scenarios
+id: agent-assurance-scenarios
+title: Generate and Manage Agent Assurance Test Scenarios
 hide_title: false
 sidebar_label: Scenarios
-description: Generate, review, edit, filter, exclude, and understand Rook functional, non-functional, and adversarial test scenarios.
+description: Generate, review, edit, filter, exclude, and understand Agent Assurance functional, non-functional, and adversarial test scenarios.
 keywords:
   - rook scenarios
   - ai agent test cases
   - adversarial agent testing
   - agent scenario yaml
-url: https://www.testmuai.com/support/docs/rook-scenarios/
+url: https://www.testmuai.com/support/docs/agent-assurance-scenarios/
 site_name: TestMu AI
-slug: rook-scenarios/
-canonical: https://www.testmuai.com/support/docs/rook-scenarios/
+slug: agent-assurance-scenarios/
+canonical: https://www.testmuai.com/support/docs/agent-assurance-scenarios/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -23,12 +23,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Rook Scenarios", "item": `${BRAND_URL}/support/docs/rook-scenarios/` }
+      { "@type": "ListItem", "position": 3, "name": "Scenarios", "item": `${BRAND_URL}/support/docs/agent-assurance-scenarios/` }
     ]
   }) }}
 />
 
-# Generate and Manage Rook Test Scenarios
+# Generate and Manage Agent Assurance Test Scenarios
+
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
 
 Rook generates scenarios from the active agent's discovered features, tools, policies, examples, and known data. A scenario is a plain YAML file containing the exact goal sent to the agent, acceptance criteria, forbidden behavior, observation requirements, timeout, repeat count, and tags.
 
@@ -46,7 +50,13 @@ In headless mode:
 rook generate
 ```
 
-Rook first shows a plan. When exploration is missing, the plan includes `/explore` before generation. When stored exploration appears stale, Rook warns you, but normal generation can still proceed from that stored feature model. Run `/explore --force` first when you need scenarios based on the current source. Review the steps and estimated credits before proceeding.
+Rook first shows a plan:
+
+- When exploration is missing, the plan includes `/explore` before generation.
+- When stored exploration appears stale, Rook warns you. Normal generation still proceeds from the stored feature model.
+- Run `/explore --force` first when you need scenarios based on the current source.
+
+Review the steps and estimated credits before proceeding.
 
 ## Scenario Taxonomy
 
@@ -89,7 +99,7 @@ rook generate \
   --total 18
 ```
 
-Every selected category receives at least one scenario when the total permits it. If the total is smaller than the category list, Rook narrows instead of silently exceeding the requested budget.
+Every selected category receives at least one scenario when the total permits it. If the total is smaller than the category list, Rook narrows the selection instead of exceeding your requested budget.
 
 Add domain guidance after `--` in the TUI:
 
@@ -105,7 +115,7 @@ Use `--force` in the TUI to regenerate even when the active agent appears curren
 /generate --force --total 20
 ```
 
-Use `--no-validate` only when you intentionally want to skip the model runnability pass. Deterministic capability checks still apply when the suite runs.
+Use `--no-validate` only when you want to skip the model runnability pass. Deterministic capability checks still apply when the suite runs.
 
 ## Review Scenario Runnability
 
@@ -122,7 +132,7 @@ rook scenarios list --entity <agent-id>
 rook scenarios list --entity <agent-id> --json
 ```
 
-Runnability is recomputed from the scenario and the active profile. It is not permanently decided when the scenario is generated. Scenarios are skipped before invocation when the input or conversation cannot be executed. Common runtime skip reasons include:
+Runnability is recomputed from the scenario and the active profile, not fixed when the scenario is generated. Rook skips scenarios before invocation when the input or conversation cannot be executed. Common runtime skip reasons include:
 
 - No active verified profile.
 - An input kind cannot be delivered.
@@ -130,7 +140,11 @@ Runnability is recomputed from the scenario and the active profile. It is not pe
 - A multi-turn scenario has no conversation mapping.
 - A required MCP verification server is unavailable.
 
-Missing usage reporting, tool-call observation, or filesystem observation is different: Rook can still invoke the agent and grade the criteria it can see. The affected criteria become **Unable to Verify**, and the run still consumes time and credits. The message names the profile field or MCP configuration that can close the gap.
+Missing usage reporting, tool-call observation, or filesystem observation is different. Rook can still invoke the agent and grade the criteria it can see:
+
+- The affected criteria become **Unable to Verify**.
+- The run still consumes time and credits.
+- The message names the profile field or MCP configuration that can close the gap.
 
 ## Scenario YAML Anatomy
 
@@ -190,7 +204,9 @@ Important fields:
 
 ## Input and Output Modalities
 
-Scenario input kinds are `text`, `text+file`, `url`, `pr_ref`, and `image`. The current executor passes `text` and `url` values through the goal. Native file attachment, `pr_ref`, and image-input delivery are not implemented yet, so do not use them as executable release gates. Although the profile schema can record an attachment field or upload endpoint, the runner does not currently transmit `scenario.input.attachments`.
+Scenario input kinds are `text`, `text+file`, `url`, `pr_ref`, and `image`. The current executor passes `text` and `url` values through the goal.
+
+**Not yet implemented:** Native file attachment, `pr_ref`, and image-input delivery. Do not use them as executable release gates. The profile schema can record an attachment field or upload endpoint, but the runner does not currently transmit `scenario.input.attachments`.
 
 Expected output kinds are `text`, `json`, `file`, `image`, and `none`.
 
@@ -200,7 +216,7 @@ For a PDF, CSV, image, or other produced file, write criteria that distinguish:
 2. Its type, size, or dimensions are correct.
 3. Its content is correct.
 
-Rook may be able to prove the first two while marking the third **Unable to Verify**. This gives a more useful report than either failing the whole scenario or claiming the artifact content passed without reading it.
+Rook may prove the first two while marking the third **Unable to Verify**. This reports more usefully than either failing the whole scenario or claiming the artifact content passed without reading it.
 
 ## Curate the Suite
 
@@ -230,7 +246,7 @@ rook scenarios include SC-014 --entity <agent-id>
 rook scenarios delete SC-021 --entity <agent-id>
 ```
 
-Deletion removes the live scenario file, but completed runs keep a snapshot of the definitions they actually executed. Historical evidence therefore does not change when the active suite changes.
+Deletion removes the live scenario file, but completed runs keep a snapshot of the definitions they executed. Historical evidence does not change when the active suite changes.
 
 ## Manual Editing Guidelines
 

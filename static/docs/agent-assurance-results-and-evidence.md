@@ -1,34 +1,6 @@
----
-id: rook-results-and-evidence
-title: Understand Rook Results and Evidence
-hide_title: false
-sidebar_label: Results and Evidence
-description: Interpret Rook verdicts, coverage, evidence, artifacts, trends, and root-cause reports in the terminal and browser viewer.
-keywords:
-  - rook report
-  - ai agent test evidence
-  - unable to verify
-  - ai agent test results
-url: https://www.testmuai.com/support/docs/rook-results-and-evidence/
-site_name: TestMu AI
-slug: rook-results-and-evidence/
-canonical: https://www.testmuai.com/support/docs/rook-results-and-evidence/
----
+# Understand Agent Assurance Results and Evidence
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify({
-    "@context": "https://schema.org", "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
-      { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Rook Results", "item": `${BRAND_URL}/support/docs/rook-results-and-evidence/` }
-    ]
-  }) }}
-/>
-
-# Understand Rook Results and Evidence
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Rook reports what the agent did separately from what the test harness could observe. Read the scenario verdict, criterion evidence, and coverage together.
 
@@ -40,7 +12,7 @@ Rook reports what the agent did separately from what the test harness could obse
 | **Fail** | One or more criteria were observed to fail. |
 | **Unable to Verify** | Rook could not establish the outcome. This is excluded from the pass-rate denominator and is not an agent defect. |
 
-The browser may also present a partial-looking scenario summary when some criteria pass or fail and others remain unverifiable. Open the scenario to see the authoritative per-criterion statuses.
+The browser may present a partial-looking scenario summary when some criteria pass or fail while others remain unverifiable. Open the scenario to see the authoritative per-criterion statuses.
 
 ## Pass Rate Versus Coverage
 
@@ -56,7 +28,7 @@ pass rate: 100%
 coverage: 40%
 ```
 
-This is not equivalent to full assurance. Improve observation until coverage matches the risk of the decision you want the report to support.
+A 100% pass rate at 40% coverage is not full assurance. Improve observation until coverage matches the risk of the decision the report needs to support.
 
 ## Open the Browser Viewer
 
@@ -72,15 +44,15 @@ Print the URL without opening a browser:
 /ui --no-open
 ```
 
-The viewer is bound to loopback, server-rendered, read-only, and makes no external requests. It reads the project files directly and stops with the Rook process.
+The viewer is:
+
+- **Bound to loopback** and server-rendered.
+- **Read-only** and makes no external requests.
+- **Local**: it reads the project files directly and stops with the Rook process.
 
 The agent page summarizes features, scenarios, profiles, trends, and prior runs.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-agent-detail.png').default} alt="Rook agent detail view with features scenarios run history pass rate and coverage" width="1440" height="900" className="doc_img"/>
-
 The run page shows totals, changes from the previous run, tool-oriented analysis, grouped verification gaps, and every scenario result.
-
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-run-detail.png').default} alt="Rook run page showing pass fail unable to verify and coverage" width="1440" height="900" className="doc_img"/>
 
 ## Inspect Criterion Evidence
 
@@ -93,9 +65,7 @@ Open a scenario result to compare:
 - The request and full exchange.
 - Produced or downloaded artifacts.
 
-<img loading="lazy" src={require('../assets/images/rook/rook-browser-scenario-evidence.png').default} alt="Rook scenario result showing failed acceptance criteria and direct response evidence" width="1440" height="900" className="doc_img"/>
-
-Do not treat a fluent narrative as evidence by itself. Look for a quote, JSON value, observed call, filesystem fact, or read-only external verification supporting the criterion.
+Do not treat a fluent narrative as evidence by itself. Look for one of the following to support the criterion: a quote, a JSON value, an observed call, a filesystem fact, or a read-only external verification.
 
 ## Common Unable-to-Verify Reasons
 
@@ -115,19 +85,19 @@ Do not treat a fluent narrative as evidence by itself. Look for a quote, JSON va
 
 ```text
 .testmuai/rook/agents/<agent-id>/
-  history.jsonl
-  history/<scenario-id>.jsonl
-  runs/<run-id>/
-    run.yaml
-    scenarios.yaml
-    analysis.yaml
-    report.evidence/
-    remedies/
-    scenarios/<scenario-id>/
-      request.json
-      response.json
-      verdict.yaml
-      artifacts/
+history.jsonl
+history/<scenario-id>.jsonl
+runs/<run-id>/
+run.yaml
+scenarios.yaml
+analysis.yaml
+report.evidence/
+remedies/
+scenarios/<scenario-id>/
+request.json
+response.json
+verdict.yaml
+artifacts/
 ```
 
 - `run.yaml` records the selected profile, concurrency, state, totals, skipped scenarios, and stop reason.
@@ -171,7 +141,7 @@ Run history can identify:
 - Scenario definition changes, which break direct trend comparison.
 - Coverage changes, including a suite that appears stable because it lost visibility.
 
-The scenario definition hash distinguishes behavioral change from a changed test. Re-run unchanged scenarios several times before labeling nondeterminism.
+The scenario definition hash distinguishes a behavioral change from a changed test. Re-run unchanged scenarios several times before labeling nondeterminism.
 
 ## Use RCA Carefully
 
@@ -184,11 +154,11 @@ Read a remedy as:
 3. The source the investigation read.
 4. A proposed cause and remediation.
 
-The cause is still an inference. Reproduce it independently and add a regression test before changing the agent.
+The proposed cause is still an inference. Reproduce it independently and add a regression test before changing the agent.
 
 ## Sharing Evidence
 
-Project evidence is designed to be reviewable as ordinary files. Before committing or attaching it:
+Project evidence is reviewable as ordinary files. Before you commit or attach it:
 
 - Review requests, responses, artifacts, and scenario goals for secrets or customer data.
 - Keep terminal transcripts out of the project; Rook stores sessions globally for this reason.
