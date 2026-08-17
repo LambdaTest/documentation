@@ -91,3 +91,9 @@ autoScan applies to **web** automation. On real devices, app automation scans ar
 ## Accessibility standards
 
 Accessibility Testing helps you work toward standards such as WCAG, ADA, EAA, and Section 508. Automated testing covers many rules, but it does not replace manual verification for every accessibility requirement. See the [Web](/support/docs/accessibility-web-what-we-cover/), [iOS](/support/docs/accessibility-ios-what-we-cover/), and [Android](/support/docs/accessibility-android-what-we-cover/) checklists for supported rules plus each platform’s **manual test checklist**, with links into each rule repository.
+
+## Related accessibility guides
+
+- [Accessibility Testing with Deque's axe](/support/docs/deque-integration/) — run automated accessibility checks using Deque's axe across 3000+ browsers.
+- [Screen Reader / VoiceOver on Real Devices](/support/docs/screen-reader-voiceover-real-devices-browser/) — perform manual screen reader and VoiceOver testing on real devices.
+- [Accessibility NUnit C# Test](/support/docs/accessibility-nunit-csharp-test/) — run automated accessibility checks from an NUnit (C#) test.

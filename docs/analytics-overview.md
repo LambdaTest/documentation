@@ -216,3 +216,8 @@ The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are availabl
     </li>
   </ul>
 </nav>
+
+## Related analytics guides
+
+- [Build insights](/support/docs/analytics-build-insights/) — analyze build-level trends and outcomes across your test runs.
+- [Dashboard settings](/support/docs/analytics-dashboard-settings/) — configure and personalize your analytics dashboards.

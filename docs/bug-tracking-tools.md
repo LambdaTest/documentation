@@ -136,6 +136,34 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <div className="download_btn mb-10">
 <a href="https://www.testmuai.com/support/docs/rally-integration/">Rally Integration With <BrandName /></a>
 </div>
+
+<div className="download_btn mb-10">
+<a href="/support/docs/redmine-integration/">Redmine Integration With <BrandName /></a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/support/docs/spirateam-integration/">SpiraTeam Integration With <BrandName /></a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/support/docs/alm-octane-integration/">ALM Octane Integration With <BrandName /></a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/support/docs/zenkit-integration/">Zenkit Integration With <BrandName /></a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/support/docs/userback-integration/">Userback Integration With <BrandName /></a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/support/docs/zoho-cliq-integration/">Zoho Cliq Integration With <BrandName /></a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/support/docs/webex-teams-integration/">Webex Teams Integration With <BrandName /></a>
+</div>
 :::info Note
 
 If your favourite Bug Tracking tool is not in the list above mentioned, you can just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**shout**</span> and we will have it ready shortly for you.

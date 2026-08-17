@@ -121,3 +121,16 @@ You can perform following Visual Regression tests using SmartUI:
   <p>In case your favorite framework or tool isn't listed here, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Shout Out Here</span>. <br/>
   In case of any other problems, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span>.</p>
 </div>
+
+## More SmartUI guides
+
+Extend your visual testing setup with these SmartUI SDKs, integrations, and features:
+
+- [SmartUI Selenium Ruby SDK](/support/docs/smartui-selenium-ruby-sdk/) — run SmartUI visual tests from a Selenium Ruby suite.
+- [SmartUI TestCafe SDK](/support/docs/smartui-testcafe-sdk/) — run SmartUI visual tests from TestCafe.
+- [SmartUI Diff Highlighter](/support/docs/smartui-diff-highlighter/) — fine-tune how visual differences are highlighted in comparisons.
+- [SmartUI Slack Integration](/support/docs/smartui-slack-integration/) — get SmartUI build and diff notifications in Slack.
+- [SmartUI with Travis CI](/support/docs/smartui-with-travis-ci/) — run SmartUI visual tests in a Travis CI pipeline.
+- [SmartUI GitLab PR checks & hooks](/support/docs/smartui-gitlab-pr-checks-hooks/) — add SmartUI visual checks to GitLab merge requests.
+- [Group screenshots by test case](/support/docs/smartui-group-by-test-cases/) — organize SmartUI screenshots by test case.
+- [SmartUI Capture on HyperExecute](/support/docs/hyperexecute-smart-ui-capture-onboarding/) — run SmartUI Capture as part of a HyperExecute job.
