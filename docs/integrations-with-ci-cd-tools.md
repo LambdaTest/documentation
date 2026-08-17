@@ -123,6 +123,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <a href="https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/">Buildkite Integration With <BrandName /></a>
 </div>
 
+<div className="download_btn mb-10">
+<a href="/support/docs/bitrise-integration-xcuitest/">Bitrise XCUITest Integration With <BrandName /></a>
+</div>
+
 >If your favourite CI/CD tools is not in the above mentioned, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
 
 <nav aria-label="breadcrumbs">

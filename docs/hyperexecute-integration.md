@@ -81,3 +81,7 @@ Integrate HyperExecute with your favourite CI/CD tools, products and <BrandName 
     </li>
   </ul>
 </nav>
+
+## Related integrations
+
+- [HyperExecute GitHub App Integration](/support/docs/hyperexecute-github-app-integration/) — trigger and manage HyperExecute jobs directly from the GitHub App.
