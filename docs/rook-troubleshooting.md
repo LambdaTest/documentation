@@ -53,35 +53,70 @@ command -v rook
 echo "$PATH"
 ```
 
-If you installed a tarball manually, link `rook-<sha>/bin/rook` into a directory already on `PATH`.
+If you installed a public archive manually, link `~/.testmuai/rook-<version>/bin/rook` into a directory already on `PATH`.
 
-### Node.js version error
+For the public shell installer, the default command link is `~/.local/bin/rook`:
 
-Rook requires Node.js 20 or newer:
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+### npm reports a Node.js version error
+
+The npm installation method requires Node.js 20 or newer:
 
 ```bash
 node --version
 ```
 
-Upgrade Node.js and rerun `rook --version`.
-
-### GitHub download is unauthorized
-
-Confirm that the authenticated GitHub account can read the private repository:
+Upgrade Node.js and repeat:
 
 ```bash
-gh auth status
-gh repo view LambdatestIncPrivate/rook
+npm install -g @testmuai/rook
 ```
 
-Then retry the installer using `gh auth token`.
+The public shell archives and Homebrew formula carry their own Rook runtime, so you do not need to preinstall Node.js for those methods.
+
+### The shell installer reports `BASH_SOURCE[0]: unbound variable`
+
+The documented pipe form is broken in Rook 0.1.0. Download and execute the script as a file:
+
+```bash
+rook_installer="$(mktemp "${TMPDIR:-/tmp}/rook-install.XXXXXX")"
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+  -o "$rook_installer" &&
+  bash "$rook_installer"
+rm -f "$rook_installer"
+```
+
+Do not remove checksum verification or pipe a modified copy around the failure.
+
+### Homebrew wants to install or upgrade Node.js
+
+This is version 0.1.0 formula behavior. The installed Rook CLI uses its bundled Node.js runtime, but the formula declares Homebrew Node as a dependency used to run npm during installation. Homebrew can therefore propose Node.js and related dependency upgrades even when it pours a precompiled Rook bottle.
+
+Review the proposed Homebrew changes before confirming. Use the public shell installer if you want to avoid Homebrew's dependency transaction.
+
+### Windows installation does not run
+
+The shell installer and Homebrew path support macOS and Linux, not native Windows. The npm package publishes a Windows x64 runtime and npm command shim, but version 0.1.0 has a known, not-fully-validated gap in resolving its bundled runtime. Install Node.js 20 or newer before evaluating the npm method, and confirm startup on your machine before relying on it. Windows arm64 is not supported. For the fully validated 0.1.0 journey, run Rook inside WSL, Linux, or macOS.
+
+### The checksum does not match
+
+The shell installer calculates the downloaded archive's SHA-256 and compares it with the public release sidecar. Do not bypass a mismatch. Remove the partial install, download again, and check whether a proxy is rewriting release downloads.
+
+Review the assets directly on the [public Rook releases page](https://github.com/LambdaTest/rook/releases).
 
 ### Download resets after the release lookup
 
-Release assets are served from a different GitHub asset domain. A VPN or corporate proxy can allow the repository request and reset the redirected asset download. Try the installer off VPN or use:
+Release assets are served from a GitHub asset domain that can be handled differently by a VPN or corporate proxy. Retry outside the proxy, or download the platform archive and matching `.sha256` file from the public release page.
+
+For example, if the optional GitHub CLI is installed:
 
 ```bash
-gh release download --repo LambdatestIncPrivate/rook --pattern '*.tar.gz'
+gh release download v0.1.0 \
+  --repo LambdaTest/rook \
+  --pattern 'rook-0.1.0-darwin-arm64.tar.gz*'
 ```
 
 ## Authentication and Credits
@@ -97,7 +132,9 @@ If the token was revoked, logging in again is required. Nothing signs in automat
 
 ### Controller is unreachable
 
-Check `rook doctor`. A network failure is not evidence that the token is invalid. Verify VPN, DNS, proxy, and controller availability before repeating login.
+Check the controller URL printed by `rook doctor`. A network failure is not evidence that the token is invalid. Verify DNS, proxy, and controller availability before repeating login.
+
+As verified on August 17, 2026, the production hostname configured in the public 0.1.0 package, `rook-api.lambdatest.com`, is not resolvable. This blocks `/explore`, `/generate`, `/run`, and other model-backed work in the default production environment. Local profile setup can still use request-field heuristics and probe a reachable agent target, although controller-assisted classification is unavailable. Installation and headless `rook doctor` can also exit successfully because doctor prints the configured endpoint; it does not prove DNS reachability.
 
 If the controller remains unreachable, confirm the network, VPN, or proxy requirements with your Rook administrator.
 

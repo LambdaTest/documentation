@@ -21,8 +21,14 @@ Rook is a terminal application that autonomously tests AI agents you own. Give i
 
 You install only the Rook CLI. You do not need the Rook source repository, a Rook development environment, Docker, or your own model API key.
 
-:::caution Pre-alpha
+Rook 0.1.0 is publicly available through npm, a checksummed shell installer, and Homebrew, with full support for macOS and Linux on x64 and arm64. The npm package also publishes a Windows x64 runtime, subject to the startup limitation described in [Install the Rook CLI](/support/docs/rook-installation/). The shell and Homebrew packages carry a matching Node.js runtime; npm installation requires Node.js 20 or newer.
+
+:::warning Pre-alpha
 Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
+:::
+
+:::warning Public 0.1.0 controller availability
+As verified on August 17, 2026, the production controller hostname configured in public version 0.1.0 is not resolvable. You can install Rook, inspect commands, run local diagnostics, and open the read-only viewer, but the model-backed testing sequence requires the production service to be available. Confirm connectivity before planning an end-to-end evaluation.
 :::
 
 <img loading="lazy" src={require('../assets/images/rook/rook-terminal-home.png').default} alt="Rook terminal home showing the autonomous agent testing workflow" width="1111" height="911" className="doc_img"/>
@@ -109,3 +115,4 @@ Use staging endpoints, disposable fixtures, and <code>--concurrency 1</code> for
 - [Test your first agent](/support/docs/rook-quickstart/)
 - [Choose a real-world setup](/support/docs/rook-use-cases/)
 - [Browse every command](/support/docs/rook-command-reference/)
+- [Review public releases and the changelog](https://github.com/LambdaTest/rook)

@@ -22,12 +22,17 @@ Replace the example filenames, URL, token, and JSON fields with values from your
 
 ## What You Need
 
-- [Rook installed and authenticated](/support/docs/rook-installation/).
+- [Rook installed](/support/docs/rook-installation/), with <code>rook doctor</code> showing the intended environment.
+- A reachable Rook controller and an authenticated LambdaTest account.
 - A local PRD or specification for the agent.
 - A working staging cURL request.
 - Test data that the agent is allowed to read or change.
 
 Do not use a production refund endpoint for this walkthrough.
+
+:::warning Public 0.1.0 limitation
+As verified on August 17, 2026, the production controller hostname in public version 0.1.0 is not resolvable, so the model-backed steps in this walkthrough cannot complete with the default production configuration. Do not substitute a private or staging controller unless your Rook administrator explicitly gives you that environment and access. You can still install the CLI, read <code>/guide</code> and <code>/help</code>, run diagnostics, and prepare the PRD and staging request.
+:::
 
 ## Step 1: Open the Specification Workspace
 

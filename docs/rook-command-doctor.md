@@ -8,7 +8,7 @@ slug: rook-command-doctor/
 
 # <code>/doctor</code> Command
 
-Use <code>/doctor</code> as the first diagnostic when Rook cannot start, authenticate, discover an agent, or reach its controller.
+Use <code>/doctor</code> as the first diagnostic when Rook cannot start, authenticate, or find the expected workspace. Headless <code>rook doctor</code> prints the configured controller and API endpoints without probing them. Interactive <code>/doctor</code> can contact the controller while resolving a signed-in session, but it is not a general connectivity test.
 
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-doctor.png').default} alt="Rook doctor command help" width="1556" height="1466" className="doc_img"/>
 
@@ -30,22 +30,23 @@ rook doctor
 
 | Check | <code>rook doctor</code> | Interactive <code>/doctor</code> |
 |---|---|---|
-| Rook and Node.js versions | Yes | Rook version only |
-| Environment and controller URL | Yes | Yes |
-| Controller reachability and providers | Yes | Yes |
-| Authentication | Locally cached state; not a live token verification | Cached state, plus a live controller verification when signed in |
-| Workspace and TTY | Both | Workspace |
+| Rook version | Exact installed version | First row shows <code>rook v&lt;version-label&gt;</code> |
+| Active Node.js runtime version | Yes | No |
+| Environment, controller URL, and API URL | Yes | Yes |
+| Controller DNS or HTTP reachability | No | Conditional: signed-in authentication resolution can contact the controller |
+| Authentication | Cached, signed-out, or local-development state | Current session state |
+| Workspace and TTY | Both | Workspace storage directory only |
 | Registered project entities | No | Yes |
 
-Neither form tests the endpoint in an agent invocation profile.
+Neither form tests the endpoint in an agent invocation profile. A signed-out interactive session also provides no controller-reachability result.
 
 ## Step-by-step troubleshooting
 
 1. Run <code>rook doctor</code> outside the TUI if the TUI will not start.
-2. Fix the first failing check.
-3. Verify authentication with <code>rook whoami</code>.
-4. Return to the intended workspace.
-5. Start Rook and retry the original command.
+2. Confirm the version, environment, endpoint URLs, workspace, and TTY are the ones you intended.
+3. Resolve the printed controller hostname with your normal DNS tools, or retry the controller-backed command and read its specific error.
+4. Verify authentication with <code>rook whoami</code> after the controller is reachable.
+5. Return to the intended workspace, start Rook, and retry the original command.
 
 ## Real-world examples
 
@@ -57,7 +58,9 @@ rook doctor
 rook whoami
 ~~~
 
-When a remote agent is unreachable, also test the profile's exported request with <code>/profile curl</code>; doctor checks Rook's controller, not every target endpoint.
+When a remote agent is unreachable, also test the profile's exported request with <code>/profile curl</code>; doctor shows Rook's configured service URLs, not the health of every target endpoint.
+
+As verified on August 17, 2026, public Rook 0.1.0 <code>rook doctor</code> can exit successfully while the configured production controller hostname is not resolvable. Treat the printed endpoint as configuration, not a green health check.
 
 ## Privacy
 
