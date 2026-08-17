@@ -1,18 +1,18 @@
 ---
-id: rook-mcp
-title: Configure MCP Servers in Rook
+id: agent-assurance-mcp
+title: Configure MCP Servers in Agent Assurance
 hide_title: false
 sidebar_label: MCP Servers
-description: Add, inspect, approve, enable, disable, and troubleshoot MCP servers used by Rook for AI agent discovery and verification.
+description: Add, inspect, approve, enable, disable, and troubleshoot MCP servers used by Agent Assurance for AI agent discovery and verification.
 keywords:
   - rook mcp
   - mcp agent testing
   - model context protocol verification
   - rook mcp approve
-url: https://www.testmuai.com/support/docs/rook-mcp/
+url: https://www.testmuai.com/support/docs/agent-assurance-mcp/
 site_name: TestMu AI
-slug: rook-mcp/
-canonical: https://www.testmuai.com/support/docs/rook-mcp/
+slug: agent-assurance-mcp/
+canonical: https://www.testmuai.com/support/docs/agent-assurance-mcp/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -23,16 +23,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": BRAND_URL },
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
-      { "@type": "ListItem", "position": 3, "name": "Rook MCP", "item": `${BRAND_URL}/support/docs/rook-mcp/` }
+      { "@type": "ListItem", "position": 3, "name": "MCP Servers", "item": `${BRAND_URL}/support/docs/agent-assurance-mcp/` }
     ]
   }) }}
 />
 
-# Configure MCP Servers in Rook
+# Configure MCP Servers in Agent Assurance
 
-Rook uses MCP primarily as an evidence source. A judge can call an approved read-only tool to confirm that a ticket, refund, pull request, or other effect exists instead of trusting the tested agent's claim.
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
 
-Exploration also records MCP servers declared by the target agent. Those declarations are evidence about the target and are never silently replaced or rewritten.
+Rook uses MCP primarily as an evidence source. A judge can call an approved read-only tool to confirm that a ticket, refund, pull request, or other effect exists, rather than trusting the tested agent's claim.
+
+Exploration also records MCP servers declared by the target agent. These declarations are evidence about the target, and Rook never silently replaces or rewrites them.
 
 ## List Servers
 
@@ -63,7 +67,7 @@ Each row reports the server name, origin, transport, state, source, and connecti
 
 Configured definition precedence is `local > project > user` by server name.
 
-The repository-root `.mcp.json` belongs to the agent under test. Rook reads it as evidence and never writes its own configuration there. Project configuration belongs in `.testmuai/rook/mcp.json`.
+The repository-root `.mcp.json` belongs to the agent under test. Rook reads it as evidence and never writes its own configuration there. Put project configuration in `.testmuai/rook/mcp.json`.
 
 ## Add a Stdio Server
 
@@ -85,9 +89,9 @@ rook mcp add github --scope user \
   -- npx -y @modelcontextprotocol/server-github
 ```
 
-Everything after `--` is the stdio command and its arguments. `--env` can be repeated.
+Everything after `--` is the stdio command and its arguments. You can repeat `--env`.
 
-Keep secret references in configuration. Rook expands `${VAR}` only when resolving a server to run and displays the raw unexpanded definition.
+Keep secret references in configuration. Rook expands `${VAR}` only when resolving a server to run, and displays the raw unexpanded definition.
 
 ## Record a Remote Server
 
@@ -99,7 +103,7 @@ rook mcp add notion \
 ```
 
 :::note Remote transport status
-HTTP, SSE, and WebSocket definitions are accepted, stored, and listed for forward compatibility, but the current pre-alpha release connects only to stdio MCP servers. Remote entries appear as `unsupported-transport`.
+HTTP, SSE, and WebSocket definitions are accepted, stored, and listed for forward compatibility. The current pre-alpha release connects only to stdio MCP servers, so remote entries appear as `unsupported-transport`.
 :::
 
 ## Inspect a Definition
@@ -113,7 +117,7 @@ Rook leaves `${VAR}` references unexpanded in display output so tokens do not le
 
 ## Approve Repository-Controlled Servers
 
-A project or discovered stdio definition can execute a command from a cloned repository, so it is inert until a person approves its exact fingerprint.
+A project or discovered stdio definition can execute a command from a cloned repository, so it stays inert until a person approves its exact fingerprint.
 
 Interactive:
 
@@ -134,7 +138,13 @@ rook mcp approve <name> --origin project
 rook mcp approve <name> --origin discovered
 ```
 
-Rook prints the command before writing the approval. Review the executable, arguments, environment references, working assumptions, and package source.
+Rook prints the command before writing the approval. Review the:
+
+- Executable
+- Arguments
+- Environment references
+- Working assumptions
+- Package source
 
 Approval is pinned to the raw definition, not only the server name. If the command, arguments, or environment references change, the server returns to `pending-approval` and is marked as changed since approval. Rotating the value of the referenced secret does not require reapproval.
 
@@ -179,11 +189,14 @@ verification_requires:
 
 If the server cannot be called, Rook names it in the skip reason. The next run recomputes MCP capability, so enabling a server can make the scenario runnable without regenerating it.
 
-A separate concern is observing the tested agent's own MCP calls. Configure that through the profile. Registry availability answers whether Rook can call a server; profile observation answers whether Rook can see the target's calls. Both gates may apply.
+Observing the tested agent's own MCP calls is a separate concern that you configure through the profile. The two gates are independent, and both may apply:
+
+- **Registry availability:** whether Rook can call a server.
+- **Profile observation:** whether Rook can see the target's calls.
 
 ## Permission Prompts Still Apply
 
-An enabled registry entry does not grant every use. Starting a server, listing its tools, and calling a tool still pass through Rook's permission gate with specific subjects such as:
+An enabled registry entry does not grant every use. Starting a server, listing its tools, and calling a tool each still pass through Rook's permission gate with specific subjects such as:
 
 ```text
 mcp_call(billing.get_refund_status)

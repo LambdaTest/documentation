@@ -223,10 +223,9 @@ export default function Home() {
               <a href="/support/docs/chat-agent/"><p className="p_home_inners">Supported Agent Types</p></a>
                <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First Agent</p></a>
                 <a href="/support/docs/testmu-a2a-cli/"><p className="p_home_inners">Test With Agent Testing CLI</p></a>
-              <a href="/support/docs/rook-overview/"><p className="p_home_inners">Autonomous Agent Testing With Rook</p></a>
-              <a href="/support/docs/rook-use-cases/"><p className="p_home_inners">Rook Use Cases</p></a>
-              <a href="/support/docs/rook-command-reference/"><p className="p_home_inners">Rook Command Guides</p></a>
                      <a href="/support/docs/chat-agent-api-integration/"><p className="p_home_inners">Integrate a Chat Agent API</p></a>
+
+                      <a href="/support/docs/agent-assurance-overview/"><p className="p_home_inners">Agent Assurance &nbsp;<NewTag value="NEW" /></p></a>
               <a href="/support/docs/agent-testing-platform-faqs/"><p className="p_home_inners">FAQs</p></a>
             </div>
           </div>
