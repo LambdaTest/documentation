@@ -2,7 +2,7 @@
 id: run-tests-with-webdriver-bidi
 title: Run Web Automation Tests With WebDriver BiDi on TestMu AI
 hide_title: true
-sidebar_label: Run Web Automation Tests With BiDi
+sidebar_label: BiDi Testing
 description: Run web automation over the WebDriver BiDi protocol on TestMu AI with WebdriverIO. Capture screenshots, validate the page, and subscribe to browser events.
 keywords:
   - run web automation tests with webdriver bidi
