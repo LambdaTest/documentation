@@ -4,7 +4,7 @@
 
 Jest is a Facebook-maintained framework for developing frontend and backend unit tests in JavaScript and executing end-to-end testing using Playwright. It provides you with the flexibility to target a single test, delivering structured output, or an entire suite for common assertions.
 
-TestMu AI allows you to run Puppeteer tests with Jest on a browser farm of 40+ real browsers and operating system combinations.
+TestMu AI allows you to run Puppeteer tests with Jest on a browser farm of real browsers and operating system combinations.
 
 This guide will cover the basics of getting started with Puppeteer testing with Jest on the TestMu AI platform.
 

@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you build codeless test automation in LEAPWORK, you can run those same visual flows on real browsers and devices by connecting LEAPWORK to TestMu AI. The integration gives your LEAPWORK agent access to 3,000+ browsers, devices, and OS combinations. You configure TestMu AI once inside LEAPWORK Studio, then run automation flows against the TestMu AI cloud without managing any local machines.
+If you build codeless test automation in LEAPWORK, you can run those same visual flows on real browsers and devices by connecting LEAPWORK to TestMu AI. The integration gives your LEAPWORK agent access to 5000+ real devices and 10,000+ browser/device combinations. You configure TestMu AI once inside LEAPWORK Studio, then run automation flows against the TestMu AI cloud without managing any local machines.
 
 This integration covers two connection types. Use a **web agent** to run flows on the cross browser cloud, and a **TestMu AI Server** connection to automate native Android and iOS apps on real devices.
 
@@ -28,7 +28,7 @@ LEAPWORK assigns **Agents**, the available machines that execute your automation
 
 **Step 5:** Return to the TestMu AI agent settings window in LEAPWORK Studio. This window is where you define how the agent connects to the cloud and which environment it runs on.
 
-Fill in the agent settings as follows. TestMu AI supports both manual and automated browser testing across 3,000+ browser, device, and OS combinations, so the platform, browser, and version you pick here determine the environment your flows run on.
+Fill in the agent settings as follows. TestMu AI supports both manual and automated browser testing across 5000+ real devices and 10,000+ browser/device combinations, so the platform, browser, and version you pick here determine the environment your flows run on.
 
   * **Title**: a name for the agent, for example `TestMu AI`.
   * **Hostname**: the IP address, machine name, or DNS name of the TestMu AI hub (see Step 6 for the exact value).

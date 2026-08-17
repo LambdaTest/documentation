@@ -1012,6 +1012,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Video Agent Testing",
+            id: "video-agent",
+          },
+          {
+            type: "doc",
             label: "Phone Agent Testing",
             id: "phone-agent",
           },
@@ -1090,6 +1095,41 @@ module.exports = {
             label: "FAQs",
             id: "agent-testing-platform-faqs",
           },
+        ],
+      },
+      {
+        type: "category",
+        label: "Agent Assurance",
+        collapsed: false,
+        items: [
+          { type: "doc", label: "Overview", id: "agent-assurance-overview" },
+          { type: "doc", label: "Getting Started", id: "agent-assurance-quickstart" },
+           { type: "doc", label: "Command Reference", id: "agent-assurance-command-reference" },
+          {
+            type: "category",
+            label: "Configure",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Connect and Explore Agents", id: "agent-assurance-connect-and-explore-agents" },
+              { type: "doc", label: "Invocation Profiles", id: "agent-assurance-profiles" },
+              { type: "doc", label: "Scenarios", id: "agent-assurance-scenarios" },
+              { type: "doc", label: "MCP Servers", id: "agent-assurance-mcp" },
+            ],
+          },
+          {
+            type: "category",
+            label: "Run & Review",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Run Tests", id: "agent-assurance-run-tests" },
+              { type: "doc", label: "Results and Evidence", id: "agent-assurance-results-and-evidence" },
+              { type: "doc", label: "CI/CD and Automation", id: "agent-assurance-ci-cd" },
+            ],
+          },
+
+           { type: "doc", label: "Troubleshooting", id: "agent-assurance-troubleshooting" },
+         
+        
         ],
       },
     ],

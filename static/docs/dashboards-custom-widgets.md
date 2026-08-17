@@ -4,6 +4,8 @@
 
 Custom widgets in TestMu AI Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
 
+You can also let AI CoPilot build a custom widget for you — describe the insight you want and the agent proposes a widget for your approval. See [Building Widgets with CoPilot](/docs/analytics-dashboard-copilot/#building-widgets-with-copilot)  — contact [support@testmuai.com](mailto:support@testmuai.com) to have it enabled for your organization.
+
 ## Prerequisites
 
 Before creating a custom widget, ensure you have:

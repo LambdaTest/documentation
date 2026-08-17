@@ -4,7 +4,7 @@
 
 Cucumber.js is a JavaScript-based open-source framework for web automation testing. It runs on Node.js and latest web browsers. Cucumber.js allows you to write and execute tests in Gherkin - a non-technical and human-readable language.
 
-TestMu AI enables you to run Playwright tests with Cucumber.js test runner on a browser farm of 40+ real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the TestMu AI platform using the Cucumber.js test runner.
+TestMu AI enables you to run Playwright tests with Cucumber.js test runner on a browser farm of real browser and operating system combinations. This guide will outline the fundamentals of getting started with Playwright testing on the TestMu AI platform using the Cucumber.js test runner.
 
 ## Prerequisites
 
