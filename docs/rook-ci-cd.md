@@ -32,6 +32,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Rook's headless commands use the same discovery, generation, profile, permission, execution, judging, and evidence paths as the interactive TUI. Use them to create a release gate after you have proved the workflow interactively against the same agent and profile.
 
+:::warning Public 0.1.0 is not ready for a production gate
+As verified on August 17, 2026, the default production controller hostname in the public 0.1.0 package is not resolvable. Keep CI integration disabled until <code>rook doctor</code> and a real controller-backed smoke command succeed from the runner. A binary that installed successfully is not proof that the testing service is reachable.
+:::
+
 ## Prepare the Project Interactively
 
 Before enabling a pipeline:
@@ -159,13 +163,8 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install pinned Rook build
-        env:
-          GH_TOKEN: ${{ secrets.ROOK_REPOSITORY_TOKEN }}
-          ROOK_VERSION: <reviewed-commit-sha>
-        run: |
-          curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" \
-            https://raw.githubusercontent.com/LambdatestIncPrivate/rook/stage/scripts/install.sh | bash
+      - name: Install pinned public Rook release
+        run: npm install -g @testmuai/rook@0.1.0
 
       - name: Verify Rook environment
         run: |
@@ -195,7 +194,7 @@ jobs:
           path: .testmuai/rook/agents/refund-desk/runs/
 ```
 
-Pin Rook by commit SHA and review updates before changing it. Scope the repository token to read access for the private release repository.
+Pin Rook by an exact public semantic version and review the [Rook changelog](https://github.com/LambdaTest/rook/blob/main/CHANGELOG.md) before changing it. The public npm package does not require a GitHub repository token.
 
 ## Separate Generation From the Gate
 

@@ -21,6 +21,10 @@ You do not need the Rook source code, and your workspace does not need to contai
 
 Use this page to choose the journey that matches the access you actually have.
 
+:::note Current public release
+These are supported testing patterns and setup examples. As verified on August 17, 2026, the default production controller in public Rook 0.1.0 is unavailable, so controller-backed commands cannot complete until that service is deployed. You can prepare the workspaces, PRDs, profiles, test data, and expected evidence now.
+:::
+
 ## Access Matrix
 
 | Your access | Explore | Invoke | What Rook can establish |
@@ -262,7 +266,52 @@ Switch to another verified profile and repeat the same scenario IDs. Runs retain
 
 Do not use a production profile for scenarios that can write. Rook does not provide rollback.
 
-## Use Case 10: Continuous Regression Testing
+## Use Case 10: Verify What the Agent Did, Not Only What It Said
+
+**Situation:** An expense agent reads an expense, applies a category limit, approves or rejects it, and writes an audit record for every tool call.
+
+Suppose the policy says:
+
+| Category | Limit | Required action above the limit |
+|---|---:|---|
+| Meals | $100 | Reject and notify a manager |
+| Software | $200 | Reject and notify a manager |
+| Travel | $1,000 | Reject and notify a manager |
+
+The test request is:
+
+~~~json
+{
+  "input": "Please review EXP-1002",
+  "session_id": "rook-SC-004"
+}
+~~~
+
+The live agent responds:
+
+~~~text
+EXP-1002 approved for $450. This is within the $200 limit for software.
+~~~
+
+This is a functional failure even though the reply is fluent. Strong evidence includes all three facts:
+
+1. The expense amount is $450.
+2. The policy limit is $200.
+3. The session-scoped audit record contains <code>approve_expense</code> and does not contain the required manager notification.
+
+Generate focused scenarios:
+
+~~~text
+/generate -- test every category boundary, already-reimbursed expenses, unknown IDs, and manager escalation
+~~~
+
+Configure the request's session field as <code>&#123;&#123;session&#125;&#125;</code> so the live agent's audit records can be isolated during manual investigation. In tested version 0.1.0 behavior, that generated session value is available to the agent invocation but not to the judge's read-only verification request. Rook can therefore compare $450 with the $200 policy limit, but it cannot safely attribute an audit record to this exact scenario automatically.
+
+Record the tool-call assertion as <code>Unable to Verify</code> with version 0.1.0. Do not use <code>approve_expense</code> or another write operation to check the result; verification must not create the state it is checking. An unscoped audit lookup is also insufficient because it can mix evidence from concurrent or earlier scenarios.
+
+<a id="use-case-10-continuous-regression-testing"></a>
+
+## Use Case 11: Continuous Regression Testing
 
 After the interactive journey is verified, use headless commands:
 
