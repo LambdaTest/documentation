@@ -2,9 +2,9 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI tunnel feature lets you test private server URLs, locally hosted web apps, and websites on 3000+ real browsers and operating systems. On TestMu AI, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new TestMu AI tunnel binary. To establish a secure and unique tunnel connection between your system and TestMu AI cloud servers, the TestMu AI tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
+TestMu AI tunnel feature lets you test private server URLs, locally hosted web apps, and websites on real browsers and operating systems. On TestMu AI, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new TestMu AI tunnel binary. To establish a secure and unique tunnel connection between your system and TestMu AI cloud servers, the TestMu AI tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
 
-Learn how to perform local testing using Playwright across 40+ real browsers and operating systems.
+Learn how to perform local testing using Playwright across real browsers and operating systems.
 
 ## Playwright Testing Of Locally Hosted Websites
 
