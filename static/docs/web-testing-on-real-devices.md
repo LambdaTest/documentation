@@ -28,7 +28,7 @@ One-click bug logging allows users to capture screenshots for future reference a
 
 3. An integration ticket will pop up. Provide the bugs/issue/task details and click **Create Issue**. Your bugs will be marked to your integrated bug-tracking tool.
 
-*TestMu AI offers 65+ integrations with your favourite tool for Bug tracking, CI/CD, Project Management, Codeless Automation, and more. Check out [TestMu AI integrations](https://www.testmuai.com/integrations).*
+*TestMu AI offers 65+ integrations with your favourite tool for Bug tracking, CI/CD, Project Management, Codeless Automation, and more. Check out [TestMu AI integrations](https://www.testmuai.com/integrations/).*
 
 ## Video Recording Of A Test Session
 

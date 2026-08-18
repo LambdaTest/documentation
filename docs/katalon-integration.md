@@ -57,7 +57,7 @@ import TabItem from '@theme/TabItem';
 
 Katalon Studio offers cross-platform testing, from Windows, macOS, and Linux for web automation, to Android and iOS for mobile automation. It also comes with a built-in intuitive interface for codeless automation testing and validating the UI elements of your web application.
 
-This integration between <BrandName /> and Katalon Studio enables you to automate the cross-browser testing process through the Selenium Grid of more than 2,000 real devices.
+This integration between <BrandName /> and Katalon Studio enables you to automate the cross-browser testing process through the Selenium Grid of 5000+ real devices.
 
 As a result, you’ll be able to expand your test coverage, analyze and extract insightful test reports, and enhance your team collaboration.
 
@@ -75,7 +75,7 @@ By the end of this topic, you will know:
 
 ---
 
-Before you can start performing App automation using Katalon Studio with Lambdatest, you would need to follow these steps:
+Before you can start performing App automation using Katalon Studio with LambdaTest, you would need to follow these steps:
 
 - You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
 - [Katalon Studio](https://katalon.com/)

@@ -108,6 +108,10 @@ Kane CLI outputs one JSON object per line (NDJSON) to stdout:
 | `run_dir` | Path to run-level logs, step JSON, screenshots |
 | `token_usage` | Token consumption breakdown |
 
+# The .evidence proof pack
+
+Every Kane CLI run produces an `.evidence` pack stored natively in the results folder, so failure context travels with the run instead of living in a separate dashboard. Each pack contains the full execution proof for the run: step-by-step traces, screenshots, video, and command, network and console logs, plus the NDJSON event stream and result codes. Coding agents and humans read the same evidence to see exactly what happened, where it failed, and why.
+
 ## Parsing Output
 
 Get the `run_end` event:

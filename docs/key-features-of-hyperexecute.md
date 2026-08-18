@@ -13,7 +13,7 @@ keywords:
   - hyperexecute automation testing
   - hyperexecute key features
 url: https://www.testmuai.com/support/docs/key-features-of-hyperexecute/
-site_name: TestMu AI Key features of Hyperexecute
+site_name: TestMu AI Key features of HyperExecute
 slug: key-features-of-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/key-features-of-hyperexecute/
 ---
@@ -183,7 +183,7 @@ To ensure that your testing environment can be optimised, HyperExecute provides 
 ## Security
 HyperExecute prioritises the safety and security of your data above everything else. The entirety of your data is encrypted for the entire duration of your testing lifecycle. HyperExecute is compliant with the industry leading security standards offering you:
 
-- **Data Encryption and Compliance :** HyperExecute prioritizes data safety through full encryption, adhering to industry standards like ([SOC2, GDPR, and CCPA](https://www.testmuai.com/security)).
+- **Data Encryption and Compliance :** HyperExecute prioritizes data safety through full encryption, adhering to industry standards like ([SOC2, GDPR, and CCPA](https://www.testmuai.com/security/)).
 - **Dedicated Proxy Server Option :** Ensure secure connections by utilizing dedicated proxy servers for your testing activities.
 - **Automatic Tunnel Management :** Maintain data security for private websites with automatic tunnel management through Network Address Translation (NAT) instances.
 

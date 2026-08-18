@@ -1211,6 +1211,8 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 - **[Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/)**: Comprehensive troubleshooting solutions
 - **[SmartUI CLI Reference](/support/docs/smartui-cli-complete-reference/)**: Complete CLI command reference
 - **[HyperExecute Documentation](/support/docs/hyperexecute-running-your-first-job/)**: Learn more about HyperExecute
+- **[SmartUI SDK with Playwright on HyperExecute](/support/docs/hyperexecute-smart-ui-sdk-using-playwright/)**: Run SmartUI SDK visual tests with Playwright on HyperExecute
+- **[SmartUI SDK with Cypress on HyperExecute](/support/docs/hyperexecute-smart-ui-sdk-using-cypress/)**: Run SmartUI SDK visual tests with Cypress on HyperExecute
 
 ## Additional Resources
 
@@ -1218,7 +1220,7 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/) - All configuration options
 - [HyperExecute YAML Reference](/support/docs/hyperexecute-yaml-version0.2/) - YAML configuration details
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) - Common issues and solutions
-- [LambdaTest Support](https://www.testmuai.com/support) - Get help from our support team
+- [LambdaTest Support](https://www.testmuai.com/support/) - Get help from our support team
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

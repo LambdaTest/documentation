@@ -102,8 +102,11 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 | `folder_id` | string \| null | `null` | <BrandName /> Test Manager folder ID for upload | `kane-cli config folder [id]` |
 | `folder_name` | string \| null | `null` | Display name of the selected folder | Set by `kane-cli config folder` |
 | `mode` | `"action"` \| `"testing"` | `"testing"` | Agent behaviour on auth walls, blocked pages, or error pages. | `kane-cli config set-mode <action\|testing>` |
+| `target` | `"desktop"` \| `"emulator"` \| `"simulator"` | `"desktop"` | Default run target. `desktop` runs the Chrome browser; `emulator` and `simulator` run against a virtual Android or iOS device (macOS Apple Silicon only). See [Mobile Target](#mobile-target). | `kane-cli config set-target <desktop\|emulator\|simulator>` |
+| `device` | string \| null | `null` | Default mobile device, by name, serial, `ip:port`, or udid. When empty, a TTY run prompts once and saves the choice; a non-interactive run needs `--device` or this key set. Ignored on the `desktop` target. | `kane-cli config set-device <id>` |
+| `app` | string \| null | `null` | Default app under test for mobile runs: a build path (`.apk` or `.zip`) or an uploaded app id. Ignored on the `desktop` target. | `kane-cli config set-app <path\|APPid>` |
 | `code_export.enabled` | boolean | `false` | Generate code export after upload completes. | TUI menu, or `--code-export` flag |
-| `code_export.language` | `"python"` | `"python"` | Output language for generated code. Only `python` is supported. | `--code-language <lang>` |
+| `code_export.language` | `"python"` \| `"javascript"` | `"python"` | Output language for generated code. Accepts `python` or `javascript`. | `--code-language <lang>` |
 | `code_export.skip_validation` | boolean | `true` | Skip post-codegen worker-side validation. | TUI menu, or `--skip-code-validation` |
 
 ---
@@ -168,6 +171,22 @@ kane-cli config set-mode testing
 
 You can override the saved mode for a single run with `--mode <action|testing>` on `kane-cli run`.
 
+### Mobile Target
+
+On macOS Apple Silicon, Kane CLI can run against a virtual mobile device instead of the desktop browser. Three settings persist the default target and how to reach it. They are a **separate axis** from `mode` above: `mode` tunes agent behaviour, while these choose *what device* a run drives.
+
+```bash
+kane-cli config set-target emulator          # desktop | emulator | simulator
+kane-cli config set-device pixel-7           # name, serial, ip:port, or udid
+kane-cli config set-app ./builds/app-debug.apk
+```
+
+- **`target`**: `desktop`, the default, runs Chrome. `emulator` runs a virtual Android device and `simulator` a virtual iOS device. Existing web runs are unaffected.
+- **`device`**: the device a mobile run selects, by name, serial, `ip:port`, or udid. When unset, a TTY run prompts once and saves the choice. Non-interactive runs need it set, either here or with `--device`.
+- **`app`**: the app under test for a mobile run, a build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, `APP` followed by six or more digits. Required for every mobile run. On the `desktop` target, `device` and `app` are ignored.
+
+A run reads these as its defaults. Override any of them for a single run with `--target`, `--device`, and `--app`. Setup and the full list of accepted app formats are in [Mobile Testing](/support/docs/kane-cli-mobile/).
+
 ### Code Export
 
 The `code_export` block enables and configures generated code output produced after a successful Test Manager upload. There is no `kane-cli config` subcommand for this block. Set it from one of:
@@ -175,7 +194,7 @@ The `code_export` block enables and configures generated code output produced af
 - **The TUI**: open the config menu, choose Code Export, and toggle the `enabled` and `skip_validation` switches.
 - **Per-run flags** on `kane-cli run`:
   - `--code-export` to enable for this run only
-  - `--code-language <lang>` to pick the output language (only `python` is supported)
+  - `--code-language <lang>` to pick the output language (`python` or `javascript`)
   - `--skip-code-validation` / `--no-skip-code-validation` to control post-codegen validation
 
 Code export requires a Test Manager upload, so it is only meaningful when a project is configured. See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for the full upload pipeline.

@@ -4,7 +4,7 @@
 
 TestMu AI tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through TestMu AI. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on TestMu AI. You can leverage the new TestMu AI tunnel binary for corporate firewalls and proxy settings without any restrictions. TestMu AI tunnel follows various protocols such as Web Socket, HTTPS, SSH(Secure Shell), etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and TestMu AI cloud servers.
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TestMu AI tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.testmuai.com/feature), even before it gets deployed over the Production environment.
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TestMu AI tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.testmuai.com/feature/), even before it gets deployed over the Production environment.
 
 > Here is all you need to know about TestMu AI tunnel from configuring a secure connection to executing test cases on your locally hosted web-apps.
 
@@ -117,7 +117,7 @@ Use the following arguments in your command line.
 
 |ARGUMENTS|EXAMPLE|DESCRIPTION|
 | --- | --- | --- |
-|`--key`|123asd123|Helps Lambdatest to map a tunnel connection with the right user.|
+|`--key`|123asd123|Helps LambdaTest to map a tunnel connection with the right user.|
 |`--proxy-host`|abc.wonderproxy.com|Full hostname for the proxy you’d like to use.|
 |`--proxy-port`|12345|The port declared by you for fetching the proxy.|
 |`--proxy-user`|abcdefg|WonderProxy username of the user.|

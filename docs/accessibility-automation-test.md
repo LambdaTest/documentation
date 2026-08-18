@@ -134,12 +134,14 @@ driver.executeScript("lambda-accessibility-scan");
 *Note: If you do not execute the hook in your script when using this method, no accessibility reports will be generated.*
 
 #### 2. Continuous Auto-Scanning
-If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you can pass the `accessibility.autoscan` capability:
+If you want the accessibility scanner to run automatically as your test drives the application, without writing manual hooks, you can pass the `accessibility.autoscan` capability:
 
 ```java
 capability.setCapability("accessibility", true); // Enable accessibility testing
-capability.setCapability("accessibility.autoscan", true); // Automatically scan all pages
+capability.setCapability("accessibility.autoscan", true); // Scan automatically as the test interacts with the app
 ```
+
+With autoScan enabled, a scan is triggered by **interactive commands** such as navigation, clicks, and `executeScript()`. Read only operations such as `findElement()`, explicit waits, and attribute reads do not trigger a scan. Each triggered scan consumes 1 accessibility scan, so an interaction heavy test consumes more than 1 scan per page. See [How scan consumption works](/support/docs/accessibility-testing/#how-scan-consumption-works).
 
 #### Advanced Capabilities
 You can also define other settings capabilities to refine your scan rules as described below:

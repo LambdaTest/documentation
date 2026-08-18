@@ -121,7 +121,7 @@ Now click on **"Create Bug"** button to send the bug directly to Mattermost work
 
 <img loading="lazy" src={require('../assets/images/integrating-mattermost-with-lambdatest/Bug-marked-message.webp').default} alt="Image"  width="484" height="178" className="doc_img"/>
 
-Login to your workspace on Mattermost and you will be able to notice the marked bug in the set channel assigned to the set person. All the data you provided through Lambdatest form would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the screenshot as attachments.
+Login to your workspace on Mattermost and you will be able to notice the marked bug in the set channel assigned to the set person. All the data you provided through LambdaTest form would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the screenshot as attachments.
 
 <img loading="lazy" src={require('../assets/images/integrating-mattermost-with-lambdatest/issue-marked-in-mattermost-channel.webp').default} alt="Image"  className="doc_img" width="1904" height="845"/>
 

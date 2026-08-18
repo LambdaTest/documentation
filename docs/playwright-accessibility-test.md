@@ -149,12 +149,16 @@ await page.evaluate('lambda-accessibility-scan');
 *Note: If you do not execute the hook in your script when using this method, no accessibility reports will be generated.*
 
 #### 2. Continuous Auto-Scanning
-If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you can pass the `accessibility.autoscan` capability:
+If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you can pass the `accessibility.autoScan` capability:
 
 ```javascript
 capabilities['accessibility'] = true; // Enable accessibility testing
-capabilities['accessibility.autoscan'] = true; // Automatically scan all pages
+capabilities['accessibility.autoScan'] = true; // Automatically scan all pages
 ```
+
+:::note
+The capability name is case sensitive here. In Playwright it is `accessibility.autoScan`, with a capital **S**.
+:::
 
 #### Advanced Capabilities
 You can also define other settings capabilities to refine your scan rules as described below:

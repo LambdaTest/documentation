@@ -82,7 +82,7 @@ For the demonstration of executing Selenium IDE tests on the <BrandName /> grid,
 
 * * *
 
-The parallel testing on the [Cloud Selenium Grid](https://www.testmuai.com/selenium-automation) works only when the tests are executed using the SIDE Runner, and not the Selenium IDE. So we will enable the Parallel testing for Selenium IDE.
+The parallel testing on the [Cloud Selenium Grid](https://www.testmuai.com/selenium-automation/) works only when the tests are executed using the SIDE Runner, and not the Selenium IDE. So we will enable the Parallel testing for Selenium IDE.
 
 *   Right click on the test suite and go to Settings. <img loading="lazy" src={require('../assets/images/uploads/open-settings-in-Selenium-IDE.webp').default} alt="Test Suite Settings" width="898" height="422" className="doc_img"/>
 *   In the Settings window, tick the **Run in Parallel** checkbox. <img loading="lazy" src={require('../assets/images/uploads/enable-parallel-testing-in-Selenium-ide.webp').default} alt="Test Suite Properties" width="893" height="323" className="doc_img"/>

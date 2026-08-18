@@ -1,6 +1,6 @@
 ﻿---
 id: kaneai-gps-location
-title: GPS Location Mocking for Mobile App and Browser Authoring
+title: GPS Location Mocking for Mobile App and Mobile Browser Authoring
 hide_title: false
 sidebar_label: GPS Location
 description: Learn how to use GPS Location Override feature in KaneAI for testing location-based functionalities in Mobile App and Mobile Browser sessions

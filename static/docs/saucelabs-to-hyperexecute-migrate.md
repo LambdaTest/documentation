@@ -18,13 +18,13 @@ There are several benefits to migrating your tests from Sauce Labs to HyperExecu
 
 - **Cost-Efficiency :** HyperExecute doesn't just offer superior [features](/support/docs/key-features-of-hyperexecute); it's also cost-effective. By reducing testing time and enhancing productivity, you can optimize your testing budget, allocating resources to other critical areas of your project.
 
-- **Seamless Integration :** HyperExecute provides out-of-the-box support for popular tools such as [Tosca](/support/docs/tosca-integration-with-hyperexecute/), [Katalon](/support/docs/katalon-integration-with-hyperexecute/), and [Accelq](/support/docs/hyperexecute-accelq-integration/). This means you can effortlessly integrate your testing workflow with your preferred tools, streamlining your testing processes.
+- **Seamless Integration :** HyperExecute provides out-of-the-box support for popular tools such as [Tosca](/support/docs/tosca-integration-with-hyperexecute/), [Katalon](/support/docs/katalon-integration-with-hyperexecute/), and [ACCELQ](/support/docs/hyperexecute-accelq-integration/). This means you can effortlessly integrate your testing workflow with your preferred tools, streamlining your testing processes.
 
 - **CI/CD Tools :** We offer robust support for [CI/CD](/support/docs/hyperexecute-integration-with-ci-cd-tools/) tools, allowing you to automate testing and release processes seamlessly, resulting in faster software delivery.
 
 ## Steps to Migrate
 
-To migrate your Test from SauceLabs to HyperExecute, you need to follow the below mentioned steps:
+To migrate your Test from Sauce Labs to HyperExecute, you need to follow the below mentioned steps:
 
 > For demonstration purposes, we'll be using Selenium with the TestNG framework in our examples.
 
@@ -119,8 +119,8 @@ jobLabel: [selenium-testng, mac, autosplit, migration]
 
 ```
 
-- Replace the SauceLabs Hooks with [TestMu AI Hooks](/support/docs/lambda-hooks/) (if required).
-- Update the SauceLabs Dependencies and Capabilities.
+- Replace the Sauce Labs Hooks with [TestMu AI Hooks](/support/docs/lambda-hooks/) (if required).
+- Update the Sauce Labs Dependencies and Capabilities.
 
 **Sauce Labs**
 

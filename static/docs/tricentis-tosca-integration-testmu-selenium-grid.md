@@ -86,7 +86,7 @@ Shown below is the final test case view.
 
 * Add below name and values in Test Configuration.
 
-*You can refer our [Desired Capability Generator](https://www.testmuai.com/capabilities-generator)
+*You can refer our [Desired Capability Generator](https://www.testmuai.com/capabilities-generator/)
  to choose different browser combination.*
 
 **Step 23:** Go to the **Details** tab then Right-click on the test case and select **Run in ScratchBook**. This will launch the test on TestMu AI Platform.

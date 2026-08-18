@@ -3,7 +3,7 @@ id: ruby
 title: Selenium With Ruby
 hide_title: false
 sidebar_label: Ruby
-description: Run Ruby Selenium automation tests on the TestMu AI cloud grid across 3000+ browser and OS combinations. Covers Capybara, RSpec, and Test::Unit.
+description: Run Ruby Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. Covers Capybara, RSpec, and Test::Unit.
 keywords:
   - ruby selenium grid setup
   - run ruby tests on cloud
@@ -51,7 +51,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-Run your Ruby Selenium tests on the TestMu AI cloud grid across 3000+ browser and OS combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
+Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
 ## Prerequisites
 ---

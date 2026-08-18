@@ -52,7 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
   <a href = "/support/docs/hyperexecute-accelq-integration/">
   <div className="support_inners">
-    <h3>Accelq</h3>
+    <h3>ACCELQ</h3>
     <p>Perform codeless automated functional and API testing using Acceelq.</p>
   </div>
   </a>

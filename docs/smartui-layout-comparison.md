@@ -152,6 +152,12 @@ If you are using the SmartUI SDK (`smartui exec`), you need to set the `ignoreTy
   </TabItem>
 </Tabs>
 
+## Applying Layout Comparison to One Region Only
+
+Layout comparison as described above applies to the entire capture, so content and color regressions anywhere on the page stop being reported. When only part of the page has dynamic content, draw a **Layout Region** on that area in the SmartUI dashboard instead. Inside the region SmartUI reports structural changes only, and the rest of the capture keeps its normal comparison mode.
+
+Layout Regions work for both web captures and PDF comparisons, and they persist across builds like any other annotated region. For web comparisons they need the DOM to have been recorded at capture time, which SmartUI CLI and SDK captures do automatically. See [Layout Regions](/support/docs/smartui-layout-regions/) for the full workflow.
+
 ## Known Limitations
 
 The Layout Comparison feature has the following limitations:

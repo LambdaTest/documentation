@@ -81,7 +81,7 @@ ClickUp offers a highly customizable cloud-based platform to boost your producti
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/7.webp').default} alt="real time testing" width="1364" height="643" className="doc_img"/>
 
-**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Bug icon** from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
+**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Bug icon** from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture/) of the same. We have highlighted that option with yellow in the below image.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-5.webp').default} alt="mark as bug icon" width="1325" height="653" className="doc_img"/>
 

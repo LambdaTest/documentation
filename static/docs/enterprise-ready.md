@@ -72,6 +72,7 @@ TestMu AI maintains enterprise-grade security across the platform with industry-
 - **SOC 2 Type II** certified: security, availability, processing integrity, confidentiality, and privacy (report available under NDA)
 - **ISO 27001** certified: information security management
 - **GDPR** compliant: data privacy and protection
+- **HIPAA** compliant: safeguards for protected health information (PHI)
 
 **Encryption:**
 - **Data in transit**: TLS 1.2 or higher for all communications
@@ -108,6 +109,10 @@ TestMu AI offers flexible deployment options to meet your organization's infrast
 - [HyperExecute Private Cloud Setup](/support/docs/hyperexecute-private-cloud-setup/)
 - [Network Whitelisting Guide](/support/docs/network-whitelisting-and-tunnel-guide/)
 - [Public IP Ranges](/support/docs/testmu-public-ip/)
+
+### Data residency & deployment isolation
+
+TestMu AI supports regional data residency and tenant isolation for regulated deployments. Each organization's data is isolated by tenant ID within its own VPC, with production segregated from non-production. Private-cloud and on-premise (including Private Real Device Cloud) keep test data, app binaries and session content inside the customer boundary. Test execution can run fully air-gapped; note that AI-agent features require connectivity to TestMu AI APIs. Regional residency options (e.g. US, EU) and sovereign-cloud deployments are available on enterprise contracts.
 
 ## Team Management
 
@@ -185,6 +190,10 @@ TestMu AI provides enterprise-grade reporting and analytics with AI-powered insi
 - [AI Root Cause Analysis](/support/docs/analytics-ai-root-cause-analysis/)
 - [Defect Analysis and Prediction](/support/docs/defect-analysis-prediction/)
 
+### Machine-readable outputs
+
+TestMu AI emits JUnit XML and JSON for CI, NDJSON event streams for agents, and framework report schemas (Allure, Extent, Cucumber, Mochawesome). OpenTelemetry spans are available via Selenium telemetry logs. SARIF is not emitted natively; security findings export as JSON via REST/MCP and can be transformed to SARIF where a consumer requires it.
+
 ## SLA & Support
 
 TestMu AI provides enterprise support with dedicated resources and guaranteed response times.
@@ -230,7 +239,7 @@ TestMu AI is GDPR compliant and provides comprehensive data protection controls 
 
 **Documentation:**
 - [Data Retention Policy](/support/docs/data-retention-policy/)
-- [Privacy Policy](https://www.testmuai.com/legal/privacy)
+- [Privacy Policy](https://www.testmuai.com/legal/privacy/)
 - [Data Processing Agreement](https://www.testmuai.com/resources/LambdaTest_DPA_with_SCC_V2.4.pdf)
 
 ## Change Management
@@ -269,7 +278,7 @@ TestMu AI offers multiple product tiers designed for different organizational ne
 - Org-level secrets management
 - Priority support SLA
 
-**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing)
+**For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing/)
 
 ## Need More Information?
 

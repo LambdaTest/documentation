@@ -58,6 +58,7 @@ const API_YAML_FILE_MAP = {
   'Analytics': 'analytics-openapi.yaml',
   'Performance Testing': 'performance.yaml',
   'Audit logs': 'audit-logs.yaml',
+  'Agent Testing API': 'agent-testing.yaml',
 };
 
 const NAV_SECTIONS = [

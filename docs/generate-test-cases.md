@@ -185,6 +185,7 @@ We support multiple input formats, including:
 - **Videos**
 - **Spreadsheets** (CSV or XLSX)
 - **Documents**
+- **Markdown files** (.md)
 - **JSON or XML**
 
 :::info Public URLs Only
@@ -575,6 +576,16 @@ Create and Automate is currently an experimental feature. Review your test steps
 | Credits deducted but no changes appeared | This can occur if the AI could not interpret your request or if there was a connection interruption. Check the conversation history for an error message. |
 | Regeneration removed refined scenarios | Regeneration replaces all current output. Use targeted conversational messages instead to preserve specific scenarios. |
 
+
+---
+
+## Video Walkthrough
+
+Watch the video below for a quick walkthrough of the AI Test Case Generator in action.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/images/mobile-app-testing/ai-test-case-generator-walkthrough.mp4').default} type="video/mp4" />
+</video>
 
 ---
 

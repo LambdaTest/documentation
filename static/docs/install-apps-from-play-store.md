@@ -15,3 +15,7 @@ Let's dive in to learn how to test apps installed from Play Store.
 **Step 4**: Select the **Device** and **OS Version** of your choice to launch the test session.
 
 **Step 5**: Log in to the Play Store with your Google account to install and test your app.
+
+- If you can't find an app on the Google Play Store, ensure you're signed in with a Google account from the region where the app is published. For example, if the app is available only in India, sign in with an Indian Google account and search again.
+
+- App availability may also depend on the device's region. If the app isn't visible on devices from one region, try launching a device from the region where the app is available (for example, a US-region device for apps published only in the United States).

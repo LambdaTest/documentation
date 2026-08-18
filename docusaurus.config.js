@@ -3,7 +3,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
   title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
-  url: 'https://www.testmuai.com',
+  url: 'https://www.lambdatest.com',
+  noIndex: true,
   baseUrl: '/support/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -12,6 +13,7 @@ module.exports = {
   trailingSlash: true,
   clientModules: [
     require.resolve('./custom.js'),
+    require.resolve('./src/js/copy-ips.js')
   ],
   scripts: [
   
@@ -71,6 +73,10 @@ module.exports = {
     },
   ],
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',            // fallback when the OS expresses no preference
+      respectPrefersColorScheme: true, // new visitors follow their system theme
+    },
     zoom: {
       selector: 'img:not(.no-zoom)',
       config: {

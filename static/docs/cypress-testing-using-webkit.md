@@ -86,7 +86,7 @@ cypress.config.js
 npm install
 ```
 
-4. Create `lambdatest-config.json` file that contains configurations like auth, capabilities, test settings, etc. which need to be successfully executed at LambaTest.
+4. Create `lambdatest-config.json` file that contains configurations like auth, capabilities, test settings, etc. which need to be successfully executed at LambdaTest.
 
 Use `init` command to generate the sample configuration files.
 

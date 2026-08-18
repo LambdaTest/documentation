@@ -12,7 +12,6 @@ function items(sidebar) {
 }
 
 const docsSidebar = [
-  { type: 'doc', id: 'agent-skills', label: 'AI Agent Skills', customProps: { icon: 'ai' } },
   {
     type: 'category', label: 'Web Automation', collapsible: true, collapsed: true,
     items: [
@@ -21,6 +20,8 @@ const docsSidebar = [
       { type: 'category', label: 'Playwright Testing', collapsible: true, collapsed: true, items: items(s.PlaywrightTestingSidebar) },
       { type: 'category', label: 'Puppeteer Testing', collapsible: true, collapsed: true, items: items(s.PuppeteerTestingSidebar) },
       { type: 'category', label: 'K6 Testing', collapsible: true, collapsed: true, items: items(s.K6BrowserTestingSidebar) },
+      { type: 'doc', id: 'run-tests-with-chrome-devtools-protocol', label: 'CDP Testing' },
+      { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' },
     ],
   },
   {

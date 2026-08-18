@@ -3,13 +3,13 @@ id: cerberus-integration
 title: Running Cerberus Automation Tests Using TestMu AI
 hide_title: true
 sidebar_label: Cerberus
-description: Now perform cross-browser testing of your website or web app on 3000+ desktop & mobile browser and OS combinations, using TestMu AI and Cerberus integration
+description: Now perform cross-browser testing of your website or web app on 10,000+ browser/device combinations, using TestMu AI and Cerberus integration
 keywords:
  - TestMu AI integrations
  - Cerberus
  - Test Automation for GUI Testing
  - test automation
- - Cerberus integration with Lambdatest
+ - Cerberus integration with LambdaTest
  - testmu ai integration with Cerberus
 url: https://www.testmuai.com/support/docs/cerberus-integration/
 site_name: TestMu AI
@@ -92,7 +92,7 @@ Once the test is complete, you can view the result of the test on <BrandName />,
 
 * * *
 
-> Congrats! You have successfully executed your Cerberus test case on the <BrandName /> platform, which provides you 3000+ browser and operating system combinations to perform cross-browser testing. If you have any doubt or face any issues, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can also mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!! 🙂
+> Congrats! You have successfully executed your Cerberus test case on the <BrandName /> platform, which provides you 10,000+ browser/device combinations to perform cross-browser testing. If you have any doubt or face any issues, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can also mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

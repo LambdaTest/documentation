@@ -82,7 +82,7 @@ public class GroupIntegrationTest {
 }
 ```
 
-In the Hyperexecute YAML Version 0.2 configuration, you can use the ```discoveryFlags``` parameter to specify the groups to discover during test discovery.
+In the HyperExecute YAML Version 0.2 configuration, you can use the ```discoveryFlags``` parameter to specify the groups to discover during test discovery.
 
 ```yaml
 framework:

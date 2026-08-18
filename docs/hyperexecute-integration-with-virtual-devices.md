@@ -58,7 +58,7 @@ This page outlines how to execute your Virtual Device tests on HyperExecute with
 
 :::info Note
 
-Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, [Contact Sales](https://www.testmuai.com/contact-us).
+Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, [Contact Sales](https://www.testmuai.com/contact-us/).
 :::
 
 ## Prerequisites

@@ -4,7 +4,7 @@
 
 Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. TestMu AI offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through TestMu AI Selenium Grid.
 
-This document will help you configure a secure TestMu AI Tunnel to execute your [Selenium test automation](https://www.testmuai.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
+This document will help you configure a secure TestMu AI Tunnel to execute your [Selenium test automation](https://www.testmuai.com/selenium-automation/) scripts through your Maven project on our online Selenium Grid.
 
 > TestMu AI Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.lambdatest/lambdatest-tunnel-binary/4.0.2)**, with various enhancements and optimizations.
 

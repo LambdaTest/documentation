@@ -19,6 +19,8 @@ canonical: https://www.testmuai.com/support/docs/getting-started-with-espresso-t
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
@@ -46,7 +48,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
-
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
 
 In this documentation, you will learn how to trigger a automation script of Java for application testing with Appium on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
@@ -57,9 +59,7 @@ In this documentation, you will learn how to trigger a automation script of Java
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
 
 :::tip
-
 If you do not have any **Android** app (.apk) and an **Espresso Test** app (.apk) file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk).
-
 :::
 
 ## Running Your First Test: A Step-by-Step Guide
@@ -149,60 +149,105 @@ Take note of the base64 encoded authentication which needs to be added in the 
 </div>
 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
- 
-> Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
+
+:::note
+* On Windows, run the following `curl` command from **Command Prompt (cmd.exe)**. The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell.
+* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.
+  :::
+
+<Tabs className="docs__val">
+
+<TabItem value="real-device" label="Real Device" default>
 
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
-
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "app" : "APP_ID",
+    "app": "APP_ID",
     "testSuite": "TEST_SUITE_ID",
-    "device" :  ["Galaxy S21 5G-12"],
+    "device": ["Galaxy S21 5G-12"],
     "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
     "network": false,
-    "build" : "Proverbial-Espresso"
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
 </CodeBlock>
 </div>
-
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="lamguage-powershell">
+<div className="lambdatest__codeblock">
+<CodeBlock className="lamguage-powershell">
 
 ```bash
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" \
---header "Authorization: Basic BASIC_AUTH_TOKEN" \
---header "Content-Type: application/json" \
---data-raw "{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
-  "device" :  ["Pixel 6-12"],
-  "queueTimeout": 360,
-  "IdleTimeout": 150,
-  "deviceLog": true,
-  "network": false,
-  "build" : "Proverbial-Espresso",
-  "geoLocation" : "FR"
-}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
+--header "Authorization: Basic BASIC_AUTH_TOKEN" ^
+--header "Content-Type: application/json" ^
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Pixel 6-12\"],\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
 ```
-  </CodeBlock>
+</CodeBlock>
 </div>
+</TabItem>
+
+</Tabs>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device" default>
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "app": "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device": ["Galaxy S21 5G-12.0"],
+    "isVirtualDevice": true,
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
+}'
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="lamguage-powershell">
+
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
+--header "Authorization: Basic BASIC_AUTH_TOKEN" ^
+--header "Content-Type: application/json" ^
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Pixel 6-12.0\"],\"isVirtualDevice\":true,\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+</Tabs>
 
 </TabItem>
 </Tabs>
@@ -217,22 +262,107 @@ Once you have run your tests, you can view the test execution along with logs. Y
 
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
 
+:::note
+* On Windows, run the following `curl` command from **Command Prompt (cmd.exe)**. The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell.
+* Before running the command, replace `BASIC_AUTH_TOKEN`, `APP_ID`, and `TEST_SUITE_ID` with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.
+:::
+
+<Tabs className="docs__val">
+
+<TabItem value="real-device" label="Real Device" default>
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+
 ```bash
-curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/build' \
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
-  "device" :  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
-  "queueTimeout": 10800,
-  "IdleTimeout": 150,
-  "deviceLog": true,
-  "build" : "Proverbial-Espresso"
+    "app": "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device": ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
 }'
 ```
 
+</CodeBlock>
+</div>
+</TabItem>
 
+<TabItem value="powershell" label="Windows" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="lamguage-powershell">
+
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
+--header "Authorization: Basic BASIC_AUTH_TOKEN" ^
+--header "Content-Type: application/json" ^
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Galaxy S20-10\",\"Galaxy S20-10\",\"Redmi Note 9-10\",\"Galaxy S10+-10\",\"Galaxy S7 edge-8\",\"Galaxy S9+-8\"],\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
+```
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device" default>
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "app": "APP_ID",
+    "testSuite": "TEST_SUITE_ID",
+    "device": ["Galaxy S20-10.0","Galaxy S20-10.0","Redmi Note 9-10.0","Galaxy S10+-10.0","Galaxy S7 edge-8.0","Galaxy S9+-8.0"],
+    "isVirtualDevice": true,
+    "queueTimeout": 10800,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "network": false,
+    "build": "Proverbial-Espresso",
+    "geoLocation": "FR"
+}'
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="lamguage-powershell">
+
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" ^
+--header "Authorization: Basic BASIC_AUTH_TOKEN" ^
+--header "Content-Type: application/json" ^
+--data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Galaxy S20-10.0\",\"Galaxy S20-10.0\",\"Redmi Note 9-10.0\",\"Galaxy S10+-10.0\",\"Galaxy S7 edge-8.0\",\"Galaxy S9+-8.0\"],\"isVirtualDevice\":true,\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+</Tabs>
+
+</TabItem>
+</Tabs>
 
 
 ## Using the Espresso Agent Skill with TestMu AI

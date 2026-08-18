@@ -2,6 +2,8 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Scheduled scans are supported on **desktop only**. You can schedule scans for websites and web apps that run on desktop browsers. **Native Android and iOS apps are not supported** in this flow. For mobile apps, see [Accessibility App Scanner](/support/docs/accessibility-app-scanner/) or [Native App Automation](/support/docs/accessibility-native-app-automation-test/).
+
 ## Step 1: Access the Scheduled Scan Feature
 - Open the Accessibility Testing Dashboard.
 - Click the “Scheduled Scan” option from the menu.

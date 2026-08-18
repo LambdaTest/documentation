@@ -56,7 +56,7 @@ To integrate any CI pipeline with HyperExecute, follow these steps:
 
 1. **Download the HyperExecute CLI Binary:**
 
-To integrate HyperExecute with your preferred CI pipeline, you need to make use of the Hyperexecute CLI. HyperExecute CLI is a command line client used to interact and run tests on HyperExecute and provide a host of other useful features that accelerate test execution.
+To integrate HyperExecute with your preferred CI pipeline, you need to make use of the HyperExecute CLI. HyperExecute CLI is a command line client used to interact and run tests on HyperExecute and provide a host of other useful features that accelerate test execution.
 
 For triggering tests using HyperExecute CLI, you have to download the HyperExecute CLI binary corresponding to the platform (or OS) from where the tests are triggered: Below are the HyperExecute CLI download links for different operating systems:
 
@@ -139,7 +139,7 @@ Below are detailed instructions for CI/CD tool integrations to help you get the 
 
 ***
 
-Want to know more about Hyperexecute? Here’s a [link](/support/docs/getting-started-with-hyperexecute/) to our Documentation.
+Want to know more about HyperExecute? Here’s a [link](/support/docs/getting-started-with-hyperexecute/) to our Documentation.
 
 >If your favourite CI/CD tool is not in the list mentioned above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
 

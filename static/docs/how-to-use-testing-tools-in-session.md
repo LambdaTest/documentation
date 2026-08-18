@@ -70,6 +70,9 @@ With the **iOS settings**, you can access the crash logs as well as the app sett
 
 - **Crash Logs :** You can download your crashed logs of the application.
 - **App Settings :** This will open the settings of the application in your mobile device.
+
+  The **App Settings** option is shown only for apps that include a Settings Bundle. If the app under test does not have a Settings Bundle, the **App Settings** option is hidden. Legacy apps where the bundle flag is not set continue to show it.
+
 - **Accessibility :** Accessibility testing on iOS devices focuses on ensuring that applications and web content are usable by individuals with different abilities. Learn in detailed way about [Accessibility in iOS devices.](/support/docs/accessibility-settings-ios)
 
 - **Select Date and Time :** Opens a modal where you can:

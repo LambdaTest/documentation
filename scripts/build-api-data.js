@@ -2,7 +2,8 @@
  * Fetches live OpenAPI YAML specs and builds src/data/api/all-apis.json
  * Run automatically via: npm run prebuild / npm run prestart
  *
- * No local files needed — specs are fetched directly from public Swagger servers.
+ * Specs are fetched directly from public Swagger servers, or read from the
+ * repo-local api-specs/ folder when an entry uses `file` instead of `url`.
  */
 
 'use strict';
@@ -28,6 +29,7 @@ const API_SPECS = [
   { name: 'Analytics',                         url: 'https://swagger-api-support.lambdatest.com/analytics/openapi.yaml' },
   { name: 'Performance Testing',               url: 'https://swagger-api-support.lambdatest.com/performance_testing/openapi.yaml' },
   { name: 'Audit logs',                        url: 'https://swagger-api-support.lambdatest.com/audit-logs/openapi.yaml' },
+  { name: 'Agent Testing API',                 file: 'api-specs/agent-testing.yaml' },
 ];
 
 // Fetch a URL and return the body as a string (follows redirects)
@@ -376,12 +378,14 @@ async function main() {
   const result = { apis: [] };
   let totalEndpoints = 0;
 
-  for (const { name, url } of API_SPECS) {
+  for (const { name, url, file } of API_SPECS) {
     let spec = null;
     try {
-      const text = await fetchText(url);
+      const text = file
+        ? fs.readFileSync(path.join(__dirname, '..', file), 'utf8')
+        : await fetchText(url);
       spec = yaml.load(text);
-      console.log(`✓ Fetched: ${name}`);
+      console.log(`✓ ${file ? 'Read' : 'Fetched'}: ${name}`);
     } catch (e) {
       console.warn(`✗ Failed:  ${name} — ${e.message}`);
     }

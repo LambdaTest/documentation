@@ -1,24 +1,20 @@
 ---
 id: hyperexecute-karate-testing
-title: Karate Automation on HyperExecute
+title: How to Perform API Testing With Karate on HyperExecute
 hide_title: false
-sidebar_label: Karate
-description: Learn how to run Selenium automation tests on HyperExecute using the Karate framework
+sidebar_label: "Karate"
+description: Run Karate API tests, with in-run mock servers, in parallel on HyperExecute. Set your credentials, configure HyperExecute.yaml, and trigger a cloud run.
 keywords:
   - Karate
-  - Karate selenium
-  - Karate Java Selenium
+  - Karate API testing
   - Karate automation testing
-  - selenium webdriver Karate
-  - selenium Karate testing tutorial
-  - Karate Java Selenium framework
+  - Karate framework tutorial
+  - Karate mock server
   - testmu ai Karate
   - frameworks on testmu ai
   - hyperexecute
   - hyperexecute Karate testing
-  - hyperexecute Karate testing
   - hyperexecute automation testing
-  - HyperExecute Selenium automation
 url: https://www.testmuai.com/support/docs/hyperexecute-karate-testing/
 site_name: TestMu AI
 slug: hyperexecute-karate-testing/
@@ -30,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import DocCard from '@site/src/component/DocCard';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -54,82 +51,43 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-Karate is a popular open-source test automation framework that combines API test-automation, mocks, performance testing, and even UI testing into a single framework. It allows writing expressive tests in a simple Gherkin syntax, while leveraging Java for extensibility.
 
-## Why Choose Karate for API Testing?
-Karate is a unified test automation framework that combines API test automation, mocks, performance testing, and UI automation into a single tool. It’s designed for simplicity and power:
+To run Karate API tests on HyperExecute, set your TestMu AI credentials, configure `HyperExecute.yaml`, and trigger the run with the HyperExecute CLI. Karate is an open-source framework for API test automation, mocks, performance testing, and UI automation that uses Gherkin syntax with Java. On HyperExecute, the TestMu AI test orchestration platform, it autosplits your `.feature` files across parallel nodes, retries only the scenarios that fail, can start Karate mock servers inside the same run, and collects logs and Cucumber reports in the dashboard.
 
-### Key Benefits of Karate:
+Run your own Karate (Java + Maven) project or the ready-made sample used in the steps below.
 
-- **Readable BDD syntax:** Write feature files in plain English.
-- **Built-in HTTP client:** No need for external tools.
-- **Supports parallel execution:** Speed up test cycles.
-- **All-in-one testing:** Covers API, UI, mocks, and performance.
-- **CI-friendly:** Works well with Jenkins, GitHub Actions, GitLab, and more.
+## How HyperExecute runs Karate
 
-## The Challenge: Scaling Karate Tests in CI/CD
-As your project grows, so do your tests. And with scale come challenges:
+- **Autosplit across nodes.** HyperExecute discovers your `.feature` files and distributes them across parallel runners, one feature per runner, up to the `concurrency` you set.
+- **Scenario-level retry.** Failed scenarios re-run on their own instead of forcing a full-suite rerun.
+- **In-run mock servers.** A `background` step starts a Karate mock server for the run, so the system under test gets controlled responses without separate mock infrastructure. A `post` step stops it.
+- **Unified reporting.** Per-test logs, console output, and Cucumber reports are collected in the HyperExecute dashboard.
 
-- **Long test execution times** (e.g., 30+ minutes for 100+ feature files)
-- **Inefficient retries**, often requiring full suite re-runs
-- **Hard-to-debug flakiness** and poor visibility into trends
-- **Scattered logs** and reports across environments
+## Prerequisites
 
-## Why HyperExecute Is Built for Karate Teams
-| Challenge             | Karate Alone      | Karate + HyperExecute         |
-| --------------------- | ----------------- | ----------------------------- |
-| Slow suite execution  | 30+ mins          | < 5 mins with autosplitting   |
-| Flaky test tracking   | Manual logs       | Built-in flakiness insights   |
-| Parallel test scaling | Custom threads    | Seamless, node-based scaling  |
-| Debug logs & reports  | Scattered         | Unified dashboard & rich logs |
-| Retry support         | Full suite reruns | Scenario-level retry logic    |
+Before you start, make sure you have:
 
-## Example Use Case: Scaling Karate API Tests with HyperExecute
-A QA team executes 100+ Karate feature files nightly. Over time, they face:
+- **A TestMu AI account.** Get your `LT_USERNAME` and `LT_ACCESS_KEY` from [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+- **Git**, to clone the sample repository.
 
-- 30+ minute run times
-- Flaky test behavior hard to trace
-- Manual re-runs of the entire test suite on failure
+HyperExecute builds and runs the suite on the grid, so you do not need Java or Maven installed locally. Install them only if you want to run the suite on your own machine first.
 
-### HyperExecute Solution:
-#### 1. Blazing Fast Execution via Autosplit
+## Run Karate API tests on HyperExecute
 
-```yaml
-autosplit: true
-concurrency: 10
-```
-HyperExecute distributes feature files intelligently across defined parallel nodes, bringing execution time down to minutes from hours.
+### Step 1: Clone the sample repository
 
-#### 2. Retry Only What Fails
-Automatically re-run failed scenarios without restarting the entire suite.
-
-#### 3. Real-Time Logs & Reports**
-Debug faster with per-test logs, reports, and console outputs, available instantly in the HyperExecute dashboard.
-
-#### 4. Flakiness & Stability Insights**
-Track unstable tests using built-in analytics that detect patterns of failure across builds.
-
-## Getting Started with Karate on HyperExecute
-
-### Prerequisites
-To run the Tests on HyperExecute from your Local System, you are required:
-
-- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
-
-### Step 1: Download Project
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+Clone the Karate sample from the TestMu AI GitHub repository, or use your own project.
 
 :::tip Sample repo
-Download or Clone the code sample for the Karate from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
+
+Download or clone the Karate sample from the TestMu AI GitHub repository to run the tests on HyperExecute.
 
 <a href="https://github.com/lambdatest/hyperexecute-karate-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-### Step 2: Download the CLI in your Project
-Download the HyperExecute CLI and copy it into the root folder of the downloaded sample repository.
+### Step 2: Download the HyperExecute CLI
+
+The CLI triggers your tests on HyperExecute. Download the binary for your platform and copy it into the **root folder** of the sample repository.
 
 | Platform | HyperExecute CLI |
 | ---------| ---------------- |
@@ -137,88 +95,60 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 
-### Step 3: Configyure `karate-config.js` file
-This file defines runtime behaviors and integrates Karate with <BrandName /> status reporting.
+### Step 3: Configure HyperExecute.yaml
 
-```javascript title="karate-config.js"
-function fn() {
-  var lambdaHooks = function() {
-    if (karate.info.errorMessage) {
-      script('lambda-status=failed');
-    } else {
-      script('lambda-status=passed');
-    }
-  }
+`HyperExecute.yaml` in the sample repo tells HyperExecute how to build, discover, and run the suite. The sections below explain each part.
 
-  var env = karate.env || 'dev';
-  karate.log('karate.env:', env);
+#### Environment and runtime
 
-  var config = {
-    env: env,
-    hub: karate.properties['hub']
-  };
-
-  karate.configure('afterScenario', lambdaHooks);
-
-  return config;
-}
-```
-
-:::note 
-- `lambdaHooks` sets test status based on execution outcome.
-- `hub` is dynamically picked to support Selenium Grid for UI tests.
-- Supports environment-based configuration using `karate.env`.
-:::
-
-### Step 4: Create your hyperexecute.yml file
-The core of HyperExecute configuration lies in the `hyperexecute.yaml` file. Let’s break down the structure and understand each section:
-
-#### 1. Environment & Runtime Setup
-This section specifies the OS, runtime language, concurrency, and autosplit features:
+Set the OS, Java runtime, and how many sessions run in parallel:
 
 ```yaml
 version: 0.1
-runson: linux   # OS to run the tests (e.g., linux, win)
+runson: linux    # OS the tests run on (e.g. linux, win)
 autosplit: true
-concurrency: 2   # Defines the number of test sessions to run concurrently
+concurrency: 10  # number of test sessions to run in parallel
 
 runtime:
   language: java
   version: 11
 ```
 
-#### 2. Dependency Resolution with Maven
-Before running the actual performance test, ensure all project dependencies are resolved locally for a reproducible build. This step pulls all required Maven dependencies to a local directory (.m2), ensuring environment consistency.
+#### Resolve Maven dependencies
+
+The `pre` step pulls all Maven dependencies into a local `.m2` directory once, so each runner reuses them for a reproducible build:
 
 ```yaml
 pre:
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 ```
 
-#### 3. Configure the Test Execution Command
-The `testRunnerCommand` defines how each test is executed on the HyperExecute infrastructure. With `autosplit: true`, HyperExecute dynamically distributes each test to a separate runner, enabling parallel execution.
+#### Test runner command
+
+`testRunnerCommand` runs one feature file per runner. With `autosplit: true`, HyperExecute passes each discovered `.feature` path in through the `$test` placeholder:
 
 ```yaml
 testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath="$test" -Dhub=https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com/wd/hub -Dmaven.repo.local=./.m2
 ```
 
-- **-Dtest=MyApiRunner:** Specifies the Java class that acts as the Karate runner. It must extend KarateRunner.
-- **-DFeaturePath="$test":** $test is dynamically provided by the discovery command. Each value here is a specific .feature file path.
-- **-Dhub=...:** Optional. Used when your Karate test needs to connect to Selenium Grid for UI tests.
-- **-Dmaven.repo.local=./.m2:** Uses a local Maven repo to avoid repeated dependency downloads on each VM.
+- **`-Dtest=MyApiRunner`**: the JUnit 5 runner class (annotated with `@Karate.Test`) that executes the feature file from `FeaturePath`.
+- **`-DFeaturePath="$test"`**: `$test` is one `.feature` path supplied by the discovery command.
+- **`-Dhub=...`**: optional. Only needed when a Karate test drives a browser through the Selenium Grid for UI tests.
+- **`-Dmaven.repo.local=./.m2`**: reuses the local Maven repo so dependencies are not re-downloaded on each runner.
 
-:::info
-This command runs one feature file per runner, as decided by autosplit. However, you can change the granularity and run:
+:::info Change the run granularity
 
-- All scenarios tagged with @smoke
-- A specific step definition class
-- A subset of feature files based on folder/module
+By default this runs one feature file per runner. To run a subset instead (for example, only scenarios tagged `@smoke`, a specific runner class, or a folder of features), pass Karate options:
 
-> mvn test -Dkarate.options="--tags @smoke"
+```bash
+mvn test -Dkarate.options="--tags @smoke"
+```
+
 :::
 
-#### 4. Test Discovery Configuration
-Test discovery determines which test files or test cases to run, and provides those to the test runner. In HyperExecute, the `testDiscovery` block parses and lists all .feature files, which are then split and executed.
+#### Test discovery
+
+`testDiscovery` lists the `.feature` files to run and hands them to the runner. HyperExecute splits this list across the parallel nodes:
 
 ```yaml
 testDiscovery:
@@ -227,16 +157,15 @@ testDiscovery:
   command: snooper --targetOs=win --featureFilePaths=src/test/java/app --frameWork=java | sed 's/:.*//' | uniq
 ```
 
-- **snooper:** A built-in utility provided by <BrandName /> to list relevant test files.
-- **--targetOs=win:** Targets Windows OS runners.
-- **--featureFilePaths=src/test/java/app:** Points to where Karate .feature files are located.
-- **--frameWork=java:** Indicates framework type for parsing.
-- **sed 's/:.*//' | uniq:** Cleans up duplicate or unnecessary output from the snooper tool.
+- **`snooper`**: a built-in TestMu AI utility that lists matching test files.
+- **`--targetOs`**: the OS path format snooper uses when listing feature-file paths.
+- **`--featureFilePaths=src/test/java/app`**: where the Karate `.feature` files live.
+- **`--frameWork=java`**: the framework snooper parses for.
+- **`sed 's/:.*//' | uniq`**: trims and de-duplicates snooper's output.
 
-#### How It Works
-Discovery command runs first and lists paths to all .feature files. These paths are saved as individual test cases. HyperExecute passes one path at a time to each test runner via the $test placeholder.
+#### How discovery and execution work
 
-The runner command executes the test against that feature. Each of these will be executed in parallel across the nodes defined under concurrency.
+The discovery command runs first and lists paths to every `.feature` file. HyperExecute saves each path as a test case and passes one at a time to a runner through the `$test` placeholder. Each runner executes its feature in parallel, up to `concurrency`:
 
 ```
 src/test/java/app/login.feature
@@ -244,30 +173,42 @@ src/test/java/app/signup.feature
 src/test/java/app/payments.feature
 ```
 
-Here is a complete working YAML configuration that runs Gatling performance tests on linux runners via HyperExecute:
+The full configuration also defines a `background` step that starts the Karate mock server (`mvn clean test -Dtest=LocalRunner`), `report`/`partialReports` for the Cucumber reports, and a `post` step that stops the mock server (`curl http://localhost:8080/__admin/stop`):
 
-```yaml reference title="hyperexecute.yaml"
+```yaml reference title="HyperExecute.yaml"
 https://github.com/LambdaTest/hyperexecute-karate-sample/blob/main/HyperExecute.yaml
 ```
 
-> 📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
+For every YAML key and project-specific option, see the [YAML parameters reference](/support/docs/hyperexecute-yaml-parameters/).
 
-### Step 5: Execute your Test Suite
-From the project root directory, execute the below CLI command in your terminal:
+### Step 4: Trigger the run from the CLI
+
+From the project root directory, run the CLI command in your terminal:
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config hyperexecute.yaml`}
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config HyperExecute.yaml`}
   </CodeBlock>
 </div>
 
-> **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+:::note macOS permissions
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/karate/karate.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+If macOS reports **permission denied** when you run the CLI, make it executable with `chmod u+x ./hyperexecute`. If a security popup appears, allow the binary from **System Preferences** → **Security & Privacy** → **General**.
 
-## Advanced Parameters
-Optimize your test pipeline using the following advanced features:
+:::
 
-- ✅ [Smart Test Splitting](/support/docs/hyperexecute-test-splitting-and-multiplexing/) – Automatically distribute tests across parallel runners
-- ⚡ [Fail Fast](/support/docs/hyperexecute-failfast/) – Stop test runs on the first failure
-- 📊 [Detailed Reports](/support/docs/hyperexecute-reports/) – Real-time terminal logs & rich test reports
+A successful run shows the job as **Completed** in the HyperExecute dashboard, with each `.feature` file executed as a separate task and the Cucumber reports attached. Open any task to inspect its request and response logs.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/karate/karate.png').default} alt="Karate suite results in the HyperExecute dashboard"  width="1920" height="868" className="doc_img"/>
+
+## Related resources
+
+<div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginBottom: '20px' }}>
+  <DocCard heading="Smart test splitting and multiplexing" link="/support/docs/hyperexecute-test-splitting-and-multiplexing/" description="Distribute tests across parallel runners and control how they split." />
+  <DocCard heading="Fail Fast" link="/support/docs/hyperexecute-failfast/" description="Stop a run on the first failure to save minutes." />
+</div>
+
+<div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+  <DocCard heading="Reports and logs" link="/support/docs/hyperexecute-reports/" description="Real-time terminal logs and rich test reports." />
+  <DocCard heading="Getting started with HyperExecute" link="/support/docs/getting-started-with-hyperexecute/" description="Set up HyperExecute and trigger your first job on the grid." />
+</div>

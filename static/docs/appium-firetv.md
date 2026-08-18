@@ -6,6 +6,11 @@
 
 In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **TestMu AI Real Device Cloud platform**.
 
+**Plus Plan Feature**
+This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
+
 ## Objective
 
 By the end of this topic, you will be able to:

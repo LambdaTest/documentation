@@ -3,7 +3,7 @@ id: playwright-testing-guide
 title: How To Run Playwright Tests On TestMu AI Platform
 hide_title: true
 sidebar_label: Run Your First Test
-description: Here you can learn how to run Playwright tests on the TestMu AI test automation platform on over 40+ browsers and operating systems.
+description: Here you can learn how to run Playwright tests on the TestMu AI test automation platform on real browsers and operating systems.
 keywords:
   - playwright testing
   - playwright e2e testing 
@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 * * *
 Playwright is a Node.js library that uses a single API to automate Chromium, Firefox, and WebKit. It is designed to enable powerful, reliable, and efficient [automated browser testing](https://www.lambdatest.com/automated-browser-testing). Playwright can also automate Microsoft Edge since it is built on the open-source Chromium web framework.
 
-<BrandName /> allows you to run Playwright tests across 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Playwright testing on the <BrandName /> platform.
+<BrandName /> allows you to run Playwright tests across real browsers and operating system combinations. This guide will cover the basics of getting started with Playwright testing on the <BrandName /> platform.
 
 
 *You can run tests using Playwright versions **v1.15.0** to the latest.*
@@ -282,6 +282,11 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Playwright 
 On clicking the session name of the respective test, you can view the details of Playwright test session that you just executed. For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video. 
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/pw-build.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+
+## Related Playwright guides
+
+- [Playwright WebView Testing](/support/docs/playwright-webview-test/) — automate WebView components using Playwright on TestMu AI.
+- [Migrate Existing Playwright Tests](/support/docs/migrate-existing-playwright-tests/) — move your existing Playwright suite to the TestMu AI cloud.
 
 
 

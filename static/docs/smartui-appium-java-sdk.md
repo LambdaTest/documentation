@@ -8,7 +8,7 @@ SmartUI App SDK enables you to perform visual regression testing on your mobile 
 
 - Basic understanding of mobile app testing and Appium
 - Login to [TestMu AI SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials
-- An active [subscription](https://www.testmuai.com/pricing) plan with valid screenshots limit
+- An active [subscription](https://www.testmuai.com/pricing/) plan with valid screenshots limit
 
 ## Create a SmartUI Project
 
@@ -420,8 +420,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 ## Additional Resources
 

@@ -964,13 +964,13 @@ If you encounter issues not covered in this guide:
    - Review [Configuration Options](/support/docs/smartui-sdk-config-options)
 
 2. **Search Existing Issues**:
-   - Check [TestMu AI Support](https://www.testmuai.com/support)
+   - Check [TestMu AI Support](https://www.testmuai.com/support/)
    - Review community forums
    - Search knowledge base
 
 3. **Contact Support**:
    - Email: support@testmuai.com
-   - [24/7 Chat Support](https://www.testmuai.com/support)
+   - [24/7 Chat Support](https://www.testmuai.com/support/)
    - Include error messages, logs, and configuration details
 
 4. **Provide Diagnostic Information**:

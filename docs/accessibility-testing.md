@@ -66,6 +66,34 @@ Use this section when you want the fastest path from "I need to test accessibili
 - Using Web Scanner docs for the Accessibility-native scheduling surface.
 - Using KaneAI guidance when your team is running direct Appium automation.
 
+## How scan consumption works
+
+Accessibility scan consumption is based on **how scans are triggered**, not on the number of unique URLs visited or the number of DOM changes on a page.
+
+### Manual scan (`lambda-accessibility-scan`)
+
+- Each scan hook invocation consumes **1 accessibility scan**.
+- Calling the hook 3 times consumes 3 scans, regardless of how many automation commands run in between.
+- Calling the hook twice on the same page consumes 2 scans.
+
+### AutoScan (`accessibility.autoscan: true`)
+
+- A scan is triggered by **interactive automation commands** such as navigation, clicks, and `executeScript()`.
+- Each such command consumes **1 accessibility scan**.
+- **Read only operations do not consume scans.** Examples are `findElement()`, explicit waits, and attribute reads.
+
+In short, consumption is determined by the automation actions that trigger a scan, not by unique URLs or DOM changes. On an interaction heavy flow this matters, because every interaction on the same page counts as its own scan, so autoScan can consume more scans than the number of pages the test visits. Use the `lambda-accessibility-scan` hook when you want to control exactly how many scans a run consumes. See [Automating Accessibility Testing with Selenium](/support/docs/accessibility-automation-test/) for both approaches.
+
+:::note
+autoScan applies to **web** automation. On real devices, app automation scans are triggered only by the `lambda-accessibility-scan` hook, so each hook call is 1 scan. See [Native App Automation](/support/docs/accessibility-native-app-automation-test/).
+:::
+
 ## Accessibility standards
 
 Accessibility Testing helps you work toward standards such as WCAG, ADA, EAA, and Section 508. Automated testing covers many rules, but it does not replace manual verification for every accessibility requirement. See the [Web](/support/docs/accessibility-web-what-we-cover/), [iOS](/support/docs/accessibility-ios-what-we-cover/), and [Android](/support/docs/accessibility-android-what-we-cover/) checklists for supported rules plus each platform’s **manual test checklist**, with links into each rule repository.
+
+## Related accessibility guides
+
+- [Accessibility Testing with Deque's axe](/support/docs/deque-integration/) — run automated accessibility checks using Deque's axe across 3000+ browsers.
+- [Screen Reader / VoiceOver on Real Devices](/support/docs/screen-reader-voiceover-real-devices-browser/) — perform manual screen reader and VoiceOver testing on real devices.
+- [Accessibility NUnit C# Test](/support/docs/accessibility-nunit-csharp-test/) — run automated accessibility checks from an NUnit (C#) test.

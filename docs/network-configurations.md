@@ -29,7 +29,11 @@ Network logs record every network interaction during your test session, from API
 
 On <BrandName />, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
+:::
 
 ---
 
@@ -153,7 +157,6 @@ Execute your test script using your preferred automation framework with the abov
 
 :::tip
 - **Certificate-pinned apps** may fail if pinned hosts are not excluded.
-- Available only on **Plus Plan**.
 - Certain HTTPS connections (e.g., using custom certificate pinning) cannot be intercepted even with MITM.
 
 :::

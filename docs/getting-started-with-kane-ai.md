@@ -207,3 +207,14 @@ Learn what is the best way to tell KaneAI what it needs to do:
     </div>
   </a>
 </nav>
+
+## Related KaneAI guides
+
+Ready to go further with KaneAI? These guides cover common authoring and workflow tasks:
+
+- [Create Pull Requests from KaneAI Test Cases](/support/docs/kaneai-create-pr/) — turn KaneAI test cases into pull requests in your repository.
+- [Scroll Until Element for Mobile Authoring](/support/docs/kaneai-scroll-until-mobile/) — scroll until a target element is visible when authoring mobile tests.
+- [Error handling in KaneAI](/support/docs/error-handling-kaneai/) — handle failures and recover gracefully within a KaneAI test.
+- [Kane CLI modes](/support/docs/kane-cli-modes/) — the execution modes available in the Kane CLI.
+- [Finding and interacting with elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/) — describe elements so KaneAI can locate them reliably.
+- [Mobile app testing patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/) — common patterns for authoring mobile app tests with KaneAI.

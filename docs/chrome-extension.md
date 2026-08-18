@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 * * *
 
-The [<BrandName /> Chrome Extension](https://chrome.google.com/webstore/detail/lambdatest/fjcjehbiabkhkdbpkenkhaahhopildlh) enables you to perform cross-browser testing across 3000+ browser environments on the cloud more quickly and easily. Pick your favorite configurations, frequently used lists, and launch tests directly from your browser tab to save time. 
+The [<BrandName /> Chrome Extension](https://chrome.google.com/webstore/detail/lambdatest/fjcjehbiabkhkdbpkenkhaahhopildlh) enables you to perform cross-browser testing across 10,000+ browser/device combinations on the cloud more quickly and easily. Pick your favorite configurations, frequently used lists, and launch tests directly from your browser tab to save time. 
 
 <BrandName /> Chrome Extension provides the following features:
 
@@ -131,7 +131,7 @@ For more information, refer to **[Real Time Testing documentation](/docs/getting
 
 <img loading="lazy" src={require('../assets/images/uploads/Screenshot-161.webp').default} alt="Capture Screenshots with Chrome Extension" width="1366" height="622" className="doc_img"/>
 
-**Step 2:** Select the configurations on which you want to [generate screenshots](https://www.testmuai.com/full-page-screen-capture) and click on **'CAPTURE'**.
+**Step 2:** Select the configurations on which you want to [generate screenshots](https://www.testmuai.com/full-page-screen-capture/) and click on **'CAPTURE'**.
 
 <img loading="lazy" src={require('../assets/images/uploads/Screenshot-160.webp').default} alt="Chrome Extension to generate screenshots" width="1366" height="620" className="doc_img"/>
 
@@ -159,7 +159,7 @@ To retest on the same configuration, select the desired configuration and you wi
 
 <img loading="lazy" src={require('../assets/images/uploads/Screenshot-163.webp').default} alt="Schedule Screenshots" width="1366" height="621" className="doc_img"/>
 
-**Step 2**: After clicking, a pop-up will appear. Enter the desired time, frequency and the day you want to [schedule a screenshot](https://www.testmuai.com/automated-screenshot-scheduler) and then click on **'Schedule'**.
+**Step 2**: After clicking, a pop-up will appear. Enter the desired time, frequency and the day you want to [schedule a screenshot](https://www.testmuai.com/automated-screenshot-scheduler/) and then click on **'Schedule'**.
 
 <img loading="lazy" src={require('../assets/images/uploads/Screenshot-164.webp').default} alt="Screenshot Scheduler <BrandName />" width="1366" height="615" className="doc_img"/>
 

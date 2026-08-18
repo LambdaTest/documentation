@@ -24,7 +24,7 @@
 
 **Step 9:** You are all set with WordPress plugin.
 
-**Step 10:** Now you can Generate [Automated Screenshots](https://www.testmuai.com/automated-screenshot) of your web pages or posts with TestMu AI plugin. Go to All Posts and you will TestMu AI icon below every post. Click on that icon.
+**Step 10:** Now you can Generate [Automated Screenshots](https://www.testmuai.com/automated-screenshot/) of your web pages or posts with TestMu AI plugin. Go to All Posts and you will TestMu AI icon below every post. Click on that icon.
 
 **Step 11:** Now select the browser, browser version and mobile devices where you want to take screenshots and hit **Start** button.
 

@@ -120,16 +120,20 @@ While executing a test run or scheduling one, you can choose which environment t
 #### Leveraging API
 You can pass environment name programmatically when initiating test runs via the API. This allows you to automate the execution of tests in different environments without manual intervention. For instance,
 
+* Before running the command, replace `` with your Base64-encoded TestMu AI credentials and `YOUR_TEST_RUN_ID` with the relevant test run ID.
+* To find the optional `environment_id`, click your desired environment. In the resulting URL, use the value of the `envId` parameter as the `environment_id`.
+* For example, if the URL contains `envId=4133`, use **4133** as the environment_id.
+
 ```bash
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic <Base64Auth>' \
 --data '{
-"test_run_id": "YOUR_TEST_RUN_ID", #enter test run id
+"test_run_id": "<YOUR_TEST_RUN_ID>",
 "concurrency": 1,
-"environment": "staging" #Optional
+"environment_id": <Environment_ID> #Optional
 ```
 
-This will run the test case in the "staging" environment.
+This will run the test case in the environment associated with the specified environment Id.
 
 If you have any feedback or suggestions, feel free to reach out at support@testmuai.com with your comments.

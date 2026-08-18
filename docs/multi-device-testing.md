@@ -22,6 +22,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> allows you to run **up to 6 devices at a time** within a single session, depending on your plan’s parallel limit. You can choose different applications for each device or test multiple versions of the same app concurrently, all from a single interface, without the need to start separate sessions.
 
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Live** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
+:::
+
 ---
 
 ## Use Cases

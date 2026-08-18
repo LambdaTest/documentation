@@ -3,7 +3,7 @@ id: genrocket-integration
 title: GenRocket Integration
 hide_title: true
 sidebar_label: GenRocket
-description: Integrate TestMu AI with GenRocket to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
+description: Integrate TestMu AI with GenRocket to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.
 keywords:
   - testmu ai integration with GenRocket
   - testmu ai and genrocket integration 
@@ -94,7 +94,7 @@ The following code snippet shows how to use the GenRocket API to generate the da
 ## Setup On HyperExecute
 ---
 
-Till now you have learnt how to set up your generators on GenRocket. Now, in order to run those tests on Hyperexecute, please follow the steps given below:
+Till now you have learnt how to set up your generators on GenRocket. Now, in order to run those tests on HyperExecute, please follow the steps given below:
 
 **Step 1:** You can login or create your free <BrandName /> account <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}>here</a>.
 
@@ -127,7 +127,7 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 
 * **For Darwin:** Download for Darwin [here](https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute).
 
-**Step 4:** Once downloaded, make sure the Hyperexecute binary is at the root directory of your project.
+**Step 4:** Once downloaded, make sure the HyperExecute binary is at the root directory of your project.
 
 <img loading="lazy" src={require('../assets/images/genrocket-integration/gen-seven.webp').default} alt="Integrating <BrandName /> With genrocket" width="1366" height="625" className="doc_img"/>
 
@@ -141,7 +141,7 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 
 Following two commands have been already added in the "[pre](/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre)" section of this HyperExecute Yaml.
 
-* In Hyperexecute, every time the tests are run, a new environment is created, and gets destroyed as soon as the tests are completed. 
+* In HyperExecute, every time the tests are run, a new environment is created, and gets destroyed as soon as the tests are completed. 
 
 * To configure Genrocket on HyperExecute we need to create a directory in the HyperExecute Machine with the name **.genrocket** which is done by the following command. 
 
