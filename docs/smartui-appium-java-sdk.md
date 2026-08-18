@@ -324,7 +324,7 @@ After test execution, visit your SmartUI project dashboard to:
 
 **Example:**
 ```java
-SmartUISnapshot.smartuiSnapshot(driver, HomeScreen-Header");
+SmartUISnapshot.smartuiSnapshot(driver, "HomeScreen-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 ```
 
@@ -340,7 +340,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 **Example:**
 ```java
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-wait.until(ExpectedConditions.presenceOfElementLocated(By.id(main-content")));
+wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ```
 
@@ -443,7 +443,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 1. Add explicit waits before screenshots:
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(content")));
+   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
    ```
 
 2. Wait for specific elements to be visible:
@@ -472,8 +472,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 2. Ensure elements exist at screenshot time
 3. Check JSON formatting in configuration:
    ```java
-   Map<String, Object"> ignoreBoxes = new HashMap<">();
-   ignoreBoxes.put(xpath", new String[]{"//*[@text="'Dynamic" Ad']"});
+   Map<String, Object> ignoreBoxes = new HashMap<>();
+   ignoreBoxes.put("xpath", new String[]{"//*[@text='Dynamic Ad']"});
    ```
 
 4. Test XPath locators in isolation before using in config

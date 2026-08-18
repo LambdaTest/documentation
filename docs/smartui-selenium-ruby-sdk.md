@@ -238,7 +238,7 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-```rb title="This is a sample for your configuration for Ruby to ignore by" ID"
+```rb title="This is a sample for your configuration for Ruby to ignore by ID"
 options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
@@ -251,7 +251,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
 
-```rb title="This is a sample for your configuration for Ruby to ignore by" Class"
+```rb title="This is a sample for your configuration for Ruby to ignore by Class"
 options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
@@ -264,7 +264,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-```rb title="This is a sample for your configuration for Ruby to ignore by" XPath"
+```rb title="This is a sample for your configuration for Ruby to ignore by XPath"
 options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -278,7 +278,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
 
-```rb title="This is a sample for your configuration for Ruby to ignore by CSS" Selector"
+```rb title="This is a sample for your configuration for Ruby to ignore by CSS Selector"
 options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -307,7 +307,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
 
-```rb title="This is a sample for your configuration for Ruby to select by" Class"
+```rb title="This is a sample for your configuration for Ruby to select by Class"
 options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
@@ -320,7 +320,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-```rb title="This is a sample for your configuration for Ruby to select by" XPath"
+```rb title="This is a sample for your configuration for Ruby to select by XPath"
 options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -334,7 +334,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
 
-```rb title="This is a sample for your webhook configuration for Ruby to select by CSS" Selector"
+```rb title="This is a sample for your webhook configuration for Ruby to select by CSS Selector"
 options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -367,7 +367,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
 
-```rb title="This is a sample for your configuration for Ruby to capture an element by" Class"
+```rb title="This is a sample for your configuration for Ruby to capture an element by Class"
 options = {
       element: {
           class: 'Required Class',
@@ -380,7 +380,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-```rb title="This is a sample for your configuration for Ruby to capture an element by" XPath"
+```rb title="This is a sample for your configuration for Ruby to capture an element by XPath"
 options = {
       element: {
           xpath: 'Required Xpath',
@@ -394,7 +394,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
 
-```rb title="This is a sample for your webhook configuration for Ruby to capture an element by CSS" Selector"
+```rb title="This is a sample for your webhook configuration for Ruby to capture an element by CSS Selector"
 options = {
       element: {
           cssSelector: 'Required CSS Selector',
@@ -463,7 +463,7 @@ end
 
 **Example:**
 ```ruby
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, HomePage-Header")
+LambdaTest::Selenium::Driver.smartui_snapshot(driver, "HomePage-Header")
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "ProductPage-MainContent")
 ```
 
@@ -483,7 +483,7 @@ require 'selenium-webdriver'
 driver.navigate.to 'https://example.com'
 wait = Selenium::WebDriver::Wait.new(timeout: 10)
 wait.until { driver.find_element(id: 'main-content') }
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
+LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Page Loaded")
 ```
 
 </TabItem>
@@ -587,7 +587,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
 2. Enable JavaScript in configuration:
    ```json
    {
-     enableJavaScript": true
+     "enableJavaScript": true
    }
    ```
 
@@ -643,7 +643,7 @@ LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
    ```
 5. Update Gemfile with specific version:
    ```ruby
-   gem 'lambdatest-selenium-driver', '~"> 1.0'
+   gem 'lambdatest-selenium-driver', '~> 1.0'
    ```
 
 </TabItem>

@@ -192,6 +192,9 @@ In case you are accessing your network using corporate proxies, set the proxies 
 
 ```bash
 export HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
+```
+
+</TabItem>
 <TabItem value="Windows-4" label='Windows - CMD'>
 
 ```bash
