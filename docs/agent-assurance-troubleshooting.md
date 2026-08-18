@@ -75,23 +75,12 @@ node --version
 
 Upgrade Node.js and rerun `rook --version`.
 
-### GitHub download is unauthorized
-
-Confirm that the authenticated GitHub account can read the private repository:
-
-```bash
-gh auth status
-gh repo view LambdatestIncPrivate/rook
-```
-
-Then retry the installer using `gh auth token`.
-
 ### Download resets after the release lookup
 
 Release assets are served from a different GitHub asset domain. A VPN or corporate proxy can allow the repository request but reset the redirected asset download. Run the installer off VPN, or use:
 
 ```bash
-gh release download --repo LambdatestIncPrivate/rook --pattern '*.tar.gz'
+gh release download --repo LambdaTest/rook --pattern '*.tar.gz'
 ```
 
 ## Authentication and Credits
