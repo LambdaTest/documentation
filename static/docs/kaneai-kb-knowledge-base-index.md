@@ -89,3 +89,5 @@ New to KaneAI? Here's the recommended reading order:
 6. **[Assertions Guide](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
 7. **[Waits & Timing](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
 8. **[JS Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds/)**: When natural language isn't enough
+9. **[Scroll Until Element for Mobile Authoring](/support/docs/kaneai-scroll-until-mobile/)**: Scroll until a target element is visible when authoring mobile tests
+10. **[Create Pull Requests from KaneAI Test Cases](/support/docs/kaneai-create-pr/)**: Turn KaneAI test cases into pull requests in your repository

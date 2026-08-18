@@ -42,4 +42,6 @@ Bitrise CI Integration With TestMu AI
 
 Buildkite Integration With TestMu AI
 
+Bitrise XCUITest Integration With TestMu AI
+
 >If your favourite CI/CD tools is not in the above mentioned, then just give us a shout and we will have it ready shortly for you.

@@ -88,6 +88,8 @@ Although, our [Selenium Grid](https://www.testmuai.com/selenium-automation/) sup
 
           Protractor
 
+          Siesta
+
     We support all languages and frameworks that are compatible with Selenium, so in case your favorite isn't in the table.Don't worry, you can still run the test. Contact Us for any help.
 
 ## Our Selenium Grid Also Support Hybrid Frameworks
