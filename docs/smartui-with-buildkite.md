@@ -128,7 +128,7 @@ steps:
 
 **Example:**
 ```yaml
-branches: main develop"
+branches: main develop
 ```
 
 </TabItem>
@@ -143,7 +143,7 @@ branches: main develop"
 **Example:**
 ```yaml
 env:
-  BUILD_NAME: ${BUILDKITE_BRANCH}-${BUILDKITE_COMMIT:0:7}"
+  BUILD_NAME: "${BUILDKITE_BRANCH}-${BUILDKITE_COMMIT:0:7}"
 ```
 
 </TabItem>
@@ -223,7 +223,7 @@ env:
 2. Pass variable to step:
    ```yaml
    env:
-     PROJECT_TOKEN: ${PROJECT_TOKEN}"
+     PROJECT_TOKEN: "${PROJECT_TOKEN}"
    ```
 
 3. Check variable is accessible to the pipeline
@@ -250,7 +250,7 @@ env:
 
 2. Check pipeline logs for errors:
    ```yaml
-   - label: Check Logs"
+   - label: "Check Logs"
      if: "build.state == 'failed'"
      commands:
        - cat /tmp/*.log || true

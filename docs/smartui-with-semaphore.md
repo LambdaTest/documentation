@@ -108,7 +108,7 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 ```yaml
 auto_cancel:
   running:
-    when: branch != 'main'"
+    when: "branch != 'main'"
 ```
 
 </TabItem>
@@ -124,7 +124,7 @@ auto_cancel:
 ```yaml
 env_vars:
   - name: BUILD_NAME
-    value: ${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
+    value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 ```
 
 </TabItem>
@@ -265,13 +265,13 @@ env_vars:
          jobs:
            - name: Run Tests
              commands:
-               - npx smartui exec -- <command">
+               - npx smartui exec -- <your-test-command>
      - name: Test Group 2
        task:
          jobs:
            - name: Run Tests
              commands:
-               - npx smartui exec -- <command">
+               - npx smartui exec -- <your-test-command>
    ```
 
 3. Optimize test execution

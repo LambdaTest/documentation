@@ -306,7 +306,7 @@ env:
 1. Use specific Node version:
    ```yaml
    node_js:
-     - 18"
+     - "18"
    ```
 
 2. Clear npm cache:
