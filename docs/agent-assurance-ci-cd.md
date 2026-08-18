@@ -165,11 +165,9 @@ jobs:
 
       - name: Install pinned Rook build
         env:
-          GH_TOKEN: ${{ secrets.ROOK_REPOSITORY_TOKEN }}
           ROOK_VERSION: <reviewed-commit-sha>
         run: |
-          curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" \
-            https://raw.githubusercontent.com/LambdatestIncPrivate/rook/stage/scripts/install.sh | bash
+          curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
 
       - name: Verify Rook environment
         run: |
