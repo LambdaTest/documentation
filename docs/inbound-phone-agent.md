@@ -173,4 +173,4 @@ Phone agents are evaluated across 8 metric categories with 30+ individual metric
 
 - See the [phone agent testing overview](/support/docs/phone-agent/) for both testing modes.
 - See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/).
-- See how to [run these tests from the terminal](/support/docs/testmu-a2a-cli/) with the A2A CLI.
+- See how to [run these tests from the terminal](/support/docs/agent-testing-cli/) with the A2A CLI.
