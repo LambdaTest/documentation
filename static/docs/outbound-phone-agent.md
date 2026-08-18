@@ -36,4 +36,4 @@ For the full metric tables and thresholds, see the [inbound phone agent metrics]
 
 - See how to [test an inbound phone agent](/support/docs/inbound-phone-agent/) for the shared features and full metrics.
 - See the [phone agent testing overview](/support/docs/phone-agent/) for both testing modes.
-- See how to [run these tests from the terminal](/support/docs/testmu-a2a-cli/) with the A2A CLI.
+- See how to [run these tests from the terminal](/support/docs/agent-testing-cli/) with the A2A CLI.

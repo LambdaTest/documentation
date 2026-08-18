@@ -1,6 +1,6 @@
 ---
-id: testmu-a2a-cli
-title: TestMu Agent Testing CLI Documentation - Getting Started
+id: agent-testing-cli
+title: Getting Started
 hide_title: false
 sidebar_label: Quickstart (CLI)
 description: Get started with the TestMu Agent Testing CLI to discover projects, run Chat and Phone Caller evaluations, retrieve results, and automate tests in CI/CD.
@@ -10,15 +10,16 @@ keywords:
   - chat agent testing
   - phone caller testing
   - ci/cd agent testing
-url: https://www.testmuai.com/support/docs/testmu-a2a-cli/
+url: https://www.testmuai.com/support/docs/agent-testing-cli/
 site_name: TestMu AI
-slug: testmu-a2a-cli/
-canonical: https://www.testmuai.com/support/docs/testmu-a2a-cli/
+slug: agent-testing-cli/
+canonical: https://www.testmuai.com/support/docs/agent-testing-cli/
 ---
 
-# TestMu Agent Testing CLI Documentation - Getting Started
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-> For product concepts and platform guidance, see the [TestMu Agent Testing CLI guide](https://www.testmuai.com/support/docs/testmu-a2a-cli/).
+# Getting Started
 
 ## Before You Begin
 
@@ -26,19 +27,20 @@ canonical: https://www.testmuai.com/support/docs/testmu-a2a-cli/
 2. Follow [Get started with TestMu Agent Testing](https://agent-to-agent.lambdatest.com/agent-ui/agents) and open **Credentials** in the TestMu AI Dashboard. Copy your username and access key.
 3. Set the credentials as environment variables when you use the CLI in CI/CD or other non-interactive environments.
 
-macOS or Linux:
-
-```bash
-export LT_USERNAME="YOUR_USERNAME"
-export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
-```
-
-Windows PowerShell:
-
-```powershell
-$env:LT_USERNAME = "YOUR_USERNAME"
-$env:LT_ACCESS_KEY = "YOUR_ACCESS_KEY"
-```
+<Tabs groupId="os">
+  <TabItem value="unix" label="macOS or Linux" default>
+    ```bash
+    export LT_USERNAME="YOUR_USERNAME"
+    export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+    ```
+  </TabItem>
+  <TabItem value="powershell" label="Windows PowerShell">
+    ```powershell
+    $env:LT_USERNAME = "YOUR_USERNAME"
+    $env:LT_ACCESS_KEY = "YOUR_ACCESS_KEY"
+    ```
+  </TabItem>
+</Tabs>
 
 **TestMu Agent Testing CLI** (`agent-testing-cli`) is a command-line tool for testing AI agents from a terminal. Use the CLI to discover projects and test resources, run Chat and Phone Caller evaluations, retrieve results, and automate tests in a continuous integration and continuous delivery (CI/CD) pipeline.
 
@@ -311,25 +313,7 @@ The shared `--json`, `--verbose`, and `--no-tui` options can appear before or af
 
 ## Integrate with CI/CD
 
-Use the sample GitHub Actions workflow: [GitHub Actions example](../examples/ci/github-actions-agent-testing-cli.yml)
-
-Before you run the workflow, configure these GitHub Actions secrets:
-
-| Secret | Value |
-| --- | --- |
-| `LT_USERNAME` | Your TestMu username |
-| `LT_ACCESS_KEY` | Your TestMu access key |
-
-Configure these GitHub Actions repository variables:
-
-| Variable | Value |
-| --- | --- |
-| `TESTMU_PROJECT_ID` | Project ID that contains the suite |
-| `TESTMU_SUITE_ID` | Suite ID to run |
-
-The example uses `workflow_dispatch`. You must start it manually from the GitHub Actions page. Copy the example into `.github/workflows/` when you are ready to activate it.
-
-For a Chat evaluation, add `TESTMU_WORKFLOW_ID` as a repository variable and use this command:
+For a Chat evaluation, provide the workflow ID as an environment variable and use this command:
 
 ```bash
 agent-testing-cli --project "$TESTMU_PROJECT_ID" --json run \
@@ -405,7 +389,6 @@ agent-testing-cli --project PROJECT_ID run \
 
 ## Next Steps
 
-- Review the [TestMu Agent Testing CLI guide](https://www.testmuai.com/support/docs/testmu-a2a-cli/).
 - Learn how [Agent Testing evaluations work](https://www.testmuai.com/support/docs/architecture-and-how-evaluation-works/).
 - Learn how to [connect a Chat agent](https://www.testmuai.com/support/docs/chat-agent-api-integration/).
 - Open the [agent-testing-cli package on PyPI](https://pypi.org/project/agent-testing-cli/).
