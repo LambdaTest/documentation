@@ -92,7 +92,7 @@ Download or Clone the code sample for the Java from the <BrandName /> GitHub rep
 Update your dependencies in `pom.xml` file Install required modules for <BrandName /> SmartUI SDK in your frontend project.
 
 ```bash
-npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+npm install @lambdatest/smartui-cli@latest @lambdatest/playwright-driver playwright
 mvn clean compile
 ```
 

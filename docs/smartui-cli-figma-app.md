@@ -116,7 +116,7 @@ Note down both the **project name** and the **project token**. You need the toke
 ### 2. Install SmartUI CLI
 
 ```bash
-npm install -g @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli@latest
 ```
 
 ---

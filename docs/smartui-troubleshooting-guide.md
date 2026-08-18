@@ -267,7 +267,7 @@ Before diving into specific issues, run through this quick checklist:
    - Requires administrator/sudo privileges
    - Best for: Single user, consistent environment
 ```bash
-   npm install -g @lambdatest/smartui-cli
+   npm install -g @lambdatest/smartui-cli@latest
    ```
    **Local Installation (without `-g`)**:
    - Installs CLI in project's `node_modules`
@@ -275,7 +275,7 @@ Before diving into specific issues, run through this quick checklist:
    - No admin privileges needed
    - Best for: Project-specific versions, CI/CD pipelines
 ```bash
-   npm install @lambdatest/smartui-cli
+   npm install @lambdatest/smartui-cli@latest
    npx smartui --version
    ```
 2. **Installing Latest Versions**:

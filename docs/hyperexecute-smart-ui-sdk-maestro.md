@@ -116,7 +116,7 @@ Now, let's set up the test suite to integrate with SmartUI.
 The SmartUI CLI is required to capture and upload screenshots. Install it in your project directory:
 
 ```bash
-npm install @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli@latest
 ```
 
 :::note

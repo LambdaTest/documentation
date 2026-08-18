@@ -176,7 +176,7 @@ cacheDirectories:
   - node_modules
 
 pre:
-  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npm install @lambdatest/smartui-cli@latest @lambdatest/selenium-driver selenium-webdriver
   - npx smartui config:create smartui-web.json
 
 post:
@@ -197,7 +197,7 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npm install @lambdatest/smartui-cli@latest @lambdatest/selenium-driver selenium-webdriver
   - npx smartui config:create smartui-web.json
 ```
 :::

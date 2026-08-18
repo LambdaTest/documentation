@@ -90,7 +90,7 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: npm install @lambdatest/smartui-cli
+          command: npm install @lambdatest/smartui-cli@latest
       - run:
           name: Execute SmartUI Tests
           command: |
@@ -374,7 +374,7 @@ environment:
    ```yaml
    - run:
        name: Install SmartUI CLI
-       command: npm install -g @lambdatest/smartui-cli
+       command: npm install -g @lambdatest/smartui-cli@latest
    ```
 
 **Getting Help**

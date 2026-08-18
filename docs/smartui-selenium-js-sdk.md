@@ -92,7 +92,7 @@ cd smartui-node-sample/sdk
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+npm install @lambdatest/smartui-cli@latest @lambdatest/selenium-driver selenium-webdriver
 ```
 
 :::note

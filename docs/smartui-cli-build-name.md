@@ -69,12 +69,12 @@ If you haven't already installed SmartUI CLI, install it using npm:
 
 **Global Installation (Recommended):**
 ```bash
-npm install -g @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli@latest
 ```
 
 **Local Installation:**
 ```bash
-npm install @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli@latest
 ```
 
 ## Step 2: Configure your Project Token

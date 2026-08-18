@@ -78,7 +78,7 @@ projectToken = "123456#1234abcd-****-****-****-************"
 Install the CLI globally using npm:
 
 ```bash
-npm install -g @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli@latest
 ```
 
 ## Step 2: Setup your credentials
@@ -323,7 +323,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 **Solutions**:
 1. Install SmartUI CLI:
    ```bash
-   npm install -g @lambdatest/smartui-cli
+   npm install -g @lambdatest/smartui-cli@latest
    ```
 
 2. Verify npm is available:
