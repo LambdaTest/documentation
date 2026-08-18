@@ -99,7 +99,7 @@ Pick the interface that matches how you work and run an evaluation end to end.
     <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Quickstart (UI)</div>
     <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Create an agent, generate scenarios, and run an evaluation from the dashboard.</div>
   </a>
-  <a href="/support/docs/testmu-a2a-cli/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+  <a href="/support/docs/agent-testing-cli/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
     <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Quickstart (CLI)</div>
     <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Test chat and phone agents from your terminal and wire them into CI/CD.</div>
   </a>

@@ -1051,7 +1051,7 @@ module.exports = {
           {
             type: "doc",
             label: "Quickstart (CLI)",
-            id: "testmu-a2a-cli",
+            id: "agent-testing-cli",
           },
           {
             type: "doc",

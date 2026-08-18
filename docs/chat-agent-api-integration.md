@@ -234,5 +234,5 @@ Most connection failures come from authentication, the response path, or network
 
 ---
 
-- See how to [test chat agents from the terminal](/support/docs/testmu-a2a-cli/), including custom body templates and response paths.
+- See how to [test chat agents from the terminal](/support/docs/agent-testing-cli/), including custom body templates and response paths.
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

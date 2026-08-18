@@ -1,8 +1,6 @@
-# TestMu Agent Testing CLI Documentation - Getting Started
+# Getting Started
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-> For product concepts and platform guidance, see the [TestMu Agent Testing CLI guide](https://www.testmuai.com/support/docs/testmu-a2a-cli/).
 
 ## Before You Begin
 
@@ -10,14 +8,10 @@
 2. Follow [Get started with TestMu Agent Testing](https://agent-to-agent.lambdatest.com/agent-ui/agents) and open **Credentials** in the TestMu AI Dashboard. Copy your username and access key.
 3. Set the credentials as environment variables when you use the CLI in CI/CD or other non-interactive environments.
 
-macOS or Linux:
-
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 ```
-
-Windows PowerShell:
 
 ```powershell
 $env:LT_USERNAME = "YOUR_USERNAME"
@@ -295,25 +289,7 @@ The shared `--json`, `--verbose`, and `--no-tui` options can appear before or af
 
 ## Integrate with CI/CD
 
-Use the sample GitHub Actions workflow: [GitHub Actions example](../examples/ci/github-actions-agent-testing-cli.yml)
-
-Before you run the workflow, configure these GitHub Actions secrets:
-
-| Secret | Value |
-| --- | --- |
-| `LT_USERNAME` | Your TestMu username |
-| `LT_ACCESS_KEY` | Your TestMu access key |
-
-Configure these GitHub Actions repository variables:
-
-| Variable | Value |
-| --- | --- |
-| `TESTMU_PROJECT_ID` | Project ID that contains the suite |
-| `TESTMU_SUITE_ID` | Suite ID to run |
-
-The example uses `workflow_dispatch`. You must start it manually from the GitHub Actions page. Copy the example into `.github/workflows/` when you are ready to activate it.
-
-For a Chat evaluation, add `TESTMU_WORKFLOW_ID` as a repository variable and use this command:
+For a Chat evaluation, provide the workflow ID as an environment variable and use this command:
 
 ```bash
 agent-testing-cli --project "$TESTMU_PROJECT_ID" --json run \
@@ -389,7 +365,6 @@ agent-testing-cli --project PROJECT_ID run \
 
 ## Next Steps
 
-- Review the [TestMu Agent Testing CLI guide](https://www.testmuai.com/support/docs/testmu-a2a-cli/).
 - Learn how [Agent Testing evaluations work](https://www.testmuai.com/support/docs/architecture-and-how-evaluation-works/).
 - Learn how to [connect a Chat agent](https://www.testmuai.com/support/docs/chat-agent-api-integration/).
 - Open the [agent-testing-cli package on PyPI](https://pypi.org/project/agent-testing-cli/).

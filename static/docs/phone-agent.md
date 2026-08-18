@@ -34,7 +34,7 @@ Phone tests run from the dashboard or the CLI, driven by scenarios grouped into 
 
 - To test an agent that answers calls, see [inbound phone agent testing](/support/docs/inbound-phone-agent/).
 - To test an agent that places calls, see [outbound phone agent testing](/support/docs/outbound-phone-agent/).
-- To run calls from the terminal, see how to [test phone agents with the CLI](/support/docs/testmu-a2a-cli/).
+- To run calls from the terminal, see how to [test phone agents with the CLI](/support/docs/agent-testing-cli/).
 
 ## Related TestMu AI Guides
 
