@@ -203,7 +203,7 @@ Once, the configuration file will be created, you will be seeing the default con
 - You can incorporate SmartUI into your custom `Playwright` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of playwright script of which we would like to take the screenshot, as shown below:
 
 ```python
-ffrom playwright.sync_api import sync_playwright, Playwright
+from playwright.sync_api import sync_playwright, Playwright
 from lambdatest_playwright_driver import smartui_snapshot
 
 def run(playwright: Playwright):
@@ -265,10 +265,10 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-```rb title="This is a sample for your configuration for Python to ignore by ID"
+```python title="This is a sample for your configuration for Python to ignore by ID"
 options = {
-            ignoreDOM: {
-                id: ["ID-1", "ID-2"],
+            "ignoreDOM": {
+                "id": ["ID-1", "ID-2"],
             }
         }
 page.goto("Required URL")
@@ -278,12 +278,12 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
 
-```py title="This is a sample for your configuration for Python to ignore by Class"
+```python title="This is a sample for your configuration for Python to ignore by Class"
 options = {
-            ignoreDOM: {
-                class: ["Class-1", "Class-2"],
-            }
-        }
+    "ignoreDOM": {
+        "class": ["Class-1", "Class-2"],
+    }
+}
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
@@ -291,10 +291,10 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-```py title="This is a sample for your configuration for Python to ignore by XPath"
+```python title="This is a sample for your configuration for Python to ignore by XPath"
 options = {
-            ignoreDOM: {
-                xpath: ["Xpath-1", "Xpath-2"],
+            "ignoreDOM": {
+                "xpath": ["Xpath-1", "Xpath-2"],
             }
         }
 page.goto("Required URL")
@@ -305,10 +305,10 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
 
-```py title="This is a sample for your configuration for Python to ignore by CSS Selector"
+```python title="This is a sample for your configuration for Python to ignore by CSS Selector"
 options = {
-            ignoreDOM: {
-                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            "ignoreDOM": {
+                "cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
 page.goto("Required URL")
@@ -321,10 +321,10 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
 
-```py title="This is a sample for your configuration for Python to select by ID."
+```python title="This is a sample for your configuration for Python to select by ID."
 options = {
-            selectDOM: {
-                id: ["ID-1", "ID-2"],
+            "selectDOM": {
+                "id": ["ID-1", "ID-2"],
             }
         }
 page.goto("Required URL")
@@ -334,12 +334,12 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
 
-```py title="This is a sample for your configuration for Python to select by Class"
+```python title="This is a sample for your configuration for Python to select by Class"
 options = {
-            selectDOM: {
-                class: ["Class-1", "Class-2"],
-            }
-        }
+    "selectDOM": {
+        "class": ["Class-1", "Class-2"],
+    }
+}
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
@@ -347,10 +347,10 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-```py title="This is a sample for your configuration for Python to select by XPath"
+```python title="This is a sample for your configuration for Python to select by XPath"
 options = {
-            selectDOM: {
-                xpath: ["Xpath-1", "Xpath-2"],
+            "selectDOM": {
+                "xpath": ["Xpath-1", "Xpath-2"],
             }
         }
 page.goto("Required URL")
@@ -361,10 +361,10 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
 
-```py title="This is a sample for your webhook configuration for Python to select by CSS Selector"
+```python title="This is a sample for your webhook configuration for Python to select by CSS Selector"
 options = {
-            selectDOM: {
-                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            "selectDOM": {
+                "cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
 page.goto("Required URL")
@@ -381,10 +381,10 @@ You can capture screenshots of targeted elements by leveraging various locator m
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
-```py title="This is a sample for your configuration for Python to capture an element by ID."
+```python title="This is a sample for your configuration for Python to capture an element by ID."
 options = {
-      element: {
-          id: 'Required ID',
+      "element": {
+          "id": "Required ID",
       }
   }
 page.goto("Required URL")
@@ -394,12 +394,12 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
 
-```py title="This is a sample for your configuration for Python to capture an element by Class"
+```python title="This is a sample for your configuration for Python to capture an element by Class"
 options = {
-      element: {
-          class: 'Required Class',
-      }
-  }
+    "element": {
+        "class": "Required Class",
+    }
+}
 page.goto("Required URL")
 smartui_snapshot(page,"<Screenshot Name>", options)
 ```
@@ -407,10 +407,10 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-```py title="This is a sample for your configuration for Python to capture an element by XPath"
+```python title="This is a sample for your configuration for Python to capture an element by XPath"
 options = {
-      element: {
-          xpath: 'Required Xpath',
+      "element": {
+          "xpath": "Required Xpath",
       }
   }
 page.goto("Required URL")
@@ -421,10 +421,10 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
 
-```py title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
+```python title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
 options = {
-      element: {
-          cssSelector: 'Required CSS Selector',
+      "element": {
+          "cssSelector": "Required CSS Selector",
       }
   }
 page.goto("Required URL")
@@ -663,8 +663,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 </TabItem>
 </Tabs>

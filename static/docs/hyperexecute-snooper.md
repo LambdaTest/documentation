@@ -24,7 +24,7 @@ To implement the `snooper` command on HyperExecute, we simply need to update our
 ### `testDiscovery`
 This command helps to discover all the test scenarios within the project. It offers two methods to implement it:
 
-#### Method 1: Discovering test cases on Hyperexecute machines:
+#### Method 1: Discovering test cases on HyperExecute machines:
 
 - `featureFilePaths`: Path where all feature files are located
 - `frameWork`: Framework of Testing
@@ -53,7 +53,7 @@ command: snooper  --targetOs=win --featureFilePaths=src/test/java/Features/ --fr
 
 ### `testRunnerCommand`
 
-This command helps to execute the test cases and needs a command that will help to execute the single test. It is executed on the Hyperexecute VMs for each scenario at an individual level.
+This command helps to execute the test cases and needs a command that will help to execute the single test. It is executed on the HyperExecute VMs for each scenario at an individual level.
 
 There are two methods to execute the runner command for cucumber:
 

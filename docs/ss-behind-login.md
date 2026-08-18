@@ -47,7 +47,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 # Taking Screenshots of Pages Behind Login
 ***
-<BrandName /> offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.testmuai.com/feature) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
+<BrandName /> offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.testmuai.com/feature/) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="HT8ODEExxZM">
@@ -55,7 +55,7 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
 </div>
 </div>
 
-This document will help you understand how you can capture bulk screenshots of your web-application **after the login page** for different browsers to measure the cross browser compatibility. Refer to our [Automated Screenshot](https://www.testmuai.com/automated-screenshot) testing document to know more.
+This document will help you understand how you can capture bulk screenshots of your web-application **after the login page** for different browsers to measure the cross browser compatibility. Refer to our [Automated Screenshot](https://www.testmuai.com/automated-screenshot/) testing document to know more.
 
 
 ## How This Works?

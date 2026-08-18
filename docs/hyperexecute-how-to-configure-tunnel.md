@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: How to Configure Tunnel with HyperExecute
 description: Learn to set up a Tunnel with HyperExecute effortlessly with our straightforward guide, simplifying the configuration process for you!
 keywords:
-  - TestMu AI Hyperexecute
-  - TestMu AI Hyperexecute help
-  - TestMu AI Hyperexecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - How to Configure Tunnel with HyperExecute
 url: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-tunnel/
 site_name: TestMu AI

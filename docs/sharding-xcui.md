@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
@@ -52,7 +53,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
-<RealDeviceTag value="Real Device" />
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Generally the XCUI tests are run in sequence which is a time taking process. This document explains how you can speed up this process by splitting the tests into **shards**. We can divide the various tests into shards which can run parallelly and save time while running various XCUI tests. 
 
 This document will cover how to execute **XCUI Tests** on real devices with **HyperExecute**. HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute is configured using a YAML file.
@@ -173,14 +174,25 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 Refer to the sample `.yaml` file here
 
-```bash title="SampleYamlFile.yaml"
+<Tabs className="docs__val">
+
+<TabItem value="real-device" label="Real Device" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
 runson: ios
-autosplit: true
+
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
+autosplit: false
+
 maxRetries: 2
 retryOnFailure: true
-globalTimeout: 180    #MAXQUEUETIMEOUT
+globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
   name: "ios/xcui"
@@ -189,31 +201,113 @@ framework:
     video: true
     networkLog: true
     deviceLog: true
-    
-    # You can use either the appId (APP1234567) or provide the path of the application using appPath.
 
-    #highlight-next-line
-    appPath: LambdaUiKitIOS.ipa
-    # We have used the appPath here instead of appId
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
-    # You can use either the APP ID (APP1234567) or provide the path of the application.
+    appPath: ProverbialTest.ipa
+    testSuitePath: LambdaUiKitIOS.ipa
+    # We have used the appPath and testSuitePath here.
 
-    #highlight-next-line
-    testSuiteAppId: lt://APP10160202521675167637685231
-    # We have used the testSuiteAppID here instead of testSuitePath
+    appId: lt://APP1010461471690377432133206
+    testSuiteAppId: lt://APP10104592261690377454846669
+    # We have used the appId and testSuiteAppID here.
 
     deviceSelectionStrategy: all
     devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
 
     shards:
       mappings:
-      - name: shard1
-        strategy: "only-testing/skip-testing"
-        values: ["<className>/<className/testName>"]
-     - name: shard2
-       strategy: "only-testing/skip-testing"
-       values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+        - name: shard1
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
+
+        - name: shard2
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
 ```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
+version: "0.2"
+concurrency: 2
+runson: ios
+
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
+autosplit: false
+
+maxRetries: 2
+retryOnFailure: true
+globalTimeout: 180 #MAXQUEUETIMEOUT
+
+framework:
+  name: "ios/xcui"
+  args:
+    buildName: "XCUIT"
+    video: true
+    networkLog: true
+    deviceLog: true
+
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
+
+    appPath: ProverbialTest.ipa
+    testSuitePath: LambdaUiKitIOS.ipa
+    # We have used the appPath and testSuitePath here.
+
+    appId: lt://APP1010461471690377432133206
+    testSuiteAppId: lt://APP10104592261690377454846669
+    # We have used the appId and testSuiteAppID here.
+
+    deviceSelectionStrategy: all
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+
+    #highlight-next-line
+    isVirtualDevice: true
+
+    shards:
+      mappings:
+        - name: shard1
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
+
+        - name: shard2
+          strategy: "only-testing/skip-testing"
+          values:
+            - "<className>/<className/testName>"
+            - "<className>/<className/testName>"
+        # The strategy for this shard is based on "only-testing/skip-testing".
+        # This shard will either execute only the specified test(s) or skip the specified test(s),
+        # depending on the strategy value configured.
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 :::tip When shards are added
 

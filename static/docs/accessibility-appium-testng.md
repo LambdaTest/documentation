@@ -21,11 +21,12 @@ UiAutomator2Options options = new UiAutomator2Options();
 options.setDeviceName("Pixel.*");
 options.setApp("lt://APP_ID"); // or storage URL per your setup
 options.setCapability("accessibility", true);
-// options.setCapability("accessibility.autoscan", true); // optional
 AppiumDriver driver = new AndroidDriver(new URL("https://mobile-hub.lambdatest.com/wd/hub"), options);
 ```
 
-Use the **official capability set** your account documentation lists for the current Appium version; the critical addition is `"accessibility": true`.
+Use the **official capability set** your account documentation lists for the current Appium version. The critical addition is `"accessibility": true`.
+
+`accessibility.autoscan` is a **web automation** capability and is **not supported on real devices**. On real devices, each screen you want covered has to be scanned with the `lambda-accessibility-scan` hook. See [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
 
 ### 2. Call the scan hook after navigation
 
@@ -50,7 +51,7 @@ Open **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating
 | Symptom | What to check |
 |--------|----------------|
 | Hook throws | Driver must be a session where accessibility capability was set; verify spelling `lambda-accessibility-scan`. |
-| Empty report | Hook never called and autoscan off; or page never reached stable state. |
+| Empty report | Hook never called, or the screen never reached a stable state. autoScan does not cover this, it is not supported on real devices. |
 
 ## Related docs
 

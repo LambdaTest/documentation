@@ -127,7 +127,7 @@ Your **API token** is now ready. Copy the token & store it safely with you, as y
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-apitoken.webp').default} alt="api token"  className="doc_img" width="1346" height="620"/>
 
-That’s it! Go to Integrations again and you will be able to notice a **green tick** indicating that GitLab is successfully installed. You can now experience bug logging in a fly from any of your running test session in Lambdatest to your repository directly by a single click.
+That’s it! Go to Integrations again and you will be able to notice a **green tick** indicating that GitLab is successfully installed. You can now experience bug logging in a fly from any of your running test session in LambdaTest to your repository directly by a single click.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-integrationcomplete.webp').default} alt="integration complete"  className="doc_img" width="1348" height="627"/>
 
@@ -147,7 +147,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/realtime-test.webp').default} alt="realtime test"  className="doc_img" width="1365" height="660"/>
 
-**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Mark as Bug** from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture) of the same. We have highlighted that option with yellow in the below image.
+**Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Mark as Bug** from the left panel for [capturing a screenshot](https://www.testmuai.com/full-page-screen-capture/) of the same. We have highlighted that option with yellow in the below image.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/mark-bug.webp').default} alt="mark as bug"  className="doc_img" width="1358" height="619"/>
 

@@ -1,4 +1,4 @@
-# Generate your HyperExecute YAML file
+# HyperExecute YAML generator: create your config file
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

@@ -57,7 +57,11 @@ For certain use cases, you may need to perform tests on devices that are **passc
 
 <BrandName />’s **Device Passcode in Automation** enables you to run such automated tests seamlessly on real devices.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
+:::
 
 ---
 
@@ -69,25 +73,14 @@ For certain use cases, you may need to perform tests on devices that are **passc
 
 ---
 
-## Supported Devices
+## Supported Platforms
 
-### iOS Devices
-
-| Device Model          | iOS Version |
-|-----------------------|-------------|
-| iPhone 16            | 18 |
-| iPhone 16 Pro        | 18 |
-| iPhone 15            | 17 |
-| iPhone 14            | 16 |
-| iPhone 13            | 15 |
-| iPad Air 11 (2024)   | 18 |
-
-> We are actively working on expanding coverage to all supported iOS devices on <BrandName /> Real Device Cloud.
+| Platform | Version      |
+|----------|--------------|
+| iOS      | 14 and above |
+| Android  | 11 and above |
 
 ---
-
-### Android Devices
-Available on **all real devices** running on **version 11 and above**.
 
 ## Default Passcode
 - **iOS:**  `123456`  

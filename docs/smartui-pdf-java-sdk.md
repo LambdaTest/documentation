@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 :::caution
-This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo).
+This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo/).
 :::
 
 ## Prerequisites for Using SmartUI
@@ -150,7 +150,7 @@ Upload pre-existing PDFs from your local machine:
 
 public class SmartuiPdfLocalTest {
     public void uploadLocalPdf() throws Exception {
-        String projectToken = System.getenv(PROJECT_TOKEN");
+        String projectToken = System.getenv("PROJECT_TOKEN");
 
         SmartUIConfig config = new SmartUIConfig()
             .withProjectToken(projectToken)
@@ -179,7 +179,7 @@ Upload PDFs downloaded during <BrandName /> cloud test execution:
 
 public class SmartuiPdfCloudTest {
     public void uploadCloudPdf(WebDriver driver) throws Exception {
-        String projectToken = System.getenv(PROJECT_TOKEN");
+        String projectToken = System.getenv("PROJECT_TOKEN");
 
         // Download PDF from cloud session
         String base64Content = (String) ((JavascriptExecutor) driver)
@@ -300,7 +300,7 @@ public class SmartuiPdfErrorHandling {
 **Example:**
 ```java
 String[] pdfPaths = {
-    documents/reports/report-v1.0.pdf",
+    "documents/reports/report-v1.0.pdf",
     "documents/specs/spec-v2.1.pdf"
 };
 ```
@@ -326,7 +326,7 @@ String[] pdfPaths = {
 
 **Example:**
 ```java
-config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
+config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 ```
 
 </TabItem>
@@ -386,7 +386,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 
 2. Check file path is correct:
    ```java
-   File pdfFile = new File(path/to/document.pdf");
+   File pdfFile = new File("path/to/document.pdf");
    if (!pdfFile.exists()) {
        throw new FileNotFoundException("PDF file not found");
    }
@@ -489,7 +489,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
    for (String pdfPath : pdfPaths) {
        try {
            FormattedResults result = pdfUploader.uploadPDF(pdfPath);
-           System.out.println(Uploaded: " + pdfPath);
+           System.out.println("Uploaded: " + pdfPath);
        } catch (Exception e) {
            System.err.println("Failed: " + pdfPath + " - " + e.getMessage());
        }
@@ -527,8 +527,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 </TabItem>
 </Tabs>

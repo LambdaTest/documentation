@@ -79,9 +79,9 @@ save
 
 **Step 3:** After configuring the TC-Shell Script, integrate it with HyperExecute. To do this:
 
-- Create a Hyperexecute YAML.
+- Create a HyperExecute YAML.
 
-- Download the Hyperexecute CLI Binary based on the OS you use:
+- Download the HyperExecute CLI Binary based on the OS you use:
 
 | Platform | Download Link |
 | ---------| --------------------------- |
@@ -92,7 +92,7 @@ save
 > The binary for Mac is unsigned. You might get a permission denied warning while executing on mac and linux machines. To allow permissions you can use the following command: `chmod u+x ./hyperexecute`.
 Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** ? **Security & Privacy** ? **General** tab.
 
-  **Sample Hyperexecute YAML file for TOSCA**:
+  **Sample HyperExecute YAML file for TOSCA**:
 ```yaml
 ---
 version: "0.1"

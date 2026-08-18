@@ -1,4 +1,4 @@
-# How to Test Chat Agent With TestMu AI Agent Testing API
+# How to Integrate a Chat Agent API
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -171,5 +171,5 @@ Most connection failures come from authentication, the response path, or network
 
 ## Related TestMu AI Guides
 
-- See how to [test chat agents from the terminal](/support/docs/testmu-a2a-cli/), including custom body templates and response paths.
+- See how to [test chat agents from the terminal](/support/docs/agent-testing-cli/), including custom body templates and response paths.
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

@@ -118,7 +118,7 @@ Appium leverages the WebDriver protocol, similar to how Selenium automates web a
 
 
 
-Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud).
+Here is a list of languages and frameworks that are supported by the <BrandName /> to run Appium automation tests on [<BrandName /> Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud/).
 
 
 
@@ -368,5 +368,11 @@ We support all languages and frameworks that are compatible with Selenium, so in
     </li>
 
   </ul>
+
+## Related app automation guides
+
+- [App Automation Dashboard](/support/docs/app-automation-dashboard/) — navigate build and session results for your app automation runs.
+- [Flutter Supported Capabilities](/support/docs/flutter-supported-capabilities/) — capabilities supported for automating Flutter apps on TestMu AI.
+- [Manual App Profiling](/support/docs/manual-app-profiling/) — capture performance profiles while manually testing your app.
 
 </nav>

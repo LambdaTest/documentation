@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI's cloud-based Selenium grid can be leveraged to run your automation test scripts on 3000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.testmuai.com/selenium-automation) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on TestMu AI Selenium grid.
+TestMu AI's cloud-based Selenium grid can be leveraged to run your automation test scripts on 3000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.testmuai.com/selenium-automation/) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on TestMu AI Selenium grid.
 
 ## Prerequisites
 

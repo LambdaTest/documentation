@@ -975,9 +975,10 @@ This flag is used to set the Name of your Projects which would later allow you t
 - If you are using   [**Project Level Secrets**](/support/docs/hyperexecute-how-to-manage-project-level-secrets/), you must include the id field in your project configuration.                                              
 :::
 ```yaml
+# 'id' is mandatory; 'name' is optional. You can pass both or just the 'id'.
 project:
-  name: 'demo-project' #project name
-  id: '1abc2345-56de-7890-f1cg-h2ij34k56789' #project id
+  name: 'demo-project' # Optional
+  id: '1abc2345-56de-7890-f1cg-h2ij34k56789' # Mandatory
 ```
 :::
 

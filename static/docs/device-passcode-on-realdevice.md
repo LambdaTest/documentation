@@ -2,10 +2,13 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-> To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
-
 TestMu AI’s **Device Passcode** feature allows you to test applications that require a device passcode as part of their security or authentication flow.
 This is especially useful for apps in **Banking/Finance**, **Enterprise**, or those distributed via **MDM (Mobile Device Management)** that mandate passcode entry for sensitive workflows.
+
+**Plus Plan Feature**
+This feature is available exclusively with the **Real Device Plus Live** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
 ## Use Cases
 
@@ -14,20 +17,12 @@ This is especially useful for apps in **Banking/Finance**, **Enterprise**, or th
 - Validate app compliance with enterprise policies that enforce passcodes.
 - Reproduce real-world scenarios for apps with heightened security requirements.
 
-## Supported Devices
+## Supported Platforms
 
-### iOS Devices
-
-| Device Model          | iOS Version |
-|-----------------------|-------------|
-| iPhone 16            | 18 |
-| iPhone 16 Pro        | 18 |
-| iPhone 15            | 17 |
-| iPhone 14            | 16 |
-| iPhone 13            | 15 |
-| iPad Air 11 (2024)   | 18 |
-
-> We are actively working on expanding coverage to all supported iOS devices on TestMu AI Real Device Cloud.
+| Platform | Version      |
+|----------|--------------|
+| iOS      | 14 and above |
+| Android  | 11 and above |
 
 ### Android Devices
 Available on **all real devices** running on **version 11 and above**.

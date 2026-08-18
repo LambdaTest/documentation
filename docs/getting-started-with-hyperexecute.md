@@ -181,6 +181,71 @@ Now that you've set up HyperExecute and run your first test, explore these resou
   </a>
 </div>
 
+### Run your framework on HyperExecute
+
+Already using one of these frameworks? Follow the dedicated guide to run it on the HyperExecute grid:
+
+<div className="support_main">
+  <a href="/support/docs/ruby-on-hyperexecute-grid/">
+    <div className="support_inners">
+      <h3>Ruby on HyperExecute</h3>
+      <p>Run your Ruby test suite on the HyperExecute grid.</p>
+    </div>
+  </a>
+  <a href="/support/docs/mocha-on-hyperexecute/">
+    <div className="support_inners">
+      <h3>Mocha on HyperExecute</h3>
+      <p>Run your Mocha (JavaScript) tests on the HyperExecute grid.</p>
+    </div>
+  </a>
+  <a href="/support/docs/capybara-on-hyperexecute-grid/">
+    <div className="support_inners">
+      <h3>Capybara on HyperExecute</h3>
+      <p>Run your Capybara acceptance tests on the HyperExecute grid.</p>
+    </div>
+  </a>
+  <a href="/support/docs/protractor-on-hyperexecute-grid/">
+    <div className="support_inners">
+      <h3>Protractor on HyperExecute</h3>
+      <p>Run your Protractor tests on the HyperExecute grid.</p>
+    </div>
+  </a>
+  <a href="/support/docs/nunit-on-hyperexecute-grid/">
+    <div className="support_inners">
+      <h3>NUnit on HyperExecute</h3>
+      <p>Run your NUnit (C#) tests on the HyperExecute grid.</p>
+    </div>
+  </a>
+  <a href="/support/docs/behave-on-hyperexecute-grid/">
+    <div className="support_inners">
+      <h3>Behave on HyperExecute</h3>
+      <p>Run your Behave (Python BDD) tests on the HyperExecute grid.</p>
+    </div>
+  </a>
+  <a href="/support/docs/robot-on-hyperexecute-grid/">
+    <div className="support_inners">
+      <h3>Robot Framework on HyperExecute</h3>
+      <p>Run your Robot Framework tests on the HyperExecute grid.</p>
+    </div>
+  </a>
+</div>
+
+### More HyperExecute guides
+
+Once your first job is running, these guides cover day-to-day configuration, monitoring, and private-cloud setup:
+
+- [HyperExecute CLI errors](/support/docs/hyperexecute-cli-error/) — diagnose and resolve common HyperExecute CLI errors.
+- [GUI query](/support/docs/hyperexecute-gui-query/) — filter and search your jobs from the HyperExecute UI.
+- [YAML capability overrides](/support/docs/hyperexecute-yaml-capability-overrides/) — override capabilities per job in your HyperExecute YAML.
+- [Task metrics](/support/docs/hyperexecute-task-metrics/) — read the per-task performance metrics for a run.
+- [Task widgets](/support/docs/hyperexecute-task-widgets/) — customize the task widgets on your dashboard.
+- [Org product preferences](/support/docs/hyperexecute-org-product-preferences/) — set organization-level HyperExecute preferences.
+- [MCP server release notes 1.0.0](/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/) — what shipped in the HyperExecute MCP server 1.0.0.
+- [Slack integration](/support/docs/hyperexecute-slack-integration/) — get HyperExecute job notifications in Slack.
+- [Private Cloud setup on Azure](/support/docs/hyperexecute-private-cloud-setup-with-azure/) — deploy HyperExecute Private Cloud on Microsoft Azure.
+- [VNet peering for Private Cloud](/support/docs/hyperexecute-vnet-peering-for-private-cloud/) — connect your VNet to HyperExecute Private Cloud.
+- [Migrate from Sauce Labs to HyperExecute](/support/docs/saucelabs-to-hyperexecute-migrate/) — move your Sauce Labs suite to HyperExecute.
+
 :::tip  We’re Already in Your Favorite Cloud!
 Deploy our cloud-native test orchestration platform directly from your trusted marketplace:
 - [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyper_execute?exp=ubp8&tab=Overview)

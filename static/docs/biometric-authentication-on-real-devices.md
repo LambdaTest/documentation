@@ -38,4 +38,4 @@ This feature allows you to simulate successful or failed biometric authenticatio
 
 After uploading your application, please wait atleast for 1-2 minutes for the application file patching process to complete.
 
-**Step 4:** Once your session starts and biometric authentication is enabled for the app, use Lambdatest's **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.
+**Step 4:** Once your session starts and biometric authentication is enabled for the app, use LambdaTest's **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.

@@ -8,7 +8,7 @@ Traditional testing approaches often force teams to choose between speed and rel
 
 With KaneAI's free trial access, every team can access GenAI-Native testing capabilities and ship flawless products.
 
-[**Start testing with KaneAI today →**](https://www.testmuai.com/kane-ai)
+[**Start testing with KaneAI today →**](https://www.testmuai.com/kane-ai/)
 
 ## Here's What it Has to Offer
 
@@ -52,4 +52,4 @@ With KaneAI free trial, you get access to:
 | Geolocation testing | [Upgrade Now](https://billing.lambdatest.com/billing/plans) |
 | Network throttling | [Upgrade Now](https://billing.lambdatest.com/billing/plans) |
 
-[**Start testing with KaneAI today →**](https://www.testmuai.com/kane-ai)
+[**Start testing with KaneAI today →**](https://www.testmuai.com/kane-ai/)

@@ -54,13 +54,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Optimize your [app automation testing](https://www.testmuai.com/blog/mobile-app-testing-tools/) with <BrandName />'s Real Devices UI Inspector. Now access unparalleled live debugging capabilities right from the app automation dashboard, enabling direct interaction with the test device, not just viewing the script's video. 
 
-With features like real-time navigation, detailed UI element inspection, and the ability to capture screenshots, now significantly enhance both the efficiency and effectiveness of your [automated tests](https://www.testmuai.com/automation-testing).
+With features like real-time navigation, detailed UI element inspection, and the ability to capture screenshots, now significantly enhance both the efficiency and effectiveness of your [automated tests](https://www.testmuai.com/automation-testing/).
 
 ## How to use Live Debugger for App Automation
 
 ---
 
-**Step 1:** Run your app automation test on the <BrandName /> platform. You can perform app automation testing across 3000+ devices, OS and browser combinations. Using debug mode to run the test is preferred as you can inspect applications at debug points.
+**Step 1:** Run your app automation test on the <BrandName /> platform. You can perform app automation testing across 5000+ real devices and 10,000+ browser/device combinations. Using debug mode to run the test is preferred as you can inspect applications at debug points.
 
 <img loading="lazy" src={require('../assets/images/live-debug/automation-dashboard.webp').default} alt="Live Debug App Automation" width="1365" height="632" className="doc_img"/>
 
@@ -78,7 +78,7 @@ With features like real-time navigation, detailed UI element inspection, and the
 
 <img loading="lazy" src={require('../assets/images/live-debug/inspector.webp').default} alt="Live Debug App Automation" width="1365" height="632" className="doc_img"/>
 
-**Step 5:** Selecting the Live Debug option smoothly transitions to the enhanced UI inspector, which tailors its behavior to the user's script and allows commands to run according to the [Appium](https://www.testmuai.com/appium) session.
+**Step 5:** Selecting the Live Debug option smoothly transitions to the enhanced UI inspector, which tailors its behavior to the user's script and allows commands to run according to the [Appium](https://www.testmuai.com/appium/) session.
 
 **Step 6:** With Live Debugger, you can interact in real time with the real device selected for the automation test allowing you to navigate the app, inspect UI elements, and take screenshots, all without disrupting the ongoing automation script.
 

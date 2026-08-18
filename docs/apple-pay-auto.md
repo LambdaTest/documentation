@@ -28,7 +28,15 @@ For **testing payment flows**, validating Apple Pay becomes critical. Automation
 
 With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. From provisioning Wallet with sandboxed test cards, to injecting payment details, confirming payments, and entering the passcode, <BrandName /> provides a seamless way to run and validate Apple Pay scenarios as part of your automation suite.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
+:::
+
+:::info Automating with Playwright?
+This guide covers the **Appium** flow. Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
+:::
 
 ---
 ## Use Cases
@@ -43,12 +51,13 @@ With <BrandName />, you can automate Apple Pay flows on **real iOS devices**. Fr
 ## Supported Devices
 Currently, the Device Passcode feature in App Automation is enabled on the following iOS real devices:
 
-| iOS Device   | iOS Version |
-|--------------|-------------|
-| iPhone 16    | 18      |
-| iPhone 15    | 17      |
-| iPhone 14    | 16      |
-| iPhone 13    | 15      |
+| iOS Device  | iOS Version |
+|-------------|-------------|
+| iPhone 17   | 26          |
+| iPhone 16   | 18          |
+| iPhone 15   | 17          |
+| iPhone 14   | 16          |
+| iPhone 13   | 15          |
 
 > We are actively working on expanding coverage to **all supported iOS devices** on <BrandName /> Real Device Cloud.
 ---
@@ -94,7 +103,7 @@ To enable Apple Pay automation, include the following capability in your automat
     // highlight-next-line
     "applePay": true,
     // highlight-next-line
-    "applePayCardType": ["visa", "master"],
+    "applePayCardType": ["visa", "master"]
 }`}
     </CodeBlock>
   </TabItem>
@@ -226,7 +235,7 @@ All parameters are optional. You can provide only the details you need to update
 
 ```python
 driver.execute_script(
-    'lambda_executor: {"action": "applePay", "arguments": {"confirmPayment": "true"}}'
+    'lambda_executor: {"action": "lambda-applepay", "arguments": {"confirmPayment": "true"}}'
 )
 ```
 

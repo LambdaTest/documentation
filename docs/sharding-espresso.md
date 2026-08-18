@@ -21,7 +21,8 @@ canonical: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecu
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -51,7 +52,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
-
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.
 
@@ -181,12 +182,23 @@ Sharding can be categorized into two types:
 
 Refer to the sample `.yaml` file here
 
-```bash title="SampleYamlFile.yaml"
+<Tabs className="docs__val">
+
+<TabItem value="real-device" label="Real Device" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
 runson: android
+
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
 autosplit: false
-globalTimeout: 180  #MAXQUEUETIMEOUT
+
+globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
   name: "android/espresso"
@@ -194,42 +206,118 @@ framework:
     buildName: "Espresso"
     video: true
     deviceLog: true
-    
-    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
 
-    #highlight-next-line
-    appPath: Proverbial.apk 
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
+    appPath: Proverbial.apk
     testSuitePath: ProverbialExpressoTest.apk
-    # We have used the appPath and testSuitePath here. 
+    # We have used the appPath and testSuitePath here.
 
+    appId: lt://APP1016025651781520733656681
+    testSuiteAppId: lt://APP10160332171784881008900412
+    # We have used the appId and testSuiteAppID here.
+
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
     
-    #highlight-next-line
-    appId: lt://APP1010461471690377432133206
-    testSuiteAppId: lt://APP10104592261690377454846669
+    shards:
+      mappings:
+        - name: shard1
+          strategy: "class"
+          values:
+            - "com.lambdatest.proverbial.BrowserTest"
+        # The strategy for this shard is based on "class".
+        # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
+
+        - name: shard2
+          strategy: "package"
+          values:
+            - "com.lambdatest.proverbial"
+        # The strategy for this shard is based on "package".
+        # This shard will run all tests that belong to the package com.lambdatest.proverbial.
+
+        - name: shard3
+          strategy: "skipClass"
+          values:
+            - "com.lambdatest.proverbial.BrowserTest"
+        # The strategy for this shard is to skip a specific class.
+        # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
+version: "0.2"
+concurrency: 2
+runson: android
+
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
+autosplit: false
+
+globalTimeout: 180 #MAXQUEUETIMEOUT
+
+framework:
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
+
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
+
+    appPath: Proverbial.apk
+    testSuitePath: ProverbialExpressoTest.apk
+    # We have used the appPath and testSuitePath here.
+
+    appId: lt://APP1016025651781520733656681
+    testSuiteAppId: lt://APP10160332171784881008900412
     # We have used the appId and testSuiteAppID here.
 
     deviceSelectionStrategy: all
     devices: ["Galaxy.*", "Pixel.*"]
 
+    #highlight-next-line
+    isVirtualDevice: true
+
     shards:
       mappings:
-     - name: shard1
-        strategy: "class"
-        values: ["com.lambdatest.proverbial.BrowserTest"]
-    # The strategy for this shard is based on "class".
-    # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
-     - name: shard2
-       strategy: "package"
-       values: ["com.lambdatest.proverbial"]
-    # The strategy for this shard is based on "package". 
-    # This shard will run all tests that belong to the package com.lambdatest.proverbial.l.
-     - name: shard3
-       strategy: "skipClass"
-       values: ["com.lambdatest.proverbial.BrowserTest"]
-    # The strategy for this shard is to skip a specific class. 
-    # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
+        - name: shard1
+          strategy: "class"
+          values:
+            - "com.lambdatest.proverbial.BrowserTest"
+        # The strategy for this shard is based on "class".
+        # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
+
+        - name: shard2
+          strategy: "package"
+          values:
+            - "com.lambdatest.proverbial"
+        # The strategy for this shard is based on "package".
+        # This shard will run all tests that belong to the package com.lambdatest.proverbial.
+
+        - name: shard3
+          strategy: "skipClass"
+          values:
+            - "com.lambdatest.proverbial.BrowserTest"
+        # The strategy for this shard is to skip a specific class.
+        # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
 ```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 
 :::tip When shards are added
@@ -249,12 +337,23 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 Refer to the sample `.yaml` file here
 
-```bash title="SampleYamlFile.yaml"
+<Tabs className="docs__val">
+
+<TabItem value="real-device" label="Real Device" default>
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
 runson: android
+
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
 autosplit: true
-globalTimeout: 180  #MAXQUEUETIMEOUT
+
+globalTimeout: 180 #MAXQUEUETIMEOUT
 
 framework:
   name: "android/espresso"
@@ -262,25 +361,72 @@ framework:
     buildName: "Espresso"
     video: true
     deviceLog: true
-    
-    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
 
-    #highlight-next-line
-    appPath: Proverbial.apk 
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
 
+    appPath: Proverbial.apk
     testSuitePath: ProverbialExpressoTest.apk
-    # We have used the appPath and testSuitePath here. 
+    # We have used the appPath and testSuitePath here.
 
-    
-    #highlight-next-line
-    appId: lt://APP1010461471690377432133206
-    testSuiteAppId: lt://APP10104592261690377454846669
+    appId: lt://APP1016025651781520733656681
+    testSuiteAppId: lt://APP10160332171784881008900412
     # We have used the appId and testSuiteAppID here.
 
     deviceSelectionStrategy: all
     devices: ["Galaxy.*", "Pixel.*"]
-
 ```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="virtual-device" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-yaml">
+
+```yaml title="SampleYamlFile.yaml"
+version: "0.2"
+concurrency: 2
+runson: android
+
+# Set autosplit to true to enable auto sharding.
+# The system will automatically split and distribute tests across the selected devices.
+#highlight-next-line
+autosplit: true
+
+globalTimeout: 180 #MAXQUEUETIMEOUT
+
+framework:
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
+
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath.
+    # Both examples are given below.
+
+    appPath: Proverbial.apk
+    testSuitePath: ProverbialExpressoTest.apk
+    # We have used the appPath and testSuitePath here.
+
+    appId: lt://APP1016025651781520733656681
+    testSuiteAppId: lt://APP10160332171784881008900412
+    # We have used the appId and testSuiteAppID here.
+
+    #highlight-next-line
+    isVirtualDevice: true
+
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
+```
+
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 
 :::tip When shards aren't added
@@ -299,12 +445,12 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the s
 
 ```bash
 chmod u+x <cliFileNAme>
-./<cliFileNAme> --user <userName> --key <accessKey> --verbose -i <yamlFileName>.yaml
+./<cliFileNAme> -user <userName> -key <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
 ```
-./hyperexecute --user my_user_name --key xyx123abc --verbose -i hyperexecute.yaml
+./hyperexecute -user my_user_name -key xyx123abc --verbose -i hyperexecute.yaml
 ```
 <img loading="lazy" src={require('../assets/images/app-automation/example-folder.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

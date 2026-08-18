@@ -36,15 +36,31 @@ Use this page to see **which rules App Scanner / automation can report** (with l
 | Non-accessible Interaction | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-non-accessible-interaction/) |
 | Missing Screen Title | 2.4.2 | [Rule →](/support/docs/accessibility-android-rule-missing-screen-title/) |
 | Unlabeled Toggle Control | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-unlabeled-toggle-control/) |
-| Mismatched Label Text | 2.5.3 | [Rule →](/support/docs/accessibility-android-rule-mismatched-label-text/) |
+| Mismatched Label Text *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-android-rule-mismatched-label-text/) |
 | Missing Input Value | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-missing-input-value/) |
 | Inaccessible Text Focus | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-inaccessible-text-focus/) |
-| Misplaced Field Label | 3.3.2 | [Rule →](/support/docs/accessibility-android-rule-misplaced-field-label/) |
+| Misplaced Field Label *(Beta)* | 2.5.3 | [Rule →](/support/docs/accessibility-android-rule-misplaced-field-label/) |
 | Nested Control Issues | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-nested-control-issues/) |
 | Unnamed Nested Element | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-unnamed-nested-element/) |
 | Fixed Orientation Lock | 1.3.4 | [Rule →](/support/docs/accessibility-android-rule-fixed-orientation-lock/) |
 | Undersized Touch Target | 2.5.5 | [Rule →](/support/docs/accessibility-android-rule-undersized-touch-target/) |
 | Insufficient Target Spacing | 2.5.5 | [Rule →](/support/docs/accessibility-android-rule-insufficient-target-spacing/) |
+| Duplicate Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-duplicate-accessibility-label/) |
+| Button Element Capitalisation Check | 3.1.6 | [Rule →](/support/docs/accessibility-android-rule-button-capitalization-check/) |
+| Emoji or Symbol Used in Accessibility Label | Best Practice | [Rule →](/support/docs/accessibility-android-rule-emoji-symbol-label/) |
+| Redundant State Keyword in Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-redundant-state-label/) |
+| Redundant Role Keyword in Accessibility Label | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-redundant-role-label/) |
+| Non-Descriptive Link Text | 2.4.4 | [Rule →](/support/docs/accessibility-android-rule-non-descriptive-link-text/) |
+| Traversal Order Does Not Match Visual Layout *(Beta)* | 2.4.3 | [Rule →](/support/docs/accessibility-android-rule-traversal-order-mismatch/) |
+| Dynamic Type Support | 1.4.4 | [Rule →](/support/docs/accessibility-android-rule-dynamic-type-support/) |
+| Non-Responsive Container Clips Text | 1.4.10 | [Rule →](/support/docs/accessibility-android-rule-non-responsive-container/) |
+| Unique Option Names | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-unique-option-names/) |
+| Invalid Range Values | 4.1.2 | [Rule →](/support/docs/accessibility-android-rule-invalid-range-values/) |
+| Images with Text | 1.1.1 | [Rule →](/support/docs/accessibility-android-rule-images-with-text/) |
+| Meaningful Sequence | 1.3.2 | [Rule →](/support/docs/accessibility-android-rule-meaningful-sequence/) |
+| Non-Focusable Interactive Element | 2.1.1 | [Rule →](/support/docs/accessibility-android-rule-non-focusable-interactive-element/) |
+| Minimum Text Size | Best Practice | [Rule →](/support/docs/accessibility-android-rule-minimum-text-size/) |
+| Text Spacing | Best Practice | [Rule →](/support/docs/accessibility-android-rule-text-spacing/) |
 
 ---
 

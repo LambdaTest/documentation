@@ -4,9 +4,11 @@
 
 ## Overview
 
-The App Profiling dashboard provides comprehensive performance metrics to help you identify bottlenecks and optimize your application. This documentation explains each widget's purpose and how to interpret the data to improve app performance.
+The App Profiling dashboard aggregates performance telemetry from Appium tests run with the `appProfiling` capability and surfaces it as cross-test, cross-device analytics. Use it to compare CPU, memory, frame rate, battery, network and startup behaviour across devices, app builds and page transitions, with org-level SLA thresholds rendered directly on each chart.
 
 The data on this dashboard comes from the App Profiling capability on Appium tests. To enable App Profiling on your test runs and review per-session metrics, see [App Performance Analytics](/support/docs/appium-app-performance-analytics/).
+
+App Profiling Insights is available for Appium tests on iOS and Android (version 9+). Set `appProfiling: true` and `resignApp: true` in your capabilities. Battery Utilization and Battery Temperature widgets are populated for Android sessions only.
 
 ## How to access
 
@@ -14,7 +16,12 @@ The data on this dashboard comes from the App Profiling capability on Appium tes
 2. Select **App Profiling**. The landing page lists every test that has App Profiling data.
 3. Click a test name to open its dashboard.
 
-The page is always scoped to the test you opened. Use the **Test Name** filter to add more tests to the comparison without leaving the dashboard or reset to revert.
+The page is always scoped to the test you opened. Use the **Test Name** filter to add more tests to the comparison without leaving the dashboard.
+
+The dashboard opens on two tabs:
+
+- **Trends** — the aggregated view described on this page: KPI cards, trend widgets and the device matrix, averaged across every session in the filtered scope.
+- **Comparison** — an overlay view that plots individual test sessions against one another, run by run. See [App Profiling Comparison](/support/docs/insights-app-profiling-comparison/).
 
 ## Filter bar
 
@@ -29,26 +36,123 @@ The filter bar at the top of the dashboard applies to every widget on the page.
 | **Page Label** | Page transition labels recorded by the test | All |
 | **Date Range** | Preset windows or a custom range with a time-of-day picker | Last 30 days |
 
+Each filter is a searchable multi-select; changes take effect when you click **Apply**, and **Reset** clears that single filter. The **OS**, **Device**, **App Build Version** and **Page Label** dropdowns only list values present in the currently selected **Test Name(s)**, so you never see options that would return no data.
+
+Clearing the Test Name filter and clicking Apply restores the test you opened — the dashboard is never scoped to zero tests.
+
+### Saved filters
+
+Your filter selections, the selected date range, and the widget layout — including any widgets you resize — are **auto-saved at the organisation level**. There is no Save button: when you refresh the page or return to the dashboard later, it reopens with your last-used filters, date range and layout already applied. Use the **Clear All Filters** button to reset everything back to the defaults. The KPI and Compare selections made inside individual widgets are not persisted.
+
+## Average and p90 views
+
+An **Average / p90** toggle in the top bar of the **Trends** tab switches its widgets between two aggregations:
+
+- **Average** — the mean value of each metric across the sessions in scope.
+- **p90** — the 90th-percentile value: the level at or below which 90% of sessions fall.
+
+Switching to **p90** re-renders the Performance Overview cards, Performance Trends, the per-metric trend widgets and the Device Performance Matrix using the 90th-percentile value for every metric. The same p90 values are also available through the App Profiling API.
+
+### Which one to read
+
+Average answers *"what does a typical run cost?"*. p90 answers *"how bad does it get for the unlucky one run in ten?"*. They are complementary, and a metric can look healthy on one and fail on the other.
+
+| Read | When you are |
+|---|---|
+| **Average** | Tracking a trend over time, comparing builds or devices at a glance, or reporting a headline number |
+| **p90** | Investigating a regression, sizing an SLA, or explaining complaints that the dashboard's averages don't reflect |
+
+Averages hide spikes. A build whose CPU averages 12% but reaches 45% on every tenth run will look green on Average and breach on p90 — and it is the p90 run your users notice. The reverse is also informative: if Average and p90 sit close together, the metric is stable and the average is trustworthy.
+
+p90 is computed per session at ingestion and then averaged across the sessions in scope — it is *the mean of each session's own 90th percentile*, not the 90th percentile of the whole window. Metrics with no pre-computed p90 — cold and hot startup, and the crash and ANR counts — are dropped in p90 mode and render as `—`. Frozen and janky frame counts stay on their average, because they are companion counts to the frame-rate series rather than percentile-able metrics in their own right.
+
+### p90 and the Comparison view
+
+The toggle applies to this view only. The Comparison view has no Average / p90 toggle — it reports [Avg, Min, Max and P90](/support/docs/insights-app-profiling-comparison/#avg-min-max-and-p90) side by side for every selected session instead.
+
+## Performance Overview
+
+A strip of KPI cards summarising the headline metrics over the selected window.
+
+- **Avg CPU (%)** — application CPU usage averaged across sessions in scope.
+- **Avg Memory (MB)** — application memory usage averaged across sessions in scope.
+- **Avg FPS** — frames per second averaged across sessions in scope.
+- **Avg Cold Startup (ms)** — cold-start duration averaged across sessions in scope.
+
+When sessions in the selected scope record crashes or ANRs, two additional cards surface:
+
+- **Avg Crashes per Crashed Session** — `avg(crash_count)` over sessions that reported at least one crash. This is the mean crash count among already-crashed sessions, not a crash rate.
+- **Avg ANRs per ANR Session** — equivalent for Application Not Responding events.
+
+Cards are hidden automatically when the underlying metric reports zero for the filtered scope.
+
+## Performance Trends
+
+A single time-series chart that overlays selected metrics on dual Y-axes. The **KPIs** selector in the widget header controls which series are visible — CPU, FPS, Memory, Temperature, Battery, Network Upload, Network Download, Disk Read and Disk Write are available; CPU and Memory are on by default. Each visible KPI gets a Min / Max / Avg row in the stats panel below the chart.
+
+**Disk Read** and **Disk Write** report the total data the application read from and wrote to disk during a session, giving visibility into storage-heavy workflows. Like every other metric, they honour the Average / p90 toggle.
+
+The X-axis bucket size is derived from the selected date range — sub-day windows render at 5-minute or 15-minute buckets, multi-week windows aggregate to hours, and multi-month windows aggregate to days.
+
+## Device Performance Matrix
+
+A table comparing performance metrics across the devices that ran in the filtered scope. One row per device.
+
+| Column | Description |
+|---|---|
+| **Device** | Device model |
+| **CPU App (%)** | Application CPU usage, colour-coded against the configured SLA threshold |
+| **CPU System (%)** | System-level CPU usage |
+| **Memory App (MB)** | Application memory, colour-coded against the configured SLA threshold |
+| **Memory System (MB)** | System-level memory |
+| **FPS** | Frame rate, colour-coded against the configured SLA threshold |
+| **Sessions** | Session count for that device in the filtered scope |
+
+Click any column header to sort. The dashboard-level **Device** filter intentionally does not narrow this widget — the matrix is itself the device breakdown.
+
+## Label Page Load Time
+
+Duration per page transition label, captured from the `label` events recorded inside the test. The widget shows the top labels by session count by default; use the label selector inside the widget to add or remove labels from the chart.
+
+A horizontal SLA reference line is drawn at the configured threshold. The stats panel below the chart reports Min / Max / Avg duration per visible label.
+
+## Per-metric trend widgets
+
+Each of the eight per-metric widgets renders a time series over the selected window with the SLA threshold drawn as a coloured band, and reports Min / Max / Avg for the primary metric in the stats panel below the chart.
+
+| Widget | Metrics | Notes |
+|---|---|---|
+| **CPU Utilization Trend** | CPU App (%), CPU System (%) | — |
+| **Frame Rate Trends** | Current FPS, Janky Frames, Frozen Frames | — |
+| **Memory Usage** | App Memory (MB), System Memory (MB) | — |
+| **Battery Utilization** | Battery drain (mAh) | Android only |
+| **Network Utilization** | Network Upload (KB), Network Download (KB) | Separate SLA thresholds for upload and download |
+| **Battery Temperature** | Temperature (°C) | Android only |
+| **Cold Startup Time** | Cold Startup (ms) | — |
+| **Hot Startup Time** | Hot Startup (ms) | — |
+
 ## Compare mode
 
 Each per-metric trend widget and Label Page Load Time supports **Compare** mode. Click **Compare** in the widget header, pick a dimension, then select up to five values to overlay on the chart.
 
 Compare dimensions:
 
-- **OS**: Android vs iOS
-- **Device**: for example Galaxy S23 vs Pixel 8 vs iPhone 15 Pro
-- **App Build Version**: for build-over-build comparisons
-- **Label**: for page-transition-level breakdowns
+- **OS** — Android vs iOS
+- **Device** — for example Galaxy S23 vs Pixel 8 vs iPhone 15 Pro
+- **App Build Version** — for build-over-build comparisons
+- **Label** — for page-transition-level breakdowns
 
-Compare is scoped to the widget. Enabling it on one chart does not affect others. Performance Overview, Performance Trends and Device Performance Matrix do not expose Compare: the first two are summary widgets (use filters to change the data scope instead), and the matrix already breaks data down per device.
+Compare mode overlays a **dimension** on a single widget. It is a different feature from the [App Profiling Comparison](/support/docs/insights-app-profiling-comparison/) view, which overlays whole **test sessions** across every metric at once.
+
+Compare is scoped to the widget — enabling it on one chart does not affect others. Performance Overview, Performance Trends and Device Performance Matrix do not expose Compare: the first two are summary widgets (use filters to change the data scope instead), and the matrix already breaks data down per device.
 
 ## SLA thresholds
 
-SLA thresholds are configured at the **organisation level** by an admin. Once set, the same threshold is applied everywhere a metric is rendered: Performance Overview cards, Performance Trends overlays, Device Performance Matrix cells, Label Page Load Time, and the per-metric trend widgets.
+SLA thresholds are configured at the **organisation level** by an admin. Once set, the same threshold is applied everywhere a metric is rendered — Performance Overview cards, Performance Trends overlays, Device Performance Matrix cells, Label Page Load Time, and the per-metric trend widgets.
 
 Default thresholds:
 
-| Metric | Green(Ok) | Amber(Warning) | Red(Critical) |
+| Metric | Green | Amber | Red |
 |---|---|---|---|
 | CPU (App) | < 15% | 15–30% | > 30% |
 | Memory (App) | < 300 MB | 300–400 MB | > 400 MB |
@@ -65,278 +169,26 @@ Thresholds render as:
 - Cell-level heatmap colouring on Device Performance Matrix.
 - Coloured value text on Performance Overview cards.
 
+Battery Utilization (mAh drain) is rendered without a threshold by default — drain varies widely by device hardware and there is no industry-standard band.
+
 Admins can override the defaults at the organisation level. Regular users see the configured thresholds applied but cannot modify them.
 
-## Understanding Performance Metrics Widgets
+## Threshold breach alerts
 
-### 1. Performance Overview
+When a session breaches a configured App Profiling threshold, TestMu AI automatically notifies your team over **email** and **Slack** — so you can catch performance regressions without opening the dashboard after every run.
 
-A strip of KPI cards summarising the headline metrics over the selected window.
+Each alert identifies the run (Test ID, Test Name, Build Name, OS, Device and date) and lists every breached metric with its observed value against the configured threshold, along with a **View Test Details** link that opens the run's App Profiling tab. Metrics that can trigger an alert include Cold Startup, Hot Startup, CPU Utilization, Frame Rate, Memory Usage, Temperature and per-label Page Load.
 
-- **Avg CPU (%)**: application CPU usage averaged across sessions in scope.
-- **Avg Memory (MB)**: application memory usage averaged across sessions in scope.
-- **Avg FPS**: frames per second averaged across sessions in scope.
-- **Avg Cold Startup (ms)**: cold-start duration averaged across sessions in scope.
-- **Avg Crashes per Crashed Session**: `avg(crash_count)` over sessions that reported at least one crash. This is the mean crash count among already-crashed sessions, not a crash rate.
+The Slack notification carries the same details:
 
-> Cards are hidden automatically when the underlying metric are not recorded for the test session.
+Alerts fire against the same SLA thresholds described above, which are configured at the organisation level by an admin.
 
-### 2. Performance Trends
+## Sharing a dashboard
 
-A single time-series chart that overlays selected metrics on dual Y-axes. The **KPIs** selector in the widget header controls which series are visible: CPU, FPS, Memory, Temperature, Battery, Network Upload and Network Download are available; CPU and Memory are on by default. Each visible KPI gets a Min / Max / Avg row in the stats panel below the chart.
+The URL of the dashboard preserves the test it was opened against, and which of the two tabs you are on — a link copied from the Comparison tab reopens on Comparison. To share a specific view with a teammate, apply the filters you want and copy the URL — the shared dashboard opens with the same test in scope. Filter selections beyond Test Name are not round-tripped through the URL; they are restored from your own saved filters instead.
 
-### 3. Device Performance Matrix
+## Related
 
-A table comparing performance metrics across the devices that ran in the filtered scope. One row per device.
-
-| Column | Description |
-|---|---|
-| **Device** | Device model |
-| **CPU App (%)** | Application CPU usage, colour-coded against the configured SLA threshold |
-| **CPU System (%)** | System-level CPU usage |
-| **Memory App (MB)** | Application memory, colour-coded against the configured SLA threshold |
-| **Memory System (MB)** | System-level memory |
-| **FPS** | Frame rate, colour-coded against the configured SLA threshold |
-| **Sessions** | Session count for that device in the filtered scope |
-
-Click any column header to sort. The dashboard-level **Device** filter intentionally does not narrow this widget. The matrix is itself the device breakdown.
-
-### 4. Label Page Load Time
-
-Duration per page transition label, captured from the `label` events recorded inside the test. Each visible label is plotted as a horizontal bar showing its average duration; the widget shows the top labels by session count by default, and a label selector inside the widget lets you add or remove labels from the chart.
-
-SLA thresholds render as vertical green/amber/red bands behind the bars, with the configured threshold drawn as a dashed reference line. Bars that extend into the red band are out of SLA. The stats panel below the chart reports Min / Max / Avg duration across the visible labels.
-
-### 5. CPU Utilization Trend
-
-**Widget Purpose:**
-This graph tracks CPU consumption over time, separating system-level processing from app-specific usage.
-
-**Metrics Explained:**
-- **CPU System (%)**: Total system CPU resources being used
-- **CPU App (%)**: CPU resources specifically consumed by your application
-
-**How to Analyze:**
-- Look for consistent app CPU usage above 15-20%, which may indicate inefficient algorithms or background tasks
-- Watch for correlations between high CPU usage and other performance issues
-- Identify patterns: gradual increases could signal memory leaks; sudden spikes might indicate intensive operations
-
-**Optimization Strategies:**
-- Offload intensive tasks to background threads
-- Implement lazy loading for resource-heavy features
-- Use caching mechanisms for repetitive operations
-- Optimize algorithms with high computational complexity
-- Consider using more efficient data structures
-
-### 6. Frame Rate Trends
-
-**Widget Purpose:**
-Visualizes rendering performance, highlighting both smooth operation and problematic frames.
-
-**Metrics Explained:**
-- **Current FPS**: Frames rendered per second (higher is better, 60+ ideal for smooth animation)
-- **Jank Frames**: Frames taking excessive time to render, causing visual stuttering
-- **Frozen Frames**: Completely dropped frames that cause noticeable pauses
-
-**How to Analyze:**
-- Identify sections where FPS consistently drops below target (60 FPS for most applications)
-- Pay attention to clusters of jank frames, which indicate UI thread blockage
-- Look for correlations between frozen frames and specific user interactions
-
-**Optimization Strategies:**
-- Move heavy operations off the UI thread
-- Simplify complex layouts and view hierarchies
-- Reduce overdraw by flattening view layers
-- Optimize or defer expensive drawing operations
-- Implement hardware acceleration where appropriate
-- Use profiling tools to identify specific rendering bottlenecks
-
-### 7. Memory Usage
-
-**Widget Purpose:**
-Monitors memory allocation patterns to identify potential leaks and inefficient resource usage.
-
-**Metrics Explained:**
-- **App Memory (MB)**: Direct memory consumed by your application
-- **System Memory (MB)**: Overall system memory usage
-
-**How to Analyze:**
-- Look for steadily increasing app memory over time (indicates potential leaks)
-- Identify memory spikes during specific operations
-- Pay attention to how memory behaves after screen transitions or intensive tasks
-- Watch for memory that doesn't return to baseline after operations complete
-
-**Optimization Strategies:**
-- Implement proper object lifecycle management
-- Use weak references for observer patterns
-- Optimize image loading and caching
-- Dispose of resources when moving between screens
-- Consider using object pools for frequently created/destroyed objects
-- Implement memory leak detection in development builds
-
-### 8. Battery Utilization
-
-**Widget Purpose:**
-Tracks energy consumption to identify processes that may drain battery excessively. This data is for Android only and rendered only when the session recorded battery samples
-
-**Metrics Explained:**
-- **Battery (mAh)**: Energy consumption rate in milliampere-hours
-
-**How to Analyze:**
-- Identify patterns of high battery usage
-- Look for correlation between battery drain and specific app features
-- Compare battery usage across different app states (active, background, idle)
-
-**Optimization Strategies:**
-- Optimize network calls (batch requests, compress data)
-- Reduce location service usage when not essential
-- Implement efficient background processing
-- Optimize wake locks and sensor usage
-- Use dark mode or darker UI for OLED screens
-- Batch CPU-intensive operations
-
-### 9. Network Utilization
-
-**Widget Purpose:**
-Monitors data transfer to identify inefficient network operations.
-
-**Metrics Explained:**
-- **Network Upload (KB)**: Data sent by the application
-- **Network Download (KB)**: Data received by the application
-
-**How to Analyze:**
-- Look for unexpected or excessive data transfers
-- Identify patterns in network activity (constant polling vs. event-based)
-- Compare network usage against expected data requirements
-
-**Optimization Strategies:**
-- Implement efficient caching strategies
-- Compress network payloads
-- Use incremental data loading
-- Optimize API requests (GraphQL, partial responses)
-- Batch network requests when possible
-- Implement offline capabilities
-- Use efficient image formats and compression
-
-### 10. Battery Temperature
-
-**Widget Purpose:**
-Measures device thermal performance to identify processes causing overheating.
-
-**Metrics Explained:**
-- **Avg. Temperature (°C)**: Current average temperature of the device
-
-**How to Analyze:**
-- Track temperature increases during specific operations
-- Identify features that consistently raise device temperature
-- Look for sustained high temperatures that could lead to thermal throttling
-
-**Optimization Strategies:**
-- Optimize CPU-intensive algorithms
-- Reduce sustained high CPU/GPU operations
-- Space out intensive tasks rather than running simultaneously
-- Implement adaptive performance based on device temperature
-- Consider lower quality graphics or processing when temperature is high
-
-### 11. Cold Startup Time
-
-**Widget Purpose:**
-Measures application launch performance from a completely shut down state.
-
-**Metrics Explained:**
-- **Cold Startup (ms)**: Time taken to launch app when not in memory
-
-**How to Analyze:**
-- Look for consistently high startup times
-- Identify variations in startup performance
-- Compare against industry benchmarks (1-2 seconds is typically acceptable)
-
-**Optimization Strategies:**
-- Implement lazy initialization of non-critical components
-- Defer heavy operations until after UI is visible
-- Optimize database and storage access during startup
-- Use app startup libraries to manage initialization
-- Consider using a splash screen for perceived performance
-- Reduce app dependencies and initialization chain
-
-### 12. Hot Startup Time
-
-**Widget Purpose:**
-Measures application launch performance when re-opening from background.
-
-**Metrics Explained:**
-- **Hot Startup (ms)**: Time taken to resume app when already in memory
-
-**How to Analyze:**
-- Look for hot startup times exceeding 500ms
-- Identify inconsistency in resume performance
-- Compare against cold startup to ensure significant improvement
-
-**Optimization Strategies:**
-- Optimize saved state management
-- Implement efficient view restoration
-- Use lightweight persistence mechanisms
-- Consider UI state caching strategies
-- Prioritize restoring visible elements first
-
-## Advanced Analysis Techniques
-
-### Correlation Analysis
-
-To gain deeper insights, analyze relationships between different metrics:
-
-1. **CPU vs. Frame Rate**: High CPU often correlates with frame drops
-2. **Memory vs. Startup Time**: Increasing memory usage may slow startup
-3. **Battery vs. Network**: Excessive network activity typically increases battery consumption
-4. **Temperature vs. Performance**: High temperatures often lead to throttling and reduced performance
-
-### Benchmark Comparison
-
-Establish baseline metrics for your application:
-
-1. **Competitor Analysis**: Compare your metrics against similar apps
-2. **Version Comparison**: Track metrics across your app versions
-3. **Device Variation**: Compare performance across different device models
-4. **User Scenario Testing**: Create specific user flows and measure performance
-
-### Performance Budgeting
-
-Set target thresholds for critical metrics:
-
-1. **Startup Budget**: Cold start < 2 seconds, hot start < 500ms
-2. **Frame Rate Budget**: Maintain 60+ FPS during animations
-3. **Memory Budget**: Keep peak memory under device-specific thresholds
-4. **Network Budget**: Limit payload sizes and request frequency
-5. **Battery Budget**: Limit battery consumption per hour of active use
-
-## Implementing Performance Improvements
-
-### Prioritization Framework
-
-When addressing performance issues:
-
-1. **User Impact**: Prioritize issues directly affecting user experience
-2. **Frequency**: Address problems that occur most frequently
-3. **Severity**: Focus on severe performance degradations first
-4. **Complexity**: Balance effort required against potential improvements
-5. **Business Impact**: Consider effects on retention, conversion, and engagement
-
-### Testing Methodology
-
-Verify improvements through rigorous testing:
-
-1. **A/B Testing**: Compare metrics between old and new implementations
-2. **Progressive Rollout**: Deploy changes to a small percentage of users first
-3. **Real-World Testing**: Test across various network conditions and devices
-4. **Automated Performance Testing**: Implement CI/CD performance checks
-
-## Continuous Monitoring
-
-For ongoing performance optimization:
-
-1. **Real User Monitoring**: Collect performance data from production users
-2. **Performance Regressions**: Set up alerts for metric degradations
-3. **Periodic Audits**: Schedule regular performance reviews
-4. **User Feedback Analysis**: Correlate performance metrics with user sentiment
-
-By leveraging these widgets and analysis techniques, you can systematically identify and address performance bottlenecks, resulting in a faster, more efficient, and battery-friendly application that provides an excellent user experience.
+- [App Profiling Comparison](/support/docs/insights-app-profiling-comparison/) — compare individual test sessions run by run against a baseline.
+- [App Performance Analytics](/support/docs/appium-app-performance-analytics/) — how to enable App Profiling on Appium tests and review per-session metrics.
+- [Analytics Overview](/support/docs/analytics-overview/) — the broader Insights module.

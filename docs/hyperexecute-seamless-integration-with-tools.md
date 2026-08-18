@@ -45,13 +45,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-HyperExecute, a powerful test automation orchestration platform, boasts seamless compatibility and effortless integration with a wide range of industry-leading testing tools. This document delves into HyperExecute's integration capabilities, highlighting its compatibility with Katalon, AccelQ, Provar, Tosca, Azure Test Plans, Excel, and other <BrandName /> products.
+HyperExecute, a powerful test automation orchestration platform, boasts seamless compatibility and effortless integration with a wide range of industry-leading testing tools. This document delves into HyperExecute's integration capabilities, highlighting its compatibility with Katalon, ACCELQ, Provar, Tosca, Azure Test Plans, Excel, and other <BrandName /> products.
 
 ## Integrate HyperExecute Effortlessly
 
 - [**Katalon Studio**](/docs/katalon-integration-with-hyperexecute/): HyperExecute directly integrates with Katalon Studio, enabling you to leverage Katalon's robust object repository and keyword-driven testing within your orchestrated test suites. Execute Katalon tests seamlessly alongside other tools for comprehensive test coverage.
 
-- [**AccelQ**](/docs/hyperexecute-accelq-integration/): HyperExecute seamlessly integrates with AccelQ's data-driven testing capabilities. Leverage AccelQ's data sheets and dynamic test case generation within HyperExecute's orchestration workflows for efficient test execution.
+- [**ACCELQ**](/docs/hyperexecute-accelq-integration/): HyperExecute seamlessly integrates with ACCELQ's data-driven testing capabilities. Leverage ACCELQ's data sheets and dynamic test case generation within HyperExecute's orchestration workflows for efficient test execution.
 
 - [**MS Office Suite**](/docs/hyperexecute-winapp-integration/): HyperExecute seamlessly integrates with MS Office tools. Leverage Excel, Notepad and other tools for data-driven testing within HyperExecute's orchestration workflows, using familiar functionalities for efficient test data management.
 

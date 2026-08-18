@@ -3,7 +3,7 @@ id: record-and-replay
 title: How to Record and Replay Tests using LT Debug
 hide_title: true
 sidebar_label: LT Debug
-description: Learn how to use LT Debug to replay or retest user flow as an automated test on 3000+ browser and OS combinations.
+description: Learn how to use LT Debug to replay or retest user flow as an automated test on 10,000+ browser/device combinations.
 keywords:
   - lt debug
   - record replay tests
@@ -22,7 +22,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 # Record and Replay Tests using LT Debug 2.0
 ---
 
-With LT Debug 2.0, you now have the ability to record user interactions through the Chrome Recorder Panel and replay or retest them as automated tests on a cloud grid on over 3000+ real browsers and operating system combinations. This eliminates the need to download code or manually run tests on your local machine, thus streamlining and optimizing your testing process.
+With LT Debug 2.0, you now have the ability to record user interactions through the Chrome Recorder Panel and replay or retest them as automated tests on a cloud grid on over 10,000+ browser/device combinations. This eliminates the need to download code or manually run tests on your local machine, thus streamlining and optimizing your testing process.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="vSpgplIYSUQ">

@@ -93,7 +93,7 @@ Log in to your Ping Identity account using admin credentials.
   <img loading="lazy" src={require('../assets/images/sso/ping-identity/4.png').default} alt="setup sso button" className="doc_img"/>
 
 ### Step 5: Configure Attribute Mappings
-- Copy following attribute from Lambdatest SSO setup.
+- Copy following attribute from LambdaTest SSO setup.
    <img loading="lazy" src={require('../assets/images/sso/ping-identity/sso-attribute.png').default} alt="ping-integration-attribute-mapping" width="944" height="487" className="doc_img"/>
 - Go to the Attribute Mappings tab of the created application in PingIdentity.
 - Update the saml_object attribute value from user_ID to emailaddress.

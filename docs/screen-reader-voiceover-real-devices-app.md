@@ -51,10 +51,13 @@ Manual accessibility testing ensures that your app or website is fully accessibl
 
 Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.
 
-:::note
-This feature is currently in **Beta**. Please reach out to our [Support](https://www.testmuai.com/support/) team for access.
+:::note Plus Plan Feature
+This feature is currently in **Beta** and available exclusively with the **Real Device Plus Live** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
 :::
 
+---
 
 ## Accessing Screen Reader in Real Device App Testing
 

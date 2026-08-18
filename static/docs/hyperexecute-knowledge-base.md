@@ -18,6 +18,6 @@ HyperExecute Status
     Learn about different types of Job Reports based on various frameworks.
 
     Migration Guide
-    Learn how to migrate your tests from the Saucelabs to HyperExecute.
+    Learn how to migrate your tests from the Sauce Labs to HyperExecute.
 
 >If you have more questions, then just give us a shout and we will answer them for you.

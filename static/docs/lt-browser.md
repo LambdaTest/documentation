@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-LT Browser allows you to ensure your website's responsiveness over a variety of major devices and view ports. You can open a website in the [LT Browser](https://www.testmuai.com/lt-browser) and perform live testing across 50+ pre-installed device viewports.
+LT Browser allows you to ensure your website's responsiveness over a variety of major devices and view ports. You can open a website in the [LT Browser](https://www.testmuai.com/lt-browser/) and perform live testing across 50+ pre-installed device viewports.
 
 To get started, you need to download the executable file from here.
 
@@ -39,7 +39,7 @@ Download LT Browser For Linux
 
 **Step 1:** Open the LT Browser. Provide the testing URL in the address bar and hit **Enter**.
 
-**Step 2:** Once you hit Enter, the website would be loaded on 50+ devices. You can select any device to start [responsive testing](https://www.testmuai.com/responsive-test-online) from the sidebar on the left. You can also monitor two different devices side by side by adding a device on the view screen.
+**Step 2:** Once you hit Enter, the website would be loaded on 50+ devices. You can select any device to start [responsive testing](https://www.testmuai.com/responsive-test-online/) from the sidebar on the left. You can also monitor two different devices side by side by adding a device on the view screen.
 
 **Step 3:** After you click on the + button to add a new device, you will be prompted with a screen from which you can select the specific device you want to test side by side. Select the device and hit the button to **add device**.
 
@@ -63,7 +63,7 @@ You will now be routed to the below screen where you can specify device details.
 
 Let's try adding OnePlus 5 to the LT Browser. We will provide the mandatory details to add OnePlus 5 as a custom device.
 
-As you click on add a device, you will find the custom device **One Plus 5** added to your [mobile view](https://www.testmuai.com/mobile-view-website) area on the LT Browser. You will also find it added over the top of sidebar on the left with a bin icon to delete the custom device, if needed.
+As you click on add a device, you will find the custom device **One Plus 5** added to your [mobile view](https://www.testmuai.com/mobile-view-website/) area on the LT Browser. You will also find it added over the top of sidebar on the left with a bin icon to delete the custom device, if needed.
 
 ## How To Search For A Specific Device In The LT Browser?
 
@@ -75,7 +75,7 @@ If you open the LT Browser, you will notice a search bar displayed over the top-
 
 ## How To Capture A Screenshot & Highlight The Bugs?
 
-**Step 1:** Click on the **camera icon** to [capture screenshot](https://www.testmuai.com/full-page-screen-capture) of your website inside a mobile device screen of your choice.
+**Step 1:** Click on the **camera icon** to [capture screenshot](https://www.testmuai.com/full-page-screen-capture/) of your website inside a mobile device screen of your choice.
 
 **Step 2:** Once you click on the camera icon, a built-in image editor would open up to present the captured screenshot of the selected device's screen.
 
@@ -135,7 +135,7 @@ If you click on it, you will generate a shareable link to access the highlighted
 
 TestMu AI offers numerous integrations to third-party tools for project management, bug tracking, instant messaging, CI/CD and more. Once you integrate your TestMu AI account with your desired third-party integration. You can leverage the mark as bug button to push the bugs directly to your projects over third-party platforms. Meaning, you can share your highlighted screenshots across Jira, asana, Trello, slack and more.
 
-As you click on the mark as bug button, you will be presented with the screen which will present you few of TestMu AI integrations. If your favorite integration isn't presented then you can click on **more integrations** to view all of the [TestMu AI integrations](https://www.testmuai.com/integrations).
+As you click on the mark as bug button, you will be presented with the screen which will present you few of TestMu AI integrations. If your favorite integration isn't presented then you can click on **more integrations** to view all of the [TestMu AI integrations](https://www.testmuai.com/integrations/).
 
 Once you integrate the LT Browser with your favourite third-party integrations then you can log bugs directly from the LT Browser to your project over a third-party tool such as GitLab, GitHub, and more.
 

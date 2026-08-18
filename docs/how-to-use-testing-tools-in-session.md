@@ -71,6 +71,10 @@ The **App Control** feature offers you the ability to perform actions with your 
 - **Kill App:** By selecting this option, you can easily kill all your installed applications. 
 - **Uninstall App:** By selecting this option, you can easily uninstall all the installed applications. 
 
+:::note
+Clicking the **Uninstall App** button under **App Controls** uninstalls **all** the user-installed applications on the device at once. This is the expected behavior of this option.
+:::
+
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/app-controls.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Screenshot
@@ -142,6 +146,11 @@ With the **iOS settings**, you can access the crash logs as well as the app sett
 
 - **Crash Logs :** You can download your crashed logs of the application.
 - **App Settings :** This will open the settings of the application in your mobile device.
+
+  :::note
+  The **App Settings** option is shown only for apps that include a Settings Bundle. If the app under test does not have a Settings Bundle, the **App Settings** option is hidden. Legacy apps where the bundle flag is not set continue to show it.
+  :::
+
 - **Accessibility :** Accessibility testing on iOS devices focuses on ensuring that applications and web content are usable by individuals with different abilities. Learn in detailed way about [Accessibility in iOS devices.](/support/docs/accessibility-settings-ios)
 
 - **Select Date and Time :** Opens a modal where you can:

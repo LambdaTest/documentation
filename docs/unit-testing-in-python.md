@@ -2,7 +2,7 @@
 id: unit-testing-in-python
 title: Selenium With Python Unittest
 sidebar_label: Unittest
-description: Run Python unittest Selenium tests on TestMu AI cloud grid with 3000+ browser and OS combinations. Includes setup, config, and execution steps.
+description: Run Python unittest Selenium tests on TestMu AI cloud grid with 10,000+ browser/device combinations. Includes setup, config, and execution steps.
 keywords:
   - python unittest selenium tutorial
   - run unittest on cloud grid

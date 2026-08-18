@@ -61,7 +61,7 @@ driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
 ```python
-driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
+driver.execute_script("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 ```ruby
@@ -91,7 +91,7 @@ config = {
 'fullPage': True,
 'pageCount': 15  # Minimum 1, Maximum 20
 }
-driver.execute("smartui.takeScreenshot", config)
+driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 ```ruby

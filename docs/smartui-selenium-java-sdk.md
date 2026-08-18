@@ -261,7 +261,7 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-```java title="This is a sample for your configuration for Java to ignore by" ID"
+```java title="This is a sample for your configuration for Java to ignore by ID"
 List<String> cssID = Arrays.asList("<required ID>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -275,7 +275,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
 
-```java title="This is a sample for your configuration for Java to ignore by" Class"
+```java title="This is a sample for your configuration for Java to ignore by Class"
 List<String> cssclass = Arrays.asList("<required class>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -289,7 +289,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-```java title="This is a sample for your configuration for Java to ignore by" XPath"
+```java title="This is a sample for your configuration for Java to ignore by XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -304,7 +304,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
 
-```java title="This is a sample for your configuration for Java to ignore by CSS" Selector"
+```java title="This is a sample for your configuration for Java to ignore by CSS Selector"
 List<String> selector = Arrays.asList("<required selector>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -335,7 +335,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
 
-```java title="This is a sample for your configuration for Java to select by" Class"
+```java title="This is a sample for your configuration for Java to select by Class"
 List<String> cssclass = Arrays.asList("<required class>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -349,7 +349,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-```java title="This is a sample for your configuration for Java to select by" XPath"
+```java title="This is a sample for your configuration for Java to select by XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -364,7 +364,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
 
-```java title="This is a sample for your webhook configuration for Java to select by CSS" Selector"
+```java title="This is a sample for your webhook configuration for Java to select by CSS Selector"
 List<String> selector = Arrays.asList("<required selector>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -399,7 +399,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
 
-```java title="This is a sample for your configuration for Java to capture an element by" Class"
+```java title="This is a sample for your configuration for Java to capture an element by Class"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -411,7 +411,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-```java title="This is a sample for your configuration for Java to capture an element by" XPath"
+```java title="This is a sample for your configuration for Java to capture an element by XPath"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -424,7 +424,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
 
-```java title="This is a sample for your configuration for Java to capture an element by CSS" Selector"
+```java title="This is a sample for your configuration for Java to capture an element by CSS Selector"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -504,7 +504,7 @@ public void tearDown() {
 
 **Example:**
 ```java
-SmartUISnapshot.smartuiSnapshot(driver, HomePage-Header");
+SmartUISnapshot.smartuiSnapshot(driver, "HomePage-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 ```
 
@@ -520,7 +520,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 
 **Example:**
 ```java
-driver.get(https://example.com");
+driver.get("https://example.com");
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
@@ -626,7 +626,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 1. Add explicit waits before screenshots:
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(content")));
+   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
    ```
 
 2. Enable JavaScript in configuration:
@@ -708,8 +708,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 </TabItem>
 </Tabs>

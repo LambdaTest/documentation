@@ -89,18 +89,22 @@ Don't worry if you don't have all the details now; you can always edit or add th
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_creation_page.png').default} alt="modules-listing-page" className="doc_img"/>
 
 :::note
- Keep in mind Modules can't be deleted but only updated after creation.
+Only modules that are **not linked to any test cases** can be deleted. If a module is used in one or more test cases, the delete option is disabled. See [Delete a Module](/support/docs/kane-ai-modules/#delete-a-module).
 :::
 
 ## 2. Update Module
 Modules support duplication, editing and versioning; however, a new version is only triggered when specific fields are edited.
 - Add a step by clicking on `Add Step` or update a step through edit icon. 
-- Click on `update` on top right to save changes.
+- In the inline editor, click `Update` to apply your change to the step. The header then shows **Unsaved changes**: click `Save Changes` on the top right to save them, or `Discard` to drop them.
 :::note
  Only **Test Step** or **Expected Outcome** updation will create a new version of the module.
 :::
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_page.png').default} alt="module-page" className="doc_img"/>
+
+:::note
+In the Classic experience, for modules authored in KaneAI, steps that use a variable or parameter and If-Else or While Loop blocks cannot be edited, deleted, or reordered from the Modules page. Edit them from the KaneAI test case the module was authored from.
+:::
 
 ## 3. Module Versions
 
@@ -119,5 +123,5 @@ You will be redirected to the Version Comparison page where you can track change
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_comparision.png').default} alt="modules-version-comparision" className="doc_img"/>
 
 :::note
-Project linking is only added for manual tests in test cases. Hence, modules linked to a particular project are only available to be added in a manual test case. However, for KaneAI test cases, all modules in all projects will be available for selection.
+Project linking is only added for manual tests in test cases. Hence, modules linked to a particular project are only available to be added in a manual test case. However, for KaneAI test cases, all modules in all projects will be available for selection. Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases. In a manual test case the **Add Module** dialog blocks them from being added.
 :::

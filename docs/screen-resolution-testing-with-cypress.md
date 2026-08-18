@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 As part of a responsive design process, it is important to ensure that websites or web applications under test run properly on different screen sizes. 
 
-<BrandName /> lets you test websites with Cypress across different screen resolutions on over 50+ browser versions on cloud.
+<BrandName /> lets you test websites with Cypress across different screen resolutions on multiple browser versions on cloud.
 
 Cypress provides website testing on different resolutions using
 

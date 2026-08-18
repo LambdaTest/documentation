@@ -77,12 +77,36 @@ kane-cli run "<objective>" [options]
 | `--agent` | Output structured NDJSON (for AI coding agents) | Off |
 | `--mode <name>` | Run mode: `action` (strict) or `testing` (lenient) | Config value, otherwise `testing` |
 | `--code-export` | Generate code export after run uploads | Off |
-| `--code-language <lang>` | Code export language (currently `python`) | `python` |
+| `--code-language <lang>` | Code export language: `python` or `javascript` | `python` |
 | `--skip-code-validation` | Skip post-codegen worker-side validation | On |
 | `--no-skip-code-validation` | Force post-codegen worker-side validation | Off |
 | `--username <user>` | Basic auth username (overrides stored profile) | N/A |
 | `--access-key <key>` | Basic auth access key (overrides stored profile) | N/A |
 | `--env <name>` | Environment (`prod`) | Active profile's env |
+
+**Mobile run flags** (macOS Apple Silicon only):
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--target <name>` | Which target to run against: `desktop`, `emulator`, or `simulator` | Saved session target, otherwise `desktop` |
+| `--device <id>` | Pick a device by name, serial, `ip:port`, or udid | TTY opens a one-time picker and saves the choice; non-interactive runs require it |
+| `--app <path\|APPid>` | The app under test. A build (emulator `.apk`, simulator `.zip`) or an uploaded app id | Config value. Required for every mobile run |
+
+On the `desktop` target, `--device` and `--app` are ignored. See [Mobile Testing](/support/docs/kane-cli-mobile/) for setup.
+
+---
+
+### `kane-cli doctor`
+
+Check the mobile tooling on this machine, and install the tooling Kane CLI manages.
+
+```bash
+kane-cli doctor              # required checks, each with a fix if it fails
+kane-cli doctor --install    # install the test tooling Kane CLI manages
+kane-cli doctor --targets    # also list the emulators and simulators available
+```
+
+`doctor` prints one line per required check. Run `kane-cli login` before `--install`. See [Mobile Testing](/support/docs/kane-cli-mobile/).
 
 ---
 
@@ -159,6 +183,9 @@ kane-cli config set-mode <action|testing>  # Set run mode
 kane-cli config chrome-profile [path]      # Set Chrome profile (interactive picker if no path)
 kane-cli config project [id]               # Set Test Manager project (interactive picker if no id)
 kane-cli config folder [id]                # Set Test Manager folder (interactive picker if no id)
+kane-cli config set-target <target>        # Set run target: desktop | emulator | simulator
+kane-cli config set-device <id>            # Set default mobile device
+kane-cli config set-app <path|APPid>       # Set default app under test for mobile runs
 ```
 
 :::note
@@ -204,6 +231,9 @@ kane-cli feedback \
 | `/balance` | | Show credit balance |
 | `/profiles` | `list\|switch\|delete` | Manage profiles |
 | `/config` | `show\|set-window\|set-mode\|chrome-profile\|project\|folder` | Manage configuration |
+| `/mobile` | | Switch the session to an emulator or simulator |
+| `/desktop` | | Switch the session back to desktop (Chrome) |
+| `/doctor` | | Check mobile tooling and devices |
 | `/new` | | Start a fresh session (uploads current session first) |
 | `/summary` | `[index]` | View detailed run summaries |
 | `/cancel` | | Abort the current run |

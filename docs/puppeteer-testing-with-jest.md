@@ -3,7 +3,7 @@ id: puppeteer-jest
 title: Run Puppeteer Tests With Jest
 hide_title: true
 sidebar_label: Integrate With Jest
-description: Learn how to integrate and run your Puppeteer tests with Jest across 40+ browser versions on the TestMu AI platform.
+description: Learn how to integrate and run your Puppeteer tests with Jest across multiple browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing with jest
   - automation testing with puppeteer
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 Jest is a Facebook-maintained framework for developing frontend and backend unit tests in JavaScript and executing end-to-end testing using Playwright. It provides you with the flexibility to target a single test, delivering structured output, or an entire suite for common assertions.
 
-<BrandName /> allows you to run Puppeteer tests with Jest on a browser farm of 40+ real browsers and operating system combinations. 
+<BrandName /> allows you to run Puppeteer tests with Jest on a browser farm of real browsers and operating system combinations. 
 
 This guide will cover the basics of getting started with Puppeteer testing with Jest on the <BrandName /> platform.
 

@@ -37,25 +37,25 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Accelq Integration",
+          "name": "ACCELQ Integration",
           "item": `${BRAND_URL}/support/docs/hyperexecute-accelq-integration/`
         }]
       })
     }}
 ></script>
 
-# Accelq Integration with HyperExecute
+# ACCELQ Integration with HyperExecute
 
 ACCELQ is a cloud-based, continuous testing platform for functional and API testing needs. It is a codeless test automation tool that allows users to create and execute tests without writing any code. ACCELQ uses a natural language abstraction to generate Java code, which makes it easy to learn and use.
 
 ## Integrate Accleq with HyperExecute
 ***
-Accelq is the most powerful software testing tool to achieve Codeless test automation and accelerate continuous testing.
+ACCELQ is the most powerful software testing tool to achieve Codeless test automation and accelerate continuous testing.
 
 ### Prerequisites
 ---
-- Sample scripts in Accelq
-- Ensure that you have integrated [Accelq with <BrandName />](/support/docs/accelq-integration/) Cloud Selenium Grid 
+- Sample scripts in ACCELQ
+- Ensure that you have integrated [ACCELQ with <BrandName />](/support/docs/accelq-integration/) Cloud Selenium Grid 
 - Parameters- accelq url, userId, apiKey, tenant code, Job Id
 - Agent.properties file for you configured agent with <BrandName />
 
@@ -65,13 +65,13 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 
 **Step 1:** Copy your local `agent.properties` file from `<directory path>` to root folder of your HyperExecute project.
 
-<!-- **Step 2:** Download Accelq Node runner in root folder of your HyperExecute project and unzip the file.
+<!-- **Step 2:** Download ACCELQ Node runner in root folder of your HyperExecute project and unzip the file.
 
 > You can download the Node Runner from [here](https://accelq.s3.amazonaws.com/releases/plugins/6.0/accelq_ci_cd.tar.gz) -->
 
 **Step 2:** Update your YAML file with your account credentials.
 
-**Step 3:** Execute HyperExcute job using the command:
+**Step 3:** Execute HyperExecute job using the command:
 
 ```
 ./hyperexecute --config hyperdemo.yaml -u <lambdausername> -k <lambda accesskey>
@@ -81,7 +81,7 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 ## Additional Details
 ### Where to Find the Parameters?
 
-#### AccelQ - URL, User-ID, API key, Tenant Code
+#### ACCELQ - URL, User-ID, API key, Tenant Code
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-1.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
 #### How to create a Job ID?
@@ -97,9 +97,9 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-4.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ### Agent.properties file
-Agent.property file is a type of file that gets generated when you configures the agents from the Accelq to the <BrandName />.
+Agent.property file is a type of file that gets generated when you configures the agents from the ACCELQ to the <BrandName />.
 
-- You can configure your [<BrandName /> from Accelq Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
+- You can configure your [<BrandName /> from ACCELQ Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
 - You can also find the same at the location `(ACCELQAgent/AgentInstances/<agent folder>/agent.properties)` in your local system.
 
 #### Sample File

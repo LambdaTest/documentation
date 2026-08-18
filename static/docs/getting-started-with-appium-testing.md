@@ -6,7 +6,7 @@ Appium is an open-source framework that allows you to automate tests for mobile 
 
 Appium leverages the WebDriver protocol, similar to how Selenium automates web applications. This makes it compatible with [popular programming languages](/support/docs/appium-languages-and-frameworks/) for writing test scripts.
 
-Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on [TestMu AI Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud).
+Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on [TestMu AI Real Device Cloud Platform](https://www.testmuai.com/real-device-cloud/).
 
           Java
 

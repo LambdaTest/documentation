@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Release Notes
 description: See the release notes for HyperExecute to stay informed about new features, fixes, and enhancements that improve your testing performance.
 keywords:
-  - TestMu AI Hyperexecute
-  - TestMu AI Hyperexecute help
-  - TestMu AI Hyperexecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/hyperexecute-release-notes/
 site_name: TestMu AI

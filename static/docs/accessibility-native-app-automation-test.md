@@ -4,12 +4,15 @@
 
 Native App Automation uses **Appium** with the **`lambda-accessibility-scan`** hook to generate accessibility results during **Android** or **iOS** test runs on the TestMu AI grid.
 
+Scans on real devices are **hook driven only**. The `accessibility.autoscan` capability used in web automation is **not supported on real devices**, so a full app flow cannot be scanned automatically. Call `lambda-accessibility-scan` at every screen you want covered. See [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
+
 ## When to use this
 
 Use this page when your team **already runs Appium** for functional tests and wants accessibility checks in the **same execution path** with deterministic checkpoints.
 
 ## Prerequisites
 
+- A **native** Android or iOS app. Hybrid apps with embedded webview content are not supported
 - Appium client and test project targeting TestMu AI **real devices** or emulators per your subscription
 - `LT_USERNAME` / `LT_ACCESS_KEY` available to the process
 - Accessibility enabled on the mobile session (see framework guides below for capability examples)
@@ -38,6 +41,8 @@ driver.executeScript("lambda-accessibility-scan");
 ## Product boundary
 
 This page is for direct Appium-based automation. If you are authoring the flow in KaneAI, use [Mobile App Accessibility Testing](/support/docs/kaneai-mobile-app-accessibility/). If you want manual screen-by-screen testing, use [Accessibility App Scanner (Overview)](/support/docs/accessibility-app-scanner/).
+
+Accessibility scanning supports **native** Android and iOS apps only. **Hybrid apps**, meaning native apps with embedded webview content, are **not supported**. This applies to both Native App Automation and [App Scanner](/support/docs/accessibility-app-scanner/). To check the web content itself, test the web application directly with [Manual Testing (DevTools)](/support/docs/accessibility-devtools/) or [web Automation](/support/docs/accessibility-automation-test/).
 
 ## Related docs
 

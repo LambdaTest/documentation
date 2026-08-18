@@ -76,7 +76,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   <a href="/support/docs/saucelabs-to-hyperexecute-migrate/">
   <div className="support_inners">
     <h3>Migration Guide</h3>
-    <p>Learn how to migrate your tests from the Saucelabs to HyperExecute.</p>
+    <p>Learn how to migrate your tests from the Sauce Labs to HyperExecute.</p>
   </div>
   </a>
 </div>

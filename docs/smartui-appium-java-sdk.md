@@ -62,7 +62,7 @@ SmartUI App SDK enables you to perform visual regression testing on your mobile 
 
 - Basic understanding of mobile app testing and Appium
 - Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials
-- An active [subscription](https://www.testmuai.com/pricing) plan with valid screenshots limit
+- An active [subscription](https://www.testmuai.com/pricing/) plan with valid screenshots limit
 
 ## Create a SmartUI Project
 
@@ -324,7 +324,7 @@ After test execution, visit your SmartUI project dashboard to:
 
 **Example:**
 ```java
-SmartUISnapshot.smartuiSnapshot(driver, HomeScreen-Header");
+SmartUISnapshot.smartuiSnapshot(driver, "HomeScreen-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 ```
 
@@ -340,7 +340,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 **Example:**
 ```java
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-wait.until(ExpectedConditions.presenceOfElementLocated(By.id(main-content")));
+wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ```
 
@@ -443,7 +443,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 1. Add explicit waits before screenshots:
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(content")));
+   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
    ```
 
 2. Wait for specific elements to be visible:
@@ -472,8 +472,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 2. Ensure elements exist at screenshot time
 3. Check JSON formatting in configuration:
    ```java
-   Map<String, Object"> ignoreBoxes = new HashMap<">();
-   ignoreBoxes.put(xpath", new String[]{"//*[@text="'Dynamic" Ad']"});
+   Map<String, Object> ignoreBoxes = new HashMap<>();
+   ignoreBoxes.put("xpath", new String[]{"//*[@text='Dynamic Ad']"});
    ```
 
 4. Test XPath locators in isolation before using in config
@@ -524,8 +524,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 </TabItem>
 </Tabs>

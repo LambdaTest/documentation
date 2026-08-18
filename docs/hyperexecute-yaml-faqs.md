@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-yaml-faqs
-title: YAML FAQs
+title: "HyperExecute YAML FAQs: troubleshooting common errors"
 hide_title: true
 sidebar_label: YAML FAQs
 description: Get answers to your HyperExecute YAML FAQs. Learn about automation, configurations, integrations, and more for efficient test execution on TestMu AI..

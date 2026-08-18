@@ -147,7 +147,7 @@ options.set_capability('LT:Options', lt_options);
 
 #Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
-command_executor=  "https://" +"<Your Username>" +":" +"<Your Access Key>" + `hub.lambdatest.com/wd/hub`.format(username, access_key),options=options)
+command_executor="https://" + "<Your Username>" + ":" + "<Your Access Key>" + "@hub.lambdatest.com/wd/hub", options=options)
 ```
 
 </TabItem>
@@ -172,7 +172,7 @@ options.set_capability('LT:Options', lt_options);
 
 #Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
-command_executor=  "https://" +"<Your Username>" +":" +"<Your Access Key>" + `hub.lambdatest.com/wd/hub`.format(username, access_key),options=options)
+command_executor="https://" + "<Your Username>" + ":" + "<Your Access Key>" + "@hub.lambdatest.com/wd/hub", options=options)
 ```
 
 </TabItem>
@@ -438,8 +438,9 @@ Add the following **Webhook** to your test cases where you need to capture the s
 ```javascript
 let config = {
       screenshotName: '<Screenshot Name>',
-      elementType: 'xpath'/'css_selector'/'id'/'class',  //Choose one from the following options - xpath, css_selector, id or class
-      element: '<Required Element>'                      //Add your required element here
+      elementType: 'xpath',   //Choose one of: xpath, css_selector, id, class
+      element: '<Required Element>'
+};
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 </TabItem>
@@ -873,8 +874,8 @@ If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
 - Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 </TabItem>
 </Tabs>

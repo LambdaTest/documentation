@@ -8,7 +8,10 @@ SIM & eSIM support allows testers to validate **SMS-driven workflows** on real m
 
 With **TestMu AI**, you can manually test SIM and eSIM scenarios on **Real Devices**. From selecting SIM-enabled devices in the dashboard to receiving OTPs directly on-screen, TestMu AI offers a complete setup for validating SMS-driven features during live testing sessions.
 
-> To enable this for your organization, contact us via **24×7 chat support** or email **support@testmuai.com**.
+**Plus Plan Feature**
+This feature is available exclusively with the **Real Device Plus Live** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
 ## Use Cases
 

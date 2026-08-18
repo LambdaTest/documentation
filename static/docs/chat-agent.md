@@ -23,14 +23,12 @@ Scenarios are drawn from behavioral test categories, including intent recognitio
 You can test a chat agent three ways. All three run the same evaluation and produce the same scored results.
 
 - **Dashboard:** create the agent, upload documents, generate scenarios, and run the evaluation. See how to [run your first evaluation in the UI](/support/docs/testing-your-first-ai-agent/).
-- **CLI:** point `testmu-a2a test` at your endpoint for a one-command run, or drive scenarios and suites from a config file. See how to [test chat agents from the terminal](/support/docs/testmu-a2a-cli/).
+- **CLI:** point `testmu-a2a test` at your endpoint for a one-command run, or drive scenarios and suites from a config file. See how to [test chat agents from the terminal](/support/docs/agent-testing-cli/).
 - **API integration:** configure the endpoint, authentication, and request or response format directly. See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/).
 
 ## Read the Results
 
 Each run produces per-metric scores with pass or fail badges, full transcripts for failing conversations annotated with the evidence that drove the score, and score deltas against previous runs. The scores roll up into a Green, Yellow, or Red go-live verdict.
-
-For how thresholds and the verdict are decided, see [quality dimensions and the go-live verdict](/support/docs/ai-agent-testing-platform-overview/).
 
 ## Features
 

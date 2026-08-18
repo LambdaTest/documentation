@@ -88,3 +88,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     </li>
   </ul>
 </nav>
+
+## Related guides
+
+- [HyperExecute Shared Cloud Usage Limit](/support/docs/hyperexecute-shared-cloud-usage-limit/) — understand concurrency and usage limits on the HyperExecute shared cloud.
+- [Shared Cloud Usage](/support/docs/shared-cloud-usage/) — how shared cloud concurrency and usage are calculated across your account.

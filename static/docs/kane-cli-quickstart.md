@@ -104,4 +104,5 @@ Run `kane-cli --tui` to open the interactive TUI: a full terminal UI where you c
 - [Modes of Operation](/support/docs/kane-cli-modes/): Understand Interactive TUI, Headless CLI, and Agent Mode
 - [Authentication](/support/docs/kane-cli-authentication/): Manage profiles and credential methods
 - [Variables & Context](/support/docs/kane-cli-variables-and-context/): Parameterize tests with credentials and project-specific context
+- [Mobile Testing](/support/docs/kane-cli-mobile/): Point the same objective at an Android Emulator or iOS Simulator
 - [CI/CD Integration](/support/docs/kane-cli-cicd/): Add Kane CLI to your pipeline

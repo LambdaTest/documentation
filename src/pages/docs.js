@@ -90,7 +90,23 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      <div className="container" style={{ padding: '30px 16px 0' }}>
+        <a
+          href="https://www.testmuai.com/testmuconf-2026/#register-form"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Register for TESTµ CONF '26"
+          style={{ display: 'block' }}
+        >
+          <img
+            src="https://assets.testmuai.com/resources/images/testmu-corepage-cta.png"
+            alt="TESTµ CONF '26 - World's Largest Virtual Agentic Engineering and Quality Conference. August 19-21. Register now."
+            loading="eager"
+            className="no-zoom"
+            style={{ width: '70%', height: 'auto', display: 'block', borderRadius: '8px', margin: 'auto' }}
+          />
+        </a>
+      </div>
       <div className="primary_main">
       <div className="container">
 
@@ -203,8 +219,13 @@ export default function Home() {
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Testing Platform </h2>
             <div className="home_inners">
-              <a href="/support/docs/getting-started-with-agent-testing-platform/"><p className="p_home_inners">Getting Started</p></a>
-              <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First AI Agent</p></a>
+              <a href="/support/docs/getting-started-with-agent-testing-platform/"><p className="p_home_inners">Overview</p></a>
+              <a href="/support/docs/chat-agent/"><p className="p_home_inners">Supported Agent Types</p></a>
+               <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First Agent</p></a>
+                <a href="/support/docs/agent-testing-cli/"><p className="p_home_inners">Test With Agent Testing CLI</p></a>
+                     <a href="/support/docs/chat-agent-api-integration/"><p className="p_home_inners">Integrate a Chat Agent API</p></a>
+
+                      <a href="/support/docs/agent-assurance-overview/"><p className="p_home_inners">Agent Assurance &nbsp;<NewTag value="NEW" /></p></a>
               <a href="/support/docs/agent-testing-platform-faqs/"><p className="p_home_inners">FAQs</p></a>
             </div>
           </div>

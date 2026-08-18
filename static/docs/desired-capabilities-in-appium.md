@@ -2,9 +2,9 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Desired capabilities in [Appium](https://www.testmuai.com/appium) are essential for guiding the Appium server to create the correct test automation environment. Represented as a set of key-value pairs within a JSON object, these capabilities allow [QA automation](https://www.testmuai.com/blog/qa-automation/) engineers to specify the desired mobile platform and configuration for their test sessions.
+Desired capabilities in [Appium](https://www.testmuai.com/appium/) are essential for guiding the Appium server to create the correct test automation environment. Represented as a set of key-value pairs within a JSON object, these capabilities allow [QA automation](https://www.testmuai.com/blog/qa-automation/) engineers to specify the desired mobile platform and configuration for their test sessions.
 
-By setting these parameters, QAs can ensure that the Appium server accurately targets the intended test environment, facilitating effective and efficient [mobile app testing](https://www.testmuai.com/mobile-app-testing).
+By setting these parameters, QAs can ensure that the Appium server accurately targets the intended test environment, facilitating effective and efficient [mobile app testing](https://www.testmuai.com/mobile-app-testing/).
 
 > **Note:** With TestMu AI [capabilities generator](https://www.testmuai.com/capabilities-generator/) run your App Automation leveraging Appium Desktop.
 

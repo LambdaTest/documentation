@@ -1,0 +1,91 @@
+/* Mirrors @docusaurus/theme-classic CodeBlock/Buttons styles so the button is
+   indistinguishable from the one on code snippets. */
+
+.copy-ips {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 0.4em;
+  padding: 0.4rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  line-height: 0;
+  opacity: 0.4;
+  transition: opacity var(--ifm-transition-fast) ease-in-out;
+}
+
+/* Code blocks reveal on .theme-code-block:hover — same idea, keyed to the
+   heading or the table's header row instead. */
+h1:hover .copy-ips,
+h2:hover .copy-ips,
+h3:hover .copy-ips,
+thead:hover .copy-ips {
+  opacity: 0.6;
+}
+
+.copy-ips:hover,
+.copy-ips:focus-visible,
+.copy-ips--copied {
+  opacity: 1 !important;
+}
+
+.copy-ips__icons {
+  position: relative;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.copy-ips__icon,
+.copy-ips__icon-success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  fill: currentColor;
+  opacity: inherit;
+  transition: all var(--ifm-transition-fast) ease;
+}
+
+.copy-ips__icon-success {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.33);
+  opacity: 0;
+  color: #00d600;
+}
+
+.copy-ips--copied .copy-ips__icon {
+  transform: scale(0.33);
+  opacity: 0;
+}
+
+.copy-ips--copied .copy-ips__icon-success {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition-delay: 0.075s;
+}
+
+/* Keep the button off the heading's bold/size inheritance */
+h1 .copy-ips,
+h2 .copy-ips,
+h3 .copy-ips,
+thead th .copy-ips {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* Scoped with :has() so this never touches tables elsewhere on the site.
+   Older browsers simply skip the rule; the icon still renders, just top-aligned
+   in the two-line firewall headers. */
+thead th:has(.copy-ips) {
+  vertical-align: middle;
+}
+
+@media (hover: none) {
+  .copy-ips {
+    opacity: 0.7;
+  }
+}

@@ -6,7 +6,7 @@
 
 ## Why HyperExecute GUI?
 
-**[HyperExecute](https://www.testmuai.com/hyperexecute)** has been a **cornerstone for automation testing**, offering unparalleled flexibility with its YAML configurations and command-line interface. Now, with HyperExecute GUI, you can experience AI-powered test detection, set up test environments with simple clicks and run your tests without coding.
+**[HyperExecute](https://www.testmuai.com/hyperexecute/)** has been a **cornerstone for automation testing**, offering unparalleled flexibility with its YAML configurations and command-line interface. Now, with HyperExecute GUI, you can experience AI-powered test detection, set up test environments with simple clicks and run your tests without coding.
 
 ## Prerequisites
 

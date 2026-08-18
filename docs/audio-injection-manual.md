@@ -54,7 +54,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 With <BrandName /> App Live, you can either inject a **pre-uploaded audio file** or stream **Live Input** directly from your system microphone into the device under test.
 
-> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
+:::note Plus Plan Feature
+This feature is available exclusively with the **Real Device Plus Live** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your <BrandName /> support representative, reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24×7 Chat Support]**</span>, or email us at **support@testmuai.com**.
+:::
 
 ---
 

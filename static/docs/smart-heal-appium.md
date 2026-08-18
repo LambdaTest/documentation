@@ -4,7 +4,10 @@
 
 TestMu AI’s **Smart Heal** uses **AI-powered algorithms** to automatically detect and recover from locator failures during test execution. It intelligently detects missing elements, analyzes the UI in real time, and applies the closest valid match, keeping tests running smoothly despite UI changes. Both the **original and recovered locators** are logged for full visibility through the TestMu AI dashboard.
 
-> Smart Heal is currently in **closed beta**. To enable it for your organization, reach out via **24×7 chat** or email **support@testmuai.com**.
+**Plus Plan Feature**
+This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
+
+To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
 ## Use Cases
 

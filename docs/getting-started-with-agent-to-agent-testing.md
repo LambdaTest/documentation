@@ -53,10 +53,15 @@ TestMu AI [Agent Testing](https://www.testmuai.com/agent-testing/) Platform vali
 
 It is the first platform to test chat, voice, phone, and image agents in one place. Connecting an agent takes three inputs and no SDK: upload the documents that describe it, define its intended behavior, and point the platform at its endpoint or phone number.
 
-<div className="ytframe"> 
-<div className="youtube" data-embed="DrdnovKzUQY" data-loading-attribute="eager">
-  <div className="play-button"></div>
-</div>
+<div style={{ width: "50%", aspectRatio: "16 / 9", margin: "20px auto", borderRadius: "8px", overflow: "hidden" }}>
+  <iframe
+    style={{ display: "block", width: "100%", height: "100%", border: 0 }}
+    src="https://www.youtube-nocookie.com/embed/DrdnovKzUQY?rel=0&showinfo=0"
+    title="Agent Testing by TestMu AI: The QA Layer AI Agents Never Had"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  ></iframe>
 </div>
 
 
@@ -99,7 +104,7 @@ Pick the interface that matches how you work and run an evaluation end to end.
     <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Quickstart (UI)</div>
     <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Create an agent, generate scenarios, and run an evaluation from the dashboard.</div>
   </a>
-  <a href="/support/docs/testmu-a2a-cli/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
+  <a href="/support/docs/agent-testing-cli/" style={{flex:'1 1 260px',minWidth:'240px',border:'1px solid #e2e8f0',borderRadius:'12px',padding:'20px 22px',textDecoration:'none',color:'inherit',display:'block'}}>
     <div style={{fontWeight:700,marginBottom:'6px',color:'#1e293b'}}>Quickstart (CLI)</div>
     <div style={{fontSize:'14px',color:'#64748b',lineHeight:1.5}}>Test chat and phone agents from your terminal and wire them into CI/CD.</div>
   </a>

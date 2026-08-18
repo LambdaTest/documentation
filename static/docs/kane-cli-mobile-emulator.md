@@ -1,0 +1,88 @@
+# Android Emulator Setup for Kane CLI
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Set up Google's Android Emulator once, and Kane CLI can run mobile tests against it. This guide targets **macOS on Apple Silicon (arm64)**, the only supported host for this release. See [Mobile Testing](/support/docs/kane-cli-mobile/) for the full picture.
+
+On Apple Silicon, always use an **`arm64-v8a`** system image. The x86 and x86_64 images do not run natively and are effectively unusable. This is the single most common setup mistake.
+
+The exact Android API levels and device profiles in the supported matrix are pinned by the product team. The values shown below, API 35 and Pixel, are current, working examples. Confirm the officially supported set before you rely on a specific one.
+
+## 1. Install Android Studio
+
+Kane CLI does not ship an Android SDK, emulator, or system image. Install **Android Studio**, which bundles the Android SDK, the emulator, the system image manager, and the Device Manager. Download it from the Android developer site and run the first-launch setup wizard, which installs the SDK and `platform-tools`.
+
+If you prefer a headless setup, install the command line SDK tools and use `sdkmanager` and `avdmanager` directly.
+
+## 2. Install an arm64 System Image
+
+Install a system image with the **`arm64-v8a`** ABI. In the Android Studio SDK Manager, tick an API level image whose ABI is `arm64-v8a`. From the command line:
+
+```bash
+sdkmanager "system-images;android-35;google_apis;arm64-v8a"
+```
+
+## 3. Create a Virtual Device
+
+Kane CLI runs against an existing AVD. It does not create one for you. Create an Android Virtual Device from that image. In Android Studio, use **Device Manager → Create Device** and pick the arm64 image. From the command line:
+
+```bash
+avdmanager create avd -n kane_pixel \
+-k "system-images;android-35;google_apis;arm64-v8a" \
+-d pixel
+```
+
+## 4. Point Kane CLI at a Non-Default SDK Location
+
+This step is only needed if your SDK is not in the default location.
+
+Kane CLI uses its own managed `adb`, so you do not need `platform-tools` or `adb` on your `PATH`. It only needs to find the **emulator binary and your AVDs**, which it looks for in the default SDK location `~/Library/Android/sdk`. If your SDK lives somewhere else, point Kane CLI at it:
+
+```bash
+export ANDROID_HOME="/path/to/your/Android/sdk"
+```
+
+If your SDK is at the default path, skip this step.
+
+## 5. Install the Kane CLI Test Tooling
+
+Sign in and let Kane CLI install the tooling it manages for the emulator:
+
+```bash
+kane-cli login
+kane-cli doctor --install
+```
+
+You do not need to boot the emulator or run `adb` yourself. Kane CLI discovers the AVD, boots it, installs your app, and runs the test.
+
+## Ready Check
+
+Confirm Kane CLI sees a ready Android toolchain and, optionally, the AVDs on your machine:
+
+```bash
+kane-cli doctor              # required checks, each with a fix if it fails
+kane-cli doctor --targets    # also list the emulators Kane CLI can run against
+```
+
+When the Android checks pass and your AVD is listed, your emulator setup is complete.
+
+## Run a Test
+
+```bash
+kane-cli run "Add the first item to the cart" --target emulator --app ./builds/app-debug.apk
+```
+
+The emulator target accepts an `.apk` build or an uploaded app id, `APP` followed by six or more digits.
+
+## Common Failures
+
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| Emulator boots extremely slowly or hangs | An x86 or x86_64 image on Apple Silicon | Recreate the AVD from an `arm64-v8a` system image |
+| `doctor` cannot find the emulator, or "No Android emulator found" when picking a device | SDK in a non-default location, or no AVD created yet | Set `ANDROID_HOME`, and create an AVD in **Android Studio → Device Manager** |
+| Prompts to install Intel HAXM | Following an Intel Mac guide | Not needed on Apple Silicon. It uses the built-in Hypervisor framework, so skip HAXM |
+
+## Next Steps
+
+- [iOS Simulator setup](/support/docs/kane-cli-mobile-simulator/)
+- [Mobile Testing overview](/support/docs/kane-cli-mobile/)

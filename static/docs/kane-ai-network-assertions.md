@@ -26,3 +26,11 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 - You can reuse the request later in your test using the familiar `{{variable}}` syntax.
 
 - The stored variable is in **JSON format**, so you can easily access nested values with dot-notation (e.g., `header.status`).
+
+## Reuse an Assertion Across Tests
+
+A network assertion can be included in a reusable **module**, so the same network-layer check runs in every test that imports it instead of being authored again each time. The assertion travels as a single step with all of its conditions, and it is re-evaluated against each importing test's own live traffic on every run.
+
+Available on **Desktop Web**, **Mobile Web**, and **Mobile App** sessions in the Classic experience.
+
+See [Include a Network Assertion in a Module](/support/docs/kane-ai-modules/#include-a-network-assertion-in-a-module).

@@ -186,7 +186,7 @@ LT  --user <username> --key <accessKey> –allowHosts google.com,apple.com,amazo
 ```
 
 **Explanation:**
-When this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from Lambdatest’s network.
+When this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from LambdaTest’s network.
 
 ## Tunnel Arguments
 You can find all the arguments for <BrandName /> Tunnel by running the below command in your command line:

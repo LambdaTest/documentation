@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-[LT Browser](https://www.testmuai.com/lt-browser) now integrates with Google Lighthouse that allows you to view the performance report of your web-page instantly. Along with testing the website's responsiveness, you can now test your website performance statistics across 50+ pre-installed device viewports. The Performance Report allows you to view the score of:
+[LT Browser](https://www.testmuai.com/lt-browser/) now integrates with Google Lighthouse that allows you to view the performance report of your web-page instantly. Along with testing the website's responsiveness, you can now test your website performance statistics across 50+ pre-installed device viewports. The Performance Report allows you to view the score of:
 
 * Desktop and Mobile
 * Performance, Accessibility, Best Practices, SEO, and Progressive Web App

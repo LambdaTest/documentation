@@ -37,4 +37,4 @@ If you are testing a voice bot, the platform generates audio for each test case 
 ## Related TestMu AI Guides
 
 - See how to [connect a chat agent over its API](/support/docs/chat-agent-api-integration/) for the API URL and authentication used in step 6.
-- See how to [test agents from the terminal](/support/docs/testmu-a2a-cli/) with the A2A CLI.
+- See how to [test agents from the terminal](/support/docs/agent-testing-cli/) with the A2A CLI.

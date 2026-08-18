@@ -4,6 +4,8 @@
 
 Test Scheduling helps teams run recurring Accessibility scans on websites and web apps without manually starting a new scan every time.
 
+Test Scheduling is supported on **desktop only**. Scheduled scans run against websites and web apps on desktop browsers. **Native Android and iOS apps are not supported** and cannot be added to a scheduled scan. To test a mobile app, use [Accessibility App Scanner](/support/docs/accessibility-app-scanner/) for manual screen by screen scanning or [Native App Automation](/support/docs/accessibility-native-app-automation-test/) for Appium runs.
+
 When you want recurring Accessibility scans outside of Web Scanner, this overview explains how the native scheduling flow fits the product, how it differs from Web Scanner, and where to go for setup, URL import, authentication, and recurring schedules. Use it to orient sitemap-based or crawler-driven workflows and ongoing visibility into accessibility drift.
 
 ## Use this when
@@ -11,6 +13,14 @@ When you want recurring Accessibility scans outside of Web Scanner, this overvie
 - you want recurring scans
 - you want to import or discover many URLs at once
 - you need scheduled visibility into accessibility drift over time
+
+## What is supported
+
+| Surface | Supported in Test Scheduling |
+|---|---|
+| Websites and web apps on desktop browsers | Yes |
+| Native Android apps | No |
+| Native iOS apps | No |
 
 ## Product boundary
 

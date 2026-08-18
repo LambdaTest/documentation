@@ -1,9 +1,9 @@
 ﻿---
 id: capability-map
-title: TestMu AI Capability Map to Migrate from BrowserStack & SauceLabs
+title: TestMu AI Capability Map to Migrate from BrowserStack & Sauce Labs
 hide_title: true
 sidebar_label: TestMu AI Migration Guide
-description: A quick guide on TestMu AI Capability Map to Migrate from BrowserStack & SauceLabs.
+description: A quick guide on TestMu AI Capability Map to Migrate from BrowserStack & Sauce Labs.
 keywords:
   - migrate desired capabilities from sauce labs
   - migrate desired capabilities from browserstack

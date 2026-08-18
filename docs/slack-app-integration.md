@@ -115,7 +115,7 @@ To launch the Realtime test, click on **Run Test**.
 
 <img loading="lazy" src={require('../assets/images/slack-app-integration/run-test1.webp').default} alt="Slack App" width="1366" height="724" className="doc_img"/>
 
-**Step 6**: You'll be redirected to the <BrandName /> cloud-based VM where you can perform real-time testing of your websites and web apps. You can also perform one-click bug logging, capture full page screenshots, [geolocation testing](https://www.testmuai.com/geolocation-testing), and more.
+**Step 6**: You'll be redirected to the <BrandName /> cloud-based VM where you can perform real-time testing of your websites and web apps. You can also perform one-click bug logging, capture full page screenshots, [geolocation testing](https://www.testmuai.com/geolocation-testing/), and more.
 
 <img loading="lazy" src={require('../assets/images/slack-app-integration/realtime-vm.webp').default} alt="Slack App" width="1263" height="621" className="doc_img"/>
 

@@ -1,4 +1,4 @@
-# Travis CI Integration with Hyperexecute
+# Travis CI Integration with HyperExecute
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -7,7 +7,7 @@ Using Travis CI, you can automate your entire testing suite for new commits, red
 
 This document will show you how to integrate Travis CI Pipeline with HyperExecute to greatly shorten your test cycles.
 
-## Steps to Integrate Travis CI Pipeline with Hyperexecute
+## Steps to Integrate Travis CI Pipeline with HyperExecute
 
 To integrate Travis CI Pipeline with HyperExecute, follow the below steps:
 ### Step 1. Log into your Travis CI account

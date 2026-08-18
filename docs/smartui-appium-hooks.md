@@ -415,7 +415,7 @@ driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 </TabItem><TabItem value='python-1' label='Python' default>
 
 ```python
-driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
+driver.execute_script("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </TabItem>
@@ -468,7 +468,10 @@ config = {
   'fullPage': True,
   'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 }
-driver.execute("smartui.takeScreenshot", config)
+driver.execute_script("smartui.takeScreenshot", config)
+```
+
+</TabItem>
 <TabItem value='ruby-2' label='Ruby' default>
 
 ```ruby
@@ -564,15 +567,6 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 </TabItem>
 <TabItem value='test-organization' label='Test Organization'>
-
-**Test Organization**
-
-- Group related screenshots in the same build
-- Use meaningful build names
-- Run tests on consistent device configurations
-
-</TabItem>
-<TabItem value='test-organization-1' label='Test Organization'>
 
 **Test Organization**
 
@@ -723,8 +717,8 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 </TabItem>
 </Tabs>

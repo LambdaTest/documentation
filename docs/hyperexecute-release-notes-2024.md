@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: 2024 Releases
 description: Consolidated HyperExecute release notes for 2024
 keywords:
-  - TestMu AI Hyperexecute
-  - TestMu AI Hyperexecute help
-  - TestMu AI Hyperexecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - FAQs
 url: https://www.testmuai.com/support/docs/hyperexecute-release-notes-2024/
 site_name: TestMu AI
