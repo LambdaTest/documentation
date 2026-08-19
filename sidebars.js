@@ -2634,6 +2634,11 @@ module.exports = {
         label: "MockWebServer & Localhost",
         id: "espresso-mockwebserver-localhost",
       },
+      {
+        type: "doc",
+        label: "SmartUI Visual Regression",
+        id: "espresso-visual-regression",
+      },
     ],
   ],
 
