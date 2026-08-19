@@ -92,7 +92,7 @@ export default function Home() {
       </div>
       <div className="container" style={{ padding: '30px 16px 0' }}>
         <a
-          href="https://www.testmuai.com/testmuconf-2026/#register-form"
+          href="https://app.zuddl.com/testmuai/testmu-conference-2026/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Register for TESTµ CONF '26"
