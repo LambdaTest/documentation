@@ -86,7 +86,7 @@ import NewTag from '../src/component/newTag';
 </div>
 <div className="container testmuconf-cta-wrap">
   <a
-    href="https://www.testmuai.com/testmuconf-2026/#register-form"
+    href="https://app.zuddl.com/testmuai/testmu-conference-2026/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Register for TESTµ CONF '26"
