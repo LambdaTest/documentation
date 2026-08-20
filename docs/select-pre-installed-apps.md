@@ -51,9 +51,9 @@ You can purchase or upgrade to the required [plan](https://www.testmuai.com/pric
 
 ---
 
-Let's delve into the streamlined steps to initiate a testing session with pre-installed applications:
-
 ## Start a Manual Session with Pre-Installed Apps
+
+Let's delve into the streamlined steps to initiate a manual testing session with pre-installed applications:
 
 **Step 1.** Login to your <BrandName /> account. Go to **App Testing** under **Real Device** from the left sidebar.
 
