@@ -44,16 +44,16 @@ The pack is the fastest way to understand a failure, because everything is in on
 
 ## The four steps
 
-1. **Open the pack.** Accept the post-run offer, or run `kane-cli evidence serve <pack>` and open the `viewer` URL.
+1. **Open the pack.** Run `kane-cli evidence serve <pack>` and open the `viewer` URL.
 2. **Go to the failed step.** The run overview marks it. The failure record shows the error message and the page state at the moment of failure.
 3. **Check the step's console and network activity.** Logs are sliced per step, so you see exactly what the browser logged and requested while that step ran. A 4xx or 5xx response, or a JS error here, usually explains the failure.
 4. **Look at the annotated screenshot.** It highlights the element the agent was acting on, which makes "clicked the wrong thing" and "element was not there" failures obvious.
 
 ## Reading a failure record
 
-A failed or broken step carries its own `failure.yaml` with the error, the page state at failure, and references into the console and network logs. The pack root carries a `failure.yaml` index that rolls those up, so you can see every failure in the run without opening each step.
+A failed or broken step normally carries its own `failure.yaml` with the error, the page state at failure, and references into the console and network logs. The pack root carries a `failure.yaml` index that rolls those up, so you can see every failure in the run without opening each step.
 
-A record holds either an error message **or** an expected and actual pair, never both.
+A record must carry evidence of what went wrong: an `error.message`, or both an `expected` and an `actual` value. It may carry both.
 
 ## `failed` or `broken`
 
@@ -68,7 +68,7 @@ Treating these as one bucket is how a flaky environment gets filed as a product 
 
 ## Working from the command line
 
-A pack is a zip, so you do not need the viewer to answer a quick question:
+A sealed pack is a zip, so you do not need the viewer to answer a quick question:
 
 ```bash
 # list everything in the pack
@@ -83,7 +83,7 @@ unzip -p <execution_id>.evidence tests/<test-id>/result.yaml
 
 ## When the pack itself looks wrong
 
-If a pack will not open, run [`kane-cli evidence validate`](/support/docs/kane-cli-evidence-validate/). An unsealed or truncated pack, for example from a run that was killed hard, reports as invalid, and the run's session directory still holds the raw logs:
+If a pack will not open, run [`kane-cli evidence validate`](/support/docs/kane-cli-evidence-validate/). An unsealed or truncated pack, for example from a run that was killed hard, reports as invalid. The session directory still holds that run's pack:
 
 ```text
 ~/.testmuai/kaneai/sessions/<session-id>/evidence/

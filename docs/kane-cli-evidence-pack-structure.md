@@ -2,7 +2,7 @@
 id: kane-cli-evidence-pack-structure
 title: Evidence Pack Structure
 sidebar_label: Pack Structure
-description: "Every file inside a kane-cli .evidence pack and what it is for, from the run.yaml manifest anchor to per-step screenshots, logs, and failure records."
+description: "What is inside a kane-cli .evidence pack and what each part is for, from the run.yaml manifest anchor to per-step screenshots, logs, and failure records."
 keywords:
   - evidence pack structure
   - run.yaml
@@ -79,19 +79,21 @@ A `testrun` pack has one `tests/<test-id>/` directory per member, all under the 
 
 ## The load-bearing files
 
-Three files carry the structured record. Everything else is additive.
+Three files are load-bearing at **L0**, the minimal profile.
 
 | File | Role |
 |---|---|
-| `run.yaml` | The manifest anchor. A directory or zip is a valid pack if and only if it has a top-level `run.yaml`. Holds run identity, lifecycle status, and the derived totals. |
-| `tests/<id>/test.md` | The test definition, that is, what was asked of the agent. |
+| `run.yaml` | The manifest anchor. A directory or zip **is a pack** if and only if it has a top-level `run.yaml`. Holds run identity, lifecycle status, and the derived totals. Being a pack is not the same as passing validation, see [Validating packs](/support/docs/kane-cli-evidence-validate/). |
+| `tests/<id>/test.md` | The test definition, that is, what was asked of the agent. It is **opaque**: the format references and hashes it, and never parses it. |
 | `tests/<id>/result.yaml` | The structured per-step outcomes for that test. |
+
+At **L1**, the profile a kane-cli pack validates against, four more artifacts are required once the run is finalized: each test's `logs/` (with its `meta.yaml`), each test's `steps/` directory, a global `coverage/` directory, and the pack-root `failure.yaml`.
 
 ## Reading a pack without unzipping it
 
 The sealed zip is **flat**: its entries are exactly the contents of the pack directory, with `run.yaml` at the archive root and no wrapping folder. Because nothing is solid-compressed, a consumer can read the zip's central directory and then fetch only the entries it needs.
 
-That is why the hosted viewer opens a very large pack after fetching only a few kilobytes: it reads `run.yaml` and each `result.yaml` first, and pulls a screenshot only when you look at it.
+That is why the hosted viewer opens a very large pack after fetching only a few kilobytes.
 
 ## Run status and test verdicts
 
