@@ -44,7 +44,7 @@ A sealed pack opens in the hosted viewer. When you serve a pack with `kane-cli e
 
 ## After a run
 
-After a successful run in a terminal, kane-cli offers to open the pack:
+After a run in an interactive terminal, kane-cli offers to open the pack:
 
 ```text
 View evidence in browser? (y/N)

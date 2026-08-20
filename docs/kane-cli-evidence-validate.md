@@ -69,24 +69,25 @@ Validation is **status-gated**. A pack that is still `running` or was `aborted` 
 
 - the manifest anchor `run.yaml` and its identity fields are present,
 - each test's recorded id equals its `tests/<id>/` directory name,
-- every test directory has a `result.yaml` and a declared definition path, and the file at that path exists,
-- the definition path is contained, with no leading `/`, no `..`, and no escape out of the pack,
+- every test directory has a `result.yaml`, and where a `result.yaml` declares a definition path, the file at that path exists,
+- a declared definition path is contained, with no leading `/`, no `..`, and no escape out of the pack,
 - step ordinals are unique and strictly increasing, with gaps allowed.
 
 **Full seal, added when the run is `finalized`:**
 
 - `ended` and `totals` are present, and `ended` is at or after `started`,
 - `totals` equals the rolled-up per-test verdicts, and the test count equals the sum of the verdict buckets,
-- every definition hash is present and matches its file.
+- every declared definition carries a hash, and the hash matches its file.
+- at `L1`, each test has a `logs/` directory whose `meta.yaml` declares at least one log, and a `steps/` directory; the pack has a global `coverage/` directory and the finalize-generated root `failure.yaml`.
 
-A test status that disagrees with its own steps is a **warning**, never a failure. The test verdict is authored, so the validator checks it, it does not overrule it.
+A test marked `passed` that still has a `failed` or `broken` step is a **warning**, never a failure. The test verdict is authored, so the validator checks it, it does not overrule it.
 
 ## Profiles
 
 | Profile | What it requires |
 |---|---|
-| `L0` | The minimal core: `run.yaml`, and for each test a definition file and a `result.yaml`. |
-| `L1` | Everything in L0, plus the captured artifact layer: declared logs, the `steps/` layer, a `coverage/` directory, and the run-level failure index. |
+| `L0` | The minimal core: `run.yaml`, and for each test a `result.yaml`, plus its definition file where one is declared. |
+| `L1` | Everything in L0, plus the captured artifact layer: declared logs, the `steps/` layer, a `coverage/` directory, and the run-level failure index. These need to be present only once the run is `finalized`. |
 
 kane-cli packs carry the captured layer, so they validate at `L1`. That is the default for this command.
 
@@ -96,7 +97,7 @@ A missing per-step screenshot is a **warning**, not an error. Not every framewor
 
 ## When a pack will not open
 
-If a pack will not open in the viewer, validate it. An unsealed or truncated pack, for example from a run that was killed hard, reports as invalid, and the run's session directory still holds the raw logs.
+If a pack will not open in the viewer, validate it. An unsealed pack, for example from a run that was killed hard, is checked for structure only, so it can still report valid. A truncated pack cannot be read at all and fails before any verdict.
 
 ## Next steps
 

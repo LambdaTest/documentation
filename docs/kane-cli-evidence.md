@@ -55,7 +55,7 @@ Opened in the viewer (or unzipped), a pack contains:
 - **Run logs** — the CLI and runner logs for the execution.
 - **Failure records** — on failed runs, a per-step record with the error message, the page state at failure, and references into the console/network logs.
 
-For a mobile run, the result summary records the **device** in the run environment (for example the device model and OS version), and the per-step logs include **device logs** from the emulator or simulator alongside the usual browser logs.
+For a mobile run, the result summary records the **device** in the run environment, for example the device model and OS version.
 
 :::note
 The pack is the **only** place run artifacts live. There is no separate per-run log directory on disk.
@@ -63,7 +63,7 @@ The pack is the **only** place run artifacts live. There is no separate per-run 
 
 ## Where packs live
 
-Every run seals a pack in its session directory:
+Every run except `testrun run` seals a pack in its session directory:
 
 ```text
 ~/.testmuai/kaneai/sessions/<session-id>/evidence/<execution_id>.evidence
@@ -79,7 +79,7 @@ What lands in the project store depends on the surface:
 
 | Surface | Copied to `.testmuai/evidence/`? |
 |---|---|
-| `kane-cli run` / TUI session | Only when the session is **named** (`--name`, `/name` in the TUI, or the save prompt at exit) |
+| `kane-cli run` / TUI session | Only when the session is **named** (`--name`, or the save prompt at exit) |
 | `kane-cli testmd run` | Always |
 | `kane-cli testrun run` | Always (the pack is created directly in the store) |
 
