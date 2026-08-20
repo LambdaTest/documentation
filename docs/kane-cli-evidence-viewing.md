@@ -40,7 +40,7 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-viewing/
     }}
 ></script>
 
-A sealed pack opens in the hosted viewer. Nothing is uploaded: the viewer page reads the pack bytes from your machine and renders them locally.
+A sealed pack opens in the hosted viewer. When you serve a pack with `kane-cli evidence serve`, the server is local only and nothing is uploaded, because the viewer page reads the pack bytes from your machine.
 
 ## After a run
 

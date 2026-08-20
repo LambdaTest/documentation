@@ -77,11 +77,12 @@ Out of the box, merge is strict:
 kane-cli evidence merge \
   .testmuai/evidence/*.evidence \
   --run-id nightly-2026-07-11 \
-  --title "Nightly regression" \
-  -o nightly.evidence
+  --title "Nightly regression"
 ```
 
-The result is one sealed pack holding every member's tests, which opens in the viewer like any other pack.
+With no `-o`, the merged pack is written to `.testmuai/evidence/<run-id>.evidence`, which stays unique as long as the run id does.
+
+The result is one sealed pack holding the tests from every pack that passed the policy. Packs the policy skipped contribute nothing, and the merge report (`--json`) lists what was skipped and why.
 
 ## Next steps
 

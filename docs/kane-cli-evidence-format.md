@@ -51,11 +51,10 @@ This is the part worth understanding, because it explains what the format guaran
 
 | Part of the pack | Written by |
 |---|---|
-| `run.yaml` identity, `tests/<id>/result.yaml`, the test definition | kane-cli |
-| Per-step folders, screenshots, console, network, and trace logs | the kane-cli runner |
-| The derived totals, the definition hashes, the run-level failure index, and the seal | `evidence finalize` |
+| `run.yaml`, each `result.yaml`, the test definition, the per-step folders and screenshots, and the console, network and runner logs | kane-cli |
+| The derived totals, each definition hash, the run-level failure index, and the seal | `evidence finalize` |
 
-The tooling in `evidence-cli` **captures nothing**. It has no browser and no runtime. It validates a pack, derives what can be derived, and seals it. A screenshot is in your pack because kane-cli put it there.
+The tooling in `evidence-cli` **captures nothing**. It drives no browser and executes no tests. It validates a pack, derives what can be derived, and seals it. A screenshot is in your pack because kane-cli put it there.
 
 That is the point of the split: the container is open, so anything can produce a pack, and any tool can read one.
 
@@ -66,7 +65,7 @@ A profile is a rung on one contract. `L1` adds requirements to `L0` and never re
 | Profile | Requires |
 |---|---|
 | **L0** | The minimal core: a top-level `run.yaml`, and per test a definition file plus a `result.yaml`. |
-| **L1** | All of L0, plus the captured artifact layer: declared logs, the `steps/` layer, a `coverage/` directory, and the run-level failure index. Video is optional. |
+| **L1** | All of L0, plus, once the run is finalized, the captured artifact layer: declared logs, the `steps/` layer, a `coverage/` directory, and the run-level failure index. Video is optional. Before finalize, L1 checks only the shape of what is already there. |
 
 The definition file is **opaque**. The format references and hashes it, and never parses it. It can be a `test.md` from kane-cli, a `login.spec.ts` from Playwright, or anything else.
 
@@ -78,7 +77,7 @@ The contract version and the profile are different axes. The version, currently 
 
 `finalize` rolls up the totals, writes each definition's content hash, sets the run to `finalized`, and seals the directory into the zip. The seal replaces the live directory in place, atomically, so a complete copy exists at every instant.
 
-The definition hash makes the pack **tamper-evident** for the thing that was tested: change the test file after the fact and the hash no longer matches. Packs are **not signed**, so this is evidence of change, not proof of origin.
+The recorded definition hash is an integrity check on the thing that was tested: `validate` fails a finalized pack whose definition no longer hashes to the value recorded at seal time. Packs are **not signed**, so this says nothing about who produced the pack.
 
 ## Using the format directly
 
@@ -93,7 +92,7 @@ evidence validate my-run.evidence --profile L0
 evidence finalize my-run.evidence/
 ```
 
-The standalone CLI ships `validate`, `finalize`, and `merge`, with exit codes `0` valid, `1` invalid, and `2` usage error. It reads its config from `~/.testmuai/evidence/config.json`, and the active profile resolves from the `--profile` flag, then the config, then the built-in default of `L0`.
+The standalone CLI ships `validate`, `finalize`, and `merge`. Exit codes differ by command: `validate` returns `0` valid, `1` invalid, `2` usage error, and `merge` returns `0` merged, `1` policy abort, `2` usage error. It reads its config from `~/.testmuai/evidence/config.json` by default, overridable with `--config` or the `EVIDENCE_CONFIG` environment variable, and the active profile resolves from the `--profile` flag, then the config, then the built-in default of `L0`.
 
 It is also a library, so `validate` and `finalize` can be called in process:
 
@@ -109,7 +108,7 @@ if (!report.valid) {
 ```
 
 :::note
-The standalone `evidence` CLI defaults to the `L0` profile, while `kane-cli evidence validate` defaults to `L1`, because a kane-cli pack always carries the captured layer.
+The standalone `evidence` CLI defaults to the `L0` profile, while `kane-cli evidence validate` defaults to `L1`.
 :::
 
 ## Next steps
