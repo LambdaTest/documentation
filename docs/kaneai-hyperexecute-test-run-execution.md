@@ -134,6 +134,44 @@ Once every test case has an assignee and at least one configuration, the run is 
 
 The **Run with HyperExecute** panel summarises the run before you start it, including the number of unique tests, the unique configurations, and the concurrency. The execute button names the report you are about to generate. For a run that contains a Classic test case, or one that is not on Chrome, the button reads **Run with Classic Report** and the panel notes that Evidence reporting is not part of this run.
 
+## Evidence Reporting
+
+A test run can produce an **Evidence Report** in place of the standard report. The Evidence Report covers the run in more detail, including coverage details and the business use cases behind the tests.
+
+Evidence Reporting is available only when both of the following are true for the run:
+
+- Every test case in the run is authored with **New Experience**.
+- The run is configured to execute on the **Chrome** browser.
+
+If either condition is not met, the run executes with the Classic report instead.
+
+### Select only New Experience test cases
+
+On the **Add Test Cases** step, each test case shows the experience it was authored with. The banner above the list states the same rule, and the **Read Docs** button opens this reference.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-selection-banner.webp').default} alt="Test case list with a New Experience test case selected and the Evidence and Coverage banner above it" className="doc_img"/>
+
+Select the test cases labelled **New Experience** and click **Add Test Cases**. Leave out anything labelled **Classic**, because a single Classic test case makes the whole run ineligible.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-select-new-experience.webp').default} alt="Add Test Cases step for a run named Test Run Evidence with a New Experience test case selected" className="doc_img"/>
+
+### Configure the run to use Chrome
+
+Give every test instance a configuration that uses Chrome, either by picking an existing Chrome configuration in the **Add a Configuration** panel or by creating one. Any instance on another browser makes the run ineligible.
+
+### Run with Evidence Report
+
+When both conditions are met, the saved run shows a note confirming that an Evidence Report is available, and the **Run with HyperExecute** panel offers it as the primary action.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-run-with-evidence-report.webp').default} alt="Run with HyperExecute panel showing the Run with Evidence Report button and the Run with Classic Report option in its dropdown" className="doc_img"/>
+
+- Click **Run with Evidence Report** to execute the run and generate the Evidence Report.
+- To run the same test run with the standard report instead, open the dropdown next to the button and choose **Run with Classic Report**.
+
+:::note
+If the run contains a Classic test case, or any instance is on a browser other than Chrome, the saved run flags which instances are blocking Evidence Reporting and the panel offers only **Run with Classic Report**. Adjust the test cases or the browser configuration, then reopen the panel.
+:::
+
 ## Advanced Configurations
 
 Before clicking **Execute**, you can optionally click **Advanced Configurations** to customize your test execution. The following settings are available:
