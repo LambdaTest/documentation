@@ -85,7 +85,7 @@ unzip -p <execution_id>.evidence tests/<test-id>/result.yaml
 
 If a pack will not open, run [`kane-cli evidence validate`](/support/docs/kane-cli-evidence-validate/). An unsealed or truncated pack, for example from a run that was killed hard, reports as invalid, and the run's session directory still holds the raw logs:
 
-```bash
+```text
 ~/.testmuai/kaneai/sessions/<session-id>/evidence/
 ```
 
