@@ -15,6 +15,8 @@ canonical: https://www.testmuai.com/support/docs/select-pre-installed-apps/
 
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 
 <script type="application/ld+json"
