@@ -88,7 +88,7 @@ A test status that disagrees with its own steps is a **warning**, never a failur
 | `L0` | The minimal core: `run.yaml`, and for each test a definition file and a `result.yaml`. |
 | `L1` | Everything in L0, plus the captured artifact layer: declared logs, the `steps/` layer, a `coverage/` directory, and the run-level failure index. |
 
-kane-cli packs carry the captured layer, so they validate at `L1`, which is why it is the default for this command.
+kane-cli packs carry the captured layer, so they validate at `L1`. That is the default for this command.
 
 :::note
 A missing per-step screenshot is a **warning**, not an error. Not every framework captures a frame per step, and not every step needs a folder.
