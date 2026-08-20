@@ -5365,6 +5365,48 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Evidence",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-evidence",
+          },
+          {
+            type: "doc",
+            label: "Pack Structure",
+            id: "kane-cli-evidence-pack-structure",
+          },
+          {
+            type: "doc",
+            label: "Viewing Evidence",
+            id: "kane-cli-evidence-viewing",
+          },
+          {
+            type: "doc",
+            label: "Validating Packs",
+            id: "kane-cli-evidence-validate",
+          },
+          {
+            type: "doc",
+            label: "Merging Packs",
+            id: "kane-cli-evidence-merge",
+          },
+          {
+            type: "doc",
+            label: "Debugging from a Pack",
+            id: "kane-cli-evidence-debugging",
+          },
+          {
+            type: "doc",
+            label: "The .evidence Format",
+            id: "kane-cli-evidence-format",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Checkpoints",
         items: [
           {
