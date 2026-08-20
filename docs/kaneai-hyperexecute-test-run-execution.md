@@ -218,7 +218,7 @@ Enable the **Reports** option in Advanced Configurations to generate reports for
 - **Generate Extent Report**: Toggle to **Yes** to generate an Extent report for the test run, available in the HyperExecute dashboard after execution.
 - **Email Addresses**: Add one or more email addresses (separated by space or enter) to receive the report via email after execution. You can add up to **10 email addresses**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/reports-advanced-config.png').default} alt="Reports option in Advanced Configurations" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/reports-advanced-config.webp').default} alt="Reports option in Advanced Configurations" className="doc_img"/>
 
 **Accessing the Report**
 
