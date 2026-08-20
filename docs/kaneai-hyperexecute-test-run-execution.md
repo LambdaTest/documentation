@@ -171,12 +171,16 @@ When both conditions are met, the saved run shows a note confirming that an Evid
 :::note
 If the run contains a Classic test case, or any instance is on a browser other than Chrome, the saved run flags which instances are blocking Evidence Reporting and the panel offers only **Run with Classic Report**. Adjust the test cases or the browser configuration, then reopen the panel.
 
-To learn more about evidence, read [The .evidence proof pack](https://www.testmuai.com/docs/kane-cli-agent-mode#the-evidence-proof-pack).
+[Learn More](https://www.testmuai.com/docs/kane-cli-agent-mode#the-evidence-proof-pack)
 :::
 
 ## Advanced Configurations
 
-Before clicking **Execute**, you can optionally click **Advanced Configurations** to customize your test execution. The following settings are available:
+Before clicking **Execute**, you can optionally click **Advanced Configurations** to customize your test execution. The panel groups the settings into Test Configuration, Network Settings, Replace URL, Performance, Visual Regression, Accessibility Testing, and Reports.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/advanced-configurations-panel.webp').default} alt="Advanced Configurations panel open on Test Configuration, showing console logs, network logs, timezone, and retry on failure" className="doc_img"/>
+
+The following settings are available:
 
 | Setting | Description |
 |---|---|
