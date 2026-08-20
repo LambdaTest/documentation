@@ -1,56 +1,35 @@
 /**
- * Fetches live OpenAPI YAML specs and builds src/data/api/all-apis.json
+ * Reads the OpenAPI YAML specs in api-specs/ and builds src/data/api/all-apis.json
  * Run automatically via: npm run prebuild / npm run prestart
  *
- * Specs are fetched directly from public Swagger servers, or read from the
- * repo-local api-specs/ folder when an entry uses `file` instead of `url`.
+ * Every spec is vendored in this repo, so the build needs no network access.
+ * See api-specs/README.md for each file's upstream source and how to refresh it.
  */
 
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
-const http = require('http');
 const yaml = require('js-yaml');
 
 const OUT = path.join(__dirname, '..', 'src', 'data', 'api', 'all-apis.json');
 
-// Live OpenAPI YAML spec URLs — one per API section
+// Local OpenAPI spec files — one per API section, relative to the repo root.
+// Upstream source URLs are recorded in api-specs/README.md.
 const API_SPECS = [
-  { name: 'Selenium Automation API',           url: 'https://swagger-api-support.lambdatest.com/openapi.yaml' },
-  { name: 'Automated Screenshots API',         url: 'https://falcon-screenshot-public-api.lambdatest.com/openapi.yaml' },
-  { name: 'App Automation API (Real Devices)', url: 'https://app-automation-apis-docs.lambdatest.com/mobile_automation.yaml' },
-  { name: 'Smart UI',                          url: 'https://swagger-api-support.lambdatest.com/smartui/openapi.yaml' },
-  { name: 'Cypress Automation',                url: 'https://swagger-api-support.lambdatest.com/cypress/openapi.yaml' },
-  { name: 'User Management',                   url: 'https://swagger-api-support.lambdatest.com/user_management/openapi.yaml' },
-  { name: 'Test Manager',                      url: 'https://swagger-api-support.lambdatest.com/test_management/openapi.yaml' },
-  { name: 'HyperExecute',                      url: 'https://swagger-api-support.lambdatest.com/hyperexecute/openapi.yaml' },
-  { name: 'Accessibility Testing',             url: 'https://swagger-api-support.lambdatest.com/accessibility/openapi.yaml' },
-  { name: 'Analytics',                         url: 'https://swagger-api-support.lambdatest.com/analytics/openapi.yaml' },
-  { name: 'Performance Testing',               url: 'https://swagger-api-support.lambdatest.com/performance_testing/openapi.yaml' },
-  { name: 'Audit logs',                        url: 'https://swagger-api-support.lambdatest.com/audit-logs/openapi.yaml' },
+  { name: 'Selenium Automation API',           file: 'api-specs/selenium-automation.yaml' },
+  { name: 'Automated Screenshots API',         file: 'api-specs/automated-screenshots.yaml' },
+  { name: 'App Automation API (Real Devices)', file: 'api-specs/app-automation.yaml' },
+  { name: 'Smart UI',                          file: 'api-specs/smartui.yaml' },
+  { name: 'Cypress Automation',                file: 'api-specs/cypress-automation.yaml' },
+  { name: 'User Management',                   file: 'api-specs/user-management.yaml' },
+  { name: 'Test Manager',                      file: 'api-specs/test-manager.yaml' },
+  { name: 'HyperExecute',                      file: 'api-specs/hyperexecute.yaml' },
+  { name: 'Accessibility Testing',             file: 'api-specs/accessibility.yaml' },
+  { name: 'Analytics',                         file: 'api-specs/analytics.yaml' },
+  { name: 'Performance Testing',               file: 'api-specs/performance-testing.yaml' },
+  { name: 'Audit logs',                        file: 'api-specs/audit-logs.yaml' },
   { name: 'Agent Testing API',                 file: 'api-specs/agent-testing.yaml' },
 ];
-
-// Fetch a URL and return the body as a string (follows redirects)
-function fetchText(url) {
-  return new Promise((resolve, reject) => {
-    const lib = url.startsWith('https') ? https : http;
-    lib.get(url, (res) => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return fetchText(res.headers.location).then(resolve).catch(reject);
-      }
-      if (res.statusCode !== 200) {
-        res.destroy();
-        return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
-      }
-      const chunks = [];
-      res.on('data', (c) => chunks.push(c));
-      res.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
-      res.on('error', reject);
-    }).on('error', reject);
-  });
-}
 
 // ─── OpenAPI helpers (unchanged) ────────────────────────────────────────────
 
@@ -378,14 +357,12 @@ async function main() {
   const result = { apis: [] };
   let totalEndpoints = 0;
 
-  for (const { name, url, file } of API_SPECS) {
+  for (const { name, file } of API_SPECS) {
     let spec = null;
     try {
-      const text = file
-        ? fs.readFileSync(path.join(__dirname, '..', file), 'utf8')
-        : await fetchText(url);
+      const text = fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
       spec = yaml.load(text);
-      console.log(`✓ ${file ? 'Read' : 'Fetched'}: ${name}`);
+      console.log(`✓ Read: ${name}`);
     } catch (e) {
       console.warn(`✗ Failed:  ${name} — ${e.message}`);
     }
