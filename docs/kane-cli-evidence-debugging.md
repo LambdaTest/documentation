@@ -83,7 +83,7 @@ unzip -p <execution_id>.evidence tests/<test-id>/result.yaml
 
 ## When the pack itself looks wrong
 
-If a pack will not open, run [`kane-cli evidence validate`](/support/docs/kane-cli-evidence-validate/). An unsealed or truncated pack, for example from a run that was killed hard, reports as invalid. The session directory still holds that run's pack:
+If a pack will not open, run [`kane-cli evidence validate`](/support/docs/kane-cli-evidence-validate/). An unsealed pack, for example from a run that was killed hard, is checked for structure only and can still report valid. A truncated pack cannot be read at all. Either way the session directory still holds that run's pack:
 
 ```text
 ~/.testmuai/kaneai/sessions/<session-id>/evidence/

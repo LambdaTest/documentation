@@ -51,7 +51,7 @@ Targets are execution ids or pack paths, and **order matters**. Earlier targets 
 |---|---|---|
 | `--run-id <id>` | Run id for the merged pack, **required** | — |
 | `-o, --out <path>` | Output path | `.testmuai/evidence/<run-id>.evidence` |
-| `--rules <path>` | Custom merge-rules file, replaces the defaults wholesale | built-in defaults |
+| `--rules <path>` | Custom merge-rules file. Settings you omit keep their default value; the rule list itself is replaced | built-in defaults |
 | `--on-collision <action>` | `error`, `prefer-first`, `prefer-latest`, or `discard` | `error` |
 | `--title <title>` | Title for the merged run | first eligible pack's |
 | `--no-finalize` | Keep the merged pack live instead of sealing it | seals by default |
