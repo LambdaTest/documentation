@@ -147,7 +147,7 @@ If either condition is not met, the run executes with the Classic report instead
 
 ### Select only New Experience test cases
 
-On the **Add Test Cases** step, each test case shows the experience it was authored with. The banner above the list states the same rule, and the **Read Docs** button opens this reference.
+On the **Add Test Cases** step, each test case shows the experience it was authored with.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/evidence-selection-banner.webp').default} alt="Test case list with a New Experience test case selected and the Evidence and Coverage banner above it" className="doc_img"/>
 
@@ -170,6 +170,8 @@ When both conditions are met, the saved run shows a note confirming that an Evid
 
 :::note
 If the run contains a Classic test case, or any instance is on a browser other than Chrome, the saved run flags which instances are blocking Evidence Reporting and the panel offers only **Run with Classic Report**. Adjust the test cases or the browser configuration, then reopen the panel.
+
+To learn more about evidence, read [The .evidence proof pack](https://www.testmuai.com/docs/kane-cli-agent-mode#the-evidence-proof-pack).
 :::
 
 ## Advanced Configurations
