@@ -90,23 +90,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container" style={{ padding: '30px 16px 0' }}>
-        <a
-          href="https://app.zuddl.com/testmuai/testmu-conference-2026/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Register for TESTµ CONF '26"
-          style={{ display: 'block' }}
-        >
-          <img
-            src="https://assets.testmuai.com/resources/images/testmu-corepage-cta.png"
-            alt="TESTµ CONF '26 - World's Largest Virtual Agentic Engineering and Quality Conference. August 19-21. Register now."
-            loading="eager"
-            className="no-zoom"
-            style={{ width: '70%', height: 'auto', display: 'block', borderRadius: '8px', margin: 'auto' }}
-          />
-        </a>
-      </div>
+     
       <div className="primary_main">
       <div className="container">
 
