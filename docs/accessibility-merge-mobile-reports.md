@@ -63,7 +63,7 @@ Merge Reports works for both **[App Automation](/support/docs/accessibility-nati
 - Select **2 to 10 completed reports** from the **[Accessibility dashboard](/support/docs/accessibility-testing-navigating-dashboard/)** and merge them into a new, named report.
 - The merged report opens like any other report, with the same sections: Violations, Insights, Recommendations, and **[Accessibility Score](/support/docs/accessibility-web-score/)**.
 - Every violation keeps its full context — you can always see which screen it came from, with its screenshot and highlighted element.
-- The report header shows which test runs were merged and the devices they ran on.
+- The report header shows which test runs were merged, so you can trace any finding back to the run it came from.
 - Merged reports are saved to your dashboard permanently: rename, share via public link, or delete them like any other report. Deleting a merged report never affects the original reports, and changes to the originals never alter the merged report.
 
 ## Requirements and limits
@@ -71,7 +71,7 @@ Merge Reports works for both **[App Automation](/support/docs/accessibility-nati
 - **2–10 completed reports** per merge. Reports that are still running cannot be merged.
 - All reports must be of the **same kind**: App Automation reports merge with App Automation reports, manual reports with manual reports.
 - Android and iOS reports **can** be merged together, and reports from different apps can be merged too.
-- The combined reports can cover up to **1,000 screens** in total.
+- The combined reports can cover up to **1,000 screens** in total. Merges near that limit take noticeably longer to build — see the note at the end of this page.
 
 :::caution Web and mobile cannot be mixed
 A merged report is either all web or all mobile. Web reports cannot be merged with mobile reports.
@@ -83,7 +83,7 @@ A merged report is either all web or all mobile. Web reports cannot be merged wi
 2. Select the reports to combine and choose **Merge** from the bulk actions.
 3. Give the report a name. A default with the date and time is pre-filled — replace it with something meaningful like `Release 4.2 — Checkout flow` so the report is easy to find later.
 4. Confirm the merge.
-5. The new report appears in your list immediately with a *merging* status, and switches to completed when ready — usually within seconds.
+5. The new report appears in your list immediately with a *merging* status, and switches to completed when ready — usually within seconds. Very large merges take longer; see the note on [merge duration](#interpreting-a-merged-report) below.
 
 If a merge can't be created — for example, a selected report is still running, was deleted, or the selection exceeds the limits — you'll see a message explaining exactly what to change.
 
@@ -107,22 +107,24 @@ Merging a WCAG 2.1 A run with a WCAG 2.2 AAA run produces a report labeled **WCA
 
 ### Rule settings are shown honestly
 
-In the merged report, a rule appears as:
+In the merged report, every rule is shown as either enabled or disabled:
 
 | State | Meaning |
 | --- | --- |
-| **Enabled** | The rule was enabled in **every** merged run that includes it |
+| **Enabled** | The rule was enabled in **any** merged run that includes it |
 | **Disabled** | The rule was off in **all** merged runs |
-| **Mixed** | Your runs were configured differently |
 
-This is why the *mixed* state exists — so the report never implies a rule was checked across all screens when it wasn't.
+A rule counts as enabled as soon as one of your runs checked it, so the merged report reflects everything that was actually evaluated across the combined screens.
 
 ## Interpreting a merged report
 
 - **A merged report is a snapshot.** It captures the selected reports as they were at merge time. Re-running tests or editing the originals afterward doesn't change it — create a new merge to get an updated view.
 - **Compare like with like.** Merged violation counts grow with the number of reports you select, since recurring issues are counted once per run. Compare merged reports with other merged reports of similar scope, not with single-test reports.
-- **Devices stay visible.** Merging runs from different devices shows all devices in the report header, and each screen keeps the device it was captured on.
 - **Use the score as a trend, not a verdict.** The averaged score inherits every caveat of the [Accessibility Score](/support/docs/accessibility-web-score/) — it reflects automated findings only and is not WCAG conformance sign-off.
+
+:::note Merging large reports takes longer
+A combined report can hold a maximum of **1,000 screens**. Merges of that size are not instant — merging a report with 1,000 screens takes around **17–18 minutes** to complete. Smaller merges finish in seconds. The report stays in a *merging* state until it's ready, and you can carry on working in the dashboard while it completes.
+:::
 
 ## Related docs
 
