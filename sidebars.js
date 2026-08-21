@@ -1716,8 +1716,6 @@ module.exports = {
       "applitools-integration-with-lambdatest",
       "selenified-integration-with-lambdatest",
       "microsoft-team",
-      "app-center-integration",
-      "app-center-automation",
       "siesta-integration",
       "testcomplete-integration",
       "testrigor-integration",
@@ -2075,6 +2073,11 @@ module.exports = {
             type: "doc",
             label: "Bug Report",
             id: "accessibility-report-bug",
+          },
+          {
+            type: "doc",
+            label: "Merge Reports (Mobile)",
+            id: "accessibility-merge-mobile-reports",
           },
         ],
       },
@@ -2562,7 +2565,6 @@ module.exports = {
             items: [
               "install-apps-from-play-store",
               "install-apps-from-test-flight",
-              "install-apps-from-app-center",
               "install-apps-from-app-store",
               "install-apps-from-firebase",
             ],
