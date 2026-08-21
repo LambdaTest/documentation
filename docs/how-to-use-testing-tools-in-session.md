@@ -71,6 +71,10 @@ The **App Control** feature offers you the ability to perform actions with your 
 - **Kill App:** By selecting this option, you can easily kill all your installed applications. 
 - **Uninstall App:** By selecting this option, you can easily uninstall all the installed applications. 
 
+:::note
+Clicking the **Uninstall App** button under **App Controls** uninstalls **all** the user-installed applications on the device at once. This is the expected behavior of this option.
+:::
+
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/app-controls.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Screenshot
