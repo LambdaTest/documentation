@@ -2074,6 +2074,11 @@ module.exports = {
             label: "Bug Report",
             id: "accessibility-report-bug",
           },
+          {
+            type: "doc",
+            label: "Merge Reports (Mobile)",
+            id: "accessibility-merge-mobile-reports",
+          },
         ],
       },
       {
