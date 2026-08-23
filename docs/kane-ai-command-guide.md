@@ -1,7 +1,9 @@
 ﻿---
 id: kane-ai-command-guide
-title: KaneAI - Command Guide
-sidebar_label: Command Types
+title: KaneAI Command Reference
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: Commands
 description: Master KaneAI commands to automate web actions like navigation, clicking, typing, and more. Create dynamic, readable test cases with ease
 keywords:
   - testmu ai automation
@@ -15,8 +17,6 @@ slug: kane-ai-command-guide/
 canonical: https://www.testmuai.com/support/docs/kane-ai-command-guide/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,73 +35,67 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "KaneAI Command Guide",
+          "name": "KaneAI Command Reference",
           "item": "https://www.testmuai.com/support/docs/kane-ai-command-guide/"
         }]
       })
     }}
 ></script>
 
-KaneAI lets you write **natural language instructions** that it converts into executable automation steps. This guide covers  a wide range of commands that help you interact with web pages, control tabs, handle waits, perform assertions, and build dynamic, reliable tests without writing code, best practices and troubleshooting tips to help you get the most out of KaneAI.
+# KaneAI Command Reference
+***
+
+
+KaneAI converts **natural language instructions** into executable automation steps. This reference lists the commands for interacting with web pages, controlling tabs, handling waits, performing assertions, and building dynamic tests without writing code.
 
 ---
 
 ## Navigation & Page Interaction
+***
 
 Use the below commands to move around the page:
 
-| Action       | Example Commands                               |
-|--------------|------------------------------------------------|
-| Open URL     | `go to https://example.com`  ,  `open https://example.com` |
-| Click        | `click on login button`                        |
-| Double / N-Click | `double click the title`  ,  `click the button 5 times`, see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| Right Click  | `right click on the file row` (web only), see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| Long Press   | `long press the menu icon for 3 seconds`, see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| Type Text    | `enter "user@example.com"`  ,  `type "password123"` |
-| Clear Field  | `clear email input field`                      |
-| Select Date  | `select 21st september date`                   |
-| Hover        | `hover on shop by category option`             |
-| Search       | `search for "laptop"`                          |
-| Refresh      | `refresh the page`                             |
-| Navigation   | `go back`  ,   `navigate back`  ,  `go forward`  ,  `navigate forward` |
+| Action | Example Command |
+|--------|-----------------|
+| Open URL | `go to https://example.com`, `open https://example.com` |
+| Click | `click on login button` |
+| Double / N-Click | `double click the title`, `click the button 5 times` (see [KaneAI Click Interactions](/support/docs/kane-ai-click-interactions/)) |
+| Right Click | `right click on the file row` (web only) |
+| Long Press | `long press the menu icon for 3 seconds` |
+| Type Text | `enter "user@example.com"`, `type "password123"` |
+| Clear Field | `clear email input field` |
+| Select Date | `select 21st september date` |
+| Hover | `hover on shop by category option` |
+| Search | `search for "laptop"` |
+| Refresh | `refresh the page` |
+| Navigation | `go back`, `navigate back`, `go forward`, `navigate forward` |
 
 ---
 
 ## Waits & Timeouts
+***
 
-**Wait until element**
+Control how long KaneAI waits for elements before a step proceeds or fails.
 
-Every element interaction automatically includes a **default maximum wait timeout of 10 seconds**, giving the element time to become interactable. This ensures that commands with locators such as click or type don't fail due to slow loading or page transitions.
+| Action | Example Command |
+|--------|-----------------|
+| Default wait | Automatic; every element interaction waits up to **10 seconds** for the element to become interactable |
+| Explicit wait | `wait for 5 seconds` (pauses the script for exactly 5 seconds before the next step) |
 
-**Explicit Waits**
+The default 10-second wait prevents commands such as click or type from failing on slow loading or page transitions. Use an explicit wait when you know an action, such as a button click or form submission, will take longer than usual.
 
-You can **define timeouts explicitly** when you expect a slower response or need to wait longer than the default. Use simple, natural language commands like:
+**Custom timeouts**
 
-- **wait for 5 seconds** - This will pause the script for exactly 5 seconds before proceeding to the next step.
+To set a custom wait timeout on a specific step, use the step menu:
 
-This is useful when you need precise control over wait times for specific actions or page loads.
+1. Click the step menu.
+2. Select **Step Timeout**.
+3. Enter your preferred timeout value (minimum 1 second, maximum 300 seconds).
 
-**Custom Timeouts**
-
-If you prefer, you can also set custom wait timeouts directly in the step menu:
-
-1. Click the step menu
-2. Select **Step Timeout**
-3. Enter your preferred timeout value (min 1 second, max 300 seconds)
-
-Use custom wait timeout when dealing with slow page loads or dynamic content. Step Timeout is a dynamic ceiling. The step proceeds as soon as the element is ready and only uses the extra time on genuinely slow loads.
+Step Timeout is a dynamic ceiling: the step proceeds as soon as the element is ready and uses the extra time only on genuinely slow loads. Use a custom timeout for slow page loads or dynamic content, such as elements that depend on external API calls.
 
 :::note
-Step Timeout is supported across **Web**, **Mobile Web**, and **App (Android and iOS)** testing.
-:::
-
-**When to Use Explicit & Custom Waits**
-
-- **Custom waits** are ideal for cases where you need to adjust the wait time for certain elements to load (such as dynamic content or external API calls). [RECOMMENDED]
-- **Use explicit waits** when you know an action (like a button click or form submission) will take longer than usual.
-
-:::note
-Custom waits apply only to element-based interactions.  
+Step Timeout is supported across **Web**, **Mobile Web**, and **App (Android and iOS)** testing. Custom waits apply only to element-based interactions.
 :::
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/commands/select_set_timeout.webp').default} alt="" className="doc_img"/>
@@ -109,68 +103,48 @@ Custom waits apply only to element-based interactions.
 ---
 
 ## Tab Management
+***
 
-KaneAI makes it easy to manage browser tabs during automated tests, whether you’re opening new tabs, switching between them, or closing them. Here's how to control your tabs with simple commands:
+Manage browser tabs during a test by opening, switching, and closing them. Tabs are indexed in the order they were opened, and the index starts at 1.
 
-**Opening a New Tab**
+| Action | Example Command |
+|--------|-----------------|
+| Open a new tab | `open amazon.com in a new tab` |
+| Switch by position | `switch to 2nd tab` |
+| Switch by name | `switch to TestMu AI tab` |
+| Close by name | `close TestMu AI tab` |
+| Close by position | `close 2nd tab` |
 
-To open a new tab in your browser, use the following command:
+**Tips**
 
-- Open amazon.com in a new tab. This will open a new tab, allowing you to work in multiple tabs during your test.
-- **IMPORTANT:** Highlight that even when a new tab is open, we need to explicitly switch context of the application to that new tab by adding an instruction for “Switch to Amazon tab” or “Switch to 2nd tab”
-
-**Switching Between Tabs**
-
-Switching between tabs lets you interact with different pages or elements within the same session. You can switch by tab number or by the tab's name:
-
-- **Switch to 2nd tab:** This switches focus to the second tab (index starts at 1), allowing you to perform actions on that page.
-- **Switch to LambdaTest tab:** Switch to the tab named "LambdaTest", regardless of its position in the tab order.
-
-Use these commands when you have multiple pages open and need to shift focus between them.
-
-**Closing Tabs**
-
-You can close tabs either by position or by name when you're done with them:
-
-- **Close LambdaTest tab:** Closes the tab named "LambdaTest". This is useful when you’ve finished interacting with a specific page and want to clean up the session.
-- **Close 2nd tab:** Closes the second tab in the current session. This command is useful when you want to manage tab resources and focus on a single page.
-
-**Tips for Managing Tabs** 
-
-- When switching tabs, be sure the tab is open before using a **switch** command. If the tab doesn’t exist or has already been closed, the command will fail.
-- Tabs are indexed in the order they were opened. Keep track of the open tabs to avoid confusion, especially when switching by position.
-- Use **explicit waits** if the tab change involves loading content or dynamic changes.
+- Opening a new tab does not switch focus to it. Add an explicit switch command, such as `switch to Amazon tab` or `switch to 2nd tab`.
+- Make sure a tab is open before you switch to it. If the tab does not exist or has already been closed, the command fails.
+- Use an explicit wait if the tab change loads content or triggers dynamic changes.
 
 ---
 
 ## Scrolling Commands
+***
 
-KaneAI allows you to easily control scrolling behavior on your web pages. Here’s how you can scroll to elements, pages, or specific sections:
+Control scrolling to reveal elements, move to page positions, or scroll dynamic content.
 
-**Scroll Until Element is Visible:**  This command scrolls the page until a specific element, like a button, becomes visible in the viewport. It's perfect for revealing hidden elements that are off-screen initially. [Currently only supported on Web]
-
-**Scroll by a Set Amount**
-
-- **Scroll by 100px:** Scrolls the page down by 100 pixels, allowing for fine-grained control of the viewport position.
-- **Scroll by 20 percent:** Scrolls the page down by 20% of the current page height, which is useful for relative scrolling in dynamic pages.
-
-**Scroll to Specific Positions**
-
-- **Scroll to the bottom:** Scrolls to the very bottom of the page, making the last section or content visible.
-- **Scroll to the top:** Brings the page back to the top, useful for navigating or resetting the viewport.
-
-**Scroll Multiple Times**
-
-- **Scroll 3 times:** Repeats the scroll action three times, which can be helpful for interacting with infinite scroll pages or loading dynamic content.
-
+| Action | Example Command |
+|--------|-----------------|
+| Scroll until element is visible | `scroll until the submit button is visible` (web only) |
+| Scroll by pixels | `scroll by 100px` |
+| Scroll by percentage | `scroll by 20 percent` |
+| Scroll to bottom | `scroll to the bottom` |
+| Scroll to top | `scroll to the top` |
+| Scroll multiple times | `scroll 3 times` (useful for infinite-scroll pages) |
 
 :::tip
-Use `scroll until` for elements not yet visible in the viewport. Works for entire pages and scrollable subsections.  
+Use `scroll until` for elements not yet in the viewport. It works for entire pages and for scrollable subsections.
 :::
 
 ---
 
 ## Assertions
+***
 
 Assertions are used to validate whether your expectations match the actual outcomes in the application. KaneAI supports several types of assertions to check various elements during test execution:
 
@@ -188,12 +162,13 @@ Assertions are used to validate whether your expectations match the actual outco
 :::note
 Since **July 20, 2025**, all assertions fail tests immediately by default.  
 Older tests may still use *warn-and-continue* until edited.  
-More info: [Failure Conditions](/support/docs/kaneai-failure-conditions)  
+More info: [KaneAI Failure Conditions](/support/docs/kaneai-failure-conditions/)
 :::
 
 ---
 
 ## Unsupported Assertions
+***
 
 The following assertion types are not yet available via natural language. Use **JS snippets** as workarounds where applicable.
 
@@ -206,33 +181,35 @@ The following assertion types are not yet available via natural language. Use **
 ---
 
 ## Query Information
+***
 
-KaneAI allows you to retrieve specific information from your web page during tests:
+Retrieve specific information from the page during a test.
 
-- **query the current URL:** Retrieves the current URL of the active page
-- **query the time mentioned in the poster:** Extracts specific text or data, such as the time listed on a poster or other page element
+| Action | Example Command |
+|--------|-----------------|
+| Query the current URL | `query the current URL` (returns the URL of the active page) |
+| Query page text or data | `query the time mentioned in the poster` (extracts text or data from a page element) |
 
 ---
 
 ## Conditional Actions
+***
 
-Use conditional logic to execute actions based on specific conditions on the page. KaneAI supports **If / Else‑If / Else** blocks with multiple conditions combined via AND / OR logic. You can add modules, JavaScript, API, and DB steps inside each branch. For the full guide, see [Conditional Logic](/support/docs/kaneai-conditional-logic/).
+Use conditional logic to run actions based on conditions on the page. KaneAI supports **If / Else-If / Else** blocks with multiple conditions combined via AND / OR logic, and you can add modules, JavaScript, API, and DB steps inside each branch. For the full guide, see [KaneAI Conditional Logic](/support/docs/kaneai-conditional-logic/).
+
+| Action | Example Command |
+|--------|-----------------|
+| Conditional click | `if pop up is present in the viewport then click on it` (clicks the pop-up only when it is visible) |
+| Conditional selection | `if price < 200 then click add to cart else select second product` (chooses an action based on the price) |
 
 :::note
 Nested conditions (an If / Else block inside another If / Else block) are not supported.
 :::
 
-**Conditional Click**
-Example:
- **if pop up is present in the viewport then click on it**: clicks on a pop-up element if it is visible within the current view.
-
-**Conditional Selection**
-Example:
-**if price < 200 then click add to cart else select second product**: selects an action based on the price condition. If the price is less than $200, it adds the item to the cart. Otherwise, it selects the second product.
-
 ---
 
 ## Do's and Don'ts
+***
 
 Follow these examples for better clarity and performance during test writing:
 
@@ -255,6 +232,7 @@ Follow these examples for better clarity and performance during test writing:
 ---
 
 ## Best Practices
+***
 
 Follow these best practices to write effective and reliable tests:
 
@@ -263,3 +241,11 @@ Follow these best practices to write effective and reliable tests:
 - **Use conditional logic for dynamic scenarios:** When a page changes dynamically (e.g., based on user interaction), use if-else logic to handle different conditions effectively.
 - **Apply waits thoughtfully for stability:** Use waits when necessary to ensure elements are loaded and ready for interaction, preventing timing issues.
 - **Always add assertions to validate outcomes:** After actions, always verify expected outcomes (e.g., element visibility, text presence) to ensure that the desired result has been achieved.
+
+## Next Steps
+***
+
+Continue with these guides:
+
+- Add loops to your tests with [KaneAI While Loops](/support/docs/kaneai-while-loops/).
+- Look up authoring errors in the [Error Handling KaneAI](/support/docs/error-handling-kaneai/).

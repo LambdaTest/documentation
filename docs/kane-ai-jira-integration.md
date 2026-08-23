@@ -1,9 +1,10 @@
 ---
 id: kane-ai-jira-integration
-title: KaneAI - Jira Integration
-hide_title: false
-sidebar_label: Jira Integration
-description: Learn how to integrate your jira tickets with KaneAI and test planner using Atalssian Marketplace
+title: How to Integrate Jira With KaneAI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: Jira
+description: Integrate Jira with KaneAI to generate test cases from your Jira tickets via the Atlassian Marketplace app.
 keywords:
   - testmu ai automation
   - testmu ai kaneai
@@ -22,9 +23,6 @@ slug: kane-ai-jira-integration/
 canonical: https://www.testmuai.com/support/docs/kane-ai-jira-integration/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
@@ -46,61 +44,89 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "KaneAI Jira Integration",
+          "name": "How to Integrate Jira with KaneAI",
           "item": `${BRAND_URL}/support/docs/kane-ai-jira-integration/`
         }]
       })
     }}
 ></script>
-The "Jira integration" feature allows you to generate test cases from your Jira tickets automatically. This feature leverages AI to analyze the content of Jira tickets and transform written test case descriptions into executable test cases on the <BrandName /> platform. This documentation provides a detailed guide to help you understand and utilize this feature effectively.
 
-## Key Benefits of the KaneAI Jira Integration:
-- **Automated Test Creation :** Quickly transform test case descriptions in Jira into executable test cases without manual setup.
-- **Efficient QA Workflow :** Simplify testing processes by managing test creation directly from Jira, saving time and reducing errors.
-- **Reduced Bug Risk :** AI Native test creation helps reduce the likelihood of bugs by ensuring all outlined test cases are covered and refined.
+# How to Integrate Jira With KaneAI
+***
 
-## Step-by-Step Guide
-### Step 1: Install <BrandName /> Application for Jira
-Visit the Atlassian Marketplace, locate the **<BrandName /> Cloud** application for Jira and install app on your Jira instance.
+The KaneAI Jira integration generates executable test cases directly from your Jira tickets. You install the <BrandName /> Cloud app for Jira, describe test cases in a ticket, and comment on the ticket to have KaneAI analyze its content and create the test cases on the <BrandName /> platform. This keeps test creation inside your existing QA workflow and covers every test case you outline.
+
+## Prerequisites
+***
+
+Before you begin, make sure you have:
 
 :::note
-Currently in the **Beta**. Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the KaneAI for your organization.
+The Jira integration is currently in **Beta**. Reach out to the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable KaneAI for your organization before you begin.
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/jira-integration/marketplace.png').default} alt="kenai-jira integration" className="doc_img"/>
+- A Jira instance where you have permission to install apps from the Atlassian Marketplace.
+- A <BrandName /> account with KaneAI enabled for your organization.
 
-### Step 2: Define Test Cases in a Jira Ticket
-- **Create or Open a Jira Ticket :** Start by creating a Jira ticket or accessing an existing ticket where you want to outline test cases.
-- **Write Test Case Details :** In the comments section, add detailed information about the test cases you want to execute. Clearly describe each test case's steps, conditions, expected outcomes, and any other relevant information to help KaneAI generate accurate tests.
+## Set up the Jira Integration
+***
 
-### Step 3: Generate Test Cases Using KaneAI
-To trigger KaneAI, add the comment to your Jira ticket calling <BrandName /> application, for example:
+Follow these steps to install the app, define test cases in a ticket, generate them with KaneAI, and refine the results.
+
+### Step 1: Install the Jira App
+***
+
+Open the Atlassian Marketplace, search for [TestMu AI Cloud Jira app](https://marketplace.atlassian.com/apps/1234543/testmu-ai-cloud?hosting=cloud&tab=overview), and install it on your Jira instance.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/jira-integration/marketplace.png').default} alt="KaneAI Jira integration" className="doc_img"/>
+
+**Result:** The <BrandName /> Cloud app is available in your Jira instance.
+
+### Step 2: Define Test Cases
+***
+
+Create a Jira ticket, or open an existing one, where you want to outline test cases. In the comments section, describe each test case's steps, conditions, expected outcomes, and any other detail that helps KaneAI generate accurate tests.
+
+**Result:** The ticket contains the test case details KaneAI uses as generation context.
+
+### Step 3: Generate Test Cases
+***
+
+To trigger KaneAI, add a comment to your Jira ticket that calls the <BrandName /> application, for example:
 
 ```bash
 @TestMu AI Cloud create test case based on the details of this Jira
 ```
 
-> **Note :** This comment signals KaneAI to analyze the Jira ticket content and automatically create test cases.
-
-#### What Context is Used for Test Case Generation?
-
-KaneAI uses the following fields from the Jira ticket as context to generate test cases:
+This comment signals KaneAI to analyze the ticket content and create test cases. KaneAI uses the following ticket fields as context:
 
 - **Summary** and **Description** of the ticket
 - **Comments** on the ticket
-- **Textual custom fields**: You can configure which custom fields are included from the <BrandName /> Cloud app settings in Jira. Only text-based custom fields are supported; non-textual fields (e.g., dropdowns, number fields, user pickers, linked tickets) are not used for generation.
+- **Textual custom fields**: Only text-based custom fields are supported; non-textual fields (dropdowns, number fields, user pickers, linked tickets) are not used for generation.
 
 :::tip
-To configure which custom fields are used as context, go to the <BrandName /> Cloud app settings in your Jira instance and select the desired textual custom fields.
+To configure which custom fields are used as context, open the <BrandName /> Cloud app settings in your Jira instance and select the textual custom fields you want.
 :::
 
-After you post the comment, KaneAI will process the request and respond with a confirmation message. The response includes a link to <BrandName /> where you can review, modify, and schedule the generated test case.
+<img loading="lazy" src={require('../assets/images/kane-ai/features/jira-integration/jira-test-case.webp').default} alt="KaneAI Jira integration" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/jira-integration/jira-test-case.webp').default} alt="kenai-jira integration" className="doc_img"/>
+**Result:** KaneAI processes the request and replies with a confirmation comment containing a link to <BrandName />, where you review, modify, and schedule the generated test case.
 
-### Step 4: Review and Refine the Generated Test Cases
-Click on the link provided by KaneAI in the Jira comment to open the [AI Test Case Generator](/support/docs/generate-test-cases-with-ai/). The AI will begin [analyzing your Jira ticket content and generating test cases](/support/docs/generate-test-cases-with-ai/#step-3-generate-test-cases) in real time. You can watch scenarios and test cases stream in as they are created.
+### Step 4: Review and Refine
+***
 
-Once the generation is complete, review the test cases grouped across scenarios. Each scenario represents a theme or functional area and is labeled with priority tags such as **Must have**, **Should have**, and **Could have**. Individual test cases are categorized as **Positive**, **Negative**, or **Edge** to indicate their test type.
+Open the link in the Jira comment to [Generate Test Cases With AI](/support/docs/generate-test-cases-with-ai/). KaneAI begins [generating test cases from your Jira ticket content](/support/docs/generate-test-cases-with-ai/#step-3-generate-test-cases) in real time, and you watch scenarios and test cases stream in as they are created.
 
-You can further refine the generated test cases using the [Conversation Layer](/support/docs/generate-test-cases-with-ai/#conversation-layer-refine-your-test-cases): describe changes in natural language and the AI applies them in real time. Once satisfied, save the test cases to your Test Manager repository or automate them with KaneAI.
+Once generation completes, review the test cases grouped across scenarios. Each scenario represents a theme or functional area and carries a priority tag such as **Must have**, **Should have**, or **Could have**. Individual test cases are categorized as **Positive**, **Negative**, or **Edge** to indicate their test type.
+
+Refine the results with the [Conversation Layer](/support/docs/generate-test-cases-with-ai/#conversation-layer-refine-your-test-cases): describe changes in natural language and KaneAI applies them in real time. When you are satisfied, save the test cases to your Test Manager repository or automate them with KaneAI.
+
+**Result:** Reviewed test cases are saved to Test Manager or handed off to KaneAI for automation.
+
+## Next Steps
+***
+
+Continue with these guides:
+
+- Organize your saved test cases in [Test Manager](/support/docs/test-manager/).
+- Automate your reviewed test cases with the [KaneAI Command Guide](/support/docs/kane-ai-command-guide/).
