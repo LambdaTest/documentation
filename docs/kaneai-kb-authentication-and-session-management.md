@@ -1,8 +1,9 @@
 ---
 id: kaneai-kb-authentication-and-session-management
-title: Authentication & Session Management
-hide_title: false
-sidebar_label: Authentication & Session Management
+title: How to Test Authentication With KaneAI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: Authentication
 description: Test login flows, TOTP/MFA, SSO, session persistence, and secure authentication patterns in KaneAI
 keywords:
   - testmu ai automation
@@ -12,13 +13,14 @@ keywords:
   - kaneai MFA
   - kaneai login testing
   - kaneai session
+  - authenticator
+  - totp
+  - 2FA
+  - authentication
 url: https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management/
 site_name: TestMu AI
 slug: kaneai-kb-authentication-and-session-management/
 ---
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,18 +39,32 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Authentication & Session Management",
+          "name": "Authentication & Session Management in KaneAI",
           "item": "https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management/"
         }]
       })
     }}
 ></script>
 
-Authentication testing is one of the most critical areas for any QA team. This guide covers how to test login flows, multi-factor authentication (MFA/2FA), TOTP, session handling, and authentication-related edge cases in KaneAI.
+# How to Test Authentication With KaneAI
+***
+
+KaneAI tests authentication flows in natural language, including login, multi-factor authentication (MFA/2FA), TOTP, session handling, and authentication edge cases. It shows the patterns for each, plus how to store credentials securely and reuse a login across tests.
+
+## Prerequisites
+***
+
+:::note
+Before you begin, make sure you have an active KaneAI authoring session (Web or Mobile App).
+:::
 
 ## Basic Login Flows
+***
+
+These patterns cover the most common username and password login scenarios.
 
 ### Standard Username/Password Login
+***
 
 ```
 go to https://app.example.com/login
@@ -60,7 +76,8 @@ assert the current URL contains "/dashboard"
 assert "Welcome, Admin" is visible
 ```
 
-### Login with "Remember Me"
+### Login With "Remember Me"
+***
 
 ```
 type "admin@example.com" in the email field
@@ -72,8 +89,9 @@ assert the current URL contains "/dashboard"
 ```
 
 ### Reusable Login Module
+***
 
-If most of your tests start with a login, create a **Module** to avoid repeating the login steps in every test:
+If most of your tests start with a login, create a [KaneAI Modules](/support/docs/kane-ai-modules/) to avoid repeating the login steps in every test:
 
 1. Author the login steps in a test
 2. Pause the test
@@ -94,8 +112,12 @@ Use **environment variables** for credentials so the same login module works acr
 :::
 
 ## Using Variables for Credentials
+***
+
+Store credentials in variables or secrets instead of hardcoding them in test steps.
 
 ### Environment Variables (Recommended)
+***
 
 Create environment-specific variables to test login across different environments:
 
@@ -110,12 +132,13 @@ Set different values for each environment:
 - **Production**: `login_email` = `readonly@example.com`
 
 :::tip
-You can find more information about environment variables in [this guide](/support/docs/kane-ai-using-variables/#environments).
+For more on environment variables, see [using variables](/support/docs/kane-ai-using-variables/#environments).
 :::
 
 ### Secrets (For Sensitive Data)
+***
 
-Store passwords securely using KaneAI Secrets (backed by HashiCorp Vault):
+Store passwords securely using [secrets](/support/docs/kane-ai-using-variables/#secrets) (backed by HashiCorp Vault):
 
 1. Go to [KaneAI Variables](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/variables)
 2. Create a secret variable for the password
@@ -126,69 +149,87 @@ Secrets are:
 - Never exposed in logs or generated code
 - Not visible in the test step output
 
-## TOTP / Multi-Factor Authentication
+## Multi-factor Authentication (TOTP)
+***
 
-KaneAI has native TOTP support, which means you can test applications protected by authenticator apps (Google Authenticator, Okta Verify, Microsoft Authenticator) without any external scripts.
+For MFA-protected logins, KaneAI generates time-based one-time passwords (TOTP) natively from the shared secret key, with no external scripts or servers. The whole login journey stays inside KaneAI, with identical behavior in Replay, generated code, and CI. TOTP variables are **global by default**: create one once and reuse it across all test cases and modules in your organization.
 
-### How It Works
+### How TOTP Works
+***
 
-1. KaneAI stores your TOTP **secret key** (Base32 encoded) securely
-2. At runtime, KaneAI generates the correct 6-digit code every 30 seconds
-3. You reference the code as a smart variable in your test steps
+1. **Create a global TOTP variable** from the **Variables > TOTP Variables** page or via the `/totp` slash command during authoring.
+2. Give the variable a name (for example, `sso_totp`) and supply the Base32 secret key.
+3. At runtime KaneAI calculates the correct six-digit code every 30 seconds.
+4. Reference the code in any test step using `{{totp.variable_name}}`.
 
-### Step-by-Step: Testing a TOTP Login Flow
+<img loading="lazy" src={require('../assets/images/kane-ai/features/totp/totp-variables-page.png').default} alt="TOTP Variables page in Test Manager" className="doc_img"/>
 
-**Step 1: Register the TOTP Secret Key**
+### TOTP Prerequisites
+***
 
-1. Start a web authoring session
-2. Type `/` and select **Add TOTP Authentication Key**
-3. Enter the Base32 secret key (the one you'd normally scan as a QR code in an authenticator app)
-4. You can also use a LambdaTest secret: `{{secret.totp_key}}`
-5. Click **Save**
-6. A smart variable (e.g., `{{totp}}`) is generated
+- A TOTP-compatible login flow (for example, Google Authenticator, Okta Verify, Microsoft Authenticator).
+- The **Base32-encoded secret key** for the account you want KaneAI to log in as.
 
-**Step 2: Use the TOTP in Your Test**
+### Create and Use a TOTP Variable
+***
 
-```
--- Login with username/password first --
-type "admin@example.com" in the email field
-type {{secret.admin_password}} in the password field
-click "Sign In"
+Create a global TOTP variable, then reference it in your test steps.
 
--- MFA screen appears --
-wait for 3 seconds
-enter {{totp}} in the verification code field
-click "Verify"
+**Create a global TOTP variable, from the Variables page:**
 
--- Authenticated --
-wait for 5 seconds
-assert the current URL contains "/dashboard"
-assert "Welcome, Admin" is visible
-```
+1. Open **Test Manager** and navigate to **Variables > TOTP Variables**.
+2. Click **+ Create new**.
+3. Enter a **Variable Name** (for example, `sso_totp`).
+4. Enter the **TOTP Secret Key**: paste the Base32 secret directly or reference an org secret using `{{` syntax.
+5. Click **Create TOTP Variable**.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/totp/create-global-totp.png').default} alt="Create TOTP Variable modal" className="doc_img"/>
+
+**Or create it from an authoring session:**
+
+1. Start a KaneAI authoring session and press **/**.
+2. Choose **Add TOTP Authentication Key**.
+3. Provide a **Variable Name** and the **Base32 secret key**.
+4. Click **Save**. The variable is created globally and is immediately available across all test cases and modules.
+
+**Use the variable in a test:**
+
+1. Navigate to the OTP input field in your application.
+2. Reference the variable in your instruction, for example, "Enter `{{totp.sso_totp}}` in verify field".
+3. KaneAI generates and inserts the current six-digit code automatically.
+
+### Migrating Existing Local TOTP Variables
+***
 
 :::note
-The `{{totp}}` smart variable generates a time-based 6-digit code based on the registered secret key. KaneAI calculates the correct code at the moment the step executes, so you get a valid code for each step run. Since TOTP codes refresh every 30 seconds, ensure that the step entering the code and the step submitting it execute in quick succession. Avoid placing long waits between them.
+Test cases created before 10 March 2026 may contain **local** TOTP variables scoped to a single session. These continue to work in existing test runs, but when you open such a test case in the KaneAI playground for editing, you are prompted to convert the local variables to global.
 :::
 
-### TOTP on Mobile
+When you open a test case that contains local TOTP variables, KaneAI shows a **Convert Local TOTP to Global** dialog:
 
-TOTP smart variables work identically on mobile tests:
+1. Review the listed local variables.
+2. Assign a **TOTP variable name** for each one (this becomes the global identifier).
+3. Optionally reference an existing global TOTP variable using `{{` syntax instead of creating a new one.
+4. Click **Convert All**.
 
-```
-type {{env.login_email}} in the email field
-type {{secret.login_password}} in the password field
-click "Login"
-wait for 3 seconds
-enter {{totp}} in the OTP field
-click "Verify"
-```
+<img loading="lazy" src={require('../assets/images/kane-ai/features/totp/convert-local-to-global.png').default} alt="Convert Local TOTP to Global dialog" className="doc_img"/>
 
-### Where to Get the TOTP Secret Key
+:::warning Important
+- **Existing test runs are not affected.** Scheduled jobs, CI pipelines, and previously generated code keep working.
+- Conversion is triggered only when you **edit the test case in the KaneAI playground**. Until then, the test case uses its original local variables.
+- After conversion, the test case uses `{{totp.variable_name}}` syntax and the variable is available across all test cases and modules.
+:::
 
-- Most authenticator setups show a "Can't scan QR?" link that reveals the Base32 secret key
-- For enterprise SSO, ask your IT team for the TOTP secret associated with the test account
+### TOTP FAQ
+***
+
+- **Are TOTP secrets stored securely?** Yes. Secrets are encrypted, stored in Vault, and never exposed in logs or generated code.
+- **Does TOTP work on mobile tests?** Yes. The `{{totp.variable_name}}` syntax works in both Web and Mobile test steps.
+- **Can I reuse a TOTP variable across test cases?** Yes. Because TOTP variables are global, any test case or module can reference the same variable by name.
+- **What about existing tests using the old `{{totp}}` syntax?** Existing test runs execute unchanged. When you open the test case for editing, you are prompted to convert local variables to global and adopt the `{{totp.variable_name}}` syntax.
 
 ## SSO (Single Sign-On) Flows
+***
 
 SSO flows typically redirect to an identity provider (Okta, Azure AD, Google Workspace) and then back to the application.
 
@@ -197,14 +238,19 @@ KaneAI does not currently support testing SSO flows. SSO involves cross-domain r
 :::
 
 ### Recommended Alternatives
+***
 
 - **Bypass SSO in test environments:** Configure your application to allow direct login (username/password) in staging/test environments, bypassing the SSO redirect entirely.
 - **Use API-based authentication:** Obtain a session token or auth cookie via API calls before launching KaneAI, and inject it into the browser session.
 - **Pre-authenticated sessions:** Work with your identity provider to set up test accounts with persistent sessions that don't require interactive login.
 
-## Testing Login Validation & Edge Cases
+## Login Validation & Edge Cases
+***
+
+These patterns test how your application responds to invalid or incomplete login attempts.
 
 ### Invalid Credentials
+***
 
 ```
 type "admin@example.com" in the email field
@@ -216,6 +262,7 @@ assert the current URL still contains "/login"
 ```
 
 ### Empty Field Validation
+***
 
 ```
 click "Sign In" without entering any credentials
@@ -224,6 +271,7 @@ assert "Password is required" error is visible
 ```
 
 ### Account Lockout After Failed Attempts
+***
 
 ```
 -- Attempt 1 --
@@ -246,8 +294,12 @@ assert "Account locked" message is visible
 ```
 
 ## Session Management Testing
+***
+
+These patterns verify how your application maintains and clears user sessions.
 
 ### Session Persistence After Page Refresh
+***
 
 ```
 -- Login first --
@@ -267,6 +319,7 @@ assert "Welcome, Admin" is visible
 ```
 
 ### Logout Flow
+***
 
 ```
 click on the user avatar in the top right corner
@@ -281,6 +334,7 @@ assert the current URL contains "/login"
 ```
 
 ### Testing Session Timeout
+***
 
 For applications with session timeouts, combine explicit waits with assertions:
 
@@ -303,8 +357,9 @@ For session timeout testing, consider setting a short timeout in your test envir
 :::
 
 ## Custom Headers for Authentication
+***
 
-For applications that require auth tokens in headers, use KaneAI's [Custom Headers](/support/docs/kaneai-custom-headers) feature:
+For applications that require auth tokens in headers, use [KaneAI Custom Headers](/support/docs/kaneai-custom-headers/):
 
 1. In session settings, add custom headers
 2. Example: `Authorization: Bearer <your-token>`
@@ -316,6 +371,9 @@ This is useful for:
 - Injecting test-user tokens
 
 ## Best Practices for Authentication Testing
+***
+
+Follow these practices for reliable tests:
 
 | Practice | Details |
 |---|---|
@@ -327,3 +385,13 @@ This is useful for:
 | **Add waits after SSO redirects** | SSO flows involve multiple page loads |
 | **Test session persistence** | Refresh the page after login to verify session |
 | **Test logout properly** | Verify that navigating to protected pages redirects to login |
+
+## Next Steps
+***
+
+Continue with these guides:
+
+- [KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)
+- [KaneAI Dynamic Content Waits and Page State](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)
+- [KaneAI API Testing](/support/docs/kane-ai-api-testing/)
+- [KaneAI Database](/support/docs/kaneai-database/)

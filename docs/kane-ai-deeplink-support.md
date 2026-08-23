@@ -1,9 +1,10 @@
 ---
 id: kane-ai-deeplink-support
-title: Deeplinks Support for Mobile App Authoring
-hide_title: false
-sidebar_label: Deeplinks
-description: Learn how to use deeplinks in KaneAI to directly navigate to specific screens in your Android and iOS mobile applications during test authoring.
+title: How to Use Deeplinks With KaneAI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: Mobile Deeplinks
+description: Add a deeplink step in KaneAI to jump straight to a specific screen in your Android or iOS app during a mobile test.
 keywords:
   - testmu ai automation
   - testmu ai kaneai
@@ -18,84 +19,124 @@ slug: kane-ai-deeplink-support/
 canonical: https://www.testmuai.com/support/docs/kane-ai-deeplink-support/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
-## What are Deeplinks?
+# How to Use Deeplinks With KaneAI
+***
 
-Deeplinks are URL-based mechanisms that allow you to directly access specific screens and functionalities within your mobile application, bypassing standard navigation flows. In the context of mobile app testing with KaneAI, deeplinks enable testers to quickly navigate to targeted screens and perform context-aware actions without manually navigating through the app interface.
+Deeplinks are URLs that open a specific screen or action inside your mobile app directly, skipping the normal navigation flow. In KaneAI, add a deeplink step during mobile app test authoring to jump straight to the screen under test instead of tapping through the app. This page shows how to add and configure a deeplink step for Android and iOS.
 
 ## How Deeplinks Work in KaneAI
+***
 
-When you use deeplinks in KaneAI during mobile app test authoring, the system:
+When you add a deeplink step during mobile app test authoring, KaneAI does the following:
 
-1. Accepts a deeplink URL from the user
-2. Identifies the target application package (Android) or bundle ID (iOS)
-3. Invokes the deeplink within the active app session
-4. Navigates directly to the specified screen or performs the defined action
+1. Accepts the deeplink URL you provide.
+2. Identifies the target application package (Android) or bundle ID (iOS).
+3. Invokes the deeplink within the active app session.
+4. Navigates directly to the specified screen or performs the defined action.
 
-KaneAI automatically pre-fills the application package or bundle ID based on the app currently installed in your test session, making the process seamless and intuitive.
+KaneAI pre-fills the application package or bundle ID from the app currently installed in your test session, so you rarely need to type it.
 
+## Prerequisites
+***
 
-## Adding Deeplinks in KaneAI
+Before you begin, make sure you have:
 
-### Step 1: Access the Deeplink Feature
+:::note
+Before you add a deeplink step, make sure you have the following.
+- A KaneAI mobile app test authoring session in progress (Android or iOS).
+- An app that implements deeplink handling for the screens you want to reach.
+- The deeplink URL and the target app package name (Android) or bundle ID (iOS).
+:::
 
-During your mobile app test authoring session in KaneAI, you can add a deeplink instruction using the following method:
+## Add a Deeplink Step
+***
 
-- Type a **slash (/)** in the input box and select the **Deeplink** option from the menu
+Follow these steps to add and configure a deeplink step during mobile app authoring.
+
+### Step 1: Open the Deeplink Feature
+***
+
+In your mobile app test authoring session, type a **slash (/)** in the input box and select the **Deeplink** option from the menu.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/add-deeplink-modal.png').default} alt="Add Deeplink Modal" className="doc_img"/>
 
-### Step 2: Configure Deeplink Parameters
+**Result:** The deeplink modal opens.
 
-Once the deeplink modal appears, provide the following information:
+### Step 2: Configure the Deeplink Parameters
+***
 
-1. **URL*** (Required)
-   - Enter the complete deeplink URL
-   - Example: `kaneai://settings` or `myapp://product/123`
+In the deeplink modal, provide the following.
 
-2. **App package for target*** (Required)
-   - For **Android**: Enter the application package name (e.g., `com.example.QAapp`)
-   - For **iOS**: Enter the bundle ID (e.g., `com.example.QAapp`)
-   - KaneAI automatically pre-fills this field with the currently installed app's package or bundle ID
+1. **URL** (required)
+   - Enter the complete deeplink URL.
+   - Example: `kaneai://settings` or `myapp://product/123`.
 
-### Step 3: Add to Test Steps
+2. **App package for target** (required)
+   - For **Android**: enter the application package name (for example, `com.example.QAapp`).
+   - For **iOS**: enter the bundle ID (for example, `com.example.QAapp`).
+   - KaneAI pre-fills this field with the currently installed app's package or bundle ID.
 
-Click the **Add in steps** button to include the deeplink instruction in your test case. KaneAI will execute this step during test runs, invoking the specified deeplink within your target application.
+**Result:** The modal holds the deeplink and its target app.
+
+### Step 3: Add the Deeplink to Your Test
+***
+
+Click **Add in steps** to include the deeplink instruction in your test case. During a test run, KaneAI invokes the deeplink within your target app.
+
+**Result:** The deeplink step is added and runs on every execution.
 
 
 ## Best Practices
+***
 
-1. **Verify Deeplink Support:** Ensure your mobile application has proper deeplink handling implemented before using this feature in tests.
+Apply these practices to keep deeplink steps reliable.
 
-2. **Test Deeplink Validity:** Manually verify deeplinks work correctly in your app before adding them to automated test cases.
-
-3. **Handle Edge Cases:** Consider scenarios where deeplinks might fail (e.g., user not logged in, invalid parameters) and add appropriate assertions.
-
-4. **Combine with Assertions:** After invoking a deeplink, add assertion steps to verify the correct screen was loaded and displays expected content.
-
+1. **Verify deeplink support:** confirm your app implements deeplink handling before you use this feature in tests.
+2. **Test deeplink validity:** open each deeplink manually in your app before adding it to an automated test.
+3. **Handle edge cases:** account for cases where a deeplink can fail, such as a logged-out user or invalid parameters, and add assertions for them.
+4. **Combine with assertions:** after invoking a deeplink, add assertion steps to confirm the correct screen loaded and shows the expected content.
 
 ## Troubleshooting
+***
 
-### Deeplink Not Working
+Use this section to resolve the common deeplink failures.
 
-- Verify the deeplink URL format is correct
-- Ensure the target app package/bundle ID matches the installed application
-- Check if the app has proper deeplink handling configured
-- Confirm the app is already running in the test session
+### The Deeplink Does Not Open a Screen
+***
 
-### Wrong Screen Opens
+When nothing happens after the deeplink step, check the following.
 
-- Double-check the deeplink path and parameters
-- Verify your app's deeplink routing configuration
-- Ensure no conflicting deeplink schemes exist
+- Verify the deeplink URL format is correct.
+- Confirm the target app package or bundle ID matches the installed app.
+- Check that the app has deeplink handling configured.
+- Confirm the app is already running in the test session.
 
-### App Crashes on Deeplink
+### The Wrong Screen Opens
+***
 
-- Validate the deeplink with your development team
-- Check if required data or permissions are available
-- Review app logs for specific error messages
+When the deeplink opens an unexpected screen, check the following.
+
+- Recheck the deeplink path and parameters.
+- Verify your app's deeplink routing configuration.
+- Confirm no conflicting deeplink schemes exist.
+
+### The App Crashes on the Deeplink
+***
+
+When the app crashes after the deeplink step, check the following.
+
+- Validate the deeplink with your development team.
+- Confirm the required data or permissions are available.
+- Review app logs for the specific error message.
+
+## Next Steps
+***
+
+Combine deeplinks with the rest of your mobile authoring workflow.
+
+- Apply platform-specific patterns from [KaneAI Mobile App Testing Patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/).
+- Scan a screen you reach via deeplink with [KaneAI Mobile App Accessibility](/support/docs/kaneai-mobile-app-accessibility/).
 
 ---
 
