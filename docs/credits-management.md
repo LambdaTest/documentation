@@ -145,6 +145,21 @@ The AI Test Case Generator includes a **Conversational Layer** that lets you ref
 
 ---
 
+### Test Case Deduplication
+
+The **duplicate scan** in Test Manager finds test cases that already exist in your repository more than once, groups them by similarity, and lets you review and delete the duplicates you no longer need. [Learn more](/support/docs/test-case-deduplication/).
+
+#### How credits are consumed
+
+* **5 credits per scan**, charged as a flat fee.
+* Credits are deducted **only if the scan produces at least one duplicate group**. A scan that finds no duplicates costs nothing.
+* The cost does not scale with the size of the scan. It is the same whether you scan 100 test cases or 5,000, and the same whether the scan returns one duplicate group or fifty.
+* **Changing the base test case** re-runs the scan for that group at **no additional cost**.
+
+>You pay once per scan that returns a result, not per test case analyzed or per duplicate found.
+
+---
+
 ### KaneAI Authoring
 
 **KaneAI** lets you author and edit automated tests in natural language. With the new pricing model, **authoring is metered in credits** — a single subscription plus a single credit balance covers each step you generate or edit, along with any remote browser or real‑device time and AI assists (vision validation, auto‑heal). [Learn more](/support/docs/getting-started-with-kane-ai/).

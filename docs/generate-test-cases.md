@@ -150,6 +150,9 @@ When you initiate a test case generation session, the following process occurs a
 - **Duplicate Prevention**: The AI recognizes test cases that already exist in your repository and avoids regenerating them.
 - **Contextual Relevance**: New test cases are informed by the language, structure, and patterns used in your existing test suite.
 - **Incremental Improvement**: Each generation session builds upon your accumulated testing knowledge.
+
+The Memory Layer prevents duplicates from being created. To find and remove duplicates that already exist in your repository, see [Find and Remove Duplicate Test Cases](/support/docs/test-case-deduplication/).
+
 :::note
 The Memory Layer operates automatically in the background, you can choose to enable or disable Memory enhancement feature before triggering a session.
 :::
