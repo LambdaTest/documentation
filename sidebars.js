@@ -1743,6 +1743,7 @@ module.exports = {
           { type: "doc", id: "modules-in-manual-testcases", label: "Importing Modules into Test Cases" },
           { type: "doc", id: "system-and-custom-fields", label: "Manage System & Custom fields" },
           { type: "doc", id: "copy-and-move-support-for-test-cases", label: "Copy & Move Test Cases" },
+          { type: "doc", id: "test-case-deduplication", label: "Find & Remove Duplicates" },
           { type: "doc", id: "update-fields", label: "Bulk Update Test Case fields" },
           { type: "doc", id: "export-test-cases", label: "Export Test Cases" },
         ],
