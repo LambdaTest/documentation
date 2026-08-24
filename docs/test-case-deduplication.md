@@ -94,7 +94,13 @@ A test case that has only a title, with no steps or description, is still scanne
 The **Minimum Match Score** controls the size of your review queue, not the accuracy of the scan. Set it high, around 80 and above, to surface only near-certain duplicates on a first pass. Lower it once the obvious duplicates are cleared and you want to catch tests that overlap in intent but differ in wording.
 :::
 
-3. Click **Review Duplicates** to start the scan. Scans consume AI credits from your account balance.
+3. Click **Review Duplicates** to start the scan.
+
+:::info Credit usage
+A scan costs a flat **5 credits**, and only if it finds something: credits are deducted only when the scan produces at least one duplicate group. A scan that finds no duplicates costs nothing.
+
+The cost does not change with the size of the scan. Scanning 100 test cases and scanning 5,000 both cost 5 credits, and finding one duplicate group costs the same as finding fifty.
+:::
 
 4. Test Manager opens the **Review & Resolve Duplicates** page and runs the scan there. The header shows the scope and a running **Tests Covered** count, and the progress bar reports each stage as it completes. Click **Stop Reviewing** at any point to end the scan.
 
@@ -176,7 +182,7 @@ The scan picks a base test case for each group, but it is not always the one you
 <img loading="lazy" src={require('../assets/images/test-manager/test-cases/deduplication/change-base-modal.png').default} alt="change-base-test-case" className="doc_img"/>
 
 :::note
-Changing the base test case starts the review scan again for that group, because every duplicate's % match is recalculated against the new base.
+Changing the base test case starts the review scan again for that group, because every duplicate's % match is recalculated against the new base. This re-scan does not cost any additional credits.
 :::
 
 ---
@@ -224,7 +230,7 @@ Deletion is permanent. Deleted test cases cannot be restored, and there is no ar
 ## Limitations
 
 - **Deletion cannot be undone.** There is no archive or restore for test cases removed through the duplicate scan.
-- **Scans consume AI credits.** The cost scales with the number of test cases in scope.
+- **Each scan costs 5 credits**, charged only when the scan produces at least one duplicate group. The cost is flat, regardless of how many test cases are scanned or how many duplicates are found.
 - **One scan at a time.** A project can only run a single duplicate scan at once.
 - **A scope needs at least two test cases** before a scan can start.
 - **Very large projects need to be narrowed.** Scan folder by folder rather than the whole project.
@@ -241,6 +247,7 @@ Deletion is permanent. Deleted test cases cannot be restored, and there is no ar
 | Reorganizing test cases across folders and projects | [Copy and Move Test Cases](/support/docs/copy-and-move-support-for-test-cases/) |
 | Tracking changes to a test case over time | [Test Case Versioning](/support/docs/test-case-versioning/) |
 | Creating and editing test cases | [Create and Manage Test Cases](/support/docs/manual-test-case-creation/) |
+| How credits are consumed across AI features | [Credits Management](/support/docs/credits-management/) |
 
 
 <nav aria-label="breadcrumbs">
