@@ -2472,6 +2472,7 @@ module.exports = {
           "create-modules",
           "modules-in-manual-testcases",
           "copy-and-move-support-for-test-cases",
+          "test-case-deduplication",
           "update-fields",
           "export-test-cases",
           {
