@@ -1,9 +1,10 @@
 ﻿---
 id: kaneai-gps-location
-title: GPS Location Mocking for Mobile App and Mobile Browser Authoring
-hide_title: false
-sidebar_label: GPS Location
-description: Learn how to use GPS Location Override feature in KaneAI for testing location-based functionalities in Mobile App and Mobile Browser sessions
+title: How to Mock GPS Location With KaneAI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: Mobile GPS Location
+description: Override GPS location in KaneAI to test location-based features in mobile app and mobile browser sessions.
 keywords:
   - testmu ai automation
   - testmu ai kaneai
@@ -41,82 +42,118 @@ canonical: https://www.testmuai.com/support/docs/kaneai-gps-location/
     }}
 ></script>
 
-> This document provides detailed instructions for utilizing the GPS Location Override feature in KaneAI for both Mobile App and Mobile Browser testing. It covers how to set GPS coordinates at the start of a session as well as within a running session to test location-based application behavior accurately.
+# How to Mock GPS Location With KaneAI
+***
 
-## Overview
 
-Testing location-based application behavior (such as geo-restricted content, regional UI, compliance flows, or location-aware features) is challenging when device GPS coordinates are dynamic or tied to the physical location of the tester.
+GPS Location Override in KaneAI mocks the device GPS coordinates for **Mobile App** and **Mobile Browser** sessions, so you can test location-based behavior such as geo-restricted content, regional UI, or compliance flows. You set coordinates in **Advanced Settings** at session start and can change them while a session is running.
 
-The GPS Location Override feature solves this problem by allowing users to explicitly define latitude and longitude values both during session initialization and while an authoring session is in progress. This ensures consistent, repeatable, and deterministic testing of location-dependent scenarios on supported mobile devices.
+## Set GPS Location at Session Start
+***
 
-This feature is supported for both **Mobile App** and **Mobile Browser** sessions. For both sessions, GPS location can also be changed within a running session.
+Follow these steps to mock GPS coordinates when the session launches.
 
-## How To Use
+### Step 1: Enable GPS Mocking
+***
 
-### Select GPS location while Authoring App Test
-
-While creating a test session, go to Advanced Settings and enable GPS location mocking option. Either include the location Coordinates or search for a particular location from the map. Ensure the coordinates fall within the allowed ranges:
-
-- Longitude: -180 to 180
-- Latitude: -90 to 90
+While creating a test session, open **Advanced Settings** and enable the GPS location mocking option. Enter the latitude and longitude, or search for a location on the map. Keep coordinates within the allowed ranges (see [Coordinate ranges](#coordinate-ranges)).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/gps/gps-advanced-settings.jpg').default} alt="gps-enabled" className="doc_img"/>
 
-### Start the Session
+**Result:** The coordinates are set to apply when the session launches.
 
-1. Launch the session after providing the coordinates.
-2. The device GPS location is mocked at session start.
-3. The configured location remains active until it is updated during the session.
+### Step 2: Launch the Session
+***
 
-### Verify the Applied Location
+Launch the session after entering the coordinates.
 
-GPS coordinates can be verified:
-- Inside the running session by clicking **Advanced Settings**
+**Result:** The device GPS location is mocked at session start and stays active until you update it during the session.
+
+### Step 3: Verify the Applied Location
+***
+
+Verify the GPS coordinates in any of these places:
+
+- Inside the running session, by clicking **Advanced Settings**
 - On the Session Summary page after execution
-- During Edit Test, the coordinates used in authoring are autoselected in playground
+- In the playground during Edit Test, where the coordinates used in authoring are auto-selected
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/gps/gps-in-session.png').default} alt="GPS-in-session" className="doc_img"/>
 
-### Update GPS Location During an Active Session
+**Result:** The active coordinates are confirmed for the session.
 
-You can also set or update the GPS location while an authoring session is already running using the **slash command**. This is useful when your test flow requires the device location to change mid-session (e.g., simulating a user traveling between cities).
+## Update GPS Location Mid-session
+***
 
-**Step 1:** Inside an active authoring session, type `/` in the action input field to open the slash command menu. Select **Set GPS Location**.
+Use the slash command to change the location while an authoring session is running, for example to simulate a user traveling between cities.
+
+### Step 1: Open the GPS Action
+***
+
+In an active authoring session, type `/` in the action input field to open the slash command menu, then select **Set GPS Location**.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/gps/slash-command-gps.png').default} alt="slash-command-gps" className="doc_img"/>
 
-**Step 2:** In the **Select GPS Location** modal, search for a location by name or enter latitude and longitude coordinates directly. The map preview updates to reflect the selected position.
+**Result:** The **Select GPS Location** modal opens.
+
+### Step 2: Choose the New Location
+***
+
+Search for a location by name, or enter latitude and longitude directly. The map preview updates to reflect the selected position.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/gps/gps-selection-modal.png').default} alt="gps-selection-modal" className="doc_img"/>
 
-**Step 3:** Click **Confirm Location** to apply the new GPS coordinates. A success notification confirms the update, and the new coordinates are recorded as a step in your test.
+**Result:** The map shows the new position.
+
+### Step 3: Apply the Location
+***
+
+Click **Confirm Location** to apply the new coordinates.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/gps/gps-set.png').default} alt="gps-set" className="doc_img"/>
 
-:::note
-The updated GPS location takes effect immediately on the device and remains active until changed again or the session ends.
-:::
+**Result:** The new coordinates take effect immediately, are recorded as a step in your test, and stay active until changed again or the session ends.
+
+## Coordinate Ranges
+***
+
+Enter latitude and longitude values within the following ranges.
+
+| Coordinate | Allowed range |
+|---|---|
+| Latitude | -90 to 90 |
+| Longitude | -180 to 180 |
 
 ## Limitations
+***
 
-- GPS override is applied only during session initialization and can be changed mid-session.
-- Replay/Edit sessions reuse GPS values from the original session.
+Keep these limitations in mind:
+
+- GPS override is applied during session initialization and can be changed mid-session.
+- Replay and Edit sessions reuse the GPS values from the original session.
 
 ## Troubleshooting
+***
+
+Use these solutions to resolve common GPS location issues.
 
 ### Invalid Latitude or Longitude Error
+***
 
-**Issue:** Session fails to start due to a validation error.
+**Issue:** The session fails to start due to a validation error.
 
 **Cause:**
-- Longitude is less than -180 or greater than 180
 - Latitude is less than -90 or greater than 90
+- Longitude is less than -180 or greater than 180
 
 **Resolution:**
-- Verify that latitude and longitude values are within valid ranges
+- Verify that latitude and longitude values are within the valid ranges
 - Ensure values are passed as valid numbers or numeric strings
 
+## Next Steps
+***
 
----
+Continue with these guides:
 
-> Have any feedback or request? Reach out to us via [support@testmuai.com](mailto:support@testmuai.com) and we would be happy to hear from you.
+- [KaneAI Advanced Settings](/support/docs/kaneai-advanced-settings/)
+- [KaneAI Mobile App Capabilities](/support/docs/kane-ai-mobile-app-capabilities/)
