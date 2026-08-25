@@ -30,10 +30,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Run Deep Functional Tests With Agent Assurance
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 `/run` selects runnable scenarios, displays the target and estimated cost, asks for permission, invokes the live agent, and records evidence for every completed scenario.
 
 > **Use a test target:** Rook does not undo the target agent's actions. Refunds, messages, tickets, deployments, database updates, and file writes are real.
