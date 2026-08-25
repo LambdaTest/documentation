@@ -104,6 +104,18 @@
                 ]
               },
               {
+                "group": "Evidence",
+                "pages": [
+                  "docs/kane-cli-evidence",
+                  "docs/kane-cli-evidence-pack-structure",
+                  "docs/kane-cli-evidence-viewing",
+                  "docs/kane-cli-evidence-validate",
+                  "docs/kane-cli-evidence-merge",
+                  "docs/kane-cli-evidence-debugging",
+                  "docs/kane-cli-evidence-format"
+                ]
+              },
+              {
                 "group": "Checkpoints",
                 "pages": [
                   "docs/kane-cli-checkpoints",
