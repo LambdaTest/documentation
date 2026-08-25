@@ -46,7 +46,6 @@
           {
             "group": "Kane CLI",
             "pages": [
-              "docs/index",
               {
                 "group": "Getting Started",
                 "pages": [
