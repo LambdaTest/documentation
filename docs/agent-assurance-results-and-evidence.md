@@ -30,10 +30,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Understand Agent Assurance Results and Evidence
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 Rook reports what the agent did separately from what the test harness could observe. Read the scenario verdict, criterion evidence, and coverage together.
 
 ## Scenario Verdicts

@@ -30,10 +30,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Generate and Manage Agent Assurance Test Scenarios
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 Rook generates scenarios from the active agent's discovered features, tools, policies, examples, and known data. A scenario is a plain YAML file containing the exact goal sent to the agent, acceptance criteria, forbidden behavior, observation requirements, timeout, repeat count, and tags.
 
 ## Generate the Default Suite
