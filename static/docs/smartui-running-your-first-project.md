@@ -35,7 +35,7 @@ Download or Clone the code sample code repository from the TestMu AI GitHub repo
 <dependency>
 <groupId>io.github.lambdatest</groupId>
 <artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.2</version>
+<version>1.0.23</version>
 </dependency>
 ```
 

@@ -1055,6 +1055,8 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 - **[Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/)**: Comprehensive troubleshooting solutions
 - **[SmartUI CLI Reference](/support/docs/smartui-cli-complete-reference/)**: Complete CLI command reference
 - **[HyperExecute Documentation](/support/docs/hyperexecute-running-your-first-job/)**: Learn more about HyperExecute
+- **[SmartUI SDK with Playwright on HyperExecute](/support/docs/hyperexecute-smart-ui-sdk-using-playwright/)**: Run SmartUI SDK visual tests with Playwright on HyperExecute
+- **[SmartUI SDK with Cypress on HyperExecute](/support/docs/hyperexecute-smart-ui-sdk-using-cypress/)**: Run SmartUI SDK visual tests with Cypress on HyperExecute
 
 ## Additional Resources
 

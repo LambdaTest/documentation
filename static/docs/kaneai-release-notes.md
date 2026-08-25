@@ -7,6 +7,7 @@ KaneAI is an AI-powered next-gen testing assistant that revolutionizes software 
 ## KaneAI Releases
 
 ### September, 2024
+
 | Release Number | Release Date |
 |----------------|--------------|
 | [Version 0.0.2](/support/docs/kaneai-release-notes-0-0-2) | September 23, 2024|

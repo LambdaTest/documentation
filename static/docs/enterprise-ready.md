@@ -166,7 +166,7 @@ TestMu AI provides built-in capabilities to generate, manage, and protect the te
 **Documentation:**
 - [Test Data Generation Overview](/support/docs/test-data-generation/)
 - [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
-- [KaneAI Variables & Parameters](/support/docs/kaneai-variables-and-parameters/)
+- [KaneAI Variables & Parameters](/support/docs/kane-ai-using-variables/)
 - [Network Data Masking for Selenium](/support/docs/network-data-masking/)
 - [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2024/#version-231)
 

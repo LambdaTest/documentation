@@ -88,127 +88,75 @@ In case you are accessing your network using corporate proxies, set the proxies 
 
 ```bash
 export HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
-<TabItem value="Windows-4" label='Windows - CMD'>
+```
 
 ```bash
-set HTTP_PROXY="http://:@:"
+set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>"
 ```
-
-</TabItem>
-<TabItem value='PowerShell-4' label='PowerShell'>
 
 ```powershell
-$env:HTTP_PROXY="http://:@:/"
+$env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```
-
-</TabItem>
-</Tabs>
 
 #### HTTPS_PROXY:
 
-<Tabs className='docs__val' groupId='language'>
-<TabItem value='MacOS/Linux-5' label='MacOS/Linux' default>
-
 ```bash
-export HTTPS_PROXY="https://:@:"
+export HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>"
 ```
 
-</TabItem>
-<TabItem value='Windows-5' label='Windows - CMD'>
-
 ```bash
-set HTTPS_PROXY="https://:@:"
+set HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>"
 ```
-
-</TabItem>
-<TabItem value='PowerShell-5' label='PowerShell'>
 
 ```powershell
-$env:HTTPS_PROXY="https://:@:/"
+$env:HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
 ```
 
-</TabItem>
-</Tabs>
-
-> **NOTE :** In most cases setting only HTTP_PROXY should be enough, but if you have different proxies for HTTP and HTTPS, you can set both.The format for proxy’s is `http[s]://<username>:<password>@<domain.com>:<port>/` [username and password is optional].
+> **NOTE :** In most cases setting only HTTP_PROXY should be enough, but if you have different proxies for HTTP and HTTPS, you can set both.The format for proxy’s is `http[s]://:@:/` [username and password is optional].
 
 ## 6. Enabling Debug mode
 
 To enable SmartUI CLI Debug mode, use the following environment variable.
 
-<Tabs className='docs__val' groupId='language'>
-<TabItem value='MacOS/Linux-6' label='MacOS/Linux' default>
-
 ```bash
 export LT_SDK_DEBUG=true
 ```
-
-</TabItem>
-<TabItem value='Windows-6' label='Windows - CMD' default>
 
 ```bash
 set LT_SDK_DEBUG=true
 ```
 
-</TabItem>
-<TabItem value='PowerShell-6' label='PowerShell'>
-
 ```powershell
 $env:LT_SDK_DEBUG="true"
 ```
-
-</TabItem>
-
-</Tabs>
 
 ## 7. Ignoring captured cookies
 
 Set the following variable to true, to stop the use of cookies captured automatically. The default is set to `false`.
 
-<Tabs className='docs__val' groupId='language'>
-<TabItem value='MacOS/Linux-7' label='MacOS/Linux' default>
-
 ```shell
 export SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
 ```
-
-</TabItem>
-<TabItem value='Windows-7' label='Windows - CMD' default>
 
 ```shell
 set SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
 ```
 
-</TabItem>
-<TabItem value='PowerShell-7' label='PowerShell'>
-
 ```powershell
 $env:SMARTUI_DO_NOT_USE_CAPTURED_COOKIES="true"
 ```
-
-</TabItem>
-</Tabs>
 
 ## 8. Setting Server Address
 
 For SDK integrations (non-Selenium), set the SmartUI server address:
 
-<Tabs className='docs__val' groupId='language'>
-<TabItem value='MacOS/Linux-8' label='MacOS/Linux' default>
-
 ```bash
 export SMARTUI_SERVER_ADDRESS="http://localhost:8080"
 ```
 
-</TabItem>
-<TabItem value='Windows-8' label='Windows - CMD'>
-
 ```bash
 set SMARTUI_SERVER_ADDRESS="http://localhost:8080"
 ```
-
-</TabItem>
-<TabItem value='PowerShell-8' label='PowerShell'>
 
 ```powershell
 $env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"

@@ -91,3 +91,9 @@ Jira (two-way sync plus an Atlassian Marketplace app), Azure DevOps, GitHub, Git
 - [Test management platform](https://www.testmuai.com/test-management/)
 - [What is test management](https://www.testmuai.com/test-management/what-is-test-management/)
 - [Test case management](https://www.testmuai.com/test-management/test-case-management/)
+
+## Related guides
+
+- [Test Case Repository](/support/docs/test-case-repository/) — organize and reuse test cases in the Test Manager repository.
+- [Sync Test Instance](/support/docs/sync-test-instance/) — keep test run instances in sync as your test cases evolve.
+- [Test Instance Audit Logs](/support/docs/test-instance-audit-logs/) — track changes to a test instance with audit logs.

@@ -181,80 +181,80 @@ The following are the different options which are currently supported:
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
-```rb title="This is a sample for your configuration for Python to ignore by ID"
+```python title="This is a sample for your configuration for Python to ignore by ID"
 options = {
-ignoreDOM: {
-id: ["ID-1", "ID-2"],
+"ignoreDOM": {
+"id": ["ID-1", "ID-2"],
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your configuration for Python to ignore by Class"
+```python title="This is a sample for your configuration for Python to ignore by Class"
 options = {
-ignoreDOM: {
-class: ["Class-1", "Class-2"],
+"ignoreDOM": {
+"class": ["Class-1", "Class-2"],
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your configuration for Python to ignore by XPath"
+```python title="This is a sample for your configuration for Python to ignore by XPath"
 options = {
-ignoreDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
+"ignoreDOM": {
+"xpath": ["Xpath-1", "Xpath-2"],
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your configuration for Python to ignore by CSS Selector"
+```python title="This is a sample for your configuration for Python to ignore by CSS Selector"
 options = {
-ignoreDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+"ignoreDOM": {
+"cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your configuration for Python to select by ID."
+```python title="This is a sample for your configuration for Python to select by ID."
 options = {
-selectDOM: {
-id: ["ID-1", "ID-2"],
+"selectDOM": {
+"id": ["ID-1", "ID-2"],
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your configuration for Python to select by Class"
+```python title="This is a sample for your configuration for Python to select by Class"
 options = {
-selectDOM: {
-class: ["Class-1", "Class-2"],
+"selectDOM": {
+"class": ["Class-1", "Class-2"],
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your configuration for Python to select by XPath"
+```python title="This is a sample for your configuration for Python to select by XPath"
 options = {
-selectDOM: {
-xpath: ["Xpath-1", "Xpath-2"],
+"selectDOM": {
+"xpath": ["Xpath-1", "Xpath-2"],
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your webhook configuration for Python to select by CSS Selector"
+```python title="This is a sample for your webhook configuration for Python to select by CSS Selector"
 options = {
-selectDOM: {
-cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+"selectDOM": {
+"cssSelector": ["CSS-Selector-1", "CSS-Selector-2"],
 }
 }
 driver.get('<Required URL>')
@@ -265,40 +265,40 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
-```py title="This is a sample for your configuration for Python to capture an element by ID."
+```python title="This is a sample for your configuration for Python to capture an element by ID."
 options = {
-element: {
-id: 'Required ID',
+"element": {
+"id": "Required ID",
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your configuration for Python to capture an element by Class"
+```python title="This is a sample for your configuration for Python to capture an element by Class"
 options = {
-element: {
-class: 'Required Class',
+"element": {
+"class": "Required Class",
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your configuration for Python to capture an element by XPath"
+```python title="This is a sample for your configuration for Python to capture an element by XPath"
 options = {
-element: {
-xpath: 'Required Xpath',
+"element": {
+"xpath": "Required Xpath",
 }
 }
 driver.get('<Required URL>')
 smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
-```py title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
+```python title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
 options = {
-element: {
-cssSelector: 'Required CSS Selector',
+"element": {
+"cssSelector": "Required CSS Selector",
 }
 }
 driver.get('<Required URL>')
@@ -309,7 +309,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
 
-```py Example for scrolling to bottom for lazy elements
+```python Example for scrolling to bottom for lazy elements
 from selenium import webdriver
 from lambdatest_selenium_driver import smartui_snapshot
 

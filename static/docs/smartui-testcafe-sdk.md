@@ -157,7 +157,7 @@ The following are the different options which are currently supported:
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
-```js title="This is a sample for your configuration for Testcafe to ignore by" ID"
+```js title="This is a sample for your configuration for Testcafe to ignore by ID"
 let options = {
 ignoreDOM: {
 id: ["ID-1", "ID-2"],
@@ -166,7 +166,7 @@ id: ["ID-1", "ID-2"],
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your configuration for Testcafe to ignore by" Class"
+```js title="This is a sample for your configuration for Testcafe to ignore by Class"
 let options = {
 ignoreDOM: {
 class: ["Class-1", "Class-2"],
@@ -175,7 +175,7 @@ class: ["Class-1", "Class-2"],
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your configuration for Testcafe to ignore by" XPath"
+```js title="This is a sample for your configuration for Testcafe to ignore by XPath"
 let options = {
 ignoreDOM: {
 xpath: ["Xpath-1", "Xpath-2"],
@@ -184,7 +184,7 @@ xpath: ["Xpath-1", "Xpath-2"],
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your configuration for Testcafe to ignore by CSS" Selector"
+```js title="This is a sample for your configuration for Testcafe to ignore by CSS Selector"
 let options = {
 ignoreDOM: {
 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -202,7 +202,7 @@ id: ["ID-1", "ID-2"],
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your configuration for Testcafe to select by" Class"
+```js title="This is a sample for your configuration for Testcafe to select by Class"
 let options = {
 selectDOM: {
 class: ["Class-1", "Class-2"],
@@ -211,7 +211,7 @@ class: ["Class-1", "Class-2"],
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your configuration for Testcafe to select by" XPath"
+```js title="This is a sample for your configuration for Testcafe to select by XPath"
 let options = {
 selectDOM: {
 xpath: ["Xpath-1", "Xpath-2"],
@@ -220,7 +220,7 @@ xpath: ["Xpath-1", "Xpath-2"],
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your webhook configuration for Testcafe to select by CSS" Selector"
+```js title="This is a sample for your webhook configuration for Testcafe to select by CSS Selector"
 let options = {
 selectDOM: {
 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -242,7 +242,7 @@ id: 'Required ID',
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your configuration for Testcafe to capture an element by" Class"
+```js title="This is a sample for your configuration for Testcafe to capture an element by Class"
 let options = {
 element: {
 class: 'Required Class',
@@ -251,7 +251,7 @@ class: 'Required Class',
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your configuration for Testcafe to capture an element by" XPath"
+```js title="This is a sample for your configuration for Testcafe to capture an element by XPath"
 let options = {
 element: {
 xpath: 'Required Xpath',
@@ -260,7 +260,7 @@ xpath: 'Required Xpath',
 await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
-```js title="This is a sample for your webhook configuration for Testcafe to capture an element by CSS" Selector"
+```js title="This is a sample for your webhook configuration for Testcafe to capture an element by CSS Selector"
 let options = {
 element: {
 cssSelector: 'Required CSS Selector',
@@ -334,7 +334,7 @@ await smartuiSnapshot(t, 'ProductPage-MainContent');
 fixture `Page Test`
 .page `https://example.com`;
 
-test('Take screenshot after page loads', async t ="> {
+test('Take screenshot after page loads', async t => {
 await t.expect(Selector('#main-content').exists).ok();
 await t.wait(1000); // Wait for animations
 await smartuiSnapshot(t, 'Page Loaded');
@@ -424,7 +424,7 @@ await t.wait(2000); // Wait for content to load
 2. Enable JavaScript in configuration:
 ```json
 {
-enableJavaScript": true
+"enableJavaScript": true
 }
 ```
 

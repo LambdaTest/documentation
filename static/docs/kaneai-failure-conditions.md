@@ -1,4 +1,4 @@
-# Failure Conditions
+# How Failure Conditions Work in KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,7 +6,7 @@ Failure conditions in KaneAI allow you to define how the test execution in a Tes
 
 Failure conditions are configurable for every type of command or step in KaneAI Authoring mode and are essential for aligning your tests with your quality and failure tolerance.
 
-Failure conditions are set in the Authoring mode but they are applicable only in Test Run your Test's flow while authoring & code generation will not be affected by this.
+Failure conditions are set in Authoring mode but apply only during a Test Run. Your test flow while authoring and code generation are not affected by this setting.
 
 Below are the failure conditions available in KaneAI:
 
@@ -27,8 +27,15 @@ You can set the failure condition in the Authoring mode by clicking on the three
 
 By default, the failure condition for each step is set to **Fail test immediately**, ensuring that the execution stops as soon as a step fails.
 
-The default failure condition can be configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, [here](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/failure-conditions).
+The default failure condition can be configured at the Organization level in the [KaneAI failure conditions settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/failure-conditions), within the **Org Product Preferences** section of **Organization settings**.
 
  These settings will be applied to all the **new tests** being created in that Organization & can only be edited by the **Admins** of the Organization.
 
 If you are transitioning from a Hard & Soft Assertions approach, think of **Fail test immediately** as your **Hard Assertion**, which halts on assertion failure, and **Warn but continue execution** as your **Soft Assertion**, which logs the failure but continues execution.
+
+## Next Steps
+
+Continue with these guides:
+
+- [KaneAI HyperExecute Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/): Execute a test run where your failure conditions take effect.
+- [KaneAI Test Run Instance View](/support/docs/kaneai-test-run-instance-view/): Inspect which step failed and how the condition was applied.

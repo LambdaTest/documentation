@@ -19,10 +19,24 @@ Setting the `webSocketUrl` capability to `true` enables WebDriver BiDi in Webdri
 
 The example opens a product listing on the [E-Commerce Playground](https://ecommerce-playground.lambdatest.io/), captures a screenshot, and validates that the products loaded.
 
-**1. Install WebdriverIO.**
+**Requirements**
+
+- **Node.js 18 or later** (check with `node -v`).
+- The **`webdriverio`** package (installed in step 1).
+- Your TestMu AI **Username** and **Access Key** (set as environment variables in step 2).
+
+These examples are written in TypeScript. You're free to use plain JavaScript instead (remove the type annotations and save the file as `.js`), or use any other WebDriver BiDi client your stack supports. The capabilities are the same.
+
+**1. Install WebdriverIO.** The package is published on the npm registry as [`webdriverio`](https://www.npmjs.com/package/webdriverio).
 
 ```bash
 npm install webdriverio
+```
+
+A successful install adds the package to your project:
+
+```text
+added 247 packages, and audited 248 packages in 20s
 ```
 
 **2. Set your credentials.** Copy your **Username** and **Access Key** from **Settings → Account Settings**, then set them as environment variables.
@@ -42,7 +56,7 @@ set LT_USERNAME=your_username
 set LT_ACCESS_KEY=your_access_key
 ```
 
-**3. Create `bidi-test.ts`.** It connects to the hub with BiDi enabled, opens the listing, captures a screenshot, and validates the products.
+**3. Create `bidi-test.ts`.** It connects to the hub with BiDi enabled, opens the listing, captures a screenshot, validates the products, and marks the test **passed** or **failed** on the dashboard.
 
 ```typescript
 // bidi-test.ts
@@ -83,6 +97,13 @@ const title = await browser.getTitle();
 if (products.length === 0) throw new Error('No products found on the page');
 
 console.log(`Passed: "${title}" loaded ${products.length} products, screenshot saved`);
+
+// Mark the test as passed on the TestMu AI dashboard
+await browser.executeScript('lambda-status=passed', []);
+} catch (e) {
+// Mark the test as failed so the dashboard reflects the real outcome
+await browser.executeScript('lambda-status=failed', []);
+throw e;
 } finally {
 await browser.deleteSession();
 }
@@ -100,6 +121,12 @@ process.exit(1);
 npx tsx bidi-test.ts
 ```
 
+WebdriverIO connects over BiDi, runs the checks, and marks the session **Passed**:
+
+```text
+Passed: "Components" loaded 15 products, screenshot saved
+```
+
 To view your test results, head over to the TestMu AI Web Automation dashboard.
 
 ## Running Web Automation With WebDriver BiDi From an AI Agent
@@ -108,7 +135,7 @@ BiDi's event stream is what makes it useful for agents: the agent subscribes to 
 
 Here the agent watches network responses to confirm the page loaded its resources.
 
-**1. Create `agent-bidi.ts`.** It subscribes to BiDi network events, opens the listing, and validates the browser's real activity.
+**1. Create `agent-bidi.ts`.** It subscribes to BiDi network events, opens the listing, validates the browser's real activity, and marks the test **passed** or **failed** on the dashboard.
 
 ```typescript
 // agent-bidi.ts
@@ -150,6 +177,13 @@ await browser.pause(3000);
 
 if (responses === 0) throw new Error('No network responses observed');
 console.log(`Validated: the page issued ${responses} network responses over BiDi`);
+
+// Mark the test as passed on the TestMu AI dashboard
+await browser.executeScript('lambda-status=passed', []);
+} catch (e) {
+// Mark the test as failed so the dashboard reflects the real outcome
+await browser.executeScript('lambda-status=failed', []);
+throw e;
 } finally {
 await browser.deleteSession();
 }
@@ -167,7 +201,16 @@ process.exit(1);
 npx tsx agent-bidi.ts
 ```
 
+The agent subscribes to the event stream and reports what the browser actually did:
+
+```text
+Validated: the page issued 56 network responses over BiDi
+```
+
 You can view your test results in the TestMu AI Web Automation dashboard.
+
+**Get started faster with ready-made cookbooks**
+The [Browser Cloud agent skills](/support/docs/browser-cloud-skills/) are ready-made cookbooks that teach any AI agent (Claude, Cursor, and other LLM tools) to generate production-grade cloud browser automation for you. Drop the skill into your assistant and it writes integrations like the ones above, so you can get started with Browser Cloud at the earliest.
 
 ## Related TestMu AI Guides
 
