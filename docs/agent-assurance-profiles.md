@@ -30,10 +30,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Configure Agent Assurance Invocation Profiles
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 A profile is a fixed, reviewable recipe for invoking one agent. Discovery learns what an agent does, but it cannot know whether you intend to test a local process, staging endpoint, production endpoint, fast model, or careful model. The profile supplies that choice.
 
 An agent can have several profiles. Runs pin the profile ID, so renaming a profile does not detach its history.
