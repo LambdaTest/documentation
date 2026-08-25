@@ -30,10 +30,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Run Agent Assurance in CI/CD
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 Rook's headless commands use the same discovery, generation, profile, permission, execution, judging, and evidence paths as the interactive TUI. Use them to build a release gate after you have proved the workflow interactively against the same agent and profile.
 
 ## Prepare the Project Interactively

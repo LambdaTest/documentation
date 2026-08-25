@@ -30,10 +30,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Troubleshoot Agent Assurance
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 Start with diagnostics:
 
 ```bash
