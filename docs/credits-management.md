@@ -84,7 +84,7 @@ A hold that is never settled releases by itself, by default **30 minutes** after
 
 ### When a run is refused
 
-A run is refused **before it starts** if your balance is smaller than the credits it needs, or your organization has hit a **blocking limit** or a **daily spend cap**, or the user belongs to a group whose **enforced** budget is exhausted.
+A run is refused **before it starts** if your balance is smaller than the credits it needs, or your organization has hit a **blocking limit**, or the user belongs to a group whose **enforced** budget is exhausted.
 
 Work that has already happened is **always charged**, even if that takes your balance below zero.
 
@@ -239,7 +239,6 @@ Admins can define org-wide controls to prevent unexpected consumption, under **C
 |---|---|---|
 | **Warn when balance falls below** (soft limit) | Yes | **No** — usage continues as normal |
 | **Block usage when balance falls below** (hard limit) | Yes | **Yes** — new runs are refused |
-| **Daily spend cap** | Yes | **Yes** — for the rest of the UTC day |
 | **Expiry alerts** | Yes | No |
 
 :::tip
@@ -249,19 +248,14 @@ Admins can define org-wide controls to prevent unexpected consumption, under **C
 ### What blocks and what does not
 
 * The **warning** threshold only emails. It never stops a test.
-* The **blocking** threshold and the **daily cap** refuse new runs before they start. Nothing is charged for a refused run.
+* The **blocking** threshold refuses new runs before they start. Nothing is charged for a refused run.
 * **Work already in flight is never blocked** — a limit can stop new runs starting, but it can never cancel or refund a run that is already going.
 
-To resume after a block: top up, raise the limit, or — for the daily cap — wait for the next UTC day.
-
-:::note The daily cap resets at 00:00 UTC
-It works on a UTC calendar day regardless of your organization's timezone, so it may not line up with the days shown on your usage chart.
-:::
+To resume after a block, top up your credits or raise the limit.
 
 ### Absolute values vs percentages
 
-* **Balance thresholds** — a percentage is converted into a **fixed number of credits at the moment you save it**, measured against your balance at that time. "80%" means *alert me when only 20% of that balance is left*. It stays at that fixed number as you spend.
-* **Daily cap** — a percentage is recalculated live against all credits ever added to the account.
+Each threshold can be an absolute number of credits or a percentage. A percentage is converted into a **fixed number of credits at the moment you save it**, measured against your balance at that time — "80%" means *alert me when only 20% of that balance is left*. It stays at that fixed number as you spend.
 
 :::caution
 Save a percentage threshold while your balance is zero and the stored figure is zero, so the alert will not fire until a later grant recalculates it. Set balance thresholds after your credits have landed.
@@ -275,7 +269,6 @@ Alert emails go to your organization's **admins**, plus any **extra recipients**
 |---|---|
 | Balance warning | 1 email per 24 hours |
 | Blocking limit | 1 email per 24 hours |
-| Daily spend cap | 1 email per UTC day |
 | Expiry reminder | 1 email per batch entering the 7-day window |
 
 Alerts are evaluated while credits are being reserved or committed — that is, when runs happen. An organization that stops running tests below its threshold receives no further reminders.
