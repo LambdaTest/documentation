@@ -1988,6 +1988,7 @@ module.exports = {
           { type: "doc", id: "custom-header" },
           { type: "doc", id: "custom-dns-map" },
           { type: "doc", id: "mock-video-injection-web-automation-selenium-chromium" },
+          { type: "doc", id: "mute-test-scenarios" },
         ],
       },
       {
@@ -2103,6 +2104,7 @@ module.exports = {
           { type: "doc", id: "playwright-android-guide" },
           { type: "doc", id: "playwright-webview-test" },
           { type: "doc", id: "playwright-ios-guide" },
+          { type: "doc", id: "mute-test-scenarios" },
         ],
       },
       {
@@ -2349,7 +2351,7 @@ module.exports = {
               "button-text-click",
               "ios-shake-gesture-appautomation",
               "appium-terminal-logs",
-              // "mute-test-scenarios-appium"
+              "mute-test-scenarios",
             ],
           },
           {
