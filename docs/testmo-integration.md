@@ -57,7 +57,7 @@ TestMo also offers integration with <BrandName /> to help you perform automated 
 Firstly, you need to run the build command as per your desired framework. You can choose any test automation framework and programming language you are familiar with. Selenium is one of the most common one used with JavaScript/Node.js, Java, C#, Python, Ruby or PHP, and other languages
 
 :::tip
-You can take the reference from [here](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks) on all the languages and frameworks supported by <BrandName /> online Selenium Grid.
+The <BrandName /> online Selenium Grid supports all major languages and frameworks, so you can build your test suite in whichever one you prefer.
 :::
 
 <img loading="lazy" src={require('../assets/images/testmo-integration/dashboard.webp').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>

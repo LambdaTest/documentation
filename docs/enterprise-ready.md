@@ -233,7 +233,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 - [Test Data Generation Overview](/support/docs/test-data-generation/)
 - [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
 - [KaneAI Variables & Parameters](/support/docs/kane-ai-using-variables/)
-- [Network Data Masking for Selenium](/support/docs/network-data-masking/)
+- [Network Data Masking for Selenium](/support/docs/selenium-mask-your-data/#network-data-masking)
 - [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2024/#version-231)
 
 ---
