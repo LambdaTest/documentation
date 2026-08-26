@@ -1,19 +1,16 @@
 ---
 id: integrate-lambdatest-with-cypress
-title: Integrate TestMu AI with Cypress Dashboard
-sidebar_label: Integrate TestMu AI with Cypress Dashboard
-description: This article guides you on how to integrate TestMu AI platform with Cypress Dashboard.
+title: How to Integrate the Cypress Dashboard With TestMu AI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: "Cypress Dashboard"
+description: Integrate the Cypress Dashboard with TestMu AI to run Cypress tests on the cloud grid and view every session across both dashboards at once.
 keywords:
-  - Cypress Automation
-  - Cypress With TestMu AI
-  - TestMu AI With Cypress
-  - Cypress Dashboard
-  - TestMu AI Cypress Integration
-  - Cypress Test Automation
-  - Cypress Automation Testing
-  - Running Cypress Tests With TestMu AI
-  - Integrate TestMu AI With Cypress
-  - TestMu AI Cloud Platform
+  - testmu ai cypress dashboard integration
+  - integrate cypress dashboard with testmu ai
+  - cypress dashboard record key
+  - run cypress tests on testmu ai
+  - cypress cloud testing
 
 url: https://www.testmuai.com/support/docs/integrate-testmu-with-cypress/
 site_name: TestMu AI
@@ -21,101 +18,88 @@ slug: integrate-testmu-with-cypress/
 canonical: https://www.testmuai.com/support/docs/integrate-testmu-with-cypress/
 ---
 
----
-
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-This article guides you on how to integrate **<BrandName /> platform** with **The Cypress Dashboard**
+# How to Integrate the Cypress Dashboard With TestMu AI
+***
 
-> In this demo we are demonstrating using [<BrandName />'s Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.
+If you already record Cypress runs to the Cypress Dashboard, you can run those same tests on the TestMu AI cloud grid and see every session in both places at once. This gives you the Cypress Dashboard analytics you rely on alongside real browser and OS coverage from TestMu AI. You link the two by adding your Cypress project ID and record key to the run configuration, then executing with the TestMu AI CLI.
 
-## Steps To Integrate <BrandName /> With Cypress Dashboard
+:::note Sample repo
+This guide uses the TestMu AI [sample Cypress Cloud repository](https://github.com/LambdaTest/Cypress-Cloud). Every resource shown here comes from that repo.
+:::
 
----
+## How to Integrate TestMu AI With the Cypress Dashboard
+***
 
-Assuming that you have run a Cypress test on TestMu AI platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
+These steps assume you have already run a Cypress test on TestMu AI. If you have not, see [how to run your first Cypress test](/support/docs/getting-started-with-cypress-testing/), then return here to link the Cypress Dashboard.
 
-### Update <BrandName /> Cypress CLI
+### Update the TestMu AI Cypress CLI
+***
 
----
-
-- Before getting started, you would have to update the **lambdatest-cypress cli** using the command below:
+Update the CLI first so the latest run and record commands are available. Install the latest version:
 
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
-- The CLI version should be the latest i.e. is 2.3.0. You can check the CLI version by running the below command.
+Confirm the CLI is on the latest version (2.3.0) by checking the installed version:
 
 ```bash
 lambdatest-cypress --version
 ```
 
-### Create a project
+### Create a Project on the Cypress Dashboard
+***
 
----
+Create a project on the Cypress Dashboard to generate the credentials TestMu AI needs. Start from the Cypress Dashboard as shown below.
 
-Create a project on Cypress Dashboard as shown below:
+<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-1.webp').default} alt="Create Project option in the Cypress Dashboard" width="1282" height="722" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-1.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
+### Enter the Project Name
+***
 
-### Enter Project Name
+Give the project a name so you can identify its runs later. Enter the name in the Cypress Dashboard project dialog.
 
----
+<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-2.webp').default} alt="Project name entry field in the Cypress Dashboard new project dialog" width="1282" height="722" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-2.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
+### Define the Project ID
+***
 
-### Define project ID
+Once you create the project on the Cypress Dashboard, you receive a `project ID` and a `record key`. Define the **project ID** in the `cypress.json` file of your project.
 
----
+<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-3.webp').default} alt="project ID and record key shown on the Cypress Dashboard project settings page" width="1282" height="722" className="doc_img"/>
 
-Once to create the project on Cypress Dashboard, you will get a `project ID` and a `record key`. Define the **project ID** in the `cypress.json` file of your project.
+<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-4.webp').default} alt="projectId value added to the cypress.json configuration file" width="1282" height="722" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-3.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
+### Define the Record Key
+***
 
----
-
-<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-4.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
-
-### Define Record Key
-
----
-
-Define the record key (Generated by Cypress Dashboard) in the run command as mentioned below:
+Pass the record key generated by the Cypress Dashboard to the run command so results are recorded to your Cypress project:
 
 ```bash
 lambdatest-cypress run --cy="--record;--key <key_value>"
 ```
 
-<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-5.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-5.webp').default} alt="TestMu AI Cypress run command with the record key passed in the terminal" width="1282" height="722" className="doc_img"/>
 
-### <BrandName />-Cypress Integration
-
----
-
-The integration is now done, just open the **<BrandName /> Dashboard** and **Cypress Dashboard** to view the results.
-
-<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-6.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
-
----
-
-<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-7.webp').default} alt="Image" width="1282" height="722" className="doc_img"/>
-
----
-
-> That's all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**[24X7 Chat Support]**</span> or mail us directly at support@testmuai.com.
-
-
-
-## Using the Cypress Agent Skill with TestMu AI
+### View Results in Both Dashboards
 ***
 
-The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+The integration is now complete. Open both the **TestMu AI Dashboard** and the **Cypress Dashboard** to view the same run results in each.
+
+<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-6.webp').default} alt="Cypress test session displayed in the TestMu AI Automation Dashboard" width="1282" height="722" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/cypress/cypress-integration/cypress-integration-7.webp').default} alt="Same Cypress run recorded and displayed in the Cypress Dashboard" width="1282" height="722" className="doc_img"/>
+
+## How to Use the Cypress Agent Skill With TestMu AI
+***
+
+The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) is part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
 The cypress-skill package includes:
 
-```
+```text
 cypress-skill/
 ├── SKILL.md
 └── reference/
@@ -132,13 +116,12 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-
-### Installing Cypress Agent Skill
+### Install the Cypress Agent Skill
 ***
 
-Install a Cypress Agent Skill using the command below:
+Clone the agent-skills repository and copy the cypress-skill into your tool's skills directory:
 
-```
+```bash
 # Clone the repo and copy the skill you need
 git clone https://github.com/LambdaTest/agent-skills.git
 cp -r agent-skills/cypress-skill .claude/skills/
@@ -147,7 +130,18 @@ cp -r agent-skills/cypress-skill .claude/skills/
 cp -r agent-skills/cypress-skill .cursor/skills/
 ```
 
-**Note**: If you prefer installing all available framework skills instead of only cypress-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+:::note
+To install all available framework skills instead of only cypress-skill, clone the repository directly into your tool's skills directory (for example, `.claude/skills/`, `.cursor/skills/`, `.gemini/skills/`, or `.agent/skills/`).
+:::
+
+## Related Cypress Guides
+***
+
+Continue with the guides below to run, debug, and report on your Cypress tests on TestMu AI.
+
+- [Reference the Cypress CLI commands](/support/docs/cypress-cli-commands/) covers the full set of commands for running and managing your Cypress tests.
+- [Download artefacts from a Cypress run](/support/docs/download-artefacts-cypress/) retrieves videos, screenshots, and other files generated by your runs.
+- [Generate Mochawesome reports for Cypress](/support/docs/cypress-mochaawesome-report/) produces detailed reports for your Cypress test executions.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -163,7 +157,7 @@ cp -r agent-skills/cypress-skill .cursor/skills/
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Integrate <BrandName /> With Cypress Dashboard
+      Integrate TestMu AI With Cypress Dashboard
       </span>
     </li>
   </ul>

@@ -1,8 +1,10 @@
 ---
 id: auto-heal
-title: How to Use Auto Healing for Selenium Test Suites
-sidebar_label: Auto-Heal Broken Locators
-description: Use Auto Healing in Selenium tests to reduce test flakiness and improve test suite reliability automatically.
+title: How to Auto-Heal Selenium Tests on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Auto-Healing"
+description: Auto-heal broken Selenium locators on TestMu AI so your tests keep passing when the application UI changes.
 keywords:
   - selenium auto heal capability
   - auto healing flaky tests selenium
@@ -28,7 +30,7 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
-# Auto Healing for Selenium Web Automation
+# How to Auto-Heal Selenium Tests on TestMu AI
 ---
 
 The TestMu AI Auto Healing feature for Selenium testing automatically recovers from certain types of failures during test execution. When enabled, it reduces test flakiness and improves test reliability by handling unexpected situations and errors in your test suites.
@@ -36,7 +38,7 @@ The TestMu AI Auto Healing feature for Selenium testing automatically recovers f
 ## Enabling Auto Healing
 ---
 
-Pass the `autoHeal: true` capability in your WebDriver configuration to enable this feature.
+Pass the `autoHeal: true` capability in your WebDriver configuration to enable this feature. For the full set of options you can combine with it, see the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
 
 ```js
 const capability = {
@@ -51,10 +53,10 @@ const capability = {
     }
 }
 ```
-> **Warning:** The `autoHeal` capability only works when `smartWait` is **disabled**. Both features cannot be enabled together in the same test session.
+> **Warning:** The `autoHeal` capability only works when `smartWait` is **disabled**. Both features cannot be enabled together in the same test session. If you need to synchronize on element readiness instead, use SmartWait in a separate session.
 
 :::info
-No prerequisites are required. Enable auto-healing directly via desired capabilities.
+No prerequisites are required. Enable auto-healing directly via capabilities.
 :::
 
 ### Language Preferences
@@ -253,11 +255,13 @@ To run the test, execute the below command:
 ./node_modules/.bin/mocha autohealingTest.js 
 ```
 
-## Using Auto Heal with Hooks
+## Using Auto Heal With Hooks
+---
 
 You can start or stop Auto Heal at any point in your test script using hooks. This gives you fine-grained control over when element healing should be applied.
 
 ### Enable Auto Heal
+---
 
 Use the following hook to **start** Auto Heal at any point in your test script.
 
@@ -268,6 +272,7 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 **Usage:** Place this hook right before interacting with elements that may dynamically change during the test.
 
 ### Disable Auto Heal
+---
 
 Use the following hook to **stop** Auto Heal at any point in your test script.
 
@@ -278,10 +283,15 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 **Usage:** Place this hook immediately after the actions requiring Auto Heal are completed. This ensures subsequent test steps execute with normal Selenium behavior.
 
 ### Sample Script
+---
 
 ```python title="Test.py"
 import os
 import time
+
+# How to Use Auto Healing for Selenium Test Suites
+---
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -319,6 +329,8 @@ driver.quit()
 ## Benefits of Auto Healing
 ---
 
+Auto Healing improves test stability, reduces maintenance effort, and keeps CI pipelines reliable.
+
 - **Increased Test Stability:** Tests remain consistent even when the web application's UI undergoes minor changes, reducing flakiness.
 - **Reduced Test Maintenance:** The system automatically adapts to evolving interfaces, reducing the manual effort required to update test scripts.
 - **Reliable CI Pipeline:** Stable tests feeding into CI pipelines reduce unexpected failures and ensure smoother deployments.
@@ -330,7 +342,7 @@ While the Auto Healing feature handles a wide range of issues, there are certain
 
 * **Non-recoverable errors**: Auto Healing cannot recover from certain types of errors, such as WebDriver initialization errors or system-level failures.
 
-* **Test accuracy**: While Auto Healing reduces test flakiness, it may also mask real issues in your web application or test scripts. Review the logs and understand why a test needed healing.
+* **Test accuracy**: While Auto Healing reduces test flakiness, it may also mask real issues in your web application or test scripts. Review the logs and debug your Selenium tests to understand why a test needed healing.
 
 * **Performance impact**: While typically minimal, enabling Auto Healing can have a slight impact on test execution time due to additional checks and recovery mechanisms.
 
@@ -349,6 +361,14 @@ The Auto Healing feature enhances your test suite, but it does not replace good 
 
 > If you have any questions, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [SmartWait](/support/docs/smart-wait/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

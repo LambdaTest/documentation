@@ -1,8 +1,10 @@
 ---
 id: setup-pre-run-executable
-title: Install Custom Certificates on the VM Through Pre-run Executables
-sidebar_label: Run a Pre-Test Script
-description: Run custom scripts before Selenium tests start to install certificates required for test execution.
+title: How to Run a Pre-Test Executable on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Run a Pre-Test Script"
+description: Run a pre-run executable before your Selenium tests on TestMu AI to install certificates, dependencies, or set up the test environment.
 keywords:
   - pre-run executable selenium custom certificate
   - install certificate VM automation test
@@ -40,9 +42,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Install Custom Certificates on the VM Through Pre-run Executables
-
-* * *
+# How to Run a Pre-Test Executable on TestMu AI
+---
 Pre-run executables let you run custom scripts before the Selenium test starts. Use this feature to install user custom certificates that are required for test cases to execute successfully.
 
 To use certificates for Selenium tests, you need 3 things:
@@ -54,7 +55,7 @@ To use certificates for Selenium tests, you need 3 things:
 ## Instructions
 ---
 
-Upload your certificate file, installation, and uninstallation script using the below steps.
+Upload your certificate file, installation, and uninstallation script using the below steps. The `prerun` and `lambda:userFiles` keys shown here are part of the broader set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to a test.
 
 1. Upload your certificate using the below command.
 
@@ -120,7 +121,7 @@ curl --request POST \
 ## Leverage the Use of APIs to Pre-run Tests
 ---
 
-Use the following prerun APIs to manage pre-run files.
+Use the following prerun APIs to manage pre-run files. If you are still setting up your environment, first learn how to run your first Selenium test before adding pre-run scripts to the flow.
 
 * **GET/`files`:** Fetch all pre run files uploaded by the user.
 * **POST/`files`:** Upload pre run executable file to lambda storage.
@@ -171,6 +172,14 @@ Get-ChildItem Cert:\CurrentUser\Root\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-It
 
 >Got any questions?<br/>
 Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@testmuai.com.
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

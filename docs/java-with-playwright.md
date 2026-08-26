@@ -1,16 +1,16 @@
 ---
 id: java-with-playwright
-title: Run your Java automation scripts with Playwright on TestMu AI
+title: How to Run Playwright Tests With JUnit on TestMu AI
 hide_title: true
 sidebar_label: Java
-description: Run your Java and JUnit automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
+description: Run Java Playwright tests with JUnit on the TestMu AI cloud grid across 50+ real desktop browsers and operating systems.
 keywords:
-  - java playwright
-  - java automation testing
-  - playwright java
-  - playwright java testing guide
-  - java playwright framework
-  - junit playwright
+  - java playwright junit testing
+  - java playwright tests cloud
+  - playwright junit framework
+  - playwright java grid setup
+  - java automation testing playwright
+  - run java playwright tests online
 
 url: https://www.testmuai.com/support/docs/java-with-playwright/
 site_name: TestMu AI
@@ -50,20 +50,25 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
-# Java with Playwright: Running Your First Test
-* * *
+# How to Run Playwright Tests With JUnit on TestMu AI
+***
 
-Run Playwright tests written in Java, either with plain Playwright or with JUnit, across real browsers and operating systems on the <BrandName /> cloud platform. The setup is the same for both: you connect Playwright to the grid over a CDP WebSocket. This guide covers the shared steps once, then gives you a per-framework setup in the tabs below.
+Run your Java Playwright tests on the TestMu AI cloud grid to reach 50+ real desktop browsers and operating systems without maintaining local infrastructure. You connect Playwright over a CDP WebSocket, pass your capabilities, then run the sample suite with JUnit.
 
 ## Prerequisites
 ***
 
-1. A <BrandName /> **Username** and **Access Key**. Get them from your <BrandName /> Profile. Don't have an account? <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>Sign up for free</a>.
+Complete these before running the test below.
+
+1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile. Don't have an account? <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>Sign up for free</a>.
+
+<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="TestMu AI Profile page showing the Username and Access Key credentials" width="1444" height="703"  className="doc_img"/>
+
 2. [JDK](https://www.oracle.com/java/technologies/downloads/) 8 or later and [Apache Maven](https://maven.apache.org/) installed. The sample projects are Maven projects, so Maven resolves the dependencies when you build.
-3. Clone the sample repository (each framework lives in its own subdirectory):
+3. Clone the sample repository. Each framework lives in its own subdirectory.
 
 :::tip Sample repo
-<a href="https://github.com/LambdaTest/playwright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/playwright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="GitHub icon linking to the Playwright sample repository" className="doc_img"/> View on GitHub</a>
 :::
 
 ```bash
@@ -71,10 +76,10 @@ git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 ```
 
-## Set your credentials
+## Set Your Credentials
 ***
 
-Set your Username and Access Key as environment variables. Pick your operating system:
+Your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
 <Tabs className="docs__val" groupId="os">
 
@@ -102,111 +107,56 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 </Tabs>
 
-## Set Up and Run in Your Framework
+## How the Sample Test Works
 ***
 
-Both frameworks build a `capabilities` object (browser, version, platform, and your `LT:Options`) and connect Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. What differs is how the test is structured. Pick your framework:
+The test builds a `capabilities` object that carries the browser, version, platform, and your `LT:Options`, then connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. The credentials come from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set above:
 
-<Tabs className="docs__val" groupId="java-framework" queryString="framework">
+```java
+JsonObject capabilities = new JsonObject();
+JsonObject ltOptions = new JsonObject();
 
-<TabItem value="java" label="Vanilla Java" default>
+String user = System.getenv("LT_USERNAME");
+String accessKey = System.getenv("LT_ACCESS_KEY");
 
-Plain Playwright with a `main()` method and no test runner.
-
-1. Go to the sample directory:
-
-```bash
-cd playwright-java
+capabilities.addProperty("browserName", "Chrome"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+capabilities.addProperty("browserVersion", "latest");
+ltOptions.addProperty("platform", "Windows 10");
+ltOptions.addProperty("user", user);
+ltOptions.addProperty("accessKey", accessKey);
+capabilities.add("LT:Options", ltOptions);
 ```
 
-2. The test lives in `PlaywrightTestSingle.java`. It builds capabilities from your env vars, connects to the grid, runs a search, and reports status:
+JUnit wraps this same connection in a `@DataProvider` so one test runs across multiple browser configurations, as the steps below show.
 
-```java title="PlaywrightTestSingle.java"
-package com.lambdatest;
+## Run the Test With JUnit
+***
 
-import com.google.gson.JsonObject;
-import com.microsoft.playwright.*;
+JUnit runs the connection through a `@DataProvider`, so a single test runs across multiple browser configurations (here Chrome and Microsoft Edge). You can use your own project, or the sample below.
 
-import java.net.URLEncoder;
+1. Clone the sample project and move into the JUnit subdirectory:
 
-public class PlaywrightTestSingle {
-    public static void main(String[] args) {
-        try (Playwright playwright = Playwright.create()) {
-            JsonObject capabilities = new JsonObject();
-            JsonObject ltOptions = new JsonObject();
-
-            String user = System.getenv("LT_USERNAME");
-            String accessKey = System.getenv("LT_ACCESS_KEY");
-
-            capabilities.addProperty("browsername", "Chrome"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-            capabilities.addProperty("browserVersion", "latest");
-            ltOptions.addProperty("platform", "Windows 10");
-            ltOptions.addProperty("name", "Playwright Test");
-            ltOptions.addProperty("build", "Playwright Testing in Java");
-            ltOptions.addProperty("user", user);
-            ltOptions.addProperty("accessKey", accessKey);
-            capabilities.add("LT:Options", ltOptions);
-
-            BrowserType chromium = playwright.chromium();
-            String caps = URLEncoder.encode(capabilities.toString(), "utf-8");
-            String cdpUrl = "wss://cdp.lambdatest.com/playwright?capabilities=" + capabilities;
-            Browser browser = chromium.connect(cdpUrl);
-            Page page = browser.newPage();
-            try {
-                page.navigate("https://www.duckduckgo.com");
-                Locator locator = page.locator("#search_form_input_homepage");
-                locator.click();
-                page.fill("#search_form_input_homepage", "LambdaTest");
-                page.keyboard().press("Enter");
-                String title = page.title();
-
-                if (title.equals("LambdaTest at DuckDuckGo")) {
-                    // Use the following code to mark the test status.
-                    setTestStatus("passed", "Title matched", page);
-                } else {
-                    setTestStatus("failed", "Title not matched", page);
-                }
-
-            } catch (Exception err) {
-                setTestStatus("failed", err.getMessage(), page);
-                err.printStackTrace();
-            }
-            browser.close();
-        } catch (Exception err) {
-            err.printStackTrace();
-        }
-    }
-
-    public static void setTestStatus(String status, String remark, Page page) {
-        Object result;
-        result = page.evaluate("_ => {}", "lambdatest_action: { \"action\": \"setTestStatus\", \"arguments\": { \"status\": \"" + status + "\", \"remark\": \"" + remark + "\"}}");
-    }
-}
-```
-
-3. Run the test:
+:::tip Sample repo
+<a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-java-junit" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="GitHub icon linking to the Playwright JUnit sample subdirectory" className="doc_img"/> View on GitHub</a>
+:::
 
 ```bash
-mvn -Dexec.mainClass="com.lambdatest.PlaywrightTestSingle" -Dexec.classpathScope=test test-compile exec:java
-```
-
-</TabItem>
-
-<TabItem value="junit" label="JUnit 5">
-
-JUnit runs the same connection through a `@DataProvider`, so a single test runs across multiple browser configurations (here Chrome and Microsoft Edge).
-
-1. Go to the sample directory:
-
-```bash
+git clone https://github.com/LambdaTest/playwright-sample.git
+cd playwright-sample
 cd playwright-java-junit
 ```
 
-2. `LTCapability.java` supplies the parameterized capabilities:
+2. Install the npm dependencies:
+
+```
+npm install
+```
+
+3. Open the `LTCapability.java` file and provide your TestMu AI Username and Access Key. It supplies the parameterized capabilities through a `@DataProvider`:
 
 ```java title="LTCapability.java"
 import com.google.gson.JsonObject;
-import com.tngtech.JUnit.junit.dataprovider.DataProvider;
+import com.tngtech.java.junit.dataprovider.DataProvider;
 
 public class LTCapability {
   @DataProvider
@@ -244,17 +194,42 @@ public class LTCapability {
 }
 ```
 
-3. Run the test:
+4. Run the test from the terminal:
 
 ```bash
 mvn clean test
 ```
 
-</TabItem>
-
-</Tabs>
-
-## View your test results
+## View Your Results
 ***
 
-Go to the [<BrandName /> Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your Playwright Java test results.
+Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms the test passed.
+
+## Related Playwright Guides
+***
+
+Continue with these related guides:
+
+- [Run Your Playwright Tests With JavaScript on TestMu AI](/support/docs/javascript-with-playwright/)
+- [Configure Playwright Capabilities for the TestMu AI Grid](/support/docs/capabilities-for-playwright/)
+- [Get Started With Playwright Testing on TestMu AI](/support/docs/playwright-testing/)
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+      Java with Playwright
+      </span>
+    </li>
+  </ul>
+</nav>

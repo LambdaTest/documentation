@@ -544,7 +544,7 @@ module.exports = {
           { type: "doc", id: "kaneai-conditional-logic", label: "Conditional Logic" },
           { type: "doc", id: "kaneai-while-loops", label: "While Loops" },
           { type: "doc", id: "kane-ai-modules", label: "Modules" },
-          { type: "doc", id: "kaneai-kb-authentication-and-session-management", label: "Authentication" },
+          { type: "doc", id: "kaneai-kb-authentication-and-session-management", label: "Authentication" },
           { type: "doc", id: "kaneai-kb-api-testing-and-network-assertions", label: "Network" },
           { type: "doc", id: "kaneai-database", label: "Database" },
           { type: "doc", id: "kane-ai-javascript-execution", label: "JavaScript Execution & Snippets" },
@@ -956,7 +956,6 @@ module.exports = {
             ],
           },
           "wordpress-plugin",
-          "npm-plugin-for-testcafe-integration-with-lambdatest",
           "fastlane-plugin",
           "azure-pipeline",
           "teamcity-plugin",
@@ -1944,25 +1943,21 @@ module.exports = {
       type: "link",
       label: "Back",
       href: "/docs/",
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      customProps: { className: "back-to-main-menu" },
     },
     [
-      
       {
         type: "category",
         collapsed: false,
         label: "Get Started",
         items: [
-          { type: "doc", id: "lambdatest-running-your-first-selenium-test", label: "Run Your First Test" },
-          { type: "doc", id: "selenium-agent-skills", label: "Run Tests With Agent Skills" },
-           { type: "doc", id: "inside-lambdatest-automation-platform", label: "See Your Results (Dashboard)" },
-          { type: "doc", id: "migrate-selenium-test-suite", label: "Migrate an Existing Suite" },
-         
-           { type: "doc", id: "selenium-automation-capabilities", label: "Desired Capabilities" },
-           { type: "doc", id: "supported-browsers-and-operating-systems-for-the-web-interface", label: "Supported Browsers & OS" },
-         
+          { type: "doc", id: "lambdatest-running-your-first-selenium-test" },
+          { type: "doc", id: "selenium-agent-skills" },
+          { type: "doc", id: "inside-lambdatest-automation-platform" },
+          { type: "doc", id: "debugging-options" },
+          { type: "doc", id: "filter-your-selenium-tests" },
+          { type: "doc", id: "migrate-selenium-test-suite" },
+          { type: "doc", id: "selenium-automation-capabilities" },
         ],
       },
       {
@@ -1970,69 +1965,66 @@ module.exports = {
         collapsed: true,
         label: "Languages & Frameworks",
         items: [
-          { type: "doc", id: "java-framework", label: "Java With Selenium" },
-          { type: "doc", id: "running-javascript-test-scripts-on-lambdatest", label: "JavaScript With Selenium" },
-          { type: "doc", id: "csharp-with-selenium", label: "C# With Selenium" },
-          { type: "doc", id: "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid", label: "Python With Selenium" },
-          { type: "doc", id: "php-framework", label: "PHP With Selenium" },
-          { type: "doc", id: "ruby", label: "Ruby With Selenium" },
-        ],
-      },
-    
-      {
-        type: "category",
-        collapsed: true,
-        label: "Advanced Capabilities",
-        items: [
-          { type: "doc", id: "smart-wait", label: "Enable SmartWait" },
-          { type: "doc", id: "auto-heal", label: "Auto-Heal Broken Locators" },
-            { type: "doc", id: "selenium-bidi-integration", label: "Use the Selenium BiDi Protocol" },
-          { type: "doc", id: "custom-chrome", label: "Upload a Custom Chrome Profile" },
-          { type: "doc", id: "mock-video-injection-web-automation-selenium-chromium", label: "Inject a Mock Video Stream" },
-          { type: "doc", id: "network-data-masking", label: "Mask Sensitive Data" },
-          { type: "doc", id: "selenium-geolocation-capabilities", label: "Test Location & Timezone" },
-          { type: "doc", id: "perform-selenium-automation-on-headless-browsers", label: "Run Headless Tests" },
-          { type: "doc", id: "network-throttling", label: "Simulate Network Conditions" },
-          { type: "doc", id: "upload-files-using-lambdatest", label: "Upload & Download Files" },
-          { type: "doc", id: "setup-pre-run-executable", label: "Run a Pre-Test Script" },
+          { type: "doc", id: "java-framework" },
+          { type: "doc", id: "running-javascript-test-scripts-on-lambdatest" },
+          { type: "doc", id: "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid" },
+          { type: "doc", id: "ruby" },
+          { type: "doc", id: "php-framework" },
+          { type: "doc", id: "csharp-with-selenium" },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Monitor & Debug",
+        label: "Features",
         items: [
-          { type: "doc", id: "filter-your-selenium-tests", label: "Organize Tests & Builds" },
-          { type: "doc", id: "mark-as-bug-in-automation-testing", label: "File a Bug From a Session" },
-          { type: "doc", id: "live-interaction", label: "Take Over a Live Session" },
-          { type: "doc", id: "rerun-automation-tests", label: "Re-Run & Reproduce a Test" },
-          // { type: "doc", id: "mute-test-scenarios", label: "Mute Test Scenarios" },
-          { type: "doc", id: "debugging-options", label: "Set Debugging Options & Logs" },
-          { type: "doc", id: "lighthouse-reports-hooks", label: "Measure Page Performance" },
-          { type: "doc", id: "lambda-hooks", label: "Use Lambda Hooks & Metadata" },
-      
+          { type: "doc", id: "test-locally-hosted-websites-with-selenium" },
+          { type: "doc", id: "selenium-geolocation-capabilities" },
+          { type: "doc", id: "network-throttling" },
+          { type: "doc", id: "configure-timezones" },
+          { type: "doc", id: "smart-wait" },
+          { type: "doc", id: "auto-heal" },
+          { type: "doc", id: "run-tests-with-webdriver-bidi" },
+          { type: "doc", id: "custom-header" },
+          { type: "doc", id: "custom-dns-map" },
+          { type: "doc", id: "mock-video-injection-web-automation-selenium-chromium" },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Troubleshoot & Optimize",
+        label: "Guides",
         items: [
-          { type: "doc", id: "error-messages", label: "Fix Errors & Timeouts" },
-          { type: "doc", id: "performance-tips", label: "Speed Up Your Tests" },
+          { type: "doc", id: "upload-files-using-lambdatest" },
+          { type: "doc", id: "perform-selenium-automation-on-headless-browsers" },
+          { type: "doc", id: "ie-mode-on-edge" },
+          { type: "doc", id: "custom-chrome" },
+          { type: "doc", id: "setup-pre-run-executable" },
+          { type: "doc", id: "run-selenium-test-behind-the-proxy" },
+          { type: "doc", id: "selenium-mask-your-data" },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Reference",
+        items: [
+          { type: "doc", id: "lighthouse-reports-hooks" },
+          { type: "doc", id: "performance-tips" },
+          { type: "doc", id: "lambda-hooks" },
+          { type: "doc", id: "error-messages" },
         ],
       },
     ],
   ],
 
+
   CypressTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: { className: "back-to-main-menu" },
     },
     [
       {
@@ -2040,17 +2032,9 @@ module.exports = {
         collapsed: false,
         label: "Getting Started",
         items: [
-          {
-            type: "doc",
-            label: "Cypress Testing",
-            id: "getting-started-with-cypress-testing",
-          },
-          {
-            type: "doc",
-            label: "Run Your Test With Agent Skills",
-            id: "cypress-agent-skills",
-          },
-       
+          { type: "doc", id: "getting-started-with-cypress-testing" },
+          { type: "doc", id: "cypress-agent-skills" },
+          { type: "doc", id: "cypress-cli-commands" },
         ],
       },
       {
@@ -2058,36 +2042,10 @@ module.exports = {
         collapsed: true,
         label: "Test Capabilities",
         items: [
-          {
-            type: "doc",
-            label: "Specify Browsers and OS",
-            id: "supported-browsers-and-os",
-          },
-          {
-            type: "doc",
-            label: "Supported Cypress Versions",
-            id: "supported-cypress-versions",
-          },
-          {
-            type: "doc",
-            label: "Cypress CLI Commands",
-            id: "cypress-cli-commands",
-          },
-          {
-            type: "doc",
-            label: "Configure Cypress Test Execution",
-            id: "run-settings",
-          },
-          {
-            type: "doc",
-            label: "Execute Including Private Dependencies",
-            id: "private-dependencies-cypress",
-          },
-          {
-            type: "doc",
-            label: "Download Artefacts For Cypress Project",
-            id: "download-artefacts-cypress",
-          },
+          { type: "doc", id: "supported-browsers-and-os" },
+          { type: "doc", id: "run-settings" },
+          { type: "doc", id: "private-dependencies-cypress" },
+          { type: "doc", id: "download-artefacts-cypress" },
         ],
       },
       {
@@ -2095,26 +2053,10 @@ module.exports = {
         collapsed: true,
         label: "Integrations",
         items: [
-          {
-            type: "doc",
-            label: "Integrate TestMu AI with Cypress Dashboard",
-            id: "integrate-lambdatest-with-cypress",
-          },
-          {
-            type: "doc",
-            label: "Applitools Integration For Cypress",
-            id: "applitools-integration-cypress",
-          },
-          {
-            type: "doc",
-            label: "Multi Reporters Support",
-            id: "cyp-multi-reporters",
-          },
-          {
-            type: "doc",
-            label: "Cypress Terminal Reports",
-            id: "cypress-detailed-command-logs",
-          },
+          { type: "doc", id: "integrate-lambdatest-with-cypress" },
+          { type: "doc", id: "applitools-integration-cypress" },
+          { type: "doc", id: "cypress-mochaawesome-report" },
+          { type: "doc", id: "cypress-detailed-command-logs" },
         ],
       },
     ],
@@ -2122,24 +2064,22 @@ module.exports = {
 
   PlaywrightTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: { className: "back-to-main-menu" },
     },
     [
       {
         type: "category",
-        collapsed: true,
-        label: "Getting Started",
+        collapsed: false,
+        label: "Get Started",
         items: [
-          "playwright-testing-guide",
-          "playwright-agent-skills",
-          "playwright-sdk",
-           "migrate-playwright-tests",
-             "playwright-test-execution-setup",
+          { type: "doc", id: "playwright-testing-guide" },
+          { type: "doc", id: "playwright-agent-skills" },
+          { type: "doc", id: "migrate-playwright-tests" },
+          { type: "doc", id: "playwright-test-execution-setup" },
+          { type: "doc", id: "playwright-caps" },
         ],
       },
       {
@@ -2147,21 +2087,21 @@ module.exports = {
         collapsed: true,
         label: "Languages & Frameworks",
         items: [
-          { type: "doc", id: "java-with-playwright", label: "Java With Playwright" },
-          { type: "doc", id: "javascript-with-playwright", label: "JavaScript With Playwright" },
-          { type: "doc", id: "csharp-with-playwright", label: "C# With Playwright" },
-          { type: "doc", id: "python-with-playwright", label: "Python With Playwright" },
+          { type: "doc", id: "java-with-playwright" },
+          { type: "doc", id: "javascript-with-playwright" },
+          { type: "doc", id: "python-with-playwright" },
+          { type: "doc", id: "csharp-with-playwright" },
         ],
       },
-    
       {
         type: "category",
         collapsed: true,
         label: "Features",
         items: [
-          "playwright-android-guide",
-          "playwright-ios-guide",
-          "playwright-auto-heal",
+          { type: "doc", id: "playwright-auto-heal" },
+          { type: "doc", id: "playwright-android-guide" },
+          { type: "doc", id: "playwright-webview-test" },
+          { type: "doc", id: "playwright-ios-guide" },
         ],
       },
       {
@@ -2169,10 +2109,8 @@ module.exports = {
         collapsed: true,
         label: "Integrations",
         items: [
-          "playwright-playwrighttest",
-          "playwright-cucumberjs",
-          "playwright-cicd",
-          "playwright-lighthouse-library",
+          { type: "doc", id: "playwright-playwrighttest" },
+          { type: "doc", id: "playwright-lighthouse-library" },
         ],
       },
     ],
@@ -2180,36 +2118,33 @@ module.exports = {
 
   PuppeteerTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: { className: "back-to-main-menu" },
     },
     [
       {
         type: "category",
         collapsed: false,
-        label: "Getting Started",
+        label: "Get Started",
         items: [
-          "puppeteer-testing-guide",
-          "puppeteer-agent-skills",
-          "puppeteer-test-execution",
+          { type: "doc", id: "puppeteer-testing-guide" },
+          { type: "doc", id: "puppeteer-agent-skills" },
+          { type: "doc", id: "puppeteer-test-execution" },
+          { type: "doc", id: "puppeteer-capabilities" },
         ],
       },
-  
       {
         type: "category",
         collapsed: true,
-        label: "Frameworks",
+        label: "Integrations",
         items: [
-          "puppeteer-mocha",
-          "puppeteer-jest",
-          "puppeteer-pytest-pyppeteer",
+          { type: "doc", id: "puppeteer-mocha" },
+          { type: "doc", id: "puppeteer-jest" },
+          { type: "doc", id: "puppeteer-pytest-pyppeteer" },
         ],
       },
-     
     ],
   ],
 

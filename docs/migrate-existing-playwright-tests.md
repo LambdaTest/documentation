@@ -1,17 +1,16 @@
 ---
 id: migrate-playwright-tests
-title: Migrate Existing Playwright Test Suites On TestMu AI
+title: How to Migrate Existing Playwright Tests to TestMu AI
 hide_title: true
-sidebar_label: Migrate Playwright Tests
-description: Learn how to run migrate existing Playwright test scripts or suitesfrom your local grid on the TestMu AI platform.
+sidebar_label: "Migrate Playwright Tests"
+description: Migrate existing Playwright test scripts from your local grid to TestMu AI by connecting to the CDP endpoint and passing browser and OS capabilities.
+toc_max_heading_level: 2
 keywords:
-  - playwright testing
-  - playwright e2e testing 
-  - playwright mobile testing
-  - playwright testing tool
-  - playwright testing on testmu ai
-  - playwright testing testmu ai
-  - migrate playwright tests on testmu ai
+  - migrate playwright tests to testmu ai
+  - migrate playwright tests from local grid
+  - run playwright tests on testmu ai
+  - playwright cloud testing
+  - playwright testmu ai capabilities
 
 url: https://www.testmuai.com/support/docs/migrate-existing-playwright-tests/
 site_name: TestMu AI
@@ -44,17 +43,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Migrate Your Existing Playwright Tests
-* * *
-
-<BrandName /> offers an online automation platform for test automation. Therefore you can easily migrate Playwright tests from your local grid to the <BrandName /> platform. 
-
-In this documentation, we look at how to migrate your existing Playwright test scripts (or test suites) from your local grid to <BrandName />. This lets you automate Playwright scripts across real browsers and operating systems on <BrandName /> cloud platform.
-
-## Sample Playwright Script Running On A Local Machine
+# How to Migrate Existing Playwright Tests to TestMu AI
 ***
 
-With just a few lines of code tweaks in your test script, you can migrate your Playwright tests running on a local grid to <BrandName />. A sample Playwright script below launches a browser on your local machine and runs the script.
+If you already run Playwright tests on a local grid, you can move them to TestMu AI to execute the same scripts across real browsers and operating systems in the cloud. The migration takes only a few lines of change: you point Playwright at the TestMu AI CDP endpoint and pass a `capabilities` object that selects the browser and OS combination for each run.
+
+## Sample Playwright Script Running on a Local Machine
+***
+
+Start from a working local test so you can see exactly which lines change during migration. The sample Playwright script below launches a browser on your local machine and runs the script.
 
 ```js
 const { chromium } = require('playwright')
@@ -79,10 +76,10 @@ const { expect } = require('@playwright/test');
 })()
 ```
 
-## Changes In Scripts To Run Playwright Tests On <BrandName />
+## Changes in Scripts to Run Playwright Tests on TestMu AI
 ***
 
-The above script shows that `playwright['chromium'].launch` runs in a Chromium browser window. To run the test scripts on <BrandName /> platform, you will need to add the following instead of `playwright['chromium'].launch`.
+The local script uses `playwright['chromium'].launch`, which opens a browser on your own machine. To run the same test on TestMu AI, replace that launch call with a connection to the TestMu AI CDP endpoint, as shown below.
 
 ```js
 const { chromium } = require('playwright')
@@ -111,17 +108,21 @@ const { expect } = require('@playwright/test');
 })()
 ```
 
-In the above code snippet, you need to connect to the CDP endpoint at <BrandName /> using `chromium.connect` method. The `capabilities` variable contains additional parameters that enable a specific browser and OS combination to be assigned to your test on <BrandName />.
+In the code snippet above, the `chromium.connect` method connects to the CDP endpoint at TestMu AI. The `capabilities` variable contains the parameters that assign a specific browser and OS combination to your test on TestMu AI.
 
-## Selecting Browser-OS Combinations For Test Runs
+## Selecting Browser-OS Combinations for Test Runs
 ***
 
-To run your script, you can choose any of the browsers and OS combinations. Just specify the browserName, browserVersion, platform in the capabilities JSON before calling the CDP endpoint.
+You can run your script on any supported browser and OS combination. Specify the `browserName`, `browserVersion`, and `platform` in the `capabilities` JSON before calling the CDP endpoint.
 
+## Related Playwright Guides
+***
 
+Continue with the guides below to configure and expand your Playwright runs on TestMu AI.
 
-
-To generate Playwright tests with AI coding assistants, see [Run Tests With Agent Skills](/support/docs/playwright-agent-skills/).
+- [Set up the Playwright test execution environment](/support/docs/playwright-test-execution-setup/) covers capabilities for browsers, resolution, and debugging.
+- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) documents the full capability reference.
+- [Use Playwright agent skills](/support/docs/playwright-agent-skills/) extends your runs with agent-based testing.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
