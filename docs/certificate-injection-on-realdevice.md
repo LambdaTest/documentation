@@ -78,7 +78,7 @@ Many apps connect to servers that use certificates issued by a private or corpor
 | **Device type** | Real devices only |
 | **Platforms** | Android and iOS |
 | **Session types** | App Testing (Manual) and App Automation |
-| **Certificates per session** | Up to 3 |
+| **Certificates at session launch** | Up to 3 |
 | **Maximum file size** | 15 MB per certificate |
 
 :::note Enablement Required
@@ -119,7 +119,7 @@ Certificates are saved to your account and reused across sessions, so you only n
 
 **Step 3:** Click **Upload** and select the certificate file from your machine. If you are uploading a `.pfx` bundle, enter its password. The password is stored securely against the certificate, so you do not need to enter it again for later sessions.
 
-**Step 4:** Turn on the **toggle** next to each certificate you want installed for this session. You can select up to **3 certificates per session**.
+**Step 4:** Turn on the **toggle** next to each certificate you want installed for this session. You can select up to **3 certificates at launch**. If you need more than three on the device, install the additional ones from the in-session **Certificates** panel after the session starts.
 
 **Step 5:** Click **Start** to launch the session. The selected certificates are installed on the device as the session starts.
 
@@ -213,7 +213,7 @@ Installation is asynchronous on iOS, so a certificate may briefly show as **pend
 
 | Rule | Value |
 |---|---|
-| Certificates per session | **3** |
+| Certificates at session launch | **3**. Install further certificates from the in-session **Certificates** panel |
 | Certificate file size | **15 MB** |
 | Device type | Real devices only. Not available on virtual devices or emulators |
 | Session type | App testing sessions only. Not supported in real device browser testing |
