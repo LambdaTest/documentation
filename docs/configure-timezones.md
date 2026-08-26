@@ -1,8 +1,10 @@
 ---
 id: configure-timezones
-title: Configure Timezones for Your Tests
-sidebar_label: Configure Timezones
-description: Set the timezone on test VMs using the timezone capability in LT:Options for accurate locale-based testing on TestMu AI.
+title: How to Test Across Timezones in Selenium on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Test Across Timezones"
+description: Configure custom timezones in Selenium tests on TestMu AI to validate time-sensitive features across different regions.
 keywords:
   - selenium timezone capability
   - configure timezone selenium
@@ -19,7 +21,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,11 +46,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+# How to Test Across Timezones in Selenium on TestMu AI
+---
+
 Many applications display dates, schedule events, or trigger time-sensitive logic based on the user's timezone. TestMu AI lets you set the timezone on the test VM using the `timezone` capability in `LT:Options`, so you can validate timezone-dependent behavior without changing your local machine settings. The capability accepts UTC offset strings (e.g., `UTC+05:30`).
 
 ## Set the Timezone Using the `timezone` Capability
 ---
-Pass a UTC offset string in `LT:Options` to configure the test VM's system timezone.
+Pass a UTC offset string in `LT:Options` to configure the test VM's system timezone. The `timezone` capability works alongside the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you set in `LT:Options`.
 
 Add the `timezone` capability to your `LT:Options` configuration. The value is a UTC offset string in the format `UTC+HH:MM` or `UTC-HH:MM` (e.g., `UTC+05:30`). The default is `UTC+00:00`.
 
@@ -260,8 +264,16 @@ Consider setting the `timezone` capability in these scenarios:
 - **Cross-timezone consistency.** Run the same test suite across multiple timezones to catch discrepancies in time-dependent logic.
 
 :::tip
-Combine the `timezone` capability with [geolocation](/support/docs/selenium-geolocation-capabilities/) to simulate a complete locale environment for your tests.
+Combine the `timezone` capability with geolocation to simulate a complete locale environment for your tests.
 :::
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Selenium Geolocation Capabilities](/support/docs/selenium-geolocation-capabilities/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

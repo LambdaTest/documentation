@@ -1,8 +1,10 @@
 ---
 id: custom-header
-title: How to Bypass Firewalls Using CustomHeaders Capability
-sidebar_label: Inject Custom HTTP Headers
-description: Add custom headers to Selenium tests and bypass firewall restrictions using the customHeaders capability.
+title: How to Set Custom HTTP Headers in Selenium on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Custom HTTP Headers"
+description: Add custom HTTP headers to Selenium tests on TestMu AI using the customHeaders capability to bypass firewalls and control requests.
 keywords:
   - custom headers bypass firewall selenium
   - customUrlFilters selective header injection
@@ -14,11 +16,10 @@ slug: custom-headers/
 canonical: https://www.testmuai.com/support/docs/custom-headers/
 ---
 
-# Bypass Firewalls with customHeaders and customUrlFilters
----
-
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+# How to Set Custom HTTP Headers in Selenium on TestMu AI
+---
 
 Corporate firewalls keep networks secure but can occasionally interfere with your testing process. The customHeaders and customUrlFilters capabilities give developers precise control over network requests and firewall bypassing during testing.
 
@@ -27,14 +28,14 @@ This document covers the customHeaders capability, which lets you add custom hea
 ## About CustomHeaders
 ---
 
-Custom headers carry information about the request or response, such as the method, URL, and body content. You can modify the parameters of HTTP requests sent by your tests by manipulating these headers, thereby working around firewall restrictions.
+Custom headers carry information about the request or response, such as the method, URL, and body content. You can modify the parameters of HTTP requests sent by your tests by manipulating these headers, thereby working around firewall restrictions. `customHeaders` is one of many network controls available on the platform; see the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) for related options.
 
 ## How to Use CustomHeaders Capability on TestMu AI
 ---
 
-Add custom headers using the Desired Capabilities class.
+Add custom headers using the Capabilities class.
 
-1. Create an instance of the Desired Capabilities class.
+1. Create an instance of the Capabilities class.
 
 2. Use the customHeaders capability to add your custom headers.
 
@@ -46,94 +47,6 @@ capabilities.setCapability("customHeaders", new HashMap<String, String>() {{
 ```
 
 In the above code snippet, replace "headerName" and "headerValue" with the actual name and value of the header. You can add multiple headers based on your requirements.
-
-## CustomHeaders: Use Cases and Examples
----
-
-Custom headers serve different purposes for web development and network communications.
-
-
-1. **User Identification and Session Management**: Send tokens and session IDs to authenticate and identify users. This helps manage user sessions and implement stateless authentication.
-
-**Example**: The Custom header `X-Session-ID` tracks user sessions.
-
-```java
-X-Session-ID: 1234567890 
-```
-
-2. **Content Negotiation**: Determine how the client and server decide on the data format to exchange. The "Accept" header specifies the format (like JSON or XML) that the client prefers.
-
-**Example**: `Accept` header specifies the client-preferred format of the response data.
-
-```java
-Accept: application/json 
-```
-
-3. **Rate Limiting**: APIs use custom headers to provide information about rate limits, including how many requests a client can make in a given time period and when they can make new requests.
-
-**Example**
-
-```java
-X-RateLimit-Limit: 60
-X-RateLimit-Remaining: 56
-X-RateLimit-Reset: 1372700873
-```
-
-4. **Debugging and Performance Tracking**: Some services include custom headers in their responses to provide additional information for debugging or performance tracking, such as server version numbers and execution times.
-
-**Example**
-
-```java
-X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
-```
-
-5. **CORS (Cross-Origin Resource Sharing)**: The CORS standard uses custom headers to allow browsers and servers to interact securely with resources from different origins, including headers like "Access-Control-Allow-Origin" and "Access-Control-Allow-Methods".
-
-**Example**
-
-```java
-X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
-```
-
-6. **Custom Application Logic**: Use custom headers to implement specific application-level logic, such as determining the response language, enabling or disabling features, or specifying API version numbers.
-
-**Example**
-
-```java
-X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
-```
-
-7. **Bypassing Firewalls or Proxies**: In some cases, use custom headers to bypass certain network restrictions, such as firewalls or proxy servers. Always do this responsibly and in accordance with security policies.
-
-**Example**
-
-```java
-X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
-```
-
-8. **Server Health and Status Information**: Some applications use custom headers to provide health and status information about the server or application for monitoring purposes.
-
-**Example**
-
-```java
-X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
-```
-
-9. **SEO Optimization**: Custom headers like canonical and pagination headers guide search engines and optimize SEO.
-
-**Example**
-
-```java
-X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
-```
-
-10. **A/B Testing**: Use custom headers to control or track A/B testing, where different versions of a service are tested against each other.
-
-**Example**
-
-```java
-X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
-```
 
 ## CustomHeader Capability: Your Key to Bypass Firewalls
 ---
@@ -148,12 +61,14 @@ Custom headers are an integral part of HTTP requests and responses. They can car
 The customUrlFilters capability, used together with customHeaders, lets you specify exactly which URLs should receive the custom headers. This ensures that headers are only applied to requests matching your defined filters.
 
 ### Key Behavior
+---
 
 - If customHeaders are defined without customUrlFilters, the headers apply globally to all outgoing network requests.
 - If customUrlFilters are provided, the customHeaders only apply to requests matching the filter criteria.
 - Filters can be exact URLs or regular expressions, providing flexible targeting.
 
 ### Implementation Example
+---
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -172,6 +87,7 @@ capabilities.setCapability("customUrlFilters", urlFilters);
 ```
 
 ### Behavior of This Example
+---
 
 The headers `WebView: Enable` and `X-Custom-Token: secure-token-123` are only applied to:
 
@@ -183,7 +99,7 @@ A request to `https://lambdatest.github.io/sample-todo-app/` will not contain an
 ## A Responsible Approach to Bypassing Firewalls
 ---
 
-While the ability to add and control custom headers is useful, always follow your organization's security and compliance policies. These capabilities are designed to facilitate secure, realistic testing - not to bypass security controls inappropriately.
+While the ability to add and control custom headers is useful, always follow your organization's security and compliance policies. These capabilities are designed to facilitate secure, realistic testing - not to bypass security controls inappropriately. For related network configuration, you can also apply custom DNS mapping to redirect domains or run tests behind a proxy for restricted environments.
 
 ## Use Cases
 ---
@@ -194,7 +110,7 @@ The following examples show common use cases for custom headers.
 
 Send tokens or session IDs with headers like:
 
-```java
+```http
 X-Session-ID: 1234567890
 ```
 
@@ -202,7 +118,7 @@ X-Session-ID: 1234567890
 
 Specify expected response formats:
 
-```java
+```http
 Accept: application/json
 ```
 
@@ -210,7 +126,7 @@ Accept: application/json
 
 Get limits and usage from APIs:
 
-```java
+```http
 X-RateLimit-Remaining: 10
 ```
 
@@ -218,7 +134,7 @@ X-RateLimit-Remaining: 10
 
 Include trace info or timing metrics:
 
-```java
+```http
 X-Execution-Time: 150ms
 ```
 
@@ -226,7 +142,7 @@ X-Execution-Time: 150ms
 
 Enable cross-origin requests:
 
-```java
+```http
 Access-Control-Allow-Origin: *
 ```
 
@@ -234,7 +150,7 @@ Access-Control-Allow-Origin: *
 
 Pass app-level config:
 
-```java
+```http
 X-App-Version: v2.3.1
 ```
 
@@ -242,7 +158,7 @@ X-App-Version: v2.3.1
 
 Mask the request with common headers:
 
-```java
+```http
 User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 ```
 
@@ -250,7 +166,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 
 Return backend state:
 
-```java
+```http
 X-Server-Status: All systems operational
 ```
 
@@ -258,7 +174,7 @@ X-Server-Status: All systems operational
 
 Guide search engines:
 
-```java
+```http
 Link: <https://example.com/page>; rel="canonical"
 ```
 
@@ -266,7 +182,7 @@ Link: <https://example.com/page>; rel="canonical"
 
 Track experimental groups:
 
-```java
+```http
 X-Experiment-ID: variant_b
 ```
 
@@ -278,6 +194,15 @@ The customHeaders and customUrlFilters capabilities let you simulate request sce
 By turning obstacles like firewalls into controllable conditions, TestMu AI simplifies testing and enhances the realism and effectiveness of your QA process.
 
 Happy testing!
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Custom DNS Map](/support/docs/custom-dns-map/)
+- [Run Selenium Tests Behind the Proxy](/support/docs/selenium-tests-behind-proxy/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

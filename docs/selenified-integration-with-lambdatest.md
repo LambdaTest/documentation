@@ -80,7 +80,7 @@ That is all you need to tweak to run your Selenified tests on <BrandName /> Sele
       <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-testmu-automation/">Automation Testing</a>
+      <a className="breadcrumbs__link" href="/support/docs/testmu-running-your-first-selenium-test/">Automation Testing</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Selenified Integration With <BrandName /></span>

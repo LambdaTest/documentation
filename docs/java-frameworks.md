@@ -1,8 +1,10 @@
 ---
 id: java-framework
-title: Selenium With Java
-sidebar_label: Java
-description: Run Java Selenium tests on TestMu AI cloud grid across 3000+ browsers and OS combinations. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, Tesbo, and the Java SDK.
+title: How to Run Selenium Tests With Java on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Java"
+description: Run Java Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity, and the SDK.
 keywords:
   - java selenium cloud testing
   - run java tests on selenium grid
@@ -48,19 +50,23 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+# How to Run Selenium Tests With Java on TestMu AI
 ---
+
 
 Run your Java Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid, pass your capabilities, and run. This guide walks through that shared flow once, then gives you a per-framework quickstart for **TestNG, JUnit, Cucumber, Selenide, Gauge, Geb, Serenity**, and the **Java SDK**.
 
 ## Prerequisites
 ---
 
+Before running any framework below, set up a TestMu AI account, your credentials, the JDK, and Maven.
+
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
 4. Install [Apache Maven](https://maven.apache.org/). The framework sample projects below all build with Maven.
 
-## Set your credentials
+## Set Your Credentials
 ---
 
 Every framework authenticates the same way: your Username and Access Key are passed in the grid URL. Set them as environment variables so you don't hard-code them. Pick your operating system:
@@ -91,7 +97,7 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 </Tabs>
 
-## How the sample test works
+## How the Sample Test Works
 ---
 
 All the framework repos below run the **same** sample test, so you only need to understand it once. The test opens the [to-do app](https://lambdatest.github.io/sample-todo-app/), marks the first two items done, adds a new item, and verifies it appears:
@@ -128,7 +134,7 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 
 **What changes between frameworks is only how that test is *structured and run***: the runner, its setup/teardown hooks, and any config files. That's what each tab below covers.
 
-## Run a test in your framework
+## Run a Test in Your Framework
 ---
 
 Each tab lists just the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run the command shown.
@@ -170,6 +176,8 @@ mvn test -D suite=single.xml
 mvn test -D suite=parallel.xml
 ```
 
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
 </TabItem>
 
 <TabItem value="junit" label="JUnit">
@@ -203,6 +211,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 mvn test -P single
 mvn test -P parallel
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 :::note
 Parallel JUnit runs need a custom `Parallelized` runner (extends `Parameterized` with a `ThreadPoolScheduler`). The cloned repo includes it; see [the sample](https://github.com/LambdaTest/junit-selenium-sample) for the full class.
@@ -254,6 +264,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 mvn test
 ```
 
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
 :::note
 `@CucumberOptions` sets the `features` and `glue` paths; `TestNGCucumberRunner` feeds scenarios into TestNG. The full runner and step definitions are in the cloned repo.
 :::
@@ -296,6 +308,8 @@ The test reads that config in `@BeforeMethod`, calls `WebDriverRunner.setWebDriv
 mvn test -P single
 mvn test -P parallel
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 </TabItem>
 
@@ -349,6 +363,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 mvn test
 ```
 
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
 :::note
 Parallel runs are configured by adding multiple browser specs under the `env` folder of the cloned project.
 :::
@@ -384,6 +400,8 @@ mvn compile
 mvn -Dlambdageb.capabilities=capabilities clean test
 ```
 
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
 </TabItem>
 
 <TabItem value="serenity" label="Serenity">
@@ -405,6 +423,8 @@ Scenarios are written in Gherkin and the grid connection lives in a `DriverSourc
 mvn verify -P single
 mvn verify -P parallel
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 :::note
 Parallel Serenity runs use one runner class per browser, each extending a shared base test. The full `DriverSource` and runners are in the cloned repo.
@@ -445,6 +465,8 @@ cd LamdaTest_Tesbo_Demo
 ```
 
 3. Run the test from your IDE. Hit the run button, and your scripts execute on the grid.
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 </TabItem>
 
@@ -487,14 +509,28 @@ tunnel: true
 mvn test -D suite=testng.xml
 ```
 
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
 </TabItem>
 
 </Tabs>
 
-## View your results
+## View Your Results
 ---
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+
+**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

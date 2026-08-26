@@ -1,4 +1,4 @@
-﻿---
+---
 id: qmetry-integration
 title: How to Run QMetry Automation Tests using TestMu AI?
 hide_title: true
@@ -55,7 +55,7 @@ Once you have your project set up in the QMetry app and test suite ready, you ne
 
 <img loading="lazy" src={require('../assets/images/uploads/QMetry.webp').default} alt="Activating <BrandName /> Account QMetry app" width="2882" height="1801" className="doc_img"/>
 
-2.  In the window that opens, navigate to **<BrandName />** tab. Here, you will need to enter your account details and the [desired capabilities](/docs/selenium-automation-capabilities/) to execute the test over your <BrandName /> account. 
+2.  In the window that opens, navigate to **<BrandName />** tab. Here, you will need to enter your account details and the [Selenium Automation Capabilities](/docs/selenium-automation-capabilities/) to execute the test over your <BrandName /> account. 
 
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-1.webp').default} alt="Manage Capabilities" width="2882" height="1801" className="doc_img"/>
 
@@ -67,7 +67,7 @@ Once you have your project set up in the QMetry app and test suite ready, you ne
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-4.webp').default} alt="Finding Username and Access Key" width="2882" height="1801" className="doc_img"/>
 
 >If you are on _[Lite](https://www.testmuai.com/pricing/)_ or _[Live](https://www.testmuai.com/pricing/)_ plan, and your provided automation minutes have been exhausted; the above step will throw an error. In such a case, you can wait for the next availability of automation minutes, or you can [upgrade](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/billing/plans) your account. To learn more about how to manage and upgrade your account, refer [this guide](/docs/manage-subscriptions/).
-6.  Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to [this guide](/docs/selenium-automation-capabilities/). 
+6.  Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to [Selenium Automation Capabilities](/docs/selenium-automation-capabilities/). 
 
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-3.webp').default} alt="Qmetry web capailities list" width="2882" height="1801" className="doc_img"/>
 
@@ -119,7 +119,7 @@ Once the test is complete, you can view the test result on the automation dashbo
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-8.webp').default} alt="Test Automation Logs" width="2881" height="1801" className="doc_img"/>
 
 
-For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more.
+For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more.
 
 ## Running QMetry Tests on HyperExecute
 
