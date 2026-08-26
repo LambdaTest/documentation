@@ -44,6 +44,20 @@ Zoho Project Integration With TestMu AI
 
 Rally Integration With TestMu AI
 
+Redmine Integration With TestMu AI
+
+SpiraTeam Integration With TestMu AI
+
+ALM Octane Integration With TestMu AI
+
+Zenkit Integration With TestMu AI
+
+Userback Integration With TestMu AI
+
+Zoho Cliq Integration With TestMu AI
+
+Webex Teams Integration With TestMu AI
+
 **Note**
 
 If your favourite Bug Tracking tool is not in the list above mentioned, you can just give us a **shout** and we will have it ready shortly for you.

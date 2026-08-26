@@ -30,7 +30,7 @@ Add the following dependency to your `pom.xml` file:
 <dependency>
 <groupId>io.github.lambdatest</groupId>
 <artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.8</version>
+<version>1.0.23</version>
 </dependency>
 ```
 
@@ -250,7 +250,7 @@ After test execution, visit your SmartUI project dashboard to:
 
 **Example:**
 ```java
-SmartUISnapshot.smartuiSnapshot(driver, HomeScreen-Header");
+SmartUISnapshot.smartuiSnapshot(driver, "HomeScreen-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 ```
 
@@ -263,7 +263,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 **Example:**
 ```java
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-wait.until(ExpectedConditions.presenceOfElementLocated(By.id(main-content")));
+wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ```
 
@@ -310,7 +310,7 @@ echo $PROJECT_TOKEN
 <dependency>
 <groupId>io.github.lambdatest</groupId>
 <artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.2</version>
+<version>1.0.23</version>
 </dependency>
 ```
 
@@ -348,7 +348,7 @@ echo $PROJECT_TOKEN
 1. Add explicit waits before screenshots:
 ```java
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-wait.until(ExpectedConditions.presenceOfElementLocated(By.id(content")));
+wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
 ```
 
 2. Wait for specific elements to be visible:
@@ -374,8 +374,8 @@ wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("main-content")))
 2. Ensure elements exist at screenshot time
 3. Check JSON formatting in configuration:
 ```java
-Map<String, Object"> ignoreBoxes = new HashMap<">();
-ignoreBoxes.put(xpath", new String[]{"//*[@text="'Dynamic" Ad']"});
+Map<String, Object> ignoreBoxes = new HashMap<>();
+ignoreBoxes.put("xpath", new String[]{"//*[@text='Dynamic Ad']"});
 ```
 
 4. Test XPath locators in isolation before using in config

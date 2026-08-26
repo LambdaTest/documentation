@@ -45,7 +45,7 @@ Add the SmartUI Java SDK to your `pom.xml`:
 <dependency>
 <groupId>io.github.lambdatest</groupId>
 <artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.18</version>
+<version>1.0.23</version>
 </dependency>
 ```
 
@@ -87,7 +87,7 @@ Upload pre-existing PDFs from your local machine:
 
 public class SmartuiPdfLocalTest {
 public void uploadLocalPdf() throws Exception {
-String projectToken = System.getenv(PROJECT_TOKEN");
+String projectToken = System.getenv("PROJECT_TOKEN");
 
 SmartUIConfig config = new SmartUIConfig()
 .withProjectToken(projectToken)
@@ -112,10 +112,10 @@ Upload PDFs downloaded during TestMu AI cloud test execution:
 
 public class SmartuiPdfCloudTest {
 public void uploadCloudPdf(WebDriver driver) throws Exception {
-String projectToken = System.getenv(PROJECT_TOKEN");
+String projectToken = System.getenv("PROJECT_TOKEN");
 
 // Download PDF from cloud session
-String base64Content = (String) ((JavaScriptExecutor) driver)
+String base64Content = (String) ((JavascriptExecutor) driver)
 .executeAsyncScript("lambda-file-content=LambdaTest.pdf");
 
 // Convert base64 to PDF file
@@ -226,7 +226,7 @@ e.printStackTrace();
 **Example:**
 ```java
 String[] pdfPaths = {
-documents/reports/report-v1.0.pdf",
+"documents/reports/report-v1.0.pdf",
 "documents/specs/spec-v2.1.pdf"
 };
 ```
@@ -246,7 +246,7 @@ documents/reports/report-v1.0.pdf",
 
 **Example:**
 ```java
-config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
+config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 ```
 
 **Error Handling**
@@ -291,7 +291,7 @@ file document.pdf
 
 2. Check file path is correct:
 ```java
-File pdfFile = new File(path/to/document.pdf");
+File pdfFile = new File("path/to/document.pdf");
 if (!pdfFile.exists()) {
 throw new FileNotFoundException("PDF file not found");
 }
@@ -382,7 +382,7 @@ mvn clean
 for (String pdfPath : pdfPaths) {
 try {
 FormattedResults result = pdfUploader.uploadPDF(pdfPath);
-System.out.println(Uploaded: " + pdfPath);
+System.out.println("Uploaded: " + pdfPath);
 } catch (Exception e) {
 System.err.println("Failed: " + pdfPath + " - " + e.getMessage());
 }

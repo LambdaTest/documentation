@@ -1,8 +1,10 @@
 ---
 id: error-messages
-title: Error Messages During Test Execution
-sidebar_label: Fix Error Messages
-description: Identify and resolve common error messages that occur during Selenium test execution on the cloud grid.
+title: How to Fix Common Selenium Errors on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Error Messages"
+description: Identify and fix common Selenium error messages on TestMu AI, from authentication and timeout errors to element and session failures.
 keywords:
   - selenium test execution errors
   - authentication error fix
@@ -45,9 +47,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Error Messages During Test Execution
-
-***
+# How to Fix Common Selenium Errors on TestMu AI
+---
 Below is a list of error messages that may occur during test execution, along with their causes and solutions.
 
 ## Authentication Error at the Time of Test Execution
@@ -56,8 +57,8 @@ This error occurs when your Username or Access Key is missing or invalid.
 
 This happens when the Username or Access Key you passed is missing or invalid.
 
-### How to Resolve?
-
+### How to Resolve
+---
 1. Go to the TestMu AI [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 2. Click the key icon at the top-right of the dashboard.
 3. Copy your username and access key.
@@ -69,6 +70,7 @@ The test was terminated because it exceeded the maximum allowed duration.
 The test was terminated because it exceeded the maximum duration allowed (default is 1800 seconds).
 
 ### Possible Cause
+---
 
 This might result from several issues: 
 
@@ -76,10 +78,13 @@ This might result from several issues:
 * The test gets stuck in an endless loop, continuously sending commands.
 
 ### Possible Solution
+---
 
 * Break your test into smaller, atomic tests.
-* Use the maxDuration desired capability option to set how long you want to wait for your test to complete.
+* Use the maxDuration capability option to set how long you want to wait for your test to complete.
 * Check your test for endless loops.
+
+If tests routinely run close to the duration limit, apply these tips to speed up your Selenium tests and cut execution time.
 
 ## Test Cancellation - Status: Error
 ---
@@ -88,12 +93,15 @@ A queued test gets cancelled before execution starts.
 When a test is placed in a queue but gets cancelled before execution.
 
 ### Possible Cause
+---
 
 This might occur due to various reasons:
 
 * The connection between your local machine and the TestMu AI cloud server is aborted.
 * High latency may also cause your test script to get cancelled.
 * You cancel the test manually after placing it in the queue.
+
+If a corporate firewall or proxy is interrupting the connection, follow the steps to run Selenium tests behind a proxy.
 
 ## Exceeded Queue Limit Error
 ---
@@ -102,6 +110,7 @@ Your test runner closed the connection before a new session became available.
 Your test runner started a new test on TestMu AI, but then closed the connection before a new test session became available.
 
 ### Possible Cause
+---
 
 This might occur due to several things:
 
@@ -109,6 +118,7 @@ This might occur due to several things:
 * You might be running too many tests at once. If you exceed the total concurrent test limit, tests are queued per your plan. If this queueing takes too long, your test runner might disconnect before the test starts.
 
 ### Possible Solutions
+---
 
 * Increase the connection timeout setting in your test runner or framework. For example, for WebdriverIO, set `connectionRetryTimeout: 210000`.
 * Make sure you are not exceeding the total allowed concurrent test limit for your TestMu AI Automation plan.
@@ -122,12 +132,15 @@ You may encounter a Lambda Error with the below message.
 > **Lambda Error:** Uh Oh! Looks like our Grid failed to recognize your test input.
 
 ### Possible Cause
+---
 
 There could be several reasons behind this error. The most common ones include:
 
 * Infrastructure Unavailability: With too many incoming requests, the cloud server may fail to allocate a VM for your request.
-* Incorrect Data Type for Desired Capabilities: Sending a string input for an integer data type capability triggers a Lambda Error.
+* Incorrect Data Type for Capabilities: Sending a string input for an integer data type capability triggers a Lambda Error.
 * Excessive web-traffic spikes may also cause Lambda Error.
+
+To inspect the exact input the grid received, debug your Selenium tests using the command logs, network logs, and video for the failed session.
 
 ## Element Click Intercepted - 400
 ---
@@ -143,11 +156,13 @@ The Element Click command could not complete because another element is obscurin
 </div>
 
 ### Possible Cause
+---
 
 * This usually occurs when the target element is overlaid by another element in the web page.
 
 
 ### Possible Solutions
+---
 
 * There are multiple ways to solve this issue. Check <a href="https://stackoverflow.com/questions/62260511/org-openqa-selenium-elementclickinterceptedexception-element-click-intercepted">StackOverflow for more information</a>.
 
@@ -159,6 +174,7 @@ The element is not ready for pointer or keyboard interaction.
 A command could not complete because the element is not pointer- or keyboard interactable.
 
 ### Possible Cause
+---
 
 1. The element has not rendered yet.
 
@@ -166,6 +182,7 @@ A command could not complete because the element is not pointer- or keyboard int
 
 
 ### Possible Solutions
+---
 
 For 1. -> Use implicit or explicit wait:
   - Implicit wait:
@@ -194,6 +211,7 @@ Navigation triggered a certificate warning due to an expired or invalid TLS cert
 Navigation caused the user agent to hit a certificate warning, usually resulting from an expired or invalid TLS certificate.
 
 ### Possible Cause
+---
 
 * SSL works through a combination of programs and encryption/decryption routines on the web server and browser.
 * When a secure connection is not established between the server and client due to the certificate, an SSL certificate error appears.
@@ -201,6 +219,7 @@ Navigation caused the user agent to hit a certificate warning, usually resulting
 
 
 ### Possible Solutions
+---
 
 You can adjust your script to handle the SSL exception automatically using Selenium WebDriver.
 
@@ -235,12 +254,14 @@ Output:
 </div>
 
 ### Possible Cause
+---
 
 * The invalid argument error is a WebDriver error that occurs when the arguments passed to a command are invalid or malformed.
 * Invalid argument errors are similar to TypeErrors in JavaScript. They can occur for many APIs when the input value is not the expected type or is malformed.
 
 
 ### Possible Solutions
+---
 
 * Check the values in your input and verify they are valid.
 
@@ -252,6 +273,7 @@ You attempted to set a cookie under a domain different from the current page.
 An illegal attempt was made to set a cookie under a different domain than the current page.
 
 ### Possible Cause
+---
 
 * The invalid cookie domain error occurs when you attempt to set a cookie under a different domain than the current browsing context. WebDriver does not permit setting cookies for other domains.
 Example:
@@ -289,6 +311,7 @@ A command could not complete because the element is in an invalid state, e.g. at
 
 
 ### Possible Cause
+---
 
 * When you try to perform an operation that does not apply to the element, it throws InvalidElementStateException.
 * If a textbox is disabled and you try to type into it, it throws an exception.
@@ -297,6 +320,7 @@ A command could not complete because the element is in an invalid state, e.g. at
 
 
 ### Possible Solutions
+---
 
 * Verify you are performing the correct operation based on the element state.
 * If the element is clickable, perform a click. If it supports type events, use sendkeys.
@@ -318,12 +342,14 @@ Argument was an invalid selector.
 </div>
 
 ### Possible Cause
+---
 
 * The invalid selector error occurs when an element retrieval command uses an unknown web element selector strategy.
 
 * The available selector strategies are CSS, link text, partial link text, tag name, and XPath. Any other selector strategy triggers this error.
 
 ### Possible Solutions
+---
 
 * Check punctuation such as @, ', and [].
 * Make sure there is only one field name with that path. Otherwise, use the contains() method.
@@ -334,7 +360,7 @@ Argument was an invalid selector.
 The session either does not exist, is not active, or could not be created.
 
 ### Invalid Session ID - 404
-
+---
 Occurs if the given session ID is not in the list of active sessions, meaning the session either does not exist or is not active.
 
 <div className="lambdatest__codeblock">
@@ -345,13 +371,14 @@ Occurs if the given session ID is not in the list of active sessions, meaning th
 </div>
 
 ### Possible Cause
+---
 
 * As of 04/2021, sync mode is no longer supported starting from Node.js v16 due to changes in Chromium.
 * Use async to solve this error.
 * The WebdriverIO site has an official guideline for this: <a href= "https://webdriver.io/docs/sync-vs-async#async-mode">WebdriverIO</a> 
 
 ### Session Not Created - 500
-
+---
 A new session could not be created.
 
 <div className="lambdatest__codeblock">
@@ -362,10 +389,12 @@ A new session could not be created.
 </div>
 
 ### Possible Cause
+---
 
 * Incompatibility between the versions of binaries being used.
 
 ### Possible Solutions
+---
 
 * Ensure the Chrome version and the JDK/driver versions are compatible. Refer to this link: <a href = "https://stackoverflow.com/questions/71571616/org-openqa-selenium-sessionnotcreatedexception-message-could-not-start-a-new-s">stackoverflow</a>
 
@@ -400,10 +429,12 @@ Output:
 </div>
 
 ### Possible Cause
+---
 
 * The underlying cause of the execution error is often supplied in the error message, along with a stacktrace from the JavaScript engine in the browser.
 
 ### Possible Solutions
+---
 
 * Check for invalid declarations and definitions in your code.
 
@@ -422,10 +453,12 @@ Example:
 </div>
 
 ### Possible Cause
+---
 
 * Selenium replicates exact human behavior, so if code failure indicates an element is not visible, the element is actually not visible.
 
 ### Possible Solutions
+---
 
 * For a detailed explanation, <a href = "https://sqa.stackexchange.com/questions/45719/selenium-throws-movetargetoutofboundsexception-while-using-negative-value-in-the">refer here.</a>
 
@@ -444,6 +477,7 @@ An attempt was made to operate on a modal dialog when one was not open.
 </div>
 
 ### Possible Cause/Explanation
+---
 
 Refer to these links for possible explanations:
 * <a href= "https://stackoverflow.com/questions/7722940/no-alert-is-present-no-modal-dialog-found-webdriver-unable-to-catch-js-error">no-alert-is-present-no-modal-dialog-found-webdriver-unable-to-catch-js-error</a>
@@ -465,10 +499,12 @@ Example:
 </div>
 
 ### Possible Cause
+---
 
 * Creating a cookie before navigating to the site.
 
 ### Possible Solutions
+---
 
 * For a detailed explanation, <a href = "https://stackoverflow.com/questions/45842709/unable-to-set-cookies-in-selenium-webdriver">refer here.</a>
 
@@ -489,6 +525,7 @@ Example:
 </div>
 
 ### Possible Cause
+---
 
 This occurs mainly in two cases:
 
@@ -499,6 +536,7 @@ This occurs mainly in two cases:
 There are different possibilities for this error. Check the link below for more information.
 
 ### Possible Solutions
+---
 
 * For a detailed explanation, <a href = "https://stackoverflow.com/questions/47993443/selenium-selenium-common-exceptions-nosuchelementexception-when-using-chrome">refer here.</a>
 
@@ -517,10 +555,12 @@ Example:
 </div>
 
 ### Possible Cause
+---
 
 * To switch to the desired frame, use WebDriverWait for the frame to become available and then switch to it.
 
 ### Possible Solutions
+---
 Implement suitable edits to either CSS selector or XPATH:
 
 * `CSS Selector`: `WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR,"iframe[id^='layui-layer-iframe'][src^='fangyuan']")))`
@@ -541,6 +581,7 @@ Example:
 </div>
 
 ### Possible Solution
+---
 
 There are multiple approaches to this problem:
 * In export configuration, to delete everything at the end, set `killinstances` to `true`.
@@ -558,7 +599,7 @@ The element does not have a shadow root.
 
 
 ### Explanation
-
+---
 For a `GET` request of Element Shadow Root with URI template `/session/{session id}/element/{element id}/shadow`, if `shadow root` is null, the error code `no such shadow root` is returned.
 
 For an explanation on locator strategy, refer to this <a href= "https://stackoverflow.com/questions/65044870/how-to-extract-info-within-a-shadow-root-open-using-selenium-python/65055114#65055114">link</a>.
@@ -578,6 +619,7 @@ Example:
 </div>
 
 ### Possible Cause
+---
 
 * The stale element reference error occurs because the referenced web element is no longer attached to the DOM.
 
@@ -586,6 +628,7 @@ Example:
 * When an element is no longer attached to the DOM (it has been removed from the document or the document has changed), it is said to be stale. Staleness occurs, for example, when you have a web element reference and the document it was retrieved from navigates.
 
 ### Possible Solutions
+---
 Common solutions include: 
 
 * Refreshing the webpage:
@@ -646,6 +689,7 @@ public class UnsupportedOperationExceptionExample {
 (for Java)
 
 ### Possible Cause
+---
 
 An UnsupportedOperationException is thrown when a requested operation cannot be performed because it is not supported for that class. One common cause is using the `asList()` method of `java.util.Arrays`. Since this method returns a fixed-size unmodifiable `List`, the `add()` or `remove()` methods are unsupported. Trying to add or remove elements from such a `List` throws the `UnsupportedOperationException`.
 
@@ -656,6 +700,7 @@ Trying to remove elements using an `Iterator`.
 Trying to add, remove, or set elements using `ListIterator`.
 
 ### Possible Solutions
+---
 
 * Resolve the `UnsupportedOperationException` by using a mutable collection, such as `ArrayList`, which can be modified. Do not attempt to modify an unmodifiable collection or data structure.
 
@@ -677,6 +722,7 @@ Example:
 </div>
 
 ### Possible Cause
+---
 
 The unknown method error occurs when the driver does not recognize the HTTP request method used for the endpoint.
 
@@ -775,7 +821,7 @@ EdgeDriver.get("https://www.google.ca/?gws_rd=ssl"); // The link is an example
 </div>
 
 ### Explanation
-
+---
 This error results from creating a cookie before navigating to the site.
 
 If you need to create a cookie on the domain `www.example.com`, first navigate to some page on that domain, create the cookie, and then start your test.
@@ -810,7 +856,7 @@ Example:
 </div>
 
 ### Explanation
-
+---
 This happens because of the default behavior of the driver when it encounters an alert. The default behavior was set to "ACCEPT", so the alert was closed automatically, and the switchTo().alert() could not find it explicitly.
 
 The solution is to modify the default behavior of the driver to ("IGNORE"), so that it does not close the alert but just ignores it.
@@ -819,7 +865,17 @@ Then use try-catch to catch any errors.
 
 
 * * *
-  <nav aria-label="breadcrumbs">
+  
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Debugging Options](/support/docs/debugging-options/)
+- [Performance Tips](/support/docs/performance-tips/)
+
+<nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href={BRAND_URL}>

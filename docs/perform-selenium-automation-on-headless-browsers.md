@@ -1,9 +1,10 @@
 ---
 id: perform-selenium-automation-on-headless-browsers
-title: How To Perform Headless Browser Testing
+title: How to Run Headless Selenium Tests on TestMu AI
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: Run Headless Tests
-description: Run headless browser tests on the TestMu AI cloud Selenium Grid across 10,000+ browser/device combinations.
+sidebar_label: "Test in Headless Mode"
+description: Run headless Selenium tests on the TestMu AI cloud grid for faster automated browser testing without a visible UI.
 keywords:
   - headless browser testing selenium
   - run headless chrome selenium
@@ -43,20 +44,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Perform Headless Browser Testing on Cloud Selenium Grid
-
-***
-TestMu AI allows you to run headless browser tests on its cloud-based Selenium Grid. This guide shows you how to enable and run headless browser testing on the TestMu AI platform.
+# How to Run Headless Selenium Tests on TestMu AI
+---
+TestMu AI lets you run headless browser tests on its cloud-based Selenium Grid. This page shows how to enable and run headless browser testing on the TestMu AI platform.
 
 ## Enabling Headless Browser Testing on TestMu AI
 ---
-Set the headless desired capability to run tests without a graphical user interface.
+Set the headless capability to run tests without a graphical user interface.
 
-For headless browser testing on TestMu AI, enable the desired capability for headless browsing. You can enable this capability using either of the two methods below:
+For headless browser testing on TestMu AI, enable the capability for headless browsing. Headless is one of many toggles you can set through the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) supported by the platform. You can enable this capability using either of the two methods below:
 
-### Enable Headless Browser Testing on Desired Capabilities Generator
+### Enable Headless Browser Testing on Capabilities Generator
 ---
-Visit the [Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/). Under the **Browser Specific Capabilities**, find the toggle button to enable **Headless** browsing. Switch the button to true.
+Visit the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/). Under the **Browser Specific Capabilities**, find the toggle button to enable **Headless** browsing. Switch the button to true.
 
 <img loading="eager" src={require('../assets/images/headless-browser-testing/selenium-desired-capabilities-generator.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
 
@@ -64,11 +64,11 @@ Visit the [Desired Capabilities Generator](https://www.testmuai.com/capabilities
 ---
 Add the headless capability directly in your test script code.
 
-While writing the desired capabilities in your code, enable headless browser testing by adding the below syntax:
+While writing the capabilities in your code, enable headless browser testing by adding the below syntax:
 
 `capabilities.setCapability("headless",true);`
 
-Below is the complete code for sample desired capabilities in various languages:
+Below is the complete code for sample capabilities in various languages:
 
 **Java**
 
@@ -245,13 +245,21 @@ public class HeadlessAutomation {
 }
 ```
 
-After you execute the above code, the test runs on TestMu AI successfully. View the status of the test on your [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline).
+After you execute the above code, the test runs on TestMu AI successfully. View the status of the test on your [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline). To reproduce a real-user session in headless runs, you can also upload a custom Chrome profile with your preferred browser settings.
 
 <img loading="lazy" src={require('../assets/images/headless-browser-testing/headless-automation-testing.webp').default} alt="Image"  className="doc_img" width="768" height="348"/>
 
 * * *
 
 That's it folks! If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Upload Custom Chrome Profile](/support/docs/upload-custom-chrome-profile/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

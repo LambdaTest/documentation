@@ -5,6 +5,7 @@
  */
 import React, { useState, useEffect, useRef } from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import SharedSidebar from '@site/src/component/SharedSidebar/SharedSidebar';
 import ApiSidebar from '@site/src/component/ApiReference/ApiSidebar';
 import EndpointDetail from '@site/src/component/ApiReference/EndpointDetail';
@@ -43,6 +44,34 @@ function findFirstEndpoint() {
     }
   }
   return null;
+}
+
+/**
+ * One unique meta description per endpoint page.
+ *
+ * The 43 URLs flagged by the SEO crawl all shared a single hardcoded string, so
+ * method + path is used as the lead to guarantee uniqueness, followed by the
+ * endpoint's own prose where the spec provides it.
+ */
+function buildMetaDescription(endpoint) {
+  if (!endpoint) {
+    return 'TestMu AI API reference: endpoints, parameters, responses and code examples.';
+  }
+  const plain = String(endpoint.description || '')
+    .replace(/`([^`]*)`/g, '$1')
+    .replace(/\*\*([^*]*)\*\*/g, '$1')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const name = String(endpoint.name || '').replace(/\s*\.\s*$/, '');
+  const lead = `${endpoint.method} ${endpoint.path} — ${name}.`;
+  const text = plain
+    ? `${lead} ${plain}`
+    : `${lead} TestMu AI ${endpoint.group} API reference: parameters, responses and code examples.`;
+  if (text.length <= 160) return text;
+  const cut = text.slice(0, 159);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trimEnd() + '…';
 }
 
 const API_YAML_FILE_MAP = {
@@ -344,6 +373,7 @@ export default function ApiDocPage({ apiSlug, groupSlug, endpointSlug }) {
     return `${base}${typeof window !== 'undefined' ? window.location.pathname : ''}.md`;
   }
 
+  const metaDescription = buildMetaDescription(endpoint);
   const pageContentValue = { getMarkdown: getEndpointMarkdown, getMdUrl: getEndpointMdUrl };
 
   return (
@@ -351,8 +381,14 @@ export default function ApiDocPage({ apiSlug, groupSlug, endpointSlug }) {
       <Layout
         noFooter
         title={endpoint ? `${endpoint.name} — TestMu AI API` : 'TestMu AI API Documentation'}
-        description="Manage and organize your test builds, test sessions, tunnel status and more with TestMu AI APIs."
       >
+        {/* Exactly one description tag. Layout's `description` prop is deliberately
+            unused: it renders <meta name="description"> AND <meta property="og:description">
+            from the same string, which is the pair that shows up in the page head. */}
+        <Head>
+          <meta name="description" content={metaDescription ? metaDescription : "Manage and organize your test builds, test sessions, tunnel status and more with TestMu AI APIs."} />
+        </Head>
+
         {/* Mobile breadcrumb row — visible only on mobile */}
         <div className={styles.mobileBreadcrumb}>
           <button

@@ -17,10 +17,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-command-referen
 
 # List of Rook Commands
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 Rook has an interactive terminal for guided human testing and headless commands for shell scripts and CI. This page is the complete reference for all 24 top-level command families in the current CLI: quick-scan tables first, then full syntax, options, examples, and safety notes for each command.
 
 <img loading="lazy" src={require('../assets/images/rook/rook-terminal-help.png').default} alt="Rook interactive help grouped by testing sequence workspace and session" width="1227" height="1222" className="doc_img"/>

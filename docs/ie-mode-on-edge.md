@@ -1,8 +1,10 @@
 ---
 id: ie-mode-on-edge
-title: Test in IE Mode on Microsoft Edge
-sidebar_label: Test in IE Mode on Edge
-description: Run Selenium tests in Internet Explorer compatibility mode on Microsoft Edge for legacy app testing on TestMu AI.
+title: How to Test in IE Mode on Edge With TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Test in IE Mode on Edge"
+description: Test legacy applications in Internet Explorer mode on Microsoft Edge with Selenium on TestMu AI.
 keywords:
   - ie mode microsoft edge
   - internet explorer mode selenium
@@ -45,6 +47,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+# How to Test in IE Mode on Edge With TestMu AI
+---
+
 Microsoft retired Internet Explorer 11 in June 2022, but many enterprise applications still require IE rendering for specific workflows. Microsoft Edge includes an IE Mode that loads pages using the IE11 Trident engine inside an Edge tab. TestMu AI supports IE Mode automation on Windows 11, so you can validate legacy apps without maintaining a standalone IE browser.
 
 ## When to Use IE Mode
@@ -65,7 +70,7 @@ IE Mode is available only on Windows. The Edge browser version must support IE M
 ---
 Configure `InternetExplorerOptions` with Edge attachment to run tests in IE Mode on TestMu AI.
 
-To run tests in IE Mode, use the `InternetExplorerOptions` class with `platformName` set to `Windows 11` and `browserVersion` set to `11.0`. TestMu AI handles the Edge attachment server-side. Pass your credentials in `LT:Options` as usual.
+To run tests in IE Mode, use the `InternetExplorerOptions` class with `platformName` set to `Windows 11` and `browserVersion` set to `11.0`. TestMu AI handles the Edge attachment server-side. Pass your credentials in `LT:Options` as usual. For the complete set of options you can combine with these settings, see the supported [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
 
 <Tabs className="docs__val">
 
@@ -146,15 +151,25 @@ Review the IE Mode capabilities and their expected values.
 ---
 Troubleshoot frequent problems when running IE Mode tests.
 
-### Elements not interactable in IE Mode
-IE Mode uses the Trident rendering engine, which handles focus and click events differently from modern browsers. Add explicit waits before interacting with elements. Avoid CSS selectors that rely on modern pseudo-classes not supported by IE11.
+### Elements Not Interactable in IE Mode
+---
+IE Mode uses the Trident rendering engine, which handles focus and click events differently from modern browsers. Add explicit waits before interacting with elements. Avoid CSS selectors that rely on modern pseudo-classes not supported by IE11. When a legacy app depends on saved logins or extensions to render correctly, you can upload a custom Chrome profile to reproduce that environment in your other browser tests.
 
-### Session timeout errors
+### Session Timeout Errors
+---
 IE Mode sessions can take longer to initialize than standard browser sessions. Increase your session timeout in `LT:Options` if you encounter timeout errors during startup.
 
 :::warning
 IE Mode does not support all Selenium features available in modern browsers. Features like shadow DOM access, modern CSS selectors, and certain JavaScript APIs are unavailable when the page renders through the Trident engine.
 :::
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Upload Custom Chrome Profile](/support/docs/upload-custom-chrome-profile/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

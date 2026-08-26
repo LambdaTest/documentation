@@ -19,3 +19,8 @@
   Each HyperExecute license provides access to standard automation platforms and features. This makes transitioning to HyperExecute easier and makes sure that the best cross-browser platform features are still available to users purchasing a HyperExecute license.
 
 >If you have more questions, then just give us a shout and we will answer them for you.
+
+## Related guides
+
+- [HyperExecute Shared Cloud Usage Limit](/support/docs/hyperexecute-shared-cloud-usage-limit/) — understand concurrency and usage limits on the HyperExecute shared cloud.
+- [Shared Cloud Usage](/support/docs/shared-cloud-usage/) — how shared cloud concurrency and usage are calculated across your account.

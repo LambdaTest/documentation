@@ -30,10 +30,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Configure MCP Servers in Agent Assurance
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 Rook uses MCP primarily as an evidence source. A judge can call an approved read-only tool to confirm that a ticket, refund, pull request, or other effect exists, rather than trusting the tested agent's claim.
 
 Exploration also records MCP servers declared by the target agent. These declarations are evidence about the target, and Rook never silently replaces or rewrites them.

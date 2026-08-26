@@ -162,7 +162,7 @@ The following are the different options which are currently supported:
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
-```rb title="This is a sample for your configuration for Ruby to ignore by" ID"
+```rb title="This is a sample for your configuration for Ruby to ignore by ID"
 options = {
 ignoreDOM: {
 id: ["ID-1", "ID-2"],
@@ -172,7 +172,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your configuration for Ruby to ignore by" Class"
+```rb title="This is a sample for your configuration for Ruby to ignore by Class"
 options = {
 ignoreDOM: {
 class: ["Class-1", "Class-2"],
@@ -182,7 +182,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your configuration for Ruby to ignore by" XPath"
+```rb title="This is a sample for your configuration for Ruby to ignore by XPath"
 options = {
 ignoreDOM: {
 xpath: ["Xpath-1", "Xpath-2"],
@@ -192,7 +192,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your configuration for Ruby to ignore by CSS" Selector"
+```rb title="This is a sample for your configuration for Ruby to ignore by CSS Selector"
 options = {
 ignoreDOM: {
 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -212,7 +212,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your configuration for Ruby to select by" Class"
+```rb title="This is a sample for your configuration for Ruby to select by Class"
 options = {
 selectDOM: {
 class: ["Class-1", "Class-2"],
@@ -222,7 +222,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your configuration for Ruby to select by" XPath"
+```rb title="This is a sample for your configuration for Ruby to select by XPath"
 options = {
 selectDOM: {
 xpath: ["Xpath-1", "Xpath-2"],
@@ -232,7 +232,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your webhook configuration for Ruby to select by CSS" Selector"
+```rb title="This is a sample for your webhook configuration for Ruby to select by CSS Selector"
 options = {
 selectDOM: {
 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -256,7 +256,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your configuration for Ruby to capture an element by" Class"
+```rb title="This is a sample for your configuration for Ruby to capture an element by Class"
 options = {
 element: {
 class: 'Required Class',
@@ -266,7 +266,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your configuration for Ruby to capture an element by" XPath"
+```rb title="This is a sample for your configuration for Ruby to capture an element by XPath"
 options = {
 element: {
 xpath: 'Required Xpath',
@@ -276,7 +276,7 @@ driver.navigate.to 'Required URL'
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
-```rb title="This is a sample for your webhook configuration for Ruby to capture an element by CSS" Selector"
+```rb title="This is a sample for your webhook configuration for Ruby to capture an element by CSS Selector"
 options = {
 element: {
 cssSelector: 'Required CSS Selector',
@@ -339,7 +339,7 @@ end
 
 **Example:**
 ```ruby
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, HomePage-Header")
+LambdaTest::Selenium::Driver.smartui_snapshot(driver, "HomePage-Header")
 LambdaTest::Selenium::Driver.smartui_snapshot(driver, "ProductPage-MainContent")
 ```
 
@@ -356,7 +356,7 @@ require 'selenium-webdriver'
 driver.navigate.to 'https://example.com'
 wait = Selenium::WebDriver::Wait.new(timeout: 10)
 wait.until { driver.find_element(id: 'main-content') }
-LambdaTest::Selenium::Driver.smartui_snapshot(driver, Page Loaded")
+LambdaTest::Selenium::Driver.smartui_snapshot(driver, "Page Loaded")
 ```
 
 **Handle Dynamic Content**
@@ -442,7 +442,7 @@ wait.until { driver.find_element(css: '.main-content').displayed? }
 2. Enable JavaScript in configuration:
 ```json
 {
-enableJavaScript": true
+"enableJavaScript": true
 }
 ```
 
@@ -492,7 +492,7 @@ ruby --version
 ```
 5. Update Gemfile with specific version:
 ```ruby
-gem 'lambdatest-selenium-driver', '~"> 1.0'
+gem 'lambdatest-selenium-driver', '~> 1.0'
 ```
 
 **Issue: Screenshot Names Not Matching Baseline**

@@ -90,23 +90,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container" style={{ padding: '30px 16px 0' }}>
-        <a
-          href="https://app.zuddl.com/testmuai/testmu-conference-2026/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Register for TESTµ CONF '26"
-          style={{ display: 'block' }}
-        >
-          <img
-            src="https://assets.testmuai.com/resources/images/testmu-corepage-cta.png"
-            alt="TESTµ CONF '26 - World's Largest Virtual Agentic Engineering and Quality Conference. August 19-21. Register now."
-            loading="eager"
-            className="no-zoom"
-            style={{ width: '70%', height: 'auto', display: 'block', borderRadius: '8px', margin: 'auto' }}
-          />
-        </a>
-      </div>
+     
       <div className="primary_main">
       <div className="container">
 
@@ -115,11 +99,13 @@ export default function Home() {
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Web Automation</h2>
             <div className="home_inners">
-              <a href="/support/docs/getting-started-with-testmu-automation/"><p className="p_home_inners">Selenium Testing</p></a>
-              <a href="/support/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
+              <a href="/support/docs/testmu-running-your-first-selenium-test/"><p className="p_home_inners">Selenium Testing</p></a>
               <a href="/support/docs/playwright-testing/"><p className="p_home_inners">Playwright Testing</p></a>
               <a href="/support/docs/puppeteer-testing/"><p className="p_home_inners">Puppeteer Testing</p></a>
+                <a href="/support/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
               <a href="/support/docs/k6-browser-testing/"><p className="p_home_inners">K6 Testing</p></a>
+               <a href="/support/docs/run-tests-with-chrome-devtools-protocol/"><p className="p_home_inners">CDP Testing</p></a>
+                <a href="/support/docs/run-tests-with-webdriver-bidi/"><p className="p_home_inners">BiDi Testing</p></a>
             </div>
           </div>
           <div className="home_inners_box">
@@ -137,9 +123,7 @@ export default function Home() {
             <div className="home_inners">
               <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
               <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
-              <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-              <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">HyperExecute GUI &nbsp;<NewTag value="BETA" /></p></a>
-              <a href="/support/docs/hyperexecute-mcp-server/"><p className="p_home_inners">HyperExecute MCP Server</p></a>
+              <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a> 
               <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
               <a href="/support/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
               <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
@@ -159,7 +143,7 @@ export default function Home() {
             </div>
           </div>
           <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Browser Cloud &nbsp;<NewTag value="NEW" /></h2>
+            <h2 className="homeMain_h2"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Browser Cloud</h2>
             <div className="home_inners">
               <a href="/support/docs/what-is-browser-cloud/"><p className="p_home_inners">What is Browser Cloud</p></a>
               <a href="/support/docs/launch-first-session/"><p className="p_home_inners">Launch Session With SDK</p></a>
@@ -206,7 +190,7 @@ export default function Home() {
             </div>
           </div>
           <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="webscanner-light-icon.svg" dark="webscanner-dark-icon.svg" alt="" />Web Scanner &nbsp;<NewTag value="NEW" /></h2>
+            <h2 className="homeMain_h2"><Icon light="webscanner-light-icon.svg" dark="webscanner-dark-icon.svg" alt="" />Web Scanner</h2>
             <div className="home_inners">
               <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>
               <a href="/support/docs/web-scanner-getting-started/"><p className="p_home_inners">Getting Started</p></a>

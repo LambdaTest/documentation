@@ -6,7 +6,7 @@
 
 Katalon Studio offers cross-platform testing, from Windows, macOS, and Linux for web automation, to Android and iOS for mobile automation. It also comes with a built-in intuitive interface for codeless automation testing and validating the UI elements of your web application.
 
-This integration between TestMu AI and Katalon Studio enables you to automate the cross-browser testing process through the Selenium Grid of more than 2,000 real devices.
+This integration between TestMu AI and Katalon Studio enables you to automate the cross-browser testing process through the Selenium Grid of 5000+ real devices.
 
 As a result, you’ll be able to expand your test coverage, analyze and extract insightful test reports, and enhance your team collaboration.
 

@@ -121,7 +121,7 @@ await driver.quit();
 public void handleLazyLoading(WebDriver driver) throws InterruptedException {
 driver.get("https://example.com");
 
-JavaScriptExecutor js = (JavaScriptExecutor) driver;
+JavascriptExecutor js = (JavascriptExecutor) driver;
 
 // Get total page height
 Long totalHeight = (Long) js.executeScript("return document.body.scrollHeight");

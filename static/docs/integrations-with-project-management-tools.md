@@ -72,4 +72,20 @@ Zoho BugTracker Integration
 
 GoodDay Integration
 
+Redmine Integration With TestMu AI
+
+SpiraTeam Integration With TestMu AI
+
+ALM Octane Integration With TestMu AI
+
+Zenkit Integration With TestMu AI
+
+Userback Integration With TestMu AI
+
+Zoho Cliq Integration With TestMu AI
+
+ServiceNow Integration With TestMu AI
+
+Webex Teams Integration With TestMu AI
+
 >If your favourite project management or bug tracking tool is not in the above mentioned, then just give us a **shout** and we will have it ready shortly for you.

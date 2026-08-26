@@ -514,238 +514,108 @@ module.exports = {
       },
     },
     [
-      // 1. Getting Started
+      // 1. Get Started
       {
         type: "category",
         collapsed: true,
-        label: "Getting Started",
+        label: "Get Started",
         items: [
-          // why-we-need-kane-ai & use-cases-of-kane-ai merged into the intro
-          // page. Files retained on disk (to be deleted later); removed from nav.
-          "getting-started-with-kane-ai",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Author Your First Test",
-            items: [
-              "author-your-first-desktop-browser-test",
-              "author-your-first-mobile-browser-test",
-              "author-your-first-mobile-app-test",
-            ],
-          },
+          { type: "doc", id: "getting-started-with-kane-ai", label: "Overview" },
+          { type: "doc", id: "author-your-first-desktop-browser-test", label: "Author Desktop Browser Test" },
+          { type: "doc", id: "author-your-first-mobile-browser-test", label: "Author Mobile Browser Test" },
+          { type: "doc", id: "author-your-first-mobile-app-test", label: "Author Mobile App Test" },
         ],
       },
 
-      // 2. Writing Tests (KB index repurposed as landing page)
+      // 2. Author Tests
       {
         type: "category",
         collapsed: true,
-        label: "Writing Tests",
+        label: "Author Tests",
         items: [
-          "kaneai-kb-knowledge-base-index",
-          {
-            type: "doc",
-            id: "kane-ai-command-guide",
-            label: "Command Types",
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Authoring Guides",
-            items: [
-              "kaneai-kb-finding-and-interacting-with-elements",
-              "kaneai-kb-forms-inputs-and-data-entry",
-              "kaneai-kb-assertions-and-validation",
-              "kaneai-kb-dynamic-content-waits-and-page-state",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Interactions",
-            items: [
-              "kane-ai-click-interactions",
-              "kane-ai-scroll-in-feature",
-              "kane-ai-drag-drop",
-              "kaneai-manual-interaction",
-              "kaneai-upload-and-download-files",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Logic & Control Flow",
-            items: [
-              "kaneai-conditional-logic",
-              "kaneai-while-loops",
-              "kane-ai-javascript-execution",
-              "kaneai-kb-js-snippets-and-workarounds",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Session Configuration",
-            items: [
-              "kaneai-advanced-settings",
-              "kaneai-chrome-options",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Mobile Testing",
-            items: [
-              "kaneai-kb-mobile-app-testing-patterns",
-              "kaneai-scroll-until-mobile",
-            ],
-          },
+          { type: "doc", id: "kaneai-kb-finding-and-interacting-with-elements", label: "Elements" },
+          { type: "doc", id: "kane-ai-click-interactions", label: "Clicks, Long-Press & Drag" },
+          { type: "doc", id: "kane-ai-scroll-in-feature", label: "Scroll" },
+          { type: "doc", id: "kaneai-kb-forms-inputs-and-data-entry", label: "Forms" },
+          { type: "doc", id: "kaneai-upload-and-download-files", label: "Upload & Download Files" },
+          { type: "doc", id: "kaneai-kb-dynamic-content-waits-and-page-state", label: "Waits" },
+          { type: "doc", id: "kaneai-manual-interaction", label: "Manual Interaction" },
+          { type: "doc", id: "kaneai-kb-assertions-and-validation", label: "Assertions" },
+          { type: "doc", id: "kaneai-conditional-logic", label: "Conditional Logic" },
+          { type: "doc", id: "kaneai-while-loops", label: "While Loops" },
+          { type: "doc", id: "kane-ai-modules", label: "Modules" },
+          { type: "doc", id: "kaneai-kb-authentication-and-session-management", label: "Authentication" },
+          { type: "doc", id: "kaneai-kb-api-testing-and-network-assertions", label: "Network" },
+          { type: "doc", id: "kaneai-database", label: "Database" },
+          { type: "doc", id: "kane-ai-javascript-execution", label: "JavaScript Execution & Snippets" },
+          { type: "doc", id: "kane-ai-api-testing", label: "API Testing" },
+          { type: "doc", id: "kaneai-smartui-visual-testing", label: "Visual Testing" },
+          { type: "doc", id: "kane-ai-deeplink-support", label: "Mobile Deeplinks" },
+          { type: "doc", id: "kaneai-kb-mobile-app-testing-patterns", label: "Mobile Patterns" },
+          { type: "doc", id: "kaneai-mobile-app-accessibility", label: "Mobile App Accessibility" },
+          { type: "doc", id: "kane-ai-using-variables", label: "Variables & Secrets" },
+          { type: "doc", id: "kane-ai-using-parameters", label: "Parameters" },
+          { type: "doc", id: "kane-ai-using-datasets", label: "Datasets" },
         ],
       },
 
-      // 3. Test Data & Variables
+      // 3. Configure Tests
       {
         type: "category",
         collapsed: true,
-        label: "Test Data & Variables",
+        label: "Configure Tests",
         items: [
-          "kaneai-variables-and-parameters",
-          "kane-ai-using-variables",
-          "kane-ai-secrets",
-          "kane-ai-smart-variables",
-          "kane-ai-using-parameters",
-          "kane-ai-using-datasets",
+          { type: "doc", id: "kaneai-advanced-settings", label: "Advanced Settings" },
+          { type: "doc", id: "kaneai-chrome-options", label: "Chrome Options" },
+          { type: "doc", id: "kaneai-custom-headers", label: "Custom Headers" },
+          { type: "doc", id: "kane-ai-geolocation-tunnel-proxy", label: "Geolocation, Tunnel & Proxy" },
+          { type: "doc", id: "kaneai-network-throttling", label: "Mobile Network Throttling" },
+          { type: "doc", id: "kaneai-gps-location", label: "Mobile GPS Location" },
+          { type: "doc", id: "kaneai-smart-locator-priority", label: "Smart Locators" },
         ],
       },
 
-      // 4. Advanced Testing
+      // 4. Run & Analyze
       {
         type: "category",
         collapsed: true,
-        label: "Advanced Testing",
+        label: "Run & Analyze",
         items: [
-          "kane-ai-geolocation-tunnel-proxy",
-          {
-            type: "category",
-            collapsed: true,
-            label: "API & Network",
-            items: [
-              "kane-ai-api-testing",
-              "kaneai-kb-api-testing-and-network-assertions",
-              "kane-ai-network-assertions",
-              "kaneai-custom-headers",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Authentication & Security",
-            items: [
-              "kaneai-kb-authentication-and-session-management",
-              "kaneai-totp",
-            ],
-          },
-          "kaneai-database",
-          "kaneai-smartui-visual-testing",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Mobile",
-            items: [
-              "kane-ai-mobile-app-capabilities",
-              "kane-ai-deeplink-support",
-              "kaneai-network-throttling",
-              "kaneai-gps-location",
-              "kaneai-mobile-app-accessibility",
-            ],
-          },
+          { type: "doc", id: "kane-ai-automation-code-generation", label: "Code Generation" },
+          { type: "doc", id: "kaneai-hyperexecute-test-run-execution", label: "Test Runs" },
+          { type: "doc", id: "kaneai-test-run-instance-view", label: "Test Run Instance View" },
+          { type: "doc", id: "kaneai-scheduled-test-runs", label: "Scheduled Test Runs" },
+          { type: "doc", id: "kaneai-sequential-test-runs", label: "Sequential Test Runs" },
+          { type: "doc", id: "kaneai-dynamic-url-replacement", label: "Dynamic URL Replacement" },
+          { type: "doc", id: "kaneai-failure-conditions", label: "Failure Conditions" },
+          { type: "doc", id: "test-runs-configurations", label: "Configurations" },
+          { type: "doc", id: "kaneai-ci-cd-automation", label: "CI/CD" },
         ],
       },
 
-      // 5. Modules & Reusability
-      {
-        type: "category",
-        collapsed: true,
-        label: "Modules & Reusability",
-        items: [
-          "kane-ai-modules",
-          "kaneai-modules-versions-and-enhancement",
-          "kaneai-bulk-module-update",
-          "kaneai-rename-instructions",
-        ],
-      },
-
-      // 6. Running Tests
-      {
-        type: "category",
-        collapsed: true,
-        label: "Running Tests",
-        items: [
-          "test-runs-configurations",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Execution",
-            items: [
-              "kaneai-hyperexecute-test-run-execution",
-              "kaneai-sequential-test-runs",
-              "kaneai-scheduled-test-runs",
-              "kaneai-dynamic-url-replacement",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Code Export & CI/CD",
-            items: [
-              "kane-ai-automation-code-generation",
-              "kaneai-ci-cd-automation",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Results",
-            items: [
-              "kaneai-test-run-instance-view",
-            ],
-          },
-        ],
-      },
-
-      // 7. Debugging & Reliability
-      {
-        type: "category",
-        collapsed: true,
-        label: "Debugging & Reliability",
-        items: [
-          "kaneai-auto-heal",
-          "kaneai-smart-locator-priority",
-          "kaneai-failure-conditions",
-          "error-handling-kaneai",
-        ],
-      },
-
-      // 8. Integrations
+      // 5. Integrations
       {
         type: "category",
         collapsed: true,
         label: "Integrations",
         items: [
-          "kane-ai-jira-integration",
-          {
-            type: "doc",
-            id: "github-app-integration",
-            label: "KaneAI GitHub App Integration",
-          },
+          { type: "doc", id: "kane-ai-jira-integration", label: "Jira" },
+          { type: "doc", id: "github-app-integration", label: "GitHub App" },
+          { type: "doc", id: "kane-ai-azure-devops-integration", label: "Azure DevOps" },
         ],
       },
 
-      // 9. FAQs
+      // 6. Reference
       {
-        type: "doc",
-        label: "FAQs",
-        id: "kaneai-faqs",
+        type: "category",
+        collapsed: true,
+        label: "Reference",
+        items: [
+          { type: "doc", id: "kane-ai-command-guide", label: "Commands" },
+          { type: "doc", id: "error-handling-kaneai", label: "Errors" },
+          { type: "doc", id: "kaneai-auto-heal", label: "Auto-Heal" },
+          { type: "doc", id: "kane-ai-mobile-app-capabilities", label: "Mobile Authoring Capabilities" },
+        ],
       },
     ],
   ],
@@ -1086,7 +956,6 @@ module.exports = {
             ],
           },
           "wordpress-plugin",
-          "npm-plugin-for-testcafe-integration-with-lambdatest",
           "fastlane-plugin",
           "azure-pipeline",
           "teamcity-plugin",
@@ -2074,25 +1943,21 @@ module.exports = {
       type: "link",
       label: "Back",
       href: "/docs/",
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      customProps: { className: "back-to-main-menu" },
     },
     [
-      
       {
         type: "category",
         collapsed: false,
         label: "Get Started",
         items: [
-          { type: "doc", id: "lambdatest-running-your-first-selenium-test", label: "Run Your First Test" },
-          { type: "doc", id: "selenium-agent-skills", label: "Run Tests With Agent Skills" },
-           { type: "doc", id: "inside-lambdatest-automation-platform", label: "See Your Results (Dashboard)" },
-          { type: "doc", id: "migrate-selenium-test-suite", label: "Migrate an Existing Suite" },
-         
-           { type: "doc", id: "selenium-automation-capabilities", label: "Desired Capabilities" },
-           { type: "doc", id: "supported-browsers-and-operating-systems-for-the-web-interface", label: "Supported Browsers & OS" },
-         
+          { type: "doc", id: "lambdatest-running-your-first-selenium-test" },
+          { type: "doc", id: "selenium-agent-skills" },
+          { type: "doc", id: "inside-lambdatest-automation-platform" },
+          { type: "doc", id: "debugging-options" },
+          { type: "doc", id: "filter-your-selenium-tests" },
+          { type: "doc", id: "migrate-selenium-test-suite" },
+          { type: "doc", id: "selenium-automation-capabilities" },
         ],
       },
       {
@@ -2100,69 +1965,66 @@ module.exports = {
         collapsed: true,
         label: "Languages & Frameworks",
         items: [
-          { type: "doc", id: "java-framework", label: "Java With Selenium" },
-          { type: "doc", id: "running-javascript-test-scripts-on-lambdatest", label: "JavaScript With Selenium" },
-          { type: "doc", id: "csharp-with-selenium", label: "C# With Selenium" },
-          { type: "doc", id: "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid", label: "Python With Selenium" },
-          { type: "doc", id: "php-framework", label: "PHP With Selenium" },
-          { type: "doc", id: "ruby", label: "Ruby With Selenium" },
-        ],
-      },
-    
-      {
-        type: "category",
-        collapsed: true,
-        label: "Advanced Capabilities",
-        items: [
-          { type: "doc", id: "smart-wait", label: "Enable SmartWait" },
-          { type: "doc", id: "auto-heal", label: "Auto-Heal Broken Locators" },
-            { type: "doc", id: "selenium-bidi-integration", label: "Use the Selenium BiDi Protocol" },
-          { type: "doc", id: "custom-chrome", label: "Upload a Custom Chrome Profile" },
-          { type: "doc", id: "mock-video-injection-web-automation-selenium-chromium", label: "Inject a Mock Video Stream" },
-          { type: "doc", id: "network-data-masking", label: "Mask Sensitive Data" },
-          { type: "doc", id: "selenium-geolocation-capabilities", label: "Test Location & Timezone" },
-          { type: "doc", id: "perform-selenium-automation-on-headless-browsers", label: "Run Headless Tests" },
-          { type: "doc", id: "network-throttling", label: "Simulate Network Conditions" },
-          { type: "doc", id: "upload-files-using-lambdatest", label: "Upload & Download Files" },
-          { type: "doc", id: "setup-pre-run-executable", label: "Run a Pre-Test Script" },
+          { type: "doc", id: "java-framework" },
+          { type: "doc", id: "running-javascript-test-scripts-on-lambdatest" },
+          { type: "doc", id: "python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid" },
+          { type: "doc", id: "ruby" },
+          { type: "doc", id: "php-framework" },
+          { type: "doc", id: "csharp-with-selenium" },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Monitor & Debug",
+        label: "Features",
         items: [
-          { type: "doc", id: "filter-your-selenium-tests", label: "Organize Tests & Builds" },
-          { type: "doc", id: "mark-as-bug-in-automation-testing", label: "File a Bug From a Session" },
-          { type: "doc", id: "live-interaction", label: "Take Over a Live Session" },
-          { type: "doc", id: "rerun-automation-tests", label: "Re-Run & Reproduce a Test" },
-          { type: "doc", id: "mute-test-scenarios", label: "Mute Test Scenarios" },
-          { type: "doc", id: "debugging-options", label: "Set Debugging Options & Logs" },
-          { type: "doc", id: "lighthouse-reports-hooks", label: "Measure Page Performance" },
-          { type: "doc", id: "lambda-hooks", label: "Use Lambda Hooks & Metadata" },
-      
+          { type: "doc", id: "test-locally-hosted-websites-with-selenium" },
+          { type: "doc", id: "selenium-geolocation-capabilities" },
+          { type: "doc", id: "network-throttling" },
+          { type: "doc", id: "configure-timezones" },
+          { type: "doc", id: "smart-wait" },
+          { type: "doc", id: "auto-heal" },
+          { type: "doc", id: "run-tests-with-webdriver-bidi" },
+          { type: "doc", id: "custom-header" },
+          { type: "doc", id: "custom-dns-map" },
+          { type: "doc", id: "mock-video-injection-web-automation-selenium-chromium" },
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Troubleshoot & Optimize",
+        label: "Guides",
         items: [
-          { type: "doc", id: "error-messages", label: "Fix Errors & Timeouts" },
-          { type: "doc", id: "performance-tips", label: "Speed Up Your Tests" },
+          { type: "doc", id: "upload-files-using-lambdatest" },
+          { type: "doc", id: "perform-selenium-automation-on-headless-browsers" },
+          { type: "doc", id: "ie-mode-on-edge" },
+          { type: "doc", id: "custom-chrome" },
+          { type: "doc", id: "setup-pre-run-executable" },
+          { type: "doc", id: "run-selenium-test-behind-the-proxy" },
+          { type: "doc", id: "selenium-mask-your-data" },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Reference",
+        items: [
+          { type: "doc", id: "lighthouse-reports-hooks" },
+          { type: "doc", id: "performance-tips" },
+          { type: "doc", id: "lambda-hooks" },
+          { type: "doc", id: "error-messages" },
         ],
       },
     ],
   ],
 
+
   CypressTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: { className: "back-to-main-menu" },
     },
     [
       {
@@ -2170,17 +2032,9 @@ module.exports = {
         collapsed: false,
         label: "Getting Started",
         items: [
-          {
-            type: "doc",
-            label: "Cypress Testing",
-            id: "getting-started-with-cypress-testing",
-          },
-          {
-            type: "doc",
-            label: "Run Your Test With Agent Skills",
-            id: "cypress-agent-skills",
-          },
-       
+          { type: "doc", id: "getting-started-with-cypress-testing" },
+          { type: "doc", id: "cypress-agent-skills" },
+          { type: "doc", id: "cypress-cli-commands" },
         ],
       },
       {
@@ -2188,36 +2042,10 @@ module.exports = {
         collapsed: true,
         label: "Test Capabilities",
         items: [
-          {
-            type: "doc",
-            label: "Specify Browsers and OS",
-            id: "supported-browsers-and-os",
-          },
-          {
-            type: "doc",
-            label: "Supported Cypress Versions",
-            id: "supported-cypress-versions",
-          },
-          {
-            type: "doc",
-            label: "Cypress CLI Commands",
-            id: "cypress-cli-commands",
-          },
-          {
-            type: "doc",
-            label: "Configure Cypress Test Execution",
-            id: "run-settings",
-          },
-          {
-            type: "doc",
-            label: "Execute Including Private Dependencies",
-            id: "private-dependencies-cypress",
-          },
-          {
-            type: "doc",
-            label: "Download Artefacts For Cypress Project",
-            id: "download-artefacts-cypress",
-          },
+          { type: "doc", id: "supported-browsers-and-os" },
+          { type: "doc", id: "run-settings" },
+          { type: "doc", id: "private-dependencies-cypress" },
+          { type: "doc", id: "download-artefacts-cypress" },
         ],
       },
       {
@@ -2225,26 +2053,10 @@ module.exports = {
         collapsed: true,
         label: "Integrations",
         items: [
-          {
-            type: "doc",
-            label: "Integrate TestMu AI with Cypress Dashboard",
-            id: "integrate-lambdatest-with-cypress",
-          },
-          {
-            type: "doc",
-            label: "Applitools Integration For Cypress",
-            id: "applitools-integration-cypress",
-          },
-          {
-            type: "doc",
-            label: "Multi Reporters Support",
-            id: "cyp-multi-reporters",
-          },
-          {
-            type: "doc",
-            label: "Cypress Terminal Reports",
-            id: "cypress-detailed-command-logs",
-          },
+          { type: "doc", id: "integrate-lambdatest-with-cypress" },
+          { type: "doc", id: "applitools-integration-cypress" },
+          { type: "doc", id: "cypress-mochaawesome-report" },
+          { type: "doc", id: "cypress-detailed-command-logs" },
         ],
       },
     ],
@@ -2252,24 +2064,22 @@ module.exports = {
 
   PlaywrightTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: { className: "back-to-main-menu" },
     },
     [
       {
         type: "category",
-        collapsed: true,
-        label: "Getting Started",
+        collapsed: false,
+        label: "Get Started",
         items: [
-          "playwright-testing-guide",
-          "playwright-agent-skills",
-          "playwright-sdk",
-           "migrate-playwright-tests",
-             "playwright-test-execution-setup",
+          { type: "doc", id: "playwright-testing-guide" },
+          { type: "doc", id: "playwright-agent-skills" },
+          { type: "doc", id: "migrate-playwright-tests" },
+          { type: "doc", id: "playwright-test-execution-setup" },
+          { type: "doc", id: "playwright-caps" },
         ],
       },
       {
@@ -2277,21 +2087,21 @@ module.exports = {
         collapsed: true,
         label: "Languages & Frameworks",
         items: [
-          { type: "doc", id: "java-with-playwright", label: "Java With Playwright" },
-          { type: "doc", id: "javascript-with-playwright", label: "JavaScript With Playwright" },
-          { type: "doc", id: "csharp-with-playwright", label: "C# With Playwright" },
-          { type: "doc", id: "python-with-playwright", label: "Python With Playwright" },
+          { type: "doc", id: "java-with-playwright" },
+          { type: "doc", id: "javascript-with-playwright" },
+          { type: "doc", id: "python-with-playwright" },
+          { type: "doc", id: "csharp-with-playwright" },
         ],
       },
-    
       {
         type: "category",
         collapsed: true,
         label: "Features",
         items: [
-          "playwright-android-guide",
-          "playwright-ios-guide",
-          "playwright-auto-heal",
+          { type: "doc", id: "playwright-auto-heal" },
+          { type: "doc", id: "playwright-android-guide" },
+          { type: "doc", id: "playwright-webview-test" },
+          { type: "doc", id: "playwright-ios-guide" },
         ],
       },
       {
@@ -2299,10 +2109,8 @@ module.exports = {
         collapsed: true,
         label: "Integrations",
         items: [
-          "playwright-playwrighttest",
-          "playwright-cucumberjs",
-          "playwright-cicd",
-          "playwright-lighthouse-library",
+          { type: "doc", id: "playwright-playwrighttest" },
+          { type: "doc", id: "playwright-lighthouse-library" },
         ],
       },
     ],
@@ -2310,36 +2118,33 @@ module.exports = {
 
   PuppeteerTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
-      customProps: {
-        className: "back-to-main-menu",
-      },
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: { className: "back-to-main-menu" },
     },
     [
       {
         type: "category",
         collapsed: false,
-        label: "Getting Started",
+        label: "Get Started",
         items: [
-          "puppeteer-testing-guide",
-          "puppeteer-agent-skills",
-          "puppeteer-test-execution",
+          { type: "doc", id: "puppeteer-testing-guide" },
+          { type: "doc", id: "puppeteer-agent-skills" },
+          { type: "doc", id: "puppeteer-test-execution" },
+          { type: "doc", id: "puppeteer-capabilities" },
         ],
       },
-  
       {
         type: "category",
         collapsed: true,
-        label: "Frameworks",
+        label: "Integrations",
         items: [
-          "puppeteer-mocha",
-          "puppeteer-jest",
-          "puppeteer-pytest-pyppeteer",
+          { type: "doc", id: "puppeteer-mocha" },
+          { type: "doc", id: "puppeteer-jest" },
+          { type: "doc", id: "puppeteer-pytest-pyppeteer" },
         ],
       },
-     
     ],
   ],
 
@@ -4525,6 +4330,48 @@ module.exports = {
             type: "doc",
             label: "Agents & CI",
             id: "kane-cli-assurance-automation",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Evidence",
+        items: [
+          {
+            type: "doc",
+            label: "Overview",
+            id: "kane-cli-evidence",
+          },
+          {
+            type: "doc",
+            label: "Pack Structure",
+            id: "kane-cli-evidence-pack-structure",
+          },
+          {
+            type: "doc",
+            label: "Viewing Evidence",
+            id: "kane-cli-evidence-viewing",
+          },
+          {
+            type: "doc",
+            label: "Validating Packs",
+            id: "kane-cli-evidence-validate",
+          },
+          {
+            type: "doc",
+            label: "Merging Packs",
+            id: "kane-cli-evidence-merge",
+          },
+          {
+            type: "doc",
+            label: "Debugging from a Pack",
+            id: "kane-cli-evidence-debugging",
+          },
+          {
+            type: "doc",
+            label: "The .evidence Format",
+            id: "kane-cli-evidence-format",
           },
         ],
       },

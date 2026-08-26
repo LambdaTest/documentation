@@ -1,7 +1,8 @@
 ---
 id: kane-ai-automation-code-generation
-title: KaneAI Automation Code Generation
-hide_title: false
+title: How KaneAI Generates Automation Code
+hide_title: true
+toc_max_heading_level: 2
 sidebar_label: Code Generation
 description: Explore KaneAI’s features and components to generate automation test code.
 keywords:
@@ -24,8 +25,6 @@ slug: kane-ai-automation-code-generation/
 canonical: https://www.testmuai.com/support/docs/kane-ai-automation-code-generation/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -51,18 +50,24 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-KaneAI generates automation scripts in multiple frameworks and languages based on natural language inputs from users. KaneAI is available for desktop web applications as well as native mobile applications currently.
+
+# How KaneAI Generates Automation Code
+***
+
+KaneAI generates automation scripts in multiple frameworks and languages from your natural language inputs. It supports both desktop web applications and native mobile applications.
 
 :::note
 KaneAI offers two authoring experiences, Classic and New Experience. New Experience is being rolled out in phases. To enable New Experience for your organization, reach out to our support team. The frameworks and languages supported by each experience are listed below.
 :::
 
 <img loading="lazy" src={require('../assets/images/kane-ai/generate-code-button.png').default} alt="generated-code-listing" className="doc_img"/>
-Click the `Generate New Code` button to go to code generation page where you can select desired framework and language.
+
+Click the **Generate New Code** button to open the code generation page, where you select the framework and language you want.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/generate-code-page.png').default} alt="code-generation-dashboard" className="doc_img"/>
 
 ## Supported Frameworks and Languages
+***
 
 The table below shows the frameworks and languages KaneAI can generate code in, and the experience each is available under.
 
@@ -142,12 +147,14 @@ The table below shows the frameworks and languages KaneAI can generate code in, 
 :::
 
 ## Understanding the Code Tab
+***
 
-After code generation completes, the **Code** tab shows the status of each generated code entry and lets you run a Sample Run Execution to validate it before adding the test case to a full Test Run.
+After code generation completes, the **Code** tab shows the status of each generated code entry and lets you run a Sample Run Execution, a quick validation run on [KaneAI HyperExecute Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/), to validate it before adding the test case to a full Test Run.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/code-gen-view.png').default} alt="KaneAI Code tab showing generated code with status and actions" className="doc_img"/>
 
 ### Code Generation States
+***
 
 | State | What it means |
 |---|---|
@@ -156,7 +163,8 @@ After code generation completes, the **Code** tab shows the status of each gener
 | **Verifying** | A Sample Run Execution is in progress via HyperExecute. |
 | **Verified** | The most recent Sample Run Execution completed successfully. |
 
-### Actions Available After Code is Generated
+### Actions After Code Generation
+***
 
 Once code is generated, the following actions are available:
 
@@ -164,11 +172,13 @@ Once code is generated, the following actions are available:
 - **Download**: Downloads the generated code to your local machine.
 
 ### Sample Run Execution Behavior
+***
 
 - Sample Run Execution can only be initiated from the **Code** tab of a test case.
 - The **Execute** button is always enabled. You can proceed to run the test on HyperExecute regardless of whether a Sample Run Execution has passed, failed, or not been triggered.
 
-### Adding Test Cases to a Test Run
+### Adding Test Cases to Runs
+***
 
 Test cases with generated code can be added to a Test Run regardless of the Sample Run Execution status, whether it passed, failed, or was never triggered. The only cases where a test case is not available for selection in a Test Run are:
 
@@ -176,10 +186,18 @@ Test cases with generated code can be added to a Test Run regardless of the Samp
 - Code generation is still in progress.
 
 :::note
-KaneAI code export leverages public libraries. The generated automation scripts depend on these published packages:
+KaneAI code export uses public libraries. The generated automation scripts depend on these published packages:
 
 - Playwright Python: [testmu-playwright-python](https://pypi.org/project/testmu-playwright-python/)
 - Playwright C#: [TestmuAI.Playwright.Bindings](https://libraries.io/nuget/TestmuAI.Playwright.Bindings)
 - Playwright JavaScript: [@testmuai/playwright-bindings](https://www.npmjs.com/package/@testmuai/playwright-bindings)
 - Selenium Java: [testmuai-selenium-bindings](https://mvnrepository.com/artifact/io.github.lambdatest/testmuai-selenium-bindings)
 :::
+
+## Next Steps
+***
+
+Continue with these guides:
+
+- [KaneAI HyperExecute Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/): Add test cases with generated code to a test run and execute them.
+- [Test Runs Configurations](/support/docs/test-runs-configurations/): Define the browser and device environments your generated code runs against.

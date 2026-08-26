@@ -18,7 +18,7 @@ Author and manage datasets directly inside KaneAI Test Manager to drive the same
 - **Version history**: track changes, revert, or restore previous dataset versions for audit and recovery
 
 **Documentation:**
-- [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
+- [KaneAI Datasets](/support/docs/kane-ai-using-parameters/#datasets)
 
 ## Data Masking
 
@@ -45,10 +45,9 @@ Pass dynamic values into test cases at runtime so a single test runs across envi
 - **Datasets**: combine parameters into rows for data-driven runs across multiple inputs
 
 **Documentation:**
-- [KaneAI Variables & Parameters Overview](/support/docs/kaneai-variables-and-parameters/)
 - [Using Variables](/support/docs/kane-ai-using-variables/)
 - [Using Parameters](/support/docs/kane-ai-using-parameters/)
-- [Secrets](/support/docs/kane-ai-secrets/)
+- [Secrets](/support/docs/kane-ai-using-variables/#secrets)
 
 ## Related Resources
 

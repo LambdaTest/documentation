@@ -21,10 +21,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
 
 # What is TestMu AI Agent Assurance
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 TestMu AI Agent Assurance is the product for proving an AI agent you own is safe to ship. This page covers its **Autonomous Agent** category, for agents that *act*: they call tools, write files, hit APIs, and change external state.
 
 Agent Assurance runs from your terminal as <code>rook</code>. Give it the materials that describe the agent and connect a live test target. It can then:

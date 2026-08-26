@@ -4,7 +4,7 @@
 
 Mocha is a JavaScript automation testing framework to run the tests on Node.js and the browser. It enables you to run test cases serially, providing greater flexibility and accurate test reporting while mapping unidentified bugs to the correct test cases.
 
-TestMu AI allows you to run Puppeteer tests with Mocha on a browser farm of 40+ real browsers and operating system combinations.
+TestMu AI allows you to run Puppeteer tests with Mocha on a browser farm of real browsers and operating system combinations.
 
 This guide will cover the basics of getting started with Puppeteer testing with Mocha on the TestMu AI platform.
 

@@ -1,9 +1,10 @@
 ---
 id: kane-ai-geolocation-tunnel-proxy
-title: KaneAI - Geolocation, Tunnel and Proxy Support
-hide_title: false
-sidebar_label: Geolocation, Tunnel, and Proxy
-description: Learn how to run your web tests on KaneAI using geolocation, tunnel, and dedicated proxy configurations.
+title: How to Configure Geolocation and Tunnel With KaneAI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: Geolocation, Tunnel & Proxy
+description: Run KaneAI web tests from a specific geolocation, through a tunnel to private environments, or via a dedicated proxy.
 keywords:
   - testmu ai automation
   - testmu ai kaneai
@@ -16,8 +17,6 @@ slug: kane-ai-geolocation-tunnel-proxy/
 canonical: https://www.testmuai.com/support/docs/kane-ai-geolocation-tunnel-proxy/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -46,30 +45,57 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-Now you can start your web tests on Kane AI using advanced configurations like geolocation, tunnel, and dedicated proxy support.
+# How to Configure Geolocation and Tunnel With KaneAI
+***
 
-## Geolocation Support
 
-With KaneAI's geolocation feature, you can simulate user interactions from different regions to ensure your website works as expected worldwide.
+KaneAI web tests use three network configurations in **Advanced Settings**: geolocation to route traffic through a chosen region, tunnel to reach pages hosted locally or behind a firewall, and dedicated proxy to route traffic through your organization's proxy IP. Each configuration is written into the generated code so the test replays with the same network context.
 
-### Steps to Use Geolocation
+## Prerequisites
+***
 
-**Step 1 :** Select the **Geolocation** option from the **Advanced Settings** and choose your desired region.
+:::note
+- An active KaneAI web authoring session (network configurations are set in **Advanced Settings**).
+- For the tunnel option: the tunnel binary plus your account username and access key.
+:::
 
-**Step 2 :** Run your web test on KaneAI with traffic proxied through the selected region.
+## Geolocation
+***
 
-**Step 3 :** Once the test is saved, the generated code will include geolocation details automatically, making it easier to 
-replicate the test across different regions.
+Geolocation routes your test traffic through a chosen region so you can verify how your website behaves for users in that location.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/geolocation.png').default} alt="Image" width="1200" height="550" className="doc_img"/>
+### Step 1: Select a Region
+***
 
-## Tunnel Support
+In **Advanced Settings**, select the **Geolocation** option and choose your desired region.
 
-KaneAI also supports tunneling to allow you to test websites hosted locally or behind a firewall.
+**Result:** Test traffic is proxied through the selected region.
 
-### Steps to Use Tunnel
+### Step 2: Run the Test
+***
 
-**Step 1 :** Configure the tunnel using the [LT tunnel binary](/support/docs/testing-locally-hosted-pages/#lambdatest-tunnel-guide) with `--env ht-prod` mode enabled. You can use the following command to trigger your tunnel:
+Run your web test on KaneAI.
+
+**Result:** The website loads as it would for a user in the selected region.
+
+### Step 3: Save the Test
+***
+
+Save the test to persist the configuration.
+
+**Result:** The generated code includes the geolocation details, so you can replay the test across regions.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/geolocation.png').default} alt="Save the Test" width="1200" height="550" className="doc_img"/>
+
+## Tunnel
+***
+
+A tunnel lets you test websites that are hosted locally or sit behind a firewall.
+
+### Step 1: Start the Tunnel
+***
+
+Configure the tunnel using the [locally hosted pages tunnel binary](/support/docs/testing-locally-hosted-pages/#download-the-tunnel-binary) with `--env ht-prod` mode enabled. Trigger the tunnel with the following command:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -77,22 +103,61 @@ KaneAI also supports tunneling to allow you to test websites hosted locally or b
 </CodeBlock>
 </div>
 
-**Step 2 :** Select the tunnel from the **Advanced Settings** on KaneAI and choose the tunnel that you have spun up.
+**Result:** The tunnel is running and available to select in KaneAI.
 
-**Step 3 :** Run your web test on KaneAI from a locally hosted webpage.
+### Step 2: Select the Tunnel
+***
 
-**Step 4 :** Once the test is saved, the generated code will include tunnel details automatically for easy replication.
+In **Advanced Settings**, select the tunnel you started.
 
-## Dedicated Proxy Support (Enterprise only)
+**Result:** KaneAI routes the test through your tunnel.
 
-KaneAI offers support for dedicated proxy usage, exclusively available for enterprise accounts with dedicated proxy enabled.
+### Step 3: Run the Test
+***
 
-### Steps to Use Dedicated Proxy
+Run your web test on KaneAI against the locally hosted page.
 
-**Step 1 :** Select the **Dedicated Proxy** option from the **Advanced Settings** and choose the region.
+**Result:** KaneAI reaches the local or firewalled page through the tunnel.
 
-**Step 2 :** Run your web test on KaneAI with traffic routed through the dedicated proxy IP configured for your organization.
+### Step 4: Save the Test
+***
 
-**Step 3 :** Once the test is saved, the generated code will include proxy details automatically, allowing seamless future executions.
+Save the test to persist the configuration.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/dedicated-proxy.png').default} alt="Image" width="1200" height="550" className="doc_img"/>
+**Result:** The generated code includes the tunnel details for future runs.
+
+## Dedicated Proxy
+***
+
+Dedicated proxy routes test traffic through the proxy IP configured for your organization. This option is available only for enterprise accounts with dedicated proxy enabled.
+
+### Step 1: Select a Region
+***
+
+In **Advanced Settings**, select the **Dedicated Proxy** option and choose the region.
+
+**Result:** KaneAI routes the test through your organization's dedicated proxy IP.
+
+### Step 2: Run the Test
+***
+
+Run your web test on KaneAI.
+
+**Result:** Traffic is routed through the dedicated proxy IP for the selected region.
+
+### Step 3: Save the Test
+***
+
+Save the test to persist the configuration.
+
+**Result:** The generated code includes the proxy details for future runs.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/dedicated-proxy.png').default} alt="Save the Test" width="1200" height="550" className="doc_img"/>
+
+## Next Steps
+***
+
+Continue with these guides:
+
+- [KaneAI Advanced Settings](/support/docs/kaneai-advanced-settings/)
+- [KaneAI Custom Headers](/support/docs/kaneai-custom-headers/)

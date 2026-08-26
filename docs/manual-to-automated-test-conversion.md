@@ -224,7 +224,7 @@ Requirements (text, docs, images, audio, Jira, ADO)
 - [AI Test Case Generator](/support/docs/generate-test-cases-with-ai/): Full guide for AI-powered test case generation
 - [KaneAI Manual Interaction](/support/docs/kaneai-manual-interaction/): Record user actions to create tests
 - [KaneAI Code Generation](/support/docs/kane-ai-automation-code-generation/): Export automation scripts in multiple frameworks
-- [KaneAI Test Planner](/support/docs/kane-ai-test-plan/): Generate tests from high-level objectives
+- [KaneAI Test Planner](/support/docs/getting-started-with-kane-ai/): Generate tests from high-level objectives
 - [KaneAI Jira Integration](/support/docs/kane-ai-jira-integration/): Generate tests from Jira tickets
 - [Getting Started with HyperExecute](/support/docs/getting-started-with-hyperexecute/): Execute automated tests at scale
 

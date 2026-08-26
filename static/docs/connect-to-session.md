@@ -337,3 +337,9 @@ the timeout.
 | Multi-page workflows | Playwright | Better context management for complex navigation |
 | Existing Selenium test suite | Selenium | Minimal migration - same WebDriver API |
 | Simple return type | Puppeteer | Returns a single `Browser` object (vs Playwright's 3 objects) |
+
+## Related guides
+
+- [Browser Cloud Sessions Overview](/support/docs/browser-cloud-sessions-overview/) — view and manage your Browser Cloud sessions and their details.
+- [Browser Cloud Tunnel](/support/docs/browser-cloud-tunnel/) — reach locally hosted or private environments from a Browser Cloud session.
+- [Bypass Proxy Domains](/support/docs/bypass-proxy-domains/) — exclude specific domains from the tunnel proxy during a session.

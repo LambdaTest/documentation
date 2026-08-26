@@ -358,19 +358,19 @@ await driver.execute("smartui.takeScreenshot", config);
 ```
 
 ```java title="Taking Screenshots with SmartUI Hooks in Java"
-import org.openqa.selenium.JavaScriptExecutor;
+import org.openqa.selenium.JavascriptExecutor;
 import java.util.HashMap;
 import java.util.Map;
 
 // Viewport screenshot
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
 
 // Full page screenshot (if supported)
 Map<String, Object> config = new HashMap<>();
 config.put("screenshotName", "Homepage");
 config.put("fullPage", true);
 config.put("pageCount", 15); // Minimum 1, Maximum 20
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot", config);
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", config);
 ```
 
 ```python title="Taking Screenshots with SmartUI Hooks in Python"
@@ -756,7 +756,7 @@ await driver.executeScript("smartui.takeScreenshot=LoginPage");
 ```java title="BaseClassWebhook.java - Complete Java Web Test with SmartUI Hooks and GitLab"
 package webhook;
 
-import org.openqa.selenium.JavaScriptExecutor;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
@@ -823,13 +823,13 @@ driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
 @Test
 public void testHomepageScreenshot() {
 driver.get("https://example.com");
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
 }
 
 @Test
 public void testLoginPageScreenshot() {
 driver.get("https://example.com/login");
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginPage");
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginPage");
 }
 
 @AfterClass
@@ -907,7 +907,7 @@ await driver.execute("smartui.takeScreenshot=LoginScreen");
 ```java title="BaseClassWebhook.java - Complete Java Mobile Test with SmartUI Hooks and GitLab"
 package webhook;
 
-import org.openqa.selenium.JavaScriptExecutor;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
@@ -978,13 +978,13 @@ driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
 @Test
 public void testHomepageScreenshot() {
 // Navigate or perform actions
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=Homepage");
 }
 
 @Test
 public void testLoginScreenScreenshot() {
 // Navigate to login screen
-((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginScreen");
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=LoginScreen");
 }
 
 @AfterClass

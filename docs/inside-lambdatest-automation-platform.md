@@ -1,8 +1,10 @@
 ---
 id: inside-lambdatest-automation-platform
-title: Explore the Automation Dashboard
-sidebar_label: Explore the Dashboard
-description: Navigate the TestMu AI Automation Dashboard. View test results, video recordings, command logs, network logs, and build timelines.
+title: How to View Selenium Test Results on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "View Test Results"
+description: "View and analyze Selenium test results on the TestMu AI Automation Dashboard: command logs, video, screenshots, and test details."
 keywords:
   - automation dashboard
   - testmu ai dashboard
@@ -43,7 +45,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+# How to View Selenium Test Results on TestMu AI
 ---
+
 
 The [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you view results, debug failures, and track every test you run on the grid. This page walks you through each section of the dashboard.
 
@@ -66,6 +70,7 @@ Each test detail page shows the build name, test status (pass/fail), execution t
 <img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/testPage.png').default} alt="Test detail page showing execution data" className="doc_img" style={{ width: '100%' }}/>
 
 ### Test List Panel
+---
 
 The left panel lists all test cases within a build. Each entry shows the test status, execution time, and configuration.
 
@@ -74,6 +79,7 @@ You can sort by date, status, or duration. Use the search bar to find a specific
 <img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/test.png').default} alt="Test list panel with filters" className="doc_img" style={{ width: '100%' }}/>
 
 ### Test Summary
+---
 
 The summary section gives you a quick overview of the selected test.
 
@@ -86,7 +92,7 @@ It displays:
 
 Use the action buttons next to the test ID to copy the ID, create an issue, rename, share, or delete the test.
 
-Use the **Re-Run** button to execute the test again from the dashboard. See [Re-Run Automation Tests](/support/docs/rerun-automation-tests/).
+Use the **Re-Run** button to execute the test again from the dashboard. See [Re-Run Automation Tests](/support/docs/debugging-options/#re-run-automation-tests).
 
 Use **Mute Test...** in the test's options menu to keep a known-broken or known-flaky test out of the build's pass/fail verdict and counts. The test still runs and still reports its real result. See [Mute Test Scenarios](/support/docs/mute-test-scenarios/).
 
@@ -106,6 +112,7 @@ The right panel contains three tabs:
 <img loading="lazy" src={require('../assets/images/selenium/guided-walkthrough/commandLogsAndVideos.png').default} alt="Command logs and network tab" className="doc_img" style={{ width: '100%' }}/>
 
 ### Video Recording
+---
 
 Watch a full video playback of your test execution to see exactly what happened in the browser.
 
@@ -114,14 +121,11 @@ Watch a full video playback of your test execution to see exactly what happened 
 ## Next Steps
 ---
 
-Now that you know how to read the dashboard, explore more ways to manage and debug your tests.
+Continue with these related guides:
 
-- [Filter your tests](/support/docs/filter-your-selenium-tests/) - narrow down results by browser, OS, status, or tags
-- [Share test results](/support/docs/sharing-test-results/) - send results to teammates
-- [Mark as bug](/support/docs/mark-as-bug-in-automation-testing/) - file a bug directly from a test session
-- [Mute test scenarios](/support/docs/mute-test-scenarios/) - stop a known-broken test from failing the build
-- [Debug your tests](/support/docs/debugging-options/) - enable extended logging for deeper analysis
-- [Group tests with tags](/support/docs/group-tests-using-custom-tags/) - organize tests using custom tags
+- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Error Messages](/support/docs/error-messages/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

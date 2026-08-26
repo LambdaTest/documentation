@@ -1,16 +1,18 @@
-# Mobile App Testing Patterns
+# How to Test Native Mobile Apps With KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Mobile native app testing in KaneAI follows many of the same principles as web testing, but with platform-specific nuances for Android and iOS. This guide covers the patterns, workarounds, and best practices that will help you write reliable mobile app tests.
+Mobile native app testing in KaneAI uses the same natural-language authoring as web testing, with platform-specific patterns for Android and iOS. This page is a lookup reference: each section covers one interaction (keyboards, OTP fields, scrolling, pickers, popups, and more), the natural-language keyword to use, and a worked scenario.
 
-## Getting Started with Mobile Tests
+## Start a Mobile Test
 
-1. Navigate to the [KaneAI home page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective)
-2. Choose **App Test** (Android or iOS)
-3. Select a real device from the device cloud
-4. Upload your app (APK for Android, IPA for iOS) or select a previously uploaded app
-5. Start authoring with natural language instructions
+Author a mobile test in five steps before you apply the patterns below.
+
+1. Go to the [KaneAI home page](https://www.testmuai.com/login/?redirectTo=https://kaneai.lambdatest.com/objective).
+2. Choose **App Test** (Android or iOS).
+3. Select a real device from the device cloud.
+4. Upload your app (APK for Android, IPA for iOS) or select a previously uploaded app.
+5. Start authoring with natural-language instructions.
 
 ## Keyboard Handling
 
@@ -93,7 +95,7 @@ wait for 2 seconds
 assert "Contact Us" section is visible
 ```
 
-### Scenario: Scrolling Through a Long Settings Page
+### Scenario: Scrolling a Settings Page
 
 ```
 scroll down 3 times
@@ -109,6 +111,8 @@ assert confirmation dialog is visible
 
 ## Pickers, Wheels & Sliders
 
+KaneAI interacts with native picker wheels and sliders using the patterns below.
+
 ### Native Pickers
 
 Mobile apps use native picker wheels for dates, numbers, and selections. KaneAI supports the following element classes:
@@ -123,7 +127,9 @@ Mobile apps use native picker wheels for dates, numbers, and selections. KaneAI 
 - `XCUIElementTypeDatePicker`
 - `XCUIElementTypeSlider`
 
-### Interacting with Picker Wheels
+### Interacting With Picker Wheels
+
+Reference each wheel by its column position when setting a value.
 
 ```
 enter "5" in the first column
@@ -133,6 +139,8 @@ enter "2026" in the third column
 
 ### Slider Interactions
 
+Set a slider by value or percentage.
+
 ```
 drag the slider to 80 percent
 set the brightness slider to 50
@@ -140,9 +148,9 @@ set the brightness slider to 50
 
 ### Troubleshooting Pickers
 
-If a picker doesn't respond to natural language:
+If a picker doesn't respond to natural language, verify its element class.
 
-1. Open LambdaTest **App Live** with the [UI Inspector](https://www.testmuai.com/support/docs/ui-inspector/)
+1. Open TestMu AI **App Live** with the [UI Inspector](https://www.testmuai.com/support/docs/ui-inspector/)
 2. Inspect the picker element to verify its class name
 3. Confirm the class is one of the supported types listed above
 4. If the class is a custom implementation, you may need to use **manual interaction** mode
@@ -164,11 +172,15 @@ Mobile apps frequently show permission dialogs, promotional popups, or system al
 
 ### Generic Dialog Dismissal
 
+Dismiss any dialog without targeting a specific button.
+
 ```
 dismiss dialog
 ```
 
 ### Permission Dialogs
+
+Handle permission prompts with conditional taps so the test does not fail when a prompt is absent.
 
 ```
 if "Allow" button is visible then click on "Allow"
@@ -177,11 +189,13 @@ if "Don't Allow" button is visible then click on "Don't Allow"
 
 ### App Rating Dialogs
 
+Dismiss a rating prompt only when it appears.
+
 ```
 if "Rate this app" dialog is visible then dismiss dialog
 ```
 
-### Scenario: Handling Permission Prompts on App Launch
+### Scenario: Handling Permission Prompts
 
 ```
 -- App launches and asks for location permission --
@@ -197,6 +211,8 @@ assert the home screen is visible
 ```
 
 ## Typing & Special Keys
+
+Use these keywords to delete characters and press special keys during input.
 
 ### Deleting Characters
 
@@ -246,11 +262,13 @@ assert the profile button's background color is blue
 
 KaneAI supports deep links for navigating directly to specific screens in your app, bypassing the normal navigation flow using the slash command.
 
-Deep links are excellent for test setup. Jump directly to the screen you want to test instead of navigating through the entire app flow. See [Deep Link Support](/support/docs/kane-ai-deeplink-support).
+Deep links are useful for test setup. Jump directly to the screen under test instead of navigating the whole app flow. See how to add [KaneAI Deeplink Support](/support/docs/kane-ai-deeplink-support/).
 
 ## Mobile-Specific Testing Scenarios
 
-### Scenario: E-Commerce App - Browse and Purchase
+These end-to-end scenarios combine the patterns above into complete mobile flows.
+
+### Scenario: E-Commerce Purchase Flow
 
 ```
 -- Handle initial permissions --
@@ -279,12 +297,12 @@ assert "Wireless Earbuds" is visible in the cart
 click on "Checkout" button
 ```
 
-### Scenario: Banking App - Check Balance with Biometric
+### Scenario: Banking Biometric Login
 
 ```
 -- App launches with biometric authentication enabled from advanced settings --
 wait for 5 seconds
--- (Biometrics pop-up visible via LambdaTest device settings) --
+-- (Biometrics pop-up visible via TestMu AI device settings) --
 click "pass" in modal
 assert the home screen is visible
 
@@ -299,7 +317,7 @@ wait for 2 seconds
 assert "Recent Transactions" section is visible
 ```
 
-### Scenario: Social Media App - Post with Image
+### Scenario: Social Media Post
 
 ```
 click on the "New Post" button
@@ -317,7 +335,9 @@ assert "Post shared successfully" is visible
 
 ## Network Conditions & Geolocation
 
-### Testing Under Different Network Conditions
+Simulate network throttling and mock GPS location to test environment-dependent behavior.
+
+### Testing Network Conditions
 
 Set network throttling before or during the test session to simulate real-world conditions:
 
@@ -325,7 +345,7 @@ Set network throttling before or during the test session to simulate real-world 
 - **2G/3G**: Test on slow connections
 - **Custom**: Define specific bandwidth limits
 
-See [Network Throttling](/support/docs/kaneai-network-throttling) for configuration.
+See how to configure [KaneAI Network Throttling](/support/docs/kaneai-network-throttling/).
 
 ### GPS Mocking (Mobile)
 
@@ -337,9 +357,11 @@ Test location-dependent features by mocking GPS coordinates:
 assert "Stores near New York" is visible
 ```
 
-See [Geolocation Testing](/support/docs/kane-ai-geolocation-tunnel-proxy).
+See how to configure [KaneAI Geolocation Tunnel Proxy](/support/docs/kane-ai-geolocation-tunnel-proxy/).
 
-## Best Practices for Mobile App Testing
+## Best Practices
+
+Follow these practices for reliable mobile app tests:
 
 | Practice | Details |
 |---|---|
@@ -351,3 +373,11 @@ See [Geolocation Testing](/support/docs/kane-ai-geolocation-tunnel-proxy).
 | **Use element type keywords** | `button`, `text`, `icon` improve targeting accuracy |
 | **Use `dismiss dialog` for stubborn popups** | Works for dialogs without visible close buttons |
 | **Use `spannable text` for inline links** | Essential for "Terms and Conditions" style partial links |
+
+## Next Steps
+
+Build on these patterns with related KaneAI mobile features.
+
+- Scan a screen for accessibility issues with [KaneAI Mobile App Accessibility](/support/docs/kaneai-mobile-app-accessibility/).
+- Reuse values across steps with [KaneAI Using Variables](/support/docs/kane-ai-using-variables/).
+- Run one test across many inputs with [KaneAI Using Parameters](/support/docs/kane-ai-using-parameters/).

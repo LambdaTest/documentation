@@ -1,4 +1,4 @@
-# Finding & Interacting with Elements
+# How to Find and Interact With Elements in KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -18,6 +18,8 @@ The best instructions combine **what the element is** (type) with **how to ident
 
 ## Describing Elements Clearly
 
+These techniques help KaneAI match the element you intend:
+
 ### Use the Element Type
 
 Always mention what kind of element you are targeting. This eliminates ambiguity when multiple elements share the same text.
@@ -30,7 +32,7 @@ Always mention what kind of element you are targeting. This eliminates ambiguity
 
 Think of it like giving directions to a person: "Click the blue **button** that says Submit" is clearer than "Click Submit."
 
-### Use Quotes for Exact Text Matching
+### Use Quotes for Exact Match
 
 Wrap element text in quotes when you need an exact match. This prevents KaneAI from matching similar but incorrect elements.
 
@@ -70,6 +72,8 @@ click "Save" inside the modal dialog
 
 ## Real-World Scenarios
 
+These examples show how to target elements in common application layouts:
+
 ### Scenario: E-Commerce Product Listing
 
 Your page shows a grid of products, each with an "Add to Cart" button.
@@ -83,7 +87,7 @@ click the "Add to Cart" button below the "Running Shoes" product
 click the "Add to Cart" button for the first product in the list
 ```
 
-### Scenario: Data Table with Repeated Actions
+### Scenario: Data Table Actions
 
 A user management table has Edit, Delete, and View buttons for each row.
 
@@ -93,7 +97,7 @@ click "Delete" next to user "John Smith"
 click the "View" link in the third row of the users table
 ```
 
-### Scenario: Navigation Menu with Nested Items
+### Scenario: Nested Navigation Menu
 
 A multi-level navigation has "Settings" under both "Account" and "Admin" sections.
 
@@ -144,7 +148,7 @@ Many real-world flows open new tabs (e.g., clicking "Terms & Conditions" or a pa
 
 Window management is currently not supported on KaneAI.
 
-### Scenario: Checkout Flow That Opens Payment in New Tab
+### Scenario: Payment in New Tab
 
 ```
 click on "Proceed to Payment"
@@ -188,9 +192,9 @@ drag the first item and drop it below the third item in the list
 drag "Card A" to "Column B"
 ```
 
-Use **Manual Interaction** to capture sliders, slide-to-confirm gestures, and other dynamic-target drags that NL cannot resolve reliably. Manual recording is available on Desktop Web, Android, and iOS. Mobile Web is **NL-only**.
+Use **Manual Interaction** to capture sliders, slide-to-confirm gestures, and other dynamic-target drags that natural language cannot resolve reliably. Manual recording is available on Desktop Web, Android, and iOS. Mobile Web is **NL-only**.
 
-See the [Drag and Drop](/support/docs/kane-ai-drag-drop/) guide for the full platform matrix, gesture classification rules, and replay behavior.
+See the [drag and drop](/support/docs/kane-ai-click-interactions/#drag-and-drop) guide for the full platform matrix, gesture classification rules, and replay behavior.
 
 ## When Natural Language Isn't Enough
 
@@ -206,16 +210,18 @@ Use the `/` command and select **"Add JS Snippet"** to execute JavaScript direct
 document.querySelector('my-component').shadowRoot.querySelector('.hidden-btn').click();
 ```
 
-See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds) guide for a comprehensive list of scenarios where JS scripting is the recommended approach.
+See the [KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/) guide for the full list of scenarios where JS scripting is the recommended approach.
 
 ## Quick Reference: Element Interaction Commands
 
+This table lists common element interactions with example instructions:
+
 | Action | Example Instructions |
 |---|---|
-| **Click** | `click on the "Submit" button` |
-| **Double / N-Click** | `double click the title` , `click the button 5 times`, see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| **Right Click** | `right click on the file row` (web only), see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
-| **Long Press** | `long press the menu icon for 3 seconds`, see [Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| **Click** | `click on the "Submit" button`, see [KaneAI Click Interactions](/support/docs/kane-ai-click-interactions/) |
+| **Double / N-Click** | `double click the title`, `click the button 5 times` |
+| **Right Click** | `right click on the file row` (web only) |
+| **Long Press** | `long press the menu icon for 3 seconds` |
 | **Type** | `type "hello world" in the search input` |
 | **Clear** | `clear the email input field` |
 | **Hover** | `hover on the "Products" menu` |
@@ -226,6 +232,8 @@ See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-work
 
 ## Do's and Don'ts
 
+This table contrasts precise instructions with vague ones to avoid:
+
 | Do | Don't |
 |---|---|
 | `click the "Save" button inside the settings modal` | `click Save` (which Save button?) |
@@ -234,3 +242,13 @@ See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-work
 | `hover on "Account" menu, then click "Profile"` | `go to my profile` (too vague for nested nav) |
 | `scroll until the "Footer" section is visible` | `scroll to the bottom` (if you need a specific section, name it) |
 | `switch to the "Checkout" tab` | `continue on the new tab` (KaneAI needs explicit tab switch) |
+
+## Next Steps
+
+Continue with these guides:
+
+- [KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)
+- [KaneAI Scroll in Feature](/support/docs/kane-ai-scroll-in-feature/)
+- [KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)
+- [KaneAI Mobile App Testing Patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/)
+- [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)

@@ -30,10 +30,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Connect and Explore AI Agents
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 Exploration tells Rook what an agent is supposed to do before you tell it how to invoke the agent. Rook reads local material such as source code, prompts, skills, manifests, tool declarations, tests, README files, and product requirements.
 
 The target can be a complete application, one agent directory, or a documentation-only workspace. Rook works with any agent framework.

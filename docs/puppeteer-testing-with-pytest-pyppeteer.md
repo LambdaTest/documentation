@@ -1,21 +1,16 @@
 ---
 id: puppeteer-pytest-pyppeteer
-title: Run Puppeteer Tests Using Pytest-Pyppeteer
+title: How to Run Pyppeteer Tests With pytest on TestMu AI
 hide_title: true
-sidebar_label: Integrate With Pytest-Pyppeteer
-description: Learn how to integrate and run your Puppeteer tests using Pytest-Pyppeteer across multiple browser versions on the TestMu AI platform.
+toc_max_heading_level: 2
+sidebar_label: "Pyppeteer"
+description: Run Pyppeteer tests with pytest across real browsers and operating systems on TestMu AI, including setup, parallel execution, and results.
 keywords:
   - puppeteer testing with pyppeteer
-  - pyppeteer
-  - pytest
-  - python
-  - puppeteer pytest
-  - puppeteer mocha
-  - automation testing with puppeteer
-  - how to use puppeteer for testing
-  - test puppeteer
-  - puppeteer testing tutorial
-  - puppeteer testing testmu ai
+  - pyppeteer pytest testing
+  - run pyppeteer tests on testmu ai
+  - pyppeteer python automation
+  - pyppeteer parallel execution
 
 url: https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/
 site_name: TestMu AI
@@ -48,57 +43,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Puppeteer Testing With CodeceptJS
-* * *
+# How to Run Pyppeteer Tests With pytest on TestMu AI
+***
 
-Learn how to run your Puppeteer tests with CodeceptJS across real browsers and operating systems on the <BrandName /> platform. 
+If you write browser automation in Python with Pyppeteer, you can run those tests with pytest across real browsers and operating systems on TestMu AI instead of a single local machine. This gives you pytest's fixtures and parallel execution on a browser farm without maintaining local browser binaries. You clone the sample project, set your TestMu AI credentials as environment variables, then run the pytest suite in parallel with the `pytest -n` option.
 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<a href="https://github.com/LambdaTest/puppeteer-sample/tree/main/pytest-pyppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
+Before you run your first test, clone the sample project, set up a Python environment, and configure the credentials TestMu AI uses to authenticate your session.
+
+:::note
+All the code samples in this documentation are available in the TestMu AI repository on GitHub. Download or clone the repository to run your tests quickly.
+:::
+
+<a href="https://github.com/LambdaTest/puppeteer-sample/tree/main/pytest-pyppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI pytest-pyppeteer sample project on GitHub"  className="doc_img"/> View on GitHub</a>
 
 1. Clone the puppeteer-sample repository on your system and navigate to the `pytest-pyppeteer` directory.
-```
+
+```bash
 cd pytest-pyppeteer
 ```
 
-2. Create a virtual environment using the following commands:
+2. Create a virtual environment using the following commands.
 
-```
+```bash
 virtualenv venv
 ```
 
-```
+```bash
 source venv/bin/activate
 ```
 
 3. Install the necessary configurations.
 
-```
+```bash
 poetry install
 ```
 
-4. Install the necessary dependencies
+4. Install the necessary dependencies.
 
+```bash
+pip install -r requirements.txt
 ```
-pip install - r requirements.txt
-```
 
-5. In order to run your pyppeteer tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+5. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find them.
 
-<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Access Key button at the top-right of the TestMu AI Automation Dashboard" width="1444" height="703"  className="doc_img"/>
 
+Set the credentials for your operating system.
 
-##### Windows
+**Windows**
 
 ```sh
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-##### macOS/Linux
+**macOS/Linux**
 
 ```sh
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -106,57 +108,58 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Running Your First Pyppeteer Test
+***
 
-The first test script navigates to DuckduckGo and searches for <BrandName />. The second test script navigates to Brave search and searches for <BrandName />. Both the tests are executed using Chrome (latest) on Windows 11.
+After you finish the prerequisite steps, you can run your first Pyppeteer test on TestMu AI. The first test script navigates to DuckDuckGo and searches for TestMu AI. The second test script navigates to Brave Search and searches for TestMu AI. Both tests run on Chrome (latest) on Windows 11.
 
-Once you are done with the steps 1 thru' 5, you can initiate your first Pyppeteer test on <BrandName />. 
+Run the following command in the terminal to run the Pyppeteer tests in parallel.
 
-Run the following command on the terminal to run the Pyppeteer tests in parallel.
-
-```
+```bash
 pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \
     tests/test_pytest_pyppeteer_2.py
 ```
 
-## View your Pyppeteer test results
+## View Your Pyppeteer Test Results
+***
 
-The [<BrandName /> Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) is where you can see the results of your Pyppeteer tests after running them on the <BrandName /> platform.
+After the tests run, open the TestMu AI Automation Dashboard to review each session. The dashboard shows the Pyppeteer build on the left and the build sessions associated with the selected build on the right.
 
-The below screenshot of <BrandName /> Automation Dashboard shows the pyppeteer build on the left and the build sessions associated with the selected build on the right.
+Open the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see the results of your Pyppeteer tests.
 
-<img loading="lazy" src={require('../assets/images/puppeteer-testing/pyppeteer-dashboard.webp').default} alt="Pyppeteer <BrandName /> Dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/puppeteer-testing/pyppeteer-dashboard.webp').default} alt="TestMu AI Automation Dashboard showing the Pyppeteer build and its associated sessions" className="doc_img"/>
 
-On clicking the session name of the respective test, you can view the details of pyppeteer test session that you just executed. For example, the below screenshot shows a test execution details of pyppeteer test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
+Click the session name of a test to view the details of the Pyppeteer session you executed. The session view shows the Test Name, Test ID, selected configurations, test logs, basic info, input config, and the test session video.
 
-<img loading="lazy" src={require('../assets/images/puppeteer-testing/pyppeteer-test-view.webp').default} alt="Pyppeteer <BrandName /> Test View" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/puppeteer-testing/pyppeteer-test-view.webp').default} alt="TestMu AI test session view showing Pyppeteer test name, ID, configurations, logs, and session video" className="doc_img"/>
 
-## Run Pyppeteer Tests In Gitpod
+## Run Pyppeteer Tests in Gitpod
+***
 
-Select the button below to try this demo in [Gitpod](https://www.gitpod.io/)
+You can run this demo in a browser-based workspace without setting up Python locally. Select the button below to open the project in [Gitpod](https://www.gitpod.io/).
 
 [<img alt="Run in Gitpod" width="200px" align="center" src="https://user-images.githubusercontent.com/70570645/169987363-1408c494-4e2a-4f12-8828-c931eac716b0.png" />](https://gitpod.io/#https://github.com/LambdaTest/pyppeteer-sample)
 
-* After the Gitpod session launches, navigate to the terminal and run the following commands to save your [<BrandName /> Credentials](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) to Gitpod as environment variables:
+* After the Gitpod session launches, navigate to the terminal and run the following commands to save your [TestMu AI credentials](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) to Gitpod as environment variables.
 
-```
+```bash
 eval $(gp env -e LT_USERNAME=******)
 eval $(gp env -e LT_ACCESS_KEY=******)
-  ```
-
-* Click the following link if you're unsure how to [access your <BrandName /> credentials.](/support/docs/using-environment-variables-for-authentication-credentials/). Also, if you start a new terminal in Gitpod, you have to run the following command to reset environment variables:
-```
- eval $(gp env -e)
 ```
 
+* If you are unsure where to find them, see [how to access your TestMu AI credentials](/support/docs/using-environment-variables-for-authentication-credentials/). If you start a new terminal in Gitpod, run the following command to reset the environment variables.
 
-## Using the Pytest Agent Skill with TestMu AI
+```bash
+eval $(gp env -e)
+```
+
+## Using the Pytest Agent Skill With TestMu AI
 ***
 
-The [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+The Pytest Agent Skill helps AI coding assistants generate production-ready pytest automation for TestMu AI. It is part of the [TestMu AI agent skills collection](https://github.com/LambdaTest/agent-skills/), and you can read the [Pytest Agent Skill reference on GitHub](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill).
 
-The pytest-skill package includes:
+The pytest-skill package includes the following files:
 
-```
+```text
 pytest-skill/
 ├── SKILL.md
 └── reference/
@@ -164,7 +167,7 @@ pytest-skill/
     └── advanced-patterns.md
 ```
 
-It provides structured guidance for:
+It provides structured guidance for the following areas:
 
 * Project structure and setup
 * Dependency configuration
@@ -173,13 +176,12 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-
-### Installing Pytest Agent Skill
+### Installing the Pytest Agent Skill
 ***
 
-Install a Pytest Agent Skill using the command below:
+Clone the agent skills repository and copy the Pytest Agent Skill into your tool's skills directory.
 
-```
+```bash
 # Clone the repo and copy the skill you need
 git clone https://github.com/LambdaTest/agent-skills.git
 cp -r agent-skills/pytest-skill .claude/skills/
@@ -188,4 +190,15 @@ cp -r agent-skills/pytest-skill .claude/skills/
 cp -r agent-skills/pytest-skill .cursor/skills/
 ```
 
-**Note**: If you prefer installing all available framework skills instead of only pytest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+:::note
+To install all available framework skills instead of only the Pytest Agent Skill, clone the repository directly into your tool's skills directory (for example, `.claude/skills/`, `.cursor/skills/`, `.gemini/skills/`, or `.agent/skills/`).
+:::
+
+## Related Puppeteer Guides
+***
+
+Continue with the guides below to configure and scale your Puppeteer runs on TestMu AI.
+
+* [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/)
+* [Explore the Puppeteer agent skills](/support/docs/puppeteer-agent-skills/)
+* [Set up Puppeteer test execution](/support/docs/puppeteer-test-execution-setup/)

@@ -19,10 +19,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-quickstart/
 
 # How to Get Started With Agent Assurance
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 TestMu AI Agent Assurance tests autonomous agents you own. These agents *act* by calling tools, writing files, and changing external state. This guide takes you from a clean machine to your first evidence-backed run: install and authenticate the <code>rook</code> CLI, then test a live agent from its PRD and a staging API.
 
 You install only the <code>rook</code> CLI. You do not need to clone the source repository, build any code, start a controller, or bring your own model API key.

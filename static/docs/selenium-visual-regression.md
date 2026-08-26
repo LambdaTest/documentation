@@ -99,7 +99,7 @@ options.set_capability('LT:Options', lt_options);
 
 #Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
-command_executor=  "https://" +"<Your Username>" +":" +"<Your Access Key>" + `hub.lambdatest.com/wd/hub`.format(username, access_key),options=options)
+command_executor="https://" + "<Your Username>" + ":" + "<Your Access Key>" + "@hub.lambdatest.com/wd/hub", options=options)
 ```
 
 ```ruby title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
@@ -121,7 +121,7 @@ options.set_capability('LT:Options', lt_options);
 
 #Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
-command_executor=  "https://" +"<Your Username>" +":" +"<Your Access Key>" + `hub.lambdatest.com/wd/hub`.format(username, access_key),options=options)
+command_executor="https://" + "<Your Username>" + ":" + "<Your Access Key>" + "@hub.lambdatest.com/wd/hub", options=options)
 ```
 
 ```csharp title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
@@ -298,8 +298,9 @@ Add the following **Webhook** to your test cases where you need to capture the s
 ```javascript
 let config = {
 screenshotName: '<Screenshot Name>',
-elementType: 'xpath'/'css_selector'/'id'/'class',  //Choose one from the following options - xpath, css_selector, id or class
-element: '<Required Element>'                      //Add your required element here
+elementType: 'xpath',   //Choose one of: xpath, css_selector, id, class
+element: '<Required Element>'
+};
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
