@@ -285,7 +285,7 @@ Go to **Billing → Credits → Overview**.
 
 <img src={require('../assets/images/credits/01-overview.png').default} alt="Credits Overview page showing the four balance cards, daily usage chart, top credit users and Credits by Type" />
 
-### The four cards
+### Credit summary
 
 | Card | What it counts | Time window |
 |---|---|---|
@@ -294,7 +294,7 @@ Go to **Billing → Credits → Overview**.
 | **Available Credits** | Your live balance right now | Live — never windowed |
 | **Reserved for Sub-Org.** | Credits handed to sub-organizations and not yet spent | Live — never windowed |
 
-The four cards always describe the same arithmetic: **Total = Used + Available + Reserved**.
+The four summary cards always describe the same arithmetic: **Total = Used + Available + Reserved**.
 
 :::note Total is not "everything you ever bought"
 Total is *what is in the wallet, plus what you have spent in this window, plus what is out with your sub-organizations*. Credits spent in an earlier window are not in it. The page prints which window **Used** covers.

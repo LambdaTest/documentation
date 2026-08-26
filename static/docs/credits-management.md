@@ -209,7 +209,7 @@ Expiry alerts are **off by default**. Turn them on and TestMu AI emails your adm
 
 Go to **Billing → Credits → Overview**.
 
-### The four cards
+### Credit summary
 
 | Card | What it counts | Time window |
 |---|---|---|
@@ -218,7 +218,7 @@ Go to **Billing → Credits → Overview**.
 | **Available Credits** | Your live balance right now | Live — never windowed |
 | **Reserved for Sub-Org.** | Credits handed to sub-organizations and not yet spent | Live — never windowed |
 
-The four cards always describe the same arithmetic: **Total = Used + Available + Reserved**.
+The four summary cards always describe the same arithmetic: **Total = Used + Available + Reserved**.
 
 **Total is not "everything you ever bought"**
 Total is *what is in the wallet, plus what you have spent in this window, plus what is out with your sub-organizations*. Credits spent in an earlier window are not in it. The page prints which window **Used** covers.
