@@ -52,7 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 * **Paid users:** Receive **complimentary credits** based on subscription to try AI‑powered features and can purchase credits as an add‑on at any time. Credits are used only when AI features are invoked.
 
 :::tip
-Once free credits are exhausted, AI features will be unavailable until you **upgrade or purchase credits** from the Billing page. Use this link to buy credits directly: [Upgrade / Buy Credits](https://billing.lambdatest.com/billing/subscriptions?addCredits=true).
+Once free credits are exhausted, AI features will be unavailable until you **upgrade or purchase credits** from the Billing page. Use this link to buy credits directly: [Upgrade / Buy Credits](https://billing.lambdatest.com/billing/credits).
 :::
 
 ---
@@ -463,7 +463,7 @@ Credits are charged **per minute of real‑device time while you author or edit*
 
 **Q: What happens when my credits run out?**
 
-AI features that require credits will be disabled. You can **purchase credits** or **upgrade** [here](https://billing.lambdatest.com/billing/subscriptions?addCredits=true).
+AI features that require credits will be disabled. You can **purchase credits** or **upgrade** [here](https://billing.lambdatest.com/billing/credits).
 
 **Q: Who can view balances and transactions?**
 
