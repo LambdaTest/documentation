@@ -148,7 +148,7 @@ configuration.profiles=lambdatest/web,web/desktop/safari
 
 <img loading="lazy" src={require('../assets/images/vividus-integration/vividus-2.webp').default} alt="Test Automation Logs" width="1281" height="721" className="doc_img"/>
 
-For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more.
+For each test executed overthe <BrandName /> platform, you can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more.
 
 ## Running Tests From Vividus In Parallel On <BrandName /> Platform
 

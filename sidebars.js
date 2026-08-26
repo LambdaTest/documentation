@@ -2013,6 +2013,7 @@ module.exports = {
           { type: "doc", id: "performance-tips" },
           { type: "doc", id: "lambda-hooks" },
           { type: "doc", id: "error-messages" },
+          { type: "doc", id: "timeouts-issues-and-resolutions" },
         ],
       },
     ],

@@ -106,7 +106,7 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **max_retries**: Define the maximum number of retries you want (max value 5, default 1).
 - **timezone**: Define the timezone you want to choose for test run in UTC+01:00 format.
 - **app_profiling**: Set to true to track app profiling metrics in your test. See [Appium App Performance Analytics](/support/docs/appium-app-performance-analytics/) for details.
-- **performance**: Set to true to generate a Lighthouse report for your web tests. Supported on limited OS and browser combinations. Setting this to true may slow down execution time. See [View Lighthouse Performance Metrics](/support/docs/view-lighthouse-performance-metrics/) for details.
+- **performance**: Set to true to generate a Lighthouse report for your web tests. Supported on limited OS and browser combinations. Setting this to true may slow down execution time. See [View Lighthouse Performance Metrics](/support/docs/generate-multiple-lighthouse-reports/#view-lighthouse-performance-metrics) for details.
 - **android_app_id**: Specify an Android app ID to override the existing app in the configuration of the Test instances.
 - **ios_app_id**: Specify an iOS app ID to override the existing app in the configuration of the Test instances.
 - **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.
