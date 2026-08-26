@@ -3381,7 +3381,7 @@ module.exports = {
               "button-text-click",
               "ios-shake-gesture-appautomation",
               "appium-terminal-logs",
-              // "mute-test-scenarios-appium"
+             "mute-test-scenarios",
             ],
           },
           {
