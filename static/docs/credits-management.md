@@ -123,7 +123,7 @@ A scheduled instalment is visible before it starts, shown as your **next grant**
 | | Monthly plan | Annual plan |
 |---|---|---|
 | Credits at purchase | Whole month, immediately | First month only, immediately |
-| Rest of the term | Next month arrives at each renewal | 11 further monthly instalments, pre-scheduled |
+| Rest of the term | Next month arrives at each renewal | 11 further monthly instalments |
 | Visible before it starts? | — | Yes, as your next grant |
 | Expiry of each batch | End of the month | End of that instalment's month |
 | Do credits roll over? | No | No |
@@ -143,8 +143,6 @@ Admins have **two different ways** to divide credits, and they work on completel
 | Expiry | Carved credits keep the original expiry date | Not applicable |
 | Shown on the parent's overview as | **Reserved for Sub-Org.** | Nothing |
 | When exhausted | Runs are refused — insufficient credits | **Enforce**: runs refused. **Notify only**: warns only |
-
-When budgets overlap, the **lowest limit applies**.
 
 ### Sub-organization budgets
 
