@@ -193,6 +193,8 @@ Credits that belong to a period do not carry forward. Whatever is unused when a 
 
 Admins have **two different ways** to divide credits, and they work on completely different principles. Both are configured under **Credits → Budgets**.
 
+<img src={require('../assets/images/credits/02-budgets.png').default} alt="Credits Budgets screen with the Sub-Organizations and Groups tabs and the Reserved Budgets table" />
+
 | | Sub-organization budget | Group budget |
 |---|---|---|
 | What it is | Credits **handed over** to a sub-organization | A **spending limit** on a group of users |
@@ -221,15 +223,21 @@ Recurring budgets refresh on a cadence — monthly, weekly, daily, one-time, or 
 
 Credits already spent can never be clawed back, and a budget cannot be reduced while that sub-organization has runs in flight.
 
+<img src={require('../assets/images/credits/04-suborg-budget.png').default} alt="Add New Sub-Organization Budget panel showing Reserved Credits carved from the root balance, reset cadence and email alert thresholds" />
+
 ### Group budgets
 
 A group budget **moves no credits**. It is a per-period spend counter for a group of users inside the same organization, and it either warns as the group approaches the limit (*notify only*) or blocks new runs once the limit is reached (*enforce*). Group budgets refresh simply because a new period starts counting from zero.
+
+<img src={require('../assets/images/credits/05-group-budget.png').default} alt="Add New Group Budget panel showing Max Credits capping the group's usage per cycle while credits stay in the org balance" />
 
 ---
 
 ## Credit usage limits and alerts
 
 Admins can define org-wide controls to prevent unexpected consumption, under **Credits → Alerts**. Each is switched on or off independently.
+
+<img src={require('../assets/images/credits/03-alerts.png').default} alt="Credits Alerts screen showing the warn and block thresholds, expiry alerts and the recipients list" />
 
 | Alert | Emails you | Blocks new runs | Measured against |
 |---|---|---|---|
@@ -285,6 +293,8 @@ Expiry alerts are **off by default**. Turn them on and <BrandName /> emails your
 ## Reading the Credits screen
 
 Go to **Billing → Credits → Overview**.
+
+<img src={require('../assets/images/credits/01-overview.png').default} alt="Credits Overview page showing the four balance cards, daily usage chart, top credit users and Credits by Type" />
 
 ### The four cards
 
