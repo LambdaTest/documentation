@@ -167,12 +167,12 @@ A group budget **moves no credits**. It is a per-period spend counter for a grou
 
 Admins can define org-wide controls to prevent unexpected consumption, under **Credits → Alerts**. Each is switched on or off independently.
 
-| Alert | Emails you | Blocks new runs | Measured against |
-|---|---|---|---|
-| **Warn when balance falls below** (soft limit) | Yes | **No** — usage continues as normal | Your available balance |
-| **Block usage when balance falls below** (hard limit) | Yes | **Yes** — new runs are refused | Your available balance |
-| **Daily spend cap** | Yes | **Yes** — for the rest of the UTC day | Credits spent so far today |
-| **Expiry alerts** | Yes | No | On/off only |
+| Alert | Emails you | Blocks new runs |
+|---|---|---|
+| **Warn when balance falls below** (soft limit) | Yes | **No** — usage continues as normal |
+| **Block usage when balance falls below** (hard limit) | Yes | **Yes** — new runs are refused |
+| **Daily spend cap** | Yes | **Yes** — for the rest of the UTC day |
+| **Expiry alerts** | Yes | No |
 
 **Recommendation:** start with a warning threshold at 70–80% of your monthly plan and a blocking threshold at 90%.
 

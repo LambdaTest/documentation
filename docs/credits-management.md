@@ -235,12 +235,12 @@ Admins can define org-wide controls to prevent unexpected consumption, under **C
 
 <img src={require('../assets/images/credits/03-alerts.png').default} alt="Credits Alerts screen showing the warn and block thresholds, expiry alerts and the recipients list" />
 
-| Alert | Emails you | Blocks new runs | Measured against |
-|---|---|---|---|
-| **Warn when balance falls below** (soft limit) | Yes | **No** — usage continues as normal | Your available balance |
-| **Block usage when balance falls below** (hard limit) | Yes | **Yes** — new runs are refused | Your available balance |
-| **Daily spend cap** | Yes | **Yes** — for the rest of the UTC day | Credits spent so far today |
-| **Expiry alerts** | Yes | No | On/off only |
+| Alert | Emails you | Blocks new runs |
+|---|---|---|
+| **Warn when balance falls below** (soft limit) | Yes | **No** — usage continues as normal |
+| **Block usage when balance falls below** (hard limit) | Yes | **Yes** — new runs are refused |
+| **Daily spend cap** | Yes | **Yes** — for the rest of the UTC day |
+| **Expiry alerts** | Yes | No |
 
 :::tip
 **Recommendation:** start with a warning threshold at 70–80% of your monthly plan and a blocking threshold at 90%.
