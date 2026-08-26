@@ -1,9 +1,10 @@
 ---
 id: lighthouse-reports-hooks
-title: How to Generate Multiple Lighthouse Reports in Selenium
+title: How to Generate Lighthouse Reports in Selenium on TestMu AI
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: Generate Lighthouse Reports
-description: Generate multiple Lighthouse reports in a single Selenium session using Lambda Hooks.
+sidebar_label: "Generate Lighthouse Reports"
+description: Generate multiple Google Lighthouse performance reports during a Selenium session on TestMu AI using Lambda Hooks.
 keywords:
   - generate multiple lighthouse reports selenium
   - lighthouse lambda hooks selenium
@@ -16,6 +17,7 @@ slug: generate-multiple-lighthouse-reports/
 canonical: https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 
 <script type="application/ld+json"
@@ -42,8 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-
-# Generating Multiple Lighthouse Reports Using Lambda Hooks
+# How to Generate Lighthouse Reports in Selenium on TestMu AI
 ---
 
 TestMu AI lets you perform Selenium automation while generating multiple Lighthouse reports through Lambda Hooks. This guide covers the hook structure, expected behavior, and conditions under which the reports are generated or errors are thrown.
@@ -77,9 +78,109 @@ Execute the hook multiple times with different URLs to generate reports for each
   }
   ```
   
-- Lighthouse reports for all hooks executed are visible on the TestMu AI Web Automation Dashboard under the **Performance** tab.
+- Lighthouse reports for all hooks executed are visible on the TestMu AI Web Automation Dashboard under the **Performance** tab. To learn how to use Lambda Hooks for other test operations, refer to the complete hooks reference.
 
 <img loading="lazy" src={require('../assets/images/uploads/lreports_se.png').default} alt="Image" width="1347" height="565" className="doc_img"/>
+
+## View Lighthouse Performance Metrics
+---
+Apart from generating reports through Lambda Hooks, TestMu AI also integrates [**Lighthouse**](https://developers.google.com/web/tools/lighthouse) directly into the Selenium Grid so you can view performance metrics (**Lighthouse Audits**) for your tests.
+
+On its cloud-based <a href={`${BRAND_URL}/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/`}>Selenium Grid</a>, you can view the scores of:
+
+*   **Performance**,
+*   **Accessibility**,
+*   **Best Practices**,
+*   **SEO**
+*   **Progressive Web App**
+
+metrics with TestMu AI. TestMu AI also allows you to perform cross-browser testing on 5000+ real devices and 10,000+ browser/device combinations. Once you have identified bottlenecks in the Lighthouse audit, apply these performance tips to speed up your Selenium tests and shorten overall execution time.
+
+> **Note:** TestMu AI currently supports **Lighthouse** on Chrome browsers for all Windows OS, macOS BigSur, macOS Mojave, and macOS Catalina.
+
+### Prerequisites
+---
+Complete these steps before generating Lighthouse reports.
+
+1. Create a <a href="https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingSignup}>TestMu AI account</a>.
+2. Get your TestMu AI Username and Access Key from the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) or your <a href="https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard" onClick={CookieTrackingLogin}>TestMu AI Profile</a>.
+
+### How to Include Lighthouse Performance Metrics in Selenium Automation
+---
+Add the `performance` capability to your capabilities to enable Lighthouse metrics.
+
+You can add Lighthouse performance metrics for the website you want to test using the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/). Use the **`Performance`** feature of the **Capabilities Generator**.
+
+For example, if you are using **TestNG** for Selenium Automation on TestMu AI, include the **Lighthouse** performance feature with the below code snippet:
+```java
+DesiredCapabilities caps = new DesiredCapabilities();
+.
+.
+
+// To view performance metrics
+caps.setCapability("performance", true);
+```
+Below is the code snippet to trigger **Lighthouse** performance metrics on TestMu AI in **macOS Catalina** with **Google Chrome** browser version **86.0**.
+```java
+DesiredCapabilities caps = new DesiredCapabilities();
+                    caps.setCapability("browser", "Chrome");
+                    caps.setCapability("version", "86");
+                    caps.setCapability("platform", "macOS Catalina");
+                    caps.setCapability("build", "Lighthouse Performance Demo");
+                    caps.setCapability("name", "TestNG Test 3");
+                    caps.setCapability("network", true);
+                    caps.setCapability("visual", true); 
+                    caps.setCapability("video", true);
+                    caps.setCapability("console", true);
+                    caps.setCapability("selenium_version", "4");
+
+                    // To view performance metrics
+                    caps.setCapability("performance", true);
+```
+### How to View Lighthouse Performance Metrics on TestMu AI
+---
+Access the Lighthouse performance report from the Automation Dashboard after running your tests.
+
+Once you have run your Selenium automation tests on TestMu AI, you can view the Lighthouse performance metrics on the website under test.
+
+>**Note:** The test duration should be at least 30 seconds to generate the **Lighthouse Performance Report**.
+
+Follow the below steps to view the **Lighthouse performance metrics** on TestMu AI:
+
+**1.**  Go to the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com). Here you can see your recently executed Selenium automation tests. For this demo, we used a sample **TestNG** script from this [GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium). 
+
+<img loading="lazy" src={require('../assets/images/uploads/lighthouse_1.webp').default} alt="Image"  width="1921" height="534" className="doc_img"/>
+
+**2.**  Click on the test in which you activated the **Lighthouse performance** feature, as shown above. 
+
+<img loading="lazy" src={require('../assets/images/uploads/lighthouse_2.webp').default} alt="Image"  width="1921" height="776" className="doc_img"/>
+
+**3.**  Click on the **Performance** tab. 
+
+<img loading="lazy" src={require('../assets/images/uploads/lighthouse_3.webp').default} alt="Image"  width="1921" height="776" className="doc_img"/>
+
+**4.**  You can see the Lighthouse performance metrics on your screen for the website under test. For example, in the below image, the website under test is [https://lambdatest.github.io/sample-todo-app/](https://lambdatest.github.io/sample-todo-app/), which we used for our demo. 
+
+<img loading="lazy" src={require('../assets/images/uploads/lighthouse_4.webp').default} alt="Image"  width="1921" height="864" className="doc_img"/>
+
+**5.**  Click on any of the metrics to view it in detail, along with the individual factor scores. For example, clicking on _Accessibility_ opens its details. 
+
+<img loading="lazy" src={require('../assets/images/uploads/lighthouse_5.webp').default} alt="Image" width="1714" height="813" className="doc_img"/>
+
+Similarly, you can click on any of the performance metrics to view it in detail. Performance reports can also be downloaded in various formats. TestMu AI also helps you view the Passed Audits, individual metrics, detailed diagnosis, and improvement opportunities for that particular Lighthouse Audit.
+
+* * *
+
+That's it folks! That's all about the Lighthouse Performance Metrics with <BrandName />. You can read more about the Lighthouse Audits and Performance Metrics from [web.dev](https://web.dev/lighthouse-performance/)page. If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! :)
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Performance Tips](/support/docs/performance-tips/)
+- [Lambda Hooks](/support/docs/lambda-hooks/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

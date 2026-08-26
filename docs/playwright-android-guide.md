@@ -1,19 +1,16 @@
 ---
 id: playwright-android-guide
-title: How To Run Playwright Tests On TestMu AI Android Devices
-sidebar_label: Getting Started
-description: Here you can learn how to run Playwright tests on the TestMu AI android devices.
+title: How to Run Playwright Android Tests on TestMu AI
+hide_title: true
+toc_max_heading_level: 2
+sidebar_label: "Android Testing"
+description: Run Playwright tests on real Android devices with TestMu AI across Node.js, Java, C#, and Python using a CDP endpoint and LT:Options.
 keywords:
-  - playwright testing
+  - playwright android testing testmu ai
   - playwright mobile testing
-  - playwright testing tool
-  - playwright testing on testmu ai
-  - playwright testing testmu ai
-  - playwright android
-  - playwright java android
-  - playwright csharp android
-  - playwright python android
-  - playwright multi language mobile
+  - run playwright tests on android devices
+  - playwright android capabilities
+  - playwright chrome android automation
 
 url: https://www.testmuai.com/support/docs/playwright-android/
 site_name: TestMu AI
@@ -48,9 +45,10 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Getting Started With Playwright Testing on Android Real Devices
-* * *
-Playwright Android automation is supported on <BrandName /> across **Node.js, Java, C#, and Python**. Run Playwright tests on Chrome for Android across 100+ real Android devices. This guide covers getting started with Playwright testing on Android devices on the <BrandName /> platform.
+# How to Run Playwright Android Tests on TestMu AI
+***
+
+When you need to validate your web app on Chrome for Android, you can run Playwright tests on real Android devices with TestMu AI. You get access to 100+ real Android devices across **Node.js, Java, C#, and Python**, so you catch device-specific issues instead of emulator approximations. You connect Playwright to the TestMu AI cloud over a CDP endpoint, pass your capabilities, and run your existing test scripts against a live device.
 
 :::tip Supported Versions
 - Playwright versions **v1.53.0** to **v1.61.0** are supported for Android Real Device testing (excluding **v1.54.0**).
@@ -59,9 +57,9 @@ Playwright Android automation is supported on <BrandName /> across **Node.js, Ja
 :::
 
 ## Prerequisites
----
+***
 
-Set your <BrandName /> username and access key in the environment variables. You can get your <BrandName /> username and access key from your <BrandName /> Profile > Account Settings > Password & Security.
+Before you run a test, set your TestMu AI username and access key as environment variables. You can find both under your TestMu AI **Profile > Account Settings > Password & Security**.
 
 <img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Access Key on TestMu AI Automation Dashboard" width="1444" height="703" className="doc_img"/>
 
@@ -128,7 +126,9 @@ dotnet add package Microsoft.Playwright
 </Tabs>
 
 ## Run Your First Test
----
+***
+
+Pick your language below, then use the sample script to connect to TestMu AI and run a search test on a real Android device.
 
 <Tabs className="docs__val">
 
@@ -503,13 +503,53 @@ dotnet run
 For Java, C#, and Python on Android, the CDP connection returns an existing browser context and page. Always check for existing contexts/pages before creating new ones, as shown in the examples above.
 :::
 
-## View your Playwright test results
+## View Your Playwright Test Results
 ***
 
-The <BrandName /> Automation Dashboard is where you can see the results of your Playwright tests after running them on the <BrandName /> platform. 
+The TestMu AI Automation Dashboard shows the results of your Playwright tests after each run on the TestMu AI platform. Open it to review builds, sessions, logs, and video.
 
-The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
+The screenshot below shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
 <img loading="lazy" src={require('../assets/images/playwright-android-build-view.png').default} alt="Playwright Android build and session details on TestMu AI Automation Dashboard" width="1444" height="703"  className="doc_img"/>
 
+## Capabilities Reference
+***
+
+Configure these capabilities in your `LT:Options` object to control how your Playwright Android tests run.
+
+:::tip
+Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+:::
+
+| Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
+|-----------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| platform        | android                        | Specify the platform name                                                                                                                                                                          | `const capability = { "LT:Options": {"platform": "android",}}`                       |
+| platformVersion | 12                             | Specify the platform version                                                                                                                                                                       | `const capability = { "LT:Options": {"platformVersion": "12",}}`                     |
+| deviceName      | Pixel 5                        | Specify the device name.  | `const capability = { "LT:Options": {"deviceName": "Pixel 5",}}`                     |
+| build           | Playwright Android Build       | Represent the build number for your test                                                                                                                                                           | ```const capability = {"LT:Options": {"build": "<build_name>",}}```                  |
+| name            | Playwright Android Test        | Represents the name of a test                                                                                                                                                                      | `const capability = {"LT:Options": {"name": "<test_name>",}}`                        |
+| projectName     | Playwright Sample Project      | Represents the name of a project                                                                                                                                                                   | `const capability = {"LT:Options": {"projectName": "<project_name>",}}`              |
+| tags            | ["tag1", "tag2", "tag3"]       | Group your Playwright tests                                                                                                                                                                        | ``const capability = {"LT:Options": { "tags": ["tag1", "tag2", "tag3"], }}``         |
+| buildTags       | ["build1", "build2", "build3"] | Group your Playwright builds                                                                                                                                                                       | `const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
+| network         | true/false                     | Enable network logs                                                                                                                                                                                | `const capability = { "LT:Options": {"network": true,}}`                             |
+| console         | true/false                     | Enable browser console logs                                                                                                                                                                        | `const capabilities = { "LT:Options": {"console": true,}}`                           |
+| video           | true/false                     | Enable video recording of the entire screen                                                                                                                                                        | `const capability = { "LT:Options": {"video": true,}}`                               |
+| tunnel          | true/false                     | Enable tunnel for local testing                                                                                                                                                                    | `const capability = { "LT:Options": {"tunnel": true,}}`                              |
+| tunnelName      | true/false                     | Specify tunnel name                                                                                                                                                                                | `const capability = { "LT:Options": {"tunnelName": "<tunnel_name>",}}`               |
+| geoLocation     | AR (Argentina)                 | Specify country code                                                                                                                                                                               | `const capability = { "LT:Options": {"geoLocation": "AR",}}`                         |
+
+### Using a REGEX for the Device Name
+***
+
+When you run a test on a specific device, the exact model you selected may not be available. A regular expression (REGEX) widens the device search so you get any matching device. For example, to run on any Pixel device rather than one specific model, use a REGEX for `deviceName`. See [how to match devices with a REGEX](/support/docs/regular-expression-appium/) for details.
+
+
+## Related Playwright Guides
+***
+
+Continue with these related guides to extend your Playwright coverage on TestMu AI.
+
+- [How to test WebView apps with Playwright](/support/docs/playwright-webview-test/) covers the `isPwMobileWebviewTest` capability for hybrid apps.
+- [How to run Playwright tests on real iOS devices](/support/docs/playwright-ios-device/) mirrors this setup for iOS.
+- [How to configure Playwright capabilities](/support/docs/capabilities-for-playwright/) documents every supported capability key.
 

@@ -1,17 +1,16 @@
 ---
 id: applitools-integration-cypress
-title: Applitools Integration With TestMu AI For Cypress
+title: How to Integrate Applitools With Cypress on TestMu AI
+hide_title: true
+toc_max_heading_level: 2
 sidebar_label: Applitools Integration For Cypress
-description: Run Applitools with Cypress on TestMu AI for automated cross browser testing on real browsers and operating systems, right from your Applitools instance.
+description: Integrate Applitools Visual AI with Cypress on TestMu AI to run automated visual and cross browser tests on real browsers and operating systems.
 keywords:
-  - testmu ai integrations
-  - applitools for cypress
-  - testmu ai cypress
-  - cypress automation
-  - testmu ai integration with applitools
-  - applitools integration
-  - cross browser testing
-  - free cross browser testing tool
+  - applitools cypress testmu ai integration
+  - applitools visual testing with cypress
+  - cypress visual regression testing
+  - run applitools tests on testmu ai
+  - applitools eyes cypress
 url: https://www.testmuai.com/support/docs/applitools-integration-with-testmu/
 site_name: TestMu AI
 slug: applitools-integration-cypress/
@@ -20,21 +19,21 @@ canonical: https://www.testmuai.com/support/docs/applitools-integration-cypress/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
----
-
-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-**Applitools** provides an end-to-end software testing platform powered by **Visual AI**. This article will guide you on how to integrate your **Cypress** automation tests with **Applitools** and **<BrandName />**.
+# How to Integrate Applitools With Cypress on TestMu AI
+***
 
-> Before getting started, make sure you have made accounts in **<BrandName />** and **Applitools** platforms.
+If you run Cypress tests with Applitools Visual AI, you can execute those visual checks across real browsers and operating systems by connecting them to TestMu AI. This catches visual regressions on the browser and OS combinations your users actually run, not just your local machine. You configure the Applitools access token and TestMu AI credentials in your project, then run the tests through the TestMu AI CLI.
 
-## Setting Up Applitools Dependencies And Packages
+:::note
+Before you begin, create accounts on both the TestMu AI and Applitools platforms.
+:::
 
----
+## Set Up Applitools Dependencies and Packages
+***
 
-You can download or clone the sample GitHub project from the following repo - [Cypress-LambdaTest-Applitools-Integration](https://github.com/gaurav8760/Cypress-LambdaTest-Applitools-Integration). Navigate to your project directory and follow these steps:
+Start by installing the Applitools packages and adding your API key so Cypress can send visual checks to Applitools. Download or clone the sample GitHub project from the [Cypress-LambdaTest-Applitools-Integration repository](https://github.com/gaurav8760/Cypress-LambdaTest-Applitools-Integration), navigate to your project directory, and follow these steps.
 
 - Install the **NPM dependencies** using the below command:
 
@@ -48,13 +47,13 @@ You can download or clone the sample GitHub project from the following repo - [C
   npx eyes-setup
   ```
 
-- Add the access token of your Applitools account in the `applitools.config.js` file as highlighted in the below screenshot. You can find your **Applitools API** key by logging into your Applitools account and going to your **Profile > My API Key**.
+- Add the access token of your Applitools account in the `applitools.config.js` file as highlighted in the screenshot below. Find your **Applitools API** key by logging into your Applitools account and going to **Profile > My API Key**.
 
-  ***
+  <img loading="lazy" src={require('../assets/images/applitools-cypress/applitools1.webp').default} alt="Applitools access token added to the applitools.config.js configuration file" width="1353" height="622" className="doc_img"/>
 
-  <img loading="lazy" src={require('../assets/images/applitools-cypress/applitools1.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
-
-  > Set the **testConcurrency** and **browser configuration** as per the requirement.
+  :::tip
+  Set the **testConcurrency** and **browser configuration** values to match your requirements.
+  :::
 
 - Install Applitools Eyes dependencies using the below command:
 
@@ -62,64 +61,62 @@ You can download or clone the sample GitHub project from the following repo - [C
   npm install @applitools/eyes-cypress --save-dev
   ```
 
-  > It will create Applitools Eyes to an Existing Node.js Cypress Project.
+  This adds Applitools Eyes to an existing Node.js Cypress project.
 
-## Setting up <BrandName /> CLI and Dependencies
+## Set Up the TestMu AI CLI and Dependencies
+***
 
----
+With Applitools ready, configure the TestMu AI CLI so the tests run on the cloud grid. These steps install the CLI, generate a config file, and add your credentials.
 
-- Install the <BrandName /> CLI using below command:
+- Install the TestMu AI CLI using the below command:
 
   ```bash
   npm install -g lambdatest-cypress-cli
   ```
 
-- Setup configurations on which you want to run your test using the below command:
+- Set up the configuration for your test run using the below command:
 
   ```bash
   lambdatest-cypress init
   ```
 
-  > It will create a **lambdatest-config.json** file in the root directory of your project.
+  This creates a **lambdatest-config.json** file in the root directory of your project.
 
-- Add spec file path in the `run_setting` and your **<BrandName /> credentials** in the auth section of the `lambdatest-config.json` file as shown in the image below.
+- Add the spec file path in the `run_setting` and your **TestMu AI credentials** in the auth section of the `lambdatest-config.json` file as shown in the image below.
 
-  ***
+  <img loading="lazy" src={require('../assets/images/applitools-cypress/applitools2.webp').default} alt="Spec file path and TestMu AI credentials configured in the lambdatest-config.json file" width="1353" height="622" className="doc_img"/>
 
-  <img loading="lazy" src={require('../assets/images/applitools-cypress/applitools2.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+## Run the Sample Project
+***
 
-## Running The Sample Project
-
----
-
-Execute your first test case using the below command:
+Run the sample tests to generate a baseline and then compare a second run against it. Execute your first test case using the below command:
 
 ```bash
 lambdatest-cypress run
 ```
 
-<img loading="lazy" src={require('../assets/images/applitools-cypress/applitools3.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/applitools-cypress/applitools3.webp').default} alt="TestMu AI Cypress run command executing the first Applitools test in the terminal" width="1353" height="622" className="doc_img"/>
 
----
+Applitools treats the first test case you execute as the base image by default.
 
-> The first test case that you execute will be considered as the base image by default by Applitools.
+<img loading="lazy" src={require('../assets/images/applitools-cypress/applitools4.webp').default} alt="First Applitools test run captured as the baseline image in the Applitools dashboard" width="1353" height="622" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/applitools-cypress/applitools4.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+Edit the URL in the `applitoolsIntegration.spec.js` file and run your second test using the same run command.
 
----
+<img loading="lazy" src={require('../assets/images/applitools-cypress/applitools5.webp').default} alt="Updated URL in the applitoolsIntegration.spec.js file for the second test run" width="1353" height="622" className="doc_img"/>
 
-Edit the URL in the `applitoolsIntegration.spec.js` file and run your second test by using the same run command.
+Applitools compares the base image with this test and highlights the difference.
 
-<img loading="lazy" src={require('../assets/images/applitools-cypress/applitools5.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/applitools-cypress/applitools6.webp').default} alt="Applitools highlighting the visual difference between the baseline and the second test run" width="1353" height="622" className="doc_img"/>
 
----
+## Related Cypress Guides
+***
 
-Applitools will compare the base image with this test and highlight the difference.
+Continue with the guides below to run and report on your Cypress tests on TestMu AI.
 
-<img loading="lazy" src={require('../assets/images/applitools-cypress/applitools6.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
-
-> That's all! you have successfully integrated **Applitools** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@testmuai.com.
-
+- [Run your first Cypress test on TestMu AI](/support/docs/getting-started-with-cypress-testing/) sets up and executes your initial Cypress run on the cloud grid.
+- [Integrate the Cypress Dashboard with TestMu AI](/support/docs/integrate-testmu-with-cypress/) views and analyzes your Cypress results across both dashboards.
+- [Generate Mochawesome reports for Cypress](/support/docs/cypress-mochaawesome-report/) produces detailed reports for your Cypress test runs.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

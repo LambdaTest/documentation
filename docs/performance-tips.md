@@ -1,14 +1,16 @@
 ---
 id: performance-tips
-title: Maximize Test Execution Performance on Automation Platform
-sidebar_label: Speed Up Your Tests
-description: Speed up Selenium test execution on the cloud grid by disabling optional logging capabilities.
+title: How to Speed Up Your Selenium Tests on TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Speed Up Your Tests"
+description: Speed up your Selenium tests on TestMu AI with parallel execution, optimized capabilities, and latency troubleshooting tips.
 keywords:
   - reduce selenium test execution time
   - disable visual network console logs
   - cloud grid performance optimization
   - selenium test speed improvement
-  - desired capabilities performance
+  - capabilities performance
 image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/performance-tips/
 site_name: TestMu AI
@@ -41,8 +43,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Performance Tips
-* * *
+# How to Speed Up Your Selenium Tests on TestMu AI
+---
 
 Running Selenium tests on a cloud grid introduces network latency compared to local execution. These tips help you reduce total execution time on TestMu AI.
 
@@ -74,6 +76,8 @@ Console, network, and visual capabilities are `false` by default. Only set them 
 Execute multiple tests simultaneously to reduce total build time.
 
 Sequential test execution multiplies wait time across every test. Use your framework's parallel execution feature (TestNG `parallel="methods"`, pytest-xdist, Mocha `--parallel`) and set the desired concurrency in your TestMu AI plan. This is the single most impactful change for reducing build duration.
+
+If a run is slow because of front-end performance rather than the grid, you can generate Lighthouse reports to pinpoint page-load bottlenecks in the website under test.
 
 ## Use the Latest Browser Version
 ---
@@ -147,6 +151,8 @@ public void tearDown() {
 ---
 Run a traceroute if performance remains slow after applying the above tips.
 
+If a specific test is failing rather than merely running slow, debug your Selenium tests with extended logging before reporting a latency issue.
+
 If you still experience latency after applying these optimizations, reach out to us on our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**in-app chat support**</span> or email [automationsupport@testmuai.com](mailto:automationsupport@testmuai.com). Include a screenshot of the traceroute output:
 
 For Windows:
@@ -157,6 +163,15 @@ For Linux/Mac:
 ```
 traceroute hub.lambdatest.com
 ```
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Generate Multiple Lighthouse Reports](/support/docs/generate-multiple-lighthouse-reports/)
+- [Debugging Options](/support/docs/debugging-options/)
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

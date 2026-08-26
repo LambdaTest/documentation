@@ -1,4 +1,4 @@
-﻿---
+---
 id: saucelabs-to-hyperexecute-migrate
 title: Sauce Labs to HyperExecute
 hide_title: true
@@ -166,7 +166,7 @@ jobLabel: [selenium-testng, mac, autosplit, migration]
 
 ```
 
-- Replace the Sauce Labs Hooks with [<BrandName /> Hooks](/support/docs/lambda-hooks/) (if required). 
+- Replace the Sauce Labs Hooks with [Lambda Hooks](/support/docs/lambda-hooks/) (if required). 
 - Update the Sauce Labs Dependencies and Capabilities.
 
 **Sauce Labs** 

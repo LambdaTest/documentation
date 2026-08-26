@@ -1,9 +1,10 @@
 ---
 id: puppeteer-capabilities
-title: Capabilities for Puppeteer Testing
+title: How to Configure Puppeteer Capabilities on TestMu AI
 hide_title: true
-sidebar_label: Puppeteer Capabilities
-description: Learn how to configure the capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Playwright tests.
+toc_max_heading_level: 2
+sidebar_label: "Supported Capabilities"
+description: Configure Puppeteer capabilities on TestMu AI to select browsers and OS, organize tests, set desktop resolution, and enable debugging logs.
 keywords:
   - puppeteer testing
   - puppeteer e2e testing 
@@ -43,11 +44,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Capabilities for Puppeteer Testing
-
+# How to Configure Puppeteer Capabilities on TestMu AI
 ***
 
-The <BrandName /> Capability Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on <BrandName />. Here are a few capabilities that you can configure to run your Puppeteer tests. 
+When you run a Puppeteer test on TestMu AI, capabilities tell the cloud machine which browser, OS, resolution, and logs each session needs. Setting them correctly means every test targets the exact environment you want and captures the debugging data you need. You define these capabilities in your Puppeteer script and pass them to the CDP endpoint at connection time.
+
+The TestMu AI Capability Generator can auto-create the capabilities class for your Puppeteer scripts. The table below lists the capabilities you can configure and an example of each.
 
 | Key | Expected Values | Description | Capability |
 | -------- | -----| ------- | ----------------- |
@@ -68,9 +70,14 @@ The <BrandName /> Capability Generator allows you to automatically create the ca
 | geoLocation   |  AR (Argentina) | Specify country code | `const capability = { "LT:Options": {"geoLocation": "AR",}}` |
 | idleTimeout | number| Specifies the timeout of the commands in seconds. <br /><br /> <b>Default value:</b> 300 <br /><br /> <b>Max value:</b> 1800<br /><br /> If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "<number>",}}`|
 
+## Related Puppeteer Guides
+***
 
+Continue with the guides below to run and configure your Puppeteer tests on TestMu AI.
 
-
+- [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/) walks through the end-to-end setup.
+- [Set up the Puppeteer test environment](/support/docs/puppeteer-test-execution-setup/) covers browser selection, test organization, and debugging logs.
+- [Run Puppeteer tests with Mocha](/support/docs/puppeteer-testing-with-mocha/) covers the Mocha test runner integration.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -1,8 +1,10 @@
 ---
 id: migrate-selenium-test-suite
-title: Migrate Your Selenium Test Suite
-sidebar_label: Migrate Your Test Suite
-description: Migrate your local Selenium tests to TestMu AI's cloud grid. Change the hub URL, add capabilities, and run your existing suite on 3000+ browsers.
+title: How to Migrate Your Selenium Suite to TestMu AI
+toc_max_heading_level: 2
+hide_title: true
+sidebar_label: "Migrate Test Suites"
+description: Migrate your existing Selenium test suite to the TestMu AI cloud grid with minimal code changes across 10,000+ browser and OS combinations.
 keywords:
   - migrate selenium tests
   - connect existing tests
@@ -49,9 +51,11 @@ import { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+# How to Migrate Your Selenium Suite to TestMu AI
 ---
 
-Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the desired capabilities. Your test logic stays the same.
+
+Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the capabilities. Your test logic stays the same.
 
 If you are moving from BrowserStack or Sauce Labs, use these dedicated migration guides with capability mapping tables.
 
@@ -89,8 +93,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  {`$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+$env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 
@@ -100,7 +104,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Step 2: Replace Your Local Driver With RemoteWebDriver
 ---
 
-Point your tests to the TestMu AI hub instead of launching a local browser.
+Point your tests to the TestMu AI hub instead of launching a local browser. The values you pass in `LT:Options` come from the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/), so you can tune build name, platform, and logging to match your suite.
 
 Find where your test creates the WebDriver instance and replace it with a `RemoteWebDriver` pointing to the TestMu AI hub URL:
 
@@ -299,7 +303,7 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 ## Step 3: Run Your Tests
 ---
 
-Execute your tests the same way you normally would. The only difference is they now run on the cloud.
+Execute your tests the same way you normally would. The only difference is they now run on the cloud. If you are new to the grid, first walk through how to run your first Selenium test to confirm your setup before migrating a full suite.
 
 ```bash
 # Java (Maven)
@@ -326,7 +330,7 @@ bundle exec rspec
 
 Check the Automation Dashboard to see exactly what happened during your test.
 
-Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your results. Each session captures video playback, screenshots, console logs, network logs, and Selenium command logs.
+Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your results. Each session captures video playback, screenshots, console logs, network logs, and Selenium command logs. If a migrated test fails, use these artifacts to debug your Selenium tests and find the cause.
 
 ## What Stays the Same
 ---
@@ -342,8 +346,14 @@ Everything except the driver setup. Here is what does not change when you move t
 | Driver setup (URL + capabilities) | **Yes** |
 | Local browser install requirement | **Removed** |
 
+## Next Steps
+---
 
+Continue with these related guides:
 
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
