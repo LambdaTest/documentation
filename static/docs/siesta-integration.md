@@ -4,7 +4,7 @@
 
 Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. You can run tests in browsers, Node.js, and Deno on Linux, macOS, and Windows.
 
-TestMu AI and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 3000+ real browsers and OS combinations.
+TestMu AI and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 10,000+ browser/device combinations.
 
 ## Prerequisites
 

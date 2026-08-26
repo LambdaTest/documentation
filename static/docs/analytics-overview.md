@@ -77,3 +77,8 @@ Insights effectively allows these managers to track and improve the tests at one
     Manage your project-level tests comprehensively, track the progress of test suite development with detailed insights.
 
 The  features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@testmuai.com).
+
+## Related analytics guides
+
+- [Build insights](/support/docs/analytics-build-insights/) — analyze build-level trends and outcomes across your test runs.
+- [Dashboard settings](/support/docs/analytics-dashboard-settings/) — configure and personalize your analytics dashboards.

@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Learn how to run your Puppeteer tests with CodeceptJS across 40+ real browsers and operating systems on the TestMu AI platform.
+Learn how to run your Puppeteer tests with CodeceptJS across real browsers and operating systems on the TestMu AI platform.
 
 ## Prerequisites
 

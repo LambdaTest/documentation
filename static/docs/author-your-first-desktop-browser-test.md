@@ -1,28 +1,86 @@
-# Author Your First Desktop Browser Test
+# How to Author Desktop Browser Tests With KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-In this guide, we'll walk you through how you can author your desktop browser tests using KaneAI
+Author a desktop browser test in KaneAI by describing what you want in natural language. KaneAI translates your plain-English instructions into executable test steps, with no coding or scripting required.
 
-## Steps to Author Your Desktop Browser Test
+## Prerequisites
 
-**Step 1:** From the KaneAI dashboard, click on **Author Browser Test**.
+Before you begin, make sure you have:
 
-**Step 2:** A modal would appear from the side. Select **Desktop** from the sidebar.
+- A TestMu AI account with access to KaneAI.
+- A web application URL you want to test.
 
-**Step 3:** You can also do additional customization with some advanced features such as:
+## Author a Desktop Browser Test
 
-- **Chrome Options:** Command-line switches that alter the default behavior of the Chrome browser.
-- **Custom Headers:**  Kееp crucial information about thе rеquеst or rеsponsе, such as thе mеthod, URL, and body contеnt.
+Follow these steps to author and run a desktop browser test:
 
-Once done, click **Author Test.**
+### Step 1: Open the Browser Test Authoring Modal
 
-**Step 4:** Now tell KaneAI what you want to author using natural language without the need for coding or scripting knowledge required. KaneAI translates your instructions into executable test steps automatically.
+From the KaneAI dashboard, click **Author Browser Test**.
 
-**Step 5:** You can also leverage the **Manual Interaction Mode** to perform any particular step or action directly in the instance window and KaneAI would record it and create an automation step for the same.
+**Result:** The test authoring modal opens from the side.
 
-As you add each instruction, KaneAI queues them in real-time without waiting for completion. This allows you to build comprehensive test flows quickly and efficiently. Once you've outlined all your test steps, click Finish Test to finalize your automated test case.
+### Step 2: Select the Desktop Platform
 
-**Step 6:** Now, select your **Project** and the folder where you want to save your test cases. The **Test Name** and **Description** will be generated automatically, but you can also edit them. Select your test's **Type** and **Status**, as well as the necessary tags that will allow you to search for it later.
+In the modal sidebar, select **Desktop**.
 
-**Step 7:** To execute your test, click on the **Execute test case** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
+**Result:** The modal shows the desktop browser configuration options.
+
+### Step 3: Configure Advanced Options and Start Authoring
+
+Optionally configure advanced settings before you begin:
+
+- **Chrome Options:** Command-line switches that alter the default behavior of the Chrome browser. See the [KaneAI Chrome Options](/support/docs/kaneai-chrome-options/) guide for the full list.
+- **Custom Headers:** Attach request or response metadata such as the method, URL, and body content. See the [KaneAI Custom Headers](/support/docs/kaneai-custom-headers/) guide for details.
+
+Once done, click **Author Test**.
+
+**Result:** KaneAI launches a live browser instance and opens the authoring panel.
+
+### Step 4: Describe Your Test in Natural Language
+
+Tell KaneAI what you want to test in plain English. KaneAI translates each instruction into an executable test step automatically. As you add instructions, KaneAI queues them in real time without waiting for completion, so you can build the full flow without pausing. When you finish, click **Finish Test** to finalize the test case.
+
+**Result:** Each instruction appears as a distinct step in the test flow.
+
+### Step 5: Capture Steps With Manual Interaction
+
+To capture an action that is hard to describe, use **Manual Interaction Mode**. Perform the step directly in the instance window, and KaneAI records it and creates the matching automation step. For the full gesture and platform matrix, see the [KaneAI Manual Interaction](/support/docs/kaneai-manual-interaction/) guide.
+
+**Result:** KaneAI adds the recorded action as an automation step in the flow.
+
+### Step 6: Save the Test Case
+
+Select your **Project** and the folder where you want to save the test case. The **Test Name** and **Description** are generated automatically, and you can edit them. Set the test's **Type** and **Status**, and add tags so you can search for it later.
+
+**Result:** The test case is saved to the selected project and folder.
+
+### Step 7: Execute the Test
+
+Click **Execute test case**.
+
+**Result:** You are redirected to the HyperExecute dashboard, where your test runs. To interpret the run, see the [KaneAI HyperExecute Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/) guide.
+
+## Tips for Writing Effective Instructions
+
+Clear, specific instructions help KaneAI translate your intent into accurate steps. Keep these in mind as you author:
+
+- **Be specific.** Name the exact element and action, for example `Click the 'Submit' button in the top-right of the form`, not "click that."
+- **Start with an action verb.** Begin each step with Click, Type, Hover, Scroll, and similar verbs.
+- **One action per step.** Break complex flows into sequential steps connected with words like "then," rather than overloading a single instruction.
+- **Add context for conditionals.** State the condition explicitly, for example `If the 'Login' button is visible, click it`.
+- **Use numbers for position or quantity.** For example, `Click the second product in the list` or `Scroll down 100 pixels`.
+- **Wait when needed.** Pause for page loads or async operations, for example `Click 'Submit' and wait 5 seconds before the next step`.
+- **Target the right tab.** When a link opens a new tab, add `switch to the  tab` so actions stay on it.
+- **Verify before saving.** Re-run the flow to confirm every step executes cleanly, and refine a prompt iteratively if the result is not what you expected.
+
+## Next Steps
+
+Continue with these guides:
+
+- [Author Your First Mobile Browser Test](/support/docs/author-your-first-mobile-browser-test/)
+- [Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)
+- [KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)
+- [KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)
+- [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)

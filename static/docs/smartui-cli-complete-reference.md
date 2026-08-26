@@ -222,7 +222,7 @@ smartui upload-pdf [options] <directory>
 | `--fetch-results [filename]` | Fetch results and save to JSON | `results.json` |
 | `--buildName ` | Custom build name | Random |
 | `--markBaseline` | Mark this build as baseline | `false` |
-| `--projectToken ` | Project token (if not in env) | - |
+| `--pdfNames ` | Comma-separated list of PDF file names to upload | - |
 
 **Examples:**
 ```bash
@@ -538,7 +538,9 @@ smartui storybook ./storybook-static --force-rebuild
 |----------|-------------|--------|
 | `HTTP_PROXY` | HTTP proxy URL | `http://[user:pass@]host:port/` |
 | `HTTPS_PROXY` | HTTPS proxy URL | `https://[user:pass@]host:port/` |
-| `NO_PROXY` | Comma-separated hosts to bypass | `localhost,127.0.0.1` |
+| `SMARTUI_HTTP_PROXY` | Proxy for SmartUI HTTP traffic | - |
+| `SMARTUI_HTTPS_PROXY` | Proxy for SmartUI HTTPS traffic | - |
+| `SMARTUI_API_PROXY` | Proxy for SmartUI API traffic | - |
 
 | Variable | Description | Default |
 |----------|-------------|---------|

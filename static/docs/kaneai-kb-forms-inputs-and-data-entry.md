@@ -1,10 +1,12 @@
-# Forms, Inputs & Data Entry
+# How to Handle Forms and Inputs With KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Forms are at the heart of most web applications: login pages, registration flows, checkout processes, search filters, and admin panels. This guide covers how to handle every type of form element in KaneAI with real-world testing scenarios.
+KaneAI handles every type of form element in natural language, from text inputs, dropdowns, and date pickers to file uploads, OTP fields, and complex input patterns. It covers the forms at the heart of most web applications: login pages, registration flows, checkout processes, search filters, and admin panels.
 
 ## Text Input Fields
+
+Enter text with static values, parameters, or smart variables:
 
 ### Basic Text Entry
 
@@ -16,7 +18,7 @@ enter "SecurePass123!" in the password field
 type "123 Main Street" in the address field
 ```
 
-### Using Variables & Parameters for Dynamic Data
+### Variables for Dynamic Data
 
 Instead of hardcoding values, use parameters for reusable and parameterized tests.
 
@@ -25,7 +27,7 @@ create a parameter using /(slash) command called username
 type ${username} in the username field
 ```
 
-Parameters once used in authoring can be used to input different data values via dataset. See the [Parameters](/support/docs/kane-ai-using-parameters/) guide for more information.
+Parameters once used in authoring can be used to input different data values via dataset. See the [KaneAI Using Parameters](/support/docs/kane-ai-using-parameters/) guide for more information.
 
 For test data that needs to be unique each run, use **smart variables**:
 
@@ -34,9 +36,11 @@ type {{smart.random_email}} in the email field
 type {{smart.random_phone}} in the phone number field
 ```
 
-Smart variables like `{{smart.random_email}}` generate unique values every run, which is ideal for registration flows where duplicate emails would fail. See the [Smart Variables](/support/docs/kane-ai-smart-variables/) guide for the full list.
+Smart variables like `{{smart.random_email}}` generate unique values every run, which is ideal for registration flows where duplicate emails would fail. See the [smart variables](/support/docs/kane-ai-using-variables/#smart-variables) guide for the full list.
 
 ## Dropdown & Select Menus
+
+Handle native selects, custom dropdowns, multi-select, and cascading dropdowns:
 
 ### Standard HTML Select Dropdowns
 
@@ -70,7 +74,7 @@ click on "Urgent" in the dropdown list
 click on "Bug" in the dropdown list
 ```
 
-### Scenario: Cascading Dropdowns (Country → State → City)
+### Scenario: Cascading Dropdowns
 
 A common pattern where the second dropdown options depend on the first.
 
@@ -85,6 +89,8 @@ select "Mumbai" from the city dropdown
 Always add a `wait` between cascading dropdowns. The child dropdown needs time to populate after the parent selection changes.
 
 ## Date Pickers
+
+Select dates in simple pickers, calendar widgets, and date ranges:
 
 ### Simple Date Pickers
 
@@ -112,7 +118,7 @@ click on the "End Date" field
 select 28th February 2026 date
 ```
 
-### Using Smart Variables for Dynamic Dates
+### Smart Variables for Dates
 
 ```
 type {{smart.current_date}} in the "Start Date" field
@@ -131,6 +137,8 @@ Use `/` → **Add JS Snippet** to execute this.
 
 ## Checkboxes & Radio Buttons
 
+Check, uncheck, and select options in checkboxes and radio buttons:
+
 ### Checkboxes
 
 ```
@@ -145,7 +153,7 @@ click on the "Express Shipping" radio button
 select the "Monthly" billing option
 ```
 
-### Scenario: Preferences Form with Multiple Checkboxes
+### Scenario: Preferences Form
 
 ```
 check the "Email Notifications" checkbox
@@ -170,7 +178,7 @@ KaneAI supports uploading files during test authoring. Use the `/` command to ac
 upload file {{FILE_sample_report_pd}} to the file input
 ```
 
-For detailed instructions, refer to [File Upload & Download Testing](/support/docs/kaneai-upload-and-download-files).
+For detailed instructions, see the [KaneAI Upload and Download Files](/support/docs/kaneai-upload-and-download-files/) guide.
 
 ## OTP & PIN Fields
 
@@ -183,7 +191,7 @@ enter OTP "567890"
 
 Do **not** try to type into each OTP box individually (e.g., `type "1" in first box, type "2" in second box`). Use the `OTP` keyword as a single instruction. KaneAI handles the per-box distribution automatically.
 
-### Scenario: Login with OTP Verification
+### Scenario: Login With OTP Verification
 
 ```
 type "john@example.com" in the email field
@@ -194,9 +202,11 @@ click on "Verify" button
 assert "Welcome, John" is visible
 ```
 
-For real TOTP-based MFA, see the [TOTP Authentication](/support/docs/kaneai-totp) guide.
+For real TOTP-based MFA, see the [KaneAI TOTP](/support/docs/kaneai-kb-authentication-and-session-management/#multi-factor-authentication-totp) guide.
 
 ## Sliders & Range Inputs
+
+Set slider and range values on web and mobile:
 
 ### Web Sliders
 
@@ -237,7 +247,7 @@ click inside the text editor
 type "This is a test paragraph for the blog post."
 ```
 
-### If the Editor is Inside an iFrame
+### Editor Inside an iFrame
 
 KaneAI handles iFrames automatically in most cases. If not, use a JS snippet:
 
@@ -245,7 +255,7 @@ KaneAI handles iFrames automatically in most cases. If not, use a JS snippet:
 document.querySelector('iframe.editor').contentDocument.body.innerHTML = '<p>Test content</p>';
 ```
 
-## Search Fields with Autocomplete
+## Search Fields With Autocomplete
 
 Many search fields show suggestions as you type. Handle these by typing, waiting for suggestions, then selecting.
 
@@ -266,6 +276,8 @@ assert the city field contains "London"
 
 ## Keyboard Interactions in Forms
 
+This table lists keyboard actions you can trigger in forms:
+
 | Action | Instruction |
 |---|---|
 | Submit a form via Enter key | `type "search query" in the search field and press Enter` |
@@ -280,7 +292,9 @@ assert the city field contains "London"
 type "test@example.com" in the email field and press Enter
 ```
 
-## Do's and Don'ts for Form Testing
+## Do's and Don'ts
+
+This table contrasts reliable form instructions with ones to avoid:
 
 | Do | Don't |
 |---|---|
@@ -289,3 +303,13 @@ type "test@example.com" in the email field and press Enter
 | `enter OTP "1234"` for OTP/PIN fields | `type "1" in the first OTP box` |
 | Use `{{smart.random_email}}` for unique registration data | Hardcode `test@test.com` which may already exist |
 | Use JS snippets for stubborn date pickers | Fight with natural language for read-only date inputs |
+
+## Next Steps
+
+Continue with these guides:
+
+- [KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)
+- [KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/)
+- [KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)
+- [KaneAI Click Interactions](/support/docs/kane-ai-click-interactions/)
+- [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)

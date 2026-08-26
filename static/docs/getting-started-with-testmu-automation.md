@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Run your Selenium tests on TestMu AI's cloud grid of 3000+ browser and OS combinations. Point your tests at the hub URL, add capabilities, and get parallel execution, video recordings, logs, and screenshots for every session - no infrastructure to maintain.
+Run your Selenium tests on TestMu AI's cloud grid of 10,000+ browser/device combinations. Point your tests at the hub URL, add capabilities, and get parallel execution, video recordings, logs, and screenshots for every session - no infrastructure to maintain.
 
 ## Before You Begin
 
@@ -43,3 +43,14 @@ See where test results live - video playback, command logs, screenshots, and ana
 ### Configure Capabilities
 
 Control which browser, version, OS, and advanced features your tests use.
+
+## Related Selenium guides
+
+- [Getting Started with Selenium 4](/support/docs/getting-started-with-selenium-4/) — set up and run Selenium 4 tests on the TestMu AI cloud grid.
+- [Test Locally Hosted Websites with Selenium](/support/docs/test-locally-hosted-websites-with-selenium/) — run Selenium tests against locally hosted or staging sites using Tunnel.
+- [Run PHP tests on the Selenium grid](/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid/) — a quick guide to running PHP Selenium tests on TestMu AI.
+- [IE mode on Edge](/support/docs/ie-mode-on-edge/) — test legacy Internet Explorer behavior using IE mode on Microsoft Edge.
+
+## Migrating to TestMu AI
+
+- [Migrate from a Legacy Platform to TestMu AI](/support/docs/migrate-from-legacy-platform-to-testmu/) — move your existing tests from a legacy platform to TestMu AI.

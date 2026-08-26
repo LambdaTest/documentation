@@ -72,6 +72,43 @@ npx smartui merge branch --source feature-branch --target main
 npx smartui merge build --source build-name --target baseline-build
 ```
 
+## Tracking Moves and Merges in the Dashboard
+
+When you move a screenshot into its baseline build, SmartUI records where that screenshot came from and where it went. That provenance is surfaced in four places, so you can always tell whether an image was captured in a build or injected into it from a later one.
+
+### Source and Destination Builds in the Move Dialog
+
+Choosing **Approve & Update** opens the **Approve and Move Screenshot** dialog. Above the reason field, a highlighted note names the exact build pair the move will act on.
+
+The note resolves the real pair for the screenshot in front of you rather than a fixed one, so a screenshot in build #6 whose baseline is build #1 reads `Moving this variant from #6 to #1`. It appears on both the single variant dialog and the **Approve All Variants** dialog, where the wording changes to cover every variant of that screenshot.
+
+Read the note before confirming. It is the quickest way to catch a screenshot whose baseline is an older build than you expected, which happens when the project baseline pointer has moved back down the chain.
+
+### Merge Tag on the Comparison Page
+
+Once a screenshot has been moved, its comparison page carries a merge tag next to the status chip.
+
+The **Added to Baseline** chip tells you the verdict, and the tag beside it tells you the destination, so this screenshot was merged into build #1. Hover the tag to see the full label.
+
+### Merge Badges on Screenshot Cards at Build Level
+
+On the build page, any screenshot involved in a move carries a badge in the top right corner of its thumbnail.
+
+The number on the badge is the count of variants involved in the move, not a build number. A screenshot with six variants where only two were moved shows `2`. The arrow gives you the direction:
+
+| Badge arrow | Meaning | Where you see it |
+|---|---|---|
+| Arrow pointing up | Merged out of this build into its baseline | The source build, alongside the **Added to Baseline** marker |
+| Arrow pointing down | Merged into this build from a later build | The destination build, on a screenshot that was never captured there |
+
+A down arrow is worth pausing on. It marks an image that was injected from a later build rather than captured during that run, so the build no longer reflects only what was actually tested at that point in time.
+
+### Variant Level Details
+
+Open the screenshot info drawer from the card to see which specific variants took part in the move.
+
+Each variant row lists its browser and resolution, and merged variants carry their own tag naming the build on the other side of the move. Variants that were not part of the move have no tag, which makes partial moves easy to spot: in a screenshot with six variants, only the rows you actually moved are tagged.
+
 ## Workflow Types and Baseline Management
 
 ### CLI-Based Workflows (Explicit User Control)
@@ -223,7 +260,7 @@ npx smartui exec -- npm test
 ```
 
 ### For SDK Integration
-```javascript
+```java
 // Set capability explicitly for baseline marking
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("smartUI.baseline", true);

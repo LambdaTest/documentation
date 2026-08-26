@@ -57,6 +57,28 @@ function extractSecurityAuth(op, spec) {
   return auth;
 }
 
+/**
+ * The endpoint page renders `summary` as the H1 and `description` as the paragraph
+ * directly beneath it, so a description that echoes the summary prints the same
+ * sentence twice. Drop it when it is a pure restatement, and strip a leading summary
+ * sentence only when it is a *complete* sentence — otherwise descriptions that merely
+ * open with the same words ("Fetch platforms along with browsers…") get cut into
+ * fragments like "along with browsers…".
+ */
+function dedupeDescription(summary, description) {
+  const s = String(summary || '').trim();
+  const d = String(description || '').trim();
+  if (!d) return '';
+  if (!s) return d;
+  const norm = (t) => t.toLowerCase().replace(/\s+/g, ' ').replace(/[.\s]+$/, '').trim();
+  if (norm(d) === norm(s)) return '';
+  const base = s.replace(/[.\s]+$/, '');
+  if (!base) return d;
+  const esc = base.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const lead = d.match(new RegExp('^' + esc + '\\s*\\.(\\s+|$)', 'i'));
+  return lead ? d.slice(lead[0].length).trim() : d;
+}
+
 function flattenSpec(spec) {
   if (!spec || !spec.paths) return [];
   const baseUrl = (spec.servers && spec.servers[0] && spec.servers[0].url) || '';
@@ -68,7 +90,7 @@ function flattenSpec(spec) {
         method: method.toUpperCase(),
         path: pth.startsWith('/') ? pth : `/${pth}`,
         summary: op.summary || '',
-        description: op.description || op.summary || '',
+        description: dedupeDescription(op.summary, op.description),
         deprecated: !!op.deprecated,
         tags: op.tags || [],
         parameters: op.parameters || [],

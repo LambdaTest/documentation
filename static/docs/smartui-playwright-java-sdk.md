@@ -149,7 +149,7 @@ The following are the different options which are currently supported:
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
-```java title="This is a sample for your configuration for Java to ignore by" ID"
+```java title="This is a sample for your configuration for Java to ignore by ID"
 List<String> cssID = Arrays.asList("<required ID>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -160,7 +160,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your configuration for Java to ignore by" Class"
+```java title="This is a sample for your configuration for Java to ignore by Class"
 List<String> cssclass = Arrays.asList("<required class>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -171,7 +171,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your configuration for Java to ignore by" XPath"
+```java title="This is a sample for your configuration for Java to ignore by XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -182,7 +182,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your configuration for Java to ignore by CSS" Selector"
+```java title="This is a sample for your configuration for Java to ignore by CSS Selector"
 List<String> selector = Arrays.asList("<required selector>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -204,7 +204,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your configuration for Java to select by" Class"
+```java title="This is a sample for your configuration for Java to select by Class"
 List<String> cssclass = Arrays.asList("<required class>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -215,7 +215,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your configuration for Java to select by" XPath"
+```java title="This is a sample for your configuration for Java to select by XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -226,7 +226,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your webhook configuration for Java to select by CSS" Selector"
+```java title="This is a sample for your webhook configuration for Java to select by CSS Selector"
 List<String> selector = Arrays.asList("<required selector>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -250,7 +250,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your configuration for Java to capture an element by" Class"
+```java title="This is a sample for your configuration for Java to capture an element by Class"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -259,7 +259,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your configuration for Java to capture an element by" XPath"
+```java title="This is a sample for your configuration for Java to capture an element by XPath"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -268,7 +268,7 @@ driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
-```java title="This is a sample for your configuration for Java to capture an element by CSS" Selector"
+```java title="This is a sample for your configuration for Java to capture an element by CSS Selector"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -296,18 +296,18 @@ System.out.println("Test Finished");
 }
 
 public void quickScrollToBottom() throws InterruptedException {
-long lastHeight = ((Number) ((JavaScriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
 while (true) {
-((JavaScriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
 Thread.sleep(2000);
 
-long newHeight = ((Number) ((JavaScriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
 if (newHeight == lastHeight) {
 break;
 }
 lastHeight = newHeight;
 }
-((JavaScriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
 Thread.sleep(1000); // wait for 1 second
 }
 
@@ -331,7 +331,7 @@ driver.quit();
 
 **Example:**
 ```java
-SmartUISnapshot.smartuiSnapshot(driver, HomePage-Header");
+SmartUISnapshot.smartuiSnapshot(driver, "HomePage-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 ```
 
@@ -343,7 +343,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 
 **Example:**
 ```java
-page.navigate(https://example.com");
+page.navigate("https://example.com");
 page.waitForSelector("#main-content", new Page.WaitForSelectorOptions().setState(WaitForSelectorState.VISIBLE));
 SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 ```

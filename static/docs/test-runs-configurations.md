@@ -1,13 +1,13 @@
-# Configurations in KaneAI & Test Manager
+# How to Create Test Run Configurations With KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Configurations in Test Manager allow you to define reusable environment setups for your test runs. You can specify platform, browser, OS, and device combinations once and apply them across multiple test runs.
 
 **Key Benefits:**
-- **Centralized Management** - Create, edit, and delete configurations from a single dashboard
-- **Reusability** - Apply the same configuration across multiple test runs
-- **Multi-Platform Support** - Configure Desktop, Virtual Mobile, and Real Device environments
+- **Centralized Management:** Create, edit, and delete configurations from a single dashboard
+- **Reusability:** Apply the same configuration across multiple test runs
+- **Multi-Platform Support:** Configure Desktop, Virtual Mobile, and Real Device environments
 
 ## Accessing Configurations
 
@@ -98,8 +98,8 @@ The following options are available only for KaneAI-generated test runs:
 **Device Type: Private Cloud vs Public Cloud**
 
 For organizations with a private cloud real device plan, you can choose between:
-- **Public Cloud** - Shared pool of devices available to all LambdaTest users
-- **Private Cloud** - Dedicated device pool exclusive to your organization
+- **Public Cloud:** Shared pool of devices available to all TestMu AI users
+- **Private Cloud:** Dedicated device pool exclusive to your organization
 
 **Multi-Select Support**
 
@@ -110,7 +110,7 @@ KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version
 | Option | Description |
 |--------|-------------|
 | **Auto Update** | Automatically updates the configuration when a new app version (matching `appPackage` or `bundleId`) is uploaded |
-| **Custom ID** | Links the configuration to an app uploaded via [API](/support/docs/application-setup-via-api/#upload-your-application) with a specific `custom_id` |
+| **Custom ID** | Links the configuration to an app uploaded via the [application upload API](/support/docs/application-setup-via-api/#upload-your-application) with a specific `custom_id` |
 | **Pre-Installed App** | Available for Private Cloud only. Maps app capability to `Stock` for testing pre-installed applications |
 
 #### Mobile Browser
@@ -159,6 +159,8 @@ Configure testing on emulators and simulators for both Native App and Mobile Bro
 
 ## Managing Configurations
 
+You can edit or delete existing configurations from the Configurations page.
+
 ### Edit a Configuration
 
 1. Navigate to the **Configurations** page from the sidebar
@@ -187,7 +189,7 @@ Deleting a configuration is only allowed if it's not associated with any Test In
 
 Apply configurations to test cases when creating or editing test runs.
 
-### Steps to Add Configurations
+### Steps to Add
 
 1. Select the test cases you want to configure
 2. Click **Configure Test**
@@ -207,6 +209,8 @@ Adding configurations **appends** to existing ones. It does not replace previous
 
 ## Best Practices
 
+Follow these practices for reliable tests:
+
 | Practice | Benefit |
 |----------|---------|
 | Use descriptive names | Easily identify configurations (e.g., "Chrome-Win11-1920x1080") |
@@ -214,3 +218,10 @@ Adding configurations **appends** to existing ones. It does not replace previous
 | Enable Auto Update for apps | Always test with the latest app build |
 | Use multi-select for devices | Increase device pool availability for KaneAI test runs |
 | Review usage count before editing | Understand the impact of changes across test runs |
+
+## Next Steps
+
+Continue with these guides:
+
+- [Run KaneAI Tests on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/): Apply your configurations to a test run and execute it.
+- [Sequential Test Runs](/support/docs/kaneai-sequential-test-runs/): Assign configurations per test case in a defined order.

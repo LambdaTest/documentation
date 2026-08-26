@@ -4,8 +4,6 @@
 
 KaneAI lets you export generated test code directly to your GitHub or GitLab repository as a pull request (PR) or merge request (MR). Instead of downloading ZIP files and manually copying code, you can raise PRs from the Test Manager in a few clicks, or automatically whenever code is generated.
 
-This guide covers how to integrate your Git provider, configure PR settings, create pull requests from test cases, and track their status.
-
 **Beta Feature**
 This feature is currently in **beta** and is not generally available. If you would like access, please reach out to [support@testmuai.com](mailto:support@testmuai.com).
 
@@ -32,10 +30,10 @@ Before you can create pull requests, you need to connect your GitHub or GitLab a
 
 Set up your Git provider from the TestMu AI Integrations page:
 
-- **GitHub**: Supports OAuth, Repo-based OAuth, Cloud/PAT, and Self-Hosted (GitHub Enterprise) connection methods. See the [GitHub Integration guide](/support/docs/github-integration/) for detailed setup instructions.
-- **GitLab**: Supports OAuth, Personal Access Token, and Self-Managed instance connection methods. See the [GitLab Integration guide](/support/docs/gitlab-integration/) for detailed setup instructions.
+- **GitHub**: Supports OAuth, Repo-based OAuth, Cloud/PAT, and Self-Hosted (GitHub Enterprise) connection methods. See the [GitHub Integration](/support/docs/github-integration/) for detailed setup instructions.
+- **GitLab**: Supports OAuth, Personal Access Token, and Self-Managed instance connection methods. See the [GitLab Integration](/support/docs/gitlab-integration/) for detailed setup instructions.
 
-### Select Platform from Test Manager
+### Select Platform From Test Manager
 
 When you initiate PR creation for the first time from the Test Manager, a **Select Platform to Create PR** dialog appears. This dialog shows the integration status for each provider.
 

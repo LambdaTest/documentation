@@ -84,8 +84,10 @@ New to KaneAI? Here's the recommended reading order:
 1. **[Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)**: Get started by authoring your first desktop browser test
 2. **[Author Your First Mobile Browser Test](/support/docs/author-your-first-mobile-browser-test/)**: Learn to author mobile browser tests with device selection and configuration
 3. **[Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)**: Build your first mobile app test with app upload and device configuration
-4. **[Element Interactions](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
-5. **[Forms & Inputs](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
-6. **[Assertions Guide](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
-7. **[Waits & Timing](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
-8. **[JS Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds/)**: When natural language isn't enough
+4. **[KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
+5. **[KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
+6. **[KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
+7. **[KaneAI Dynamic Content Waits and Page State](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
+8. **[KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/)**: When natural language isn't enough
+9. **[KaneAI Scroll in Feature](/support/docs/kane-ai-scroll-in-feature/)**: Scroll until a target element is visible when authoring mobile tests
+10. **[KaneAI Create PR](/support/docs/kaneai-create-pr/)**: Turn KaneAI test cases into pull requests in your repository

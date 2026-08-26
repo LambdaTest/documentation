@@ -4,7 +4,7 @@
 
 TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
-TestMu AI integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
+TestMu AI integration with TestComplete lets you perform web and app automation testing across 5000+ real devices and 10,000+ browser/device combinations.
 
 > The TestComplete application will only work on the **Windows** operating system.
 
