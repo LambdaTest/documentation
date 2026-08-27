@@ -128,7 +128,7 @@ Everything to do with credits lives under **Credits** in the [Billing console](h
 
 **Credits > Overview** is the summary screen for your organization. The subtitle shows the plan cycle the figures cover, and the date range picker at the top right changes the window.
 
-<img loading="lazy" src={require('../assets/images/credits-management/credits-overview.png').default} alt="Credits Overview page showing the plan cycle, the Total, Used, Available and Reserved cards, and the composition bar" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/credits-overview.webp').default} alt="Credits Overview page showing the plan cycle, the Total, Used, Available and Reserved cards, and the composition bar" className="doc_img"/>
 
 Four cards sit at the top, with a single composition bar underneath showing how the balance splits.
 
@@ -147,13 +147,13 @@ Below the cards:
 * **Top 10 Credit Users** ranks consumption over the selected range and has a **Users / Products** toggle. Columns are Name, Email, and Credits Used with its share of the total.
 * **Credits by Type** shows a card for each type you hold, **Subscription Credits**, **Purchased Credits** and **Complimentary Credits**, with a Used and Available split bar over a table of the individual batches. Each batch lists its credits and expiry date.
 
-<img loading="lazy" src={require('../assets/images/credits-management/credits-by-type.png').default} alt="Credits by Type showing the Subscription, Purchased and Complimentary cards, each with a Used and Available split bar and a table of batches with their credits and expiry dates" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/credits-by-type.webp').default} alt="Credits by Type showing the Subscription, Purchased and Complimentary cards, each with a Used and Available split bar and a table of batches with their credits and expiry dates" className="doc_img"/>
 
 ### Add credits
 
 Select **Add Credits** at the top right of the Overview page.
 
-<img loading="lazy" src={require('../assets/images/credits-management/add-credits-modal.png').default} alt="Add Credits modal showing the Enter Credits field, quick add chips, payment method and billing address" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/add-credits-modal.webp').default} alt="Add Credits modal showing the Enter Credits field, quick add chips, payment method and billing address" className="doc_img"/>
 
 1. Type the number of credits in **Enter Credits**, or use the **+1000**, **+5000** and **+10000** shortcuts.
 2. Pick a card under **Select a Payment method**.
@@ -169,7 +169,7 @@ Credits are added as soon as the payment goes through, and the pack is valid for
 
 **Credits > Transactions** lists every movement of credit in your organization.
 
-<img loading="lazy" src={require('../assets/images/credits-management/transactions.png').default} alt="Transactions table showing transaction ID, activity, used by, credits and date and time columns with the filter row above" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/transactions.webp').default} alt="Transactions table showing transaction ID, activity, used by, credits and date and time columns with the filter row above" className="doc_img"/>
 
 The transactions table shows:
 
@@ -200,7 +200,7 @@ Use the filter row to narrow the list by transaction type, source, product and d
 
 **Credits > Budgets** gives admins two ways to control who spends what. They work on different principles, so pick the one that matches your intent. When budgets overlap, the lowest limit applies.
 
-<img loading="lazy" src={require('../assets/images/credits-management/budgets-overview.png').default} alt="Credits Budgets page with the Sub-Organizations and Groups tabs and the Reserved Budgets table" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/budgets-overview.webp').default} alt="Credits Budgets page with the Sub-Organizations and Groups tabs and the Reserved Budgets table" className="doc_img"/>
 
 |  | Sub-organization budget | Group budget |
 |--|-------------------------|--------------|
@@ -216,7 +216,7 @@ The **Sub-Organizations** tab lists these under **Reserved Budgets** and the **G
 
 Open the **Sub-Organizations** tab and select **+ Add New Budget**.
 
-<img loading="lazy" src={require('../assets/images/credits-management/add-sub-org-budget.png').default} alt="Add New Sub-Organization Budget panel with sub-organization, reserved credits, resets and email alert threshold fields" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/add-sub-org-budget.webp').default} alt="Add New Sub-Organization Budget panel with sub-organization, reserved credits, resets and email alert threshold fields" className="doc_img"/>
 
 * **Sub-Organization:** the sub-organization the budget applies to. One budget covers one sub-organization.
 * **Reserved Credits:** how many credits are carved from the root balance each cycle. The field shows how many are currently available to reserve.
@@ -234,7 +234,7 @@ Once the budget is saved, the sub-organization spends from its own reserved bala
 
 Open the **Groups** tab and add a budget there.
 
-<img loading="lazy" src={require('../assets/images/credits-management/add-group-budget.png').default} alt="Add New Group Budget panel with group, max credits, resets and email alert threshold fields" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/add-group-budget.webp').default} alt="Add New Group Budget panel with group, max credits, resets and email alert threshold fields" className="doc_img"/>
 
 * **Group:** the group the cap applies to. One budget covers one group.
 * **Max Credits:** the most the group can spend in a cycle. No credits are moved, so the amount stays in your organization balance and anyone outside the group can still spend it.
@@ -251,7 +251,7 @@ Open the **Groups** tab and add a budget there.
 
 **Credits > Alerts** holds the organization-wide controls that prevent unexpected consumption. Turn on **Email alerts**, fill in the thresholds under **Total Balance Alerts**, then select **Save Changes**.
 
-<img loading="lazy" src={require('../assets/images/credits-management/credits-alerts.png').default} alt="Credits Alerts page with the email alerts toggle, warn and block balance thresholds, expiry alerts and manage recipients" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/credits-management/credits-alerts.webp').default} alt="Credits Alerts page with the email alerts toggle, warn and block balance thresholds, expiry alerts and manage recipients" className="doc_img"/>
 
 | Setting | What it does |
 |---------|--------------|
