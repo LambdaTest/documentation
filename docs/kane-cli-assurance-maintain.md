@@ -47,6 +47,7 @@ Products change; tests shouldn't rot. `kane-cli maintain` closes the [assurance 
 kane-cli maintain reconcile --from <file> --source-id <id>          # the interactive session (TTY default)
 kane-cli maintain reconcile --from <file> --source-id <id> --plan   # preview: stage + store the plan
 kane-cli maintain reconcile --apply [path]                          # continue a stored plan
+kane-cli maintain reconcile --from <url>                              # a Jira, Confluence, Linear or web URL
 kane-cli maintain reconcile --from <file> --source-id <id> --mode agent   # headless — see Automation
 kane-cli maintain evolve <ref> [--because "<reason>"]               # re-design one stale use-case (interactive)
 kane-cli maintain evolve --from-stale                               # …or every use-case with stale designs
@@ -58,7 +59,7 @@ Reconcile is the on-change front door: a requirement document changed — what s
 
 It takes **two explicit inputs** — reconcile never guesses which source a file belongs to:
 
-- `--from <file>` — the **new** version of the document (a file path).
+- `--from <file|url>` — the **new** version of the document: a file path, or a remote source URL — a Jira issue, a Confluence page, a Linear issue or document, or a public web page. These are the same URLs [`context ingest`](/support/docs/kane-cli-assurance-sources/) takes. See [Remote sources](#remote-sources) below.
 - `--source-id <id>` — the **existing** source this file succeeds; its head moves. Find ids with `kane-cli context list --type source`.
 
 Both are required on a fresh run. `--apply <path>` alone is enough to continue a stored plan — the plan remembers its source.
@@ -114,6 +115,29 @@ After the last card the composer wakes: type `<uc-ref> <what to change>` to rout
 `--plan` records the source change and **stages everything downstream**: the proposed rows are held in a stored plan (`plan stored: <path>`, under `.context/reconcile/plans/`), and no tests or designs are touched. Two things do land, disclosed in the output: the head move (the change fact is true regardless of what you decide), and a matched use-case whose source content moved is updated as part of the re-extract itself. Every MODIFY and ARCHIVE row in the plan carries its impact line (`impact: approving marks N item(s) stale`), and a `skipped arms` line names every analysis this release does not run.
 
 Walk the plan later with `--apply <path>` — or bare `--apply`, which picks the latest plan behind an approval prompt (headless modes accept it silently). `--apply --from <file> --source-id <id>` recomputes live instead. `--plan` and `--apply` together is a usage error (exit `2`). A repeated `--plan` re-renders the stored plan; an unchanged source is a truthful no-op (`nothing to reconcile`).
+
+### Remote sources — `--from <url>` {#remote-sources}
+
+`--from` also accepts a remote source URL: a Jira issue, a Confluence page, a Linear issue or document, or a public web page. These are the same URLs [`context ingest`](/support/docs/kane-cli-assurance-sources/) takes.
+
+Remote sources ride the same flow as files. Reconcile fetches the latest content through the provider, the head moves if anything you would cite changed, and everything downstream — the cards, `--plan` and `--apply` — is identical.
+
+```bash
+kane-cli maintain reconcile --from https://<your-site>/browse/PROJ-123 --plan
+kane-cli maintain reconcile --from https://<site>/wiki/spaces/<KEY>/pages/<id>/…
+kane-cli maintain reconcile --from https://linear.app/<workspace>/issue/ENG-42
+kane-cli maintain reconcile --from https://docs.example.com/guide
+```
+
+Three rules are specific to remote sources:
+
+- **The id comes from the URL.** `proj-123` or `eng-42` for an issue, `page-<id>` for a Confluence page, `doc-<id>` for a Linear document, and a slug plus a short hash for a web page. That makes `--source-id` optional. Passing one that contradicts the URL's own identity refuses, because reconcile never adopts a URL under a different id. A source you ingested under a custom id with `context ingest --as` is maintained by re-running that ingest with the same `--as`.
+- **Kind continuity, both ways.** A URL cannot version a file-backed source that happens to share its id, and a file cannot version a remote source. Each refuses and names the correct `--from`. The same check runs when a stored plan replays, so a stale plan can never overwrite a source whose backing changed hands.
+- **Stored plans remember the URL** and recompute by re-fetching it, the same way a file plan re-reads its file.
+
+:::note
+After an upgrade, the first reconcile of a Jira issue ingested on an older release may report a head move that is not a content edit. That is the source's one-time re-version, not a change to review.
+:::
 
 ### Running again — reconcile converges {#running-again}
 
@@ -171,6 +195,7 @@ Evolve re-designs the **parent use-case** of whatever you point it at — a test
 
 ## Next steps
 
+- [Requirement sources](/support/docs/kane-cli-assurance-sources/) — every file type and remote URL reconcile accepts.
 - [Coverage](/support/docs/kane-cli-assurance-coverage/) — `cover gaps --stage design` is the standing worklist between reconciles.
 - [Designing tests](/support/docs/kane-cli-assurance-design/) — what an approved ADD row actually runs.
 - [Automation](/support/docs/kane-cli-assurance-automation/) — reconcile in CI, and its NDJSON stream.

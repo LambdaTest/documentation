@@ -4316,6 +4316,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Requirement Sources",
+            id: "kane-cli-assurance-sources",
+          },
+          {
+            type: "doc",
             label: "Designing Tests",
             id: "kane-cli-assurance-design",
           },
