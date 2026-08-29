@@ -1,6 +1,8 @@
-# Filters for Espresso Tests
+# How to Filter Espresso Tests on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Filtering Espresso tests on TestMu AI lets you run only selected test cases instead of running the entire suite, speeding up execution. Pass parameters like package, class, annotation, and size to the REST API request through your AndroidJUnitRunner test runner.
 
 Usually, all the test cases of your Espresso test suite are executed, but there is a way to filter these. You can use Espresso test runner (typically `AndroidJUnitRunner`), which provides you with multiple options to filter the test cases which you want to execute.
 

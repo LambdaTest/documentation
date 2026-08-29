@@ -1,6 +1,8 @@
-# Supported Locales And Languages - XCUI
+# Supported Locales and Languages for XCUI on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Supported locales on TestMu AI define the language and region codes you can set through Appium's language and locale capabilities to test localized strings in iOS apps, letting you validate translations, formats, and region-specific behavior across many languages on devices.
 
 Use the given below list of supported locale and language codes for app testing.
 
@@ -9,6 +11,7 @@ Use the given below list of supported locale and language codes for app testing.
 To test localised strings in your iOS app, configure Appium's language capability with language code.
 
 Language to be passed in the capability - language:'fr' where fr is language code for french
+
 
 ### iOS Language and Language Codes
 
@@ -46,7 +49,9 @@ Language to be passed in the capability - language:'fr' where fr is language cod
 
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
 
+
 Locale to be passed in the capability - locale: 'fr_FR' where fr is language code for french and FR is the locale code for France
+
 
 ### iOS Locale and Locale Codes
 
@@ -99,6 +104,7 @@ Locale to be passed in the capability - locale: 'fr_FR' where fr is language cod
 | Mexico                 | es-MX                      |
 | South Africa           | en-ZA                      |
 
+
 ## How to Setup Locale and Language
 
 You can also configure both locale and language during XCUI test execution for a seamless user experience in diverse linguistic and regional contexts of your app.
@@ -139,6 +145,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 "locale": "CA"
 }'
 ```
+
 
 - When setting language or locale parameters, make sure your tests use the `ProcessInfo` object to pass these arguments correctly. This ensures the app launches with the specified language and locale settings.
 ```swift

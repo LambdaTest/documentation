@@ -1,11 +1,12 @@
-# Setting Up Espresso Environment Variables
+# How to Set Espresso Env Variables on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This feature allows you to dynamically set and test environment variables during Espresso test execution on TestMu AI.
+Setting Espresso environment variables on TestMu AI lets you pass values like STAGE, PROD, or DEV into automated Android tests at runtime. Define variables in your test suite, supply them during execution, and switch environments dynamically without rebuilding your APK.
 
 ## Step 1: Create Variables in Your Test Suite
 Define environment variables in your Espresso test suite to fetch the variable values during execution.
+
 
 ```bash title="Sample Script"
 String envVar = InstrumentationRegistry.getArguments().getString(ENV_VAR);
@@ -23,12 +24,33 @@ To begin testing, upload your Android application (.apk file) to TestMu AI's ser
 - **Authentication :** You'll need your TestMu AI Username and AccessKey. Combine them in the format `Username:AccessKey`.
 - **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
 
+
+
+
+
+
+
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@""' --form 'type="espresso-android"'`}
+
+
+
+
+
+
+
+
 
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@""" --form "type=\"espresso-android\""`}
 
+
+
+
+
+
+
 - Provide the path of your android application in the above URL in place of ``
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+
 
 ## Step 3: Upload Your Test Suite
 
@@ -36,12 +58,33 @@ Upload your Espresso test suite (.apk) file to TestMu AI servers using our REST 
 
 The following sample cURL command shows how to upload a test suite:
 
+
+
+
+
+
+
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@""' --form 'type="espresso-android"'`}
+
+
+
+
+
+
+
+
 
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@""" --form "type=\"espresso-android\""`}
 
+
+
+
+
+
+
 - Provide the path of your android application in the above URL in place of ``
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+
 
 ## Step 4: Executing The Test
 
@@ -49,7 +92,11 @@ The following sample cURL command shows how to upload a test suite:
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
+
+
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
+
 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
 

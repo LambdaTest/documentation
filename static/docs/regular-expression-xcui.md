@@ -1,6 +1,10 @@
-# Regular Expression - XCUI
+# How to Use Regular Expressions for XCUI on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Using regular expressions for XCUI device selection on TestMu AI lets you match any available device with a pattern instead of one exact model, so tests still run when your chosen iPhone or iPad is busy, widening the device search.
+
+**Supported on:** Real devices
 
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 
@@ -25,5 +29,8 @@ Passing `deviceName` using REGEX:
 
 ``Pixel.*-12``
 ``Pixel.*``
+
+
+
 
 REGEX is currently possible on the `deviceName` as of now and *not* on the ``platformVerison``.

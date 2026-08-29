@@ -1,8 +1,8 @@
 ---
 id: getting-started-with-xcui-testing
-title: XCUI Testing on TestMu AI
-sidebar_label: XCUI Testing
-description: Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!
+title: How to Run XCUITest on TestMu AI
+sidebar_label: "Run First Test"
+description: Run XCUITest automation for your iOS apps across 5000+ real devices and OS combinations on TestMu AI, from app upload to viewing results.
 keywords:
   - xcuitest
   - app test automation
@@ -19,8 +19,6 @@ canonical: https://www.testmuai.com/support/docs/getting-started-with-xcuitest/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
@@ -42,13 +40,16 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "XCUI Testing on TestMu AI",
+          "name": "How to Run XCUITest on TestMu AI",
           "item": `${BRAND_URL}/support/docs/getting-started-with-xcuitest/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+Running XCUITest on TestMu AI executes Apple's XCTest-based UI automation for your iOS apps across 5000+ real devices and OS combinations. Upload your app and test bundle, configure capabilities, trigger the run, and review results on the TestMu AI dashboard.
+
+**Supported on:** Real &amp; Virtual devices
+
 Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 5000+ real devices and OS combinations.
 
 ## Prerequisites
@@ -188,7 +189,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 <TabItem value="powershell" label="Windows" default>
   <div className="lambdatest__codeblock">
-    <CodeBlock className="lamguage-powershell">
+    <CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
@@ -235,7 +236,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 <TabItem value="powershell" label="Windows" default>
   <div className="lambdatest__codeblock">
-    <CodeBlock className="lamguage-powershell">
+    <CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
@@ -300,7 +301,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 <TabItem value="powershell" label="Windows" default>
   <div className="lambdatest__codeblock">
-    <CodeBlock className="lamguage-powershell">
+    <CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
@@ -347,7 +348,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 <TabItem value="powershell" label="Windows" default>
   <div className="lambdatest__codeblock">
-    <CodeBlock className="lamguage-powershell">
+    <CodeBlock className="language-powershell">
 
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" ^
@@ -364,48 +365,6 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 </TabItem>
 </Tabs>
 
-
-## Using the XCUITest Agent Skill with TestMu AI
-***
-
-The [xcuitest-skill](https://github.com/LambdaTest/agent-skills/tree/main/xcuitest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The xcuitest-skill package includes:
-
-```
-xcuitest-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing XCUITest Agent Skill
-***
-
-Install a XCUITest Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/xcuitest-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/xcuitest-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only xcuitest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
@@ -420,7 +379,7 @@ cp -r agent-skills/xcuitest-skill .cursor/skills/
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      XCUI Testing
+        How to Run XCUITest on TestMu AI
       </span>
     </li>
   </ul>

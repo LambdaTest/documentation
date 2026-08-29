@@ -8,7 +8,8 @@ Using TestMu AI with Bitrise, you can effortlessly perform [Espresso testing](ht
 
 ## Prerequisites
 
-1. Ensure you have access to TestMu AI [real device cloud](https://www.testmuai.com/real-device-cloud). If not, please [contact sales](https://www.testmuai.com/contact-us).
+
+1. Ensure you have access to TestMu AI [real device cloud](https://www.testmuai.com/real-device-cloud/). If not, please [contact sales](https://www.testmuai.com/contact-us/).
 
 2. A Bitrise account.
 
@@ -17,11 +18,19 @@ Using TestMu AI with Bitrise, you can effortlessly perform [Espresso testing](ht
 **Note**
 If you are getting started with Bitrise CI, please refer to our documentation on [running Appium tests in Bitrise CI](/support/docs/bitrise-integration/).
 
+
+
 ## Configuring The TestMu AI App Automate - Espresso Step In Bitrise
+
 
 1. Use the search bar to find **TestMu AI App Automate - Espresso**.
 
+
+
 2. Click **TestMu AI App Automate- Espresso** card.
+
+
+
 
 3. In **Input Variables**, enter **App apk path** and **Test suite apk path**.
 
@@ -29,15 +38,27 @@ If you are getting started with Bitrise CI, please refer to our documentation on
 * [Proverbial APK](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
 * [Test Suite APK](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk)
 
+
+
 * In **TestMu AI username**, click Select secret variable.
+
+
 
 * Enter the key (it can be anything), your TestMu AI username and click **Add new**.
 
+
+
 * In **TestMu AI access key**, click Select secret variable.
+
+
 
 * Enter the key (it can be anything), your TestMu AI access key and click **Add new**.
 
+
+
 4. Provide the list of device and operating system version on which you wish to run your tests.
+
+
 
 Other options:
 
@@ -53,12 +74,20 @@ Other options:
 | Network logs |   TYPE: BOOLEAN DEFAULT: FALSE`True`OR `False` | Enable Network Logs that will show the information on the data transmitted & received by the device. |
 | Video |   TYPE: BOOLEAN DEFAULT: TRUE`True`OR `False` | Video recording of the screen. |
 
+
+
 [Espresso Testing On TestMu AI](/support/docs/getting-started-with-espresso-testing/)
 
 [Automation Capabilities Generator For Selenium and Appium](https://www.testmuai.com/capabilities-generator/)
 
+
+
 5. Click **⌘ + S** to save the step.
 
+
+
 6. Now go back to the build and click **Rebuild** to build the step.
+
+
 
 7. Once the build process is complete, visit TestMu AI App Automation Dashboard to view your test results.

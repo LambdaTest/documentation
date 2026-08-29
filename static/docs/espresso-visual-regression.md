@@ -12,7 +12,9 @@ In this documentation, you will learn step-by-step how to perform regression tes
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
 - Go to [`TestMu AI SmartUI`](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 
+
 If you do not have any **Android** app (.apk) and an **Android Test** app (.apk) file, you can run your sample tests on TestMu AI by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android-app.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/espresso/proverbial_android_espressotest-app.apk).
+
 
 ## Step 1: Create a SmartUI Project
 
@@ -25,17 +27,38 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
+
+
 ## Step 2: Set up your Authentication
 
 Now, you need to export your environment variables LT_USERNAME and LT_ACCESS_KEY that are available in the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
+
+
+
+
+
+
 {`export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
 
+
+
+
+
+
+
+
+
 {`set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
+
+
+
+
+
 
 ## Step 3: Update your App Configurations
 
@@ -71,12 +94,33 @@ To begin testing, upload your Android application (.apk file) to TestMu AI's ser
 - **Authentication :** You'll need your TestMu AI Username and AccessKey. Combine them in the format `Username:AccessKey`.
 - **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
 
+
+
+
+
+
+
 {`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@""' --form 'type="espresso-android"'`}
+
+
+
+
+
+
+
+
 
 {`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@""" --form "type=\"espresso-android\""`}
 
+
+
+
+
+
+
 - Provide the path of your android application in the above URL in place of ``
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+
 
 ## Step 5: Upload Your Test Suite
 
@@ -84,12 +128,33 @@ Upload your Espresso test suite (.apk) file to TestMu AI servers using our REST 
 
 The following sample cURL command shows how to upload a test suite:
 
+
+
+
+
+
+
 {`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@""' --form 'type="espresso-android"'`}
+
+
+
+
+
+
+
+
 
 {`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@""" --form "type=\"espresso-android\""`}
 
+
+
+
+
+
+
 - Provide the path of your android application in the above URL in place of ``
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step.
+
 
 ## Step 6: Executing The Test
 
@@ -97,7 +162,11 @@ The following sample cURL command shows how to upload a test suite:
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
 
+
+
 {`${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}`}
+
+
 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
 
@@ -158,6 +227,7 @@ appPath: Proverbial.apk
 testSuitePath: ProverbialExpressoTest.apk
 # We have used the appPath and testSuitePath here.
 
+
 #highlight-next-line
 appId: lt://APP1010461471690377432133206
 testSuiteAppId: lt://APP10104592261690377454846669
@@ -188,6 +258,7 @@ values: ["com.lambdatest.proverbial.BrowserTest"]
 # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
 ```
 
+
 **When shards are added**
 
 If you are using the `deviceSelectionStrategy: all`,then in that case all the specified shards will be executed on every device available.
@@ -196,6 +267,10 @@ Then, d1 has 3 shards, i.e., total 3 devices of d1 configuration will be used. 1
 
 If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on just one device from the provided list.
 **For example:** If there are 2 shards mentioned in `.yaml`and 3 devices mentioned, the system will create 2 shards. These shards might use any 2 devices from the given 3 configurations. It's also possible that the same device configuration could be used for both shards. In this setup, test cases will be distributed between these shards.
+
+
+
+
 
 **Auto Sharding** : The system intelligently determines the distribution of tests across devices, employing specific criteria to optimize the testing process.
 
@@ -223,6 +298,7 @@ appPath: Proverbial.apk
 testSuitePath: ProverbialExpressoTest.apk
 # We have used the appPath and testSuitePath here.
 
+
 #highlight-next-line
 appId: lt://APP1010461471690377432133206
 testSuiteAppId: lt://APP10104592261690377454846669
@@ -236,6 +312,7 @@ devices: ["Galaxy.*", "Pixel.*"]
 
 ```
 
+
 **When shards aren't added**
 
 If you are using the `deviceSelectionStrategy: all`, then in that case the tests will be executed on all mentioned devices in `.yaml` based on the concurrency.
@@ -244,6 +321,7 @@ Then, d1 has 3 shards, i.e., total 3 devices of d1 configuration will be used. 1
 
 If you are using the `deviceSelectionStrategy: any`, then in that case all the specified tests will be executed on each device from the provided list, considering the concurrency setting.
 **For example:** If the concurrency is set to 2 and 3 devices mentioned, the system will create 2 shards. These shards might use any 2 devices from the given 3 configurations. It's also possible that the same device configuration could be used for both shards. In this setup, test cases will be distributed between these shards.
+
 
 ## Smart Crop With SmartUI
 
@@ -256,6 +334,9 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 |  |  |
 
 ## Best Practices
+
+
+
 
 ### Project and Build Naming
 
@@ -272,11 +353,17 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 }
 ```
 
+
+
+
 ### Device Selection
 
 - Test on devices that match your user base
 - Include multiple device configurations for comprehensive coverage
 - Use device patterns for consistent testing (e.g., `Galaxy.*`, `Pixel.*`)
+
+
+
 
 ### Smart Crop Configuration
 
@@ -284,25 +371,40 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 - Enable `cropNavigationBar` for Android devices
 - Test cropped screenshots to ensure important content isn't removed
 
+
+
+
 ### Test Organization
 
 - Use sharding for parallel test execution
 - Group related tests in same build
 - Use meaningful test names for better organization
 
-### App and Test Suite Management
 
-- Upload apps and test suites before execution
-- Use app IDs (`lt://APP...`) for faster execution
-- Keep app and test suite versions synchronized
+
 
 ### App and Test Suite Management
 
 - Upload apps and test suites before execution
 - Use app IDs (`lt://APP...`) for faster execution
 - Keep app and test suite versions synchronized
+
+
+
+
+### App and Test Suite Management
+
+- Upload apps and test suites before execution
+- Use app IDs (`lt://APP...`) for faster execution
+- Keep app and test suite versions synchronized
+
+
+
 
 ## Troubleshooting
+
+
+
 
 ### Issue: Screenshots Not Captured
 
@@ -331,6 +433,9 @@ visual": true,
 
 4. Check network connectivity to TestMu AI
 
+
+
+
 ### Issue: Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
@@ -345,6 +450,9 @@ visual": true,
 2. Copy project name directly from dashboard
 3. Check credentials match the account with the project
 4. Ensure project name is in API request
+
+
+
 
 ### Issue: App Upload Fails
 
@@ -361,6 +469,9 @@ visual": true,
 2. Check file size limits
 3. Retry upload with stable network connection
 4. Verify authentication credentials
+
+
+
 
 ### Issue: Test Execution Fails
 
@@ -385,6 +496,9 @@ IdleTimeout: 60
 
 4. Review device logs for test errors
 
+
+
+
 ### Issue: Screenshots Show Incorrect Content
 
 **Symptoms**: Screenshots captured but show wrong screen or state
@@ -408,6 +522,10 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+
+
+
+
 
 ## Additional Resources
 
