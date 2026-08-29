@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-guided-walkthrough
 title: Guided Walkthrough of HyperExecute
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: Guided Walkthrough
+sidebar_label: "View Test Results"
 description: Learn how to manage Jobs, configure tunnels, upgrade subscriptions, and access detailed test and job information. Discover the power of custom report, analytic.
 keywords:
   - TestMu AI Hyperexecute
@@ -40,15 +41,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample Job](/support/docs/hyperexecute-running-your-first-job/). The dashboard is built to be **WCAG-compliant**, ensuring an accessible experience for all users.
+The HyperExecute Dashboard shows every job, task, and test result. This walkthrough covers each area once you have [run your first sample Job](/support/docs/hyperexecute-running-your-first-job/). The dashboard is built to be **WCAG-compliant**, ensuring an accessible experience for all users.
 
 ## Jobs Page
 
-All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute). Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [`Status`](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [`Labels`](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [`Tasks`](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job.
+All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute). Each [Job](/support/docs/hyperexecute-job-reports/#hyperexecute-status) has a [`Status`](/support/docs/hyperexecute-job-reports/#hyperexecute-status), a unique `Job Number`, a set of [`Labels`](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [`Tasks`](/support/docs/hyperexecute-job-reports/#hyperexecute-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/1.png').default} alt="Image"  className="doc_img"/>
 
-> Learn more about [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/), getting [User Name and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from our [Knowledge Base](/support/docs/hyperexecute-knowledge-base/)
+> Learn more about [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/), getting [User Name and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key) from our [Knowledge Base](/support/docs/getting-started-with-hyperexecute/)
 
 ### Top Panel
 
@@ -97,9 +98,9 @@ You can click on a particular Job to navigate to the Job Details Page.
   -   **Type**: The job type (Selenium, Playwright, etc) along with the mode of the job (AutoSplit or Matrix).
   -   **Git Commit ID** - For jobs triggered via [Workflows](/support/docs/hyperexecute-workflows/) or [sourcePayload](/support/docs/hyperexecute-how-to-configure-sourcePayload/), the git commit hash is displayed in the job metadata, providing traceability to the specific code changes tested.
   -   **[Artifacts](/support/docs/hyperexecute-artifacts/)**: Can be used to configure and generate custom reports and artifacts.
-  -   **[Report](/support/docs/hyperexecute-reports/)**: A detailed report for your test execution for the Job.
+  -   **[Report](/support/docs/hyperexecute-job-reports/)**: A detailed report for your test execution for the Job.
 - The left side shows all the Tasks (Just-in-time testing environments) that were a part of the Job.
-- Each Task has 3 types of Stages : [Pre stages, Scenario stages, Post stages](/support/docs/hyperexecute-status/#3-stage-level-status).
+- Each Task has 3 types of Stages : [Pre stages, Scenario stages, Post stages](/support/docs/hyperexecute-job-reports/#hyperexecute-status).
 
 <!-- > **Note** - You can learn about Job, Tasks and Stages [here](/support/docs/hyperexecute-concepts/). -->
 

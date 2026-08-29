@@ -15,9 +15,13 @@ ACCELQ is the most powerful software testing tool to achieve Codeless test autom
 - Parameters- accelq url, userId, apiKey, tenant code, Job Id
 - Agent.properties file for you configured agent with TestMu AI
 
+
 ### Steps to Integrate
 
+
 **Step 1:** Copy your local `agent.properties` file from `` to root folder of your HyperExecute project.
+
+
 
 **Step 2:** Update your YAML file with your account credentials.
 
@@ -27,18 +31,24 @@ ACCELQ is the most powerful software testing tool to achieve Codeless test autom
 ./hyperexecute --config hyperdemo.yaml -u <lambdausername> -k <lambda accesskey>
 ```
 
+
 ## Additional Details
 ### Where to Find the Parameters?
 
 #### ACCELQ - URL, User-ID, API key, Tenant Code
 
+
 #### How to create a Job ID?
 
 **Step 1:** Create an LT profile with with the below configuration and save it
 
+
 **Step 2:** Create a [CI job](https://support.accelq.com/hc/en-us/articles/360016077871-How-do-I-create-a-job-that-I-can-invoke-from-CI-tool#:~:text=Step%201%3A%20On%20the%20ACCELQ,Click%20on%20%22Create%20Job%22) with the same profile and agent which has TestMu AI configured with it.
 
+
+
 **Step 3:** Copy the Job ID
+
 
 ### Agent.properties file
 Agent.property file is a type of file that gets generated when you configures the agents from the ACCELQ to the TestMu AI.
@@ -222,6 +232,7 @@ agent: [hyper1\agent.properties]
 pre:
 - move agent.properties C:\Users\ltuser.ghtestVM\Downloads\acc_installer_win\ACCELQAgent\AgentInstances\agent\agent.properties #move your agent file to hyperex machines agent folder
 - acc start # start accelq agent on hyperexecute machines
+
 
 testSuites:
 - node $env:ACCELQ --url "" --userID "" --apiKey "" --tenantCode "poc" --jobID $jobID;

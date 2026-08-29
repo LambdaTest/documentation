@@ -1,5 +1,3 @@
-# AI Root Cause Analysis (AI RCA) - Test Intelligence
-
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 AI Root Cause Analysis (AI RCA) in TestMu AI Analytics uses advanced AI-powered LLM technology to automatically analyze failed tests and identify their root causes. Instead of manually sifting through logs and error messages, AI RCA provides:
@@ -8,6 +6,8 @@ AI Root Cause Analysis (AI RCA) in TestMu AI Analytics uses advanced AI-powered 
 - **Actionable fixes** - specific recommendations to resolve issues
 - **Error timelines** - chronological sequence of events leading to failures
 - **Trend analysis** - identifies recurring patterns across test executions
+
+
 
 ## Prerequisites for AI RCA
 
@@ -29,6 +29,7 @@ TestMu AI offers two methods to generate Root Cause Analysis:
 - Use **Automatic RCA** for continuous monitoring of critical test suites where you want immediate analysis of every failure.
 - Use **Manual RCA** for ad-hoc debugging when you need to investigate a specific test failure without setting up automated rules.
 
+
 | Feature | Automatic RCA | Manual RCA |
 |---------|---------------|------------|
 | **Trigger** | Runs automatically when configured tests fail | Click "Generate RCA" button |
@@ -40,11 +41,14 @@ TestMu AI offers two methods to generate Root Cause Analysis:
 **Shared Configuration**
 **Custom RCA Categories** and **Special Instructions** configured in Organization Settings apply to both Automatic and Manual RCA generation. This ensures consistent categorization and analysis context across all RCA results.
 
+
 ## Generate RCA Manually
 
 You can manually generate RCA for any failed test from the **Test Manager** or **HyperExecute** dashboards.
 
 ### From Test Manager (TMS)
+
+
 
 1. Navigate to **Test Manager** → open a **Test Run**
 2. Go to the **Test Instances** tab
@@ -52,6 +56,8 @@ You can manually generate RCA for any failed test from the **Test Manager** or *
 4. View the RCA output with root cause, severity, and recommended fixes
 
 ### From HyperExecute
+
+
 
 1. Navigate to **HyperExecute** → open the failed **Job**
 2. Select the **Tasks** tab and expand the failed scenario
@@ -62,6 +68,8 @@ You can manually generate RCA for any failed test from the **Test Manager** or *
 
 The Insights dashboard provides aggregated RCA analytics and trend analysis across all your test executions.
 
+
+
 1. Navigate to **Insights** from the TestMu AI dashboard
 2. Access the **RCA Category Trends** widget to view aggregated data
 3. Click on specific categories to drill down into detailed analysis
@@ -70,6 +78,8 @@ The Insights dashboard provides aggregated RCA analytics and trend analysis acro
 ## Understanding RCA Output
 
 When you generate or view an RCA, a detailed analysis panel opens with the following components:
+
+
 
 ### Error Classification
 
@@ -118,9 +128,12 @@ Help improve RCA accuracy using the feedback options at the bottom:
   - Provide a custom root cause if the AI classification was incorrect
   - Add additional context or feedback
 
+
 ## Configure Automatic RCA
 
 Set up Automatic RCA to continuously analyze test failures based on your targeting rules.
+
+
 
 ### Step 1: Access Organization Settings
 
@@ -169,7 +182,10 @@ The intelligent targeting system applies rules using the following logic:
 - **Test Your Rules**: Verify rule behavior with sample test names and tags before applying
 - **Regular Review**: Periodically review and update rules based on changing test patterns
 
+
 #### Example Configuration for Production Test Analysis
+
+
 
 **Test Name:**
 - **Include**: `.*prod.*` - Only analyze tests with name containing "prod"
@@ -188,9 +204,12 @@ The intelligent targeting system applies rules using the following logic:
 
 **Result**: AI-powered analysis will run only on production tests (excluding non-critical ones) from hourly builds, focusing on Playwright or HyperExecute test tags, while excluding smoke tests. The analysis will target ecommerce and payment projects, excluding staging projects. This configuration helps narrow down analysis to the most critical test scenarios.
 
+
 ### Step 5: Manage Custom RCA Categories (Optional)
 
 Custom RCA Categories allow you to define intelligent classification categories that automatically categorize and organize test failure analysis results. This helps you group similar failures together, track trends, and prioritize fixes more effectively.
+
+
 
 #### Managing Categories
 
@@ -207,10 +226,12 @@ Custom RCA Categories allow you to define intelligent classification categories 
 
 **Best Practices:**
 
+
 - **Be Specific**: Create distinct categories (e.g., "Database Connection Timeouts" vs "Database Issues")
 - **Use Clear Names**: Choose names your team understands immediately
 - **Start Small**: Begin with 5-10 active categories for your most common failure types
 - **Review Regularly**: Periodically refine categories based on your failure patterns
+
 
 **Example Custom RCA Categories:**
 
@@ -231,6 +252,7 @@ Provide context or specific guidance for the AI to consider during analysis:
 3. Use the "Show examples" link for guidance on effective instruction writing
 
 **Example Instructions:**
+
 
 **Environment-Specific Context:**
 - Running on Staging environment with test data
@@ -271,6 +293,7 @@ Provide context or specific guidance for the AI to consider during analysis:
 - Expected 404s for optional resources (favicon, tracking pixels)
 - Third-party script loading delays that don't impact core functionality
 
+
 ### Step 7: Save Configuration
 
 1. Click **Save Configuration** to apply your settings
@@ -287,6 +310,7 @@ Provide context or specific guidance for the AI to consider during analysis:
 
 ## Troubleshooting Common Issues
 
+
 RCA Not Generating
 
 - **Check prerequisites**: Ensure you have the required subscription plan
@@ -294,6 +318,9 @@ RCA Not Generating
 - **Verify test failures**: AI RCA requires actual test failures to analyze
 - **Review configuration**: Confirm AI RCA is enabled in organization settings
 - **Check permissions**: Ensure you have access to Analytics and Test Intelligence features
+
+
+
 
 Inaccurate RCA Results
 
@@ -303,6 +330,9 @@ Inaccurate RCA Results
 - **Refine custom RCA categories**: Update category descriptions to better match your failure patterns
 - **Provide feedback**: Use any available feedback mechanisms to improve accuracy
 
+
+
+
 Missing RCA Data
 
 - **Check time range**: Ensure you're looking at the correct time period
@@ -310,9 +340,13 @@ Missing RCA Data
 - **Review dashboard filters**: Check if any filters are excluding relevant data
 - **Contact support**: Reach out if RCA data appears to be missing
 
+
+
 ## Support
 
 For any queries or issues related to AI Root Cause Analysis, please reach out to our [24/7 customer support](mailto:support@testmuai.com). We're here to help you maximize the value of this powerful debugging tool!
+
+
 
 **Related Documentation:**
 - [Smart Tags - Test Intelligence](/docs/analytics-smart-tags-test-intelligence/)

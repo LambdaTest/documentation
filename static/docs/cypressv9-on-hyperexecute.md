@@ -10,12 +10,14 @@ This guide will cover the basics of getting started with Cypress v9 testing on t
 
 ## Running Cypress v9 Tests on HyperExecute
 
+
 Cypress Tests can be executed on HyperExecute using 2 ways:
 
 1. [**Using Local System**](/support/docs/cypressv9-on-hyperexecute#1-testing-using-local-system) - Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) to execute tests from your Local System.
 2. [**Using Gitpod**](/support/docs/cypressv9-on-hyperexecute#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
 ## 1. Testing Using Local System
+
 
 ### Prerequisites:
 
@@ -28,6 +30,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 
 **Sample repo**
 You can either download or clone the code samples of Cypress v9 from the **TestMu AI's GitHub Repository** to quickly run your tests.  View on GitHub
+
 
 #### Download HyperExecute CLI
 
@@ -43,17 +46,38 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
+
+
+
+
+
+
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
+
+
+
+
+
 
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
+
+
+
+
+
 ### Execution Methods:
+
 
 Cypress Tests can be executed on HyperExecute using 2 methods:
 
 ### 1. Execution Using Auto-Split
+
 
 The Auto-Split mechanism enables you to run tests at predefined concurrency levels and distribute them across available infrastructure. Concurrency can be achieved at various levels, including file, module, test suite, test, and scenario.
 
@@ -153,17 +177,32 @@ testRunnerCommand: npx cypress run  --spec ./cypress/integration/$test --browser
 
 Run the following command on the terminal to trigger the tests as per your machine.
 
+
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
+
+
+
+
 
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
 
+
+
+
+
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
+
+
+
+
+
 
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution
 
@@ -205,6 +244,7 @@ jobLabel: [cypress-v9, win, autosplit]
 ```
 
 ### 2. Execution Using Matrix
+
 
 Matrix-based test execution is used for running the same tests across different test (or input) combinations. The Matrix directive in HyperExecute YAML file is a *key:value* pair where value is an array of strings. Also, the *key:value* pairs are opaque strings for HyperExecute.
 
@@ -264,17 +304,31 @@ post:
 
 Run the following command on the terminal to trigger the tests as per your machine.
 
+
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
+
+
+
+
 
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
 
+
+
+
+
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
+
+
+
+
 
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution:
 
@@ -310,23 +364,32 @@ BuildTags: ["Hyperexecute-Cypress"]
 post:
 - cat ./yaml/win/.hyperexecute_autosplit.yaml
 
+
 jobLabel: [cypress-v9, win, matrix]
 ```
 
 ## 2. Testing Using Gitpod
 
+
 Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 **Step 1:** Click the **Open in Gitpod** button (You will be redirected to Login/Signup page).
 
+
+
 **Step 2:** Login with TestMu AI credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
+
+
 
 **Step 3:** You will need to login into your Gitpod account, or create a new one.
   (If you are creating a new account, choose your preferred editor. We recommend VS Code)
 
+
+
 **Step 4:** As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated.
 
 **Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
+
 
 ## Additional Details
 
@@ -356,7 +419,9 @@ Network: true
 FullHar: true
 ```
 
+
 You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).
+
 
 ### Detailed Cypress Command Logs
 > To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
@@ -370,9 +435,14 @@ pre:
 - npm install cypress-terminal-report --save-dev
 ```
 
+
 For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v9-and-previous-versions) documentation.
 
+
+
+
 ## Using the Cypress Agent Skill with TestMu AI
+
 
 The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
@@ -395,7 +465,9 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
+
 ### Installing Cypress Agent Skill
+
 
 Install a Cypress Agent Skill using the command below:
 

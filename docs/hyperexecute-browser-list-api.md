@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-browser-list-api
-title: How to List Supported Browser in HyperExecute via API
+title: How to List Supported Browser in HyperExecute via API
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: How to List Supported Browser in HyperExecute via API
+sidebar_label: "List Supported Browsers via API"
 description: Find out how to list the browser used in hyperexecute using the BrowserList API
 keywords:
   - TestMu AI Hyperexecute

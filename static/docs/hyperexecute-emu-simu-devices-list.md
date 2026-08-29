@@ -1,10 +1,11 @@
-# HyperExecute Emulator and Simulator Devices
-
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 HyperExecute supports a wide range of emulator and simulator devices for testing your applications. Below is the categorized list of available devices.
 
 ## Emulators
+
+
+
 
 | Device Name        | Category |
 |--------------------|----------|
@@ -32,6 +33,10 @@ HyperExecute supports a wide range of emulator and simulator devices for testing
 | Pixel 4 XL         | Phone    |
 | Pixel 4a           | Phone    |
 
+
+
+
+
 | Device Name        | Category |
 |--------------------|----------|
 | Galaxy Note20      | Phone    |
@@ -54,6 +59,10 @@ HyperExecute supports a wide range of emulator and simulator devices for testing
 | Pixel 4a 5G        | Phone    |
 | Pixel 5            | Phone    |
 | Pixel 5a 5G        | Phone    |
+
+
+
+
 
 | Device Name            | Category |
 |------------------------|----------|
@@ -87,6 +96,10 @@ HyperExecute supports a wide range of emulator and simulator devices for testing
 | Vivo X80 Pro           | Phone    |
 | Xiaomi 12 / 12 Pro     | Phone    |
 
+
+
+
+
 | Device Name       | Category |
 |-------------------|----------|
 | ASUS ZenFone 8    | Phone    |
@@ -119,6 +132,10 @@ HyperExecute supports a wide range of emulator and simulator devices for testing
 | Vivo X80 Pro      | Phone    |
 | Xiaomi 12 / 12 Pro | Phone   |
 
+
+
+
+
 | Device Name       | Category |
 |-------------------|----------|
 | Pixel 6a          | Phone    |
@@ -128,7 +145,15 @@ HyperExecute supports a wide range of emulator and simulator devices for testing
 | Pixel 5           | Phone    |
 | Pixel 5a 5G       | Phone    |
 
+
+
+
+
+
 ## Simulators
+
+
+
 
 | Device Name                          | Category       |
 |--------------------------------------|----------------|
@@ -142,6 +167,10 @@ HyperExecute supports a wide range of emulator and simulator devices for testing
 | iPad Pro (12.9-inch) (5th generation)| Tablet         |
 | iPad Air (5th generation)            | Tablet         |
 | iPad mini (6th generation)           | Tablet         |
+
+
+
+
 
 | Device Name                          | Category |
 |--------------------------------------|----------|

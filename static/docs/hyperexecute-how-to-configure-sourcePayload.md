@@ -6,6 +6,8 @@ When you run your tests on HyperExecute, the test scripts are zipped, encrypted 
 
 Once you set `sourcePayload`, your test scripts are directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and sent through the HyperExecute CLI. Learn more detailed documentation below.
 
+
+
 ## Setting up
 
 You can start by configuring the `sourcePayload` key in the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file. The format is explained below.
@@ -43,6 +45,8 @@ commit: <optional>
 ```
 > You can assign a name to your PAT via the HyperExecute vault feature and replace it in place of the `GIT_PAT` tag in the example given above.
 
+
+
 ### Sample YAML file
 
 A sample HyperExecute YAML file is added below for your reference.
@@ -79,22 +83,40 @@ accessToken: <your_PAT>
 
 ### Generating a Personal Access Token
 
+
 Generate Personal Access Token on GitHub
    You can generate a **PAT** on **GitHub** by following the steps below.
 
+
+
 1. Log in to your [GitHub](https://github.com/ "https://github.com/") account. You will be redirected to your homepage on GitHub.
+
 
 2. Click on your profile on the top right-hand side corner of your page to access your **Settings**.
 
+
+
 3. Go to the bottom of the **Settings** page and click on **Developer settings**.
+
+
 
 4. Click on **Tokens (classic)** to generate your own Personal Access Token.
 
+
+
 5. Click on **Generate new token** and select the **classic** or **fine-grained** version as per your choice.
+
+
 
 6. Proceed to configuring the PAT and click on **Generate token** to create your Personal Access Token.
 
   > **Note**: While configuring your PAT, ensure that the access is given for all keys under `repo`. Moreover, you will also have to give all the accesses for `read` keys.
+
+
+
+
+
+
 
 Generate Personal Access Token on GitLab
 
@@ -104,6 +126,15 @@ Generate Personal Access Token on GitLab
 4. Click on **Create Personal Access Token**.
 5. **Copy and Save** your token securely.
 
+
+
+
+
+
+
+
+
+
 Generate Project Access Token on GitLab
 
 1. Navigate to the project for which you want to create a token.
@@ -112,6 +143,9 @@ Generate Project Access Token on GitLab
 4. Select the scopes for the token.
 5. Select the role for the token, which determines the level of access it has.
 6. Click on **Create project access token**.
+
+
+
 
 Generate Repository Access Token on Bitbucket
 
@@ -124,7 +158,10 @@ We need to follow the 2 steps mentioned below:
 Please refer to the following link for generating access tokens if your/your client’s repository is private. This access token will allow HyperExecute to directly fetch the test scripts/Provar tests from bitbucket whenever a Job is triggered.
 https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/
 
+
 - Add the token in Job trigger API payload
+
+
 
 In order for HyperExecute to be able to fetch tests from **bitbucket**, **bitbucket-server**, or **github**, the token has to be added in the Job Trigger API. Example given below:
 

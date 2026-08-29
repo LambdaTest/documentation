@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
          "@type": "ListItem",
          "position": 3,
          "name": "UI Testing with Maestro",
-         "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-maestro/`
+         "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-sdk-maestro/`
        }]
      })
    }}

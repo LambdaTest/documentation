@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-auto-healing
-title: Auto Healing in HyperExecute
+title: Auto Healing in HyperExecute
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: Auto Heal
+sidebar_label: "Auto Heal"
 description: This documentation will help you to understand the concept of auto healing in hyperexecute
 keywords:
 - hyperexecute auto healing

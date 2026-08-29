@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-private-cloud-setup-with-aws
-title: How to setup HyperExecute Private Cloud with AWS
+title: How to setup HyperExecute Private Cloud with AWS
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: Setup with AWS
+sidebar_label: "Setup with AWS"
 description: This documentation will help you setup HyperExecute Private Cloud with AWS.
 keywords:
 - hyperexecute aws

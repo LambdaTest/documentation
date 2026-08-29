@@ -1,8 +1,8 @@
 ---
 id: adb-commands-support
-title: ADB Commands Support
+title: How to Run ADB Commands on TestMu AI
 sidebar_label: ADB Commands Support
-description: TestMu AI provides support for limited commands which can be executed in your app automation test scripts via javascript executors. 
+description: Execute supported ADB commands inside app automation scripts via JavaScript executors on TestMu AI real and virtual Android devices.
 keywords:
   - appium
   - java
@@ -20,8 +20,6 @@ canonical: https://www.testmuai.com/support/docs/adb-commands-support/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -42,12 +40,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "ADB Commands Support",
+          "name": "How to Run ADB Commands on TestMu AI",
           "item": `${BRAND_URL}/support/docs/adb-commands-support/`
         }]
       })
     }}
 ></script>
+Running ADB commands on TestMu AI lets you drive real and virtual Android devices from your app automation scripts using JavaScript executors, triggering swipes, taps, key events, and shell actions like dumpsys to control device state during mobile test runs.
+
 Android Debug Bridge (adb) is a versatile command-line tool that lets users communicate with a device. The adb command facilitates a variety of device actions, such as installing and debugging apps. 
 
 <BrandName /> provides support for limited commands which can be executed in your app automation test scripts via javascript executors. The following command with the below mentioned parameters need to be used to execute adb command with <BrandName /> real device cloud.
@@ -61,7 +61,7 @@ driver.execute_script("lambda-adb", params)
 > **NOTE :** All these commands are supported on both Real and Virtual Devices except for the [**adb shell dumpsys**](/support/docs/adb-commands-support/#adb-shell-command) command, which is not supported for Virtual Device.
 
 ###  Swipe
-**adb shell input swipe** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+**adb shell input swipe** Real &amp; Virtual
 
   The command is used to generate a swipe gesture by defining the coordinates of starting and ending point of the swipe. The following is a Python sample of using the adb swipe command with <BrandName /> executor.
 
@@ -72,7 +72,7 @@ driver.execute_script("lambda-adb", params)
 
 ###  Clipboard
 
-**adb shell input sendKeys** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+**adb shell input sendKeys** Real &amp; Virtual
 
   The command is used to sends text as if typed at the keyboard in the real devices. The following is a Python sample of using the adb sendKeys command with <BrandName /> executor.
 
@@ -83,7 +83,7 @@ driver.execute_script("lambda-adb", params)
 
 ###  Home Button
 
-- **Navigate to the home screen** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+- **Navigate to the home screen** Real &amp; Virtual
 
 The command is used to navigate to the home screen of the device while running an app automation test script. The following is a Python sample of using the adb command to navigate to the home screen with <BrandName /> executor.
 
@@ -94,7 +94,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### Enable/Disable auto rotate
 
-- **enableAutoRotate** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+- **enableAutoRotate** Real &amp; Virtual
 
   The command is used to auto rotate the screen of the device while running an app automation test script. The following is a Python sample using the adb command to allow auto rotation with <BrandName /> executor.
 
@@ -109,7 +109,7 @@ result = driver.execute_script("lambda-adb",params)
 
 #### ADB Shell Command - Public 
 
-- **adb shell dumpsys** <RealDeviceTag value="Real Device" />
+- **adb shell dumpsys** Real
 
   The `adb shell dumpsys` command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
 
@@ -123,7 +123,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-- **adb shell getprop** <VirtualDeviceTag value="Virtual Device" /> <RealDeviceTag value="Real Device" />
+- **adb shell getprop** Real &amp; Virtual
 
   The command `adb shell getprop` is used to retrieve system properties from an Android device. When executed, it provides a list of key-value pairs representing various system settings and configurations. These properties include information about the device's build, hardware, and other system-related details. The output can be useful for debugging, development or understanding the device's current state. The following is a Python sample using the adb command:
 
@@ -137,7 +137,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-- **adb shell cat /proc/version** <RealDeviceTag value="Real Device" />
+- **adb shell cat /proc/version** Real
 
   The `adb shell cat /proc/version` command outputs detailed information about the Linux kernel version running on the Android device, including the build date and compiler details. This information is essential for debugging compatibility issues and understanding the device’s operating system internals.The following is a Python sample using the adb command:
 
@@ -148,7 +148,7 @@ result = driver.execute_script("lambda-adb",params)
 
 #### ADB Shell Command - Private
 
-- **adb shell pm** <RealDeviceTag value="Real Device" />
+- **adb shell pm** Real
 
   The `adb shell pm` command enables management of Android apps programmatically. It supports installing, uninstalling, clearing data, and querying installed packages. The following is a Python sample using the adb command:
 
@@ -157,7 +157,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-- **adb shell rm** <RealDeviceTag value="Real Device" />
+- **adb shell rm** Real
 
   The `adb shell rm` command is used to delete files or directories from the Android device's filesystem directly from your terminal or during automated test execution. It helps in clearing residual data, removing temporary test files, or resetting the test environment by deleting specific logs, APKs, screenshots, or other generated data. The following is a Python sample using the adb command:
 
@@ -167,7 +167,7 @@ result = driver.execute_script("lambda-adb",params)
   ```
 
 
-- **adb shell mkdir** <RealDeviceTag value="Real Device" />
+- **adb shell mkdir** Real
 
   The `adb shell mkdir` command is used to create new directories on an Android device’s filesystem. It is especially useful when preparing the device environment before automated test runs, ensuring that the required folder structure exists for storing screenshots, logs, or other test-related files. The following is a Python sample using the adb command:
 
@@ -176,7 +176,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-- **adb shell screencap** <RealDeviceTag value="Real Device" />
+- **adb shell screencap** Real
 
   The `adb shell screencap` command captures the current screen on a real device and saves it as an image file. It’s useful for debugging UI issues or validating visual test results during automation. The following is a Python sample using the adb command:
 
@@ -185,7 +185,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-- **adb shell content** <RealDeviceTag value="Real Device" />
+- **adb shell content** Real
 
   The `adb shell content` command interacts with Android’s content providers to query, insert, update, or delete shared data like contacts, SMS, or calendar entries. It's commonly used in tests to read data, insert test entries, or reset content to a known state. The following is a Python sample using the adb command:
 
@@ -195,7 +195,7 @@ result = driver.execute_script("lambda-adb",params)
   ```
 
 
-- **adb shell am** <RealDeviceTag value="Real Device" />
+- **adb shell am** Real
 
   The `adb shell am command` uses the Activity Manager to control app components on a real device. It’s useful for launching activities, restarting apps, or sending broadcast intents, commonly done during tests to simulate user actions or reset app state. The following is a Python sample using the adb command:
 
@@ -203,7 +203,7 @@ result = driver.execute_script("lambda-adb",params)
   params = {"command": "shell", "text": "am start -n com.example/.MainActivity"}
   result = driver.execute_script("lambda-adb",params)
   ```
-- **adb shell dumpsys** <RealDeviceTag value="Real Device" />
+- **adb shell dumpsys** Real
 
   The `adb shell dumpsys` command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
 
@@ -217,7 +217,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-- **adb shell getprop** <RealDeviceTag value="Real Device" />
+- **adb shell getprop** Real
 
  The `adb shell getprop` command retrieves system-level properties in the form of key-value pairs. These properties include internal runtime details such as device model, manufacturer, OS version, network state, security patch level, and debug flags.  The following is a Python sample using the adb command:
 
@@ -227,7 +227,7 @@ result = driver.execute_script("lambda-adb",params)
   ```
 
 
-- **adb shell setprop** <RealDeviceTag value="Real Device" />
+- **adb shell setprop** Real
 
   The `adb shell setprop` command sets system properties on a real device, allowing you to modify device behavior. It’s often used to change debug flags, adjust logging levels, or simulate different configurations and network conditions during testing. The following is a Python sample using the adb command:
 
@@ -235,7 +235,7 @@ result = driver.execute_script("lambda-adb",params)
   params = {"command": "shell", "text": "setprop debug.test true"}
   result = driver.execute_script("lambda-adb",params)
   ```
-- **adb shell cat /proc/version** <RealDeviceTag value="Real Device" />
+- **adb shell cat /proc/version** Real
 
   The `adb shell cat /proc/version` command outputs detailed information about the Linux kernel version running on the Android device, including the build date and compiler details. This information is essential for debugging compatibility issues and understanding the device’s operating system internals.The following is a Python sample using the adb command:
 
@@ -244,7 +244,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-- **adb shell ls** <RealDeviceTag value="Real Device" />
+- **adb shell ls** Real
 
   The `adb shell ls` command lists files and directories within a specified folder on the Android device. It is commonly used during automated tests to verify the presence and contents of files created, modified, or downloaded by the app. This helps ensure test artifacts are correctly generated and stored on the device. 
   
@@ -268,7 +268,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb", params)
   ```
 
-- **adb shell cat** <RealDeviceTag value="Real Device" />
+- **adb shell cat** Real
 
   The `adb shell cat` command in Android's shell outputs a file’s contents to the console, allowing quick access to text or binary data on the device. Short for “concatenate,” it’s a common Linux command used to read files. In automation, cat helps inspect logs, reports, images, or videos without manual device access. Text files show readable content, while binary files output raw data that may need special handling. 
   
@@ -297,7 +297,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### Additional ADB Shell Commands
 
-- **adb shell ping -c 4 YOUR_URL** <VirtualDeviceTag value="Virtual Device" />
+- **adb shell ping -c 4 YOUR_URL** Virtual
 
   This command is used to test the network connectivity between the Android device and a specified host, such as `google.com`. When executed it sends four ICMP request packets to the host and wait for responses. The output includes details such as packet transmission time, success rate and round-trip time, which helps diagnose network connectivity and latency issues. The following is a Python sample using the adb command:
 
@@ -310,7 +310,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### Enable/Disable Notification
 
-- **enableNotification** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+- **enableNotification** Real &amp; Virtual
 
   These commands enable or disable your app notifications on the device based on the value provided for `enableNotification`. **True** is used to enable notifications, while **False** is used to disable them. The following is a Python sample using the adb command with <BrandName /> executor:
 
@@ -326,7 +326,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### Enable/Disable Battery Optimization
 
-- **disableBatteryOptimization** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+- **disableBatteryOptimization** Real &amp; Virtual
 
   This command is used to enable or disable battery optimization for your app on the device. The following is a Python sample using the adb command to disable battery optimization with <BrandName /> executor:
 
@@ -337,7 +337,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### Fixed-to-User Rotation
 
-- **fixedToUserRotation** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+- **fixedToUserRotation** Real &amp; Virtual
 
   This command serves to lock the screen rotation in alignment with the app's default behavior and user-defined settings. Below is a Python example utilizing the adb command to enforce fixed screen rotation with the <BrandName /> executor:
 
@@ -346,7 +346,7 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-### Disabling Animations on Android Devices <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+### Disabling Animations on Android Devices Real &amp; Virtual
 Disabling animations can enhance test execution speed by preventing unnecessary visual effects. The following commands are used to disable different types of animations:
 
 - `adb shell settings put global animator_duration_scale 0`: Disables property animation effects, such as object transitions and transformations.
@@ -360,7 +360,7 @@ Disabling animations can enhance test execution speed by preventing unnecessary 
   androidDriver.executeScript("lambda-adb", params);
   ```
 
-### Enabling Automatic Timezone and Automatic Time Using ADB <VirtualDeviceTag value="Virtual Device App" />
+### Enabling Automatic Timezone and Automatic Time Using ADB Virtual
 By default, Automatic Timezone and Automatic Time settings are enabled on the device. These settings ensure that the device updates its time and timezone automatically based on network-provided information. If needed, you can manually enable these settings using ADB shell commands. To enable these settings via ADB, run the following commands:
 
 - `settings put global auto_time_zone 1`: Enables Automatic Timezone, allowing the device to adjust its timezone based on network data.
@@ -393,7 +393,7 @@ This approach is particularly useful when testing applications that rely on corr
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      ADB Commands Support 
+        How to Run ADB Commands on TestMu AI
       </span>
     </li>
   </ul>

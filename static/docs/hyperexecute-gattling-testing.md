@@ -28,10 +28,10 @@ By integrating Gatling with HyperExecute, you can move beyond traditional limita
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key)
+- [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
+- Setup the [Environmental Variable](/support/docs/hyperexecute-running-your-first-job/#set-up-authentication-and-environment-variables)
 
 ## Run a Sample Project
 ### Step 1: Download Project
@@ -300,4 +300,4 @@ Optimize your test pipeline using the following advanced features:
 
 - ✅ [Smart Test Splitting](/support/docs/hyperexecute-test-splitting-and-multiplexing/) – Automatically distribute tests across parallel runners
 - ⚡ [Fail Fast](/support/docs/hyperexecute-failfast/) – Stop test runs on the first failure
-- 📊 [Detailed Reports](/support/docs/hyperexecute-reports/) – Real-time terminal logs & rich test reports
+- 📊 [Detailed Reports](/support/docs/hyperexecute-job-reports/) – Real-time terminal logs & rich test reports

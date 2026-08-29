@@ -1,8 +1,9 @@
 ---
 id: jenkins-with-hyperexecute
-title: Jenkins Integration
+title: Jenkins Integration
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: Jenkins
+sidebar_label: "Jenkins"
 description: Streamline automation with Jenkins and HyperExecute by exploring TestMu AI's comprehensive support documentation.
 keywords:
   - testmu ai integrations

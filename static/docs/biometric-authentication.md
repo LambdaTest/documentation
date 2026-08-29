@@ -1,16 +1,27 @@
-# Biometric Authentication
+# How to Test Biometric Authentication on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Testing biometric authentication on TestMu AI lets you validate fingerprint and face recognition flows in native apps on real iOS and Android devices. Simulate both successful and failed biometric prompts through supported APIs to confirm your app handles authentication securely.
+
+**Supported on:** Real devices
 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 
 TestMu AI now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
 
+
 **OS Version:** Biometric authentication is supported only on Android devices with OS version `11` or `above`, and on iOS devices with OS version `13` or `above`.
+
 
 ## Supported Biometric Authentication APIs
 
 Below given is the list of Biometric Authentication APIs which are supported. Please ensure that your app uses these APIs only to enable Biometric Authentication.
+
+
+
+
+
 
     | Supported APIs |
     |----------------|
@@ -18,8 +29,15 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
     | `evaluatePolicy`: The evaluatePolicy(_:localizedReason:reply:) method of LAContext used to actually perform the biometric authentication, such as verifying a user's face or fingerprint. |
     |`canEvaluatePolicy`: The canEvaluatePolicy(_:error:) method of LAContext that checks whether a specific biometric authentication policy can be evaluated on the device.|
 
+
 **note**
   We don’t support apps using IOS Keychain APIs with Biometric access control. For more details [IOS Keychain Documentation](https://developer.apple.com/documentation/localauthentication/accessing-keychain-items-with-face-id-or-touch-id)
+
+
+
+
+
+
 
     | Supported APIs |
     |----------------|
@@ -28,7 +46,13 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
     | `BiometricManager` API 📕 For more details [BiometricManager Documentation](https://developer.android.com/reference/android/hardware/biometrics/BiometricManager) |
     | `KeyguardManager`  API 📕 For more details [KeyguardManager Documentation](https://developer.android.com/reference/android/app/KeyguardManager) |
 
+
+
+
+
+
 The OS versions and APIs mentioned above are subject to change as per the latest OS updates and best practices recommended by Android and iOS.
+
 
 ## Biometric Authentication in App Automation
 
@@ -54,8 +78,10 @@ driver.execute_script("lambda-biometric-injection=fail")
 | capability (for both iOS & android)|enableBiometricsAuthentication|boolean| `true`  OR  `false`
 | lambda-hook | lambda-biometric-injection  || `lambda-biometric-injection=fail`  OR  `lambda-biometric-injection=pass` |
 
+
 - To use the web hook, passing `enableBiometricsAuthentication` capability is mandatory.
 - If you plan to use the **Uninstall Lambda Hook**, and then the **Install Lambda Hook** for the same application, biometric authentication can be used afterwards only via the lambda-hook. In this case, the initial capability won't be applicable anymore.
 - When biometric capability is `true`, set `autoAcceptAlerts` and `autoDismissAlerts` to `false`. For help, contact [support](https://www.testmuai.com/support/).
+
 
 > 📕 Check the [documentation for Biometrics Authentication](/support/docs/biometric-authentication-on-real-devices/) feature in Manual App Testing on Real devices

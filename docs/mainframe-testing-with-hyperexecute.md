@@ -1,8 +1,9 @@
 ---
 id: mainframe-testing-with-hyperexecute
 title: Mainframe Testing with HyperExecute
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: Mainframe Testing
+sidebar_label: "Mainframe Testing"
 description: Run a Robot Framework mainframe 3270 suite on HyperExecute. Install s3270 and x3270 emulators on the VM, start mock hosts as background services, autosplit suites across parallel Linux machines, and record the x3270 green screen.
 keywords:
   - mainframe testing hyperexecute
@@ -290,7 +291,7 @@ Open the job link printed at the end of the run, or go to the [HyperExecute Dash
 
 - **Job summary** shows pass and fail counts, per-VM timing, and the autosplit distribution.
 - **Reports tab** holds the merged Robot Framework `report.html` and `log.html`.
-- **Artifacts** lets you download the `FNB_Reports` archive with everything under `results/**`. See [HyperExecute Job Artifacts](/support/docs/hyperexecute-artifacts/) and [HyperExecute Job Reports](/support/docs/hyperexecute-reports/).
+- **Artifacts** lets you download the `FNB_Reports` archive with everything under `results/**`. See [HyperExecute Job Artifacts](/support/docs/hyperexecute-artifacts/) and [HyperExecute Job Reports](/support/docs/hyperexecute-job-reports/).
 - **Scenario video** plays the per-scenario recording. For `tests/10` this shows the real `x3270` green screen being driven.
 
 Locally, the CLI also writes `hyperexecute-cli.log` (the full job log, the first place to look on a failure) and a `.hyperexecute/` run directory.

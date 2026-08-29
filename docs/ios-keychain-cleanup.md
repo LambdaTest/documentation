@@ -1,6 +1,6 @@
 ---
 id: ios-keychain-cleanup
-title: Support for iOS keychain cleanup and access groups
+title: How to Clean Up iOS Keychain on TestMu AI
 sidebar_label: iOS Keychain Cleanup
 description: Secure and clean iOS testing with TestMu AI's iOS Keychain cleanup and seamless access group handling support.
 keywords:
@@ -19,8 +19,6 @@ canonical: https://www.testmuai.com/support/docs/ios-keychain-cleanup/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -41,16 +39,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "iOS Keychain Cleanup",
+          "name": "How to Clean Up iOS Keychain on TestMu AI",
           "item": `${BRAND_URL}/support/docs/ios-keychain-cleanup/`
         }]
       })
     }}
 ></script>
 
-<RealDeviceTag value="Real Device" /> 
-Apple’s [Keychain](https://developer.apple.com/documentation/security/keychain_services) offers a secure system for apps to store sensitive information like passwords, certificates, authentication tokens, and other small data pieces.  
-<BrandName /> now offers enhanced Keychain management on real iOS devices, enabling you to test app flows that rely on secure storage and Keychain-specific use cases more effectively.
+iOS Keychain cleanup on TestMu AI automatically clears all Keychain entries after each real-device session, preventing login details and tokens from carrying over between runs. It also preserves keychain-access-groups entitlements during app resigning, keeping secure-storage flows working correctly after resigning.
+
+**Supported on:** Real devices
 
 ## Keychain Cleanup After Sessions
 
@@ -132,7 +130,7 @@ This approach ensures your app remains functional even if the Team ID changes af
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      iOS Keychain Cleanup
+        How to Clean Up iOS Keychain on TestMu AI
       </span>
     </li>
   </ul>

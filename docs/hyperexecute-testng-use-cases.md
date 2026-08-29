@@ -1,7 +1,8 @@
 ---
 id: hyperexecute-testng-use-cases
 title: HyperExecute TestNG Use Cases
-sidebar_label: TestNG Use Cases
+toc_max_heading_level: 2
+sidebar_label: "TestNG Use Cases"
 description: "Practical TestNG automation use cases on HyperExecute: parallel execution, data-driven tests, and Java workflows to accelerate QA delivery."
 keywords:
   - TestMu AI Hyperexecute

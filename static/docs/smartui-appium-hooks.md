@@ -4,6 +4,13 @@
 
 Using the TestMu AI platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
+
+
+
+
+
+
+
 ## Prerequisites for SmartUI with App Automation
 
 - Basic understanding of [appium](https://appium.io/docs/en/2.0/intro/) and remote [WebDriver](https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/) is required.
@@ -13,17 +20,29 @@ Using the TestMu AI platform, perform regression testing in just one click and f
 
 Below are code examples for taking viewport screenshots using SmartUI with Appium across different programming languages and frameworks:
 
+
+
+
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
+
+
+
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
+
+
+
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
 ```
+
+
+
 
 The following steps will guide you in running your first Visual Regression test on TestMu AI platform -
 
@@ -38,18 +57,41 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
+
+
 ## Step 2: Upload your application
 
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
+
+
+
+
+
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
 `}
+
+
+
+
+
+
+
 
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
 `}
 
+
+
+
+
+
+
+
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on TestMu AI by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ```lt://APP123456789123456789``` and will be used in the next step.
+
+
 
 ## Step 3: Clone the sample project
 
@@ -64,17 +106,37 @@ cd LT-appium-nodejs
 
 Make sure you have your TestMu AI credentials with you to run test automation scripts on TestMu AI. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/). Then, set TestMu AI `Username` and `Access Key` in environment variables with following commands.
 
+
+
+
+
+
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
 export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
+
+
+
+
+
+
+
+
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
+
+
+
+
 
 ## Step 5: Configure your test with Appium Desired Capabilities
 
 **Explore more capabilities**
 
 To view and generate more capabilities for your appium application test suite, please see the capability generator here: https://www.testmuai.com/capabilities-generator/
+
+
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Edit the required capabilities for your test suite as shown in the below sample code snippet:
 
@@ -116,13 +178,19 @@ let driver = await new webdriver.Builder()
 
 It is important that the `visual:true` is set your capabilities configuration for capturing the screenshots to SmartUI - Visual Regression tests and add into the build for comparison. If this capability is not added then the build status will be shown as `Error`.
 
+
+
 - Webhook for taking the screenshot - This part of the code needs to be attached below the required segment of appium script of which we would like to take the screenshot to test on.
 
 ```javascript title="For Example if your are using with NodeJS"
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
+
+
 Appium with SmartUI is currently only supports the viewport based screenshot comparisons.
+
+
 
 - Execute your test suite as per the execution command depending on your framework or language.
 
@@ -140,7 +208,11 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 ### Original Screenshot:
 
+
+
 ### Cropped Screenshot
+
+
 
 ## Region-Based Ignore/Select for Dynamic Content (Advanced)
 
@@ -186,6 +258,9 @@ await driver.execute("smartui.takeScreenshot", config);
 
 ### Cross-Framework Examples
 
+
+
+
 ```javascript
 let config = {
 screenshotName: '<Your Screenshot Name>',
@@ -196,6 +271,10 @@ xpath: ["//*[@text='Dynamic Ad']", "//*[@id='timestamp']"]
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
+
+
+
+
 ```python
 config = {
 'screenshotName': '<Your Screenshot Name>',
@@ -203,6 +282,10 @@ config = {
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
+
+
+
+
 
 ```java
 Map<String, Object> configIgnore = new HashMap<>();
@@ -218,6 +301,9 @@ configIgnore.put("ignoreBoxes", ignoreBoxes);
 
 ```
 
+
+
+
 ```csharp
 var config = new Dictionary<string, object> {
 {"screenshotName", "<Your Screenshot Name>"},
@@ -226,6 +312,10 @@ var config = new Dictionary<string, object> {
 driver.ExecuteScript("smartui.takeScreenshot", config);
 ```
 
+
+
+
+
 ```ruby
 config = {
 'screenshotName' => '<Your Screenshot Name>',
@@ -233,6 +323,9 @@ config = {
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
+
+
+
 
 ### Configuration Keys
 
@@ -248,7 +341,10 @@ driver.execute_script("smartui.takeScreenshot", config)
 - Ensure XPath expressions are unique and stable across test runs.
 - Test your XPath locators using Appium Inspector or similar tools before integrating.
 
+
 ## Running Tests on Other Languages and Frameworks
+
+
 
 In this module we discussed about running smart visual tests on **NodeJS**, here we will know more about running those tests for any language or framework with appium.
 
@@ -258,31 +354,51 @@ In a similar way, we can run visual tests for other languages and frameworks usi
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
 
+
+
+
 ```javascript
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
+
+
 
 ```python
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
+
+
+
 ```ruby
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
+
+
+
 
 ```csharp
 driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
+
+
+
 ```java
 ((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
+
+
+
 
 ### For capturing full page screenshot in Native Apps
 
 You can capture the full page screenshot for apps which have a scrolling functionality on their application user interface for your **Appium** functional testing.
 
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
+
+
+
 
 ```javascript
 let config = {
@@ -293,6 +409,8 @@ pageCount: 15   // Enter the number of pages for the Full Page screenshot (Minim
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
+
+
 ```python
 config = {
 'screenshotName': '<Your Screenshot Name>',
@@ -301,6 +419,9 @@ config = {
 }
 driver.execute("smartui.takeScreenshot", config)
 <TabItem value='ruby-2' label='Ruby' default>
+
+
+
 
 ```ruby
 config = {
@@ -311,8 +432,8 @@ config = {
 driver.execute("smartui.takeScreenshot", config)
 ```
 
-</TabItem>
-<TabItem value='csharp-2' label='C#' default>
+
+
 
 ```csharp
 var config = new Dictionary {
@@ -323,8 +444,8 @@ var config = new Dictionary {
 driver.Execute("smartui.takeScreenshot", config);
 ```
 
-</TabItem>
-<TabItem value='java-2' label='Java' default>
+
+
 
 ```java
 Map config = new HashMap<>();
@@ -334,17 +455,17 @@ config.put("pageCount", 15); // Enter the number of pages for the Full Page scre
 ((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
-</TabItem>
-</Tabs>
 
-:::note
-Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
-:::
+
+
+
+Please note that this webhook is only applicable to native app screenshots and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
+
 
 ## Best Practices
 
-<Tabs className='docs__val' groupId='best-practices'>
-<TabItem value='screenshot-naming' label='Screenshot Naming' default>
+
+
 
 **Screenshot Naming**
 
@@ -359,8 +480,8 @@ await driver.execute("smartui.takeScreenshot=HomeScreen-Header");
 await driver.execute("smartui.takeScreenshot=CheckoutScreen-PaymentForm");
 ```
 
-</TabItem>
-<TabItem value='wait-for-screen-load' label='Wait for Screen Load'>
+
+
 
 **Wait for Screen Load**
 
@@ -375,8 +496,8 @@ await driver.wait(until.elementLocated(By.id('main-content')), 10000);
 await driver.execute("smartui.takeScreenshot=Screen Loaded");
 ```
 
-</TabItem>
-<TabItem value='handle-dynamic-content' label='Handle Dynamic Content'>
+
+
 
 **Handle Dynamic Content**
 
@@ -384,8 +505,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Use `selectBoxes` when you only need to compare specific regions
 - Test XPath locators using Appium Inspector before integrating
 
-</TabItem>
-<TabItem value='smart-crop-configuration' label='Smart Crop Configuration'>
+
+
 
 **Smart Crop Configuration**
 
@@ -393,8 +514,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Enable `cropNavigationBar` for Android devices
 - Test cropped screenshots to ensure important content isn't removed
 
-</TabItem>
-<TabItem value='test-organization' label='Test Organization'>
+
+
 
 **Test Organization**
 
@@ -402,22 +523,13 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Use meaningful build names
 - Run tests on consistent device configurations
 
-</TabItem>
-<TabItem value='test-organization-1' label='Test Organization'>
 
-**Test Organization**
 
-- Group related screenshots in the same build
-- Use meaningful build names
-- Run tests on consistent device configurations
-
-</TabItem>
-</Tabs>
 
 ## Troubleshooting
 
-<Tabs className='docs__val' groupId='troubleshooting'>
-<TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
+
+
 
 **Issue: Screenshots Not Captured**
 
@@ -451,8 +563,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 4. Check network connectivity to LambdaTest
 
-</TabItem>
-<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+
 
 **Issue: "Project Not Found" Error**
 
@@ -469,8 +581,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 3. Check credentials match the account with the project
 4. Ensure project name is in capabilities, not just in dashboard
 
-</TabItem>
-<TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
+
+
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -497,8 +609,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 4. Verify app is in correct state before screenshot
 
-</TabItem>
-<TabItem value='full-page-screenshot-issues' label='Full Page Screenshot Issues'>
+
+
 
 **Issue: Full Page Screenshot Issues**
 
@@ -523,8 +635,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 3. Test with different `pageCount` values to find optimal setting
 
-</TabItem>
-<TabItem value='ignoreboxes-selectboxes-not-working' label='ignoreBoxes/selectBoxes Not Working'>
+
+
 
 **Issue: ignoreBoxes/selectBoxes Not Working**
 
@@ -556,6 +668,10 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+
+
+
+
 
 ## Additional Resources
 

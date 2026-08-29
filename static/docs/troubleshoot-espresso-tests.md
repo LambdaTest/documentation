@@ -8,6 +8,8 @@ This document is a guide to troubleshooting common errors encountered when runni
 
 This table highlights the errors encountered when running tests on [TestMu AI Real Devices without shards](/support/docs/getting-started-with-espresso-testing/).
 
+
+
 | Build Execution Errors | Root Cause of Error |
 |--------------------------------------------|--------------------------|
 |Application under test provided by you did not get installed. Please check the application.| The target application failed to install on the selected device during test execution. This indicates an issue with the provided application file or incompatibility with the chosen device configuration.|
@@ -22,6 +24,8 @@ This table highlights the errors encountered when running tests on [TestMu AI Re
 ## Espresso via HyperExecute Shard Errors
 
 This table highlights the errors encountered when running espresso tests with [Shards via HyperExecute](/support/docs/sharding-espresso-rd-hyperexecute/) on TestMu AI Real Device Cloud.
+
+
 
 | Shard Execution Errors | Root Cause of Error |
 |--------------------------------------------|--------------------------|

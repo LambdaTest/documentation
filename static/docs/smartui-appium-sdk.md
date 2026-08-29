@@ -11,17 +11,46 @@ TestMu AI SmartUI supports Appium automation tests for mobile applications throu
 
 Below is the list of supported languages and their integration methods:
 
+
+
+
+
       Java SDK
+
+
+
+
+
 
       JavaScript Hooks
 
+
+
+
+
+
       Python Hooks
+
+
+
+
+
 
         Ruby Hooks
 
+
+
+
+
+
       C# Hooks
 
+
+
+
+
   We support all languages and frameworks that are compatible with Appium, so in case your favorite isn't in the table.Don't worry, you can still run the test. Contact Us for any help.
+
 
 ## Integration Methods
 
@@ -56,25 +85,43 @@ For languages other than Java, SmartUI uses Hooks integration, which leverages A
 
 Add the following code snippet in your test where you want to capture a screenshot:
 
+
+
+
 ```javascript
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
+
+
+
 
 ```python
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
+
+
+
 ```ruby
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
+
+
+
 
 ```csharp
 driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
+
+
+
 **Taking Full Page Screenshots (Native Apps):**
 
 For apps with scrolling functionality, you can capture full-page screenshots:
+
+
+
 
 ```javascript
 let config = {
@@ -85,6 +132,9 @@ pageCount: 15   // Minimum 1, Maximum 20
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
+
+
+
 ```python
 config = {
 'screenshotName': '<Your Screenshot Name>',
@@ -93,6 +143,9 @@ config = {
 }
 driver.execute("smartui.takeScreenshot", config)
 ```
+
+
+
 
 ```ruby
 config = {
@@ -103,6 +156,9 @@ config = {
 driver.execute("smartui.takeScreenshot", config)
 ```
 
+
+
+
 ```csharp
 var config = new Dictionary<string, object> {
 {"screenshotName", "<Your Screenshot Name>"},
@@ -112,21 +168,36 @@ var config = new Dictionary<string, object> {
 driver.Execute("smartui.takeScreenshot", config);
 ```
 
+
+
+
 **Configuration:**
 
 Set your Project Token as an environment variable before running tests:
+
+
+
 
 ```bash
 export PROJECT_TOKEN="your_project_token"
 ```
 
+
+
+
 ```bash
 set PROJECT_TOKEN=your_project_token
 ```
 
+
+
+
 ```powershell
 $env:PROJECT_TOKEN="your_project_token"
 ```
+
+
+
 
 ## Next Steps
 
@@ -134,6 +205,7 @@ After selecting your preferred language, refer to the specific documentation for
 
 - **[Java SDK](/support/docs/smartui-appium-java-sdk)** - Complete guide with best practices and troubleshooting
 - **[Appium Hooks](/support/docs/smartui-appium-hooks)** - For JavaScript, Python, Ruby, and C# implementations
+
 
 ## Additional Resources
 

@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-k6-testing
 title: Execute k6 Tests on HyperExecute
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: k6
+sidebar_label: "K6"
 description: Prevent app launch disaster! Test app performance under load with HyperExecute and JMeter. Get real-time insights, identify weaknesses & ensure smooth launch. 
 keywords:
   - hyperexecute performance testing
@@ -53,10 +54,10 @@ This guide details how to execute your **k6** tests on **HyperExecute** using [Y
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key)
+- [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
+- Setup the [Environmental Variable](/support/docs/hyperexecute-running-your-first-job/#set-up-authentication-and-environment-variables)
 
 ### Step 1: Configure Your Test Suite
 

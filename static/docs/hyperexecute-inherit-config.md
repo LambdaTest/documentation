@@ -23,6 +23,8 @@ yamls:
 ```
 -   Insert the path of the YAML files you want to inherit in place of the placeholder value ``. The path of the YAML file that you want to inherit is relative to the main YAML file.
 
+
+
 -  If the configuration YAML file is passed via the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), then it will be treated as the main YAML. Hence, all values of the base YAML will be overwritten by the values from the parent YAML file. However, if the configuration YAML file has a flag that contains the Boolean value False or numeric value '0', then the values from the parent YAML are used (if they are present).
 
 > **Note**: If you want to inherit two YAML files, then the second YAML file takes precedence. If a key is not defined in the first file or the main YAML file, but it is defined in the second, then that key will take the value of the second file. Similarly, if a key is defined in the two YAML files that are inherited but not in the main file, then the value defined in the second file is used.

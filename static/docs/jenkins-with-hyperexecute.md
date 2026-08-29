@@ -6,6 +6,7 @@ Jenkins is an open-source automation server that is easy to install and configur
 
 You can now integrate HyperExecute with your Jenkins project to shorten your test cycles.
 
+
 **How to Integrate HyperExecute with Jenkins**
 
 To integrate HyperExecute with your Jenkins project, follow the steps listed below.
@@ -17,15 +18,28 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
+
 1. Log Into your Jenkins account. You will be directed to your Jenkins dashboard.
+
+
+
 
 2. Select the project you want to integrate with HyperExecute. Or else, click on **+ New Item** on the left panel to create a new project.
 
+
+
 3. After opening your project, click on **Configure**.
+
+
 
 4. Click on **Build Steps**.
 
+
+
+
 5. Add a new build step and select **Execute Shell** if you are running your tests on MacOS. Alternatively, select **Execute Windows** batch command if you want to run your test on Windows.
+
+
 
 6. Copy and paste the following code snippet in the **Command** section of your Build Step. Click on **Save** to add your Build Step.
 
@@ -45,13 +59,24 @@ hyperexecute.exe -u <your_username> -k <your_access_key> -i <path_of_RELATIVE_PA
 
     **Note**: Replace the placeholder values in the code with your username and access key for HyperExecute.
 
+
+
 7. Build your Jenkins project by clicking on **Build Now** and wait for a few minutes.
+
+
 
   After your build is successful, go to the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to monitor the progress of your tests.
 
+
+
   The **HyperExecute Dashboard**:
 
+
+
   Click on the job to find out more details about your tests.
+
+
+
 
 You have successfully integrated your Jenkins project with HyperExecute.
 

@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you build Unity mobile games and need to test them on real hardware, you can automate them with AltTester on TestMu AI Real Device Cloud.
+Automating Unity games with AltTester on TestMu AI lets you assert on live game objects, components, and `PlayerPrefs` rather than screen coordinates. Upload an instrumented build once, then run your suite with pytest against real Android and iOS devices remotely.
 
 AltTester reads the live Unity scene graph, so your tests assert on game objects, components, and `PlayerPrefs` instead of raw screen coordinates.
 
@@ -10,9 +10,17 @@ You upload an AltTester-instrumented build once, point the suite at TestMu AI, a
 
 This guide uses the [testmuai-alttester-unity-game-automation](https://github.com/hjsblogger/testmuai-alttester-unity-game-automation) sample, which automates the open-source TrashCat Unity game.
 
+
 This guide assumes you already have an AltTester-instrumented `.apk` or `.ipa`. Instrumenting a Unity build with the AltTester SDK happens inside the Unity editor and is out of scope here. See the [AltTester instrumentation documentation](https://alttester.com/docs/sdk/) for that step.
 
+
+
+
+
+
 ## Prerequisites
+
+
 
 Before you run the suite, make sure the following are in place.
 
@@ -22,13 +30,19 @@ Before you run the suite, make sure the following are in place.
 - Your TestMu AI **Username** and **Access Key**, found under **Profile** in the dashboard.
 - The **`LT` tunnel binary** at `tunnel/LT`. The sample repo ships the macOS binary. Download the binary for your platform from the [TestMu AI tunnel downloads](https://www.testmuai.com/support/docs/testing-locally-hosted-pages/) if you are on Windows or Linux.
 
-To upload your build and get the `lt://` URL, see [how to upload apps to the Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/).
+To upload your build and get the `lt://` URL, see [how to upload apps to the Real Device Cloud](/support/docs/application-setup-via-api/).
+
+
 
 ## How to Set Up the AltTester Unity Project
+
+
 
 Clone the sample, create an isolated Python environment, and install the four dependencies it needs.
 
 ### Clone the Repository
+
+
 
 Clone the project and change into it.
 
@@ -38,6 +52,8 @@ cd testmuai-alttester-unity-game-automation
 ```
 
 ### Create a Virtual Environment and Install Dependencies
+
+
 
 Create and activate a virtual environment, then install the requirements.
 
@@ -59,6 +75,8 @@ The suite depends on four packages. AltDriver drives the Unity objects, Appium p
 Verified against alttester-driver 2.2.5, Appium-Python-Client 4.0.0, pytest 8.0.0, Python 3.9+, June 2026.
 
 ### Configure Your TestMu AI Credentials
+
+
 
 The suite reads your credentials and app URL from a `.env` file in the project root. The file is gitignored, so create it yourself.
 
@@ -82,9 +100,15 @@ Each value comes from a specific place in the dashboard.
 | `LT_ACCESS_KEY` | TestMu AI dashboard, **Profile** section |
 | `LT_APP_URL` | **App Automation**, the uploaded app's `lt://` URL |
 
+
 Never commit `.env` or hard-code your Access Key in test files. The Access Key grants full API access to your account. Keep it in `.env` or a CI secret.
 
+
+
+
 ## How to Configure the TestMu AI Capabilities
+
+
 
 The capabilities live in the `lt_options` dictionary in `tests/conftest.py`. This object tells TestMu AI which device to allocate and how to route the session through the tunnel. The sample sets it up for a real Android device and routes AltDriver traffic through a named tunnel.
 
@@ -116,6 +140,7 @@ command_executor=f"https://{username}:{access_key}@mobile-hub.lambdatest.com/wd/
 options=options,
 )
 ```
+
 
 Every key in `lt_options` is required for this session to start and connect through the tunnel. The table below explains what each one controls and why it matters for an AltTester run.
 
@@ -151,7 +176,11 @@ The tunnel itself is launched by `conftest.py` with the binary at `tunnel/LT`. T
 
 `--infoAPIPort` exposes the tunnel's local info API. `conftest.py` polls that port until the tunnel reports ready, then starts the Appium session. `--tunnelName` must be the same value used in `tunnelName` inside `lt_options`.
 
+
+
 ## How to Run the Unity Game Tests
+
+
 
 With the environment configured and the tunnel binary in place, run the suite with `pytest`. The fixtures start the tunnel and the Appium session automatically, so you do not start them by hand.
 
@@ -179,13 +208,25 @@ pytest tests/test_main_menu.py::TestMainMenu::test_main_menu_page_loaded_correct
 
 The tunnel forwards the WebSocket connection to port `13000` on the cloud device for the entire run, so AltDriver stays connected to the in-app AltTester Server from the first test to the last.
 
+
+
 As the suite runs, each test logs its progress in the terminal while the tunnel stays active.
+
+
 
 Track the session live on the [TestMu AI automation dashboard](https://automation.lambdatest.com/build?pageType=build), where each step annotation pushed through `lambdatest_executor` appears against the test.
 
+
+
 Open a session to see its annotated steps, status, and logs.
 
+
+
+
+
 ## How to Change the Target Device
+
+
 
 The suite runs on **Pixel 8 (Android 14)** by default. To target a different device or switch to iOS, edit the `lt_options` block in `tests/conftest.py`. The commented iOS lines show the keys to change.
 
@@ -203,8 +244,13 @@ The suite runs on **Pixel 8 (Android 14)** by default. To target a different dev
 
 When you switch platforms, change `LT_APP_URL` to the matching build. An Android `lt://` URL points to an `.apk` and an iOS one to an `.ipa`. The app must be instrumented with AltTester for the platform you target. To confirm the device name and OS version are available, check the [supported real device list](/support/docs/app-testing-on-real-devices/).
 
+
+
+
 ## Related TestMu AI Guides
 
-- See [how to upload apps to the Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) to get the `lt://` app URL this suite needs.
+
+
+- See [how to upload apps to the Real Device Cloud](/support/docs/application-setup-via-api/) to get the `lt://` app URL this suite needs.
 - See [how to get started with Real Device App Testing](/support/docs/app-testing-on-real-devices/) for manual testing on the same device pool.
 - See [how to set up the TestMu AI tunnel](/support/docs/testing-locally-hosted-pages/) for tunnel binaries on Windows and Linux.

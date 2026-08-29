@@ -1,8 +1,8 @@
 ﻿---
 id: appium-flutter-integration
-title: Appium Flutter Integration Driver Testing
-sidebar_label: Flutter Integration Driver
-description: Guide to testing Flutter apps using Appium Flutter Integration Driver on TestMu AI real device cloud.
+title: How to Test Flutter Apps With Appium on TestMu AI
+sidebar_label: "Appium Flutter Integration Driver Testing"
+description: Test Flutter apps using the Appium Flutter Integration Driver on TestMu AI real device cloud, across Android and iOS.
 keywords:
   - flutter app testing
   - appium flutter integration
@@ -20,12 +20,14 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+Testing Flutter apps on TestMu AI with Appium Flutter Integration Driver automates Flutter UI validation on real Android and iOS devices in the cloud, letting you write tests in multiple languages, switch contexts seamlessly, and drive gestures beyond native limits.
+
+**Supported on:** Real &amp; Virtual devices
+
 <BrandName /> supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 
 Testing Flutter apps requires embedding the **Flutter Integration Server** inside your app to enable communication between Appium and Flutter UI elements.
@@ -126,14 +128,14 @@ void main() {
 
 
 - For detailed instructions on how to upload your application to <BrandName />, please refer to our comprehensive guide.
-- Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-your-application) documentation to learn more.
+- Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-via-the-rest-api) documentation to learn more.
 - Use the returned **App ID** from above step in your automation scripts.
 
 
 
 ---
 
-## Sample Desired Capabilities <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+## Sample Desired Capabilities Real &amp; Virtual
 
 <Tabs>
   <TabItem value="android" label="Android" default>

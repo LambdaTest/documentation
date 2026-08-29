@@ -6,11 +6,17 @@ Imagine you are a software tester, and you have a test suite with hundreds of te
 
 **Test Muting** is a feature that allows you to temporarily disable a test case from being executed. This can be useful for skipping failing or irrelevant tests, which can improve the efficiency and effectiveness of your test runs and help you focus on the most important results.
 
+
+
 ## How do you Enable Test Muting for your Organization?
 
 As you can see, we have triggered a Job in HyperExecute, and we've encountered a recurring issue with a specific test consistently failing. To address this, we will implement Test Muting functionality, enabling automatic muting of a test that fails a predefined consecutive number of times.
 
+
+
 Now, to enable the Test Muting, follow the below mentioned steps:
+
+
 
 **Step 1:** Go to the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
@@ -28,7 +34,16 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 **Step 6:** Now, if you trigger the same job again, you will notice that the particular test has muted.
 
+
+
+
+
+
+
+
 ## How do you Manually Mute specific Tests?
+
+
 
 **Step 1:** Execute your job on HyperExecute.
 
@@ -37,10 +52,29 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 **Step 2:** Trigger the same job again, and you will notice that particular test won't be executed.
 
+
+
+
+
+
+
+
+
+
 ## How do you UnMute Tests?
+
+
 
 **Step 1:** Click on the **3 dots** of the muted test.
 
 **Step 2:** Click on the **Unmute scenario** button.
+
+
+
+
+
+
+
+
 
 > The test will remain in-active until manually unmuted.

@@ -25,6 +25,7 @@ reporter: [['html', { open: 'never' }]],
 
 - By default, the report is written into the **playwright-report folder** in the current working directory. The same location can be used in the report parameters in the YAML file.
 
+
 ### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 

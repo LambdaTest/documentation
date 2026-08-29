@@ -8,6 +8,7 @@ This document will show you how to integrate Bamboo CI Pipeline with HyperExecut
 
 ## How To Integrate Bamboo CI Pipeline with HyperExecute
 
+
 To integrate CircleCI Pipeline with HyperExecute, follow the below steps:
 
 ### Pre-requisite:
@@ -56,6 +57,8 @@ cd ROOT_FOLDER
 
 - Click on **Create Project** button.
 
+
+
 - Enter the required details for your project:
 
     - Enter your **Project Name**
@@ -64,12 +67,18 @@ cd ROOT_FOLDER
     - You can choose whether to provide access to this project to everyone or not.
     - Click on **Save** button.
 
+
+
 - Now click on **Create Plan** button.
+
+
 
 - Select your required **Project**.
 - Enter a **Plan Name**
 - Enter your **Project Key** (it should be same as the one you entered in the above step).
 - Click on **Create** button.
+
+
 
 ### Step 4: Configure the Source Code
 
@@ -79,17 +88,25 @@ cd ROOT_FOLDER
 - Select the **Authentication Type** of your choice. We are selecting "Username and Password"
 - Enter the **Username** and **Password**.
 
+
+
 - Enter the desired **Branch** name.
 - Click on **Test Connection** button to check whether the connection is successfully established or not.
 - Define who can access to this repository.
 - Click on **Save and Continue** button.
+
+
 
 ### Step 5: Configure Job
 
 - Select the **environment** where do you want to execute this job. For the demo purpose, we are using **Agent Environment**.
 - Click on **Add Task** button
 
+
+
 - Select the **Script** option from the provided Task Types.
+
+
 
 - Enter your Task Description.
 - Select the **Interpreter** as **Shell**.
@@ -102,18 +119,32 @@ chmod +x hyperexecute
 ./hyperexecute --user <username>--key <key> --config <file>
 ```
 
+
+
 - Add the Task and click on **Create** button.
+
+
 
 - Configure the pipeline as per your need in the **Trigger** tab or leave it to *Default*
 
+
+
 - Click on **Actions** -> **Enable Plan** button.
+
+
 
 - Click on **Run** -> **Run plan** button.
 
+
+
 - Test will get triggered and start executing. You can check the activity status of your Job here.
+
+
 
 ### Step 6: Check the Output
 
 - Logs of the Job Build
+
+
 
 - Result on HyperExecute Dashboard

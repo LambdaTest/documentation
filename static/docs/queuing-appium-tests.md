@@ -21,6 +21,7 @@ Here are some key points to keep in mind while running Appium automated tests on
 
 ## Rate Limiter and Penalty
 
+
 An account can exceed the authorized queuing limit seven times per month. For example, if an account has 100 concurrent session plans, user is allowed to queue n+150=250 requests. If one attempts to exceed the limit, the requests will be declined. At the account level, rejection events are counted monthly. So, before terminating an account, the user can request (n+150)*x (default 7 times in a month), where x is a constant per account.
 
 * After (n+150)*2 request rejections due to exceeding the permitted queuing threshold in a month, the admin will get an email alert for service exploitation.

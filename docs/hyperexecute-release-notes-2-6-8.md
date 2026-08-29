@@ -1,6 +1,7 @@
 ---
 id: hyperexecute-cli-release-notes-0-2-249
 title: Version 0.2.249
+toc_max_heading_level: 2
 hide_title: false
 sidebar_label: Version 0.2.249
 description: Version 0.2.249
@@ -38,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-6-8/`
+          "item": `${BRAND_URL}/support/docs/hyperexecute-cli-release-notes-0-2-249/`
         }]
       })
     }}
@@ -56,7 +57,7 @@ We’re excited to announce several key updates and enhancements in the latest v
 ### Bug Fixes
 - Fixed [`--use-zip`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#-z---use-zip) flag functionality for seamless execution.
 - Resolved GUI execution issues for C# projects.
-- Addressed issues with [inherited YAML configurations](/support/docs/hyperexecute-inherit-config/) and environment variable replacements.
+- Addressed issues with [inherited YAML configurations](/support/docs/deep-dive-into-hyperexecute-yaml/#inherit-your-yaml-configurations) and environment variable replacements.
 - Fixed nil map errors and streamlined email array replacement using variables.
 - Corrected XcTestPlanId configurations for improved iOS testing.
 

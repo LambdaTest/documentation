@@ -2,7 +2,7 @@
 id: hyperexecute-how-to-configure-sourcePayload
 title: How to configure sourcePayload
 hide_title: true
-sidebar_label: How to configure sourcePayload
+sidebar_label: "Configure sourcePayload"
 description: Learn to configure sourcePayload in HyperExecute with ease, allowing secure and direct sourcing of test scripts from your Git provider for seamless testing integration.
 keywords:
   - TestMu AI Hyperexecute

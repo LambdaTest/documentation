@@ -16,21 +16,33 @@ To Integrate Tosca with HyperExecute, follow the below mentioned steps:
 
 **Step 2:** Click on the **Setup a New Project** button.
 
+
+
 **Step 3:** Enter your **Project Name**. Click on Continue.
 
+
+
 **Step 4:** Enter the **License Details**, i.e. Username and Password with which you want to execute your tests.
+
+
 
 **Step 5:** Now select your **Database Type**. For the demo purpose, we are using Oracle. Choose how you want to establish the connection, i.e, **via Connection Data** or **via Connection String**, to access the common repository associated with your workspace. For demo purposes, we are selecting the **Connection String**. Enter the connection string for your database.
 
 Enter the **Workspace Details**, i.e., Username (mandatory) and Password (optional), that you want to use for this project. Click on the **Save** button.
 
+
+
 **Step 6:** Please wait for the discovered execution list to get populated. Now, select the desired tests that you want to execute, and then click on the **Run** button.
+
 
 **Step 7:** Now set the total number of **Concurrent Sessions** that you want to run on HyperExecute and click on the **Run** button.
 
+
 **Step 8:** Now go to the [**Jobs**](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
 
+
 > Results will get updated in the **Common Repository** once execution is completed on HyperExecute. The live video of running tests can be viewed from the [HyperExecute job-detail](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs)dashboard.
+
 
 ## Integrate Tosca with HyperExecute using YAML
 
@@ -46,9 +58,13 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 - You can drag and drop test cases from the **Test Cases** tab to the execution list. In the example given below, the execution list is called LT.
 
+
+
 **Step 2:** Create a **TC-Shell Script**:
 
 - A TC-Shell script file usually has the extension _.tcs_, and it contains a sequence of [TC-Shell commands](https://support-hub.tricentis.com/open?id=kb_article_view&table=kb_knowledge&number=KB0035628&searchTerm=shell%20commands) in plain text to configure the steps to execute a Tosca test via command line. This script file is kept in the same folder where you have the actual Tosca project saved.
+
+
 
 - **Sample TC-Shell Script:**
 
@@ -69,7 +85,11 @@ save
 
 - Click the arrow on the right side of the **Execution** tab to retrieve the node path used in **jumptonode** command.
 
+
+
 - The node path is highlighted in the image below.
+
+
 
 - Use the following command to execute this test via command line.
 
@@ -122,6 +142,11 @@ path:
 
 - After configuring the YAML, execute it via terminal using the following command:
 
+
+
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+
+
+
 
 You have successfully integrated your Tricentis Tosca project with HyperExecute.

@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-slack-integration
-title: Receive Instant Notification on your Jobs Directly in your Slack
+title: Receive Instant Notification on your Jobs Directly in your Slack
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: Slack
+sidebar_label: "Slack"
 description:  Streamline testing & communication! Integrate TestMu AI HyperExecute with Slack for real-time test notifications & updates. 
 keywords:
   - TestMu AI Hyperexecute

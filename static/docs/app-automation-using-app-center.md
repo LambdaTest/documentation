@@ -8,6 +8,7 @@ In this documentation, learn how to install apps from App Center for automated a
 
 ## Prerequisites
 
+
 Getting started with the setup requires access to the following:
 
 1. Access to TestMu AI Real Devices.
@@ -15,19 +16,29 @@ Getting started with the setup requires access to the following:
 
 ## Step 1 - Generating API Token On App Center
 
+
 Below are the steps to generate the API Token on App Center -
 
 1. Launch App Center. Navigate to your Profile avatar and click **Account Settings**.
 
+
+
 2. Click on **User API tokens** to generate a token.
 
+
+
 3. Click on **Add new API token** to add the new token.
+
+
 
 >**Important**: It’s recommended to provide **Read Only** access.
 
 4. Once you get the API token, click on the Copy icon to copy the generated token. This token will be used in Step 2.
 
+
+
 ## Step 2: Listing All The Apps For The API Token
+
 
 You can get all the Apps (specific to the API token) by using the API call below with the API token you generated in the previous step.
 
@@ -101,6 +112,7 @@ Shown below is the response of the above API call.
 
 ## Step 3: Fetch All The Releases For An App
 
+
 If you have the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (as received in Step 2), you can use the API call below to retrieve all the Release information for a particular app.
 
 ```js
@@ -163,6 +175,7 @@ Shown below is the response of the above API call.
 
 ## Step 4: Fetch The Required App Release Information For An App
 
+
 Using the API call below, use the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (received from Step 2), and the id (received from Step 3) to fetch Release information for a specific App:
 
 ```js
@@ -219,6 +232,7 @@ The download_url (For e.g. `https://appcenter-filemanagement-distrib3ede6f06e.az
 
 ## Step 5: Upload the Release Version Of An App On TestMu AI
 
+
 You can upload the release version of your app on TestMu AI by using the following API call -
 
 ```js
@@ -242,6 +256,9 @@ Using the `app_url` obtained in the response, you can execute your Appium tests 
 
 ## Step - 6 Executing Your Tests
 
+
 Once your app is successfully uploaded, you can refer to [Getting Started With Appium Testing](/support/docs/getting-started-with-appium-testing/) for more information on executing Appium tests on TestMu AI.
+
+
 
 > That’s all! In case you have any questions or need any additional information, you could reach out at our 24X7 Chat Support or mail us directly at support@testmuai.com.

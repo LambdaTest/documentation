@@ -1,6 +1,8 @@
-# Basic Authentication for Safari Web Automation
+# How to Set Up Basic Authentication on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Basic Authentication on TestMu AI lets you pass HTTP username and password credentials during Safari web automation sessions on real iOS devices, using a lambda hook that answers Base64-encoded Authorization prompts automatically so your scripts reach protected pages without sign-in.
 
 ## Introduction
 
@@ -8,8 +10,11 @@ Basic Authentication is a method for an HTTP user agent to provide a user name a
 
 To provide support for Basic Authentication in Safari during Web Automation, we have introduced a new lambda hook in our `iOS` Real Device (RD) web sessions.
 
+
+
 1. This hook is not compatible with any app-based sessions.
 2. The capability `autoAcceptAlerts` must be set to `false`.
+
 
 ## How to Use
 
@@ -24,7 +29,9 @@ data = {
 driver.execute_script("lambda-ios-set-basic-auth", data)
 ```
 
+
 It is important to note that all three parameters (username, password, URL) are mandatory and must be passed to the script.
+
 
 ## Limitations
 

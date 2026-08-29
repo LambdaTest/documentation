@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-testsigma-integration
-title: Testsigma Integration With HyperExecute
+title: Testsigma Integration With HyperExecute
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: Testsigma
+sidebar_label: "Testsigma"
 description:  Explore seamless integrations with popular tools at TestMu AI. Enhance your testing workflow for faster, efficient cross-browser testing.
 keywords:
   - TestMu AI Hyperexecute

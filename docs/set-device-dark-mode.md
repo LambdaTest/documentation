@@ -1,8 +1,8 @@
 ﻿---
 id: set-device-dark-mode
-title: Set Device Dark Mode
+title: How to Set Device Dark Mode on TestMu AI
 sidebar_label: Set Dark Mode
-description: This documentation will help you change thed device level dark and light mode.
+description: Enable or disable device-level dark and light mode for automation testing on TestMu AI real and virtual mobile devices.
 keywords:
   - mobile app testing
   - realtime mobile testing on real devices
@@ -22,8 +22,6 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -44,13 +42,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Appium Inspector Integration on TestMu AI",
+          "name": "How to Set Device Dark Mode on TestMu AI",
           "item": `${BRAND_URL}/support/docs/set-device-dark-mode/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+Setting device dark mode on TestMu AI lets you enable or disable dark and light themes during automation testing on real and virtual devices, so you can validate UI rendering, text contrast, and theme switching across mobile and web apps.
+
+**Supported on:** Real &amp; Virtual devices
+
 <BrandName /> now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 
 :::note Plus Plan Feature

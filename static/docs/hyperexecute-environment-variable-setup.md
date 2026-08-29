@@ -6,6 +6,7 @@ To provide you with a secure [cross-browser testing](https://www.testmuai.com) e
 
 ## Where to find TestMu AI Authentication Credentials?
 
+
 TestMu AI Authentication Credentials consists of two fields:
 
 1. TestMu AI Username
@@ -17,9 +18,19 @@ TestMu AI Authentication Credentials consists of two fields:
 
 **Step 2:** Under Account Settings, go to **Password & Security**
 
+
+
+
+
 **Step 3:** You will find your LT Username and Access Key here, this would be required in order to trigger a Job using the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 
+
 You can directly copy your Username and Access Key using shortcut key button.
+
+
+
+
+
 
 ## Configuring Environment Variables on your Operating System
 
@@ -43,8 +54,22 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
+
+
+
+
+
+
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
+
+
+
+
+
 
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
