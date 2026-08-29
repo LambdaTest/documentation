@@ -90,6 +90,8 @@ Once configured, click on continue
 7. Once the connection is created, you will be redirected to the SSO settings page. From here you can <a href="/support/docs/testmu-sso-manage-connection/">Manage SSO Connection</a>.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
+8. If your organization uses **Groups**, you can choose which group new SSO users are added to from the SSO settings page. See <a href="/support/docs/testmu-sso-manage-connection/#assign-a-group-to-sso-provisioned-users">Assign a Group to SSO-Provisioned Users</a>.
+
 
 That's all you need to know for Configuring <BrandName /> SSO Integration Using SAML. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@testmuai.com](mailto:support@testmuai.com).
 
