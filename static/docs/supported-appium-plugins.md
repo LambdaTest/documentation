@@ -26,4 +26,6 @@ capabilities = {
 }
 ```
 
+
+
 - Appium plugins are only supported with version 2.0.0 and above appium versions. Please ensure that the `appiumVersion` capability is set correctly to utilize these plugins.

@@ -1,7 +1,8 @@
 ---
 id: hyperexecute-bidi-testing
 title: Execute BiDi Framework Tests on HyperExecute
-sidebar_label: BiDi
+toc_max_heading_level: 2
+sidebar_label: "BiDi Testing"
 description: Follow this guide to run Selenium BiDi protocol tests seamlessly on HyperExecute and capture rich browser events with TestMu AI.
 keywords:
   - xcui
@@ -131,7 +132,7 @@ Optimize your test pipeline using the following advanced features:
 
 - ✅ [Smart Test Splitting](/support/docs/hyperexecute-test-splitting-and-multiplexing/) – Automatically distribute tests across parallel runners
 - ⚡ [Fail Fast](/support/docs/hyperexecute-failfast/) – Stop test runs on the first failure
-- 📊 [Detailed Reports](/support/docs/hyperexecute-reports/) – Real-time terminal logs & rich test reports
+- 📊 [Detailed Reports](/support/docs/hyperexecute-job-reports/) – Real-time terminal logs & rich test reports
 - 🔄 [Auto-Healing](/support/docs/hyperexecute-auto-healing/) – Automatically recover from certain failures
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />

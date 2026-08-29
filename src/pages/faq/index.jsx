@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from '@docusaurus/router';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -162,8 +163,19 @@ const HYE_SUB_TABS = [
 ];
 
 export default function FaqPage() {
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState('realtime');
   const [activeHyeTab, setActiveHyeTab] = useState('gen');
+
+  // Open a specific tab (and HyperExecute sub-tab) from URL query params,
+  // e.g. /support/faq/?tab=hye&sub=yaml
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tab = params.get('tab');
+    const sub = params.get('sub');
+    if (tab && TABS.some((t) => t.id === tab)) setActiveTab(tab);
+    if (sub && HYE_SUB_TABS.some((t) => t.id === sub)) setActiveHyeTab(sub);
+  }, [location.search]);
 
   return (
     <Layout
@@ -490,7 +502,7 @@ export default function FaqPage() {
                 <div className={faqStyles.accordionGroup}>
                 <details>
                 <summary>Which testing frameworks does HyperExecute support?</summary>
-                <p>HyperExecute has deep support for Selenium, Cypress, Playwright, CDP, Taiko, and other web browser testing frameworks. It can also run any other type of test using YAML configuration. See the full <a href={`${BRAND_URL}/support/docs/hyperexecute-supported-languages-and-frameworks/`}>HyperExecute supported frameworks list</a>.</p>
+                <p>HyperExecute has deep support for Selenium, Cypress, Playwright, CDP, Taiko, and other web browser testing frameworks. It can also run any other type of test using YAML configuration. See the full <a href={`${BRAND_URL}/support/docs/getting-started-with-hyperexecute/`}>HyperExecute supported frameworks list</a>.</p>
                 </details>
 
                 <details>
@@ -537,6 +549,44 @@ export default function FaqPage() {
                 <summary>In which regions is HyperExecute available?</summary>
                 <p>HyperExecute is available in more than 40 cloud availability regions globally, supported by multiple cloud providers.</p>
                 </details>
+
+                <details>
+                <summary>Do I need to change my code to run my tests on HyperExecute?</summary>
+                <p>No code or logic changes have to be done in order to run your end to end tests on HyperExecute. HyperExecute requires a YAML configuration file to determine which tests to run and configure other settings. This YAML file can be created using an online YAML generator, hosted on the HyperExecute onboarding page.</p>
+                </details>
+
+                <details>
+                <summary>Where will HyperExecute run my tests?</summary>
+                <p>HyperExecute takes your test scripts and places them in virtual machines having all the components required to run your tests and collect logs and metrics. These virtual machines are hosted by HyperExecute in its secure cloud environment. HyperExecute is also available on dedicated and private clouds where virtual machines can run in your personal cloud accounts.</p>
+                </details>
+
+                <details>
+                <summary>Does HyperExecute provide APIs to consume logs?</summary>
+                <p>Yes, HyperExecute provides APIs to consume all the logs generated during test execution for offline usage.</p>
+                </details>
+
+                <details>
+                <summary>Does HyperExecute record video recording of the test session?</summary>
+                <p>Yes, HyperExecute generates video recording of every single end to end test triggered over the platform. All the features available in the standard automation platform including video, screenshot, network logs and a lot more, are available in HyperExecute.</p>
+                </details>
+
+                <details>
+                <summary>Can I run performance tests with HyperExecute?</summary>
+                <p>Though HyperExecute currently doesn't have a deep support for performance testing, nothing stops the users from running performance tests. HyperExecute will still orchestrate and run performance tests in parallel and provide the terminal logs like all other tests.</p>
+                </details>
+
+                <details>
+                <summary>How can I open my Microsoft Excel files with HyperExecute?</summary>
+                <p>You can access your Microsoft Excel files with HyperExecute by modifying the files that contain your tests. In order to automate the opening of your Excel file, set the <code>ms:waitForAppLaunch</code> and <code>appArguments</code> capabilities to:</p>
+                <pre><code>{`cap.setCapability("ms:waitForAppLaunch", 15);
+cap.setCapability("appArguments", " /e ");`}</code></pre>
+                <p>This will ensure that your Excel file is opened after 15 seconds, and that it is opened in edit mode. If you want your file to open after a certain period of time, just enter that time in the <code>ms:waitForAppLaunch</code> field.</p>
+                </details>
+
+                <details>
+                <summary>How can I access my {BRAND_NAME} Hub URL?</summary>
+                <p>Your {BRAND_NAME} Hub URL can be accessed from our <a href="https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build">automation page</a>, along with your username and access key. Click on the <b>Access Key</b> button on the right side of your screen to retrieve your Hub URL.</p>
+                </details>
                 </div>
               )}
 
@@ -549,22 +599,118 @@ export default function FaqPage() {
 
                 <details>
                 <summary>How do I install private artifactory dependencies only accessible on my organization's network?</summary>
-                <p>Enable the tunnel flag in your HyperExecute YAML file to connect HyperExecute VMs to your organization's private network. See <a href={`${BRAND_URL}/support/docs/hyperexecute-yaml-faqs/#3-how-can-i-install-private-artifactory-dependencies-that-can-only-be-accessed-on-my-organizations-internal-network-on-hyperexecute-machines`}>how to access private artifactory in HyperExecute</a>.</p>
+                <p>Enable the tunnel flag in your HyperExecute YAML file to connect HyperExecute VMs to your organization's private network.</p>
                 </details>
 
                 <details>
                 <summary>How do I use Jenkins job choice parameters in the YAML file?</summary>
-                <p>Reference the Jenkins parameter keys directly in your HyperExecute YAML file. See <a href={`${BRAND_URL}/support/docs/hyperexecute-yaml-faqs/#8-how-can-i-use-the-jenkins-job-choice-parameters-in-the-yaml-file`}>how to use Jenkins parameters in YAML</a>.</p>
+                <p>Reference the Jenkins parameter keys directly in your HyperExecute YAML file.</p>
                 </details>
 
                 <details>
                 <summary>I use the same YAML configuration repeatedly. Can I avoid repeating it every time?</summary>
-                <p>Yes. HyperExecute's inheritance feature lets you define a base YAML file and inherit its configuration in other YAML files. See <a href={`${BRAND_URL}/support/docs/hyperexecute-inherit-config/`}>how to inherit YAML configurations</a>.</p>
+                <p>Yes. HyperExecute's inheritance feature lets you define a base YAML file and inherit its configuration in other YAML files. See <a href={`${BRAND_URL}/support/docs/deep-dive-into-hyperexecute-yaml/#inherit-your-yaml-configurations`}>how to inherit YAML configurations</a>.</p>
                 </details>
 
                 <details>
                 <summary>Can I source test code directly from my Git repository?</summary>
                 <p>Yes. Use the <code>sourcePayload</code> flag to source test code directly from your Git provider via secure access tokens. Only the YAML file is uploaded through the CLI; your test code never leaves your Git provider. See <a href={`${BRAND_URL}/support/docs/hyperexecute-how-to-configure-sourcePayload/`}>how to source tests from Git</a>.</p>
+                </details>
+
+                <details>
+                <summary>How can I run all feature files and scenarios in a folder without listing them explicitly in the YAML file?</summary>
+                <p>Use HyperExecute's AutoSplit mode. See <a href={`${BRAND_URL}/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy`}>the AutoSplit strategy page</a> to learn more. A sample YAML file that supports AutoSplit looks like this:</p>
+                <pre><code>{`
+---
+version: 0.1
+runson: linux
+concurrency: 2
+autosplit: true
+pre:
+  - npm install
+
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+testDiscovery:
+  type: automatic
+  mode: static
+  args:
+    featureFilePaths: <the_path_to_your_folder>
+    frameWork: javascript
+    specificTags: ["@ToDoOne", "@ToDoTwo", "@ToDoThree"]
+
+testRunnerCommand: <your_test_execution_command>
+`}</code></pre>
+                <p>Add the path to the folder of files you want to run in the <code>featureFilePaths</code> argument, and your test execution command under the <code>testRunnerCommand</code> parameter.</p>
+                </details>
+
+                <details>
+                <summary>How can I install and set a private node registry on the HyperExecute machine?</summary>
+                <p>Add the following command in the preDirectives section of the HyperExecute YAML file.</p>
+                <pre><code>{`
+preDirectives:
+  commands:
+    - npm config set registry <artifactory_URL>
+`}</code></pre>
+                <p>Note: Replace the placeholder value &lt;artifactory_URL&gt; with the link to your private node registry.</p>
+                </details>
+
+                <details>
+                <summary>Can I run WDIO tests on HyperExecute via proxy?</summary>
+                <p>Yes, you can. Use the following parameters in the testRunnerCommand of the HyperExecute YAML file:</p>
+                <pre><code>{`
+testRunnerCommand: $env:GLOBAL_AGENT_NO_PROXY="hub.lambdatest.com";$env:GLOBAL_AGENT_HTTP_PROXY=$env:LT_PROXY
+`}</code></pre>
+                </details>
+
+                <details>
+                <summary>I want to use a specific version of Gradle for my project. How can I set that up on HyperExecute machines?</summary>
+                <p>Set up your Gradle project with HyperExecute by configuring the runtime flag in the YAML file. If you are using the 7.0 version of Gradle, use the following configurations.</p>
+                <pre><code>{`
+runtime:
+  language: java
+  version: 17
+  addons:
+    - name: "gradle"
+	  version: "7.0"
+`}</code></pre>
+                </details>
+
+                <details>
+                <summary>Can I pass a specific package through npm in the YAML file instead of npm picking the package present in the directory?</summary>
+                <p>You can accomplish this by running the following command in the preDirectives section of the YAML file:</p>
+                <pre><code>{`
+preDirectives:
+  commands:
+    - npm --prefix /path/to/project/my_package.json
+`}</code></pre>
+                <p>This command will install a package called <code>my_package.json</code> from the path that you have provided.</p>
+                </details>
+
+                <details>
+                <summary>I am running a non-hub based test on HyperExecute. How can I capture a video of it?</summary>
+                <p>You can use HyperExecute's video recording feature even while running non-hub based tests (Selenium, Cypress, and CDP are all hub-based). Set the <code>captureScreenRecordingForScenarios</code> flag to <code>true</code> in your <a href={`${BRAND_URL}/support/docs/deep-dive-into-hyperexecute-yaml/`}>HyperExecute YAML</a> file to capture the video of your test scenarios.</p>
+                <p><code>captureScreenRecordingForScenarios: true</code></p>
+                <p>You can access the recorded video on the Tasks page by clicking on the Watch Video button on the right-hand side of your test. Use this feature when you want to trigger a command and record it, or when you want to record any applications triggered on your desktop during the test execution process.</p>
+                </details>
+
+                <details>
+                <summary>How can I check if there is any private dependency in testng YAML?</summary>
+                <p>You can detect any private dependency in testng YAML using the <code>analyze</code> flag in CLI.</p>
+                </details>
+
+                <details>
+                <summary>How do I handle a Maven SSL cert error while executing the test?</summary>
+                <p>Pass these Maven arguments, which are required to handle mvn SSL cert errors:</p>
+                <pre><code>{`
+-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
+`}</code></pre>
+                </details>
+
+                <details>
+                <summary>Will my YAML parameters overwrite properties in my XML configuration?</summary>
+                <p>No, your XML configurations are not overwritten by YAML parameters.</p>
                 </details>
                 </div>
               )}
@@ -614,6 +760,21 @@ export default function FaqPage() {
                 <p>Yes, for enterprise accounts. HyperExecute allows custom VM images built on top of HyperExecute base images, giving you full control over the test environment for specialized frameworks or tooling.</p>
                 </details>
 
+                <details>
+                <summary>How can I integrate HyperExecute with other CI/CD platforms?</summary>
+                <p>Since HyperExecute is operated using a universal CLI, it essentially takes two lines of terminal commands to integrate HyperExecute with any CI/CD platform. You need to download the CLI and trigger it to do this.</p>
+                </details>
+
+                <details>
+                <summary>How is HyperExecute different from other testing clouds?</summary>
+                <p>While other testing platforms throw infrastructure at the users to run their tests, HyperExecute is a smart orchestration cloud where the platform decides the best execution plan to finish the jobs in the least amount of time. HyperExecute accomplishes this by distributing tests smartly on available resources, providing other features, such as, retrying failed scenarios, automatic reordering and more. HyperExecute acts as a co-pilot for developers to run and triage their tests as fast as possible.</p>
+                </details>
+
+                <details>
+                <summary>Can I use HyperExecute to run test cases on Microsoft Excel?</summary>
+                <p>Yes, you can configure HyperExecute to run your Microsoft Excel test cases. However, this feature is only available on request at this moment. Visit <a href={`${BRAND_URL}/support/docs/hyperexecute-winapp-integration/`}>our documentation</a> for this feature or contact support@testmuai.com to know more.</p>
+                </details>
+
                 </div>
               )}
 
@@ -643,6 +804,31 @@ export default function FaqPage() {
                 <summary>Do I have access to the underlying OS and file system during tests?</summary>
                 <p>Yes. You have full access to the VM's file system and OS, including registry settings, background processes, and file I/O. Enterprise accounts can build custom VM images on top of HyperExecute base images for deeper environment customization.</p>
                 </details>
+
+                <details>
+                <summary>What is the current configuration of the virtual machines?</summary>
+                <p>The virtual machines are currently configured with 4vCPU and 16GB RAM. This results in improved availability and fewer preemptions, and faster IOPs have been observed on these machines during benchmarking tests.</p>
+                </details>
+
+                <details>
+                <summary>Which logs does HyperExecute provide for Selenium tests?</summary>
+                <p>Video recording, screenshots, command logs, network logs, Selenium node logs, browser logs, and more are available for every end-to-end test run on the platform.</p>
+                </details>
+
+                <details>
+                <summary>Can I customize the testing environment?</summary>
+                <p>Yes. You can fully customize the test environment using pre and post steps in the YAML. For enterprise accounts, HyperExecute provides the ability to define custom virtual machine images for all supported operating systems for deeper customization. Enterprise customers can create their own customized virtual machine images on top of HyperExecute base images to suit their use case.</p>
+                </details>
+
+                <details>
+                <summary>Can I integrate my reporting tool with HyperExecute?</summary>
+                <p>Yes. You can integrate HyperExecute with your reporting tool by calling its APIs in the post-steps using the YAML. HyperExecute is also adding more integrations with popular reporting tools. You can request new integrations by emailing us at hyperexecute@lambdatest.com.</p>
+                </details>
+
+                <details>
+                <summary>Do HyperExecute VMs have basic command line tools installed?</summary>
+                <p>HyperExecute virtual machines come preinstalled with a variety of open source utilities and language runtimes so the testing environment is ready to use. HyperExecute uses GitHub's open source images for GitHub Actions and pre-installed software. See the pre-installed software lists for <a href="https://github.com/actions/runner-images/blob/main/images/macos/macos-15-Readme.md">macOS</a>, <a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">Windows</a>, and <a href="https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md">Linux</a>.</p>
+                </details>
                 </div>
               )}
 
@@ -661,6 +847,11 @@ export default function FaqPage() {
                 <details>
                 <summary>Can I use the standard {BRAND_NAME} automation platform with a HyperExecute license?</summary>
                 <p>Yes. Every HyperExecute license also provides access to the standard {BRAND_NAME} automation platform and its features, making it easy to transition to HyperExecute incrementally.</p>
+                </details>
+
+                <details>
+                <summary>How many parallel tests can I run on a single HyperExecute license?</summary>
+                <p>Each parallel test execution consumes a single HyperExecute license. HyperExecute puts no capping on the number of parallel tests that can run simultaneously. We have users running thousands of tests in parallel.</p>
                 </details>
                 </div>
               )}
@@ -685,6 +876,56 @@ export default function FaqPage() {
                 <details>
                 <summary>How do I access private package registries or artifactories from HyperExecute?</summary>
                 <p>Use the automatic tunnel, dedicated NAT, or pre-step VPN to connect to private networks. Store private registry credentials in the HyperExecute vault and reference them in your YAML.</p>
+                </details>
+
+                <details>
+                <summary>How secure is HyperExecute?</summary>
+                <p>HyperExecute is built with security at its core and provides industry standard security on the entire infrastructure. HyperExecute provides fresh virtual machines every time a new job is triggered and deletes the infrastructure after the test execution of the job is completed. Dozens of microservices ensure that test scripts are deleted after the retention period and uniquely encrypted during their retention period. HyperExecute uses a powerful vault to store client side secrets for the users. The Enterprise version enables users to add their own security policies over the HyperExecute infrastructure.</p>
+                </details>
+
+                <details>
+                <summary>Is the VM allocated secure?</summary>
+                <p>We are SOC2 compliant. All the VMs are highly secure and compliant with the CIS benchmark.</p>
+                </details>
+
+                <details>
+                <summary>Can we do SSH to machines?</summary>
+                <p>No. Machines are private in nature and cannot be accessed by the Internet directly.</p>
+                </details>
+
+                <details>
+                <summary>What happens to secrets present in test code?</summary>
+                <p>All the logs are encrypted and stored in a secure manner. But we always prefer customers to use the vault to pass the credentials.</p>
+                </details>
+
+                <details>
+                <summary>Is the product GDPR compliant?</summary>
+                <p>Yes, we follow GDPR guidelines.</p>
+                </details>
+
+                <details>
+                <summary>What is the security level?</summary>
+                <p>We follow strict security levels at each step. We are SOC 2 compliant.</p>
+                </details>
+
+                <details>
+                <summary>What is the data retention time period? Can we ask to delete it anytime?</summary>
+                <p>We store the data for a max of 60 days. Yes, you can ask the {BRAND_NAME} team for the deletion of your data via email.</p>
+                </details>
+
+                <details>
+                <summary>How to update the HyperExecute Binary?</summary>
+                <p>The HyperExecute Binary is a secure binary. This can be updated via a link, and a notification regarding the same will be shared.</p>
+                </details>
+
+                <details>
+                <summary>Can this be set up completely on the premises?</summary>
+                <p>Yes, HyperExecute can be set up completely on the premises.</p>
+                </details>
+
+                <details>
+                <summary>What about the SAS token?</summary>
+                <p>The SAS token is generated only for 60 min in use and is different every time. This token is time-based authenticated and can only be used once.</p>
                 </details>
                 </div>
               )}

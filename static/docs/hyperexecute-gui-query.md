@@ -28,6 +28,14 @@ For example: `suiteTest.name = "LoginTest"` where,
 3. Toggle to **"Query Selection"** mode
 4. You'll see a query input box with helpful dropdowns
 
+
+
+
+
+
+
+
+
 Let's build a query to find all the Suite (XML) Tests which have **login** in their name.
 
 ### Step 1: Choose What to Look At

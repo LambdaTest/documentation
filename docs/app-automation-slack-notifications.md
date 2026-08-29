@@ -1,8 +1,8 @@
 ---
 id: app-automation-slack-notifications
-title: Slack Notifications for App Automation
+title: How to Get Slack Notifications on TestMu AI
 sidebar_label: Slack Notifications
-description: Get real-time Slack notifications for your test sessions and build summaries on TestMu AI.
+description: Get real-time Slack notifications for your App Automation test sessions and build summaries directly in your Slack channels using TestMu AI.
 keywords:
   - slack notifications
   - app automation slack
@@ -39,14 +39,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Slack Notifications for App Automation",
+          "name": "How to Get Slack Notifications on TestMu AI",
           "item": `${BRAND_URL}/support/docs/app-automation-slack-notifications/`
         }]
       })
     }}
 ></script>
 
-With Slack Notifications for App Automation, you can receive real-time updates about your test sessions and build summaries directly in your Slack channels. This eliminates the need to manually monitor the dashboard and keeps your entire team informed about test execution results.
+Slack notifications on TestMu AI deliver real-time updates about each of your App Automation test sessions and build summaries directly in your Slack channels, eliminating manual dashboard monitoring and keeping your entire team instantly informed about mobile test execution results.
 
 ## Prerequisites
 
@@ -171,7 +171,7 @@ Slack notifications never block or impact your test execution. If a notification
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Slack Notifications for App Automation
+        How to Get Slack Notifications on TestMu AI
       </span>
     </li>
   </ul>

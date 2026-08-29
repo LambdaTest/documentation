@@ -1,14 +1,22 @@
-# iOS App Settings
+# How to Change iOS App Settings on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Changing iOS app settings on TestMu AI lets you toggle permissions and preferences like camera, location, and app resets during App Automation on real iOS devices, using the lambda-ios-settings hook to manipulate settings the public cloud otherwise blocks for security.
+
+**Supported on:** Real devices
+
 **iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of TestMu AI due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
 
-This document will guide you on how to access and use iOS settings for **App Automation session.**
+Access and configure iOS device settings during an **App Automation session.**
+
 
 This feature is supported only on iOS 14 and above devices.
 
+
 ## How to use iOS app settings in App Automation
+
+
 
 To make it easier for the user to access the iOS app settings, we have created a **lambda-hook**. This web-hook supports the opening and manipulation of the settings.
 
@@ -21,7 +29,10 @@ driver.execute_script("lambda-ios-settings", params)
 
 If you look at the code snippet above you can see `params` which contains the **JSON object** for manipulating the iOS app settings. This JSON object contains **Permission settings**. Let’s learn more about that.
 
+
 ## iOS app settings Supported by Lambda Hook
+
+
 
 ### App-specific permission settings
 The permission settings are available in the OS and changed through permissions provided by the user.
@@ -46,17 +57,23 @@ One important thing to remember while handling Permission Settings is that, we h
 
 Let's say we pass Camera: "On" in the lambda hook’s preferences even before handling Camera’s permission popup from the app, the Camera key would be missing on the app settings page which would result in failure. So we have to be sure that we have handled the permission pop ups before calling lambda hook.
 
+
+
 Note that we have separate key for Precise Location. We do not pass it inside Location object as shown:
 
 ```bash
 params = {"Permission Settings":{"Location":"While using the app", "Precise Location": "On"}}
 ```
 
+
+
 ### Custom App Settings
 
 These are the settings added by the app developer using the [iOS Settings Bundle](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html#//apple_ref/doc/uid/10000059i-CH6-SW11).
 
+
 For a step-by-step guide on adding a Settings Bundle to your app, refer to Apple's official documentation: [Building a settings bundle for your app](https://developer.apple.com/documentation/foundation/building-a-settings-bundle-for-your-app).
+
 
 **Supported custom settings**
 
@@ -90,7 +107,10 @@ If any key is not present, we should get an error saying one of the keys is miss
 
 The title of the keys displayed on your iOS app settings page must be unique.
 
+
 ## Apply iOS app settings with the `updateAppSettings` capability
+
+
 
 Besides the in-session `lambda-ios-settings` hook, which applies settings **on demand** during a running test, you can now apply the same iOS Settings Bundle values **automatically at session start** by passing the `updateAppSettings` capability. TestMu AI applies the settings right after the app is installed and **before it launches**, so the app reads the desired values on its very first launch, with no in-test hook call required.
 
@@ -101,7 +121,9 @@ Besides the in-session `lambda-ios-settings` hook, which applies settings **on d
 | Applied | Once, pre-launch (at session start) | On demand, any time during the test |
 | Best for | Baseline settings the app should have before first launch | Changing settings mid-run |
 
+
 You can use both in the same session. The hook applies over the capability values if you change them later.
+
 
 ### Requirements
 
@@ -135,7 +157,7 @@ options = {
 }
 ```
 
-The keys and values follow the same rules as the hook: setting **titles must match the app's iOS Settings page exactly** and be unique, sliders use a 0–1 decimal scale, and textfields and sliders are indexed (e.g. `Slider-1`, `TextField-2`).
+The keys and values follow the same rules as the hook: setting **titles must match the app's iOS Settings page exactly** and be unique, sliders use a 0-1 decimal scale, and textfields and sliders are indexed (e.g. `Slider-1`, `TextField-2`).
 
 ### Errors and validation
 
@@ -147,7 +169,10 @@ The keys and values follow the same rules as the hook: setting **titles must mat
 | Web / no-app session | `updateAppSettings capability is only supported for iOS real device app automation tests` |
 | Android session | `updateAppSettings capability is not supported with android platform` |
 
+
 ## Additional Links
+
+
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)

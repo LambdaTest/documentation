@@ -12,7 +12,11 @@ Follow the steps below to compelete the test case association:
 
 > **NOTE :** Login with the same credentials for Visual Studio as in the Test Plan.
 
+
+
 **Step 2:** Navigate to the Team Explorer view.
+
+
 
 **Step 3:** Click the **Home** icon and pull down the list to the right of Home icon.
 
@@ -20,16 +24,28 @@ Follow the steps below to compelete the test case association:
 
 - Click on **Manage Connections** >> **Connect to a Project**.
 
+
+
 **Step 4:** Select your repository, click the right button of your mouse, and then click the **Connect** button.
 
 > **NOTE :** The connection might ask you to connect with GitHub; please provide access to GitHub as well.
 
+
+
 **Step 5:** Once connected, click on the **Test** menu, then **Test Explorer**.
+
+
 
 **Step 6:** Inside the Test Explorer, select any test, right click and select **Associate to Test Case**.
 
+
+
 **Step 7:** Enter the **Test Case ID**, click on **Add Association**, and then click the **Save** button. This will associate the test with the Test Case ID in the Test Plan.
 
+
+
 **Step 8:** You can check the associated test in test plan by hovering on three dots beside test case name and click on Open Test Case.
+
+
 
 Associated test cases will look like this:

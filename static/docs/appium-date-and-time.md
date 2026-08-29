@@ -1,17 +1,16 @@
-# Set Device Date & Time
+# How to Set Device Date and Time on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI now supports configuring custom **date**, **time**, and **hour-format** on Real Devices via Appium during automation testing sessions. This allows developers and testers to simulate specific date/time conditions to validate use cases like scheduled events, alarms, chats, or localization for time formats.
+Setting device date and time on TestMu AI lets you configure custom date, time, and hour format on real devices during Appium automation, simulating scheduled events, alarms, chats, and time-format localization by using the lambda_executor hook with the updateDeviceSettings action.
 
-By the end of this document, you will be able to:
-- Set a specific date and time on the device
-- Toggle between 12-hour and 24-hour formats
-- Enable/disable automatic time syncing with network settings
+
 
 ## Support for Automation on Real Devices
 
 To modify the date and time settings programmatically, use the `lambda_executor` Appium hook with the `updateDeviceSettings` action. You can provide multiple arguments including custom date, time, format toggle, and auto-time setting.
+
+
 
 ## Supported Arguments
 
@@ -24,7 +23,10 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 
 > 💡 **Note:** When `setAutomatically` is turned **On**, all Other Arguments for  **Date and Time**  are automatically disabled on the device.
 
+
+
 ### Appium Hook Example
+
 
 {`driver.execute_script('lambda_executor: {
   "action": "updateDeviceSettings",
@@ -35,6 +37,10 @@ To modify the date and time settings programmatically, use the `lambda_executor`
     "setAutomatically": "On"
   }
 }')`}
+
+
+
+
 
 ## Supported Platforms
 
@@ -50,10 +56,14 @@ Custom date and time configuration is not supported on certain Android device mo
 
 If you encounter this error, retry your automation run on a different Android device.
 
+
+
+
 ## Example Use Cases
 
 - Validate how the app behaves across different time zones or locales.
 - Test reminder or calendar event triggering logic.
 - Test 12-hour vs. 24-hour format layout rendering.
+
 
 > For Configuring Device **Date and Time** during **Manual Testing** on Real Devices, please refer to our [Set Date & Time on Real Devices (Manual)](/support/docs/set-date-time-hour-format-real-devices/) guide.

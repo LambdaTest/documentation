@@ -1,8 +1,9 @@
 ﻿---
 id: hyperexecute-winapp-integration
-title: WinAppDriver
+title: WinAppDriver
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: WinAppDriver
+sidebar_label: "WinAppDriver"
 description: Unlock enhanced automation testing by seamlessly integrating Excel with HyperExecute using TestMu AI's support documentation.
 keywords:
   - TestMu AI HyperExecute

@@ -35,29 +35,89 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
+
+
+
+
+
+
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
+
+
+
+
+
+
+
+
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
+
+
 
 ## Steps to Run Your Test
 
 ### Step 1: Upload your Application
 Upload your _android_ application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format `Username:AccessKey` in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
+
+
+
+
+
+
+
+
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name="Android_App"' --form 'appFile=@""'
 `}
 
+
+
+
+
+
+
+
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "appFile=@"""
 `}
+
+
+
+
+
+
+
+
+
+
+
+
 
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \\
 --form 'name="Android_App"' \\
 --form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'`}
 
+
+
+
+
+
+
+
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
+
+
+
+
+
+
+
 
 > Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
@@ -82,6 +142,8 @@ https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/s
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/yaml/hyp-android-emulator.yaml
 ```
 
+
+
 ### Step 5: Execute your Test Suite
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -92,5 +154,7 @@ Run the below command in your terminal at the root folder of the project:
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+
 
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}

@@ -8,6 +8,7 @@ You can also upload files to the real device for testing and can also save the f
 
 ## Transferring the files
 
+
 ### How to copy a file or folder to the real device?
 
 We recognise that you need some files or folders on the device to test various things, such as uploading something to your app etc. Therefore, TestMu AI provides you with a set of pre-loaded media files on the real device so that you can test your apps. But, in case you need to **upload** something specific, you can upload and use it wherever required. For this functionality, we generally use Appium’s [push file](https://appium.readthedocs.io/en/latest/en/commands/device/files/push-file/) command to copy files into any folder.
@@ -18,7 +19,16 @@ If your app has a feature of **saving a file** to the real device and you want t
 
 Refer to the code snippets given below for push and pull commands in different languages.
 
+
+
+
+
 While using pull and push features of Appium, please copy the files and retrieve them from the given folders, `/sdcard/Downloads/`, `/sdcard/Pictures` and `/sdcard/Android/data/`, on the TestMu AI Real Device.
+
+
+
+
+
 
   {` # Push a file
 dest_path = '/sdcard/Downloads/file.txt'
@@ -27,37 +37,81 @@ driver.push_file(dest_path, 'Hello World'.encode("utf-8"))
 file_base64 = driver.pull_file(dest_path)
 `}
 
+
+
+
+
+
+
+
   {`// Push a file
 let data = new Buffer("Hello LambdaTest").toString('base64');
 driver.pushFile('/sdcard/Downloads/sample.txt', data);
 // Pull file
 let data = driver.pullFile('/sdcard/Downloads/sample.txt');`}
 
+
+
+
+
+
+
   {`// Push a file
 $driver->pushFile('/sdcard/Downloads/sample.txt', 'QXJlIHlvdXIgYmVlcnMgb2theT8=');
 // Pull file
 $data = $driver->pullFile('/sdcard/Downloads/sample.txt');`}
+
+
+
+
+
+
 
   {`// Push a file
 driver.pushFile("/sdcard/Downloads/sample.jpg", new File("/Users/macuser/Desktop/sample.jpg"));
 // Pull file
 byte[] fileBase64 = driver.pullFile("/sdcard/Downloads/sample.jpg");`}
 
+
+
+
+
+
+
   {`# Push a file
 driver.push_file('/sdcard/Downloads/sample.jpg', File.read('/Users/macuser/Desktop/sample.jpg'))
 # Pull file
 pull_file('/sdcard/Downloads/sample.jpg')`}
+
+
+
+
+
+
 
   {`// Push a file
 driver.PushFile("/sdcard/Downloads/sample.jpg", new FileInfo("/Users/macuser/Desktop/sample.jpg"))
 // Pull file
 byte[] fileBase64 = driver.PullFile("/sdcard/Downloads/sample.jpg");`}
 
+
+
+
+
+
+
+
+
 While using pull and push feature of Appium in iOS, please adhere to the following points:
 
 - Copy and save the files in the app's **Documents folder** on the real device.
 - Make sure that the app has `UIFileSharingEnabled` key set to true in the **Info.plist**
 - Follow this specific format for the destination path while using push feature: `@:Documents/.png`
+
+
+
+
+
 
   {` # Push file
 driver.push_file('@com.lambdatest.proverbial:Documents/sample-image1.png', source_path='/Users/macuser/Desktop/sample-image1.png')
@@ -68,26 +122,57 @@ driver.push_file(dest_path, 'Hello LambdaTest'.encode("utf-8"))
 file_base64 = driver.pull_file(dest_path)
 `}
 
+
+
+
+
+
+
+
   {`// Push file
 let data = new Buffer("Hello LambdaTest").toString('base64');
 driver.pushFile('@com.lambdatest.proverbial:Documents/sample.txt', data);
 // Pull file
 let data = driver.pullFile('@com.lambdatest.proverbial:Documents/sample.txt');`}
 
+
+
+
+
+
+
   {` // Push file
   $driver->pushFile('@com.lambdatest.proverbial:Documents/foo.bar', 'QXJlIHlvdXIgYmVlcnMgb2theT8=');
 // Pull file
 $data = $driver->pullFile('@com.lambdatest.proverbial:Documents/foo.bar');`}
+
+
+
+
+
+
 
   {`// Push file
 driver.pushFile("@com.lambdatest.proverbial:Documents/sample-image.jpg", new File("/Users/macuser/Desktop/sample-image.jpg"));
 // Pull file
 byte[] fileBase64 = driver.pullFile("@com.lambdatest.proverbial:Documents/sample-image.jpg");`}
 
+
+
+
+
+
+
   {`# Push file
 driver.push_file('@com.lambdatest.proverbial:Documents/sample-image.jpg', File.read('/Users/macuser/Desktop/sample-image.jpg'))
 # Pull file
 pull_file('@com.lambdatest.proverbial:Documents/sample-image.jpg')`}
+
+
+
+
+
+
 
   {`// Push file
 driver.PushFile("@com.lambdatest.proverbial:Documents/sample-image.jpg", new FileInfo("/Users/macuser/Desktop/sample-image.jpg"))

@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-failfast
-title: FailFast
+title: FailFast
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: FailFast
+sidebar_label: "FailFast"
 description: Learn more about how to use HyperExecute's FailFast feature.
 keywords:
   - TestMu AI Hyperexecute

@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-detox-testing
-title: Detox Testing on HyperExecute
+title: Detox Testing on HyperExecute
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: Detox
+sidebar_label: "Detox"
 description: Learn how to run Detox automation tests on HyperExecute for React Native apps
 keywords:
   - Detox
@@ -25,7 +26,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-detox-testing/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -151,45 +151,3 @@ Route your test traffic through a dedicated proxy server with a fixed IP that yo
 Run your tests as if from a specific geographic location by passing a supported two-letter country code, letting you validate region-based content and geo-restricted features. Learn more in the [IP Geolocation on Real Devices](/support/docs/ip-geolocation-on-real-devices-app/) guide, and refer to the [supported country codes](/support/docs/appium-ip-geolocation/).
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />
-
-
-## Using the Detox Agent Skill with TestMu AI
-***
-
-The [detox-skill](https://github.com/LambdaTest/agent-skills/tree/main/detox-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The detox-skill package includes:
-
-```
-detox-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Detox Agent Skill
-***
-
-Install a Detox Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/detox-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/detox-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only detox-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

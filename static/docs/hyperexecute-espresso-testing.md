@@ -2,16 +2,16 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This page outlines how to execute your Espresso tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
+This page outlines how to execute your Espresso tests on HyperExecute with [YAML 0.2](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config)
 
 ## Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your TestMu AI [Username and Access key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
-- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- Setup the [Environmental Variable](/support/docs/hyperexecute-running-your-first-job/#set-up-authentication-and-environment-variables)
+- [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) file which contains all the necessary instructions.
 - An Android app (.apk or .aab file).
 
 ## Step 1: Setup Your Test Suite
@@ -218,7 +218,7 @@ OR use this command if you have not exported your username and access key in the
 
 **Troubleshoot Guide**
 
-If you are stumbling upon errors during Espresso test execution, then refer to the [**Espresso Troubleshoot**](/support/docs/troubleshoot-espresso-tests/#sharded-espresso-errors) guide for detailed explanations to your common errors.
+If you are stumbling upon errors during Espresso test execution, then refer to the [**Espresso Troubleshoot**](/support/docs/debugging-espresso-tests/#troubleshooting-espresso-tests) guide for detailed explanations to your common errors.
 
 ## Additional Details
 

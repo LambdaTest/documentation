@@ -1,7 +1,8 @@
 ---
 id: analytics-ai-root-cause-analysis
-title: AI Root Cause Analysis (AI RCA) - Test Intelligence
-sidebar_label: AI Root Cause Analysis
+title: AI Root Cause Analysis (AI RCA) - Test Intelligence
+toc_max_heading_level: 2
+sidebar_label: "AI Native Root Cause Analysis"
 description: Automatically analyze test failures with AI-powered Root Cause Analysis. Get instant insights into test failure patterns and accelerate debugging with actionable RCA results.
 keywords:
   - analytics

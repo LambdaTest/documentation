@@ -6,6 +6,8 @@ The HyperExecute Analytics module empowers QA managers to gain comprehensive ins
 
 ## Job Trends
 
+
+
 The Job Trends widget allows you to analyze the trends of jobs executed on the platform, categorized by their status: Failed, Aborted, Lambda Error, Timeout, and Completed. You can easily filter the data using the legends at the top of the graph.
 
 - X-Axis: Represents the time intervals at which the job trends are measured.
@@ -23,6 +25,7 @@ By examining the Job Trends widget, you can identify patterns, fluctuations, or 
 As a QA Manager, John's team runs over 50,000 jobs per month across various TestMu AI products. With the Job Trends widget, John can:
 - Understand the status distribution of jobs executed by his team.
 - Identify any failing job numbers and troubleshoot them by viewing the logs.
+
 
 ## Job Queue Time Trends
 
@@ -48,6 +51,8 @@ By analyzing the Job Queue Time Trends widget, you can identify bottlenecks, opt
 
 ## Job Summary
 
+
+
 The Job Summary widget enables you to track the total number of jobs run on the platform, grouped by their status: Completed, Partially Completed, Failed, Aborted, etc.
 
 #### How It Works
@@ -64,6 +69,8 @@ John can use the Job Summary widget to:
 
 ## Stage Summary
 
+
+
 The Stage Summary widget allows you to track the total number of stages run on the platform, grouped by their status: Completed, Skipped, Failed, Aborted, etc.
 
 #### How It Works
@@ -79,6 +86,8 @@ John can use the Stage Summary widget to:
 - Identify any bottlenecks or issues at the stage level.
 
 ## Stage Trends
+
+
 
 The Stage Trends widget enables you to analyze the trends of stages for each job executed on the platform, categorized into Completed, Failed, Lambda Error, and Cancelled. You can filter the data by a specific date and time.
 
@@ -100,6 +109,8 @@ John can use the Stage Trends widget to:
 
 ## Task Summary
 
+
+
 The Task Summary widget allows you to track the total number of tasks run on the platform, grouped by their status: Completed, Skipped, Failed, Aborted, etc.
 
 #### How It Works
@@ -115,6 +126,8 @@ John can use the Task Summary widget to:
 - Monitor the granular progress of his team's testing efforts.
 
 ## Task Trends
+
+
 
 The Task Trends widget enables you to analyze the trends of tasks for each job executed on the platform, categorized into Completed, Failed, Aborted, Lambda Error, and Cancelled. You can filter the data by a specific date and time.
 
@@ -133,6 +146,8 @@ By examining the Task Trends widget, you can identify patterns, fluctuations, or
 John can use the Task Trends widget to:
 - Understand the status distribution of tasks in the jobs executed by his team.
 - Identify any failing tasks and gather information for troubleshooting.
+
+
 
 The HyperExecute Analytics module provides a powerful set of tools to gain deep insights into your HyperExecute testing pipeline. By leveraging these widgets, you can optimize your testing process, identify bottlenecks, and ensure the smooth execution of your jobs, stages, and tasks.
 

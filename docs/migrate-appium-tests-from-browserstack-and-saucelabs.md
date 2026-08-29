@@ -1,6 +1,6 @@
 ---
 id: migrate-appium-tests-from-browserstack-and-saucelabs
-title: Migrate Appium Tests
+title: How to Migrate Appium Tests to TestMu AI
 sidebar_label: Migrate From BrowserStack And SauceLabs
 description: This documentation will guide you through the process of migrating your Appium test suites from BrowserStack and SauceLabs to TestMu AI.
 keywords:
@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Migration",
+          "name": "How to Migrate Appium Tests to TestMu AI",
           "item": `${BRAND_URL}/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/`
         }]
       })
@@ -44,6 +44,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ## From Local Grid, BrowserStack Or SauceLabs To <BrandName />
 
 ---
+
+Migrating Appium tests to TestMu AI lets you move existing suites from a local grid, BrowserStack, or Sauce Labs with only a few code tweaks. Update authentication and desired capabilities, then run your native and hybrid tests on the cloud.
 
 <BrandName /> offers an online Appium automation grid to perform App automation. The online Appium Grid is available on local grid, BrowserStack, Sauce Labs and <BrandName />. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from local grid, Sauce Labs or BrowserStack to <BrandName />.
 
@@ -649,7 +651,7 @@ for cap in caps:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Migrate Appium Tests From Local Grid, BrowserStack Or Sauce Labs
+        How to Migrate Appium Tests to TestMu AI
       </span>
     </li>
   </ul>

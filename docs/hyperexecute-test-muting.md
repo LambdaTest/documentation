@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-test-muting
-title: Test Muting
+title: Test Muting
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: Test Muting
+sidebar_label: "Test Muting"
 description: Understand how to mute tests on scenario level in HyperExecute.
 keywords:
   - TestMu AI Hyperexecute

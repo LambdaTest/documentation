@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-how-to-find-correct-concurrency
 title: How to Find the Correct Concurrency for my Job
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: How to Find the Correct Concurrency 
+sidebar_label: "Find Correct Concurrency"
 description: Discover the right concurrency levels with HyperExecute using TestMu AI's guide for effective automation testing.
 keywords:
   - TestMu AI Hyperexecute
@@ -53,7 +54,7 @@ The `concurrency` is one of the parameters in the HyperExecute Yaml. It indicate
 concurrency: 10   
 ```
 
-This is a **required** parameter in case you are using [autosplit](/support/docs/hyperexecute-auto-split-strategy/). However if you are using [matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) the number of concurrent threads is automatically defined by the possible permutations and combinations of parameters give.
+This is a **required** parameter in case you are using [autosplit](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy). However if you are using [matrix](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) the number of concurrent threads is automatically defined by the possible permutations and combinations of parameters give.
 
 The platform automatically analyzes your usage and test cases and will guide you to increase the concurrency to obtain substantial time savings. You can find this information on the left side banner. <br/>
 

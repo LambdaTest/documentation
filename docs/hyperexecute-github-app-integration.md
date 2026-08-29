@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-github-app-integration
-title: GitHub App Integration Support for HyperExecute
+title: GitHub App Integration Support for HyperExecute
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: GitHub App
+sidebar_label: "GitHub App"
 description:  GitHub App Integration Support for HyperExecute 
 keywords:
   - TestMu AI Hyperexecute

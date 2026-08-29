@@ -6,6 +6,7 @@ GitHub is one of the best solutions for supporting continuous integration for Gi
 
 This document will show you how to use HyperExecute Integration with GitHub Continuous Integration. We will use the WebdriverIO framework to execute our automation script.
 
+
 ## Prerequisites For Integrating GitHub CI With HyperExecute
 
 To perform your WebdriverIO tests with HyperExecute, you would need the following essentials to be already set up.
@@ -21,6 +22,7 @@ $ brew install node
 ```
 
 * If you already have npm set up, you might want to update to the most recent version. To upgrade npm, run the following code in your terminal.
+
 
 ```
 npm install npm@latest –g

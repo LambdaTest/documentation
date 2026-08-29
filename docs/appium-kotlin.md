@@ -1,6 +1,6 @@
 ﻿---
 id: appium-kotlin
-title: Appium With Kotlin
+title: How to Run Appium Kotlin Tests on TestMu AI
 sidebar_label: Kotlin
 description: Now you can run your Appium automation scripts using Kotlin on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:
@@ -21,12 +21,9 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,14 +42,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Koltin With Appium",
+          "name": "How to Run Appium Kotlin Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-kotlin/`
         }]
       })
     }}
 ></script>
 
-In this documentation, you will learn how to configure and run your **Kotlin** automation testing scripts with **Appium** on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
+Running Appium tests with Kotlin on TestMu AI automates native and hybrid mobile apps across a real device cloud of 3000+ Android and iOS devices. Configure your project, set desired capabilities, upload your app, and run scripts to view results.
+
+**Supported on:** Real &amp; Virtual devices
 
 ## Prerequisites
 
@@ -382,48 +381,6 @@ mvn clean install
 
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-## Using the Appium Agent Skill with TestMu AI
-***
-
-The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The appium-skill package includes:
-
-```
-appium-skill/
-├── SKILL.md
-└── reference/
-    ├── playbook.md
-    └── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Appium Agent Skill
-***
-
-Install a Appium Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/appium-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/appium-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only appium-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
-
-
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
@@ -445,8 +402,8 @@ cp -r agent-skills/appium-skill .cursor/skills/
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Kotlin With Appium
-</span>
+        How to Run Appium Kotlin Tests on TestMu AI
+      </span>
     </li>
   </ul>
 </nav>

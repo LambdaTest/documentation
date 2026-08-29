@@ -10,6 +10,9 @@ The Smart **Auto Split Strategy** enables you to distribute tests across multipl
 - Maximization of concurrency for faster results.
 - [Automatic reordering of test cases](/support/docs/hyperexecute-auto-split-strategy/#automatic-reordering-of-test-cases), prioritizing failed ones for faster feedback in subsequent executions.
 
+
+
+
 > HyperExecute provides flexibility to distribute tests at file level, scenario level, module level, and practically anything, provided you have a way to list down all the possible values of the entity that has to be distributed.
 
 ## Enabling Auto-Test Splitting
@@ -75,6 +78,8 @@ When you run tests with HyperExecute's autosplit feature, your tests are divided
 After the initial run is complete, HyperExecute takes note of the failing tests. It may use this information to automatically reorder your tests for the next time you run them.
 
 On subsequent runs, HyperExecute might prioritize the failing tests from the previous run for faster feedback.
+
+
 
 **info**
 Automatic reordering is a behind-the-scenes feature that optimizes test execution. You don't need to specifically configure it; it might happen automatically as part of the autosplit process. It's like a hidden perk that can significantly improve your testing experience.

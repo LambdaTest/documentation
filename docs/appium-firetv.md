@@ -1,6 +1,6 @@
 ---
 id: appium-firetv
-title: Fire TV With Appium
+title: How to Run Fire TV Appium Tests on TestMu AI
 sidebar_label: Fire TV Stick
 description: Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
 keywords:
@@ -25,7 +25,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
@@ -45,18 +44,20 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Fire TV With Appium",
+          "name": "How to Run Fire TV Appium Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-firetv/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" /> 
+
+Running Fire TV tests on TestMu AI executes Appium automation for Amazon Fire TV apps on the real device cloud. Configure the required desired capabilities, connect to the hub, and run scripts to validate Fire TV app behaviour without hardware.
+
+**Supported on:** Real devices
+
 ## Tutorial To Run Your First Test On <BrandName />
 
 ---
-
-In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **<BrandName /> Real Device Cloud platform**.
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
@@ -316,7 +317,7 @@ Your test results would be displayed on the test console (or command-line interf
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Fire TV With Appium
+        How to Run Fire TV Appium Tests on TestMu AI
       </span>
     </li>
   </ul>

@@ -1,8 +1,8 @@
 ---
 id: network-configurations
-title: Network Configurations in Automation Tests
+title: How to Configure Network Logs on TestMu AI
 sidebar_label: Network Configurations
-description: Learn how to configure and capture HTTP/S traffic during automation testing on TestMu AI Real Devices.
+description: Configure and capture HTTP/S traffic in HAR format during automation on TestMu AI Real Devices, with content capture and domain-based filtering.
 keywords:
   - testmu ai automation
   - appium network logs
@@ -20,12 +20,12 @@ canonical: https://www.testmuai.com/support/docs/network-configurations/
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-# Network Logs and Configurations
-<RealDeviceTag value="Real Device" />
-Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services, all without leaving your testing workflow.
+# How to Configure Network Logs on TestMu AI
+Network configurations on <BrandName /> capture and analyze HTTP/S traffic in real time on real devices during automation. Logs stored in HAR format record API calls, requests, responses, and load times, while content capture and domain filtering help reduce noise.
+
+**Supported on:** Real devices
 
 On <BrandName />, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 
@@ -85,7 +85,7 @@ When you enable **network logging** on <BrandName />, traffic passes through a *
 
 Before enabling network configurations, ensure your app is uploaded to <BrandName />.
 
-1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](/support/docs/upload-apps-on-real-device-cloud/) guide.
+1. **Uploading Your App** - Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 

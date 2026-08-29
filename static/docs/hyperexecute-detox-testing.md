@@ -1,10 +1,8 @@
-# Detox Testing on HyperExecute
-
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
 Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on TestMu AI HyperExecute using your local system setup.
 
+
 Detox testing on TestMu AI is supported via HyperExecute on **Android real devices** and **iOS simulators**.
+
 
 ## Prerequisites
 
@@ -22,6 +20,7 @@ Download or Clone the Detox sample from TestMu AI’s GitHub Repository
 
  View on GitHub
 
+
 ### Step 2: Download the CLI in your Project
 Download the HyperExecute CLI and copy it into the root folder of the downloaded sample repository.
 
@@ -34,9 +33,17 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 ### Step 3: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:
 
+
+
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
 
+
+
 > **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+
+
+
 
 You've successfully triggered the Detox tests on HyperExecute. Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
@@ -64,6 +71,8 @@ https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
+
+
 You can click on **View Test** from the **HyperExecute logs**, which will take you to the [App Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build). There, you can access detailed **device logs**, **crash logs**, and **Metadata** for your test. You’ll also be able to watch a **video recording** of the Test sessions for better **debugging** and **analysis**.
 
 ## Advanced Configuration
@@ -90,7 +99,9 @@ Run your tests as if from a specific geographic location by passing a supported 
 
 > For any query or doubt, please feel free to contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
 
+
 ## Using the Detox Agent Skill with TestMu AI
+
 
 The [detox-skill](https://github.com/LambdaTest/agent-skills/tree/main/detox-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
@@ -113,12 +124,17 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
+
 ### Installing Detox Agent Skill
+
 
 Install a Detox Agent Skill using the command below:
 
 ```
 # Clone the repo and copy the skill you need
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 git clone https://github.com/LambdaTest/agent-skills.git
 cp -r agent-skills/detox-skill .claude/skills/
 

@@ -1,7 +1,8 @@
 ---
 id: hyperexecute-csharp-use-cases
-title: HyperExecute CSharp Use Cases
-sidebar_label: CSharp Use Cases
+title: HyperExecute CSharp Use Cases
+toc_max_heading_level: 2
+sidebar_label: "C# Use Cases"
 description: Explore real-world C# test automation use cases on HyperExecute with NUnit, MSTest, and SpecFlow to speed up your daily testing workflows.
 keywords:
   - TestMu AI Hyperexecute

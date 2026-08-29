@@ -1,7 +1,3 @@
-# Using Snooper Command on Hyperexecute
-
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
 A `snooper` is a command that can be used to discover the list of Feature file scenarios that would be further executed using the value passed in the `testRunnerCommand`. The `snooper` command takes two arguments:
 
 - `featureFilePaths`: This argument specifies the path to the Feature files that you want to discover.
@@ -13,7 +9,9 @@ For example, the following command will discover the list of Feature file scenar
 snooper --featureFilePaths=features/ --frameWork=java
 ```
 
+
 Snooper is **not compatible** with **Alpine-based** Docker images, as Alpine uses **musl libc** instead of **glibc**, which Snooper depends on. To ensure proper functionality, use a non-Alpine base image that includes glibc.
+
 
 ## How to implement Snooper on HyperExecute
 
@@ -136,6 +134,8 @@ featureFilePaths: features/sample_website
 frameWork: javascript
 specificTags: [ "@test" ]
 #  command: .hyperexecute/snooper  --targetOs=win --featureFilePaths=features/onepass_website --frameWork=javascript --specificTags=@test | sed 's/:.*//' | uniq
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 testRunnerCommand: npm run execute-tests $test
 

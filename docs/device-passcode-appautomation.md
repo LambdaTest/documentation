@@ -1,6 +1,6 @@
 ---
 id: device-passcode-appautomation
-title: Device Passcode in App Automation on Real Devices
+title: How to Test iOS Passcode Apps on TestMu AI
 sidebar_label: Device Passcode
 description: Run automated tests on iOS apps that require a device passcode during execution on real devices.
 keywords:
@@ -24,7 +24,6 @@ import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -45,13 +44,16 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Device Passcode in App Automation",
+          "name": "How to Test iOS Passcode Apps on TestMu AI",
           "item": `${BRAND_URL}/support/docs/device-passcode-appautomation/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" /> 
+
+Device Passcode in App Automation on TestMu AI runs tests on passcode-protected real iOS devices. Apps enforcing a passcode, such as banking, enterprise, or MDM apps, unlock during execution so your Appium scripts complete secure login and sensitive workflows automatically.
+
+**Supported on:** Real devices
 
 For certain use cases, you may need to perform tests on devices that are **passcode-protected**. Apps handling sensitive data (for example, **banking apps**, **enterprise apps**, or apps distributed through **MDM**) often enforce device passcodes for enhanced security.  
 
@@ -131,6 +133,6 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 
 :::note
 - Passcode entry screens are **not visible** in the stream for security reasons. You may see a blank screen briefly during automation.  
-- Enabling passcode for iOS Devices may increase the setup time of your test by **25–30 seconds** compared to regular sessions.  
+- Enabling passcode for iOS Devices may increase the setup time of your test by **25-30 seconds** compared to regular sessions.  
 :::
 

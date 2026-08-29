@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-provar-integration
 title: Integrate Provar with HyperExecute
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: Provar
+sidebar_label: "Provar"
 description:  Integrate Provar with HyperExecute for Salesforce test automation. Configure, generate build files, set up licenses, and execute tests seamlessly.
 keywords:
   - TestMu AI HyperExecute
@@ -74,7 +75,7 @@ This documentation guides you on how to integrate Provar seamlessly with HyperEx
 
     - Enter the **Name** for your new Browser Provider.
     - Select the **Type** as **<BrandName />**
-    - Enter your [<BrandName /> **User Name** and **Access Key**](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+    - Enter your [<BrandName /> **User Name** and **Access Key**](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key)
     - Update all the **browser** options that you want to run your tests on.
     - Update all the **capabilities** that you want to pass through the test.
 

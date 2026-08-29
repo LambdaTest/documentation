@@ -1,8 +1,13 @@
-# Roku TV With Appium
+# How to Automate Roku TV Testing on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+Automating Roku TV testing on TestMu AI lets you run Appium scripts through the Roku WebDriver on real TVs, validating remote-based navigation across Roku models so you gain broader device coverage and catch experience issues earlier without repetitive manual checks.
+
+**Supported on:** Real devices
+
 ## Tutorial To Run Your First Test On TestMu AI
+
 
 As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Roku TV testing provides broader device coverage, enhances user experience by validating remote-based navigation, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Roku TV models.
 In this guide, you will learn how to configure and run your **Roku TV** automation testing scripts with **Appium Roku WebDriver** on **TestMu AI Real Device Cloud platform**.
@@ -11,6 +16,9 @@ In this guide, you will learn how to configure and run your **Roku TV** automati
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
+
+
+
 
 ## Objective
 
@@ -23,6 +31,9 @@ By the end of this topic, you will be able to:
 **Sample repo**
 
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
+
+
+
 
 ## Prerequisites
 
@@ -41,16 +52,26 @@ Before you can start performing App automation testing with Appium, you would ne
 
 ## Run your first test
 
+
 ### 1. Upload your application
 Upload your **Roku TV** application (.zip file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
 
+
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/roku-sample-app.zip"" -F "name="roku_app""
 `}
 
+
+
+
+
+
+
 - If you do not have any **.zip** file, you can run your sample tests on TestMu AI by using our sample :link: [RokuTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/roku-sample-app.zip).
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
+
+
 
 ### 2. Clone the sample project
 
@@ -65,11 +86,29 @@ cd LT-appium-rokutv
 
 Make sure you have your TestMu AI credentials with you to run test automation scripts on TestMu AI. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/). Then, set TestMu AI `Username` and `Access Key` in environment variables with following commands.
 
+
+
+
+
+
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
 export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
+
+
+
+
+
+
+
+
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
+
+
+
+
 
 ### 4. Write your automation script
 
@@ -83,6 +122,7 @@ from appium import webdriver
 import os
 import time
 from appium.options.android import UiAutomator2Options
+
 
 def getCaps():
 desired_caps = {
@@ -100,6 +140,7 @@ desired_caps = {
 "idleTimeout": 1800,
 }
 return desired_caps
+
 
 def runTest():
 if os.environ.get("LT_USERNAME") is None:
@@ -143,6 +184,7 @@ driver.execute_script("roku: pressKey", {"key": "Right"})
 
 driver.quit()
 
+
 if __name__ == "__main__":
 runTest()
 ```
@@ -177,6 +219,8 @@ caps = {
 - You must add the generated **APP_URL** to the `"app"` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt **Capabilities Generator**.For more details, please refer to our guide on [Desired Capabilities in Appium](/support/docs/desired-capabilities-in-appium/).
 
+
+
 ### 5. Execute your test case
 
 1. Install the required packages from the cloned project directory:
@@ -191,7 +235,9 @@ pip install -r requirements.txt
 python main.py
 ```
 
+
 If you are unable to run the automation script with the above mentioned commands try **'python3'** command except for **'python'**.
+
 
 ### List of Capabilities supported by Roku:
 
@@ -225,7 +271,10 @@ We utilise the Appium Roku Driver to run tests on Roku via Appium, here's a list
 |`roku: deepLink`|`contentId`, `mediaType`|As described in the [Roku dev docs](https://developer.roku.com/en-ca/docs/developer-program/discovery/implementing-deep-linking.md#using-ecp-commands-for-testing-deep-linking), you can deep link into content in the running application using a content ID and media type. For this command, `contentId` is required, and `mediaType` defaults to `movie` and must be one of the [valid media types](https://developer.roku.com/en-ca/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior). Note that this command acts on the currently-running app. If you want to test deep-linking into an app that is not launched, use `activateApp` instead.|
 |`roku: ecpInput`|`params`|This command allows calling the `/input` ECP command directly. An arbitrary set of key/value pairs can be sent in as a JSON object. No url-encoding of the values needs to be done. For example, to represent the parameters in the ECP command `POST /input?acceleration.x=0.0&acceleration.y=0.0&acceleration.z=9.8` from the ECP docs, you would construct a `params` of `{"acceleration.x": "0.0", "acceleration.y": "0.0", "acceleration.z": "9.8"}`|
 
+
 ## Additional Links
+
+
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)

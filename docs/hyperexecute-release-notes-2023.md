@@ -1,6 +1,7 @@
 ﻿---
 id: hyperexecute-release-notes-2023
-title: HyperExecute Release Notes 2023
+title: HyperExecute Release Notes 2023
+toc_max_heading_level: 2
 hide_title: false
 sidebar_label: 2023 Releases
 description: Consolidated HyperExecute release notes for 2023

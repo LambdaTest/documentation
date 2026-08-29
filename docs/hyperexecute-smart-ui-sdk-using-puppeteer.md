@@ -45,7 +45,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Testing",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-hooks-using-puppeteer/`
+          "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/`
         }]
       })
     }}
@@ -56,10 +56,10 @@ This documentation will guide you step-by-step to execute the SmartUI tests on t
 
 You must do the following in order to run the tests on HyperExecute from your local system:
 
-- Get your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from the dashboard
+- Get your <BrandName /> [Username and Access key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key) from the dashboard
 - Download [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Set your [Environmental Variables](/support/docs/hyperexecute-environment-variable-setup/)
-- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- Set your [Environmental Variables](/support/docs/hyperexecute-running-your-first-job/#set-up-authentication-and-environment-variables)
+- [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) file which contains all the necessary instructions.
 - Use your login credentials to access [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 ## Step 1: Create a SmartUI Project

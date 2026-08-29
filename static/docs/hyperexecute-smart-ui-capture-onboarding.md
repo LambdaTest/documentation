@@ -387,7 +387,7 @@ jobLabel: ['HYP', 'SmartUI', 'Capture', 'Parallel']
 | `matrix` | Matrix for parallel execution | Multiple URL files |
 
 **HyperExecute YAML Documentation**
-For detailed YAML configuration options, refer to the [HyperExecute YAML Documentation](/support/docs/hyperexecute-yaml-version0.2/).
+For detailed YAML configuration options, refer to the [HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config).
 
 ## Step 8: Execute Tests on HyperExecute
 
@@ -969,7 +969,7 @@ concurrency: 1  # Start with 1, increase gradually
 1. Validate YAML syntax using online validators
 2. Check indentation (YAML is space-sensitive)
 3. Verify all required fields are present
-4. Review [HyperExecute YAML documentation](/support/docs/hyperexecute-yaml-version0.2/)
+4. Review [HyperExecute YAML documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config)
 
 ### Debugging Tips
 
@@ -1062,6 +1062,6 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 
 - [SmartUI CLI Documentation](/support/docs/smartui-cli/) - Complete CLI guide
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/) - All configuration options
-- [HyperExecute YAML Reference](/support/docs/hyperexecute-yaml-version0.2/) - YAML configuration details
+- [HyperExecute YAML Reference](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) - YAML configuration details
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) - Common issues and solutions
 - [LambdaTest Support](https://www.testmuai.com/support/) - Get help from our support team

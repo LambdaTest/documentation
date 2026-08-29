@@ -1,6 +1,7 @@
 ---
 id: hyperexecute-karate-testing
 title: How to Perform API Testing With Karate on HyperExecute
+toc_max_heading_level: 2
 hide_title: false
 sidebar_label: "Karate"
 description: Run Karate API tests, with in-run mock servers, in parallel on HyperExecute. Set your credentials, configure HyperExecute.yaml, and trigger a cloud run.
@@ -67,7 +68,7 @@ Run your own Karate (Java + Maven) project or the ready-made sample used in the 
 
 Before you start, make sure you have:
 
-- **A TestMu AI account.** Get your `LT_USERNAME` and `LT_ACCESS_KEY` from [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+- **A TestMu AI account.** Get your `LT_USERNAME` and `LT_ACCESS_KEY` from [Username and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
 - **Git**, to clone the sample repository.
 
 HyperExecute builds and runs the suite on the grid, so you do not need Java or Maven installed locally. Install them only if you want to run the suite on your own machine first.
@@ -209,6 +210,6 @@ A successful run shows the job as **Completed** in the HyperExecute dashboard, w
 </div>
 
 <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-  <DocCard heading="Reports and logs" link="/support/docs/hyperexecute-reports/" description="Real-time terminal logs and rich test reports." />
+  <DocCard heading="Reports and logs" link="/support/docs/hyperexecute-job-reports/" description="Real-time terminal logs and rich test reports." />
   <DocCard heading="Getting started with HyperExecute" link="/support/docs/getting-started-with-hyperexecute/" description="Set up HyperExecute and trigger your first job on the grid." />
 </div>

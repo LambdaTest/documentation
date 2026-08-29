@@ -4,9 +4,11 @@
 
 This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
 
+
 - Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, **gradle/spock**, **wdio/mocha**, and **wdio/jasmine** framework.
 - Version 0.2 supports all the fields available in Version 0.1, except for [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand)
 - The new [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) flag has been introduced to configure the test framework.
+
 
 ## Why to use HyperExecute YAML Version 0.2?
 
@@ -73,6 +75,7 @@ name: gradle/testng
 - Apply the `java` plugin in your `build.gradle`.
 - For **gradle/spock**, also apply the `groovy` plugin, since Spock specifications are written in Groovy.
 
+
 ### `flags`
 Specifies the command line flags to pass to the custom runner for both test discovery and execution.
 
@@ -117,6 +120,7 @@ flags:
 - For **maven/junit4** and **maven/junit5**  the supported discovery types are **method** and **class**. The default is **method**.
 - For **wdio/mocha** and **wdio/jasmine** the supported discovery types are **test, spec, suite** and **wdiosuite**. The default is **spec**.
 
+
 ### `discoveryMode`
 Specifies where the test discovery runs. Supported values are `local` and `remote`.
 
@@ -130,9 +134,12 @@ name: gradle/testng
 discoveryMode: remote
 ```
 
+
 Remote discovery is supported for all Java runners: **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, and **gradle/spock**.
 
+
 ### `workingDirectory`
+
 
 The `working directory` specifies the location of the directory in which all test discovery and execution commands will be run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
 
@@ -184,6 +191,7 @@ artifacts: true
 
 > 📕 Learn [how to perform group-based test discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng)
 
+
 ### `language`
 
 Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed.
@@ -204,6 +212,7 @@ args:
 locale: ES
 ```
 
+
 ### `mitmProxy`
 
 You can now capture network logs directly from emulator sessions using MITM. This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
@@ -213,6 +222,7 @@ framework:
 args:
 mitmProxy: true
 ```
+
 
 ## Sample Yaml Version 0.2
 

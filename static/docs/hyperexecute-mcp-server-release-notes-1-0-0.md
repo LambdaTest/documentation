@@ -121,4 +121,6 @@ This release is compatible with:
 
 For questions or issues with the connection methods, please refer to our documentation or contact TestMu AI support.
 
+
+
 **Note**: Make sure to update your configurations to use the new connection methods as the old SSE-based approach is no longer supported.

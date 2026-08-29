@@ -9,6 +9,8 @@ This document will show you how to integrate Travis CI Pipeline with HyperExecut
 
 ## Steps to Integrate Travis CI Pipeline with HyperExecute
 
+
+
 To integrate Travis CI Pipeline with HyperExecute, follow the below steps:
 ### Step 1. Log into your Travis CI account
 
@@ -40,11 +42,15 @@ script:
 
 - Check the build status page to see if your build passes or fails according to the return status of the build command by visiting Travis CI and selecting your repository.
 
+
 ### Step 3: Run Your Job
 
 Now commit your job and run the build.
 
+
+
 **Below is an example of a HyperExecute job that was triggered through the above pipeline:**
+
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

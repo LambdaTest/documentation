@@ -26,41 +26,41 @@ export default function HyperExecuteSupportedLanguageDocs() {
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/testng-on-hyperexecute-grid/">TestNG</a></li>
-                    <li><a href="/support/docs/junit-on-hyperexecute-grid/">JUnit</a></li>
-                    <li><a href="/support/docs/cucumber-on-hyperexecute-grid/">Cucumber</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#java">TestNG</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#java">JUnit</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#java">Cucumber</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/webdriverio-on-hyperexecute-grid/">WebdriverIO</a></li>
-                    <li><a href="/support/docs/protractor-on-hyperexecute-grid/">Protractor</a></li>
-                    <li><a href="/support/docs/nightwatch-on-hyperexecute-grid/">Nightwatch</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#javascript">WebdriverIO</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#javascript">Protractor</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#javascript">Nightwatch</a></li>
                     <li><a href="/support/docs/hyperexecute-bidi-testing/">BiDi</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/nunit-on-hyperexecute-grid/">NUnit</a></li>
-                    <li><a href="/support/docs/specflow-on-hyperexecute-grid/">SpecFlow</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#c">NUnit</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#c">SpecFlow</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/pyunit-on-hyperexecute-grid/">PyUnit</a></li>
-                    <li><a href="/support/docs/pytest-on-hyperexecute-grid/">PyTest</a></li>
-                    <li><a href="/support/docs/robot-on-hyperexecute-grid/">Robot</a></li>
-                    <li><a href="/support/docs/behave-on-hyperexecute-grid/">Behave</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#python">PyUnit</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#python">PyTest</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#python">Robot</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#python">Behave</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/ruby-on-hyperexecute-grid/">Ruby</a></li>
-                    <li><a href="/support/docs/capybara-on-hyperexecute-grid/">Capybara</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#ruby">Ruby</a></li>
+                    <li><a href="/support/docs/hyperexecute-selenium-testing/#ruby">Capybara</a></li>
                   </ul>
                 </div>
               </div>
@@ -71,9 +71,9 @@ export default function HyperExecuteSupportedLanguageDocs() {
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/jest-on-hyperexecute/">Jest</a></li>
-                    <li><a href="/support/docs/mocha-on-hyperexecute/">Mocha</a></li>
-                    <li><a href="/support/docs/codecept-on-hyperexecute/">CodeceptJs</a></li>
+                    <li><a href="/support/docs/hyperexecute-puppeteer-testing/#run-a-puppeteer-test-in-your-runner">Jest</a></li>
+                    <li><a href="/support/docs/hyperexecute-puppeteer-testing/#run-a-puppeteer-test-in-your-runner">Mocha</a></li>
+                    <li><a href="/support/docs/hyperexecute-puppeteer-testing/#run-a-puppeteer-test-in-your-runner">CodeceptJs</a></li>
                   </ul>
                 </div>
               </div>
@@ -84,28 +84,28 @@ export default function HyperExecuteSupportedLanguageDocs() {
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/pytest-on-hyperexecute/">PyTest</a></li>
-                    <li><a href="/support/docs/playwright-python-on-hyperexecute/">Python</a></li>
+                    <li><a href="/support/docs/playwright-integration-with-hyperexecute/#python">PyTest</a></li>
+                    <li><a href="/support/docs/playwright-integration-with-hyperexecute/#python">Python</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/color-js.webp').default} alt="Javascript" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/playwright-vanillajs-on-hyperexecute/">VanillaJs</a></li>
-                    <li><a href="/support/docs/codecept-on-hyperexecute/">CodeceptJs</a></li>
-                    <li><a href="/support/docs/playwright-jest-on-hyperexecute/">Jest</a></li>
+                    <li><a href="/support/docs/playwright-integration-with-hyperexecute/#javascript">VanillaJs</a></li>
+                    <li><a href="/support/docs/hyperexecute-puppeteer-testing/#run-a-puppeteer-test-in-your-runner">CodeceptJs</a></li>
+                    <li><a href="/support/docs/playwright-integration-with-hyperexecute/#javascript">Jest</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/playwright-junit-on-hyperexecute/">JUnit</a></li>
+                    <li><a href="/support/docs/playwright-integration-with-hyperexecute/#java">JUnit</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/playwright-dotnet-on-hyperexecute/">.Net</a></li>
+                    <li><a href="/support/docs/playwright-integration-with-hyperexecute/#c--net">.Net</a></li>
                   </ul>
                 </div>
               </div>
@@ -116,8 +116,8 @@ export default function HyperExecuteSupportedLanguageDocs() {
                 <div className="lt_col lt_framework_wrapper">
                   <img loading="lazy" src={require('../../../assets/images/getting-started/cypress_logo.png').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
-                    <li><a href="/support/docs/cypressv9-on-hyperexecute/">Cypress v9</a></li>
-                    <li><a href="/support/docs/cypressv10-on-hyperexecute/">Cypress v10</a></li>
+                    <li><a href="/support/docs/cypress-integration-with-hyperexecute/#run-a-cypress-test-in-hyperexecute">Cypress v9</a></li>
+                    <li><a href="/support/docs/cypress-integration-with-hyperexecute/#run-a-cypress-test-in-hyperexecute">Cypress v10</a></li>
                   </ul>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function HyperExecuteSupportedLanguageDocs() {
                   <img loading="lazy" src={require('../../../assets/images/getting-started/appium.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
                   <ul className="lt_framework_list">
                     <li><a href="/support/docs/hyperexecute-appium-testing/">Mobile Application</a></li>
-                    <li><a href="/support/docs/hyperexecute-webapp-appium-testing/">Web Application</a></li>
+                    <li><a href="/support/docs/hyperexecute-appium-testing/#appium-webapp-testing">Web Application</a></li>
                   </ul>
                 </div>
               </div>
