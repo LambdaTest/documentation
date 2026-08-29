@@ -179,14 +179,14 @@ export default function Home() {
           <div className="home_inners_box">
             <h2 className="homeMain_h2"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Kane CLI &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
-              <a href="/support/docs/kane-cli-introduction/"><p className="p_home_inners">Getting Started</p></a>
-              <a href="/support/docs/kane-cli-installation/"><p className="p_home_inners">Installation</p></a>
-              <a href="/support/docs/kane-cli-quickstart/"><p className="p_home_inners">Quick Start</p></a>
-              <a href="/support/docs/kane-cli-writing-objectives/"><p className="p_home_inners">Writing Objectives</p></a>
-              <a href="/support/docs/kane-cli-generate/"><p className="p_home_inners">Generate Test Cases</p></a>
-              <a href="/support/docs/kane-cli-checkpoints/"><p className="p_home_inners">Checkpoints</p></a>
-              <a href="/support/docs/kane-cli-agent-mode/"><p className="p_home_inners">Agent Mode</p></a>
-              <a href="/support/docs/kane-cli-cli-reference/"><p className="p_home_inners">CLI Reference</p></a>
+              <a href="/docs/kane-cli-introduction"><p className="p_home_inners">Getting Started</p></a>
+              <a href="/docs/kane-cli-installation"><p className="p_home_inners">Installation</p></a>
+              <a href="/docs/kane-cli-quickstart"><p className="p_home_inners">Quick Start</p></a>
+              <a href="/docs/kane-cli-writing-objectives"><p className="p_home_inners">Writing Objectives</p></a>
+              <a href="/docs/kane-cli-generate"><p className="p_home_inners">Generate Test Cases</p></a>
+              <a href="/docs/kane-cli-checkpoints"><p className="p_home_inners">Checkpoints</p></a>
+              <a href="/docs/kane-cli-agent-mode"><p className="p_home_inners">Agent Mode</p></a>
+              <a href="/docs/kane-cli-cli-reference"><p className="p_home_inners">CLI Reference</p></a>
             </div>
           </div>
           <div className="home_inners_box">
