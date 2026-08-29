@@ -51,14 +51,14 @@ export LT_USERNAME="YOUR_USERNAME"
 <TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
-set LT_USERNAME=YOUR_USERNAME"
+set LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
-$env:LT_USERNAME=YOUR_USERNAME"
+$env:LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>

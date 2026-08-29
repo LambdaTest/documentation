@@ -105,14 +105,14 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
-set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 <TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
-$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>

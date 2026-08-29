@@ -140,7 +140,7 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
-$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -658,7 +658,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 2. Check configuration file syntax
 3. Try different port if default is in use:
    ```bash
-   npx smartui exec -P 5000 -- <command">
+   npx smartui exec -P 5000 -- <your-test-command>
    ```
 4. Check file permissions for configuration and project files
 
