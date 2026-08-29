@@ -290,12 +290,12 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the s
 
 ```bash
 chmod u+x <cliFileNAme>
-./<cliFileNAme> -user <userName> -key <accessKey> --verbose -i <yamlFileName>.yaml
+./<cliFileNAme> -u <userName> -k <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
 ```
-./hyperexecute -user my_user_name -key xyx123abc --verbose -i hyperexecute.yaml
+./hyperexecute -u my_user_name -k xyx123abc --verbose -i hyperexecute.yaml
 ```
 
 5. After the test is started you can follow the test on the below links.

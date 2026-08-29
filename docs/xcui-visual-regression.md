@@ -1,7 +1,6 @@
 ﻿---
 id: xcui-visual-regression
 title: Getting Started With Visual Regression Testing Using XCUI On SmartUI Real Devices
-sidebar_label: XCUI
 description: Dive into our detailed XCUI Visual Regression support documentation for step-by-step guidance! Efficiently perform visual testing, manage applications, and ensure your mobile apps are visually perfect before launch.
 keywords:
   - Visual Regression
