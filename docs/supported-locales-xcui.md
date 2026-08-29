@@ -1,8 +1,8 @@
 ---
 id: supported-locales-xcui
-title: Supported Locales And Languages - XCUI
+title: Supported Locales and Languages for XCUI on TestMu AI
 hide_title: false
-sidebar_label: Supported Locales And Languages
+sidebar_label: "Supported Locales And Languages"
 description: Checkout the list of all supported locales
 keywords:
   - Supported locales
@@ -33,12 +33,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "List of Supported Locales",
+          "name": "Supported Locales and Languages for XCUI on TestMu AI",
           "item": `${BRAND_URL}/support/docs/supported-locales-xcui/`
         }]
       })
     }}
 ></script>
+
+Supported locales on TestMu AI define the language and region codes you can set through Appium's language and locale capabilities to test localized strings in iOS apps, letting you validate translations, formats, and region-specific behavior across many languages on devices.
+
 Use the given below list of supported locale and language codes for app testing.
 
 ##  iOS Locales and Language Codes

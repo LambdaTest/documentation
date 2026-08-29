@@ -1,7 +1,7 @@
 ---
 id: ios-ipa-files-xcui
-title: Creating iOS Applications
-sidebar_label: Creating iOS Applications
+title: How to Create iOS IPA Files on TestMu AI
+sidebar_label: "Creating iOS Applications"
 description: Effortlessly test iOS IPA files with XCUi on TestMu AI. Ensure your apps run smoothly on all iOS devices with comprehensive testing support.
 keywords:
   - xcuitest
@@ -42,14 +42,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Creating iOS apps",
+          "name": "How to Create iOS IPA Files on TestMu AI",
           "item": `${BRAND_URL}/support/docs/ios-ipa-files-xcui/`
         }]
       })
     }}
 ></script>
 
-This document outlines the process of creating and testing iOS apps using Xcode. It covers two methods for creating.ipa files for testing: directly creating the.ipa file or creating an.app bundle and converting it into an.ipa file. The first method involves creating a.ipa file using various export methods, such as Ad Hoc, Enterprise, or Development. The second method involves creating an.app bundle and converting it into an.ipa file.
+Creating iOS IPA files for XCUITest on TestMu AI uses Xcode to archive and export your app. Build the .ipa through Ad Hoc, Enterprise, or Development export methods, or generate a .app bundle and convert it into an uploadable .ipa.
 
 ## Step 1: Create .ipa files for Testing
 
@@ -150,7 +150,7 @@ This process will overwrite the **Build settings** at the Project Level to the g
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      XCUI Testing
+        How to Create iOS IPA Files on TestMu AI
       </span>
     </li>
   </ul>

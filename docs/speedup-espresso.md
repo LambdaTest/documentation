@@ -1,8 +1,8 @@
 ---
 id: speedup-espresso
-title: Filters for Espresso Tests
-sidebar_label: Filters for Espresso Tests
-description: This document helps you learn how to speed up your Espresso Tests.
+title: How to Filter Espresso Tests on TestMu AI
+sidebar_label: Test Filters
+description: Filter Espresso test cases on TestMu AI using package, class, annotation, and size parameters passed to the REST API to run only the tests you need.
 keywords:
   - espresso test filters
   - app test automation
@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Filters for Espresso Test",
+          "name": "How to Filter Espresso Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/speedup-espresso/`
         }]
       })
@@ -52,6 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 ---
 
+Filtering Espresso tests on <BrandName /> lets you run only selected test cases instead of running the entire suite, speeding up execution. Pass parameters like package, class, annotation, and size to the REST API request through your AndroidJUnitRunner test runner.
 
 Usually, all the test cases of your Espresso test suite are executed, but there is a way to filter these. You can use Espresso test runner (typically `AndroidJUnitRunner`), which provides you with multiple options to filter the test cases which you want to execute.
 
@@ -227,7 +228,9 @@ This configuration will run tests annotated with multiple annotations, i.e., onl
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Speeding up Espresso Tests</span>
+      <span className="breadcrumbs__link">
+        How to Filter Espresso Tests on TestMu AI
+      </span>
     </li>
   </ul>
 </nav>

@@ -1,12 +1,16 @@
 ---
 id: debug-espresso-tests
-title: How to debug your Espresso tests
+title: How to Debug Espresso Tests on TestMu AI
 hide_title: true
+toc_max_heading_level: 2
 sidebar_label: Debug Espresso Tests
-description: Learn how to debug Espresso tests for your mobile applications to resolve different kinds of bugs for your failed test builds.
+description: Debug Espresso tests on TestMu AI using instrumentation, device, and network logs, video recordings, and a reference of build and shard errors.
 keywords:
 - debug espresso tests
 - how to debug espresso tests
+- troubleshoot espresso tests
+- espresso build errors
+- espresso shard errors
 - mobile app testing
 url: https://www.testmuai.com/support/docs/debugging-espresso-tests/
 site_name: TestMu AI
@@ -32,20 +36,20 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Debugging your Espresso Tests",
+          "name": "How to Debug Espresso Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/debugging-espresso-tests/`
         }]
       })
     }}
 ></script>
 
-# Debugging Your Espresso Tests
-***
+# How to Debug Espresso Tests on TestMu AI
+---
 
-Learn how to debug Espresso tests for your mobile applications to resolve different kinds of bugs for your failed tests/builds.
+Debugging Espresso tests on <BrandName /> uses instrumentation, device, and network logs plus video recordings to pinpoint the root cause of failed tests and builds. A reference of common build and shard errors with explanations helps you diagnose issues fast.
 
 ## Objective
-***
+---
 
 By the end of this guide, you will be able to:
 
@@ -53,7 +57,7 @@ By the end of this guide, you will be able to:
 * Understand the reasoning behind the same.
 
 ## Debugging Tests
-***
+---
 
 <BrandName /> offers a variety of logs to help you locate the root cause:
 
@@ -129,11 +133,62 @@ KEY|VALUE|DESCRIPTION
 --|--|--
 | video            | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video= TRUE`<br/> OR `video = FALSE` | Video recording of the complete screen |
 
-Refer to our [Espresso testing documentation](/support/docs/getting-started-with-espresso-testing/#capabilities-supported) for more capabilities.
+Refer to our [Espresso testing documentation](/support/docs/espresso-supported-capabilities/) for more capabilities.
+
+## Troubleshooting Espresso Tests
+---
+
+Beyond the logs above, the tables below list the common errors encountered when running Espresso tests on <BrandName />. Understanding these errors and their explanations can help you diagnose and resolve issues during your test execution on <BrandName />.
+
+### Espresso Build Errors
+
+This table highlights the errors encountered when running tests on [<BrandName /> Real Devices without shards](/support/docs/getting-started-with-espresso-testing/).
+
+<img loading="lazy" src={require('../assets/images/debug-espresso-test/5.png').default} alt="Image" width="1347" Height="610" className="doc_img"/> <br />
+
+| Build Execution Errors | Root Cause of Error |
+|--------------------------------------------|--------------------------|
+|Application under test provided by you did not get installed. Please check the application.| The target application failed to install on the selected device during test execution. This indicates an issue with the provided application file or incompatibility with the chosen device configuration.| 
+|Test Suite provided by you did not get installed. Please check the application.| This indicates that the test suite you provided could not be installed on the chosen <BrandName /> environment. This might be due to invalid test suite files, incompatibility issues, or missing dependencies.| 
+|Failed to fetch runner class for test extraction. Please recheck your test suite.| Test discovery failed. The system couldn't extract test cases or classes from the provided test suite application. This might be due to issues with the test suite app itself or its configuration.| 
+|Failed to extract classes or tests from runner app - test discovery failed.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the test suite app itself or an incompatibility with the testing framework used. | 
+|No tests found in the test suite. Please check your test suite or applied filters.| The test execution framework couldn't locate any test cases to run due to: <br /> <b>Empty Test Suite: </b>Ensure your test suite contains at least one test class with a @Test annotated method.<br /> <b>Incorrect Filtering: </b>Verify that any applied test filters aren't accidentally excluding all tests. You can see more on espresso test filtering [here](/support/docs/speedup-espresso/).| 
+|Tests could not be run as localization setup failed. Please check locale and try again.| The test suite encountered a localization setup error. This means the system's locale or language settings could not be configured correctly. Please verify your locale settings and try re-running the tests. | 
+|Oops! An error occurred at our end. Please try again.| A temporary infrastructure issue arose. While a device was allocated for your test, it became unavailable before the test execution started. Please retry the test or reach out to support@testmuai.com if the issue persists. | 
+|Desired Capabilities Error. Please check the desired capabilities that you have passed.| The test encountered a [`Desired Capabilities`](/support/docs/espresso-supported-capabilities/) Error.  This indicates an issue with the configuration provided for the test execution.  Please verify the values you have set for desired capabilities like device, platform, or application path. | 
+
+### Espresso via HyperExecute Shard Errors
+
+This table highlights the errors encountered when running espresso tests with [Shards via HyperExecute](/support/docs/sharding-espresso-rd-hyperexecute/) on <BrandName /> Real Device Cloud.
+
+<img loading="lazy" src={require('../assets/images/debug-espresso-test/4.png').default} alt="Image" width="1347" Height="610" className="doc_img"/> <br />
+
+| Shard Execution Errors | Root Cause of Error |
+|--------------------------------------------|--------------------------|
+|Application under test provided by you did not get installed. Please check the application.| The target application failed to install on the selected device during test execution. This indicates an issue with the provided application file (APK/IPA) or incompatibility with the chosen device configuration.| 
+|Test Suite provided by you did not get installed. Please check the application.| This indicates that the test suite you provided could not be installed on the chosen <BrandName /> environment. This might be due to invalid test suite files, incompatibility issues, or missing dependencies.| 
+|Failed to fetch runner class for test extraction. Please recheck your test suite.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the runner app itself or its configuration.| 
+|Failed to extract classes or tests from runner app - test discovery failed.| Test discovery failed. The system couldn't extract test cases or classes from the provided runner application. This might be due to issues with the runner app itself or an incompatibility with the testing framework used. | 
+|No tests found in the test suite. Please check your test suite or applied filters.| The test execution framework couldn't locate any test cases to run due to: <br /> <b>Empty Test Suite: </b>Ensure your test suite contains at least one test class with a @Test annotated method.<br /> <b>Incorrect Filtering: </b>Verify that any applied test filters aren't accidentally excluding all tests. You can see more on espresso test filtering [here](/support/docs/speedup-espresso/).| 
+|Tests could not be run as localization setup failed. Please check locale and try again.| The test suite encountered a localization setup error. This means the system's locale or language settings could not be configured correctly. Please verify your locale settings and try re-running the tests. | 
+|Oops! An error occurred at our end. Please try again.| A temporary infrastructure issue arose. While a device was allocated for your test, it became unavailable before the test execution started. Please retry the test. | 
+|Desired Capabilities Error. Please check the desired capabilities that you have passed.| The test encountered a [`Desired Capabilities`](/support/docs/espresso-supported-capabilities/) Error.  This indicates an issue with the configuration provided for the test execution.  Please verify the values you have set for desired capabilities like device, platform, or application path. | 
+| Oops! An error occurred at our end. Please try again. | An internal error occurred while retrieving configuration details for the test execution environment (HyperExecute API).  A temporary glitch might be preventing communication with the API. Please retry the test execution. If the issue persists, contact support for further assistance. |
+|Build has been stopped. | The build process was terminated prematurely. User intervention caused this stoppage, likely due to errors encountered during the build phase. |
+|Build breached queue timeout| The test execution encountered a "Build breached queue timeout" error. This indicates the build exceeded the maximum allowed wait time while in a queue. This could be due to high system load or insufficient resources on the <BrandName /> platform. |
+
+## Next Steps
+---
+
+Continue with these related guides:
+
+- [Getting started with Espresso testing](/support/docs/getting-started-with-espresso-testing/)
+- [Espresso automation capabilities](/support/docs/espresso-supported-capabilities/)
+- [Speed up your Espresso tests with filtering](/support/docs/speedup-espresso/)
+- [Sharding Espresso tests via HyperExecute](/support/docs/sharding-espresso-rd-hyperexecute/)
 
 >
-If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmuai.com
-
+If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@testmuai.com
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -149,12 +204,8 @@ If you still have any questions for us, please feel free to let us know via our 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Debugging Espresso Tests
+        How to Debug Espresso Tests on TestMu AI
       </span>
     </li>
   </ul>
 </nav>
-
-
-
-

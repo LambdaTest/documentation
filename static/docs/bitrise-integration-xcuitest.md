@@ -47,7 +47,7 @@ Other options:
 | Network logs |   TYPE: BOOLEAN DEFAULT: FALSE`True`OR `False` | Enable Network Logs that will show the information on the data transmitted & received by the device. |
 | Video |   TYPE: BOOLEAN DEFAULT: TRUE`True`OR `False` | Video recording of the screen. |
 
-[XCUI Testing On TestMu AI](/support/docs/getting-started-with-xcuitest/#capabilities-supported)
+[XCUI Testing On TestMu AI](/support/docs/xcui-supported-capabilities/)
 
 [Automation Capabilities Generator For Selenium and Appium](https://www.testmuai.com/capabilities-generator/)
 

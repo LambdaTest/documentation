@@ -1,8 +1,8 @@
 ---
 id: xctestplan
-title: XCTestPlan
-sidebar_label: XCTestPlan
-description: Manage iOS, iPadOS, macOS, watchOS, and tvOS tests with XCTestPlan on TestMu AI. Learn how to upload apps, configure tests, and view execution logs efficiently.
+title: What Is XCTestPlan on TestMu AI
+sidebar_label: "Test Filters"
+description: Manage iOS, iPadOS, macOS, watchOS, and tvOS tests with XCTestPlan on TestMu AI. Upload apps, configure tests, and view execution logs efficiently.
 keywords:
   - XCUI test filters
   - app test automation
@@ -26,7 +26,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import RealDeviceTag from '../src/component/realDevice';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
@@ -46,13 +45,16 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Filters for XCUI Test",
+          "name": "What Is XCTestPlan on TestMu AI",
           "item": `${BRAND_URL}/support/docs/xctestplan/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" />
+XCTestPlan on <BrandName /> manages how you run automated XCTest suites across iOS, iPadOS, macOS, watchOS, and tvOS apps. Create targeted test runs, upload your app and XCUI test IPA files, configure scenarios, and view execution logs for efficient testing.
+
+**Supported on:** Real devices
+
 XCTestPlan is a feature within Xcode used for building iOS, iPadOS, macOS, watchOS, tvOS, and audioOS applications. XCTestPlan helps manage how you run automated tests written with the XCTest framework.
 
 XCTestPlan improves the organization and efficiency of running automated tests within Xcode. It allows you to create targeted test runs and manage various testing scenarios effectively.
@@ -181,9 +183,9 @@ curl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan
 
 ## Step 3: Executing The Test
 
-- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey`ï¿½in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
 
-Take note of the base64 encoded authentication which needs to be added in the next step.
+Take note of theï¿½base64ï¿½encoded authentication which needs to be added in the next step.
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -245,7 +247,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}><BrandName /> Automation</a>.
 
-> **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/speedup-xcui/) simultaneously
+> **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/sharding-rd-hyperexec/#filters-for-xcui-tests) simultaneously
 
 :::tip
 To learn how to use XCTestPlan with sharding in XCUI, refer to the detailed guide in [Sharding for XCUI](/support/docs/sharding-rd-hyperexec/#xctestplan-in-sharding).

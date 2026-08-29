@@ -1,14 +1,15 @@
-# Supported Locales And Languages - Espresso
+# Supported Espresso Locales & Languages on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Use the given below list of supported locale and language codes for app testing.
+Espresso testing on TestMu AI supports a wide range of Android and iOS locales and language codes. Use the tables to find the correct code, then configure Appium's language capability to test how your app renders localized strings across regions.
 
 ## Android Locales and Language Codes
 
 To test localised strings in your android app, configure Appium's language capability with language code.
 
 Language to be passed in the capability - language:'fr' where fr is language code for french
+
 
 ### Android Language and Language Codes
 
@@ -56,7 +57,9 @@ Language to be passed in the capability - language:'fr' where fr is language cod
 
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
 
+
 Locale to be passed in the capability - locale:'FR' where FR is the locale code for France
+
 
 | Locale                 | Locale Code                |
 | -----------------------| ---------------------------|
@@ -113,6 +116,7 @@ Locale to be passed in the capability - locale:'FR' where FR is the locale code 
 | Vietnam                |  VN                        |
 | Zimbabwe               |  ZA                        |
 
+
 ## How to Setup Locale and Language
 
 You can also configure both locale and language during Espresso test execution for a seamless user experience in diverse linguistic and regional contexts of your app.
@@ -151,6 +155,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
 "locale": "CA"
 }'
 ```
+
 
 - Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.
 - App should support the language and locale mentioned in the API request to work.
