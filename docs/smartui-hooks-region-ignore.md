@@ -224,7 +224,6 @@ Coordinates are validated at two levels. Note that only the **format** check hap
 
 ## Notes
 
-- **Scope:** this applies to the Web Hooks path (Selenium `executeScript("smartui.takeScreenshot", ...)`). RD Hooks and the CLI SDK already support these inputs.
 - **Empty or mixed configs:** a config containing only `coordinates` (no selector) is honoured; it is not treated as "no DOM region." Selector and coordinate regions in one `ignoreDOM` are additive.
 - **Identical to selector-based ignore:** coordinate regions resolve to the same kind of ignored/selected box as selectors, so the comparison result matches an equivalent selector-based ignore.
 
