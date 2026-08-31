@@ -3599,6 +3599,7 @@ module.exports = {
         },
         items: [
           "smartui-running-your-first-project",
+          "smartui-omni-projects",
           "smartui-agent-skills",
           "smartui-guided-walkthrough",
           "smartui-cli-env-variables",
@@ -3859,6 +3860,16 @@ module.exports = {
             type: "doc",
             label: "Baseline Management",
             id: "smartui-baseline-management",
+          },
+          {
+            type: "doc",
+            label: "Baseline Strategy",
+            id: "smartui-baseline-strategy",
+          },
+          {
+            type: "doc",
+            label: "Baseline History",
+            id: "smartui-baseline-history",
           },
           {
             type: "doc",
