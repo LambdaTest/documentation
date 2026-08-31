@@ -181,4 +181,4 @@ OR use this command if you have not exported your username and access key in the
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
 **discover more**
-📕 Learn more about the other [supported arguments](/support/docs/smartui-selenium-csharp-sdk), how you can [handle the dynamic data](/support/docs/smartui-selenium-csharp-sdk), and how to [capture the screenshot of a specific element](/support/docs/smartui-selenium-csharp-sdk)
+📕 Learn more about the other [supported arguments](/support/docs/smartui-selenium-js-sdk/), how you can [handle the dynamic data](/support/docs/smartui-selenium-js-sdk/), and how to [capture the screenshot of a specific element](/support/docs/smartui-selenium-js-sdk/)

@@ -4,6 +4,7 @@
 
 Smart Git is an advanced feature in SmartUI that provides intelligent branch comparison and management capabilities. This guide explains how to use Smart Git effectively in your visual regression testing workflow.
 
+
 ## What is Smart Git?
 
 Smart Git is a feature that enhances the default Git branching strategy in SmartUI by providing more flexible and intelligent branch comparison capabilities. When enabled, it automatically compares the latest build of a branch against the latest approved version of the same branch, regardless of the project's baseline settings.
@@ -19,17 +20,29 @@ Smart Git is a feature that enhances the default Git branching strategy in Smart
 
 Smart Git can be enabled using an environment variable:
 
+
+
+
 ```bash
 export SMART_GIT=true
 ```
+
+
+
 
 ```bash
 set SMART_GIT=true
 ```
 
+
+
+
 ```powershell
 $env:SMART_GIT="true"
 ```
+
+
+
 
 ## How Smart Git Works
 
@@ -124,7 +137,9 @@ export SMART_GIT=true
 npx smartui --config .smartui.json exec -- <Your execution command>
 ```
 
+
 The Smart Git management works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.
+
 
 **Result**:
 - Quick visual regression testing for hotfix
@@ -133,27 +148,52 @@ The Smart Git management works consistently across all SmartUI CLI commands (`ex
 
 ## Best Practices
 
+
+
+
 **Branch Naming**
 
 Use clear, consistent branch naming conventions.
+
+
+
+
 
 **Regular Updates**
 
 Keep branches up to date with their parent branches.
 
+
+
+
+
 **Approval Process**
 
 Establish clear approval criteria for each branch.
+
+
+
+
 
 **Documentation**
 
 Document branch-specific visual changes.
 
+
+
+
+
 **Cleanup**
 
 Regularly clean up old branches and their builds.
 
+
+
+
 ## Troubleshooting
+
+
+
 
 **Comparison Issues**
 
@@ -162,12 +202,19 @@ Regularly clean up old branches and their builds.
    - Check branch name: `git branch --show-current`
    - Ensure previous builds exist in the branch
 
+
+
+
+
 **Approval Issues**
 
 1. **Approval Issues**:
    - Verify you have necessary permissions
    - Check if the build is in an approvable state
    - Ensure the branch has previous approved builds
+
+
+
 
 ### Getting Help
 

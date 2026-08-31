@@ -130,7 +130,9 @@ rook
 
 This keeps the source state, scenario evidence, and tested revision reproducible.
 
+
 Never clone or check out untrusted code and then run its setup scripts without reviewing them first.
+
 
 ## Explore an External Local Directory
 
@@ -145,6 +147,7 @@ The path must be typed by a human. A model suggestion or stored record cannot gr
 **Current external-workspace limitation**
 Rook can read and report an external directory, but the current pre-alpha release does not persist an external agent record. To keep discovery state and generate scenarios, `cd` into that checkout and start Rook there.
 
+
 Rook also refuses two paths to keep read scope tight:
 
 - **A parent directory that contains the current workspace:** This would mix evaluator files with target files.
@@ -153,6 +156,8 @@ Rook also refuses two paths to keep read scope tight:
 ## Manage Multiple Agents
 
 The browser inventory shows all registered agents and their scenario and run history.
+
+
 
 Interactive commands:
 

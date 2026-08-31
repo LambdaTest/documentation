@@ -6,6 +6,8 @@ Common questions about the TestMu AI Agent Testing Platform, grouped by plans, s
 
 ## Plans and Pricing
 
+
+
 ### Availability for Small Teams and Startups
 
 Yes. The Pay-As-You-Go tier starts at $0 with no monthly commitment, and you pay only for the credits you consume at $0.01 each. The Starter and Growth plans suit small and mid-size teams, while Scale and Enterprise add SLAs and compliance documentation for high-volume organizations.
@@ -23,6 +25,8 @@ TestMu AI historically focused on browser and device testing. Agent Testing is a
 The platform uses a hybrid stack that combines third-party large language models with TestMu AI's in-house agentic framework. Multiple LLMs contribute to evaluation reasoning, which reduces single-model blind spots. Specific model names are disclosed under NDA.
 
 ## Connecting and Running Tests
+
+
 
 ### Connecting an Agent Without Code Changes
 
@@ -50,6 +54,8 @@ The platform dials real phone numbers. For an inbound agent, it calls the agent'
 
 ## Security and Data Handling
 
+
+
 ### Whether Your Model and Knowledge Base Leave Your Environment
 
 No. The platform sends test inputs to your agent endpoint, the same inputs any user would send, and receives responses. The agent's internal model, knowledge base, and code do not leave your environment.
@@ -68,6 +74,8 @@ On-premises and VPC deployment is available for enterprise contracts. Contact th
 
 ## Evaluation Quality and Accuracy
 
+
+
 ### How Verdict Accuracy Is Backed by Evidence
 
 Every verdict is backed by evidence, the specific conversation transcripts that drove each metric score. You can review the failing transcripts and validate whether the platform's assessment matches your own judgment. Confidence levels flag when the scenario volume is too low for a reliable verdict.
@@ -81,6 +89,8 @@ Review the failing scenario transcript. If the assessment does not match expert 
 Yes. The dashboard shows metric score deltas between test runs and tracks trends over time, so you can confirm whether a model update improved or regressed quality.
 
 ## Platform Capabilities
+
+
 
 ### Multilingual Requirement Analysis and Multi-Language Testing
 
@@ -119,6 +129,8 @@ The three native connectors are:
 - **Confluence** for page content import, documentation retrieval, and knowledge base integration, including private Confluence instances via secure tunnels.
 
 ## Related TestMu AI Guides
+
+
 
 - See how to [run your first evaluation from the dashboard](/support/docs/testing-your-first-ai-agent/).
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

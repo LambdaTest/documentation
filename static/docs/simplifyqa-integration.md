@@ -18,6 +18,8 @@ This document will guide you step-by-step method to integrate the SimplifyQA wit
 - Login to TestMu AI account and click on the profile icon.
 - Navigate to **Account Settings** > **Password and Security**. Copy the provided **Username** and **Access Key**
 
+
+
 ### Step 2: Setup your SimplifyQA platform
 - Login to SimplifyQA as non-admin user. Click on the **Settings** icon > **Mobile Settings** .
 - Go to Cloud Setup and navigate to TestMu AI tab. Enter details copied from TestMu AI and save the settings:
@@ -25,9 +27,13 @@ This document will guide you step-by-step method to integrate the SimplifyQA wit
   - AccessKey – Your TestMu AI Access Key
   - Build – Reference build numbers
 
+
+
 ### Step 3: Upload your application
 - Go to TestMu AI's **Real Device** > **App Testing** and upload your desired **.apk** file.
 - After successfully uploading the APK, click on the settings icon and copy the provided **App ID**.
+
+
 
 ### Step 4: Trigger your tests from SimplifyQA
 - Record your test cases in SimplifyQA. Go to the Test Case module > click on **+** icon and select the **Mobile** to record your test cases.

@@ -6,7 +6,11 @@
 
 Sub Organization Widgets provide a comprehensive overview of the test health and trends of your sub-organizations. The module helps you to monitor and analyze the test concurrency utilization, browser distribution, OS distribution, and device coverage of your sub-organizations. This helps you to identify the bottlenecks in the testing process and optimize the testing strategy for your sub-organizations.
 
+
+
+
 The  features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@testmuai.com).
+
 
 ## How to use Sub-Organization Widgets?
 To use the Sub-Organization Widgets, follow the below steps:
@@ -16,8 +20,11 @@ To use the Sub-Organization Widgets, follow the below steps:
 - Select the `Sub Organization` widget from the list of available widgets.
 - Click on the `Add Widget` button for existing dashboard and Click on the `Create Dashboard` button for new dashboard.
 
+
+
 **Please Note**
 The Sub Organization Widgets are available for the feature enabled users only. You need to have access to admin control to use these widgets. Please reach out to our [24/7 customer support](mailto:support@testmuai.com) to enable these features.
+
 
 ## What are the Key Insights Provided by Sub-Organization Widgets?
 The `Sub-Organization` widget provides the following key insights:
@@ -27,12 +34,16 @@ The `Sub-Organization` widget provides the following key insights:
 
 ## Sub Organization Concurrency Trends
 
+
+
 The `Sub Organization Concurrency Trends` widget provides the concurrency utilization of your sub-organizations. This helps you to identify the concurrency utilization of your sub-organizations and optimize the concurrency utilization for your sub-organizations. The widget provides the following key insights:
 - **Concurrency Trends**: The widget provides the concurrency trends of your sub-organizations. This helps you to analyze the concurrency trends and identify the bottlenecks in the concurrency utilization of your sub-organizations.
 - **Concurrency Distribution**: The widget provides the distribution of the concurrency utilization of your sub-organizations. This helps you to identify the popular concurrency utilization of your sub-organizations.
 - **Concurrency Utilization Ratio**: The widget provides the concurrency utilization ratio of your sub-organizations. This helps you to identify the concurrency utilization ratio of your sub-organizations and optimize the concurrency utilization for your sub-organizations.
 
 ## Sub Organization Test Trends
+
+
 
 The `Sub Organization Test Trends` widget provides a trend of the tests run of your sub-organizations. This helps you to analyze the test trends and identify the test health of your sub-organizations. The widget provides the following key insights:
 - **Test Trends**: The widget provides the test trends of your sub-organizations. The total number of tests run, passed, failed and other statues are displayed in the widget. This helps you to analyze the test trends and identify the testing scope of your sub-organizations.

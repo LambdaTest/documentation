@@ -4,6 +4,7 @@
 
 This is the guide to setup the **version 2** of the SmartUI upload API.
 
+
 ### Prerequisites for running SmartUI
 
 - Basic understanding of HTTP APIs is required.
@@ -42,6 +43,7 @@ API_URL="https://api.lambdatest.com/automation/smart-ui/v2/upload"
 **NOTE**
 For more information, please visit our [API documentation](https://www.testmuai.com/support/api-doc/).
 
+
 **Step 2:** Add the following information to your API payload `form-body`:
 
 | Variable            | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                           | Is Mandatory? |
@@ -54,5 +56,6 @@ For more information, please visit our [API documentation](https://www.testmuai.
 
 **NOTE**
 We only support the following formats: `.png` `.jpeg` `.jpg`
+
 
 Please see the below screenshot for adding your screenshots which needs to be uploaded for your project to generate a build.

@@ -260,7 +260,7 @@ Yes. CustomScroll helps preserve the visible scroll state, but your test should 
 ## Related documentation
 
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/)
-- [SmartUI CLI Documentation](/support/docs/smartui-cli/)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 - [Handle Lazy Loading](/support/docs/smartui-handle-lazy-loading/)
 - [Handle Sticky Elements](/support/docs/smartui-handle-sticky-elements/)
 - [Custom CSS Injection in SmartUI](/support/docs/smartui-custom-css/)

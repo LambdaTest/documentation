@@ -7,8 +7,10 @@ TestMu AI supports connectivity via IPsec Site-to-Site VPN (S2S VPN) for clients
 **Executive Summary**
 An IPsec Site-to-Site VPN creates a permanent, encrypted tunnel between your network gateway and TestMu AI cloud, enabling secure access to internal staging environments, development servers, and private applications without exposing them to the public internet.
 
+
 **Client Action Required**
 Setting up an IPsec Site-to-Site VPN requires coordination with your organization's internal **Network and Security Team**. Your network/security team will need to configure your on-premises VPN gateway/firewall device, define firewall rules, and coordinate IP addressing with the TestMu AI network team. Please engage your internal IT/Security team before initiating this process.
+
 
 ## What is IPsec Site-to-Site VPN?
 
@@ -24,6 +26,8 @@ An IPsec Site-to-Site (S2S) VPN creates a permanent, encrypted tunnel between tw
 ## Network Architecture
 
 The diagram below illustrates the secure connection between your internal network and TestMu AI's cloud infrastructure.
+
+
 
 ### Traffic Flow Steps
 
@@ -92,6 +96,7 @@ The following ports must be permitted on your external firewall between the Clie
 **Network Team Involvement Mandatory**
 Setting up an IPsec Site-to-Site VPN is **NOT** a self-service process. It requires configuration on your organization's edge firewalls/routers.
 
+
 ### Required Actions by Client Team
 
 1. **Gateway Configuration**: Configure on-premise device (Cisco, Fortinet, Palo Alto, etc.) with provided parameters.
@@ -140,6 +145,7 @@ To initiate the VPN setup process, please gather the following details from your
 **Submit Your Request**
 Send the above details to **support@testmu.ai** to submit your VPN setup request. TestMu AI Network Engineering will review and contact you within **2 business days**.
 
+
 ## Implementation Checklist
 
 Setup involves parallel work from both teams. Use the checklists below to track progress.
@@ -177,5 +183,7 @@ Setup involves parallel work from both teams. Use the checklists below to track 
 - RFC 7296: Internet Key Exchange Protocol Version 2 (IKEv2)
 - NIST SP 800-77 Rev. 1: Guide to IPsec VPNs
 - FIPS 140-3: Security Requirements for Cryptographic Modules
+
+
 
 For VPN setup assistance, contact: **support@testmu.ai**

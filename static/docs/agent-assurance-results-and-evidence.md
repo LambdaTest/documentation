@@ -52,7 +52,11 @@ The viewer is:
 
 The agent page summarizes features, scenarios, profiles, trends, and prior runs.
 
+
+
 The run page shows totals, changes from the previous run, tool-oriented analysis, grouped verification gaps, and every scenario result.
+
+
 
 ## Inspect Criterion Evidence
 
@@ -64,6 +68,8 @@ Open a scenario result to compare:
 - Confidence and any verification gap.
 - The request and full exchange.
 - Produced or downloaded artifacts.
+
+
 
 Do not treat a fluent narrative as evidence by itself. Look for one of the following to support the criterion: a quote, a JSON value, an observed call, a filesystem fact, or a read-only external verification.
 

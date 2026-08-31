@@ -8,6 +8,7 @@ The TestMu AI and Notion integration allows you to perform one-click bug logging
 
 ## Integrating Notion With TestMu AI Account
 
+
 ### For existing users: Re-Sync your Integration
 
 If you are already an existing user and have integrated Notion with TestMu AI earlier, then you have to re-sync the integration to update the changes.
@@ -18,6 +19,10 @@ Follow the below-mentioned method to re-sync the changes:
 
 **Step 2:** Click on the **Resync** button to re-sync the changes made.
 
+
+
+
+
 ### For new users: Install the Integration
 
 > If you already have a TestMu AI integration with any third-party tool then you will be asked to uninstall the existing TestMu AI integration.
@@ -26,23 +31,38 @@ Follow the below-mentioned method to re-sync the changes:
 
 2. Visit 'Integrations' from the left menu and select **'Notion'** from the **'BUG TRACKER'** section.
 
+
+
 >**Note**: Make sure you have created an account on Notion.
 
 3. You will be taken to OAuth Page. Click on **Select Pages**.
 
+
+
 4. Choose the page on which you want to give an access. For example, in the below screenshot, we select *DemoTest1* page.
 
+
+
 5. After selecting the pages, click on **Allow Access**.
+
+
 
 The Notion will be successfully integrated with your TestMu AI account. You'll also receive the confirmation message and an email of the same.
 
 ## Creating A Kanban Board
 
+
 1. Open Notion dashboard. From the left menu, click **Add a page**.
+
+
 
 2. Select **Board**.
 
+
+
 3. Give a relevant title and add your desired properties in the board.
+
+
 
 Your Kanban board is now configured to store bugs.
 
@@ -54,25 +74,44 @@ We will perform one-click bug looging while perform Real Time Testing.
 
 2. Enter the test URL, select the test environment details like Browser, Browser versions, OS and Resolution. Then click on **'START'**.
 
+
+
 3. A cloud-based virtual machine will launch where you can perform real time testing of websites and web apps. If you found a bug, click on the **'Mark as Bug'** icon from the left tool bar to grab the screenshot.
+
+
 
 4. Once the screenshot is captured, annotate issues or tasks that you have encountered using in-built image editor tools. After annotating the bugs, click on **'Mark As Bug'**.
 
+
+
 5. A Notion ticket will open up. Fill the details like Board, Status, Assignee, Summary and Description. After providing the details in the ticket, click on **'Create Issue"**.
+
+
 
 Once you click on Create Issue, your bugs will be marked successfully.
 
 6. To view your logged issues, visit **Issue Tracker** from the TestMu AI left menu. You'll notice the marked bugs along with the Test environment details on the right.
 
+
+
 7. To view your marked bugs in Notion, click on the right diagonal arrow icon.
+
+
 
 You'll be routed to the Notion dashboard where you can find your marked issues along with the test environment details.
 
+
+
+
+
 ## Uninstalling The Notion Integration
+
 
 1. Login to your TestMu AI account and visit Integrations from the left menu.
 
 2. Navigate to 'My Integrations'and click on **'REMOVE'** under the Notion block.
+
+
 
 The Notion integration will be uninstalled.
 

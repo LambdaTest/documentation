@@ -6,7 +6,10 @@ TestMu AI provides seamless Single Sign-On (SSO) integration with various identi
 
 This comprehensive guide will walk you through configuring OIDC-based SSO between your TestMu AI organization and your identity provider, using Azure AD as the example throughout the documentation.
 
+
 ## What is OIDC (OpenID Connect)?
+
+
 
 OpenID Connect (OIDC) is a simple identity layer built on top of the OAuth 2.0 protocol. It allows clients to verify the identity of the end-user based on the authentication performed by an authorization server, as well as to obtain basic profile information about the end-user in an interoperable and REST-like manner.
 
@@ -18,6 +21,8 @@ OpenID Connect (OIDC) is a simple identity layer built on top of the OAuth 2.0 p
 - **Secure**: Industry-standard security practices
 
 ## Prerequisites
+
+
 
 To enable TestMu AI SSO through OIDC integration, you will need:
 
@@ -31,6 +36,8 @@ To enable TestMu AI SSO through OIDC integration, you will need:
 
 ## Step-by-Step Integration Guide
 
+
+
 ### Step 1: Create Application in Your Identity Provider
 
 The exact steps vary by identity provider, but the general process involves creating a new application or client registration. We'll use Azure AD as our example:
@@ -40,11 +47,16 @@ The exact steps vary by identity provider, but the general process involves crea
 
 3. **Create New Registration**: Click **New registration** to create a new application registration.
 
+
+
 4. **Configure Application Details**:
    - **Name**: Enter a descriptive name such as "TestMu AI SSO" or "TestMu AI OIDC Integration"
    - **Supported account types**: Select "Accounts in this organizational directory only"
    - **Redirect URI**: Leave this blank for now (we'll configure it later)
    - Click **Register** to create the application
+
+
+
 
 ### Step 2: Configure Application Settings
 
@@ -68,9 +80,13 @@ The exact steps vary by identity provider, but the general process involves crea
    - **Expires**: Select your preferred expiration period (recommended: 24 months)
    - Click **Add**
 
+
+
 3. **Copy Secret Value**:
    - **Important**: Copy the secret value immediately - it won't be shown again
    - Store this securely as you'll need it for TestMu AI configuration
+
+
 
 > **Important**: Store the client secret securely as you'll need it for TestMu AI configuration. Most providers only show the secret once.
 
@@ -83,6 +99,8 @@ The exact steps vary by identity provider, but the general process involves crea
    - Select **Web**
    - **Redirect URI**: Enter the redirect URI provided by TestMu AI (typically: `https://lambdatest.auth0.com/login/callback`)
    - Click **Save**
+
+
 
 ### Step 5: Collect OpenID Connect Metadata
 
@@ -99,6 +117,8 @@ https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configurat
    - **Auth0**: `https://yourdomain.auth0.com/.well-known/openid-configuration`
 
 2. **Verify Well-Known URL**: You can test the URL in your browser to ensure it returns valid JSON configuration.
+
+
 
 > **Verify Well-Known URL**: Test the URL in your browser to ensure it returns valid JSON configuration.
 
@@ -137,7 +157,10 @@ Connection Name: [Unique Connection Name]
 
 3. **Configure App Roles** (if needed): You can define custom app roles for different access levels within TestMu AI.
 
+
 ## Testing Your OIDC Integration
+
+
 
 ### Method 1: Direct SSO Login
 
@@ -151,6 +174,7 @@ Connection Name: [Unique Connection Name]
 
 5. **Verify Success**: After successful authentication, you should be redirected to your TestMu AI organization.
 
+
 ### Method 2: Direct OIDC Login (For Testing)
 
 Since OIDC doesn't support classic IDP-based SSO login, you can use this URL to simulate the login process:
@@ -162,6 +186,8 @@ https://accounts.lambdatest.com/auth0/login?connection={connection-name}
 Replace `{connection-name}` with the connection name you created in TestMu AI.
 
 ## Troubleshooting Common Issues
+
+
 
 ### Application Not Found
 - **Issue**: "Application not found" error during login

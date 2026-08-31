@@ -17,6 +17,7 @@ This document will help you leverage TestMu AI [Automated Screenshot](https://ww
 
 ## Prerequisites
 
+
 - **TestMu AI Authentication Credentials**
 Ensure that you have your TestMu AI authentication credentials, i.e., your TestMu AI username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com) by clicking on the key icon near the help button.
 
@@ -32,9 +33,13 @@ $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
 $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 
+
 Open API Document For Automated Screenshot Testing
 
+
+
 ## Fetch All OS + Browser Combinations
+
 
 The below **GET** request will help you extract a list of all the combinations for (OS + Browser) offered by TestMu AI. You can download these combinations as a JSON file.
 
@@ -117,6 +122,7 @@ As you execute, you will find the Server response presented below.
 ```
 ## Fetch Details Of An Executed Test Session
 
+
 In case you wish to fetch all the details from an already executed screenshot test session. These details will help you analyze the results of your [screenshot test session](/support/docs/automated-screenshot-testing/) at TestMu AI. You would get the below details:
 
 * **Test Details**:
@@ -175,6 +181,7 @@ Example Value:
 ```
 
 ## Run A Screenshot Test
+
 
 To start a screenshot test using the API, you would need to trigger the below **POST** request.
 
@@ -277,6 +284,7 @@ Example:
 "74",
 "73"
 ]
+
 
 }
 }

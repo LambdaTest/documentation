@@ -63,7 +63,7 @@ const API_YAML_FILE_MAP = {
 
 const NAV_SECTIONS = [
   { label: 'Home', href: '/support/' },
-  { label: 'Docs', href: '/support/docs/getting-started-with-testmu-automation/' },
+  { label: 'Docs', href: '/support/docs/testmu-running-your-first-selenium-test/' },
   { label: 'API Reference', href: '/support/api-doc/' },
   { label: 'FAQ', href: '/support/faq/' },
 ];

@@ -51,11 +51,15 @@ CustomScroll works in two steps:
 
 This ensures the screenshot reflects the page or component state your test actually reached.
 
+
 CustomScroll does not replace waits. For virtualized, lazy-loaded, or document-heavy pages, wait until the target page, row, or element is visible before taking the snapshot.
+
 
 ## Java And Playwright Examples
 
 Use `pageCustomScroll` and `elementsCustomScroll` in the snapshot options when the page and nested content can both scroll.
+
+
 
 ```java
 Map<String, Object> options = new HashMap<>();
@@ -64,6 +68,7 @@ options.put("elementsCustomScroll", true);
 
 SmartUISnapshot.smartuiSnapshot(driver, "PDF-Viewer-Page-25", options);
 ```
+
 
 ```javascript
 await page.goto('https://vault.example.com/ui/#doc_info/2/0/1?anQS=page25');
@@ -76,6 +81,8 @@ elementsCustomScroll: true,
 pageCustomScroll: false,
 });
 ```
+
+
 
 In this example:
 
@@ -206,7 +213,7 @@ Yes. CustomScroll helps preserve the visible scroll state, but your test should 
 ## Related documentation
 
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/)
-- [SmartUI CLI Documentation](/support/docs/smartui-cli/)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 - [Handle Lazy Loading](/support/docs/smartui-handle-lazy-loading/)
 - [Handle Sticky Elements](/support/docs/smartui-handle-sticky-elements/)
 - [Custom CSS Injection in SmartUI](/support/docs/smartui-custom-css/)

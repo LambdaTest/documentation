@@ -211,6 +211,7 @@ Zephyr Enterprise's test case fields are Name, Alt ID, Priority, Tags, Descripti
 | Zephyr test case ID | — | Custom field | Keep it — your permanent link back to Zephyr for audits and reconciliation. |
 | Zephyr version | Version History | Not mappable | Versioning restarts in Test Manager at import. |
 
+
 ### C. Value mapping
 
 Field mapping connects columns; value mapping connects the contents. Zephyr's priority scheme is admin-configurable, so yours may not match Test Manager's out of the box:
@@ -224,6 +225,7 @@ Field mapping connects columns; value mapping connects the contents. Zephyr's pr
 | Trivial | Lowest | Create new value |
 
 Do the same for any custom dropdown fields. Where a Zephyr value has no sensible home, **Create new value** adds it rather than forcing a bad match — but agree the scheme with your team first, or you'll end up with both "Blocker" and "Critical" in the same project.
+
 
 ## Why this migration uses CSV
 
@@ -244,6 +246,6 @@ Behaviour described in this guide comes from the Test Manager product docs:
 | Layouts, field mapping, preview, skipped rows | [Import Test Cases from CSV](/support/docs/csv-import/) |
 | Creating custom fields before import | [System and Custom Fields](/support/docs/system-and-custom-fields/) |
 | Connecting Jira before import | [Link Jira Issues with Test Manager](/support/docs/link-jira-issues-with-test-manager/) |
-| Editing fields in bulk after import | [Bulk Update Test Case Fields](/support/docs/bulk-update-fields/) |
+| Editing fields in bulk after import | [Bulk Update Test Case Fields](/support/docs/system-and-custom-fields/#bulk-update-fields) |
 | Exporting from Test Manager to verify results | [Export Test Cases](/support/docs/export-test-cases/) |
 | Organizing test cases after import | [Copy and Move Test Cases](/support/docs/copy-and-move-support-for-test-cases/) |

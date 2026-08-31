@@ -11,14 +11,19 @@ You can download the binary file responsible for establishing a tunnel connectio
 | [DOWNLOAD TestMu AI tunnel ZIP FOR LINUX 64 BIT](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip) |
 |:------------------------------------------------------------------------------------------------------------------:|
 
+
 ## Configuring Connection With TestMu AI tunnel
 
 **Step 1**:  Click the button **‘Configure Tunnel’**. Download the binary zip file by clicking the **‘Download Link’**. Press the **‘Copy’**  button in the form that opens up to copy the complete string to your system’s clipboard.
+
+
 
 >**What is this zip file for?**
 This zip file contains the tunnel binary which will help in establishing a secure tunnel connection to TestMu AI cloud servers so you could test your locally hosted web pages over thousands of browsers and operating systems for desktop and mobile using TestMu AI.
 
 **Step 2**:  Extract the downloaded zip file. Go to the terminal and route your pointer to the same directory where you extracted the zip file.
+
+
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
 ```
@@ -34,15 +39,25 @@ LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelN
 
 In a few seconds, after you execute the command, a tunnel connection will be established. You will receive a message inside your command prompt mentioning **"You can start testing now"**.
 
+
+
 ## Testing Locally Hosted Web Pages Using TestMu AI tunnel
 
 **Step 1**:  Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, Press the **‘Start’**  button for **‘Apache’**  under **‘Actions’**. If you also want to test the back-end functionality for your website then Press the **‘Start’**  button for **‘MySQL’**  as well.
 
+
+
 **Step 2**:  Navigate to **‘Real Time Testing’**  menu. Enter the localhost URL you want to test in the text field provided and Select the tunnel via which you want to run the test.
+
+
 
 **Step 3**:  Select the test configuration of your choice. You can select from various major browsers & their assorted versions to perform a test session. After selecting the configuration, click on the **‘Start’**  button.
 
+
+
 Once you press the **‘Start’**  button, your test will start and you will be navigated to your localhost URL.
+
+
 
 >**Note:** If `http://localhost:{port}`  does not work then try with either `http://localhost.lambdatest.com:{port}`  or your machine’s private IP `http://{IP}:{port}`.
 
@@ -52,11 +67,19 @@ Once you press the **‘Start’**  button, your test will start and you will 
 
 **Step 1:**  Navigate to **‘Configure Tunnel’**  button.
 
+
+
 **Step 2:**  Click on **‘Folder’**  button and copy the string on your system’s clipboard.
+
+
 
 **Step 3:**  After you establish a tunnel connection, go to TestMu AI and navigate to **‘Real Time Test’**. Enter `local-folder.lambdatest.com`  in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice. Click on the **‘Start’**  button.
 
+
+
 Once the VM (Virtual Machine) is launched, you will be able to access your local folders on a testing environment hosted by our cloud servers.
+
+
 
 >**Note:**  Similarly, if you want to run any file in the specified directory, you need to give URL as `local-folder.lambdatest.com/filename`.
 For example: If you have a file `test.html`  in your folder. You need to give URL as `local-folder.lambdatest.com/test.html`  to run the same file.
@@ -68,7 +91,11 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 
 **Option 1:**  You can kill the process by using **‘Ctrl+C’**  in the terminal. You will receive the below-highlighted message **‘Tunnel stopped successfully’**  indicating the termination of Tunnel Connection.
 
+
+
 **Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of the TestMu AI interface, you will find a button that says **‘Tunnel active’**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**button. Press the **‘x’**  button to terminate the tunnel connection.
+
+
 
 ## Geolocation Testing Through VPN with TestMu AI tunnel
 
@@ -141,8 +168,14 @@ If you ever misplace your Access key into the hands of someone you don’t trust
 
 Find your Access Key while performing any type of testing, from the left navigation menu. You will find a button that says **‘Configure Tunnel’**. Click on that button & a string containing your access key will be presented.
 
+
+
 For instance, if you go to **‘Real Time Test’**, you will observe a button that says **‘Configure Tunnel’**  on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
 
+
+
 You can also find your Access Key by going to **‘Settings’**  in the left navigation menu and routing to **‘Profile’**.
+
+
 
 >**TestMu AI tunnel Update:**  Earlier, when our TestMu AI tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.testmuai.com/) experience of locally hosted web pages. Not anymore! We have now updated the TestMu AI tunnel binary in a way that it auto-updates to the latest version every time you execute the TestMu AI tunnel from cmd/terminal.

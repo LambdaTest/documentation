@@ -332,7 +332,7 @@ With this feature, you can seamlessly validate a range of accessibility issues t
 ### How to Use:
 - **For Selenium Users:**
 To start accessibility testing with Selenium, you have to pass `"accessibility", true` capability in your test files.
-> 📕 Check out our detailed guide on [HyperExecute integration: Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/).
+> 📕 Check out our detailed guide on [HyperExecute integration: Selenium accessibility automation](/support/docs/accessibility-testng-test/).
 
 - **For Cypress Users:**
 To start accessibility testing with Cypress, you have to pass `accessibility: true` capability in the [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag of your YAML file as well as update other necessary configurations in your project.
@@ -582,7 +582,7 @@ HyperExecute integrates seamlessly with SmartUI SDK to deliver effortless visual
 
 You can seamlessly integrate SmartUI with your favorite frameworks - Selenium, Playwright, Puppeteer, Cypress, or Appium.
 
-📕 Refer to our comprehensive documentation - [HyperExecute with SmartUI SDK](/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/)
+📕 Refer to our comprehensive documentation - [HyperExecute with SmartUI SDK](/support/docs/smartui-sdk-with-hyperexecute/)
 
 ### Support for Chrome and Edge Beta Versions 🧑‍💻
 
@@ -635,7 +635,7 @@ HyperExecute now supports running Playwright tests on real devices. This allows 
 
 HyperExecute now supports integration with SmartUI for your Playwright tests. This allows you to use SmartUI's visual verification capabilities to ensure that your web applications are visually consistent and functional.
 
-> :green_book: Check the [documentation](/support/docs/hyperexecute-smart-ui-test-using-playwright/) to trigger your tests.
+> :green_book: Check the [documentation](/support/docs/smartui-hooks-with-hyperexecute/) to trigger your tests.
 
 ---
 
@@ -689,7 +689,7 @@ You can selectively exclude specific elements from visual comparisons during you
 
 - **Testing Specific Sections :** Target a particular area of your webpage for more granular testing.
 
-> 📕 Learn more about the [ignoreDOM](/support/docs/hyperexecute-smart-ui-testing-using-selenium/#smart-ui-test-keywords) flag
+> 📕 Learn more about the [ignoreDOM](/support/docs/smartui-hooks-with-hyperexecute/) flag
 
 ---
 

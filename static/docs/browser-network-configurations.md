@@ -6,7 +6,10 @@ Network logs record every network interaction during your test session, from API
 
 On TestMu AI, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 
+
 > To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
+
+
 
 ### Use cases
 
@@ -14,6 +17,8 @@ On TestMu AI, you can enable **network configurations** to capture and analyze t
 - **Verify backend integration** by checking if calls are made to the correct endpoints.
 - **Filter noise** by including/excluding specific hosts.
 - **Reproduce production issues** that depend on specific network conditions or API behaviors.
+
+
 
 ## Enabling Network Configuration
 
@@ -25,9 +30,13 @@ Log into your TestMu AI dashboard and navigate to Real Devices > App Testing.
 
 Choose a real Android or iOS device, upload your app (APK/IPA), or open a browser URL.
 
+
 ### Step 3: Configure network log options
 
 Run your app. In the network logs for your device, open the **Configuration Options** slider and select the options you want to apply for your current session.
+
+
+
 
 ### Configuration Options
 
@@ -37,16 +46,25 @@ Run your app. In the network logs for your device, open the **Configuration Opti
 | Include specific domains | Text input (comma-separated domains) | Empty    | Capture network requests only for the specified domains. |
 | Exclude specific domains    | Text input (comma-separated domains) | Empty    | Exclude network requests to the specified domains. |
 
+
+
 ## Available configuration options
+
 
 ### **Include specific domains**:
  Use this to capture logs only for network requests to specified domains. Enable the toggle and add the domains separated by commas, as shown below.
 
+
 ### **Capture content**:
 Use this option to capture or exclude response content. This is off by default but can be enabled if needed, as shown below.
 
+
 ### **Exclude specific domains**:
 Use this to exclude certain domains from network logs. This works similarly to **Include specific domains**. If both options are enabled, **Exclude specific domains** takes precedence.
+
+
+
+
 
 ## Best practices & tips
 
@@ -54,6 +72,9 @@ Use this to exclude certain domains from network logs. This works similarly to *
 - Use the include list to focus on relevant domains.
 - Avoid broad patterns that may capture excessive traffic.
 - Save your settings for reuse in future sessions.
+
+
+
 
 - Available only on **Pro Plans** for manual testing.
 - Apps from the App Store or Play Store may not support network capture.

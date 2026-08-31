@@ -4,6 +4,7 @@
 
 Make your agent's browser look like a real human user to bot-detection systems. Stealth mode masks fingerprints, randomizes user-agents, and humanizes interactions automatically.
 
+
 ## Why Stealth Matters
 
 If your automated browser is getting blocked, served CAPTCHAs, or shown
@@ -20,6 +21,7 @@ detectable fingerprints that these systems check for:
 Stealth mode in the TestMu AI Browser SDK removes or fakes these fingerprints, so
 the cloud browser is indistinguishable from a regular human user's Chrome
 session.
+
 
 ## Enabling Stealth
 
@@ -38,6 +40,7 @@ lambdatestOptions: { ... }
 });
 ```
 
+
 ## Configuration Reference
 
 | Option | Type | Default | What It Does |
@@ -46,6 +49,7 @@ lambdatestOptions: { ... }
 | `randomizeUserAgent` | `boolean` | `true` | Picks a random user-agent from a pool of 7 realistic Chrome/Firefox strings |
 | `randomizeViewport` | `boolean` | `true` | Adds ±20px random jitter to viewport dimensions |
 | `skipFingerprintInjection` | `boolean` | `false` | Disables all stealth entirely (Puppeteer only, useful for comparison testing) |
+
 
 ## What Gets Patched
 
@@ -79,6 +83,7 @@ cannot observe the original values:
 > **Selenium** does not support stealth mode. Use Puppeteer or Playwright if
 > your agent needs anti-detection.
 
+
 ## User-Agent Randomization
 
 When `randomizeUserAgent` is enabled (it is by default when any `stealthConfig`
@@ -92,12 +97,14 @@ detection signal.
 If you provide an explicit `userAgent` in the session config, it takes priority
 over randomization.
 
+
 ## Viewport Randomization
 
 When `randomizeViewport` is enabled, the SDK adds ±20 pixels of random jitter
 to your base viewport dimensions. Instead of the perfectly round `1920x1080`
 that bots typically fingerprint as, your session might run at `1907x1063` -
 subtly different each time.
+
 
 ## Humanized Interactions
 
@@ -112,6 +119,7 @@ methods to add random delays:
 
 New pages created during the session automatically inherit the same humanized
 behavior.
+
 
 ## Disabling Stealth
 
@@ -130,6 +138,7 @@ lambdatestOptions: { ... }
 });
 ```
 
+
 ## Testing Your Stealth Setup
 
 The TestMu AI Browser SDK includes a built-in test that visits the bot detection
@@ -138,6 +147,7 @@ comparison:
 
 Screenshots are saved to `test-output/`. Stealth ON shows green checks; stealth
 OFF shows red failures.
+
 
 ## How Stealth Works
 

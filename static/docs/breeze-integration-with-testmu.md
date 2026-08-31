@@ -8,17 +8,26 @@ TestMu AI integration with Breeze will help you log UI bugs or observations in y
 
 ## How To Integrate Breeze With Your TestMu AI Account?
 
+
 **Step 1:** Login to your TestMu AI account. You would need to have Admin or User level access to see and install integrations.
 
 **Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3:** Click on ‘Add’ under the block that says ‘Breeze’.
 
+
+
 **Step 4:** You need to specify your API token for authenticating your TestMu AI account to your Breeze instance.
+
+
 
 **Step 5:** Go to your Breeze project and hit the profile image holder on top-right. Select the option for Personal settings & password.
 
+
+
 **Step 6:** Select the tab for Integrations and copy the API token.
+
+
 
 > **What is an API token?**
 When two different applications interact with each other, a server-to-server communication is established. API token is needed for authenticating user identity from one server to another, by fetching user-owned resources available on the server from where the communication is initiated. API token has been a necessity for maintaining security and data integrity of any application. They are just as vital to an end user as they are to an application. API tokens are relevant if an end user logs in an application through a 2-step verification process.
@@ -26,19 +35,30 @@ When two different applications interact with each other, a server-to-server com
 
 **Step 7:** Paste this API token while integrating Breeze from your TestMu AI account. Now, hit the Install button.
 
+
+
 **Step 8:** Kudos! You have successfully integrated your TestMu AI account with Breeze your project.
 
 ## Log Your First Bug Through TestMu AI Integration With Breeze
+
 
 **Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking "Real Time Test" option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start‘.
 
+
+
 **Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for capturing a screenshot of the same. We have highlighted that option with yellow in the below image.
+
+
 
 **Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says "Mark as Bug".
 
+
+
 **Step 5:** After clicking on "Mark as Bug" button a form would open up. Fill the fields as per your requirement, and create the issue.
+
+
 
 * You can select your Breeze project.
 * Select the particular list in which you want to put your task.
@@ -46,13 +66,21 @@ When two different applications interact with each other, a server-to-server com
 * Provide a name to your task.
 * Mention a description to relay important message around the UI observation.
 
+
+
+
 > Note: After you click on "Create Bug", you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message "Bug successfully marked" indicating that the screenshot has been pushed to your Breeze project.
 
+
+
 **Step 6:** Now, go to your Breeze project and you will notice your logged task under the specific list your assigned it through TestMu AI.
+
+
 
 **Step 7:** As you click on the task. You will be able to find all the details you provided while marking the bug through TestMu AI. You would also find a URL routing to the screenshot you captured while cross browser testing using TestMu AI.
 
 ## Remove TestMu AI Integration With Breeze
+
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to remove your current integration. Here is how you can do that.
 
@@ -61,5 +89,7 @@ When two different applications interact with each other, a server-to-server com
 **Step 2:** Select ‘Integrations’ from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3:** Click on ‘REMOVE’. You can find the remove button right under the ‘Breeze’ block which would be highlighted with a green tick.
+
+
 
 > That was all you need to know for TestMu AI + Breeze Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on **chat** to help you out with any roadblock regarding our product. Happy testing! 🙂

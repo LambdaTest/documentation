@@ -6,6 +6,8 @@
 
 Once scan configuration and URLs are complete, you’ll be prompted to set your scan frequency and runtime preferences.
 
+
+
 ## Scheduling Modes
 
 ### Quick Scan (One-Time)
@@ -41,6 +43,8 @@ You're scheduling a scan for every Monday. With "Run Initial Scan" enabled, a ba
 * Click the 3-dot menu and select **Edit**.
 * Modify the scan name, schedule days, time, and time zone.
 * **Options:** Edit Schedule, Stop Recurring Scan, Delete Scan.
+
+
 
 ### Accessibility Scans:
 

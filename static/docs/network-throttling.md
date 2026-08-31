@@ -1,4 +1,4 @@
-# Network Throttling
+# How to Simulate Network Conditions in Selenium on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -8,15 +8,16 @@ To validate your website on such network profiles, simulate these network condit
 
 | KEY | VALUES |CAPABILITY |
 |-----|--------|-----------|
-| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this:  ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
+| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this: |
 
-```yaml
+```java
 capabilities.setCapability("networkThrottling", "Regular 4G");
 ```
 
 ## List of Network Profiles
 
-The following table lists all available preset network profiles with their speed and latency values.
+
+The following table lists all available preset network profiles with their speed and latency values. To mirror how users in a specific region experience your app, pair these profiles with Selenium geolocation testing, and use custom DNS mapping when the test must resolve a hostname to a particular IP.
 
 | CONDITION  | MAX DOWNLOAD SPEED (KBPS) | MAX UPLOAD SPEED (KBPS) | LATENCY (MS)     |
 | ------------ | --------------------------- | ------------------------- | ------------------ |
@@ -33,6 +34,7 @@ The following table lists all available preset network profiles with their speed
 **Custom Network Profile**: Create custom network conditions using objects. Define the upload speed, max download speed, and latency for the custom condition, as shown in the table above.
 
 ## Configuring Network Profile
+
 
 Use the Selenium JavaScript Executor to apply custom network throttling during tests.
 
@@ -55,11 +57,15 @@ TestMu AI allows you to select a network profile before running automation tests
 
 ## Configuring Network Throttling in Test Automation
 
-Define network throttle capabilities in your automation scripts to configure network throttling.
+
+Define network throttle capabilities in your automation scripts to configure network throttling. You can set these together with the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) that control your test environment.
 
 To configure network throttling in automation, use the [TestMu AI TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run automation tests.
 
-### Configuring Capabilities for Pre-defined Network Settings
+### Configuring Capabilities for Pre-Defined Network Settings
+
+
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("browserName", "Chrome");
@@ -71,11 +77,16 @@ caps.setCapability("networkThrottling", "Regular 4G");  //Set Network Speed to R
 The following TestNG code validates your TestMu AI credentials for authentication. The code selects basic capabilities such as OS, browser, browser version, and network.
 
 ### Configuring Custom Network Settings
+
+
+
 ```java
 package com.lambdatest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -114,6 +125,7 @@ throttleParams.put("latency", 30);   // Latency in ms
 driver.executeScript("lambda-throttle-network", throttleParams);
 
 }
+
 
 @Test
 public void basicTest() throws InterruptedException {
@@ -198,4 +210,14 @@ driver.quit();
 
  Find your defined network capabilities under the section 'Input Config' by navigating to the 'METADATA' section of your automation build-logs.
 
+
 > In case you have any questions, feel free to share them with us.Our experts are available on **24/7 Customer chat support**. You can also drop us a mail at support@testmuai.com. Happy testing! 🙂
+
+## Next Steps
+
+
+Continue with these related guides:
+
+- [Selenium Geolocation Capabilities](/support/docs/selenium-geolocation-capabilities/)
+- [Custom DNS Map](/support/docs/custom-dns-map/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)

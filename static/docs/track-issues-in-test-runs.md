@@ -37,9 +37,13 @@ Use this when the defect is already tracked in Jira or Azure DevOps and you want
 1. Open the Test Run and stay on the **Test Instances** tab.
 2. On the test instance you want, open the bug menu on its row and select **Link Issue**.
 
+
+
 3. In the **Link Issues** dialog, choose the tracker: **Jira** or **Azure DevOps**. Only trackers you have integrated are available.
 4. Enter the issue key or paste its URL.
 5. Click **Link Issue**.
+
+
 
 The issue is now linked, and the test instance row shows a bug count. That count is your at-a-glance signal for which tests in the run have known defects.
 
@@ -52,9 +56,13 @@ Use this when you find a defect while executing a test and no ticket exists yet.
 3. Fill in the issue details, such as the project, issue type, and summary. Required fields are marked. The panel already carries the test instance's context.
 4. Click **Create Issue**.
 
+
+
 Test Manager files the ticket in your bug tracker without leaving the run. When the ticket is created in Jira or Azure DevOps, it is associated with the test instance and appears in the same views as a linked issue.
 
+
 Mark as Bug can file tickets in several bug trackers, but only Jira and Azure DevOps tickets are tracked back to the test instance. See [Supported trackers and visibility](#supported-trackers-and-visibility).
+
 
 ## Review the issues on an instance
 
@@ -64,6 +72,8 @@ You can review the bugs on a test instance in two ways:
 - **From the instance**: open the test instance and go to its **Issues** tab. The tab header shows how many issues the instance carries. This is only possible in Manual Test Runs.
 
 Each issue entry shows its title, key, type, status, priority, the project it belongs to, and who created it, enough to triage without opening the tracker. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
+
+
 
 ## Add a bug while reviewing an instance or a step
 

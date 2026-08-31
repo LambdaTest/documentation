@@ -8,8 +8,15 @@ The categories below group the most common scenarios you can cover with Kane CLI
 
 ## Browse by Category
 
+
+
+
+
       🔗 API Testing
       Smoke tests, auth-token chaining, schema and field validation, negative paths, SLA gates, and multi-step transactions.
+
+
+
 
       🤖 AI Coding Agents
       Give Claude Code, Codex CLI, or Gemini CLI a real browser: verify a change, reproduce a bug, diagnose failures, and commit verified runs as tests.

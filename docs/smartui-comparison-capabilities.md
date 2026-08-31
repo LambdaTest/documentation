@@ -238,5 +238,5 @@ options.put("ignoreType", Arrays.asList()); // override: compare this one in ful
 - [SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
 - [Ignore and Select Regions on Web Hooks](/support/docs/smartui-hooks-region-ignore/)
 - [Smart Ignore](/support/docs/smartui-smartignore/)
-- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/html-dom-smartui-options/)
+- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/smartui-project-settings/)
 - [Selenium Visual Regression](/support/docs/selenium-visual-regression/)

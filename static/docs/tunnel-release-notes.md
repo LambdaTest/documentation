@@ -84,17 +84,25 @@
 - **Support for Wildcard in `allowHosts` and `bypassHosts`**
   - Added the ability to use wildcards in the `allowHosts` and `bypassHosts` configurations, providing more flexibility in defining tunnel access rules.
 
+
+
 ## Version 3.2.10 (18th December 2024)
 - **Security Certificate Update**
   - Updated security certificates to ensure enhanced security compliance and prevent potential vulnerabilities.
+
+
 
 ## Version 3.2.9 (24th November 2024)
 - **Logger Level Configurability**
   - Introduced support for configuring logger levels in the Tunnel Client. This allows users to customize the verbosity of logs based on their requirements.
 
+
+
 ## Version 3.2.8 (22nd December 2024)
 - **Fix for Tunnel Stop Issue**
   - Resolved a bug that caused issues when stopping the tunnel, ensuring smoother operation during tunnel termination.
+
+
 
 ## Version 3.2.7 (25th October 2024)
 - **Security Updates and Stability Fixes**

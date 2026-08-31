@@ -8,18 +8,30 @@ The TestMu AI App Manager is a tool within the Real Device App Testing section. 
 
 To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
 
+
+
+
+
 ## Accessing App Manager
 To access the App Manager in TestMu AI:
 
 **Step 1:** Navigate to **Real Device** under **App Testing** in the TestMu AI dashboard.
 
+
 **Step 2:** Click on the **App Manager** CTA.
 
+
 **Step 3:** This will open the **App Manager** in a new tab.
+
 
 ## Uploading Apps on App Manager
 
 In the **App Manager** window, users can **upload mobile app** files Either by click **“Click to upload”**  or **drag and drop your file** into the upload box.
+
+
+
+
+
 
 **Supported formats :**
 | Platform | Supported Format |
@@ -30,6 +42,9 @@ In the **App Manager** window, users can **upload mobile app** files Either by c
 **Maximum App upload limit (Per batch):** 10
 
 **Maximum size per app:** 1 GB
+
+
+
 
 ## Searching and Filtering Apps
 Once your apps are uploaded, you can easily search and filter them using the tools provided:
@@ -52,16 +67,23 @@ Once your apps are uploaded, you can easily search and filter them using the too
 
     - Both **Android** and **iOS** apps together
 
+
+
+
 ## Version Control
 
 **TestMu AI App Manager** offers a convenient version control system for managing multiple versions of the same application:
 - When you click on an app name in the file bundle section, a **App Card** opens.
 - This **App Card** displays all versions of the selected app that have been uploaded.
 
+
 - The **most recent version** appears at the top, with older versions listed below.
 - Users can:
   -  **Search** through the uploaded App versions.
   -  Run any version by clicking the **Green Run** button or recent version by clicking on **Run App**.
+
+
+
 
 ### Release Notes for Versions
 For each app version, you can add multiline release notes to help differentiate between multiple builds.
@@ -71,9 +93,14 @@ For each app version, you can add multiline release notes to help differentiate 
 
 - Once added, a notes icon appears on the version. On hover, the release note is shown directly from the App Card.
 
+
+
 - Maximum release notes length is upto 500 characters.
 - On hover, only the first 100 characters are displayed, followed by ... if the text is longer.
 - Only the owner of the version has permission to add or edit release notes, Other users can only view them.
+
+
+
 
 ## Launching an App on a Real Device
 Once a specific version is selected:
@@ -82,11 +109,13 @@ Once a specific version is selected:
 
  **Step 2** This action redirects you to the **Real Device App Testing** screen
 
+
  **Step 3** A list of available Real devices is displayed. Click on the device you want to use for testing.
 
  **Step 4** Click on **Start button**.
 
  **Step 5** This will **launch your Session**.
+
 
 ## Use Case
 

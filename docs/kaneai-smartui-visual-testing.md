@@ -1,7 +1,8 @@
 ---
 id: kaneai-smartui-visual-testing
 title: How to Run Visual Tests With KaneAI
-sidebar_label: Visual Testing
+sidebar_label: Visual Testing with KaneAI
+displayed_sidebar: VisualRegressionTestingSidebar
 hide_title: true
 toc_max_heading_level: 2
 description: Automate visual regression tests in KaneAI, capture screenshots, set baselines, compare changes with SmartUI, and schedule automated runs.

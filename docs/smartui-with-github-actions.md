@@ -346,9 +346,9 @@ on:
 If you encounter issues not covered here:
 
 - Review [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 </TabItem>
 </Tabs>
@@ -356,7 +356,7 @@ If you encounter issues not covered here:
 
 ## Additional Resources
 
-- [SmartUI CLI Documentation](/support/docs/smartui-cli)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

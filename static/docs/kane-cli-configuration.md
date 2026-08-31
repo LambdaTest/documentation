@@ -6,6 +6,8 @@ Kane CLI stores persistent settings at `~/.testmuai/kaneai/tui-config.json`. Mos
 
 Authentication credentials are managed separately under `~/.testmuai/kaneai/profiles/`. See [Authentication](/support/docs/kane-cli-authentication/).
 
+
+
 ## Viewing Settings
 
 Print the current configuration:
@@ -38,6 +40,8 @@ chrome   /Users/you/.testmuai/kaneai/chrome-profiles/work
 
 Empty fields are shown as `(none)`. The `chrome` path is empty by default, in which case Kane CLI launches Chrome with a temporary profile each run.
 
+
+
 ## Settings Reference
 
 | Field | Type | Default | Description | How to Change |
@@ -58,6 +62,8 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 | `code_export.enabled` | boolean | `false` | Generate code export after upload completes. | TUI menu, or `--code-export` flag |
 | `code_export.language` | `"python"` \| `"javascript"` | `"python"` | Output language for generated code. Accepts `python` or `javascript`. | `--code-language ` |
 | `code_export.skip_validation` | boolean | `true` | Skip post-codegen worker-side validation. | TUI menu, or `--skip-code-validation` |
+
+
 
 ## Updating Settings
 
@@ -147,6 +153,8 @@ The `code_export` block enables and configures generated code output produced af
 
 Code export requires a Test Manager upload, so it is only meaningful when a project is configured. See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for the full upload pipeline.
 
+
+
 ## Chrome Management
 
 ### Chrome Profile
@@ -182,6 +190,8 @@ Headless mode is per-run; there is no persistent setting. It is the right choice
 ### Window Size
 
 The Chrome window dimensions for both headed and headless modes come from the `window_size` setting. See [Window Size](#window-size) above to update them.
+
+
 
 ## Resetting Settings
 

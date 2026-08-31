@@ -6,6 +6,8 @@ LangGraph agents are text agents exposed over HTTP, with state held in a graph a
 
 ## Before You Begin
 
+
+
 Before you connect a LangGraph agent, make sure you have:
 
 - A deployed graph with a reachable endpoint, self-hosted or on LangGraph Platform
@@ -14,11 +16,15 @@ Before you connect a LangGraph agent, make sure you have:
 
 ## Test a LangGraph Chat Agent
 
+
+
 Chat testing covers text conversations against a deployed graph, whether streaming or non-streaming. Upload the graph definition and supporting docs to generate scenarios, then create the endpoint profile using the deployment's REST endpoint, with a fresh thread per scenario. It scores reasoning, tool call correctness, grounding, and safety, and runs in CI on every commit.
 
 Full setup: [Chat agent testing](/support/docs/chat-agent/)
 
 ## What You Get With Agent Testing
+
+
 
 Every LangGraph run, on any surface it supports, is scored across:
 
@@ -31,6 +37,8 @@ Every LangGraph run, on any surface it supports, is scored across:
 
 ## LangGraph-Specific Considerations
 
+
+
 A few LangGraph behaviours are worth building dedicated scenarios around:
 
 - State lives on the thread, so reusing one across scenarios contaminates results
@@ -40,6 +48,8 @@ A few LangGraph behaviours are worth building dedicated scenarios around:
 - There is no voice or phone surface, so voice metrics and personas do not apply
 
 ## Troubleshooting
+
+
 
 Common failure modes to watch for:
 

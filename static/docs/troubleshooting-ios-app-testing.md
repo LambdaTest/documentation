@@ -4,7 +4,9 @@
 
 While uploading `.app` files on Simulators, you may encounter issues such as the app crashing immediately or the error *"No .app found inside zip"*. These problems typically occur when the app is not built correctly for the Simulator platform.
 
+
 For a complete step-by-step guide on building your iOS app for Simulator testing, see [Building Your iOS App for Simulator Testing](/docs/build-ios-app-for-simulator-testing/).
+
 
 ## Common Issues
 
@@ -31,7 +33,9 @@ vtool -show-build YourApp.app/YourApp
 
 The output should show `platform: IOSSIMULATOR` (Platform 7).
 
+
 Your Simulator build must include the **arm64** architecture. There is no need to exclude it from Simulator builds.
+
 
 ### "No .app found inside zip" error
 
@@ -41,6 +45,12 @@ Your Simulator build must include the **arm64** architecture. There is no need t
 1. Build your app for the Simulator (as described above).
 2. Locate the `.app` file in Xcode: right-click the `.app` under **Products** and select **Show in Finder**.
 3. Right-click the `.app` file in Finder and select **Compress** to create the `.zip` file.
+
+
+
+
+
+
 
 Your `.zip` file is now ready for upload on TestMu AI servers.
 
@@ -57,5 +67,7 @@ Your `.zip` file is now ready for upload on TestMu AI servers.
 | **Supported Platforms** | iOS Simulator |
 
 Ensure you are **not** excluding arm64 from Simulator builds.
+
+
 
 That's all! In case you have any questions or need any additional information, you could reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.

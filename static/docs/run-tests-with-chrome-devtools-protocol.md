@@ -8,12 +8,14 @@ On TestMu AI, you connect to a cloud Chrome browser over CDP and run your web au
 
 ## Prerequisites
 
+
 Before you start, make sure you have the following in place.
 
 1. A TestMu AI account. [Sign up on TestMu AI](https://www.testmuai.com/register/) if you do not have one.
 2. Node.js 18 or later installed.
 
 ## Running Web Automation Tests With CDP
+
 
 Puppeteer is a CDP client. It connects to a TestMu AI cloud browser over a CDP WebSocket, so no Browser SDK is required. The example opens a product listing on the [E-Commerce Playground](https://ecommerce-playground.lambdatest.io/) and reads it; swap the URL and selectors for your own target.
 
@@ -23,7 +25,9 @@ Puppeteer is a CDP client. It connects to a TestMu AI cloud browser over a CDP W
 - The **`puppeteer-core`** package (installed in step 1).
 - Your TestMu AI **Username** and **Access Key** (set as environment variables in step 2).
 
+
 These examples are written in TypeScript. You're free to use plain JavaScript instead (remove the type annotations and save the file as `.js`), or connect over CDP from any other language your stack supports. The connection flow is the same.
+
 
 **1. Install the Puppeteer client.** `puppeteer-core` connects to a remote browser without downloading a local one.
 
@@ -40,20 +44,32 @@ found 0 vulnerabilities
 
 **2. Set your credentials.** Copy your **Username** and **Access Key** from **Settings → Account Settings**, then set them as environment variables.
 
+
+
+
 ```bash
 export LT_USERNAME="your_username"
 export LT_ACCESS_KEY="your_access_key"
 ```
+
+
+
 
 ```powershell
 $env:LT_USERNAME="your_username"
 $env:LT_ACCESS_KEY="your_access_key"
 ```
 
+
+
+
 ```batch
 set LT_USERNAME=your_username
 set LT_ACCESS_KEY=your_access_key
 ```
+
+
+
 
 **3. Create `cdp-test.ts`.** It builds the CDP endpoint from your credentials, connects Puppeteer to the cloud browser, pages through the listing, marks the test **passed** or **failed** on the dashboard, and disconnects.
 
@@ -165,7 +181,11 @@ Collected 75 products total
 
 To view your test results, navigate to the TestMu AI Web Automation dashboard.
 
+
+
+
 ## Running Web Automation With CDP From an AI Agent
+
 
 AI agent workloads need more than a raw connection: stealth so a site does not flag the browser as automated, session persistence so a logged-in agent does not start cold, and managed cleanup.
 
@@ -378,7 +398,9 @@ To see your test results, open the TestMu AI Web Automation dashboard.
 **Get started faster with ready-made cookbooks**
 The [Browser Cloud agent skills](/support/docs/browser-cloud-skills/) are ready-made cookbooks that teach any AI agent (Claude, Cursor, and other LLM tools) to generate production-grade Browser Cloud automation for you. Drop the skill into your assistant and it writes integrations like the ones above, so you can get started with Browser Cloud at the earliest.
 
+
 ## Related TestMu AI Guides
+
 
 - [How to launch your first Browser Cloud session](/support/docs/launch-first-session/) to verify credentials before your first run.
 - [How to connect Puppeteer, Playwright, or Selenium to a session](/support/docs/connect-to-session/) for the full SDK adapter reference.

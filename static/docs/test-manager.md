@@ -32,6 +32,7 @@ You can also import existing test cases in bulk using CSV. The import supports c
 
 Create a test run, add test cases, and assign them to testers. During manual execution, testers see each test step in sequence and record pass/fail results with attached evidence. Automated tests can be triggered from the same workspace, and results from manual and automated runs flow into one unified view, executed against real browsers and devices in the TestMu AI cloud.
 
+
 ## Two-way Jira sync
 
 Connect your Jira account using your hostname and credentials to link Jira issues with test cases, test runs, and results. Updates made on either side are reflected across both platforms automatically, with no copy-pasting and no version mismatches.
@@ -92,8 +93,10 @@ Jira (two-way sync plus an Atlassian Marketplace app), Azure DevOps, GitHub, Git
 - [What is test management](https://www.testmuai.com/test-management/what-is-test-management/)
 - [Test case management](https://www.testmuai.com/test-management/test-case-management/)
 
+
+
 ## Related guides
 
 - [Test Case Repository](/support/docs/test-case-repository/) — organize and reuse test cases in the Test Manager repository.
 - [Sync Test Instance](/support/docs/sync-test-instance/) — keep test run instances in sync as your test cases evolve.
-- [Test Instance Audit Logs](/support/docs/test-instance-audit-logs/) — track changes to a test instance with audit logs.
+- [Test Instance Audit Logs](/support/docs/test-run-creation-and-management/) — track changes to a test instance with audit logs.

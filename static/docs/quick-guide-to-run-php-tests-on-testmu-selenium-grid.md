@@ -6,6 +6,7 @@ TestMu AI's cloud-based Selenium grid can be leveraged to run your automation te
 
 ## Prerequisites
 
+
 Running PHP scripts require your local system to have both PHP and Composer. Here’s how you can setup your PHP environment for running Selenium scripts.
 
 - First step is to install the latest PHP build. Latest MacOS systems come with PHP pre-installed, however for windows users and linux users, you can download PHP from [here](https://www.php.net/manual/en/install.php).
@@ -20,6 +21,8 @@ php -r "unlink('composer-setup.php');"
 ```
 - If you are using XAMPP or MAMP, you may have to open up PHP shell by pressing the button shown in picture below:
 
+
+
 Once you have composer installed, you can leverage Composer to download and install Selenium dependencies. For that, first create a composer.json file in your directory and add the following JSON code:
 
 ```javascript
@@ -32,6 +35,7 @@ Once you have composer installed, you can leverage Composer to download and inst
 ```
 ## Installing Selenium Dependencies For PHP
 
+
 Now all you would have to do is to run composer to install Selenium. You can do that by running following command in your terminal:
 
     composer install
@@ -42,9 +46,11 @@ If you are using XAMPP or MAMP you may have to be a little more specific.
 
 ## Sample PHP & Selenium Test To Get You started
 
+
 Once you have installed and setup PHP and Selenium, you are now ready to run PHP automation scripts on TestMu AI Selenium Grid. Checkout the simple sample code below. This is a simple PHP and Selenium automation script that opens up google.com, searches TestMu AI and outputs the title of the resultant google search page. You can also fork it from our [PHP GitHub repository](https://github.com/LambdaTest/php-selenium-sample).
 
 ### PHP Sample Test
+
 
 ```javascript
 <?php

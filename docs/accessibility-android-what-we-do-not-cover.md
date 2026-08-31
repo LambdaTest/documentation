@@ -8,4 +8,4 @@ slug: accessibility-android-what-we-do-not-cover/
 
 import { Redirect } from '@docusaurus/router';
 
-<Redirect to="/support/docs/accessibility-android-what-we-cover/#manual-test-checklist" />
+<Redirect to="/support/docs/accessibility-web-what-we-cover/" />

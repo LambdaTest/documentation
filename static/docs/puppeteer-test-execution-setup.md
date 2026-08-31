@@ -1,14 +1,15 @@
-# Puppeteer - Test Execution Setup
+# How to Set Up the Puppeteer Test Environment on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Whenever you run a Puppeteer test, you must specify the operating system and the browser you wish to use. The TestMu AI Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on TestMu AI.
+When you run a Puppeteer test on TestMu AI, you must tell the cloud machine which operating system and browser to use. Setting the right capabilities gives your scripts access to the browser, OS, resolution, and debugging logs each run needs. You do it by defining a capabilities object in your Puppeteer script and passing it to the CDP endpoint, so every test targets the exact environment you want.
 
-In this guide, learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Puppeteer tests.
+The TestMu AI Capability Generator can auto-create the capabilities class for your Puppeteer scripts. The sections below cover selecting browsers and OS, organizing tests, changing desktop resolution, and enabling debugging logs.
 
-## Choosing Browser And OS
+## Choosing the Browser and OS
 
-To perform Puppeteer testing on TestMu AI, you need to define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts.
+
+To run a Puppeteer test on TestMu AI, define the browser, browser version, and platform in your automation script. The three capabilities below set the exact environment the test targets.
 
 | Key | Expected Values | Description | Example |
 | -------- | -----| ------- | ----------------- |
@@ -16,9 +17,10 @@ To perform Puppeteer testing on TestMu AI, you need to define the `browserName`,
 | browserVersion  |  Chrome 83 & above, Edge 83 & above |   Specify the browser version to test on    |  `const capability = {"browserVersion": "113.0"}`
 | platform  |  **Windows**: 11, 10, 8, 8.1, 7  **macOS**: Monterey, Big Sur, Catiline, Mojave |    Specify the platform name    | `const capability = { "LT:Options": {"platform": "Windows 10",}}`
 
-## Organizing Tests
+## Organizing Tests With Build and Name Capabilities
 
-You can name your test cases and categorize your builds by build, and name for easier analysis. You will need to use the name, and build capabilities to organize Puppeteer  automated tests.
+
+Name your test cases and group your builds so runs stay easy to find in the dashboard. Use the capabilities below to organize your Puppeteer tests.
 
 | Key | Values | Description | Capability|
 | -------- | -----| ------------ | ---------|
@@ -28,10 +30,10 @@ You can name your test cases and categorize your builds by build, and name for e
 | tags   |  ["tag1", "tag2", "tag3"] |  Group your Puppeteer tests |``const capability = {"LT:Options": { "tags": ["tag1", "tag2", "tag3"], }}`` |
 | buildTags   |  ["build1", "build2", "build3"] |  Group your Puppeteer builds |`const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
 
-Shown below is the script that configure the `build` and `name` capabilities.
+The script below configures the `build` and `name` capabilities inside the `LT:Options` object.
 
 ```js
-# add test code after initializing your browser
+// add test code after initializing your browser
 'use strict';
 const { strict } = require('once');
 const puppeteer = require('puppeteer');
@@ -81,7 +83,8 @@ console.log("Error - ", e);
 
 ## Getting Session Details
 
-Each Puppeteer test generates a different log on TestMu AI. To get the information relevant to your test session, use the snippet provided below in your Puppeteer test scripts.
+
+Each Puppeteer test generates its own logs on TestMu AI. To read the information for the current session, add the snippet below to your Puppeteer test script.
 
 ```js
 let response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`)
@@ -121,7 +124,8 @@ status: 'success'
 
 ## Changing Desktop Resolutions
 
-Puppeteer tests run with a `1920x1080` resolution by default for desktop browsers. With our `resolution` capability, you can set a different screen resolution for your tests.
+
+Puppeteer tests run at `1920x1080` by default on desktop browsers. Set the `resolution` capability to run at a different screen resolution.
 
 | Capability | Description  | Expected Values | Example |
 | -------- | -----| ------------ | -----------------------------|
@@ -129,10 +133,10 @@ Puppeteer tests run with a `1920x1080` resolution by default for desktop browser
 
 ## Changing Browser Window Size
 
-If you wish to modify the browser window size during your Puppeteer test, you can do it as shown in the code below.
+
+To change the browser window size during a Puppeteer test, call `page.setViewport()` as shown below.
 
 ```js
-
 await page.setViewport({
 width: 1024,
 height: 768,
@@ -140,40 +144,72 @@ deviceScaleFactor: 1,
 });
 ```
 
-## Naming your Project
+## Naming Your Project
 
-You can give your project a name of your choice by using the `projectName` key.
 
-| Key | Values | Description | Desired Capability |
+Group related builds under a project by setting the `projectName` key to a name of your choice. Use the capability below.
+
+| Key | Values | Description | Capability |
 | -------- | -----| ------------ | --------------|
 | projectName   | Example: My Test |   Represent the name of your project    |  `const capabilities = { 'LT:Options': {'projectName': 'My Test',}}` |
 
-## Debugging Tests
+## Debugging Tests With Logs and Video
 
-By specifying the capabilities for the debugging tools, you can debug and fix your failed Puppeteer test sessions using network logs, console logs, and video logs.
 
-| Key | Values | Description | Desired Capability |
+Enable network logs, console logs, and video recording to debug failed Puppeteer sessions. Set the capabilities below to capture each type of log.
+
+| Key | Values | Description | Capability |
 | -------- | -----| ------------ | --------------|
 | network   | true/false |   Enable network logs    |  `const capabilities = { 'LT:Options': {'network': true,}}` |
 | console  | true/false |   Enable browser console logs  | `const capabilities = { 'LT:Options': {'console': true,}}` |
 | video   |  true/false |    Enable Video recording of the entire screen     | `const capabilities = { 'LT:Options': {'video': true,}}` |
 
-## Mark Tests As Passed Or Failed
+## Mark Tests as Passed or Failed
 
-While running Puppeteer tests on the TestMu AI platform, you may come across a scenario in which a test that failed in your local instance turns up to be successful on TestMu AI. For verifying expected behavior, it is critical to identify automated tests as **Passed** or **Failed** based on your testing requirements.
 
-By default, the Status of each test that runs successfully is marked as **Completed**, and if there are any issues, the Status is marked as **Failed**.
+A test that fails on your local machine can still pass on TestMu AI, so set the status explicitly to match your own assertions. By default, a test that finishes without error is marked **Completed**, and one that hits an error is marked **Failed**. Use the `setTestStatus` action to override this.
 
-Shown below is syntax how to mark Puppeteer tests as **Passed** or **Failed**.
+1. To mark test status as **passed**:
 
-1. To mark test status as **passed**.
-
-```
+```js
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)
 ```
 
-2. To mark test status as **failed**.
+2. To mark test status as **failed**:
 
-```
+```js
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)
 ```
+
+## Capabilities Reference
+
+
+The TestMu AI Capability Generator can auto-create the capabilities class for your Puppeteer scripts. The full set of capabilities you can configure is listed below.
+
+| Key | Expected Values | Description | Capability |
+| -------- | -----| ------- | ----------------- |
+| browserName   |  Chrome, Edge |   Specify the browser to test on    |  `const capability = {"browserName": "Chrome"}`
+| browserVersion  |  Chrome 83 & above, Edge 83 & above |   Specify the browser version to test on    |  `const capability = {"browserVersion": "113.0"}`
+| platform  |  **Windows**: 11, 10, 8, 8.1, 7  **macOS**: Monterey, Big Sur, Catiline, Mojave |    Specify the platform name    | `const capability = { "LT:Options": {"platform": "Windows 10",}}`
+| build   |  Puppeteer Sample Build |   Represent the build number for your test | `const capability = { "LT:Options": {"build": "",}}`
+| name   |  Puppeteer Sample Test |    Represents the name of a test   | `const capability = { "LT:Options": {"name": "",}}`
+| resolution   |  Specifying your desktop resolution before initiating the test |   String, **Default value**: 1920x1080   **Windows 11 & 10**: `1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080 and 2048x1536`  **macOS**: `1024x768, 1280x960, 1280x1024, 1600x1200 and 1920x1080`  | `const capability = {"LT:Options": {"resolution": '1024x768'}}` |
+| projectName   | Example: My Test |   Represent the name of your project    |  `const capability = { "LT:Options": {"projectName": "",}}` |
+| tags   |  ["tag1", "tag2", "tag3"] |  Group your Puppeteer tests |``const capability = {"LT:Options": { "tags": ["tag1", "tag2", "tag3"], }}`` |
+| buildTags   |  ["build1", "build2", "build3"] |  Group your Puppeteer builds |`const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
+| network   | true/false |   Enable network logs    |  `const capability = { "LT:Options": {"network": true,}}` |
+| console  | true/false |   Enable browser console logs  | `const capabilities = { "LT:Options": {"console": true,}}` |
+| video   |  true/false |    Enable video recording of the entire screen     | `const capability = { "LT:Options": {"video": true,}}` |
+| tunnel   |  true/false |    Enable tunnel for local testing     | `const capability = { "LT:Options": {"tunnel": true,}}` |
+| tunnelName   |  true/false | Specify tunnel name     | `const capability = { "LT:Options": {"tunnelName": "",}}` |
+| geoLocation   |  AR (Argentina) | Specify country code | `const capability = { "LT:Options": {"geoLocation": "AR",}}` |
+| idleTimeout | number| Specifies the timeout of the commands in seconds.  Default value: 300  Max value: 1800 If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "",}}`|
+
+## Related Puppeteer Guides
+
+
+Continue with the guides below to run and scale your Puppeteer tests on TestMu AI.
+
+- [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/) walks through the end-to-end setup.
+- [Run Puppeteer tests with Mocha](/support/docs/puppeteer-testing-with-mocha/) covers the Mocha test runner integration.
+- [Run Puppeteer tests with Jest](/support/docs/puppeteer-testing-with-jest/) covers the Jest test runner integration.

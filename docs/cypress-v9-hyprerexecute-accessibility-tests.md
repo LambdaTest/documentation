@@ -56,7 +56,7 @@ Please reach out to our <span className="doc__lt" onClick={() => window.openLTCh
 :::
 
 ## Prerequisites
-- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
 - Setup your local machine as per your testing framework.

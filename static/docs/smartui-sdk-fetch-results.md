@@ -11,7 +11,9 @@ SmartUI CLI allows you to fetch detailed build results after executing your visu
 - Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 - A properly configured SmartUI CLI project
 
+
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+
 
 ## Steps to Use
 
@@ -33,17 +35,29 @@ npm install @lambdatest/smartui-cli
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
+
+
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
+
+
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
+
+
+
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
+
+
 
 ### **Step 3:** Execute Tests with Results Fetching
 
@@ -305,10 +319,11 @@ npx smartui capture urlTest.json --config config.json --fetch-results results.js
 # 4. Export to PDF or CSV for sharing
 ```
 
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 - [CLI Exec Commands](/support/docs/smartui-cli-exec)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

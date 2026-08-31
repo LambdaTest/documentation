@@ -6,26 +6,30 @@
 
 ## Overview
 
-Testing location-based application behavior (such as geo-restricted content, regional UI, compliance flows, or location-aware features) is challenging when device GPS coordinates are dynamic or tied to the physical location of the tester.
+
+Follow these steps to mock GPS coordinates when the session launches.
 
 The GPS Location Override feature solves this problem by allowing users to explicitly define latitude and longitude values both during session initialization and while an authoring session is in progress. This ensures consistent, repeatable, and deterministic testing of location-dependent scenarios on supported mobile devices.
 
-This feature is supported for both **Mobile App** and **Mobile Browser** sessions. For both sessions, GPS location can also be changed within a running session.
 
-## How To Use
+While creating a test session, open **Advanced Settings** and enable the GPS location mocking option. Enter the latitude and longitude, or search for a location on the map. Keep coordinates within the allowed ranges (see [Coordinate ranges](#coordinate-ranges)).
+
+
+
+**Result:** The coordinates are set to apply when the session launches.
 
 ### Select GPS location while Authoring App Test
 
-While creating a test session, go to Advanced Settings and enable GPS location mocking option. Either include the location Coordinates or search for a particular location from the map. Ensure the coordinates fall within the allowed ranges:
+
+Launch the session after entering the coordinates.
 
 - Longitude: -180 to 180
 - Latitude: -90 to 90
 
 ### Start the Session
 
-1. Launch the session after providing the coordinates.
-2. The device GPS location is mocked at session start.
-3. The configured location remains active until it is updated during the session.
+
+Verify the GPS coordinates in any of these places:
 
 ### Verify the Applied Location
 
@@ -34,28 +38,69 @@ GPS coordinates can be verified:
 - On the Session Summary page after execution
 - During Edit Test, the coordinates used in authoring are autoselected in playground
 
-### Update GPS Location During an Active Session
+
+
+**Result:** The active coordinates are confirmed for the session.
 
 You can also set or update the GPS location while an authoring session is already running using the **slash command**. This is useful when your test flow requires the device location to change mid-session (e.g., simulating a user traveling between cities).
 
-**Step 1:** Inside an active authoring session, type `/` in the action input field to open the slash command menu. Select **Set GPS Location**.
+
+Use the slash command to change the location while an authoring session is running, for example to simulate a user traveling between cities.
 
 **Step 2:** In the **Select GPS Location** modal, search for a location by name or enter latitude and longitude coordinates directly. The map preview updates to reflect the selected position.
 
-**Step 3:** Click **Confirm Location** to apply the new GPS coordinates. A success notification confirms the update, and the new coordinates are recorded as a step in your test.
 
-The updated GPS location takes effect immediately on the device and remains active until changed again or the session ends.
+In an active authoring session, type `/` in the action input field to open the slash command menu, then select **Set GPS Location**.
+
+
+
+**Result:** The **Select GPS Location** modal opens.
+
+### Step 2: Choose the New Location
+
+
+Search for a location by name, or enter latitude and longitude directly. The map preview updates to reflect the selected position.
+
+
+
+**Result:** The map shows the new position.
+
+### Step 3: Apply the Location
+
+
+Click **Confirm Location** to apply the new coordinates.
+
+
+
+**Result:** The new coordinates take effect immediately, are recorded as a step in your test, and stay active until changed again or the session ends.
+
+## Coordinate Ranges
+
+
+Enter latitude and longitude values within the following ranges.
+
+| Coordinate | Allowed range |
+|---|---|
+| Latitude | -90 to 90 |
+| Longitude | -180 to 180 |
 
 ## Limitations
 
-- GPS override is applied only during session initialization and can be changed mid-session.
-- Replay/Edit sessions reuse GPS values from the original session.
+
+Keep these limitations in mind:
+
+- GPS override is applied during session initialization and can be changed mid-session.
+- Replay and Edit sessions reuse the GPS values from the original session.
 
 ## Troubleshooting
 
+
+Use these solutions to resolve common GPS location issues.
+
 ### Invalid Latitude or Longitude Error
 
-**Issue:** Session fails to start due to a validation error.
+
+**Issue:** The session fails to start due to a validation error.
 
 **Cause:**
 - Longitude is less than -180 or greater than 180
@@ -65,4 +110,10 @@ The updated GPS location takes effect immediately on the device and remains acti
 - Verify that latitude and longitude values are within valid ranges
 - Ensure values are passed as valid numbers or numeric strings
 
-> Have any feedback or request? Reach out to us via [support@testmuai.com](mailto:support@testmuai.com) and we would be happy to hear from you.
+## Next Steps
+
+
+Continue with these guides:
+
+- [KaneAI Advanced Settings](/support/docs/kaneai-advanced-settings/)
+- [KaneAI Mobile App Capabilities](/support/docs/kane-ai-mobile-app-capabilities/)

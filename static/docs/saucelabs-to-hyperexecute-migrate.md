@@ -20,7 +20,7 @@ There are several benefits to migrating your tests from Sauce Labs to HyperExecu
 
 - **Seamless Integration :** HyperExecute provides out-of-the-box support for popular tools such as [Tosca](/support/docs/tosca-integration-with-hyperexecute/), [Katalon](/support/docs/katalon-integration-with-hyperexecute/), and [ACCELQ](/support/docs/hyperexecute-accelq-integration/). This means you can effortlessly integrate your testing workflow with your preferred tools, streamlining your testing processes.
 
-- **CI/CD Tools :** We offer robust support for [CI/CD](/support/docs/hyperexecute-integration-with-ci-cd-tools/) tools, allowing you to automate testing and release processes seamlessly, resulting in faster software delivery.
+- **CI/CD Tools :** We offer robust support for [CI/CD](/support/docs/getting-started-with-hyperexecute/) tools, allowing you to automate testing and release processes seamlessly, resulting in faster software delivery.
 
 ## Steps to Migrate
 

@@ -1,4 +1,4 @@
-# How to Upload Custom Chrome Profile?
+# How to Upload a Custom Chrome Profile on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,7 +6,7 @@ Custom Chrome profiles allow you to simulate a real-user environment with specif
 
 ## Uploading Your Custom Chrome Profile
 
-Zip your Chrome profile folder and upload it to the TestMu AI cloud using the API.
+Zip your Chrome profile folder and upload it to the TestMu AI cloud using the API. The `browserProfile` capability used below is one of the many [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to a test session.
 
 ### Before You Begin
 
@@ -64,3 +64,14 @@ Review these constraints before uploading your custom Chrome profile.
 * The compressed zip file must not exceed 100 MB.
 
 * Ensure that you compress the exact profile folder. Compressing the parent folder or a subfolder causes the functionality to fail.
+
+Once your profile is in place, you can pair it with other run modes, such as when you run headless Selenium tests, to mirror a real-user environment without a visible browser.
+
+## Next Steps
+
+
+Continue with these related guides:
+
+- [Perform Selenium Automation on Headless Browsers](/support/docs/perform-selenium-automation-on-headless-browsers/)
+- [IE Mode on Edge](/support/docs/ie-mode-on-edge/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)

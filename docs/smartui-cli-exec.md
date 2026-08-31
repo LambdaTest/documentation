@@ -280,17 +280,17 @@ Review the server logs for error messages.
 
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
-- Check [CLI Documentation](/support/docs/smartui-cli) for general CLI usage
-- Visit [<BrandName /> Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Check [CLI Documentation](/support/docs/smartui-cli-complete-reference/) for general CLI usage
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
 
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [CLI Documentation](/support/docs/smartui-cli)
-- [CLI Upload](/support/docs/smartui-cli-upload)
-- [Environment Variables](/support/docs/smartui-cli-env-variables)
+- [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [CLI Upload](/support/docs/smartui-cli-complete-reference/)
+- [Environment Variables](/support/docs/smartui-running-your-first-project/)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 

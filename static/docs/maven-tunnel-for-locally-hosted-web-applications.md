@@ -49,6 +49,7 @@ Ensure that you have the Maven Tunnel dependency configured in your `pom.xml`.
 
 ## Running Maven Tunnel
 
+
 Here is the code that is present in the cloned [GitHub repository for Maven Tunnel](https://github.com/LambdaTest/maven-tunnel-sample).
 
 ```js
@@ -73,6 +74,7 @@ public static String status = "passed";
 
 String username = System.getenv("LT_USERNAME");
 String access_key = System.getenv("LT_ACCESS_KEY");
+
 
 @BeforeTest
 public void setUp() throws Exception {
@@ -189,6 +191,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.lambdatest.tunnel.Tunnel;
+
 
 public class MavenParallel implements IExecutionListener{
 

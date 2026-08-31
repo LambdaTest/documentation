@@ -67,7 +67,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/npm-plugin-for-testcafe-integration-with-testmu/">npm Plugin For TestCafe</a>
+<a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=testcafe">npm Plugin For TestCafe</a>
 </div>
 
 <div className="download_btn mb-10">

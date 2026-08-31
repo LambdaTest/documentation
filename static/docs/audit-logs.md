@@ -21,6 +21,8 @@ Audit logs can be used to:
 
 **Step 2:** Click on Settings -> **Organization Settings** and navigate to the **Audit Logs** tab.
 
+
+
 ### Audit Logs details
 
 Each log in the audit logs section has detailed information regarding who performed the action, when the action was performed, the scope of the action, the entities involved and affected by the action etc. The following sections provide a general overview of how to read and interpret the data.
@@ -66,9 +68,15 @@ The following table contains the list of activities and their definition:
 |35    |org.payment-method.deleted                |Organization - Payment Method Deleted              |Payment method deleted                        |
 |36    |org.payment-method.default-updated        |Organization - Default Payment Method Updated      |Default payment method updated                |
 
+
+
+
 As highlighted in the above screenshot, this section contains details that include the event ID, the email address of the **user who performed the action**, the time of the change/action, the IP address of the user and the user agent used.
 
+
+
 As highlighted in the above screenshot, details of the user affected by the change/action are shown. This includes an identifier - email address, and additional details such as the original value and the changed value if present.
+
 
 ### Filter your Audit Logs
 
@@ -78,9 +86,14 @@ You can filter the logs based on Action Performed either on User or Organization
 
 You can select the type of event for which you want to check the logs. You can also filter it by what level you want to check the audit logs at, i.e., User level or Organization level.
 
+
+
 - **User Level ->** Logged In, Access Key Regenerated, Password Reset, Profile Update, Password Changed.
 
 - **Organization Level ->**Invitation Sent, Invitation Accepted, User Role Updated, User Profile Updated, User Removed from the Organization.
+
+
+
 
 #### Filter By Date
 
@@ -88,13 +101,19 @@ You can view the logs of the users for a particular date range as well. Select t
 
 > You can view Audit Logs for a maximum of 60 days. Please contact support for higher retention period (Supported in Enterprise Plan).
 
+
+
 #### Filter By User
 
 Based on the given date range, you can review the logs for each individual user in your company as well as for all users at once.
 
+
+
 ### Download your Audit Logs
 
 Click on the **Export Button** displayed in the screenshot below, and your logs will be downloaded in **.csv** format.
+
+
 
 ## FAQs
 

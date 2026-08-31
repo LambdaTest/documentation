@@ -1,14 +1,19 @@
-# List of TestMu AI Cypress CLI Commands
+# Cypress CLI Commands Supported on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The TestMu AI-Cypress CLI provides a set of commands to streamline and enhance your testing workflows on the TestMu AI platform. Below is a comprehensive list of supported commands and their usage.
+When you run Cypress tests on TestMu AI, the `lambdatest-cypress` CLI is how you initialize config, start builds, check build status, and generate reports from your terminal. This page lists every supported command and flag, with its purpose and value type, so you can look up the exact syntax while scripting a run.
 
 ## General Syntax
-To use any command in the TestMu AI-Cypress CLI, follow this basic syntax:
+
+
+Every TestMu AI Cypress CLI command follows the same pattern: the CLI name, a command, then optional flags. Use this basic syntax as the template for the commands documented below.
+
 ```bash
 lambdatest-cypress <command> [options]
 ```
+
+The table below lists the top-level commands and Visual UI arguments available across the CLI.
 
 | Command / Arg  | Purpose                                                |
 | -------------- | ------------------------------------------------------ |
@@ -22,50 +27,58 @@ lambdatest-cypress <command> [options]
 | `--vib , --vi-build` | To set the smart ui build name.  The acceptable data type is `string` |
 | `--vibase , --vi-base` | To set that build as baseline for smart ui.  The acceptable data type is `boolean` |
 
-## `init` command
-The `init` command to generate a initial lambdatest configuration file.
+## `init` Command
 
-```
+
+Run the `init` command to generate an initial TestMu AI configuration file for your project. It scaffolds the config and reporter files the CLI needs before its first run.
+
+```bash
 lambdatest-cypress init
 ```
 
-On running the above command, it will generate `base_reporter_config.json`,`custom_support_file.js` and `lambdatest-config.json` files.
 
-- **`base_reporter_config.json`**: This is the configuration file for mochawesome reporter, that TestMu AI uses to generate mochawesome reports which in turn is used to generate the commands section on the TestMu AI dashboard. For Cypress 10, the absence of this file may lead to the commands section not being visible on the dashboard.
 
-- **`custom_support_file.js`**: By default, Cypress automatically captures screenshots when a test fails. For Cypress 10, in order to make the screenshot visible with the failed tests on our dashboard, we recommend you move and import this file as recommended.
+On running the above command, the CLI generates the `base_reporter_config.json`, `custom_support_file.js`, and `lambdatest-config.json` files.
 
-- **`lambdatest-config.json`**: This file contains configurations like TestMu AI credentials, capabilities, run settings etc., that are required to run the test.
+- **`base_reporter_config.json`**: This is the configuration file for the mochawesome reporter that TestMu AI uses to generate mochawesome reports, which in turn generate the commands section on the TestMu AI dashboard. For Cypress 10, the absence of this file may lead to the commands section not being visible on the dashboard.
 
-## `run` command
+- **`custom_support_file.js`**: By default, Cypress automatically captures screenshots when a test fails. For Cypress 10, to make the screenshot visible with the failed tests on the TestMu AI dashboard, move and import this file as recommended.
+
+- **`lambdatest-config.json`**: This file contains configurations like TestMu AI credentials, capabilities, and run settings that are required to run the test.
+
+## `run` Command
+
+
+The `run` command starts a Cypress test build on TestMu AI and accepts a large set of flags to control browsers, parallelism, tunneling, and reporting.
 
 **Note**
-For detailed examples of each Cypress flag, please visit our guide [Configuring Cypress Test Execution](/support/docs/run-settings/).
+For detailed examples of each Cypress flag, see [how to configure Cypress run settings](/support/docs/run-settings/).
 
-To start running the test build, you can use the given-below command.
+
+To start running the test build, use the command below.
 
 ```bash
 lambdatest-cypress run
 ```
 
-Given below are the additional flags available with the `run` command.
+The table below lists the additional flags available with the `run` command, along with each flag's purpose and value type.
 
 | Flag | Purpose | Type |
 |------|---------|------|
 | `--version` | Show version number | Boolean |
 | `--help` | Show help | Boolean |
 | `--ccf, --cypress-config-file` | Path of the config file | String |
-| `--user, --username` | LambdaTest username | String |
-| `--ak, --access_key` | LambdaTest access key | String |
-| `--lcf, --lambdatest-config-file` | Path of the LambdaTest config file | String |
+| `--user, --username` | TestMu AI username | String |
+| `--ak, --access_key` | TestMu AI access key | String |
+| `--lcf, --lambdatest-config-file` | Path of the TestMu AI config file | String |
 | `-s, --specs` | Path of the spec file, directory, or pattern | String |
 | `--env, --environment` | Specify environment name | String |
 | `--bn, --build-name` | Set build name | String |
 | `-t, --tags` | Run tests with specific tags | String |
 | `-p, --parallels` | Number of parallel sessions | String |
 | `--envs, --env-variables` | Set environment variables before test execution | String |
-| `--tun, --tunnel` | Enable LambdaTest tunnel | String |
-| `--tname, --tunnel_name` | Set LambdaTest tunnel name | String |
+| `--tun, --tunnel` | Enable TestMu AI tunnel | String |
+| `--tname, --tunnel_name` | Set TestMu AI tunnel name | String |
 | `--brs, --browsers` | Run tests on specified browsers in format `platform:browser:version` | String |
 | `--bi, --build-identifier` | Set build identifier or build counter | String |
 | `--if, --ignore_files` | Files to ignore in project zip | String |
@@ -102,14 +115,16 @@ Given below are the additional flags available with the `run` command.
 | `--reg, --region` | Set data center region (e.g., us, eu, ap) | String |
 | `--pC, --privateCloud` | Set custom private cloud | String |
 
-## `build-info` command
-You can use the `build-info` command to get information on the build.
+## `build-info` Command
+
+
+Use the `build-info` command to fetch details about a specific build, such as its status and session breakdown, from the terminal.
 
 ```bash
 lambdatest-cypress build-info
 ```
 
-Given below are the additional arguments available with the `build-info` command.
+The table below lists the additional arguments available with the `build-info` command.
 
 | Flag   | Purpose    | Type |
 | --------| -----------| -----|
@@ -117,20 +132,37 @@ Given below are the additional arguments available with the `build-info` command
 | `--user, --username` | Your TestMu AI username | String |
 | `--ak, --access_key` | Your TestMu AI access key | String |
 
-## `build-stop` command
-You can use the `build-stop` command to stop all the test in the build.
+
+
+## `build-stop` Command
+
+
+Use the `build-stop` command to stop all the tests in a build, either by session id or by targeting the last test session.
 
 ```bash
 lambdatest-cypress build-stop
 ```
 
-Given below are the additional arguments available with the `build-stop` command.
+The table below lists the additional arguments available with the `build-stop` command.
 
 | Flag             | Purpose   |
 | -------------------- | --------- |
 | `--id, --session_id` | Identifies the session |
 | `--sls, --stop_last_session` | Stop the last test session |
 
-- `--stop_last_session`
+Passing `--stop_last_session` stops the most recent test session.
 
-- `--session_id`
+
+
+Passing `--session_id` stops the specific session you identify.
+
+
+
+## Related Cypress Guides
+
+
+Continue with the guides below to run and scale your Cypress tests on TestMu AI.
+
+- [Run your first Cypress test on TestMu AI](/support/docs/getting-started-with-cypress-testing/) by cloning the sample project and running it on the cloud.
+- [Generate Cypress tests with AI coding assistants](/support/docs/cypress-agent-skills/) using Cypress Agent Skills.
+- [Check the supported browsers and OS](/support/docs/supported-browsers-and-os/) to see the versions and platforms you can target.

@@ -8,6 +8,7 @@ TestMu AI provides an integration with Bamboo, using which you can perform cross
 
 ## Prerequisites
 
+
 - A Bamboo Server installed.
 - A GIT repository.
 - wget & unzip utility.
@@ -33,15 +34,20 @@ $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 
 ## Integrating TestMu AI With Bamboo Server
 
+
 **Step 1:** Deploy your Bamboo server & login as an administrator.
 
 **Step 2:** Create a new plan with Default stage & job.
 
 **Step 3:** After creating a new job, we would need to add three tasks.
 
+
+
 **Step 4:** To create your first task, "Source Code Checkout," you need to fetch the relevant Git repository.
 
 **Step 5:** Task number two would require to you install the required package for npm.
+
+
 
 **Step 6:** To create your third task, you would need to configure the below script for running a Protractor test.
 
@@ -60,9 +66,14 @@ unzip -o LT_Linux.zip
 node ./node_modules/protractor/bin/protractor conf/single.conf.js
 ```
 
+
+
 **Step 7:** Now, you need to save the plan & run it. As you run the test you will find the below logs in Bamboo highlighting that the test was successfully executed on TestMu AI Selenium Grid.
 
+
+
 ## Running Multiple Tests In Parallel
+
 
 Parallel Testing is one of the most demanding features of TestMu AI Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. So you can execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions. Wondering how many parallel test cases can you run? That depends entirely on the number of concurrent session under your opted plan.
 

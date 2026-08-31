@@ -6,7 +6,9 @@ TestMu AI **Roles and Permissions (RBAC)** allows organization admins to define 
 
 This is especially useful for large enterprises with multiple teams where different groups need access to different parts of the platform, for example, one team working exclusively with KaneAI and Test Manager, while another only needs access to SmartUI and Automation.
 
+
 Custom Roles and Permissions is an enterprise-level feature. Please contact your account manager or reach out to [support@testmuai.com](mailto:support@testmuai.com) to get it enabled for your organization.
+
 
 ## Prerequisites
 
@@ -18,6 +20,8 @@ Custom Roles and Permissions is an enterprise-level feature. Please contact your
 
 Navigate to **Organization Settings** > **Custom Roles & Permissions** from the left sidebar. You will see the **Custom Roles & Permissions** page displaying all existing roles in your organization.
 
+
+
 TestMu AI provides three default roles out of the box:
 
 | Role | Description | Entity Permissions |
@@ -26,9 +30,13 @@ TestMu AI provides three default roles out of the box:
 | **User** | Full permissions on all products and entities, but without organization-level administration. | List, Read, Create, Update, Delete, Execute on all entities |
 | **Guest** | Read-only access across products. | List, Read only on entities |
 
+
 Roles are auto-applied at login.
 
+
+
 When a user is assigned more than one role, their effective permissions are the combination of all assigned roles, and the most permissive access applies. Permission changes take effect on the user's next request or page load, no re-login is required.
+
 
 ## Creating and Applying Custom Roles
 
@@ -36,9 +44,13 @@ Custom roles give you the flexibility to tailor access permissions to match your
 
 **Step 1:** On the **Custom Roles & Permissions** page, click the **Create New Role** button in the top-right corner.
 
+
+
 **Step 2:** In the **Create New Role** dialog, enter a **Role Name** that clearly describes the role's purpose (e.g., "SmartUI Tester", "KaneAI Developer", "QA Lead").
 
 **Step 3:** You can configure [product-level access](#product-level-access) or entity-level access based on your requirements. Entity-level access is covered in detail below.
+
+
 
 **Step 4:** Click **Create** to complete the process.
 
@@ -46,7 +58,11 @@ Custom roles give you the flexibility to tailor access permissions to match your
 
 - **To assign to individual users:** Navigate to **Organization Settings** > **Members**, click on the user's row or the options menu, and assign the custom role.
 
+
+
 - **To assign to a team:** Navigate to **Organization Settings** > **Teams**, select a team, and assign the desired custom role. All members of the team will automatically inherit the same permissions.
+
+
 
 ### Entity Level Access
 
@@ -92,7 +108,9 @@ Each product exposes a different set of entities. Here is what each one represen
 
 - **Projects**: The read-only reporting scope that controls which dashboards and reports a user can view.
 
+
 Entity-level access for **App Automation** is planned for an upcoming release. The exact set of entities, and the actions available on each, can vary from one product to another.
+
 
 #### Select Specific Entities
 
@@ -109,7 +127,9 @@ For supported products, you can configure fine-grained permissions on each entit
 - **Delete**: Remove items.
 - **Execute**: Run or trigger items (for example, abort a build or trigger a HyperExecute job).
 
+
 Not every permission level applies to every entity. For example, Analytics & Insights is a read-only reporting surface, so only **List** and **Read** apply there.
+
 
 ## Product Level Access
 
@@ -121,6 +141,7 @@ When creating or editing a role, add **List of Products** as an entity and selec
 
 - The product is **hidden from the sidebar** and **dashboard** for the user.
 - If a user tries to directly access a restricted product URL, they are redirected to a **403 page**.
+
 
 ### When to use Product Level Access
 

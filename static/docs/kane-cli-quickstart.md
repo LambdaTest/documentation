@@ -14,28 +14,52 @@ Once `kane-cli --version` prints a version number, you are ready. See [Installat
 
 ## Step 2: Authenticate
 
+
+
+
+
 ```bash
 kane-cli login
 ```
 
 Your default browser opens on a TestMu AI consent page. Sign in (or confirm, if you are already signed in), authorise the CLI, and the page will tell you it is safe to close the tab. Control returns to your terminal and your credentials are stored under `~/.testmuai/kaneai/profiles/`.
 
+
+
+
+
+
+
 {`kane-cli login \\
   --username "${ YOUR_LAMBDATEST_USERNAME()}" \\
   --access-key "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
 
 Find your username and access key on the TestMu AI [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
 Use this method for environments without a browser (servers, containers, CI/CD).
 
+
+
+
+
 For non-interactive CI pipelines, pass credentials inline:
+
+
 
 {`kane-cli run "your objective" \\
   --username "${ YOUR_LAMBDATEST_USERNAME()}" \\
   --access-key "${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
   --headless --agent`}
 
+
+
 Store `LT_USERNAME` and `LT_ACCESS_KEY` as secrets in your CI/CD platform. See [CI/CD Integration](/support/docs/kane-cli-cicd/) for platform-specific guides.
+
+
+
+
 
 Verify authentication at any time:
 
@@ -96,7 +120,9 @@ By default each run starts on the KaneAI playground site. The agent navigates fr
 
 When the session ends, Kane CLI uploads the run to TestMu AI Test Manager and prints a share link. For details on the upload, the share-link experience, and the run mode toggle, see [Test Manager Integration](/support/docs/kane-cli-tms-integration/). To change settings like window size, Chrome profile, or the active project and folder, see [Configuration](/support/docs/kane-cli-configuration/).
 
+
 Run `kane-cli --tui` to open the interactive TUI: a full terminal UI where you can type objectives, see step-by-step progress, and chain multiple tests in one session with persistent browser state.
+
 
 ## Next Steps
 

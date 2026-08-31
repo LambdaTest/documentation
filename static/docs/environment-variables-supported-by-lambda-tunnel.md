@@ -7,6 +7,8 @@ To configure the .lt.yaml, you can refer to the section [Leverage .lt.yaml file]
 
 ### What are Environment Variables?
 
+
+
 Environment variables can be used in place of command-line flags. Each operating system has its compatibility in terms of environment variables. Command-line flags restrict environment variables from being bypassed. When available, the command-line flags always take priority.
 
 Below is the following list of environment variables used by the TestMu AI Tunnel

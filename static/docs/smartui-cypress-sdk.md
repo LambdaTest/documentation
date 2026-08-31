@@ -43,7 +43,9 @@ cd smartui-cypress-sdk-sample
 npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
 ```
 
+
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+
 
 2. Import the TestMu AI Cypress driver in `support/e2e.js`.
 
@@ -62,23 +64,39 @@ return null;
 });
 ```
 
+
 SmartUI SDK only supports Cypress versions >= 10.0.0
+
 
 ### **Step 3:** Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
+
+
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
+
+
 
 ```bash
 set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
+
+
+
 ```powershell
 $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
+
+
+
+
+
 
 ### **Step 4:** Create and Configure SmartUI Config
 
@@ -130,6 +148,7 @@ Once, the configuration file will be created, you will be seeing the default con
 - For the list of available mobile viewports, please refer to this [documentation](/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)
 - For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).
 
+
 ### **Step 5:** Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Cypress` test script, as shown below:
@@ -158,13 +177,17 @@ Execute `visual regression tests` on SmartUI using the following commands
 npx smartui --config .smartui.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed
 ```
 
+
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
+
 
 ##  View SmartUI Results
 
 You have successfully integrated SmartUI SDK with your Cypress tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+
+
 
 ## Arguments supported in the `cy.smartUISnapshot` function
 
@@ -180,7 +203,10 @@ The following are the different options which are currently supported:
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `cy.smartuiSnapshot` function in the following way
 
-```js title="This is a sample for your configuration for Cypress to ignore by" ID"
+
+
+
+```js title="This is a sample for your configuration for Cypress to ignore by ID"
 let options = {
 ignoreDOM: {
 id: ["ID-1", "ID-2"],
@@ -189,7 +215,10 @@ id: ["ID-1", "ID-2"],
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
-```js title="This is a sample for your configuration for Cypress to ignore by" Class"
+
+
+
+```js title="This is a sample for your configuration for Cypress to ignore by Class"
 let options = {
 ignoreDOM: {
 class: ["Class-1", "Class-2"],
@@ -198,7 +227,10 @@ class: ["Class-1", "Class-2"],
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
-```js title="This is a sample for your configuration for Cypress to ignore by" XPath"
+
+
+
+```js title="This is a sample for your configuration for Cypress to ignore by XPath"
 let options = {
 ignoreDOM: {
 xpath: ["Xpath-1", "Xpath-2"],
@@ -207,7 +239,11 @@ xpath: ["Xpath-1", "Xpath-2"],
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
-```js title="This is a sample for your configuration for Cypress to ignore by CSS" Selector"
+
+
+
+
+```js title="This is a sample for your configuration for Cypress to ignore by CSS Selector"
 let options = {
 ignoreDOM: {
 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -215,6 +251,12 @@ cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
 }
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
+
+
+
+
+
+
 
 ```js title="This is a sample for your configuration for Cypress to select by" ID."
 let options = {
@@ -225,7 +267,10 @@ id: ["ID-1", "ID-2"],
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
-```js title="This is a sample for your configuration for Cypress to select by" Class"
+
+
+
+```js title="This is a sample for your configuration for Cypress to select by Class"
 let options = {
 selectDOM: {
 class: ["Class-1", "Class-2"],
@@ -234,7 +279,10 @@ class: ["Class-1", "Class-2"],
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
-```js title="This is a sample for your configuration for Cypress to select by" XPath"
+
+
+
+```js title="This is a sample for your configuration for Cypress to select by XPath"
 let options = {
 selectDOM: {
 xpath: ["Xpath-1", "Xpath-2"],
@@ -243,7 +291,11 @@ xpath: ["Xpath-1", "Xpath-2"],
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
-```js title="This is a sample for your webhook configuration for Cypress to select by CSS" Selector"
+
+
+
+
+```js title="This is a sample for your webhook configuration for Cypress to select by CSS Selector"
 let options = {
 selectDOM: {
 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -252,9 +304,15 @@ cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
+
+
+
 ## For capturing the screenshot of a specific element
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+
 
 ```js title="This is a sample for your configuration for Cypress to capture an element by" ID."
 let options = {
@@ -265,7 +323,10 @@ id: 'Required ID',
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
-```js title="This is a sample for your configuration for Cypress to capture an element by" Class"
+
+
+
+```js title="This is a sample for your configuration for Cypress to capture an element by Class"
 let options = {
 element: {
 class: 'Required Class',
@@ -274,7 +335,10 @@ class: 'Required Class',
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
-```js title="This is a sample for your configuration for Cypress to capture an element by" XPath"
+
+
+
+```js title="This is a sample for your configuration for Cypress to capture an element by XPath"
 let options = {
 element: {
 xpath: 'Required Xpath',
@@ -284,7 +348,11 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 
 ```
 
-```js title="This is a sample for your webhook configuration for Cypress to capture an element by CSS" Selector"
+
+
+
+
+```js title="This is a sample for your webhook configuration for Cypress to capture an element by CSS Selector"
 let options = {
 element: {
 cssSelector: 'Required CSS Selector',
@@ -293,7 +361,13 @@ cssSelector: 'Required CSS Selector',
 cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
+
+
+
 ## Best Practices
+
+
+
 
 **Screenshot Naming**
 
@@ -307,6 +381,10 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 cy.smartuiSnapshot('HomePage-Header');
 cy.smartuiSnapshot('ProductPage-MainContent');
 ```
+
+
+
+
 
 **Wait for Page Load**
 
@@ -322,11 +400,19 @@ cy.wait(1000); // Wait for animations
 cy.smartuiSnapshot('Page Loaded');
 ```
 
+
+
+
+
 **Handle Dynamic Content**
 
 - Use `ignoreDOM` for elements that change between runs
 - Use `selectDOM` when you only need to compare specific areas
 - Document why elements are ignored for future reference
+
+
+
+
 
 **Configuration Management**
 
@@ -334,13 +420,23 @@ cy.smartuiSnapshot('Page Loaded');
 - Use environment variables for sensitive data
 - Document custom configuration choices
 
+
+
+
+
 **Test Organization**
 
 - Group related screenshots in the same build
 - Use meaningful build names
 - Run tests in consistent environments
 
+
+
+
 ## Troubleshooting
+
+
+
 
 **Issue: Screenshots Not Appearing in Dashboard**
 
@@ -369,6 +465,9 @@ npx smartui --version
 
 5. Review test execution logs for error messages
 
+
+
+
 **Issue: Project Not Found" Error**
 
 **Symptoms**: Error message indicating project cannot be found
@@ -383,6 +482,9 @@ npx smartui --version
 2. Copy project token directly from Project Settings
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
+
+
+
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -414,6 +516,9 @@ enableJavaScript": true
 
 4. Verify viewport size matches expected dimensions
 
+
+
+
 **Issue: Build Execution Fails**
 
 **Symptoms**: `npx smartui exec` command fails
@@ -432,6 +537,9 @@ enableJavaScript": true
 npx smartui exec -P 5000 -- <command">
 ```
 4. Check file permissions for configuration and project files
+
+
+
 
 **Issue: npm Dependencies Not Resolving**
 
@@ -458,6 +566,9 @@ npm cache clean --force
 
 4. Check package.json for version conflicts
 
+
+
+
 **Issue: Screenshot Names Not Matching Baseline**
 
 **Symptoms**: Screenshots appear as New" instead of comparing with baseline
@@ -482,6 +593,10 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+
+
+
+
 
 ## Additional Resources
 

@@ -5,6 +5,18 @@
 TestMu AI Documentation and Knowledge Hub
 Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mobile Platforms
 
+
+
+
+
+
+
+
+
+
+
+
+
        Web Automation
 
         Selenium Testing
@@ -13,6 +25,8 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         Puppeteer Testing
         K6 Testing
 
+
+
        App Automation
 
         Appium Testing
@@ -20,6 +34,8 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         XCUI Testing
         Flutter Testing
         Virtual Devices
+
+
 
        HyperExecute
 
@@ -32,6 +48,8 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
     Integrations
      Private Cloud
 
+
+
        Insights
 
         Pre-built Dashboards
@@ -43,12 +61,23 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         Flaky Test Insights
         Command Logs Insights
 
+
+
+
+
+
+
+
+
+
        Browser Cloud &nbsp;
 
         What is Browser Cloud
         Launch Session With SDK
         Launch Session With Agent Skills
         Connect to a Session
+
+
 
        SmartUI
 
@@ -61,6 +90,8 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         Advance Comparison Options
         Handling Dynamic Data
 
+
+
      Web Scanner
 
     Overview
@@ -69,6 +100,8 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
     Accessibility Scans
     Adding URLs
     Scheduling Options
+
+
 
         KaneAI &nbsp;
 
@@ -79,11 +112,24 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         Command Types
          Test Automation with CI/CD
 
+
+
         Agent Testing Platform &nbsp;
 
         Getting Started
         Test Your First AI Agent
         FAQs
+
+
+
+
+
+
+
+
+
+
+
 
         Real Time
 
@@ -94,13 +140,20 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         ChromeOS App Testing
         Key Features
 
+
+
+
         Real Device
 
         Real Device App Testing
 
+
         Real Device Browser Testing
 
+
         Private Cloud
+
+
 
         Test Manager &nbsp;
 
@@ -112,9 +165,14 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         Milestones
         Issue Tracker Integration
 
+
+
+
         TestMu AI MCP Server &nbsp;
 
         Setting up TestMu AI MCP Server
+
+
 
        Integrations
 
@@ -124,6 +182,8 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         Test Reporting
         Communication Tools
         Plugin and Extensions
+
+
 
        Accessibility Testing
 
@@ -136,6 +196,8 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         Reports
         Mobile App Testing
 
+
+
         Testing Locally
 
         Testing Locally Hosted Pages
@@ -146,6 +208,12 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
         IP Whitelisting
         Charles Proxy
 
+
+
+
+
+
+
    Settings and Security
 
     Account Management
@@ -153,6 +221,8 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
     TestMu AI Public IP
     Single Sign On
     SCIM
+
+
 
        Other Docs
 

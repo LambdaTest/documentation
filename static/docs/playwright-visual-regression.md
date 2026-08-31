@@ -7,20 +7,29 @@ This documentation will act as your step-by-step guide in to perform Playwright 
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+
+
+
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
+
+
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 
+
+
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
 $env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
+
+
 
 The following steps will guide you in running your first Visual Regression test on TestMu AI platform -
 
@@ -34,6 +43,8 @@ To create a SmartUI Project, follow these steps:
 3. Select the platform as Web for executing your `PlayWright` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
+
+
 
 ### Step 2: Configure your test with Playwright Desired Capabilities
 
@@ -131,10 +142,13 @@ node playwright-smartui.js
 
 ## Fetching Screenshot Status and Results using WebHook
 
+
+
 To retrieve the status and results of a captured screenshot, you can utilize the provided webhook. Follow the steps below to fetch this information:
 
 ```javascript
 // Add this code snippet within your script to fetch the screenshot status during runtime
+
 
 response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({action: 'smartui.fetchScreenshotStatus', arguments: { screenshotName: "" }})}`)
 
@@ -175,11 +189,17 @@ The following are the description of the parameters:
 | `buildId`            | ID of the build in which the screenshot was captured.         |
 | `projectName`        | Name of the project in which the screenshot was captured.     |
 
+
+
+
 By including the above code, you will be able to obtain the status of the captured screenshot. If you specify a particular `Screenshot Name`, the response will contain the result for that specific screenshot.
+
+
 
 Please note that the screenshot name should be provided within the screenshotName argument.
 
 ## GitHub App Integration With Playwright
+
 
 Experience effortless collaboration and streamlined testing workflows with SmartUI's GitHub app integration for Playwright users. Now, you can seamlessly link your GitHub repositories to your SmartUI accounts. This integration empowers teams to effortlessly share test scripts, review and track changes, and provide feedback within the familiar GitHub environment.
 
@@ -197,15 +217,20 @@ const capabilities: {
 ```
 **For step by step guide for  `Github Integration` click [here](/support/docs/smartui-github-app-integration/)**
 
+
 For additional information about Playwright framework please explore the documentation [here](/support/docs/playwright-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
-  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smartui-project-settings/).
+
+  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/smartui-project-settings/).
 
 ## Best Practices
+
+
+
 
 ### Capability Configuration
 
@@ -231,6 +256,9 @@ build: 'Release 1.0',
 };
 ```
 
+
+
+
 ### Screenshot Timing
 
 - Wait for page elements to load before capturing screenshots
@@ -244,11 +272,17 @@ await page.waitForSelector('.main-content', { state: 'visible' });
 await page.waitForLoadState('networkidle');
 ```
 
+
+
+
 ### Screenshot Naming
 
 - Use descriptive, consistent names
 - Include context (page, component, state) in names
 - Avoid special characters
+
+
+
 
 ### Baseline Management
 
@@ -256,19 +290,31 @@ await page.waitForLoadState('networkidle');
 - Review and approve baselines before using
 - Update baselines when intentional changes are made
 
-### Viewport Selection
 
-- Test on viewports that match your user base
-- Include mobile, tablet, and desktop viewports
-- Consider both portrait and landscape orientations
+
 
 ### Viewport Selection
 
 - Test on viewports that match your user base
 - Include mobile, tablet, and desktop viewports
 - Consider both portrait and landscape orientations
+
+
+
+
+### Viewport Selection
+
+- Test on viewports that match your user base
+- Include mobile, tablet, and desktop viewports
+- Consider both portrait and landscape orientations
+
+
+
 
 ## Troubleshooting
+
+
+
 
 ### Issue: Screenshots Not Captured
 
@@ -302,6 +348,9 @@ echo $LT_ACCESS_KEY
 
 4. Check network connectivity to TestMu AI
 
+
+
+
 ### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
@@ -316,6 +365,9 @@ echo $LT_ACCESS_KEY
 2. Copy project name directly from dashboard
 3. Check credentials match the account with the project
 4. Ensure project name is in capabilities, not just in dashboard
+
+
+
 
 ### Issue: Screenshots Show Blank Pages
 
@@ -343,6 +395,9 @@ await page.waitForSelector('.main-content', { state: 'visible' });
 
 4. Check viewport size matches expected dimensions
 
+
+
+
 ### Issue: Build Name Conflicts
 
 **Symptoms**: Screenshots appear in wrong build or build name issues
@@ -361,6 +416,9 @@ await page.waitForSelector('.main-content', { state: 'visible' });
 2. Avoid special characters in build names
 
 3. Use consistent naming convention across team
+
+
+
 
 ### Issue: Mismatch Percentage Unexpected
 
@@ -392,14 +450,18 @@ await page.waitForSelector('.main-content', { state: 'visible' });
 
 If you encounter issues not covered here:
 
-- Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
-- Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
-- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
+- Review [SmartUI Build Options](/support/docs/smartui-project-settings/) documentation
+- Check [Advanced Test Settings](/support/docs/smartui-project-settings/) for comparison options
+- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+
+
+
+
 
 ## Additional Resources
 
-- [SmartUI Build Options](/support/docs/smart-ui-build-options)
-- [Advanced Test Settings](/support/docs/test-settings-options/)
+- [SmartUI Build Options](/support/docs/smartui-project-settings/)
+- [Advanced Test Settings](/support/docs/smartui-project-settings/)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Project Settings](/support/docs/smartui-project-settings)

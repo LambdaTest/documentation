@@ -24,11 +24,17 @@ After selecting the appropriate option, enter the following details:
 - **Taiga Username:** Your Taiga account username.
 - **Taiga Password:** Your Taiga account password.
 
+
 We do not store your password. It is only used for initial authentication during the integration setup.
+
 
 - **Taiga Hosted URL:** This field will only appear if you select the **On-premise/Self-hosted Taiga** option.
 
 After filling in the details, click on the **Install** button to establish the integration.
+
+
+
+
 
 ## Lodge your First Bug
 
@@ -46,6 +52,10 @@ After filling in the details, click on the **Install** button to establish the i
 
 **Step 4:** Click on the **Create Issue** button. The bug will be logged into your selected Taiga project, and you can view it directly from your Taiga dashboard.
 
+
+
+
+
 ## Resync Taiga Integration
 
 To ensure that the latest projects and users from your Taiga system are available in TestMu AI, you can resync the integration.
@@ -56,7 +66,12 @@ To ensure that the latest projects and users from your Taiga system are availabl
 
 - This will fetch the latest projects and users from your Taiga system.
 
+
+
 - If your authentication token has expired, you will be prompted to re-enter your Taiga password to authenticate again.
+
+
+
 
 Once resynced, the latest data will be available for use.
 

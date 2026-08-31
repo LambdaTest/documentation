@@ -8,6 +8,8 @@ Everything the assistant does happens in your own Test Manager projects, filtere
 
 ## How Does It Work?
 
+
+
 Once connected to the TestMu AI MCP Server, your AI client discovers a set of tools prefixed `tm_`. You describe what you want in natural language and the client picks the right tools, in the right order. A typical flow:
 
 1. **Discover:** list projects, then fetch the folder tree, existing Modules, and saved Configurations to reference by id.
@@ -17,11 +19,15 @@ Once connected to the TestMu AI MCP Server, your AI client discovers a set of to
 
 ## Available Tools
 
+
+
 The Test Manager MCP Tool exposes 22 tools: 8 to read and discover, 14 to act. **Bold** inputs are required. Ids are referenced across tools: projects, folders, cases, runs, and milestones use ULID strings, configurations and run instances use numbers.
 
 ### Projects
 
+
 Project and Organization Instructions (the Memory Layer) stay managed in the Test Manager UI. The AI generator applies them automatically.
+
 
 | Tool | Description | Inputs | Example prompt |
 |---|---|---|---|
@@ -81,6 +87,8 @@ Linking a run result also links its test case and run. Both linking tools need t
 
 ## Generating Test Cases with AI
 
+
+
 `tm_generate_test_cases` drives the same [AI test case generation](/support/docs/generate-test-cases-with-ai/) you get in the Test Manager UI, applying your Project and Organization Instructions automatically. A few behaviors worth knowing:
 
 - **Generation is asynchronous.** The call returns fast with a `request_id` and a browser progress URL. Generation takes roughly 30 to 90 seconds. The assistant polls with the `request_id` to check progress and fetch results.
@@ -88,9 +96,13 @@ Linking a run result also links its test case and run. Both linking tools need t
 - **Review before saving.** By default all generated cases are saved into the chosen folder, one sub-folder per scenario. Pass `auto_save: false` to review first. That choice persists across polls, and nothing is saved until the assistant calls again with the `request_id` and `auto_save: true`. The save call returns every saved case with its new id.
 - **Ground the generation with context.** Reference files (requirement docs, specs, spreadsheets, screenshots) can be attached, and Jira issue keys can be passed as requirement context.
 
+
 AI generation consumes AI generation credits, the same as generating from the UI.
 
+
 ## Working with Configurations
+
+
 
 Configurations are reusable platform, browser, OS, and device setups, created in the Test Manager UI and referenced by id. Two parameters control how they apply to a run:
 
@@ -99,9 +111,13 @@ Configurations are reusable platform, browser, OS, and device setups, created in
 
 Configurations are validated against the run's type. Applying one that does not support the run (manual or KaneAI) is rejected with a clear message and nothing is applied. Use the `run_type` filter on `tm_list_configurations` to see what is usable.
 
+
 To apply several Configurations, or to add one without touching what is already applied, use `configuration_ids`.
 
+
 ## KaneAI Test Runs
+
+
 
 Test runs are manual by default. Passing `run_type: "kaneai"` to `tm_create_test_run` creates a KaneAI run instead:
 
@@ -114,6 +130,8 @@ Every run returned by `tm_get_test_runs` carries a `run_type` field of `kaneai` 
 
 ## Recording Results in Bulk
 
+
+
 `tm_record_test_results` records execution results on a manual run's instances, targeting each by `instance_id` or simply by `test_case_id`:
 
 - **Up to 500 results per request, all or nothing.** Larger requests are rejected cleanly and nothing is recorded.
@@ -123,6 +141,8 @@ Every run returned by `tm_get_test_runs` carries a `run_type` field of `kaneai` 
 - Instance results are independent of the run's **overall** status. The overall status (`Passed`, `Failed`, `Skipped`, `In Progress`) is set separately through `tm_update_test_run`.
 
 ## How to Invoke
+
+
 
 Once your MCP client is connected, use natural language. Multi-step prompts compose several tools in one request:
 
@@ -134,6 +154,8 @@ Once your MCP client is connected, use natural language. Multi-step prompts comp
 
 ## Guardrails
 
+
+
 The tool set is designed so an assistant cannot cause data loss or overload shared systems:
 
 - **No delete tools.** Nothing through the connection deletes a project, folder, test case, run, or milestone. Removal stays a human action in the Test Manager UI. Runs can be archived through `tm_update_test_run`.
@@ -143,6 +165,8 @@ The tool set is designed so an assistant cannot cause data loss or overload shar
 - **Errors are plain and recoverable.** Missing integrations, permission limits, and oversized requests each return a message saying what happened and what to do next.
 
 ## Error Handling
+
+
 
 If a referenced id is invalid or a precondition is not met, the tool responds with a plain-language message, for example:
 

@@ -5,23 +5,42 @@
 This guide provides a detailed walkthrough for automating the execution of test runs using CI/CD tools such as GitHub Actions or Jenkins on the KaneAI platform. By following these steps, you can effortlessly integrate test run executions with your pipelines.
 
 ## Prerequisites
+
+
+Before you begin, make sure you have:
+
 - Access to Test Manager.
 - A project with KaneAI-generated test cases.
 - Credentials for TestMu AI platform.
 
-## Step-by-Step Guide
-### Step 1: Navigate to the Test Manager
+## Set up CI/CD Automation
+
+
+Follow these steps to copy a test run ID and trigger it from your CI/CD pipeline using the Test Manager API.
+
+### Step 1: Open Test Manager
+
+
 - Log in to the KaneAI platform and go to the Test Manager page.
 - Access the project where the test run is located.
 
-### Step 2: Locate the 'Test Runs' Section & Copy Test run ID
+
+
+### Step 2: Copy Run ID
+
+
 Inside your selected project, navigate to the Test Runs section. Select the desired test run for integration or direct triggering from your CI/CD pipeline.
 
 Open the test run to view its URL. Copy the Test Run ID from the URL. This ID will be used in the API call for integration.
 
+
 A list of test instances with various configurations will be displayed for each test run.
 
-### Step 3: Configure the API Call
+
+
+### Step 3: Configure API Call
+
+
 Replace `` with the actual ID from the URL and set additional optional parameters:
 
 - **concurrency**: Select the concurrency you want to set for this test run. Defaults to 1 if not specified.
@@ -35,8 +54,8 @@ Replace `` with the actual ID from the URL and set additional optional parameter
 - **retry_on_failure**: Define whether to retry on failure. When enabled, retries are triggered both when the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) execution fails and when individual test cases fail. You can set the maximum number of retries using `max_retries`. You can find more details [here]( https://www.testmuai.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure).
 - **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details [here](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries).
 - **timezone**: Define the timezone you want to choose for test run in UTC+01:00 format.
-- **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](/support/docs/appium-app-performance-analytics/).
-- **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](/support/docs/view-lighthouse-performance-metrics/).
+- **app_profiling**: Set to true to track app profiling metrics in your test. See [Appium App Performance Analytics](/support/docs/appium-app-performance-analytics/) for details.
+- **performance**: Set to true to generate a Lighthouse report for your web tests. Supported on limited OS and browser combinations. Setting this to true may slow down execution time. See [View Lighthouse Performance Metrics](/support/docs/generate-multiple-lighthouse-reports/#view-lighthouse-performance-metrics) for details.
 - **android_app_id**: Specify an Android app ID to override the existing app in the configuration of the Test instances.
 - **ios_app_id**: Specify an iOS app ID to override the existing app in the configuration of the Test instances.
 - **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.
@@ -45,7 +64,9 @@ Replace `` with the actual ID from the URL and set additional optional parameter
 - **extent_report_enabled**: Set to `true` to generate an Extent report for the test run. The report can be accessed from the HyperExecute Job page after execution. Only one report type can be enabled at a time. Use either `report_enabled` or `extent_report_enabled`, not both.
 - **report_email_to**: An array of email addresses to receive the test run report via email after execution. Maximum 10 email addresses. Only works when `report_enabled` is set to `true`.
 
+
 Test case failure retries are supported only for code exported from **May 10, 2026 onwards**. For previously exported code, retries are triggered only on test runner command failure. To use this capability, regenerate the code export for your test cases in Test Manager.
+
 
 #### Example API Call:
 
@@ -112,24 +133,40 @@ The API response contains the job ID for both jobs created for desktop web tests
 }
 ```
 
-### Step 4: Authenticate and Trigger the Job
+
+### Step 4: Authenticate and Trigger
+
+
 - Provide your TestMu AI username and access key for Basic Authentication.
 - Submit the API call to trigger the job. The process will start within seconds.
 
 > **Important :** Keep your credentials secure to maintain platform integrity.
 
+
 ### Step 5: Monitor Test Executions
+
+
 - Follow the link provided in the API response to view the HyperExecute Job.
 - Monitor running executions in real time through the dashboard.
 
-## Github Actions sample
-Here is a sample that you can use on how to integrate the API with Github Actions in your Github repository:
 
-**Step 1: Create a GitHub Actions Workflow YAML File**
-In your Git repository, navigate to .github/workflows/ and create a file named sanity-test.yml.
 
-**Step 2: Sample for yml file**
-In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs [here](https://www.testmuai.com/support/api-doc/?key=hyperexecute) and update the API in the .yml file based on your needs.
+## GitHub Actions Sample
+
+
+Use the sample below to integrate the API with GitHub Actions in your repository.
+
+### Step 1: Create a Workflow File
+
+
+In your Git repository, navigate to `.github/workflows/` and create a file named `sanity-test.yml`.
+
+**Result:** An empty workflow file is ready for the sample below.
+
+### Step 2: Add the Workflow YAML
+
+
+The sample below executes a test run using `test_run_id` and then verifies the result using the HyperExecute job status API. See the [HyperExecute API reference](https://www.testmuai.com/support/api-doc/?key=hyperexecute) and update the API call in the file based on your needs.
 
 ```yml
 name: Run Sanity Tests on LambdaTest
@@ -183,9 +220,25 @@ fi
 echo "Sanity tests passed successfully."
 ```
 
-**Step 3: Define Workflow Triggers**
-Set the workflow to trigger on push and pull_request events (you can modify the trigger based on your needs) under "on" section of the yaml above.
+### Step 3: Define Workflow Triggers
+
+
+Set the workflow to trigger on `push` and `pull_request` events under the `on` section of the YAML above. Modify the triggers based on your needs.
+
+**Result:** The workflow runs your KaneAI test run automatically on each matching push or pull request.
+
+## Next Steps
+
+
+Continue with these guides:
+
+- [KaneAI Test Run Instance View](/support/docs/kaneai-test-run-instance-view/): Inspect the results of a pipeline-triggered run step by step.
+- [KaneAI Dynamic URL Replacement](/support/docs/kaneai-dynamic-url-replacement/): Point the same test run at different environments per pipeline run.
 
 ## Video Explanation
+
+
+Watch a short walkthrough:
+
 
 The video consists of old configuration with Test Plans and Builds instead of Test Runs. Please keep this in mind while going through the video. The video will be updated soon.

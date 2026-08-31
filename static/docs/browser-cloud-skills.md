@@ -6,6 +6,8 @@ Give any AI agent a real browser. The `browser-cloud` skill is a structured inst
 
 No local Chrome. No infrastructure. Just agents that can actually use the web.
 
+
+
 ## What the Skill Does
 
 When you load the skill into your AI tool, the agent gains the ability to:
@@ -16,6 +18,8 @@ When you load the skill into your AI tool, the agent gains the ability to:
 - **Wrap browser actions** into LangChain, CrewAI, OpenAI function calling, or any custom agent loop
 
 The skill is **agent-agnostic** - it works with any LLM or agent framework, not just Claude.
+
+
 
 ## Before You Begin
 
@@ -37,6 +41,8 @@ LT_ACCESS_KEY=your_testmuai_access_key
 
 Get credentials at **testmuai.com → Settings → Account Settings**.
 
+
+
 ## Install the Skill
 
 Install `browser-cloud` from the LambdaTest browser-cloud-skills repo with the Skills CLI:
@@ -45,15 +51,33 @@ Install `browser-cloud` from the LambdaTest browser-cloud-skills repo with the S
 npx skills add https://github.com/LambdaTest/browser-cloud-skills --skill browser-cloud
 ```
 
+
 Requires Node.js and network access. After installation, your environment picks up the skill automatically where supported. You can also open `SKILL.md` manually if your tool does not integrate with the CLI.
+
+
+
 
 ## Load the Skill into Your AI Tool
 
+
+
+
 Copy the contents of `browser-cloud/SKILL.md` into a **Project instruction** or **system prompt**.
+
+
+
 
 Add to `.cursor/rules/browser-cloud.mdc` or paste into **Cursor Settings → Rules for AI**.
 
+
+
+
 Paste `browser-cloud/SKILL.md` as a **system prompt** or **instruction file**. The skill is plain markdown - it works anywhere.
+
+
+
+
+
 
 ## Ask Your Agent to Build Something
 
@@ -65,6 +89,8 @@ Once the skill is loaded, ask naturally:
 - *"Set up a cloud browser session with stealth mode and Playwright"*
 
 The agent reads the skill, picks the right pattern, and writes complete, runnable TypeScript.
+
+
 
 ## Examples
 
@@ -124,6 +150,8 @@ const results = await parallelResearch([
 ], 3);
 ```
 
+
+
 ## Supported Frameworks
 
 | Framework | Language | Status | Reference |
@@ -134,6 +162,8 @@ const results = await parallelResearch([
 | **CrewAI** | Python | Ready (subprocess bridge) | `browser-cloud/references/integrations/crewai.md` |
 | **AutoGen** | Python | Use OpenAI pattern | `browser-cloud/references/integrations/openai-functions.md` |
 | **Custom agent loop** | Any | Drop-in function | Any file in `browser-cloud/examples/` |
+
+
 
 ## Supported Capabilities
 
@@ -148,6 +178,8 @@ const results = await parallelResearch([
 | **Extensions** | Load Chrome extensions into sessions from S3 URLs. |
 | **Quick Actions** | One-liner scrape, screenshot, and PDF. No session management required. |
 | **Observability** | Every session gets video recording, console logs, and network capture in your TestMu AI automation session history. |
+
+
 
 ## Skill Repo Structure
 
@@ -176,6 +208,8 @@ const results = await parallelResearch([
 └── crewai.md              ← CrewAI BaseTool (Python + Node bridge)
 ```
 
+
+
 ## Contributing
 
 Contributions welcome at the [browser-cloud-skills repo](https://github.com/LambdaTest/browser-cloud-skills). The most useful additions are:
@@ -184,5 +218,6 @@ Contributions welcome at the [browser-cloud-skills repo](https://github.com/Lamb
 - New **integration files** in `browser-cloud/references/integrations/` for frameworks not yet supported
 - New **runnable examples** in `browser-cloud/examples/`
 - Improvements to `browser-cloud/SKILL.md` that make the LLM output more correct or more concise
+
 
 Keep `SKILL.md` under 500 lines. Every addition should remove or replace something weaker. The skill is a decision engine, not a tutorial.

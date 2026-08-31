@@ -1,7 +1,7 @@
 ---
 id: selenium-bidi-integration
 title: BiDi Testing with Selenium WebDriver on TestMu AI
-sidebar_label: Use Selenium BiDi Protocol
+sidebar_label: BiDi Testing
 description: Run BiDi tests with Selenium WebDriver on the cloud grid for event-driven, cross-browser automation.
 keywords:
   - selenium bidi protocol testing

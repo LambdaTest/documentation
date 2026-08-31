@@ -1,4 +1,4 @@
-# Auto Healing for Selenium Web Automation
+# How to Auto-Heal Selenium Tests on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,7 +6,8 @@ The TestMu AI Auto Healing feature for Selenium testing automatically recovers f
 
 ## Enabling Auto Healing
 
-Pass the `autoHeal: true` capability in your WebDriver configuration to enable this feature.
+
+Pass the `autoHeal: true` capability in your WebDriver configuration to enable this feature. For the full set of options you can combine with it, see the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
 
 ```js
 const capability = {
@@ -21,11 +22,18 @@ const capability = {
 }
 }
 ```
-> **Warning:** The `autoHeal` capability only works when `smartWait` is **disabled**. Both features cannot be enabled together in the same test session.
+> **Warning:** The `autoHeal` capability only works when `smartWait` is **disabled**. Both features cannot be enabled together in the same test session. If you need to synchronize on element readiness instead, use SmartWait in a separate session.
 
-No prerequisites are required. Enable auto-healing directly via desired capabilities.
+
+No prerequisites are required. Enable auto-healing directly via capabilities.
+
 
 ### Language Preferences
+
+
+
+
+
 
 For **Java**, use the following code:
 
@@ -42,6 +50,9 @@ ltOptions.put("w3c", true);
 ltOptions.put("autoHeal", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
+
+
+
 
 For **NodeJS**, use the following code:
 
@@ -61,6 +72,9 @@ const capability = {
 }
 ```
 
+
+
+
 For **C#**, use the following code:
 
 ```csharp
@@ -76,6 +90,9 @@ ltOptions.Add("plugin", "c#-c#");
 ltOptions.Add("autoHeal", true);
 capabilities.AddAdditionalOption("LT:Options", ltOptions);
 ```
+
+
+
 
 For **PHP**, use the following code:
 
@@ -95,6 +112,9 @@ $capability = array(
 );
 ```
 
+
+
+
 For **Python**, use the following code:
 
 ```python
@@ -110,6 +130,9 @@ lt_options["plugin"] = "python-python"
 lt_options["autoHeal"] = True
 options.set_capability('LT:Options', lt_options)
 ```
+
+
+
 
 For **Ruby**, use the following code:
 
@@ -127,17 +150,26 @@ lt_options[:autoHeal] = true
 options.set_capability('LT:Options', lt_options)
 ```
 
+
+
+
 ## How Auto Healing Works
+
 
 Selenium Locator auto-healing adjusts locators by merging attributes and context to handle inconsistent tests. During runtime, it monitors the web page to identify DOM (Document Object Model) changes.
 
 When an element is successfully located on the page, its DOM path is recorded for later use. If that same element is later referenced on the same page and is missing, the system evaluates the current page and generates new locators for altered elements based on previous benchmarks.
 
+
+
+
 ## Auto Detection of New Locator
+
 
 Web elements might change their locators due to updates in the web application. The Auto Healing feature automatically detects the new locator and continues the test execution.
 
 Here is an example test case demonstrating this:
+
 
 ```js
 import assert from 'assert';
@@ -192,11 +224,13 @@ To run the test, execute the below command:
 ./node_modules/.bin/mocha autohealingTest.js
 ```
 
-## Using Auto Heal with Hooks
+## Using Auto Heal With Hooks
+
 
 You can start or stop Auto Heal at any point in your test script using hooks. This gives you fine-grained control over when element healing should be applied.
 
 ### Enable Auto Heal
+
 
 Use the following hook to **start** Auto Heal at any point in your test script.
 
@@ -208,6 +242,7 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 
 ### Disable Auto Heal
 
+
 Use the following hook to **stop** Auto Heal at any point in your test script.
 
 ```javascript
@@ -218,9 +253,14 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 
 ### Sample Script
 
+
 ```python title="Test.py"
 import os
 import time
+
+# How to Use Auto Healing for Selenium Test Suites
+---
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -257,21 +297,27 @@ driver.quit()
 
 ## Benefits of Auto Healing
 
+
+Auto Healing improves test stability, reduces maintenance effort, and keeps CI pipelines reliable.
+
 - **Increased Test Stability:** Tests remain consistent even when the web application's UI undergoes minor changes, reducing flakiness.
 - **Reduced Test Maintenance:** The system automatically adapts to evolving interfaces, reducing the manual effort required to update test scripts.
 - **Reliable CI Pipeline:** Stable tests feeding into CI pipelines reduce unexpected failures and ensure smoother deployments.
 
 ## Limitations of Auto Healing
 
+
 While the Auto Healing feature handles a wide range of issues, there are certain limitations to be aware of.
 
 * **Non-recoverable errors**: Auto Healing cannot recover from certain types of errors, such as WebDriver initialization errors or system-level failures.
 
-* **Test accuracy**: While Auto Healing reduces test flakiness, it may also mask real issues in your web application or test scripts. Review the logs and understand why a test needed healing.
+* **Test accuracy**: While Auto Healing reduces test flakiness, it may also mask real issues in your web application or test scripts. Review the logs and debug your Selenium tests to understand why a test needed healing.
 
 * **Performance impact**: While typically minimal, enabling Auto Healing can have a slight impact on test execution time due to additional checks and recovery mechanisms.
 
 The Auto Healing feature enhances your test suite, but it does not replace good test design and error handling practices. Always ensure your tests are well-designed, have proper error handling in place, and are reviewed regularly for issues that may be masked by the Auto Healing feature.
+
+
 
 ## Related Docs
 
@@ -280,4 +326,15 @@ The Auto Healing feature enhances your test suite, but it does not replace good 
 - [Auto Healing in HyperExecute](/support/docs/hyperexecute-auto-healing/):Auto-heal for tests executed via HyperExecute
 - [Auto-Heal in KaneAI](/support/docs/kaneai-auto-heal/):AI-native auto-heal with natural language understanding for KaneAI-authored tests
 
+
+
 > If you have any questions, please feel free to let us know. Our experts are always available on **chat** to help you out with any roadblock regarding our product. Happy testing!
+
+## Next Steps
+
+
+Continue with these related guides:
+
+- [SmartWait](/support/docs/smart-wait/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)

@@ -9,7 +9,9 @@ A baseline represents the "expected" state of your application's UI. When you ru
 
 A baseline in SmartUI represents the reference point for visual regression testing. It's the set of screenshots against which all future builds are compared.
 
-For detailed guidance on approval, reject, move, and merge functions, see our comprehensive [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+
+For detailed guidance on approval, reject, move, and merge functions, see our comprehensive [Approval & Baseline Management Guide](/support/docs/smartui-running-your-first-project/).
+
 
 ### Types of Baselines
 
@@ -88,11 +90,18 @@ npx smartui --markBaseline capture urls.json
 
 ## Best Practices
 
+
+
+
 **Baseline Selection**
 
 - Choose stable builds as baselines
 - Document baseline selection criteria
 - Regular baseline updates
+
+
+
+
 
 **Branch Management**
 
@@ -100,11 +109,19 @@ npx smartui --markBaseline capture urls.json
 - Document branch purposes
 - Regular branch cleanup
 
+
+
+
+
 **Build Management**
 
 - Meaningful build names
 - Document build purposes
 - Regular build cleanup
+
+
+
+
 
 **Approval Process**
 
@@ -112,7 +129,13 @@ npx smartui --markBaseline capture urls.json
 - Document approval decisions
 - Maintain audit trail
 
+
+
+
 ## Troubleshooting
+
+
+
 
 **Common Issues**
 
@@ -131,6 +154,10 @@ npx smartui --markBaseline capture urls.json
    - Check branch protection
    - Review access settings
 
+
+
+
+
 **Baseline Not Found**
 
 **Error**: Baseline branch or build does not exist
@@ -145,6 +172,10 @@ npx smartui --markBaseline capture urls.json
 npx smartui --baselineBranch "main" exec -- <command>
 ```
 
+
+
+
+
 **Permission Denied**
 
 **Error**: Insufficient permissions to set baseline
@@ -154,6 +185,10 @@ npx smartui --baselineBranch "main" exec -- <command>
 2. Check project settings for baseline management permissions
 3. Contact project admin for access
 
+
+
+
+
 **Baseline Mismatch**
 
 **Error**: Screenshot names don't match between baseline and current build
@@ -162,6 +197,9 @@ npx smartui --baselineBranch "main" exec -- <command>
 1. Ensure screenshot names are consistent
 2. Check if screenshot names changed between builds
 3. Review screenshot naming conventions
+
+
+
 
 ## Visual Examples
 
@@ -271,7 +309,9 @@ Best practices for updating baselines:
 3. Update after design system updates
 4. Document baseline update reason
 
-For detailed guidance on approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+
+For detailed guidance on approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-running-your-first-project/).
+
 
 ### Getting Help
 

@@ -4,7 +4,10 @@
 
 KaneAI lets you write **natural language instructions** that it converts into executable automation steps. This guide covers  a wide range of commands that help you interact with web pages, control tabs, handle waits, perform assertions, and build dynamic, reliable tests without writing code, best practices and troubleshooting tips to help you get the most out of KaneAI.
 
+
+
 ## Navigation & Page Interaction
+
 
 Use the below commands to move around the page:
 
@@ -23,9 +26,12 @@ Use the below commands to move around the page:
 | Refresh      | `refresh the page`                             |
 | Navigation   | `go back`  ,   `navigate back`  ,  `go forward`  ,  `navigate forward` |
 
+
+
 ## Waits & Timeouts
 
-**Wait until element**
+
+Control how long KaneAI waits for elements before a step proceeds or fails.
 
 Every element interaction automatically includes a **default maximum wait timeout of 10 seconds**, giving the element time to become interactable. This ensures that commands with locators such as click or type don't fail due to slow loading or page transitions.
 
@@ -39,26 +45,18 @@ This is useful when you need precise control over wait times for specific action
 
 **Custom Timeouts**
 
-If you prefer, you can also set custom wait timeouts directly in the step menu:
 
-1. Click the step menu
-2. Select **Step Timeout**
-3. Enter your preferred timeout value (min 1 second, max 300 seconds)
+Step Timeout is supported across **Web**, **Mobile Web**, and **App (Android and iOS)** testing. Custom waits apply only to element-based interactions.
 
-Use custom wait timeout when dealing with slow page loads or dynamic content. Step Timeout is a dynamic ceiling. The step proceeds as soon as the element is ready and only uses the extra time on genuinely slow loads.
 
-Step Timeout is supported across **Web**, **Mobile Web**, and **App (Android and iOS)** testing.
 
-**When to Use Explicit & Custom Waits**
 
-- **Custom waits** are ideal for cases where you need to adjust the wait time for certain elements to load (such as dynamic content or external API calls). [RECOMMENDED]
-- **Use explicit waits** when you know an action (like a button click or form submission) will take longer than usual.
 
-Custom waits apply only to element-based interactions.
 
 ## Tab Management
 
-KaneAI makes it easy to manage browser tabs during automated tests, whether you’re opening new tabs, switching between them, or closing them. Here's how to control your tabs with simple commands:
+
+Manage browser tabs during a test by opening, switching, and closing them. Tabs are indexed in the order they were opened, and the index starts at 1.
 
 **Opening a New Tab**
 
@@ -89,29 +87,23 @@ You can close tabs either by position or by name when you're done with them:
 - Tabs are indexed in the order they were opened. Keep track of the open tabs to avoid confusion, especially when switching by position.
 - Use **explicit waits** if the tab change involves loading content or dynamic changes.
 
+
+
 ## Scrolling Commands
 
-KaneAI allows you to easily control scrolling behavior on your web pages. Here’s how you can scroll to elements, pages, or specific sections:
+
+Control scrolling to reveal elements, move to page positions, or scroll dynamic content.
 
 **Scroll Until Element is Visible:**  This command scrolls the page until a specific element, like a button, becomes visible in the viewport. It's perfect for revealing hidden elements that are off-screen initially. [Currently only supported on Web]
 
-**Scroll by a Set Amount**
 
-- **Scroll by 100px:** Scrolls the page down by 100 pixels, allowing for fine-grained control of the viewport position.
-- **Scroll by 20 percent:** Scrolls the page down by 20% of the current page height, which is useful for relative scrolling in dynamic pages.
+Use `scroll until` for elements not yet in the viewport. It works for entire pages and for scrollable subsections.
 
-**Scroll to Specific Positions**
 
-- **Scroll to the bottom:** Scrolls to the very bottom of the page, making the last section or content visible.
-- **Scroll to the top:** Brings the page back to the top, useful for navigating or resetting the viewport.
 
-**Scroll Multiple Times**
-
-- **Scroll 3 times:** Repeats the scroll action three times, which can be helpful for interacting with infinite scroll pages or loading dynamic content.
-
-Use `scroll until` for elements not yet visible in the viewport. Works for entire pages and scrollable subsections.
 
 ## Assertions
+
 
 Assertions are used to validate whether your expectations match the actual outcomes in the application. KaneAI supports several types of assertions to check various elements during test execution:
 
@@ -126,11 +118,16 @@ Assertions are used to validate whether your expectations match the actual outco
 | **DOM Attribute Assertions** | Assert **HTML, ARIA, or data attribute** values on elements.Example: Assert the aria-expanded of the "Menu" equals "true"Example: Assert the href of the "Dashboard" link contains "/dashboard" |
 | **CSS Property Assertions** | Validate **computed CSS properties** like color, font-size, opacity, and more.Example: Assert the font-size of the "Heading" equals "24px"Example: Assert the background-color of the "Banner" equals "blue" |
 
+
 Since **July 20, 2025**, all assertions fail tests immediately by default.
 Older tests may still use *warn-and-continue* until edited.
 More info: [Failure Conditions](/support/docs/kaneai-failure-conditions)
 
+
+
+
 ## Unsupported Assertions
+
 
 The following assertion types are not yet available via natural language. Use **JS snippets** as workarounds where applicable.
 
@@ -140,28 +137,36 @@ The following assertion types are not yet available via natural language. Use **
 | **Action-based** | Assert tooltip appears after hover | Assertions based on actions (e.g., hover or click) need to be split into multiple steps (hover → wait → assert). |
 | **Nested Assertions** | Assert login button enabled AND welcome message visible | Nested assertions involving multiple layers of validation within a single assertion are not supported. Split into separate assertions. |
 
+
+
 ## Query Information
 
-KaneAI allows you to retrieve specific information from your web page during tests:
+
+Retrieve specific information from the page during a test.
 
 - **query the current URL:** Retrieves the current URL of the active page
 - **query the time mentioned in the poster:** Extracts specific text or data, such as the time listed on a poster or other page element
 
+
+
 ## Conditional Actions
 
-Use conditional logic to execute actions based on specific conditions on the page. KaneAI supports **If / Else‑If / Else** blocks with multiple conditions combined via AND / OR logic. You can add modules, JavaScript, API, and DB steps inside each branch. For the full guide, see [Conditional Logic](/support/docs/kaneai-conditional-logic/).
+
+Use conditional logic to run actions based on conditions on the page. KaneAI supports **If / Else-If / Else** blocks with multiple conditions combined via AND / OR logic, and you can add modules, JavaScript, API, and DB steps inside each branch. For the full guide, see [KaneAI Conditional Logic](/support/docs/kaneai-conditional-logic/).
+
+| Action | Example Command |
+|--------|-----------------|
+| Conditional click | `if pop up is present in the viewport then click on it` (clicks the pop-up only when it is visible) |
+| Conditional selection | `if price < 200 then click add to cart else select second product` (chooses an action based on the price) |
+
 
 Nested conditions (an If / Else block inside another If / Else block) are not supported.
 
-**Conditional Click**
-Example:
- **if pop up is present in the viewport then click on it**: clicks on a pop-up element if it is visible within the current view.
 
-**Conditional Selection**
-Example:
-**if price < 200 then click add to cart else select second product**: selects an action based on the price condition. If the price is less than $200, it adds the item to the cart. Otherwise, it selects the second product.
+
 
 ## Do's and Don'ts
+
 
 Follow these examples for better clarity and performance during test writing:
 
@@ -181,7 +186,10 @@ Follow these examples for better clarity and performance during test writing:
 - **Avoid overly specific checks:** Instead of checking for exact visual details (like a color code), focus on functionality (e.g., "Assert divider is visible").
 - **Limit the number of assertions:** Avoid making too many assertions in a single step. Test one clear outcome per assertion.
 
+
+
 ## Best Practices
+
 
 Follow these best practices to write effective and reliable tests:
 
@@ -190,3 +198,11 @@ Follow these best practices to write effective and reliable tests:
 - **Use conditional logic for dynamic scenarios:** When a page changes dynamically (e.g., based on user interaction), use if-else logic to handle different conditions effectively.
 - **Apply waits thoughtfully for stability:** Use waits when necessary to ensure elements are loaded and ready for interaction, preventing timing issues.
 - **Always add assertions to validate outcomes:** After actions, always verify expected outcomes (e.g., element visibility, text presence) to ensure that the desired result has been achieved.
+
+## Next Steps
+
+
+Continue with these guides:
+
+- Add loops to your tests with [KaneAI While Loops](/support/docs/kaneai-while-loops/).
+- Look up authoring errors in the [Error Handling KaneAI](/support/docs/error-handling-kaneai/).

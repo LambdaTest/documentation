@@ -30,7 +30,12 @@ The TestMu AI integration enables you to capture and log bugs directly from your
 
 > **Note**: By default, we use `https://rally1.rallydev.com` as host.
 
+
 **Step 5:** Click **Install**. TestMu AI will now be integrated with Rally.
+
+
+
+
 
 ## Log your First Bug
 
@@ -47,6 +52,8 @@ The TestMu AI integration enables you to capture and log bugs directly from your
 
 - any other required fields defined in your rally attribute for defects
 
+
+
 **Step 4:** Click on the **Create Issue** button. The bug will be logged into your Rally, and you can view it directly from your Rally dashboard or the TestMu AI Issue Tracker.
 
 ## Resync Rally Integration
@@ -62,6 +69,8 @@ This will:
 - Update any changes in project configurations
 
 If your API key has expired, you will be prompted to update your Rally integration credentials.
+
+
 
 ## Uninstall Rally Integration
 

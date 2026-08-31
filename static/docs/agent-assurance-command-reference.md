@@ -4,6 +4,8 @@
 
 Rook has an interactive terminal for guided human testing and headless commands for shell scripts and CI. This page is the complete reference for all 24 top-level command families in the current CLI: quick-scan tables first, then full syntax, options, examples, and safety notes for each command.
 
+
+
 ## Start and Ask
 
 | Command | Purpose | Details |
@@ -85,6 +87,8 @@ Human-readable text can evolve during pre-alpha. Prefer --json for automation wh
 ~~~
 
 See the [end-user quickstart](/support/docs/agent-assurance-quickstart/#test-your-first-agent) or choose a setup in [real-world use cases](/support/docs/agent-assurance-overview/#real-world-use-cases).
+
+
 
 # Command Details
 
@@ -362,6 +366,7 @@ Interactive class, category, tag, concurrency, natural-language selection, and R
 
 **Live effects**
 Rook does not sandbox or roll back the target agent. Refunds, bookings, emails, tickets, and file writes are real.
+
 
 **Notes**
 

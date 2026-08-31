@@ -1,8 +1,8 @@
-# Building Your iOS App for Simulator Testing
+# How to Build iOS Apps for Simulators on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-To test your iOS application on TestMu AI iOS Simulators, your app must be built specifically for the **iOS Simulator** platform. A build intended for a physical iPhone will not work on the Simulator, even if the CPU architecture matches. This guide walks you through creating a Simulator-compatible build and verifying it before uploading.
+Building an iOS app for Simulator testing on TestMu AI requires compiling against the iphonesimulator SDK, not a physical-device build. This produces a .app targeting Mach-O platform 7, which the Simulator accepts, so your uploads run without any immediate crash.
 
 ## Why Simulator Builds Are Different
 
@@ -17,6 +17,7 @@ Even when the CPU architecture (e.g., arm64) matches between device and Simulato
 
 **Common Mistake**
 Building your app for a physical device (e.g., selecting **Any iOS Device** in Xcode) and then uploading it to the Simulator will cause an immediate crash with errors like **"App quit unexpectedly."** You must build targeting the **iOS Simulator** SDK.
+
 
 ## Prerequisites
 
@@ -34,6 +35,7 @@ This is the most common method. Xcode handles the platform switching automatical
 
 **Important**
 Do **not** select **Any iOS Device** or a physical device plugged into your Mac. You must select a Simulator destination.
+
 
 **Step 3:** Press **Cmd + B** or go to **Product > Build** to build the application.
 
@@ -64,7 +66,9 @@ xcodebuild -project YourProject.xcodeproj \
 build
 ```
 
+
 If your project uses a **workspace** (e.g., with CocoaPods), replace `-project YourProject.xcodeproj` with `-workspace YourProject.xcworkspace`.
+
 
 **Key flags explained:**
 
@@ -129,6 +133,7 @@ lipo -info YourApp.app/YourApp
 ```
 This displays the architectures included in the binary (e.g., `arm64`).
 
+
 ## Uploading to TestMu AI
 
 Once you have a verified Simulator build (`.zip` containing the `.app`):
@@ -160,5 +165,7 @@ Ensure you are compressing the `.app` bundle directly into a `.zip` file. The `.
 
 ### Build fails with architecture errors
 Ensure the `-arch arm64` flag is set. Your Simulator build must include the arm64 architecture.
+
+
 
 That's all! In case you have any questions or need any additional information, you could reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.

@@ -8,9 +8,14 @@ The TestMu AI Cloud GitHub App brings KaneAI, our AI testing agent, directly int
 
 No context switching. No manual test authoring. No waiting.
 
+
+
+
+
 ## Key Capabilities
 
-#### Automated AI Test Authoring
+
+The GitHub App brings the following capabilities to your pull request workflow:
 
 Automatically generate test coverage for every pull request. KaneAI reads your code diff, PR description, README, and custom agent instructions to create automated tests that reflect actual business logic, not generic boilerplate.
 
@@ -26,7 +31,10 @@ Tests run automatically and seamlessly on TestMu AI's HyperExecute infrastructur
 
 Detailed execution reports enriched with AI-powered Root Cause Analysis, offering actionable recommendations. When tests fail, KaneAI analyzes logs, screenshots, network traces, and stack traces to surface the specific root cause, directly in your PR comment.
 
+
+
 ## Prerequisites
+
 
 Before implementing the TestMu AI Cloud GitHub App in your development workflow, ensure your organization has the following:
 
@@ -36,20 +44,33 @@ Before implementing the TestMu AI Cloud GitHub App in your development workflow,
 
 - **KaneAI Access**: This integration requires KaneAI to be enabled on your TestMu AI account. New signups can start a free trial to explore KaneAI's key workflows.
 
+
 Start KaneAI Free Trial →
+
+
+
 
 #### Repository Requirements
 
 - **GitHub Repository Access**: Administrative access to the GitHub repositories where you want to install the app
 - **Repository README** *(recommended)*: A descriptive `README.md` in your repository improves test quality. KaneAI uses it to understand your application's purpose, architecture, and key user workflows.
 
+
+
+
 ## Installation
+
 
 Follow these steps to install and authorize the TestMu AI Cloud GitHub App for your organization.
 
 #### Step 1: Access GitHub Marketplace
 
-Navigate to the [TestMu AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace and click **Install** to begin the installation process.
+Navigate to the [TestMu AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace and click **Install** to begin.
+
+
+
+**Result:** GitHub prompts you to choose which repositories the app can access.
+
 
 #### Step 2: Configure Repository Access
 
@@ -58,12 +79,17 @@ During installation, you'll need to specify which repositories should have acces
 - **Organization-wide Installation**: Select **All repositories** to enable the app across your entire GitHub organization
 - **Selective Installation**: Choose **Only select repositories** and specify individual repositories for more granular control
 
-After making your selection and clicking the **Install and Authorize** button, you will be redirected to TestMu AI where you will be asked to login.
 
-Once done, you will be redirected to the Integrations page.
+
+After making your selection, click **Install and Authorize**. You are redirected to TestMu AI to log in, and then to the Integrations page.
+
+
+
+**Result:** The app is authorized for the selected repositories and your TestMu AI Integrations page opens.
 
 **Best Practice**
 For pilot programs or initial rollouts, we recommend installing on a select subset of repositories first. Once your team is comfortable with the workflow, you can expand access organization-wide.
+
 
 #### Step 3: Verify Successful Installation
 
@@ -74,7 +100,14 @@ Confirm the installation was successful by:
 3. Selecting **Installed GitHub Apps** from the left sidebar
 4. Verifying that **TestMu AI Cloud** appears in the list of installed applications
 
-You can also click on the app to review and modify repository access permissions at any time.
+You can also click the app to review and modify repository access permissions at any time.
+
+
+
+**Result:** **TestMu AI Cloud** is confirmed in your organization's installed GitHub Apps.
+
+
+
 
 #### Uninstalling the GitHub App
 
@@ -86,9 +119,17 @@ If you need to remove the TestMu AI Cloud GitHub App from your organization:
 4. Click on the **Uninstall** button to remove the app from your organization
 5. Confirm the uninstallation when prompted
 
+
+
+
+
 Uninstalling the GitHub App will stop all AI-powered test generation workflows on your pull requests. This action cannot be undone, and you'll need to reinstall the app to restore functionality.
 
+
+
+
 ## Repository Configuration
+
 
 After installing the GitHub App, each repository requires a configuration file to connect your GitHub workflow with your TestMu AI Test Manager environment. This configuration defines where tests should be stored, who should be assigned, and which environment to test against.
 
@@ -124,6 +165,8 @@ test_cases_per_scenario: 5       # Optional: test cases per scenario (1-20, defa
 
 After installing the GitHub App, you are redirected to the [integration settings page](https://integrations.lambdatest.com/githubci/install) where all configuration values (project ID, folder ID, assignee, and environment ID) are displayed with a **copy button**. Use these to populate your `.lambdatest/config.yaml` file directly.
 
+
+
 > **Note:** All configuration IDs can also be retrieved programmatically from the [TestMu AI Test Manager API Documentation](https://www.testmuai.com/support/api-doc/?key=test-management).
 
 #### How the Test Configuration Is Selected
@@ -137,7 +180,9 @@ KaneAI resolves which configuration to run your tests on in the following order:
 
 With auto-selection, KaneAI picks a runnable KaneAI Web configuration from your account on its own, so you can start validating pull requests without configuring an environment first. The chosen configuration is reported in the progress tracker comment, along with the exact `configuration_name` value to add to your config file if you want to pin it for future runs.
 
+
 KaneAI Web supports **desktop** configurations only. Only configurations that are complete and runnable are considered, whether you name one explicitly or let KaneAI auto-select.
+
 
 #### Configuration Error Handling
 
@@ -152,6 +197,7 @@ When a run cannot start because of a configuration problem, KaneAI posts a comme
 
 **Maximize AI Context**
 KaneAI uses your `README.md` and `agent.md` to improve test quality. Keep your README comprehensive (app overview, key workflows, tech stack) and use `agent.md` for custom instructions like testing priorities, scenarios to cover or skip, and domain-specific rules.
+
 
 #### Repository Structure
 
@@ -175,7 +221,10 @@ your-repo/
 - **Tune Coverage Depth**: Use `scenario_limit` and `test_cases_per_scenario` to balance breadth against turnaround time. Keep them low for fast-moving repositories with frequent small PRs, and raise them for critical repositories where deeper coverage matters more than speed
 - **Version Control**: Commit `.lambdatest/config.yaml` to your repository so all team members use consistent configuration
 
+
+
 ## Try It Out: Sample Repository
+
 
 Explore the GitHub App workflow using our public sample repository:
 
@@ -196,7 +245,11 @@ To experience the full workflow hands-on, fork the sample repository and run the
 4. **Set up GitHub Pages & Actions**: Enable GitHub Pages and GitHub Actions in your forked repository to handle deployment and workflows.
 5. **Trigger the workflow**: Open a pull request in your fork and comment `@TestMuAI Validate this PR` to see the full AI testing pipeline in action.
 
+
+
+
 ## Triggering Test Generation
+
 
 With the GitHub App installed and your repository configured, you're ready to start generating AI-powered tests for your pull requests.
 
@@ -213,6 +266,8 @@ The test generation workflow is triggered through a simple comment on any pull r
 |---------|-------------|
 | `@TestMuAI Validate this PR` | Triggers the full AI testing workflow: analysis, generation, execution, and reporting |
 | `@KaneAI Validate this PR` | Alias for the above |
+
+
 
 #### Optional Parameters
 
@@ -238,7 +293,9 @@ You can extend any trigger command with optional parameters to customize test ex
 
 All parameters are independent. Use any one of them on its own, or combine the ones that apply to a given run. Every flag takes precedence over the corresponding value in `.lambdatest/config.yaml`, and applies only to that run, so you can experiment on a single pull request without editing the config file.
 
+
 If `--max-scenarios` or `--max-test-cases` is given a value outside the supported 1-20 range, the flag is ignored and KaneAI posts a comment telling you so. The run continues using the value from `.lambdatest/config.yaml`, or the default.
+
 
 #### Setting Up Tunnel Testing
 
@@ -252,6 +309,7 @@ When your application runs on a local machine, private network, or staging envir
 
 For complete setup instructions, refer to the [KaneAI Tunnel Support documentation](https://www.testmuai.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support).
 
+
 #### What Happens Next
 
 After you post the trigger comment, KaneAI immediately begins working:
@@ -264,7 +322,11 @@ After you post the trigger comment, KaneAI immediately begins working:
 **Fast Feedback**
 The first signal, test plan and progress tracker, appears in your PR within approximately **1 minute** of triggering the workflow. Full execution and reporting typically completes within minutes, depending on test volume and complexity.
 
-## Live PR Updates, Step by Step
+
+
+
+## Live PR Updates
+
 
 From the moment you trigger the workflow, KaneAI posts real-time updates directly in your pull request. Every phase, from analysis through execution to reporting, is visible without leaving GitHub. Here is what happens at each stage.
 
@@ -282,6 +344,9 @@ As soon as the workflow begins, KaneAI posts a comprehensive progress tracker co
 
 The tracker automatically updates as each stage completes, no manual refreshes required.
 
+
+
+
 #### Step 2: Automated AI Test Authoring
 
 Once KaneAI completes test generation, a detailed comment lists every test case that was created. These are not generic tests. They reflect the specific code changes in your PR and your application's business context.
@@ -295,19 +360,26 @@ Each entry includes:
 - **Test Case links** (TC-XXXXX) can be accessed by any user in your organization who has TestMu AI Test Manager access.
 - **Authoring status links** can only be accessed by the user who integrated the GitHub App, as they redirect to that user's live KaneAI session.
 
+
 When a PR produces more than one scenario, the test cases are grouped by scenario instead of being listed in a single flat table, so it is clear which scenario each test case belongs to. Test cases stay numbered sequentially across all scenarios, and only the first group is expanded by default to keep the comment compact.
 
 Test cases that KaneAI could not convert into executable automation are marked as **Not automated**, with a note explaining how many were affected. These test cases still exist in Test Manager, but they are not part of the test run, so the comment reflects what actually gets executed.
 
 This comment updates dynamically as test authoring progresses, so you can monitor the transition from conceptual test cases to executable automation.
 
-#### Step 3: Smart Intelligence (Similar Test Detection)
+
+
+
+#### Step 3: Smart Intelligence
 
 KaneAI does not rely solely on newly generated tests. It scans your existing test inventory in TestMu AI Test Manager to find semantically similar test cases that are relevant to the PR changes. These existing tests are added on top of the newly generated test cases into the test run for execution on HyperExecute. This is **Smart Intelligence** at work.
 
 - **Maximizes coverage**: Combines AI-generated tests with proven existing test cases, ensuring both new and established scenarios are validated in a single run.
 - **Leverages your test library**: Your team's existing test cases become active participants in every PR validation, not just historical records.
 - **Builds institutional knowledge**: Every test run enriches the system's understanding of your project, making future test suggestions progressively more accurate.
+
+
+
 
 #### Step 4: Seamless Execution on HyperExecute
 
@@ -319,15 +391,23 @@ When test execution begins, a dedicated comment provides live status updates dir
 
 Tests run in parallel across browsers, devices, and operating systems on TestMu AI's HyperExecute infrastructure, delivering results at scale without queuing delays.
 
+
 Test run link in this comment can be accessed by any user in your organization who has TestMu AI Test Manager access.
 
-#### Step 5: In-Depth Insights and Root Cause Analysis
+
+
+
+
+#### Step 5: Insights and RCA
 
 Upon completion, KaneAI generates a final report that goes far beyond simple pass/fail metrics:
 
 - **Executive Summary**: High-level test coverage and success rate for quick stakeholder review
 - **Detailed Test Results**: Pass/fail status for each individual test case with failure details
 - **PR Approval Recommendation**: Based on test results and failure severity, KaneAI suggests whether the PR should be approved, requires changes, or needs further investigation
+
+
+
 
 For any failing test, KaneAI performs automated **Root Cause Analysis (RCA)** by correlating:
 
@@ -338,19 +418,41 @@ For any failing test, KaneAI performs automated **Root Cause Analysis (RCA)** by
 
 The RCA summary is posted directly in your PR, along with a clear recommendation: approve, request changes, or investigate further. Your team gets a readable diagnosis, not a raw stack dump.
 
+
 Test run link in this comment can be accessed by any user in your organization who has TestMu AI Test Manager access.
 
-## Why This Changes Your Workflow
 
-The TestMu AI Cloud GitHub App eliminates the gap between code change and validated confidence. Instead of treating testing as a separate phase that happens after development, every pull request becomes a self-validating artifact.
 
-- **Automated AI Test Authoring**: KaneAI handles test design, script generation, and execution. Your team reviews results, not writes boilerplate.
-- **Smart Intelligence**: AI finds existing test cases semantically relevant to your PR changes and adds them alongside newly generated tests, maximizing coverage with every validation run.
-- **Seamless Execution**: Tests run automatically inside your PR workflow. Developers, QA engineers, and stakeholders all see the same information in the same place, no context switching required.
-- **In-Depth Insights**: AI Root Cause Analysis transforms cryptic test failures into actionable diagnoses with recommended fixes.
 
-Every test run, result, and AI recommendation is permanently recorded in your PR history, providing a complete audit trail for compliance and retrospective analysis.
+
+
+
+## Audit Trail
+
+
+KaneAI keeps a record of every validation run in your pull request:
+
+
+Every test run, result, and AI recommendation is recorded in your PR history, providing an audit trail for compliance and retrospective analysis.
+
+
+
 
 ## Video Walkthrough
 
-Watch the video below for a complete walkthrough of the TestMu AI Cloud GitHub App in action, from installation to AI-powered test generation and reporting.
+
+Watch the video below for a walkthrough of the TestMu AI Cloud GitHub App, from installation to test generation and reporting.
+
+
+
+
+
+
+
+## Next Steps
+
+
+Continue with these guides:
+
+- Author natural-language tests with the [KaneAI Command Guide](/support/docs/kane-ai-command-guide/).
+- Generate tests from tickets with the [KaneAI Jira Integration](/support/docs/kane-ai-jira-integration/).

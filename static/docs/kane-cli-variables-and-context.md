@@ -4,6 +4,8 @@
 
 **Variables** keep credentials and test data out of your objectives. **Context files** give the agent persistent background information: guidance, conventions, and notes that apply across runs.
 
+
+
 ## Variables
 
 ### Format
@@ -119,7 +121,11 @@ Mark a variable as secret by setting `"secret": true`:
 
 Secret values are masked in displayed output and logs, and are routed to the TestMu AI secrets store instead of being synced to Test Manager as plain variables. Use this for credentials, tokens, and anything else that should not appear in shareable artifacts.
 
+
 Do not commit credential files to version control. Add `.testmuai/variables/` to your `.gitignore`, or use environment variable substitution in CI/CD.
+
+
+
 
 ## Context Files
 

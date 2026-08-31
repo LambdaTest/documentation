@@ -20,15 +20,21 @@ npm install npm@latest -g
 
     * **For Linux/Mac:**
 
+
     $ export LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
     $ export LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 
+
+
     * **For Windows:**
+
 
     $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
     $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
+
+
 
 4. Install Concourse and start a Concourse server at port 8080 i.e. ``http://127.0.0.1:8080``.
 
@@ -92,6 +98,10 @@ $ fly -t ci set-pipeline -p nodejs-lambda-sample -c pipeline-config.yml
 
 Now, you will find the nodejs-selenium-sample pipeline in the Concourse Web UI. You can run the pipeline over TestMu AI Selenium Grid from the UI itself.
 
+
+
 After you trigger the test, you will notice the different stages of test execution. The Concourse CI will get the nodejs-selenium-sample and execute it on TestMu AI after installing the right dependencies.
+
+
 
 Deploy your code in a reliable manner at scale using Concourse CI integration with TestMu AI, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!

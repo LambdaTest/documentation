@@ -1,4 +1,4 @@
-# Install Custom Certificates on the VM Through Pre-run Executables
+# How to Run a Pre-Test Executable on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -12,7 +12,8 @@ To use certificates for Selenium tests, you need 3 things:
 
 ## Instructions
 
-Upload your certificate file, installation, and uninstallation script using the below steps.
+
+Upload your certificate file, installation, and uninstallation script using the below steps. The `prerun` and `lambda:userFiles` keys shown here are part of the broader set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to a test.
 
 1. Upload your certificate using the below command.
 
@@ -61,6 +62,7 @@ curl --request POST \
 },
 ```
 
+
 > **Note:** Replace `{TOKEN}`, `{PATH-TO-CERTIFICATE-FILE}`, `{PATH-TO-CERTIFICATE-INSTALLATION-SCRIPT}`, `{PATH-TO-CERTIFICATE-DELETION-SCRIPT}`, `{NAME-OF-YOUR-PRERUN}` with the appropriate values.
 
 6. After uploading your pre-run script, reach out to us via chat support or email to get the scripts approved.
@@ -76,7 +78,8 @@ curl --request POST \
 
 ## Leverage the Use of APIs to Pre-run Tests
 
-Use the following prerun APIs to manage pre-run files.
+
+Use the following prerun APIs to manage pre-run files. If you are still setting up your environment, first learn how to run your first Selenium test before adding pre-run scripts to the flow.
 
 * **GET/`files`:** Fetch all pre run files uploaded by the user.
 * **POST/`files`:** Upload pre run executable file to lambda storage.
@@ -87,6 +90,7 @@ Use the following prerun APIs to manage pre-run files.
 > **Note:** To learn more about our APIs, check out our [API Documentation](https://www.testmuai.com/support/api-doc/).
 
 ## Sample Certificate Installation and Uninstallation File (macOS)
+
 
 Replace the placeholder values in each script file before use.
 
@@ -107,6 +111,7 @@ sudo security delete-certificate -c "Local Certificate"
 
 ## Sample Certificate Installation and Uninstallation File (Windows)
 
+
 Replace the placeholder values in each script file before use.
 
 * In `install_certificate.ps1` replace `{CERTIFICATE-FILE-NAME}` with the certificate file name.
@@ -125,3 +130,11 @@ Get-ChildItem Cert:\CurrentUser\Root\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-It
 
 >Got any questions?
 Please reach out at our **24x7 Chat Support** or you could also mail us at support@testmuai.com.
+
+## Next Steps
+
+
+Continue with these related guides:
+
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)

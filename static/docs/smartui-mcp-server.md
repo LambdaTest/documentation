@@ -4,7 +4,16 @@
 
 SmartUI MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It lets you debug visual regressions from SmartUI comparison runs by returning natural-language summaries of pixel, layout, DOM, and perceptual differences.
 
+
+
+
+
+
+
+
 ## How Does It Work?
+
+
 
 The SmartUI MCP Tool processes visual comparison data by calling specific analysis capabilities with a `comparisonId`. Each capability simulates a different debugging layer: pixel diff, layout, DOM structure, and human perception.
 
@@ -14,6 +23,8 @@ The tool fetches the visual assets (screenshots, DOM snapshots, metadata) and re
 - "Header layout shifted left due to padding changes."
 
 ## Capabilities
+
+
 
 All capabilities take a `comparisonId` as input. Start with `analyzeSmartUIRun` for a full picture, then use the individual capabilities to investigate a specific layer.
 
@@ -55,6 +66,8 @@ Returns a description of what was found and flags anything missing.
 
 ## How to Invoke
 
+
+
 Once your MCP client is connected, use natural language to interact with the SmartUI tool. Example prompts:
 
 - "Run a full SmartUI analysis on comparisonId ``."
@@ -65,6 +78,8 @@ Once your MCP client is connected, use natural language to interact with the Sma
 Your AI client will route the request to the appropriate analysis layer.
 
 ## Error Handling
+
+
 
 If the `comparisonId` is invalid or resources are missing, you will receive:
 

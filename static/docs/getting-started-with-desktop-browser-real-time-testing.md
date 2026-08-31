@@ -4,12 +4,24 @@
 
 Real-Time Desktop Web Browser Testing on TestMu AI allows you to test your websites and web applications directly on live desktop browsers. This approach allows developers, testers, and QA professionals to interact with their web applications across various browser environments, operating systems, and versions without the need to configure complex infrastructure on local machines.
 
+
+
+
+
+
+
+
+
 ## Launch the Virtual Machine
 
 - Navigate to the Real Time Testing section.
 - Select **Desktop** from the **Web Browser Testing** section.
 - To test a website, enter its URL and select your **Operating System**, **browser**, **browser version**, and **screen resolution**.
 - Afterwards click on the **Start** button to initiate the testing process.
+
+
+
+
 
 ## Understanding the Dashboard
 The dashboard for real-time desktop browser testing is designed to simplify the testing process with an intuitive user interface. Here’s a breakdown of its key components:

@@ -1,4 +1,4 @@
-# How to Run Web Automation Tests With WebDriver BiDi
+# How to Run WebDriver BiDi Tests on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -8,6 +8,7 @@ On TestMu AI, WebdriverIO connects to a cloud browser with BiDi enabled and runs
 
 ## Prerequisites
 
+
 Before you start, make sure you have the following in place.
 
 1. A TestMu AI account. [Sign up on TestMu AI](https://www.testmuai.com/register/) if you do not have one.
@@ -15,7 +16,8 @@ Before you start, make sure you have the following in place.
 
 ## Running Web Automation Tests With WebDriver BiDi
 
-Setting the `webSocketUrl` capability to `true` enables WebDriver BiDi in WebdriverIO. WebdriverIO connects to the TestMu AI hub and returns a cloud browser that it controls over BiDi.
+
+Setting the `webSocketUrl` capability to `true` enables WebDriver BiDi in WebdriverIO. WebdriverIO connects to the TestMu AI hub and returns a cloud browser that it controls over BiDi. For every other option you can pass alongside it, see the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/). If this is your first run on the platform, follow the guide to run your first Selenium test before enabling BiDi.
 
 The example opens a product listing on the [E-Commerce Playground](https://ecommerce-playground.lambdatest.io/), captures a screenshot, and validates that the products loaded.
 
@@ -25,7 +27,9 @@ The example opens a product listing on the [E-Commerce Playground](https://ecomm
 - The **`webdriverio`** package (installed in step 1).
 - Your TestMu AI **Username** and **Access Key** (set as environment variables in step 2).
 
+
 These examples are written in TypeScript. You're free to use plain JavaScript instead (remove the type annotations and save the file as `.js`), or use any other WebDriver BiDi client your stack supports. The capabilities are the same.
+
 
 **1. Install WebdriverIO.** The package is published on the npm registry as [`webdriverio`](https://www.npmjs.com/package/webdriverio).
 
@@ -41,20 +45,32 @@ added 247 packages, and audited 248 packages in 20s
 
 **2. Set your credentials.** Copy your **Username** and **Access Key** from **Settings → Account Settings**, then set them as environment variables.
 
+
+
+
 ```bash
 export LT_USERNAME="your_username"
 export LT_ACCESS_KEY="your_access_key"
 ```
+
+
+
 
 ```powershell
 $env:LT_USERNAME="your_username"
 $env:LT_ACCESS_KEY="your_access_key"
 ```
 
+
+
+
 ```batch
 set LT_USERNAME=your_username
 set LT_ACCESS_KEY=your_access_key
 ```
+
+
+
 
 **3. Create `bidi-test.ts`.** It connects to the hub with BiDi enabled, opens the listing, captures a screenshot, validates the products, and marks the test **passed** or **failed** on the dashboard.
 
@@ -129,9 +145,13 @@ Passed: "Components" loaded 15 products, screenshot saved
 
 To view your test results, head over to the TestMu AI Web Automation dashboard.
 
+
+
+
 ## Running Web Automation With WebDriver BiDi From an AI Agent
 
-BiDi's event stream is what makes it useful for agents: the agent subscribes to browser events and validates against what the browser actually does, not just the DOM it queries.
+
+BiDi's event stream is what makes it useful for agents: the agent subscribes to browser events and validates against what the browser actually does, not just the DOM it queries. The same console and network events also help you debug your Selenium tests when a run behaves unexpectedly.
 
 Here the agent watches network responses to confirm the page loaded its resources.
 
@@ -212,8 +232,22 @@ You can view your test results in the TestMu AI Web Automation dashboard.
 **Get started faster with ready-made cookbooks**
 The [Browser Cloud agent skills](/support/docs/browser-cloud-skills/) are ready-made cookbooks that teach any AI agent (Claude, Cursor, and other LLM tools) to generate production-grade cloud browser automation for you. Drop the skill into your assistant and it writes integrations like the ones above, so you can get started with Browser Cloud at the earliest.
 
+
+
 ## Related TestMu AI Guides
+
+
+These guides cover adjacent WebDriver BiDi and DevTools workflows on TestMu AI.
 
 - [How to run web automation tests with CDP](/support/docs/run-tests-with-chrome-devtools-protocol/) for the Chrome DevTools Protocol path on Chromium browsers.
 - [How to run BiDi tests with the WebdriverIO sample project](/support/docs/selenium-bidi-integration/) for a ready-to-clone repository.
 - [How to run BiDi tests on HyperExecute](/support/docs/hyperexecute-bidi-testing/) to scale BiDi runs across a test matrix.
+
+## Next Steps
+
+
+Continue with these related guides:
+
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)

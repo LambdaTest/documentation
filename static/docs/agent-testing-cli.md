@@ -8,15 +8,20 @@
 2. Follow [Get started with TestMu Agent Testing](https://agent-to-agent.lambdatest.com/agent-ui/agents) and open **Credentials** in the TestMu AI Dashboard. Copy your username and access key.
 3. Set the credentials as environment variables when you use the CLI in CI/CD or other non-interactive environments.
 
+
+
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 ```
 
+
 ```powershell
 $env:LT_USERNAME = "YOUR_USERNAME"
 $env:LT_ACCESS_KEY = "YOUR_ACCESS_KEY"
 ```
+
+
 
 **TestMu Agent Testing CLI** (`agent-testing-cli`) is a command-line tool for testing AI agents from a terminal. Use the CLI to discover projects and test resources, run Chat and Phone Caller evaluations, retrieve results, and automate tests in a continuous integration and continuous delivery (CI/CD) pipeline.
 

@@ -11,6 +11,9 @@ This feature is currently in **Beta** and available exclusively with the **Real 
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
+
+
+
 ## Accessing Screen Reader in Real Device App Testing
 
 VoiceOver-enabled devices are available in a separate device pool. To access them, you need to enable the VoiceOver toggle from Advanced Settings before selecting a device.
@@ -21,7 +24,11 @@ VoiceOver-enabled devices are available in a separate device pool. To access the
 
 **Step 3:** Enable the **VoiceOver** toggle. This filters the device list to show only VoiceOver-enabled devices from the dedicated pool.
 
+
+
 **Step 4:** Select an iOS device from the filtered list and click **Start** to launch your session. Once the session starts, the VoiceOver feature will be active on the device.
+
+
 
 > Make sure your system's audio is turned on to hear the spoken descriptions provided by VoiceOver.
 
@@ -34,6 +41,7 @@ The VoiceOver feature is currently supported on selected iOS devices, allowing a
 | iPhone 15 | iOS 17 |
 | iPhone 16 | iOS 18 |
 | iPhone 17 | iOS 26 |
+
 
 ## How to Navigate using Keyboard Shortcuts
 
@@ -74,5 +82,8 @@ Below is a list of VoiceOver keyboard shortcuts, using `Control+Option` on macOS
 | Return to the previous screen                        | Option+Esc                                          | Windows+Esc+EscEsc                                  |
 
 By incorporating **VoiceOver** keyboard navigation into your accessibility testing workflow, you can identify usability barriers early, ensuring compliance with WCAG standards and delivering an **inclusive digital experience for all users**.
+
+
+
 
  If the keyboard shortcuts do not work initially, click on the device screen in your test session to ensure that it is in focus.

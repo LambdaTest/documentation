@@ -10,6 +10,8 @@ Kane CLI has three modes. Choose based on who (or what) is running the test.
 | **Non-Interactive CLI Mode** | `kane-cli run "..." --headless` | Formatted text + JSON | CI/CD, shell scripts |
 | **Agent Mode** | `kane-cli run "..." --agent` | NDJSON on stdout | AI coding agents (Claude, Codex, Gemini) |
 
+
+
 ## Interactive TUI
 
 Launch the TUI:
@@ -125,6 +127,8 @@ If the agent needs information mid-run (for example, a one-time code or a clarif
 
 A graceful `/exit` runs the upload pipeline (if applicable) and prints any final links to your terminal scrollback before the process ends.
 
+
+
 ## Non-Interactive CLI Mode
 
 ```bash
@@ -186,6 +190,8 @@ Below the summary, Kane CLI prints any of the following links:
 
 After the result and links print, Kane CLI prompts you to rate the session with thumbs up or thumbs down. Use the left and right arrow keys to choose, Enter to submit, or Esc to skip. See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for details.
 
+
+
 ## Agent Mode
 
 Add `--agent` to get structured NDJSON output designed for AI coding agents:
@@ -203,5 +209,6 @@ With `--agent`:
 This mode is how Claude Code, Codex CLI, and Gemini CLI consume Kane CLI results. The agent reads the NDJSON stream, parses the final `run_end` event, and presents results to you.
 
 See [Agent Mode](/support/docs/kane-cli-agent-mode/) for the full event schema and parsing guide.
+
 
 Always combine `--agent` with `--headless` in non-interactive environments to prevent display server errors.

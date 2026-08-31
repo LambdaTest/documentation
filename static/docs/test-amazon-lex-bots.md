@@ -6,6 +6,8 @@ Lex handles both text and speech natively, built from intents, slots, and fulfil
 
 ## Before You Begin
 
+
+
 Before you connect an Amazon Lex bot, make sure you have:
 
 - A published Lex bot with a live alias
@@ -14,11 +16,15 @@ Before you connect an Amazon Lex bot, make sure you have:
 
 ## Test a Lex Voice Bot
 
+
+
 Voice testing applies to bots reached over the speech endpoint rather than a phone number. Upload the bot definition and supporting docs to generate scenarios, then create the endpoint profile using the streaming conversation API. It isolates the speech pipeline, so recognition accuracy, slot capture from spoken input, and interruption handling get tested without telephony noise in the results.
 
 Full setup: [Voice agent testing](/support/docs/voice-agent/)
 
 ## Test a Lex Chat Bot
+
+
 
 Chat testing covers text conversations against the bot alias. Upload the bot definition and supporting docs to generate scenarios, then create the endpoint profile using the text recognition API. It catches intent matching, slot filling, and fulfilment failures.
 
@@ -27,6 +33,8 @@ Full setup: [Chat agent testing](/support/docs/chat-agent/)
 Phone testing for Lex bots runs through Amazon Connect. See how to [test Amazon Connect bots](/support/docs/test-amazon-connect-bots/).
 
 ## What You Get With Agent Testing
+
+
 
 Every Amazon Lex run, on any surface it supports, is scored across:
 
@@ -39,6 +47,8 @@ Every Amazon Lex run, on any surface it supports, is scored across:
 
 ## Lex-Specific Considerations
 
+
+
 A few Amazon Lex behaviours are worth building dedicated scenarios around:
 
 - Slot filling is the main failure surface, so partial input, corrections, and out-of-order answers all need scenarios
@@ -48,6 +58,8 @@ A few Amazon Lex behaviours are worth building dedicated scenarios around:
 - Lex has no telephony of its own, so there is no phone section on this page
 
 ## Troubleshooting
+
+
 
 Common failure modes to watch for:
 

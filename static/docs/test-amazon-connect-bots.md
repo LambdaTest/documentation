@@ -6,6 +6,8 @@ Amazon Connect is a contact centre rather than an agent builder. The conversatio
 
 ## Before You Begin
 
+
+
 Before you connect an Amazon Connect bot, make sure you have:
 
 - An Amazon Connect instance with a published contact flow
@@ -15,17 +17,23 @@ Before you connect an Amazon Connect bot, make sure you have:
 
 ## Test an Amazon Connect Phone Bot
 
+
+
 Phone testing covers callers reaching your bot inbound or outbound on the Connect number. Upload the contact flow and bot definition to generate scenarios, then add the Connect number and pick from 100+ voices, background noise conditions, and personas. It covers what telephony introduces around the bot's conversational accuracy: DTMF entry, queue routing, hold behaviour, transfer to a representative, and carrier latency.
 
 Full setup: [Phone agent testing](/support/docs/phone-agent/)
 
 ## Test an Amazon Connect Chat Bot
 
+
+
 Chat testing covers text conversations through the Connect chat widget or a custom client. Upload the contact flow and supporting docs to generate scenarios, then create the endpoint profile using the chat contact API, with messages received over the participant WebSocket. It catches reasoning, slot filling, and routing failures.
 
 Full setup: [Chat agent testing](/support/docs/chat-agent/)
 
 ## What You Get With Agent Testing
+
+
 
 Every Amazon Connect run, on any surface it supports, is scored across:
 
@@ -38,6 +46,8 @@ Every Amazon Connect run, on any surface it supports, is scored across:
 
 ## Amazon Connect-Specific Considerations
 
+
+
 A few Amazon Connect behaviours are worth building dedicated scenarios around:
 
 - A failure can sit in the bot or in the contact flow, so each metric needs to name which layer it reflects
@@ -46,6 +56,8 @@ A few Amazon Connect behaviours are worth building dedicated scenarios around:
 - The bot itself is covered on the Amazon Lex page
 
 ## Troubleshooting
+
+
 
 Common failure modes to watch for:
 

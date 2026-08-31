@@ -29,7 +29,7 @@ You can go through the table below to understand exactly why HyperExecute Privat
 | Automated report generation for all testing frameworks. | ✅ | ✅ |
 | User Workflow Management | ✅ | ✅ |
 | Intelligent Test Analytics | ✅ |  ❌ |
-| Integration with major [CI/CD platforms and products](/support/docs/hyperexecute-integration-with-ci-cd-tools/) | ✅ | ✅ |
+| Integration with major [CI/CD platforms and products](/support/docs/getting-started-with-hyperexecute/) | ✅ | ✅ |
 | Includes all features from TestMu AI's Web + Mobile Automation Plan, along with exclusive HyperExecute benefits | ✅ |  ❌ |
 | 24/7 dedicated customer support for uninterrupted assistance. | ✅ | ✅ |
 | Support for custom testing frameworks |  ❌ | ✅ |

@@ -22,7 +22,7 @@ export default function SmartUISDKSupportedLanguage() {
                         <div className="lt_row">
                             <div className="lt_col lt_framework_wrapper">
                                 <img loading="lazy" src={require('../../../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon no-zoom"/>
-                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-selenium-java-sdk/">Java</a></li></ul>
+                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-selenium-js-sdk/">Java</a></li></ul>
                             </div>
                             <div className="lt_col lt_framework_wrapper">
                                 <img loading="lazy" src={require('../../../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
@@ -30,15 +30,15 @@ export default function SmartUISDKSupportedLanguage() {
                             </div>
                             <div className="lt_col lt_framework_wrapper">
                                 <img loading="lazy" src={require('../../../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon no-zoom"/>
-                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-selenium-csharp-sdk/">C#</a></li></ul>
+                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-selenium-js-sdk/">C#</a></li></ul>
                             </div>
                             <div className="lt_col lt_framework_wrapper">
                                 <img loading="lazy" src={require('../../../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon no-zoom"/>
-                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-selenium-python-sdk/">Python</a></li></ul>
+                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-selenium-js-sdk/">Python</a></li></ul>
                             </div>
                             <div className="lt_col lt_framework_wrapper">
                                 <img loading="lazy" src={require('../../../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon no-zoom"/>
-                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-selenium-ruby-sdk/">Ruby</a></li></ul>
+                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-selenium-js-sdk/">Ruby</a></li></ul>
                             </div>
                         </div>
                     </TabItem>
@@ -51,7 +51,7 @@ export default function SmartUISDKSupportedLanguage() {
                             </div>
                             <div className="lt_col lt_framework_wrapper">
                                 <img loading="lazy" src={require('../../../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon no-zoom"/>
-                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-playwright-python-sdk/">Python</a></li></ul>
+                                <ul className="lt_framework_list"><li><a href="/support/docs/smartui-playwright-sdk/">Python</a></li></ul>
                             </div>
                             <div className="lt_col lt_framework_wrapper"><ul className="lt_framework_list"><li></li></ul></div>
                             <div className="lt_col lt_framework_wrapper"><ul className="lt_framework_list"><li></li></ul></div>

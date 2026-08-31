@@ -15,15 +15,23 @@ From the TestMu AI dashboard you can export **build-level** data for a SmartUI r
 
 With the build page open, select the **three-dot menu** (⋮) in the **upper-right** corner, then choose **Export**.
 
+
+
 ### Step 2: Wait for export data to load
 
 The product gathers build data for export. Stay on the view until loading **finishes** (spinner or progress clears). Large builds can take longer; avoid closing the tab during this step.
+
+
 
 ### Step 3: Choose a format and download
 
 When loading completes, select **PDF**, **CSV**, or **JSON**. Your browser will download the file (exact name depends on the product version). Use your browser’s download bar or downloads folder if the save dialog does not appear.
 
+
+
+
 If a download does not start, check pop-up or download permissions for your TestMu AI domain, then try the same format again after a short wait.
+
 
 ## Choose a format
 

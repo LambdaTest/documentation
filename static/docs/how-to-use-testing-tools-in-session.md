@@ -8,6 +8,14 @@ Let us get an overview of all the features in our real device instance:
 
 ## Comprehensive Sidebar
 
+
+
+
+
+
+
+
+
 ### Home
 
 The **Home** feature on the left-sidebar allows you to go to the home screen of your selected real device instantly.
@@ -20,6 +28,12 @@ The **App Control** feature offers you the ability to perform actions with your 
 - **Kill App:** By selecting this option, you can easily kill all your installed applications.
 - **Uninstall App:** By selecting this option, you can easily uninstall all the installed applications.
 
+
+Clicking the **Uninstall App** button under **App Controls** uninstalls **all** the user-installed applications on the device at once. This is the expected behavior of this option.
+
+
+
+
 ### Screenshot
 
 The **Screenshot** feature allows you to take a screenshot of the current screen of the device that you are currently testing on. You can access the screenshots and even download them in the gallery section.
@@ -30,17 +44,26 @@ The **Record Session** feature allows you to screen record the current test sess
 
 Just as your screenshots, you can find your recorded video in the gallery. You can also download the recording by clicking on the download button.
 
+
+
 ### Mark As Bug
 
 The **Mark as Bug** feature allows you to push your UI related issues/edited screenshot to your integrated workspace instantly.
+
+
+
 
 ### Gallery
 
 All screenshots and video recordings from test sessions are stored in the Gallery. To access, select **Gallery** from the left toolbar and you'll find the saved screenshots and videos.To download the screenshots or videos to your local machine, click on the Download icon.
 
+
+
 ### IP Geolocation
 
 The **IP Geolocation** feature allows you to emulate website and mobile experiences from more than 45 countries using local IP addresses. This enables you to test localized elements like pricing, languages, and product offerings. With IP Geolocation activated, you can verify that your app's traffic is coming from a particular country, facilitating thorough global testing.
+
+
 
 Check out our detailed support documentation to know more about the [IP Geolocation](/support/docs/list-of-supported-locales/) feature.
 
@@ -50,17 +73,25 @@ Check out our detailed support documentation to know more about the [IP Geolocat
 
 However, if your preferred location is not showing, you can specify the exact location by entering the lattitude and longitude of the location.
 
+
+
+
 ### Network Throttling
 
 With TestMu AI’s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
 
 You can simulate these network environments using either pre-defined profiles or by creating custom network profiles to suit your needs.
 
+
+
 Check out our detailed support documentation to know more about the [Network Throttling](/support/docs/app-auto-network-throttling/) feature.
+
 
 ### Files Upload
 
 Real device app testing on TestMu AI comes with preloaded media files on remote devices for testing scenarios that need file access. Additionally, you have the option to upload your own media or non-media files to cover your testing scenarios. You can upload files with formats: JPEG, PNG, MP4, 3GP, PDF, CSV, DOC and other major formats.
+
+
 
 Check out our detailed support documentation to know more about the [Files Upload](/support/docs/upload-media/) feature.
 
@@ -68,10 +99,14 @@ Check out our detailed support documentation to know more about the [Files Uploa
 
 With the **iOS settings**, you can access the crash logs as well as the app settings. For crash logs, If the app crashes at any point, the crash log gets downloaded automatically. Application settings allows you to access the default application settings in your iOS devices.
 
+
+
 - **Crash Logs :** You can download your crashed logs of the application.
 - **App Settings :** This will open the settings of the application in your mobile device.
 
+
   The **App Settings** option is shown only for apps that include a Settings Bundle. If the app under test does not have a Settings Bundle, the **App Settings** option is hidden. Legacy apps where the bundle flag is not set continue to show it.
+
 
 - **Accessibility :** Accessibility testing on iOS devices focuses on ensuring that applications and web content are usable by individuals with different abilities. Learn in detailed way about [Accessibility in iOS devices.](/support/docs/accessibility-settings-ios)
 
@@ -93,6 +128,9 @@ Under Device Control, you'll find multiple options to customize your device's se
 3. **Recent Apps** : Available on `iOS 15` and above, this feature allows you to view recent apps. Note that it is not supported on devices that rely on a physical button for accessing recent apps instead of the swipe-up gesture.
 4. **Bluetooth**: Used to enable the bluetooth functionality during the session.
 
+
+
+
 ### Settings
 
 The settings section offer the following features:
@@ -102,15 +140,28 @@ The settings section offer the following features:
 - **Language:** With this feature, you can change the language in your test session for a more localized testing experience. Language locale doc.
 - **Projects:** The projects feature allows you to track your existing test session in an existing project. You can create and access your projects under **More Tools**.
 
+
+
+
 ### Switch
 
 This feature allows you to **switch** between devices, browser and their OS versions without exiting your current test session.
+
+
 
 ### End Session
 
 By clicking on the end session button, you can close your current test session.
 
 ## Comprehensive Top Bar
+
+
+
+
+
+
+
+
 
 ### Zoom In-Out
 
@@ -120,16 +171,30 @@ With the **zoom in-out** slider, you can zoom in and out in your real device as 
 
 **Network Logs** record performance metrics including network traffic, latency, and HTTP requests and responses in the HAR (HTTP Archive) format. These logs provide a detailed overview of all network requests, such as REST API calls, from your app and their response times, aiding in the identification of performance bottlenecks and troubleshooting of failed REST API responses.
 
+
+
 ### Device Logs
 
 **Device logs** are application-specific system logs generated by iOS or Android that provide access to your application's logs. They are particularly useful for analyzing issues when the application crashes during testing.
+
+
+
+
 
 ### UI Inspector
 
 The Intelligent **UI Inspector** for real device testing streamlines mobile app testing by enabling direct interaction with devices, allowing testers to efficiently inspect app elements without the need of repeatedly opening and closing the inspector. The Intelligent UI Inspector offers the capability to crеatе custom XPaths еffortlеssly for automation test scripts.
 
+
+
+
+
 ### Test Manager
 
 Unified **Test Manager** simplifies test authoring, management, triggering, and reporting, boosting efficiency throughout all testing phases.
+
+
+
+
 
 > **Notes:** The max duration for running manual tests on TestMu AI Real Device Cloud is 2 hours. In order to extend the duration, you can opt for our dedicated real device cloud.

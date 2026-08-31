@@ -8,47 +8,51 @@ KaneAI, the GenAI Native testing assistant from TestMu AI, generates automation 
 
 **Auto-Heal** ensures your automation scripts remain robust, even when the application under test undergoes changes like modified element locators (IDs, XPaths, CSS selectors). Instead of failing the test immediately when locators break, KaneAI dynamically finds new locators at runtime by leveraging the original natural language instruction used to execute the test case.
 
-## How is Auto-Heal Implemented?
+
+Auto-Heal recovers a broken step in two stages, then falls back to visual matching where the DOM is not enough.
 
 ### Multi-Locator Fallback Approach
 
-- Every element identified by KaneAI comes with **multiple locators** (XPath, CSS, ID, etc.) at the time of script generation.
-- During execution on HyperExecute, if the primary locator fails, the script automatically tries fallback locators sequentially.
+
+- Every element KaneAI identifies is generated with **multiple locators** (XPath, CSS, ID, and others).
+- During execution on HyperExecute, if the primary locator fails, the script tries the fallback locators in priority order, ranked by confidence score.
 
 ### Locator Healing via Natural Language Understanding
 
-- If **all locators fail**, KaneAI doesn't stop there.
-- It re-evaluates the **original natural language instruction** that generated the test step.
-- Using AI models trained on automation scenarios and web element patterns, KaneAI **rebuilds the locator on-the-fly** based on the intent of the instruction (e.g., “Click on the ‘Submit’ button”).
-- The test step continues without manual intervention, ensuring minimal test flakiness and faster issue resolution.
+
+- If all locators fail, KaneAI re-evaluates the **original natural language instruction** that generated the step.
+- It re-parses the instruction with context from nearby elements, page structure, and DOM hierarchy, then rebuilds the locator at runtime from the intent (for example, "Click on the 'Submit' button").
+- The step continues without manual intervention.
 
 ## Complexity of Auto-Heal Logic
 
-The core logic of Auto-Heal integrates several sophisticated systems working in real-time:
+
+- When a locator cannot be determined from the DOM, KaneAI uses **visual queries** to identify the element by its appearance and relative position.
 
 1. **Locator Redundancy and Priority Mapping:**
    - Prioritized fallback locators based on confidence scores.
 
-2. **Natural Language Parsing with Context Awareness:**
-   - Re-parsing instructions with contextual understanding of nearby elements, page structure, and DOM hierarchy.
+
+Auto-Heal applies to any command that requires an element locator, such as **Click**, **Type**, or **Hover**.
 
 3. **Visual Query Integration (where applicable):**
    - When locators cannot be determined purely through DOM, KaneAI utilizes **visual queries** to identify elements based on their appearance and relative positioning.
 
-4. **Scope of Auto-Heal:**
-   - Any command that requires the use of an element locator, such as **Click**, **Type**, or **Hover**, falls under the purview of auto-heal.
+
+Self-heal and agent-driven test modifications are surfaced for human review before they become permanent. When KaneAI adapts a locator or refactors a step, the change is captured with a before/after diff and an attributed audit-log entry. A reviewer can accept, reject, or edit the adaptation from the test summary; changes are never silently committed. Confidence-scored element matching blocks low-confidence actions, and every accepted or rejected modification is recorded in Audit Logs for compliance.
 
 ## Human-in-the-loop review & approval
 
-Self-heal and agent-driven test modifications are surfaced for human review before they become permanent. When KaneAI adapts a locator or refactors a step, the change is captured with a before/after diff and an attributed audit-log entry. A reviewer can accept, reject, or edit the adaptation from the test summary; changes are never silently committed. Confidence-scored element matching automatically blocks low-confidence actions, and every accepted or rejected modification is recorded in Audit Logs for compliance.
+
+Auto-Heal offers the following benefits for your test suite:
 
 ## Benefits of Auto-Heal
 
 - ✅ **Reduced Test Maintenance Effort:**
   No need to manually update locators when the application UI changes.
 
-- ⚡ **Increased Automation Stability:**
-  Avoid flaky tests caused by minor DOM updates or attribute changes.
+
+The following capabilities are planned and not yet available:
 
 - 🧠 **AI-Native Healing with Context:**
   Uses the original intent behind instructions to intelligently recover from failures.
@@ -69,7 +73,8 @@ Self-heal and agent-driven test modifications are surfaced for human review befo
 
 ## Video Explanation
 
-🎥 **[Watch the Demo: How Auto-Heal Works in KaneAI with HyperExecute](https://app.trupeer.ai/view?slug=R9mcuH)**
+
+Watch this walkthrough to see Auto-Heal in action:
 
 The video walkthrough explains:
 - How KaneAI generates scripts with fallback locators.
@@ -78,7 +83,10 @@ The video walkthrough explains:
 
 ## Related Docs
 
-- [Selenium Auto Healing](/support/docs/auto-healing/):Auto-heal for Selenium web automation tests
-- [Playwright Auto Healing](/support/docs/playwright-auto-healing/):Auto-heal for Playwright web automation tests
-- [Smart Heal for Appium](/support/docs/smart-heal-appium/):AI-powered self-healing for mobile app automation on real devices
-- [Auto Healing in HyperExecute](/support/docs/hyperexecute-auto-healing/):Auto-heal for tests executed via HyperExecute
+
+Continue with these guides:
+
+- [Auto Healing](/support/docs/auto-healing/): Auto-heal for Selenium web automation tests.
+- [Playwright Auto Healing](/support/docs/playwright-auto-healing/): Auto-heal for Playwright web automation tests.
+- [Smart Heal Appium](/support/docs/smart-heal-appium/): AI-powered self-healing for mobile app automation on real devices.
+- [HyperExecute Auto Healing](/support/docs/hyperexecute-auto-healing/): Auto-heal for tests executed via HyperExecute.

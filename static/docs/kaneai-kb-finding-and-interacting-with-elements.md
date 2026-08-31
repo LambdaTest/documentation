@@ -6,6 +6,7 @@ KaneAI converts natural language instructions into automation actions by identif
 
 ## How KaneAI Finds Elements
 
+
 KaneAI uses a combination of signals to locate elements:
 
 - **Text content**: visible labels, button text, placeholder text
@@ -18,7 +19,11 @@ The best instructions combine **what the element is** (type) with **how to ident
 
 ## Describing Elements Clearly
 
+
+These techniques help KaneAI match the element you intend:
+
 ### Use the Element Type
+
 
 Always mention what kind of element you are targeting. This eliminates ambiguity when multiple elements share the same text.
 
@@ -28,9 +33,12 @@ Always mention what kind of element you are targeting. This eliminates ambiguity
 | `click on the "Pricing" link in the navigation bar` | Distinguishes the nav link from other "Pricing" text on the page |
 | `type "john@example.com" in the email input field` | Targets the input specifically, not a label |
 
+
 Think of it like giving directions to a person: "Click the blue **button** that says Submit" is clearer than "Click Submit."
 
-### Use Quotes for Exact Text Matching
+
+### Use Quotes for Exact Match
+
 
 Wrap element text in quotes when you need an exact match. This prevents KaneAI from matching similar but incorrect elements.
 
@@ -41,6 +49,7 @@ Wrap element text in quotes when you need an exact match. This prevents KaneAI f
 | Multiple links with similar names | `click on the "View Details" link` |
 
 ### Use Positional Cues to Disambiguate
+
 
 When multiple elements look the same (e.g., a table with "Edit" buttons on every row, or a page with multiple "Submit" buttons), use position or context to narrow down the target.
 
@@ -70,12 +79,17 @@ click "Save" inside the modal dialog
 
 ## Real-World Scenarios
 
+
+These examples show how to target elements in common application layouts:
+
 ### Scenario: E-Commerce Product Listing
+
 
 Your page shows a grid of products, each with an "Add to Cart" button.
 
 **Bad approach**
 `click on Add to Cart`. KaneAI won't know which product you mean.
+
 
 **Good approaches**
 ```
@@ -83,9 +97,12 @@ click the "Add to Cart" button below the "Running Shoes" product
 click the "Add to Cart" button for the first product in the list
 ```
 
-### Scenario: Data Table with Repeated Actions
+
+### Scenario: Data Table Actions
+
 
 A user management table has Edit, Delete, and View buttons for each row.
+
 
 ```
 click the "Edit" button in the row containing "jane.doe@company.com"
@@ -93,25 +110,33 @@ click "Delete" next to user "John Smith"
 click the "View" link in the third row of the users table
 ```
 
-### Scenario: Navigation Menu with Nested Items
+
+### Scenario: Nested Navigation Menu
+
 
 A multi-level navigation has "Settings" under both "Account" and "Admin" sections.
+
 
 ```
 hover on the "Account" menu, then click on "Settings"
 click on "Settings" inside the "Admin" dropdown
 ```
 
+
 ### Scenario: Modal/Dialog Interactions
 
+
 A page has a confirmation modal with "Cancel" and "Confirm" buttons, but the background page also has buttons.
+
 
 ```
 click "Confirm" inside the confirmation dialog
 click the "Cancel" button in the modal
 ```
 
+
 ## Scrolling to Find Elements
+
 
 If an element is not visible in the current viewport, KaneAI can scroll to find it.
 
@@ -124,11 +149,16 @@ If an element is not visible in the current viewport, KaneAI can scroll to find 
 | Scroll multiple times (infinite scroll) | `scroll down 5 times` |
 | Scroll within a container | `scroll down inside the chat messages panel` |
 
+
 `scroll until` works only for interactable elements. For non-interactable elements, use `scroll down X times` combined with a wait step.
+
+
 
 `scroll until` is currently supported on **Web only**. For mobile app, use `scroll down X times` combined with a wait step.
 
+
 ## Tab & Window Management
+
 
 Many real-world flows open new tabs (e.g., clicking "Terms & Conditions" or a payment gateway).
 
@@ -142,9 +172,12 @@ Many real-world flows open new tabs (e.g., clicking "Terms & Conditions" or a pa
 | Close a tab | `close the "Terms" tab` |
 | Return to original tab | `switch to the 1st tab` |
 
+
 Window management is currently not supported on KaneAI.
 
-### Scenario: Checkout Flow That Opens Payment in New Tab
+
+### Scenario: Payment in New Tab
+
 
 ```
 click on "Proceed to Payment"
@@ -155,9 +188,12 @@ switch to the 1st tab
 assert "Payment Successful" is visible
 ```
 
+
 Always add a `switch to tab` instruction after any action that opens a new tab. Without it, subsequent instructions will execute on the wrong tab and fail.
 
+
 ## Hover & Multi-Step Interactions
+
 
 Some UI elements only appear after hovering (e.g., dropdown menus, tooltips, action icons on table rows).
 
@@ -173,12 +209,14 @@ click on "Sign Out"
 
 ### Scenario: Tooltip Verification
 
+
 ```
 hover on the info icon next to "Annual Revenue"
 assert tooltip text "Total revenue for the fiscal year" is visible
 ```
 
 ## Drag and Drop
+
 
 KaneAI supports drag-and-drop interactions on **Desktop Web, Android apps, iOS apps, and Mobile Web**, for sortable lists, kanban boards, sliders, payment confirmation gestures, and similar UI patterns.
 
@@ -190,9 +228,12 @@ drag "Card A" to "Column B"
 
 Use **Manual Interaction** to capture sliders, slide-to-confirm gestures, and other dynamic-target drags that NL cannot resolve reliably. Manual recording is available on Desktop Web, Android, and iOS. Mobile Web is **NL-only**.
 
-See the [Drag and Drop](/support/docs/kane-ai-drag-drop/) guide for the full platform matrix, gesture classification rules, and replay behavior.
+
+See the [drag and drop](/support/docs/kane-ai-click-interactions/#drag-and-drop) guide for the full platform matrix, gesture classification rules, and replay behavior.
+
 
 ## When Natural Language Isn't Enough
+
 
 For complex or highly dynamic pages where natural language targeting is unreliable, KaneAI supports **JS Snippets** as a workaround. Common cases include:
 
@@ -206,9 +247,14 @@ Use the `/` command and select **"Add JS Snippet"** to execute JavaScript direct
 document.querySelector('my-component').shadowRoot.querySelector('.hidden-btn').click();
 ```
 
-See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds) guide for a comprehensive list of scenarios where JS scripting is the recommended approach.
+
+See the [KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/) guide for the full list of scenarios where JS scripting is the recommended approach.
+
 
 ## Quick Reference: Element Interaction Commands
+
+
+This table lists common element interactions with example instructions:
 
 | Action | Example Instructions |
 |---|---|
@@ -226,6 +272,9 @@ See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-work
 
 ## Do's and Don'ts
 
+
+This table contrasts precise instructions with vague ones to avoid:
+
 | Do | Don't |
 |---|---|
 | `click the "Save" button inside the settings modal` | `click Save` (which Save button?) |
@@ -234,3 +283,14 @@ See the [JS Snippets & Workarounds](/support/docs/kaneai-kb-js-snippets-and-work
 | `hover on "Account" menu, then click "Profile"` | `go to my profile` (too vague for nested nav) |
 | `scroll until the "Footer" section is visible` | `scroll to the bottom` (if you need a specific section, name it) |
 | `switch to the "Checkout" tab` | `continue on the new tab` (KaneAI needs explicit tab switch) |
+
+## Next Steps
+
+
+Continue with these guides:
+
+- [KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)
+- [KaneAI Scroll in Feature](/support/docs/kane-ai-scroll-in-feature/)
+- [KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)
+- [KaneAI Mobile App Testing Patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/)
+- [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)

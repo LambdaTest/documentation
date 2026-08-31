@@ -15,13 +15,21 @@ TestMu AI now integrates with Codeship to boost your go-to-market delivery. Perf
 3. **TestMu AI Authentication Credentials**
     Be aware of your TestMu AI authentication credentials i.e. your TestMu AI username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
+
 ## Integrating Codefresh CI With TestMu AI
 
 **Step 1:** Sign-in into your codefresh ci account , and create a new pipeline
 
+
+
 **Step 2:** Select your user/git organisation, select repository and then click create.
 
+
+
+
 **Step 3:** After the creation of pipeline, you must see the workflow YAML got generated, with your selected github repository.
+
+
 
 **Step 4:** You will have option to choose your runtime image as per your requirements, or test scripts.
   - Choose your runtime image
@@ -65,7 +73,11 @@ stage: "test"
 
 You can see the pipeline running.
 
+
+
 **Step 4:** Login to the TestMu AI Dashboard, Navigate to Automation -> Web Automation. You can see your codefresh pipeline build has been executed on TestMu AI
+
+
 
 Similarly you can run test scripts based on any framework using this above described method.
 Here is the selenium test script for your reference.
@@ -79,6 +91,7 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 username = os.getenv("LT_USERNAME")  # Replace the username
 access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
+
 
 # paste your capability options below
 options = ChromeOptions()
@@ -153,6 +166,7 @@ driver.execute_script("lambda-status=failed")
 # tearDown runs after each test case
 def tearDown(self):
 self.driver.quit()
+
 
 if __name__ == "__main__":
 unittest.main()
