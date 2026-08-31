@@ -2833,6 +2833,16 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Baseline Strategy",
+            id: "smartui-baseline-strategy",
+          },
+          {
+            type: "doc",
+            label: "Baseline History",
+            id: "smartui-baseline-history",
+          },
+          {
+            type: "doc",
             label: "A/B Testing & Variations",
             id: "smartui-ab-testing-variations",
           },
