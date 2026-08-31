@@ -63,8 +63,8 @@ Standard project types work the other way around. A standard project is created 
 | Sending another source type | Accepted | Rejected with a project type mismatch error |
 | Projects needed for a web + mobile + PDF release | One | One per source |
 | Configuration screen | One tab per capture source | Instructions for the project's own source |
-| Baseline selection | Per git branch | One baseline for the project, except CLI projects, which are also per git branch |
-| Build list | One chronological list across all sources | Grouped into **Baseline Build** and **Non Baseline Build** |
+| Baseline selection | Chosen at creation: **Git Strategy** (per git branch, default) or **Single Baseline** (one baseline for the project) | One baseline for the project, except CLI projects, which are also per git branch |
+| Build list | One chronological list on Git Strategy, grouped into **Baseline Build** and **Non Baseline Build** on Single Baseline | Grouped into **Baseline Build** and **Non Baseline Build** |
 
 The practical difference is consolidation. A team shipping a feature across a web app, a mobile app and a generated PDF statement can run all three into one Omni project and read one build list, instead of aggregating status by hand from three projects.
 
@@ -74,16 +74,16 @@ For an enterprise team weighing a move, the differences that actually change day
 
 **Fewer projects, and one place to look.** A release that spans a web app, a mobile app and generated documents needs one Omni project rather than three. Approvers, tags and settings are configured once rather than kept in step across projects, and the release status is read from one build list.
 
-**Branch aware baselines.** This is the change most likely to affect an existing pipeline, and how much it affects you depends on where you are coming from.
+**You pick how baselines are resolved.** An Omni project is created with a [baseline strategy](/support/docs/smartui-baseline-strategy/), and the choice is permanent.
 
-- Coming from a **CLI** project, nothing changes. CLI projects already resolve baselines per git branch, and Omni behaves the same way.
-- Coming from a **Website**, **App** or **PDF** project, this is new. Those resolve against one baseline for the whole project, whereas Omni resolves per branch, so a feature branch compares against its own branch's baseline rather than against whatever the project's single baseline happens to be.
+- **Git Strategy**, the default, resolves per git branch, so a feature branch compares against its own branch's baseline. This is what a **CLI** project already does, so a team coming from CLI sees no change.
+- **Single Baseline** keeps one baseline for the whole project and ignores the branch on a build. This is closest to how a **Website**, **App** or **PDF** project behaves today, so it is the option to pick if your runs are manual, scheduled, or otherwise not driven by branch based CI.
 
-If your runs do not currently send branch information, add it before migrating, because Omni treats a build with no branch as being on the default branch.
+If you choose Git Strategy and your runs do not currently send branch information, add it before migrating, because a build with no branch is treated as being on the default branch.
 
-**A different baseline mental model in the dashboard.** A standard project separates its build list into a **Baseline Build** and **Non Baseline Build** section, so the baseline is a specific build you can point at. An Omni project shows one chronological list, and the baseline is resolved per branch rather than being a single pinned build. Teams with a documented approval process that references "the baseline build" will want to revisit that wording.
+**A different baseline mental model in the dashboard.** A standard project separates its build list into a **Baseline Build** and **Non Baseline Build** section, so the baseline is a specific build you can point at. A Single Baseline Omni project keeps that model. A Git Strategy Omni project shows one chronological list instead, and the baseline is resolved per branch rather than being a single pinned build, so teams with a documented approval process that references "the baseline build" will want to revisit that wording.
 
-**Document annotation is materially better on Omni.** In a standard PDF project a region applies only to the page you drew it on, so a 40 page document means 40 regions placed by hand. Omni adds page level propagation plus [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring), so one region can cover the whole document and follow the anchored content as the pages reflow. For teams testing statements, invoices or policy packs this is usually the single biggest reason to move.
+**Document annotation is ahead on Omni today.** In a standard PDF project a region applies only to the page you drew it on, so a 40 page document means 40 regions placed by hand. Omni adds page level propagation plus [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring), so one region can cover the whole document and follow the anchored content as the pages reflow. Page level propagation is landing for every project type, so treat it as a reason Omni is ready first rather than a capability only Omni will ever have.
 
 **Nothing changes for how you capture.** The CLI commands, SDK hooks and APIs are the same. Omni changes which project accepts the artifact and how baselines are resolved, not how the screenshot is taken, so existing test code does not need rewriting.
 
@@ -196,7 +196,7 @@ Similarly, two artifacts that share a name but were captured at different resolu
 
 Annotations behave the same way in an Omni project as anywhere else, and the [region types and scope controls](/support/docs/smartui-draw-on-ui/) are unchanged. What differs is the axis a region propagates along, which follows the source of the screenshot you drew it on:
 
-- On a **PDF** artifact, a region can be applied to every page of that PDF, and [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring) places it on the anchored content page by page. Page level propagation is specific to Omni: in a standard PDF project a region stays on the page it was drawn on. Anchoring itself is not limited to Omni, and is available on web comparisons in any project.
+- On a **PDF** artifact, a region can be applied to every page of that PDF, and [Element Based Anchoring](/support/docs/smartui-draw-on-ui/#element-based-anchoring) places it on the anchored content page by page. Page level propagation is available on Omni first: in a standard PDF project a region currently stays on the page it was drawn on, and support for every project type is on the way. Anchoring itself is not limited to Omni, and is available on web comparisons in any project.
 - On a **website or app** artifact, a region can be applied to every browser and viewport variant of that screenshot.
 
 ## Availability and Access
@@ -217,11 +217,13 @@ To have Omni enabled for your organisation, contact support at support@testmuai.
 
 - **Group by release, not by source.** The value of an Omni project comes from one project covering a whole release. Splitting by source recreates the silos Omni exists to remove.
 - **Keep screenshot names stable across sources.** Names are part of every matching key, so a rename is read as a new artifact rather than a change to an existing one.
-- **Keep git branch information accurate on every run.** Omni resolves baselines per branch, as CLI projects do, so a missing or wrong branch sends a build to compare against the wrong baseline.
+- **Pick the baseline strategy deliberately, because it is permanent.** Git Strategy needs accurate branch information on every run, since a missing or wrong branch sends a build to compare against the wrong baseline. Single Baseline ignores the branch entirely. See [Baseline Strategy](/support/docs/smartui-baseline-strategy/).
 - **Keep viewports consistent between runs.** A changed resolution produces a new entry rather than a comparison.
 
 ## Additional Resources
 
+- [Baseline Strategy for Omni Projects](/support/docs/smartui-baseline-strategy/)
+- [Baseline History](/support/docs/smartui-baseline-history/)
 - [Ignore or Select Annotated Regions](/support/docs/smartui-draw-on-ui/)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project/)
 - [SmartUI CLI Environment Variables](/support/docs/smartui-cli-env-variables/)
