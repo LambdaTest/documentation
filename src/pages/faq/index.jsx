@@ -5,6 +5,118 @@ import SharedSidebar from '@site/src/component/SharedSidebar/SharedSidebar';
 import CopyPageButton from '@site/src/component/CopyPageButton/CopyPageButton';
 import faqStyles from './styles.module.css';
 
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I mark my test as passed or failed in TestMu AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The TestMu AI Selenium grid does not automatically detect pass or fail. Use TestMu AI Annotations or the TestMu AI API to push pass/fail status from your test code." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the default idle timeout for Selenium sessions on TestMu AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "By default, if the TestMu AI Selenium grid receives no command for 120 seconds, the session is terminated. Use the idleTimeout capability to extend this up to 1800 seconds (30 minutes)." }
+    },
+    {
+      "@type": "Question",
+      "name": "What test automation frameworks does TestMu AI support for app automation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "TestMu AI supports Appium, Espresso (Android), and XCUITest (iOS) for app automation on real devices." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum queuing capacity for Appium tests on TestMu AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Maximum queued Appium tests = n + 150, where n is your concurrent session count. Tests that stay queued for more than 15 minutes are timed out and not executed." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which testing frameworks does HyperExecute support?",
+      "acceptedAnswer": { "@type": "Answer", "text": "HyperExecute has deep support for Selenium, Cypress, Playwright, CDP, Taiko, and other web browser testing frameworks, and can run any other tests using YAML." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum session duration on TestMu AI real devices?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A single session (manual or Appium-automated) can run for up to 6 hours uninterrupted on the public cloud real device platform." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does KaneAI automatically fix broken test locators when the UI changes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. KaneAI's Auto-Heal feature finds new locators at runtime when element IDs, XPaths, or CSS selectors break. Auto-Heal applies when KaneAI-generated tests run via HyperExecute." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I run KaneAI tests in CI/CD pipelines?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. KaneAI test runs can be triggered from GitHub Actions and Jenkins using the TestMu AI API." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I install Kane CLI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Run: npm install -g @testmuai/kane-cli. Requires Node.js 18 or higher and Google Chrome. Authenticate with: kane-cli login" }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the three modes of Kane CLI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Kane CLI has three modes: Interactive TUI (kane-cli --tui) for development, Non-Interactive CLI (kane-cli run ... --headless) for CI/CD pipelines, and Agent Mode (kane-cli run ... --agent) for AI coding agents like Claude Code, Codex, and Gemini." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I set up my first SmartUI visual regression test?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Create a SmartUI project, install the SDK, set your project token as an environment variable, add smartuiSnapshot calls to your existing test, then run the suite. Requires Node.js v20.3+ for CLI v4.x.x." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I stop false positives from dynamic content like timestamps in SmartUI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use ignoreDOM to exclude specific elements from comparison, or selectDOM to compare only a specific portion of the page. Both accept CSS selectors, XPath, element IDs, and class names." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I run accessibility checks as part of my automated Selenium or Playwright test suite?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Accessibility Automation integrates with Selenium and Playwright on the TestMu AI cloud grid. Add the accessibility capability to your existing test configuration. Note: Playwright requires Chrome; pw-chromium is not supported." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I identify flaky tests in TestMu AI Insights?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the Flaky Tests AI module in Insights. It categorizes tests by severity: High (over 75% flake rate), Medium (50-75%), and Low (under 50%). The Flakiness Trends widget shows changes over time." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I import existing test cases into Test Manager?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the CSV import flow: upload your CSV file, map column headers to Test Manager fields, preview the mapping, and finalize the import. Both single-row and multi-row CSV formats are supported." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TestMu AI pricing based on users or parallel sessions?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pricing is based on parallel sessions. The user limit is an add-on that comes with each edition." }
+    },
+    {
+      "@type": "Question",
+      "name": "What paid plans does TestMu AI offer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "TestMu AI offers three paid tiers billed annually: Virtual Live at $15/month, ChromeOS Live at $29/month, and Real Device Plus Live at $39/month. Enterprise pricing is custom." }
+    },
+    {
+      "@type": "Question",
+      "name": "What security certifications does TestMu AI hold?",
+      "acceptedAnswer": { "@type": "Answer", "text": "TestMu AI holds SOC 2 Type II, ISO 27001, ISO 27017, and ISO 27701 certifications. The platform is also GDPR, CCPA, and HIPAA-ready compliant." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TestMu AI have a disaster recovery plan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. TestMu AI maintains a formal Business Continuity Plan and Disaster Recovery Plan tested annually. Recovery Time Objective (RTO) is 4 hours and Recovery Point Objective (RPO) is under 1 hour." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TestMu AI support SP-initiated and IdP-initiated SSO?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Both are supported. In SP-initiated SSO the login begins on the TestMu AI sign-in page via Continue with SSO. In IdP-initiated SSO the user launches TestMu AI from the configured app in their Identity Provider." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are all users forced to log in via SSO on TestMu AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not by default. The organization admin controls this with the Enforce SSO Login toggle. When enforced, users on the configured company domain must use SSO, while admins can add exceptions to an Exempt List." }
+    }
+  ]
+};
+
 const BRAND_NAME = 'TestMu AI';
 
 function FaqSidebarLink() {
@@ -44,6 +156,7 @@ const TABS = [
   { id: 'realtime', label: 'Real Time' },
   { id: 'billing', label: 'Plans & Billing' },
   { id: 'security', label: 'Data & Security' },
+  { id: 'sso', label: 'SSO' },
   { id: 'ltbrowser', label: 'LT Browser' },
 ];
 
@@ -1429,6 +1542,150 @@ export default function FaqPage() {
               <details>
               <summary>Do you have separate production, QA, and development environments?</summary>
               <p>Yes. Production, Dev, and Test environments are hosted on separate AWS instances behind private networks. Only the Production environment holds real customer data; other environments use dummy or simulated data.</p>
+              </details>
+
+            </div>
+          )}
+
+          {/* ── Single Sign-On (SSO) ──────────────────────────────────── */}
+          {activeTab === 'sso' && (
+            <div className={faqStyles.accordionGroup}>
+
+              {/* Integration & Hosting */}
+              <details>
+              <summary>Will the SSO flow be SP-initiated or IdP-initiated?</summary>
+              <p>Both are supported. {BRAND_NAME} supports SP-initiated and IdP-initiated SSO.</p>
+              <ul>
+              <li><strong>SP-initiated SSO:</strong> The login begins on the {BRAND_NAME} side (the Service Provider). A user visits the {BRAND_NAME} sign-in page, clicks <strong>Continue with SSO</strong>, and {BRAND_NAME} sends a SAML request to your configured Identity Provider to authenticate.</li>
+              <li><strong>IdP-initiated SSO:</strong> The login starts on the Identity Provider side. An assigned user clicks the {BRAND_NAME} application from the configured SSO app in the IdP, which redirects them to the sign-in URL and continues the SSO flow.</li>
+              </ul>
+              </details>
+
+              <details>
+              <summary>If the SSO flow is SP-initiated, does the application support the SAML request signature?</summary>
+              <p>Yes. SP-initiated SSO supports signing the SAML request.</p>
+              </details>
+
+              {/* Login Behaviour & Enforcement */}
+              <details>
+              <summary>Are all users forced to log in via SSO?</summary>
+              <p>Not by default. Your organization admin controls this through the <strong>Enforce SSO Login</strong> toggle.</p>
+              </details>
+
+              <details>
+              <summary>What happens when "Enforce SSO" is off (default)?</summary>
+              <p>Users have a choice. They can log in using SSO, standard email and password, or social logins (Google or GitHub). No one is forced to use SSO.</p>
+              </details>
+
+              <details>
+              <summary>What happens when "Enforce SSO" is on?</summary>
+              <p>All team members must use SSO to access the organization, and email and password login is disabled for them.</p>
+              </details>
+
+              <details>
+              <summary>Are there any exceptions when SSO is enforced?</summary>
+              <p>Yes. The admin can add specific users to an <strong>Exempt List</strong>. These users, typically external contractors or backup admins, can still log in with a standard password while enforcement is active for everyone else.</p>
+              </details>
+
+              <details>
+              <summary>If SSO is enabled for the root organization, can sub-org users still log in with a username and password?</summary>
+              <p>It depends on their email domain. Users on the enforced company domain (for example, <code>@yourcompany.com</code>) are forced to use SSO even if they only work inside a sub-organization, because the system recognises that their email belongs to the enforced domain. Users on a different domain (for example, <code>@gmail.com</code> or <code>@agency.com</code>) are not forced and can continue with a username and password.</p>
+              </details>
+
+              <details>
+              <summary>Can users log in to a sub-org via SSO if the parent org has SSO enabled?</summary>
+              <p>Yes. If SSO is enabled for the parent organization, users can log in to the sub-org via SSO as well. However, a user who does not belong to the parent organization, or who belongs to an organization where SSO is not enabled, cannot log in to the sub-org via SSO.</p>
+              </details>
+
+              {/* Configuration */}
+              <details>
+              <summary>Is it possible to add more than one domain in SSO?</summary>
+              <p>Yes. The SSO (SAML) configuration includes an <strong>SSO Domains</strong> field that accepts a comma-separated list of allowed email domains (for example, <code>domain1.com,domain2.com</code>). Users from any listed domain can authenticate through that SSO setup.</p>
+              </details>
+
+              <details>
+              <summary>Does {BRAND_NAME} have an X.509 certificate configured to verify SAML assertions?</summary>
+              <p>Yes. {BRAND_NAME} supports SAML SSO with an X.509 certificate and provides a way to configure it during SSO setup.</p>
+              </details>
+
+              <details>
+              <summary>How do X.509 certificates work in {BRAND_NAME} SSO?</summary>
+              <p>You configure SSO with your IdP (Google Workspace, Okta, Azure AD, OneLogin, and others) and upload the IdP's base64-encoded X.509 certificate on the {BRAND_NAME} SSO setup screen. This certificate verifies the authenticity of the SAML responses and assertions sent by your IdP. {BRAND_NAME} also displays its own Assertion Consumer Service (ACS) URL, Entity ID, and X.509 certificate, which you copy into your IdP configuration so the IdP trusts {BRAND_NAME} as the Service Provider.</p>
+              </details>
+
+              <details>
+              <summary>Does {BRAND_NAME} use a metadata URL or manual entry of IdP details?</summary>
+              <p>Both are supported, but the metadata URL is recommended. {BRAND_NAME} lets you enter the IdP metadata URL provided by your identity provider and automatically fetches the SSO endpoint (Login URL), IdP Entity ID, and X.509 certificate from it. This reduces manual errors, particularly when the IdP rotates certificates.</p>
+              </details>
+
+              {/* Troubleshooting */}
+              <details>
+              <summary>Why do I get a 405 error when attempting to log in through SSO?</summary>
+              <p>A 405 ("Method Not Allowed") means the HTTP method used in the SAML request is not accepted by the SSO endpoint. The common causes are an incorrect HTTP binding, a wrong SSO URL, misconfigured IdP settings, or, less commonly, a firewall or proxy. Each is covered below.</p>
+              </details>
+
+              <details>
+              <summary>Can an incorrect HTTP binding cause a 405 error?</summary>
+              <p>Yes. SAML SSO supports HTTP-Redirect (GET), where the SAML request is sent as a query parameter, and HTTP-POST (POST), where it is sent in the request body. {BRAND_NAME} expects one specific binding, usually POST for login, so an IdP sending GET instead triggers a 405.</p>
+              </details>
+
+              <details>
+              <summary>Can a wrong SSO URL cause a 405 error?</summary>
+              <p>Yes. {BRAND_NAME} provides a specific ACS (Assertion Consumer Service) URL. If your IdP posts to the wrong endpoint, for example the generic login page URL instead of the ACS URL, the request is rejected with a 405.</p>
+              </details>
+
+              <details>
+              <summary>Can misconfigured IdP settings cause a 405 error?</summary>
+              <p>Yes. The IdP may be sending the SAML response to the wrong endpoint or using an unsupported method. Verify the IdP's SSO URL, binding method, and certificate settings.</p>
+              </details>
+
+              <details>
+              <summary>Can a firewall or proxy cause a 405 error?</summary>
+              <p>Occasionally. Corporate proxies or security policies that block POST requests to the ACS URL can surface as a 405. This is a less common cause.</p>
+              </details>
+
+              <details>
+              <summary>What status code is returned when an unauthorized user tries to access the application via SSO?</summary>
+              <p>If the user is successfully authenticated through SSO but does not have permission to access the application, the request generally results in a <strong>403 Forbidden</strong> status. This means the user has been authenticated but is not authorized. With an IdP, this usually happens when the user is not assigned to the enterprise application or is not part of an authorized group. To resolve it, the IdP administrator should assign the user to the {BRAND_NAME} enterprise application, or add the user to a group that has access. Once access is granted, the user can log in successfully through SSO.</p>
+              </details>
+
+              <details>
+              <summary>Why does SSO authentication fail with a certificate error?</summary>
+              <p>If the SSO certificate has expired, SSO authentication can fail due to certificate validation errors. To resolve this, generate a new certificate and update the SSO connection with the newly generated certificate. Once updated, users can authenticate through SSO successfully.</p>
+              </details>
+
+              {/* Updating & Migration */}
+              <details>
+              <summary>What steps are required to switch the SSO configuration from Okta to Microsoft Entra ID?</summary>
+              <p>In {BRAND_NAME} SSO settings, reconfigure the existing connection. This does not delete users; it only removes the authentication pipe.</p>
+              <ol>
+              <li>Give the connection a unique name (for example, <code>EntraID-YourCompany</code>). Reusing the old connection name is technically possible, but a new name avoids caching issues.</li>
+              <li>Update the metadata URL, or add the X.509 signing certificate and sign-in URL copied from Entra ID.</li>
+              <li>Configure your SSO email domains (for example, <code>company.com</code>).</li>
+              <li>Update the connection.</li>
+              <li>Copy the Service Provider / Reply URL (ACS) URL and Entity ID that {BRAND_NAME} generates, and keep them handy for the IdP configuration.</li>
+              </ol>
+              </details>
+
+              {/* SCIM Provisioning */}
+              <details>
+              <summary>How does SCIM provisioning work on {BRAND_NAME}?</summary>
+              <p>SCIM for user provisioning is turned on by default; you only need to configure SCIM through the auth provided by {BRAND_NAME}. For group provisioning, reach out to the support team to have that feature enabled. See <a href={`${BRAND_URL}/support/docs/scim/`}>how to set up SCIM provisioning</a> for details.</p>
+              </details>
+
+              <details>
+              <summary>Why is a user not getting provisioned automatically?</summary>
+              <p>Check whether the user already exists in a different organization. If a user is already associated with another organization, automatic user provisioning does not occur, and it requires support from the {BRAND_NAME} side to resolve.</p>
+              </details>
+
+              <details>
+              <summary>Why are groups, teams, or sub-organizations not being provisioned correctly?</summary>
+              <p>Verify that group, team, or sub-organization provisioning is enabled for the user's organization, and confirm that the corresponding configuration in the Identity Provider is correct and properly mapped.</p>
+              </details>
+
+              <details>
+              <summary>Where can I find the full SSO setup guide?</summary>
+              <p>See <a href={`${BRAND_URL}/support/docs/single-sign-on/`}>how to get started with SSO</a> and <a href={`${BRAND_URL}/support/docs/lambdatest-sso-self-serve/`}>how to create an SSO connection</a> for step-by-step configuration.</p>
               </details>
 
             </div>
