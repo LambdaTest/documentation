@@ -82,7 +82,7 @@ Record your entire test session for detailed playback. A timer keeps track of re
 </video> 
 
 ## Gallery
-All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
+All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the images by clicking their checkboxes and then click on Bug icon.
 
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos/gallery.png').default} style={{ height: '350px' }} className="doc_img"/> 
 

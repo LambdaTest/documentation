@@ -84,7 +84,7 @@ This allows you to record a video of your testing session, providing a detailed 
 </video>
  
 ## Gallery
-Serves as your central hub for all captured screenshots and recorded sessions from your ChromeOS testing endeavors. This eliminates the need to search for these assets across different locations. The Gallery provides easy access, allowing you to review, download, and organize your testing assets effortlessly.
+All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the images by clicking their checkboxes and then click on the Bug icon.
  
 <video class="right-side" width="80%" controls id="vid">
 <source src= {require('../assets/videos/real-time/chromeos-app/gallery.mp4').default} style={{ height: '300px' }} type="video/mp4" />
