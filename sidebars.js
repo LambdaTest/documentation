@@ -1087,6 +1087,7 @@ module.exports = {
               "devtools-on-real-devices-app",
               "set-date-time-hour-format-real-devices",
               "device-passcode-on-realdevice",
+              "certificate-injection-on-realdevice",
               "assistive-touch-on-real-ios-devices",
               "dark-mode-on-real-devices",
               "low-power-mode-on-real-devices",
@@ -1474,6 +1475,7 @@ module.exports = {
               "live-debug-in-app-automation",
               "appium-date-and-time",
               "device-passcode-appautomation",
+              "certificate-injection-appautomation",
               "set-device-dark-mode",
               "smart-heal-appium",
               "apple-pay-auto",
@@ -2834,6 +2836,11 @@ module.exports = {
             type: "doc",
             label: "Context Graph",
             id: "kane-cli-assurance-context",
+          },
+          {
+            type: "doc",
+            label: "Requirement Sources",
+            id: "kane-cli-assurance-sources",
           },
           {
             type: "doc",

@@ -35,7 +35,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Network Throttling",
+          "name": "Credits Management",
           "item": `${BRAND_URL}/support/docs/credits-management/`
         }]
       })
@@ -49,15 +49,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ## Who gets credits?
 
 * **Free users:** Receive **1,000 complimentary credits** to try AI‑powered features.
-* **Paid users:** Receive **complimentary credits** based on subscription to try AI‑powered features and can purchase credits as an add‑on at any time. Credits are used only when AI features are invoked.
+* **Paid users:** Receive the same one-time **complimentary credits** at signup, plus the credits included with their subscription, and can purchase more as an add‑on at any time. Credits are used only when AI features are invoked.
 
 :::tip
-Once free credits are exhausted, AI features will be unavailable until you **upgrade or purchase credits** from the Billing page. Use this link to buy credits directly: [Upgrade / Buy Credits](https://billing.lambdatest.com/billing/subscriptions?addCredits=true).
+Once free credits are exhausted, AI features will be unavailable until you **upgrade or purchase credits** from the Billing page. Use this link to buy credits directly: [Add Credits](https://billing.lambdatest.com/billing/credits).
 :::
 
 ---
 
-## View your current credit balance
+## How credits are charged
 
 * Your organization holds a **single credit balance**. Every credit-consuming feature draws from it, so products do not have separate wallets.
 * Charges are proportional to what a run actually uses, not a flat fee per run. Fractional amounts such as `0.3` or `1.54` credits are normal.
@@ -173,16 +173,32 @@ Credits are added as soon as the payment goes through, and the pack is valid for
 
 The transactions table shows:
 
-* **Date** of the event
-* **Type** (Debit / Credit)
-* **Credits** (Amount of credits)
-* **Name** of the user who did the transaction
+| Column | What it shows |
+|--------|---------------|
+| **Transaction ID** | The unique ID of the entry, with a copy icon |
+| **Activity** | The product the credits were spent on, with its source underneath |
+| **Used By** | The name and email of the user who triggered it |
+| **Credits** | Negative and red for spend, positive and green for credits added |
+| **Date & Time** | When the entry was recorded |
+
+Use the filter row to narrow the list by transaction type, source, product and date range, and **Group by** to collapse related entries. The **All Sources** dropdown lists each source with a count and varies from account to account.
+
+| Transaction type | Meaning |
+|------------------|---------|
+| **Debit** | Committed usage. An amount of zero means a hold that was released |
+| **Credit** | A grant or purchase added to your balance |
+| **Reserve** | Credits held for a run that is still in progress |
+| **Expired** | Credits that lapsed on their batch expiry date |
+
+**Export CSV** downloads every transaction matching the filters you have applied, not only the rows currently on screen.
+
+>Fractional amounts are normal here. Summary figures on the Credits screens are rounded so they read cleanly, while per-batch amounts and the CSV export carry the exact values.
 
 ---
 
-## Set credit usage limits (Admins Only)
+## Divide credits across teams (Admins Only)
 
-Admins can define **org‑wide controls** to prevent unexpected consumption:
+**Credits > Budgets** gives admins two ways to control who spends what. They work on different principles, so pick the one that matches your intent. When budgets overlap, the lowest limit applies.
 
 <img loading="lazy" src={require('../assets/images/credits-management/budgets-overview.webp').default} alt="Credits Budgets page with the Sub-Organizations and Groups tabs and the Reserved Budgets table" className="doc_img"/>
 
@@ -246,8 +262,22 @@ Open the **Groups** tab and add a budget there.
 Both balance thresholds are entered as an absolute number of credits.
 
 :::tip
-**Recommendation:** Start with a soft limit (e.g., 70–80% of your monthly plan) and a hard limit (e.g., 90%).
+**Recommendation:** Set the warning threshold at roughly 20 to 30% of a month of credits, so there is time to top up, and keep the blocking threshold well below it so one busy day cannot stop your pipelines.
 :::
+
+### What a limit stops
+
+* The warning threshold only sends email. It never stops a test.
+* The blocking threshold refuses new runs that reserve credits up front. Nothing is charged for a refused run.
+* A run that is already in flight is never cancelled by a threshold.
+
+To resume after a block, add credits or lower the blocking threshold.
+
+### Who receives the emails
+
+Alert emails go to the admins in your <BrandName /> organization. Add anyone else under **Manage Recipients** with **Add Recipients**; the table lists each recipient with their email and role.
+
+>A sustained overrun will not flood inboxes. Balance alerts send at most one email every 24 hours, and each batch of expiring credits triggers a single reminder when it enters the 7-day window.
 
 ---
 
@@ -359,7 +389,7 @@ Credits are charged **per minute of real‑device time while you author or edit*
 
 **Q: What happens when my credits run out?**
 
-AI features that require credits will be disabled. You can **purchase credits** or **upgrade** [here](https://billing.lambdatest.com/billing/subscriptions?addCredits=true).
+AI features that require credits will be disabled. You can **purchase credits** or **upgrade** [here](https://billing.lambdatest.com/billing/credits).
 
 **Q: Who can view balances and transactions?**
 
@@ -367,7 +397,7 @@ Users with the **Admin** role in your <BrandName /> organization.
 
 **Q: Do unused credits expire?**
 
-For free users, complimentary credits are provided for one-time usage and do not expire. While for users subscribed to <BrandName /> products, the complimentary credits get reset at the beginning of each month. Any credits explicitly purchased, do not expire.
+Each batch of credits expires on its own expiry date, shown against the batch under **Credits by Type**. Plan credits expire at the end of the period they cover and do not roll over. Purchased packs and complimentary credits are both valid for one year, measured from the date of purchase and the date of the grant. A batch issued without an expiry date never expires.
 
 **Q: Why were credits refunded after generation?**
 
@@ -375,7 +405,27 @@ When fewer scenarios than the selected Max Scenarios are generated, the differen
 
 **Q: Can I cap my organization’s usage?**
 
-Yes, set **Soft** and **Hard** limits (Admins only).
+Yes. Admins can set **Warn when balance falls below** and **Block usage when balance falls below** on the **Alerts** screen for the whole organization, and add **Budgets** for individual sub-organizations and groups.
+
+**Q: On an annual plan, do I get the whole year of credits up front?**
+
+No. An annual plan is delivered as twelve monthly instalments. The first is credited immediately and the rest activate automatically each month, and each instalment expires at the end of its own month.
+
+**Q: Why did credits disappear from Available Credits without appearing as Used Credits?**
+
+They are held for a test that is still running. A hold lowers the available balance right away and becomes used only when the run settles.
+
+**Q: A run failed. Do I get the credits back?**
+
+Yes. A failed or cancelled run releases its hold in full. A run that is abandoned releases its hold on its own, usually within about 30 minutes of starting.
+
+**Q: Can a sub-organization spend the parent organization's credits?**
+
+No. A sub-organization with a budget spends only the credits reserved for it. When that balance is empty its runs are refused rather than falling back on the parent balance.
+
+**Q: Why is my balance negative?**
+
+Work that has already run is always charged in full, even if it cost more than was held for it. New runs are refused before your balance reaches zero, so an overdraft only ever comes from work that already happened.
 
 **Q: Is KaneAI test execution charged in credits?**
 

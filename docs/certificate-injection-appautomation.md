@@ -81,7 +81,7 @@ The file extension determines how a certificate is installed, so make sure you u
 | Extension | What it is | Installs as | Platform | Password |
 |---|---|---|---|---|
 | `.crt` `.cer` | A CA or server certificate | Trusted CA certificate | Android, iOS | Not used |
-| `.pfx` | A PKCS#12 bundle containing a private key and its certificate chain | Client identity, granted to the app under test | Android, iOS | Required |
+| `.pfx` | A PKCS#12 bundle containing a private key and its certificate chain | Client identity, granted to the app under test | Android, iOS | Required at upload |
 | `.mobileconfig` | An Apple configuration profile | Installed profile | iOS only | Not used |
 
 **Constraints**
@@ -91,7 +91,7 @@ The file extension determines how a certificate is installed, so make sure you u
 | **Device type** | Real devices only (`isRealMobile: true`) |
 | **Platforms** | Android and iOS |
 | **Session types** | App Automation, App Testing (Manual) |
-| **Certificates per session** | Up to 3 |
+| **Certificates per session request** | Up to 3 |
 | **Maximum file size** | 15 MB per certificate |
 | **Capability** | `customCertificates` |
 
@@ -123,7 +123,7 @@ Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
 <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \\
   -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" \\
-  -F "file=@/Users/macuser/Downloads/corp-root-ca.crt" \\
+  -F "media_file=@/Users/macuser/Downloads/corp-root-ca.crt" \\
   -F "type=cert"`}
 </CodeBlock>
 </div>
@@ -137,7 +137,7 @@ For a PKCS#12 bundle, send the password along with the upload. The password is s
 <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \\
   -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" \\
-  -F "file=@/Users/macuser/Downloads/client-identity.pfx" \\
+  -F "media_file=@/Users/macuser/Downloads/client-identity.pfx" \\
   -F "type=cert" \\
   -F "password=$CERT_PASSWORD"`}
 </CodeBlock>
@@ -150,18 +150,21 @@ For a PKCS#12 bundle, send the password along with the upload. The password is s
 
 | Parameter | Required | Description |
 |---|---|---|
-| `file` | Yes | The certificate file to upload from your local machine. |
+| `media_file` | Yes | The certificate file to upload from your local machine. |
 | `type` | Yes | Must be `cert` for certificate uploads. |
 | `password` | Only for `.pfx` | The password for the PKCS#12 bundle. Stored securely and reused automatically. |
 
-The response returns the ID that you reference in your capabilities:
+The response returns the `media_url` that you reference in your capabilities:
 
 ```json
 {
-  "media_id": "MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05",
-  "name": "corp-root-ca.crt"
+  "media_url": "lt://MEDIA9f2c4b18a7d54e3ba0c6f19d2e8b7c05",
+  "name": "corp-root-ca.crt",
+  "status": "success"
 }
 ```
+
+Use this value as the `certificateId` in your capabilities. Both the full `lt://MEDIA...` form and the bare `MEDIA...` identifier are accepted.
 
 The file is validated before it is stored. If it cannot be parsed as a certificate, the upload is rejected immediately instead of failing later on a device.
 
@@ -175,10 +178,19 @@ You can also upload and manage certificates from the **Certificates** section of
 
 Pass `customCertificates` inside `LT:Options` as an **array of objects**. Each entry requires a `certificateId`. The `password` field is optional and overrides the password stored at upload time.
 
+:::note `customCertificates` is not `acceptInsecureCerts`
+These two capabilities are easy to confuse and do very different things.
+
+- **`customCertificates`** changes the **device trust store**. Use it when the device itself must trust your certificate authority, or when your app must present a client identity. Real device app automation only.
+- **`acceptInsecureCerts`** is a standard W3C WebDriver capability that tells the **browser context** to proceed past an untrusted certificate. It installs nothing and does not touch the device trust store.
+
+If you are testing a native app against a private certificate authority, `customCertificates` is the one you want.
+:::
+
 | Key | Type | Required | Description |
 |---|---|---|---|
 | `customCertificates` | Array of objects | Yes | The certificates to install for this session. Maximum 3 entries. |
-| `certificateId` | String | Yes | The `media_id` returned by the upload API. |
+| `certificateId` | String | Yes | The `media_url` returned by the upload API. Both the full `lt://MEDIA...` form and the bare `MEDIA...` identifier are accepted. |
 | `password` | String | No | Overrides the password stored with a `.pfx` certificate at upload time. |
 
 <Tabs className="docs__val">
@@ -286,7 +298,7 @@ Capabilities are validated before a device is allocated. The session request fai
 
 ## Password Requirements
 
-- **`.pfx` bundles:** a password is mandatory. If the bundle does not have one, pass an empty string (`""`).
+- **`.pfx` bundles:** a password is **required when you upload the bundle**. In capabilities the `password` field is **optional** — omit it to use the stored password, or set it to override. If the bundle genuinely has no password, upload it with an empty string (`""`).
 - **`.crt`, `.cer`, and `.mobileconfig`:** the password field is not used.
 - A `password` set in the capability **takes precedence** over the one stored at upload time. This is useful when a bundle is reissued and you have not re-uploaded it yet.
 
@@ -356,10 +368,10 @@ Each additional certificate increases session start time slightly, because every
 
 | Rule | Value | What happens if you exceed it |
 |---|---|---|
-| Certificates per session | **3** | Session request rejected with `400` |
+| Certificates per session request | **3** | Session request rejected with `400` |
 | Certificate file size | **15 MB** | Upload rejected |
 | `certificateId` | Required on every entry | Session request rejected with `400` |
-| Password on `.pfx` | Required. Pass `""` if the bundle has none | Session request rejected with `400` |
+| Password on `.pfx` | Required at upload; optional in capabilities | A wrong password fails injection and the session is refused |
 | `isRealMobile` | Must be `true` | Session request rejected with `400` |
 | Browser automation | Not supported | Session request rejected with `400` |
 | Organization entitlement | Must be enabled | Session request rejected with `400` |
