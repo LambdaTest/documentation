@@ -1,6 +1,7 @@
 ---
 id: smartui-smart-comments
 title: SmartUI Smart Comments
+sidebar_label: Smart Comments
 description: Learn how to collaborate on visual test results using Smart Comments. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions for better team collaboration.
 slug: smartui-smart-comments/
 canonical: https://www.testmuai.com/support/docs/smartui-smart-comments/

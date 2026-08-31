@@ -1,19 +1,23 @@
-# Login to Google account on Android
+# How to Log in to Google on Android on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This documentation will guide you to log in to your Google Account on an Android Device on TestMu AI so you can test features/services that are linked to your Google Account.
+Logging in to a Google account on Android real devices with TestMu AI lets you authenticate during App Automation using a credentials HashMap, so your scripts can test Play Store flows, sync, and features or services tied to that account.
+
 
 ## Objective
+
 
 To log in to Google Account on Real Devices [Android], and perform testing using Google account-related tasks.
 
 ## Prerequisites
 
+
 1. TestMu AI App Automation Account.
 2. Automation script for testing.
 
 ## Logging into Google Account
+
 
 Add the following HashMap structure to store the credentials:
 
@@ -93,6 +97,7 @@ appiumDriver.quit();
 }
 }
 ```
+
 
 **Important**:
 

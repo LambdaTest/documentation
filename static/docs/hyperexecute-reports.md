@@ -7,6 +7,7 @@ Reports provide summarized job information, including status counts and links to
 **note**
 Refer to this detailed [Job Reports](/support/docs/hyperexecute-job-reports/) page to learn more about the types of reports being offered and how to configure them.
 
+
 ## Steps to Generate and Download Reports
 
 Follow the below mentioned steps to generate the Reports for your desired framework:
@@ -31,7 +32,11 @@ type: html
 
 **Step 4:** Click on the **Open** button of the **Reports**.
 
+
+
 Here is the sample report generated.
+
+
 
 ## Generate Multiple Reports
 If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/), simply add the required specifications in the `partialReports` field as shown below:

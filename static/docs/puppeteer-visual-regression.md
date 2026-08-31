@@ -10,17 +10,29 @@ This documentation will act as your step-by-step guide in to perform Puppteer te
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+
+
+
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
+
+
+
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
+
+
+
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
 ```
+
+
+
 
 The following steps will guide you in running your first Visual Regression test on TestMu AI platform -
 
@@ -34,6 +46,8 @@ To create a SmartUI Project, follow these steps:
 3. Select the platform as Web for executing your `Puppeteer` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
+
+
 
 ### **Step 2:** Configure your test with Puppeteer Desired Capabilities
 
@@ -126,6 +140,6 @@ For additional information about Puppteer framework please explore the documenta
 
 ## Advanced Options for Screenshot Comparison
 
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smartui-project-settings/).
 
-  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
+  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/smartui-project-settings/).

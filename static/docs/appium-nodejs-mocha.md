@@ -19,32 +19,68 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
+
 ### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
+
+
+
+
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
+
+
+
+
+
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
+
 
 ### Step 3: Upload your Application
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
+
+
+
+
+
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
 
+
+
+
+
+
+
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+
+
+
+
+
+
 
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on TestMu AI by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step.
 
+
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application available above has been provided here.
+
+
+
+
 
 ```javascript title="ios_test.js"
 const driver= require("appium-base-driver")
@@ -57,6 +93,7 @@ require("appium-base-driver")
 var assert= require("assert"),
 webdriver = require("selenium-webdriver"),
 conf_file= process.argv[3] || "conf/ios.conf.js";
+
 
 var caps = require("../" + conf_file).capabilities;
 
@@ -97,6 +134,10 @@ driver.quit()
 
 ```
 
+
+
+
+
 ```javascript title="android_test.js"
 const { default: driver } = require("appium-android-driver/build/lib/driver");
 const { By } = require("selenium-webdriver");
@@ -106,6 +147,7 @@ require("appium-android-driver")
 var assert= require("assert"),
 webdriver = require("selenium-webdriver"),
 conf_file= process.argv[3] || "conf/Appp.conf.js";
+
 
 var caps = require("../" + conf_file).capabilities;
 
@@ -122,9 +164,11 @@ LT_ACCESS_KEY +
 .build();
 };
 
+
 describe("Mocha Appium Test " + caps.browserName, function() {
 var driver;
 this.timeout(0);
+
 
 it ('Application is launched', function name(done) {
 driver=buildDriver(caps);
@@ -144,16 +188,27 @@ driver.quit()
 })
 });
 
+
 });
 ```
 
+
+
+
+
+
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+
 
 ### Step 5: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
+
+
+
+
 
 ```javascript title="android.conf.js"
 LT_USERNAME = process.env.LT_USERNAME || "<your username>";      //Enter your LambdaTest username here
@@ -174,7 +229,13 @@ exports.capabilities = {
 };
 ```
 
+
+
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+
+
+
+
 
 ```javascript title="ios.conf.js"
 LT_USERNAME = process.env.LT_USERNAME || "<your username>";        //Enter your LambdaTest username here
@@ -195,9 +256,18 @@ exports.capabilities = {
 };
 ```
 
+
+
+
+
+
+
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+
+
+
 
 ### Step 6: Execute and Monitor your Tests
 
@@ -213,19 +283,30 @@ npm install --save
 ```
 - The tests can be executed in the terminal using the following command:
 
+
+
+
 ```js
 npm run android    //to run single test
 npm run parallel_android    //to run parallel tests
 ```
+
+
+
+
 
 ```js
 npm run ios    //to run single test
 npm run parallel_ios    //to run parallel tests
 ```
 
+
+
+
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
 ## Using the Mocha Agent Skill with TestMu AI
+
 
 The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
@@ -248,7 +329,9 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
+
 ### Installing Mocha Agent Skill
+
 
 Install a Mocha Agent Skill using the command below:
 
@@ -262,6 +345,7 @@ cp -r agent-skills/mocha-skill .cursor/skills/
 ```
 
 **Note**: If you prefer installing all available framework skills instead of only mocha-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
+
 
 ## Reference Guides
 

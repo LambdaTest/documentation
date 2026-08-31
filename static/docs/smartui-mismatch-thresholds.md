@@ -19,11 +19,14 @@ If you set `approvalThreshold: 2` and `rejectionThreshold: 5`:
 - A screenshot with **3%** mismatch needs **manual review**.
 - A screenshot with **6%** mismatch is **auto-rejected**.
 
+
 ## Supported Frameworks & Languages
 
 | Languages | Frameworks |
 |---|---|
 | Java, JavaScript, Python, C#, Ruby | Selenium, Appium |
+
+
 
 ## Threshold Hierarchy
 
@@ -38,6 +41,9 @@ You can set thresholds at three levels. When multiple levels are configured, the
 **Backward Compatible**
 If you do not configure build or screenshot-level thresholds, your existing project-level settings continue to apply. No changes are needed to your existing tests.
 
+
+
+
 ## Threshold Rules
 
 Keep the following constraints in mind when configuring thresholds:
@@ -45,6 +51,8 @@ Keep the following constraints in mind when configuring thresholds:
 - Both values must be a number between **0** and **100** (representing a percentage).
 - The `approvalThreshold` must be **less than** the `rejectionThreshold`.
 - If only one threshold is provided, the other falls back to the next level in the hierarchy (build or project).
+
+
 
 ## Build-Level Configuration
 
@@ -58,6 +66,9 @@ Set thresholds for an entire build by adding them to your test capabilities. Thi
 | `smartUI.rejectionThreshold` | Number | Mismatch percentage at or above which screenshots are auto-rejected. |
 
 ### Examples
+
+
+
 
 ```javascript title="Add thresholds to your LT:Options capabilities"
 let capabilities = {
@@ -73,6 +84,9 @@ accessKey: process.env.LT_ACCESS_KEY,
 };
 ```
 
+
+
+
 ```java title="Add thresholds to your LT:Options capabilities"
 HashMap<String, Object> ltOptions = new HashMap<>();
 ltOptions.put("user", System.getenv("LT_USERNAME"));
@@ -85,6 +99,9 @@ ltOptions.put("smartUI.rejectionThreshold", 5);
 capabilities.setCapability("LT:Options", ltOptions);
 ```
 
+
+
+
 ```python title="Add thresholds to your LT:Options capabilities"
 lt_options = {
 "user": os.environ["LT_USERNAME"],
@@ -96,6 +113,9 @@ lt_options = {
 }
 capabilities["LT:Options"] = lt_options
 ```
+
+
+
 
 ```csharp title="Add thresholds to your LT:Options capabilities"
 var ltOptions = new Dictionary<string, object>
@@ -110,6 +130,9 @@ var ltOptions = new Dictionary<string, object>
 capabilities.AddAdditionalOption("LT:Options", ltOptions);
 ```
 
+
+
+
 ```ruby title="Add thresholds to your LT:Options capabilities"
 lt_options = {
 user: ENV['LT_USERNAME'],
@@ -121,6 +144,11 @@ accessKey: ENV['LT_ACCESS_KEY'],
 }
 capabilities['LT:Options'] = lt_options
 ```
+
+
+
+
+
 
 ## Screenshot-Level Configuration
 
@@ -137,6 +165,9 @@ The `smartuiSnapshot` method accepts an optional options object with threshold p
 
 ### Examples
 
+
+
+
 ```javascript title="Pass thresholds as the third argument to smartuiSnapshot"
 // Screenshot using build/project-level thresholds (no override)
 await smartuiSnapshot(driver, "Homepage");
@@ -150,6 +181,9 @@ rejectionThreshold: 10
 // highlight-end
 ```
 
+
+
+
 ```java title="Pass thresholds as a Map to smartuiSnapshot"
 // Screenshot using build/project-level thresholds (no override)
 SmartUISnapshot.smartuiSnapshot(driver, "Homepage");
@@ -162,6 +196,9 @@ options.put("rejectionThreshold", 10);
 SmartUISnapshot.smartuiSnapshot(driver, "Live Dashboard", options);
 // highlight-end
 ```
+
+
+
 
 ```python title="Pass thresholds in the options dictionary"
 # Screenshot using build/project-level thresholds (no override)
@@ -178,6 +215,9 @@ driver.execute_script("smartui.takeScreenshot", options)
 # highlight-end
 ```
 
+
+
+
 ```csharp title="Pass thresholds in a Dictionary to smartuiSnapshot"
 // Screenshot using build/project-level thresholds (no override)
 SmartUISnapshot.smartuiSnapshot(driver, "Homepage");
@@ -193,6 +233,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Live Dashboard", options);
 // highlight-end
 ```
 
+
+
+
 ```ruby title="Pass thresholds as a hash to smartui_snapshot"
 # Screenshot using build/project-level thresholds (no override)
 smartui_snapshot(driver, "Homepage")
@@ -205,6 +248,11 @@ rejectionThreshold: 10
 })
 # highlight-end
 ```
+
+
+
+
+
 
 ## Combining Build and Screenshot Thresholds
 
@@ -236,6 +284,8 @@ approvalThreshold: 5,
 rejectionThreshold: 15
 });
 ```
+
+
 
 ## Common Use Cases
 

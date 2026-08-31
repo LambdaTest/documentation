@@ -26,13 +26,20 @@ Set any of these in the `LT:Options` block for the session:
 | `smartUI.ignoreType` | array | Comparison type applied to every screenshot, for example `["layout"]` for layout comparison. |
 | `smartUI.smartIgnore` | boolean | Enables [Smart Ignore](/support/docs/smartui-smartignore/) for the whole session. |
 
+
 Over the CDP-based drivers (Puppeteer and Playwright via CDP), `smartUI.ignoreType` is also accepted under its alias **`smartUIIgnoreType`**. Both keys are equivalent; use whichever your driver expects.
 
+
+
 Set the same comparison capabilities on both the baseline and the comparison runs so the two builds are compared in the same mode.
+
 
 ## 1. Layout comparison for the whole session
 
 Set `smartUI.ignoreType` to `["layout"]` in `LT:Options`. Every screenshot in the session is then compared in layout mode, the same as passing `ignoreType: ["layout"]` on each individual screenshot.
+
+
+
 
 ```java
 import java.util.Arrays;
@@ -50,6 +57,9 @@ ltOptions.put("smartUI.ignoreType", Arrays.asList("layout")); // applies to ever
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
+
+
+
 ```javascript
 'LT:Options': {
 user: process.env.LT_USERNAME,
@@ -59,6 +69,9 @@ visual: true,
 'smartUI.ignoreType': ['layout'], // applies to every screenshot
 },
 ```
+
+
+
 
 ```python
 lt_options = {
@@ -71,11 +84,17 @@ lt_options = {
 options.set_capability("LT:Options", lt_options)
 ```
 
+
+
+
 ```csharp
 capabilities.SetCapability("visual", true);
 capabilities.SetCapability("smartUI.project", "Your_Project_Name");
 capabilities.SetCapability("smartUI.ignoreType", new[] { "layout" }); // applies to every screenshot
 ```
+
+
+
 
 With this set, your screenshot calls stay clean, no comparison option is needed on each one:
 
@@ -90,10 +109,16 @@ options.put("screenshotName", "home-page");
 
 Set `smartUI.smartIgnore` to `true` in `LT:Options` to apply [Smart Ignore](/support/docs/smartui-smartignore/) across the session.
 
+
+
+
 ```java
 ltOptions.put("smartUI.project", "Your_Project_Name");
 ltOptions.put("smartUI.smartIgnore", true); // applies to every screenshot
 ```
+
+
+
 
 ```javascript
 'LT:Options': {
@@ -102,6 +127,9 @@ ltOptions.put("smartUI.smartIgnore", true); // applies to every screenshot
 },
 ```
 
+
+
+
 ```python
 lt_options = {
 "smartUI.project": "Your_Project_Name",
@@ -109,10 +137,16 @@ lt_options = {
 }
 ```
 
+
+
+
 ```csharp
 capabilities.SetCapability("smartUI.project", "Your_Project_Name");
 capabilities.SetCapability("smartUI.smartIgnore", true); // applies to every screenshot
 ```
+
+
+
 
 ## 3. Ignore regions are set per screenshot, not per session
 
@@ -160,5 +194,5 @@ options.put("ignoreType", Arrays.asList()); // override: compare this one in ful
 - [SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
 - [Ignore and Select Regions on Web Hooks](/support/docs/smartui-hooks-region-ignore/)
 - [Smart Ignore](/support/docs/smartui-smartignore/)
-- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/html-dom-smartui-options/)
+- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/smartui-project-settings/)
 - [Selenium Visual Regression](/support/docs/selenium-visual-regression/)

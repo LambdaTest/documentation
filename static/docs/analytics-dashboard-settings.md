@@ -6,6 +6,8 @@
 
 The Analytics Dashboard Settings page provides a comprehensive set of controls to help you manage notifications, sharing, and access for your test analytics dashboards. This guide details each setting and how to use it for optimal collaboration and visibility.
 
+
+
 ### Email Notifications
 
 Keep your team informed about dashboard activity and test results by configuring email notifications.
@@ -21,6 +23,8 @@ Keep your team informed about dashboard activity and test results by configuring
 
 For a detailed guide on scheduling reports with custom delivery times, see [Report Scheduling](/docs/analytics-report-scheduling/).
 
+
+
 ### Slack Notification Settings
 
 Integrate your dashboard with Slack to receive instant updates and foster real-time collaboration.
@@ -32,6 +36,8 @@ Integrate your dashboard with Slack to receive instant updates and foster real-t
 - **Update & Save Preferences:** Click **Update** to apply your Slack notification settings.
 
 > **Best Practice:** Use Slack notifications for critical dashboards or to alert teams about important trends, regressions, or test failures.
+
+
 
 ### MS Teams Notification Settings
 
@@ -45,6 +51,8 @@ Integrate your dashboard with Microsoft Teams to receive timely updates and enha
 
 > **Best Practice:** Use MS Teams notifications for dashboards that require broad visibility or to alert teams about important trends, regressions, or test failures.
 
+
+
 ### Share Link Settings
 
 Easily share your dashboard with colleagues, clients, or external stakeholders while maintaining control over access and privacy.
@@ -55,11 +63,15 @@ Easily share your dashboard with colleagues, clients, or external stakeholders w
   - **Allow Anyone with the Link:** Enable open access for anyone who has the link, ideal for broad sharing within your organization.
   - **Set a Custom Password:** Add an extra layer of security by requiring users to enter a password to access the dashboard. This is especially useful when sharing with external users or when the link has no expiry.
 
+
 Password setup is mandatory if you select "Never" for link expiry. Exporting the dashboard will be disabled in this case to protect sensitive data.
+
 
 - **Export Restrictions:** If you set the link to never expire and require a password, dashboard export functionality will be disabled to enhance security.
 
 > **Security Tip:** Always use password protection and link expiration when sharing dashboards outside your core team.
+
+
 
 ### Edit Dashboard Name
 
@@ -70,6 +82,8 @@ Personalize your dashboard for clarity and easy identification.
 
 > **Tip:** Use naming conventions to organize dashboards by project, environment, or team.
 
+
+
 ### Delete the Dashboard
 
 Remove dashboards that are no longer needed to keep your workspace organized and secure.
@@ -78,9 +92,13 @@ Remove dashboards that are no longer needed to keep your workspace organized and
 2. Click the **Delete** button next to "Delete this Dashboard".
 3. Confirm the deletion when prompted.
 
+
 This action is irreversible. Once deleted, the dashboard and all its data cannot be recovered. Ensure you have exported or backed up any important information before proceeding.
 
+
 > **Recommendation:** Only delete dashboards when you are certain they are no longer required by any team members.
+
+
 
 ### Additional Support
 

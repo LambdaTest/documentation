@@ -1,8 +1,8 @@
-# Slack Notifications for App Automation
+# How to Get Slack Notifications on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-With Slack Notifications for App Automation, you can receive real-time updates about your test sessions and build summaries directly in your Slack channels. This eliminates the need to manually monitor the dashboard and keeps your entire team informed about test execution results.
+Slack notifications on TestMu AI deliver real-time updates about each of your App Automation test sessions and build summaries directly in your Slack channels, eliminating manual dashboard monitoring and keeping your entire team instantly informed about mobile test execution results.
 
 ## Prerequisites
 
@@ -25,6 +25,9 @@ To enable Slack notifications for your App Automation tests, add the `slackChann
 
 ### Configuration Examples
 
+
+
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("platformName", "Android");
@@ -36,6 +39,9 @@ capabilities.setCapability("isRealMobile", true);
 //highlight-next-line
 capabilities.setCapability("slackChannel", "mobile-test-results");
 ```
+
+
+
 
 ```python
 desired_caps = {
@@ -50,6 +56,9 @@ desired_caps = {
 }
 ```
 
+
+
+
 ```javascript
 const capabilities = {
 platformName: "Android",
@@ -62,6 +71,9 @@ isRealMobile: true,
 slackChannel: "mobile-test-results"
 };
 ```
+
+
+
 
 ## What Notifications You Receive
 
@@ -76,7 +88,9 @@ TestMu AI sends two types of Slack notifications:
 
 The `slackChannel` capability is set at the session level. If you update the channel name in a subsequent session under the same build, notifications for that session onward are sent to the updated channel.
 
+
 When multiple users or multiple sessions specify different channels concurrently within the same build, all channels are merged and notifications are sent to all of them.
+
 
 ## Fallback Behavior
 
@@ -88,6 +102,7 @@ If the `slackChannel` capability is not provided or the specified channel is inv
 
 **Important**
 Slack notifications never block or impact your test execution. If a notification fails to deliver for any reason, the test continues to run normally.
+
 
 ## Related Resources
 

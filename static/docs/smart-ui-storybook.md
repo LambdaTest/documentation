@@ -10,6 +10,7 @@ Using the TestMu AI platform, perform regression testing in just one click and f
 - Node.js v20.3+ installed (required for SmartUI CLI v4.x.x)
 - StoryBook version installed should be higher than `6.4.0.` Click [here](https://github.com/storybookjs/storybook/releases) to know more
 
+
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 
 - Login to [TestMu AI SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
@@ -28,6 +29,8 @@ The first step is to create a project with the application in which we will comb
 
 ## Steps to run your first test
 
+
+
 **GitHub Sample**
 
 Please try our **StoryBook SmartUI** GitHub sample repository for trying an example.
@@ -35,6 +38,8 @@ Please try our **StoryBook SmartUI** GitHub sample repository for trying an exam
 ```bash
 git clone https://github.com/LambdaTest/smartui-storybook-sample.git
 ```
+
+
 
 ### **Step 1**: Install the Dependencies
 
@@ -168,29 +173,52 @@ If you set `"backgroundTheme": "both"` in your SmartUI config, each story will b
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
+
+
+
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
+
+
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
+
+
+
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
+
+
+
+
 
 ### **Step 3.1:** Configure Proxy (Optional)
 
 If you are behind a proxy, you can configure the `SMARTUI_API_PROXY` environment variable.
 
+
+
+
 ```bash
 export SMARTUI_API_PROXY=http://172.17.0.1:3128
 ```
 
+
+
+
 ```bash
 set SMARTUI_API_PROXY=http://172.17.0.1:3128
 ```
+
+
+
 
 > **Note**: Replace the IP address and port with the appropriate values for your environment.
 
@@ -238,7 +266,9 @@ Please read the following table for more information about the configuration fil
 | backgroundTheme | Theme for capturing stories. Options: `"light"`, `"dark"`, or `"both"` (captures both themes)  Ex: `"light"` | Optional (default: `"light"`) |
 | useGlobals     | Enable Storybook global decorators and parameters (required for theme switching)  Ex: `true` | Optional (default: `false`) |
 
+
 SmartUI Storybook testing now supports `Edge` browser.
+
 
 **Please Note**
 The `waitForTimeout` is an optional configuration. This is available for the versions above `1.1.7` of the NPM CLI.
@@ -246,6 +276,10 @@ The `waitForTimeout` is an optional configuration. This is available for the ver
 If you are using any `async` components in your StoryBook, then you can add the wait time for the page to load the DOM of your StoryBook components.
 
 This will help you to avoid any false-positive results for your tests. You can add the wait time in milliseconds. This might increase the execution time of your tests.
+
+
+
+
 
 For capturing the stories in **full page** without limiting the height to the viewport then in the `viewports` array, you can change the following configuration:
 
@@ -255,6 +289,7 @@ For capturing the stories in **full page** without limiting the height to the vi
 [1440]
 ]
 ```
+
 
 #### Custom Viewport Configuration
 
@@ -308,31 +343,48 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
 }
 ```
 
+
 The `waitForTimeout` setting at the story level takes precedence over the global `waitForTimeout` configuration and only applies to the specific stories to which it is assigned.
 
 For instance, if `Story-1` has a story-level `waitForTimeout` value (T1) set within custom viewport settings, and there exists a global `waitForTimeout` value (T2) defined in the configuration, all browser and viewport combinations of `Story-1` will render with T1. Conversely, all other stories will be rendered with T2 across all combinations.
 
+
 ### **Step 5:** Execute the Tests on SmartUI Cloud using CLI
 
 You can now execute your `StoryBook` components for `Visual Regression Testing` using the following options:.
+
+
+
 
 ```bash
 npm run storybook                                                 // Starts your local StoryBook server
 smartui storybook http://localhost:6006 --config .smartui.json    // Captures all the stories running on local server
 ```
 
+
+
+
 ```bash
 npm run build-storybook                                           // Creates a Static Build Folder of StoryBook Stories
 smartui storybook ./storybook-static --config .smartui.json       // Captures all the stories added in the static build folder
 ```
 
+
+
+
 ```bash
 smartui storybook https://<your_public_hosted_url> --config .smartui.json    // Captures all the stories running on local server
 ```
 
+
+
+
 **For Continuous Integration (CI)**
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI StoryBook` execution then the following are the steps needs to be added to your `.yaml` file:
+
+
+
 
 ```yaml
 steps:
@@ -344,6 +396,9 @@ npm run build-storybook
 smartui storybook ./storybook-static --config .smartui.json
 ```
 
+
+
+
 ```yaml
 steps:
 - name: Running SmartUI StoryBook Tests
@@ -352,6 +407,11 @@ npm i
 npm install @lambdatest/smartui-storybook -g
 smartui storybook https://<replace_with_your_url> --config .smartui.json
 ```
+
+
+
+
+
 
 #### CLI Options and Keys
 
@@ -366,19 +426,31 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 You can now see the SmartUI dashboard to view the results. Can also identify the mis-matches from the existing `Baseline` build.
 
+
+
 ## Troubleshooting
+
+
+
 
 Verify Storybook Server
 
 - Ensure Storybook is running on the specified URL/port
    - Check that `buildStoriesJson: true` is set in `.storybook/main.js`
 
+
 >**Note**: `buildStoriesJson` is available for Storybook versions below v9.
+
+
+
 
 Check Story Inclusion/Exclusion
 
 - Verify `include` and `exclude` patterns in `.smartui.json`
    - Ensure story paths match your Storybook structure
+
+
+
 
 Validate Configuration
 
@@ -391,6 +463,9 @@ cat .smartui.json | python -m json.tool
 - Components not in expected state
 **Solutions**:
 
+
+
+
 Increase Wait Timeout
 
 ```json
@@ -400,6 +475,9 @@ Increase Wait Timeout
 }
 }
 ```
+
+
+
 
 Check Play Function Syntax
 
@@ -411,6 +489,9 @@ Check Play Function Syntax
 - Globals not applied
 **Solutions**:
 
+
+
+
 Verify useGlobals Setting
 
 ```json
@@ -421,10 +502,16 @@ Verify useGlobals Setting
 }
 ```
 
+
+
+
 Check Storybook Version
 
 - Ensure Storybook v6.4+ for globals support
    - Verify decorators are properly configured
+
+
+
 
 Validate Theme Configuration
 
@@ -435,6 +522,10 @@ If you encounter issues not covered here:
 - Check [Storybook Documentation](https://storybook.js.org/docs) for Storybook-specific issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+
+
+
+
 
 ## Additional Resources
 

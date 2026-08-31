@@ -4,6 +4,8 @@
 
 App settings play a crucial role in testing the environment for mobile applications. These settings, provided by TestMu AI, offer developers a range of capabilities to enhance testing procedures and ensure comprehensive validation of their apps functionality.
 
+
+
 ## Image Injection
 
 Enable the Image Injection feature to capture images, QR codes, and barcode scans seamlessly within your app using TestMu AI devices. Our approach utilizes Sensor Instrumentation to seamlessly integrate your app with various mobile sensors, such as the camera. By enabling Image Injection for a specific session, TestMu AI seamlessly injects camera code modules into your app, effectively mocking or overriding the Android or iOS SDK used in your app.

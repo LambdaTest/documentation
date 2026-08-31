@@ -1,6 +1,6 @@
 ﻿---
 id: live-debug-in-app-automation
-title: Live Debug Your App Automation Tests
+title: How to Live Debug App Automation Tests on TestMu AI
 sidebar_label: Live Inspect
 description: Optimize your app automation with TestMu AI's Live Debugger. Enjoy live debugging and direct interaction with real devices from the app automation dashboard.
 keywords:
@@ -18,8 +18,6 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -41,20 +39,23 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Live Debug Your App Automation Tests",
+          "name": "How to Live Debug App Automation Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/live-debug-in-app-automation/`
         }]
       })
     }}
 ></script>
 
-# Live Inspect Your App Automation Tests
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+# How to Live Debug App Automation Tests on TestMu AI
 ---
 
-Optimize your [app automation testing](https://www.testmuai.com/blog/mobile-app-testing-tools/) with <BrandName />'s Real Devices UI Inspector. Now access unparalleled live debugging capabilities right from the app automation dashboard, enabling direct interaction with the test device, not just viewing the script's video. 
+Live debugging app automation tests on TestMu AI opens a Real Device UI Inspector from the dashboard, letting you interact directly with the test device, navigate in real time, inspect UI elements, and capture screenshots to troubleshoot automated tests faster.
 
-With features like real-time navigation, detailed UI element inspection, and the ability to capture screenshots, now significantly enhance both the efficiency and effectiveness of your [automated tests](https://www.testmuai.com/automation-testing/).
+**Supported on:** Real &amp; Virtual devices
+
+Optimize your app automation testing with <BrandName />'s Real Devices UI Inspector. Now access unparalleled live debugging capabilities right from the app automation dashboard, enabling direct interaction with the test device, not just viewing the script's video. 
+
+With features like real-time navigation, detailed UI element inspection, and the ability to capture screenshots, now significantly enhance both the efficiency and effectiveness of your automated tests.
 
 ## How to use Live Debugger for App Automation
 
@@ -78,7 +79,7 @@ With features like real-time navigation, detailed UI element inspection, and the
 
 <img loading="lazy" src={require('../assets/images/live-debug/inspector.webp').default} alt="Live Debug App Automation" width="1365" height="632" className="doc_img"/>
 
-**Step 5:** Selecting the Live Debug option smoothly transitions to the enhanced UI inspector, which tailors its behavior to the user's script and allows commands to run according to the [Appium](https://www.testmuai.com/appium/) session.
+**Step 5:** Selecting the Live Debug option smoothly transitions to the enhanced UI inspector, which tailors its behavior to the user's script and allows commands to run according to the Appium session.
 
 **Step 6:** With Live Debugger, you can interact in real time with the real device selected for the automation test allowing you to navigate the app, inspect UI elements, and take screenshots, all without disrupting the ongoing automation script.
 
@@ -98,7 +99,7 @@ With features like real-time navigation, detailed UI element inspection, and the
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Live Debug Your App Automation Tests
+        How to Live Debug App Automation Tests on TestMu AI
       </span>
     </li>
   </ul>

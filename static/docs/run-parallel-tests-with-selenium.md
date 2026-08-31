@@ -6,6 +6,7 @@ Running tests sequentially multiplies wait time across every test. Parallel exec
 
 ## How Parallel Testing Works
 
+
 Each parallel test opens its own session on the grid. Your framework splits the test suite into threads or processes, and each one connects to a separate browser instance on TestMu AI.
 
 ```
@@ -20,7 +21,12 @@ The number of sessions you can run simultaneously depends on your TestMu AI plan
 
 ## Run Parallel Tests by Framework
 
+
 Each framework handles parallelism differently. Below are the commands and configurations for the most common frameworks.
+
+
+
+
 
 TestNG uses `parallel="tests"` and `thread-count` in the `testng.xml` file to run tests in parallel.
 
@@ -65,6 +71,10 @@ Run with Maven:
 mvn test -D suite=parallel.xml
 ```
 
+
+
+
+
 JUnit uses a custom `Parallelized` runner or JUnit 5's `junit.jupiter.execution.parallel.enabled` property.
 
 **JUnit 5** - add to `junit-platform.properties`:
@@ -82,6 +92,10 @@ junit.jupiter.execution.parallel.config.fixed.parallelism=3
 mvn test -P parallel
 ```
 
+
+
+
+
 Use the `pytest-xdist` plugin to run tests in parallel.
 
 Install it:
@@ -98,6 +112,10 @@ pytest -n 3
 
 Each worker opens its own browser session on the TestMu AI grid.
 
+
+
+
+
 Use the `--parallel` flag (Mocha 8+) to run test files in parallel:
 
 ```bash
@@ -110,6 +128,10 @@ Or use a test runner like `mocha-parallel-tests`:
 npm install mocha-parallel-tests
 mocha-parallel-tests --max-parallel 3
 ```
+
+
+
+
 
 NUnit runs tests in parallel using the `[Parallelizable]` attribute:
 
@@ -130,6 +152,10 @@ dotnet test
 
 NUnit handles thread management automatically.
 
+
+
+
+
 Use the `parallel_tests` gem:
 
 ```bash
@@ -141,6 +167,10 @@ Run with a specified number of processes:
 ```bash
 parallel_rspec -n 3 spec/
 ```
+
+
+
+
 
 Use the `paratest` package for parallel PHPUnit execution:
 
@@ -154,13 +184,22 @@ Run with a specified number of processes:
 vendor/bin/paratest -p 3
 ```
 
+
+
+
+
 xUnit runs tests in parallel by default across test collections. Run with:
 
 ```bash
 dotnet test --filter "profile=parallel"
 ```
 
+
+
+
+
 ## Best Practices
+
 
 Follow these guidelines to get the most out of parallel execution.
 
@@ -171,6 +210,7 @@ Follow these guidelines to get the most out of parallel execution.
 - **Start small.** Begin with 2-3 parallel threads and increase gradually. Monitor the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for failures caused by test interference.
 
 ## Verify Your Parallel Runs
+
 
 Check the dashboard to confirm tests ran simultaneously.
 

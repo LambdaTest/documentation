@@ -1,12 +1,13 @@
-#  CustomHeaders support for automation
+#  How to Use CustomHeaders Capability on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Custom headers provide you the ability to keep crucial information about the request or response, such as the method, URL, and body content. You can modify the parameters of the HTTP requests delivered by your tests by manipulating with these headers, thereby around firewall restrictions.
+The customHeaders capability on TestMu AI adds custom HTTP headers to your automation requests, letting tests bypass firewall restrictions and control request or response metadata like the method, URL, and body. Configure it through the DesiredCapabilities class during automated testing.
 
-In this documentation, we will look at LambdaTest CustomHeaders, a `capability` that allows you to add custom headers to your tests and bypass firewall restrictions while performing automated browser testing.
 
 ## How to use CustomHeaders Capability on TestMu AI?
+
+
 
 To add custom headers using TestMu AI's CustomHeader capability, you need to use TestMu AI's Desired Capabilities class.
 
@@ -25,7 +26,12 @@ In the above code snippet, you need to replace **headerName** and **headerValue*
 
 ## CustomHeaders: Use Cases and Examples
 
+
+
+
+
 Custom headers serves different purposes for development and network communications. Here are some of its key use cases:
+
 
 1. **User Identification and Session Management**: Used to send tokens, session IDs to authenticate and identify users. This helps in managing user sessions, implement stateless authentication mechanisms, track user behavior.
 

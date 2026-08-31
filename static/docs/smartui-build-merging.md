@@ -4,6 +4,7 @@
 
 This guide explains how to effectively merge builds in SmartUI for granular control over your visual regression testing workflow.
 
+
 ## Build-Level Merging
 
 Build-level merging provides granular control over specific builds, allowing you to merge individual build results and manage your visual regression testing at a more detailed level.
@@ -73,11 +74,17 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 
 ## Best Practices
 
+
+
+
 **Build Management**
 
 - Use meaningful build names
    - Document build purposes
    - Regular cleanup of old builds
+
+
+
 
 **Merge Planning**
 
@@ -88,6 +95,9 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 **Getting Help**
 
 If you encounter any issues with build merging in SmartUI, please contact our support team at support@testmuai.com.
+
+
+
 
 1. **Build Management**:
    - Use meaningful build names

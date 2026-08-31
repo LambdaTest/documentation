@@ -6,6 +6,7 @@ The default list of Mobile and Desktop browsers for [Automated Screenshot Testin
 
 ## Default Desktop Browsers
 
+
 | S. NO. | OPERATING SYSTEM  | BROWSER           | BROWSER VERSION |
 |--------|-------------------|-------------------|-----------------|
 | 1      | Windows 10        | Google Chrome     | 71              |
@@ -17,7 +18,10 @@ The default list of Mobile and Desktop browsers for [Automated Screenshot Testin
 | 7      | Windows 10        | Firefox           | 61              |
 | 8      | Windows 10        | Firefox           | 60              |
 
+
+
 ## Default Mobile Browsers
+
 
 | S. NO. | DEVICE OPERATING SYSTEM | DEVICE BRAND | DEVICE MODEL  |
 |--------|-------------------------|--------------|---------------|

@@ -6,18 +6,30 @@ This article will guide you on how does TestMu AI cloud access network restricte
 
 ## Prerequisites
 
+
+
 - Client network resources are publicly discoverable (clientapplication.private.com) but access is restricted to the dedicated proxy.
 - The **dedicated proxy IP** needs to be whitelisted by the client’s network administrators.
 
 ## IP whitelisting
 
+
+
 IP whitelisting can help the client to have control over who has the access to resources hosted on their network. IP whitelist is an approved list of IP addresses or IP domains that have permission to access the resource domain. Reserved for only trusted users, it is only set and updated by the client network administrators. With dedicated proxy solution, **only a single IP** needs to be whitelisted which saves the hassle of whitelisting multiple IP ranges.
 
 ## Dedicated Proxy Server of TestMu AI
 
+
+
 TestMu AI provides a dedicated proxy server solution that can be whitelisted to provide access to the client’s network-restricted resources.
 
 ### How does it work?
+
+
+
+
+
+
 
 1. The test script from the client network machine makes a call to the TestMu AI cloud platform to start the test session.
 2. TestMu AI cloud then allocates a device to the user with the specified capabilities to run the user’s test on the TestMu AI cloud.

@@ -1,6 +1,7 @@
 ﻿---
 id: hyperexecute-release-notes-2025
 title: HyperExecute Release Notes 2025
+toc_max_heading_level: 2
 hide_title: false
 sidebar_label: 2025 Releases
 description: HyperExecute Release Notes 2025
@@ -135,7 +136,7 @@ HyperExecute now supports **Katalon Reports** generation, including all new repo
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/katalon-report.png').default} alt="Image"  className="doc_img"/>
 
-> 📘 Refer to our [Katalon Report Generation Guide](/support/docs/hyperexecute-katalon-report/) for a detailed setup walkthrough and examples.
+> 📘 Refer to our [Katalon Report Generation Guide](/support/docs/hyperexecute-job-reports/#katalon-report) for a detailed setup walkthrough and examples.
 
 ---
 
@@ -242,7 +243,7 @@ With Workflow Variables, you can now customize your workflow execution. This mak
 ## Version 3.0.0
 ### Language Support for Android Real Device Maestro Framework
 
-We have introduced language support for Maestro tests on Android devices in HyperExecute. Now, you can configure the language parameter directly in your HyperExecute YAML under the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag.
+We have introduced language support for Maestro tests on Android devices in HyperExecute. Now, you can configure the language parameter directly in your HyperExecute YAML under the [framework](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) flag.
 
 This enhancement is particularly useful when your testing applications in non-English environments. For example, you can now run tests in Spanish by setting:
 
@@ -396,7 +397,7 @@ ltOptions:
   video: false
 ```
 
-> 📘 Refer to our detailed documentation for [`ltOptions`](/support/docs/hyperexecute-yaml-capability-overrides/) flag.
+> 📘 Refer to our detailed documentation for [`ltOptions`](/support/docs/deep-dive-into-hyperexecute-yaml/#yaml-based-capability-overrides-for-selenium-tests-on-hyperexecute) flag.
 
 
 ### Network Logs & Tunnel Support for Maestro Framework

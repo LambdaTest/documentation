@@ -8,6 +8,7 @@ This document will show you how to integrate TeamCity with HyperExecute to great
 
 ## How to Integrate TeamCity with HyperExecute
 
+
 To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 
 ### Pre-requisite:
@@ -21,12 +22,16 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - Now type ``http://localhost:8111/`` in your browser to open the TeamCity GUI.
 - Click on Create Project button.
 
+
+
 ### Step 2: Create the Project
 
 - For the demo purposes, we will be using the GitHub repository to create the project. Thus, select **From a repository URL** section.
 - Enter the **Repository URL** from which you want to set up the project.
 - Enter the **Username** and **Password** of your GitHub. (It is required in case the access to the repo needed authentication).
 -  Click on **Proceed** button.
+
+
 
 ### Step 3: Connect your Version Control System.
 
@@ -37,11 +42,17 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - If you want that besides your default branch, TeamCity should monitor other branches too, define it in the **Branch specification** section.
 - Click on **Proceed** button.
 
+
+
 ### Step 4: Start the build process
 
 - Configure your build setup either **automatically** (fetched by your VCS) or **manually**. For the demo purpose, we will configure the build process manually.
 
+
+
 - Select the **Command Line** for the build setup
+
+
 
 - Enter the **Step name** (optional).
 - Select the **Custom Script** in the **Run** field.
@@ -58,8 +69,12 @@ chmod +x hyperexecute
   - **Linux** -> linux
   - **Windows**-> windows
 
+
+
 ### Step 5: Build process is complete
 
 - Now your build process is completed. This will take a couple of minutes to completely execute all the stages.
+
+
 
 - After the build is successful, go to your TestMu AI Dashboard and check the output of the triggered Job.

@@ -8,6 +8,7 @@ TestMu AI offers integration with Zephyr Scale that lets you perform automated b
 
 ## Prerequisites
 
+
 1. Install the **Zephyr Scale - Test Management for Jira** application from the Atlassian Marketplace.
 
 2. A TestMu AI account. Don't have an account, sign up for free.
@@ -17,6 +18,7 @@ TestMu AI offers integration with Zephyr Scale that lets you perform automated b
 4. A Zephyr Scale Access token.
 
 ## Integrating TestMu AI with Zephyr Scale
+
 
 1. Clone the [TestMu AI Zephyr Scale GitHub repository](https://github.com/LambdaTest/junit-selenium-zephyr-scale-sample) and navigate to the cloned directory.
 
@@ -123,7 +125,9 @@ method.callApi();
 **Important**
 You need to invoke `method.callApi()` from the PostTestResults class in the `@After` hook of `JUnitTodo.java` file.
 
+
 ## Running your Automation tests with TestMu AI and Zephyr Scale
+
 
 To run the test, pass the below command in the terminal.
 
@@ -133,10 +137,18 @@ mvn test -P single
 
 Go to the TestMu AI's Automation Dashboard to view the test execution results.
 
+
+
+
 ## Viewing the Test Results in Zephyr Scale
+
 
 To view test results in Zephyr Scale, head over to your Zephyr Scale project. The below screenshot shows the Test Case in Zephyr Scale that you executed on TestMu AI.
 
+
+
 You can also view the executed build by navigating to **Test Cycles**.
+
+
 
 To view the build details, click on the Zephyr project *Key* or *Name*.

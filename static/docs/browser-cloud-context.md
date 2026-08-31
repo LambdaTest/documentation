@@ -4,6 +4,7 @@
 
 Extract and inject browser state - cookies, localStorage, and sessionStorage - across sessions to preserve login and user data without re-authenticating.
 
+
 ## Why You Need This
 
 Your agent needs to stay logged in across sessions. Without a way to preserve
@@ -32,11 +33,13 @@ You need an active session with a connected page before you can extract or
 inject context. If you have not set that up yet, see
 [Connect to a session](/support/docs/connect-to-session/).
 
+
 ## Framework Agnostic
 
 The Context Service auto-detects whether you pass a Puppeteer `Page` or a
 Playwright `Page`/`BrowserContext`. The same API works with both - you never
 need to specify which adapter you're using.
+
 
 ## Extracting Context
 
@@ -57,6 +60,7 @@ const cookies = await client.context.getCookies(page);
 const localStorage = await client.context.getLocalStorage(page);
 const sessionStorage = await client.context.getSessionStorage(page);
 ```
+
 
 ## Injecting Context
 
@@ -81,6 +85,7 @@ await client.context.setLocalStorage(page, localStorageData);
 await client.context.setSessionStorage(page, sessionStorageData);
 ```
 
+
 ## Clearing Context
 
 ```typescript
@@ -88,6 +93,7 @@ await client.context.clearContext(page);    // Clear everything
 await client.context.clearCookies(page);    // Just cookies
 await client.context.clearStorage(page);    // localStorage + sessionStorage
 ```
+
 
 ## Example: Transfer Login Between Sessions
 
@@ -119,11 +125,13 @@ await page2.goto('https://app.example.com/dashboard');
 // Already logged in!
 ```
 
+
 ## How It Works
 
 - **Puppeteer:** Uses CDP `Network.getAllCookies` / `Network.setCookie` for cookies, and `page.evaluate()` for localStorage/sessionStorage
 - **Playwright:** Uses `context.cookies()` / `context.addCookies()` for cookies, and `page.evaluate()` for storage
 - Framework detection is automatic based on the page object's available methods
+
 
 ## Context vs Profiles
 

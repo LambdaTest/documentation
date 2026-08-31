@@ -12,6 +12,7 @@ With KaneAI's free trial access, every team can access GenAI-Native testing capa
 
 ## Here's What It Has to Offer
 
+
 With KaneAI free trial, you get access to:
 
 - **2 AI Agent Sessions:** Any two users can automate in parallel

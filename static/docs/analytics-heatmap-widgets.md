@@ -18,6 +18,7 @@ Currently, heatmap widgets use fixed metrics:
 
 Custom metric selection for box size and color , allowing you to choose different metrics for visualization.
 
+
 This dual-encoding visualization is particularly effective for:
 
 - **Identifying patterns** across two or more dimensions (e.g., browser × resolution)
@@ -35,9 +36,12 @@ Before creating a heatmap widget, ensure you have completed the [common prerequi
 **Common Steps**
 For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the [Common Steps for Creating Custom Widgets](/docs/dashboards-custom-widgets#common-steps-for-creating-custom-widgets) section in the main Custom Widgets documentation.
 
+
 ### Step 6: Choose Heatmap Visualization
 
 1. In the **Choose Visualisation** section, select **Heatmap** from the available options (Line, Bar, Pie, Table, Billboard, Heatmap).
+
+
 
 ### Step 7: Configure Grouping
 
@@ -53,13 +57,17 @@ This is the most critical step for creating meaningful heatmaps:
    - `project_name` - Group by project name (all products)
    - Custom data keys you've defined
 
+
    For a complete list of available keys for each product, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
+
 
 2. **Then By** (Optional): Select a secondary dimension for nested grouping. This creates a two-dimensional heatmap showing relationships between the two dimensions.
 
    **Example**: Group by `browser` first, then by `resolution` to see which browser-resolution combinations have the most test activity.
 
+
 The combination of Group By and Then By creates the axes of your heatmap.
+
 
 ### Step 8: Name Your Widget
 
@@ -90,7 +98,9 @@ The **size of each box** in the heatmap represents the **total number of tests**
 - **Smaller boxes** = Fewer tests executed for that combination
 - **No box** = No tests executed for that combination
 
+
 Currently, box size is always determined by the total test count. This metric is not configurable at the moment, but custom metric selection for box size .
+
 
 This helps you quickly identify:
 - Which combinations have the most test coverage
@@ -110,7 +120,9 @@ The **color of each box** represents the **pass rate percentage** for that combi
 | 60-80% | Medium Green | Good performance - solid pass rate |
 | 80-100% | Dark Green | Excellent performance - high pass rate, well-tested |
 
+
 Currently, box color is always determined by the pass rate percentage. This metric is not configurable at the moment, but custom metric selection for box color .
+
 
 ### Combining Size and Color
 
@@ -225,7 +237,9 @@ Heatmaps use size and color to encode information. Refer to the [How Heatmaps Wo
 
 For a complete list of available keys that can be used in the **Group By** and **Then By** fields when configuring your heatmap, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 
+
 For heatmaps, choose keys that represent categorical dimensions (like browser, OS, project name) rather than numeric or date values for best visualization results.
+
 
 ### Common Metrics for Heatmaps
 

@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-task-metrics
-title: HyperExecute- Monitoring CPU and Memory Resource Consumption
+title: HyperExecute- Monitoring CPU and Memory Resource Consumption
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: Task Metrics
+sidebar_label: "Task Metrics"
 description: HyperExecute Task Metrics helps you to understand your resource utilization for different stages of test execution.
 keywords:
   - TestMu AI Hyperexecute

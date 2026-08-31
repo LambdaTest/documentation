@@ -43,7 +43,9 @@ const capabilities = {
 };
 ```
 
+
 The `project` name must match exactly as it appears in Test Manager. If the project name is incorrect or doesn't exist, the test run will be created under **LambdaTest Default Project**.
+
 
 **NOTE**
 - Ensure the Test Case ID exists in Test Manager before linking.

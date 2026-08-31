@@ -211,7 +211,7 @@ values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
 This example will run only the 2 classes & one test as mentioned from the TestSuite.
 
 ## XCTestPlan in Sharding
-To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
+To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) flag as shown below:
 
 ```yaml
 framework:

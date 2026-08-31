@@ -4,16 +4,24 @@
 
 TestMu AI supports a **credit management system** as an add‑on over your active subscriptions for TestMu AI products. Many products include additional **AI features** that are powered by credits. This guide explains how credits work, how to view usage, and how admins can control consumption.
 
+
+
 ## Who gets credits?
 
 * **Free users:** Receive **1,000 complimentary credits** to try AI‑powered features.
 * **Paid users:** Receive **complimentary credits** based on subscription to try AI‑powered features and can purchase credits as an add‑on at any time. Credits are used only when AI features are invoked.
 
+
 Once free credits are exhausted, AI features will be unavailable until you **upgrade or purchase credits** from the Billing page. Use this link to buy credits directly: [Upgrade / Buy Credits](https://billing.lambdatest.com/billing/subscriptions?addCredits=true).
+
+
+
 
 ## View your current credit balance
 
 If you are an **admin** in TestMu AI organization, you can see the current credits and subscription details in [Billing & Subscriptions](https://billing.lambdatest.com/billing/subscriptions).
+
+
 
 ## View credit transactions
 
@@ -26,6 +34,8 @@ The transactions table shows:
 * **Credits** (Amount of credits)
 * **Name** of the user who did the transaction
 
+
+
 ## Set credit usage limits (Admins Only)
 
 Admins can define **org‑wide controls** to prevent unexpected consumption:
@@ -36,7 +46,11 @@ Admins can define **org‑wide controls** to prevent unexpected consumption:
 * **Hard Limit**
   When the hard limit is reached, **no further credit consumption** is allowed. Users are notified via email. To resume, increase the limit or purchase more credits.
 
+
 **Recommendation:** Start with a soft limit (e.g., 70–80% of your monthly plan) and a hard limit (e.g., 90%).
+
+
+
 
 ## AI features that consume credits
 
@@ -60,6 +74,8 @@ TestMu AI **SmartUI Visual AI** simulates human perception for visual regression
 * **Consumes \~5–8 credits** (less common)
 
 **In summary:** The bigger and more content‑heavy the screenshot, the more credits it consumes.
+
+
 
 ### AI Test Case Generator
 
@@ -87,6 +103,8 @@ The AI Test Case Generator includes a **Conversational Layer** that lets you ref
 * Credits are deducted **per message** based on the scope of the change.
 * If your message affects multiple scenarios, credits are deducted for each scenario impacted.
 
+
+
 ### Test Case Deduplication
 
 The **duplicate scan** in Test Manager finds test cases that already exist in your repository more than once, groups them by similarity, and lets you review and delete the duplicates you no longer need. [Learn more](/support/docs/test-case-deduplication/).
@@ -100,9 +118,12 @@ The **duplicate scan** in Test Manager finds test cases that already exist in yo
 
 >You pay once per scan that returns a result, not per test case analyzed or per duplicate found.
 
+
+
 ### KaneAI Authoring
 
 **KaneAI** lets you author and edit automated tests in natural language. With the new pricing model, **authoring is metered in credits** — a single subscription plus a single credit balance covers each step you generate or edit, along with any remote browser or real‑device time and AI assists (vision validation, auto‑heal). [Learn more](/support/docs/getting-started-with-kane-ai/).
+
 
 #### How credits are consumed
 
@@ -129,7 +150,11 @@ Real devices in the TestMu AI cloud are grouped into four **device categories** 
 | **Older devices** | Previous‑generation devices | **6** |
 | **Oldest devices** | Long‑standing legacy devices | **4** |
 
+
 Credits are charged **per minute of real‑device time while you author or edit**, so a 10‑minute session on a newest device costs 100 credits, while the same session on an oldest device costs 40. If a test does not need the newest hardware, pick a lower device category.
+
+
+
 
 ## FAQs
 
@@ -170,6 +195,8 @@ Yes, it provides AI FinOps capabilities for cost control and spend management, e
 - Credit balance management with real-time credit monitoring, consumption tracking, and organization-level cost summaries.
 
 - Cost metrics and analytics covering operation-level breakdowns, project-level aggregation, and historical cost analysis.
+
+
 
 ## What’s next
 

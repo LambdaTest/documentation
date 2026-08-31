@@ -21,6 +21,10 @@ This guide covers the **SmartUI Hooks** approach, where you pass SmartUI capabil
 - Used for Java SDK and CLI-based projects
 - See [SmartUI Appium Java SDK](/support/docs/smartui-appium-java-sdk) for SDK approach
 
+
+
+
+
 ## Prerequisites
 
 Before you begin, ensure you have:
@@ -32,6 +36,8 @@ Before you begin, ensure you have:
 - Test framework configured in your preferred language (TypeScript/JavaScript/Java/Python/Ruby/C#)
 - TestMu AI credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
 
+
+
 ## Step 1: Integrate GitLab with TestMu AI
 
 1. Go to [TestMu AI Integrations page](https://integrations.lambdatest.com/)
@@ -40,13 +46,25 @@ Before you begin, ensure you have:
 4. Click **Install** and authorize the integration
 5. After successful authentication, refresh the Integrations page to verify GitLab is installed
 
+
+
 **Integration Status**
 
 You can verify your GitLab integration is active by checking the [Integrations page](https://integrations.lambdatest.com/). The GitLab integration should show as "Installed" or "Active".
 
+
+
+
+
 ## Step 2: Configure SmartUI Capabilities with GitLab Integration
 
 Configure your test suite with SmartUI capabilities. Since you're using the **Hooks approach**, you'll pass SmartUI capabilities directly in your test configuration, including the GitLab integration capability.
+
+
+
+
+
+
 
 ```typescript title="Example: TypeScript Selenium Configuration with SmartUI Hooks and GitLab"
 import { Builder, Capabilities } from 'selenium-webdriver';
@@ -84,6 +102,9 @@ const driver = await new Builder()
 .withCapabilities(capabilities)
 .build();
 ```
+
+
+
 
 ```java title="Example: Java Selenium Configuration with SmartUI Hooks and GitLab"
 package webhook;
@@ -151,6 +172,9 @@ driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
 }
 ```
 
+
+
+
 ```python title="Example: Python Selenium Configuration with SmartUI Hooks and GitLab"
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -188,6 +212,15 @@ command_executor=f"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY'
 desired_capabilities=capabilities
 )
 ```
+
+
+
+
+
+
+
+
+
 
 ```typescript title="Example: TypeScript/WebdriverIO Mobile Configuration with SmartUI Hooks and GitLab"
 import { remote, RemoteOptions } from 'webdriverio';
@@ -230,6 +263,9 @@ key: process.env.LT_ACCESS_KEY,
 capabilities: capabilities as any,
 });
 ```
+
+
+
 
 ```java title="Example: Java Appium Configuration with SmartUI Hooks and GitLab"
 package webhook;
@@ -301,6 +337,9 @@ driver = new RemoteWebDriver(new URL(remoteUrl), browserOptions);
 }
 ```
 
+
+
+
 ```python title="Example: Python Appium Configuration with SmartUI Hooks and GitLab"
 from appium import webdriver
 import os
@@ -336,13 +375,24 @@ desired_capabilities=capabilities
 )
 ```
 
+
+
+
+
+
+
 **GitLab Capability Note**
 
 The capability is named `github` (legacy name) but works with GitLab's API endpoint. Use the `GIT_URL` environment variable to pass the GitLab API URL. This is the same capability used for GitHub integration and supports both GitHub and GitLab status APIs.
 
+
+
 ### Taking Screenshots with SmartUI Hooks
 
 In your test code, use the SmartUI execute command to capture screenshots:
+
+
+
 
 ```typescript title="Taking Screenshots with SmartUI Hooks"
 // Viewport screenshot
@@ -356,6 +406,9 @@ pageCount: 15  // Minimum 1, Maximum 20
 };
 await driver.execute("smartui.takeScreenshot", config);
 ```
+
+
+
 
 ```java title="Taking Screenshots with SmartUI Hooks in Java"
 import org.openqa.selenium.JavascriptExecutor;
@@ -373,6 +426,9 @@ config.put("pageCount", 15); // Minimum 1, Maximum 20
 ((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", config);
 ```
 
+
+
+
 ```python title="Taking Screenshots with SmartUI Hooks in Python"
 # Viewport screenshot
 driver.execute_script("smartui.takeScreenshot=Homepage")
@@ -386,6 +442,9 @@ config = {
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
+
+
+
 ```ruby title="Taking Screenshots with SmartUI Hooks in Ruby"
 # Viewport screenshot
 driver.execute_script("smartui.takeScreenshot=Homepage")
@@ -398,6 +457,9 @@ config = {
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
+
+
+
 
 ```csharp title="Taking Screenshots with SmartUI Hooks in C#"
 using OpenQA.Selenium;
@@ -415,15 +477,25 @@ var config = new Dictionary<string, object>
 ((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeScreenshot", config);
 ```
 
+
+
+
 **Important**
 
 The `visual: true` capability is **mandatory** for SmartUI visual regression testing. Without this capability, screenshots will not be captured and the build status will show as `Error`.
+
+
+
+
 
 ## Step 3: Configure GitLab CI/CD Pipeline
 
 Create or update your `.gitlab-ci.yml` file. Since you're using **Hooks**, you just need to run your tests normally - no SmartUI CLI exec command required.
 
 ### Complete GitLab CI/CD Configuration
+
+
+
 
 ```yaml title=".gitlab-ci.yml - TypeScript/JavaScript Example"
 stages:
@@ -476,6 +548,9 @@ only:
 environment:
 name: visual-regression/$CI_COMMIT_REF_NAME
 ```
+
+
+
 
 ```yaml title=".gitlab-ci.yml - Java Example"
 stages:
@@ -532,6 +607,9 @@ environment:
 name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
+
+
+
 ```yaml title=".gitlab-ci.yml - Python Example"
 stages:
 - test
@@ -584,6 +662,9 @@ environment:
 name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
+
+
+
 ```yaml title=".gitlab-ci.yml - Ruby Example"
 stages:
 - test
@@ -635,6 +716,9 @@ environment:
 name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
+
+
+
 ### Key Configuration Points
 
 1. **No SmartUI CLI exec needed**: With Hooks, you run your tests normally (e.g., `npm test`, `mvn test`, `pytest`)
@@ -651,6 +735,10 @@ With SmartUI Hooks:
 - SmartUI integration happens automatically through the capabilities
 - GitLab PR checks are updated automatically when tests complete
 
+
+
+
+
 ## Step 4: Set Up GitLab CI/CD Variables
 
 Configure the following variables in your GitLab project:
@@ -658,24 +746,34 @@ Configure the following variables in your GitLab project:
 1. Go to your GitLab project → **Settings** → **CI/CD** → **Variables**
 2. Add the following variables:
 
+
+
 | Variable Name | Description |
 |--------------|-------------|
 | `LT_USERNAME` | Your TestMu AI username |
 | `LT_ACCESS_KEY` | Your TestMu AI access key |
 | `SMARTUI_PROJECT_NAME` | Your SmartUI project name |
 
+
+
 ## Step 5: View Pipeline Results in GitLab
 
 After your pipeline runs, you can view the results in the GitLab Pipelines page:
+
+
 
 The pipeline will show:
 - **Pipeline status** (Success/Failed)
 - **Job status** for SmartUI tests
 - **Screenshot statistics** (Total, Approved, Changes Found) in the job tooltip
 
+
+
 ## Step 6: View PR Check Results in GitLab Merge Request
 
 After your pipeline runs, you'll see SmartUI status checks in your GitLab merge request:
+
+
 
 ### Successful Status
 
@@ -691,7 +789,15 @@ When visual differences are detected:
 - **Details**: Click "Details" to review differences in SmartUI dashboard
 - **Action Required**: Review and approve/reject changes in SmartUI dashboard
 
+
+
 ## Complete Working Examples
+
+
+
+
+
+
 
 ```typescript title="example.spec.ts - Complete Web Test with SmartUI Hooks and GitLab"
 import { Builder, Capabilities } from 'selenium-webdriver';
@@ -752,6 +858,9 @@ await driver.executeScript("smartui.takeScreenshot=LoginPage");
 });
 });
 ```
+
+
+
 
 ```java title="BaseClassWebhook.java - Complete Java Web Test with SmartUI Hooks and GitLab"
 package webhook;
@@ -841,6 +950,15 @@ driver.quit();
 }
 ```
 
+
+
+
+
+
+
+
+
+
 ```typescript title="example.spec.ts - Complete Mobile App Test with SmartUI Hooks and GitLab"
 import { remote, RemoteOptions } from 'webdriverio';
 
@@ -903,6 +1021,9 @@ await driver.execute("smartui.takeScreenshot=LoginScreen");
 });
 });
 ```
+
+
+
 
 ```java title="BaseClassWebhook.java - Complete Java Mobile Test with SmartUI Hooks and GitLab"
 package webhook;
@@ -996,7 +1117,18 @@ driver.quit();
 }
 ```
 
+
+
+
+
+
+
+
+
 ## Troubleshooting
+
+
+
 
 **Issue: PR Check Not Appearing in GitLab**
 
@@ -1010,6 +1142,9 @@ driver.quit();
 5. For merge requests, use `CI_MERGE_REQUEST_SHA` instead of `CI_COMMIT_SHA`
 6. Check test logs to ensure tests completed successfully
 7. Verify GitLab API URL format: `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`
+
+
+
 
 **Issue: Tests Run But No Screenshots in SmartUI**
 
@@ -1026,6 +1161,9 @@ driver.quit();
 6. Verify SmartUI project exists and is accessible
 7. Ensure screenshot commands are being called in your tests
 
+
+
+
 **Issue: GitLab URL Not Available in Tests**
 
 **Symptoms**: Tests run but GitLab PR check doesn't update.
@@ -1036,6 +1174,11 @@ driver.quit();
 3. Add debug logging to verify URL is set
 4. Ensure URL format is correct: `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`
 5. Verify the URL is set in the same script block that runs tests
+
+
+
+
+
 
 ## Key Differences: Hooks vs SDK
 
@@ -1048,11 +1191,15 @@ driver.quit();
 | **Languages** | TypeScript/JS/Java/Python/Ruby/C#/WebdriverIO/Appium | Java SDK, CLI projects |
 | **Java Support** | ✅ Yes - Use capabilities with `github` capability | ✅ Yes - Use `npx smartui exec -- mvn test` |
 
+
+
 ## Next Steps
 
 - Learn about [SmartUI Appium Hooks](/support/docs/smartui-appium-hooks) for detailed mobile testing guide
 - Check the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for common issues
 - Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/) for advanced pipeline configuration
+
+
 
 ## Related Documentation
 

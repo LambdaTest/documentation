@@ -376,7 +376,7 @@ variables:
 If you encounter issues not covered here:
 
 - Review [Azure Pipelines Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
 - Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
@@ -387,7 +387,7 @@ If you encounter issues not covered here:
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [SmartUI CLI Documentation](/support/docs/smartui-cli)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 - [Azure Pipelines Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

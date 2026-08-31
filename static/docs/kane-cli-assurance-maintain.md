@@ -24,7 +24,9 @@ It takes **two explicit inputs** — reconcile never guesses which source a file
 
 Both are required on a fresh run. `--apply ` alone is enough to continue a stored plan — the plan remembers its source.
 
+
 Hand reconcile the changed file directly — don't `context ingest` the new version first. Reconcile does the re-ingest itself, and [re-running the same command](#running-again) is always safe.
+
 
 ### Fail-fast validations
 

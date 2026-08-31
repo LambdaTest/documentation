@@ -21,7 +21,7 @@ This documentation guides you on how to integrate Provar seamlessly with HyperEx
 
     - Enter the **Name** for your new Browser Provider.
     - Select the **Type** as **TestMu AI**
-    - Enter your [TestMu AI **User Name** and **Access Key**](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+    - Enter your [TestMu AI **User Name** and **Access Key**](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key)
     - Update all the **browser** options that you want to run your tests on.
     - Update all the **capabilities** that you want to pass through the test.
 

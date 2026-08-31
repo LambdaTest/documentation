@@ -8,6 +8,8 @@ You upload images by file or URL, define what a correct image looks like, and th
 
 ## Features
 
+
+
 **Image Analysis.** Upload single images or batch-process up to 50 at once, by file upload, URL, or drag and drop. Supported formats are JPG, JPEG, PNG, GIF, WEBP, and BMP, with a maximum of 20 MB per image.
 
 **Custom Evaluation Criteria.** Score images against your own rules, in three types, each toggleable active or inactive:
@@ -24,6 +26,8 @@ All criteria support create, edit, delete, and search by name, description, or t
 
 ## Metrics
 
+
+
 Each image is scored on a single Quality Score from 0 to 100, plus a set of qualitative outputs.
 
 | Metric | Scale | What it measures |
@@ -37,5 +41,7 @@ Each image is scored on a single Quality Score from 0 to 100, plus a set of qual
 Quality Score bands: 90 to 100 excellent, 80 to 89 good, 60 to 79 fair, and 0 to 59 poor. For each active custom criterion, results show a Pass, Fail, or Partial status with compliance details.
 
 ## Related TestMu AI Guides
+
+
 
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

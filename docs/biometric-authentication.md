@@ -1,8 +1,8 @@
 ---
 id: biometric-authentication
-title: Biometric Authentication
+title: How to Test Biometric Authentication on TestMu AI
 sidebar_label: Biometric Authentication
-description: Test biometric authentication functionalities such as fingerprint or face recognition in your app on TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.
+description: Test fingerprint and face recognition in your app on TestMu AI's Real Device Cloud, across real iOS and Android devices using supported biometric APIs.
 keywords:
   - biometric authentication
   - Fingerprint authentication
@@ -27,7 +27,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -48,13 +47,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Biometric Authentication",
+          "name": "How to Test Biometric Authentication on TestMu AI",
           "item": `${BRAND_URL}/support/docs/biometric-authentication/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" /> 
+
+Testing biometric authentication on TestMu AI lets you validate fingerprint and face recognition flows in native apps on real iOS and Android devices. Simulate both successful and failed biometric prompts through supported APIs to confirm your app handles authentication securely.
+
+**Supported on:** Real devices
+
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 
 <BrandName /> now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.

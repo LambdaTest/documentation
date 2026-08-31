@@ -177,7 +177,7 @@ KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version
 | Option | Description |
 |--------|-------------|
 | **Auto Update** | Automatically updates the configuration when a new app version (matching `appPackage` or `bundleId`) is uploaded |
-| **Custom ID** | Links the configuration to an app uploaded via the [application upload API](/support/docs/application-setup-via-api/#upload-your-application) with a specific `custom_id` |
+| **Custom ID** | Links the configuration to an app uploaded via the [application upload API](/support/docs/application-setup-via-api/#upload-via-the-rest-api) with a specific `custom_id` |
 | **Pre-Installed App** | Available for Private Cloud only. Maps app capability to `Stock` for testing pre-installed applications |
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/UpdateApp.png').default} alt="auto-update-app" className="doc_img"/>

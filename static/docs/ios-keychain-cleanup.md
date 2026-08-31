@@ -1,9 +1,10 @@
-# Support for iOS keychain cleanup and access groups
+# How to Clean Up iOS Keychain on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Apple’s [Keychain](https://developer.apple.com/documentation/security/keychain_services) offers a secure system for apps to store sensitive information like passwords, certificates, authentication tokens, and other small data pieces.
-TestMu AI now offers enhanced Keychain management on real iOS devices, enabling you to test app flows that rely on secure storage and Keychain-specific use cases more effectively.
+iOS Keychain cleanup on TestMu AI automatically clears all Keychain entries after each real-device session, preventing login details and tokens from carrying over between runs. It also preserves keychain-access-groups entitlements during app resigning, keeping secure-storage flows working correctly after resigning.
+
+**Supported on:** Real devices
 
 ## Keychain Cleanup After Sessions
 
@@ -20,6 +21,7 @@ However, the **Bundle Seed ID** (also known as Team ID), a critical part of acce
 
 As a result, app functionalities that depend on the original access group may break if not handled properly.
 By enabling Keychain support, TestMu AI takes care of these changes, allowing your app to continue using Keychain securely even after resigning.
+
 
 >This feature is currently in **Beta**. We are actively refining it based on real-world usage and feedback.
 
@@ -40,8 +42,12 @@ Enabling `ios_keychain_enabled=true` will
 - Clear Keychain data after each test session.
 - Preserve Keychain access across resigning.
 
+
+
 - Supported on **iOS 13 and above** only. Apps targeting earlier iOS versions are not compatible.
 - Requires app resigning (`resignApp=true`). Apps signed with **Enterprise certificates** are not supported. LT framework needs to be injected in this case.
+
+
 
 ## Frequently Asked Questions (FAQs)
 
@@ -54,6 +60,8 @@ Yes. Developers have the following options:
 You can refer to Apple's guide for best practices: [Manage Keychain Data](https://developer.apple.com/documentation/security/keychain_services).
 
 Additionally, apps can provide an in-app setting to manually clear Keychain data if needed during testing.
+
+
 
 ### 2. Can Keychain access groups be handled without `ios_keychain_enabled`?
 

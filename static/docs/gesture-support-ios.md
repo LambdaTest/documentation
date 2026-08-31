@@ -6,31 +6,64 @@ When testing iOS apps on **TestMu AI Real Devices**, certain native gestures lik
 
 To make this easier, TestMu AI provides keyboard shortcuts that simulate these **gestures** without needing physical multi‑touch input. These shortcuts work on both **macOS** and **Windows**, allowing you to trigger gestures instantly during manual sessions.
 
+
 # Supported Gestures & Shortcuts
+
+
+
+
+
+
 
             iOS Gesture
             Shortcut
+
+
+
 
             Two-Finger Triple-Tap
             ⌘ + ⇧
 
+
             Single-Finger Double-Tap
             ⌘
+
 
             Single-Finger Triple-Tap
             ⌥
 
+
+
+
+
+
+
+
+
+
+
             iOS Gesture
             Shortcut
+
+
+
 
             Two-Finger Triple-Tap
             Ctrl + Shift
 
+
             Single-Finger Double-Tap
             Ctrl
 
+
             Single-Finger Triple-Tap
             Alt
+
+
+
+
+
+
 
 ## Additional Links
 

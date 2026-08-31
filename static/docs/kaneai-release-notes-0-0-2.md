@@ -4,6 +4,7 @@
 
 ## 1. Iframe, Shadow DOM, and Canvas Support
 
+
 KaneAI now fully supports testing for:
 
 - Iframe elements 🖼️
@@ -14,32 +15,40 @@ We've gone the extra mile to bring full iframe, Shadow DOM, and Canvas support i
 
 ## 2. Auto-Scroll for Manual Interaction 🎯
 
+
 No more searching for the latest entries after clicking! KaneAI now automatically scrolls to the latest interaction in manual testing sessions, saving time and making testing more efficient.
 
 ## 3. Screenshot Modal Fix 📸
+
 
 We’ve fixed an issue where screenshots would appear outside the modal on both KaneAI and TMS. Screenshots will now stay neatly within their designated area for better viewing.
 
 ## 4. URL Update With Objective Changes 🌐
 
+
 Whenever you update an objective, the URL will now update along with any other pre-filled fields. This improvement ensures that your URLs stay in sync with your updates for better tracking and organization.
 
 ## 5. Label Overlap Fix in TMS 🏷️
+
 
 Fixed the issue of labels overlapping other elements on the TMS UI. Now, we show a concise label such as "+12" when there's no space. Clicking it will open an overlay with all label details, improving readability and UI neatness.
 
 ## 6. Test Case Name Display Issue Fixed 🔍
 
+
 Resolved an issue where test case names weren't appearing in certain situations, such as when the screen was zoomed in at 200%. This fix ensures that test case names are visible even in extreme zoom conditions.
 
 ## 7. Manual Interaction Enhancements 🖱️
+
 
 We've refined manual interactions to make Click actions faster and more precise, optimizing the overall experience for testers.
 
 ## 8. Stable Template Support 📑
 
+
 Our templates have been stabilized for more reliable performance during test creation and execution.
 
 ## 9. Enhancements in Visual and Textual Query for Code Generation 🔍
+
 
 We've enhanced the visual and textual query capabilities in code exports, making your scripts even more accurate when handling complex UI elements.

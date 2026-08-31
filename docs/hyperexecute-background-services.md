@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-background-services
-title: Background Services
+title: Background Services
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: Background Services
+sidebar_label: "Background Services"
 description: This documentation will help you 
 keywords:
 - hyperexecute background services

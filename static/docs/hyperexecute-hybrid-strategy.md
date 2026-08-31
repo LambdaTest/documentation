@@ -12,6 +12,8 @@ For Matrix jobs involving numerous combinations, execution time might be longer.
 - **Time-Saving Potential of Hybrid Approach :**
 The Hybrid Strategy is a time-saving solution for matrix-intensive jobs. By harnessing parallelism, you can expedite testing without compromising coverage.
 
+
+
 Based on the above instructions passed as parameters in your [YAML](#sample-yaml-file) file, HyperExecute will now generate Virtual Machines.
 - 1 VM for Win + Chrome
 - 1 VM for Win + Firefox
@@ -29,6 +31,7 @@ Now the given `parallelism` is 2, hence it will create the same set of the above
 
 > You can run your tests in Hybrid Strategy by configuring the following flags in your [YAML file](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
+
 - **autosplit**: To use HyperExecute’s AutoSplit Strategy, you need to set this flag to `true`. Similarly, this flag should be set to `true` in Hybrid Strategy too.
 
 ```yaml
@@ -36,6 +39,7 @@ autosplit: true
 ```
 
 - **parallelism**: This key indicates the number of tests that can run in parallel.
+
 
 ```yaml
 parallelism: 5
@@ -52,6 +56,7 @@ macParallelism: 3
 - In the example given above, the `parallelism` for Linux tests is not defined and if any tests are run on Linux OS, then they will be run in 4 different virtual machines because the global value of `parallelism` is set to 4.
 
 - **matrix**: This flag is used to define the combination of tests you want to run in your job. You can use the matrix flag to define combinations of browsers, operating systems, and even custom parameters like files, folders, tags, scenarios, and more.
+
 
 ```yaml
 matrix:

@@ -1,6 +1,6 @@
 ---
 id: espresso-supported-capabilities
-title: Espresso Supported Capabilities
+title: What Are Espresso Supported Capabilities on TestMu AI
 sidebar_label: Supported Capabilities
 description: Now you can run your Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
 keywords:
@@ -20,8 +20,6 @@ canonical: https://www.testmuai.com/support/docs/espresso-supported-capabilities
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 
 
 
@@ -42,16 +40,16 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Espresso Supported Capabilities",
+          "name": "What Are Espresso Supported Capabilities on TestMu AI",
           "item": `${BRAND_URL}/support/docs/espresso-supported-capabilities/`
         }]
       })
     }}
 ></script>
 
-This document provide details about the features and capabilities supported for Espresso Framework on <BrandName />.
+Espresso supported capabilities on TestMu AI configure Android instrumentation test runs on the cloud, controlling device selection, video, device and network logs, timeouts, geolocation, GPS coordinates, Bluetooth, and build naming. These capabilities also apply to virtual devices for full control.
 
-> The capabilities listed in this document are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
+> These capabilities are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
 
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
@@ -75,7 +73,7 @@ This document provide details about the features and capabilities supported for 
 | testRemarks <br /> <br /> | Boolean | Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
 | retries <br /> <br /> | Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
 | region | String | Set the region for the test execution data center. Supported values: `US`, `EU`, `AP`. **Default:** Nearest data center. Example: `region: EU` |
-| networkProfile <RealDeviceTag value="Real Device" /> | String | Set a predefined [network throttling](/support/docs/app-auto-network-throttling/) profile during test execution. Requires `network: true`. **Default:** `null`. Example: `networkProfile: 2g-gprs-good` |
+| networkProfile Real| String | Set a predefined [network throttling](/support/docs/app-auto-network-throttling/) profile during test execution. Requires `network: true`. **Default:** `null`. Example: `networkProfile: 2g-gprs-good` |
 | uploadMedia | String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
 
 :::note

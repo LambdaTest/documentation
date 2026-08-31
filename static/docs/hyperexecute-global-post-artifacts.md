@@ -6,6 +6,8 @@ The **`globalPost`** step can download every task's artifacts onto a VM after yo
 
 > 📘 This page covers the artifact download and processing behavior of `globalPost`. For the base `globalPost` step (running cleanup commands after a job), see [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) in the YAML deep dive.
 
+
+
 ## Why Process Artifacts in Global Post?
 
 Consider a long HyperExecute pipeline that produces reports, logs, and screenshots across dozens of tasks. Traditionally, to merge those into a single client-specific report, you would wait for the whole job to finish and then run a separate post-processing stage in an external CI/CD pipeline. That means your outer pipeline has to stay alive and keep tracking the job the whole time, just to do a bit of work at the end.
@@ -21,6 +23,8 @@ With artifact processing in `globalPost`, that final step moves inside HyperExec
 - **No test framework changes:** The processing is defined entirely in YAML, so you don't touch your test code to produce a custom report.
 - **Custom, client-specific output:** Run any shell command against the artifacts to shape the exact report or artifact bundle your team or customer needs.
 
+
+
 ## Before You Begin
 
 For the artifact-download step to run, all of the following must be true. If any is missing, the download step is silently skipped and `globalPost` just runs its commands as before, without downloading anything.
@@ -28,6 +32,8 @@ For the artifact-download step to run, all of the following must be true. If any
 - [`uploadArtifacts`](/support/docs/hyperexecute-artifacts/) is configured in your YAML so that your tasks actually produce artifacts to download.
 - `commands` under `globalPost` is not empty.
 - `downloadArtifacts: true` is explicitly set under `globalPost`.
+
+
 
 ## Configuration
 
@@ -64,6 +70,8 @@ templatePath: mailtemplates/template.html
 | `email.templatePath` | No | Path to a custom HTML email template (advanced use). |
 | `disableEmail` | No | Set to `true` to skip sending emails entirely. |
 
+
+
 ## Working With Downloaded Artifacts
 
 Once your tasks finish, HyperExecute downloads their artifacts to a VM and runs your `commands` in order. Your commands read the downloaded artifacts from one directory and write anything they want uploaded to another. Both locations are exposed as environment variables you can reference in your commands.
@@ -99,7 +107,11 @@ $UPLOAD_DIR/
 └── final-results.csv
 ```
 
+
 If `downloadArtifacts` is enabled but your commands don't write anything to `${UPLOAD_DIR}`, `globalPost` still completes successfully. There is simply nothing new in the **Artifacts** section — an empty upload is not treated as a failure.
+
+
+
 
 ## Email Delivery
 
@@ -135,6 +147,8 @@ disableEmail: true
 | `{{.FileSize}}` | Human-readable zip size (for example, `15.2 MB`). |
 | `{{.Timestamp}}` | When the artifacts were generated. |
 
+
+
 ## Size and Time Limits
 
 | What | Limit |
@@ -144,29 +158,49 @@ disableEmail: true
 | Download timeout | 30 minutes |
 | Upload timeout | 30 minutes |
 
+
 If the total size of the artifacts to download exceeds **10 GB**, the download step fails with an error. If your jobs produce more than this, scope `uploadArtifacts` to only the files you actually need to process.
 
+
+
+
 ## Frequently Asked Questions
+
 
 Why aren't my artifacts downloading?
 
 The download step runs only when every prerequisite is met. Confirm that `downloadArtifacts: true` is set, that [`uploadArtifacts`](/support/docs/hyperexecute-artifacts/) is configured, and that `commands` is not empty. If any of these is missing, `globalPost` runs your commands without downloading anything.
 
+
+
+
 Why is ARTIFACTS_DIR empty?
 
 The directory is populated from the artifacts your tasks upload. If it's empty, your tasks likely didn't produce any artifacts — verify that they actually upload them via [`uploadArtifacts`](/support/docs/hyperexecute-artifacts/).
+
+
+
 
 Why didn't I get an email?
 
 Check that `email.to` contains valid addresses and that `disableEmail` is not set to `true`. Remember that `disableEmail: true` suppresses email even when `uploadArtifacts` has its own email configuration.
 
+
+
+
 Why is the upload directory empty in the dashboard?
 
 Only files your commands write into `${UPLOAD_DIR}` are uploaded. Make sure your commands actually create output there. If they don't, the job still completes successfully — there's just nothing new to show in the **Artifacts** section.
 
+
+
+
 Why is my download failing on a large job?
 
 The total artifacts to download cannot exceed **10 GB**; above that, the download step fails with an error. Narrow `uploadArtifacts` to just the files you need to process so you stay under the limit.
+
+
+
 
 Why are my commands failing?
 

@@ -12,7 +12,9 @@ Therefore, if your application adjusts DOM elements between different screen siz
 2. **SDK Installation:** Install the **SDK** with the specified compatible version.
 3. **Recommended Frameworks:** For optimal performance, use either Playwright or Selenium frameworks.
 
+
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+
 
 ## Steps to Use
 

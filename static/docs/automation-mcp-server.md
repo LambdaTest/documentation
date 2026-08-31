@@ -4,7 +4,16 @@
 
 Automation MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It connects your AI client to test execution data on TestMu AI, letting you triage and debug automation failures directly from your IDE.
 
+
+
+
+
+
+
+
 ## Key Benefits
+
+
 
 Use the Automation tool to accelerate debugging and test analysis:
 
@@ -16,6 +25,8 @@ Use the Automation tool to accelerate debugging and test analysis:
 
 ## Capabilities
 
+
+
 The Automation MCP Tool provides four capabilities:
 
 1. **Automation Test Details:** Fetches detailed information about a specific TestID from the TestMu AI cloud.
@@ -24,6 +35,8 @@ The Automation MCP Tool provides four capabilities:
 4. **Automation Console Logs:** Fetches browser console logs, surfacing error-level messages and warnings.
 
 ## How to Invoke
+
+
 
 Once your MCP client is connected, use natural language to interact with the Automation tool. Example prompts:
 

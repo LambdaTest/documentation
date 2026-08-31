@@ -1,9 +1,9 @@
 ---
 id: appium-terminal-logs
-title: Terminal Logs for Appium Tests
+title: How to View Terminal Logs on TestMu AI
 hide_title: true
 sidebar_label: Terminal Logs
-description: Upload your own Appium server, test-runner, or CI logs to any app automation session and view or download them from the TestMu AI dashboard under Logs › Terminal.
+description: Upload your own Appium server, test-runner, or CI logs to any app automation session and view them on the TestMu AI dashboard under Logs › Terminal.
 keywords:
   - appium terminal logs
   - upload terminal logs appium
@@ -19,8 +19,6 @@ canonical: https://www.testmuai.com/support/docs/appium-terminal-logs/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -40,18 +38,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "View Terminal Logs for Appium Tests",
+          "name": "How to View Terminal Logs on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-terminal-logs/`
         }]
       })
     }}
 ></script>
 
-# Terminal Logs for Appium Tests
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+# How to View Terminal Logs on TestMu AI
 ---
 
-<BrandName /> lets you attach **your own terminal logs** (Appium server logs, test-runner output, or CI logs) to any app automation session through a single REST API. Once uploaded, you can view or download them directly from the <BrandName /> Automation dashboard under **Logs › Terminal**.
+TestMu AI lets you attach your terminal logs (Appium server output, test-runner, or CI logs) to any app automation session through a single REST API, then view or download them from the dashboard under Logs › Terminal beside native logs.
+
+**Supported on:** Real &amp; Virtual devices
 
 This keeps your own diagnostic logs next to the session they belong to, so you can correlate them with the session's native logs (Appium, device, network, crash) in one place, without jumping between your CI system, local files, and the dashboard.
 
@@ -164,7 +163,7 @@ If you still have any questions for us, please feel free to let us know via our 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        View Terminal Logs for Appium Tests
+        How to View Terminal Logs on TestMu AI
       </span>
     </li>
   </ul>

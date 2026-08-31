@@ -10,19 +10,28 @@ This is true for all Certificates & Profiles except the applications generated u
 
 ## Disabling Re-Signing In Manual App Testing
 
+
 **Note**
 
 - Your application must be an Enterprise Application.
+
+
 
 When you upload an application that is generated through an Enterprise Account, you have the option at the beginning of your test to disable re-signing by toggling iOS Entitlements.
 
 Once you toggle the iOS Entitlements option, your application's certificates will be preserved.
 
+
+
+
 ## Disabling Re-Signing In App Automation
+
 
 **Note**
 
 - Your application must be an Enterprise Application.
+
+
 
 You can prevent re-signing your application with the "resignApp" capability. Upload your enterprise application & specify the capability as "false" to prevent it from being re-signed.
 

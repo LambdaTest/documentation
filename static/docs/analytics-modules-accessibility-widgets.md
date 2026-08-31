@@ -5,7 +5,9 @@
 TestMu AI Accessibility Dashboard widgets provide comprehensive insights into your accessibility testing efforts. These widgets help you optimize your accessibility testing efforts by providing detailed insights into your accessibility testing scans,
 Top 10 URLs Issue Criticality, and more.
 
+
 The Accessibility Widgets module is currently in  . If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
+
 
 ## Onboarding: where to find the widgets
 

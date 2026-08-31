@@ -11,6 +11,9 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
+
+
+
 ## Use Cases
 
 - **Voice command testing**: Validate voice assistants and in-app voice search.
@@ -18,6 +21,8 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 - **In-app audio recording**: Verify that the app captures and stores microphone input correctly.
 - **KYC and voice verification**: Test identity flows that require a recorded voice sample.
 - **Live conversational testing**: Use Live Input to drive ad-hoc, interactive voice flows in real time.
+
+
 
 ## Supported Devices
 
@@ -45,6 +50,8 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 | iPhone 16 | 18 |
 | iPhone 15 | 17 |
 
+
+
 ## Supported File Formats
 
 | Format | Max Size |
@@ -53,6 +60,8 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 | WAV | 200 MB |
 
 Files are uploaded one at a time and injected one at a time per session.
+
+
 
 ## Manual Audio Injection Workflow in App Live
 
@@ -64,10 +73,18 @@ Files are uploaded one at a time and injected one at a time per session.
 
 Once enabled, the device list is filtered to show **only the devices that support Audio Injection** for the respective OS.
 
+
+
+
+
+
+
 ### Step 2: Select a Device and Start Your Session
 
 1. From the filtered device list, choose your app and pick a supported Android or iOS real device.
 2. Click **Start** to launch the session.
+
+
 
 ### Step 3: Open Media Injection
 
@@ -79,6 +96,10 @@ You will see two options:
 
 - **Select Files**: inject a pre-recorded audio file
 - **Inject Live Input**: stream audio from your system microphone in real time
+
+
+
+
 
 ### Step 4a: Inject an Audio File
 
@@ -92,7 +113,13 @@ Use this mode when you want a deterministic, repeatable input, for example, the 
 6. Once a file is injected, the controls are limited to **Play** and **Pause**. Clicking **Play** streams the audio into the device's microphone pipeline as live mic input, and the app captures it as if a user were speaking.
 7. To switch audio, select a different file and click **Inject** on it. Only **one file can be injected at a time**, and the new file replaces the previously injected one.
 
+
+
+
 Inject and start playback **after** the app has opened the mic. Some recognizers need 1–2 seconds of silence to initialize before they accept speech.
+
+
+
 
 ### Step 4b: Use Live Input
 
@@ -105,7 +132,13 @@ Use this mode when you want to drive the device microphone interactively, for ex
 5. Speak into your mic. The app receives your voice in real time.
 6. Click **Stop** to end the live stream.
 
+
+
+
 Live Input streams from the same browser tab running App Live. Avoid muting your system mic or switching tabs mid-session. The stream will be interrupted.
+
+
+
 
 ## Execution Rules
 
@@ -114,6 +147,8 @@ Live Input streams from the same browser tab running App Live. Avoid muting your
 - For files, only one file can be injected and played at a time.
 - The last injected audio is the active source until you stop it or inject another.
 
+
+
 ## Tips and Best Practices
 
 - Keep audio files short (under 5 minutes) for predictable timing.
@@ -121,10 +156,14 @@ Live Input streams from the same browser tab running App Live. Avoid muting your
 - For voice-recognition tests, allow the device 1–2 seconds of silence before injecting speech.
 - Use **Files** for repeatable regression tests; use **Live Input** for exploratory and conversational testing.
 
+
+
 ## Related Resources
 
 - [Audio Injection on Real Devices (Automation)](/docs/audio-injection/): Inject audio via Appium / Selenium tests
 - [Camera Image Injection on Real Devices](/docs/camera-image-injection-on-real-devices/)
 - [Biometric Authentication on Real Devices](/docs/biometric-authentication-on-real-devices/)
+
+
 
 > **Need help?** Reach out via **24×7 chat support** or email **support@testmuai.com**.

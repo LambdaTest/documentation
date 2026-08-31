@@ -6,6 +6,8 @@ Layout testing is a specialized approach to visual testing that focuses on verif
 
 The example below demonstrates localisation testing, one of the major use cases of layout testing, where a webpage is tested across languages and locales.
 
+
+
 ### Why Layout Testing Matters
 
 1. **Structural Consistency**: Ensures that UI elements maintain their intended positions and relationships, regardless of content changes or style updates.
@@ -35,8 +37,12 @@ Understanding the difference between content and layout is crucial for effective
 - **Visual Diffs** refer to the actual information that users interact with on a webpage, such as text, images, videos, and other elements that convey your message.
 In the example below, you can see the visual differences between the baseline and comparison screenshot using  Smart Ignore Diff Option.
 
+
+
 - **Layout** pertains to the arrangement and presentation of this content, including the positioning, styling, and structuring of elements. The goal of layout design is to ensure that content is visually appealing and well-organized.
 In the example below, you can see the layout differences between the baseline and comparison screenshot using  Layout Diff Option.
+
+
 
 SmartUI's layout comparison feature allows you to focus specifically on layout differences while ignoring content changes, giving you more precise control over your visual testing process.
 
@@ -66,6 +72,8 @@ For **`LT:Options`**, you still set **`smartUI.project`** (and `visual`, credent
 ### 2. Using SmartUI SDK (smartUISnapshot command)
 If you are using the SmartUI SDK (`smartui exec`), you need to set the `ignoreType` option to `"layout"` when taking a specific screenshot within your code:
 
+
+
 ```javascript
 // Set options to focus only on layout structure
 let options = {
@@ -76,6 +84,7 @@ ignoreType: ["layout"]
 await smartuiSnapshot(driver, "ScreenshotName", options);
 ```
 
+
 ```java
 // Set options to focus only on layout structure
 Map<String, Object> options = new HashMap<>();
@@ -84,6 +93,7 @@ options.put("ignoreType", Arrays.asList("layout"));
 // Take a screenshot with layout comparison enabled
 smartuiSnapshot(driver, "ScreenshotName", options);
 ```
+
 
 ```python
 # Set options to focus only on layout structure
@@ -94,6 +104,7 @@ options = {
 # Take a screenshot with layout comparison enabled
 smartui_snapshot(driver, "ScreenshotName", options)
 ```
+
 
 ```csharp
 // Set options to focus only on layout structure
@@ -106,6 +117,7 @@ var options = new Dictionary<string, object>
 await SmartUI.Snapshot(driver, "ScreenshotName", options);
 ```
 
+
 ```ruby
 # Set options to focus only on layout structure
 options = {
@@ -115,6 +127,8 @@ ignoreType: ["layout"]
 # Take a screenshot with layout comparison enabled
 smartui_snapshot(driver, "ScreenshotName", options)
 ```
+
+
 
 ## Applying Layout Comparison to One Region Only
 
@@ -170,9 +184,10 @@ await smartuiSnapshot(driver, "HomePageLayout", options);
 });
 ```
 
+
 ## Additional Resources
 
 - [SmartUI SDK Documentation](/docs/smartui-sdk-config-options)
 - [Visual Regression Testing Guide](/support/docs/smart-visual-regression-testing/)
-- [Comparison Settings Documentation](/docs/test-settings-options)
+- [Comparison Settings Documentation](/support/docs/smartui-project-settings/#test-settings)
 - [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)

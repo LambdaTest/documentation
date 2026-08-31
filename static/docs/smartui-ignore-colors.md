@@ -9,6 +9,7 @@ Teams that ship frequent theme swaps, brand-color rotations, or seasonal palette
 **Important**
 Works only with the **Smart Ignore** comparison strategy. `ignoreColors` regions are honored by the smart-ignore engine. On the pixel-by-pixel comparison path they are dropped. Set your project or build comparison to Smart Ignore for these regions to take effect. See [Smart Ignore](/support/docs/smartui-smartignore/).
 
+
 ## What it does
 
 Inside an `ignoreColors` region:
@@ -76,7 +77,9 @@ entireScreenshot: true              // ignore colors across the whole image
 })}`);
 ```
 
+
 `coordinates` and `webElement` are not available on the Playwright / Puppeteer path.
+
 
 ## Notes
 
@@ -90,5 +93,5 @@ entireScreenshot: true              // ignore colors across the whole image
 
 - [Smart Ignore](/support/docs/smartui-smartignore/)
 - [Region Ignore + Select on Web Hooks](/support/docs/smartui-hooks-region-ignore/)
-- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/html-dom-smartui-options/)
+- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/smartui-project-settings/)
 - [Selenium Visual Regression](/support/docs/selenium-visual-regression/)

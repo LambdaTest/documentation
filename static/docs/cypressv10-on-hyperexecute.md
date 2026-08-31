@@ -29,6 +29,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 **Sample repo**
 You can either download or clone the code samples of Cypress v9 from the **TestMu AI's GitHub Repository** to quickly run your tests.  View on GitHub
 
+
 #### Download HyperExecute CLI
 
 The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
@@ -43,11 +44,30 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
+
+
+
+
+
+
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
+
+
+
+
+
+
+
+
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
+
+
 
 ### Execution Methods:
 
@@ -144,17 +164,32 @@ testRunnerCommand: npx cypress run  --spec ./cypress/e2e/2-advanced-examples/$te
 
 Run the following command on the terminal to trigger the tests as per your machine.
 
+
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
+
+
+
+
 
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
 
+
+
+
+
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts
 ```
+
+
+
+
+
 
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution
 
@@ -278,17 +313,31 @@ post:
 
 Run the following command on the terminal to trigger the tests as per your machine.
 
+
+
 ```bash
 ./hyperexecute --config yaml/win/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
+
+
+
+
 
 ```bash
 ./hyperexecute --config yaml/mac/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
 
+
+
+
+
 ```bash
 ./hyperexecute --config yaml/linux/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts
 ```
+
+
+
+
 
 Visit [HyperExecute Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/hyperexecute) to check the status of execution
 
@@ -334,16 +383,24 @@ post:
 jobLabel: [cypress-v10, win, matrix]
 ```
 
+
 ## 2. Testing Using Gitpod
+
 
 Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 **Step 1:** Click the **Open in Gitpod** button (You will be redirected to Login/Signup page).
 
+
+
 **Step 2:** Login with TestMu AI credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
+
+
 
 **Step 3:** You will need to login into your Gitpod account, or create a new one.
   (If you are creating a new account, choose your preferred editor. We recommend VS Code)
+
+
 
 **Step 4:** As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated.
 
@@ -378,7 +435,9 @@ Network: true
 FullHar: true
 ```
 
+
 You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).
+
 
 ### Detailed Cypress Command Logs
 > To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
@@ -392,9 +451,14 @@ pre:
 - npm install cypress-terminal-report --save-dev
 ```
 
+
 For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
 
+
+
+
 ## Using the Cypress Agent Skill with TestMu AI
+
 
 The [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
@@ -417,7 +481,9 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
+
 ### Installing Cypress Agent Skill
+
 
 Install a Cypress Agent Skill using the command below:
 

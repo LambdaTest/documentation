@@ -1,8 +1,10 @@
-# Camera Image Injection
+# How to Inject Camera Images on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **5000+ real devices** on the TestMu AI Real Device Cloud platform.
+Camera image injection on TestMu AI feeds custom images into an app's camera during automated tests, letting you validate QR scanning, barcode reading, and document capture across real Android and iOS devices without physical hardware or any manual scanning setup.
+
+**Supported on:** Real &amp; Virtual devices
 
 This tool is ideal for testing features such as:
 
@@ -24,9 +26,16 @@ TestMu AI utilizes **Sensor Instrumentation** to integrate with various mobile s
 - For iOS apps signed with Enterprise Certificates, app resigning (a prerequisite for using the Image Injection tool) is not available.
 - For virtual devices this feature is available on Android App Automation Testing.
 
+
+
 ## Supported Camera APIs
 
 Below given is the list of Camera APIs which are supported by TestMu AI Image Injection tool. Please ensure that your app uses these APIs only to enable Image Injection.
+
+
+
+
+
 
     | Supported APIs |
     |----------------|
@@ -34,12 +43,22 @@ Below given is the list of Camera APIs which are supported by TestMu AI Image In
     | `AVCapturePhoto` iOS SDK class for receiving captured photos from `AVCapturePhotoOutput` API. 📕 For details, please check [Apple Documentation](https://developer.apple.com/documentation/avfoundation/avcapturephoto).|
     | `AVMetadataMachineReadableCodeObject` is a subclass of `AVMetadataObject` iOS SDK class for scanning QR/Barcodes. 📕 For more details, please check [AVMetadataMachineReadableCodeObject Documentation](https://developer.apple.com/documentation/avfoundation/avmetadatamachinereadablecodeobject) |
 
+
+
+
+
+
+
     | Supported APIs |
     |----------------|
     | `CameraX` API is used. 📕 For details, please check [CameraX documentation](https://developer.android.com/training/camerax) |
     | `Camera` API is used. 📕 For details, please check [Camera documentation](https://developer.android.com/training/camera-deprecated)|
     | `Camera2` API is used. 📕 For details, please check [Camera2 documentation](https://developer.android.com/training/camera2)|
     | `ACTION_IMAGE_CAPTURE` is standard Intent action that can be sent to have the camera application capture an image and return it. 📕 For details, please check [MediaStore documentation](https://developer.android.com/reference/android/provider/MediaStore)|
+
+
+
+
 
 ## Image Injection in App Automation
 
@@ -49,7 +68,11 @@ This section explains how to use Image Injection with App automation. This secti
 
 You can use the following curl command to upload any image of your choice to the TestMu AI cloud. Please note that we support only **JPG, JPEG, and PNG formats which can be 10 MB or less**.
 
+
+
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type="image"" -F "custom_id="SampleImage""`}
+
+
 
 Response of above cURL will be a JSON object containing the `media_url` of the format - lt://MEDIA123456789123456789 as shown below.
 
@@ -66,23 +89,59 @@ Response of above cURL will be a JSON object containing the `media_url` of the f
 
 You can use the appium capability to turn the image injection on in your application. Just add `"enableImageInjection": True` in the desired capabilities while writing the automation script. By adding this capability the app undergoes Sensor Instrumentation, which was described earlier in the documentation. Also adding media url `"media": "lt://MEDIA123456789123456789"` in the capabilities to inject the image is now optional and can be passed in LambdaHook as mentioned in step 3.
 
+
+
+
+
+
   {`desired_capabilities = {
     "enableImageInjection": True,
     "media": "lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", #Add media_url here (optional)
   }`}
 
+
+
+
+
+
+
+
   {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 desiredCapabilities.setCapability("enableImageInjection", "true");`}
+
+
+
+
 
 ### Step 3: Inject the image
 
 Refer to the code snippets given below to upload the image with the action `ImageInjection`. Please make sure that the image needs to be injected before the camera is triggered in your application. This is due to the fact that the camera only captures the image injected at the last.
 
+
+
+
+
+
   {`driver.execute_script("lambda-image-injection=media_url") #Add media_url here`}
+
+
+
+
+
+
+
 
   {`driver.execute_script("lambda-image-injection=media_url") //Add media_url here`}
 
+
+
+
+
+
+
 **Use Case**: This feature can be used when you want to test injecting more than one images in single test at different instances. The image injected through above process will replace the image which you put in previous steps.
+
+
 
 ### Step 4: Capture the desired image through camera
 

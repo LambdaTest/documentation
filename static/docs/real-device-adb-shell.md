@@ -4,11 +4,14 @@
 
 The integration of Android Debug Bridge (ADB) shell support within the TestMu AI Manual Testing platform for app testing on Android devices empowers users to run supported ADB shell commands directly on devices during manual testing sessions, receiving instant output. This feature addresses the challenge of remote device communication, enabling users to interact with devices as if they were physically present.
 
+
+
 ## Benefits
 
 - Unlock new testing scenarios that require direct device interaction, simplifying the development process.
 - Speed up testing by easily accessing native device capabilities and APIs, reducing reliance on framework-specific commands.
 - Gain better control over device configurations to execute specific commands tailored to your test cases.
+
 
 ## Accessing ADB Shell Terminal
 
@@ -20,6 +23,8 @@ The integration of Android Debug Bridge (ADB) shell support within the TestMu AI
 - Once in the test session, find the **ADB Shell** icon on the top bar.
 - Click the ADB Shell icon to open the terminal and start running supported ADB shell commands.
 - With a single click, you can clear the terminal content or download the terminal output as a `.txt` file.
+
+
 
 ## Supported ADB Commands
 To ensure security and compatibility, we have a list of ADB commands that can be executed within our Real Device Cloud. Please refer to the following list of supported commands:
@@ -66,6 +71,7 @@ All the public commands along with the following:
 | `pm`                                  | All other package manager commands.                   |
 | `rm`                                  | Removes files or directories.                         |
 | `setprop`                             | Sets custom system properties (e.g., for debugging frameworks).  |
+
 
 `adb shell` is already pre-applied in our **terminal environment**. Rewriting it explicitly may prevent the command from executing properly.
 

@@ -1,6 +1,10 @@
-# Set Device Dark Mode
+# How to Set Device Dark Mode on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Setting device dark mode on TestMu AI lets you enable or disable dark and light themes during automation testing on real and virtual devices, so you can validate UI rendering, text contrast, and theme switching across mobile and web apps.
+
+**Supported on:** Real &amp; Virtual devices
 
 TestMu AI now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 
@@ -8,6 +12,9 @@ TestMu AI now allows you to **enable or disable dark mode** for automation testi
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
+
+
+
 
 ## Use Cases
 
@@ -25,7 +32,9 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 - Check browser-level dark mode support
 - Review responsiveness across both themes
 
+
  This feature works for both Virtual and Real Devices.
+
 
 ## Supported Platforms
 
@@ -34,9 +43,13 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 | iOS      | 13 and above   |
 | Android  | 11 and above   |
 
+
 ### Enabling Dark Mode via Capabilities
 
 You can enable the dark mode setting through `darkMode` capability before the session starts. This ensures the device starts in the dark   theme without additional steps during test execution.
+
+
+
 
 ```json
 {
@@ -50,6 +63,9 @@ You can enable the dark mode setting through `darkMode` capability before the se
 }
 ```
 
+
+
+
 ```json
 {
 "deviceName":"Galaxy S20",
@@ -62,12 +78,24 @@ You can enable the dark mode setting through `darkMode` capability before the se
 }
 ```
 
+
+
+
+
+
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
+
+
+
+
 
 ### Enabling Dark Mode via Hooks
 
 To change dark mode settings during test execution, use the hook with the `updateDeviceSettings` action. The example below demonstrates this using **Python**.
+
+
+
 
 ```python
 driver.execute_script('lambda_executor: {
@@ -78,6 +106,9 @@ driver.execute_script('lambda_executor: {
 }')
 ```
 
+
+
+
 ```python
 driver.execute_script('lambdatest_executor: {
 "action": "updateDeviceSettings",
@@ -86,6 +117,11 @@ driver.execute_script('lambdatest_executor: {
 }
 }')
 ```
+
+
+
+
+
 
 - Dark mode changes are applied at the system level and may require app restarts for full effect
 - Some legacy applications may not fully support dark mode theming

@@ -8,6 +8,8 @@ This document will show you how to integrate GitHub Actions Pipeline with HyperE
 
 ## How To Integrate GitHub Actions Pipeline with HyperExecute
 
+
+
 To integrate GitHub Actions Pipeline with HyperExecute, follow the below steps:
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -17,12 +19,15 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
+
 ### 1. Log into your GitHub account
 -  Navigate to the main page of the repository.
 -  Under your repository name, click  **Actions**.
 
 ### 2. Create a New Workflow
 In the left sidebar, click the **New workflow** button.
+
+
 
 ### 3. Create the GitHub Actions work-flow YAML file:
 
@@ -73,12 +78,23 @@ In the steps section, you should declare the execution commands.
   - In the second step it downloads the HyperExecute CLI binary.
   - The third step is the execution command which executes The HyperExecute CLI binary. This contains TestMu AI username, access key, and path of the Yaml created for HyperExecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 
+
+
+
+
 ### 4. Run the Workflow
 To run the new pipeline that you just created, click the **Run workflow** button on the workflow page.
 
+
+
+
 **Below is an example of how a test that is run on the GitHub Actions pipeline gets executed:**
 
+
+
+
 **Below is an example of a HyperExecute job that was triggered through the above pipeline:**
+
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

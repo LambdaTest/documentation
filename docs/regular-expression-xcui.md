@@ -1,9 +1,9 @@
 ---
 id: regular-expression-xcui
-title: Regular Expression - XCUI
+title: How to Use Regular Expressions for XCUI on TestMu AI
 # hide_title: true
-sidebar_label: Regular Expression
-description: There may be instances when the device you chose for a test on TestMu AI is not available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.
+sidebar_label: "Regular Expression"
+description: Use REGEX in your device capabilities on TestMu AI to widen the device search when the exact iPhone or iPad you picked is unavailable.
 keywords:
 - regular expression testmu ai
 - regular expression app automation
@@ -13,7 +13,6 @@ slug: regular-expression-xcui/
 canonical: https://www.testmuai.com/support/docs/regular-expression-xcui/
 ---
 
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -34,13 +33,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "App Automation: Regular Expression",
+          "name": "How to Use Regular Expressions for XCUI on TestMu AI",
           "item": `${BRAND_URL}/support/docs/regular-expression-xcui/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" />
+
+Using regular expressions for XCUI device selection on TestMu AI lets you match any available device with a pattern instead of one exact model, so tests still run when your chosen iPhone or iPad is busy, widening the device search.
+
+**Supported on:** Real devices
+
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 
 When you run a test on <BrandName /> using a specific device, there may be scenarios, in which the particular device that you selected isn’t available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.

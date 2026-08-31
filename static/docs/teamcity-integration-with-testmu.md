@@ -19,15 +19,21 @@ TestMu AI now integrates with TeamCity to boost your go-to-market delivery. Perf
 
     * **For Linux/Mac:**
 
+
     $ export LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
     $ export LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 
+
+
     * **For Windows:**
+
 
     $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
     $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
+
+
 
 ## Integrating TestMu AI with TeamCity
 
@@ -35,19 +41,31 @@ TestMu AI now integrates with TeamCity to boost your go-to-market delivery. Perf
 
 **Step 2:** Go to Administration and create a new project manually.
 
+
+
 **Step 3:** After filing details and click on the Create button.
 
 **Step 4:** Create a new VCS root using the below form. Required inputs are: Git Repo URL into Fetch URL and Authentication method is password where you need to pass your git username/ password.
+
+
 
 **Step 5:** Fill details, test connection and click on the Create button.
 
 **Step 6:** Go to the General Settings screen for the added project. Now, create a build configuration.
 
+
+
 **Step 7:** Go to Build Step page and add a build step as below.
+
+
 
 **Step 8:** Save build step and go to Parameters and create two environment variables as below where LT_USERNAME and LT_ACCESS_KEY will be your authentication credentials for TestMu AI.
 
+
+
 **Step 9:** Go to Project Dashboard and Run your project. Now, notice the status of test running successfully on TestMu AI Grid with the below log.
+
+
 
 ## Running Test in Parallel
 

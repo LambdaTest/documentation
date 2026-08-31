@@ -6,7 +6,11 @@ Large test repositories accumulate duplicates over time, exact copies created by
 
 TestMu AI Test Manager includes an AI-powered duplicate scan that reads your existing test cases, groups them into duplicate sets, and scores every match. You review each set, compare test cases side by side, and delete the ones you no longer need.
 
+
 This is different from the [Smart Context: Memory Layer](/support/docs/generate-test-cases-with-ai/#smart-context-memory-layer), which prevents duplicates from being created during AI generation. The duplicate scan finds duplicates that already exist in your repository.
+
+
+
 
 ## How duplicate detection works
 
@@ -21,11 +25,17 @@ Every result is expressed as a **% Match** between 0 and 100. Results are organi
 
 Matches are further grouped into four bands, `Above 80%`, `50-80%`, `20-50%`, and `Below 20%`, which you use to triage the strongest matches first.
 
+
 A test case that has only a title, with no steps or description, is still scanned, but its match score is far less reliable. Add steps and a description before you act on results for such test cases.
+
+
+
 
 ## Run a duplicate scan
 
 1. Open your project in Test Manager and go to the **Test Cases** tab. Click **Review Duplicates** in the toolbar.
+
+
 
 2. In the **Review Duplicates** panel, configure **Scan Settings**:
 
@@ -35,7 +45,11 @@ A test case that has only a title, with no steps or description, is still scanne
 | **Selected Project** | Confirms the project being scanned and the number of test cases in scope. |
 | **Minimum Match Score** | The lowest score, from 1 to 100, at which the AI will return a test case as a duplicate. Drag the slider or type a value in the box. |
 
+
+
+
 The **Minimum Match Score** controls the size of your review queue, not the accuracy of the scan. Set it high, around 80 and above, to surface only near-certain duplicates on a first pass. Lower it once the obvious duplicates are cleared and you want to catch tests that overlap in intent but differ in wording.
+
 
 3. Click **Review Duplicates** to start the scan.
 
@@ -44,13 +58,24 @@ A scan costs a flat **5 credits**, and only if it finds something: credits are d
 
 The cost does not change with the size of the scan. Scanning 100 test cases and scanning 5,000 both cost 5 credits, and finding one duplicate group costs the same as finding fifty.
 
+
 4. Test Manager opens the **Review & Resolve Duplicates** page and runs the scan there. The header shows the scope and a running **Tests Covered** count, and the progress bar reports each stage as it completes. Click **Stop Reviewing** at any point to end the scan.
 
+
+
+
+
 Only one scan can run in a project at a time, and a scope needs at least two test cases before a scan can start. On very large projects, scan a folder at a time instead of the whole project.
+
+
+
 
 ## Review the results
 
 When the scan finishes, **Review & Resolve Duplicates** splits into two panes.
+
+
+
 
 ### Base test cases
 
@@ -76,11 +101,18 @@ The controls above the list narrow what you are reviewing:
 | **Status** | Filter duplicates by test case status. |
 | **More** | Additional filters for narrowing the duplicate list. |
 
+
+
 Work top down through the bands. Clear `Above 80%` first, where matches are usually exact copies you can delete without much thought, and only then move to the lower bands, where you need to read both test cases before deciding.
+
+
+
 
 ## Compare a base test case with a duplicate
 
 Click **Compare** on any duplicate row to open the comparison view, which shows the base test case and that duplicate next to each other.
+
+
 
 The comparison view gives you:
 
@@ -93,6 +125,8 @@ The duplicate pane also carries its own actions. **Ignore** dismisses the duplic
 
 The left rail keeps the full duplicate list available while you compare, with the same **Search** and **Matches** filters as the results page.
 
+
+
 ## Change the base test case
 
 The scan picks a base test case for each group, but it is not always the one you want to keep. If a duplicate is better written or more current, promote it to base instead.
@@ -102,7 +136,13 @@ The scan picks a base test case for each group, but it is not always the one you
 3. Click **View Comparison** first if you want to check the two test cases side by side before deciding.
 4. Click **Change Base to** the selected ID to confirm.
 
+
+
+
 Changing the base test case starts the review scan again for that group, because every duplicate's % match is recalculated against the new base. This re-scan does not cost any additional credits.
+
+
+
 
 ## Ignore duplicates
 
@@ -110,6 +150,8 @@ Ignoring tells Test Manager that a test case is not a duplicate of the current b
 
 - To ignore one test case, click **Ignore** on its row in the duplicate list, or in the duplicate pane of the comparison view.
 - To ignore several at once, select them using their checkboxes and click **Ignore** in the selection header above the list.
+
+
 
 ## Delete duplicates
 
@@ -121,6 +163,8 @@ Select the checkbox on any duplicate row, or click **Mark** in the comparison vi
 
 The selection header above the duplicate list shows how many test cases are marked in the current group, and offers **Select all** to mark every duplicate of the current base test case at once.
 
+
+
 The footer bar tracks your selection across the whole scan, not just the group you are looking at. It shows the total **Duplicates Marked** and breaks that total down by match band, so you can confirm you are not about to delete a batch of low-confidence matches. **Clear Selection** discards everything you have marked.
 
 ### Commit the deletion
@@ -130,9 +174,15 @@ The footer bar tracks your selection across the whole scan, not just the group y
 3. Type `DELETE` in all caps in the confirmation field.
 4. Click **Delete Duplicates** to commit.
 
+
+
 Test Manager deletes the marked test cases and returns you to the project's test cases list.
 
+
 Deletion is permanent. Deleted test cases cannot be restored, and there is no archive to recover them from. Review your marked selection in the footer breakdown before you commit.
+
+
+
 
 ## Limitations
 
@@ -143,6 +193,8 @@ Deletion is permanent. Deleted test cases cannot be restored, and there is no ar
 - **Very large projects need to be narrowed.** Scan folder by folder rather than the whole project.
 - **Manual test cases only.** The scan covers manual test cases, including KaneAI-authored test cases stored in Test Manager. Automation scripts are not analyzed.
 - **Single project.** Duplicates are detected within one project. Test cases in other projects are not compared.
+
+
 
 ## Related resources
 

@@ -11,6 +11,9 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
+
+
+
 ## Use Cases
 
 - **Web voice search**: Validate browser-based voice search and dictation flows.
@@ -18,6 +21,8 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 - **Web-based KYC**: Test identity flows that record a voice sample in the browser.
 - **WebRTC and conferencing**: Verify mic capture in browser conferencing tools.
 - **Live exploratory testing**: Use Live Input to drive ad-hoc voice interactions on web pages in real time.
+
+
 
 ## Supported Devices
 
@@ -45,6 +50,8 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 | iPhone 16 | 18 |
 | iPhone 15 | 17 |
 
+
+
 ## Supported File Formats
 
 | Format | Max Size |
@@ -53,6 +60,8 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 | WAV | 200 MB |
 
 Files are uploaded one at a time and injected one at a time per session.
+
+
 
 ## Manual Audio Injection Workflow in Browser Testing
 
@@ -64,10 +73,14 @@ Files are uploaded one at a time and injected one at a time per session.
 
 Once enabled, the device list is filtered to show **only the devices that support Audio Injection** for the respective OS.
 
+
+
 ### Step 2: Select a Device and Start Your Session
 
 1. From the filtered device list, pick a supported Android or iOS real device along with the browser you want to test on.
 2. Click **Start** to launch the session.
+
+
 
 ### Step 3: Open Media Injection
 
@@ -79,6 +92,8 @@ You will see two options:
 
 - **Select Files**: inject a pre-recorded audio file
 - **Inject Live Input**: stream audio from your system microphone in real time
+
+
 
 ### Step 4a: Inject an Audio File
 
@@ -93,7 +108,11 @@ Use this mode when you want a deterministic, repeatable input, for example, the 
 7. Once a file is injected, the controls are limited to **Play** and **Pause**. Clicking **Play** streams the audio into the device's microphone pipeline as live mic input, and the browser captures it as if the user were speaking.
 8. To switch audio, select a different file and click **Inject** on it. Only **one file can be injected at a time**, and the new file replaces the previously injected one.
 
+
 Inject and start playback **after** the page has opened the mic. Some recognizers need 1–2 seconds of silence to initialize before they accept speech.
+
+
+
 
 ### Step 4b: Use Live Input
 
@@ -106,7 +125,11 @@ Use this mode when you want to drive the device microphone interactively, for ex
 5. Speak into your mic. The web page receives your voice in real time.
 6. Click **Stop** to end the live stream.
 
+
 Live Input streams from the same browser tab running the Real Time session. Avoid muting your system mic or switching tabs mid-session. The stream will be interrupted.
+
+
+
 
 ## Execution Rules
 
@@ -115,6 +138,8 @@ Live Input streams from the same browser tab running the Real Time session. Avoi
 - For files, only one file can be injected and played at a time.
 - The last injected audio is the active source until you stop it or inject another.
 
+
+
 ## Tips and Best Practices
 
 - Keep audio files short (under 5 minutes) for predictable timing.
@@ -122,10 +147,14 @@ Live Input streams from the same browser tab running the Real Time session. Avoi
 - For voice-recognition pages, allow the device 1–2 seconds of silence before injecting speech.
 - Use **Files** for repeatable regression runs across device-browser pairs; use **Live Input** for exploratory and conversational testing.
 
+
+
 ## Related Resources
 
 - [Audio Injection Manual Testing (App)](/docs/audio-injection-manual/): Same feature on App Live
 - [Audio Injection on Real Devices (Automation)](/docs/audio-injection/): Inject audio via Appium / Selenium tests
 - [Browser Testing on Real Devices](/docs/browser-testing-on-real-devices/)
+
+
 
 > **Need help?** Reach out via **24×7 chat support** or email **support@testmuai.com**.

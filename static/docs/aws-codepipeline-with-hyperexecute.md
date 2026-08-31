@@ -8,6 +8,8 @@ This document will show you how to integrate AWS CodePipeline with HyperExecute 
 
 ## How to Integrate AWS CodePipeline with HyperExecute
 
+
+
 To integrate AWS CodePipeline with HyperExecute, follow the below mentioned steps:
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -17,10 +19,14 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
+
+
 ### Step 1: Create a new AWS CodePipeline pipeline.
 
 - Enter the Pipeline Name.
 - Under Service role, select **New service role.** Click Next.
+
+
 
 ### Step 2: Add a Source Provider
 
@@ -29,11 +35,15 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 - Select the desired Repository.
 - Select the specified branch name, for which you want to establish the pipeline.
 
+
+
 ### Step 3: Select the Build Provider
 
 - Add a Build action to the pipeline. Select the **CodeBuild** as the build provider.
 - Click on **Create a Project** button.
 - For the demo we are selecting OS as Amazon Linux 2, Runtime as standard, Image - amazonlinux2-x86_64_standard:4.0, and Runtime Environment as Linux.
+
+
 
 ### Step 4: Create a `buildspec.yml` file
 
@@ -65,6 +75,8 @@ command: ./hyperexecute --user <your_user_name> --key <your_access_key> --config
 - Now Click the **"continue to code pipeline"** button and then click on **Next**.
 
 - You can "**Skip deploy stage"** and finally click **"Create Pipeline"** button.
+
+
 
 ### Save the pipeline.
 

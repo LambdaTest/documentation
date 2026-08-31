@@ -6,6 +6,12 @@ SpiraTeam is a software tool used for Application Lifecycle Management (ALM). It
 
 It is very useful for managing teams programs, portfolios, requirements, releases, test cases, issues, baselines, workflows, and tasks in one unified environment.
 
+
+
+
+
+
+
 ## Steps to Integrate TestMu AI with SpiraTeam
 
 ### Step 1: Setup Your Accounts
@@ -20,11 +26,15 @@ It is very useful for managing teams programs, portfolios, requirements, release
 
 - In the **Bug Tracker Section**, select the **SpiraTeam** and click on the **Connect** button.
 
+
+
 - Enter the configuration details and click on **Install** button.
 
     - **Username :**  Go to your SpiraTeam account profile to find your Username.
     - **SpiraTeam URL :** Enter your organization URL using for the integration.
     - **RSS / API Key :** In your SpiraTeam profile, toggle the **Enable RSS Feeds** to **yes** and copy the **RSS / API Key** and click on the Save button.
+
+
 
 ### Step 3: Create Your Incident Ticket
 
@@ -34,7 +44,11 @@ It is very useful for managing teams programs, portfolios, requirements, release
 
 - Click on **Create an issue**.
 
+
+
 - Configure the ticket details as shown below and click on **Create Issue** button.
+
+
 
 ### Step 4: (Optional) Complete Your Ticket Configuration if needed
 

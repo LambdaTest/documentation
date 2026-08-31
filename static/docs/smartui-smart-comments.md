@@ -14,6 +14,8 @@ Smart Comments enables real-time collaboration on SmartUI visual test results. A
 
 > Need help with other SmartUI features? Jump to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/).
 
+
+
 ## Where Comments Appear
 
 Comments can be added and viewed in multiple locations within SmartUI:
@@ -22,17 +24,27 @@ Comments can be added and viewed in multiple locations within SmartUI:
 
 Comments appear on individual screenshots with a comment icon indicator showing the total number of comments.
 
+
+
 **Comment indicators:**
 - Comment icon with count in the screenshot header
 - Comment count badge showing total comments for that screenshot
+
+
 
 ### 2. Build Level
 
 Comments can be viewed at the build level, showing the total count of comments across all screenshots in the build.
 
+
+
 ### 3. Comment Drawer
 
 Access all comments via the **Comment** button in the Actions tab. The comment drawer displays all comments for the current build or screenshot.
+
+
+
+
 
 ## How to Add Comments
 
@@ -42,11 +54,15 @@ You can add comments from multiple locations in SmartUI:
 
 Add comments directly on a screenshot using the comment textbox in the screenshot drawer.
 
+
+
 **Steps:**
 1. Open a screenshot from the build view
 2. Locate the comment textbox in the screenshot drawer
 3. Type your comment (max 500 characters)
 4. Click **Post** to publish your comment
+
+
 
 ### 2. Accept/Reject Modals
 
@@ -56,6 +72,8 @@ Add optional comments when approving or rejecting screenshots.
 
 When accepting a screenshot, you can add an optional comment:
 
+
+
 **Modal options:**
 - **Accept**: Approve only that specific viewport and browser
 - **Accept All**: Approve in all viewports and browsers of the screenshot
@@ -64,9 +82,13 @@ When accepting a screenshot, you can add an optional comment:
 
 Add comments when accepting all variants:
 
+
+
 #### Reject Modal
 
 Add comments when rejecting screenshots:
+
+
 
 **Modal options:**
 - **Reject**: Reject only that specific viewport and browser
@@ -84,11 +106,15 @@ Add comments when moving screenshots to baseline:
 
 Add comments when performing bulk operations (multiselect):
 
+
+
 **Steps:**
 1. Select multiple screenshots using [multiselect](/support/docs/smartui-multiselect-bulkops/)
 2. Choose your bulk action (Approve, Reject, Move to Baseline)
 3. Add an optional comment in the comment box
 4. Confirm the action
+
+
 
 ## Comment Features
 
@@ -105,11 +131,14 @@ Smart Comments automatically saves your comment drafts for the active session. I
 
 **1. Draft in Accept Modal:**
 
+
 If you write a comment in the Accept modal but close it, the draft is saved.
 
 **2. Draft in Reject Modal:**
 
+
 **3. Draft in Multiselect:**
+
 
 You can then post the saved draft from:
 - The comment textbox in the screenshot drawer
@@ -122,15 +151,20 @@ You can then post the saved draft from:
 
 Mention teammates in your comments to notify them and bring them into the discussion.
 
+
+
 **How to mention:**
 1. Type `@` in the comment box
 2. Start typing the teammate's name
 3. Select from the dropdown list
 4. The mentioned user will be highlighted in the comment
 
+
 ### Threaded Comments
 
 Reply to existing comments to create threaded discussions.
+
+
 
 **How to reply:**
 1. Click **Reply** on any existing comment
@@ -147,6 +181,8 @@ Comments can be in two states:
 
 Unresolved comments are active and visible in the main comments list.
 
+
+
 **Characteristics:**
 - Visible in the main comments view
 - Require attention or follow-up
@@ -155,6 +191,8 @@ Unresolved comments are active and visible in the main comments list.
 #### Resolved (Archived)
 
 Resolved comments are archived and moved to a separate column.
+
+
 
 **Characteristics:**
 - Moved to the "Resolved" column
@@ -173,6 +211,8 @@ Resolved comments are archived and moved to a separate column.
 3. Click **Reopen** or **Mark as Unresolved**
 4. The comment moves back to the Active column
 
+
+
 ## Comment Management
 
 ### Viewing Comments
@@ -180,6 +220,8 @@ Resolved comments are archived and moved to a separate column.
 #### Screenshot Drawer
 
 View comments directly in the screenshot drawer:
+
+
 
 #### Comment Drawer (Actions Tab)
 
@@ -212,6 +254,8 @@ All comments are retained and searchable:
 - Comment history is maintained per screenshot ID
 - You can search and filter comments in the comment drawer
 
+
+
 ## Special Cases
 
 ### Delete Screenshot
@@ -236,7 +280,12 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Each variant maintains its own comment thread
 - Use "Accept All" or "Reject All" with comments to apply the same comment across all variants
 
+
+
 ## Best Practices
+
+
+
 
 **Use Mentions Strategically**
 
@@ -245,12 +294,18 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Avoid over-mentioning: only tag people who need to be involved
 - Combine mentions with clear action items in your comments
 
+
+
+
 **Organize with Threads**
 
 - Reply to existing comments to maintain context
 - Create separate comment threads for different topics
 - Use threads to track discussions on specific visual changes
 - Keep threads focused on one issue or question
+
+
+
 
 **Resolve When Complete**
 
@@ -259,12 +314,18 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Reopen resolved comments if follow-up is needed
 - Use resolved comments as a reference for similar issues
 
+
+
+
 **Add Context in Comments**
 
 - Include specific details about what you're commenting on
 - Reference the viewport, browser, or specific UI element
 - Explain why a change is acceptable or needs revision
 - Link to related tickets or documentation when relevant
+
+
+
 
 **Use Bulk Operation Comments**
 
@@ -273,6 +334,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Use bulk comments to document batch approvals or rejections
 - Combine with [multiselect](/support/docs/smartui-multiselect-bulkops/) for efficient workflows
 
+
+
+
 **Manage Drafts**
 
 - Review your draft before posting from a different location
@@ -280,7 +344,15 @@ Comments are specific to each screenshot variant (viewport + browser combination
 - Clear drafts if you change your mind (refresh the page)
 - Remember that drafts are session-based only
 
+
+
+
+
+
 ## Troubleshooting
+
+
+
 
 **Issue: Comment Not Appearing**
 
@@ -293,6 +365,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 4. Ensure you have proper permissions to view comments
 5. Check the comment drawer in the Actions tab
 
+
+
+
 **Issue: Draft Not Saving**
 
 **Symptoms**: Draft comment disappears after closing modal or navigating.
@@ -302,6 +377,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 2. Drafts persist only during the active browser session
 3. Try posting the draft immediately if you need to preserve it
 4. Check browser console for any JavaScript errors
+
+
+
 
 **Issue: @Mention Not Working**
 
@@ -314,6 +392,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 4. Check your network connection
 5. Verify you have permission to mention users
 
+
+
+
 **Issue: Comment Too Long**
 
 **Symptoms**: Can't post comment or character count exceeds limit.
@@ -323,6 +404,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 2. Break long comments into multiple shorter comments
 3. Use threaded replies to continue the discussion
 4. Check the character counter in the comment box
+
+
+
 
 **Issue: Comments Deleted Unexpectedly**
 
@@ -335,6 +419,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 4. Check if comments were moved to the Resolved column
 5. Verify you're viewing the correct build or screenshot
 
+
+
+
 **Issue: Can't Resolve or Unresolve Comments**
 
 **Symptoms**: Resolve button doesn't work or comments don't move.
@@ -346,7 +433,15 @@ Comments are specific to each screenshot variant (viewport + browser combination
 4. Try clicking the comment directly to open the resolve option
 5. Check browser console for errors
 
+
+
+
+
+
 ## Comment Workflow Examples
+
+
+
 
 **Scenario:** Reviewing visual changes and adding comments for the team.
 
@@ -358,6 +453,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 6. Wait for reply in the comment thread
 7. Mark comment as resolved once confirmed
 
+
+
+
 **Scenario:** Approving multiple screenshots with a bulk comment.
 
 1. Use [multiselect](/support/docs/smartui-multiselect-bulkops/) to select multiple screenshots
@@ -365,6 +463,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 3. Add a comment: "All screenshots approved after design system update"
 4. Confirm the bulk approval
 5. Comment appears in all selected screenshots' comment lists
+
+
+
 
 **Scenario:** Rejecting a screenshot and explaining why.
 
@@ -375,6 +476,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 5. Confirm rejection
 6. Comment is saved and visible in the comment drawer
 
+
+
+
 **Scenario:** Having a discussion about a visual change.
 
 1. QA adds initial comment: "Is this color change intentional?"
@@ -382,6 +486,9 @@ Comments are specific to each screenshot variant (viewport + browser combination
 3. Developer adds: "I'll update the CSS to match the new palette."
 4. QA marks the thread as resolved once the change is implemented
 5. All participants can see the full discussion thread
+
+
+
 
 **Scenario:** Starting a comment in one place and finishing it elsewhere.
 
@@ -392,6 +499,11 @@ Comments are specific to each screenshot variant (viewport + browser combination
 5. Complete the comment and post it
 6. Draft is cleared after posting
 
+
+
+
+
+
 ## Future Enhancements
 
 The following features are planned for future releases:
@@ -400,6 +512,8 @@ The following features are planned for future releases:
 - **RBAC (Role-Based Access Control)**: Users can edit/delete their own comments; Admins can moderate all comments
 - **Cross-Build Comments**: Comments across builds for the same screenshot name (optional feature)
 - **Area-Specific Comments**: Comments on specific areas of a screenshot using drawing boxes
+
+
 
 ## Next Steps
 

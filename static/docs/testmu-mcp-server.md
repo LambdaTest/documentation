@@ -6,6 +6,8 @@ TestMu AI MCP Server is a remote MCP server that connects MCP-compatible AI clie
 
 ## Available Tools
 
+
+
 TestMu AI MCP Server provides five tools, each covering a different area of testing:
 
 1. **[HyperExecute Tool:](/support/docs/hyperexecute-mcp-server/)** AI-native test orchestration. Auto-generates test runner commands and HyperExecute YAML, monitors jobs, and surfaces session details.
@@ -16,6 +18,9 @@ TestMu AI MCP Server provides five tools, each covering a different area of test
 
 ## Connecting to TestMu AI MCP Server
 
+
+
+
 TestMu AI MCP Server works with any MCP-compatible AI client. Pick your client below, paste the configuration, and complete the OAuth flow with your TestMu AI account.
 
 - **Server URL:** `https://mcp.lambdatest.com/mcp`
@@ -24,6 +29,8 @@ TestMu AI MCP Server works with any MCP-compatible AI client. Pick your client b
 ### Cursor
 
 Use the one-click install button to add the server to Cursor:
+
+
 
 **Or configure manually:**
 
@@ -113,7 +120,9 @@ Custom connectors in Claude Desktop are configured through **Settings > Connecto
 
 3. Save and refresh the MCP servers panel. Complete the OAuth flow when prompted.
 
+
 Antigravity has a global limit of around 100 active MCP tools across all servers. If you are hitting that limit, disable tools you do not need from the MCP settings panel.
+
 
 ### OpenAI Codex CLI
 
@@ -175,7 +184,9 @@ url: https://mcp.lambdatest.com/mcp
 
 2. Switch to **Agent Mode** in Continue and complete the OAuth flow when prompted.
 
+
 MCP servers in Continue work in Agent Mode only.
+
 
 ### Other Tools
 
@@ -201,6 +212,8 @@ If your MCP client is not listed above, use one of these connection methods:
 
 ## A Typical Workflow
 
+
+
 Once connected, open your project in your AI-enabled IDE and use natural language to invoke tools:
 
 1. Open your project in your AI-enabled IDE.
@@ -224,6 +237,8 @@ You can also ask questions like:
 - "Generate test cases from this requirement into my Regression folder in Test Manager."
 
 ## Troubleshooting
+
+
 
 **OAuth flow does not open or fails**
 

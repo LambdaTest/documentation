@@ -10,11 +10,16 @@ Let's dive in to learn how to test apps installed from App Store.
 
 **Step 2**: Next, choose the OS version. In this case lets choose **iOS**.
 
+
+
 **Step 3**: From the uploading apps section choose **Install from App Store**.
+
+
 
 **Step 4**: Select the **iOS device** and **resolution** of your choice to launch the test session.
 
 **Step 5**: Use your Apple ID to log into the App Store, install the app and begin testing.
+
 
 - If you can't find an app on the Apple App Store, ensure you're signed in with an Apple ID from the region where the app is published. For example, if the app is available only in India, sign in with an Indian Apple ID and search again.
 

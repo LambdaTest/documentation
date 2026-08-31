@@ -4,6 +4,7 @@
 
 Install Chrome extensions into cloud browser sessions so they behave identically to local browsers with your required extensions.
 
+
 ## Overview
 
 Your agent workflow depends on a Chrome extension - an ad blocker, a cookie manager, or a custom tool your team built. Without it, the browser behaves differently and your automation may not work as expected.
@@ -12,6 +13,8 @@ The Extension Service solves this by letting you register Chrome extensions and 
 
 **Before You Begin**
 Your extension must be hosted at a cloud URL (such as an S3 bucket) before you can register it. See [Current Limitations](#current-limitations) for details on what is supported today.
+
+
 
 ## Loading Extensions into a Session
 
@@ -36,6 +39,7 @@ lambdatestOptions: { ... }
 When `extensionIds` are provided, the session manager fetches the cloud URLs
 and adds them to TestMu AI capabilities as `lambda:loadExtension`.
 
+
 ## Managing Extensions
 
 ```typescript
@@ -45,6 +49,7 @@ const ext = await client.extensions.get('ext_abc123');
 
 await client.extensions.delete('ext_abc123');
 ```
+
 
 ## Extension Object
 
@@ -65,6 +70,7 @@ localPath?: string;    // Local file path
 
 - `.zip` archives containing Chrome extension files
 - `.crx` Chrome extension packages
+
 
 ## Current Limitations
 

@@ -1,7 +1,8 @@
 ---
 id: hyperexecute-projects
 title: HyperExecute Projects
-sidebar_label: Projects
+toc_max_heading_level: 2
+sidebar_label: "Projects"
 description: Discover the power of HyperExecute Projects for agile test execution. Learn how to set up and run custom projects with ease, maximizing testing efficiency.
 keywords:
   - TestMu AI Hyperexecute
@@ -114,21 +115,21 @@ In addition to custom projects, HyperExecute supports integration with specializ
 
 <div className="support_main">
 
-  <a href = "/support/docs/tosca-integration-with-hyperexecute-using-commander/">
+  <a href = "/support/docs/tosca-integration-with-hyperexecute/#tosca-integration-using-commander">
   <div className="support_inners">
     <h3>Tosca using Commander</h3>
     <p>Optimize and accelerate end-to-end testing for your entire digital landscape using Tosca.</p>
   </div>
   </a>
 
-  <a href = "/support/docs/tosca-integration-with-hyperexecute-using-dex/">
+  <a href = "/support/docs/tosca-integration-with-hyperexecute/#tosca-integration-using-dex">
   <div className="support_inners">
     <h3>Tosca using DEX</h3>
     <p>Perform end-to-end testing using Tosca DEX with HyperExecute.</p>
   </div>
   </a>
 
-  <a href = "/support/docs/tosca-integration-with-hyperexecute-for-sap/">
+  <a href = "/support/docs/tosca-integration-with-hyperexecute/#tosca-integration-for-sap">
   <div className="support_inners">
     <h3>Tosca for SAP</h3>
     <p>Use Tosca for SAP to integrate with HyperExecute.</p>

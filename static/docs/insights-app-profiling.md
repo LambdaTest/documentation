@@ -8,7 +8,11 @@ The App Profiling dashboard aggregates performance telemetry from Appium tests r
 
 The data on this dashboard comes from the App Profiling capability on Appium tests. To enable App Profiling on your test runs and review per-session metrics, see [App Performance Analytics](/support/docs/appium-app-performance-analytics/).
 
+
 App Profiling Insights is available for Appium tests on iOS and Android (version 9+). Set `appProfiling: true` and `resignApp: true` in your capabilities. Battery Utilization and Battery Temperature widgets are populated for Android sessions only.
+
+
+
 
 ## How to access
 
@@ -64,7 +68,9 @@ Average answers *"what does a typical run cost?"*. p90 answers *"how bad does it
 
 Averages hide spikes. A build whose CPU averages 12% but reaches 45% on every tenth run will look green on Average and breach on p90 — and it is the p90 run your users notice. The reverse is also informative: if Average and p90 sit close together, the metric is stable and the average is trustworthy.
 
+
 p90 is computed per session at ingestion and then averaged across the sessions in scope — it is *the mean of each session's own 90th percentile*, not the 90th percentile of the whole window. Metrics with no pre-computed p90 — cold and hot startup, and the crash and ANR counts — are dropped in p90 mode and render as `—`. Frozen and janky frame counts stay on their average, because they are companion counts to the frame-rate series rather than percentile-able metrics in their own right.
+
 
 ### p90 and the Comparison view
 
@@ -171,7 +177,9 @@ Thresholds render as:
 
 Battery Utilization (mAh drain) is rendered without a threshold by default — drain varies widely by device hardware and there is no industry-standard band.
 
+
 Admins can override the defaults at the organisation level. Regular users see the configured thresholds applied but cannot modify them.
+
 
 ## Threshold breach alerts
 
@@ -179,9 +187,15 @@ When a session breaches a configured App Profiling threshold, TestMu AI automati
 
 Each alert identifies the run (Test ID, Test Name, Build Name, OS, Device and date) and lists every breached metric with its observed value against the configured threshold, along with a **View Test Details** link that opens the run's App Profiling tab. Metrics that can trigger an alert include Cold Startup, Hot Startup, CPU Utilization, Frame Rate, Memory Usage, Temperature and per-label Page Load.
 
+
+
 The Slack notification carries the same details:
 
+
+
+
 Alerts fire against the same SLA thresholds described above, which are configured at the organisation level by an admin.
+
 
 ## Sharing a dashboard
 

@@ -10,7 +10,11 @@ Let's dive in to learn how to test apps installed from Test Flight.
 
 **Step 2**: Next, choose the OS version. In this case lets choose **iOS**.
 
+
+
 **Step 3**: From the uploading apps section choose **Install from Test Flight**.
+
+
 
 **Step 4**: Select the **iOS device** and **resolution** of your choice to launch the test session.
 

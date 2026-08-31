@@ -4,6 +4,7 @@
 
 Create encrypted tunnels between your local machine and Browser Cloud. Let cloud browsers reach localhost dev servers, staging environments, and private network resources.
 
+
 ## Why You Need This
 
 Your cloud browser can only reach public URLs by default. But your agent may need to access localhost, staging servers, or internal tools. For example:
@@ -20,6 +21,7 @@ Cloud Browser --(encrypted tunnel)--> Your Machine --> localhost:3000
 --> staging.internal.company.com
 --> 192.168.1.50:8080
 ```
+
 
 ## Automatic Tunnel (Recommended)
 
@@ -42,6 +44,7 @@ await page.goto('http://localhost:3000');  // This works!
 
 If you set `tunnel: true` without a `tunnelName`, the SDK auto-generates a name
 and starts the tunnel for you.
+
 
 ## Manual Tunnel
 
@@ -72,6 +75,7 @@ lambdatestOptions: { ... }
 await client.tunnel.stop();
 ```
 
+
 ## Tunnel Config
 
 ```typescript
@@ -87,6 +91,7 @@ logFile?: string;       // Log file path
 }
 ```
 
+
 ## API
 
 ```typescript
@@ -94,6 +99,7 @@ await client.tunnel.start(config);   // Start tunnel
 await client.tunnel.stop();          // Stop tunnel
 client.tunnel.getStatus();           // Returns true/false
 ```
+
 
 ## How It Works
 

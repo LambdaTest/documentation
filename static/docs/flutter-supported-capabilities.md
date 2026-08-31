@@ -1,8 +1,8 @@
-# Flutter Supported Capabilities
+# Flutter Supported Capabilities on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This document provide details about the features and capabilities supported for Espresso Framework on TestMu AI.
+Flutter supported capabilities on TestMu AI let you configure Flutter mobile app tests on real Android devices, controlling the app, test suite, device, video, timeouts, device logs, build name, permissions, geolocation, GPS coordinates, and Bluetooth for reliable end-to-end automation runs.
 
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
@@ -19,5 +19,7 @@ This document provide details about the features and capabilities supported for 
 | geoLocation | String | Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test. Example - `geoLocation: FR`|
 | gpsLocation | Decimal | The capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`|
 | enableBluetooth | Boolean | Used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`|
+
+
 
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."

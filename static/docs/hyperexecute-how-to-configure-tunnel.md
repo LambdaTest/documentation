@@ -1,7 +1,3 @@
-# Tunnel Configuration in HyperExecute
-
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
 You can configure a secure tunnel in HyperExecute to test applications that are:
 
 - Hosted locally on your system, or
@@ -52,6 +48,8 @@ tunnelOpts:
 global: true
 ```
 
+
+
 ## Clone a Repository via Tunnel
 
 Cloning a repository using a tunnel can help secure the transfer of data between the repository and your local machine.
@@ -71,6 +69,9 @@ accessToken: <your_personal_access_token>
 commit: <optional>
 
 # highlight-next-line
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 tunnelOpts:
 # highlight-next-line
 useInCodeSetUp: true

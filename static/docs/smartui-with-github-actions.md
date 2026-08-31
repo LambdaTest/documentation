@@ -14,6 +14,7 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
+
 ### Step 1: Create your Secrets
 - Click on the **Settings** of your repository.
 - Go to the **Security** option > **Secrets and Variables** > **Actions**.
@@ -34,9 +35,14 @@ https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/main/.github/w
 ### Step 4: Run the Workflow
 To run the new pipeline that you just created, click the **Run workflow** button on the workflow page. A prompt will ask you to enter your **PROJECT_TOKEN**. You can get your project token from the dashboard after creating your SmartUI project.
 
+
+
 > Check your output in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)
 
 ## Best Practices
+
+
+
 
 **Secret Management**
 
@@ -44,6 +50,9 @@ To run the new pipeline that you just created, click the **Run workflow** button
 - Use GitHub Secrets for all sensitive data
 - Rotate secrets regularly
 - Use different secrets for different environments
+
+
+
 
 **Workflow Optimization**
 
@@ -61,6 +70,9 @@ pull_request:
 branches: [ main ]
 ```
 
+
+
+
 **Build Naming**
 
 - Use meaningful build names that include branch/PR info
@@ -75,6 +87,9 @@ BUILD_NAME="PR-${{ github.event.pull_request.number }}-${{ github.sha }}"
 echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
 ```
 
+
+
+
 **Error Handling**
 
 - Set up proper error handling in workflows
@@ -82,12 +97,8 @@ echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-**Resource Management**
 
-- Limit concurrent workflow runs
-- Clean up old builds regularly
-- Monitor workflow execution time
-- Optimize test execution order
+
 
 **Resource Management**
 
@@ -95,8 +106,24 @@ echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
 - Clean up old builds regularly
 - Monitor workflow execution time
 - Optimize test execution order
+
+
+
+
+**Resource Management**
+
+- Limit concurrent workflow runs
+- Clean up old builds regularly
+- Monitor workflow execution time
+- Optimize test execution order
+
+
+
 
 ## Troubleshooting
+
+
+
 
 **Issue: Workflow Fails with "Secret Not Found"**
 
@@ -117,6 +144,9 @@ echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
 3. Check workflow has permission to access secrets
 
 4. Verify secrets are set for the correct repository/environment
+
+
+
 
 **Issue: PROJECT_TOKEN Prompt Appears**
 
@@ -146,6 +176,9 @@ required: true
 type: string
 ```
 
+
+
+
 **Issue: Tests Run But No Results in Dashboard**
 
 **Symptoms**: Workflow completes but screenshots don't appear in SmartUI
@@ -173,6 +206,9 @@ run: |
 
 4. Check if SmartUI CLI step completed successfully
 
+
+
+
 **Issue: Workflow Times Out**
 
 **Symptoms**: Workflow execution exceeds time limit
@@ -198,6 +234,9 @@ test-group: [1, 2, 3]
 
 3. Optimize test execution
 4. Split tests across multiple workflows
+
+
+
 
 **Issue: Dependencies Installation Fails**
 
@@ -225,6 +264,9 @@ node-version: '18'
 3. Use package-lock.json for consistent installs
 
 4. Check for version conflicts in package.json
+
+
+
 
 **Issue: SmartUI CLI Not Found**
 
@@ -258,13 +300,17 @@ node-version: '18'
 If you encounter issues not covered here:
 
 - Review [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
+
+
+
+
 ## Additional Resources
 
-- [SmartUI CLI Documentation](/support/docs/smartui-cli)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

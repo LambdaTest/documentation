@@ -29,15 +29,25 @@ $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 ```
 
+
+
 ## Integrating Codeship With TestMu AI
 
 **Step 1:** Sign up on Codeship with your GitHub account, and create a **"New Project."**
 
+
+
 **Step 2:** Select GitHub as your SCM.
+
+
 
 **Step 3:** Provide your GitHub organization and your GitHub repository, then hit **Connect.**
 
+
+
 **Step 4:** Now, you need to opt for **"Codeship Basic"** as your project type by clicking on **"Select Basic Project."**
+
+
 
 **Step 5:** You will be redirected to a screen of **Project Settings.** Select the technology to prepopulate basic commands with respect to your tests.
 For the below demonstration, we will be using Protractor, so you can select Node.js. Now, enter the commands below in setup.
@@ -63,6 +73,7 @@ That is it! Now, any changes you commit in your GitHub repository will trigger t
 
 To help you perform [cross browser testing](https://www.testmuai.com) of your locally stored web pages, TestMu AI provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on TestMu AI. So you make sure how well your changes look, even before your customers.
 Curious to know more about Lambda Tunnel?
+
 
 >Follow our documentation on Lambda Tunnel to know it all. OS-specific instructions to download and set up tunnel binary are at the following links.
 >

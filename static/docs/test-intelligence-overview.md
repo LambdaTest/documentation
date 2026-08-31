@@ -14,6 +14,9 @@ Join the wait list today and be the first to experience the power of Test Intell
 
 Experience the power of our AI algorithms that can detect inconsistent test results in your WebDriver command logs. With this feature, identifying flaky tests becomes a breeze, allowing you to focus on resolving issues effectively.
 
+
+
+
 ### Error Classification of Command Logs
 
 Our platform goes beyond simple error detection by classifying different types of errors in your command logs. This classification enables you to prioritize and address issues accordingly, ensuring a more efficient and streamlined QA process.

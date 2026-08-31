@@ -6,6 +6,8 @@ LiveKit is infrastructure rather than a hosted builder. The agent joins a WebRTC
 
 ## Before You Begin
 
+
+
 Before you connect a LiveKit agent, make sure you have:
 
 - A running LiveKit agent, self-hosted or on LiveKit Cloud
@@ -15,17 +17,23 @@ Before you connect a LiveKit agent, make sure you have:
 
 ## Test a LiveKit Phone Agent
 
+
+
 Phone testing covers inbound and outbound callers arriving over a SIP trunk. Paste the agent's prompt to generate scenarios, then add the number provisioned on the trunk and pick from 100+ voices, background noise conditions, and personas. It covers DTMF entry, SIP REFER transfers, voicemail handling, and carrier latency.
 
 Full setup: [Phone agent testing](/support/docs/phone-agent/)
 
 ## Test a LiveKit Voice Agent
 
+
+
 Voice testing applies to agents reached by joining a room directly rather than over a phone number. Paste the prompt to generate scenarios, then create the endpoint profile using WebRTC against the room. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise in the results.
 
 Full setup: [Voice agent testing](/support/docs/voice-agent/)
 
 ## What You Get With Agent Testing
+
+
 
 Every LiveKit run, on any surface it supports, is scored across:
 
@@ -38,6 +46,8 @@ Every LiveKit run, on any surface it supports, is scored across:
 
 ## LiveKit-Specific Considerations
 
+
+
 A few LiveKit behaviours are worth building dedicated scenarios around:
 
 - The unit under test is a room, not an agent ID, so setup differs from every hosted platform
@@ -47,6 +57,8 @@ A few LiveKit behaviours are worth building dedicated scenarios around:
 - There is no text channel to test, so the page covers phone and voice only
 
 ## Troubleshooting
+
+
 
 Common failure modes to watch for:
 

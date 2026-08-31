@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-how-to-configure-os-and-browser
 title: How to configure Operating System and Browser in your Test Suite
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: How to Configure OS and Browser
+sidebar_label: "Configure Browser/OS"
 description: Discover the correct way to configure the operating system and the browser capabilities in your codebase to execute in the HyperExecute platform.
 keywords:
   - TestMu AI Hyperexecute
@@ -79,7 +80,7 @@ The HyperExecute YAML configuration file is the blueprint for running your tests
     ```yaml title="hyperexecute_autosplit.yaml"
     runson: linux #linux, win, win11, mac, mac13
     ```
-    > 📕 Learn more about [AutoSplit Test Method](/support/docs/hyperexecute-auto-split-strategy/)
+    > 📕 Learn more about [AutoSplit Test Method](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy)
   </TabItem>
 
   <TabItem value="matrix" label="Matrix">
@@ -94,6 +95,6 @@ The HyperExecute YAML configuration file is the blueprint for running your tests
     matrix:
       os: ["win", "mac", "linux"] #linux, win, win11, mac, mac13
     ```
-    > 📕 Learn more about [Matrix Test Method](/support/docs/hyperexecute-matrix-multiplexing-strategy/)
+    > 📕 Learn more about [Matrix Test Method](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy)
   </TabItem>
 </Tabs>

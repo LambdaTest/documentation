@@ -31,7 +31,11 @@ kane-cli testmd run amazon_test.md --agent
 
 On the first run, the agent authors each step and caches the recording. On every later run, the steps replay from cache instantly.
 
+
 Always combine `--agent` with `--headless` in CI/CD environments to avoid display server errors.
+
+
+
 
 ## When to Use testmd vs run
 
@@ -40,6 +44,8 @@ Always combine `--agent` with `--headless` in CI/CD environments to avoid displa
 `kane-cli testmd run` is for tests you want to persist. Use it when you are building a login flow smoke test, a regression suite, or any test you plan to re-run across builds. The test file lives in your repo, recordings are cached and committed alongside it, and every subsequent run replays from cache without consuming LLM credits. Teammates and CI pick up the same recordings and replay them identically.
 
 If you run an ad-hoc objective with `kane-cli run` and later decide you want to keep it, use the `--name` flag to save it as a `_test.md` file (see [Recording a Test from a Live Session](#recording-a-test-from-a-live-session) below).
+
+
 
 ## File Format
 
@@ -89,7 +95,9 @@ no_reset: false              # optional
 - **`app`**: the app under test, required with a mobile target and rejected with a browser one. A build path (emulator `.apk`, simulator `.zip`) or an uploaded app id, `APP` followed by six or more digits. On-device package ids are not accepted.
 - **`no_reset`**: optional. Keep the app's existing state between runs instead of resetting it.
 
+
 The nested form, `target: {platform, app}`, is not accepted. The parser refuses it and spells out the flat shape above.
+
 
 Mobile tests run with `kane-cli testmd run`. A batch run does not support mobile members: a `_test.md` with a mobile target is rejected up front, before the suite runs. Setup is covered in [Mobile Testing](/support/docs/kane-cli-mobile/).
 
@@ -114,6 +122,8 @@ Click submit and verify the confirmation banner.
 
 Setting `optional: true` tells Kane CLI that a failure on this step should not fail the overall test. The run continues to the next step.
 
+
+
 ## Replay and Cascade Rule
 
 This is the most important concept in `testmd`.
@@ -131,7 +141,9 @@ After the first run, each step replays from its cached recording with no AI agen
 
 Editing step N **re-authors step N and every step after it**. Each step starts where the previous step left off (URL, login state, open tabs). When step 3 changes, step 4 cannot safely replay against state that no longer exists.
 
+
 A one-line tweak at the top of a 20-step test re-authors all 20 steps on the next run. To minimize re-authoring, edit only the steps you need to change.
+
 
 **Useful commands:**
 
@@ -140,6 +152,8 @@ A one-line tweak at the top of a 20-step test re-authors all 20 steps on the nex
 | Re-record one step | Edit only that step (steps after it cascade automatically) |
 | Force full re-authoring | Use `--author` flag for one run |
 | Wipe cache entirely | Run `rm -rf output-/` |
+
+
 
 ## Reusing Flows with `@import`
 
@@ -159,7 +173,11 @@ Extract repeating flows (login, setup, cookie banner dismissal) into helper file
 - `optional: true` on `@import` is allowed only at the root file level, not on nested imports
 - Variables and context propagate into helpers automatically
 
+
 Editing a helper re-authors that step in **every test that imports it**, plus everything after the import in those tests. The same cascade rule applies.
+
+
+
 
 ## Recording a Test from a Live Session
 
@@ -171,7 +189,11 @@ kane-cli run "Search for noise-cancelling headphones on amazon.com" --name amazo
 
 On exit, Kane CLI writes the test file to `.testmuai/tests/amazon-search_test.md`. Move that file into your repo and re-run it with `testmd run`.
 
+
 Without `--name`, ad-hoc runs are ephemeral and nothing is written to disk.
+
+
+
 
 ## Commands
 
@@ -182,6 +204,8 @@ Without `--name`, ad-hoc runs are ephemeral and nothing is written to disk.
 | `kane-cli testmd status ` | Show Test Manager identity and local sync state |
 | `kane-cli testmd export ` | Regenerate code export from existing recordings (no browser launch) |
 | `kane-cli testmd delete ` | Delete the test and its `output-/` cache locally. Does NOT delete from Test Manager |
+
+
 
 ## Flags for `testmd run`
 
@@ -196,7 +220,11 @@ All [`kane-cli run` flags](/support/docs/kane-cli-cli-reference/) apply (`--agen
 | `--author` | off | Force authoring every step, skipping replay entirely |
 | `--code-language ` | `python` | Code export language: `python` or `javascript` |
 
+
 Flag values win over frontmatter for all settings **except** `variables`. The file owns variables. You can add new keys via flags but cannot override file-defined ones.
+
+
+
 
 ## Output Directory
 
@@ -224,7 +252,11 @@ After each run, `Result.md` is generated with:
 | Step results | One entry per step: `✓ passed`, `✗ failed`, or `⏭ skipped` (suffixed `(optional)` for soft-failing optional steps) |
 | Import failure paths | For `@import` steps that failed, the path to the failing sub-step inside the helper |
 
+
 To check whether a test passed or where it failed, read `Result.md` instead of re-running the test.
+
+
+
 
 ## CI/CD Usage
 
@@ -252,6 +284,8 @@ kane-cli testmd run ./tests/checkout_test.md \
 | 2 | ⚠️ Error (auth, setup, parse error, or `--on-lock-conflict fail`) |
 | 3 | ⏱️ Timeout, cancelled, or `--on-lock-conflict wait` timed out |
 
+
+
 ## Common Parse Errors
 
 Parse errors abort **before** any browser launch with exit code `2`:
@@ -268,6 +302,8 @@ Parse errors abort **before** any browser launch with exit code `2`:
 | `'' is run-level and cannot be set per-step` | Move `mode` / `on_lock_conflict` to root frontmatter |
 | `unknown config key` | Remove or fix the key |
 | `auth/identity keys are CLI-only` | Pass `username` / `access_key` as CLI flags, not in frontmatter |
+
+
 
 ## Example: Full Test with Imports
 
@@ -317,6 +353,8 @@ Enter {{username}} in the email field and {{password}} in the password field, th
 ```bash
 kane-cli testmd run tests/checkout_test.md --agent
 ```
+
+
 
 ## Next Steps
 

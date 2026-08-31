@@ -23,7 +23,9 @@ First, you need to create a project in SmartUI. All your visual regression test 
 4.  Provide a **Project Name**, select approvers, and add any relevant tags.
 5.  Click **Submit**.
 
+
 Once the project is created, you will get a unique `PROJECT_TOKEN`. Copy this token as it is required in the HyperExecute YAML configuration file later.
+
 
 ## Step 2: Clone The Sample Repository
 
@@ -39,14 +41,21 @@ You can find the complete code for this example in the following TestMu AI GitHu
 
  View on GitHub
 
+
+
 ## Step 3: Upload Your Application
 
 To run your tests on TestMu AI real devices or emulators, you need to upload your Android app (`.apk`) and get an `appId`.
 
 Run the following `cURL` command in your terminal. Ensure you have set your `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables.
 
+
+
+
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@""" -F "name="sampleApp""
 `}
+
+
 
 From the JSON response, copy the value of `app_url`. It will be in the format `lt://...`. This is your `appId`.
 
@@ -62,7 +71,9 @@ The SmartUI CLI is required to capture and upload screenshots. Install it in you
 npm install @lambdatest/smartui-cli
 ```
 
+
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+
 
 #### 4.2. Add SmartUI Screenshots to Your Maestro Flow
 
@@ -83,11 +94,30 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
+
+
+
+
+
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
+
+
+
+
+
+
+
+
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
+
+
+
 
 ## Step 5: Configure the HyperExecute YAML
 
@@ -95,9 +125,15 @@ The HyperExecute YAML file is the blueprint for your test execution. It tells Hy
 
 You need to add your `PROJECT_TOKEN` (from Step 1) and your `appId` (from Step 3) to the YAML file. Below are example configurations for running Maestro tests on Emulators and Real Devices.
 
+
+
+
 ```yaml reference title="maestro_Real_Devices.yaml"
 https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Real_Devices.yaml
 ```
+
+
+
 
 > To enable this for your organizaton, connect with us through our **24/7 chat support** or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
 
@@ -105,7 +141,13 @@ https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Real
 https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Emulator_HyperEx.yaml
 ```
 
+
+
+
+
+
 In the real device configuration, the `testDiscovery` and `testRunnerCommand` are handled internally by the `maestro` framework integration on HyperExecute. You just need to specify the `framework` block.
+
 
 ## Step 6: Execute Your Test Suite
 
@@ -117,11 +159,20 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 2.
 
+
+
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+
+
+
+
+
 
 ## Step 7: View Your Visual Test Results on SmartUI
 
 After the HyperExecute job is finished, all screenshots captured using the `takeScreenshot` command will be available in your SmartUI project for review.
+
+
 
 1.  Navigate to the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2.  Select your project and the most recent build.

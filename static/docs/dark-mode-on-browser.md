@@ -10,6 +10,9 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
+
+
+
 ## Use Cases
 
 - Validate app UI elements render correctly in dark mode.
@@ -30,6 +33,11 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 **Step 1:** Start a manual testing session on a real iOS or Android device in **App Live** or **Browser Live**.
 
 **Step 2:** Go to the **Device Control tab** and turn the toggle **On** for Dark Mode.
+
+
+
+
+
 
 - Dark mode changes are applied at the **system/browser level** and may require refreshing the page for full effect.
 - Some legacy websites may not fully support dark mode.

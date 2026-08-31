@@ -12,6 +12,10 @@ SCIM (System for Cross-domain Identity Management) lets your Identity Provider (
 
 > **SSO is required.** If you haven't set up SSO yet, see [Getting Started with SSO](/support/docs/single-sign-on/) first.
 
+
+
+
+
 ## Setup {#setup}
 
 **What you need:** Enterprise plan, SSO configured, Admin access, and an IDP that supports SCIM 2.0 (Okta, Azure AD, JumpCloud, etc.).
@@ -20,9 +24,14 @@ SCIM (System for Cross-domain Identity Management) lets your Identity Provider (
 
 Go to **Settings** > **Organization Settings** > **Security** tab. Copy the **SCIM Base URL** and **Bearer Token**.
 
+
+
 ### Step 2: Configure Your IDP
 
 Paste the SCIM Base URL and Bearer Token into your IDP's provisioning settings.
+
+
+
 
 Full walkthrough: [Okta SCIM Guide](/support/docs/scim/okta/)
 
@@ -32,7 +41,12 @@ Full walkthrough: [Okta SCIM Guide](/support/docs/scim/okta/)
 4. **Assignments** tab > assign users or groups
 5. *(For groups)* **Push Groups** tab > **Push Groups** > Find by name or rule
 
+
 Member changes in pushed Okta groups are automatically synced to TestMu AI.
+
+
+
+
 
 Full walkthrough: [Azure AD SCIM Guide](/support/docs/scim/azure/)
 
@@ -42,6 +56,9 @@ Full walkthrough: [Azure AD SCIM Guide](/support/docs/scim/azure/)
 4. Under **Users and groups**, assign what you want to provision
 5. Start a provisioning cycle (or wait for the 40-minute auto sync)
 
+
+
+
 Full walkthrough: [JumpCloud SCIM Guide](/support/docs/jumpcloud-scim/)
 
 1. **SSO Applications** > your TestMu AI app > **Identity Management** tab
@@ -49,12 +66,18 @@ Full walkthrough: [JumpCloud SCIM Guide](/support/docs/jumpcloud-scim/)
 3. Configure attribute mappings (userName, name, active)
 4. **User Groups** tab > select groups > **Activate** > **Save**
 
+
+
+
 Full walkthrough: [PingOne SCIM Guide](/support/docs/pingone-scim/)
 
 1. In PingOne, go to **Integrations** > **Provisioning** > create a new **SCIM Outbound** connection
 2. Enter the **SCIM Base URL** and **Bearer Token** from TestMu AI
 3. Configure preferences: set **User Identifier** to `workEmail` and enable **Create**, **Update**, **Disable** users
 4. Create a provisioning **Rule** to select which users and groups to sync
+
+
+
 
 Any SCIM 2.0-compliant IDP works. Use these settings:
 
@@ -75,6 +98,13 @@ Any SCIM 2.0-compliant IDP works. Use these settings:
 
 - **User extension attributes:** `OrganizationRole` (Admin / User / Guest), `LambdatestGroup` (concurrency group name)
 - **Group extension attributes:** `LambdatestRoles` (array of Admin / User / Guest, applied to all group members)
+
+
+
+
+
+
+
 
 ## User Provisioning {#user-provisioning}
 
@@ -129,6 +159,9 @@ For PATCH operations, use the fully qualified SCIM path:
 
 ### User API Operations
 
+
+
+
 **Request:** POST `https://auth.lambdatest.com/api/scim/Users`
 
 ```json
@@ -166,6 +199,9 @@ For PATCH operations, use the fully qualified SCIM path:
 }
 ```
 
+
+
+
 **Request:** GET `https://auth.lambdatest.com/api/scim/Users/{id}`
 
 **Response:** `200 OK`
@@ -187,6 +223,9 @@ For PATCH operations, use the fully qualified SCIM path:
 ```
 
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
+
+
+
 
 **Request:** GET `https://auth.lambdatest.com/api/scim/Users`
 
@@ -222,6 +261,9 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 
 **Errors:** `400 Bad Request` if user belongs to a different org.
 
+
+
+
 **Request:** PUT `https://auth.lambdatest.com/api/scim/Users/{id}`
 
 ```json
@@ -237,6 +279,9 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 **Response:** `200 OK`, returns the full updated user object.
 
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
+
+
+
 
 **Request:** PATCH `https://auth.lambdatest.com/api/scim/Users/{id}`
 
@@ -263,6 +308,9 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
 
+
+
+
 **Request:** PATCH `https://auth.lambdatest.com/api/scim/Users/{id}`
 
 ```json
@@ -278,58 +326,93 @@ Filter by email: `?filter=userName eq "jane@company.com"`
 
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
 
+
+
+
 **Request:** DELETE `https://auth.lambdatest.com/api/scim/Users/{id}`
 
 **Response:** `204 No Content`
 
+
 DELETE only **deactivates** the account. It does not permanently delete it. For permanent deletion, the user must request it from TestMu AI Account Settings.
 
+
 **Errors:** `404 Not Found` if user doesn't exist. `400 Bad Request` if user belongs to a different org.
+
+
+
+
+
+
+
 
 ## Group Provisioning {#group-provisioning}
 
 **Quick Start**
 Push groups from your IDP → approve the mapping in the **SCIM Group Provisioning** dashboard → members are synced automatically.
 
+
 ### How It Works
 
 Groups and members are stored **as soon as your IDP pushes them**, even before any mapping is configured. Mapping only controls **where** members are assigned.
 
+
+
+
     Step 1: Your IDP (automatic)
     Groups & members pushed via SCIM
 
+
   ↓
+
 
     Step 2: LambdaTest (automatic)
     Group stored & roles applied to members
     Members get roles immediately, even without mapping
 
+
   ↓
+
 
     Step 3: Admin (manual) or Mapping Rules (automatic)
     Group mapped to a LambdaTest entity
+
+
 
     ↙
     ↓
     ↘
 
+
+
+
       Team
       Additive
       Multiple teams allowed
+
 
       Concurrency Group
       Exclusive
       User can only belong to one
 
+
       Sub-Organization
       Exclusive
       User can only belong to one
 
+
+
+
+
 ### Enabling & Disabling
+
 
 Group provisioning is not enabled by default. Reach out to our **24/7 chat support** or email [support@testmuai.com](mailto:support@testmuai.com) to get it activated for your organization.
 
+
 Once activated, you can control it from **Settings** > **Organization Settings** > **Security** > **SCIM Group Provisioning**.
+
+
 
 > **When toggled OFF:** New IDP group operations (create/update/delete) are rejected with `403`. Existing groups, mappings, and assignments are preserved. Nothing is deleted. Toggle back ON to resume syncing.
 
@@ -374,6 +457,10 @@ Once a group is pushed, it needs to be **mapped** to tell TestMu AI what to do w
 **Feature Activation**
 **Teams**, **Concurrency Groups**, and **Sub-Organizations** are not enabled by default. Reach out to our **24/7 chat support** or email [support@testmuai.com](mailto:support@testmuai.com) to get them activated for your organization before mapping groups to these entities.
 
+
+
+
+
 **Teams are additive**: a user can belong to multiple teams at once, so there are no conflicts.
 
 | | |
@@ -385,6 +472,9 @@ Once a group is pushed, it needs to be **mapped** to tell TestMu AI what to do w
 
 This is the simplest and most common mapping. If you're just starting out, **Team is the recommended choice**.
 
+
+
+
 **Concurrency groups are exclusive**: a user can only belong to one at a time.
 
 | | |
@@ -393,6 +483,9 @@ This is the simplest and most common mapping. If you're just starting out, **Tea
 | **On member removal** | User moved back to the org's **default concurrency group** |
 | **On group rename** | Concurrency group is **automatically renamed** to match the IDP group name |
 | **Conflicts** | Yes, if the same user is in two SCIM groups mapped to **different** concurrency groups. See [Conflicts](#conflicts). |
+
+
+
 
 **Sub-organizations are exclusive**: a user can only belong to one at a time. Sub-orgs also **conflict with concurrency groups and teams** from other SCIM groups (cross-type conflict).
 
@@ -405,25 +498,44 @@ This is the simplest and most common mapping. If you're just starting out, **Tea
 
 **Why cross-type conflicts?** Moving a user to a sub-org takes them out of the parent org's resource pool entirely. Team and concurrency group assignments in the parent org become invalid.
 
+
+
+
+
+
 A single SCIM group can only be mapped to **one** TestMu AI entity (one team, one concurrency group, or one sub-org). To assign the same users to multiple entities, use separate IDP groups.
 
 > **Mapping statuses:** `Pending` → `Approved` / `Auto-Approved` (members synced) or `Rejected` (no sync). If no mapping rule matches, the group stays **Pending** until an admin maps it manually.
 
 **To map manually:** Go to **SCIM Group Provisioning** dashboard > click a Pending group > select target type and entity > **Approve**.
 
+
+
 ### Mapping Rules (Automatic Mapping)
 
 Instead of mapping each group manually, create rules that auto-match groups by name.
+
+
+
 
 Matches group names **starting with** a pattern (case-insensitive).
 
 `eng-` matches `eng-backend`, `eng-frontend`, `ENG-DevOps`
 
+
+
+
 Matches group names against a **regular expression**.
 
 `^qa-.*-team$` matches `qa-mobile-team`, `qa-web-team`
 
+
+
+
 Matches **every group**. Use as a low-priority catch-all fallback.
+
+
+
 
 **Each rule has an auto-approve toggle:**
 - **ON** → finds (or creates) the target entity by name → mapping approved → members synced immediately.
@@ -446,6 +558,7 @@ Matches **every group**. Use as a low-priority catch-all fallback.
 5. Choose the **target type** (Team, Concurrency Group, or Sub-Organization)
 6. Toggle **auto-approve** ON if you want matched groups to be approved automatically
 7. Click **Save**
+
 
 ### Role Assignment {#roles}
 
@@ -477,17 +590,32 @@ Each TestMu AI entity (team, concurrency group, or sub-org) can only be mapped f
 **Teams don't have conflicts**
 If you're only mapping to **Teams**, you can skip this section entirely. Teams are additive: no conflicts possible.
 
+
 Conflicts happen when a user belongs to multiple SCIM groups that compete for the **same exclusive slot**. When a conflict occurs, the user **keeps their current assignment** until an admin resolves it. Nothing changes automatically.
 
 **When do conflicts happen?**
 
+
+
+
 When the same user is in two SCIM groups mapped to **different** concurrency groups. Example: Group A → "QA Pool" and Group B → "Dev Pool". The user can only be in one.
 
+
+
+
 When the same user is in two SCIM groups mapped to **different** sub-orgs. Example: Group X → "US Team" and Group Y → "EU Team". The user can only be in one.
+
+
+
 
 When a user is mapped to a **sub-organization** from one SCIM group and a **concurrency group or team** from another SCIM group. Example: Group A maps to Sub-Org "US Team" and Group B maps to Concurrency Group "Dev Pool".
 
 **Why does this conflict?** Moving a user to a sub-org takes them out of the parent org's resource pool entirely. Team and concurrency group assignments in the parent org become invalid.
+
+
+
+
+
 
 **To resolve:**
 
@@ -496,8 +624,11 @@ When a user is mapped to a **sub-organization** from one SCIM group and a **conc
 3. Click **Keep Current** or **Use Incoming**
 4. TestMu AI remembers this decision. The same combination won't create a new conflict
 
+
+
 **To avoid conflicts**
 Prefer **teams** when users need to be in multiple groups. Teams never create conflicts. Only use concurrency groups and sub-orgs when you need exclusive assignment.
+
 
 ### Deleted Target {#target-deleted}
 
@@ -505,6 +636,7 @@ If an admin deletes a team, concurrency group, or sub-org that has an active SCI
 
 **Manual re-mapping required**
 When a target is deleted, the mapping **will not auto-create a replacement**, even if a matching mapping rule with auto-approve exists. This is intentional: auto-creating the same entity that was just deleted would cause a loop. An admin must manually update the mapping to point to a new (or recreated) target.
+
 
 **To fix a `target_deleted` mapping:**
 
@@ -514,6 +646,9 @@ When a target is deleted, the mapping **will not auto-create a replacement**, ev
 4. Click **Approve**: members will be synced to the new target
 
 ### Group API Operations
+
+
+
 
 **Request:** POST `https://auth.lambdatest.com/api/scim/Groups`
 
@@ -559,6 +694,9 @@ When a target is deleted, the mapping **will not auto-create a replacement**, ev
 }
 ```
 
+
+
+
 **Request:** GET `https://auth.lambdatest.com/api/scim/Groups`
 
 Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=1&count=20`
@@ -598,9 +736,15 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 **Zero results:** Returns `"totalResults": 0` with empty `"Resources": []`.
 
+
+
+
 **PUT** (full replace) to `https://auth.lambdatest.com/api/scim/Groups/{id}`. Replaces entire membership list. Members removed from the list are unassigned from all mapped entities.
 
 **PATCH** (partial) to `https://auth.lambdatest.com/api/scim/Groups/{id}`:
+
+
+
 
 ```json
 {
@@ -615,6 +759,9 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 }
 ```
 
+
+
+
 ```json
 {
 "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
@@ -627,6 +774,9 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 ]
 }
 ```
+
+
+
 
 ```json
 {
@@ -641,6 +791,9 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 }
 ```
 
+
+
+
 ```json
 {
 "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
@@ -654,9 +807,15 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 }
 ```
 
+
+
+
 **Response:** `200 OK`, returns the updated group object with new membership and `meta.lastModified` timestamp.
 
 **Errors:** `404 Not Found` if group doesn't exist. `409 Conflict` if renamed to an existing `displayName`.
+
+
+
 
 **Request:** DELETE `https://auth.lambdatest.com/api/scim/Groups/{id}`
 
@@ -666,9 +825,19 @@ Filter by name: `?filter=displayName eq "eng-backend"` | Paginate: `?startIndex=
 
 **Errors:** `404 Not Found` if group doesn't exist.
 
+
+
+
+
+
+
+
 ## What Happens When... {#sync-behavior}
 
 Quick reference for common scenarios. Everything below is handled automatically, no action needed unless noted.
+
+
+
 
 | You do this in your IDP | What happens in LambdaTest | Action needed? |
 |---|---|---|
@@ -679,6 +848,9 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | **Re-push a previously deleted group** | Group restored. Members must be re-pushed. Mapping rules re-evaluated. | Depends on rules |
 | **Change roles on a group** | All members' roles recomputed immediately. | No |
 
+
+
+
 | You do this in LambdaTest | What happens | Important |
 |---|---|---|
 | **Rename a team / group / sub-org** | Works fine, but the next IDP group rename will overwrite it. | To control names, rename **in your IDP** |
@@ -686,6 +858,13 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | **Manually remove a member from a team** | Removal is immediate but **temporary**. Next IDP sync re-adds them. | Remove **in your IDP** instead |
 | **Manually assign user to concurrency group / sub-org** | SCIM overrides non-SCIM assignments on next sync. | Use SCIM groups for exclusive assignments |
 | **Manually change a SCIM-managed user's role** | May be overwritten on next IDP sync. | Manage roles **in your IDP** |
+
+
+
+
+
+
+
 
 ## Troubleshooting {#troubleshooting}
 
@@ -723,5 +902,7 @@ Quick reference for common scenarios. Everything below is handled automatically,
 | What happens to a conflict when one group is deleted? | The conflict is **auto-resolved** in favor of the remaining group. No admin action needed. |
 | What's the difference between Approved and Auto-Approved? | Both sync members identically. **Auto-Approved** = mapping rule matched automatically. **Approved** = admin approved manually. |
 | Do mapping rules overwrite existing mappings? | No. Rules only apply when a group is first created or renamed. Existing mappings (manual or auto) are not overwritten. |
+
+
 
 > That's all you need to know about SCIM Provisioning with TestMu AI. In case you have any questions please feel free to reach out to us via the **24/7 chat support** or email us over [support@testmuai.com](mailto:support@testmuai.com).

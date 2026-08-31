@@ -4,6 +4,8 @@
 
 ## Introduction
 
+
+
 Now run automated tests with Selenium 4 using the TestMu AI Selenium Grid across 3000+ browsers and operating systems. With this TestMu AI and Selenium 4 integration, TestMu AI not only allows you to perform Selenium 4 testing on an online automation cloud, but also allows you to perform cross-browser testing at scale.
 
 This Selenium 4 documentation will act as your step-by-step guide on your journey to test using Selenium 4 on TestMu AI.
@@ -11,6 +13,8 @@ This Selenium 4 documentation will act as your step-by-step guide on your journe
 >**Note**: As of now, the sample test script is only available in Java. But worry not! We are working on adding the test scripts on other languages too.
 
 ## Running Your First Test
+
+
 
 As a part of this step-by-step guide, we will run a Selenium 4 test that perform the following action:
 
@@ -22,9 +26,13 @@ As a part of this step-by-step guide, we will run a Selenium 4 test that perform
 
 ### Step 1 - OS-device-browser Combination
 
+
+
 To select the OS-device-browser combination for running the test, use TestMu AI's [capability generator](https://www.testmuai.com/capabilities-generator/). After selecting the combination, replace the capabilities given in the sample test script with the chosen combination.
 
 ###  Step 2 - Understanding the Sample Script
+
+
 
 As the sample test script is only available in Java, we recommend using it to run your first Selenium 4 test on TestMu AI. The offered test script uses the updated Action class features and the relative locators of Selenium 4.
 
@@ -42,6 +50,8 @@ Along with these features, Selenium 4 offers other CDP features that TestMu AI s
 
 ### Step 3 - Writing the Sample Test Script
 
+
+
 In your Java project, create a new file JavaSample.java and copy the following code to this file:
 
 >**Note**: As of now, the sample test script is only available in Java. But worry not! We are working on adding the test scripts on other languages too.
@@ -50,8 +60,12 @@ In your Java project, create a new file JavaSample.java and copy the following c
 
 ### Step 4 - Run the Sample Test Code
 
+
+
 You can run the file using the Run command in your IDE after the test script is created.
 
 ### Step 5 - View the Test Results
+
+
 
 After running the test successfully, the dashboard and the command line will view your result. In addition, you get access to text logs, video recordings ,and screenshots of your test execution.

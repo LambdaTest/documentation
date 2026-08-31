@@ -65,17 +65,29 @@ For better security, you can use environment variables for your authentication c
 
 Then set your environment variables:
 
+
+
+
 ```bash
 export AUTH_USERNAME="your-username"
 ```
+
+
+
 
 ```bash
 set AUTH_USERNAME="your-username"
 ```
 
+
+
+
 ```powershell
 $env:AUTH_USERNAME="your-username"
 ```
+
+
+
 
 ## Common Issues and Solutions
 
@@ -86,6 +98,7 @@ $env:AUTH_USERNAME="your-username"
 2. **Authentication Failures**
    - Ensure credentials are correct and active
    - Verify that the authentication endpoint is accessible from TestMu AI's infrastructure
+
 
 When using basic authentication:
 1. Test your credentials manually before running SmartUI tests

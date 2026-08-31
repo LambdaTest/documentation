@@ -137,7 +137,7 @@ The following settings are available:
 | **Retry on Failure** | Enable to retry on failure. When enabled, retries are triggered both on `testRunnerCommand` failure and individual test case failure. Defaults to true. See [Retry on Failure in the HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) for details. |
 | **Max Retries** | Define the maximum number of retries when retry on failure is enabled. Max value 5, default 1. |
 | **Replace URL** | Dynamically replace any pattern URL in test cases with a replacement URL for the entire test run. See [KaneAI Dynamic URL Replacement](/support/docs/kaneai-dynamic-url-replacement/) for details. |
-| **Performance** | Enable Lighthouse performance reports for web tests. Supported on limited OS browser combinations. May slow down execution time. See [View Lighthouse Performance Metrics](/support/docs/view-lighthouse-performance-metrics/) for details. |
+| **Performance** | Enable Lighthouse performance reports for web tests. Supported on limited OS browser combinations. May slow down execution time. See [View Lighthouse Performance Metrics](/support/docs/generate-multiple-lighthouse-reports/#view-lighthouse-performance-metrics) for details. |
 | **App Profiling** | Enable app performance metrics tracking for native mobile app tests. See [Appium App Performance Analytics](/support/docs/appium-app-performance-analytics/) for details. |
 | **Android App ID** | Specify an Android app ID (`lt://`) to override the existing app in the test instance configuration. |
 | **iOS App ID** | Specify an iOS app ID (`lt://`) to override the existing app in the test instance configuration. |

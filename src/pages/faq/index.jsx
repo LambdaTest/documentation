@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, useHistory } from '@docusaurus/router';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -162,8 +163,34 @@ const HYE_SUB_TABS = [
 ];
 
 export default function FaqPage() {
+  const location = useLocation();
+  const history = useHistory();
   const [activeTab, setActiveTab] = useState('realtime');
   const [activeHyeTab, setActiveHyeTab] = useState('gen');
+
+  // Open a specific tab (and HyperExecute sub-tab) from URL query params,
+  // e.g. /support/faq/?tab=hye&sub=yaml
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const tab = params.get('tab');
+    const sub = params.get('sub');
+    if (tab && TABS.some((t) => t.id === tab)) setActiveTab(tab);
+    if (sub && HYE_SUB_TABS.some((t) => t.id === sub)) setActiveHyeTab(sub);
+  }, [location.search]);
+
+  // Reflect the active tab in the URL so every tab has a unique, shareable link,
+  // e.g. /support/faq/?tab=accessibility (HyperExecute keeps its sub-tab).
+  const selectTab = (id) => {
+    setActiveTab(id);
+    const params = new URLSearchParams();
+    params.set('tab', id);
+    if (id === 'hye') params.set('sub', activeHyeTab);
+    history.replace(`${location.pathname}?${params.toString()}`);
+  };
+  const selectHyeTab = (id) => {
+    setActiveHyeTab(id);
+    history.replace(`${location.pathname}?tab=hye&sub=${id}`);
+  };
 
   return (
     <Layout
@@ -188,7 +215,7 @@ export default function FaqPage() {
               <button
                 key={t.id}
                 className={`${faqStyles.tabBtn} ${activeTab === t.id ? faqStyles.tabBtnActive : ''}`}
-                onClick={() => setActiveTab(t.id)}
+                onClick={() => selectTab(t.id)}
               >
                 {t.label}
               </button>
@@ -479,7 +506,7 @@ export default function FaqPage() {
                   <button
                     key={t.id}
                     className={`${faqStyles.subTabBtn} ${activeHyeTab === t.id ? faqStyles.subTabBtnActive : ''}`}
-                    onClick={() => setActiveHyeTab(t.id)}
+                    onClick={() => selectHyeTab(t.id)}
                   >
                     {t.label}
                   </button>
@@ -490,7 +517,7 @@ export default function FaqPage() {
                 <div className={faqStyles.accordionGroup}>
                 <details>
                 <summary>Which testing frameworks does HyperExecute support?</summary>
-                <p>HyperExecute has deep support for Selenium, Cypress, Playwright, CDP, Taiko, and other web browser testing frameworks. It can also run any other type of test using YAML configuration. See the full <a href={`${BRAND_URL}/support/docs/hyperexecute-supported-languages-and-frameworks/`}>HyperExecute supported frameworks list</a>.</p>
+                <p>HyperExecute has deep support for Selenium, Cypress, Playwright, CDP, Taiko, and other web browser testing frameworks. It can also run any other type of test using YAML configuration. See the full <a href={`${BRAND_URL}/support/docs/getting-started-with-hyperexecute/`}>HyperExecute supported frameworks list</a>.</p>
                 </details>
 
                 <details>
@@ -537,6 +564,44 @@ export default function FaqPage() {
                 <summary>In which regions is HyperExecute available?</summary>
                 <p>HyperExecute is available in more than 40 cloud availability regions globally, supported by multiple cloud providers.</p>
                 </details>
+
+                <details>
+                <summary>Do I need to change my code to run my tests on HyperExecute?</summary>
+                <p>No code or logic changes have to be done in order to run your end to end tests on HyperExecute. HyperExecute requires a YAML configuration file to determine which tests to run and configure other settings. This YAML file can be created using an online YAML generator, hosted on the HyperExecute onboarding page.</p>
+                </details>
+
+                <details>
+                <summary>Where will HyperExecute run my tests?</summary>
+                <p>HyperExecute takes your test scripts and places them in virtual machines having all the components required to run your tests and collect logs and metrics. These virtual machines are hosted by HyperExecute in its secure cloud environment. HyperExecute is also available on dedicated and private clouds where virtual machines can run in your personal cloud accounts.</p>
+                </details>
+
+                <details>
+                <summary>Does HyperExecute provide APIs to consume logs?</summary>
+                <p>Yes, HyperExecute provides APIs to consume all the logs generated during test execution for offline usage.</p>
+                </details>
+
+                <details>
+                <summary>Does HyperExecute record video recording of the test session?</summary>
+                <p>Yes, HyperExecute generates video recording of every single end to end test triggered over the platform. All the features available in the standard automation platform including video, screenshot, network logs and a lot more, are available in HyperExecute.</p>
+                </details>
+
+                <details>
+                <summary>Can I run performance tests with HyperExecute?</summary>
+                <p>Though HyperExecute currently doesn't have a deep support for performance testing, nothing stops the users from running performance tests. HyperExecute will still orchestrate and run performance tests in parallel and provide the terminal logs like all other tests.</p>
+                </details>
+
+                <details>
+                <summary>How can I open my Microsoft Excel files with HyperExecute?</summary>
+                <p>You can access your Microsoft Excel files with HyperExecute by modifying the files that contain your tests. In order to automate the opening of your Excel file, set the <code>ms:waitForAppLaunch</code> and <code>appArguments</code> capabilities to:</p>
+                <pre><code>{`cap.setCapability("ms:waitForAppLaunch", 15);
+cap.setCapability("appArguments", " /e ");`}</code></pre>
+                <p>This will ensure that your Excel file is opened after 15 seconds, and that it is opened in edit mode. If you want your file to open after a certain period of time, just enter that time in the <code>ms:waitForAppLaunch</code> field.</p>
+                </details>
+
+                <details>
+                <summary>How can I access my {BRAND_NAME} Hub URL?</summary>
+                <p>Your {BRAND_NAME} Hub URL can be accessed from our <a href="https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build">automation page</a>, along with your username and access key. Click on the <b>Access Key</b> button on the right side of your screen to retrieve your Hub URL.</p>
+                </details>
                 </div>
               )}
 
@@ -549,22 +614,118 @@ export default function FaqPage() {
 
                 <details>
                 <summary>How do I install private artifactory dependencies only accessible on my organization's network?</summary>
-                <p>Enable the tunnel flag in your HyperExecute YAML file to connect HyperExecute VMs to your organization's private network. See <a href={`${BRAND_URL}/support/docs/hyperexecute-yaml-faqs/#3-how-can-i-install-private-artifactory-dependencies-that-can-only-be-accessed-on-my-organizations-internal-network-on-hyperexecute-machines`}>how to access private artifactory in HyperExecute</a>.</p>
+                <p>Enable the tunnel flag in your HyperExecute YAML file to connect HyperExecute VMs to your organization's private network.</p>
                 </details>
 
                 <details>
                 <summary>How do I use Jenkins job choice parameters in the YAML file?</summary>
-                <p>Reference the Jenkins parameter keys directly in your HyperExecute YAML file. See <a href={`${BRAND_URL}/support/docs/hyperexecute-yaml-faqs/#8-how-can-i-use-the-jenkins-job-choice-parameters-in-the-yaml-file`}>how to use Jenkins parameters in YAML</a>.</p>
+                <p>Reference the Jenkins parameter keys directly in your HyperExecute YAML file.</p>
                 </details>
 
                 <details>
                 <summary>I use the same YAML configuration repeatedly. Can I avoid repeating it every time?</summary>
-                <p>Yes. HyperExecute's inheritance feature lets you define a base YAML file and inherit its configuration in other YAML files. See <a href={`${BRAND_URL}/support/docs/hyperexecute-inherit-config/`}>how to inherit YAML configurations</a>.</p>
+                <p>Yes. HyperExecute's inheritance feature lets you define a base YAML file and inherit its configuration in other YAML files. See <a href={`${BRAND_URL}/support/docs/deep-dive-into-hyperexecute-yaml/#inherit-your-yaml-configurations`}>how to inherit YAML configurations</a>.</p>
                 </details>
 
                 <details>
                 <summary>Can I source test code directly from my Git repository?</summary>
                 <p>Yes. Use the <code>sourcePayload</code> flag to source test code directly from your Git provider via secure access tokens. Only the YAML file is uploaded through the CLI; your test code never leaves your Git provider. See <a href={`${BRAND_URL}/support/docs/hyperexecute-how-to-configure-sourcePayload/`}>how to source tests from Git</a>.</p>
+                </details>
+
+                <details>
+                <summary>How can I run all feature files and scenarios in a folder without listing them explicitly in the YAML file?</summary>
+                <p>Use HyperExecute's AutoSplit mode. See <a href={`${BRAND_URL}/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy`}>the AutoSplit strategy page</a> to learn more. A sample YAML file that supports AutoSplit looks like this:</p>
+                <pre><code>{`
+---
+version: 0.1
+runson: linux
+concurrency: 2
+autosplit: true
+pre:
+  - npm install
+
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+testDiscovery:
+  type: automatic
+  mode: static
+  args:
+    featureFilePaths: <the_path_to_your_folder>
+    frameWork: javascript
+    specificTags: ["@ToDoOne", "@ToDoTwo", "@ToDoThree"]
+
+testRunnerCommand: <your_test_execution_command>
+`}</code></pre>
+                <p>Add the path to the folder of files you want to run in the <code>featureFilePaths</code> argument, and your test execution command under the <code>testRunnerCommand</code> parameter.</p>
+                </details>
+
+                <details>
+                <summary>How can I install and set a private node registry on the HyperExecute machine?</summary>
+                <p>Add the following command in the preDirectives section of the HyperExecute YAML file.</p>
+                <pre><code>{`
+preDirectives:
+  commands:
+    - npm config set registry <artifactory_URL>
+`}</code></pre>
+                <p>Note: Replace the placeholder value &lt;artifactory_URL&gt; with the link to your private node registry.</p>
+                </details>
+
+                <details>
+                <summary>Can I run WDIO tests on HyperExecute via proxy?</summary>
+                <p>Yes, you can. Use the following parameters in the testRunnerCommand of the HyperExecute YAML file:</p>
+                <pre><code>{`
+testRunnerCommand: $env:GLOBAL_AGENT_NO_PROXY="hub.lambdatest.com";$env:GLOBAL_AGENT_HTTP_PROXY=$env:LT_PROXY
+`}</code></pre>
+                </details>
+
+                <details>
+                <summary>I want to use a specific version of Gradle for my project. How can I set that up on HyperExecute machines?</summary>
+                <p>Set up your Gradle project with HyperExecute by configuring the runtime flag in the YAML file. If you are using the 7.0 version of Gradle, use the following configurations.</p>
+                <pre><code>{`
+runtime:
+  language: java
+  version: 17
+  addons:
+    - name: "gradle"
+	  version: "7.0"
+`}</code></pre>
+                </details>
+
+                <details>
+                <summary>Can I pass a specific package through npm in the YAML file instead of npm picking the package present in the directory?</summary>
+                <p>You can accomplish this by running the following command in the preDirectives section of the YAML file:</p>
+                <pre><code>{`
+preDirectives:
+  commands:
+    - npm --prefix /path/to/project/my_package.json
+`}</code></pre>
+                <p>This command will install a package called <code>my_package.json</code> from the path that you have provided.</p>
+                </details>
+
+                <details>
+                <summary>I am running a non-hub based test on HyperExecute. How can I capture a video of it?</summary>
+                <p>You can use HyperExecute's video recording feature even while running non-hub based tests (Selenium, Cypress, and CDP are all hub-based). Set the <code>captureScreenRecordingForScenarios</code> flag to <code>true</code> in your <a href={`${BRAND_URL}/support/docs/deep-dive-into-hyperexecute-yaml/`}>HyperExecute YAML</a> file to capture the video of your test scenarios.</p>
+                <p><code>captureScreenRecordingForScenarios: true</code></p>
+                <p>You can access the recorded video on the Tasks page by clicking on the Watch Video button on the right-hand side of your test. Use this feature when you want to trigger a command and record it, or when you want to record any applications triggered on your desktop during the test execution process.</p>
+                </details>
+
+                <details>
+                <summary>How can I check if there is any private dependency in testng YAML?</summary>
+                <p>You can detect any private dependency in testng YAML using the <code>analyze</code> flag in CLI.</p>
+                </details>
+
+                <details>
+                <summary>How do I handle a Maven SSL cert error while executing the test?</summary>
+                <p>Pass these Maven arguments, which are required to handle mvn SSL cert errors:</p>
+                <pre><code>{`
+-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
+`}</code></pre>
+                </details>
+
+                <details>
+                <summary>Will my YAML parameters overwrite properties in my XML configuration?</summary>
+                <p>No, your XML configurations are not overwritten by YAML parameters.</p>
                 </details>
                 </div>
               )}
@@ -614,6 +775,21 @@ export default function FaqPage() {
                 <p>Yes, for enterprise accounts. HyperExecute allows custom VM images built on top of HyperExecute base images, giving you full control over the test environment for specialized frameworks or tooling.</p>
                 </details>
 
+                <details>
+                <summary>How can I integrate HyperExecute with other CI/CD platforms?</summary>
+                <p>Since HyperExecute is operated using a universal CLI, it essentially takes two lines of terminal commands to integrate HyperExecute with any CI/CD platform. You need to download the CLI and trigger it to do this.</p>
+                </details>
+
+                <details>
+                <summary>How is HyperExecute different from other testing clouds?</summary>
+                <p>While other testing platforms throw infrastructure at the users to run their tests, HyperExecute is a smart orchestration cloud where the platform decides the best execution plan to finish the jobs in the least amount of time. HyperExecute accomplishes this by distributing tests smartly on available resources, providing other features, such as, retrying failed scenarios, automatic reordering and more. HyperExecute acts as a co-pilot for developers to run and triage their tests as fast as possible.</p>
+                </details>
+
+                <details>
+                <summary>Can I use HyperExecute to run test cases on Microsoft Excel?</summary>
+                <p>Yes, you can configure HyperExecute to run your Microsoft Excel test cases. However, this feature is only available on request at this moment. Visit <a href={`${BRAND_URL}/support/docs/hyperexecute-winapp-integration/`}>our documentation</a> for this feature or contact support@testmuai.com to know more.</p>
+                </details>
+
                 </div>
               )}
 
@@ -643,6 +819,31 @@ export default function FaqPage() {
                 <summary>Do I have access to the underlying OS and file system during tests?</summary>
                 <p>Yes. You have full access to the VM's file system and OS, including registry settings, background processes, and file I/O. Enterprise accounts can build custom VM images on top of HyperExecute base images for deeper environment customization.</p>
                 </details>
+
+                <details>
+                <summary>What is the current configuration of the virtual machines?</summary>
+                <p>The virtual machines are currently configured with 4vCPU and 16GB RAM. This results in improved availability and fewer preemptions, and faster IOPs have been observed on these machines during benchmarking tests.</p>
+                </details>
+
+                <details>
+                <summary>Which logs does HyperExecute provide for Selenium tests?</summary>
+                <p>Video recording, screenshots, command logs, network logs, Selenium node logs, browser logs, and more are available for every end-to-end test run on the platform.</p>
+                </details>
+
+                <details>
+                <summary>Can I customize the testing environment?</summary>
+                <p>Yes. You can fully customize the test environment using pre and post steps in the YAML. For enterprise accounts, HyperExecute provides the ability to define custom virtual machine images for all supported operating systems for deeper customization. Enterprise customers can create their own customized virtual machine images on top of HyperExecute base images to suit their use case.</p>
+                </details>
+
+                <details>
+                <summary>Can I integrate my reporting tool with HyperExecute?</summary>
+                <p>Yes. You can integrate HyperExecute with your reporting tool by calling its APIs in the post-steps using the YAML. HyperExecute is also adding more integrations with popular reporting tools. You can request new integrations by emailing us at hyperexecute@lambdatest.com.</p>
+                </details>
+
+                <details>
+                <summary>Do HyperExecute VMs have basic command line tools installed?</summary>
+                <p>HyperExecute virtual machines come preinstalled with a variety of open source utilities and language runtimes so the testing environment is ready to use. HyperExecute uses GitHub's open source images for GitHub Actions and pre-installed software. See the pre-installed software lists for <a href="https://github.com/actions/runner-images/blob/main/images/macos/macos-15-Readme.md">macOS</a>, <a href="https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md">Windows</a>, and <a href="https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md">Linux</a>.</p>
+                </details>
                 </div>
               )}
 
@@ -661,6 +862,11 @@ export default function FaqPage() {
                 <details>
                 <summary>Can I use the standard {BRAND_NAME} automation platform with a HyperExecute license?</summary>
                 <p>Yes. Every HyperExecute license also provides access to the standard {BRAND_NAME} automation platform and its features, making it easy to transition to HyperExecute incrementally.</p>
+                </details>
+
+                <details>
+                <summary>How many parallel tests can I run on a single HyperExecute license?</summary>
+                <p>Each parallel test execution consumes a single HyperExecute license. HyperExecute puts no capping on the number of parallel tests that can run simultaneously. We have users running thousands of tests in parallel.</p>
                 </details>
                 </div>
               )}
@@ -685,6 +891,56 @@ export default function FaqPage() {
                 <details>
                 <summary>How do I access private package registries or artifactories from HyperExecute?</summary>
                 <p>Use the automatic tunnel, dedicated NAT, or pre-step VPN to connect to private networks. Store private registry credentials in the HyperExecute vault and reference them in your YAML.</p>
+                </details>
+
+                <details>
+                <summary>How secure is HyperExecute?</summary>
+                <p>HyperExecute is built with security at its core and provides industry standard security on the entire infrastructure. HyperExecute provides fresh virtual machines every time a new job is triggered and deletes the infrastructure after the test execution of the job is completed. Dozens of microservices ensure that test scripts are deleted after the retention period and uniquely encrypted during their retention period. HyperExecute uses a powerful vault to store client side secrets for the users. The Enterprise version enables users to add their own security policies over the HyperExecute infrastructure.</p>
+                </details>
+
+                <details>
+                <summary>Is the VM allocated secure?</summary>
+                <p>We are SOC2 compliant. All the VMs are highly secure and compliant with the CIS benchmark.</p>
+                </details>
+
+                <details>
+                <summary>Can we do SSH to machines?</summary>
+                <p>No. Machines are private in nature and cannot be accessed by the Internet directly.</p>
+                </details>
+
+                <details>
+                <summary>What happens to secrets present in test code?</summary>
+                <p>All the logs are encrypted and stored in a secure manner. But we always prefer customers to use the vault to pass the credentials.</p>
+                </details>
+
+                <details>
+                <summary>Is the product GDPR compliant?</summary>
+                <p>Yes, we follow GDPR guidelines.</p>
+                </details>
+
+                <details>
+                <summary>What is the security level?</summary>
+                <p>We follow strict security levels at each step. We are SOC 2 compliant.</p>
+                </details>
+
+                <details>
+                <summary>What is the data retention time period? Can we ask to delete it anytime?</summary>
+                <p>We store the data for a max of 60 days. Yes, you can ask the {BRAND_NAME} team for the deletion of your data via email.</p>
+                </details>
+
+                <details>
+                <summary>How to update the HyperExecute Binary?</summary>
+                <p>The HyperExecute Binary is a secure binary. This can be updated via a link, and a notification regarding the same will be shared.</p>
+                </details>
+
+                <details>
+                <summary>Can this be set up completely on the premises?</summary>
+                <p>Yes, HyperExecute can be set up completely on the premises.</p>
+                </details>
+
+                <details>
+                <summary>What about the SAS token?</summary>
+                <p>The SAS token is generated only for 60 min in use and is different every time. This token is time-based authenticated and can only be used once.</p>
                 </details>
                 </div>
               )}
@@ -1019,6 +1275,65 @@ export default function FaqPage() {
               <p>KaneAI integrates with {BRAND_NAME}'s SmartUI. Add a visual assertion step to your test and SmartUI captures a baseline screenshot and diffs future runs against it, catching layout regressions alongside functional failures. See <a href={`${BRAND_URL}/support/docs/kaneai-smartui-visual-testing/`}>how to set up visual testing in KaneAI</a> for setup.</p>
               </details>
 
+              {/* General */}
+              <details>
+              <summary>What does KaneAI run my tests on?</summary>
+              <p>KaneAI runs your tests on real browsers in the cloud on HyperExecute, across multiple operating systems.</p>
+              </details>
+
+              <details>
+              <summary>Where can I see my KaneAI test results?</summary>
+              <p>Every run is saved to Test Manager, and KaneAI gives you a shareable Test Summary link you can send to anyone.</p>
+              </details>
+
+              {/* Bot protection and CAPTCHAs */}
+              <details>
+              <summary>Why is my KaneAI test blocked by a CAPTCHA or Cloudflare challenge?</summary>
+              <p>KaneAI runs your test on a cloud browser. Bot protection such as Cloudflare Turnstile, Google reCAPTCHA, or hCaptcha can classify that cloud session as automated and block it, so a sign up, log in, or checkout step never completes. The verification token is rejected even when the form is filled correctly.</p>
+              </details>
+
+              <details>
+              <summary>Can KaneAI solve CAPTCHAs automatically?</summary>
+              <p>No. CAPTCHAs are built to block automation, and no tool can solve them reliably. The reliable approach is to stop the challenge from being served to your test traffic, not to solve it. You do not need to build a separate environment to do this.</p>
+              </details>
+
+              <details>
+              <summary>How do I run KaneAI tests on a site protected by Cloudflare Turnstile?</summary>
+              <p>Use whichever option fits your setup:</p>
+              <ol>
+                <li><strong>Whitelist {BRAND_NAME}'s cloud IPs (recommended).</strong> Add {BRAND_NAME}'s cloud IP ranges to an allow rule in your security layer, a Cloudflare IP Access rule, a WAF allowlist, or a Turnstile allowlist, scoped to your test domain. Traffic from our cloud browsers is then trusted and the challenge is never shown.</li>
+                <li><strong>Use a test environment without the live challenge.</strong> On staging or UAT, disable the CAPTCHA or switch it to a testing key. Cloudflare Turnstile provides test keys that always pass, so automation verifies while production stays fully protected.</li>
+                <li><strong>Allowlist automation with a request header.</strong> If your application supports it, allow a known custom request header on your test environment so requests carrying it skip the challenge. Keep this to test environments only.</li>
+              </ol>
+              <p>To get your IPs whitelisted, follow the <a href={`${BRAND_URL}/support/docs/testmu-public-ip/`}>TestMu AI Public IP Ranges</a> for the current ranges and the exact steps.</p>
+              </details>
+
+              <details>
+              <summary>Do I need a separate, CAPTCHA-free environment for KaneAI?</summary>
+              <p>No. Whitelisting {BRAND_NAME}'s cloud IPs in your existing setup is a configuration change, not new infrastructure.</p>
+              </details>
+
+              <details>
+              <summary>How do I test an app on a private network or localhost with KaneAI?</summary>
+              <p>Whitelisting only works for applications reachable on the public internet. If your environment is on a private network, behind a VPN, or on localhost, use the <a href={`${BRAND_URL}/support/docs/network-whitelisting-and-tunnel-guide/`}>TestMu AI Tunnel</a> instead.</p>
+              </details>
+
+              {/* Billing and plans */}
+              <details>
+              <summary>What payment methods does KaneAI billing support, and how do I get an invoice?</summary>
+              <p>TestMu AI accepts all types of credit and debit cards for KaneAI billing, and PayPal is available for annual subscriptions. An invoice is generated for every subscription and sent by default to the email address you used at signup; you can also download invoices anytime from your account. Since KaneAI billing is per active agent, each invoice reflects the agent licenses active on your plan for that period. If something looks wrong, raise it quickly: under the Terms of Service, billing discrepancies must be reported within 30 days of appearing on an invoice, or the right to dispute them is waived. For payment-method or invoice questions you cannot resolve in the dashboard, email support@testmuai.com or use the 24/7 chat portal.</p>
+              </details>
+
+              <details>
+              <summary>How do I upgrade or downgrade my KaneAI plan, and how do seats and usage limits work?</summary>
+              <p>You can upgrade or downgrade your KaneAI plan at any time, with changes taking effect from your next billing cycle; plan changes are self-serve via the Upgrade button in the dashboard or Subscriptions &amp; Billings &gt; Edit, where the Monthly-to-Yearly toggle is advertised as saving up to 20% platform-wide. Because KaneAI is licensed per agent, adding seats means adding agent licenses, and each paid agent includes 500 AI test authoring sessions per month, so usage limits scale with your license count. If you have seen credits mentioned, that unit belongs to Kane CLI, a separate developer product. Compare the Web plan ($249/agent/month, or $199/agent/month billed annually) and Mobile + Web ($349/agent/month, or $299/agent/month billed annually) on the <a href="https://www.testmuai.com/pricing/?product=kane-ai-group" rel="nofollow">KaneAI per-agent pricing page</a>, or contact sales about enterprise plans.</p>
+              </details>
+
+              <details>
+              <summary>Does KaneAI auto-renew, and how do I cancel my subscription or delete my account?</summary>
+              <p>Yes, KaneAI subscriptions auto-renew at the end of each monthly or annual billing cycle unless you act before the term ends: per the Terms of Service, you can terminate with thirty (30) days' prior written notice, or turn off auto-renewal by logging into TestMu Services or emailing support@testmuai.com. To cancel in-app, open your profile avatar (top-right), go to Billing, scroll to CANCEL SUBSCRIPTION, select a cancellation reason, and click Complete Cancellation; a Resume your subscription option stays available if you change your mind. Fees already paid are non-refundable under the Terms of Service, so time the change around your renewal date. Cancelling a subscription is separate from deleting your TestMu AI account entirely; for full account deletion, contact support@testmuai.com or the 24/7 chat portal. Before you go, export your generated tests to Selenium, Playwright, Cypress, or Appium so your work leaves with you as standard framework code.</p>
+              </details>
+
             </div>
           )}
 
@@ -1224,7 +1539,7 @@ export default function FaqPage() {
 
               <details>
               <summary>Can I run accessibility checks as part of my automated Selenium or Playwright test suite?</summary>
-              <p>Yes. Accessibility Automation integrates with Selenium and Playwright on the {BRAND_NAME} cloud grid. Add the accessibility capability to your existing test configuration; no separate test file is needed. Results appear in the Accessibility tab of your Automation dashboard. Note: Playwright Automation requires Chrome; the bundled <code>pw-chromium</code> browser is not supported because the required extension does not load in it. See <a href={`${BRAND_URL}/support/docs/accessibility-automation/`}>how to add accessibility checks to automated tests</a>.</p>
+              <p>Yes. Accessibility Automation integrates with Selenium and Playwright on the {BRAND_NAME} cloud grid. Add the accessibility capability to your existing test configuration; no separate test file is needed. Results appear in the Accessibility tab of your Automation dashboard. Note: Playwright Automation requires Chrome; the bundled <code>pw-chromium</code> browser is not supported because the required extension does not load in it. See <a href={`${BRAND_URL}/support/docs/accessibility-automation-test/`}>how to add accessibility checks to automated tests</a>.</p>
               </details>
 
               <details>
@@ -1254,12 +1569,90 @@ export default function FaqPage() {
 
               <details>
               <summary>How do I export and share accessibility reports with my team or for compliance audits?</summary>
-              <p>Export reports as a spreadsheet, PDF, or packaged evidence bundle from the Accessibility dashboard. Exports reflect the current active issue state including any filters or hide/restore decisions applied. For audit trails, include build metadata (date, commit SHA, scan type) alongside the export. See <a href={`${BRAND_URL}/support/docs/accessibility-exporting-sharing-reports/`}>how to export and share accessibility reports</a>.</p>
+              <p>Export reports as a spreadsheet, PDF, or packaged evidence bundle from the Accessibility dashboard. Exports reflect the current active issue state including any filters or hide/restore decisions applied. For audit trails, include build metadata (date, commit SHA, scan type) alongside the export. See <a href={`${BRAND_URL}/support/docs/accessibility-testing-navigating-dashboard/`}>how to export and share accessibility reports</a>.</p>
               </details>
 
               <details>
               <summary>Does accessibility testing work alongside KaneAI or HyperExecute tests?</summary>
               <p>Yes. Accessibility Automation runs on the same {BRAND_NAME} cloud grid as Selenium and Playwright tests, so it is compatible with HyperExecute for parallel execution. Accessibility checks can be embedded in any test that runs on the grid, including tests authored in KaneAI and exported as Selenium or Playwright code.</p>
+              </details>
+
+              {/* Scan configuration */}
+              <details>
+              <summary>Why did a Best Practice rule not run under WCAG 2.1 AA?</summary>
+              <p>A check runs only if its WCAG criterion is in range <strong>and</strong> every tag it carries is enabled. If the Best Practice toggle is off, Best Practice rules are skipped regardless of WCAG level. Turn the relevant group toggle on.</p>
+              </details>
+
+              <details>
+              <summary>Does every accessibility scan need to be reconfigured?</summary>
+              <p>No. The last-used configuration is pre-filled automatically (per platform). You adjust only what you need and run. The scan must be saved for the configuration to persist.</p>
+              </details>
+
+              <details>
+              <summary>Do accessibility scan configuration changes affect teammates?</summary>
+              <p>No. Settings are saved per user and per platform.</p>
+              </details>
+
+              <details>
+              <summary>Why are AI-powered accessibility rules off by default?</summary>
+              <p>They are opt-in by design: AI rules invoke AI evaluation and surface items for manual verification rather than automatic pass or fail. Enable them when that depth is required.</p>
+              </details>
+
+              {/* Keyboard scan */}
+              <details>
+              <summary>Can the keyboard scan test keyboard navigation within iframes?</summary>
+              <p>The tool attempts to test iframe content when possible, but cross-origin iframes may have limitations due to security restrictions.</p>
+              </details>
+
+              <details>
+              <summary>Why didn't the keyboard scan detect my custom dropdown menu?</summary>
+              <p>Complex widgets with dynamic content may require manual identification. Use the "Yes" option in the guided step to mark these elements.</p>
+              </details>
+
+              <details>
+              <summary>How is the keyboard scan different from a regular axe-core scan?</summary>
+              <p>It combines axe-core's automated checks with guided manual testing to catch issues that automated tools alone might miss, particularly custom interactive elements.</p>
+              </details>
+
+              <details>
+              <summary>Can I save and share keyboard scan results?</summary>
+              <p>Yes. Keyboard scan results can be exported and shared with your team from the export options in the report view.</p>
+              </details>
+
+              {/* Accessibility score */}
+              <details>
+              <summary>What does an accessibility score of 100 mean?</summary>
+              <p>No automated issues were detected by the scanning engine. It does <strong>not</strong> mean full WCAG conformance; automated tools catch roughly 30 to 40% of WCAG issues, so a manual audit is still recommended.</p>
+              </details>
+
+              <details>
+              <summary>Why is my accessibility score different from before?</summary>
+              <p>The old ratio-based score counted decorative and structural elements as "passing," which inflated results. The density-adjusted model only weighs meaningful, functional elements, so scores are generally lower but more honest.</p>
+              </details>
+
+              <details>
+              <summary>Why does an accessibility score not appear on a test?</summary>
+              <p>The score requires <code>scored_element_count</code>, collected by newer versions of the scanning extensions and SDKs. Tests run before the feature was enabled show the existing accessibility level instead.</p>
+              </details>
+
+              <details>
+              <summary>Does hiding issues change the accessibility score?</summary>
+              <p>Yes. Hiding an issue recomputes the score from the remaining visible issues, and the dashboard updates in real time. Restoring a hidden issue recomputes again.</p>
+              </details>
+
+              <details>
+              <summary>Is the accessibility score the same across web and mobile?</summary>
+              <p>Yes. The formula is identical everywhere; only the exclusion rules that decide which elements count differ (web uses DOM rules, Android uses <code>AccessibilityNodeInfo</code>, iOS uses <code>XCUIElement</code>).</p>
+              </details>
+
+              <details>
+              <summary>Does toggling "Needs Review" change the accessibility score?</summary>
+              <p>No. Needs-review items are excluded from scoring because they require manual verification. Toggling updates issue counts but not the score.</p>
+              </details>
+
+              <details>
+              <summary>What is the minimum accessibility score?</summary>
+              <p>A score of 0 is reserved exclusively for keyboard-only scans.</p>
               </details>
 
             </div>

@@ -1,5 +1,3 @@
-# How to setup HyperExecute Private Cloud with AWS
-
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Prerequisites
@@ -24,13 +22,19 @@ To deploy the CloudFormation template on AWS, follow these steps:
 
 **Step 4:** Browse for the main template file **hyperexecute_deployment.yaml** and click **Next**.
 
+
+
 **Step 5:** On the **Specify Stack details** page, provide a name for the stack (deployment) and provide the necessary configuration details. Refer to the configuration parameters details sections for guidance.
 
 **Step 6:** On the next page, under the **Configure stack** option, change the **Stack failure options** to preserve the successfully provisioned resources. This helps in preserving the created resources and troubleshooting issues in case of a stack failure.
 
 **Step 7:** Click **Next** to review all the details, and then initiate the launch to deploy the HyperExecute CloudFormation stack.
 
+
+
 By following these steps, you can deploy the HyperExecute CloudFormation template from the AWS Marketplace and set up the required infrastructure for your testing needs.
+
+
 
 ## Configuration Parameters
 
@@ -106,6 +110,8 @@ kubectl get namespaces
 
    This command will provide a list of namespaces created.
 
+
+
 **Step 4:** Execute the command:
 
 ```bash
@@ -113,6 +119,8 @@ kubectl get po -n hyperexecute
 ```
 
    This command will provide a list of pods created under the `hyperexecute` namespace.
+
+
 
 **Step 5:** Access the Private Cloud deployment using the provided [link](https://dashboard.hyperexecute.cloud/).
 

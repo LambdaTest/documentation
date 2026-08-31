@@ -1,6 +1,6 @@
 ---
 id: regular-expression-appium
-title: Regular Expression - Appium
+title: How to Use Regular Expressions in Appium on TestMu AI
 # hide_title: true
 sidebar_label: Regular Expression
 description: If your chosen device for testing on TestMu AI is unavailable, use REGEX to broaden the search request for alternative devices to run the test.
@@ -17,8 +17,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -40,16 +38,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "App Automation: Regular Expression",
+          "name": "How to Use Regular Expressions in Appium on TestMu AI",
           "item": `${BRAND_URL}/support/docs/regular-expression-appium/`
         }]
       })
     }}
 ></script>
 
-<RealDeviceTag value="Real Device" /> 
 
-Regular Expressions (RegEx) are powerful tools for searching and manipulating strings. When running tests on <BrandName /> with a specific device, there may be times when the exact device you selected isn't available. In such cases, RegEx will help you widen your search criteria to find any available device that matches your requirements.
+Regular expressions in Appium on TestMu AI widen your device search when an exact device is unavailable, matching any suitable real device by pattern. TestMu AI supports RegEx for both deviceName and platformVersion, improving the chance of allocating a device.
+
+**Supported on:** Real devices
 
 
 <BrandName /> provides RegEx support for both **deviceName** and **platformVersion**, making it easier to find the right devices for your tests.
@@ -107,7 +106,7 @@ You can pass both `deviceName` and `platformVersion` regex patterns together or 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Regular Expression
+        How to Use Regular Expressions in Appium on TestMu AI
       </span>
     </li>
   </ul>

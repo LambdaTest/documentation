@@ -8,9 +8,12 @@ Feel more confident than ever, before deploying any UI specific change into Prod
 
 > **Note**: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for macOS](/docs/local-testing-macos/).
 
+
 You can download the binary file responsible for establishing a TCP with TLS 1.2 secure connection between your local device and our testing cloud by clicking on the downloadable link below.
 
+
 Download TestMu AI Tunnel For macOS
+
 
 This file is supported for the below listed macOS:
 
@@ -29,11 +32,15 @@ This file is supported for the below listed macOS:
 
 **Step 1**: Click the button "Configure Tunnel". Download the binary zip file by clicking the "Download Link". Also, hit the ‘Copy’ button in the form that opens up to copy the complete string to your system’s clipboard.
 
+
+
 **What is this zip file for?**
 
 This zip file will help in establishing a secure connection to TestMu AI cloud servers so you can test your locally hosted web pages using a TCP with TLS 1.2 secure connection.
 
 **Step 2**: Extract the downloaded zip file. Go to terminal and route your pointer to the same directory where you extracted the zip file.
+
+
 
 **Step 3**: Paste the copied string to execute the downloaded binary file. The command will look like:
 
@@ -43,25 +50,41 @@ So for example, if your user login email is `example@lambdatest.com` and your us
 
 `LT --user example@lambdatest.com --key 123asd123 --cui`
 
+
+
 **Note:** After you execute the command, you may be asked for user permission. Make sure you have administrator access to allow the file to run successfully.
 
 In a few seconds, after you execute the command, a TCP with TLS 1.2 secure connection will be established. You will receive a message inside your command prompt mentioning "Secure connection established, you may start your tests now".
 
+
+
 ## Testing Locally Hosted Web Pages Using TestMu AI tunnel
+
+
 
 **Step 1**: Navigate to 'Real Time Testing' menu and enter the localhost URL you want to test in the text field provided to enter URL.
 
 **Step 2**: Select the tunnel via which you want to run the test.
 
+
+
 **Step 3**: Select the test configuration of your choice. You can select from various major browsers & their assorted versions to perform a test session. You may also choose from a variety of Operating System & screen resolutions to check the RWD(Responsive Web Design) of the website when rendering on different resolutions.
+
+
 
 **Step 4**: Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, hit ‘Start’ for Apache under ‘Services’. If you also want to test the back-end functionality for your website then make sure you hit the ‘Start’ button for MySQL as well.
 
+
+
 **Step 5**: Once you are done selecting your configurations and hosting a web server. Hit the ‘Start’ button in Real Time Test. Your test will start and you will be navigated to your localhost URL.
+
+
 
 >**Important Note:** Some Safari browsers, on both Mac machines and iOS browsers, doesn’t support automatic resolution of URL string "localhost". Therefore if you test on URLs like "`http://localhost/`" or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to replace the string "`localhost`" with machine IP address. For example if you wanted to test "`http://localhost/dashboard`" or "`http://localhost/dashboard:8080`", and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`" or "`http://192.168.2.6/dashboard:8080`".
 
 ## Testing Local Folder Files Using TestMu AI tunnel
+
+
 
 >**Note:** If you were already running a test session through tunnel then you will have to terminate the existing TCP with TLS 1.2 secure connection in cmd before you re-establish it for a new directory.
 
@@ -77,7 +100,11 @@ Sample format:
 
 **Step 2**: After you establish a TCP with TLS 1.2 secure connection, go to TestMu AI and navigate to Real Time test. Enter "local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
 
+
+
 **Step 3**: Hit the ‘Start’ button. Once the VM(Virtual Machine) is launched, you will be able to access your local folders on a testing environment hosted by our cloud servers.
+
+
 
 **Note:** Similarly, if you want to run any file in the specified directory, you need to give URL as local-folder.lambdatest.com/filename.
 
@@ -85,14 +112,22 @@ Sample format:
 
 ## Terminating The Secure Connection
 
+
+
 A secure tunnel connection is maintained unless you explicitly disconnect it. You can disconnect the tunnel in following ways:
 
 **Option 1**: You can kill the process by using Ctrl+C in the terminal.
 You will receive the below highlighted messages indicating the termination of the TCP with TLS 1.2 secure connection.
 
+
+
 **Option 2**: You can also disconnect it using the option provided in the user interface. In the top right corner of TestMu AI interface, you will find a button that says "Tunnel active:". This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an ‘x’. Hit the ‘x’ to terminate the secure tunnel.
 
+
+
 ## Geolocation Testing Through VPN with TestMu AI tunnel
+
+
 
 Test the performance of your web-app through different geographic locations using VPN in TestMu AI tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
@@ -116,6 +151,7 @@ Example of full command:
 
 ### How Can Geolocation Testing Help You?
 
+
 **1. SERPs** – Search Engine Result Pages: For a website that is targeting audience from different parts of globes. It is always recommended to have a constant check on SERPs to address you website according to the respective trends of different geographies. This is extremely necessary for clothing brands. Traditional wearing differs from one country to another.
 
 **2. GDPR compliance** – General Data Protection Rule Compliance: Payment Gateways may differ from one geography to another due to different GDPR compliance for different geographies.
@@ -127,6 +163,7 @@ Example of full command:
 **5. Bandwidth:** 4G may or may not be available to every one of your targeted geography and even if it is available. The available bandwidth will usually be different. Meaning some countries would provide a faster download speed in 4G as compared to others. So you need to be mindful about the content optimization according to your targeted geolocations. Testing from IPs belonging to different geolocations will help you get a realistic view for page loading speed. A faster page loading will not only help in pleasing your customers, it would also help in ranking higher in SERPs.
 
 ### How Can You Test From An IP Of A Different Geolocation?
+
 
 This is where a VPN comes to rescue! VPN – Virtual Private Network – It helps in expanding a private network through a public network. Initially VPNs were introduced and used among large enterprises, defense organization, banking companies etc. to keep their data secure. A VPN created a pathway through which people working in large organizations could access the data they want, remotely, in a secured manner. The data is securely transmitted through the process of Cryptography. In Cryptography, the data is encrypted from the sender’s end and then it gets decrypted with the help of a unique key on the receivers end.
 
@@ -151,6 +188,8 @@ Following is the list of command arguments which can be used as modifiers while 
 
 ## Changing Your Access Key
 
+
+
 **What is an Access Key?**
 
 An Access Key is a unique string used for the identification of your account.
@@ -163,8 +202,14 @@ Access Key is pivotal for establishing a TCP with TLS 1.2 secure connection thro
 
 Find your Access Key while performing any type of testing, from the left navigation menu. You will find a button that says "Configure Tunnel". Click on that button & a string containing your access key will be presented.
 
+
+
 For instance, if you go to Real-Time Test, you will observe a button that says "Configure Tunnel" on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
 
+
+
 You can also find your Access Key by going to ‘Settings’ in the left navigation menu and routing to ‘Profile’.
+
+
 
 >**TestMu AI tunnel Update:** Earlier, when our TestMu AI tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted cross browser testing experience of locally hosted web pages. Not anymore! We have now updated the TestMu AI tunnel binary in a way that it auto-updates to the latest version every time you execute the TestMu AI tunnel from cmd/terminal.

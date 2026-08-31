@@ -18,12 +18,22 @@ The TestMu AI Rocket.Chat Integration enables users to share or push bugs to the
 
 **Step 4:** Now, provide your Rocket.Chat Webhook URL to establish integration with TestMu AI and click on **install** button.
 
+
+
+
+
 **generate your webhook url**
 
 - Visit your Rocket.Chat account -> **Workspace** tab.
 - Click on the **Integrations** -> click on **New** button to generate your new webhook.
 - Toggle the enable button to true.
 - Enter the details and click on the **Save** button -> copy your Webhook URL.
+
+
+
+
+
+
 
 ## Lodge your First Bug
 
@@ -44,6 +54,10 @@ The TestMu AI Rocket.Chat Integration enables users to share or push bugs to the
 
 **Step 5:** Click on **Mark as Bug** button. Now go to your dashboard and check a ticket will be created for the same.
 
+
+
+
+
 **Step 6:** Go to your Rocket.Chat dashboard and you can check on your assigned channel, a notification is sent for the same.
 
 ## Uninstall Rocket.Chat Integration
@@ -53,5 +67,9 @@ The TestMu AI Rocket.Chat Integration enables users to share or push bugs to the
 **Step 2:** Click on Settings -> Integrations -> Communication.
 
 **Step 3:** Click on the **Remove** button.
+
+
+
+
 
 >That was all you need to know for TestMu AI + Rocket.Chat Integration. Increase your productivity multifold with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always **available on chat** to help you out with any roadblock regarding our product. Happy testing!

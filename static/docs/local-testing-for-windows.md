@@ -10,7 +10,10 @@ Feel more confident than ever, before deploying any UI specific change into Prod
 
 You can download the binary file responsible for establishing a TCP with TLS 1.2 secure connection between your local device and our testing cloud by clicking on the downloadable link below.
 
+
 Download TestMu AI Tunnel For Windows
+
+
 
 This file is supported for the below listed windows:
 
@@ -24,11 +27,15 @@ This file is supported for the below listed windows:
 
 **Step 1**: Click the button **"Configure Tunnel"**. Download the binary zip file by clicking the **"Download Link"**. Also, hit the ‘Copy’ button in the form that opens up to copy the complete string to your system’s clipboard.
 
+
+
 **What is this zip file for?**
 
 This zip file will help in establishing a secure connection to TestMu AI cloud servers so you could test your locally hosted web pages in a TCP with TLS 1.2 secure connection environment.
 
 **Step 2**: Extract the downloaded zip file. Go to **cmd(Command Prompt)** and route your pointer to the same directory where you extracted the zip file.
+
+
 
 **Step 3**: Paste the copied string to execute the downloaded binary file. The command will look like:
 
@@ -38,9 +45,16 @@ So for example, if your user login email is example@lambdatest.com and your user
 
 `LT --user example@lambdatest.com --key 123asd123 --cui`
 
+
+
+
 **Note:** After you execute the command, Windows may ask for user permission. Make sure you have administrator access to allow the file to run successfully.
 
 In a few seconds, after you execute the command, a TCP with TLS 1.2 secure connection will be established. You will receive a message inside your command prompt mentioning "**Secure connection established, you may start your tests now**".
+
+
+
+
 
 ## Testing locally hosted web pages using TestMu AI Tunnel
 
@@ -48,11 +62,19 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 
 **Step 2**: Select the tunnel via which you want to run the test.
 
+
+
 **Step 3**: Select the test configuration of your choice. You can select from various major browsers & their assorted versions to perform a test session. You may also choose from a variety of Operating System & screen resolutions to check the RWD(Responsive Web Design) of the website when rendering on different resolutions.
+
+
 
 **Step 4**: Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, hit **‘Start’** for Apache under **‘Actions’**. If you also want to test the back-end functionality for your website then make sure you hit the ‘Start’ button for MySQL as well.
 
+
+
 **Step 5**: Once you are done selecting your configurations and hosting a web server. Hit the ‘**Start**’ button in **Real Time Test**. Your test will start and you will be navigated to your localhost URL.
+
+
 
 > **IMPORTANT NOTE**: Some browsers doesn’t support automatic resolution of the URL string "localhost". Therefore if you test on URLs like `http://localhost/` or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to use "localhost.lambdatest.com" or replace the string "localhost" with machine IP address. For example if you wanted to test `http://localhost/dashboard` or, and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`".
 
@@ -72,7 +94,11 @@ In a few seconds, after you execute the command, a TCP with TLS 1.2 secure conne
 
 **Step 2:** After you establish a TCP with TLS 1.2 secure connection, go to TestMu AI and navigate to Real Time test. Enter "local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
 
+
+
 **Step 3:** Hit the **‘Start’** button. Once the VM(Virtual Machine) is launched, you will be able to access your local folders on a testing environment hosted by our cloud servers.
+
+
 
 **Note:** Similarly, if you want to run any file in the specified directory, you need to give URL as local-folder.lambdatest.com/filename.
 
@@ -84,15 +110,24 @@ In this way, you can run any HTML, PHP, Python or similar web files present in a
 
 **Step 1:** Go to "**Real Time Test**" from the left navigation menu and click on the **mobile** icon. This will guide you to a screen where you can perform cross browser testing for your website on mobile OS. Select the icon for Android and choose from a variety of **Android** mobile devices to start testing.
 
+
+
 **Step 2:** After choosing your configurations, hit the ‘Start’ button to launch the VM. You will be able to access you locally hosted web pages.
 
+
+
 #### Testing Locally Hosted Web Pages On iOS
+
 
 **Step 1:** Go to **"Real Time Test"** from the left navigation menu and click on the mobile icon. This will guide you to a screen where you can perform cross browser testing for your website on mobile OS. Select the icon for Apple and choose from a variety of iOS devices to start testing.
 
 **Note:** To test your locally hosted web pages on iOS, you need to mention "`http://localhost.lambdatest.com`" or simply mention your machine IP as the URL in the below-highlighted box. For example if you wanted to test "`http://localhost/dashboard`" or "`http://localhost/dashboard:8080`", and your machine IP is 192.168.2.6 you can instead test on "`http://localhost.lambdatest.com/dashboard`" or "`http://192.168.2.6/dashboard`".
 
+
+
 **Step 2:** After choosing your configurations, hit the ‘**Start**’ button to launch the VM. You will be able to access you locally hosted web pages.
+
+
 
 _Notice how the font changed from Android to iOS or rather from Google Chrome to Mozilla Firefox, in the above images of local testing on Android & iOS. That right there is a cross browser compatibility issue!_
 
@@ -103,7 +138,11 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 **Option 1:** You can kill the process by using Ctrl+C in Windows command prompt.
 You will receive the below highlighted messages indicating the termination on TCP with TLS 1.2 secure connection.
 
+
+
 **Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of TestMu AI interface, you will find a button that's says **"Tunnel active"**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the TCP with TLS 1.2 secure connection.
+
+
 
 #### Geolocation Testing through VPN with TestMu AI Tunnel
 
@@ -175,8 +214,14 @@ If you ever misplace your Access key into the hands of someone you don’t trust
 
 Find your Access Key while performing any type of testing, from the left **navigation menu**. You will find a button that says "**Configure Tunnel**". Click on that button & a string containing your access key will be presented.
 
+
+
 For instance, if you go to **Real-Time Test**, you will observe a button that says "**Configure Tunnel**" on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
 
+
+
 You can also find your Access Key by going to ‘**Settings**’ in the left navigation menu and routing to ‘**Profile**’.
+
+
 
 **TestMu AI Tunnel Update:** Earlier, when our TestMu AI Tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted cross browser testing experience of locally hosted web pages. Not anymore! We have now updated the TestMu AI Tunnel binary in a way that it auto-updates to the latest version every time you execute the TestMu AI Tunnel from cmd/terminal.

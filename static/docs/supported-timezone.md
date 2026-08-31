@@ -26,6 +26,7 @@ capabilities.setCapability("platformName", "android");
 // Add other capabilities as needed                       |
 ```
 
+
 ## Supported Timezones
 
 Below is the list of supported **timezones** supported along with their corresponding cities and UTC times:

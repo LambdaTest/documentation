@@ -10,9 +10,15 @@ Test Manager enhances its functionality by seamlessly linking test cases with Ji
 
 1. Navigate to the [Integration page](https://integrations.lambdatest.com/) to integrate your TestMu AI account with Jira. Search for Jira and click on **Connect**.
 
+
+
 2. A side drawer will open to initiate Jira integration. Click on **Install** to proceed.
 
+
+
 3. A prompt will appear requesting access to your Atlassian account. Click on **Accept** to proceed.
+
+
 
 4. Select your Jira instance site, click on **Select Site & Proceed**, then select your preferred project and click **Integrate Projects & Install**.
 
@@ -21,10 +27,16 @@ Test Manager enhances its functionality by seamlessly linking test cases with Ji
 Once the integration is complete, follow these steps to link issues with your test cases or test runs:
 
 1. Head to the issues section in Test Manager, click on **Link Issue** and go to Jira.
-> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
+> Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/test-run-creation-and-management/).
+
+
 
 2. Enter the Jira Issue ID or URL in the input field and click on **Link Issue**.
 
+
+
 3. The Jira issue from your integrated Jira Project is successfully linked and listed. You can view the Issue summary, ID, type, status, priority, and creator.
+
+
 
 4. To **unlink an issue**, click on the unlink button located on the right side of the Jira Issue.

@@ -18,10 +18,20 @@ TestMu AI integrates with BugHerd, allowing users to file issues directly from t
 
 **Step 4:** Now, provide your BugHerd API Token to establish integration with TestMu AI and click on **install** button.
 
+
+
+
+
 **Fetch your Bugherd API Token**
 
 - Visit your BugHerd account -> **Settings** tab.
 - You will find the "**API Token**" under the section **Authentication Token**. Copy your API token.
+
+
+
+
+
+
 
 ## Lodge your First Bug
 
@@ -35,6 +45,10 @@ TestMu AI integrates with BugHerd, allowing users to file issues directly from t
 
 **Step 5:** Now update the comments of the bug and other details and click on **Create Task** button.
 
+
+
+
+
 **Step 6:** Go to your dashboard and check a ticket will be created for the same.
 
 ## Uninstall BugHerd Integration
@@ -44,5 +58,9 @@ TestMu AI integrates with BugHerd, allowing users to file issues directly from t
 **Step 2:** Click on Settings -> Integrations -> Bug Tracker.
 
 **Step 3:** Click on the **Remove** button.
+
+
+
+
 
 > That was all you need to know for TestMu AI + BugHerd Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on **chat** to help you out with any roadblock.

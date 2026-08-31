@@ -15,7 +15,7 @@ We’re excited to announce several key updates and enhancements in the latest v
 ### Bug Fixes
 - Fixed [`--use-zip`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#-z---use-zip) flag functionality for seamless execution.
 - Resolved GUI execution issues for C# projects.
-- Addressed issues with [inherited YAML configurations](/support/docs/hyperexecute-inherit-config/) and environment variable replacements.
+- Addressed issues with [inherited YAML configurations](/support/docs/deep-dive-into-hyperexecute-yaml/#inherit-your-yaml-configurations) and environment variable replacements.
 - Fixed nil map errors and streamlined email array replacement using variables.
 - Corrected XcTestPlanId configurations for improved iOS testing.
 

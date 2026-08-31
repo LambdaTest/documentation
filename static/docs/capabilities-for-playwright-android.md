@@ -6,7 +6,9 @@ The TestMu AI Capability Generator allows you to automatically create the capabi
 Playwright automation scripts on TestMu AI. Here are a few capabilities that you can configure to run your Playwright
 Android tests.
 
+
 You can use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+
 
 | Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
 |-----------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|

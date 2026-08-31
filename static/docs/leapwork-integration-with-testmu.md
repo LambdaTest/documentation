@@ -20,13 +20,21 @@ LEAPWORK assigns **Agents**, the available machines that execute your automation
 
 **Step 1:** In LEAPWORK Studio, open the **Agents** section and click **New**.
 
+
+
 **Step 2:** Open the **Agent type** drop-down and select **TestMu AI**. A settings window opens for the new agent.
+
+
 
 **Step 3:** Log in to your TestMu AI account in a browser so you can copy your credentials in the next step.
 
 **Step 4:** Open **Account Settings** from your profile menu in the top-right corner. Copy the **Username** and **Access Key** shown there. You need both values to authenticate the agent.
 
+
+
 **Step 5:** Return to the TestMu AI agent settings window in LEAPWORK Studio. This window is where you define how the agent connects to the cloud and which environment it runs on.
+
+
 
 Fill in the agent settings as follows. TestMu AI supports both manual and automated browser testing across 5000+ real devices and 10,000+ browser/device combinations, so the platform, browser, and version you pick here determine the environment your flows run on.
 
@@ -47,7 +55,11 @@ Fill in the agent settings as follows. TestMu AI supports both manual and automa
 hub.lambdatest.com
 ```
 
+
+
 **Step 7:** Click **Test connection**. When the credentials and hostname are correct, Studio shows **Successfully connected** in green.
+
+
 
 Click **Save** to store the TestMu AI environment in Studio. You can now select this agent whenever you schedule or run automation flows.
 
@@ -55,11 +67,17 @@ Click **Save** to store the TestMu AI environment in Studio. You can now select 
 
 A **TestMu AI Server** connection points your LEAPWORK flows at the TestMu AI mobile cloud. Use it to automate native Android and iOS app flows on real devices without maintaining a physical device lab. This connection is separate from the web agent above and is added on the **Connections** screen.
 
+
 Adding a server connection is restricted to LEAPWORK **Admin** users. If you do not see the option, ask your workspace administrator to grant admin access or to create the connection for you.
+
 
 **Step 1:** In LEAPWORK Studio, open the **Connections** screen and click **Add**. The **Add Connection** dialog opens.
 
+
+
 **Step 2:** Enter a unique **Title** and an optional **Description** so your team can identify the connection. Open the **Type** drop-down and select **TestMu AI Server**. Selecting it reveals the connection fields.
+
+
 
 **Step 3:** Fill in the connection fields:
 
@@ -68,7 +86,11 @@ Adding a server connection is restricted to LEAPWORK **Admin** users. If you do 
   * **Access Key**: your TestMu AI access key from the same **Account Settings** page.
   * **Custom Capabilities** (optional): a JSON block defining the device, OS version, and other run settings, for example `{"deviceName": "Galaxy S23", "platformVersion": "14", "platformName": "android"}`.
 
+
+
 **Step 4:** Click **Test connection** to validate the credentials. When the values are correct, Studio shows a success message. Click **Save** to store the connection.
+
+
 
 The saved connection appears in the **Connections** list and can be reused across mobile automation flows. To change credentials or remove it, use the **Edit** or **Delete** buttons next to **Add**.
 

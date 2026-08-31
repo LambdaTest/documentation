@@ -1,8 +1,9 @@
 ---
 id: circle-ci-with-hyperexecute
-title: CircleCI Integration with Hyperexecute
+title: CircleCI Integration with Hyperexecute
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: CircleCI
+sidebar_label: "CircleCI"
 description: HyperExecute integrates with CircleCI to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - testmu ai integrations

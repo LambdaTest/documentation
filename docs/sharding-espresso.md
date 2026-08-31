@@ -1,8 +1,8 @@
 ---
 id: sharding-espresso
-title: Sharding for Espresso 
-sidebar_label: Sharding for Espresso
-description: This document will cover how to execute Espresso Tests on real devices with HyperExecute. Before starting, please make sure you have App Automation plans on your account.
+title: How to Shard Espresso Tests on TestMu AI
+sidebar_label: Sharding
+description: Shard Espresso tests to run in parallel on real devices with HyperExecute on TestMu AI, cutting execution time using a simple YAML configuration.
 keywords:
   - sharding
   - Espresso
@@ -21,8 +21,6 @@ canonical: https://www.testmuai.com/support/docs/sharding-espresso-rd-hyperexecu
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -46,17 +44,20 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Sharding in Espresso",
+          "name": "How to Shard Espresso Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/sharding-espresso-rd-hyperexecute/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
+Sharding Espresso tests on TestMu AI splits your suite into shards that run in parallel across real devices with HyperExecute, cutting total execution time. Configure a simple YAML file to distribute tests, orchestrate runs, and review results on the dashboard.
+
+**Supported on:** Real &amp; Virtual devices
 
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.
 
-Furthermore, this document provides insights on executing Espresso Tests on real devices using the innovative **HyperExecute** platform. Designed with precision, HyperExecute stands out as a test orchestration solution, tailored to execute end-to-end tests at breakneck speed. To streamline its setup and configuration, a user-friendly `YAML` file is employed. Dive into this guide to make your testing process more agile and efficient.
+**HyperExecute** is a test orchestration platform that executes Espresso end-to-end tests on real devices at high speed, configured through a `YAML` file.
 
 :::tip Note
 You can learn more about the HyperExecute portal and UI by going through our [Guided Walkthrough](/support/docs/hyperexecute-guided-walkthrough/) page. It contains all the relevant information that you need to optimize your testing process with HyperExecute. 
@@ -534,7 +535,9 @@ To download these artifacts in your local machine, you can pass the `--download-
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Sharding in XCUIT</span>
+      <span className="breadcrumbs__link">
+        How to Shard Espresso Tests on TestMu AI
+      </span>
     </li>
   </ul>
 </nav>

@@ -14,6 +14,9 @@ To get started, please try our **[fastlane Sample](https://github.com/LambdaTest
 git clone https://github.com/LambdaTest/fastlane-android-sample
 ```
 
+
+
+
 To upload an app to TestMu AI for app testing, you would need the following things :
 
 * Make sure you have fastlane installed on the machine. Please refer fastlane docs for installation.
@@ -22,12 +25,15 @@ To upload an app to TestMu AI for app testing, you would need the following thin
 
     * Please ensure that you have your TestMu AI credentials handy, including your TestMu AI username and access key. You will need to set them up in the Fastfile. To retrieve these credentials, simply click on the key icon located near the help button on your TestMu AI automation [dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
+
+
 ``` bash
 LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Installing TestMu AI fastlane Plugin
+
 
 **Step 1:** Add TestMu AI [fastlane](https://rubygems.org/gems/fastlane-plugin-lambdatest) plugin by running.
 ```

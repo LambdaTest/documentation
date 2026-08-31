@@ -23,6 +23,10 @@ Shown below are the steps to set up your Grid on Testim.
     - Update your Host and Port number.
     - Enter your TestMu AI Username and Access Key and click on **Add** button.
 
+
+
+
+
 ## Recording the Tests
 Shown below are the steps to record your tests on Testim.
 
@@ -31,6 +35,10 @@ Shown below are the steps to record your tests on Testim.
 2. Enter your app URL and click on **Create Test**.
 
 3. It will start recording the tests. Once your testing is completed, stop the recording and save your tests.
+
+
+
+
 
 ## Configuring the Capabilities
 Include the capabilities you wish to use in a `.json` file and ensure this file is located in the same directory as your Testim runner.
@@ -62,5 +70,8 @@ testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid
 ```
 
 To view your test results, navigate to the TestMu AI Web Automation Dashboard.
+
+
+
 
 > **Note**: To explore additional configuration options, you can execute `testim --help` in PowerShell or bash, which will display further customizations available for writing and executing your test cases.

@@ -9,6 +9,8 @@ With this plugin, you can:
 - Compare them with visual baselines
 - Detect UI changes early in your CI/CD pipeline
 
+
+
 ## Installation
 
 ### Option 1: Install via Katalon Store (Recommended)
@@ -23,6 +25,8 @@ With this plugin, you can:
 2. In Katalon Studio, go to **Project > Settings > Plugins > Import Plugin**.
 3. Select the downloaded `.jar` file and click **Import**.
 
+
+
 ## Configuration & Usage
 
 ### Step 1: Create a SmartUI Project
@@ -35,6 +39,8 @@ With this plugin, you can:
 
 > Your Project Token will be used to authenticate screenshot uploads to SmartUI.
 
+
+
 ### Step 2: Start your Katalon Instance from terminal
 
 Run the following command in the terminal to start the Katalon instance.
@@ -42,6 +48,7 @@ Run the following command in the terminal to start the Katalon instance.
 ```bash
 /Applications/Katalon\ Studio\ Enterprise.app/Contents/MacOS/katalon
 ```
+
 
 ### Step 3: Set Environment Variable
 
@@ -54,6 +61,8 @@ In your Katalon project, set the `PROJECT_TOKEN` environment variable:
 ```bash
 PROJECT_TOKEN = "project_token..."
 ```
+
+
 
 ### Step 4: Configure SmartUI in Your Test Case
 
@@ -80,6 +89,8 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.stopServer'()
 // Close Browser
 WebUI.closeBrowser()
 ```
+
+
 
 ### Step 5: Advanced Configuration (Optional)
 
@@ -110,6 +121,8 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 > Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.
 > Use `selectBoxes` to compare only specific regions (e.g., main content area).
 
+
+
 ## Running Tests
 
 1. Execute your test case as usual in Katalon Studio.
@@ -119,23 +132,45 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
    - Approve or reject visual changes
    - Manage builds and baselines
 
+
+
 ## Best Practices
+
+
+
 
 **Server Management**
 
 - Always include `startServer()` before taking screenshots and `stopServer()` after.
 
+
+
+
+
 **Snapshot Naming**
 
 - Use descriptive snapshot names for easy identification in SmartUI.
+
+
+
+
 
 **CI/CD Integration**
 
 - For CI/CD pipelines, set `PROJECT_TOKEN` as an environment variable in your CI tool (Jenkins, GitHub Actions, etc.).
 
+
+
+
+
 **Reporting**
 
 - Combine with Katalon's built-in reporting for comprehensive test insights.
+
+
+
+
+
 
 ## Troubleshooting
 

@@ -1,7 +1,7 @@
 ﻿---
 id: xcui-visual-regression
 title: Getting Started With Visual Regression Testing Using XCUI On SmartUI Real Devices
-sidebar_label: XCUI
+sidebar_label: XCUITest
 description: Dive into our detailed XCUI Visual Regression support documentation for step-by-step guidance! Efficiently perform visual testing, manage applications, and ensure your mobile apps are visually perfect before launch.
 keywords:
   - Visual Regression
@@ -336,7 +336,7 @@ filters:
 This example will run only the 2 classes & one test as mentioned from the TestSuite.
 
 ## XCTestPlan in Sharding
-To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
+To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) flag as shown below:
 
 ```yaml
 framework:

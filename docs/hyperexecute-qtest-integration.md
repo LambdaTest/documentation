@@ -1,8 +1,9 @@
 ---
 id: hyperexecute-qtest-integration
 title: Integrate qTest with HyperExecute
+toc_max_heading_level: 2
 hide_title: false
-sidebar_label: qTest
+sidebar_label: "qTest"
 description:  Unleash the power of QTest & TestMu AI HyperExecute! Streamline test management & experience blazing-fast execution.
 keywords:
   - TestMu AI Hyperexecute
@@ -137,7 +138,7 @@ You can download the CLI for your desired platform from the below mentioned link
   </CodeBlock>
 </div>
 
-> Refer the documentation to understand how to get your [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+> Refer the documentation to understand how to get your [Username and Access key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
 
 ## Step 3: Setup the Automation
 

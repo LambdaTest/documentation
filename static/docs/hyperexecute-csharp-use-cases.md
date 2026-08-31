@@ -1,7 +1,3 @@
-# HyperExecute CSharp Use Cases
-
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
 This guide provides a complete reference for integrating C# NUnit SpecFlow tests with HyperExecute, covering edge cases, solutions, YAML setup, artifact management, remote test discovery, and reporting.
 
 ## 1. Autosplit
@@ -22,6 +18,8 @@ autosplit: true
 - Flaky tests delay feedback
 - No control over test splitting
 
+
+
 ## 2. Matrix Setup
 ### Edge Case
 Tests behave differently on various OS platforms. Running only on one OS may hide platform-specific bugs.
@@ -40,6 +38,8 @@ runson: ${matrix.os}
 - Tests may pass on one OS but fail on others
 - Hidden bugs reach end users
 - Manual cross-OS testing required
+
+
 
 ## 3. Environment Variables (NuGet Paths)
 ### Edge Case
@@ -62,6 +62,8 @@ NUGET_PLUGINS_CACHE_PATH: '/home/ltuser/.local/share/NuGet/plugins-cache'
 - Disk space issues
 - Inconsistent behavior across OSes
 
+
+
 ## 4. Pre Steps
 ### Edge Case
 Dependencies may not be restored or projects may not build correctly if pre-steps are missing, causing test failures downstream.
@@ -73,6 +75,9 @@ pre:
 - dotnet restore
 - dotnet list OnlySpecTest.csproj package > packages.txt
 #  - chmod 777 /tmp/NuGetScratch
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 #  - nuget locals all -clear
 - dotnet build -c Release
 ```
@@ -86,6 +91,8 @@ pre:
 - Builds fail or produce outdated DLLs
 - Tests fail due to missing dependencies
 - Manual fixes required
+
+
 
 ## 5. Artifact Upload
 ### Edge Case
@@ -109,6 +116,8 @@ path:
 - Debugging intermittent failures is hard
 - Manual reporting is required
 
+
+
 ## 6. Report Generation
 ### Edge Case
 Partial or misconfigured reports can be unreadable, incomplete, or fail to merge in parallel executions.
@@ -129,6 +138,8 @@ frameworkName: specflow
 - Harder to analyze test performance trends
 - Manual effort needed to share results
 
+
+
 ## 7. Test Discovery
 ### Edge Case
 Static or incorrect discovery may skip new tests, misdetect test tags, or fail in parallel executions.
@@ -148,6 +159,8 @@ command: grep -rni 'Features' -e '@' --include=*.feature | sed 's/.*@//'
 - New tests may never run
 - Reduced test coverage
 
+
+
 ## 8. testRunnerCommand
 ### Edge Case
 Running all tests every time is inefficient, and category typos or missing attributes can prevent execution.
@@ -163,6 +176,8 @@ testRunnerCommand: dotnet test --filter "(Category=$test)"
 - All tests run every time
 - Slower pipelines
 - Increased build cost
+
+
 
 ## 9. Multiple Tag-Based Test Discovery
 ### Edge Case
@@ -187,6 +202,8 @@ command: grep -E -w -R -A10 --include='*.feature.cs' ${tagname} AllInOneProject/
 - Manual updates required
 - Increased risk of regressions
 
+
+
 ## 10. Framework Version Compatibility Handling
 ### Edge Case
 Different .NET versions require different build steps; incorrect handling causes build failures or runner crashes.
@@ -205,6 +222,8 @@ C:\PROGRA~2\Micros~1\2019\Community\MSBuild\Current\Bin\MSBuild.exe /p:Configura
 - Build failures
 - Outdated or incompatible DLLs
 - Test runner crashes
+
+
 
 ## 11. Private Dependencies (config.nuget)
 ### Edge Case
@@ -234,6 +253,8 @@ Configures private feeds securely to ensure reliable dependency resolution acros
 - CI/CD errors
 - Manual debugging and inconsistent builds
 
+
+
 ## 12. Custom Test Runner Alternatives
 ### Edge Case
 Some projects cannot run with dotnet test due to configuration or .NET version constraints.
@@ -249,6 +270,8 @@ vstest.console.exe "GlobalPolaris\bin\Debug\net472\GlobalPolaris.dll" /Settings:
 - Tests may fail to execute
 - Build verification and pipelines are blocked
 
+
+
 ## 13. NUnit Console for Feature Tag Discovery
 ### Edge Case
 Standard discovery may fail with complex NUnit tag setups.
@@ -263,6 +286,8 @@ Uses NUnit console to explore feature tests by tags.
 - Tag-based tests are skipped
 - Partial coverage
 - Manual intervention required
+
+
 
 ## 14. Differential Upload Configuration
 ### Edge Case
@@ -282,6 +307,8 @@ ttlHours: 300
 - Wasted resources
 - Longer pipeline durations
 
+
+
 ## 15. Certificate Management for Browser Authentication
 ### Edge Case
 Browser tests requiring client certificates fail without proper installation.
@@ -296,6 +323,8 @@ Installs certificates in browser environment for authenticated sessions.
 ### What Happens If We Don’t Use It
 - Browser authentication tests fail
 - Manual certificate setup required
+
+
 
 ## 16. Custom Status Reporting via CleanUp Function
 ### Edge Case
@@ -322,6 +351,8 @@ _ => "others"
 - Missing or inaccurate test reporting
 - Dashboard metrics incomplete
 
+
+
 ## 17. Custom SpecFlow Reporting Configuration
 ### Edge Case
 Standard reports may not provide enough detail for complex SpecFlow tests.
@@ -344,6 +375,8 @@ metaInfo: ["project-name:Global Polaris Regression","project-env:QA"]
 - Reports lack detail
 - Stakeholders have limited visibility
 - Manual reporting required
+
+
 
 ## 18. File Level Discovery (DLL)
 ### Edge Case
@@ -370,6 +403,8 @@ commands:
 - New features not executed
 - Manual DLL verification required
 
+
+
 ## 19. Feature File Level Discovery (Matrix)
 ### Edge Case
 All tests running together reduce parallelism and rerun flexibility.
@@ -393,6 +428,8 @@ commands:
 - Parallelism lost
 - Slower execution
 - Rerunning failed features is difficult
+
+
 
 ## 20. Passing Arguments in HyperExecute
 ### Edge Case

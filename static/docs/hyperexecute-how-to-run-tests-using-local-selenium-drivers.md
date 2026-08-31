@@ -1,5 +1,3 @@
-# Trigger Your Job via Local Selenium Web Driver
-
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 As a tester, whenever you switch from local web driver to remote web driver can be a tedious and time-consuming process. You will have to manually modify your tests which includes adding Desired Capabilities, and adjusting code just to get them running on a cloud testing platform.
@@ -22,6 +20,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 Download or Clone the code sample for the TestNG from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
  View on GitHub
+
 
 ### Step 2: Update YAML Configuration:
 
@@ -109,8 +108,10 @@ console: true
 #highlight-end
 ```
 
+
 - For operating system **win, mac,** and **linux**, only the **os** flag is mandatory, rest are optional.
 - For operating system **android** and **ios**, the **os** and **deviceName** flags are mandatory, rest are optional.
+
 
 In the above sample YAML file, we have passed **parallelism = 1** and **total number of platforms = 6**
 
@@ -122,6 +123,8 @@ The number of tasks created = **(total number of platforms) * (parallelism)** = 
 - 1 android with any device (we have not specified device name)
 - 1 ios with any device (we have not specified device name)
 
+
+
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 Capabilities Generator.
 
 ### Step 3: Run Your Tests:
@@ -129,7 +132,13 @@ The number of tasks created = **(total number of platforms) * (parallelism)** = 
 - Execute your tests as usual through your test framework (e.g., JUnit, TestNG).
 - HyperExecute automatically intercepts Selenium commands and routes them to its platform.
 
+
+
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+
+
+
+
 
 ## Priority Mapping of Capability Selection
 

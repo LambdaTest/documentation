@@ -1,20 +1,34 @@
-# Configuring Cypress Test Execution
+# How to Configure Cypress Test Execution on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+When you run Cypress tests on TestMu AI, you control how each build behaves through run settings such as the config file, spec paths, geolocation, resolution, timeouts, and dependencies. Setting these correctly targets the right specs, matches your local environment, and keeps build times down. You configure them in the `run_settings` object of `lambdatest-config.json`, and most also have an equivalent Cypress CLI flag.
+
 You can specify Cypress CLI flags to run on TestMu AI in two ways:
 
-1. Adding the CLI flag details in `lambdatest-config.json` file
+1. Adding the CLI flag details in the `lambdatest-config.json` file
 2. Using the CLI
 
-If a glob pattern path is passed in the specs flag using CLI, you must enclose it within double quotes as shown:
+
+If a glob pattern path is passed in the specs flag using the CLI, enclose it within double quotes as shown:
 `lambdatest-cypress-cli run --env=stage --verbose --specs "./cypress/integration/examples/*"`
 
-## Cypress Config File
-#### Using `lambdatest-config.json`
-You can use the `cypress_config_file` key in `run_settings` option to specify the Cypress configuration file.
 
-> **NOTE :** Cypress 10 and above versions automatically identify the `cypress.config.js` file in the project. Therefore, you don't need to specify the `cypress_config.js` capability.
+## Set the Cypress Config File
+
+
+Point TestMu AI at your Cypress configuration file so the run uses the settings your project expects. You can set it in `lambdatest-config.json` or pass it as a CLI flag.
+
+**Using `lambdatest-config.json`**
+
+Use the `cypress_config_file` key in the `run_settings` option to specify the Cypress configuration file.
+
+
+Cypress 10 and above automatically identify the `cypress.config.js` file in the project, so you do not need to specify the `cypress_config.js` capability.
+
+
+
+
 
 ```javascript title="lambdatest-config.json"
 {
@@ -25,21 +39,35 @@ You can use the `cypress_config_file` key in `run_settings` option to specify th
 }
 ```
 
+
+
+
 ```javascript title="lambdatest-config.json"
 // In case of Cypress 10 and above, you can specify your custom config files by using the --cy flag.
 lambdatest-cypress-cli run --env=stage,video=true --verbose --specs "./cypress/integration/examples/*"
 ```
 
-#### Using CLI
-You can specify the Cypress configuration file using the below CLI flag with `run` command.
+
+
+**Using the CLI**
+
+Specify the Cypress configuration file using the CLI flag below with the `run` command.
 
 | Flag                         | Purpose                 | Type   |
 | ---------------------------- | ----------------------- | ------ |
 | --ccf, --cypress-config-file | Path of the config file | String |
 
-## Specifying Spec Files
-#### Using `lambdatest-config.json`
-You can use the *specs* key in *run_settings* option to specify the Spec files.
+## Specify the Spec Files to Run
+
+
+Choose which spec files a build executes so you run only the tests you need. Set the paths in `lambdatest-config.json` or pass them on the CLI.
+
+**Using `lambdatest-config.json`**
+
+Use the `specs` key in the `run_settings` option to specify the spec files.
+
+
+
 
 ```javascript title="lambdatest-config.json"
 {
@@ -48,6 +76,9 @@ You can use the *specs* key in *run_settings* option to specify the Spec files.
 }
 }
 ```
+
+
+
 
 ```javascript title="lambdatest-config.json"
 {
@@ -58,15 +89,23 @@ You can use the *specs* key in *run_settings* option to specify the Spec files.
 
 ```
 
-#### Using CLI
-You can specify the Spec files using the below CLI flag with `run` command.
+
+
+**Using the CLI**
+
+Specify the spec files using the CLI flag below with the `run` command.
 
 | Flag        | Purpose                                       | Type   |
 | ----------- | --------------------------------------------- | ------ |
 | -s, --specs | Path of the spec file or directory or pattern | String |
 
-## Exclude Specs Files
-You can use the *exclude_specs* key in *run_settings* option to specify the spec files that you want to exclude from the test execution.
+## Exclude Spec Files From a Run
+
+
+Skip specific spec files without deleting them from your project. Use the `exclude_specs` key in the `run_settings` option to list the spec files you want to leave out of the test execution.
+
+
+
 
 ```javascript title="lambdatest-config.json"
 {
@@ -76,6 +115,9 @@ You can use the *exclude_specs* key in *run_settings* option to specify the spec
 }
 ```
 
+
+
+
 ```javascript title="lambdatest-config.json"
 {
 "run_settings": {
@@ -84,9 +126,19 @@ You can use the *exclude_specs* key in *run_settings* option to specify the spec
 }
 ```
 
-## Geolocation
-#### Using `lambdatest-config.json`
-You can use the *geo_location* key in *run_settings* option to specify the Spec files.
+
+
+## Set the Test Geolocation
+
+
+Run your tests from a specific country to check geo-targeted behavior. Set the location in `lambdatest-config.json` or pass it on the CLI.
+
+**Using `lambdatest-config.json`**
+
+Use the `geo_location` key in the `run_settings` option to specify the country to run from.
+
+
+
 
 ```javascript title="lambdatest-config.json"
 {
@@ -96,6 +148,9 @@ You can use the *geo_location* key in *run_settings* option to specify the Spec 
 }
 ```
 
+
+
+
 ```javascript title="lambdatest-config.json"
 {
 "run_settings": {
@@ -104,16 +159,27 @@ You can use the *geo_location* key in *run_settings* option to specify the Spec 
 }
 ```
 
-#### Using CLI
-You can specify the geolocation files using the below CLI flag with `run` command.
+
+
+**Using the CLI**
+
+Specify the geolocation using the CLI flag below with the `run` command.
 
 | Flag                  | Purpose                   | Type   |
 | --------------------- | ------------------------- | ------ |
 | --geo, --geo_location | Pass the Geo country code | String |
 
-## Resolution
-#### Using `lambdatest-config.json`
-Use the *resolution* key in *run_settings* option to specify the resolution.
+## Set the Screen Resolution
+
+
+Control the screen resolution of the machine your tests run on. Set it in `lambdatest-config.json` or pass it on the CLI.
+
+**Using `lambdatest-config.json`**
+
+Use the `resolution` key in the `run_settings` option to specify the resolution.
+
+
+
 
 ```javascript title="lambdatest-config.json"
 {
@@ -123,6 +189,9 @@ Use the *resolution* key in *run_settings* option to specify the resolution.
 }
 ```
 
+
+
+
 ```javascript title="lambdatest-config.json"
 {
 "run_settings": {
@@ -131,20 +200,24 @@ Use the *resolution* key in *run_settings* option to specify the resolution.
 }
 ```
 
-#### Using CLI
-You can specify the system's resolution using the below CLI flag with `run` command.
+
+
+**Using the CLI**
+
+Specify the system's resolution using the CLI flag below with the `run` command.
 
 | Flag   | Purpose             | Type   |
 | ------ | ------------------- | ------ |
 |  --res | Pass the resolution | String |
 
-*It will change the resolution of the system but the viewport in which Cypress launches the website is controlled by Cypress.*
+This changes the resolution of the system, but the viewport in which Cypress launches the website is controlled by Cypress.
 
 **Supported resolutions**: `1024x768`, `1280x960`, `1280x1024`, `1600x1200`, `1920x1080`, `2048x1536`, `2560x1440`
 
 The `resolution` capability above sets the VM's screen resolution. To control the browser **viewport** that Cypress renders the app in (which `resolution` does not change), use Cypress's own viewport and full-screen options.
 
-#### Test on viewports
+**Test on viewports**
+
 When you define a viewport, Cypress uses the browser's scaling to size the app: a large viewport scales the app down, a small one scales it up. Set the viewport globally with `viewportWidth` and `viewportHeight` in the Cypress config, or per test:
 
 ```js
@@ -152,11 +225,13 @@ cy.viewport(550, 750) // Set viewport to 550px x 750px
 cy.viewport('iphone-6') // Set viewport to 375px x 667px
 ```
 
-For more details, see the [official Cypress documentation](https://docs.cypress.io/api/commands/viewport#Syntax).
+For more details, see the [Cypress viewport command reference](https://docs.cypress.io/api/commands/viewport#Syntax).
 
-#### Test in full-screen mode
+**Test in full-screen mode**
+
 
 Full-screen mode together with viewports gives the best results for screen-resolution testing.
+
 
 Use the `before:browser:launch` event to change the browser options.
 
@@ -207,9 +282,17 @@ return launchOptions
 })
 ```
 
-## Excluding Files From Test Uploads
-#### Using `lambdatest-config.json`
-You can use the *ignore_files* key in *run_settings* option to ignore or exclude any particular files while uploading your tests.
+## Exclude Files From Test Uploads
+
+
+Keep files out of the project archive that gets uploaded to TestMu AI, which trims upload size and build time. Set the paths in `lambdatest-config.json` or pass them on the CLI.
+
+**Using `lambdatest-config.json`**
+
+Use the `ignore_files` key in the `run_settings` option to exclude particular files while uploading your tests.
+
+
+
 
 ```javascript title="lambdatest-config.json"
 {
@@ -219,6 +302,9 @@ You can use the *ignore_files* key in *run_settings* option to ignore or exclude
 }
 ```
 
+
+
+
 ```javascript title="lambdatest-config.json"
 {
 "run_settings": {
@@ -227,19 +313,29 @@ You can use the *ignore_files* key in *run_settings* option to ignore or exclude
 }
 ```
 
-#### Using CLI
-Specify the files that you want to exclude using the below CLI flag with `run` command.
+
+
+**Using the CLI**
+
+Specify the files you want to exclude using the CLI flag below with the `run` command.
 
 | Flag                | Purpose                            | Type   |
 | ------------------- | ---------------------------------- | ------ |
 | --if, --ignore_files| Files to ignore in the zip project | String |
 
-## Max Duration for Test Session Timeout
-When running tests, if you encounter a situation where a particular test is running for an extended period and causing other parallel tests to be blocked, in this case, you can use the *max duration* flag to mitigate the issue. This flag allows you to specify a maximum time limit for the test to run before it is automatically stopped, thus freeing up resources for other tests to execute.
+## Set a Max Duration for Session Timeout
 
-The valid input for `max_duration` must be an integer, and it can only be within the range of 2 to 240 minutes.
-#### Using `lambdatest-config.json`
-You can use the `max_duration` key in *run_settings* option to specify the session timeout.
+
+When a single test runs for an extended period, it can block other parallel tests from executing. Use the `max_duration` flag to set a maximum time limit after which the test is automatically stopped, freeing up resources for other tests.
+
+The valid input for `max_duration` must be an integer within the range of 2 to 240 minutes.
+
+**Using `lambdatest-config.json`**
+
+Use the `max_duration` key in the `run_settings` option to specify the session timeout.
+
+
+
 
 ```javascript title="lambdatest-config.json"
 {
@@ -249,6 +345,9 @@ You can use the `max_duration` key in *run_settings* option to specify the sessi
 }
 ```
 
+
+
+
 ```javascript title="lambdatest-config.json"
 {
 "run_settings": {
@@ -257,15 +356,20 @@ You can use the `max_duration` key in *run_settings* option to specify the sessi
 }
 ```
 
-#### Using CLI
- You can specify the timeout using the below CLI flag with `run` command.
+
+
+**Using the CLI**
+
+Specify the timeout using the CLI flag below with the `run` command.
 
 | Flag           | Purpose                        | Type    |
 | -------------- | ------------------------------ | ------- |
 | --max_duration | idle timeout of a test session | Integer |
 
-## Organizing Tests
-You can name your test cases and categorize your Cypress builds by build number, build name, test and build tags for easier analysis. Use the following keys to organize your tests.
+## Organize Builds With Names and Tags
+
+
+Name your test cases and categorize your Cypress builds by build name, project name, and tags for easier analysis. Use the following keys to organize your tests.
 
 | Key          |  Description                                  | Type   |
 | ------------ | --------------------------------------------  | ------ |
@@ -285,8 +389,10 @@ You can name your test cases and categorize your Cypress builds by build number,
 }
 ```
 
-## Headless Browser
-You can run Headless tests with Cypress by the `headless` key to `true`.
+## Run Tests in Headless Mode
+
+
+Run your Cypress tests without a visible browser UI to speed up execution. Set the `headless` key to `true`.
 
 | Key      | Description               | Type    |
 | -------- | ------------------------- | ------- |
@@ -303,7 +409,9 @@ You can run Headless tests with Cypress by the `headless` key to `true`.
 ```
 
 ## Capture Network Logs
-You can generate Network logs with Cypress by setting the `network` key to `true`.
+
+
+Record the network packets exchanged during a run so you can debug requests and responses after the test. Set the `network` key to `true`.
 
 | Key |  Description | Type |
 | -------- | ------------ | -------- |
@@ -319,13 +427,16 @@ You can generate Network logs with Cypress by setting the `network` key to `true
 }
 ```
 
-## NPM Package Dependencies
-In order to run your tests on TestMu AI, we refer to your `package.json` and use those dependencies and devDependencies. Since, `package.json` may contain several dependencies which may not be required to run your Cypress tests. We recommend to use `npm_dependencies` parameter to list down the required dependencies to run your test, because it will reduce your build time on TestMu AI.
+## Install NPM Package Dependencies
 
-Below are the ways through which TestMu AI detects the dependencies which has to be installed before running the test on TestMu AI.
 
-#### Using `npm_dependencies`
-Inside `run_settings` of `lambdatest-config.json`, you can provide the list of NPM dependencies:
+To run your tests on TestMu AI, the platform reads your `package.json` and installs its dependencies and devDependencies. Because `package.json` can list several packages that your Cypress tests do not need, listing only the required packages in `npm_dependencies` reduces build time on TestMu AI.
+
+TestMu AI detects the dependencies to install before running the test in the following ways.
+
+**Using `npm_dependencies`**
+
+Inside `run_settings` of `lambdatest-config.json`, provide the list of NPM dependencies:
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
@@ -335,8 +446,9 @@ Inside `run_settings` of `lambdatest-config.json`, you can provide the list of N
 },
 ```
 
-#### Using `package.json`
-TestMu AI will automatically detects the dependencies that has to be installed from `package.json`.
+**Using `package.json`**
+
+TestMu AI automatically detects the dependencies to install from `package.json`.
 
 ```javascript title="package.json"
 "devDependencies": {
@@ -350,19 +462,25 @@ TestMu AI will automatically detects the dependencies that has to be installed f
 **note**
 It's recommended to use `npm_dependencies` instead of `package.json` because `package.json` may contain the dependencies which are not actually used while running the Cypress tests and also, installing these unwanted dependencies will increase the build time.
 
-#### Install npm packages via a tunnel
-Use the `npm_via_tunnel` flag to route npm install traffic through a tunnel. This is useful when installing packages from a private registry, or in a restricted environment where the public npm registry isn't directly reachable. Add it to `run_settings`:
+
+**Install npm packages via a tunnel**
+
+Use the `npm_via_tunnel` flag to route npm install traffic through a tunnel. This helps when installing packages from a private registry, or in a restricted environment where the public npm registry is not directly reachable. Add it to `run_settings`:
 
 ```bash
 "npm_via_tunnel": true
 ```
 
-You must already have a tunnel configured and running. To download private dependencies, see [Include Private Dependencies](/support/docs/private-dependencies-cypress/).
+You must already have a tunnel configured and running. To download private dependencies, see [how to use private dependencies in Cypress](/support/docs/private-dependencies-cypress/).
 
-## Specific Node Version
-TestMu AI allows you to specify the Node.js version for running your tests using the ``useNodeVersion`` capability in the `run_settings` section of the `lambdatest-config.json` file. This capability provides greater flexibility and ensures compatibility with your project's dependencies and environment.
+## Set a Specific Node Version
 
-> Supported Versions are 18, 20 and 22. The exact version will be used are `18.17.1`, `20.18.0`, and `22.11.0` respectively
+
+Pin the Node.js version your tests run on to match your project's dependencies and environment. Use the `useNodeVersion` capability in the `run_settings` section of the `lambdatest-config.json` file.
+
+
+Supported versions are 18, 20, and 22. The exact versions used are `18.17.1`, `20.18.0`, and `22.11.0` respectively.
+
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
@@ -370,11 +488,14 @@ TestMu AI allows you to specify the Node.js version for running your tests using
 }
 ```
 
-## Environment Variables
-You can set environment variables for your Cypress tests in three ways: via the Cypress config file, via `cypress.env.json`, or via the TestMu AI Cypress CLI. If you set variables via both the CLI and `cypress.env.json`, the `cypress.env.json` file is ignored and only the CLI values are used.
+## Set Environment Variables
 
-#### Via the config file
-**Cypress 9.** A sample `cypress.json`:
+
+Pass environment variables to your Cypress tests so specs can read runtime values such as base URLs and endpoints. You can set them in three ways: via the Cypress config file, via `cypress.env.json`, or via the TestMu AI Cypress CLI. If you set variables via both the CLI and `cypress.env.json`, the `cypress.env.json` file is ignored and only the CLI values are used.
+
+**Via the config file**
+
+For Cypress 9, use a sample `cypress.json`:
 
 ```bash
 {
@@ -388,7 +509,7 @@ You can set environment variables for your Cypress tests in three ways: via the 
 }
 ```
 
-**Cypress 10.** A sample `cypress.config.js`:
+For Cypress 10, use a sample `cypress.config.js`:
 
 ```bash
 module.exports = defineConfig({
@@ -414,7 +535,9 @@ cy.wait(3000)
 })
 ```
 
-#### Via `cypress.env.json`
+**Via `cypress.env.json`**
+
+Define the variables in a `cypress.env.json` file in your project root:
 
 ```bash
 {
@@ -424,9 +547,19 @@ cy.wait(3000)
 }
 ```
 
-#### Via the Cypress CLI
+**Via the Cypress CLI**
+
 Add variables with the `--envs` parameter:
 
 ```bash
 lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"
 ```
+
+## Related Cypress Guides
+
+
+Continue with the guides below to run and manage your Cypress tests on TestMu AI.
+
+- [Reference the Cypress CLI commands](/support/docs/cypress-cli-commands/) documents every CLI command and flag in one place.
+- [Choose supported browsers and operating systems](/support/docs/supported-browsers-and-os/) lists the browsers, versions, and platforms you can test on.
+- [Use private dependencies in Cypress](/support/docs/private-dependencies-cypress/) runs tests that need packages from a private registry.

@@ -1,8 +1,10 @@
-# Video Injection
+# How to Inject Video on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 5000+ real devices on the TestMu AI Real Device Cloud platform.
+Video Injection on TestMu AI feeds custom video into an app's camera during automated tests, letting you validate live streaming, real-time capture, identity verification, and video upload workflows across 5000+ real Android and iOS devices without any physical hardware setup.
+
+**Supported on:** Real devices
 
 This tool is ideal for testing features such as:
 
@@ -22,7 +24,11 @@ This section explains how to use Video Injection with App automation. This secti
 
 You can use the following curl command to upload any video of your choice to the TestMu AI cloud. Please note that we support only **MP4 format is only supported and the video can be 50 MB or less**.
 
+
+
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/video.mp4"" -F "type="video"" -F "custom_id="SampleVideo""`}
+
+
 
 Response of above cURL will be a JSON object containing the `media_url` of the format - lt://MEDIA123456789123456789 as shown below.
 
@@ -39,23 +45,59 @@ Response of above cURL will be a JSON object containing the `media_url` of the f
 
 You can use the appium capability to turn the video injection on in your application. Just add `"enableVideoInjection": True` in the desired capabilities while writing the automation script. By adding this capability the app undergoes Sensor Instrumentation, which was described earlier in the documentation. Also adding media url `"media": "lt://MEDIA123456789123456789"` in the capabilities to inject the video is now optional and can be passed in LambdaHook as mentioned in step 3.
 
+
+
+
+
+
   {`desired_capabilities = {
     "enableVideoInjection": True,
     "media": "lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", #Add media_url here (optional)
   }`}
 
+
+
+
+
+
+
+
   {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 desiredCapabilities.setCapability("enableVideoInjection", "true");`}
+
+
+
+
 
 ### Step 3: Inject the video
 
 Refer to the code snippets given below to upload the video with the action `VideoInjection`. Please make sure that the video needs to be injected before the camera is triggered in your application. This is due to the fact that the camera only captures the video injected at the last.
 
+
+
+
+
+
   {`driver.execute_script("lambda-video-injection=media_url") #Add media_url here`}
+
+
+
+
+
+
+
 
   {`driver.execute_script("lambda-video-injection=media_url") //Add media_url here`}
 
+
+
+
+
+
+
 **Use Case**: This feature can be used when you want to test injecting more than one video in single test at different instances. The video injected through above process will replace the video which you put in previous steps.
+
+
 
 ### Step 4: Capture the desired video through camera
 

@@ -10,6 +10,9 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
+
+
+
 ## Use Cases
 
 - Verify app behavior when the device requires a passcode for login or secure actions.
@@ -24,8 +27,11 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 | iOS      | 14 and above |
 | Android  | 11 and above |
 
+
+
 ### Android Devices
 Available on **all real devices** running on **version 11 and above**.
+
 
 ## Default Passcode
 - **iOS:**  `123456`
@@ -34,6 +40,8 @@ Available on **all real devices** running on **version 11 and above**.
 ## Accessing Device Passcode in Manual Testing
 
 **Step 1:** (**iOS only**) On the App Testing Dashboard, click **Advanced Settings** and enable the **Device Passcode** filter. This will refine the iOS device list to show only those with passcode support.
+
+
 
 **Step 2:** Start a manual testing session on your selected device (iOS or Android).
 - On **iOS** → Open the **iOS Settings** panel and toggle **Passcode** on.
@@ -50,6 +58,8 @@ Setup may take **15–30 seconds** depending on the platform.
   - Android: `1234`
 
 **Step 5:** Continue your app testing once the **passcode** is validated.
+
+
 
 - Passcode input is **not visible** in the stream for security reasons.
 - You may experience a blacked-out screen briefly during passcode entry.

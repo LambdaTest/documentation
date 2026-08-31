@@ -137,27 +137,52 @@ SmartUI handles standard HTML5 video elements:
 
 ## Best Practices
 
+
+
+
 **Allow Video Loading**
 
 Use appropriate `waitForTimeout` values to ensure videos are loaded before snapshots.
+
+
+
+
 
 **Test Video Pages**
 
 Verify that video pages work correctly with SmartUI before running full test suites.
 
+
+
+
+
 **Combine with Other Features**
 
 Use `ignoreDOM` to exclude video controls if needed.
+
+
+
+
 
 **Document Video Content**
 
 Note which pages contain videos for better test planning.
 
+
+
+
+
 **Review First Frames**
 
 Occasionally review captured first frames to ensure they represent the intended baseline.
 
+
+
+
 ## Troubleshooting
+
+
+
 
 **Issue: Videos Not Captured Correctly**
 
@@ -175,6 +200,9 @@ await driver.sleep(2000); // Additional wait for first frame
 await smartuiSnapshot(driver, 'Video Page');
 ```
 
+
+
+
 **Issue: False Positives from Video Areas**
 
 **Symptoms**: Video areas show differences even when page design is unchanged
@@ -184,6 +212,9 @@ await smartuiSnapshot(driver, 'Video Page');
 2. Use `ignoreDOM` to exclude video elements if first frame capture isn't sufficient
 3. Consider using layout comparison mode for pages with many videos
 
+
+
+
 **Issue: Embedded Videos (YouTube, Vimeo)**
 
 **Symptoms**: Embedded videos via iframe may not be captured correctly
@@ -192,6 +223,10 @@ await smartuiSnapshot(driver, 'Video Page');
 1. Embedded videos in iframes are handled automatically
 2. If issues persist, consider using `ignoreDOM` for iframe areas
 3. Check if iframe content is accessible (CORS policies may affect this)
+
+
+
+
 
 ## Additional Resources
 

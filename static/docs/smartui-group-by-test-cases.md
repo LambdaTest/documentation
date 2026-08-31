@@ -8,6 +8,8 @@ This guide’s **recommended flow** is **Selenium on the grid + SmartUI Hooks** 
 
 It also covers how to get **one Automation / SmartUI build** with **multiple captures** (for example, five logical test cases), how to use **Group by → Test Case** in SmartUI, the **Automation → SmartUI Screenshots** tab, and **bulk** approve or reject. An **optional** Node SDK + `visual: true` flow is included for **Web-only** SmartUI projects.
 
+
+
 ## Audience & Prerequisites
 
 - **Audience:** QA Engineers and Developers running automated visual tests on TestMu AI.
@@ -19,7 +21,11 @@ It also covers how to get **one Automation / SmartUI build** with **multiple cap
 - **Prerequisites (optional: Node SDK + `visual: true`):** The SmartUI project must be **Web** type; **Omni** names with **`smartUIProjectName`** + **`visual: true`** cause hub `failed to validate project`, see [Omni vs Web](#omni-vs-web). Prefer the **Hooks** flow above for Omni / Hooks projects.
 - On the **grid**, grouping metadata usually comes from session **`name`**, suite/project, or runner test titles. For **local** `smartui exec` + Cypress or Playwright, see the SmartUI SDK docs.
 
+
 **`smartui capture` (static URLs)** uploads screenshots to a build but does **not** attach automation test-case metadata. To validate **Group by → Test Case** with real folders, run **automation on the grid** (for example the [Java Hooks flow](#hooks-java-webhook), or Cypress/Playwright with **`smartui exec`**) so captures are tied to test/session identity.
+
+
+
 
 ## Recommended flow: Java Selenium + SmartUI Hooks {#hooks-java-webhook}
 
@@ -83,6 +89,8 @@ Use **`mvn versions:display-dependency-updates`** only if you want to inspect de
 
 For more Java options, see the SmartUI Selenium Java SDK.
 
+
+
 ## Multiple test cases, one build (Hooks pattern)
 
 Use this when you want **one Automation / SmartUI build** with **several** captures that can be reviewed under **Group by → Test Case**.
@@ -94,6 +102,8 @@ Use this when you want **one Automation / SmartUI build** with **several** captu
 3. **Distinct `screenshotName`** values for each **`smartui.takeScreenshot`** call so each capture is a separate asset in the build.
 4. **Test case folders:** vary the session **`name`** in `LT:Options` per test method or per parallel session when you need multiple **Test Case** groups (same pattern as multi-session Selenium suites). For **one session** with multiple hooks, grouping still uses automation metadata from that session; align **`name`** / suite with your runner (JUnit/TestNG method names, etc.) per your organization’s conventions.
 5. You can run sessions **sequentially or in parallel** as long as **`build`** and **`smartUI.project`** stay consistent.
+
+
 
 ## Optional: Node SDK + `visual: true` (Web SmartUI projects only)
 
@@ -110,9 +120,13 @@ Pattern: constant **`build`**, unique **`name`** per session, **`visual: true`**
 - Use **`smartui exec`** (or your CI job) with a **single `--buildName`** for the whole suite.
 - Map each **`it` / test** (or file) to a unique snapshot name; consult the SmartUI SDK docs for `testName`, `suiteName`, or `testCaseId` on your stack.
 
+
+
 ## Viewing Grouped Screenshots in SmartUI
 
 By default, screenshots in a SmartUI build are listed flatly.
+
+
 
 To view them hierarchically:
 
@@ -120,16 +134,26 @@ To view them hierarchically:
 2. At the top right of the build view, click the **Group By** dropdown menu.
 3. Select **Test Case**.
 
+
+
 4. Your screenshots will now be grouped into folders representing each automation test case.
+
+
 
 ### Expanding and Collapsing Groups
 
 - Click the **arrow icon** or the **folder name** next to a test case to expand or collapse its screenshots.
 - The group header provides a summary, including the total number of screenshots, the number of unreviewed/approved/rejected screenshots, and the average mismatch percentage for that specific test case.
 
+
+
+
+
 ## The Automation SmartUI Tab
 
 You can review visual differences without leaving your test automation execution context.
+
+
 
 1. Navigate to your **Automation** dashboard and select a test run.
 2. In the test detail view, locate the **SmartUI Screenshots** tab alongside the traditional Overview, Logs, and Network tabs.
@@ -137,9 +161,13 @@ You can review visual differences without leaving your test automation execution
 4. Click the tab to view a thumbnail grid of all screenshots. Each thumbnail displays its status, mismatch percentage, and environment details.
 5. Click any thumbnail to open the **Comparison Viewer Modal** to perform side-by-side, slider, or diff-overlay visual inspections right from the Automation page.
 
+
+
 ## Bi-directional Navigation
 
 You can seamlessly jump between SmartUI and Automation contexts:
+
+
 
 ### From SmartUI to Automation
 If you are reviewing a test group in SmartUI and want to see the automation logs, click the **View in Automation →** link located under the group header. This will open the specific automation test detail page with the "SmartUI Screenshots" tab pre-selected.
@@ -147,11 +175,15 @@ If you are reviewing a test group in SmartUI and want to see the automation logs
 ### From Automation to SmartUI
 If you are in the Automation dashboard and prefer the full-screen SmartUI review experience, click the **Open in SmartUI →** link at the top of the SmartUI tab. This will navigate you to the SmartUI Build Review page with the relevant test group already expanded and focused.
 
+
+
 ## Executing Bulk Actions
 
 When reviewing a large number of screenshots, you can triage them efficiently using bulk actions at the test case group level.
 
 **Group by Test Case** uses the **same bulk-action workflow** as the standard (flat) build view: select screenshots via the **group checkbox** on a test-case folder (or pick individual thumbnails), then use **Approve All** / **Reject All** on the floating action bar. You are only changing how screenshots are **organized**, not which bulk controls are available.
+
+
 
 1. Ensure your view is grouped by **Test Case**.
 2. To select all screenshots within a test case, check the **Group Checkbox** located on the test group header.
@@ -160,11 +192,17 @@ When reviewing a large number of screenshots, you can triage them efficiently us
 5. Click **✗ Reject All** to reject the selected visual differences.
 6. To cancel your selection, click the **✕** button on the action bar.
 
+
 You can expand a group and check or uncheck individual screenshots before applying a bulk action. The group checkbox will show an indeterminate state `[-]` if only a partial selection is made.
+
+
+
 
 ## Status Filters
 
 To focus your review efforts, use the status filter pills at the top of the SmartUI build view. These filters work seamlessly with the grouped view:
+
+
 
 - **All (Gray):** Displays all screenshots.
 - **To Review (Amber):** Displays only screenshots with unreviewed mismatches.
@@ -172,6 +210,8 @@ To focus your review efforts, use the status filter pills at the top of the Smar
 - **Rejected (Red):** Displays only rejected screenshots.
 
 Empty test groups will automatically hide if none of their screenshots match the selected filter.
+
+
 
 ## Troubleshooting
 
@@ -205,11 +245,15 @@ Empty test groups will automatically hide if none of their screenshots match the
 **Likely Cause:** Static URL capture does not send automation test metadata.
 **Fix:** Run the five scenarios through **Automation + SDK** or **`smartui exec`**, then open the build and set **Group By → Test Case**.
 
+
+
 ## Limits and Notes
 
 - Group actions are optimized for performance and will complete in under 2 seconds for up to 50 items. For larger test suites, processing might briefly pause.
 - When navigating via deep links, your current state (including applied filters and zoom levels) is preserved.
 - "View in Automation" links will only be available if the visual captures were tied to a valid automation session ID on the platform.
+
+
 
 ## Related Resources
 

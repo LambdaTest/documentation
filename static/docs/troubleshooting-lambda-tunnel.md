@@ -6,6 +6,8 @@ TestMu AI Tunnel helps in establishing an SSH connection between your local mach
 
 If due to some unfortunate reason, you are unable to perform cross browser testing using TestMu AI Tunnel then this document will help you troubleshoot the most common challenges.
 
+
+
 Oops !! Facing issue while testing your locally hosted application through TestMu AI Tunnel? Here are a few guidelines for you.
 
 Before proceeding, here are some of the common issues:
@@ -22,7 +24,11 @@ Before proceeding, here are some of the common issues:
 
 ## 1. Localhost Refused To Connect
 
+
+
 After configuring the tunnel, you might get into the error similar to the below screenshot:
+
+
 
 The error "localhost refused to connect" occurs because of using the URL as localhost which is unfortunately not compatible with various browsers and browser versions. We are deliberately eliminating the URL localhost and recovering it with localhost.lambdatest.com or your local system IP.
 
@@ -32,9 +38,13 @@ however, URL: `https://localhost.lambdatest.com/demo.html` or `10.0.0.15/demo.ht
 
 ## 2. Invalid Host Header
 
+
+
 While testing an application hosted on your local machine, you may receive an "Invalid Host Header" error message when testing on TestMu AI using a local connection. This error is most commonly caused by a misconfiguration of the application server that causes it to reject non-local connections or reject requests directed at hostnames other than localhost(or any custom one set)
 
 Since, web applications are now built with various different kinds of frameworks like angular, react etc; In order to test it using tunnel the command used to run your web app needs to modified in your project manifest file i.e. "package.json"
+
+
 
 - **Angular Framework Project**: For Angular framework based web app, ideally you might be using "ng serve" or "npm start" to run your web application or your package.json file configuration would be set as "ng serve" in order to start your web app and as usual, it would be working fine on local browser. However, this might throw an "Invalid Host Header"error or error something related to the invalid host in a Real Time Test.
 
@@ -48,13 +58,23 @@ This would help you avoiding "Invalid Host Header" error.
 
 ## 3. WordPress - CSS Not Loading
 
+
+
 While testing your local web app built through WordPress, you may find issue with the rendering of CSS, similar to the below screenshot:
+
+
 
 The general solution for this is to update the WordPress Address and Site Address on the General Settings tab in the WordPress dashboard with your system IP address rather than the default of localhost, then everything will be emitted relative to that. Here is a screenshot for your further reference:
 
+
+
 By applying the above changes, you would find the CSS loading issue as resolved. Below is a screenshot after the mentioned changed:
 
+
+
 ## 4. IP Whitelisting
+
+
 
 If you are testing a server that requires IP whitelisting, then you just have to set up a Local Testing connection and whitelist the below few IP’s for the respective domain:
 
@@ -69,7 +89,10 @@ If you are testing a server that requires IP whitelisting, then you just have to
 - 13.126.37.58
 - 3.66.78.89
 
+
 ## 5. Custom Host Name
+
+
 
 Because of some firewall restrictions, your web application might not be accessible on some other servers even after whitelisting the IP’s and configuring the tunnel, in such case you need to make an entry in the hosts file which is used to map hostnames to IP addresses. With the hosts file, you can change the IP address that you resolve a given domain name. This change only affects your own computer without affecting how the domain is resolved worldwide.
 
@@ -87,11 +110,17 @@ Let’s say that you wish to resolve **mydomain.com** to the IP address **10.20.
 
 ## 6. Enable Verbose Logging
 
+
 The `- v`  flag enables Verbose logging on the console. You can use this to log the HTTP headers & requests or to debug the TestMu AI Tunnel connection.
 
 The requests are also logged into a log file `lt.log` which is created in the same working directory as the TestMu AI Tunnel binary. You can also specify the tunnel log file name using the `--logFile` flag.
 
+
+
+
 ## 7. LT Can’t Be Opened Because Apple Cannot Check It For Malicious Software
+
+
 
 Catalina OS users may get the below error from the command line while trying to configure the TestMu AI Tunnel to test their locally hosted web pages:
 "LT can't be opened because Apple cannot check it for malicious software"

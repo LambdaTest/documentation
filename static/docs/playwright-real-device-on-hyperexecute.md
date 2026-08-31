@@ -19,16 +19,23 @@ Download or Clone the code sample for the Playwright Real Device from the TestMu
 
  View on GitHub
 
+
 ### Configure Desired Capabilities
 Update your test configuration with the required capabilities.
+
+
 
 ```javascript title="playwright-android-real-device.js" reference
 https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample/blob/main/playwright-android-real-device.js
 ```
 
+
+
 ```javascript title="playwright-ios-real-device.js" reference
 https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample/blob/main/playwright-ios-real-device.js
 ```
+
+
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 Capabilities Generator.
 
@@ -55,13 +62,20 @@ You can download the CLI for your desired platform from the below mentioned link
 ## Step 3: Configure YAML in your Test Suite
 Use the sample YAML below to configure your execution:
 
+
+
 ```yaml title="hyperexecute_android.yaml" reference
 https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample/blob/main/hyperexecute_android.yaml
 ```
 
+
+
 ```yaml title="hyperexecute_ios.yaml" reference
 https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample/blob/main/hyperexecute_ios.yaml
 ```
+
+
+
 
 To Run test on Mobile Containers in a Particular Region
 
@@ -77,23 +91,34 @@ reservation: false
 ```
 - If **`reservation : false`**, it means that it will allocate the device from any region. If you want to allocate the device of any specific region, keep the **`reservation : true`**.
 
+
 ## Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
 
+
+
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+
+
 
 ## Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
+
+
 ## Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
+
+
+
 ## Using the Playwright Agent Skill with TestMu AI
+
 
 The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
@@ -116,7 +141,9 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
+
 ### Installing Playwright Agent Skill
+
 
 Install a Playwright Agent Skill using the command below:
 

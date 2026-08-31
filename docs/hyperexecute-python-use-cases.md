@@ -1,7 +1,8 @@
 ---
 id: hyperexecute-python-use-cases
-title: HyperExecute Python Use Cases
-sidebar_label: Python Use Cases
+title: HyperExecute Python Use Cases
+toc_max_heading_level: 2
+sidebar_label: "Python Use Cases"
 description: Explore Python test automation use cases on HyperExecute with PyTest, Behave, and Robot Framework to streamline your daily testing pipelines.
 keywords:
   - TestMu AI Hyperexecute

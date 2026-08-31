@@ -1,6 +1,6 @@
 ---
 id: camera-image-injection
-title: Camera Image Injection
+title: How to Inject Camera Images on TestMu AI
 sidebar_label: Camera Image Injection
 description: Simulate camera input to test camera-based features like QR scanning and document capture without needing physical devices.
 keywords:
@@ -25,8 +25,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -47,14 +45,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Camera Image Injection",
+          "name": "How to Inject Camera Images on TestMu AI",
           "item": `${BRAND_URL}/support/docs/camera-image-injection/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **5000+ real devices** on the <BrandName /> Real Device Cloud platform.
+Camera image injection on TestMu AI feeds custom images into an app's camera during automated tests, letting you validate QR scanning, barcode reading, and document capture across real Android and iOS devices without physical hardware or any manual scanning setup.
+
+**Supported on:** Real &amp; Virtual devices
 
 This tool is ideal for testing features such as:
 
@@ -214,7 +213,7 @@ You need to first add a logic to inject the uploaded image in the script. Therea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Camera Image Injection
+        How to Inject Camera Images on TestMu AI
       </span>
     </li>
   </ul>

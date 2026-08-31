@@ -1,8 +1,8 @@
 ---
 id: appium-androidtv
-title: Android TV Automation
+title: How to Automate Android TV Apps on TestMu AI
 sidebar_label: Android TV
-description: Learn how to automate Android TV apps using Appium with a step-by-step tutorial and sample Python code.
+description: Automate Android TV apps with Appium on TestMu AI Real Device Cloud, with a step-by-step tutorial and sample Python code.
 keywords:
   - android tv
   - appium
@@ -22,7 +22,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
@@ -44,17 +43,17 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Apple TV With Appium",
-          "item": `${BRAND_URL}/support/docs/appium-appletv/`
+          "name": "How to Automate Android TV Apps on TestMu AI",
+          "item": `${BRAND_URL}/support/docs/appium-androidtv/`
         }]
       })
     }}
 ></script>
-<RealDeviceTag value="Real Device" /> 
 ## Tutorial To Run Your First Test On <BrandName />
 ---
-As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Android TV testing provides broader device coverage, enhances user experience by validating remote-based navigation and voice commands, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Android TV models. 
-In this guide, you will learn how to set up and run your **Android TV** automation testing scripts with **Appium** on the **<BrandName /> Real Device Cloud platform**.
+Automating Android TV apps on TestMu AI runs Appium scripts against real smart TV devices in the cloud, validating remote-based navigation, voice commands, and app behavior across many Android TV models while removing repetitive manual checks and expanding device coverage.
+
+**Supported on:** Real devices
 
 :::note Plus Plan Feature
 This feature is available exclusively with the **Private Cloud** Plan.
@@ -200,8 +199,8 @@ Shown below is an execution snapshot from TestMu AI Dashboard:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Roku TV With Appium
-</span>
+        How to Automate Android TV Apps on TestMu AI
+      </span>
     </li>
   </ul>
 </nav>

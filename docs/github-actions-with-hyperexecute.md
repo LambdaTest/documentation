@@ -1,8 +1,9 @@
 ---
 id: github-actions-with-hyperexecute
-title: GitHub Actions Integration
+title: GitHub Actions Integration
+toc_max_heading_level: 2
 hide_title: true
-sidebar_label: GitHub Actions
+sidebar_label: "GitHub Actions"
 description: TestMu AI now integrates with GitHub Actions Pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - testmu ai integrations

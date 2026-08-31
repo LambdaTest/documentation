@@ -17,9 +17,12 @@ These patterns apply to every CI system; the platform-specific recipes below dif
 **Chrome Requirement**
 The runner spawns Chrome itself, so the CI image must have Chrome available on `PATH`. If your runner image cannot install Chrome, point Kane CLI at a remote browser with `--cdp-endpoint ` or `--ws-endpoint ` (for example, a TestMu AI `wss://` endpoint).
 
+
 ## Authentication in CI/CD
 
 Pass credentials directly on the run command using environment variables from your secrets store:
+
+
 
 {`kane-cli run "Verify checkout flow completes" \\
   --url https://staging.myapp.com \\
@@ -28,6 +31,8 @@ Pass credentials directly on the run command using environment variables from yo
   --headless \\
   --agent \\
   --timeout 300`}
+
+
 
 Get your username and access key from the TestMu AI [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
@@ -48,7 +53,13 @@ Get your username and access key from the TestMu AI [dashboard](https://www.test
 - Use `--variables-file`: load test data from a committed config file
 - Store credentials as secrets: never hardcode in pipeline files
 
+
+
 ## Platform Guides
+
+
+
+
 
 Store `LT_USERNAME` and `LT_ACCESS_KEY` as repository secrets under **Settings > Secrets and variables > Actions**.
 
@@ -94,6 +105,10 @@ name: kane-test-logs
 path: ~/.testmuai/kaneai/sessions/
 ```
 
+
+
+
+
 Define `LT_USERNAME` and `LT_ACCESS_KEY` as masked CI/CD variables in your project settings.
 
 ```yaml
@@ -127,6 +142,10 @@ paths:
 when: always
 expire_in: 7 days
 ```
+
+
+
+
 
 Store credentials in **Jenkins > Manage Jenkins > Manage Credentials**. The two `credentials(...)` IDs refer to Username/Password or Secret Text credentials configured in Jenkins.
 
@@ -168,6 +187,10 @@ allowEmptyArchive: true
 
 The pipeline fails on any non-zero exit code from the `sh` step, which matches Kane CLI's exit-code semantics.
 
+
+
+
+
 Add `LT_USERNAME` and `LT_ACCESS_KEY` as repository variables under **Repository settings > Repository variables**.
 
 ```yaml
@@ -191,6 +214,10 @@ script:
 artifacts:
 - ~/.testmuai/kaneai/sessions/**
 ```
+
+
+
+
 
 The shell command below works in any CI that can run a Linux container with Chrome installed:
 
@@ -216,6 +243,12 @@ kane-cli run "Open the pricing page and verify the Pro plan is listed" \
 ```
 
 `--cdp-endpoint ` works the same way for browsers that expose a Chrome DevTools Protocol URL. With either flag, Kane CLI skips its own Chrome launch and connects to the endpoint you provide.
+
+
+
+
+
+
 
 ## Running Multiple Tests
 
@@ -257,6 +290,8 @@ echo "Failed tests: ${FAILED_TESTS[*]}"
 exit 1
 fi
 ```
+
+
 
 ## Variables in CI/CD
 

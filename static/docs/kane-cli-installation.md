@@ -6,6 +6,9 @@ Kane CLI is published to the public npm registry as `@testmuai/kane-cli` and to 
 
 ## Install
 
+
+
+
 Requires Node.js 18 or higher.
 
 ```bash
@@ -13,6 +16,9 @@ npm install -g @testmuai/kane-cli
 ```
 
 Platform-specific native binaries are installed automatically for your OS. No additional configuration is needed.
+
+
+
 
 For macOS and Linux. Node.js is not required.
 
@@ -22,7 +28,12 @@ brew install LambdaTest/kane/kane-cli
 
 Homebrew also installs Google Chrome automatically through the `google-chrome` cask, so no additional setup is needed.
 
+
+
+
+
 Kane CLI requires **Google Chrome** installed on your system. Chrome is used as the automation browser and is launched automatically when you run a test. The npm install additionally requires **Node.js 18 or higher**. The Homebrew install bundles Chrome for you and needs no Node.js.
+
 
 ## Verify
 
@@ -41,7 +52,9 @@ If the command is not found, your shell is not seeing the npm global `bin` direc
 | Linux | x64 | ✅ |
 | Windows | x64 | ✅ |
 
+
 **Mobile testing**, the iOS Simulator and the Android Emulator, is supported on **macOS Apple Silicon (arm64) only** for the initial release. See [Mobile Testing](/support/docs/kane-cli-mobile/) for the simulator and emulator prerequisites.
+
 
 ## Update
 

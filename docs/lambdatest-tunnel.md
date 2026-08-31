@@ -63,7 +63,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 | [Local Testing for Windows](/support/docs/local-testing-windows/) | Step-by-step guide for setting up <BrandName /> Tunnel on Windows OS.|
 | [Local Testing for macOS](/support/docs/local-testing-macos/) | Step-by-step instructions for running the tunnel on macOS. |
 | [Real-Time Locally Hosted Pages](/support/docs/real-time-locally-hosted-pages/) | Perform interactive, real-time testing of locally hosted sites.|
-| [Testing Locally Hosted Apps for App Automation](/support/docs/testing-locally-hosted-apps/) | Use Tunnel to test private apps during mobile automation. |
+| [Testing Locally Hosted Apps for App Automation](/support/docs/getting-started-with-appium-testing/#test-locally-hosted-apps) | Use Tunnel to test private apps during mobile automation. |
 
 ## Configuration and Modifiers
 | Title | Description|

@@ -1,6 +1,6 @@
 ---
 id: regular-expression-espresso
-title: Regular Expression - Espresso
+title: How to Use REGEX for Espresso Devices on TestMu AI
 # hide_title: true
 sidebar_label: Regular Expression
 description: If your chosen device for testing on TestMu AI is unavailable, use REGEX to broaden the search for alternative devices to run espresso test.
@@ -32,12 +32,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "App Automation: Regular Expression",
+          "name": "How to Use REGEX for Espresso Devices on TestMu AI",
           "item": `${BRAND_URL}/support/docs/regular-expression-espresso/`
         }]
       })
     }}
 ></script>
+
+Using REGEX for Espresso device selection on TestMu AI lets you match any available device instead of a fixed one. When your chosen device is busy, pass a pattern in the `deviceName` capability so TestMu AI allots any match automatically.
 
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 
