@@ -56,49 +56,47 @@ It is a read only view. Nothing in it can approve, reject, promote or move a bas
 
 On the **Projects** screen, open the overflow menu on a project row and select **Baseline History**. It sits directly after **Audit Logs**.
 
-## What the three screens show
+<img loading="lazy" className='doc_img' width="1000" height="605" src={require('../assets/images/smart-visual-testing/baseline-history/project-menu-baseline-history.png').default} alt="Project row overflow menu in SmartUI showing Pin Project, Copy Project Token, Audit Logs, Baseline History and Delete Project" />
 
-### 1. Current and past baselines
+## Current and past baselines
 
 The first screen is the project's baseline lineage.
 
-- **Current baseline**, with the build it points at, how long it has held the role, and the state it is in.
-- **Which later builds ran without displacing it**, so a build that found changes and was never approved is visible as a build that did not become the baseline, rather than as a gap.
-- **The composition of the baseline**: how many reference images were captured in that build, and how many were promoted into it from elsewhere by an approval or a merge.
-- **A grid of reference screenshots**, each card carrying its own provenance.
-- **Past baselines**, newest first, with how long each held the role and which build superseded it.
+The left rail names the **current baseline**, the build it points at and how long it has held the role, and lists **past baselines** underneath with a count. The right pane opens on the current baseline: the build name and number, the period it has been the baseline for, and the reference images that build holds, each card showing its state and how many variants it covers.
 
-### 2. Variant picker
+<img loading="lazy" className='doc_img' width="1180" height="684" src={require('../assets/images/smart-visual-testing/baseline-history/current-and-past-baselines.png').default} alt="Baseline History showing the current baseline build in the left rail with one past baseline, and the four reference screenshots that build holds" />
 
-Selecting a screenshot opens its variants, grouped by resolution with one row per browser.
+A build that ran and found changes but was never made the baseline does not appear here. Only builds that actually held the role are listed, which is what makes the rail a lineage rather than a build list.
 
-A variant is the unit the comparison engine actually keys on:
+## The timeline for one variant
+
+Selecting a reference image opens its timeline. The header states where the live reference lives right now: whether it is the current baseline, which build it belongs to, when it was captured, and the variant it belongs to.
+
+A variant is the unit the comparison engine keys on:
 
 `Screenshot Name` + `Browser` + `Resolution`
 
-One screenshot captured on two browsers at two viewports is four variants, and each of them can have a different history. Picking the variant first is what stops the timeline from mixing four unrelated stories into one.
+One screenshot captured on two browsers at two viewports is four variants, and each of them can have a different history. The browser and resolution dropdowns above the timeline switch between them, and **Events** and **Users** narrow a long history to the change or the person you are chasing.
 
-### 3. Evolution timeline
+<img loading="lazy" className='doc_img' width="1180" height="453" src={require('../assets/images/smart-visual-testing/baseline-history/variant-timeline.png').default} alt="Baseline History timeline for the Home screenshot on chrome at 1366, listing baseline screenshot created and removed from baseline events with actor, time and build" />
 
-The timeline is scoped to a single variant and lists every event that touched it, with its effect on the baseline stated plainly:
+Every entry names what happened, who caused it, when, and the build it happened in, with a plain description of the effect on the baseline. Expanding an entry shows the reference image as it stood after the event, alongside the image it replaced where there was one.
 
-- The build that first captured the reference image.
-- Pointer moves, where the project baseline moved from one build to another.
-- Image replacements, showing both the promoted image and the image it displaced.
-- Approvals, including automatic approvals recorded at a 0.00% difference.
-- Rejections.
-- Build level approvals that swept the variant up with everything else in the build.
+<img loading="lazy" className='doc_img' width="1180" height="665" src={require('../assets/images/smart-visual-testing/baseline-history/timeline-event-expanded.png').default} alt="Expanded Baseline History event showing the reference image, a note that there was no previous image to compare, and the build and actor that placed it" />
 
-A panel stays pinned beside the timeline showing where the live reference image actually lives: the build it belongs to, the build that captured it, the action that placed it there and who performed that action.
+The full walkthrough, from the baseline lineage to a single event:
+
+<img loading="lazy" className='doc_img' width="900" height="522" src={require('../assets/images/smart-visual-testing/baseline-history/baseline-history-walkthrough.gif').default} alt="Walkthrough of Baseline History moving from current and past baselines, to the timeline for one variant, to an expanded event" />
+
+:::info What is recorded
+Events are recorded for the actions that actually change a reference image or move the baseline, such as a build becoming the baseline or a screenshot being promoted into it. Approving a screenshot in a build that is not the baseline records no event, because it does not change the reference image. For the approval and rejection trail itself, use [Audit Logs](/support/docs/smartui-audit-logs-annotations/).
+:::
 
 ## How the history is derived
 
 Baseline History does not maintain a separate record of its own. Every screen is derived at read time from the builds, approvals and baseline pointers the project already has, using the same rule the comparison engine uses to resolve a baseline.
 
-Two consequences are worth knowing:
-
-- **Deleting a build removes it from the history**, because the history is a view over the builds that exist, not an append only log kept beside them.
-- **The lineage always agrees with what the comparison engine did**, because both read the same pointers. If a build shows a baseline you did not expect, the timeline shows the event that put it there.
+The consequence worth knowing is that the lineage always agrees with what the comparison engine did, because both read the same pointers. If a build compared against a baseline you did not expect, the timeline holds the event that put that reference in place.
 
 For the approval actions themselves, with actor and timestamp, see [Audit Logs and Annotations](/support/docs/smartui-audit-logs-annotations/).
 
@@ -108,7 +106,7 @@ The pattern that brings most teams to this screen is a comparison that ran again
 
 1. Open **Baseline History** for the project and read the **current baseline** block. If the build named there is not the build you expected, the answer is already on this screen.
 2. Check **past baselines**. The entry that superseded the build you expected names the build that took over and when.
-3. Open the screenshot, then the variant that surprised you. Browser and resolution are part of the key, so confirm you are looking at the same variant your test captured.
+3. Open the screenshot, then set the browser and resolution dropdowns to the variant your test captured. Both are part of the key, so a different combination is a different history.
 4. Read the timeline from the bottom. The first event that changed the reference image after the point you trusted is the one to take back to the person who performed it.
 
 ## Availability
