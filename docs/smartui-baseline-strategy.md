@@ -82,9 +82,13 @@ Single Baseline does not discard git metadata. Branch, commit and author are sti
 1. On the **Projects** screen, select **New Project**.
 2. Enter the project name, approvers and tags as usual.
 3. In **Baseline Strategy**, at the bottom of the drawer, select **Git Strategy** or **Single Baseline**.
-4. Select **Create**.
+4. Select **Create Project**.
+
+<img loading="lazy" className='doc_img' width="998" height="1320" src={require('../assets/images/smart-visual-testing/baseline-strategy/new-project-baseline-strategy.png').default} alt="New Project drawer in SmartUI with the Baseline Strategy fieldset offering Git Strategy, tagged Default and selected, and Single Baseline" />
 
 The strategy each project uses is shown as a chip on its row in the project list, next to the build count.
+
+<img loading="lazy" className='doc_img' width="1180" height="132" src={require('../assets/images/smart-visual-testing/baseline-strategy/project-list-strategy-chips.png').default} alt="Two project rows in the SmartUI project list, one chipped Single Baseline and one chipped Git Strategy" />
 
 </TabItem>
 
@@ -111,6 +115,10 @@ If `baselineStrategy` is omitted, the project is created with `git_branching`.
 
 ## The choice is permanent
 
+Project Settings shows the strategy the project was created with as a read only row.
+
+<img loading="lazy" className='doc_img' width="1180" height="151" src={require('../assets/images/smart-visual-testing/baseline-strategy/project-settings-baseline-strategy.png').default} alt="Baseline Strategy row in SmartUI Project Settings reading The baseline model this project was created with. It cannot be changed, above a Git Strategy chip" />
+
 The strategy is accepted only when the project is created. A later attempt to change it through Project Settings or through the API is rejected:
 
 ```json
@@ -135,11 +143,21 @@ Two controls change the lookup:
 - [Smart Git](/support/docs/smartui-smart-git-strategy/) (`SMART_GIT=true`) swaps the lookup to the build's own branch, so a branch compares against its own last approved build.
 - `--baselineBranch <name>` overwrites the project's baseline branch. It is a project level setting, not a per run override.
 
+The build list stays one chronological list, and each build carries the branch it ran on.
+
+<img loading="lazy" className='doc_img' width="1180" height="237" src={require('../assets/images/smart-visual-testing/baseline-strategy/git-strategy-build-list.png').default} alt="Build list in a Git Strategy project showing two builds in one chronological list, each with its git branch on the card" />
+
 ### Single Baseline
 
 The project holds one baseline build. The first build in the project becomes it and is approved automatically. Every later build, on any branch, is compared against that same build, and the build list separates the current **Baseline Build** from **Non Baseline Build** entries.
 
-To move the baseline to a different build, use **Mark as Baseline** on the build, or promote individual screenshots with **Merge to Baseline**. `--baselineBuild <build name>` still works for a one off comparison against a named build.
+<img loading="lazy" className='doc_img' width="1180" height="351" src={require('../assets/images/smart-visual-testing/baseline-strategy/single-baseline-build-list.png').default} alt="Build list in a Single Baseline project split into a Baseline Build section and a Non Baseline Build section, with a Mark as Baseline action on the selected build" />
+
+To move the baseline to a different build, use **Mark as Baseline** on the build, or run the build with `--markBaseline`. Individual screenshots can be promoted into the current baseline with **Merge to Baseline**, and `--baselineBuild <build name>` still works for a one off comparison against a named build.
+
+:::warning Approving a build does not move the baseline
+In a Single Baseline project the baseline is a build you point at, not the last build anyone approved. Approving the screenshots in a non baseline build sets that build to Approved and leaves the baseline where it is, so the next run still compares against the same reference. Use **Mark as Baseline** when you want the new state to become the reference.
+:::
 
 `SMART_GIT` and `--baselineBranch` have no effect in a Single Baseline project. Sending them does not fail the run, it simply does not change which build is used.
 
