@@ -58,7 +58,11 @@ This document outlines how you can leverage the features like mark as bug, chang
 </video>
 
 ## Device Controls
-This transcend basic volume adjustments and lock/unlock functionalities. It empowers you to interact with the emulated ChromeOS device programmatically, automating tasks and integrating them within your testing scripts. This gives you fine-grained control over the device's state, tailoring the testing environment to your specific needs.
+The Device Control feature allows you tp perform certain actions with your device  within your current test session:
+
+- **Home:** Return to the device's home screen instantly during your test session. This is useful for testing how your app behaves when sent to the background and resumed, or for navigating between apps without ending the session.
+- **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
+- **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
 <video class="right-side" width="80%" controls id="vid">
 <source src= {require('../assets/videos/real-time/chromeos-app/device-control.mp4').default} style={{ height: '300px' }} type="video/mp4" />
