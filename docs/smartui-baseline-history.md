@@ -78,18 +78,31 @@ A variant is the unit the comparison engine keys on:
 
 One screenshot captured on two browsers at two viewports is four variants, and each of them can have a different history. The browser and resolution dropdowns above the timeline switch between them, and **Events** and **Users** narrow a long history to the change or the person you are chasing.
 
-<img loading="lazy" className='doc_img' width="1180" height="453" src={require('../assets/images/smart-visual-testing/baseline-history/variant-timeline.png').default} alt="Baseline History timeline for the Home screenshot on chrome at 1366, listing baseline screenshot created and removed from baseline events with actor, time and build" />
+<img loading="lazy" className='doc_img' width="1180" height="573" src={require('../assets/images/smart-visual-testing/baseline-history/variant-timeline.png').default} alt="Baseline History timeline for the Home screenshot on chrome at 1366, listing a screenshot moved to baseline event above baseline screenshot created and removed from baseline entries" />
 
-Every entry names what happened, who caused it, when, and the build it happened in, with a plain description of the effect on the baseline. Expanding an entry shows the reference image as it stood after the event, alongside the image it replaced where there was one.
+Every entry names what happened, who caused it, when, and the build it happened in, with a plain description of the effect on the baseline.
 
-<img loading="lazy" className='doc_img' width="1180" height="665" src={require('../assets/images/smart-visual-testing/baseline-history/timeline-event-expanded.png').default} alt="Expanded Baseline History event showing the reference image, a note that there was no previous image to compare, and the build and actor that placed it" />
+### Before and after on a promotion
+
+The entries that matter most in a review are the ones that replaced a reference image. Expanding one shows the image that was the baseline **before** the event beside the image that replaced it **after**, so a promotion can be judged without leaving the screen.
+
+<img loading="lazy" className='doc_img' width="1180" height="286" src={require('../assets/images/smart-visual-testing/baseline-history/timeline-event-before-after.png').default} alt="Expanded Screenshot moved to baseline event in Baseline History showing the previous baseline image on the left and the promoted image on the right, with the actor, time and build" />
+
+Both routes into the baseline land here as **Screenshot moved to baseline**:
+
+| Action | Where you run it | What the event shows |
+| --- | --- | --- |
+| **Approve and Update** | Comparison view, on one variant | Before and after for that variant, tagged `Single` |
+| **Merge to Baseline** | Screenshot or build level, on a captured screenshot | Before and after for each variant it promoted |
+
+The other entries you will see on a variant are **Baseline screenshot created**, when a build captured the image into the baseline build, and **Removed from baseline**, when a new baseline build did not contain that screenshot at all.
 
 The full walkthrough, from the baseline lineage to a single event:
 
 <img loading="lazy" className='doc_img' width="900" height="522" src={require('../assets/images/smart-visual-testing/baseline-history/baseline-history-walkthrough.gif').default} alt="Walkthrough of Baseline History moving from current and past baselines, to the timeline for one variant, to an expanded event" />
 
 :::info What is recorded
-Events are recorded for the actions that actually change a reference image or move the baseline, such as a build becoming the baseline or a screenshot being promoted into it. Approving a screenshot in a build that is not the baseline records no event, because it does not change the reference image. For the approval and rejection trail itself, use [Audit Logs](/support/docs/smartui-audit-logs-annotations/).
+Events are recorded for the actions that actually change a reference image or move the baseline, such as a build becoming the baseline or a screenshot being promoted into it. Two things that look like they should appear here do not: approving a screenshot in a build that is not the baseline, which leaves the reference image untouched, and adding an [A/B variation](/support/docs/smartui-ab-testing-variations/), which is tracked on the screenshot rather than on the baseline. For the approval and rejection trail itself, use [Audit Logs](/support/docs/smartui-audit-logs-annotations/).
 :::
 
 ## How the history is derived
