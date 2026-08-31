@@ -99,7 +99,7 @@ The other entries you will see on a variant are **Baseline screenshot created**,
 
 The full walkthrough, from the baseline lineage to a single event:
 
-<img loading="lazy" className='doc_img' width="900" height="522" src={require('../assets/images/smart-visual-testing/baseline-history/baseline-history-walkthrough.gif').default} alt="Walkthrough of Baseline History moving from current and past baselines, to the timeline for one variant, to an expanded event" />
+<img loading="lazy" className='doc_img' width="880" height="427" src={require('../assets/images/smart-visual-testing/baseline-history/baseline-history-walkthrough.gif').default} alt="Walkthrough of Baseline History moving from current and past baselines, to the timeline for one variant, to an expanded event showing the before and after images" />
 
 :::info What is recorded
 Events are recorded for the actions that actually change a reference image or move the baseline, such as a build becoming the baseline or a screenshot being promoted into it. Two things that look like they should appear here do not: approving a screenshot in a build that is not the baseline, which leaves the reference image untouched, and adding an [A/B variation](/support/docs/smartui-ab-testing-variations/), which is tracked on the screenshot rather than on the baseline. For the approval and rejection trail itself, use [Audit Logs](/support/docs/smartui-audit-logs-annotations/).
