@@ -21,9 +21,6 @@
 # Claude
 CLAUDE.md
 
-# Build/tooling scripts (kept on disk for local build; excluded from the repo)
-/scripts
-
 # Misc
 .DS_Store
 .venv-validate-smartui/
