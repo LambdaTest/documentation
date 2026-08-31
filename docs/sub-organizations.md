@@ -41,39 +41,53 @@ Before setting up sub-organizations, review the following constraints:
 
 **Step 1:** Sign in to your <BrandName /> account. If you don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>register for free</a>.
 
-<img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+**Step 2:** From the dashboard, go to **Settings** and select **Organization Settings**.
 
-**Step 2:** Navigate to **Settings** and select **Organization Settings** from the dropdown.
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/navigate-to-organization-settings.png').default} alt="Selecting Organization Settings from the Settings menu" width="1920" height="385"  className="doc_img img_center"/><br/>
 
-<img loading="lazy" src={require('../assets/images/lambdatest-mfa/org-settings.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+**Step 3:** Open the **Sub Organizations** tab.
 
-**Step 3:** Open the **Sub Organization** tab.
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/sub-organizations-tab.png').default} alt="Sub Organizations tab in Organization Settings with the Create button" width="1920" height="577"  className="doc_img img_center"/><br/>
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/sub-org-tab.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+**Step 4:** Click **Create** in the top-right corner. Enter a name for your sub-organization.
 
-**Step 4:** Click **Create**. 
+Allocate concurrency to at least one product using the sliders. Each row shows the concurrency allocated against your organization's total, for example `0/50`. You cannot create a sub-organization without allocating concurrency to at least one product.
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/click-create.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/create-new-sub-organization-modal.png').default} alt="Create New Sub Organization dialog with a name field and per-product concurrency sliders" width="1920" height="917"  className="doc_img img_center"/><br/>
 
-**Step 5:** Enter a name for your sub-organization and click **Create**.
+**Step 5:** Click **Create**.
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/enter-name.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/sub-organization-created-success.png').default} alt="New sub-organization listed with its user and service account counts" width="1920" height="649"  className="doc_img img_center"/><br/>
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/sub-org-created.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-Your **sub-organization** has been created and is ready to configure.
+Your **sub-organization** appears in the list with its user and service account counts, and is ready to configure.
 
 
 
 ## Manage Your Sub-Organization
 ---
 
-To manage a sub-organization, click the **three-dot (⋮) menu** next to its name. From this menu, you can **view, edit, or delete** the sub-organization. 
+The Sub Organizations list shows each sub-organization along with its user count and service account count.
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/manage-org.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+To manage a sub-organization, click the **three-dot (⋯) menu** at the end of its row. From this menu, you can **View**, **Edit**, or **Delete** the sub-organization.
+
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/sub-organization-actions-menu.png').default} alt="Sub-organization row menu with View, Edit, and Delete options" width="1920" height="766"  className="doc_img img_center"/><br/>
+
+You can also rename a sub-organization from inside it, using the **pencil icon** next to its name.
 
 ## Manage Users in Your Sub-Organization
 ---
+
+Open the sub-organization from the list to manage its users. The **Users** tab is selected by default and lets you search the user list, filter by role, review pending invitations, export the list, and invite new users.
+
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/sub-organization-users-empty.png').default} alt="Users tab inside a sub-organization with Search, All Roles filter, Pending Invitations, Export, and Invite options" width="1920" height="758"  className="doc_img img_center"/><br/>
+
+Use the **All Roles** dropdown to filter the list to only **Admin**, **User**, or **Guest** members.
+
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/filter-sub-organization-users-by-role.png').default} alt="All Roles dropdown showing Admin, User, and Guest filter options" width="1920" height="629"  className="doc_img img_center"/><br/>
+
+Click **Pending Invitations** to review invitations that have been sent but not yet accepted. You can search by email address and filter by status or role.
+
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/search-pending-invitations.png').default} alt="List of invited users dialog for searching pending invitations" width="1920" height="775"  className="doc_img img_center"/><br/>
 
 ### Invite a User
 
@@ -81,11 +95,11 @@ To **invite users** to your sub-organization, open the newly created sub-organiz
 
 **Step 1:** Click **Invite**. 
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/invite-user.webp').default} alt="Invite user button in the Users tab" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/invite.png').default} alt="Invite user button in the Users tab" width="404" height="206"  className="doc_img img_center"/><br/>
 
 **Step 2:** Enter the **email address** of the user you want to add, select a **role** from the dropdown, and click **Submit**.
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/add-user.webp').default} alt="Invite user dialog" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/lambdatest-mfa/submit-email.png').default} alt="Invite user dialog" width="404" height="206"  className="doc_img img_center"/><br/>
 
 ### Manage Existing Users
 
@@ -93,7 +107,7 @@ After users have joined, you can manage them directly from the **Users** tab ins
 
 <img loading="lazy" src={require('../assets/images/sub-organizations/users-list.webp').default} alt="Users list inside a sub-organization" width="404" height="206"  className="doc_img img_center"/><br/>
 
-Each user row has a **three-dot (⋮) menu** that provides the following actions:
+Each user row has a **three-dot (⋯) menu** that provides the following actions:
 
 - **View Username & Access Key:** View the user's username and access key for use in automation or scripts.
 - **Change Password:** Reset the password for the selected user.
@@ -106,7 +120,7 @@ Each user row has a **three-dot (⋮) menu** that provides the following actions
 
 The **Login As** action lets administrators sign in to <BrandName /> as another user within the sub-organization. This is useful for troubleshooting access issues, validating role-based permissions, or reproducing problems reported by a team member.
 
-**Step 1:** Open the **three-dot (⋮) menu** next to the user and select **Login As**.
+**Step 1:** Open the **three-dot (⋯) menu** next to the user and select **Login As**.
 
 <img loading="lazy" src={require('../assets/images/sub-organizations/login-as.webp').default} alt="Login As option in the user actions menu" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -135,17 +149,17 @@ To create a new service account, open the **Service Account** tab within your su
 
 **Step 1:** Click **Create**. 
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/create-service-acc.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/sub-organizations/create-service-acc.webp').default} alt="Create button on the Service Accounts tab" width="404" height="206"  className="doc_img img_center"/><br/>
 
 **Step 2:** Enter a name for your **Service Account** and click **Create**. 
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/service-acc-name.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/sub-organizations/service-acc-name.webp').default} alt="Create Service Account dialog with a name field" width="404" height="206"  className="doc_img img_center"/><br/>
 
 **Step 3:** Your **Service Account credentials** are displayed. Save them securely, as they will not be shown again. 
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/service-acc-credentials.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/sub-organizations/service-acc-credentials.webp').default} alt="Service account username and access key dialog" width="404" height="206"  className="doc_img img_center"/><br/>
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/service-acc-created.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+<img loading="lazy" src={require('../assets/images/sub-organizations/service-acc-created.webp').default} alt="New service account listed after creation" width="404" height="206"  className="doc_img img_center"/><br/>
 
 Your new **Service Account** is now ready to use. 
 
