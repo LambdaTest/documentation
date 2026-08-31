@@ -17,14 +17,22 @@ TestMu AI Authentication Credentials consist of two fields:
 
 ### Fetching Authentication Credentials from the Automation Tab
 
+
 1. Visit the Automation tab from the left navigation menu.
 2. Click on the key icon from the top-right corner of your screen and copy the Access Key and Username.
 
+
+
 ### Fetching Authentication Credentials from Your Profile
+
 
 1. Visit your TestMu AI Profile by clicking on the user icon on the top-right followed by clicking on Profile.
 
+
+
 2. You will find your Username & Access Key.
+
+
 
 ## Configuring Environment Variables on Mac OSX/Linux Systems
 
@@ -34,8 +42,13 @@ Export your credentials in the bash profile to make them available across termin
 2. Press the **i** button from your keyboard to perform text-insertion into your profile.
 3. Feed TestMu AI Authentication credentials using the code below:
 
+
+
 {`$ export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 $ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
 
 4. Hit **Esc** once you have entered the above lines into your Profile.
 5. Long-press the **Shift** button & hit **Z** twice (z z) to save your file and quit vi.
@@ -47,6 +60,8 @@ Add your credentials as System variables through the Windows Environment Variabl
 
 1. Right-click on the **Computer** icon to access your Computer **Properties**. You can also follow the path `(Control Panel\All Control Panel Items\System)` into your computer address bar.
 2. Go to **Advanced system settings** & click on **Environment Variables**.
+
+
 
 3. You will see a dialog prompt for **Environment Variables**. Click on **New** under the **System variables**.
 4. Enter `LT_USERNAME` as the **Variable name** & provide your `TestMu AI Username` as the **Variable value**.
@@ -60,6 +75,7 @@ Now that we have set up our TestMu AI Authentication Credentials as System Envir
 
 ### Java
 
+
 - For **JUnit** & **TestNG**:
 
 ```
@@ -69,6 +85,7 @@ lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
 
 ### Python
 
+
 - For **PyTest** & **unittest**:
 ```
 lambdatest_username = os.environ["LT_USERNAME"]
@@ -76,6 +93,7 @@ lambdatest_access_key = os.environ["LT_ACCESS_KEY"]
 ```
 
 ### NodeJS
+
 
 - For **Mocha-Chai** & **Jasmine-Chai**:
 
@@ -95,6 +113,7 @@ lambdatestKey: process.env.LT_ACCESS_KEY
 
 ### Ruby
 
+
 - For **RSpec**:
 
 ```
@@ -103,6 +122,7 @@ accessKey: ENV['LT_ACCESS_KEY']
 ```
 
 ### C#
+
 
 - For **NUnit**:
 
@@ -114,6 +134,7 @@ Environment.GetEnvironmentVariable("LT_ACCESS_KEY", EnvironmentVariableTarget.Us
 ```
 
 ### PHP
+
 
 - For **Behat**:
 

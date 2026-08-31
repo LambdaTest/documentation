@@ -8,6 +8,7 @@ TestMo also offers integration with TestMu AI to help you perform automated cros
 
 ## Steps to Integrate your Project
 
+
 ### Pre-requisite
 
 - Create your account in [LambdaTest](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard) and [TestMo](https://manage.testmo.com/trial)
@@ -15,7 +16,11 @@ TestMo also offers integration with TestMu AI to help you perform automated cros
 ### Step 1: Build the Test Suite
 Firstly, you need to run the build command as per your desired framework. You can choose any test automation framework and programming language you are familiar with. Selenium is one of the most common one used with JavaScript/Node.js, Java, C#, Python, Ruby or PHP, and other languages
 
-You can take the reference from [here](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks) on all the languages and frameworks supported by TestMu AI online Selenium Grid.
+
+The TestMu AI online Selenium Grid supports all major languages and frameworks, so you can build your test suite in whichever one you prefer.
+
+
+
 
 ### Step 2: Generate your Testing Result XML Files
 To submit and report your test results to Testmo, execute your automated tests and generate a JUnit-style XML report file. This file format has become a standard format to exchange test results between tools and is supported by practically any testing tool. Testmo also directly supports this format so it's very easy to report your test automation results.

@@ -1,7 +1,7 @@
 ---
 id: manual-test-case-creation
 title: Create & Manage Test Cases
-sidebar_label: Create & Manage Test Cases
+sidebar_label: Create Test Cases Manually
 description: Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.
 keywords:
   - test case creation
@@ -106,7 +106,7 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
 :::note
-In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
+In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/create-modules/).
 :::
 
 #### Add New Step:

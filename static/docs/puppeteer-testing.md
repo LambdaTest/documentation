@@ -1,53 +1,55 @@
-# Getting Started With Puppeteer Testing
+# How to Run Your First Puppeteer Test on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Puppeteer is a Node package that automates the Chrome browser for web testing. Over the DevTools Protocol, it provides a high-level API for controlling headless Chrome or Chromium. It may also be set to run full (non-headless) Chrome or Chromium.
-
-TestMu AI allows you to run Puppeteer tests on a browser farm of real browsers and operating system combinations. This guide will cover the basics of getting started with Puppeteer testing on the TestMu AI platform.
+If you automate Chrome with Puppeteer over the DevTools Protocol, you can run those same tests against real browsers and operating systems by connecting to TestMu AI. This gives your Puppeteer scripts access to a browser farm of real browser and OS combinations instead of a single local machine. You point Puppeteer's `connect` call at the TestMu AI CDP WebSocket endpoint, pass your capabilities, then view every run in the Automation Dashboard.
 
 ## Prerequisites
 
->Note: All the code samples in this documentation can be found in the TestMu AI's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+
+Before you run a test, set up the sample project and your credentials. All code samples in this documentation are available in the TestMu AI repository on GitHub, which you can download or clone to run your tests quickly.
  View on GitHub
 
-1. Clone the TestMu AI-Puppeteer repository on your system.
+1. Clone the TestMu AI Puppeteer repository on your system.
 
 2. Install the npm dependencies.
 
-```
+```bash
 npm install
 ```
 
-3. Add browserWSEndpoint (browser end point URL) in your test script.
+3. Add `browserWSEndpoint` (the browser endpoint URL) in your test script.
 
 ```js
 `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
 
-4. In order to run your Puppeteer tests, you will need to set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+4. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+
+
 
 **Windows**
 
-```js
+```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
 
-```js
+```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Run Your First Puppeteer Test
 
-Shown below are the steps on running Puppeteer tests on the TestMu AI platform.
 
-1. Clone the [TestMu AI-Puppeteer GitHub repository](https://github.com/LambdaTest/puppeteer-sample) and switch to the cloned directory.
+With the project cloned and your credentials set, follow these steps to run a Puppeteer test on the TestMu AI platform.
 
-```js
+1. Clone the [TestMu AI Puppeteer sample repository](https://github.com/LambdaTest/puppeteer-sample) and switch to the cloned directory.
+
+```bash
 git clone https://github.com/LambdaTest/puppeteer-sample.git
 cd puppeteer-sample
 ```
@@ -56,9 +58,9 @@ cd puppeteer-sample
 
 3. Configure your TestMu AI authentication credentials.
 
-Once you are done with the above-mentioned steps, you can initiate your first Puppeteer test on TestMu AI.
+Once these steps are complete, you can run your first Puppeteer test on TestMu AI.
 
->**Test Scenario**: The below test script runs on Chrome browser running Windows 10. It visits the TestMu AI platform, clicks on the Pricing page, and navigates to the Automation Testing page.
+>**Test Scenario**: The below test script runs on the Chrome browser on Windows 10. It visits the TestMu AI platform, opens the Pricing page, then navigates to the Automation Testing page.
 
 ```js
 'use strict';
@@ -76,7 +78,7 @@ const capabilities = {
 'name': 'My first Puppeteer test',
 'resolution':'1366x768',
 'user': process.env.LT_USERNAME || "Your Username",
-'accessKey': process.env.LT_ACCESS_KEY || "Your Access Key",,
+'accessKey': process.env.LT_ACCESS_KEY || "Your Access Key",
 'network': true
 }
 };
@@ -108,16 +110,28 @@ console.log("Error - ", e);
 })();
 ```
 
-4. Pass the below command to run the test.
+4. Run the test with the command below.
 
-```
+```bash
 node navigation.js
 ```
 
-## View your Puppeteer test results
+## View Your Puppeteer Test Results
 
-The TestMu AI Automation Dashboard is where you can see the results of your Puppeteer tests after running them on the TestMu AI platform.
 
-The below screenshot of TestMu AI Automation Dashboard shows the Puppeteer build on the left and the build sessions associated with the selected build on the right.
+After a run finishes, the TestMu AI Automation Dashboard is where you see the results of your Puppeteer tests. It shows the Puppeteer build on the left and the build sessions associated with the selected build on the right.
 
-On clicking the session name of the respective test, you can view the details of Puppeteer test session that you just executed. For example, the below screenshot shows a test execution details of Puppeteer test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
+
+
+Click the session name of a test to view the details of the Puppeteer session you just executed. The session view shows Test Name, Test ID, selected configurations, test logs, basic info, input config, and the test session video.
+
+
+
+## Related Puppeteer Guides
+
+
+Continue with these related guides to configure and extend your Puppeteer runs on TestMu AI.
+
+- [Configure your environment to execute Puppeteer tests](/support/docs/puppeteer-test-execution-setup/) walks through the setup needed before a cloud run.
+- [Set browser, OS, and build capabilities for Puppeteer](/support/docs/capabilities-for-puppeteer/) covers the full capabilities reference.
+- [Run Puppeteer tests with the Mocha framework](/support/docs/puppeteer-testing-with-mocha/) shows how to structure tests with Mocha.

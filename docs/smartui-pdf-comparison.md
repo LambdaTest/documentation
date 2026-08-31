@@ -1,6 +1,7 @@
-﻿---
+---
 id: smartui-pdf-comparison
-title: SmartUI Visual Regression Testing for PDF Files
+title: SmartUI PDF Testing
+hide_title: true
 sidebar_label: PDF Testing
 description: In this documentation, learn how to perform Visual Regression testing of PDFs using SmartUI.
 keywords:
@@ -18,6 +19,7 @@ url: https://www.testmuai.com/support/docs/smartui-pdf-comparison/
 site_name: TestMu AI
 slug: smartui-pdf-comparison/
 canonical: https://www.testmuai.com/support/docs/smartui-pdf-comparison/
+toc_max_heading_level: 2
 ---
 
 import Tabs from '@theme/Tabs';
@@ -52,6 +54,12 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+# SmartUI PDF Testing
+
+---
+
+SmartUI PDF Testing is a visual regression capability that captures snapshots of every page in a PDF and compares them against a baseline to surface pixel-level differences. Upload your PDFs through the REST API, the Java SDK, or the CLI, and review the highlighted changes directly in the SmartUI dashboard.
+
 :::caution
 This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo/).
 :::
@@ -79,7 +87,7 @@ In the following section, we will walk you through the process of conducting you
   </div>
 </div>
 
-## Step 1: Establishing a SmartUI Project
+## Establishing a SmartUI Project
 
 To initiate a SmartUI PDF Comparison Project, adhere to the following instructions:
 
@@ -95,34 +103,999 @@ Once your project is active, retrieve your `Project Token` from the application.
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
 
-## Upload Methods
+:::note
+Only files in `.pdf` format are compatible with this feature.
+:::
 
-SmartUI provides three different methods to upload PDFs for visual regression testing. Choose the method that best fits your workflow:
+## Upload PDFs via API
 
-<div className='support_main'>
-  <a href="/support/docs/smartui-pdf-api-upload/">
-    <div className='support_inners'>
-      <h3>API Upload</h3>
-      <p>Upload PDFs using REST API for programmatic integration and automation.</p>
-    </div>
-  </a>
-  <a href="/support/docs/smartui-pdf-cli-upload/">
-    <div className='support_inners'>
-      <h3>CLI Upload</h3>
-      <p>Upload PDFs using command-line interface for quick testing and CI/CD integration.</p>
-    </div>
-  </a>
-  <a href="/support/docs/smartui-pdf-java-sdk/">
-    <div className='support_inners'>
-      <h3>Java SDK Upload</h3>
-      <p>Upload PDFs using Java SDK for enterprise applications and test automation frameworks.</p>
-    </div>
-  </a>
-</div>
+Use the REST API to upload local PDF files programmatically and generate a build automatically by capturing snapshots of every page.
+
+Here's how you can upload your PDFs:
+
+1. Retrieve your API `URL Endpoint` post activation of your enterprise plan. To schedule a demonstration, click [here](https://www.testmuai.com/demo/).
+
+2. Append the following parameters to your request payload via `form-body`:
+
+| Variable     | Type   | Description                                                                                                                                      | Required? |
+| ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
+| projectToken | string | This token is required to upload PDF files and validate your project. <br/> Example: `projectToken:123456#1234abcd-****-****-****-************` | Yes       |
+| pathToFiles  | array  | Add the path to the PDFs that will be uploaded. <br/> Example: `pathToFiles : [ "path/to/pdf-1", "path/to/pdf-2"]`                                | Yes       |
+| buildName    | string | Assign a name of your choice to the build comprising the uploaded PDFs. <br/> Example: `buildName : #<Build_Name>`                                | No        |
 
 :::note
 Only files in `.pdf` format are compatible with this feature.
 :::
+
+### API Request Example
+
+Here's a sample API request using cURL:
+
+```bash
+curl -X POST "YOUR_API_ENDPOINT" \
+  -H "Content-Type: multipart/form-data" \
+  -F "projectToken=123456#1234abcd-****-****-****-************" \
+  -F "pathToFiles[]=path/to/document1.pdf" \
+  -F "pathToFiles[]=path/to/document2.pdf" \
+  -F "buildName=Release-v2.1"
+```
+
+### Response Format
+
+The API will return a JSON response containing:
+
+- **Build ID**: Unique identifier for the uploaded build
+- **Status**: Upload status (success/failure)
+- **Pages Captured**: Number of pages processed
+- **Test Results**: Visual comparison results (if available)
+
+### API Use Cases
+
+- **Automated CI/CD Integration**: Seamlessly integrate PDF testing into your deployment pipeline
+- **Batch Processing**: Upload multiple PDFs simultaneously for efficient testing
+- **Custom Workflows**: Build custom applications that interact with SmartUI programmatically
+- **Enterprise Integration**: Connect with existing enterprise systems and workflows
+
+### API Best Practices
+
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='file-management' label='PDF File Management' default>
+
+**PDF File Management**
+
+- Use consistent naming conventions for PDF files
+- Organize PDFs in logical directory structures
+- Verify PDF files are valid and not corrupted before upload
+- Keep PDF files in version control when appropriate
+
+</TabItem>
+
+<TabItem value='token-management' label='Project Token Management'>
+
+**Project Token Management**
+
+- Store project token as environment variable
+- Never commit tokens to version control
+- Use different tokens for different environments
+- Rotate tokens regularly
+
+</TabItem>
+
+<TabItem value='build-naming' label='Build Naming'>
+
+**Build Naming**
+
+- Use meaningful build names that include version info
+- Include date or version in build names
+- Use consistent naming conventions
+
+**Example:**
+```bash
+buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
+```
+
+</TabItem>
+
+<TabItem value='error-handling' label='Error Handling'>
+
+**Error Handling**
+
+- Always check API response status
+- Handle network failures gracefully
+- Implement retry logic for transient failures
+- Log errors for debugging
+
+</TabItem>
+
+<TabItem value='batch-processing' label='Batch Processing'>
+
+**Batch Processing**
+
+- Process PDFs in batches for efficiency
+- Monitor upload progress
+- Handle partial failures in batch operations
+- Use appropriate batch sizes
+
+</TabItem>
+</Tabs>
+
+### API Troubleshooting
+
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
+
+**Issue: PDF Upload Fails**
+
+**Symptoms**: PDF upload returns error or fails silently
+
+**Possible Causes**:
+- Invalid PDF file
+- File path incorrect
+- File size too large
+- Network connectivity issues
+- Project token incorrect
+- API endpoint incorrect
+
+**Solutions**:
+1. Verify PDF file is valid and not corrupted
+2. Check file path is correct and accessible
+3. Verify file size is within limits
+4. Check network connectivity to <BrandName /> servers
+5. Verify PROJECT_TOKEN is set correctly
+6. Confirm API endpoint URL is correct
+
+</TabItem>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+**Issue: "Project Not Found" Error**
+
+**Symptoms**: Error message indicating project cannot be found
+
+**Possible Causes**:
+- Incorrect project token
+- Project deleted or renamed
+- Token from wrong project
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project token directly from Project Settings
+3. Ensure token includes the project ID prefix (e.g., `123456#...`)
+4. Check for extra spaces or quotes in token
+
+</TabItem>
+<TabItem value='upload-returns-error-response' label='Upload Returns Error Response'>
+
+**Issue: Upload Returns Error Response**
+
+**Symptoms**: API returns error status or failure message
+
+**Possible Causes**:
+- Invalid request format
+- Missing required parameters
+- Authentication issues
+- Server-side processing error
+
+**Solutions**:
+1. Verify request format matches API specification
+2. Check all required parameters are included
+3. Verify authentication credentials
+4. Review error response for specific details
+5. Retry upload if transient error
+
+</TabItem>
+<TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
+
+**Issue: PDFs Not Appearing in Dashboard**
+
+**Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
+
+**Possible Causes**:
+- Incorrect project token
+- Project name mismatch
+- Upload not completed
+- Dashboard refresh needed
+
+**Solutions**:
+1. Verify PROJECT_TOKEN is correct
+2. Check project name matches exactly (case-sensitive)
+3. Wait a few moments and refresh dashboard
+4. Check upload response for errors
+5. Review API response for upload status
+
+**Getting Help**
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+
+</TabItem>
+</Tabs>
+
+## Upload PDFs via Java SDK
+
+Use the SmartUI Java SDK to upload PDFs programmatically from Java applications and test automation frameworks.
+
+For the Java SDK you will also need:
+
+- Java 8 or higher installed on your system
+- Maven or Gradle build tool
+- Familiarity with Java development
+
+### Clone the Sample Project
+
+First, clone the sample project to get started:
+
+```bash
+git clone https://github.com/LambdaTest/junit-selenium-sample.git
+cd junit-selenium-sample
+```
+
+### Install the SmartUI Java SDK
+
+Add the SmartUI Java SDK to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-java-sdk</artifactId>
+    <version>1.0.23</version>
+</dependency>
+```
+
+Then compile your project:
+
+```bash
+mvn clean compile
+```
+
+### Set up your credentials
+
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
+
+```bash
+export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value='Windows' label='Windows - CMD'>
+
+```bash
+set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value='PowerShell' label='PowerShell'>
+
+```powershell
+$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+</Tabs>
+
+### Upload PDFs using Java SDK
+
+You can upload PDFs in two modes:
+
+<Tabs className='docs__val'>
+
+<TabItem value='local' label='Local Mode' default>
+
+Upload pre-existing PDFs from your local machine:
+
+"> 📁 **Sample File**: [`SmartuiPdfLocalTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfLocalTest.java)
+
+```java
+
+public class SmartuiPdfLocalTest {
+    public void uploadLocalPdf() throws Exception {
+        String projectToken = System.getenv("PROJECT_TOKEN");
+
+        SmartUIConfig config = new SmartUIConfig()
+            .withProjectToken(projectToken)
+            .withFetchResult(true);
+
+        SmartUIPdf pdfUploader = new SmartUIPdf(config);
+
+        // Upload PDF file
+        String pdfPath = "path/to/your/document.pdf";
+        FormattedResults result = pdfUploader.uploadPDF(pdfPath);
+
+        System.out.println("Upload result: " + result);
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value='cloud' label='Cloud Mode'>
+
+Upload PDFs downloaded during <BrandName /> cloud test execution:
+
+"> 📁 **Sample File**: [`SmartuiPdfCloudTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfCloudTest.java)
+
+```java
+
+public class SmartuiPdfCloudTest {
+    public void uploadCloudPdf(WebDriver driver) throws Exception {
+        String projectToken = System.getenv("PROJECT_TOKEN");
+
+        // Download PDF from cloud session
+        String base64Content = (String) ((JavascriptExecutor) driver)
+            .executeAsyncScript("lambda-file-content=LambdaTest.pdf");
+
+        // Convert base64 to PDF file
+        byte[] pdfBytes = Base64.getDecoder().decode(base64Content);
+        File pdfFile = new File("downloaded.pdf");
+        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
+            fos.write(pdfBytes);
+        }
+
+        // Upload to SmartUI
+        SmartUIConfig config = new SmartUIConfig()
+            .withProjectToken(projectToken)
+            .withFetchResult(true);
+
+        SmartUIPdf pdfUploader = new SmartUIPdf(config);
+        FormattedResults result = pdfUploader.uploadPDF(pdfFile.getAbsolutePath());
+
+        System.out.println("Upload result: " + result);
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+### Java SDK Configuration Options
+
+| Method | Description |
+|-------|-------------|
+| `.withProjectToken(token)` | Required. Your SmartUI project token. |
+| `.withFetchResult(true)` | Optional. Returns structured test results. |
+| `.withBuildName("v2.1")` | Optional. Assign a custom build name. |
+
+### Run your tests
+
+```bash
+mvn test
+```
+
+### Advanced Java SDK Usage
+
+#### Batch Upload Example
+
+```java
+public class SmartuiPdfBatchTest {
+    public void uploadMultiplePdfs() throws Exception {
+        String projectToken = System.getenv("PROJECT_TOKEN");
+
+        SmartUIConfig config = new SmartUIConfig()
+            .withProjectToken(projectToken)
+            .withFetchResult(true)
+            .withBuildName("Batch-Upload-v1.0");
+
+        SmartUIPdf pdfUploader = new SmartUIPdf(config);
+
+        String[] pdfPaths = {
+            "documents/report1.pdf",
+            "documents/report2.pdf",
+            "documents/specification.pdf"
+        };
+
+        for (String pdfPath : pdfPaths) {
+            FormattedResults result = pdfUploader.uploadPDF(pdfPath);
+            System.out.println("Uploaded " + pdfPath + ": " + result);
+        }
+    }
+}
+```
+
+#### Error Handling
+
+```java
+public class SmartuiPdfErrorHandling {
+    public void uploadWithErrorHandling() {
+        try {
+            String projectToken = System.getenv("PROJECT_TOKEN");
+
+            SmartUIConfig config = new SmartUIConfig()
+                .withProjectToken(projectToken)
+                .withFetchResult(true);
+
+            SmartUIPdf pdfUploader = new SmartUIPdf(config);
+            FormattedResults result = pdfUploader.uploadPDF("document.pdf");
+
+            System.out.println("Upload successful: " + result);
+
+        } catch (Exception e) {
+            System.err.println("Upload failed: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Java SDK Use Cases
+
+- **Enterprise Applications**: Integrate PDF testing into large-scale Java applications
+- **Test Automation Frameworks**: Build comprehensive test suites with PDF validation
+- **CI/CD Integration**: Automate PDF testing in Java-based deployment pipelines
+- **Custom Tools**: Develop specialized tools for PDF comparison and validation
+
+### Java SDK Best Practices
+
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='pdf-file-management' label='PDF File Management' default>
+
+**PDF File Management**
+
+- Use consistent naming conventions for PDF files
+- Organize PDFs in logical directory structures
+- Keep PDF files in version control when appropriate
+- Document PDF sources and purposes
+
+**Example:**
+```java
+String[] pdfPaths = {
+    "documents/reports/report-v1.0.pdf",
+    "documents/specs/spec-v2.1.pdf"
+};
+```
+
+</TabItem>
+<TabItem value='project-token-management' label='Project Token Management'>
+
+**Project Token Management**
+
+- Store project token as environment variable
+- Never commit tokens to version control
+- Use different tokens for different environments
+- Rotate tokens regularly
+
+</TabItem>
+<TabItem value='build-naming' label='Build Naming'>
+
+**Build Naming**
+
+- Use meaningful build names that include version info
+- Include date or version in build names
+- Use consistent naming conventions
+
+**Example:**
+```java
+config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
+```
+
+</TabItem>
+<TabItem value='error-handling' label='Error Handling'>
+
+**Error Handling**
+
+- Always wrap upload calls in try-catch blocks
+- Log errors for debugging
+- Handle network failures gracefully
+- Implement retry logic for transient failures
+
+</TabItem>
+<TabItem value='batch-processing' label='Batch Processing'>
+
+**Batch Processing**
+
+- Process PDFs in batches for efficiency
+- Monitor upload progress
+- Handle partial failures in batch operations
+- Use appropriate batch sizes
+
+</TabItem>
+<TabItem value='batch-processing-1' label='Batch Processing'>
+
+**Batch Processing**
+
+- Process PDFs in batches for efficiency
+- Monitor upload progress
+- Handle partial failures in batch operations
+- Use appropriate batch sizes
+
+</TabItem>
+</Tabs>
+
+### Java SDK Troubleshooting
+
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
+
+**Issue: PDF Upload Fails**
+
+**Symptoms**: PDF upload returns error or fails silently
+
+**Possible Causes**:
+- Invalid PDF file
+- File path incorrect
+- File size too large
+- Network connectivity issues
+- Project token incorrect
+
+**Solutions**:
+1. Verify PDF file is valid and not corrupted:
+   ```bash
+   file document.pdf
+   ```
+
+2. Check file path is correct:
+   ```java
+   File pdfFile = new File("path/to/document.pdf");
+   if (!pdfFile.exists()) {
+       throw new FileNotFoundException("PDF file not found");
+   }
+   ```
+
+3. Verify file size is within limits
+
+4. Check network connectivity to <BrandName /> servers
+
+5. Verify PROJECT_TOKEN is set correctly:
+   ```bash
+   echo $PROJECT_TOKEN
+   ```
+
+</TabItem>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+**Issue: Project Not Found" Error**
+
+**Symptoms**: Error message indicating project cannot be found
+
+**Possible Causes**:
+- Incorrect project token
+- Project deleted or renamed
+- Token from wrong project
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project token directly from Project Settings
+3. Ensure token includes the project ID prefix (e.g., `123456#...`)
+4. Check for extra spaces or quotes in token
+
+</TabItem>
+<TabItem value='upload-returns-null-or-empty-result' label='Upload Returns Null or Empty Result'>
+
+**Issue: Upload Returns Null or Empty Result**
+
+**Symptoms**: Upload completes but result is null or empty
+
+**Possible Causes**:
+- `withFetchResult(false)` or not set
+- Network timeout
+- Server-side processing error
+
+**Solutions**:
+1. Enable result fetching:
+   ```java
+   config.withFetchResult(true);
+   ```
+
+2. Check upload response:
+   ```java
+   FormattedResults result = pdfUploader.uploadPDF(pdfPath);
+   if (result == null) {
+       // Handle null result
+   }
+   ```
+
+3. Review error logs for server-side issues
+
+4. Retry upload if transient error
+
+</TabItem>
+<TabItem value='maven-dependencies-not-resolving' label='Maven Dependencies Not Resolving'>
+
+**Issue: Maven Dependencies Not Resolving**
+
+**Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
+
+**Possible Causes**:
+- Incorrect dependency version
+- Maven repository access issues
+- Network connectivity problems
+
+**Solutions**:
+1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
+2. Clear Maven cache:
+   ```bash
+   mvn clean
+   ```
+3. Verify internet connectivity for Maven repository access
+4. Check pom.xml for version conflicts
+
+</TabItem>
+<TabItem value='batch-upload-partially-fails' label='Batch Upload Partially Fails'>
+
+**Issue: Batch Upload Partially Fails**
+
+**Symptoms**: Some PDFs upload successfully, others fail
+
+**Possible Causes**:
+- Individual file issues
+- Network interruptions
+- Timeout issues
+- File size limits
+
+**Solutions**:
+1. Implement individual error handling:
+   ```java
+   for (String pdfPath : pdfPaths) {
+       try {
+           FormattedResults result = pdfUploader.uploadPDF(pdfPath);
+           System.out.println("Uploaded: " + pdfPath);
+       } catch (Exception e) {
+           System.err.println("Failed: " + pdfPath + " - " + e.getMessage());
+       }
+   }
+   ```
+
+2. Verify each file individually
+3. Check file sizes and formats
+4. Implement retry logic for failed uploads
+
+</TabItem>
+<TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
+
+**Issue: PDFs Not Appearing in Dashboard**
+
+**Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
+
+**Possible Causes**:
+- Incorrect project token
+- Project name mismatch
+- Upload not completed
+- Dashboard refresh needed
+
+**Solutions**:
+1. Verify PROJECT_TOKEN is correct
+2. Check project name matches exactly (case-sensitive)
+3. Wait a few moments and refresh dashboard
+4. Check upload response for errors
+5. Review test execution logs
+
+**Getting Help**
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+
+</TabItem>
+</Tabs>
+
+## Upload PDFs via CLI
+
+Use the SmartUI CLI to upload one or multiple PDF files from the command line, ideal for quick testing and CI/CD integration.
+
+For the CLI, familiarity with command-line tools is essential.
+
+### Install the SmartUI CLI
+
+Install the CLI globally using npm:
+
+```bash
+npm install -g @lambdatest/smartui-cli
+```
+
+### Setup your credentials
+
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
+
+```bash
+export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value='Windows' label='Windows - CMD'>
+
+```bash
+set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value='PowerShell' label='PowerShell'>
+
+```powershell
+$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+</Tabs>
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img' />
+
+### Upload PDFs Using CLI
+
+Use the `upload-pdf` command to upload one or multiple PDF files from a directory:
+
+```bash
+smartui upload-pdf <directory_or_filename> [options]
+```
+
+#### Arguments:
+- `directory_or_filename`: Path to a single PDF file or a directory containing multiple PDFs.
+
+#### Options:
+- `--fetch-results [filename]`: Fetch test results after upload. Optionally specify an output file (e.g., `results.json`).
+- `--buildName <string>`: Assign a custom name to the build.
+- `--markBaseline`: Mark this build as the baseline.
+- `--pdfNames <string>`: Comma-separated list of PDF file names to upload.
+
+#### Example Usage:
+
+Upload all PDFs from a folder and name the build:
+
+```bash
+smartui upload-pdf ./pdfs/ --buildName "Release-v2.1"
+```
+
+Upload a single PDF file:
+
+```bash
+smartui upload-pdf ./document.pdf --buildName "Single-PDF-Test"
+```
+
+Fetch results and save to a file:
+
+```bash
+smartui upload-pdf ./spec.pdf --fetch-results results.json
+```
+
+Upload with custom project token:
+
+```bash
+smartui upload-pdf ./pdfs/ --projectToken "123456#1234abcd-****-****-****-************" --buildName "Custom-Build"
+```
+
+### Advanced CLI Options
+
+#### Batch Processing
+
+Process multiple directories:
+
+```bash
+smartui upload-pdf ./documents/ --buildName "Batch-1"
+smartui upload-pdf ./reports/ --buildName "Batch-2"
+```
+
+#### CI/CD Integration
+
+Example for GitHub Actions:
+
+```yaml
+- name: Upload PDFs to SmartUI
+  run: |
+    smartui upload-pdf ./generated-pdfs/ --buildName "${{ github.sha }}" --fetch-results test-results.json
+```
+
+### CLI Use Cases
+
+- **CI/CD Pipelines**: Integrate PDF testing into automated deployment workflows
+- **Batch Processing**: Upload multiple PDFs efficiently from command line
+- **Automated Testing**: Schedule PDF uploads as part of automated test suites
+- **Developer Workflows**: Quick PDF testing during development and debugging
+
+### CLI Best Practices
+
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='file-management' label='PDF File Management' default>
+
+**PDF File Management**
+
+- Use consistent naming conventions for PDF files
+- Organize PDFs in logical directory structures
+- Verify PDF files are valid and not corrupted before upload
+- Keep PDF files in version control when appropriate
+
+</TabItem>
+
+<TabItem value='token-management' label='Project Token Management'>
+
+**Project Token Management**
+
+- Store project token as environment variable
+- Never commit tokens to version control
+- Use different tokens for different environments
+- Rotate tokens regularly
+
+</TabItem>
+
+<TabItem value='build-naming' label='Build Naming'>
+
+**Build Naming**
+
+- Use meaningful build names that include version info
+- Include date or version in build names
+- Use consistent naming conventions
+
+**Example:**
+```bash
+smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
+```
+
+</TabItem>
+
+<TabItem value='error-handling' label='Error Handling'>
+
+**Error Handling**
+
+- Always check CLI exit codes
+- Handle network failures gracefully
+- Implement retry logic for transient failures
+- Log errors for debugging
+
+</TabItem>
+
+<TabItem value='batch-processing' label='Batch Processing'>
+
+**Batch Processing**
+
+- Process PDFs in batches for efficiency
+- Monitor upload progress
+- Handle partial failures in batch operations
+- Use appropriate batch sizes
+
+</TabItem>
+</Tabs>
+
+### CLI Troubleshooting
+
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
+
+**Issue: PDF Upload Fails**
+
+**Symptoms**: CLI command fails or returns error
+
+**Possible Causes**:
+- Invalid PDF file
+- File path incorrect
+- File size too large
+- Network connectivity issues
+- Project token incorrect
+- CLI not installed
+
+**Solutions**:
+1. Verify PDF file is valid and not corrupted:
+   ```bash
+   file document.pdf
+   ```
+
+2. Check file path is correct:
+   ```bash
+   ls -la ./pdfs/
+   ```
+
+3. Verify file size is within limits
+
+4. Check network connectivity to <BrandName /> servers
+
+5. Verify PROJECT_TOKEN is set correctly:
+   ```bash
+   echo $PROJECT_TOKEN
+   ```
+
+6. Verify SmartUI CLI is installed:
+   ```bash
+   smartui --version
+   ```
+
+</TabItem>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+**Issue: Project Not Found" Error**
+
+**Symptoms**: Error message indicating project cannot be found
+
+**Possible Causes**:
+- Incorrect project token
+- Project deleted or renamed
+- Token from wrong project
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project token directly from Project Settings
+3. Ensure token includes the project ID prefix (e.g., `123456#...`)
+4. Check for extra spaces or quotes in token
+
+</TabItem>
+<TabItem value='cli-command-not-found' label='CLI Command Not Found'>
+
+**Issue: CLI Command Not Found**
+
+**Symptoms**: `smartui` command not recognized
+
+**Possible Causes**:
+- CLI not installed
+- npm not available
+- PATH issues
+
+**Solutions**:
+1. Install SmartUI CLI:
+   ```bash
+   npm install -g @lambdatest/smartui-cli
+   ```
+
+2. Verify npm is available:
+   ```bash
+   npm --version
+   ```
+
+3. Check PATH includes npm global bin directory
+
+</TabItem>
+<TabItem value='upload-returns-error' label='Upload Returns Error'>
+
+**Issue: Upload Returns Error**
+
+**Symptoms**: CLI returns error status or failure message
+
+**Possible Causes**:
+- Invalid command syntax
+- Missing required parameters
+- Authentication issues
+- Server-side processing error
+
+**Solutions**:
+1. Verify command syntax matches documentation
+2. Check all required parameters are included
+3. Verify authentication credentials
+4. Review error message for specific details
+5. Retry upload if transient error
+
+</TabItem>
+<TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
+
+**Issue: PDFs Not Appearing in Dashboard**
+
+**Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
+
+**Possible Causes**:
+- Incorrect project token
+- Project name mismatch
+- Upload not completed
+- Dashboard refresh needed
+
+**Solutions**:
+1. Verify PROJECT_TOKEN is correct
+2. Check project name matches exactly (case-sensitive)
+3. Wait a few moments and refresh dashboard
+4. Check CLI output for errors
+5. Use `--fetch-results` to verify upload status
+
+**Getting Help**
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Visit [<BrandName /> Support](https://www.testmuai.com/support/) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+
+</TabItem>
+</Tabs>
 
 ## Use Cases of Smart PDF Comparison
 
@@ -132,3 +1105,10 @@ Only files in `.pdf` format are compatible with this feature.
 - **Proofreading**: Detect edits between document versions for quick review.
 - **Quality Assurance**: Compare specs or blueprints to uphold standards.
 - **Archiving**: Confirm integrity of records over time by highlighting modifications.
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.testmuai.com/support/api-doc/)

@@ -8,6 +8,8 @@ Phone agents come in two directions, inbound and outbound, and each has its own 
 
 ## Features
 
+
+
 Phone testing runs in two modes, both scored with the same 30+ metrics.
 
 **Live test calls.** The platform places a real call and drives the conversation with a simulated caller. During the call it tracks duration in real time, produces a speaker-identified transcript, and detects DTMF tones for menu navigation.
@@ -24,11 +26,15 @@ Phone testing runs in two modes, both scored with the same 30+ metrics.
 
 ## Metrics
 
+
+
 Every call is scored across 8 metric categories with 30+ individual metrics: conversation flow and interaction dynamics, accuracy and effectiveness, user experience and satisfaction, business operational metrics, audio voice quality, speech-to-text evaluation, validation results, and automated issue tags. Key metrics include First Call Resolution, CSAT, containment rate, intent recognition accuracy, and speech-to-text accuracy across accents and noise.
 
 For the full metric tables and thresholds, see the [inbound phone agent metrics](/support/docs/inbound-phone-agent/#metrics).
 
 ## Run a Phone Agent Test
+
+
 
 Phone tests run from the dashboard or the CLI, driven by scenarios grouped into suites. Pick the direction that matches your agent.
 
@@ -37,6 +43,8 @@ Phone tests run from the dashboard or the CLI, driven by scenarios grouped into 
 - To run calls from the terminal, see how to [test phone agents with the CLI](/support/docs/agent-testing-cli/).
 
 ## Related TestMu AI Guides
+
+
 
 - See how to [test an inbound phone agent](/support/docs/inbound-phone-agent/) step by step.
 - See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/) step by step.

@@ -58,7 +58,9 @@ Select the date range for the data included in each report:
 
 Click **Update** to save your scheduling preferences. The changes take effect immediately.
 
+
 Each dashboard has its own independent scheduling settings. You can configure different delivery times and recipients for different dashboards to match each team's needs.
+
 
 ## Update an Existing Schedule
 
@@ -67,7 +69,9 @@ Each dashboard has its own independent scheduling settings. You can configure di
 3. Adjust the frequency, time, period, date range, or recipients as needed.
 4. Click **Update** to save your changes.
 
+
 When you update the delivery time for a dashboard, the new schedule applies only to that dashboard. Other dashboards retain their existing schedules.
+
 
 ## Disable Scheduled Reports
 

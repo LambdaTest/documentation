@@ -124,8 +124,8 @@ export default function Home() {
               <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
               <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
               <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a> 
-              <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
-              <a href="/support/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
+              <a href="/support/docs/getting-started-with-hyperexecute/#key-features-of-hyperexecute"><p className="p_home_inners">Features</p></a>
+              <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
               <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
             </div>
           </div>
@@ -156,12 +156,12 @@ export default function Home() {
             <div className="home_inners">
               <a href="/support/docs/smart-visual-regression-testing/"><p className="p_home_inners">Getting Started</p></a>
               <a href="/support/docs/smartui-selenium-js-sdk/"><p className="p_home_inners">Explore SDKs</p></a>
-              <a href="/support/docs/smartui-cli/"><p className="p_home_inners">CLI</p></a>
-              <a href="/support/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload Screenshots</p></a>
+              <a href="/support/docs/smartui-cli-complete-reference/"><p className="p_home_inners">CLI</p></a>
+              <a href="/support/docs/smartui-cli-complete-reference/"><p className="p_home_inners">Upload Screenshots</p></a>
               <a href="/support/docs/smartui-pdf-comparison/"><p className="p_home_inners">Smart PDF Comparison</p></a>
-              <a href="/support/docs/smart-ui-build-options/"><p className="p_home_inners">Build Config and Options</p></a>
-              <a href="/support/docs/test-settings-options/"><p className="p_home_inners">Advance Comparison Options</p></a>
-              <a href="/support/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
+              <a href="/support/docs/smartui-project-settings/"><p className="p_home_inners">Build Config and Options</p></a>
+              <a href="/support/docs/smartui-project-settings/"><p className="p_home_inners">Advance Comparison Options</p></a>
+              <a href="/support/docs/smartui-project-settings/"><p className="p_home_inners">Handling Dynamic Data</p></a>
             </div>
           </div>
           <div className="home_inners_box">
@@ -173,7 +173,7 @@ export default function Home() {
               <a href="/support/docs/kane-ai-api-testing/"><p className="p_home_inners">API Testing</p></a>
               <a href="/support/docs/kane-ai-command-guide/"><p className="p_home_inners">Command Types</p></a>
               <a href="/support/docs/kaneai-ci-cd-automation/"><p className="p_home_inners">Test Automation with CI/CD</p></a>
-              <a href="/support/docs/kaneai-faqs/"><p className="p_home_inners">FAQs</p></a>
+              <a href="/support/docs/getting-started-with-kane-ai/"><p className="p_home_inners">FAQs</p></a>
             </div>
           </div>
           <div className="home_inners_box">
@@ -236,18 +236,12 @@ export default function Home() {
             <h2 className="homeMain_h2"><Icon light="testManager-light.svg" dark="testManager-dark.svg" alt="" />Test Manager &nbsp;<NewTag value="NEW" /></h2>
             <div className="home_inners">
               <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
-              <a href="/support/docs/insights-dashboard/"><p className="p_home_inners">Insights Dashboard</p></a>
+              <a href="/support/docs/tms-reports/"><p className="p_home_inners">Insights Dashboard</p></a>
               <a href="/support/docs/manual-test-case-creation/"><p className="p_home_inners">Manual Test Cases</p></a>
               <a href="/support/docs/automated-test-cases-with-ai/"><p className="p_home_inners">Automated Test Cases</p></a>
               <a href="/support/docs/test-run-creation-and-management/"><p className="p_home_inners">Test Run</p></a>
               <a href="/support/docs/milestone-creation-and-management/"><p className="p_home_inners">Milestones</p></a>
               <a href="/support/docs/link-jira-issues-with-test-manager/"><p className="p_home_inners">Issue Tracker Integration</p></a>
-            </div>
-          </div>
-          <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="testManager-light.svg" dark="testManager-dark.svg" alt="" />TestMu AI MCP Server &nbsp;<NewTag value="NEW" /></h2>
-            <div className="home_inners">
-              <a href="/support/docs/lambdatest-mcp-server/"><p className="p_home_inners">Setting up TestMu AI MCP Server</p></a>
             </div>
           </div>
           <div className="home_inners_box">
@@ -266,7 +260,7 @@ export default function Home() {
             <div className="home_inners">
               <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
               <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
-              <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Web Automation</p></a>
+              <a href="/support/docs/accessibility-automation-test/"><p className="p_home_inners">Accessibility Web Automation</p></a>
               <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Sitemap Scheduling</p></a>
               <a href="/support/docs/accessibility-app-scanner/"><p className="p_home_inners">Native App Scanner</p></a>
               <a href="/support/docs/accessibility-native-app-automation-test/"><p className="p_home_inners">Native App Automation</p></a>

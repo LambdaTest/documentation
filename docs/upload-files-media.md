@@ -2,7 +2,7 @@
 id: upload-files-media
 title: Files and Media
 hide_title: true
-sidebar_label: Files and Media
+sidebar_label: "Upload Files and Media"
 description: Learn how to upload and download files and media on real Android and iOS devices during app and browser testing on TestMu AI.
 keywords:
   - files upload

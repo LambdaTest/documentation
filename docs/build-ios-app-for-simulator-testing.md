@@ -1,6 +1,6 @@
 ---
 id: build-ios-app-for-simulator-testing
-title: Building Your iOS App for Simulator Testing
+title: How to Build iOS Apps for Simulators on TestMu AI
 sidebar_label: Build iOS App for Simulators
 description: Learn how to build your iOS app correctly for testing on iOS Simulators on TestMu AI Cloud. Covers Xcode UI, command line builds, and build verification.
 keywords:
@@ -38,14 +38,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Building Your iOS App for Simulator Testing",
+          "name": "How to Build iOS Apps for Simulators on TestMu AI",
           "item": `${BRAND_URL}/support/docs/build-ios-app-for-simulator-testing/`
         }]
       })
     }}
 ></script>
 
-To test your iOS application on <BrandName /> iOS Simulators, your app must be built specifically for the **iOS Simulator** platform. A build intended for a physical iPhone will not work on the Simulator, even if the CPU architecture matches. This guide walks you through creating a Simulator-compatible build and verifying it before uploading.
+Building an iOS app for Simulator testing on TestMu AI requires compiling against the iphonesimulator SDK, not a physical-device build. This produces a .app targeting Mach-O platform 7, which the Simulator accepts, so your uploads run without any immediate crash.
 
 ## Why Simulator Builds Are Different
 
@@ -227,7 +227,7 @@ That's all! In case you have any questions or need any additional information, y
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Build iOS App for Simulator Testing
+        How to Build iOS Apps for Simulators on TestMu AI
       </span>
     </li>
   </ul>

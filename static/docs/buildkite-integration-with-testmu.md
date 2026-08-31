@@ -11,13 +11,18 @@ TestMu AI now integrates with Buildkite to boost your go-to-market delivery. Per
 1. Buildkite account
 2. A GitHub repository. Here is our sample GitHub repository for [Buildkite](https://github.com/LambdaTest/buildkite-selenium-sample).
 
+
 ## Integrating Buildkite with TestMu AI via UI
 
 **Step 1:** Login to Buildkite and click the + icon to create a new pipeline
 
+
+
 **Step 2:** Connect your GitHub repository. Fill the name and description fields.
 
 You can select the GitHub account where your repository is and add the repository to setup the pipeline for it. Provide an appropriate name and description for this pipeline.
+
+
 
 **Step 3:** Add TestMu AI Credentials to Environment Variables
 
@@ -27,6 +32,8 @@ You need to set your TestMu AI username and accesskey as your environment variab
 LT_USERNAME=YOUR_LAMBDATEST_USERNAME
 LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 ```
+
+
 
 **Step 4:** Add steps to add lambdatest-buildkite plugin
 
@@ -51,9 +58,13 @@ python3 lambdatest.py
 
 You can add additional steps by clicking on the `Add` button. Once all the steps are added, you can click `Create Pipeline`.
 
+
+
 **Step 6:** Adding an agent
 
 The next step is adding an agent. In this example, a local MacOS agent is used. If you have a custom agent already setup, this step is skipped.
+
+
 
 **Step 7:** Create and run a build
 
@@ -61,15 +72,22 @@ After the pipeline is created, we can create a build. To create a build, click t
 
 Now the build should be created and run. After the build runs successfully, you should be able to see your builds on TestMu AI Automation Dashboard.
 
+
+
+
+
 That is it! You can also add a webhook to your repository to trigger the build whenever a change is done in the repository.
 
 Monitor and analyze your test result on the **[TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).**
+
 
 ## Integrating Buildkite with TestMu AI via YAML
 
 **Step 1:** Login to Buildkite.
 
 **Step 2:** Select **Settings** > **YAML Migration** to open the YAML migration settings. Select **Use YAML Steps for New Pipelines**, then confirm the action in the modal.
+
+
 
 **Step 3:** Go to your desired GitHub repository for which you want to build the pipeline.
 
@@ -90,13 +108,19 @@ commands:
 
 **Step 8:** In the Steps editor, ensure there's a step to upload the definition from your repository.
 
+
+
 **Step 9:** Click on the **Create Pipeline** button.
 
 **Step 10:** On the next page showing your pipeline name, click New Build. In the modal that opens, create a build using the pre-filled details. Select **Create Build**.
 
+
+
+
 - Run the pipeline whenever you make changes you want to verify. If you want to add more functionality, go back to editing your steps and repeat.
 
 - If you've configured webhooks, your pipeline will trigger when you push updates to the repository. Otherwise, select New Build in the Buildkite dashboard to trigger the pipeline.
+
 
 > Monitor and analyze your test result on the **[TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).**
 

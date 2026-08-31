@@ -17,7 +17,9 @@ Make sure you have:
 - An accessibility scan result from a mobile-device session available in the dashboard, or
 - An Appium test with accessibility enabled in any supported Appium flow for mobile accessibility automation.
 
+
 Tag support is available for accessibility scans that run on mobile devices. Tags are optional. If you do not add a tag, your scans continue to work as usual.
+
 
 ## What Tags Help You Do
 
@@ -34,23 +36,33 @@ Use this flow when the scan is already available in the dashboard and you want t
 
 In the issue view, open the scan or view you want to label and click the tag icon.
 
+
+
 ### Step 2: Assign one or more tags
 
 In the **Assign Tags** modal, search for an existing tag or create a new one, then save your selection.
 
 You can assign multiple tags to the same scan from the dashboard.
 
+
+
 ### Step 3: Review tagged issues
 
 Once saved, the selected tags appear with the affected issue details.
+
+
 
 ### Step 4: Filter the dashboard by tag
 
 Use the **Tags** filter to show only the issues or views that match the selected tags.
 
+
+
 ### Step 5: Use tags in Mobile View
 
 The same tags are also available when you review the test in **Mobile View**.
+
+
 
 ### Step 6: Switch how issues are grouped
 
@@ -61,7 +73,11 @@ In the **All Issues** tab, you can group the results in two ways:
 
 **Group by: Views**
 
+
+
 **Group by: Issue Types**
+
+
 
 ## Option 2: Add Tags During Automation
 
@@ -151,4 +167,4 @@ put("tags", Arrays.asList("Profile Screen"));
 - [Native App Accessibility Automation](/support/docs/accessibility-native-app-automation-test/)
 - [Accessibility App Scanner](/support/docs/accessibility-app-scanner/)
 - [Navigating Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
-- [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)
+- [All Issues](/support/docs/accessibility-testing-navigating-dashboard/#all-issues)

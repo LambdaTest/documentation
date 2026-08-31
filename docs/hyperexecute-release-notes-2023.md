@@ -1,6 +1,7 @@
 ﻿---
 id: hyperexecute-release-notes-2023
-title: HyperExecute Release Notes 2023
+title: HyperExecute Release Notes 2023
+
 toc_max_heading_level: 2
 hide_title: false
 sidebar_label: 2023 Releases
@@ -224,7 +225,7 @@ HyperExecute now supports the Cypress framework, allowing teams to run their Cyp
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/cyp-hyp-smartui.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-> To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](/support/docs/hyperexecute-smart-ui-testing-using-cypress/) using HyperExecute.
+> To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](/support/docs/smartui-hooks-with-hyperexecute/) using HyperExecute.
 
 ---
 

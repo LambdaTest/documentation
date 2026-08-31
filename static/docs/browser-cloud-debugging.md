@@ -4,12 +4,14 @@
 
 Watch, replay, and troubleshoot your agent's browser sessions. Every session automatically records video, console logs, and network requests - accessible from the TestMu AI dashboard.
 
+
 ## Built-In Observability
 
 When your agent runs at 3am and does something unexpected, you need to know
 exactly what happened. Every session runs on TestMu AI's infrastructure,
 which means every session automatically comes with video recordings, console
 logs, and network request capture - no extra setup required.
+
 
 ## TestMu AI Web Automation Dashboard
 
@@ -27,6 +29,7 @@ From the dashboard you can:
 - Inspect **network requests**
 - Review **screenshots**
 - Check **test results** (pass/fail)
+
 
 ## Organizing Sessions
 
@@ -48,6 +51,7 @@ console: true,   // Capture console logs,
 });
 ```
 
+
 ## Debug URLs
 
 Every session provides URLs for viewing:
@@ -56,6 +60,7 @@ Every session provides URLs for viewing:
 console.log(session.debugUrl);          // Dashboard URL for this session
 console.log(session.sessionViewerUrl);  // Live stream of the browser
 ```
+
 
 ## SDK Console Output
 
@@ -68,6 +73,7 @@ Adapter: Set stealth viewport: 1907x1063
 Adapter: Humanized interactions enabled
 Adapter: Loading profile my-app-login
 ```
+
 
 ## Common Issues
 
@@ -85,6 +91,7 @@ or network firewall blocking WebSocket connections.
 Fix: Verify your credentials, check the TestMu AI status page, try a different
 network.
 
+
 **Session Not Found**
 
 ```
@@ -96,6 +103,7 @@ minutes.
 
 Fix: Increase with `timeout: 600000` (10 minutes) in your session config.
 
+
 **Playwright Requires Node 18+**
 
 ```
@@ -103,6 +111,7 @@ Playwright requires Node.js 18 or higher.
 ```
 
 Fix: Upgrade Node.js with `nvm install 18 && nvm use 18`.
+
 
 **Profile Not Loading**
 

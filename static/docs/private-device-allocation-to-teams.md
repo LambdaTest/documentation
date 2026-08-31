@@ -18,15 +18,28 @@ The Teams feature for Private Cloud Devices enables organization admins to divid
 ### Step 2: Allocate Devices to the Team
 In the **Private Cloud Devices** tab section, distribute your devices amongst your teams for restricted access via:
 
+
+
+
     - Click on the **Bulk Distribute** button and select all the devices that you want to allocate to the teams.
     - Click on the **Distribute** button. In the popup, choose the teams from the dropdown list.
     - Click on the **Allocate** button.
 The devices will now appear in the selected team's device pool, accessible only to its members.
 
+
+
+
+
+
     - Click on the **Allocate** button from the right side of your desired device.
     - In the popup, choose the teams from the dropdown list.
     - Click on the **Allocate** button.
 The selected device will now appear in the team's device pool, accessible only to its members.
+
+
+
+
+
 
 > You can also see tags of all those teams to which those devices are allocated.
 
@@ -35,6 +48,8 @@ The selected device will now appear in the team's device pool, accessible only t
 
 The selected device will no longer appear in all those allocated team's device pool.
 
+
+
 ## Edit Allocation of any Device
 To edit allocation of any device, or simply if you want to add/remove any team allocation for any particular device then:
 
@@ -42,7 +57,11 @@ To edit allocation of any device, or simply if you want to add/remove any team a
 - Select or Deselect your required teams.
 - Click on the **Allocate** button.
 
+
+
+
 A device in a busy state will not be allocated or deallocated.
+
 
 ## Filter your Devices
 In the topbar, you have plenty of options to filter your devices based on:

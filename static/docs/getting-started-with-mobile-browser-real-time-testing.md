@@ -11,6 +11,10 @@ Real-Time Mobile Web Browser Testing allows you to test websites and web applica
 - To test a website, enter its URL and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
 - Afterwards click on the **Start** button to initiate the testing process.
 
+
+
+
+
 ## Understanding the Dashboard
 The TestMu AI dashboard is designed to simplify the testing process. Here's a breakdown of its key components:
 

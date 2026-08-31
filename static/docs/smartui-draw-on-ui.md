@@ -8,6 +8,13 @@ The SmartUI Annotation tool allows you to interact directly with your screenshot
 
 By utilizing ignored/selected regions, you can keep your test results focused on the truly important changes, streamlining your workflow and saving you time from chasing irrelevant discrepancies.
 
+
+
+
+
+
+
+
 ## Quick Start
 
 ### Accessing the Annotation Tool
@@ -15,6 +22,8 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 1. Navigate to your SmartUI project dashboard
 2. Open a screenshot comparison that shows differences
 3. Click on the **Actions** button (annotation icon) in the comparison view
+
+
 
 ### Basic Workflow
 
@@ -29,6 +38,9 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 ## Annotation Methods
 
 All annotation methods are accessible from the same **Actions** button (annotation icon). Click on the annotation icon to open the annotation tool, then select your desired annotation type from the available options.
+
+
+
 
 **What is Ignore Region?**
 
@@ -46,17 +58,29 @@ All annotation methods are accessible from the same **Actions** button (annotati
 
 **Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
 
+
+
 **Step 2:** Click on the **Add Region** button and draw a box around the area you want to ignore.
 
+
+
 **Step 3:** Select **Ignore Region** from the annotation type dropdown and click **Save**.
+
+
 
 **Step 4:** Choose whether to apply to the current screenshot only or all browser variants.
 
 **What Happens:** The configured area will be ignored in every consecutive build for the same screenshot test case.
 
+
+
 **Example**
 
 Ignoring a "Last updated" timestamp in a dashboard that changes with each page load.
+
+
+
+
 
 **What is Select Region?**
 
@@ -88,6 +112,10 @@ Ignoring a "Last updated" timestamp in a dashboard that changes with each page l
 
 Testing only the checkout form while ignoring the rest of the page, including header, footer, and sidebar elements.
 
+
+
+
+
 **What is Floating Region?**
 
 **Floating Region** handles elements that move or shift position within a defined boundary. This feature uses two regions:
@@ -110,6 +138,8 @@ Perfect for handling dynamic elements that may appear in different positions but
 
 **Step 2:** First, draw a **Blue Region** (Floating Area) that defines the boundary where the element might move to. Make it large enough to encompass all possible positions.
 
+
+
 **Step 3:** Then, within the blue region, draw a **Yellow Region** (Element to Test) that defines the specific element you want to test.
 
 **Step 4:** Select **Floating Region** from the annotation type dropdown and click **Save**.
@@ -118,11 +148,17 @@ Perfect for handling dynamic elements that may appear in different positions but
 
 **What Happens:** SmartUI will compare the yellow region element, allowing it to move anywhere within the blue floating area without triggering false positives.
 
+
+
 > **Tip:** Make the blue region large enough to encompass all possible positions of the element, and keep the yellow region focused on the specific element you want to test.
 
 **Example**
 
 Testing a notification badge that may appear in different positions based on content length or screen size.
+
+
+
+
 
 **What is Ignore Colors?**
 
@@ -142,17 +178,25 @@ Testing a notification badge that may appear in different positions based on con
 
 **Step 2:** Click on the **Add Region** button and draw a box around the area where you want to ignore color differences.
 
+
+
 **Step 3:** Select **Ignore Colors** from the annotation type dropdown and click **Save**.
 
 **Step 4:** Choose whether to apply to the current screenshot only or all browser variants.
 
 **What Happens:** The region will be compared for structure and layout, but color differences will be ignored, reducing false positives from color variations.
 
+
+
 > **Note:** Ignore Colors is particularly effective when combined with other annotation types for comprehensive visual testing.
 
 **Example**
 
 Ignoring color differences in a themed navigation bar while testing its structure and layout across different theme configurations.
+
+
+
+
 
 **What is Layout Region?**
 
@@ -188,6 +232,9 @@ This sits between Ignore Region, which drops the area from validation completely
 Validating that an order summary table still has all of its rows and columns, while the order numbers and timestamps inside it change on every run.
 
 See [Layout Regions](/support/docs/smartui-layout-regions/) for how the matching works and what it does not catch.
+
+
+
 
 ## Advanced: Select Ignore
 
@@ -302,15 +349,21 @@ For a 40-page statement, that is 40 manual regions to place and re-place. Teams 
 - On a **PDF** comparison, choose **Apply to all the pages of this PDF**.
 - On a **web** comparison, choose **Apply to all variants**.
 
+
+
 > **Note:** Page level propagation on PDFs is available in **Omni projects**. In a standard PDF project a region applies to the page it was drawn on, so there is nothing to propagate it across.
 
 **Step 4:** Set the **Search area** value in pixels. This is how far out from the drawn box SmartUI will look for the anchor content on each of the other targets. The default is `50` px, and you can set any value between `0` and `500` px.
 
 **Step 5:** Click **Save**, then confirm with **Apply Changes**. SmartUI resolves the anchor on every target and reports how many of them the region was applied to.
 
+
+
 **What Happens:** On each target, SmartUI looks for the anchor content within the search area around the drawn position and places the region where that content is found. Open any other page of the PDF, or any other variant of the screenshot, to see the region sitting on the same content at that target's own position.
 
 > **Important:** Where the anchor cannot be found within the search area, the region is **not placed on that target at all**, and the result is reported back to you. SmartUI never falls back to stamping the box at the drawn coordinates, because a mask in the wrong place hides real differences.
+
+
 
 ### Choosing a Search Area
 
@@ -341,7 +394,7 @@ Regions propagate on both PDF and website comparisons, but the axis they propaga
 
 > **Note:** Anchoring on web reads the DOM element data recorded alongside the screenshot, the same data that [Layout Regions](/support/docs/smartui-layout-regions/#dom-recording-requirement-for-web-comparisons) use. A build made from an uploaded image carries no DOM, so there is nothing to anchor to. PDF comparisons are not affected, since they read the structure out of the document itself.
 
-> **Note:** In an [Omni project](/support/docs/smartui-omni-projects/), where PDF, website, app, Figma, Storybook and image sources all co-exist in one project, both propagation controls are available in the same place. The one you see for a given comparison follows the source of the screenshot you are annotating: PDF artifacts offer **Apply to all the pages of this PDF**, and website and app artifacts offer **Apply to all variants**.
+> **Note:** In an [Omni project](/support/docs/smartui-project-settings/#omni-projects), where PDF, website, app, Figma, Storybook and image sources all co-exist in one project, both propagation controls are available in the same place. The one you see for a given comparison follows the source of the screenshot you are annotating: PDF artifacts offer **Apply to all the pages of this PDF**, and website and app artifacts offer **Apply to all variants**.
 
 ### Example
 
@@ -356,6 +409,8 @@ Once you've created annotations, you can view, edit, and delete them as needed.
 ### Viewing Annotations
 
 **Step 1:** Toggle the **Annotations** switch to view/analyze your ignored/selected areas.
+
+
 
 **Step 2:** When the toggle is on, you'll see all your annotation boxes with color coding (see [Annotation Color Coding](#annotation-color-coding) below).
 
@@ -393,6 +448,8 @@ You can always edit or delete pre-configured areas or add new ones according to 
 ### Applying Annotations
 
 After drawing a region, you'll see a modal dialog that controls where that specific region is applied:
+
+
 
 **Options:**
 
@@ -462,6 +519,9 @@ Follow these best practices to get the most out of the annotation tool:
 
 ## Troubleshooting
 
+
+
+
 **Annotations Not Applying**
 
 **Issue:** Annotations are not being applied to future builds.
@@ -471,6 +531,10 @@ Follow these best practices to get the most out of the annotation tool:
 - Verify you selected the correct annotation type
 - Check that you applied annotations to the correct screenshot variant
 - Refresh the page and verify annotations are visible
+
+
+
+
 
 **Floating Region Not Working**
 
@@ -482,6 +546,10 @@ Follow these best practices to get the most out of the annotation tool:
 - Check that the element structure hasn't changed significantly
 - Try adjusting the size of both regions
 
+
+
+
+
 **Ignore Colors Still Showing Differences**
 
 **Issue:** Color differences are still being detected in ignore colors regions.
@@ -492,6 +560,10 @@ Follow these best practices to get the most out of the annotation tool:
 - Check that structural differences aren't being mistaken for color differences
 - Review the comparison settings in project configuration
 
+
+
+
+
 **Annotations Disappearing**
 
 **Issue:** Annotations are not visible or have disappeared.
@@ -501,6 +573,10 @@ Follow these best practices to get the most out of the annotation tool:
 - Refresh the page
 - Check if annotations were deleted accidentally
 - Verify you're viewing the correct screenshot variant
+
+
+
+
 
 **Layout Region Not Flagging Changes**
 
@@ -513,7 +589,11 @@ Follow these best practices to get the most out of the annotation tool:
 - Reduce very large regions. A region drawn over an element heavy page falls back to plain ignore behavior
 - See [Layout Regions](/support/docs/smartui-layout-regions/) for the full behavior and limitations
 
+
+
+
 For more comprehensive troubleshooting, refer to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide).
+
 
 ## Additional Resources
 

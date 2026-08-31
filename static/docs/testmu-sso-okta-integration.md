@@ -21,17 +21,23 @@ To enable TestMu AI SSO through Okta integration:
 
 1. Go to TestMu AI Authentication & SSO settings and click on **Setup SSO**.
 
+
 2. Enter Connection Name and Click on  **Add New Connection**.
 
+
 3. Select **Okta** as your identity provider.
+
 
 4. Now copy the details required for setting up SSO connection in your **Identity Provider**.
    Once configured, click on continue
 
+
 5. Now Configure the Attributes and Claims in your **Identity Provider**.
    Once configured, click on continue
 
+
 6. Login to your okta account.
+
 
 7. Go to Application menu from the toolbar and click on **Create App Integration**.
 
@@ -56,5 +62,6 @@ To enable TestMu AI SSO through Okta integration:
 * X509 Certificate (Upload the base64 encoded X509 certificate of your Identity Provider.)
 
 Create Connection with Metadata URL
+
 
 > That's all you need to know for Configuring TestMu AI SSO Integration with Okta. In case you have any questions please feel free to reach out to us via the **24/7 chat support** or email us over [support@testmuai.com](mailto:support@testmuai.com).

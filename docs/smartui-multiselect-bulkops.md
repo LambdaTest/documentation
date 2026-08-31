@@ -57,7 +57,7 @@ Managing large visual regression builds can be time-consuming. **Multiselect & B
 This guide explains the end-to-end workflow, supported actions, and best practices to avoid accidental approvals or baseline edits.
 
 :::info
-For a complete understanding of approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/).
+For a complete understanding of approval, reject, move, and merge functions across different workflows, see our [Approval & Baseline Management Guide](/support/docs/smartui-running-your-first-project/).
 :::
 
 ---
@@ -193,7 +193,7 @@ Once approved diffs represent the new expected UI, promote them to Baseline:
 
 <ul>
 <li>Promote to baseline only after QA sign-off.</li>
-<li>Keep a release branch baseline separate using <a href='/support/docs/smartui-smart-git-strategy/'>Smart Git</a>.</li>
+<li>Keep a release branch baseline separate using <a href='/support/docs/smartui-git-branching-strategy/#smart-git-strategy'>Smart Git</a>.</li>
 </ul>
 
   </TabItem>

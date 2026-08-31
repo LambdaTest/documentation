@@ -9,6 +9,7 @@ You install only the rook CLI. You do not need to clone the source repository, b
 **Pre-alpha**
 Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
 
+
 ## Install and authenticate the CLI
 
 This section installs the packaged rook CLI. You do not clone the source repository, install its dependencies, start a controller, or build any code.
@@ -77,6 +78,8 @@ rook whoami
 
 Authentication is global. Multiple rook sessions on the same machine use the credentials stored below ~/.testmuai/rook/.
 
+
+
 ### Install a specific release
 
 Release identifiers use a commit SHA. Pin a known version for CI or a controlled rollout:
@@ -141,6 +144,8 @@ Start rook:
 cd refund-agent-test
 rook
 ~~~
+
+
 
 ### Step 2: Explore the PRD and knowledge base
 
@@ -232,6 +237,8 @@ Before confirming, check:
 
 Agent Assurance cannot roll back a refund, message, ticket, or other action taken by the agent.
 
+
+
 ### Step 6: Run the approved set
 
 After the first scenario behaves correctly:
@@ -251,6 +258,8 @@ Open the local viewer:
 ~~~text
 /ui
 ~~~
+
+
 
 Open each failure or **Unable to Verify** result. Check the request, response, criterion evidence, artifacts, and verification gaps.
 

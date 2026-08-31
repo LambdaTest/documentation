@@ -22,6 +22,10 @@ This guide covers the **SmartUI SDK/Exec approach**, where you use `npx smartui 
 - SmartUI integration happens automatically through capabilities
 - See [GitLab PR Checks with SmartUI Hooks](/support/docs/smartui-gitlab-pr-checks-hooks) for Hooks approach
 
+
+
+
+
 ## Prerequisites
 
 Before you begin, ensure you have:
@@ -34,6 +38,8 @@ Before you begin, ensure you have:
 - TestMu AI credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
 - SmartUI CLI installed (or use `npx @lambdatest/smartui-cli`)
 
+
+
 ## Step 1: Integrate GitLab with TestMu AI
 
 1. Go to [TestMu AI Integrations page](https://integrations.lambdatest.com/)
@@ -42,9 +48,15 @@ Before you begin, ensure you have:
 4. Click **Install** and authorize the integration
 5. After successful authentication, refresh the Integrations page to verify GitLab is installed
 
+
+
 **Integration Status**
 
 You can verify your GitLab integration is active by checking the [Integrations page](https://integrations.lambdatest.com/). The GitLab integration should show as "Installed" or "Active".
+
+
+
+
 
 ## Step 2: Configure SmartUI Project
 
@@ -62,11 +74,18 @@ Create or update your SmartUI configuration file (`.smartui.json`):
 
 The SmartUI configuration file is used to specify project settings. You can also use environment variables or command-line options to override these settings.
 
+
+
+
+
 ## Step 3: Configure GitLab CI/CD Pipeline
 
 Create or update your `.gitlab-ci.yml` file. The key difference with the Exec method is that you use `npx smartui exec --gitURL` to run your tests.
 
 ### Complete GitLab CI/CD Configuration
+
+
+
 
 ```yaml title=".gitlab-ci.yml - TypeScript/JavaScript Example"
 stages:
@@ -117,6 +136,9 @@ only:
 environment:
 name: visual-regression/$CI_COMMIT_REF_NAME
 ```
+
+
+
 
 ```yaml title=".gitlab-ci.yml - Java Example"
 stages:
@@ -171,6 +193,9 @@ environment:
 name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
+
+
+
 ```yaml title=".gitlab-ci.yml - Python Example"
 stages:
 - test
@@ -221,6 +246,9 @@ environment:
 name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
+
+
+
 ```yaml title=".gitlab-ci.yml - Ruby Example"
 stages:
 - test
@@ -270,6 +298,9 @@ environment:
 name: visual-regression/$CI_COMMIT_REF_NAME
 ```
 
+
+
+
 ### Key Configuration Points
 
 1. **SmartUI CLI Installation**: Install SmartUI CLI globally or use `npx @lambdatest/smartui-cli`
@@ -290,12 +321,18 @@ npx smartui exec --gitURL "<gitlab-url>" -- <your-test-command>
 - `--`: Separator before your test command
 - ``: Your normal test command (e.g., `npm test`, `mvn test`, `pytest`)
 
+
+
+
+
 ## Step 4: Set Up GitLab CI/CD Variables
 
 Configure the following variables in your GitLab project:
 
 1. Go to your GitLab project → **Settings** → **CI/CD** → **Variables**
 2. Add the following variables:
+
+
 
 | Variable Name | Description |
 |--------------|-------------|
@@ -307,18 +344,28 @@ Configure the following variables in your GitLab project:
 
 The `PROJECT_TOKEN` is different from `LT_USERNAME` and `LT_ACCESS_KEY`. You can find it in your SmartUI project settings in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
+
+
+
+
 ## Step 5: View Pipeline Results in GitLab
 
 After your pipeline runs, you can view the results in the GitLab Pipelines page:
+
+
 
 The pipeline will show:
 - **Pipeline status** (Success/Failed)
 - **Job status** for SmartUI tests
 - **Screenshot statistics** (Total, Approved, Changes Found) in the job tooltip
 
+
+
 ## Step 6: View PR Check Results in GitLab Merge Request
 
 After your pipeline runs, you'll see SmartUI status checks in your GitLab merge request:
+
+
 
 ### Successful Status
 
@@ -334,7 +381,15 @@ When visual differences are detected:
 - **Details**: Click "Details" to review differences in SmartUI dashboard
 - **Action Required**: Review and approve/reject changes in SmartUI dashboard
 
+
+
 ## Complete Working Examples
+
+
+
+
+
+
 
 ```yaml title=".gitlab-ci.yml - Complete Web Testing Example"
 stages:
@@ -374,6 +429,9 @@ only:
 - merge_requests
 - main
 ```
+
+
+
 
 ```yaml title=".gitlab-ci.yml - Complete Java Web Testing Example"
 stages:
@@ -418,6 +476,15 @@ only:
 - main
 ```
 
+
+
+
+
+
+
+
+
+
 ```yaml title=".gitlab-ci.yml - Complete Mobile Testing Example"
 stages:
 - test
@@ -457,6 +524,9 @@ only:
 - merge_requests
 - main
 ```
+
+
+
 
 ```yaml title=".gitlab-ci.yml - Complete Java Mobile Testing Example"
 stages:
@@ -501,7 +571,18 @@ only:
 - main
 ```
 
+
+
+
+
+
+
+
+
 ## Troubleshooting
+
+
+
 
 **Issue: PR Check Not Appearing in GitLab**
 
@@ -516,6 +597,9 @@ only:
 6. Check pipeline logs to ensure tests completed successfully
 7. Verify SmartUI CLI is installed and accessible
 
+
+
+
 **Issue: Tests Run But No Screenshots in SmartUI**
 
 **Symptoms**: Pipeline completes successfully but no screenshots appear in SmartUI dashboard.
@@ -528,6 +612,9 @@ only:
 5. Check test logs for SmartUI execute command errors
 6. Ensure screenshot commands are being called in your tests
 7. Verify `SMARTUI_SERVER_ADDRESS` is set correctly (if using non-Selenium frameworks)
+
+
+
 
 **Issue: SmartUI Exec Command Fails**
 
@@ -542,6 +629,11 @@ only:
 6. Review pipeline logs for detailed error messages
 7. Try running the command locally first to debug
 
+
+
+
+
+
 ## Key Differences: Exec vs Hooks
 
 | Aspect | SmartUI Exec (This Guide) | SmartUI Hooks |
@@ -554,11 +646,15 @@ only:
 | **Project Token** | Required (`PROJECT_TOKEN`) | Not required (uses `LT_USERNAME`/`LT_ACCESS_KEY`) |
 | **Server Address** | May need `SMARTUI_SERVER_ADDRESS` for non-Selenium | Not required |
 
+
+
 ## Next Steps
 
 - Learn about [SmartUI CLI Exec Commands](/support/docs/smartui-cli-exec) for detailed exec usage
 - Check the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for common issues
 - Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/) for advanced pipeline configuration
+
+
 
 ## Related Documentation
 

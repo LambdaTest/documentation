@@ -56,7 +56,7 @@ TestComplete, from SmartBear, streamlines automated testing across desktop, web,
 ## Prerequisites
 
 - <BrandName /> account. You can <a href="https://www.testmuai.com/login/" onClick={CookieTrackingLogin}>sign up for free.</a>
-- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
 - Download TestComplete from its official website and complete the signup process.
 - Generate your App Id by uploading it to the <BrandName /> Server.
 

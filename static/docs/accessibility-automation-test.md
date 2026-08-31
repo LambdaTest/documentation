@@ -2,18 +2,23 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using TestMu AI's Accessibility Tool.
+Selenium accessibility automation runs WCAG accessibility checks against your web pages inside your existing Selenium test flow, then reports the violations in the TestMu AI Automation dashboard. Enable it with a single capability, choose whether scans fire on demand or automatically, and review the results alongside the rest of your automation run.
 
 > Compatible only with Chrome and Edge browser versions >= 90.
 
 ## Prerequisites
 
-- Your [TestMu AI Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
-- Setup your local machine as per your testing framework.
+Before you run your first accessibility scan, make sure you have the following in place:
+
+- Your [TestMu AI Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/).
+- A local machine set up for your testing framework.
+- Chrome or Edge, version 90 or later, since accessibility scans run only on these browsers.
 
 ## Step-by-Step Guide to Trigger Your Test
 
-### Step 1: Setup Your Test Suite
+Follow the numbered steps below in order. By the end, the session and its accessibility report appear in the Automation dashboard.
+
+### Step 1: Set Up Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
@@ -21,6 +26,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 Download or Clone the code sample from the TestMu AI GitHub repository to run your tests.
 
  View on GitHub
+
 
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
@@ -37,17 +43,40 @@ capabilities.setCapability("name", "LambdaTestJavaSample");
 
 > You can generate capabilities for your test requirements with the help of our inbuilt 🔗 Capabilities Generator.
 
+**Expected result:** Your test file points at the TestMu AI Hub endpoint and declares valid desired capabilities, so the test can launch a remote browser session.
+
 ### Step 2: Establish User Authentication
 
 Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
+
+
+
+
+
+
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
+
+
+
+
+
+
+
+
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
+
+
+
+**Expected result:** `LT_USERNAME` and `LT_ACCESS_KEY` are set in your shell, so your test authenticates to TestMu AI without hardcoding credentials.
 
 ### Step 3: Configure the Necessary Capabilities
 
@@ -89,6 +118,10 @@ capability.setCapability("accessibility.bestPractice", false); // Exclude best p
 capability.setCapability("accessibility.needsReview", true); // Include issues that need review
 ```
 
+For the full list of settings you can tune, including the WCAG version, Best Practice, Beta, and AI rule groups, see the [Supported Automation Capabilities reference](/support/docs/accessibility-automation-scan-configurations/).
+
+**Expected result:** Your capabilities include `accessibility: true` and either the `lambda-accessibility-scan` hook or `accessibility.autoscan`, so scans are generated during the run.
+
 ### Step 4: Execute and Monitor your Test
 
 Now execute your tests and visit the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
@@ -96,3 +129,12 @@ Now execute your tests and visit the [Automation Dashboard](https://www.testmuai
 ```bash
 mvn test
 ```
+
+
+
+**Expected result:** The test run completes and the session, along with its accessibility report, appears under the Accessibility tab in the Automation dashboard. Open the report to see the list of WCAG violations detected on each scanned page.
+
+## Next steps
+
+- Review your findings in depth with the [Navigating the Dashboard guide](/support/docs/accessibility-testing-navigating-dashboard/) to read the Accessibility Score, break down issues in Issue Summary and All Issues, and file bugs into your tracker.
+- Refine which pages get scanned by switching between the on-demand `lambda-accessibility-scan` hook and `accessibility.autoscan`, as covered in Step 3 above.

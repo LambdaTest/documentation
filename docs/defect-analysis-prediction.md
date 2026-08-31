@@ -109,7 +109,7 @@ When tests fail, the first question is always: *"Is this a real bug, a test scri
 ### How to Use It
 
 - [**Failure Categorization AI**](/docs/analytics-test-failure-classification/): Available in Insights dashboards for Web Automation, App Automation, and HyperExecute
-- [**Error Categorization Report**](/docs/error-categorization-report/): Structured failure reports for HyperExecute jobs with multiple error types
+- [**Error Categorization Report**](/support/docs/hyperexecute-job-reports/#error-categorization-report): Structured failure reports for HyperExecute jobs with multiple error types
 
 **Prerequisite:** Add the `remark` capability in your test scripts to provide additional context to the AI model, which improves categorization accuracy.
 

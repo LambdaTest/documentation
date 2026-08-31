@@ -11,7 +11,9 @@ A generation produces:
 
 You generate, review the result, **refine** it in plain language as many times as you like, and optionally **save** the functional cases as runnable `_test.md` files that [`kane-cli testmd`](/support/docs/kane-cli-testmd/) can execute and replay.
 
+
 For the full picture of AI test-case generation, including richer inputs (files, PDFs, issue links) and pushing cases into Test Manager or automation, see the [AI test-case generation guide](https://www.testmuai.com/support/docs/generate-test-cases-with-ai/). The **CLI here takes a text description** (optionally with local files attached via [`--files`](#attaching-files-for-context)) and writes local `_test.md` files. See [Limits and scope](#limits-and-scope).
+
 
 ## Quick start
 

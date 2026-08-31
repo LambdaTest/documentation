@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This page outlines how you can run your first test execution job on HyperExecute.
+Run your first test execution job on HyperExecute using a sample project.
 
 ## Before you start
 
@@ -10,7 +10,7 @@ We recommend running your first test execution job using a sample project on Hyp
 
 1. [**Using Quick Run**](/support/docs/hyperexecute-running-your-first-job/#1-using-quick-run): Execute tests directly from the HyperExecute Portal. ([Recommended](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/quickstart) for new users)
 2. [**Using Local System**](/support/docs/hyperexecute-running-your-first-job/#2-using-local-system): Execute tests from your Local System. (Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/))
-3. [**Using the HyperExecute Agent Skill**](/support/docs/getting-started-with-hyperexecute/#using-the-hyperexecute-agent-skill-with-testmu-ai): Generate and run tests using an AI coding assistant with the HyperExecute Agent Skill.
+3. [**Using the HyperExecute Agent Skill**](/support/docs/hyperexecute-agent-skills/): Generate and run tests using an AI coding assistant with the HyperExecute Agent Skill.
 
 ## Set Up Authentication and Environment Variables
 
@@ -105,9 +105,9 @@ In case of MAC, if you get a permission denied warning while executing CLI, simp
 
 ## 3. Using the HyperExecute Agent Skill
 
-You can generate production-ready HyperExecute tests and run them directly from your AI coding assistant (such as Claude or Cursor) using the HyperExecute Agent Skill — no manual YAML or CLI setup required.
+You can generate production-ready HyperExecute tests and run them directly from your AI coding assistant (such as Claude or Cursor) using the HyperExecute Agent Skill, with no manual YAML or CLI setup required.
 
-For installation and usage, refer to [Using the HyperExecute Agent Skill with TestMu AI](/support/docs/getting-started-with-hyperexecute/#using-the-hyperexecute-agent-skill-with-testmu-ai).
+For installation and usage, refer to [Using the HyperExecute Agent Skill with TestMu AI](/support/docs/hyperexecute-agent-skills/).
 
 ## HyperExecute Webinar Video
 
@@ -148,7 +148,7 @@ The above file would make sure that following are excluded while the zip is crea
 
 ## How to Get my Username and Access key
 
-This page explains where you can find your LT Username and Access Key.
+Your LT Username and Access Key authenticate every HyperExecute job. Here is where to find them.
 
 **Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 

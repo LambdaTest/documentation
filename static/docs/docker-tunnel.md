@@ -8,14 +8,20 @@ With Docker Tunnel, you will also be able to create multiple instances of TestMu
 
 ## Prerequisites To Get Started With TestMu AI Docker Tunnel
 
+
+
 1. Download and set up Docker Desktop from [official Docker website](https://www.docker.com/products/docker-desktop).
 2. You also need your TestMu AI Username and Access Key. You can get these from your [TestMu AI's profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
 
 ## How To Use Docker With TestMu AI Tunnel
 
+
+
 Initially, you need to pull the [Docker hub image of Lambda Tunnel](https://hub.docker.com/r/lambdatest/tunnel). You can use the below command to raise the pull request.
 
 `docker pull lambdatest/tunnel:latest`
+
+
 
 In order to pull the other docker images from the hub, use the below command:
 
@@ -37,13 +43,19 @@ This image supports all the [tunnel modifier flags](/docs/lambda-tunnel-modifier
 
 `docker run -it  lambdatest/tunnel --version`
 
+
+
 * **Basic Authentication and Login**: You can login into your TestMu AI Tunnel with Docker image, with the help of below command:
 
 `docker run -it --name lt lambdatest/tunnel --user johndoe --key XXXXXXXXXXXX`
 
+
+
 * **Capturing logs in mounted volume on host machine**: You can capture these logs with the help of below command:
 
 `docker run -it  -v /mydir:/logs lambdatest/tunnel --user joendoe --key XXXXXXXX --logFile /logs/tunnel.log`
+
+
 
 * **Getting Tunnel Status**: You can fetch the current tunnel status using the Info API on the tunnel.
 
@@ -51,9 +63,13 @@ Suppose the InfoAPI is available on the host over port 13001, then you need to e
 
 `docker run -it -p 13001:8000 lambdatest/tunnel --user johndoe --key XXXXXXX  --infoAPIPort 8000`
 
+
+
 Now, in order to fetch the current tunnel status, just execute the below command:
 
 `curl http://127.0.0.1:13001/api/v1.0/info`
+
+
 
 * You can also use **Proxy running on host machine at port 8082 having foo and bar as username and key** as per the example shown below:
 
@@ -79,7 +95,11 @@ Consider the below example:
 
 `curl -X DELETE http://127.0.0.1:13001/api/v1.0/stop`
 
+
+
 ## How To Make Use Of TestMu AI Tunnel With Docker Image For Development
+
+
 
 By default TestMu AI tunnel can no longer access web apps running on host machines or other docker containers using *localhost* or *127.0.0.1* when you run it using docker container. This means that the test scripts need to be modified in a way that they can access the target web app, according to the docker network topology and host operating system.
 

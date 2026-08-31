@@ -116,10 +116,10 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
         <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-        <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">HyperExecute GUI &nbsp; <NewTag  value="BETA" /></p></a>
+        <a href="/support/docs/hyperexecute-running-your-first-job/"><p className="p_home_inners">HyperExecute GUI &nbsp; <NewTag  value="BETA" /></p></a>
         <a href="/support/docs/hyperexecute-mcp-server/"><p className="p_home_inners">HyperExecute MCP Server</p></a>
-        <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
-    <a href="/support/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
+        <a href="/support/docs/getting-started-with-hyperexecute/#key-features-of-hyperexecute"><p className="p_home_inners">Features</p></a>
+    <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
      <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
       </div>
     </div>
@@ -157,12 +157,12 @@ import NewTag from '../src/component/newTag';
       <div className="home_inners">
         <a href="/support/docs/smart-visual-regression-testing/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/smartui-selenium-js-sdk/"><p className="p_home_inners">Explore SDKs</p></a>
-        <a href="/support/docs/smartui-cli/"><p className="p_home_inners">CLI</p></a>
-        <a href="/support/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload Screenshots</p></a>
+        <a href="/support/docs/smartui-cli-complete-reference/"><p className="p_home_inners">CLI</p></a>
+        <a href="/support/docs/smartui-cli-complete-reference/"><p className="p_home_inners">Upload Screenshots</p></a>
         <a href="/support/docs/smartui-pdf-comparison/"><p className="p_home_inners">Smart PDF Comparison</p></a>
-        <a href="/support/docs/smart-ui-build-options/"><p className="p_home_inners">Build Config and Options</p></a>
-        <a href="/support/docs/test-settings-options/"><p className="p_home_inners">Advance Comparison Options</p></a>
-        <a href="/support/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
+        <a href="/support/docs/smartui-project-settings/"><p className="p_home_inners">Build Config and Options</p></a>
+        <a href="/support/docs/smartui-project-settings/"><p className="p_home_inners">Advance Comparison Options</p></a>
+        <a href="/support/docs/smartui-project-settings/"><p className="p_home_inners">Handling Dynamic Data</p></a>
       </div>
     </div>
     <div className="home_inners_box">
@@ -232,7 +232,7 @@ import NewTag from '../src/component/newTag';
        <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
         <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
-        <a href="/support/docs/insights-dashboard/"><p className="p_home_inners">Insights Dashboard</p></a>
+        <a href="/support/docs/tms-reports/"><p className="p_home_inners">Insights Dashboard</p></a>
         <a href="/support/docs/manual-test-case-creation/"><p className="p_home_inners">Manual Test Cases</p></a>
         <a href="/support/docs/automated-test-cases-with-ai/"><p className="p_home_inners">Automated Test Cases</p></a>
         <a href="/support/docs/test-run-creation-and-management/"><p className="p_home_inners">Test Run</p></a>
@@ -262,9 +262,9 @@ import NewTag from '../src/component/newTag';
       <h2 className='homeMain_h2'><AccessibilityLightIcon className="home_icons home_light_icon" role="presentation"/> <AccessibilityDarkIcon className="home_icons home_dark_icon" role="presentation"/>Accessibility Testing</h2>
       <div className="home_inners">
         <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
-        <a href="/support/docs/accessibility-choosing-the-right-tool/"><p className="p_home_inners">Choose Your Tool</p></a>
+        <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Choose Your Tool</p></a>
         <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Manual Testing</p></a>
-        <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Automation</p></a>
+        <a href="/support/docs/accessibility-automation-test/"><p className="p_home_inners">Automation</p></a>
         <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Test Scheduling</p></a>
         <a href="/support/docs/web-scanner-getting-started/"><p className="p_home_inners">Web Scanner</p></a>
         <a href="/support/docs/accessibility-testing-navigating-dashboard/"><p className="p_home_inners">Reports</p></a>

@@ -44,6 +44,9 @@ If your runs do not currently send branch information, add it before migrating, 
 
 Every source below can be used in the same Omni project. Each one keeps the workflow it already has, because Omni changes where the results land, not how you capture them.
 
+
+
+
 Browser-based capture, through any of the supported routes:
 
 - **CLI exec mode**, to wrap an existing automation suite, for example `npx smartui exec -- npx cypress run`
@@ -51,7 +54,15 @@ Browser-based capture, through any of the supported routes:
 - **SDK hooks**, calling `smartui.snapshot()` directly inside your test code
 - **Web Scanner**, for no-code crawling of a site
 
+
+
+
+
 Native mobile app screenshots captured through the app automation SDKs (Appium, Espresso and XCUITest), using the SmartUI screenshot hook inside your test.
+
+
+
+
 
 Designs pulled straight from Figma with the CLI, so the intended design can sit in the same project as the implementation that is meant to match it.
 
@@ -59,11 +70,19 @@ Designs pulled straight from Figma with the CLI, so the intended design can sit 
 smartui upload-figma <designs.json>
 ```
 
+
+
+
+
 Component-library validation by crawling a running Storybook instance.
 
 ```bash
 npx smartui storybook <storybook-url>
 ```
+
+
+
+
 
 Multi-page document verification. Each page of the PDF becomes its own comparison.
 
@@ -73,11 +92,18 @@ smartui upload-pdf <path-to-pdfs>
 
 PDFs can also be uploaded through the SmartUI PDF API.
 
+
+
+
+
 Raw image assets uploaded directly, for cases where the screenshot is produced outside SmartUI.
 
 ```bash
 smartui upload <path-to-images>
 ```
+
+
+
 
 ## Where Each Source Is Set Up
 
@@ -131,6 +157,7 @@ Omni projects are released behind a feature flag and are rolled out progressivel
 **Enabled per organisation**
 Omni is switched on for an organisation as a whole, not per user or per project. Once it is enabled, every project you create is an Omni project regardless of which creation flow you use, and it accepts all six capture sources from the start.
 
+
 - **Existing projects are not converted.** Projects created before Omni was enabled keep their original type and continue to behave exactly as they did, accepting the single source they were created for. There is no in place conversion, so plan for new projects rather than a switch on existing ones.
 - **You can tell the two apart from the dashboard URL.** An Omni project opens under `/test/omni/`, while a standard project opens under its own platform, for example `/test/pdf/`.
 - **If you expect Omni and do not see it**, your organisation may not be enabled yet.
@@ -148,4 +175,4 @@ To have Omni enabled for your organisation, contact support at support@testmuai.
 
 - [Ignore or Select Annotated Regions](/support/docs/smartui-draw-on-ui/)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project/)
-- [SmartUI CLI Environment Variables](/support/docs/smartui-cli-env-variables/)
+- [SmartUI CLI Environment Variables](/support/docs/smartui-running-your-first-project/)

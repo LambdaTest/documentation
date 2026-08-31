@@ -4,8 +4,6 @@
 
 HyperExecute Job Reports are designed to offer deep insights into the performance of your tests. By utilizing these reports, you can identify issues, track progress, and enhance your software testing workflow. Whether you're a developer or QA engineer, understanding and leveraging the various report types is crucial to delivering high-quality software efficiently.
 
-If you want to learn how to **generate** and **download** detailed reports, including **multiple reports**, please refer to the [HyperExecute Reports documentation](/support/docs/hyperexecute-job-reports/) page.
-
 ## Extent Report
 Extent Reports is a powerful reporting library used in test automation frameworks to generate visually appealing and detailed test reports. It provides insights into the status of each test case, including whether they passed, failed, or were skipped, along with additional information such as logs, screenshots, and system/environment details. This makes it especially popular in Selenium, Appium, and API testing frameworks.
 

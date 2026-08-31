@@ -17,6 +17,9 @@ You install only the rook CLI. You do not need the source repository, a dedicate
 **Pre-alpha**
 Commands and stored file formats can change. Test against a disposable or staging target and review the target and write warning before every run.
 
+
+
+
 ## Conversation Testing and Autonomous Testing
 
 Agent Assurance covers both forms of agent testing, but they solve different problems.
@@ -89,6 +92,7 @@ Current pre-alpha limits include:
 
 **Target actions are real**
 Rook does not sandbox or roll back the agent under test. Refunds, emails, tickets, database updates, and filesystem writes happen in the target environment.
+
 
 For the first run, use staging endpoints, disposable fixtures, and --concurrency 1. Start with one harmless scenario, and approve only the exact target you intended.
 

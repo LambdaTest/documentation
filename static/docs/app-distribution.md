@@ -15,11 +15,17 @@ App Distribution lives in the sidebar under **Real Device → App Management and
 
 App Distribution is currently in **Beta** and only supports builds signed with an **Enterprise certificate**. We're actively working on expanding the features and gradually rolling it out. If you have any queries, please reach out to our support team.
 
+
+
+
+
 ## Before You Begin
 
 - A TestMu AI account with **App Distribution enabled** for your organization.
 - An Android (`.apk` / `.aab`) or iOS (`.ipa`) build, no larger than **1 GB**.
 - For CI/CD uploads, your TestMu AI **username** and **access key** ([find them on your dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security)).
+
+
 
 ## Manage Beta Testers
 
@@ -31,6 +37,8 @@ At a glance:
 
 - **Beta Testers** are individuals you invite by email.
 - **Beta Teams** are groups of testers. Assign a team to an app's sharing list and all current (and future) members of that team get access automatically.
+
+
 
 ## Upload Builds
 
@@ -51,6 +59,8 @@ You can add builds to App Distribution either from the dashboard or directly fro
 
 **Maximum size per build:** 1 GB
 
+
+
 ### From Your CI/CD Pipeline
 
 Builds produced by Azure DevOps, GitHub Actions, Jenkins, Bitrise, CircleCI, or any other pipeline can be uploaded to App Distribution using the same Upload App API used by App Manager. See [App Testing APIs](/support/docs/app-testing-apis/) for the request format.
@@ -59,11 +69,15 @@ Builds produced by Azure DevOps, GitHub Actions, Jenkins, Bitrise, CircleCI, or 
 
 App Distribution auto-detects each build's app from the **package name** (Android) or **bundle ID** (iOS) and groups every version of that app together. You don't need to create apps manually.
 
+
+
 | Upload | Result |
 | --- | --- |
 | New package name / bundle ID | A new app entry is created. |
 | Same package + new version | A new build is added under the existing app. |
 | Same package + same version | The previous build is **overwritten**. |
+
+
 
 ## Distribution Page and Sharing
 
@@ -82,6 +96,8 @@ Open any app and go to the **Distribution Page** tab. Here you can
   - **Public** - anyone with the link can download.
   - **Authenticated** - only testers in the app's sharing list can download from the link received in their email.
 
+
+
 ### Sharing Settings
 
 Open any app and go to the **Sharing** tab. Here you can:
@@ -92,6 +108,8 @@ Open any app and go to the **Sharing** tab. Here you can:
   - **All testers in the organization** - notify every beta tester in your org.
 - **Invite beta testers** - search and add **teams** or **individual members** to the sharing list. Testers added here can download authenticated builds and receive notifications.
 
+
+
 ### Notification Emails
 
 When Auto-Notify is ON and a new build is uploaded, configured testers receive an email with a link to the Distribution Page.
@@ -101,6 +119,10 @@ You can also send notifications manually:
 1. Open the build row in App Manager.
 2. Click the **Share** icon.
 3. Click **Notify Testers**.
+
+
+
+
 
 ## Test on Real Devices
 

@@ -16,6 +16,10 @@ This document will guide you to integrate your SmartUI jobs and Slack, allowing 
 - Navigate to the **Settings** > **Integration** page.
 - Select the **Communication** tab and search for Slack.
 
+
+
+
+
 ## Step 2: Integrate the Slack with your TestMu AI Account
 
 - Click on the **Connect** button and then **Install** for the Slack integration.
@@ -25,6 +29,10 @@ This document will guide you to integrate your SmartUI jobs and Slack, allowing 
 - Select the channel you want to post on. Click on **Allow** button.
 
 A notification would be shared on to all the members belonging to that channel, informing about your integration.
+
+
+
+
 
 ## Step 3: Update the Notification Settings and Trigger the Job
 
@@ -36,7 +44,13 @@ Once you integrate Slack, you need to configure notification settings to get tes
 - Click on the **Update Settings** button.
 - Now again trigger the project with the changes and visit the Slack channel to view the notification containing meta information about the build.
 
+
+
+
+
 - Once you save that configuration, you will start receiving the custom notifications in Slack!
+
+
 
 ## Remove the Slack Integration
 

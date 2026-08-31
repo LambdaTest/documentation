@@ -8,12 +8,18 @@ Using the TestMu AI platform, perform regression testing in just one click and e
 
 If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite. We have to enable the mapping with the `smartUI.build` to be added your capabilities.
 
+
+
+
 ```js title="Please add the following to your capabilities configuration"
 let capabilities = {
 // highlight-next-line
 "smartUI.build": <Your_Build_Name> // Please add your build name of choice here
 }
 ```
+
+
+
 
 ```json title="Please make the changes in lambdatest-config.json"
 "smart_ui": {
@@ -22,15 +28,8 @@ let capabilities = {
 }
 ```
 
-```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
-const capabilities = {
-'LT:Options': {
-// highlight-next-line
-"smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
 
-}}
-```
 
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
@@ -42,6 +41,8 @@ const capabilities = {
 }}
 ```
 
+
+
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
 const capabilities = {
@@ -51,10 +52,29 @@ const capabilities = {
 
 }}
 ```
+
+
+
+```js title="Please add the following in <LT:Options> in your capabilities configuration "
+
+const capabilities = {
+'LT:Options': {
+// highlight-next-line
+"smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
+
+}}
+```
+
+
+
+
 
 ## Enabling build as a baseline
 
 If you want to mark your build as a baseline from your test suite while executing tests then you have to enable the below mentioned capability configuration needs to be enabled.
+
+
+
 
 ```js title="Please add the following to your capabilities configuration"
 let capabilities = {
@@ -63,6 +83,9 @@ let capabilities = {
 };
 ```
 
+
+
+
 ```json title="Please make the changes in lambdatest-config.json"
 "smart_ui": {
 // highlight-next-line
@@ -70,15 +93,8 @@ let capabilities = {
 }
 ```
 
-```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
-const capabilities = {
-'LT:Options': {
-// highlight-next-line
-"smartUIBaseline": true // Please add if you want to make this build as baseline
 
-}}
-```
 
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
@@ -90,6 +106,8 @@ const capabilities = {
 }}
 ```
 
+
+
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
 const capabilities = {
@@ -99,6 +117,22 @@ const capabilities = {
 
 }}
 ```
+
+
+
+```js title="Please add the following in <LT:Options> in your capabilities configuration "
+
+const capabilities = {
+'LT:Options': {
+// highlight-next-line
+"smartUIBaseline": true // Please add if you want to make this build as baseline
+
+}}
+```
+
+
+
+
 
 ## Build Features
 
@@ -109,7 +143,11 @@ The following are the list of features that are available for the build process 
 - Add additional screenshots if needed for the existing build by using the same build name in the capabilities. This will add new screenshots to the build.
 - You can also update any build of choice as a new **Baseline** build.
 
+
 We currently only support one baseline for one project in our current version. We recommend you to create a new project for multiple baseline builds
+
+
+
 
 ## Build Status Information
 

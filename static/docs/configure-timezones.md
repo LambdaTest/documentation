@@ -1,4 +1,4 @@
-# Configure Timezones for Your Tests
+# How to Test Across Timezones in Selenium on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,9 +6,13 @@ Many applications display dates, schedule events, or trigger time-sensitive logi
 
 ## Set the Timezone Using the `timezone` Capability
 
-Pass a UTC offset string in `LT:Options` to configure the test VM's system timezone.
+Pass a UTC offset string in `LT:Options` to configure the test VM's system timezone. The `timezone` capability works alongside the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you set in `LT:Options`.
 
 Add the `timezone` capability to your `LT:Options` configuration. The value is a UTC offset string in the format `UTC+HH:MM` or `UTC-HH:MM` (e.g., `UTC+05:30`). The default is `UTC+00:00`.
+
+
+
+
 
 ```java title="TimezoneTest.java"
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -37,6 +41,10 @@ driver.quit();
 }
 ```
 
+
+
+
+
 ```javascript title="timezone-test.js"
 const { Builder } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
@@ -63,6 +71,10 @@ await driver.quit();
 })();
 ```
 
+
+
+
+
 ```python title="timezone_test.py"
 import os
 from selenium import webdriver
@@ -88,6 +100,10 @@ driver.get("https://example.com")
 driver.quit()
 ```
 
+
+
+
+
 ```csharp title="TimezoneTest.cs"
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -109,6 +125,10 @@ new Uri("https://hub.lambdatest.com/wd/hub"), browserOptions);
 driver.Navigate().GoToUrl("https://example.com");
 driver.Quit();
 ```
+
+
+
+
 
 ```php title="TimezoneTest.php"
 <?php
@@ -133,6 +153,10 @@ $driver->get("https://example.com");
 $driver->quit();
 ```
 
+
+
+
+
 ```ruby title="timezone_test.rb"
 require "selenium-webdriver"
 
@@ -156,6 +180,10 @@ driver.navigate.to("https://example.com")
 driver.quit
 ```
 
+
+
+
+
 ## Common Timezone Values
 
 Use these UTC offset strings with the `timezone` capability.
@@ -173,7 +201,9 @@ Use these UTC offset strings with the `timezone` capability.
 | `UTC-03:00` | Sao Paulo, Buenos Aires |
 | `UTC+03:00` | Moscow, Istanbul |
 
+
 The timezone capability is case sensitive. Use the exact format `UTC+HH:MM` or `UTC-HH:MM`.
+
 
 ## When to Configure Timezones
 
@@ -186,4 +216,14 @@ Consider setting the `timezone` capability in these scenarios:
 - **Time-based business logic.** Test features like cutoff times, availability windows, or session expiration that depend on the user's timezone.
 - **Cross-timezone consistency.** Run the same test suite across multiple timezones to catch discrepancies in time-dependent logic.
 
-Combine the `timezone` capability with [geolocation](/support/docs/selenium-geolocation-capabilities/) to simulate a complete locale environment for your tests.
+
+Combine the `timezone` capability with geolocation to simulate a complete locale environment for your tests.
+
+
+## Next Steps
+
+
+Continue with these related guides:
+
+- [Selenium Geolocation Capabilities](/support/docs/selenium-geolocation-capabilities/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)

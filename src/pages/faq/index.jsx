@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from '@docusaurus/router';
+import { useLocation, useHistory } from '@docusaurus/router';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import { BRAND_URL } from '@site/src/component/BrandName';
@@ -164,6 +164,7 @@ const HYE_SUB_TABS = [
 
 export default function FaqPage() {
   const location = useLocation();
+  const history = useHistory();
   const [activeTab, setActiveTab] = useState('realtime');
   const [activeHyeTab, setActiveHyeTab] = useState('gen');
 
@@ -176,6 +177,20 @@ export default function FaqPage() {
     if (tab && TABS.some((t) => t.id === tab)) setActiveTab(tab);
     if (sub && HYE_SUB_TABS.some((t) => t.id === sub)) setActiveHyeTab(sub);
   }, [location.search]);
+
+  // Reflect the active tab in the URL so every tab has a unique, shareable link,
+  // e.g. /support/faq/?tab=accessibility (HyperExecute keeps its sub-tab).
+  const selectTab = (id) => {
+    setActiveTab(id);
+    const params = new URLSearchParams();
+    params.set('tab', id);
+    if (id === 'hye') params.set('sub', activeHyeTab);
+    history.replace(`${location.pathname}?${params.toString()}`);
+  };
+  const selectHyeTab = (id) => {
+    setActiveHyeTab(id);
+    history.replace(`${location.pathname}?tab=hye&sub=${id}`);
+  };
 
   return (
     <Layout
@@ -200,7 +215,7 @@ export default function FaqPage() {
               <button
                 key={t.id}
                 className={`${faqStyles.tabBtn} ${activeTab === t.id ? faqStyles.tabBtnActive : ''}`}
-                onClick={() => setActiveTab(t.id)}
+                onClick={() => selectTab(t.id)}
               >
                 {t.label}
               </button>
@@ -491,7 +506,7 @@ export default function FaqPage() {
                   <button
                     key={t.id}
                     className={`${faqStyles.subTabBtn} ${activeHyeTab === t.id ? faqStyles.subTabBtnActive : ''}`}
-                    onClick={() => setActiveHyeTab(t.id)}
+                    onClick={() => selectHyeTab(t.id)}
                   >
                     {t.label}
                   </button>
@@ -1260,6 +1275,65 @@ preDirectives:
               <p>KaneAI integrates with {BRAND_NAME}'s SmartUI. Add a visual assertion step to your test and SmartUI captures a baseline screenshot and diffs future runs against it, catching layout regressions alongside functional failures. See <a href={`${BRAND_URL}/support/docs/kaneai-smartui-visual-testing/`}>how to set up visual testing in KaneAI</a> for setup.</p>
               </details>
 
+              {/* General */}
+              <details>
+              <summary>What does KaneAI run my tests on?</summary>
+              <p>KaneAI runs your tests on real browsers in the cloud on HyperExecute, across multiple operating systems.</p>
+              </details>
+
+              <details>
+              <summary>Where can I see my KaneAI test results?</summary>
+              <p>Every run is saved to Test Manager, and KaneAI gives you a shareable Test Summary link you can send to anyone.</p>
+              </details>
+
+              {/* Bot protection and CAPTCHAs */}
+              <details>
+              <summary>Why is my KaneAI test blocked by a CAPTCHA or Cloudflare challenge?</summary>
+              <p>KaneAI runs your test on a cloud browser. Bot protection such as Cloudflare Turnstile, Google reCAPTCHA, or hCaptcha can classify that cloud session as automated and block it, so a sign up, log in, or checkout step never completes. The verification token is rejected even when the form is filled correctly.</p>
+              </details>
+
+              <details>
+              <summary>Can KaneAI solve CAPTCHAs automatically?</summary>
+              <p>No. CAPTCHAs are built to block automation, and no tool can solve them reliably. The reliable approach is to stop the challenge from being served to your test traffic, not to solve it. You do not need to build a separate environment to do this.</p>
+              </details>
+
+              <details>
+              <summary>How do I run KaneAI tests on a site protected by Cloudflare Turnstile?</summary>
+              <p>Use whichever option fits your setup:</p>
+              <ol>
+                <li><strong>Whitelist {BRAND_NAME}'s cloud IPs (recommended).</strong> Add {BRAND_NAME}'s cloud IP ranges to an allow rule in your security layer, a Cloudflare IP Access rule, a WAF allowlist, or a Turnstile allowlist, scoped to your test domain. Traffic from our cloud browsers is then trusted and the challenge is never shown.</li>
+                <li><strong>Use a test environment without the live challenge.</strong> On staging or UAT, disable the CAPTCHA or switch it to a testing key. Cloudflare Turnstile provides test keys that always pass, so automation verifies while production stays fully protected.</li>
+                <li><strong>Allowlist automation with a request header.</strong> If your application supports it, allow a known custom request header on your test environment so requests carrying it skip the challenge. Keep this to test environments only.</li>
+              </ol>
+              <p>To get your IPs whitelisted, follow the <a href={`${BRAND_URL}/support/docs/testmu-public-ip/`}>TestMu AI Public IP Ranges</a> for the current ranges and the exact steps.</p>
+              </details>
+
+              <details>
+              <summary>Do I need a separate, CAPTCHA-free environment for KaneAI?</summary>
+              <p>No. Whitelisting {BRAND_NAME}'s cloud IPs in your existing setup is a configuration change, not new infrastructure.</p>
+              </details>
+
+              <details>
+              <summary>How do I test an app on a private network or localhost with KaneAI?</summary>
+              <p>Whitelisting only works for applications reachable on the public internet. If your environment is on a private network, behind a VPN, or on localhost, use the <a href={`${BRAND_URL}/support/docs/network-whitelisting-and-tunnel-guide/`}>TestMu AI Tunnel</a> instead.</p>
+              </details>
+
+              {/* Billing and plans */}
+              <details>
+              <summary>What payment methods does KaneAI billing support, and how do I get an invoice?</summary>
+              <p>TestMu AI accepts all types of credit and debit cards for KaneAI billing, and PayPal is available for annual subscriptions. An invoice is generated for every subscription and sent by default to the email address you used at signup; you can also download invoices anytime from your account. Since KaneAI billing is per active agent, each invoice reflects the agent licenses active on your plan for that period. If something looks wrong, raise it quickly: under the Terms of Service, billing discrepancies must be reported within 30 days of appearing on an invoice, or the right to dispute them is waived. For payment-method or invoice questions you cannot resolve in the dashboard, email support@testmuai.com or use the 24/7 chat portal.</p>
+              </details>
+
+              <details>
+              <summary>How do I upgrade or downgrade my KaneAI plan, and how do seats and usage limits work?</summary>
+              <p>You can upgrade or downgrade your KaneAI plan at any time, with changes taking effect from your next billing cycle; plan changes are self-serve via the Upgrade button in the dashboard or Subscriptions &amp; Billings &gt; Edit, where the Monthly-to-Yearly toggle is advertised as saving up to 20% platform-wide. Because KaneAI is licensed per agent, adding seats means adding agent licenses, and each paid agent includes 500 AI test authoring sessions per month, so usage limits scale with your license count. If you have seen credits mentioned, that unit belongs to Kane CLI, a separate developer product. Compare the Web plan ($249/agent/month, or $199/agent/month billed annually) and Mobile + Web ($349/agent/month, or $299/agent/month billed annually) on the <a href="https://www.testmuai.com/pricing/?product=kane-ai-group" rel="nofollow">KaneAI per-agent pricing page</a>, or contact sales about enterprise plans.</p>
+              </details>
+
+              <details>
+              <summary>Does KaneAI auto-renew, and how do I cancel my subscription or delete my account?</summary>
+              <p>Yes, KaneAI subscriptions auto-renew at the end of each monthly or annual billing cycle unless you act before the term ends: per the Terms of Service, you can terminate with thirty (30) days' prior written notice, or turn off auto-renewal by logging into TestMu Services or emailing support@testmuai.com. To cancel in-app, open your profile avatar (top-right), go to Billing, scroll to CANCEL SUBSCRIPTION, select a cancellation reason, and click Complete Cancellation; a Resume your subscription option stays available if you change your mind. Fees already paid are non-refundable under the Terms of Service, so time the change around your renewal date. Cancelling a subscription is separate from deleting your TestMu AI account entirely; for full account deletion, contact support@testmuai.com or the 24/7 chat portal. Before you go, export your generated tests to Selenium, Playwright, Cypress, or Appium so your work leaves with you as standard framework code.</p>
+              </details>
+
             </div>
           )}
 
@@ -1465,7 +1539,7 @@ preDirectives:
 
               <details>
               <summary>Can I run accessibility checks as part of my automated Selenium or Playwright test suite?</summary>
-              <p>Yes. Accessibility Automation integrates with Selenium and Playwright on the {BRAND_NAME} cloud grid. Add the accessibility capability to your existing test configuration; no separate test file is needed. Results appear in the Accessibility tab of your Automation dashboard. Note: Playwright Automation requires Chrome; the bundled <code>pw-chromium</code> browser is not supported because the required extension does not load in it. See <a href={`${BRAND_URL}/support/docs/accessibility-automation/`}>how to add accessibility checks to automated tests</a>.</p>
+              <p>Yes. Accessibility Automation integrates with Selenium and Playwright on the {BRAND_NAME} cloud grid. Add the accessibility capability to your existing test configuration; no separate test file is needed. Results appear in the Accessibility tab of your Automation dashboard. Note: Playwright Automation requires Chrome; the bundled <code>pw-chromium</code> browser is not supported because the required extension does not load in it. See <a href={`${BRAND_URL}/support/docs/accessibility-automation-test/`}>how to add accessibility checks to automated tests</a>.</p>
               </details>
 
               <details>
@@ -1495,12 +1569,90 @@ preDirectives:
 
               <details>
               <summary>How do I export and share accessibility reports with my team or for compliance audits?</summary>
-              <p>Export reports as a spreadsheet, PDF, or packaged evidence bundle from the Accessibility dashboard. Exports reflect the current active issue state including any filters or hide/restore decisions applied. For audit trails, include build metadata (date, commit SHA, scan type) alongside the export. See <a href={`${BRAND_URL}/support/docs/accessibility-exporting-sharing-reports/`}>how to export and share accessibility reports</a>.</p>
+              <p>Export reports as a spreadsheet, PDF, or packaged evidence bundle from the Accessibility dashboard. Exports reflect the current active issue state including any filters or hide/restore decisions applied. For audit trails, include build metadata (date, commit SHA, scan type) alongside the export. See <a href={`${BRAND_URL}/support/docs/accessibility-testing-navigating-dashboard/`}>how to export and share accessibility reports</a>.</p>
               </details>
 
               <details>
               <summary>Does accessibility testing work alongside KaneAI or HyperExecute tests?</summary>
               <p>Yes. Accessibility Automation runs on the same {BRAND_NAME} cloud grid as Selenium and Playwright tests, so it is compatible with HyperExecute for parallel execution. Accessibility checks can be embedded in any test that runs on the grid, including tests authored in KaneAI and exported as Selenium or Playwright code.</p>
+              </details>
+
+              {/* Scan configuration */}
+              <details>
+              <summary>Why did a Best Practice rule not run under WCAG 2.1 AA?</summary>
+              <p>A check runs only if its WCAG criterion is in range <strong>and</strong> every tag it carries is enabled. If the Best Practice toggle is off, Best Practice rules are skipped regardless of WCAG level. Turn the relevant group toggle on.</p>
+              </details>
+
+              <details>
+              <summary>Does every accessibility scan need to be reconfigured?</summary>
+              <p>No. The last-used configuration is pre-filled automatically (per platform). You adjust only what you need and run. The scan must be saved for the configuration to persist.</p>
+              </details>
+
+              <details>
+              <summary>Do accessibility scan configuration changes affect teammates?</summary>
+              <p>No. Settings are saved per user and per platform.</p>
+              </details>
+
+              <details>
+              <summary>Why are AI-powered accessibility rules off by default?</summary>
+              <p>They are opt-in by design: AI rules invoke AI evaluation and surface items for manual verification rather than automatic pass or fail. Enable them when that depth is required.</p>
+              </details>
+
+              {/* Keyboard scan */}
+              <details>
+              <summary>Can the keyboard scan test keyboard navigation within iframes?</summary>
+              <p>The tool attempts to test iframe content when possible, but cross-origin iframes may have limitations due to security restrictions.</p>
+              </details>
+
+              <details>
+              <summary>Why didn't the keyboard scan detect my custom dropdown menu?</summary>
+              <p>Complex widgets with dynamic content may require manual identification. Use the "Yes" option in the guided step to mark these elements.</p>
+              </details>
+
+              <details>
+              <summary>How is the keyboard scan different from a regular axe-core scan?</summary>
+              <p>It combines axe-core's automated checks with guided manual testing to catch issues that automated tools alone might miss, particularly custom interactive elements.</p>
+              </details>
+
+              <details>
+              <summary>Can I save and share keyboard scan results?</summary>
+              <p>Yes. Keyboard scan results can be exported and shared with your team from the export options in the report view.</p>
+              </details>
+
+              {/* Accessibility score */}
+              <details>
+              <summary>What does an accessibility score of 100 mean?</summary>
+              <p>No automated issues were detected by the scanning engine. It does <strong>not</strong> mean full WCAG conformance; automated tools catch roughly 30 to 40% of WCAG issues, so a manual audit is still recommended.</p>
+              </details>
+
+              <details>
+              <summary>Why is my accessibility score different from before?</summary>
+              <p>The old ratio-based score counted decorative and structural elements as "passing," which inflated results. The density-adjusted model only weighs meaningful, functional elements, so scores are generally lower but more honest.</p>
+              </details>
+
+              <details>
+              <summary>Why does an accessibility score not appear on a test?</summary>
+              <p>The score requires <code>scored_element_count</code>, collected by newer versions of the scanning extensions and SDKs. Tests run before the feature was enabled show the existing accessibility level instead.</p>
+              </details>
+
+              <details>
+              <summary>Does hiding issues change the accessibility score?</summary>
+              <p>Yes. Hiding an issue recomputes the score from the remaining visible issues, and the dashboard updates in real time. Restoring a hidden issue recomputes again.</p>
+              </details>
+
+              <details>
+              <summary>Is the accessibility score the same across web and mobile?</summary>
+              <p>Yes. The formula is identical everywhere; only the exclusion rules that decide which elements count differ (web uses DOM rules, Android uses <code>AccessibilityNodeInfo</code>, iOS uses <code>XCUIElement</code>).</p>
+              </details>
+
+              <details>
+              <summary>Does toggling "Needs Review" change the accessibility score?</summary>
+              <p>No. Needs-review items are excluded from scoring because they require manual verification. Toggling updates issue counts but not the score.</p>
+              </details>
+
+              <details>
+              <summary>What is the minimum accessibility score?</summary>
+              <p>A score of 0 is reserved exclusively for keyboard-only scans.</p>
               </details>
 
             </div>

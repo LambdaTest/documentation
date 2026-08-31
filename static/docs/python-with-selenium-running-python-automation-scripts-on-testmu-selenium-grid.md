@@ -1,4 +1,4 @@
-# Selenium With Python
+# How to Run Selenium Tests With Python on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,22 +6,47 @@ Run your Python Selenium tests on the TestMu AI cloud grid across 10,000+ browse
 
 ## Prerequisites
 
+
+Have these in place before you run any of the frameworks below.
+
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install [Python](https://www.python.org/downloads/) and pip.
 4. Install the Selenium client and WebDriver bindings, and (recommended) `virtualenv` to isolate dependencies.
 
-## Set your credentials
+## Set Your Credentials
+
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
+
+
+
+
+
+
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
+
+
+
+
+
+
+
+
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-## How the sample test works
+
+
+
+
+
+
+## How the Sample Test Works
+
 
 Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities dictionary:
 
@@ -37,11 +62,18 @@ capabilities = {
 
 What changes between frameworks is only how those capabilities are supplied: inline, a `conftest.py`, a `.robot` variables block, or a JSON config. That is what each tab covers.
 
+
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 
-## Run a test in your framework
+
+## Run a Test in Your Framework
+
 
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
+
+
+
+
 
 The standard-library `unittest` framework connects a remote WebDriver to the grid, with capabilities inline in the test.
 
@@ -64,11 +96,23 @@ capabilities = {
 }
 ```
 
-3. Run the test:
+3. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the test:
 
 ```bash
 python lambdatest_test.py
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+
+
+
 
 pytest keeps capabilities in `conftest.py` and runs in parallel via `pytest-xdist`.
 
@@ -90,12 +134,24 @@ capabilities = {
 }
 ```
 
-3. Run a single test, or in parallel:
+3. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the test. The actual pytest run is the `pytest` command (which also enables parallel execution); the plain `python` invocation runs the script directly:
 
 ```bash
 python tests/lt_sample_todo.py
 pytest -s -n=2 tests/lt_sample_todo.py
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+
+
+
 
 Robot Framework uses Selenium2Library, with capabilities and the grid URL declared as variables in a `.robot` file, run through a Makefile.
 
@@ -123,12 +179,24 @@ ${CAPABILITIES}     ${EMPTY.join(${_tmp})}
 ${REMOTE_URL}       https://${KEY}@hub.lambdatest.com/wd/hub
 ```
 
-3. Run a single test, or all in parallel:
+3. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run a single test, or all in parallel:
 
 ```bash
 make test_Windows_10_chrome_latest
 make run_all_in_parallel
 ```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+
+
+
 
 Behave is BDD for Python: feature files plus step definitions, with capabilities in a JSON config.
 
@@ -153,18 +221,70 @@ cd Python-Behave-Selenium
 ]
 ```
 
-3. Run the test:
+3. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the test:
 
 ```bash
 behave features/test.feature
 ```
 
-## Legacy frameworks
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-This framework is deprecated and kept only for existing suites. For new projects, use one of the frameworks above.
 
-- **Lettuce** (unmaintained since 2016, Python 2 only): [sample GitHub project](https://github.com/LambdaTest/sample-lettuce). Set your browser and OS in `config.json`, then run `python tests/lt_sample_todo.py`. Migrate to Behave or pytest.
 
-## View your results
+
+
+**Deprecated**
+Lettuce is unmaintained (since 2016, Python 2 only). For new projects, use the actively maintained **Behave** or **pytest** frameworks instead (see the Behave and pytest tabs).
+
+
+Lettuce is a BDD framework for Python: feature files plus step definitions, with capabilities in a JSON config.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/sample-lettuce):
+
+```bash
+git clone https://github.com/LambdaTest/sample-lettuce
+cd sample-lettuce
+```
+
+2. Set your browser and OS in `config.json`.
+
+3. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the test:
+
+```bash
+python tests/lt_sample_todo.py
+```
+
+The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
+
+
+
+
+
+## View Your Results
+
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
+
+**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
+
+## Next Steps
+
+
+Continue with these related guides:
+
+- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
+- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+- [Debugging Options](/support/docs/debugging-options/)
+- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)

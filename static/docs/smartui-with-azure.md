@@ -14,6 +14,7 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
+
 ### Step 1: Set Up Your Repository
 Ensure your project is hosted in Azure Repos, GitHub, or any supported repository.
 
@@ -64,7 +65,12 @@ displayName: 'Execute SmartUI Tests'
 
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)
 
+
+
 ## Best Practices
+
+
+
 
 **Secret Management**
 
@@ -73,6 +79,9 @@ displayName: 'Execute SmartUI Tests'
 - Mark variables as secret to hide values in logs
 - Rotate secrets regularly
 - Use different secrets for different environments
+
+
+
 
 **Pipeline Optimization**
 
@@ -90,6 +99,9 @@ include:
 - develop
 ```
 
+
+
+
 **Build Naming**
 
 - Use meaningful build names that include branch/commit info
@@ -102,6 +114,9 @@ variables:
 BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
 ```
 
+
+
+
 **Error Handling**
 
 - Set up proper error handling in pipelines
@@ -109,12 +124,8 @@ BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-**Resource Management**
 
-- Limit concurrent pipeline runs
-- Clean up old builds regularly
-- Monitor pipeline execution time
-- Optimize test execution order
+
 
 **Resource Management**
 
@@ -122,8 +133,24 @@ BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
 - Clean up old builds regularly
 - Monitor pipeline execution time
 - Optimize test execution order
+
+
+
+
+**Resource Management**
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+
+
 
 ## Troubleshooting
+
+
+
 
 **Issue: Pipeline Fails with "Variable Not Found"**
 
@@ -146,6 +173,9 @@ BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
 
 4. Verify variables are marked as secret if needed
 
+
+
+
 **Issue: PROJECT_TOKEN Not Available**
 
 **Symptoms**: Pipeline prompts for PROJECT_TOKEN or token not found
@@ -167,6 +197,9 @@ PROJECT_TOKEN: $(PROJECT_TOKEN)
 3. Check variable is accessible to the job
 
 4. Verify variable scope includes your pipeline
+
+
+
 
 **Issue: Tests Run But No Results in Dashboard**
 
@@ -197,6 +230,9 @@ Get-Content $(Agent.TempDirectory)/*.log
 
 4. Check if SmartUI CLI step completed successfully
 
+
+
+
 **Issue: Pipeline Times Out**
 
 **Symptoms**: Pipeline execution exceeds time limit
@@ -226,6 +262,9 @@ TEST_GROUP: 2
 3. Optimize test execution
 4. Split tests across multiple pipeline stages
 
+
+
+
 **Issue: Dependencies Installation Fails**
 
 **Symptoms**: npm install or dependency installation fails
@@ -254,6 +293,9 @@ npm install
 3. Use package-lock.json for consistent installs
 
 4. Check for version conflicts in package.json
+
+
+
 
 **Issue: SmartUI CLI Not Found**
 
@@ -288,14 +330,18 @@ npm install -g @lambdatest/smartui-cli
 If you encounter issues not covered here:
 
 - Review [Azure Pipelines Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+
+
+
+
 
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [SmartUI CLI Documentation](/support/docs/smartui-cli)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 - [Azure Pipelines Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

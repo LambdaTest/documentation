@@ -54,7 +54,7 @@ By using these hooks, you can:
 
 This provides precise control over when element healing should be applied, improving reliability and reducing flakiness without impacting unrelated steps.
 
-> To learn how to use AutoHeal hooks in your Selenium scripts, refer to the detailed guide: [How to Use AutoHeal using Hooks](/support/docs/autoheal-with-hooks/)
+> To learn how to use AutoHeal hooks in your Selenium scripts, refer to the detailed guide: [How to Use AutoHeal using Hooks](/support/docs/auto-healing/)
 
 
 ## Benefits of Auto Healing

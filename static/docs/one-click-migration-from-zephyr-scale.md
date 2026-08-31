@@ -12,7 +12,9 @@ TestMu AI Test Manager supports one-click migration from **Zephyr Scale (Jira Cl
 - **Rich text content preserved**: Embedded screenshots within rich text fields (description, preconditions, step descriptions, and expected results) are migrated.
 - **Real-time progress tracking**: A progress bar shows migration status so you know exactly where things stand.
 
+
 This migration supports **Zephyr Scale (Jira Cloud)** only. Zephyr Enterprise and Data Center are not supported at this time.
+
 
 ## Prerequisites
 
@@ -30,7 +32,9 @@ You need your Zephyr Scale Cloud API access token. Refer to the [Zephyr Scale AP
 3. Under **API Access Tokens**, generate a new token if you do not already have one.
 4. Copy the **Access Token**.
 
+
 The Access Token may be shown only once. Store it securely before proceeding.
+
 
 #### Jira Cloud Credentials
 
@@ -50,6 +54,8 @@ To migrate linked Jira issues and requirements, you must have the corresponding 
 - Your Jira account must have **read access** to the project you are migrating.
 - Your Zephyr Scale API token must have permission to access test cases and folders in the target project.
 
+
+
 ## Step-by-Step Migration Guide
 
 ### Step 1: Open the Migration Tool
@@ -58,6 +64,8 @@ To migrate linked Jira issues and requirements, you must have the corresponding 
 2. Navigate to **Test Manager Projects** from the left sidebar.
 3. Click the **Import data** option on the Project Listing page.
 4. Select **Zephyr Scale** as the migration source from the **Import from** dropdown.
+
+
 
 ### Step 2: Enter Your Credentials
 
@@ -72,18 +80,26 @@ Fill in the following fields:
 
 Click **Continue**. The system validates both your Jira and Zephyr Scale credentials in parallel. If either set is invalid, an error message indicates which credentials need to be corrected.
 
+
+
 ### Step 3: Select the Jira Project
 
 1. After successful validation, a list of your Jira projects containing Zephyr Scale test cases is displayed.
 2. Select the **project** you want to migrate from. You can select multiple projects at once.
 3. Click **Start Migration**.
 
+
+
 ### Step 4: Monitor Progress
 
 - A **progress bar** shows real-time migration status.
 - The migration processes test cases in batches. Depending on the size of your test library, the complete process may take some time.
 
+
+
 - You can navigate away from the page and continue other work. The migration continues in the background. Once the migration is complete, you will receive an email notification.
+
+
 
 ### Step 5: Review the Results
 
@@ -93,6 +109,10 @@ Once migration completes:
 2. Navigate to the **Test Cases** section in any of your migrated projects.
 3. Verify that your test cases and folder structure have been imported correctly.
 4. Check a few test cases to confirm that steps, custom fields, embedded screenshots, and linked requirements are intact.
+
+
+
+
 
 ## What Gets Migrated
 
@@ -110,10 +130,13 @@ The following entities and data are transferred from Zephyr Scale to Test Manage
 | **Linked Issues / Requirements** | Jira issue links and requirement associations are preserved. Requires [Jira integration](https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/) to be configured. |
 | **Zephyr Scale Test Key** | The original Zephyr Scale test key is imported within tags, enabling quick reference and filtering in Test Manager. |
 
+
 Zephyr Scale fields that cannot be directly mapped to system fields in Test Manager are automatically imported as custom fields. These may include Reporter, Assignee, Environment, Fix Version, Components, etc.
+
 
 **Test Data Migration**
 Test Data from Zephyr Scale steps is migrated as a single textarea custom field at the test case level, with textual data consolidated together. This is because Test Manager does not currently support a step-level Test Data field.
+
 
 ## What Does Not Get Migrated
 
@@ -127,6 +150,8 @@ The migration focuses exclusively on your **test library**: definitions, structu
 | **Test Execution Logs** | Execution history and pass/fail results are excluded by design. |
 | **Datasets** | Datasets and their corresponding parameters are not imported. |
 
+
+
 ## Test Steps Handling
 
 The migration supports all three Zephyr Scale test script types: **Step by Step**, **BDD-Gherkin**, and **Plain Text**.
@@ -137,8 +162,11 @@ Manual test cases are migrated with their full step definitions. Each step's **S
 ### BDD / Gherkin
 For BDD-type test cases in Zephyr Scale, the full **Gherkin scenario** text (Given/When/Then) is extracted and stored in the test case as structured BDD content under the **BDD Scenarios** template in Test Steps.
 
+
 ### Call to Test Case (Recursive Steps)
 If your Zephyr Scale steps reference other test cases using the **"Call to Test Case"** step type, the migrator recursively fetches and includes the steps from the referenced test case. This ensures that all linked step definitions are fully resolved and available in the migrated test case.
+
+
 
 ## Troubleshooting
 
@@ -149,6 +177,8 @@ If your Zephyr Scale steps reference other test cases using the **"Call to Test 
 | **No projects found** | Verify your Jira account has access to at least one project containing Zephyr Scale test cases. Check that Zephyr Scale is installed and active on your Jira Cloud instance. |
 | **Migration stalls or takes too long** | Large projects (thousands of test cases) may take few hours depending on the size of embedded screenshots. If it does not gets stuck, re-initiate the migration. |
 | **Custom fields not appearing** | Custom fields are auto-created during migration. Navigate to **Project Settings > Custom Fields** to verify they exist and are enabled. |
+
+
 
 ## FAQ
 
@@ -175,6 +205,8 @@ Test cases without steps are still migrated. The test case metadata (title, desc
 **Are Zephyr Enterprise and Zephyr on Jira Data Center supported?**
 
 No. This migration currently supports **Zephyr Scale** (on Jira Cloud) only. Zephyr Enterprise and Zephyr on Jira Data Center are not supported.
+
+
 
 ## Known Limitations
 

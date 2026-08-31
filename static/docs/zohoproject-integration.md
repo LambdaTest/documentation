@@ -26,6 +26,10 @@ The TestMu AI integration enables you to capture and log bugs directly from your
 
 **Step 8:** Click **Install**. TestMu AI will now be integrated with Zoho Project.
 
+
+
+
+
 ## Log your First Bug
 
 **Step 1:** Ensure you have access to the appropriate Zoho Project workspace and project.
@@ -34,7 +38,11 @@ The TestMu AI integration enables you to capture and log bugs directly from your
 
 **Step 3:** In the bug logging form, provide the necessary details.
 
+
+
 **Step 4:** Click on the **Create Issue** button. The bug will be logged into your Zoho Project, and you can view it directly from your Zoho Project dashboard.
+
+
 
 ## Resync Zoho Project Integration
 
@@ -45,6 +53,8 @@ To ensure that your Zoho Project integration stays up-to-date with the latest pr
 **Step 2:** Locate the Zoho Project integration and click on the **Resync** button.
 
 If your refresh token has expired, you will be prompted to reauthorize your Zoho Project integration.
+
+
 
 ## Uninstall Zoho Project Integration
 

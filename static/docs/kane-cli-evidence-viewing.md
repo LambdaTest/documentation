@@ -48,7 +48,9 @@ Open the `viewer` URL in your browser.
 
 Exit codes: `0` after a clean Ctrl-C shutdown, `2` for any bad input or a port that cannot be bound.
 
+
 The server binds to `127.0.0.1` only and uses a random per-instance token in the URL path. Nothing is uploaded anywhere.
+
 
 ## The hosted viewer
 

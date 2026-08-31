@@ -273,7 +273,7 @@ Aggregated scheduled reporting preserves historical audit consistency. Updates a
 ## Related docs
 
 - [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
-- [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)
-- [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)
+- [All Issues](/support/docs/accessibility-testing-navigating-dashboard/#all-issues)
+- [Exporting & Sharing Reports](/support/docs/accessibility-testing-navigating-dashboard/)
 - [Starting an Accessibility Scan with Web Scanner](/support/docs/web-scanner-accessibility-scan/)
 - [Test Scheduling - Sitemap (Overview)](/support/docs/accessibility-test-scheduling/)

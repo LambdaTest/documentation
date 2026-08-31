@@ -6,37 +6,60 @@ Network logs assertions let you validate the network calls your application make
 
 ## Network Logs Assertions
 
+
 Unlike making your own API calls, this validates what the app itself does behind the scenes, capturing every request and response during the session.
 
 Network logs assertions work in **Desktop Web**, **Mobile Web**, and **Mobile App** sessions. Desktop Web captures automatically; for **Mobile Web** and **Mobile App**, first enable the **Capture Network Logs** toggle under **Advanced Settings → Session Settings**.
 
+
+
 ### How It Works
+
 
 1. During a test session, **all network calls are recorded automatically** in the background. Open them with `/` → **Assert Network Logs**.
 
+
+
 2. Filter the recorded requests by **Status Code** (200, 404, 500, etc.) or **HTTP Method** (GET, POST, etc.). Requests are shown in JSON format.
+
+
 
 3. Select the request, then choose which **request header**, **request body**, or **response body** keys to validate.
 
+
+
 4. Click **Add Assertion** to add the **request** or **response** blocks. All chosen values are validated in a single step.
+
+
 
 5. Once added, the request is stored as a **variable**, and KaneAI asserts against it.
 
+
+
 ### Accessing Network Data as Variables
+
 
 Once you add a network assertion, the request data is stored as a **variable** in JSON format. You can reuse it later with `{{variable}}` syntax.
 
+
+
 Access nested values with dot notation (e.g., `{{network_req.response.data.userId}}` or `header.status`).
+
+
 
 ## Reuse an Assertion Across Tests
 
+
 A network assertion can be included in a reusable **module**, so the same network-layer check runs in every test that imports it instead of being authored again each time. The assertion travels as a single step with all of its conditions, and it is re-evaluated against each importing test's own live traffic on every run.
 
+
 Available on **Desktop Web**, **Mobile Web**, and **Mobile App** sessions in the Classic experience.
+
 
 See [Include a Network Assertion in a Module](/support/docs/kane-ai-modules/#include-a-network-assertion).
 
 ## Best Practices
+
 
 Follow these practices for reliable tests:
 
@@ -51,6 +74,7 @@ Follow these practices for reliable tests:
 | **Test error scenarios via API** | Set up invalid data via API, then verify UI handles it gracefully |
 
 ## Next Steps
+
 
 Continue with these guides:
 

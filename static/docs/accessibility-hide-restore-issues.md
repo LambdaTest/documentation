@@ -6,7 +6,9 @@ Use **Hide and Restore Issues** to manage known, accepted, or intentionally excl
 
 The sections that follow describe how hide and restore work for supported **web** scans: supported hierarchy levels (URL through element), capture of hide reasons, optional **Hide for future scans**, the **Hidden Issues** tab, how restore follows stored preferences, and why **Save** is required. You will also see how issue counts, charts, graphs, and exports reflect active issues after you hide or restore findings.
 
+
 This feature is currently supported only for **web scans**. It is **not supported for app scans**.
+
 
 ## Supported hierarchy levels
 
@@ -23,6 +25,8 @@ Each hierarchy level has its own action entry point and confirmation modal so us
 
 The report can be explored from top to bottom across the issue hierarchy. This is the same structure used by the hide and restore feature.
 
+
+
 When you apply a hide or restore action, the effect depends on the level you selected in this hierarchy.
 
 ## How hiding works
@@ -35,6 +39,8 @@ Open the report and navigate to the issue location you want to manage. You can s
 
 Use the hide icon from the relevant level in the hierarchy.
 
+
+
 ### Step 3: Choose the level you want to hide
 
 You can hide from any supported level depending on how broad or narrow the action should be.
@@ -43,23 +49,43 @@ You can hide from any supported level depending on how broad or narrow the actio
 
 Use this when all findings under a specific URL should be hidden together.
 
+
+
+
+
 **Hide at rule level**
 
 Use this when the hide action should apply to one rule and the issues grouped under that rule.
+
+
+
+
 
 **Hide at element group level**
 
 Use this when the issue set should be hidden only for a specific group of similar elements.
 
+
+
+
+
 **Hide at element level**
 
 Use this when only a single element-level issue should be hidden.
+
+
+
+
 
 ### Step 4: Select a reason in the hide modal
 
 When you hide an issue or issue set, the modal lets you choose a reason for hiding it.
 
+
+
 The selected reason is shown later inside the issue as a **reason tag**.
+
+
 
 If a reason is chosen at a higher hierarchy level, that reason is mapped to all associated issues under that hierarchy.
 
@@ -67,13 +93,17 @@ If a reason is chosen at a higher hierarchy level, that reason is mapped to all 
 
 For **Web Scanner Accessibility scans** and **Accessibility scheduled scans**, the hide modal also lets you choose whether the issue should be hidden for **future scans**.
 
+
+
 Use this option when:
 
 - the issue is already known and accepted across scheduled runs
 - the same hide preference should continue in future executions
 - the team wants scheduled reports to stay aligned with an approved hide decision
 
+
 The **Hide for future scans** option is available only for supported **Web Scanner Accessibility scans** and **Accessibility scheduled scans**. It is not available for app scans.
+
 
 ### Step 6: Confirm the hide action
 
@@ -82,6 +112,8 @@ After you confirm the modal, the selected issue set is removed from the active r
 ## Hidden Issues tab
 
 After issues are hidden, you can access them from the **Hidden Issues** tab.
+
+
 
 Use this tab to:
 
@@ -96,6 +128,8 @@ Use this tab to:
 
 Inside the **Hidden Issues** tab, use the restore icon for the hierarchy you want to restore.
 
+
+
 ### Step 2: Review the restore modal
 
 The restore modal reflects the stored hide preference and keeps restore behavior consistent with the original hide action.
@@ -104,9 +138,13 @@ The restore modal reflects the stored hide preference and keeps restore behavior
 
 If none of the issues in the selected set were hidden for future scans, the restore action applies to the current scan only.
 
+
+
 **Restore for future scans too**
 
 If the selected hierarchy, or any child inside that hierarchy, was hidden for future scans, the restore modal preserves that future-scoped behavior.
+
+
 
 ### Restore behavior across hierarchy levels
 
@@ -131,7 +169,11 @@ This keeps hide and restore behavior aligned across URL, rule, element group, an
 
 Hide and restore actions change the active report state immediately in the current session, but you still need to click **Save** to persist the preference.
 
+
+
 When the save request is processing, the interface shows the in-progress state.
+
+
 
 ### Before you click Save
 
@@ -196,7 +238,7 @@ Aggregated scheduled reporting preserves historical audit consistency. Updates a
 ## Related docs
 
 - [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
-- [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)
-- [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)
+- [All Issues](/support/docs/accessibility-testing-navigating-dashboard/#all-issues)
+- [Exporting & Sharing Reports](/support/docs/accessibility-testing-navigating-dashboard/)
 - [Starting an Accessibility Scan with Web Scanner](/support/docs/web-scanner-accessibility-scan/)
 - [Test Scheduling - Sitemap (Overview)](/support/docs/accessibility-test-scheduling/)

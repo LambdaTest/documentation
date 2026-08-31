@@ -4,13 +4,20 @@
 
 TestMu AI Test Manager Dashboard widgets provide comprehensive insights into your test automation or manual efforts. These widgets help you optimize your testing efforts by providing detailed insights into your test execution, test case insights, and more.
 
+
 The Test Manager Widgets module is currently in  . If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
+
+
+
+
 
 **Filtering Widgets**
 Every widget supports configurable filters. Click the **three-dot menu** on any widget to apply filters and narrow down the displayed results based on your specific criteria.
 
+
 **Drill Down into Data**
 All widgets support drill-down. Click on any data point in a chart (such as a segment in a pie chart, a bar in a bar chart, or a status value) to view the underlying list of associated records (e.g., test cases, test runs, or issues) that make up that data point.
+
 
 ## Test Cases Summary
 
@@ -94,6 +101,8 @@ This widget helps you understand the composition of your test suite and ensure t
 ## Execution Progress
 
 The Execution Progress widget displays overall test execution progress as a percentage on a visual gauge, alongside a breakdown of total, executed, and remaining test run instances.
+
+
 
 ### How it works?
 

@@ -16,9 +16,18 @@ This integration allows you to capture real-time feedback and track issues direc
 
 **Step 4:** Now, provide your zipBoard API Token to establish integration with TestMu AI and click on **install** button.
 
+
+
+
+
 **Fetch your Bugherd API Token**
 - Visit your zipBoard account -> **Edit Profile** tab.
 - Click on the **+** icon to generate your API. Copy your API token to use it for authenticate it with TestMu AI integration.
+
+
+
+
+
 
 > This API key will be used to authenticate your zipBoard account to third-party apps. Please do not share it with anyone. If you believe your API key has been misplaced, you can always generate a new API key from zipBoard by clicking on the refresh icon in your profile settings.
 
@@ -39,5 +48,9 @@ This integration allows you to capture real-time feedback and track issues direc
 **Step 2:** Click on Settings -> Integrations -> Bug Tracker.
 
 **Step 3:** Click on the Remove button.
+
+
+
+
 
 > That was all you need to know for TestMu AI + zipBoard Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on **chat** to help you out with any roadblock regarding our product. Happy testing! 🙂

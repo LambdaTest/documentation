@@ -8,6 +8,8 @@ TestMu AI now integrates with the Vividus tool to help you execute automation te
 
 ## How To Setup Your TestMu AI Account With Vividus?
 
+
+
 Once you have your project set up using the Vividus tool, here's a step by step guide to help you setup your TestMu AI account with Vividus tool:
 
 1. Once you have your test scenario ready, you need to add the TestMu AI plugin in the build.gradle -> dependencies, using the below command.
@@ -33,11 +35,15 @@ This will verify your credentials and connect your TestMu AI account with the Vi
 
 To get your Username and Access Key, go to your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/) and click on the "key" icon left to the help button, on the top right corner.
 
+
+
 Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to our [Capabilities Generator Guide](/docs/selenium-automation-capabilities/).
 
 That's it. Vividus tool has been integrated successfully with your TestMu AI account. Now you can execute your automated tests on TestMu AI's cloud-based Selenium Grid.
 
 ## Running Tests From Your Vividus App On TestMu AI Platform
+
+
 
 For demo purpose, we have recorded a test scenario, which includes:
 
@@ -89,14 +95,24 @@ configuration.profiles=lambdatest/web,web/desktop/safari
 ./gradlew runStories
 ```
 
+
+
 * The test execution will then start, and you can see the same on the automation dashboard of your TestMu AI account.
+
+
 
 * Once the test is complete, you can view the test result on the automation dashboard by clicking on the test case. You can see and verify if the test has been passed or failed in the Automation Logs.
 
-For each test executed overthe TestMu AI platform, you can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more.
+
+
+For each test executed overthe TestMu AI platform, you can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more.
 
 ## Running Tests From Vividus In Parallel On TestMu AI Platform
 
+
+
 Parallel execution is available out of the box and limited only with machine resources and cloud concurrency. In Vividus, concurrency is available at the story level, i.e., each story will use a new session. To configure how many threads you would like to use you need to change the value threads value in the suite.properties file, as shown below:
+
+
 
 > Congrats! You have successfully integrated the Vividus tool with your TestMu AI account. Now run your test cases over the TestMu AI's cloud-based Seleniunm Grid. If you come across any doubts or questions, reach out to us via our **24/7 chat support** or mail us at support@testmuai.com. Happy testing! 🙂

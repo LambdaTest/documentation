@@ -4,6 +4,7 @@
 
 TestMu AI Test Manager supports one-click migration from qTest, allowing you to import your entire test library — including projects, test cases, folder structures, custom fields, attachments, and linked Jira requirements — directly into Test Manager without manual data entry.
 
+
 ## Key Benefits
 
 - **Zero manual effort** — Projects, test cases, steps, and folder structures are automatically migrated.
@@ -11,6 +12,8 @@ TestMu AI Test Manager supports one-click migration from qTest, allowing you to 
 - **Custom fields carried over** — Custom fields are detected and created automatically, including dropdowns, multi-selects, user fields, checkboxes, and more.
 - **Attachments migrated** — File attachments at the test case and step level are downloaded from qTest and stored in LambdaTest. Inline base64 images in step content are uploaded and served with auto-refreshed links.
 - **Jira requirement links preserved** — Linked Jira issues on test cases are migrated (requires Jira integration to be configured in TestMu AI).
+
+
 
 ## Prerequisites
 
@@ -36,6 +39,8 @@ To migrate linked Jira requirements, the corresponding Jira instance must be int
 - Your qTest account must have read access to the projects being migrated.
 - The API token must have permission to access test cases, modules, and attachments.
 
+
+
 ## Step-by-Step Migration Guide
 
 ### Step 1: Open the Migration Tool
@@ -44,19 +49,32 @@ To migrate linked Jira requirements, the corresponding Jira instance must be int
 3. Click the **Import data** option on the Project Listing page.
 4. Select **qTest** as the migration source from the Import from dropdown.
 
+
+
 ### Step 2: Enter Your Credentials
 Enter your **qTest Instance URL** and **qTest API Token**, then click **Continue**. The system validates your credentials. If either is invalid, an error message specifies what needs to be corrected.
+
+
 
 ### Step 3: Select Projects
 After successful validation, a list of your accessible qTest projects is displayed. Select the project(s) you want to migrate — multiple projects can be selected at once — and click **Start Migration**.
 
+
+
 ### Step 4: Monitor Progress
 A progress bar shows real-time migration status. You can navigate away at any time — the migration continues in the background and survives page reloads. An email notification is sent when the migration completes or fails.
+
+
+
 
 ### Step 5: Review the Results
 1. Migrated projects appear on the Projects listing page in Test Manager, tagged **"qTest Migrated"**.
 2. Navigate to Test Cases in any migrated project.
 3. Verify that test cases, folder structure, steps, custom fields, attachments, and linked issues are imported correctly.
+
+
+
+
 
 ## What Gets Migrated
 
@@ -73,12 +91,17 @@ A progress bar shows real-time migration status. You can navigate away at any ti
 | Jira requirement links | Linked issues on migrated test cases (requires Jira integration in TestMu AI) |
 | Required-field flags | Preserved on created custom fields |
 
+
+
+
 ## What Does Not Get Migrated
 
 | Entity | Reason |
 |---|---|
 | Test runs, executions, results, and test plans | Execution-layer data; only test-design data is migrated |
 | Defects and defect-scoped fields | Belong to execution data, which is out of scope |
+
+
 
 ## Troubleshooting
 
@@ -89,6 +112,8 @@ A progress bar shows real-time migration status. You can navigate away at any ti
 | Test case shows raw "call step" text | The referenced shared or called test case could not be fetched, or is called more than once by the same test case. The fallback text from the original step is used. |
 | Custom fields not appearing | Custom fields are created during migration. Navigate to Test Manager Settings > Custom Fields to verify they exist and are enabled for the project. |
 
+
+
 ## FAQ
 
 **Can I migrate multiple qTest projects at once?** Yes. Select multiple projects in Step 3. Each project is migrated into its own separate Test Manager project.
@@ -98,6 +123,8 @@ A progress bar shows real-time migration status. You can navigate away at any ti
 **What happens if a project with the same name already exists in Test Manager?** The migrated project name is automatically suffixed with a number (e.g., `My Project 1`) to avoid conflicts.
 
 **Can I run multiple migrations simultaneously?** Each user can run one active qTest migration at a time. Start a new migration only after the current one completes.
+
+
 
 ## Known Limitations
 

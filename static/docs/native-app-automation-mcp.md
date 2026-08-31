@@ -15,6 +15,8 @@ The rest of this page covers each server in turn, then a shared troubleshooting 
 
 ## Part 1: Debug App Automation Tests with the TestMu AI MCP Server
 
+
+
 The [TestMu AI MCP Server](/support/docs/testmu-mcp-server/) connects your AI client to test execution data on TestMu AI. Its [Automation tool](/support/docs/automation-mcp-server/) now supports **app automation** tests in addition to web and desktop, so you can triage a failed mobile app run without leaving your IDE.
 
 ### What you can do
@@ -67,7 +69,10 @@ Your client routes the request to the Automation tool, pulls the relevant data f
 **A note on large logs**
 App-automation command logs can be very large. Asking the agent to dump every page of logs into its context can exceed the model's context window and cause the run to stall or error out. Ask for the **failure reason** or a **specific page** of command logs rather than the entire log history. See [Requests stall or hit a context-length error](#requests-stall-or-hit-a-context-length-error) for details and settings.
 
+
 ## Part 2: Drive a Live Device with the Appium MCP Server
+
+
 
 The **Appium MCP server** (the open-source [`appium/appium-mcp`](https://github.com/appium/appium-mcp) project) gives an AI assistant real-time control of a mobile device or simulator through Appium. This is the server to use when you want the agent to open apps, tap buttons, enter text, take screenshots, read on-screen text, and generate test code from natural language.
 
@@ -203,6 +208,8 @@ Screenshots and page-source dumps embedded in tool responses can be large and ex
 
 ## Troubleshooting
 
+
+
 ### 404: Unable to find test details
 
 **Symptom:** The Automation tool returns `Error fetching automation test details: Unable to find test details (Status: 404)` for a TestID you know is valid.
@@ -268,6 +275,8 @@ Also confirm that the authenticated MCP user actually has access to that TestID.
 Your MCP client cannot find Node.js on its PATH. Find the full path with `which npx` (macOS/Linux) or `where npx` (Windows), then replace `"command": "npx"` in your configuration with that full path.
 
 ## Which server, again?
+
+
 
 - **TestMu AI MCP Server (Automation tool):** cloud test triage and RCA for app-automation runs that already executed. Remote, OAuth, no local setup. Reads data. Does not touch a device.
 - **Appium MCP server:** live control of a real or virtual device. Local stdio, needs an Appium toolchain. Opens apps, taps, types, screenshots, and reads the screen.

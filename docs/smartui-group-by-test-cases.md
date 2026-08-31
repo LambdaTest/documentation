@@ -108,7 +108,7 @@ To align **`SmartUI.java`** with your dashboard project name, change the **`smar
 
 Use **`mvn versions:display-dependency-updates`** only if you want to inspect dependency updates; it is not required to execute tests.
 
-For more Java options, see the <a href={`${BRAND_URL}/support/docs/smartui-selenium-java-sdk/`}>SmartUI Selenium Java SDK</a>.
+For more Java options, see the <a href={`${BRAND_URL}/support/docs/smartui-selenium-js-sdk/`}>SmartUI Selenium Java SDK</a>.
 
 ---
 
@@ -278,8 +278,8 @@ Empty test groups will automatically hide if none of their screenshots match the
 
 ## Related Resources
 
-- <a href={`${BRAND_URL}/support/docs/smartui-guided-walkthrough/`}>Visual Regression Testing with SmartUI</a>
+- <a href={`${BRAND_URL}/support/docs/smartui-project-settings/#projects-page`}>Visual Regression Testing with SmartUI</a>
 - <a href={`${BRAND_URL}/support/docs/smartui-running-your-first-project/`}>SmartUI SDK Documentation</a>
-- <a href={`${BRAND_URL}/support/docs/smartui-selenium-java-sdk/`}>SmartUI Selenium Java SDK</a>
-- <a href={`${BRAND_URL}/support/docs/smartui-cli/`}>SmartUI CLI (`capture` / `exec`)</a>
+- <a href={`${BRAND_URL}/support/docs/smartui-selenium-js-sdk/`}>SmartUI Selenium Java SDK</a>
+- <a href={`${BRAND_URL}/support/docs/smartui-cli-complete-reference/`}>SmartUI CLI (`capture` / `exec`)</a>
 - [LambdaTest Java Selenium sample (GitHub)](https://github.com/LambdaTest/java-selenium-sample)

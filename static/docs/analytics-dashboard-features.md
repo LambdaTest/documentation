@@ -4,6 +4,8 @@
 
 ## Export Dashboard as PDF
 
+
+
 #### Summary of the feature
 This feature allows users to export their dashboard as a PDF file. This is useful for sharing the analytics data with team members, clients, or stakeholders who may not have access to the analytics platform.
 
@@ -20,6 +22,8 @@ This feature allows users to export their dashboard as a PDF file. This is usefu
 
 ## Expiry Settings for Dashboard Share Link
 
+
+
 #### Summary of the feature
 This feature allows users to set an expiration date for the share link generated for the dashboard. This ensures that access to the dashboard is restricted after a certain time period, enhancing security and control over the shared data.
 
@@ -28,6 +32,9 @@ This feature allows users to set an expiration date for the share link generated
 2. Click on the "Settings" gear icon located in the upper-right corner of the dashboard.
 3. Select the desired expiration date from the available dates in the settings.
 4. Click "Generate Link" to create the share link with the specified expiry settings.
+
+
+
 
 #### Usecases with examples
 1. **Limited-time client access:** Provide clients with temporary access to a dashboard during a campaign or project, ensuring that access is revoked once the project is completed.
@@ -46,9 +53,18 @@ For the users who are external to the organization, we have added the ability to
 4. Save the settings.
 5. Now, when you share the dashboard with the new share link, the user will be prompted to enter the password to access the dashboard.
 
+
+
+
+
+
 The above password is only for those users who are external to the organization accessing through the share link of the dashboard. For the internal users, the dashboard will be accessible without any password.
 
+
+
 ## Dashboard Visibility Settings
+
+
 
 #### Summary of the feature
 This feature allows users to change the visibility of a dashboard from being accessible to all organization users to being private and only accessible to admin user and creator of the dashboard. This provides better control over who can view and interact with the dashboard.
@@ -58,11 +74,14 @@ This feature allows users to change the visibility of a dashboard from being acc
 2. Click on the "Settings" button located in the upper-right corner of the dashboard.
 3. Toggle the visibility of the dashboard between "Public (All User)" and "Private (Creator Only)."
 
+
 An admin user is the user who has created the dashboard. Only the creator is allowed to access the dashboard settings and change the visibility of the dashboard.
+
 
 #### Usecases with examples
 1. **Sensitive data protection:** Restrict access to dashboards containing sensitive or confidential information by setting visibility to "Private (Creator Only)."
 2. **Role-based access control:** Limit dashboard access
+
 
 ## Admin Access for Dashboards
 

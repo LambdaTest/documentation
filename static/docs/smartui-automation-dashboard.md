@@ -10,6 +10,8 @@ Every automation test run that captures SmartUI screenshots now has a dedicated 
 
 This works across **Web Automation** and **App Automation**.
 
+
+
 ## The problem it solves
 
 Until now, understanding why a visual test failed meant working across two separate places:
@@ -21,6 +23,8 @@ For teams running large suites, that context-switching added up to significant m
 
 This feature closes that gap. The visual results live next to the test that generated them, so triage happens in one flow.
 
+
+
 ## What users gain
 
 | Before | Now |
@@ -30,11 +34,15 @@ This feature closes that gap. The visual results live next to the test that gene
 | Approve or reject one screenshot at a time | Review and approve at the test-case level |
 | No direct path between the two products | One-click deep link from a build into full SmartUI |
 
+
+
 ## Key capabilities
 
 ### 1. SmartUI tab in the test view
 
 Open any test in the Automation Dashboard and select the **SmartUI tab**. Users will see the associated Project and Build, a total screenshot count, and a status roll-up showing how many screenshots are new, changed, approved, or rejected.
+
+
 
 ### 2. Grid and List views
 
@@ -48,6 +56,8 @@ Organize screenshots by automation suite or test name so related screenshots sta
 
 The **View in SmartUI** link on a build takes users straight to the full SmartUI experience for that build.
 
+
+
 ## How to use it
 
 1. Open the **Automation Dashboard** and select the test the user wants to inspect.
@@ -56,17 +66,23 @@ The **View in SmartUI** link on a build takes users straight to the full SmartUI
 4. Choose **Grid** or **List** view using the toggle on the screenshots panel.
 5. Optionally, use **Group by** to cluster screenshots by test, and **Status** to filter to a specific state.
 
+
+
 ## Availability and access
 
 - The feature appears as a tab in the test view for any test that has associated SmartUI screenshots; tests without SmartUI data won't show SmartUI content.
 - It is rolled out progressively. If the user does not see the SmartUI tab and expects to, their account may not yet be enabled; contact the account team or support.
 - Requires an active SmartUI project linked to the automation run.
 
+
+
 ## Tips and known behavior
 
 - **Real Device sessions:** Screenshots are matched to the user's test even when a session identifier isn't present, so results display reliably for Real Device runs.
 - **Mixed runs:** App Automation and Web-Automation-with-Real-Device tests each route to their correct dashboard when the user follows a deep link.
 - For the cleanest grouping, use consistent, descriptive test names in the automation suite; these are what the **Group by test** view uses to cluster screenshots.
+
+
 
 ## FAQ
 
@@ -81,5 +97,7 @@ Yes. The integration supports Web Automation, App Automation, and Real Device se
 
 **Why don't I see the SmartUI tab on a particular test?**
 That test likely has no associated SmartUI screenshots, or the feature isn't yet enabled for the user's account. Check that a SmartUI project is linked to the run, and reach out to support if needed.
+
+
 
 Need help getting this enabled for an account? Contact the TestMu AI account team or support.

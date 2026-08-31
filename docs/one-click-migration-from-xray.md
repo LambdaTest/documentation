@@ -2,7 +2,7 @@
 id: one-click-migration-from-xray
 title: One Click Migration from X-Ray
 hide_title: true
-sidebar_label: One Click Migration from X-Ray
+sidebar_label: Import from X-Ray
 description: Migrate your test cases, attachments, and custom fields from X-Ray (Jira Cloud) to TestMu AI Test Manager in a single click.
 keywords:
   - xray

@@ -17,7 +17,11 @@ The Microsoft Teams integration with TestMu AI enables seamless collaboration an
 
 **Step 3:** Provide the description and create a new workflow by selecting the channels
 
+
+
 **Step 4:** Copy your generated workflow, you will need it in the next step.
+
+
 
 ## Integrate Teams with your TestMu AI Account
 
@@ -28,6 +32,10 @@ The Microsoft Teams integration with TestMu AI enables seamless collaboration an
 **Step 3:** Click on **Connect** button of `Microsoft Teams` block.
 
 **Step 4:** Now, provide your Microsoft Teams Workflow URL to establish integration with TestMu AI and click on **install** button.
+
+
+
+
 
 ## Lodge your First Bug
 
@@ -54,5 +62,9 @@ The Microsoft Teams integration with TestMu AI enables seamless collaboration an
 **Step 2:** Click on Settings -> Integrations -> Communication.
 
 **Step 3:** Click on the **Remove** button.
+
+
+
+
 
 > That was all you need to know for TestMu AI + Teams Integration. Increase your productivity multifold with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always **available on chat** to help you out with any roadblock regarding our product. Happy testing!

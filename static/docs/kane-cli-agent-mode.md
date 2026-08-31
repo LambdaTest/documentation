@@ -19,7 +19,11 @@ When `--agent` is active:
 - The interactive TUI is fully suppressed (no boot screen, no menus)
 - Stdin is not used (no interactive prompts)
 
+
 Always combine `--agent` with `--headless` in non-interactive environments (CI/CD, agent contexts) to avoid display server errors.
+
+
+
 
 ## Output Format
 
@@ -35,6 +39,8 @@ Kane CLI outputs one JSON object per line (NDJSON) to stdout:
 ...
 {"type":"run_end","status":"passed","summary":"...","duration":45.2,...}
 ```
+
+
 
 ## Event Schema
 
@@ -60,6 +66,8 @@ Kane CLI outputs one JSON object per line (NDJSON) to stdout:
 | `ask_user` | `question`, `step_index`, `options`* | Agent needs input (auto-disabled when stdin is not TTY) |
 | `error` | `message` | Error occurred |
 | `run_end` | *(see below)* | Terminal event: always the last line |
+
+
 
 ## The `run_end` Event
 
@@ -108,9 +116,13 @@ Kane CLI outputs one JSON object per line (NDJSON) to stdout:
 | `run_dir` | Path to run-level logs, step JSON, screenshots |
 | `token_usage` | Token consumption breakdown |
 
+
+
 # The .evidence proof pack
 
 Every Kane CLI run produces an `.evidence` pack stored natively in the results folder, so failure context travels with the run instead of living in a separate dashboard. Each pack contains the full execution proof for the run: step-by-step traces, screenshots, video, and command, network and console logs, plus the NDJSON event stream and result codes. Coding agents and humans read the same evidence to see exactly what happened, where it failed, and why.
+
+
 
 ## Parsing Output
 
@@ -128,6 +140,8 @@ kane-cli run "go to example.com, store the price as 'price'" --agent 2>/dev/null
 | tail -1 | jq -r '.final_state.price'
 ```
 
+
+
 ## Handling `ask_user` Events
 
 If an objective requires user input mid-run, Kane CLI fires `ask_user`:
@@ -136,7 +150,9 @@ If an objective requires user input mid-run, Kane CLI fires `ask_user`:
 {"type": "ask_user", "question": "Which item should I select?", "options": ["Small", "Medium", "Large"]}
 ```
 
+
 `ask_user` is **auto-disabled when stdin is not a TTY**. In CI/CD and AI agent contexts, stdin is never a TTY, so `ask_user` never fires. Write objectives that don't require interactive prompts.
+
 
 If stdin IS a TTY, respond by writing JSON to stdin:
 
@@ -150,6 +166,8 @@ To cancel:
 {"type": "cancel"}
 ```
 
+
+
 ## Agent Mode vs Interactive Mode
 
 | | Agent Mode (`--agent`) | Interactive Mode |
@@ -158,6 +176,8 @@ To cancel:
 | Output | NDJSON to stdout | Formatted text |
 | Stderr | Logs only | Logs + progress UI |
 | Use case | AI agents, programmatic tools | Human development |
+
+
 
 ## Next Steps
 

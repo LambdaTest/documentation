@@ -34,7 +34,11 @@ Then your command would be:
 LT --user example@lambdatest.com --key 123asd123 --tunnelName SampleTunnel
 ```
 
+
+
 Once you execute the command, you will successfully establish a client connection using the **TestMu AI Tunnel**. You will find the command logs to state, that you are now ready to test.
+
+
 
 ## What Makes The New TestMu AI Tunnel Binary Special?
 Well, other than the fact that you can now establish a connection through your corporate firewalls with the new TestMu AI Tunnel binary. Here are a couple things to top it off -
@@ -47,6 +51,8 @@ Now, by default, everything will run over the **port 443** to ensure a secure we
 
 ### Leverage `.lt.yaml` file
 With this new TestMu AI Tunnel binary, you can declare your TestMu AI authentication credentials in a **YAML** file configuration and keep it in the same directory as the **LT binary file**. That way, you won’t have to pass the environment variables in the cmd every time you wish to configure the TestMu AI Tunnel. Once you specify these variables in the `.lt.yaml file`, you will just have to execute the binary file through cmd **LT.exe** and the YAML file will automatically configure a secure TestMu AI Tunnel connection by auto detecting the variables specified in the YAML file.
+
+
 
 Here is an example of the `.lt.yaml` file.
 
@@ -69,14 +75,20 @@ Verbose: True
 
 Now, when you trigger the binary file through cmd. You will have your verbose logs populated automatically, without you having to specify the variable every time.
 
+
+
 ### Local Testing By MITM (Man-In-The-Middle)
 The **MITM(Man-in-the-middle)** mode enables you to test websites using self-signed certificates on your local system or internal network. It happens very often that you may try to test a website on the localhost which may not have valid SSL certificates before the website is made live. In such cases, you may receive the below error.
+
+
 
 You can test such websites by leveraging the **MITM** mode. The command will look like this:
 
 `LT --user salmank@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest --mitm`
 
 Here is a screenshot of the same website that was throwing an error earlier but can now be tested by running the **MITM** mode.
+
+
 
 ### Using The Tunnel InfoAPIs
 By using the tunnel **Info APIs**, you can fetch the current status of the tunnel and can use it to stop the tunnel. You can fetch the current tunnel status using the Info API on the tunnel. Suppose the **InfoAPI** is available on the host over port **8000**, then use the below command to infuse the **InfoAPI** in the tunnel.
@@ -85,17 +97,23 @@ By using the tunnel **Info APIs**, you can fetch the current status of the tunne
 LT --user salmank@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest --infoAPIPort 8000
 ```
 
+
+
 In order to fetch the current tunnel status, execute the below command:
 
 ```bash
 curl http://127.0.0.1:8000/api/v1.0/info
 ```
 
+
+
 To stop the current tunnel, execute the below command:
 
 ```bash
 curl -X DELETE http://127.0.0.1:8000/api/v1.0/stop
 ```
+
+
 
 ### Tunnel Logs
 The --log-level flag in the TestMu AI CLI is used to specify the desired log level for tunnel logs. This feature enables users to control the verbosity of logs generated during tunnel operations, making it easier to debug or monitor activities as needed.
@@ -110,6 +128,7 @@ The --log-level flag in the TestMu AI CLI is used to specify the desired log lev
 - **debug :** Outputs detailed logs, including diagnostic information, for troubleshooting purposes.
 - **error :** Displays error messages when something goes wrong in the tunnel operation.
 - **fatal :** Shows critical issues that cause the tunnel to terminate unexpectedly.
+
 
 ## AllowHost In Tunnel
 With the latest tunnel binary release we have introduced the capability to provide the domains which will be resolved from tunnel binary and the rest of the urls will be resolved from our servers. This can speed up the execution of test as the latency will be reduced by transferring data from the tunnel client. You may also use this to restrict the traffic flowing from user’s network.
@@ -133,6 +152,8 @@ You can find all the arguments for TestMu AI Tunnel by running the below command
 ```bash
 LT --help
 ```
+
+
 
 > **Note:** For all modifiers/arguments, refer to the list of [TestMu AI Tunnel Modifiers](/docs/lambda-tunnel-modifiers/).
 

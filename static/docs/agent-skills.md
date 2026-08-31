@@ -12,6 +12,9 @@ Skills work with Claude Code, GitHub Copilot, Cursor, Gemini CLI, and any assist
 
 Use the `agentskillsforall` installer to add a skill straight from the repository. No manual cloning is required.
 
+
+
+
 Add skills by name. Run the installer once per skill you want:
 
 ```bash
@@ -20,11 +23,17 @@ npx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill
 npx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill cypress-skill
 ```
 
+
+
+
 List every skill in the repository, then install the one you want:
 
 ```bash
 npx agentskillsforall list https://github.com/LambdaTest/agent-skills.git
 ```
+
+
+
 
 Once installed, ask your assistant to write and run tests. It picks up the matching skill automatically.
 
@@ -32,47 +41,71 @@ Once installed, ask your assistant to write and run tests. It picks up the match
 
 Pick the skill for the framework you already test in. Each card opens that skill's source on GitHub. Web frameworks run on the TestMu AI browser grid, and app frameworks target real Android and iOS devices.
 
+
+
+
+
 Web Automation
+
 
     Selenium↗
     WebDriver tests that run on the TestMu AI browser grid.
 
+
     Cypress↗
     End-to-end specs that run locally and on the cloud.
+
 
     Playwright↗
     Cross-browser tests with fast cloud execution.
 
+
     Puppeteer↗
     Headless Chrome automation on the TestMu AI cloud.
 
+
+
 App Automation
+
 
     Appium↗
     One suite for real Android and iOS devices.
 
+
     Espresso↗
     Native Android UI tests with Espresso.
+
 
     XCUITest↗
     Native iOS UI tests with XCUITest.
 
+
     Flutter↗
     Widget and integration tests for Flutter apps.
 
+
+
 Cloud, Visual &amp; Platform
+
 
     HyperExecute↗
     Shard test suites across the HyperExecute cloud.
 
+
     SmartUI↗
     Visual regression with pixel-diff baselines.
+
 
     Browser Cloud↗
     A real cloud browser for any AI agent.
 
+
     Kane CLI↗
     Natural-language browser automation in agent mode.
+
+
+
+
 
 ## Explore the Full Skill Catalog
 

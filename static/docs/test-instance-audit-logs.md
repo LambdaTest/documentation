@@ -14,8 +14,17 @@ With Audit logs you can store the execution history of your tests and even run p
 
 You can view the Audit Logs by clicking on the `View Execution Log`.
 
+
+
+
+
 For the Steps level execution logs, you can preview the step with respect to which the log was created.
 
+
  As step level Audit logs are with respect to that specific steps in case the step changes the old logs will still show the preview of the older step.
+
+
+
+
 
  When you delete a configuration or a test case, all associated audit logs are removed. This is because the action deletes the entire instance. If you then add the same test case and configuration again, it creates a brand new instance with no prior audit history.

@@ -12,7 +12,9 @@ Make sure you have:
 - SmartUI enabled for the session. Your SmartUI project and build must be configured on the test session.
 - A locator for the target element, such as a CSS selector, XPath, or HTML `id`. You can also pass an already-resolved element handle, see [Capture by Resolved Element Handle](#capture-by-resolved-element-handle-webelement).
 
+
 Do not store usernames or access keys in your source repository. Use environment variables or your CI secret manager instead.
+
 
 ## Step 1: Open the Page in Your Test
 
@@ -64,7 +66,9 @@ The locator-based flow above re-resolves your selector at the moment the screens
 
 To avoid this, set `elementType` to `webElement` and pass an already-resolved element reference as `element`. SmartUI uses that live handle directly and skips locator re-resolution, so the capture stays reliable even when the surrounding DOM changes after the element was located.
 
+
 When `elementType` is `webElement`, you pass a real element object, not a string. Call the hook with the command name and a config object as two separate arguments so your automation framework serializes the element handle correctly. Do not use the `smartui.takeScreenshot,` string form for `webElement`, because a serialized string cannot carry a live element reference.
+
 
 First resolve the element in your test, then pass it to the hook:
 
@@ -86,7 +90,9 @@ await driver.executeScript('smartui.takeScreenshot', config);
 | `elementType` | Set to `webElement` to pass a resolved element handle instead of a locator. |
 | `element` | The resolved element reference to scope the capture to, for example the return value of `driver.findElement(...)`. |
 
+
 Use `webElement` when the element is present and stable when you locate it, but the page mutates the DOM before the screenshot runs. If your locator stays valid through capture, the locator-based flow in Step 3 is simpler.
+
 
 ## Optional: Capture Many Elements Automatically
 

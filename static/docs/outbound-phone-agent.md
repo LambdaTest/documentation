@@ -8,6 +8,8 @@ Outbound testing shares the same two modes as inbound, pre-evaluation and post-e
 
 ## What Differs From Inbound Testing
 
+
+
 Outbound pre-evaluation changes five things compared to the inbound flow.
 
 - **The agent speaks first.** The platform answers the call, so the default first speaker is the agent, matching real outbound behavior.
@@ -18,9 +20,13 @@ Outbound pre-evaluation changes five things compared to the inbound flow.
 
 ## Outbound Number Pool
 
+
+
 Outbound test calls originate against numbers reserved from a dedicated pool. You can view the pool status and available numbers, view and manage the reservations held per suite, and clear reservations to release numbers when a run is done.
 
 ## Everything Else Mirrors Inbound Testing
+
+
 
 Aside from the differences above, outbound testing is identical to inbound. Phone number management, voice and background-noise configuration, agent profiles, test suites, call execution, post-evaluation recording analysis, the go-live assessment, and scheduling all work the same way.
 
@@ -28,11 +34,15 @@ For the full detail on each, see [inbound phone agent testing](/support/docs/inb
 
 ## Metrics
 
+
+
 Outbound agents are evaluated across the same 8 metric categories and 30+ individual metrics as inbound: conversation flow and interaction dynamics, accuracy and effectiveness, user experience and satisfaction, business operational metrics, audio voice quality, speech-to-text evaluation, validation results, and automated issue tags.
 
 For the full metric tables and thresholds, see the [inbound phone agent metrics](/support/docs/inbound-phone-agent/#metrics).
 
 ## Related TestMu AI Guides
+
+
 
 - See how to [test an inbound phone agent](/support/docs/inbound-phone-agent/) for the shared features and full metrics.
 - See the [phone agent testing overview](/support/docs/phone-agent/) for both testing modes.

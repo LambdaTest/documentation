@@ -4,7 +4,7 @@
 
 Welcome to HyperExecute, **an AI-Native Test Orchestration Cloud Platform**, designed to accelerate your testing process, enabling test automation teams worldwide to achieve an accelerated time to market by providing **JIT (Just-in-time) testing infrastructure**.
 
-If you want to learn more about HyperExecute and how it can enable your team, then you are the right place. This guide will help you take your first steps with HyperExecute, from understanding the basics to running your first test.
+This page covers the basics of HyperExecute and walks you through running your first test.
 
 ## What is HyperExecute?
 
@@ -36,7 +36,7 @@ Ready to experience the power of HyperExecute? Getting started is easy. We’ve 
 
      Learn More
 
-    Run your tests in a fully managed online development environment, without any local installations or configurations.
+    Generate and run production-ready HyperExecute tests directly from your AI coding assistant, with no manual YAML or CLI setup.
 
     Learn More
 
@@ -96,18 +96,6 @@ HyperExecute provides you with the tools that you need to run your tests at the 
 
 HyperExecute is available on Windows, Linux and Mac. You can use HyperExecute in more than 60 regions that are supported by Microsoft Azure.
 
-### Integrations
-To ensure that your testing environment can be optimised, HyperExecute provides you with multiple [Integrations](/support/docs/hyperexecute-integration-with-ci-cd-tools/), such as:
-
-    Integrations with CI/CD Tool
-    Explore a range of CI/CD tool integrations to optimize your testing pipeline.
-
-    Integration with Products
-    Effortlessly integrate with products like Tosca, Katalon and more for streamlined test execution and management.
-
-    Integration with TestMu AI Products
-    Integrate seamlessly with other TestMu AI products sucha as Smart UI or Real Device and enhance your testing environment's efficiency.
-
 ### Security
 HyperExecute prioritises the safety and security of your data above everything else. The entirety of your data is encrypted for the entire duration of your testing lifecycle. HyperExecute is compliant with the industry leading security standards offering you:
 
@@ -147,9 +135,6 @@ Now that you've set up HyperExecute and run your first test, explore these resou
       HyperExecute Private Cloud
       Learn how to setup HyperExecute Private Cloud for your organization.
 
-      Integrations
-      Know how to setup with your CI/CD, Project management tools and TestMu AI products.
-
 ### Run your framework on HyperExecute
 
 Already using one of these frameworks? Follow the dedicated guide to run it on the HyperExecute grid:
@@ -179,58 +164,20 @@ Already using one of these frameworks? Follow the dedicated guide to run it on t
 
 Once your first job is running, these guides cover day-to-day configuration, monitoring, and private-cloud setup:
 
-- [HyperExecute CLI errors](/support/docs/hyperexecute-how-to-debug-job/) — diagnose and resolve common HyperExecute CLI errors.
-- [GUI query](/support/docs/hyperexecute-guided-walkthrough/) — filter and search your jobs from the HyperExecute UI.
-- [YAML capability overrides](/support/docs/deep-dive-into-hyperexecute-yaml/#yaml-based-capability-overrides-for-selenium-tests-on-hyperexecute) — override capabilities per job in your HyperExecute YAML.
-- [Task metrics](/support/docs/hyperexecute-task-metrics/) — read the per-task performance metrics for a run.
-- [Task widgets](/support/docs/hyperexecute-widgets/#task-widgets) — customize the task widgets on your dashboard.
-- [Org product preferences](/support/docs/hyperexecute-org-product-preferences/) — set organization-level HyperExecute preferences.
-- [MCP server release notes 1.0.0](/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/) — what shipped in the HyperExecute MCP server 1.0.0.
-- [Slack integration](/support/docs/hyperexecute-slack-integration/) — get HyperExecute job notifications in Slack.
-- [Private Cloud setup on Azure](/support/docs/hyperexecute-private-cloud-setup-with-azure/) — deploy HyperExecute Private Cloud on Microsoft Azure.
-- [VNet peering for Private Cloud](/support/docs/hyperexecute-private-cloud-setup-with-azure/#vnet-peering-and-vnet-links) — connect your VNet to HyperExecute Private Cloud.
-- [Migrate from Sauce Labs to HyperExecute](/support/docs/saucelabs-to-hyperexecute-migrate/) — move your Sauce Labs suite to HyperExecute.
+- [HyperExecute CLI errors](/support/docs/hyperexecute-how-to-debug-job/): diagnose and resolve common HyperExecute CLI errors.
+- [GUI query](/support/docs/hyperexecute-guided-walkthrough/): filter and search your jobs from the HyperExecute UI.
+- [YAML capability overrides](/support/docs/deep-dive-into-hyperexecute-yaml/#yaml-based-capability-overrides-for-selenium-tests-on-hyperexecute): override capabilities per job in your HyperExecute YAML.
+- [Task metrics](/support/docs/hyperexecute-task-metrics/): read the per-task performance metrics for a run.
+- [Task widgets](/support/docs/hyperexecute-widgets/#task-widgets): customize the task widgets on your dashboard.
+- [Org product preferences](/support/docs/hyperexecute-org-product-preferences/): set organization-level HyperExecute preferences.
+- [MCP server release notes 1.0.0](/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/): what shipped in the HyperExecute MCP server 1.0.0.
+- [Slack integration](/support/docs/hyperexecute-slack-integration/): get HyperExecute job notifications in Slack.
+- [Private Cloud setup on Azure](/support/docs/hyperexecute-private-cloud-setup-with-azure/): deploy HyperExecute Private Cloud on Microsoft Azure.
+- [VNet peering for Private Cloud](/support/docs/hyperexecute-private-cloud-setup-with-azure/#vnet-peering-and-vnet-links): connect your VNet to HyperExecute Private Cloud.
+- [Migrate from Sauce Labs to HyperExecute](/support/docs/saucelabs-to-hyperexecute-migrate/): move your Sauce Labs suite to HyperExecute.
 
 **We’re Already in Your Favorite Cloud!**
 Deploy our cloud-native test orchestration platform directly from your trusted marketplace:
 - [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyper_execute?exp=ubp8&tab=Overview)
 - [Amazon Web Services Marketplace](https://aws.amazon.com/marketplace/pp/prodview-35cneaxfou2eq)
 - [Google Cloud Provider Marketplace](https://console.cloud.google.com/marketplace/product/hyperexecute-privatecloud/lambdatest?pli=1)
-
-## Using the HyperExecute Agent Skill with TestMu AI
-
-The [hyperexecute-skill](https://github.com/LambdaTest/agent-skills/tree/main/hyperexecute-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The hyperexecute-skill package includes:
-
-```
-hyperexecute-skill/
-├── SKILL.md
-└── reference/
-├── playbook.md
-└── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-### Installing HyperExecute Agent Skill
-
-Install a HyperExecute Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/hyperexecute-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/hyperexecute-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only hyperexecute-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

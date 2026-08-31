@@ -1,7 +1,7 @@
 ---
 id: accessibility-supported-wcag-browsers
 title: Supported WCAG Versions & Browsers
-sidebar_label: Supported WCAG Versions & Browsers
+sidebar_label: WCAG Versions & Browsers
 description: Reference page for supported WCAG versions, browser scope, and high-level environment considerations in Accessibility Testing.
 slug: accessibility-supported-wcag-browsers/
 ---
@@ -32,5 +32,5 @@ For Playwright Accessibility Automation, Chrome should be used instead of `pw-ch
 
 ## Related docs
 
-- [Accessibility Automation (Overview)](/support/docs/accessibility-automation/)
+- [Accessibility Automation (Overview)](/support/docs/accessibility-automation-test/)
 - [Accessibility FAQ](/support/docs/accessibility-faq/)

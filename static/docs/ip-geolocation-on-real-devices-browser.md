@@ -14,7 +14,11 @@ With TestMu AI’s Geolocation Change feature for Real Device Browsers, you can 
 
 **Step 3:** Once the session launches, open the **IP Geolocation** option from the top toolbar.
 
+
+
 **Step 4:** Use the search bar to find the country or location you want to simulate. Select the desired location from the results.
+
+
 
 ## Supported Web Browsers
 
@@ -30,9 +34,13 @@ With TestMu AI’s Geolocation Change feature for Real Device Browsers, you can 
 |Opera|
 |Yandex|
 
+
+
 ## Supported Country
 
 You can simulate geolocation for the following countries in TestMu AI's Real Device Browser Testing. Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test.
+
+
 
 ## Use Cases
 

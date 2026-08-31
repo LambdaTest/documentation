@@ -14,9 +14,11 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
+
 ### Step 1: Create your Project
 - Click on the **Create New** >> **Choose Repository**.
 - Select your desired repository from your VCS (GitHub or Bitbucket)
+
 
 ### Step 2: Setup your Workflow
 - Select your desired build tool and edit your workflow as per your requirement. A sample workflow is given for your reference:
@@ -25,13 +27,20 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/semaphore/.semaphore/semaphore.yml
 ```
 
+
 You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your Semaphore project repository.
+
 
 ### Step 3: Check the output
 
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)
 
+
+
 ## Best Practices
+
+
+
 
 **Secret Management**
 
@@ -39,6 +48,9 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 - Use Semaphore Secrets for all sensitive data
 - Rotate secrets regularly
 - Use different secrets for different environments
+
+
+
 
 **Pipeline Optimization**
 
@@ -54,6 +66,9 @@ running:
 when: "branch != 'main'"
 ```
 
+
+
+
 **Build Naming**
 
 - Use meaningful build names that include branch/commit info
@@ -67,6 +82,9 @@ env_vars:
 value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 ```
 
+
+
+
 **Error Handling**
 
 - Set up proper error handling in pipelines
@@ -74,12 +92,8 @@ value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-**Resource Management**
 
-- Limit concurrent pipeline runs
-- Clean up old builds regularly
-- Monitor pipeline execution time
-- Optimize test execution order
+
 
 **Resource Management**
 
@@ -87,8 +101,24 @@ value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 - Clean up old builds regularly
 - Monitor pipeline execution time
 - Optimize test execution order
+
+
+
+
+**Resource Management**
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+
+
 
 ## Troubleshooting
+
+
+
 
 **Issue: Pipeline Fails with "Secret Not Found"**
 
@@ -110,6 +140,9 @@ value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 3. Check secret scope (project or organization level)
 
 4. Verify secrets are accessible to the pipeline
+
+
+
 
 **Issue: PROJECT_TOKEN Not Available**
 
@@ -133,6 +166,9 @@ value: ${PROJECT_TOKEN}
 3. Check secret is accessible to the pipeline
 
 4. Verify secret scope includes your project
+
+
+
 
 **Issue: Tests Run But No Results in Dashboard**
 
@@ -159,6 +195,9 @@ commands:
 3. Verify network connectivity in pipeline
 
 4. Check if SmartUI CLI step completed successfully
+
+
+
 
 **Issue: Pipeline Times Out**
 
@@ -193,6 +232,9 @@ commands:
 3. Optimize test execution
 4. Split tests across multiple pipeline blocks
 
+
+
+
 **Issue: Dependencies Installation Fails**
 
 **Symptoms**: npm install or dependency installation fails
@@ -221,6 +263,9 @@ commands:
 3. Use package-lock.json for consistent installs
 
 4. Check for version conflicts in package.json
+
+
+
 
 **Issue: SmartUI CLI Not Found**
 
@@ -256,14 +301,18 @@ commands:
 If you encounter issues not covered here:
 
 - Review [Semaphore Documentation](https://docs.semaphoreci.com/)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+
+
+
+
 
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [SmartUI CLI Documentation](/support/docs/smartui-cli)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 - [Semaphore Documentation](https://docs.semaphoreci.com/)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

@@ -8,6 +8,7 @@ Autoheal can be started or stopped at any point in your test script using hooks.
 
 ## Using Autoheal Hooks in Tests
 
+
 Insert Autoheal hooks anywhere in the script depending on where you need dynamic element handling.
 
 - Navigate to your test page.
@@ -20,6 +21,7 @@ This gives you fine-grained control over Autoheal, improving test stability with
 
 ## Enable AutoHeal
 
+
 Use the following hook to **start** Autoheal at any point in your Selenium test script.
 
 ```javascript
@@ -30,6 +32,7 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 
 ## Disable AutoHeal
 
+
 Use the following hook to **stop** Autoheal at any point in your Selenium test script.
 
 ```javascript
@@ -39,6 +42,7 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 **Usage:** Place this hook immediately after the actions requiring Autoheal are completed. This ensures subsequent test steps execute with normal Selenium behavior.
 
 ## Sample Script
+
 
 Review the following sample script to see how Autoheal hooks work in practice.
 

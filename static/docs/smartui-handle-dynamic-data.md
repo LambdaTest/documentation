@@ -14,6 +14,7 @@ SmartUI provides two powerful options to handle dynamic data:
 **Related Documentation**
 If you're experiencing high mismatch percentages or false positives, see our [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for solutions. For project-level settings, check [Project Settings](/support/docs/smartui-project-settings).
 
+
 ## When to Use Dynamic Data Handling
 
 You should use dynamic data handling in the following scenarios:
@@ -28,6 +29,9 @@ You should use dynamic data handling in the following scenarios:
 8. **Notifications**: Unread message counts or notification badges
 
 ## Dynamic Data Handling Methods
+
+
+
 
 **Ignore DOM Elements**
 
@@ -48,6 +52,9 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 **Examples by Selector Type**
+
+
+
 
 **JavaScript (Selenium)**
 ```javascript
@@ -93,6 +100,9 @@ options = {
 smartui_snapshot(driver, "Home Page", options)
 ```
 
+
+
+
 **JavaScript (Selenium)**
 ```javascript
 let options = {
@@ -120,6 +130,9 @@ options = {
 }
 }
 ```
+
+
+
 
 **JavaScript (Selenium)**
 ```javascript
@@ -159,6 +172,9 @@ options = {
 }
 ```
 
+
+
+
 **JavaScript (Selenium)**
 ```javascript
 let options = {
@@ -195,6 +211,13 @@ options = {
 }
 ```
 
+
+
+
+
+
+
+
 **Select DOM Elements**
 
 Use `selectDOM` to include only specific elements in visual comparison. This is useful when you want to compare only certain parts of the page, ignoring everything else.
@@ -214,6 +237,9 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
 **Examples by Selector Type**
+
+
+
 
 **JavaScript (Selenium)**
 ```javascript
@@ -247,6 +273,9 @@ options = {
 }
 ```
 
+
+
+
 **JavaScript (Selenium)**
 ```javascript
 let options = {
@@ -274,6 +303,9 @@ options = {
 }
 }
 ```
+
+
+
 
 **JavaScript (Selenium)**
 ```javascript
@@ -311,6 +343,9 @@ options = {
 }
 ```
 
+
+
+
 **JavaScript (Selenium)**
 ```javascript
 let options = {
@@ -346,6 +381,13 @@ options = {
 }
 }
 ```
+
+
+
+
+
+
+
 
 **Combining ignoreDOM and selectDOM**
 
@@ -423,6 +465,10 @@ class: ["related-articles", "social-share-count"]
 await smartuiSnapshot(driver, 'Article Page', options);
 ```
 
+
+
+
+
 **Best Practices**
 
 1. **Use Specific Selectors**: Prefer IDs or data attributes over generic class names for more precise targeting.
@@ -437,7 +483,13 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 6. **Use Data Attributes**: Add `data-testid` attributes to elements you need to target for better test stability.
 
+
+
+
 ## Troubleshooting
+
+
+
 
 **Issue: Elements Not Being Ignored**
 
@@ -462,6 +514,9 @@ id: ["timestamp"]
 await smartuiSnapshot(driver, 'Page', options);
 ```
 
+
+
+
 **Issue: selectDOM Not Working**
 
 **Possible Causes:**
@@ -474,6 +529,9 @@ await smartuiSnapshot(driver, 'Page', options);
 2. Use more specific selectors
 3. Ensure elements are in the viewport
 
+
+
+
 **Issue: False Positives Still Occurring**
 
 **Possible Causes:**
@@ -485,6 +543,10 @@ await smartuiSnapshot(driver, 'Page', options);
 1. Review the diff to identify missed dynamic elements
 2. Add more selectors to ignoreDOM
 3. Increase wait times or use explicit waits
+
+
+
+
 
 ## Additional Resources
 

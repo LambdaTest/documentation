@@ -20,13 +20,22 @@ In this topic, you will learn about the:
  Be aware of your TestMu AI authentication credentials i.e., your TestMu AI username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com) by clicking on the key icon near the help button.
 * For Linux/Mac:
 
+
+
 {`$ export LT_USERNAME= ${ YOUR_LAMBDATEST_USERNAME()}
 $ export LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
+
+
+
 * For Windows:
+
+
 
 {`$ set LT_USERNAME= ${ YOUR_LAMBDATEST_USERNAME()}
 $ set LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
+
 
 * **Applitools API Key**
 
@@ -54,6 +63,10 @@ $ mvn install
 Below is a code to run a demo test on TestMu AI Selenium Grid from Applitools.
 
 >**Important:** You can clone the below code from our [GitHub repository for TestMu AI Integration with Applitools](https://github.com/LambdaTest/applitools-lambdatest-integration/blob/master/src/test/java/com/applitools/quickstarts/BasicDemo.java).
+
+
+
+
 
 {`package com.applitools.quickstarts;
 import static com.google.common.base.Strings.isNullOrEmpty;
@@ -158,6 +171,8 @@ public class BasicDemo {
 	}
 }`}
 
+
+
 Once you have cloned the above code, you need to execute the below command to trigger the test on TestMu AI Selenium Grid.
 
 ```
@@ -186,6 +201,7 @@ capability.setCapability("tunnel", true);
 ```
 >**Important Note:**
 Some Safari & IE browsers don't support automatic resolution of the URL string *localhost*. Therefore if you test on URLs like `http://localhost/` or `http://localhost:8080` etc., you would get an error in these browsers. A possible solution is to use `localhost.lambdatest.com` or replace the string *localhost* with a machine IP address. For example, if you wanted to test `http://localhost/dashboard` or, and your machine, IP is 192.168.2.6, you can instead try on `http://192.168.2.6/dashboard` or `https://localhost.lambdatest.com/dashboard`.
+
 
 **Got Questions?**
 Feel free to give us a shout on our 24/7 in-app customer chat support. You can even mail to support@testmuai.com. Happy Testing! 🙂

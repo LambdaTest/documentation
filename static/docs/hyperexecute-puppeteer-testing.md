@@ -168,42 +168,6 @@ You can seamlessly navigate between JobId's and taskId's. You need to click on t
 
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
-#### Using the Mocha Agent Skill with TestMu AI
-
-The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The mocha-skill package includes:
-
-```
-mocha-skill/
-├── SKILL.md
-└── reference/
-├── playbook.md
-└── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-Install a Mocha Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/mocha-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/mocha-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only mocha-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
-
 Jest is a JavaScript testing framework commonly paired with Puppeteer for testing web applications. Specifically designed for JavaScript, Jest provides a simple and efficient platform for writing unit tests, integration tests, and end-to-end tests using Puppeteer.
 
 You can execute your Jest framework tests on HyperExecute via two different methods:
@@ -337,42 +301,6 @@ Every test run on the HyperExecute has a unique *jobId* associated with it. Each
 You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
 
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
-
-#### Using the Jest Agent Skill with TestMu AI
-
-The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The jest-skill package includes:
-
-```
-jest-skill/
-├── SKILL.md
-└── reference/
-├── playbook.md
-└── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-Install a Jest Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/jest-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/jest-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only jest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 CodeceptJS is a versatile JavaScript testing framework that supports Puppeteer for end-to-end testing of web applications. It introduces a human-readable syntax and a versatile architecture that allows writing tests in a natural language style.
 

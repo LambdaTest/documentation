@@ -1562,7 +1562,7 @@ jobLabel: [selenium-testng, linux, v1, autosplit]
 
 ## Inherit Your YAML Configurations
 
-YAML inheritance in HyperExecute allows you to reuse common configuration settings across multiple [YAML](/support/docs/deep-dive-into-hyperexecute-yaml) files, improving efficiency, consistency, and flexibility.
+YAML inheritance in HyperExecute allows you to reuse common configuration settings across multiple YAML files, improving efficiency, consistency, and flexibility.
 
 For example, you can create a base YAML file with common settings like **browsers**, **OS versions**, and **devices**, and then inherit from it in other YAML files for different environments or test types. This **reduces boilerplate code and errors** while making it easy to switch between environments and manage complex test execution configurations.
 
@@ -1685,7 +1685,7 @@ retryOnFailure: true
 jobLabel: [selenium-testng, linux, v1, autosplit]
 ```
 
-To learn more about the HyperExecute YAML file, go through [this page](/support/docs/deep-dive-into-hyperexecute-yaml).
+The parameter sections above document the full HyperExecute YAML configuration.
 
 ## HyperExecute YAML v0.2: framework, flags and discovery config
 

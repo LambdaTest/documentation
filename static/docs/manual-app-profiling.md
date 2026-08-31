@@ -11,18 +11,25 @@ You can enable App Profiling from the App Live session toolbar before starting y
 **Beta Feature**
 Manual App Profiling is currently in **Beta**. To use this feature, get it enabled for your organization by reaching out to our **24x7 Chat Support** or mailing us at [support@testmuai.com](https://support.lambdatest.com/).
 
+
 ## Getting Started
 
 **Step 1:** Navigate to **Real Devices > App Testing** and select your app, device, and OS version.
 
 **Step 2:** Before launching the session, enable the **Advance App Profiling** toggle in the session configuration.
 
+
+
 **Step 3:** Start your session, then start profiling from the toolbar. The profiling toolbar appears with options to monitor performance, capture network logs, and capture device logs.
+
+
 
 **Step 4:** During your session, you can:
 - **Start/Stop Profiling**: Create multiple profiling segments within a single session.
 - **Restart App Performance**: Reset profiling data and start a fresh capture from that point.
 - **View Live Metrics**: CPU, Memory, Disk, FPS, Network, and Battery (iOS only) graphs update in real-time.
+
+
 
 **Step 5:** When done, click **Stop Profiling** to see a summary of captured metrics. Use **View Detailed Report** to navigate to the dashboard for in-depth analysis.
 
@@ -100,7 +107,9 @@ Apps that consume excessive battery negatively affect user experience. With Test
 
 - **Battery Energy (J):** Energy consumed by the app, measured in Joules.
 
+
 Battery consumption data is only displayed for **iOS** applications. This feature is not available for Android applications during manual profiling.
+
 
 ### 7. ANR (Application Not Responding)
 
@@ -118,6 +127,7 @@ Application start-up time significantly impacts the first impression and overall
 
 - **Cold Startup Time:** Time from app launch (from scratch) to the first frame rendered.
 - **Hot Startup Time:** Time from app resume (from background) to interactive state.
+
 
 ## Profiling Segments
 
@@ -139,6 +149,8 @@ When starting profiling, you can optionally enable:
 - **Network Logs:** Captures all HTTP/HTTPS traffic in HAR format. Available on the dashboard under the **Network Logs** tab.
 - **Device Logs:** Captures system-level device logs. Available on the dashboard under the **Device Logs** tab.
 
+
+
 > These tabs only appear on the dashboard if they were enabled at the time of starting profiling. If not enabled, only the **App Performance** and **Meta Data** tabs will be visible.
 
 ## Viewing Profiling Results
@@ -151,6 +163,8 @@ After profiling is complete and you end the session, the session is created and 
 - Analyze network logs (HAR viewer) and device logs
 - Compare profiling segments across different user flows
 
+
+
 For more details on navigating the dashboard, see the [Manual Tests Sessions Dashboard](/support/docs/manual-tests-dashboard/) documentation.
 
 ## Platform Availability
@@ -161,6 +175,7 @@ For more details on navigating the dashboard, see the [Manual Tests Sessions Das
 | Network Logs (HAR) and Device Logs | Android 9+ | All versions |
 | Battery Energy | Not supported | All versions |
 | ANR Monitoring | Android 9+ | Not supported |
+
 
 > Got any questions?
 > Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).

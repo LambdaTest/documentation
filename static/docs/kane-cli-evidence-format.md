@@ -30,7 +30,9 @@ A profile is a rung on one contract. `L1` adds requirements to `L0` and never re
 
 The definition file is **opaque**. The format references and hashes it, and never parses it. It can be a `test.md` from kane-cli, a `login.spec.ts` from Playwright, or anything else.
 
+
 The contract version and the profile are different axes. The version, currently `0.1`, is the meaning of the fields. Adding a profile is additive and never changes it. Only a breaking change to an existing meaning bumps the version.
+
 
 ## What sealing does and does not give you
 
@@ -66,7 +68,9 @@ console.error(`${d.severity} ${d.location}: ${d.message} [${d.code}]`);
 }
 ```
 
+
 The standalone `evidence` CLI defaults to the `L0` profile, while `kane-cli evidence validate` defaults to `L1`.
+
 
 ## Next steps
 

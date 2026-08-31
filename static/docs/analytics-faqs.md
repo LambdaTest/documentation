@@ -14,13 +14,21 @@ Step 3: Get started with creating a dashboard
 
 ### How to edit the name of a dashboard?
 
+
+
 One can simply edit the name of a dashboard by clicking on the pencil icon on the right and typing the desired name of the dashboard.
 
 ### How to share a dashboard?
 
+
+
 One can easily share the dashboard by clicking on the share icon on the right of the date selection dropdown inside the dashboard page.
 
 ### How to delete a dashboard?
+
+
+
+
 
 A dashboard can be deleted in 2 simple ways
 
@@ -30,17 +38,27 @@ A dashboard can be deleted in 2 simple ways
 
 ### How to favourite a dashboard?
 
+
+
 A dashboard can be favourited by clicking on the star icon on the left of the dashboard name. After favouriting the dashboard, it can be seen under the favourites section on the Analytics page.
 
 ### How to edit a widget?
 
+
+
 To edit a widget click the three dots on the right of the widget and then click on the `Edit` button from the dropdown.
+
+
 
 One can edit the name of the widget and even select from the variety of filters available and click on the `Update Widget` button to update the widget.
 
 ### How to add a new widget to the dashboard?
 
+
+
 A new widget can easily be added to a dashboard by clicking on the `Add Widget` button inside the dashboard.
+
+
 
 One can select the widgets they want to add from the variety of widgets available and click on the `Update Dashboard` button to update the dashboard with the new widgets.
 

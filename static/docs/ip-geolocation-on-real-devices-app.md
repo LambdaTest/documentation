@@ -6,6 +6,7 @@ Location-specific behavior is crucial to ensure your mobile apps and websites de
 
 TestMu AI's Geolocation Simulation feature allows you to manually set and update the GPS location on real Android devices during live app testing sessions. This empowers you to verify how your app behaves for users across various regions, without needing to physically move devices or use external GPS spoofing tools.
 
+
 ## Update Geolocation for Real Devices on TestMu AI
 
 **Step 1:** Click on the **Real Devices** > **App Testing**
@@ -13,6 +14,8 @@ TestMu AI's Geolocation Simulation feature allows you to manually set and update
 **Step 2:** Select your required device and upload your application and click on Start button.
 
 **Step 3:** Once your live session begins, click the **IP Geolocation** option from the top toolbar.
+
+
 
 **Step 4:** Use the search bar to find the country or location you want to simulate. Select the desired location from the results.
 
@@ -32,9 +35,14 @@ TestMu AI's Geolocation Simulation feature allows you to manually set and update
 |Android 09|
 |Android 08|
 
+
+
+
 ## Supported Country
 
 You can simulate geolocation for the following countries in TestMu AI's Real Device App Testing. Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test.
+
+
 
 ## Use Cases
 

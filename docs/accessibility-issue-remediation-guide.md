@@ -1,7 +1,7 @@
 ---
 id: accessibility-issue-remediation-guide
 title: Accessibility Issue Remediation Guide
-sidebar_label: Accessibility Issue Remediation Guide
+sidebar_label: Issue Remediation
 description: Use this guide to move from Accessibility findings to remediation planning, prioritization, and rule-level fixes.
 slug: accessibility-issue-remediation-guide/
 url: https://www.testmuai.com/support/docs/accessibility-issue-remediation-guide/
@@ -33,7 +33,7 @@ You will learn how to translate report findings into an ordered remediation path
 
 | Day | Focus |
 |-----|--------|
-| 1 | Baseline scan on **top 5 URLs**; export snapshot ([exporting](/support/docs/accessibility-exporting-sharing-reports/)). |
+| 1 | Baseline scan on **top 5 URLs**; export snapshot ([exporting](/support/docs/accessibility-testing-navigating-dashboard/#exporting-and-sharing-reports)). |
 | 2–3 | Fix **critical** keyboard and name/role issues using rule pages. |
 | 4–5 | Address **serious** contrast and form labeling issues; re-scan. |
 | 6 | Manual pass with **[Screen Reader](/support/docs/screen-reader-on-accessibility/)** guidance on primary flows. |
@@ -43,6 +43,6 @@ Adjust cadence to your release train; keep evidence in ticketing tools via **[in
 
 ## Related docs
 
-- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
-- [Android Rule Repository](/support/docs/accessibility-android-rule-repository/)
-- [iOS Rule Repository](/support/docs/accessibility-ios-rule-repository/)
+- [Web Rule Repository](/support/docs/accessibility-rule-repository/)
+- [Android Rule Repository](/support/docs/accessibility-rule-repository/)
+- [iOS Rule Repository](/support/docs/accessibility-rule-repository/)

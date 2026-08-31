@@ -107,6 +107,8 @@ keys:
 - run: node_modules/.bin/nightwatch -e chrome // Executing test in bash.
 ```
 
+
+
 TestMu AI offers a [Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to fetch coded values for your desired test configurations.
 
 For Instance, if you select the below configurations:
@@ -118,6 +120,7 @@ For Instance, if you select the below configurations:
 | Operating System | Windows 8\.1    |
 | Browser Version  | 62\.0           |
 | Browser          | Mozilla Firefox |
+
 
 Then Capabilities Generator at TestMu AI will provide you with the below program:
 

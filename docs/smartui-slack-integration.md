@@ -1,7 +1,7 @@
 ---
 id: smartui-slack-integration
 title: Slack Integration with SmartUI
-sidebar_label: Slack Integration
+sidebar_label: Slack
 description: Integrate Slack with TestMu AI SmartUI for real-time notifications. Follow our guide to set up, configure, and receive SmartUI job updates directly in your Slack workspace.
 keywords:
   - Visual Regression

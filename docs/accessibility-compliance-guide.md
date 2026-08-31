@@ -1,7 +1,7 @@
 ---
 id: accessibility-compliance-guide
 title: Accessibility Compliance Guide (ADA / WCAG / EAA / 508)
-sidebar_label: Accessibility Compliance Guide (ADA / WCAG / EAA / 508)
+sidebar_label: Compliance Guide
 description: High-level reference for common accessibility compliance frameworks and how Accessibility Testing supports those workflows.
 slug: accessibility-compliance-guide/
 url: https://www.testmuai.com/support/docs/accessibility-compliance-guide/
@@ -28,7 +28,7 @@ Accessibility Testing supports compliance workflows, but automated results alone
 
 ## Onboarding stakeholders (what to say in week one)
 
-1. **WCAG** is the technical baseline, map automated findings to success criteria using **[Web](/support/docs/accessibility-web-what-we-cover/)**, **[iOS](/support/docs/accessibility-ios-what-we-cover/)**, and **[Android](/support/docs/accessibility-android-what-we-cover/)** checklists plus rule repositories.
+1. **WCAG** is the technical baseline, map automated findings to success criteria using **[Web](/support/docs/accessibility-web-what-we-cover/)**, **[iOS](/support/docs/accessibility-web-what-we-cover/)**, and **[Android](/support/docs/accessibility-web-what-we-cover/)** checklists plus rule repositories.
 2. **ADA / EAA / 508 conversations** still require **manual evidence** (keyboard-only paths, screen readers, policy docs). Use Accessibility outputs as **inputs**, not the final legal position.
 3. Establish a **definition of done**: e.g., “no open critical/serious automated issues on core journeys + documented manual matrix.”
 4. For procurement or VPAT-style evidence work, pair this guide with **[VPAT and ACR evidence (customer-owned templates)](/support/docs/accessibility-vpat-report-generation/)** (TestMu AI does **not** provide VPAT or ACR reports) and **[Supported WCAG Versions & Browsers](/support/docs/accessibility-supported-wcag-browsers/)**.

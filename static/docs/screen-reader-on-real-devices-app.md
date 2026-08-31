@@ -11,6 +11,9 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
+
+
+
 ## Accessing Screen Reader in Real Device App Testing
 
 **Step 1:** Navigate to **Real Devices** > **App Testing**.
@@ -19,7 +22,11 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 > Make sure the device supports accessibility features, look for the **Accessibility icon** next to the device name.
 
+
+
 **Step 3:** After the session starts, open the **Screen Reader** option from the sidebar and use the **toggle to enable or disable the TalkBack** functionality.
+
+
 
 ## Supported Devices
 
@@ -32,6 +39,7 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 |Google Pixel 7 Pro|Android 13|
 |Samsung Galaxy S22 5G|Android 12|
 |Google Pixel 6 Pro|Android 12|
+
 
 ## How to Navigate using Keyboard Shortcuts
 

@@ -1,3 +1,5 @@
+# HyperExecute Release Notes 2023
+
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Version 2.1.4
@@ -179,7 +181,7 @@ HyperExecute now supports the Cypress framework, allowing teams to run their Cyp
 
 
 
-> To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](/support/docs/hyperexecute-smart-ui-testing-using-cypress/) using HyperExecute.
+> To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](/support/docs/smartui-hooks-with-hyperexecute/) using HyperExecute.
 
 
 

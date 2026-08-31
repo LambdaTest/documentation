@@ -1,3 +1,5 @@
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
 Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on TestMu AI HyperExecute using your local system setup.
 
 
@@ -98,48 +100,3 @@ Route your test traffic through a dedicated proxy server with a fixed IP that yo
 Run your tests as if from a specific geographic location by passing a supported two-letter country code, letting you validate region-based content and geo-restricted features. Learn more in the [IP Geolocation on Real Devices](/support/docs/ip-geolocation-on-real-devices-app/) guide, and refer to the [supported country codes](/support/docs/appium-ip-geolocation/).
 
 > For any query or doubt, please feel free to contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
-
-
-## Using the Detox Agent Skill with TestMu AI
-
-
-The [detox-skill](https://github.com/LambdaTest/agent-skills/tree/main/detox-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
-
-The detox-skill package includes:
-
-```
-detox-skill/
-├── SKILL.md
-└── reference/
-├── playbook.md
-└── advanced-patterns.md
-```
-
-It provides structured guidance for:
-
-* Project structure and setup
-* Dependency configuration
-* Local execution
-* TestMu AI cloud execution
-* Debugging patterns
-* CI/CD integration
-
-
-### Installing Detox Agent Skill
-
-
-Install a Detox Agent Skill using the command below:
-
-```
-# Clone the repo and copy the skill you need
-
-> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/detox-skill .claude/skills/
-
-# Or for Cursor / Copilot
-cp -r agent-skills/detox-skill .cursor/skills/
-```
-
-**Note**: If you prefer installing all available framework skills instead of only detox-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

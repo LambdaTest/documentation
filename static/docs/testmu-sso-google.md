@@ -8,6 +8,8 @@ This comprehensive guide will walk you through configuring SAML-based SSO betwee
 
 ## Prerequisites
 
+
+
 Before configuring SSO integration, ensure you have the following:
 
 *   **TestMu AI Enterprise Plan**: SSO functionality is available with our Enterprise subscription. Learn more about [managing your subscription](/docs/manage-subscriptions/).
@@ -15,6 +17,8 @@ Before configuring SSO integration, ensure you have the following:
 *   **Google Workspace Super Admin Access**: Administrative access to your organization's Google Workspace instance is required to create and configure SAML applications.
 
 ## Configuration Guide
+
+
 
 The SSO integration process involves configuring both Google Workspace and TestMu AI. We'll guide you through each step to ensure a successful setup.
 
@@ -26,9 +30,17 @@ The SSO integration process involves configuring both Google Workspace and TestM
 
 3. **Add Custom SAML App**: Click **Add App** and select **Add custom SAML app** to create a new SAML application for TestMu AI integration.
 
+
+
+
 4. **Configure Application Details**:
    - **App name**: Enter a descriptive name such as "TestMu AI SSO" or "TestMu AI SSO App" to easily identify this application in your Google Workspace admin console.
    - Click **Continue** to proceed to the next configuration step.
+
+
+
+
+
 
 5. **Retrieve Google Identity Provider Details**: On the **Google Identity Provider details** page, you'll need to collect the following information for TestMu AI configuration:
 
@@ -40,13 +52,20 @@ The SSO integration process involves configuring both Google Workspace and TestM
 
     Click **Continue** to proceed.
 
+
+
+
 ### Step 2: Create Connection in TestMu AI
 
 6. **Access TestMu AI SSO Configuration**: Navigate to the [TestMu AI Authentication & SSO settings](https://accounts.lambdatest.com/auth/sso) page. This dashboard provides comprehensive management of your organization's single sign-on configuration. Click **Setup SSO** to initiate the integration process.
 
 7. **Create New SSO Connection**: In the connection setup wizard, enter a descriptive connection name such as "Google Workspace SSO" or "TestMu AI Google SSO". This name will help you identify and manage this connection in your TestMu AI organization. Click **Add New Connection** to proceed.
 
+
+
 8. **Select Identity Provider**: From the list of supported identity providers, select **Other SAML Provider** to configure Google Workspace integration.
+
+
 
 9. **Retrieve TestMu AI Configuration Details**: TestMu AI will generate and display the configuration details required for your Google Workspace setup. These critical details include:
     - **Assertion Consumer Service (ACS) URL**: The secure endpoint where Google will send SAML authentication responses
@@ -54,6 +73,8 @@ The SSO integration process involves configuring both Google Workspace and TestM
     - **X.509 Certificate**: TestMu AI's public certificate for verifying SAML response authenticity
 
     **Important**: Securely copy these details as you'll need to enter them in your Google Workspace admin console to complete the integration.
+
+
 
 Click **Continue** to proceed to the next step.
 
@@ -76,6 +97,10 @@ Click **Continue** to proceed to the next step.
     - **Name ID Format**: Set to **"X509_SUBJECT"** - this specifies the format for the Name ID attribute
     - **Name ID**: Set to **"Basic Information > Primary Email"** - this serves as the primary user identifier
 
+
+
+
+
 13. **Configure Attribute Mapping**: Click **Add mapping** to establish the user attribute mappings required by TestMu AI:
     - **Google Directory attributes**: Select the appropriate field from the Google directory attributes dropdown
     - **App attributes**: Enter the corresponding attribute name that TestMu AI expects
@@ -85,7 +110,12 @@ Click **Continue** to proceed to the next step.
     - **First Name**: Map to `given_name`
     - **Last Name**: Map to `family_name`
 
+
+
+
 14. **Complete Google Workspace Setup**: Click **Finish** to finalize the SAML application configuration in Google Workspace.
+
+
 
 15. **Enable SAML Application**: In the Google Admin Console, navigate to **Menu** > **Apps** > **Web and mobile apps**, locate the TestMu AI SAML application you created, click **User access**, then configure access for your organization:
     - **On for everyone**: Enable access for all users in your organization
@@ -94,6 +124,8 @@ Click **Continue** to proceed to the next step.
     - **Off for everyone**: Disable access (not recommended for production)
 
     Select your preferred access level and click **Save** to activate the application.
+
+
 
 ### Step 4: Complete TestMu AI Integration
 
@@ -108,6 +140,8 @@ Click **Continue** to proceed to the next step.
     - `yourcompany.com` - enables authentication for all users with @yourcompany.com email addresses
     - `subsidiary.com,partner.com` - supports multiple domains (comma-separated)
 
+
+
 19. **Pre-Integration Verification**: Before finalizing the connection, ensure the following:
     - All required configuration fields are properly completed
     - The X.509 certificate file has been successfully uploaded and validated
@@ -118,6 +152,8 @@ Click **Continue** to proceed to the next step.
 20. **Finalize SSO Integration**: After verification, click **Create Connection** to complete the SSO integration and activate the authentication flow.
 
 ## SSO Verification and Testing
+
+
 
 After completing the integration, verify that your SSO setup is functioning correctly by testing both authentication flows.
 
@@ -136,13 +172,19 @@ After completing the integration, verify that your SSO setup is functioning corr
 4. **Complete Authentication**: You'll be redirected to Google's sign-in page. Enter your Google Workspace credentials.
 5. **Verify Successful Authentication**: After successful authentication, you should be automatically redirected to your TestMu AI organization.
 
+
+
 ## Troubleshooting Common Issues
+
+
 
 If you encounter issues with your SSO integration, the following troubleshooting guide will help you resolve common problems:
 
 ### Application Not Enabled Error
 
 If you receive an "App not enabled" error, the SAML application hasn't been properly activated for your users in Google Workspace.
+
+
 
 **Resolution**: Return to the Google Admin Console, navigate to your SAML application, and ensure it's enabled for the appropriate users or organizational units.
 
@@ -153,5 +195,6 @@ If you receive an "App not enabled" error, the SAML application hasn't been prop
 3. **Attribute Mapping**: Confirm that attribute names match precisely between Google Workspace and TestMu AI
 4. **Domain Restrictions**: Verify that SSO domains in TestMu AI correspond to your organization's email domains
 5. **User Permissions**: Ensure users have appropriate access to the SAML application in Google Workspace
+
 
 > **Integration Complete!** Your TestMu AI organization is now successfully integrated with Google Workspace SSO. Your team can now access TestMu AI using their Google Workspace credentials. If you encounter any issues or need assistance, our **Support Team** is here to help. You can also reach us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!

@@ -1,39 +1,95 @@
-# Python with Playwright: Running Your First Test
+# How to Run Playwright Tests With Python on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Learn how to use Playwright with Python to automate web application testing across real browsers and operating systems on TestMu AI cloud platform.
+Run your Python Playwright tests on the TestMu AI cloud grid to reach 50+ real desktop browsers and operating systems without maintaining local infrastructure. You connect Playwright over a CDP WebSocket, pass your capabilities, then run the sample script.
 
 ## Prerequisites
 
-1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+Complete these before running the test below.
+
+1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile section. Don't have an account? Sign up for free.
+
+
+
+2. [Python](https://www.python.org/downloads/) installed, along with the Playwright Python package.
+3. Clone the sample repository. The Python sample lives in its own subdirectory.
 
 **Sample repo**
-Download or clone the code sample for the Playwright Python from the TestMu AI GitHub repository to run the tests.
-
  View on GitHub
 
-```js
+
+```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 cd playwright-python
 ```
 
-2. Install the Python dependencies.
+4. Install the Python dependencies from the sample directory:
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-3. A TestMu AI Username and Access key. You can get it from your TestMu AI Profile section. Don't have an account, sign up for free.
+## Set Your Credentials
 
-4. To run Playwright tests, set your TestMu AI Username and Access key in the Environment Variables.
 
-## Run your Playwright tests with Python
+Your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
-Navigate to the `playwright_sample.py` file in the `playwright-python` directory.
+
+
+
+
+
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
+
+
+
+
+
+
+
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
+set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+
+
+
+
+
+
+
+## How the Sample Test Works
+
+
+The test builds a `capabilities` dictionary that carries the browser, version, platform, and your `LT:Options`, then connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. The credentials come from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set above, and `set_test_status` reports whether the assertion passed.
 
 ```py
+capabilities = {
+'browserName': 'Chrome',  # Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+'browserVersion': 'latest',
+'LT:Options': {
+'platform': 'Windows 10',
+'user': os.getenv('LT_USERNAME'),
+'accessKey': os.getenv('LT_ACCESS_KEY'),
+}
+}
+```
+
+The sample script wraps this connection, runs a search, then calls `set_test_status` to mark the result, as the steps below show.
+
+## Run the Test With Python
+
+
+The sample script connects Playwright to the grid, opens a page, runs a search, and reports the test status back to TestMu AI. You can use your own project, or the sample below.
+
+1. Open the `playwright_sample.py` file in the `playwright-python` directory. It builds the capabilities, connects to the grid, and sets the test status:
+
+```py title="playwright_sample.py"
 import json
 import os
 import urllib
@@ -58,6 +114,7 @@ capabilities = {
 'geoLocation': '', # country code can be fetched from https://www.lambdatest.com/capabilities-generator/
 }
 }
+
 
 def run(playwright):
 playwrightVersion = str(subprocess.getoutput('playwright --version')).strip().split(" ")[1]
@@ -87,23 +144,33 @@ set_test_status(page, "failed", str(err))
 
 browser.close()
 
+
 def set_test_status(page, status, remark):
 page.evaluate("_ => {}",
 "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\":\"" + status + "\", \"remark\": \"" + remark + "\"}}");
+
 
 with sync_playwright() as playwright:
 run(playwright)
 
 ```
 
-Pass the below command in the terminal to run the test.
+2. Run the test from the terminal:
 
-```js
-npm run test
+```bash
+python playwright_sample.py
 ```
 
-## View your test results
+## View Your Results
 
-Go to the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your Playwright Python test results.
 
-To generate Playwright tests with AI coding assistants, see [Run Tests With Agent Skills](/support/docs/playwright-agent-skills/).
+Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms the test passed.
+
+## Related Playwright Guides
+
+
+Continue with these related guides:
+
+- [Configure Playwright Capabilities for the TestMu AI Grid](/support/docs/capabilities-for-playwright/)
+- [Get Started With Playwright Testing on TestMu AI](/support/docs/playwright-testing/)
+- [Set Up Playwright Test Execution on TestMu AI](/support/docs/playwright-test-execution-setup/)

@@ -26,6 +26,11 @@ This enables testers to validate UI appearance, color contrast, and theme switch
 
 **Step 2:** Go to the **Device Control tab** and turn the toggle **On** for Dark Mode.
 
+
+
+
+
+
 - Dark mode changes are applied at the **system/browser level** and may require refreshing the page for full effect.
 - Some legacy websites may not fully support dark mode.
 - Web applications must implement dark mode CSS for consistent theming beyond browser UI.

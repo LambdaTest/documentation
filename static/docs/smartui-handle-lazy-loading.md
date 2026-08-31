@@ -226,11 +226,17 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 ## Best Practices
 
+
+
+
 **Choose the Right Method**
 
 - **Simple lazy loading**: Use `waitForTimeout` in configuration
 - **Complex lazy loading**: Use programmatic scrolling
 - **Known lazy elements**: Wait for specific elements
+
+
+
 
 **Optimize Wait Times**
 
@@ -238,11 +244,17 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Balance between thorough loading and test execution time
 - Monitor test execution times to optimize
 
+
+
+
 **Scroll Incrementally**
 
 - Use smaller scroll steps (200-500px) for better coverage
 - Wait between scrolls to allow content to load
 - Recalculate page height for infinite scroll scenarios
+
+
+
 
 **Return to Top**
 
@@ -250,17 +262,26 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Ensures consistent baseline for comparison
 - Prevents viewport-dependent differences
 
-**Combine Methods**
 
-- Use `waitForTimeout` for initial page load
-- Add programmatic scrolling for lazy content
-- Wait for specific critical elements
+
 
 **Combine Methods**
 
 - Use `waitForTimeout` for initial page load
 - Add programmatic scrolling for lazy content
 - Wait for specific critical elements
+
+
+
+
+**Combine Methods**
+
+- Use `waitForTimeout` for initial page load
+- Add programmatic scrolling for lazy content
+- Wait for specific critical elements
+
+
+
 
 ## Use Cases
 
@@ -284,12 +305,18 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 ## Troubleshooting
 
+
+
+
 **Issue: Content Still Missing After Scrolling**
 
 **Solutions:**
 1. Increase wait times between scrolls
 2. Add explicit waits for lazy-loaded elements
 3. Check if lazy loading uses intersection observer (may need different approach)
+
+
+
 
 **Issue: Test Takes Too Long**
 
@@ -298,6 +325,9 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 2. Only scroll to areas that matter for your test
 3. Use `waitForTimeout` instead of scrolling when possible
 
+
+
+
 **Issue: Inconsistent Results**
 
 **Solutions:**
@@ -305,6 +335,10 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 2. Always scroll back to top
 3. Add sufficient wait times
 4. Use fixed viewport sizes
+
+
+
+
 
 ## Additional Resources
 

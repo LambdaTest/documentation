@@ -30,6 +30,8 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 }
 ```
 
+
+
 ## 1xx -- Success
 
 ### 100 COMPLETE
@@ -41,6 +43,8 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 | **What happened** | All checkpoints passed and the agent confirmed the objective is achieved. |
 | **Action** | None required. |
 
+
+
 ## 2xx -- Cancelled
 
 ### 200 USER_CANCELLED
@@ -51,6 +55,8 @@ The `run_end` event includes both `result_code` (numeric) and `reason_code` (des
 | **Status** | `CANCELLED` |
 | **What happened** | The run was cancelled by the caller (e.g., Ctrl+C, `cancel` event, or API cancellation). |
 | **Action** | No action required. Re-run the objective if needed. |
+
+
 
 ## 3xx -- Stuck
 
@@ -82,6 +88,8 @@ The agent ran into a dead end. These are not crashes - the agent recognized it c
 | **Status** | `STUCK` |
 | **What happened** | The action planner determined there are no viable actions available on the current page to progress toward the objective. |
 | **Action** | Manual intervention is needed. Check the screenshot at `{session_id}/runs/{run_dir}/run-test/screenshots/` to understand what page state the agent ended on. You may need to adjust the objective, provide credentials, or navigate to a different starting URL. |
+
+
 
 ## 4xx -- Agent Error
 
@@ -122,6 +130,8 @@ An internal agent component failed. These typically indicate a transient issue o
 | **Status** | `ERROR` |
 | **What happened** | A child agent (spawned for a sub-objective during analysis) failed. The parent run cannot continue. |
 | **Action** | Check the `child_agent_end` event in the NDJSON output for the child's failure details. Fix the child objective, then re-run the parent. |
+
+
 
 ## 5xx -- Infra Error
 
@@ -172,9 +182,13 @@ Platform or infrastructure failures. These are independent of the objective itse
 | **What happened** | The TestMu AI controller returned a `401 Unauthorized` response. Your authentication token has expired or is invalid. |
 | **Action** | Refresh your authentication token: |
 
+
+
 {`kane-cli login
 # or re-run login with basic auth
 kane-cli login --username "${ YOUR_LAMBDATEST_USERNAME()}" --access-key "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+
 
 Verify with `kane-cli whoami`, then retry the run.
 
@@ -186,6 +200,8 @@ Verify with `kane-cli whoami`, then retry the run.
 | **Status** | `ERROR` |
 | **What happened** | The TestMu AI controller returned a `402 Payment Required` response. Your account has no remaining credits for AI agent runs. |
 | **Action** | Purchase additional credits or upgrade your plan on the [TestMu AI billing page](https://billing.lambdatest.com/billing/plans/). Contact your account administrator if you are on a team plan. |
+
+
 
 ## 6xx -- Blocker
 
@@ -243,6 +259,8 @@ kane-cli run "Log in and navigate to dashboard" \
 --agent
 ```
 
+
+
 ## 7xx -- Assertion Error
 
 The agent completed its actions but one or more assertions or checkpoints did not pass.
@@ -274,6 +292,8 @@ The agent completed its actions but one or more assertions or checkpoints did no
 | **What happened** | An if-else objective had multiple branches, but none of the conditions matched the actual page state. |
 | **Action** | Review your branching conditions. Add a fallback branch, or check the screenshot to see what state the page was actually in. Adjust conditions to cover the observed state. |
 
+
+
 ## Quick Lookup Table
 
 | Code | Name | Reason Code | Action |
@@ -302,6 +322,8 @@ The agent completed its actions but one or more assertions or checkpoints did no
 | 720 | CHECKPOINT_FAILED | `assertion_error.checkpoint_failed` | Check assertion condition |
 | 730 | NO_BRANCH_MATCHED | `assertion_error.no_branch_matched` | Update branch conditions |
 
+
+
 ## Handling Errors in Agent Mode
 
 When consuming Kane CLI output programmatically, use `result_code` ranges to determine your next action:
@@ -321,6 +343,8 @@ case $CODE in
 7*) echo "Assertion failed: check test conditions" ;;
 esac
 ```
+
+
 
 ## Related Resources
 
