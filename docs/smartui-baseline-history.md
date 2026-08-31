@@ -131,4 +131,4 @@ Baseline History is rolled out progressively. If you expect it on a project row 
 - [Baseline Management](/support/docs/smartui-baseline-management/)
 - [Baseline Strategy for Omni Projects](/support/docs/smartui-baseline-strategy/)
 - [Audit Logs and Annotations](/support/docs/smartui-audit-logs-annotations/)
-- [Approval and Baseline Management Guide](/support/docs/smartui-approval-workflow-guide/)
+- [Approval and Baseline Management Guide](/support/docs/smartui-running-your-first-project/)
