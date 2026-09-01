@@ -1201,7 +1201,6 @@ module.exports = {
           { type: "doc", id: "configure-timezones" },
           { type: "doc", id: "smart-wait" },
           { type: "doc", id: "auto-heal" },
-          { type: "doc", id: "run-tests-with-webdriver-bidi" },
           { type: "doc", id: "selenium-bidi-integration" },
           { type: "doc", id: "custom-header" },
           { type: "doc", id: "custom-dns-map" },
