@@ -105,6 +105,16 @@ const FAQ_SCHEMA = {
       "@type": "Question",
       "name": "Does TestMu AI have a disaster recovery plan?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. TestMu AI maintains a formal Business Continuity Plan and Disaster Recovery Plan tested annually. Recovery Time Objective (RTO) is 4 hours and Recovery Point Objective (RPO) is under 1 hour." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TestMu AI support SP-initiated and IdP-initiated SSO?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Both are supported. In SP-initiated SSO the login begins on the TestMu AI sign-in page via Continue with SSO. In IdP-initiated SSO the user launches TestMu AI from the configured app in their Identity Provider." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are all users forced to log in via SSO on TestMu AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not by default. The organization admin controls this with the Enforce SSO Login toggle. When enforced, users on the configured company domain must use SSO, while admins can add exceptions to an Exempt List." }
     }
   ]
 };
@@ -148,6 +158,7 @@ const TABS = [
   { id: 'realtime', label: 'Real Time' },
   { id: 'billing', label: 'Plans & Billing' },
   { id: 'security', label: 'Data & Security' },
+  { id: 'sso', label: 'SSO' },
   { id: 'ltbrowser', label: 'LT Browser' },
 ];
 
@@ -1928,6 +1939,150 @@ preDirectives:
               <details>
               <summary>Do you have separate production, QA, and development environments?</summary>
               <p>Yes. Production, Dev, and Test environments are hosted on separate AWS instances behind private networks. Only the Production environment holds real customer data; other environments use dummy or simulated data.</p>
+              </details>
+
+            </div>
+          )}
+
+          {/* ── Single Sign-On (SSO) ──────────────────────────────────── */}
+          {activeTab === 'sso' && (
+            <div className={faqStyles.accordionGroup}>
+
+              {/* Integration & Hosting */}
+              <details>
+              <summary>Will the SSO flow be SP-initiated or IdP-initiated?</summary>
+              <p>Both are supported. {BRAND_NAME} supports SP-initiated and IdP-initiated SSO.</p>
+              <ul>
+              <li><strong>SP-initiated SSO:</strong> The login begins on the {BRAND_NAME} side (the Service Provider). A user visits the {BRAND_NAME} sign-in page, clicks <strong>Continue with SSO</strong>, and {BRAND_NAME} sends a SAML request to your configured Identity Provider to authenticate.</li>
+              <li><strong>IdP-initiated SSO:</strong> The login starts on the Identity Provider side. An assigned user clicks the {BRAND_NAME} application from the configured SSO app in the IdP, which redirects them to the sign-in URL and continues the SSO flow.</li>
+              </ul>
+              </details>
+
+              <details>
+              <summary>If the SSO flow is SP-initiated, does the application support the SAML request signature?</summary>
+              <p>Yes. SP-initiated SSO supports signing the SAML request.</p>
+              </details>
+
+              {/* Login Behaviour & Enforcement */}
+              <details>
+              <summary>Are all users forced to log in via SSO?</summary>
+              <p>Not by default. Your organization admin controls this through the <strong>Enforce SSO Login</strong> toggle.</p>
+              </details>
+
+              <details>
+              <summary>What happens when "Enforce SSO" is off (default)?</summary>
+              <p>Users have a choice. They can log in using SSO, standard email and password, or social logins (Google or GitHub). No one is forced to use SSO.</p>
+              </details>
+
+              <details>
+              <summary>What happens when "Enforce SSO" is on?</summary>
+              <p>All team members must use SSO to access the organization, and email and password login is disabled for them.</p>
+              </details>
+
+              <details>
+              <summary>Are there any exceptions when SSO is enforced?</summary>
+              <p>Yes. The admin can add specific users to an <strong>Exempt List</strong>. These users, typically external contractors or backup admins, can still log in with a standard password while enforcement is active for everyone else.</p>
+              </details>
+
+              <details>
+              <summary>If SSO is enabled for the root organization, can sub-org users still log in with a username and password?</summary>
+              <p>It depends on their email domain. Users on the enforced company domain (for example, <code>@yourcompany.com</code>) are forced to use SSO even if they only work inside a sub-organization, because the system recognises that their email belongs to the enforced domain. Users on a different domain (for example, <code>@gmail.com</code> or <code>@agency.com</code>) are not forced and can continue with a username and password.</p>
+              </details>
+
+              <details>
+              <summary>Can users log in to a sub-org via SSO if the parent org has SSO enabled?</summary>
+              <p>Yes. If SSO is enabled for the parent organization, users can log in to the sub-org via SSO as well. However, a user who does not belong to the parent organization, or who belongs to an organization where SSO is not enabled, cannot log in to the sub-org via SSO.</p>
+              </details>
+
+              {/* Configuration */}
+              <details>
+              <summary>Is it possible to add more than one domain in SSO?</summary>
+              <p>Yes. The SSO (SAML) configuration includes an <strong>SSO Domains</strong> field that accepts a comma-separated list of allowed email domains (for example, <code>domain1.com,domain2.com</code>). Users from any listed domain can authenticate through that SSO setup.</p>
+              </details>
+
+              <details>
+              <summary>Does {BRAND_NAME} have an X.509 certificate configured to verify SAML assertions?</summary>
+              <p>Yes. {BRAND_NAME} supports SAML SSO with an X.509 certificate and provides a way to configure it during SSO setup.</p>
+              </details>
+
+              <details>
+              <summary>How do X.509 certificates work in {BRAND_NAME} SSO?</summary>
+              <p>You configure SSO with your IdP (Google Workspace, Okta, Azure AD, OneLogin, and others) and upload the IdP's base64-encoded X.509 certificate on the {BRAND_NAME} SSO setup screen. This certificate verifies the authenticity of the SAML responses and assertions sent by your IdP. {BRAND_NAME} also displays its own Assertion Consumer Service (ACS) URL, Entity ID, and X.509 certificate, which you copy into your IdP configuration so the IdP trusts {BRAND_NAME} as the Service Provider.</p>
+              </details>
+
+              <details>
+              <summary>Does {BRAND_NAME} use a metadata URL or manual entry of IdP details?</summary>
+              <p>Both are supported, but the metadata URL is recommended. {BRAND_NAME} lets you enter the IdP metadata URL provided by your identity provider and automatically fetches the SSO endpoint (Login URL), IdP Entity ID, and X.509 certificate from it. This reduces manual errors, particularly when the IdP rotates certificates.</p>
+              </details>
+
+              {/* Troubleshooting */}
+              <details>
+              <summary>Why do I get a 405 error when attempting to log in through SSO?</summary>
+              <p>A 405 ("Method Not Allowed") means the HTTP method used in the SAML request is not accepted by the SSO endpoint. The common causes are an incorrect HTTP binding, a wrong SSO URL, misconfigured IdP settings, or, less commonly, a firewall or proxy. Each is covered below.</p>
+              </details>
+
+              <details>
+              <summary>Can an incorrect HTTP binding cause a 405 error?</summary>
+              <p>Yes. SAML SSO supports HTTP-Redirect (GET), where the SAML request is sent as a query parameter, and HTTP-POST (POST), where it is sent in the request body. {BRAND_NAME} expects one specific binding, usually POST for login, so an IdP sending GET instead triggers a 405.</p>
+              </details>
+
+              <details>
+              <summary>Can a wrong SSO URL cause a 405 error?</summary>
+              <p>Yes. {BRAND_NAME} provides a specific ACS (Assertion Consumer Service) URL. If your IdP posts to the wrong endpoint, for example the generic login page URL instead of the ACS URL, the request is rejected with a 405.</p>
+              </details>
+
+              <details>
+              <summary>Can misconfigured IdP settings cause a 405 error?</summary>
+              <p>Yes. The IdP may be sending the SAML response to the wrong endpoint or using an unsupported method. Verify the IdP's SSO URL, binding method, and certificate settings.</p>
+              </details>
+
+              <details>
+              <summary>Can a firewall or proxy cause a 405 error?</summary>
+              <p>Occasionally. Corporate proxies or security policies that block POST requests to the ACS URL can surface as a 405. This is a less common cause.</p>
+              </details>
+
+              <details>
+              <summary>What status code is returned when an unauthorized user tries to access the application via SSO?</summary>
+              <p>If the user is successfully authenticated through SSO but does not have permission to access the application, the request generally results in a <strong>403 Forbidden</strong> status. This means the user has been authenticated but is not authorized. With an IdP, this usually happens when the user is not assigned to the enterprise application or is not part of an authorized group. To resolve it, the IdP administrator should assign the user to the {BRAND_NAME} enterprise application, or add the user to a group that has access. Once access is granted, the user can log in successfully through SSO.</p>
+              </details>
+
+              <details>
+              <summary>Why does SSO authentication fail with a certificate error?</summary>
+              <p>If the SSO certificate has expired, SSO authentication can fail due to certificate validation errors. To resolve this, generate a new certificate and update the SSO connection with the newly generated certificate. Once updated, users can authenticate through SSO successfully.</p>
+              </details>
+
+              {/* Updating & Migration */}
+              <details>
+              <summary>What steps are required to switch the SSO configuration from Okta to Microsoft Entra ID?</summary>
+              <p>In {BRAND_NAME} SSO settings, reconfigure the existing connection. This does not delete users; it only removes the authentication pipe.</p>
+              <ol>
+              <li>Give the connection a unique name (for example, <code>EntraID-YourCompany</code>). Reusing the old connection name is technically possible, but a new name avoids caching issues.</li>
+              <li>Update the metadata URL, or add the X.509 signing certificate and sign-in URL copied from Entra ID.</li>
+              <li>Configure your SSO email domains (for example, <code>company.com</code>).</li>
+              <li>Update the connection.</li>
+              <li>Copy the Service Provider / Reply URL (ACS) URL and Entity ID that {BRAND_NAME} generates, and keep them handy for the IdP configuration.</li>
+              </ol>
+              </details>
+
+              {/* SCIM Provisioning */}
+              <details>
+              <summary>How does SCIM provisioning work on {BRAND_NAME}?</summary>
+              <p>SCIM for user provisioning is turned on by default; you only need to configure SCIM through the auth provided by {BRAND_NAME}. For group provisioning, reach out to the support team to have that feature enabled. See <a href={`${BRAND_URL}/support/docs/scim/`}>how to set up SCIM provisioning</a> for details.</p>
+              </details>
+
+              <details>
+              <summary>Why is a user not getting provisioned automatically?</summary>
+              <p>Check whether the user already exists in a different organization. If a user is already associated with another organization, automatic user provisioning does not occur, and it requires support from the {BRAND_NAME} side to resolve.</p>
+              </details>
+
+              <details>
+              <summary>Why are groups, teams, or sub-organizations not being provisioned correctly?</summary>
+              <p>Verify that group, team, or sub-organization provisioning is enabled for the user's organization, and confirm that the corresponding configuration in the Identity Provider is correct and properly mapped.</p>
+              </details>
+
+              <details>
+              <summary>Where can I find the full SSO setup guide?</summary>
+              <p>See <a href={`${BRAND_URL}/support/docs/single-sign-on/`}>how to get started with SSO</a> and <a href={`${BRAND_URL}/support/docs/lambdatest-sso-self-serve/`}>how to create an SSO connection</a> for step-by-step configuration.</p>
               </details>
 
             </div>
