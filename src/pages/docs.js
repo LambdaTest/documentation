@@ -293,10 +293,7 @@ export default function Home() {
             <h2 className="homeMain_h2"><Icon light="other-light-icon.svg" dark="other-dark-icon.svg" alt="" />Other Docs</h2>
             <div className="home_inners">
               <a href="/support/docs/lt-browser/"><p className="p_home_inners">LT Browser</p></a>
-              <a href="/support/docs/test-logs/"><p className="p_home_inners">Test Logs</p></a>
               <a href="/support/docs/test-intelligence-overview/"><p className="p_home_inners">Test Intelligence</p></a>
-              <a href="/support/docs/automated-screenshot-testing/"><p className="p_home_inners">Screenshot Testing</p></a>
-              <a href="/support/docs/responsive-testing/"><p className="p_home_inners">Responsive Testing</p></a>
               <a href="/support/docs/concurrency-widget/"><p className="p_home_inners">Concurrency Widget</p></a>
             </div>
           </div>

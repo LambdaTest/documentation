@@ -2,7 +2,7 @@
 id: test-run-creation-and-management
 title: Test Run - Creation and Management
 hide_title: false
-sidebar_label: Create Test Runs
+sidebar_label: Test Runs
 description: Gain insights into effective Test Run Creation with TestMu AI, designed to streamline your workflow.
 keywords:
   - test run
