@@ -17,6 +17,8 @@ site_name: TestMu AI
 slug: filter-your-selenium-tests/
 canonical: https://www.testmuai.com/support/docs/filter-your-selenium-tests/
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -36,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Filtering Selenium Tests",
+          "name": "Organizing Selenium Tests and Builds",
           "item": `${BRAND_URL}/support/docs/filter-your-selenium-tests/`
         }]
       })
@@ -47,7 +49,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-You can filter your tests on TestMu AI using the various filters available on the automation dashboard. On each of the tabs available on the automation dashboard (Timeline, Automation Logs, and Analytics), a _filter toolbar_ helps you filter your tests based on selected values. This document explains the filter toolbar of each tab and how you can filter your tests.
+Once your Selenium tests are running on TestMu AI, the automation dashboard gives you several ways to keep them organized. You can filter tests, group them with custom tags, tag and split builds, edit individual test details during a run, and share results with your team. This document covers each of these.
+
+On each of the tabs available on the automation dashboard (Timeline, Automation Logs, and Analytics), a _filter toolbar_ helps you filter your tests based on selected values. The sections below start with the filter toolbar of each tab, then cover tagging, build splitting, editing test details, and sharing.
 
 ## Filtering Tests on Timeline
 ---
@@ -146,7 +150,7 @@ The Build, Date, Users, Status, and Clear Filters components behave the same as 
 
 ---
 
-You can filter your Selenium tests on TestMu AI using [custom tags](/docs/group-tests-using-custom-tags/). Click on the Tags option to select the tag by which you want to filter tests. You must have used the custom tags feature earlier to use this filter.
+You can filter your Selenium tests on TestMu AI using [custom tags](#group-tests-using-custom-tags). Click on the Tags option to select the tag by which you want to filter tests. You must have used the custom tags feature earlier to use this filter.
 
 Here is an example showing tests filtered using the _Demo1_ custom tag:
 
@@ -1085,7 +1089,7 @@ Continue with these related guides:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Filtering Selenium Tests
+        Organizing Selenium Tests and Builds
       </span>
     </li>
   </ul>

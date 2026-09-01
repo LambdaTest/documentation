@@ -11,6 +11,7 @@ keywords:
   - java webdriver remote execution
   - java automation cross browser testing
   - selenium java cloud grid setup
+  - testng junit cucumber selenide gauge geb serenity selenium
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
@@ -63,56 +64,25 @@ Before running any framework below, set up a TestMu AI account, your credentials
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
-4. Download the latest [Selenium Java Client](https://www.selenium.dev/downloads/) and extract the ZIP file to your project directory.
-5. Add the Selenium JARs to your project dependencies in your IDE.
+4. Install [Apache Maven](https://maven.apache.org/). The framework sample projects below all build with Maven.
 
 ## Set Your Credentials
 ---
 
-Create a new Java file and add the following sample test. It opens a to-do app, marks two items as done, adds a new item, and verifies it.
+Every framework authenticates the same way: your Username and Access Key are passed in the grid URL. Set them as environment variables so you don't hard-code them. Pick your operating system:
 
-```java title="JavaToDo.java"
-import java.net.MalformedURLException;
-import java.net.URL;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import java.util.HashMap;
-public class JavaTodo {
-    String username = "YOUR_LAMBDATEST_USERNAME";
-    String accesskey = "YOUR_LAMBDATEST_ACCESS_KEY";
-    static RemoteWebDriver driver = null;
-    String gridURL = "@hub.lambdatest.com/wd/hub";
-    boolean status = false;
-    public static void main(String[] args) {
-        new JavaTodo().test();
-    }
-    public void test() {
-        setUp();
-        try {
-            driver.get("https://lambdatest.github.io/sample-todo-app/");
+<Tabs className="docs__val" groupId="os">
 
-            driver.findElement(By.name("li1")).click();
-            driver.findElement(By.name("li2")).click();
+<TabItem value="macos" label="macOS / Linux" default>
 
-            driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
-            driver.findElement(By.id("addbutton")).click();
+<div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-            String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
-            if (enteredText.equals("Yey, Let's add it to list")) {
-                status = true;
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        } finally {
-            tearDown();
-        }
-    }
-    private void setUp() {
-        ChromeOptions browserOptions = new ChromeOptions();
-        browserOptions.setPlatformName("Windows 10");
-        browserOptions.setBrowserVersion("latest");
+</TabItem>
 
 <TabItem value="win-cmd" label="Windows (CMD)">
 
@@ -140,37 +110,26 @@ driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list"
 driver.findElement(By.id("addbutton")).click();
 ```
 
-## Step 2: Set Your Credentials
----
-
-Replace the placeholder values with your actual credentials from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-java">
-  {`String username= "${ YOUR_LAMBDATEST_USERNAME()}"; 
-String accesskey= "${ YOUR_LAMBDATEST_ACCESS_KEY()}";`}
-  </CodeBlock>
-</div>
-
-## Step 3: Configure Capabilities
----
-
-Define the browser, version, and OS for your test run.
+The driver is a `RemoteWebDriver` pointed at the grid, with your browser/OS choices passed through `LT:Options`:
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
-        browserOptions.setPlatformName("Windows 10");
-        browserOptions.setBrowserVersion("latest");
+browserOptions.setPlatformName("Windows 10");
+browserOptions.setBrowserVersion("latest");
 
-        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-        ltOptions.put("build", "LambdaTestSampleApp");
-        ltOptions.put("name", "LambdaTestJavaSample");
-        ltOptions.put("w3c", true);
-        browserOptions.setCapability("LT:Options", ltOptions);
+HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+ltOptions.put("build", "Java Selenium Build");
+ltOptions.put("name", "Java Selenium Test");
+ltOptions.put("w3c", true);
+browserOptions.setCapability("LT:Options", ltOptions);
+
+driver = new RemoteWebDriver(
+    new URL("https://" + username + ":" + accesskey + "@hub.lambdatest.com/wd/hub"),
+    browserOptions);
 ```
 
 :::tip
-Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate capabilities for any browser, version, and OS combination.
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build an `LT:Options` block for any browser, version, and OS combination.
 :::
 
 **What changes between frameworks is only how that test is *structured and run***: the runner, its setup/teardown hooks, and any config files. That's what each tab below covers.
@@ -178,16 +137,19 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 ## Run a Test in Your Framework
 ---
 
-Execute your Java test from your IDE or terminal.
+Each tab lists just the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run the command shown.
 
-**From your IDE:** Build and run the Java file directly.
+<Tabs className="docs__val" groupId="java-framework" queryString="framework">
 
-**From the terminal:**
+<TabItem value="testng" label="TestNG" default>
+
+TestNG is the most common choice. It wraps the shared test with `@BeforeClass` (create the driver) and `@AfterClass` (report status and quit), and drives cross-browser runs from a `testng.xml` suite.
+
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/Java-TestNG-Selenium):
 
 ```bash
-cd to/file/location
-javac -classpath ".:/path/to/selenium/jarfile:" JavaTodo.java
-java -classpath ".:/path/to/selenium/jarfile:" JavaTodo
+git clone https://github.com/LambdaTest/Java-TestNG-Selenium
+cd Java-TestNG-Selenium
 ```
 
 2. Set your browser and OS in the `testng.xml` suite. Listing several environments with `parallel="tests"` and a `thread-count` runs them concurrently:

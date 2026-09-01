@@ -20,6 +20,8 @@ canonical: https://www.testmuai.com/support/docs/java-with-playwright/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
@@ -69,7 +71,7 @@ Complete these before running the test below.
 <a href="https://github.com/LambdaTest/playwright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="GitHub icon linking to the Playwright sample repository" className="doc_img"/> View on GitHub</a>
 :::
 
-```js
+```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 ```

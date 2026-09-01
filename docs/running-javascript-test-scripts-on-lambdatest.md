@@ -11,6 +11,7 @@ keywords:
   - selenium webdriver javascript setup
   - javascript browser automation tutorial
   - javascript selenium cloud execution
+  - mocha nightwatch webdriverio jest cucumberjs selenium
 image: /assets/images/og-images/selenium-testing-og.png
 url: https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/
 site_name: TestMu AI
@@ -57,7 +58,6 @@ Run your JavaScript Selenium tests on the TestMu AI cloud grid across 10,000+ br
 
 ## Prerequisites
 ---
-Complete these steps before running JavaScript Selenium tests on TestMu AI.
 
 Before running any framework below, you need a TestMu AI account, your credentials, Node.js and npm, and the Selenium JavaScript bindings.
 
@@ -68,27 +68,14 @@ Before running any framework below, you need a TestMu AI account, your credentia
 
 ## Set Your Credentials
 ---
-Clone the TestMu AI JavaScript Selenium sample repository to your local machine.
 
-```bash
-git clone https://github.com/LambdaTest/nodejs-selenium-sample
-cd nodejs-selenium-sample
-```
+Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
-Install the required dependencies:
-```bash
-npm install selenium-webdriver
-```
+<Tabs className="docs__val" groupId="os">
 
-## Step 2: Set Your Credentials
----
-Set your TestMu AI username and access key as environment variables.
+<TabItem value="macos" label="macOS / Linux" default>
 
-<Tabs className="docs__val">
-
-<TabItem value="bash" label="macOS / Linux" default>
-
-  <div className="lambdatest__codeblock">
+<div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
@@ -97,40 +84,42 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 </TabItem>
 
-<TabItem value="powershell" label="Windows" default>
+<TabItem value="win-cmd" label="Windows (CMD)">
 
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+<div className="lambdatest__codeblock">
+    <CodeBlock className="language-batch">
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
+set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
   </CodeBlock>
 </div>
 
 </TabItem>
+
 </Tabs>
 
 ## How the Sample Test Works
 ---
-Update the capabilities object in your test script to define the browser and platform settings.
+
+Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities object. A minimal one looks like this:
 
 ```js
-// index.js
 const capabilities = {
-        build: 'NodeJS build',      // Name of the build
-        name: 'Test 1',             // Name of the test
-        platformName: 'Windows 10', // Name of Operating System
-        browserName: 'chrome',      // Name of the browser
-        browserVersion: 'latest',   // Version of the browser
-        resolution: '1280x800',     // Resolution of the screen 
-        network: true,              // Enable to capture browser network logs
-        visual: true,               // Enable to capture screenshot on every command
-        console: true,              // Enable to capture the console log
-        video: true                 // Enable to capture the video recording of the test
+  build: 'NodeJS build',
+  name: 'Test 1',
+  platformName: 'Windows 10',
+  browserName: 'chrome',
+  browserVersion: 'latest',
+  network: true,
+  visual: true,
+  console: true,
+  video: true
 }
 ```
 
+What changes between frameworks is only how those capabilities are wired in: an inline object, a `.conf.js` file, or a runner config. That is what each tab covers.
+
 :::tip
-Generate capabilities for your test requirements with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 :::
 
 ## Run a Test in Your Framework
@@ -631,24 +620,12 @@ The test then appears on the [Automation Dashboard](https://www.testmuai.com/log
 
 </TabItem>
 
-```bash
-node index.js
-```
+</Tabs>
 
 ## View Your Results
 ---
 
-```bash
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/selenium-skill .claude/skills/
-
-# For Cursor / Copilot
-cp -r agent-skills/selenium-skill .cursor/skills/
-```
-
-:::tip
-Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
-:::
+Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 **Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
 
@@ -676,7 +653,7 @@ Continue with these related guides:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Selenium With JavaScript  
+      Selenium With JavaScript
       </span>
     </li>
   </ul>

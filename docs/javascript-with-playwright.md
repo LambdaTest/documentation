@@ -20,6 +20,8 @@ canonical: https://www.testmuai.com/support/docs/javascript-with-playwright/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
@@ -66,7 +68,7 @@ Before running any framework below, you need a TestMu AI account, your credentia
 <a href="https://github.com/LambdaTest/playwright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="TestMu AI Playwright sample repository on GitHub" className="doc_img"/> View on GitHub</a>
 :::
 
-```js
+```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 ```
@@ -136,26 +138,12 @@ The JavaScript path connects to the grid through a Playwright Test fixture in `l
 
 ```bash
 cd playwright-test-js
-```
-
-2. Install the npm dependencies.
-
-```
 npm install
 ```
 
-3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>sign up for free</a>.
+2. The grid connection lives in `lambdatest-setup.js`, a Playwright test fixture that patches the capabilities per project and reports test status:
 
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
-
-4. To run Playwright tests, set your <BrandName /> Username and Access key in the Environment Variables.
-
-## Run your Playwright tests with JavaScript
----
-
-Navigate to the `lambdatest-setup.js` file in the `playwright-test-js` directory.
-
-```js
+```js title="lambdatest-setup.js"
 /**
  * Add the file in your test suite to run tests on LambdaTest.
  * Import `test` object from this file in the tests.
@@ -231,9 +219,9 @@ exports.test = base.test.extend({
 })
 ```
 
-Pass the below command in the terminal to run the test.
+3. Run the test:
 
-```js
+```bash
 npm run test
 ```
 
