@@ -6,19 +6,15 @@ Run your Python Playwright tests on the TestMu AI cloud grid to reach 50+ real d
 
 ## Prerequisites
 
-
 Complete these before running the test below.
 
 1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile section. Don't have an account? Sign up for free.
-
-
 
 2. [Python](https://www.python.org/downloads/) installed, along with the Playwright Python package.
 3. Clone the sample repository. The Python sample lives in its own subdirectory.
 
 **Sample repo**
  View on GitHub
-
 
 ```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
@@ -34,37 +30,15 @@ pip install -r requirements.txt
 
 ## Set Your Credentials
 
-
 Your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
-
 ## How the Sample Test Works
-
 
 The test builds a `capabilities` dictionary that carries the browser, version, platform, and your `LT:Options`, then connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. The credentials come from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set above, and `set_test_status` reports whether the assertion passed.
 
@@ -83,7 +57,6 @@ capabilities = {
 The sample script wraps this connection, runs a search, then calls `set_test_status` to mark the result, as the steps below show.
 
 ## Run the Test With Python
-
 
 The sample script connects Playwright to the grid, opens a page, runs a search, and reports the test status back to TestMu AI. You can use your own project, or the sample below.
 
@@ -115,7 +88,6 @@ capabilities = {
 }
 }
 
-
 def run(playwright):
 playwrightVersion = str(subprocess.getoutput('playwright --version')).strip().split(" ")[1]
 capabilities['LT:Options']['playwrightClientVersion'] = playwrightVersion
@@ -144,11 +116,9 @@ set_test_status(page, "failed", str(err))
 
 browser.close()
 
-
 def set_test_status(page, status, remark):
 page.evaluate("_ => {}",
 "lambdatest_action: {\"action\": \"setTestStatus\", \"arguments\": {\"status\":\"" + status + "\", \"remark\": \"" + remark + "\"}}");
-
 
 with sync_playwright() as playwright:
 run(playwright)
@@ -163,11 +133,9 @@ python playwright_sample.py
 
 ## View Your Results
 
-
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms the test passed.
 
 ## Related Playwright Guides
-
 
 Continue with these related guides:
 

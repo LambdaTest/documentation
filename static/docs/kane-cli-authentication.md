@@ -7,8 +7,6 @@ Kane CLI authenticates against your TestMu AI account before it can run tests, u
 - **OAuth**: recommended for everyday local use. Opens a browser, you approve once, and tokens are stored on your machine.
 - **Basic auth**: your TestMu AI username and access key. Use this in CI and other non-interactive environments where no browser is available.
 
-
-
 ## OAuth Login
 
 ```bash
@@ -19,8 +17,6 @@ Kane CLI opens your default browser to the TestMu AI consent page. Sign in and a
 
 If you run `kane-cli login` interactively without flags, Kane CLI launches a guided login wizard that walks you through choosing a method, profile, and (for basic auth) entering credentials.
 
-
-
 ## Basic Auth
 
 Basic auth uses your TestMu AI username and account access key. It is the right choice for CI runners, Docker containers, and any other environment where opening a browser is not possible.
@@ -29,13 +25,9 @@ Basic auth uses your TestMu AI username and account access key. It is the right 
 
 Pass credentials directly on the command you are running. They take precedence over any stored credentials:
 
-
-
 {`kane-cli run "Search for a product" \\
   --username "${ YOUR_LAMBDATEST_USERNAME()}" \\
   --access-key "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
 
 Both `kane-cli run` and `kane-cli feedback` accept `--username` and `--access-key`.
 
@@ -43,19 +35,13 @@ Both `kane-cli run` and `kane-cli feedback` accept `--username` and `--access-ke
 
 To save basic auth credentials for a profile so you do not have to pass them every time, log in with the basic auth flags:
 
-
-
 {`kane-cli login --username "${ YOUR_LAMBDATEST_USERNAME()}" --access-key "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
 
 Saved basic auth is used automatically for subsequent commands run under that profile.
 
 ### Where to Find Your Access Key
 
 Sign in to the TestMu AI [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials** and copy your access key. Treat it like a password. Anyone with your username and access key can run tests on your account.
-
-
 
 ## Profiles
 
@@ -100,8 +86,6 @@ Removes the stored credentials for that profile.
 
 A few commands accept `--profile ` so you can target a profile for a single invocation without changing the active one. This is supported on `kane-cli login`, `kane-cli whoami`, and `kane-cli balance`. For other commands, use `kane-cli profiles switch` first.
 
-
-
 ## Check Who You Are Logged In As
 
 ```bash
@@ -112,8 +96,6 @@ kane-cli whoami
 
 Pass `--profile ` to inspect a profile other than the active one.
 
-
-
 ## Log Out
 
 ```bash
@@ -121,8 +103,6 @@ kane-cli logout
 ```
 
 `logout` signs out of the active profile. For OAuth profiles, Kane CLI revokes the stored tokens with TestMu AI before deleting them. The on-disk credentials for the profile are removed. If you have other profiles configured, Kane CLI automatically switches to one of them; otherwise you are left with no active profile.
-
-
 
 ## Where Credentials Are Stored
 

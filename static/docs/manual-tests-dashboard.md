@@ -9,9 +9,6 @@ All your **Real Devices App Testing** (App Live) and **Real Devices Browser Test
 **New Dashboard**
 The Manual Tests Sessions Dashboard is a newly launched feature. To get it enabled for your organization, please reach out to our **24x7 Chat Support** or mail us at [support@testmuai.com](https://support.lambdatest.com/).
 
-
-
-
 ## Supported Session Types
 
 Currently, the dashboard supports manual testing sessions run on **Real Devices**.
@@ -41,7 +38,6 @@ The dashboard displays all completed manual testing sessions in a list format. E
 - **Tags**: Custom tags assigned to the session (up to 10 per session).
 - **Remark**: User-added notes (up to 256 characters).
 
-
 ### Filters
 
 You can filter sessions using the filter dropdown. Click the **Filter** button at the top of the dashboard to open the filter panel.
@@ -55,19 +51,15 @@ You can filter sessions using the filter dropdown. Click the **Filter** button a
 | **Users** | Team member names | Filter by the user who ran the session |
 | **Tags** | Custom tag names | Filter by tags (AND logic, session must have **all** selected tags) |
 
-
-
 When filters are active, a **Clear All** bar appears at the top. Clicking it removes all active filters but does **not** clear search text.
 
 > Filter state is **URL-encoded**, so your filter selections are preserved in the URL, making filtered views shareable and bookmarkable.
-
 
 ### Search
 
 Use the search bar to find sessions by **test name** or **test ID**. Search works alongside active filters, so results are filtered by both search text and selected filters at the same time.
 
 Click the **X** button in the search bar to clear the search and restore the full list.
-
 
 ### Sorting
 
@@ -88,8 +80,6 @@ In the **Session Details** modal, you can:
 
 Once the details are set, click **Save & End Session** to save the session. Click **Cancel** to dismiss the modal without ending the session.
 
-
-
 > The test name, remark, and tags can only be set when ending the session through the Session Details modal. Remarks and tags cannot be edited after the session ends. The test name can be renamed later from the dashboard.
 
 After you click **Save & End Session**, the session is created and appears on the Manual Tests Sessions Dashboard, under the **Real Devices** product, with all the metadata you provided. You can then locate it on the dashboard using the search bar or filters.
@@ -102,7 +92,6 @@ Sessions with [Manual App Profiling](/support/docs/manual-app-profiling/) enable
 - **Profiling Tests (Children)**: Each time you start and stop profiling within a session, a new child profiling test is created (for example, `PROF_ANDROID_...` or `PROF_IOS_...`).
 
 Click the **expand chevron** on a parent session to reveal the profiling tests as child rows. Each child has its own name, duration, and platform icon. Click a child profiling test to navigate directly to its **App Performance** view.
-
 
 ## Session Detail Page
 
@@ -139,7 +128,6 @@ The Meta Data tab displays session information in a two-column layout:
 - **User**: Username who ran the session
 - **Remark**: Full remark text (if set)
 
-
 ### Media Tab
 
 The Media tab shows all artifacts captured during the session:
@@ -151,7 +139,6 @@ Toggle between **list view** and **grid view** for browsing artifacts. Each arti
 
 If no artifacts were captured, an empty state message is displayed.
 
-
 ### App Performance Tab
 
 Available only for sessions with [App Profiling](/support/docs/manual-app-profiling/) enabled. This is where you view the detailed profiling results for your session.
@@ -161,7 +148,6 @@ This tab displays:
 - **Profiling Summary Card**: All key metrics at a glance, including CPU (max and average), Memory (max and average), Disk (max and average), Average FPS, Network (download/upload), Battery Energy (iOS only), Cold Startup Time, Hot Startup Time, ANR Count (Android only), and App Crashes.
 - **Time-Series Graphs**: Interactive performance graphs for each metric category (CPU, Memory, Disk, FPS, Network, Battery).
 - **Video-Graph Sync**: Session video playback is synchronized with the performance graphs. As the video plays, a timeline marker moves across the graphs in real time, making it easy to correlate user interactions with performance changes.
-
 
 #### Navigating Between Tests
 
@@ -173,9 +159,6 @@ A session and its profiling tests are viewed individually. To move between them,
 
 Click any test to switch to its view. You can also use the **previous and next arrows** in the toolbar (for example, "1 of 2") to move between tests one at a time.
 
-
-
-
 ### Network Logs Tab
 
 Available when profiling was started with network log capture enabled. Displays a **HAR viewer** showing:
@@ -185,7 +168,6 @@ Available when profiling was started with network log capture enabled. Displays 
 - Request and response headers and body (expandable)
 - Filter by URL, method, or status code
 
-
 ### Device Logs Tab
 
 Available when profiling was started with device log capture enabled. Displays a **log viewer** with:
@@ -193,7 +175,6 @@ Available when profiling was started with device log capture enabled. Displays a
 - System-level device logs captured during the profiling test
 - Searchable and filterable log entries
 - **Download** button to export logs
-
 
 ## Session Actions
 
@@ -210,7 +191,6 @@ Rename a session from the **kebab menu** (three dots) on the list row or the det
 **Step 4:** Click **Save**.
 
 The updated name is reflected immediately in both the list view and detail page, and persists after refresh.
-
 
 ### Delete
 
@@ -241,7 +221,6 @@ All manual testing sessions from Real Devices App Testing and Browser Testing ar
 ## Related Documentation
 
 - [Manual App Profiling](/support/docs/manual-app-profiling/): Enable and use real-time performance profiling during App Live sessions
-
 
 > Got any questions?
 > Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).

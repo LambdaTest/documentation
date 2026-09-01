@@ -10,25 +10,15 @@ The TestMu AI Asana Integration allows you to create a task directly to your spe
 
 ## How To Integrate Asana With Your TestMu AI Account?
 
-
-
 **Step 1:** Login to your TestMu AI account. You would need to have Admin or User level access to see and install integrations.
 
 **Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3:** Click on **'ADD'** under the block that says 'Asana'.
 
-
-
 **Step 4:** If you are already logged into **Asana**, you'll be asked to grant permission to TestMu AI for accessing your user-owned resources.
 
-
-
 **Step 5:** If you are not already logged in, then you will be redirected to a page where you can do so. Provide your login credentials. You can even login using your **Google account**.
-
-
-
-
 
 * **Why we ask for your login credentials?**
 
@@ -38,20 +28,11 @@ Asana APIs uses OAuth 2.0's [authorization code grant flow](https://tools.ietf.o
 
 In scenarios where OAuth is excessively utilized, Personal Access Tokens comes to aid in accessing the API. While generating a token, make sure you provide a description that is easy to remember, as your Personal Access Token will be derived from it. Treat this token just as you would treat your own password! Access tokens are strings with authorization key required to access an API. They are issued to the client server and are usually opaque. They are used for requesting access to protected, user-specific resources. Access tokens are vital from a security point of view & can be generated in different formats, depending upon security requirements specified on the resource server.
 
-
-
 **Step 7:** If you are logging into **'Asana'** for the first time, then you will be asked to choose teams concerned to your organizations. This is optional, you can skip and add teams later as well.
-
-
 
 **Step 8:** That's it! Go to Integrations again and you will be able to notice a green tick indicating that Asana is successfully added.
 
-
-
-
 ## How To Log Your First Bug Through Asana Integration?
-
-
 
 > **Note:** If you are using Asana for the first time, then make sure to create a project for yourself. It is a pre-requisite in order to push screenshots from your TestMu AI account.
 
@@ -59,16 +40,9 @@ In scenarios where OAuth is excessively utilized, Personal Access Tokens comes t
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit '**Start**'.
 
-
-
 **Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Bug icon** from the left panel for capturing a screenshot of the same. We have highlighted that option with yellow in the below image.
 
-
-
 **Step 4:** After a screenshot is captured, you can annotate any issue or a task with an **in-built image editor**. Once you are done highlighting the bug, click on the button that says **"Mark as Bug"**.
-
-
-
 
 **Step 5:** After clicking on **"Mark as Bug"** button a form would open up. Fill the fields as per your requirement.
 
@@ -77,24 +51,15 @@ In scenarios where OAuth is excessively utilized, Personal Access Tokens comes t
 * You can assign the bug to a colleague by populating the field **'Assignee'**.
 * You also get to post a **description** to help relate the cause of the issue or the task.
 
-
 At the bottom of the form you will find a button **"Create Issue"**.
-
-
 
 **Step 6:** After you click on **"Create Issue"**, you will be able to observe it being successfully marked through a single click effort. You will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message "**Bug successfully marked**" indicating that the screenshot has been pushed to your workspace.
 
-
-
 Login to your Asana workspace and you will be able to notice the logged issue right away! All the data you provided through TestMu AI would already be presented in it. TestMu AI automatically includes test environment details and related screenshots in the screenshot as attachments.
-
-
 
 You can set a due date to the task in Asana to help you organize your tasks easily.
 
 ## How To Remove Asana Integration?
-
-
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **Remove** your current integration. Here is how you can do that.
 
@@ -103,9 +68,5 @@ You can set a due date to the task in Asana to help you organize your tasks easi
 **Step 2:** Select 'Settings' from the left navigation menu bar & click on 'Integrations'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3:** Click on **'Remove'**. You can find the Revoke button right under the **'Asana'** block which would be highlighted with a green tick.
-
-
-
-
 
 That was all you need to know for TestMu AI + Asana Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always **available on chat** to help you out with any roadblock regarding our product. Happy testing!

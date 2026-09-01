@@ -10,43 +10,25 @@ You can link an automation run to a test case in three ways: **automatically** w
 
 1. Initiate the automation script and once it completes, proceed to the automation dashboard. The automation test run will be visible.
 
-
-
 2. Open the Test Manager dashboard, and in the **Projects** section, you will find the **TestMu AI Automation** project automatically created.
 
-
-
 3. Upon opening the newly created project, the automatically generated test case title from the automation process will be visible.
-
-
 
 4. In the Test Case section, **BDD Scenarios** will be automatically visible in the Test Case that is created from the command logs of the linked automated test run.
 
 > Currently, this feature is supported for Selenium Web frameworks.
 
-
-
 ## Manual Linking from the Automation Dashboard {#manual-linking}
 
 1. On the right side of the automation dashboard, there are two toggle buttons: one to open the **Test Case** and another to **Unlink Test**.
 
-
-
 2. To link a test case, click on **Link Test Case**. You can browse the test cases or add new test cases by clicking on **Create new Test Case** for your automation script.
-
-
 
 3. Initiate bug reporting directly from the automation dashboard by selecting **Raise a bug**.
 
-
-
 4. It will open an instance window, enter the details required to automatically link the bug to your Jira account, streamlining the issue creation process.
 
-
-
 5. Once logged, the issue is immediately reflected in the **Issues** section of the corresponding test case.
-
-
 
 ## Linking via Capabilities (tms.tc_id) {#capability-linking}
 
@@ -91,9 +73,7 @@ const capabilities = {
 };
 ```
 
-
 The `project` name must match exactly as it appears in Test Manager. If the project name is incorrect or doesn't exist, the test run will be created under **LambdaTest Default Project**.
-
 
 **NOTE**
 - Ensure the Test Case ID exists in Test Manager before linking.

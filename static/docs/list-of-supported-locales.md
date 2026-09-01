@@ -8,17 +8,13 @@ TestMu AI supports locales, language codes, and timezones for Appium testing on 
 
 ## Android Locales and Language Codes
 
-
 To test localised strings in your Android app, configure Appium's language capability with the language code.
 
-
 Language to be passed in the capability - language:'fr' where fr is language code for french
-
 
 ### Android Language and Language Codes
 
 The table below lists every supported Android language and its language code.
-
 
 View all supported Android language codes
 
@@ -62,18 +58,13 @@ View all supported Android language codes
 | Ukrainian              |  uk                        |
 | Vietnamese             |  vi                        |
 
-
-
 ### Android Locale and Locale Codes
 
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
 
-
 Locale to be passed in the capability - locale:'FR' where FR is the locale code for France
 
-
 The table below lists every supported Android locale and its locale code.
-
 
 View all supported Android locale codes
 
@@ -132,21 +123,15 @@ View all supported Android locale codes
 | Vietnam                |  VN                        |
 | Zimbabwe               |  ZA                        |
 
-
-
 ## iOS Locales and Language Codes
-
 
 To test localised strings in your iOS app, configure Appium's language capability with the language code.
 
-
 Language to be passed in the capability - language:'fr' where fr is language code for french
-
 
 ### iOS Language and Language Codes
 
 The table below lists every supported iOS language and its language code.
-
 
 View all supported iOS language codes
 
@@ -182,18 +167,13 @@ View all supported iOS language codes
 | Ukrainian              | uk                         |
 | Vietnamese             | vi                         |
 
-
-
 ### iOS Locale and Locale Codes
 
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
 
-
 Locale to be passed in the capability - locale: 'fr_FR' where fr is language code for french and FR is the locale code for France
 
-
 The table below lists every supported iOS locale and its locale code.
-
 
 View all supported iOS locale codes
 
@@ -246,10 +226,7 @@ View all supported iOS locale codes
 | Mexico                 | es-MX                      |
 | South Africa           | en-ZA                      |
 
-
-
 ## Enabling Locales and Language via Hook
-
 
 To **dynamically change** the language and locale of a device during test execution use the `updateLanguageLocale` action inside `lambda_executor`. The example below demonstrates how to use the following.
 
@@ -263,15 +240,11 @@ driver.execute_script('lambda_executor: {
 }')
 ```
 
-
 - **iOS**: Supported on devices running iOS 14 and above.
 - **Android**: Supported on devices running Android 11 and above.
 - Both language and locale are required parameters. If either one is missing, the hook will return an error
 
-
 ## Supported Timezones
-
-
 
 In automated testing with Appium on TestMu AI, configuring the timezone accurately is crucial for precise testing scenarios. TestMu AI provides support for various timezones, allowing users to customize their testing environments to meet specific requirements.
 
@@ -300,7 +273,6 @@ capabilities.setCapability("platformName", "android");
 ### List of Supported Timezones
 
 Below is the list of supported **timezones** supported along with their corresponding cities and UTC times:
-
 
 View all supported timezones
 
@@ -337,10 +309,7 @@ View all supported timezones
 | Niue        | Niue          | UTC-11:00 |
 | Belgium     | Brussels      | UTC+1:00  |
 
-
-
 ## Next Steps
-
 
 Continue with these related guides:
 

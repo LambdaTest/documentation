@@ -1,65 +1,56 @@
-# Smart Locator Priority
+# How to Set Smart Locator Priority With KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Smart Locator Priority lets your organization define the order in which KaneAI should prefer supported locator strategies while authoring test cases in KaneAI.
+Smart Locator Priority sets the order in which KaneAI prefers supported locator strategies while authoring test cases, applied consistently across your organization. Set it in **Organization Settings** when your application is more stable with one locator type than another.
 
-This is useful when your application is more stable with one locator type over another and you want that preference applied consistently at the organization level.
-
-
+## Prerequisites
 
 You need **organization-admin** access. Locator priority is set in Organization Settings and applies across the whole organization.
 
-
 ## Locator Strategies
-
 
 KaneAI supports prioritizing these locator strategies. The strategy at the top of the list takes precedence over those below it.
 
-The locator type placed at the top of the list is given higher priority than the locator types below it.
+| Strategy | Description |
+|---|---|
+| **CSS selector** | Resolves elements using CSS selectors. |
+| **XPath** | Resolves elements using XPath expressions. |
+| **Full XPath** | Resolves elements using absolute XPath expressions. |
 
-For example:
+For example, if **CSS selector** is above **XPath**, KaneAI prefers CSS selector first. If **XPath** is moved to the top, KaneAI prefers XPath first.
 
-- If **CSS selector** is placed above **XPath**, KaneAI will prefer CSS selector first.
-- If **XPath** is moved to the top, KaneAI will prefer XPath first.
+Adjust the order when your application produces more stable selectors of one type, or when you want one consistent strategy across the organization.
 
-## Why This Matters
-
+## Configure Locator Priority
 
 Follow these steps to set the locator strategy order for your organization.
 
-You may want to adjust the default order if:
-
+### Step 1: Open Smart Locator Priority
 
 Open [Smart Locator Priority in Organization Settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/smart-locator-priority). In TestMu AI, this is under **Org Product Preferences** &rarr; **KaneAI** &rarr; **Smart locator priority**.
 
-
-
 **Result:** The list of supported locator strategies opens.
 
-- [Open Smart Locator Priority in Organization Settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/smart-locator-priority)
-
+### Step 2: Reorder the Strategies
 
 Drag and drop the locator types into your preferred order, keeping the most preferred strategy at the top.
 
-## How to Configure Smart Locator Priority
-
+**Result:** The new order becomes the organization-level preference for any newly authored or edited test cases.
 
 The priority change does not apply to already authored test cases. It applies only when a test step is authored or re-authored in the KaneAI playground.
 
-
 ## Limitations
-
 
 Keep these limitations in mind:
 
-## Related Docs
+- This setting supports only the locator strategies shown in the UI.
+- The priority order controls which locator type is preferred first. It does not replace the need for stable page structure and reliable element identification.
 
 ## Next Steps
-
 
 Continue with these guides:
 
 - [KaneAI Failure Conditions](/support/docs/kaneai-failure-conditions/)
 - [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)
-- [Custom Instructions in KaneAI Test Generation](/support/docs/generate-test-cases-with-ai/)
+- [Generate Test Cases With AI](/support/docs/generate-test-cases-with-ai/)

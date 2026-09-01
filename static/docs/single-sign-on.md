@@ -8,8 +8,6 @@ Single sign-on is an authentication feature that allows you to access multiple a
 
 ## Benefits Of Authenticating Single Sign On (SSO)
 
-
-
 Here are the following benefits of authenticating a Single sign-on to the TestMu AI dashboard.
 
 *   **Security Enhancements**: Your team members can access the TestMu AI dashboard directly without creating a password. Also, you can leverage several authentication decisions provided by an identity provider(IdP) like security protocols, multi-factor authentication, etc.
@@ -17,8 +15,6 @@ Here are the following benefits of authenticating a Single sign-on to the TestMu
 *   **Easy to manage**: SSO consolidates passwords and user data, making it easier to access different platforms and resources. New team members can leverage Just-in-Time account provisioning to leverage login to the TestMu AI dashboard instantly. Also, with Just-in-Time (JIT), you can revoke TestMu AI dashboard access from one central place.
 
 ## Feature Of Single Sign On (SSO)
-
-
 
 TestMu AI provides the support for the below Single sign-on features.
 
@@ -30,20 +26,12 @@ TestMu AI provides the support for the below Single sign-on features.
 
 ## Enable TestMu AI SSO
 
-
 **Step 1:** Sign in to your TestMu AI account. Don't have an account, register for free.
-
-
 
 **Step 2:**  Click on the **User Icon** on the top right and select **Organization Settings** from the dropdown.
 
-
-
 **Step 3:**  Head to the **Security** tab and click the **SSO** option.
 
-
-
 You can contact the **Support Team**, who will help you enable the SSO feature for your TestMu AI account.
-
 
 > That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the **24/7 chat support** or email us over [support@testmuai.com](mailto:support@testmuai.com).

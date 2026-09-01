@@ -29,9 +29,7 @@ XCUI supported capabilities on TestMu AI let you configure iOS XCUITest automati
 | region Real| String | Set the region for the test execution data center. Supported values: `US`, `EU`, `AP`. **Default:** Nearest data center. Example: `region: EU` |
 | uploadMedia Real| String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
 
-
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
-
 
 **Important**
 You can either use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.

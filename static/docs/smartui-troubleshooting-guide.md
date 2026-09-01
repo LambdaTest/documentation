@@ -16,11 +16,7 @@ Before diving into specific issues, run through this quick checklist:
 - [ ] Credentials (for Hooks) are set correctly (`LT_USERNAME`, `LT_ACCESS_KEY`)
 - [ ] Project name matches exactly (case-sensitive)
 
-
-
 ## Troubleshooting by Category
-
-
 
 **Issue: Screenshots Not Appearing in Dashboard**
 
@@ -40,7 +36,6 @@ Before diving into specific issues, run through this quick checklist:
 
 1. **Verify Project Token**:
 
-
 ```bash
 echo $PROJECT_TOKEN
 ```
@@ -48,7 +43,6 @@ echo $PROJECT_TOKEN
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-
 
 ```bash
 echo %PROJECT_TOKEN%
@@ -58,7 +52,6 @@ echo %PROJECT_TOKEN%
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
-
 ```powershell
 echo $env:PROJECT_TOKEN
 ```
@@ -66,8 +59,6 @@ echo $env:PROJECT_TOKEN
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-
-
 
 2. **Check Project Name**: Verify project name in dashboard matches exactly (case-sensitive)
 
@@ -86,8 +77,6 @@ curl -I https://smartui.lambdatest.com
 5. **Review Test Execution Logs**: Look for error messages or warnings in test output
 
 **Related Documentation**: [Project Settings](/support/docs/smartui-project-settings), [Running Your First Project](/support/docs/smartui-running-your-first-project)
-
-
 
 ### Issue: "Project Not Found" Error
 
@@ -126,8 +115,6 @@ curl -I https://smartui.lambdatest.com
 
 **Related Documentation**: [Project Settings](/support/docs/smartui-project-settings)
 
-
-
 ### Issue: Credentials Not Working (Hooks)
 
 **Symptoms**:
@@ -145,25 +132,20 @@ curl -I https://smartui.lambdatest.com
 
 1. **Verify Credentials Are Set**:
 
-
 ```bash
 echo $LT_USERNAME
 echo $LT_ACCESS_KEY
 ```
-
 
 ```bash
 echo %LT_USERNAME%
 echo %LT_ACCESS_KEY%
 ```
 
-
 ```powershell
 echo $env:LT_USERNAME
 echo $env:LT_ACCESS_KEY
 ```
-
-
 
 2. **Get Correct Credentials**:
    - Log into [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
@@ -172,29 +154,22 @@ echo $env:LT_ACCESS_KEY
 
 3. **Set Credentials Correctly**:
 
-
 ```bash
 export LT_USERNAME="your_username"
 export LT_ACCESS_KEY="your_access_key"
 ```
-
 
 ```bash
 set LT_USERNAME="your_username"
 set LT_ACCESS_KEY="your_access_key"
 ```
 
-
 ```powershell
 $env:LT_USERNAME="your_username"
 $env:LT_ACCESS_KEY="your_access_key"
 ```
 
-
-
 **Related Documentation**: [Selenium Visual Regression](/support/docs/selenium-visual-regression), [Playwright Visual Regression](/support/docs/playwright-visual-regression)
-
-
 
 ### Issue: CLI Installation and Version Management
 
@@ -306,9 +281,6 @@ npx smartui exec -- <command>
 
 **Related Documentation**: [CLI Complete Reference](/support/docs/smartui-cli-complete-reference), [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
-
-
-
 **Issue: Screenshots Show Blank or Incorrect Content**
 
 **Symptoms**:
@@ -375,8 +347,6 @@ cy.smartuiSnapshot('Screenshot Name');
 
 **Related Documentation**: [Handling Lazy Loading](/support/docs/smartui-handle-lazy-loading), [Configuration Options](/support/docs/smartui-sdk-config-options)
 
-
-
 **Issue: Screenshot Names Not Matching Baseline**
 
 **Symptoms**:
@@ -424,8 +394,6 @@ cy.smartuiSnapshot('test-' + Date.now());
 ```
 **Related Documentation**: [Baseline Management](/support/docs/smartui-baseline-management)
 
-
-
 **Issue: High Mismatch Percentage or False Positives**
 
 **Symptoms**:
@@ -472,9 +440,6 @@ smartuiSnapshot(driver, "Screenshot Name", options);
    - Document ignored elements
 
 **Related Documentation**: [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data), [Project Settings](/support/docs/smartui-project-settings), [Smart Ignore](/support/docs/smartui-smartignore)
-
-
-
 
 **Issue: Build Execution Fails**
 
@@ -529,8 +494,6 @@ npx smartui --help
 npx smartui exec --help
 ```
 **Related Documentation**: [CLI Documentation](/support/docs/smartui-cli-complete-reference/), [Configuration Options](/support/docs/smartui-sdk-config-options)
-
-
 
 **Issue: Dependencies Not Resolving**
 
@@ -592,9 +555,6 @@ node --version
 
 **Related Documentation**: [SDK Documentation](/support/docs/smartui-selenium-js-sdk/), [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
 
-
-
-
 **Issue: Pipeline/Workflow Fails with "Secret/Variable Not Found"**
 
 **Symptoms**:
@@ -648,8 +608,6 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 ```
 **Related Documentation**: [GitHub Actions Integration](/support/docs/smartui-with-github-actions), [GitLab Integration](/support/docs/smartui-with-gitlab), [Bitbucket Integration](/support/docs/smartui-with-bitbucket)
 
-
-
 **Issue: Tests Run But No Results in Dashboard (CI/CD)**
 
 **Symptoms**:
@@ -687,9 +645,6 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 
 **Related Documentation**: [CI/CD Integration Guides](/support/docs/smartui-with-github-actions)
 
-
-
-
 **Issue: Configuration File Errors**
 
 **Symptoms**:
@@ -725,8 +680,6 @@ cat .smartui.json | python -m json.tool
 
 **Related Documentation**: [Configuration Options](/support/docs/smartui-sdk-config-options), [Custom CSS](/support/docs/smartui-custom-css)
 
-
-
 **Issue: Environment Variables Not Persisting or Not Working**
 
 **Symptoms**:
@@ -749,8 +702,6 @@ cat .smartui.json | python -m json.tool
 
    To keep environment variables consistent across all terminals, configure them in your shell's startup file:
 
-
-
 ```bash
 # Edit ~/.bashrc
 nano ~/.bashrc
@@ -764,7 +715,6 @@ export LT_ACCESS_KEY="your_access_key"
 source ~/.bashrc
 ```
 
-
 ```bash
 # Edit ~/.zshrc
 nano ~/.zshrc
@@ -777,7 +727,6 @@ export LT_ACCESS_KEY="your_access_key"
 # Reload the configuration
 source ~/.zshrc
 ```
-
 
 ```powershell
 # Check if profile exists
@@ -799,8 +748,6 @@ $env:LT_ACCESS_KEY="your_access_key"
 # Reload the profile
 . $PROFILE
 ```
-
-
 
 2. **Configuring Environment Variables in VS Code**:
 
@@ -888,8 +835,6 @@ load_dotenv()
 
 4. **Verifying Environment Variables**:
 
-
-
 ```bash
 # Check if variable is set
 echo $PROJECT_TOKEN
@@ -899,8 +844,6 @@ echo $LT_ACCESS_KEY
 # List all SmartUI-related variables
 env | grep -E "PROJECT_TOKEN|LT_USERNAME|LT_ACCESS_KEY|SMARTUI"
 ```
-
-
 
 ```bash
 # Check if variable is set
@@ -912,7 +855,6 @@ echo %LT_ACCESS_KEY%
 set | findstr /i "PROJECT_TOKEN LT_USERNAME LT_ACCESS_KEY SMARTUI"
 ```
 
-
 ```powershell
 # Check if variable is set
 echo $env:PROJECT_TOKEN
@@ -922,8 +864,6 @@ echo $env:LT_ACCESS_KEY
 # List all SmartUI-related variables
 Get-ChildItem Env: | Where-Object { $_.Name -like "*PROJECT_TOKEN*" -or $_.Name -like "*LT_*" -or $_.Name -like "*SMARTUI*" }
 ```
-
-
 
 5. **Troubleshooting Common Issues**:
 
@@ -951,9 +891,6 @@ Get-ChildItem Env: | Where-Object { $_.Name -like "*PROJECT_TOKEN*" -or $_.Name 
    - **Validate on startup**: Check if required variables are set before running tests
 
 **Related Documentation**: [CLI Environment Variables](/support/docs/smartui-running-your-first-project/), [Running Your First Project](/support/docs/smartui-running-your-first-project)
-
-
-
 
 **Issue: Proxy Configuration Not Working**
 
@@ -988,8 +925,6 @@ echo $HTTPS_PROXY
 ```
 **Related Documentation**: [CLI Environment Variables](/support/docs/smartui-running-your-first-project/)
 
-
-
 **Issue: Tunnel Connection Issues**
 
 **Symptoms**:
@@ -1019,12 +954,6 @@ echo $HTTPS_PROXY
 
 **Related Documentation**: [Tunnel Documentation](/support/docs/testing-locally-hosted-pages), [SDK Tunnel](/support/docs/smartui-sdk-tunnel)
 
-
-
-
-
-
-
 ## Getting Additional Help
 
 If you encounter issues not covered in this guide:
@@ -1049,7 +978,6 @@ If you encounter issues not covered in this guide:
    - Configuration file (redact sensitive data)
    - Error messages and logs
    - Steps to reproduce
-
 
 ## Additional Resources
 

@@ -6,7 +6,6 @@ If you automate Chrome with Puppeteer over the DevTools Protocol, you can run th
 
 ## Prerequisites
 
-
 Before you run a test, set up the sample project and your credentials. All code samples in this documentation are available in the TestMu AI repository on GitHub, which you can download or clone to run your tests quickly.
  View on GitHub
 
@@ -26,8 +25,6 @@ npm install
 
 4. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-
-
 **Windows**
 
 ```bash
@@ -43,7 +40,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Run Your First Puppeteer Test
-
 
 With the project cloned and your credentials set, follow these steps to run a Puppeteer test on the TestMu AI platform.
 
@@ -118,17 +114,11 @@ node navigation.js
 
 ## View Your Puppeteer Test Results
 
-
 After a run finishes, the TestMu AI Automation Dashboard is where you see the results of your Puppeteer tests. It shows the Puppeteer build on the left and the build sessions associated with the selected build on the right.
-
-
 
 Click the session name of a test to view the details of the Puppeteer session you just executed. The session view shows Test Name, Test ID, selected configurations, test logs, basic info, input config, and the test session video.
 
-
-
 ## Related Puppeteer Guides
-
 
 Continue with these related guides to configure and extend your Puppeteer runs on TestMu AI.
 

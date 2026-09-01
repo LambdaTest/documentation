@@ -9,7 +9,6 @@ Tunnel configuration is only supported with the `exec` mode of SmartUI SDK. It i
 `capture`, `upload`, or `figma` commands. For more information about exec mode, refer to our [SmartUI CLI Exec
 documentation](/support/docs/smartui-cli-exec/).
 
-
 ## Prerequisites
 
 - Working knowledge of npm CLI commands
@@ -58,9 +57,7 @@ For manual tunnel setup, add the following configuration:
 }
 ```
 
-
 Configuration values take precedence over environment variables when both are present.
-
 
 ## Environment Variables Support
 
@@ -123,52 +120,32 @@ The tunnel configuration automatically uses the following environment variables 
 
 ## Best Practices
 
-
-
-
 **Automatic vs Manual Mode**
 
 - Use automatic mode for simple setups and quick testing
    - Use manual mode when you need more control over tunnel lifecycle
-
-
-
 
 **Credentials Management**
 
 - Prefer environment variables for sensitive information
    - Use config file for non-sensitive settings
 
-
-
-
 **Proxy Configuration**
 
 - Specify proxy settings in config when using corporate networks
    - Test proxy settings before running full test suite
-
-
-
 
 **Logging**
 
 - Enable verbose logging (`"v": true`) for troubleshooting
    - Specify custom log file location for persistent logs
 
-
-
-
 **Directory Testing**
 
 - Always specify the directory to test when working with local files
    - Ensure the directory path is accessible and contains the necessary files
 
-
 For more detailed information about TestMu AI Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
-
-
-
-
 
 1. **Automatic vs Manual Mode**
    - Use automatic mode for simple setups and quick testing
@@ -189,6 +166,5 @@ For more detailed information about TestMu AI Tunnel features and configurations
 5. **Directory Testing**
    - Always specify the directory to test when working with local files
    - Ensure the directory path is accessible and contains the necessary files
-
 
 For more detailed information about TestMu AI Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).

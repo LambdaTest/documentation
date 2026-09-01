@@ -19,12 +19,6 @@ Both Real Devices App and Browser testing now support these features to enable a
 
 **Step 3 :** On the testing toolbar, click on the **iOS Settings** > **Accessibility**.
 
-
-
-
-
-
-
 - On the **iOS Settings** > **Accessibility** prompt, select **Display and Text Size**.
 - Now, you can enable or disable the required display settings by clicking on the checkboxes, and use the slider to adjust the text size.
 - Click on the Update button. A prompt will appear on the dashboard stating "**Accessibility Settings updated successfully**".
@@ -35,11 +29,6 @@ Both Real Devices App and Browser testing now support these features to enable a
 - **Larger Accessibility Settings :** When enabled, this option adjusts interface elements to be larger and more accessible without affecting the core layout of the device’s UI.
 - **Text Size Adjustment :** A slider is provided to adjust the size of the text throughout the system. Users can move the slider to the right for larger text and to the left for smaller text. This feature benefits users who need larger fonts for readability across apps and system interfaces.
 
-
-
-
-
-
 - On the **iOS Settings** > **Accessibility** prompt, select **Reduce Motion**.
 - Toggle the button to minimize dynamic animations and motion effect.
 - Click on the Update button. A prompt will appear on the dashboard stating "**Accessibility Settings updated successfully**".
@@ -47,10 +36,6 @@ Both Real Devices App and Browser testing now support these features to enable a
 #### Key Features:
 - **Reduce Motion of User Interface :** This toggle reduces animations throughout the system, including the parallax effect of icons on the Home Screen and in-app transitions.
 - **Parallax Effect Adjustment :** Disabling parallax can create a more stable and comfortable experience, particularly for users prone to motion sickness.
-
-
-
-
 
 ## Conclusion
 These accessibility settings allow iOS users to customize their device’s interface to match individual needs, improving usability and comfort. Whether adjusting display, text size or reducing motion.

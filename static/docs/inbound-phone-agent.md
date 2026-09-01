@@ -1,14 +1,12 @@
-# Inbound Phone Agent Testing With TestMu AI
+# How to Test an Inbound Phone Agent With TestMu AI Agent Testing Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-An inbound phone agent answers calls. To test one, the Agent Testing Platform places a real call to the agent's phone number, and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
+An inbound phone agent answers calls. To test one, the Agent Testing Platform places a real call to the agent's phone number and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
 
 Inbound testing runs in two modes: **pre-evaluation** with live simulated calls, and **post-evaluation** on recordings from real production calls.
 
 ## Pre-Evaluation: Live Test Calls
-
-
 
 In pre-evaluation, the platform simulates customers calling your voice agent, then evaluates the resulting conversations.
 
@@ -26,8 +24,6 @@ In pre-evaluation, the platform simulates customers calling your voice agent, th
 
 ## Post-Evaluation: Recording Analysis
 
-
-
 In post-evaluation, you upload recordings from real production calls and score them with the same metrics, without placing new calls.
 
 **Voice Analytics.** Upload production recordings (MP3, WAV) and transcripts, analyze them in parallel batches, select which metric categories or individual metrics to run, and bookmark, tag, search, and filter recordings.
@@ -36,8 +32,6 @@ In post-evaluation, you upload recordings from real production calls and score t
 
 ## Shared Across Both Modes
 
-
-
 **Go-Live Assessment.** Get a Green (score at least 80), Yellow (65 to 79), or Red (below 65) verdict, with confidence based on call volume, dimension scores, scenario coverage, failure pattern analysis, validation-criteria compliance, and prioritized action items.
 
 **Metric Configuration.** Select which metric categories or individual metrics to run per project.
@@ -45,8 +39,6 @@ In post-evaluation, you upload recordings from real production calls and score t
 **Scheduled Runs.** Automate runs with cron-based scheduling, IANA timezones, pause and resume, and run history.
 
 ## Metrics
-
-
 
 Phone agents are evaluated across 8 metric categories with 30+ individual metrics.
 
@@ -123,8 +115,6 @@ Phone agents are evaluated across 8 metric categories with 30+ individual metric
 | Average Pitch | 85 to 300 Hz | n/a | under 85 or over 300 Hz |
 
 ## Related TestMu AI Guides
-
-
 
 - See the [phone agent testing overview](/support/docs/phone-agent/) for both testing modes.
 - See how to [test an outbound phone agent](/support/docs/outbound-phone-agent/).

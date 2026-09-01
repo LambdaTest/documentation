@@ -14,11 +14,9 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
-
 ### Step 1: Create your Project
 - Click on the **Create New** >> **Choose Repository**.
 - Select your desired repository from your VCS (GitHub or Bitbucket)
-
 
 ### Step 2: Setup your Workflow
 - Select your desired build tool and edit your workflow as per your requirement. A sample workflow is given for your reference:
@@ -27,20 +25,13 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/semaphore/.semaphore/semaphore.yml
 ```
 
-
 You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your Semaphore project repository.
-
 
 ### Step 3: Check the output
 
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)
 
-
-
 ## Best Practices
-
-
-
 
 **Secret Management**
 
@@ -48,9 +39,6 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 - Use Semaphore Secrets for all sensitive data
 - Rotate secrets regularly
 - Use different secrets for different environments
-
-
-
 
 **Pipeline Optimization**
 
@@ -63,11 +51,8 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 ```yaml
 auto_cancel:
 running:
-when: branch != 'main'"
+when: "branch != 'main'"
 ```
-
-
-
 
 **Build Naming**
 
@@ -79,11 +64,8 @@ when: branch != 'main'"
 ```yaml
 env_vars:
 - name: BUILD_NAME
-value: ${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
+value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 ```
-
-
-
 
 **Error Handling**
 
@@ -92,9 +74,6 @@ value: ${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-
-
-
 **Resource Management**
 
 - Limit concurrent pipeline runs
@@ -102,23 +81,14 @@ value: ${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 - Monitor pipeline execution time
 - Optimize test execution order
 
-
-
-
 **Resource Management**
 
 - Limit concurrent pipeline runs
 - Clean up old builds regularly
 - Monitor pipeline execution time
 - Optimize test execution order
-
-
-
 
 ## Troubleshooting
-
-
-
 
 **Issue: Pipeline Fails with "Secret Not Found"**
 
@@ -140,9 +110,6 @@ value: ${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 3. Check secret scope (project or organization level)
 
 4. Verify secrets are accessible to the pipeline
-
-
-
 
 **Issue: PROJECT_TOKEN Not Available**
 
@@ -166,9 +133,6 @@ value: ${PROJECT_TOKEN}
 3. Check secret is accessible to the pipeline
 
 4. Verify secret scope includes your project
-
-
-
 
 **Issue: Tests Run But No Results in Dashboard**
 
@@ -196,9 +160,6 @@ commands:
 
 4. Check if SmartUI CLI step completed successfully
 
-
-
-
 **Issue: Pipeline Times Out**
 
 **Symptoms**: Pipeline execution exceeds time limit
@@ -220,20 +181,17 @@ task:
 jobs:
 - name: Run Tests
 commands:
-- npx smartui exec -- <command">
+- npx smartui exec -- <your-test-command>
 - name: Test Group 2
 task:
 jobs:
 - name: Run Tests
 commands:
-- npx smartui exec -- <command">
+- npx smartui exec -- <your-test-command>
 ```
 
 3. Optimize test execution
 4. Split tests across multiple pipeline blocks
-
-
-
 
 **Issue: Dependencies Installation Fails**
 
@@ -263,9 +221,6 @@ commands:
 3. Use package-lock.json for consistent installs
 
 4. Check for version conflicts in package.json
-
-
-
 
 **Issue: SmartUI CLI Not Found**
 
@@ -304,10 +259,6 @@ If you encounter issues not covered here:
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
-
-
-
-
 
 ## Additional Resources
 

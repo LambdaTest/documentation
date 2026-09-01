@@ -12,27 +12,15 @@ With this new plugin, testers and developers never have to leave XCode to execut
 
 1. On **Xcode** on your machine.
 
-
-
 2. Head to **Product** on the menu bar in the top-left corner.
-
-
 
 3. Hover on the **Scheme** option from the dropdown and click on the **Edit Scheme** from the dropdown list.
 
-
-
 4. In the pop-up window, click and expland the **Build** option from the sidebar.
-
-
 
 5. Head to the **Post Actions** option from the sidebar and copy the sample code.
 
-
-
 6. Click on **+** icon to add **"New Script Run Action"**. You can change the path and capabilities as per your preference, which will reflect directly on the TestMu AI Grid.
-
-
 
 Here is the sample code for the Xcode plugin:
 
@@ -70,10 +58,6 @@ echo "$XCUITTestExecution"
 ```
 >**Note:** By clicking on the **Play** button in the top left corner, the script will automatically run on the TestMu AI Grid.
 
-
-
 7. In the above code, update the required TestMu AI credentials - `{Username:AccessKey}`. You can access your credentials under the [profile section](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
-
-
 
 8. Along with this, you need to update the `{FilePathWithNameAndExtension}` with the path where your app and test suite is in local.

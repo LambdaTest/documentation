@@ -11,35 +11,24 @@ Integrate SCIM With TestMu AI:
 ## Integrating SCIM with Okta
 **Step 1:** Sign in to your TestMu AI account. Don't have an account, register for free.
 
-
-
 **Step 2:**  Head to **Settings** and select **Organization Settings** from the dropdown.
-
-
 
 **Step 3:**  Head to the **Authentication and SSO** tab and click and copy the **SCIM Base URL and Bearer Token** option.
 
-
-
 **Step 4:** Sign in to the [Okta](https://developer.okta.com). Select Enterprise Applications, then select Applications tab.
-
 
 **Step 5:** In the applications list, select application used for TestMu AI SSO setup
 
 **Step 6:** Select the Provisioning tab.
-
 
 **Step 7:** Under the Integration section, input your TestMu AI SCIM Base URL-`https://auth.lambdatest.com/api/scim`  and Bearer Token retrieved earlier in Step 3.
 
 **Unique identifier field for users** field must be set to **userName**
 Click Test Connection to ensure Okta can connect to TestMu AI. If the connection fails, ensure your TestMu AI account has Admin permissions and try again.
 
-
 **Step 8:** Now navigate to App tab
 
-
 **Step 9:** Review the User Attribute mappings:
-
 
 userName, Active, name.givenName, name.familyName are required attributes
 
@@ -56,18 +45,13 @@ Enter Variable name as **OrganizationRole**
 Enter External name as **OrganizationRole**
 Enter External namespace as **urn:ietf:params:scim:schemas:extension:TestMu AI:2.0:User**
 
-
 Set the data type as **String**
 Select Enum as **Yes**
 Enter the values as **Admin, Guest, User**
 
-
 Also if you want to assign this attribute at a okta group level choose AttributeType as Group
 
-
-
 **Step 10:** To enable the Okta provisioning service for TestMu AI, set Create Users, Update User Attributes and Deactivate Users to enabled
-
 
 ## Pushing Groups from Okta
 
@@ -75,7 +59,6 @@ Once user provisioning is working, you can push Okta groups to TestMu AI for aut
 
 **Prerequisites**
 Group Provisioning must be enabled for your org. Contact **24/7 chat support** to activate it.
-
 
 **Step 1:** In Okta, go to your TestMu AI application > **Push Groups** tab.
 

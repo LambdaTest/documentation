@@ -26,23 +26,13 @@ The first step is to create a project with the application in which we will comb
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-
 After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
-
 
 ## Set Up and Run Your Tests
 
 Select your framework below and follow the remaining steps to configure and execute your SmartUI SDK tests on HyperExecute.
 
-
-
-
-
 Selenium is supported in both JavaScript and C#. Choose your language below.
-
-
-
-
 
 ### Step 2: Setup Your Test Suite
 
@@ -52,7 +42,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 Download or Clone the code sample for the Selenium - JavaScript framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
  View on GitHub
-
 
 #### Configure Your Test Suite
 
@@ -90,30 +79,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 4: Configure YAML in your Test Suite
 
@@ -160,7 +130,6 @@ testRunnerCommand: npx smartui exec node sdk/sdkCloud.js --config smartui-web.js
 jobLabel: ["smart-ui-sdk", "hyperexecute", "selenium", "javascript"]
 ```
 
-
 It is mandatory to mention these commands in the pre flag to download all the necessary dependencies
 
 ```bash
@@ -168,7 +137,6 @@ pre:
 - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
 - npx smartui config:create smartui-web.json
 ```
-
 
 ### Step 5: Execute your Test Suite
 
@@ -182,27 +150,15 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 3.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 ### Step 6: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
-
-
-
-
-
-
 ### Step 2: Setup Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
-
-
 
 #### Update the Dependencies
 
@@ -214,9 +170,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 </ItemGroup>
 ```
 
-
 You can check the latest version of [TestMu AI.Selenium.Driver]( https://www.nuget.org/packages/LambdaTest.Selenium.Driver) and update the latest version accordingly.
-
 
 #### Configuring your Project
 You can configure your project meta information from here, like build name, project name, defining the platform, browser, browser version, your credentials etc.
@@ -291,30 +245,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 4: Configure YAML in your Test Suite
 
@@ -369,29 +304,14 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 3.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 ### Step 6: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
-
-
 **discover more**
 📕 Learn more about the other [supported arguments](/support/docs/smartui-selenium-js-sdk/), how you can [handle the dynamic data](/support/docs/smartui-selenium-js-sdk/), and how to [capture the screenshot of a specific element](/support/docs/smartui-selenium-js-sdk/)
-
-
-
-
-
-
-
-
-
 
 > **Note :** SmartUI SDK only supports Cypress versions >= 10.0.0
 
@@ -404,8 +324,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 Download or Clone the code sample for the Maestro framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
  View on GitHub
-
-
 
 #### Adding SmartUI function to take screenshot
 You can incorporate SmartUI into your custom `Cypress` test script, as shown below:
@@ -446,30 +364,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 4: Configure YAML in your Test Suite
 
@@ -520,7 +419,6 @@ testRunnerCommand: npx smartui --config smartui-web.json exec -- npx cypress run
 jobLabel: ["smart-ui-sdk", "hyperexecute", "cypress"]
 ```
 
-
 It is mandatory to mention these commands in the pre flag to download all the necessary dependencies
 
 ```bash
@@ -528,7 +426,6 @@ pre:
 - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
 - npx smartui config:create smartui-web.json
 ```
-
 
 ### Step 5: Execute your Test Suite
 
@@ -542,21 +439,11 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 3.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 ### Step 6: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
-
-
-
-
-
-
 
 ### Step 2: Setup Your Test Suite
 
@@ -567,8 +454,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 Download or Clone the code sample for the Maestro framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
  View on GitHub
-
-
 
 #### Configure Your Test Suite
 
@@ -605,30 +490,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 4: Configure YAML in your Test Suite
 
@@ -670,7 +536,6 @@ testRunnerCommand: npx smartui exec node sdk/playwrightCloud.js --config smartui
 jobLabel: ["smart-ui-sdk", "hyperexecute", "playwright"]
 ```
 
-
 It is mandatory to mention these commands in the pre flag to download all the necessary dependencies
 
 ```bash
@@ -678,7 +543,6 @@ pre:
 - npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
 - npx smartui config:create smartui-web.json
 ```
-
 
 ### Step 5: Execute your Test Suite
 
@@ -692,21 +556,11 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 3.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 ### Step 6: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
-
-
-
-
-
-
 
 ### Step 2: Setup Your Test Suite
 
@@ -716,7 +570,6 @@ To configure and test it, you can use your own project. We are using the sample 
 Download or Clone the code sample for the Puppeteer framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
  View on GitHub
-
 
 #### Configure Your Test Suite
 
@@ -753,30 +606,11 @@ Now, you have to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 4: Configure YAML in your Test Suite
 
@@ -818,7 +652,6 @@ testRunnerCommand: npx smartui exec node sdk/puppeteerCloud.js --config smartui-
 jobLabel: ["smart-ui-sdk", "hyperexecute", "puppeteer"]
 ```
 
-
 It is mandatory to mention these commands in the pre flag to download all the necessary dependencies
 
 ```bash
@@ -826,7 +659,6 @@ pre:
 - npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
 - npx smartui config:create smartui-web.json
 ```
-
 
 ### Step 5: Execute your Test Suite
 
@@ -840,21 +672,11 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 3.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 ### Step 6: Monitor the Test Execution
 
 Go to the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to see the status of your job.
-
-
-
-
-
-
 
 This flow guides you on how to perform visual regression testing for your Android applications by running your Maestro tests on the HyperExecute platform and capturing screenshots with the SmartUI SDK.
 
@@ -872,21 +694,14 @@ You can find the complete code for this example in the following TestMu AI GitHu
 
  View on GitHub
 
-
-
 ### Step 3: Upload Your Application
 
 To run your tests on TestMu AI real devices or emulators, you need to upload your Android app (`.apk`) and get an `appId`.
 
 Run the following `cURL` command in your terminal. Ensure you have set your `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables.
 
-
-
-
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@""" -F "name="sampleApp""
 `}
-
-
 
 From the JSON response, copy the value of `app_url`. It will be in the format `lt://...`. This is your `appId`.
 
@@ -902,9 +717,7 @@ The SmartUI CLI is required to capture and upload screenshots. Install it in you
 npm install @lambdatest/smartui-cli
 ```
 
-
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-
 
 #### 4.2. Add SmartUI Screenshots to Your Maestro Flow
 
@@ -925,30 +738,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
-
 
 ### Step 5: Configure the HyperExecute YAML
 
@@ -956,15 +750,9 @@ The HyperExecute YAML file is the blueprint for your test execution. It tells Hy
 
 You need to add your `PROJECT_TOKEN` (from Step 1) and your `appId` (from Step 3) to the YAML file. Below are example configurations for running Maestro tests on Emulators and Real Devices.
 
-
-
-
 ```yaml reference title="maestro_Real_Devices.yaml"
 https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Real_Devices.yaml
 ```
-
-
-
 
 > To enable this for your organizaton, connect with us through our **24/7 chat support** or drop us an email to [support@testmuai.com](mailto:support@testmuai.com).
 
@@ -972,13 +760,7 @@ https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Real
 https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Emulator_HyperEx.yaml
 ```
 
-
-
-
-
-
 In the real device configuration, the `testDiscovery` and `testRunnerCommand` are handled internally by the `maestro` framework integration on HyperExecute. You just need to specify the `framework` block.
-
 
 ### Step 6: Execute Your Test Suite
 
@@ -990,20 +772,11 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
-
-
-
 
 ### Step 7: View Your Visual Test Results on SmartUI
 
 After the HyperExecute job is finished, all screenshots captured using the `takeScreenshot` command will be available in your SmartUI project for review.
-
-
 
 1.  Navigate to the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2.  Select your project and the most recent build.

@@ -25,8 +25,6 @@ No extra setup is required: if your screenshot uses **Smart Ignore** comparison,
 
 On the comparison view, open the **actions menu** (e.g. the 3-dot or actions dropdown).
 
-
-
 ### Step 3: Use Previous, Highlight, and Next
 
 In the actions menu you’ll see:
@@ -34,10 +32,6 @@ In the actions menu you’ll see:
 - **Previous** — moves focus to the **previous** diff (above the current one).
 - **Highlight** — runs the **highlight animation**: popping circles traverse each diff from **top to bottom**, so you can see every change location in sequence.
 - **Next** — moves focus to the **next** diff (below the current one).
-
-
-
-
 
 Use **Highlight** when you want to quickly see all diffs without clicking through. Use **Previous** and **Next** when you want to step through differences one by one.
 
@@ -56,8 +50,6 @@ When you click **Highlight**:
 - They **traverse each diff region from top to bottom** in sequence.
 - This makes it easy to see how many changes there are and where they sit, without manually scanning the whole screenshot.
 
-
-
 ## Comparison mode support
 
 | Comparison mode | Diff navigation & highlight |
@@ -68,9 +60,7 @@ When you click **Highlight**:
 
 Diff navigation and highlight use **precomputed diff regions** from the comparison. Today these are available for **Smart Ignore** only. Support for **Strict** and **Layout** modes is planned for a future release.
 
-
 To use diff navigation and highlight, ensure the screenshot is compared with **Smart Ignore**. You can enable Smart Ignore in [Project Settings](/support/docs/smartui-project-settings) or choose it per screenshot from the **Diff options** dropdown on the comparison page.
-
 
 ## Tips
 
@@ -85,7 +75,6 @@ To use diff navigation and highlight, ensure the screenshot is compared with **S
 | **No Previous/Next/Highlight in the menu** | Confirm the screenshot is using **Smart Ignore** comparison. These controls are not shown for Strict or Layout mode yet. |
 | **Highlight doesn’t show anything** | Ensure there is at least one diff; if the comparison is identical, there’s nothing to highlight. |
 | **Order of diffs** | Diffs are always traversed **top to bottom**; Previous goes up, Next goes down. |
-
 
 ## Related docs
 

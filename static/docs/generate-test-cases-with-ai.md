@@ -7,8 +7,6 @@ The **AI Test Case Generator** is an intelligent feature within TestMu AI Test M
 
 This feature is designed to save time, improve test coverage, and streamline the test design process for both manual and automated testing workflows.
 
-
-
 ## Highlights
 
 ### Conversation Layer
@@ -47,9 +45,6 @@ Project-level instructions are specific to a single project and are applied when
 4. Enter your instructions in the text field.
 5. Save your changes.
 
-
-
-
 **Example project-level instructions:**
 ```
 - All test cases must include preconditions for user authentication state.
@@ -68,17 +63,12 @@ Organization-level instructions apply globally across all projects within your o
 3. Enter your organization-wide instructions.
 4. Save your changes.
 
-
-
-
 **Example organization-level instructions:**
 ```
 - Include accessibility testing considerations where applicable.
 - Severity and priority must be assigned to every test case.
 - Test data should use anonymized values, never production data.
 ```
-
-
 
 ### Smart Context: Memory Layer
 
@@ -100,11 +90,7 @@ When you initiate a test case generation session, the following process occurs a
 
 The Memory Layer prevents duplicates from being created. To find and remove duplicates that already exist in your repository, see [Find and Remove Duplicate Test Cases](/support/docs/test-case-deduplication/).
 
-
 The Memory Layer operates automatically in the background, you can choose to enable or disable Memory enhancement feature before triggering a session.
-
-
-
 
 ## Generate Test Cases: Step-by-Step
 
@@ -114,14 +100,8 @@ You can access the AI Test Case Generator from two entry points:
 **From Test Manager:**
 Navigate to the **Test Case Listing** page within your project and click on `Generate With AI`. An input box will appear where you can provide your requirements.
 
-
-
-
 **From KaneAI:**
 Navigate to the **Agent** page in KaneAI and select `Generate Scenarios`. This opens the same AI Test Case Generator interface.
-
-
-
 
 ### Step 2: Enter Your Requirements
 Start by entering your product or feature requirements in the input box.
@@ -143,41 +123,24 @@ Currently, the AI Test Case Generator can only access **publicly available URLs*
 
 **Support for private URLs is coming soon.**
 
-
 #### Add Input Requirements
 
 ##### Text Input
 
 - Type your requirement directly into the input box.
 
-
-
-
 ##### Record Audio
 - Click the mic icon to begin recording, as shown in the picture.
 
-
  Audio recording is not supported in Firefox, ARC and Opera browsers.
 
-
-
-
-
 - Click the tick icon to confirm, or the cross to discard.
-
-
 
 ##### Upload Files
 - Click on the **pin** icon 📎, then select `Upload from device`.
 - You can select a maximum of 10 files from your device.
 
-
-
-
 - Uploaded files will appear within the input box.
-
-
-
 
 ##### Add Issue Links
 - Integrate your TestMu AI account with Jira/Azure DevOps. Follow the steps described in the following link to integrate Jira/Azure DevOps:
@@ -185,25 +148,13 @@ Currently, the AI Test Case Generator can only access **publicly available URLs*
 
 - After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues`.
 
-
-
-
 - Enter your Jira/Azure DevOps issue ID or link and press Enter.
-
 
  Only issues from the connected Jira/Azure DevOps project can be linked here.
 
-
-
-
-
 - The linked issue will then appear inside the input box.
 
-
-
-
 For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps integration fetches textual content only.
-
 
 ##### Configure Generation Settings
 Before triggering a generation session, you can configure the following settings to control the AI's output:
@@ -215,23 +166,13 @@ Before triggering a generation session, you can configure the following settings
 | **Memory Enhancement** | Toggle to enable or disable the [Smart Context: Memory Layer](#smart-context-memory-layer), which retrieves relevant existing test cases from your repository to improve generation quality |
 | **Project Instructions** | View and verify the [project-level custom instructions](#project-level-custom-instructions) that will be applied to the session |
 
-
-
-
-
 Configure these settings before pressing Enter to ensure the AI generates test cases aligned with your session requirements. Organization-level instructions, if configured, are automatically applied in addition to project instructions.
-
 
 ### Step 3: Generate Test Cases
 - Once all your input requirements are added (along with any custom instructions), press **Enter** to start generating test cases.
 - The AI analyzes your input, retrieves relevant context from your existing test case repository via the [Smart Context: Memory Layer](#smart-context-memory-layer), and generates test cases that are both comprehensive and non-duplicative.
 
-
-
-
-
 To end the test case generation while the Agent is thinking, click on the **Stop Generating** button.
-
 
 ### Step 4: Review Test Cases Across Scenarios
 - Test cases are grouped into high-level, logical test scenarios. Each scenario represents a theme or functional area for easier navigation and categorization.
@@ -243,9 +184,6 @@ To end the test case generation while the Agent is thinking, click on the **Stop
   - **Negative**: Invalid or failure cases designed to test robustness.
   - **Edge**: Corner cases that may be overlooked in testing flows.
 
-
-
-
 ### Step 5: View and Edit Test Case Details
 Click on any test case to explore its full details, including:
 - Test Case Title
@@ -256,23 +194,13 @@ Click on any test case to explore its full details, including:
 
 You can **edit** any part of the test case if you want to add more context or align it with your test strategy.
 
-
-
-
-
-
 ## Conversation Layer: Refine Your Test Cases
 
 After generating your initial test scenarios and cases, you can use the **Conversation Layer** to iteratively refine them through natural language. Instead of manually editing each test case or regenerating everything from scratch, simply describe what you want changed in the chat interface, and the AI applies the modifications in real time.
 
-
-
 #### Conversational Workspace
 
 When the Conversation Layer is active, the workspace is divided into two primary panels:
-
-
-
 
 **Chat Interface (Left Panel)**
 
@@ -283,9 +211,6 @@ The left panel is your chat interface for refining test output:
 - **File attachments**: Attach files directly within the conversation using the attachment button.
 - **Confirmation prompts**: The AI asks for confirmation when a change affects more than 5 test cases.
 
-
-
-
 **Live Output View (Right Panel)**
 
 The right panel is the primary workspace showing your generated test scenarios and test cases:
@@ -294,9 +219,6 @@ The right panel is the primary workspace showing your generated test scenarios a
 - **Visual indicators**: Scenarios and test cases being modified are visually highlighted during streaming.
 - **Full test case details**: Expand any test case to view its steps, expected results, preconditions, and other fields.
 
-
-
-
 **Session Context Drawer**
 
 To review the context used for your current generation session, click the **pencil icon** located just above the chat input box at the bottom left. This opens a side drawer displaying:
@@ -304,9 +226,6 @@ To review the context used for your current generation session, click the **penc
 - **Organization Instructions**: Organization-level custom instructions applied to the session.
 - **Project Instructions**: Project-level custom instructions applied to the session.
 - **Linked Issues**: Jira or Azure DevOps issues linked to the session.
-
-
-
 
 Use the context drawer to verify that the AI is working with the correct inputs. You can review linked issues, attached files, and the custom instructions being applied before sending refinement messages.
 
@@ -328,16 +247,12 @@ The `@` referencing system allows you to precisely target specific scenarios or 
 | Scenario | `@S1`, `@S3` |
 | Test Case | `@S1.C1`, `@S2.C4` |
 
-
 **Using Autocomplete:**
 
 1. Type `@` in the conversation input.
 2. An autocomplete dropdown appears showing all available scenarios and test cases.
 3. Start typing to filter the list (e.g., `@S2` filters to scenarios, `@S2.*` filters to test cases in Scenario 2).
 4. Click or press **Enter** to select the reference.
-
-
-
 
 **What You Can Do with Conversational Refinement:**
 
@@ -354,7 +269,6 @@ Restructure how your test cases are grouped and organized.
 | Group by platform or environment | These test cases are mixed. Group them by platform, create one scenario for Web Desktop, one for Mobile Web, and one for Mobile App |
 | Create user journey scenarios | Create end-to-end user journey scenarios. Combine login, product search, add to cart, and checkout into a complete "Customer Purchase Journey" scenario |
 
-
 #### Expand Test Coverage
 
 Add new test cases or scenarios to improve coverage.
@@ -367,7 +281,6 @@ Add new test cases or scenarios to improve coverage.
 | Fill coverage gaps from uploaded files | I've attached the updated requirements document. Review it against our current test cases and create new ones for any features or user stories we haven't covered yet |
 | Add new scenarios | Create a new scenario for the password reset flow with test cases covering successful reset, expired reset links, invalid tokens, rate limiting, and already-used tokens |
 
-
 #### Remove Unnecessary Tests
 
 Clean up your test suite by removing low-value or out-of-scope test cases.
@@ -379,7 +292,6 @@ Clean up your test suite by removing low-value or out-of-scope test cases.
 | Keep specific functionality only | We're deprecating the wishlist feature. Keep only the shopping cart test cases and remove everything related to wishlist functionality |
 | Remove by user role | Our next sprint focuses only on logged-in users. Remove all guest user and anonymous browsing test cases, keep authenticated user workflows |
 
-
 #### Combine and Merge Tests
 
 Reduce redundancy by merging overlapping test cases.
@@ -389,7 +301,6 @@ Reduce redundancy by merging overlapping test cases.
 | Merge duplicate tests | I notice @S1.C3 and @S1.C5 both test login validation with different edge cases. Merge them into a single comprehensive test case that includes all the validation scenarios from both |
 | Create end-to-end flows | Combine the separate test cases for user registration, email verification, and first-time login into one end-to-end "New User Onboarding Journey" test |
 | Consolidate compatibility tests | We have separate test cases for Chrome, Firefox, Safari, and Edge. Merge these into a single cross-browser compatibility test with browser-specific validation steps |
-
 
 #### Standardize Naming and Formatting
 
@@ -401,7 +312,6 @@ Apply consistent naming conventions and formatting across test cases.
 | Align terminology | Our team uses "save" instead of "submit". Replace every instance of "submit" with "save" across all test case titles, steps, and expected results in @S2 |
 | Standardize priorities | Update priority to High for all test cases that involve payment processing, checkout, or financial transactions |
 | Add tags | Tag all critical user journey test cases with "smoke-suite" so we can easily filter them for our smoke testing runs |
-
 
 #### Enhance Test Case Details
 
@@ -415,7 +325,6 @@ Add preconditions, cleanup steps, or additional context to test cases.
 | Add steps to specific test cases | In @S1.C3 and @S1.C5, add a step after login to verify the user's dashboard displays their last login timestamp and session information |
 | Add steps at specific position | In @S2.C2, add a step between step 3 and step 4 to take a screenshot of the shopping cart and verify the item quantity matches what was added |
 
-
 #### Make Targeted Modifications
 
 Precisely modify specific scenarios or test cases using `@` references.
@@ -426,13 +335,11 @@ Precisely modify specific scenarios or test cases using `@` references.
 | Update specific test case | In @S2.C4, the expected result needs updating. Change it to "Account is locked for 30 minutes after 3 consecutive failed login attempts" instead of just showing an "Invalid credentials" error |
 | Expand test case validation | Expand @S1.C2 to include password strength validation: minimum 8 characters, at least one uppercase letter, one number, one special character, and cannot contain the username |
 
-
 **Pro Tips for Effective Refinement**
 - **Use `@` references for precision**: Target specific scenarios (`@S1`) or test cases (`@S2.C3`) to ensure the AI modifies exactly what you intend
 - **Combine multiple actions**: Request several changes in one message: "Remove all Low priority test cases from @S1, add 2 boundary tests for the email field, and rename remaining test cases to include the module name"
 - **Provide updated context mid-session**: Upload revised specifications or link Jira/Azure DevOps tickets at any point to help the AI identify coverage gaps and generate test cases aligned with the latest requirements
 - **Start broad, then refine**: First organize scenarios at a high level, then drill down to individual test cases
-
 
 #### Re-Generation Settings
 
@@ -442,13 +349,7 @@ The Test Case Generator provides several controls that work alongside the Conver
 - **Max Test Cases per Scenario**: Set the upper limit for test cases within each individual scenario.
 - **Regenerate Scenarios**: Regenerate all scenarios utilizing existing context and to regenerate fresh Scenarions and Test Cases.
 
-
-
-
-
 Regeneration replaces all current scenarios. To keep specific scenarios intact and only modify others, use targeted conversational refinements instead.
-
-
 
 #### Credit Usage
 
@@ -458,7 +359,6 @@ The Conversation Layer consumes AI credits based on the scope of each refinement
 |--------|-------------|
 | Edit or modify a **scenario** (including its test cases) | **5 credits** |
 | Edit or modify a single **test case** | **1 credit** |
-
 
 - Credits are deducted **per message** based on the scope of the change.
 - If your message affects multiple scenarios, credits are deducted for each scenario impacted.
@@ -472,24 +372,15 @@ The following capabilities are planned for future releases:
 - **Step-level referencing**: You cannot reference individual steps within a test case. Instead, reference the test case and describe the change.
 - **Coverage queries**: Asking analytical questions (e.g., "Do we have tests for invalid amounts?") without requesting a change is not supported.
 
-
-
 ## Save or Automate Test Cases
 
 Once you have generated and refined your test scenarios and test cases, it's time to save your work. Select the test cases you want to keep and choose one of the following options:
 
-
-
-
 #### Option 1: Create Test Cases
 Select the desired test cases and click **Create** to save them directly to your **Test Case Repository** in TestMu AI Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual test planning. Any files attached during the generation session will also be saved as attachments on the created test cases.
 
-
-
 #### Option 2: Create and Automate with KaneAI
 Select the desired test cases and click **Create and Automate** to save the test cases to your repository and submit them to KaneAI for automated authoring. Clicking this button opens the **Create and Automate Test Cases** dialog, where you configure automation settings before KaneAI begins authoring. The dialog displays the number of distinct test cases selected and how many are automation-ready.
-
-
 
 The dialog is organized into three platform tabs — **Desktop Browser**, **Mobile Browser**, and **Mobile App**. Each tab contains three sections:
 
@@ -505,15 +396,10 @@ Select the target environment for your tests. Mobile Browser and Mobile App tabs
 
 Configure environment-level settings for your test run. All platforms support **Network Configuration** to connect via a tunnel or proxy, and **Timezone** to set the execution timezone. Each platform also includes additional settings specific to that environment. For a full reference of available options per platform, see [Advanced Settings in KaneAI](/support/docs/kaneai-advanced-settings/).
 
-
 The **Create and Automate** option requires KaneAI access. If you do not have KaneAI enabled on your account, use the **Create** option to save test cases manually.
-
 
 **Experimental Feature**
 Create and Automate is currently an experimental feature. Review your test steps once the test cases have been created and automated.
-
-
-
 
 ## Troubleshooting
 
@@ -526,28 +412,9 @@ Create and Automate is currently an experimental feature. Review your test steps
 | Credits deducted but no changes appeared | This can occur if the AI could not interpret your request or if there was a connection interruption. Check the conversation history for an error message. |
 | Regeneration removed refined scenarios | Regeneration replaces all current output. Use targeted conversational messages instead to preserve specific scenarios. |
 
-
-
-
 ## Video Walkthrough
 
 Watch the video below for a quick walkthrough of the AI Test Case Generator in action.
-
-
-
-
-
-
-
-## Video Walkthrough
-
-Watch the video below for a quick walkthrough of the AI Test Case Generator in action.
-
-
-
-
-
-
 
 ## Frequently Asked Questions
 

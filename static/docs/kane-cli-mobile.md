@@ -4,17 +4,13 @@
 
 Kane CLI can run tests against local mobile virtual devices: Apple's **iOS Simulator** and Google's **Android Emulator**. You author and run mobile tests the same way you already do for the browser. The differences are that a mobile test runs against an **app you provide**, and that the target device is a simulator or emulator on your machine.
 
-
 This release supports **macOS on Apple Silicon (arm64) only**. Mobile testing is not yet available on Intel Macs, Linux, or Windows. Everything below assumes a mac-arm64 host.
-
 
 ## What Mobile Means Here
 
 **Native app testing.** A mobile test drives an installed app. You pass a build, or an app id from a previous upload, with `--app`. Kane CLI installs it on the device and runs your objective against it. WebViews inside the app under test are handled.
 
-
 Pointing a mobile run at a website is not supported yet. Mobile runs target a native app, not a mobile web page.
-
 
 **Two targets.** `emulator` is a virtual Android device and `simulator` is a virtual iOS device. The default target stays **desktop**, the browser, so nothing changes for your existing web runs.
 

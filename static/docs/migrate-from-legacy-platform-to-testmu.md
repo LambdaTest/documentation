@@ -6,11 +6,7 @@ Legacy test execution platforms present various challenges including limited bro
 
 In this guide,  we will look at how to migrate from legacy test execution platform to TestMu AI.
 
-
-
-
 ## How to Migrate From Local Grid to TestMu AI
-
 
 The major difference between a local Selenium Grid and a cloud-based Selenium Grid like TestMu AI is the point of execution.
 
@@ -21,27 +17,16 @@ TestMu AI provides scalability, parallel execution, and increased reliability, w
 
 Migration is simple, tests running on a local grid can be executed on TestMu AI with minimal modifications, typically requiring no changes to your automation logic. Only the execution endpoint and capabilities need to be configured.
 
-
 ## Run Your Script Locally
 
 You can run your script locally by executing it directly on your machine with your preferred browser setup. This allows you to quickly test functionality, debug issues, and verify results without relying on external environments. It's an efficient way to validate tests during development.
-
-
-
-
-
-
-
 
 ## Connect Your Local Script to TestMu AI
 
 To migrate your existing local script to TestMu AI, you only need to update your WebDriver configuration with cloud capabilities and the TestMu AI Hub URL. Once the credentials and capabilities are added, the same test can run on remote browsers without code logic changes.
 
-
-
 ### Authentication
 Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on TestMu AI Selenium Grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on TestMu AI, visit the TestMu AI signup page and create a new account.
-
 
 When migrating your Selenium 4 tests from BrowserStack to TestMu AI, the following updates are required in your existing code:
 
@@ -54,9 +39,7 @@ LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"
 ```
 
-
 Once the .env file is set up, ensure your test framework correctly reads these variables at runtime. This helps keep your authentication secure and avoids hard-coding credentials within your scripts. With the credentials in place, you’re now ready to update your Hub URL for TestMu AI execution.
-
 
 ### Add TestMu AI Hub URL
 You need to now add the hub URL in the configuration settings of your test suite. Hub URL is of type String and it defines the Hub location to which the Selenium tests would be submitted for execution.
@@ -65,15 +48,8 @@ You need to now add the hub URL in the configuration settings of your test suite
 @hub.lambdatest.com/wd/hub
 ```
 
-
 ### TestMu AI Automation Capabilities
 Add your capabilities using the [TestMu AI Capabilities Generator](https://www.testmuai.com/capabilities-generator/), where you can quickly generate the required browser, OS, and platform configurations for your test script. Select the environment you want, copy the capabilities, and paste them directly into your script to run on TestMu AI.
-
-
-
-
-
-
 
 ```js
 SafariOptions browserOptions = new SafariOptions();
@@ -85,9 +61,6 @@ ltOptions.put("accessKey", "<your_access_key>");
 ltOptions.put("w3c", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
-
-
-
 
 ```js
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -102,26 +75,13 @@ ltOptions.put("video", true);
 capabilities.setCapability("LT:Options", ltOptions);
 ```
 
-
-
-
-
-
-
 ## Hands On Guide -  TestMu AI Migration
 
-
 You can execute the same test that previously ran on a local environment by connecting it to the TestMu AI cloud grid. With minor configuration changes and added capabilities, your script can run cross-browser on TestMu AI without altering the core test logic.
-
 
 **Test Scenario**:
 
 This test script performs a basic text validation on the website [TestMu AI eCommerce Playground](https://ecommerce-playground.lambdatest.io/) and shows the expected execution results when running the test in the TestMu AI cloud.
-
-
-
-
-
 
 ```java
 // TextValidationTest.java
@@ -135,7 +95,6 @@ import java.util.HashMap;
 
 public class TextValidationTest {
 
-
 public static void main(String[] args) throws Exception {
 
 String username = System.getenv("LT_USERNAME") == null ?
@@ -145,7 +104,6 @@ String authkey = System.getenv("LT_ACCESS_KEY") == null ?
 "Your LT AccessKey\n"  : System.getenv("LT_ACCESS_KEY");
 
 String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
-
 
 SafariOptions browserOptions = new SafariOptions();
 browserOptions.setPlatformName("MacOS Tahoe");
@@ -185,10 +143,6 @@ driver.quit();   // 🔹 Correctly placed – runs even if test fails
 }
 ```
 
-
-
-
-
 ```java
 // TextValidationTest.java – Selenium 3 Configuration
 import org.openqa.selenium.WebDriver;
@@ -200,7 +154,6 @@ import java.net.URL;
 import java.util.HashMap;
 
 public class TextValidationTest {
-
 
 public static void main(String[] args) throws Exception {
 
@@ -250,20 +203,11 @@ driver.quit();   // 🔹 Correctly placed – runs even if test fails
 }
 ```
 
-
-
-
-
-
 **Result**
 
 Visit TestMu AI Web Automation dashboard to view your test execution result.
 
-
-
-
 ## Contact Us for Support
-
 
 If you come across any challenges while migrating or need help at any stage, feel free to reach out to our support team. We are dedicated to ensuring a seamless transition to TestMu AI and are available around the clock to help you with any queries or issues.
 

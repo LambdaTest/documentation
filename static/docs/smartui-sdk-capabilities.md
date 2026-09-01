@@ -7,7 +7,6 @@ SmartUI SDK provides several capabilities that allow you to configure your visua
 **Important**
 These capabilities only work when running tests on the TestMu AI Automation Grid. For local test executions, please refer to the standard authentication methods using project token or project name in the [Running your first project](/support/docs/smartui-running-your-first-project/) documentation.
 
-
 ## Prerequisites
 
 Before using SmartUI SDK capabilities, ensure you have the following minimum versions installed:

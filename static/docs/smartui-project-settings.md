@@ -24,8 +24,6 @@ To access the Project Settings, follow these simple steps:
 
 All the tests on SmartUI get executed as a Project, and every Project lives on the Projects page — the best place to explore once you have [run your first sample project](/support/docs/smartui-running-your-first-project/). Each Project has an Approver, Tags, Platform, and a Sort By section followed by the details of the number of builds and who initiated the Project.
 
-
-
 ## Projects Dashboard Details
 
 The SmartUI dashboard presents a comparison between the baseline and the captured screenshots for visual regression testing. It provides essential insights to detect any UI anomalies.
@@ -49,12 +47,7 @@ Located at the center of the top menu, the Diff Controls allow testers to custom
 ### Variants
 The top menu includes browser variants, which allow cross-browser testing. Variants visible in the screenshot include: Chrome, Firefox, Edge, Playwright WebKit (Pw-Webkit). Each variant shows the same test across different browsers and resolutions, helping identify browser-specific visual issues.
 
-
-
 ## Project Settings
-
-
-
 
 **Project Token**
 
@@ -64,29 +57,17 @@ The Project Token is a unique identifier that authenticates your SmartUI project
 
 Use this key to authenticate your SmartUI project for executing locally with CLI and APIs.
 
-
-
-
 ```bash
 export PROJECT_TOKEN='project#token'
 ```
-
-
-
 
 ```bash
 set PROJECT_TOKEN='project#token'
 ```
 
-
-
-
 ```powershell
 $env:PROJECT_TOKEN='project#token'
 ```
-
-
-
 
 ### Using Project Token
 
@@ -96,39 +77,21 @@ The Project Token is required for:
 - Local test execution
 - CI/CD pipeline integrations
 
-
 Keep your Project Token secure and never commit it to version control. Use environment variables or secret management tools in CI/CD pipelines.
-
-
-
-
-
 
 **Basic Settings**
 
-
-
 - **Project Name:** Customize the name of your project to enhance its identification.
-
 
 Changing the Project Name will automatically update the `smartUI.project` capability's options for Web/App projects.
 
-
 - **Approvers:** Manage the list of authorized individuals responsible for approving changes within the project.
-
 
 Altering Approvers will impact email notifications, which will be sent to the latest approver list for recent builds.
 
-
 - **Tags:** Add tags to your project for better organization and categorization.
 
-
-
-
-
 **Comparison Settings**
-
-
 
 Comparison settings allow you to fine-tune how SmartUI compares screenshots, balancing between highlighting important changes and ignoring noise.
 
@@ -145,9 +108,7 @@ Strike a balance between highlighting important changes and ignoring noise. The 
 **Example:**
 - Custom value: `5000` - Higher value means more tolerance for pixel differences
 
-
 Adjusting the Pixel Threshold in Comparison Settings will only affect new builds/screenshots captured after the update.
-
 
 **Error Highlight Color**
 
@@ -250,38 +211,25 @@ Ability to scale the test screenshot according to baseline.
 
 **Use Case**: Handle cases where screenshots are captured at different resolutions or viewport sizes.
 
-
 Changes to Project Settings will impact builds/comparisons executed after the changes and the previous builds/comparisons remain unaffected.
-
 
 **Additional Information:**
 For detailed information on these options, refer to the [Test Settings](#test-settings) section below.
-
-
-
-
 
 **Build Settings**
 
 **Smart Baseline**
 
-
-
 Smart Baseline is a feature that simplifies and automates the process of updating the baseline for approved screenshots in your baseline build. This feature provides convenience and efficiency by ensuring your baseline remains in sync with approved changes without manual intervention.
-
-
 
 - **Baseline Branch:** A baseline branch build consists of screenshots captured using SmartUI. All screenshots in this build are compared against non-baseline branch builds.
 
 - **Non-Baseline Branches:** Non-baseline branch(s) builds are sets of screenshots captured using SmartUI. All screenshots in these builds are compared against the baseline build, matching them by screenshot names.
 
-
 When **`Smart Baseline`** is turned on, the system automatically updates the baseline for approved screenshots in the baseline build, streamlining the testing process and saving time.
-
 
 **Warning**
 Please note that this feature is not supported for projects integrated with `Git` as `Git`-based projects follow a [Git branching strategy](/support/docs/smartui-github-app-integration/).
-
 
 **Git Settings**
 
@@ -292,19 +240,11 @@ For detailed information on these options, refer to our [Git Baseline Branching 
 
 **Overwrite Screenshot**
 
-
-
 - This feature allows to update and overwrite screenshots with the same name, ensuring that the latest version is updated for that screenshot.
 
 - This capability provides users with more control over the management of screenshots with identical names, enabling them to maintain accurate visual records and efficiently track changes in their application's user interface over time.
 
-
-
-
-
 **Notifications**
-
-
 
 Configure how you receive alerts and updates about your SmartUI project.
 
@@ -330,13 +270,7 @@ Receive Slack alerts whenever there are changes found in your build.
 
 **Use Case**: Integrate visual testing alerts into your team's communication workflow.
 
-
 We are continually adding more notification channels for SmartUI.
-
-
-
-
-
 
 **TestMu AI Badge**
 
@@ -351,16 +285,9 @@ Show the world that you are using TestMu AI for your visual regression testing.
 
 **Delete Project**
 
-
-
 The "Delete Project" option allows administrators or project creators to permanently delete a project. Once a project is deleted, it cannot be retrieved.
 
-
 Only the **Admin** or **Creator** of the project can delete a project. Once deleted, a project cannot be retrieved.
-
-
-
-
 
 ## Test Settings
 
@@ -387,10 +314,6 @@ The image threshold settings helps you in analyzing the granularity of the pixel
 
 You can specify the following `capability` in the following format:
 
-
-
-
-
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
@@ -404,10 +327,6 @@ let capabilities = {
 };
 ```
 
-
-
-
-
 ```json title="Add the following in your /project/lambdatest-config.json"
 "smart_ui": {
 "project": "<Your Project Name>" // Add your SmartUI Project Name here
@@ -417,11 +336,6 @@ let capabilities = {
 }
 }
 ```
-
-
-
-
-
 
 #### Error Identifier Types
 
@@ -434,10 +348,6 @@ The following are the supported options for the pixel comparison feature:
 
 You can specify the following `capability` in the following format:
 
-
-
-
-
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
@@ -451,10 +361,6 @@ let capabilities = {
 };
 ```
 
-
-
-
-
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
 "project": "<Your Project Name>" // Add your SmartUI Project Name here
@@ -465,11 +371,6 @@ let capabilities = {
 }
 
 ```
-
-
-
-
-
 
 #### Ignore - P2P False Positives
 
@@ -484,10 +385,6 @@ The following are the supported options for the pixel comparison feature:
 
 You can specify the following `capability` in the following format:
 
-
-
-
-
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
@@ -501,10 +398,6 @@ let capabilities = {
 };
 ```
 
-
-
-
-
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
 "project": "<Your Project Name>" // Add your SmartUI Project Name here
@@ -515,11 +408,6 @@ let capabilities = {
 }
 
 ```
-
-
-
-
-
 
 #### Transparency
 
@@ -527,10 +415,6 @@ An advanced configuration to set the comparison view image to be displayed as a 
 
 You can specify the following `capability` in the following format:
 
-
-
-
-
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
 
@@ -544,10 +428,6 @@ let capabilities = {
 };
 ```
 
-
-
-
-
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
 "project": "<Your Project Name>" // Add your SmartUI Project Name here
@@ -559,12 +439,8 @@ let capabilities = {
 
 ```
 
-
-
-
 **`boundingBoxes`, `ignoredBoxes`, `ignoreAreasColoredWith`**
 These three comparison modes exist in SmartUI’s **pixel-to-pixel** model. The examples below nest them under **`smartUI.options`** (Selenium) and **`smart_ui.options`** (Cypress), the same shape as **Image Threshold** through **Transparency**, but **behavior can still vary by integration**; **do not copy into production** without validating against your session or with **[support](mailto:support@testmuai.com)**. For box/color-style ignores in the UI, use **[Draw on UI](/support/docs/smartui-draw-on-ui/)** or confirm the supported payload with support.
-
 
 #### Bounding Boxes - Compare only specific area {#bounding-boxes---compare-only-specific-area}
 
@@ -575,10 +451,6 @@ The bounding boxes are the areas created on the screenshot which needs to be com
 This specific case is used to compare only a specific area of the screenshot from the **baseline**.
 
 You can specify the following `capability` in the following format:
-
-
-
-
 
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
@@ -609,10 +481,6 @@ let capabilities = {
 
 ```
 
-
-
-
-
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
 "project": "<Your Project Name>",
@@ -636,11 +504,6 @@ let capabilities = {
 
 ```
 
-
-
-
-
-
 #### Ignore Boxes - Ignore only specific area {#ignore-boxes---ignore-only-specific-area}
 
 **Reference only:** verify with support before relying on capability wiring.
@@ -650,10 +513,6 @@ The ignored boxes are the areas created on the screenshot which needs to be igno
 This specific case is used to ignore only a specific area of the screenshot from the **baseline**.
 
 You can specify the following `capability` in the following format:
-
-
-
-
 
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
@@ -684,10 +543,6 @@ let capabilities = {
 
 ```
 
-
-
-
-
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
 "project": "<Your Project Name>",
@@ -711,11 +566,6 @@ let capabilities = {
 
 ```
 
-
-
-
-
-
 #### Ignore Areas Colored - Removes the colored content from the comparison {#ignore-areas-colored---removes-the-colored-content-from-the-comparison}
 
 **Reference only:** verify with support before relying on capability wiring.
@@ -723,10 +573,6 @@ let capabilities = {
 You can exclude the pixels that match the specified color on a **baseline** image from the comparison view. This feature will ignore that specific regions with the color pixels and shows the comparison view.
 
 You can specify the following `capability` in the following format:
-
-
-
-
 
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
@@ -750,10 +596,6 @@ let capabilities = {
 
 ```
 
-
-
-
-
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
 "project": "<Your Project Name>",
@@ -769,16 +611,9 @@ let capabilities = {
 
 ```
 
-
-
-
-
-
 ## HTML DOM Options
 
 HTML DOM options let you handle dynamic content of your web pages during visual regression by ignoring or selecting specific areas of the DOM.
-
-
 
 Using the TestMu AI platform, perform regression testing in just one click and explore various possible solutions for grouping your screenshots into different builds and map as per your testing suite needs.
 
@@ -795,10 +630,6 @@ The following are the different options which are currently supported:
 | `ignoreDOM` (object) ****     | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or Xpath` used by your webpage that should be excluded from the comparison |
 | `selectDOM` (object)      | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or XPath` used by your webpage that should be included in the comparison |
 
-
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by ID"
 let config = {
 screenshotName: "Ignore-ID",
@@ -809,9 +640,6 @@ id: ["ID-1", "ID-2"], // Ignoring elements by ID, you can ignore multiple at onc
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by Class"
 let config = {
@@ -824,9 +652,6 @@ class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore mul
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by XPath"
 let config = {
 screenshotName: "Ignore-XPath",
@@ -837,10 +662,6 @@ xpath: ["Xpath-1", "Xpath-2"], // Ignoring elements by XPath, you can ignore mul
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
-
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector"
 let config = {
@@ -853,12 +674,6 @@ cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS s
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to select by ID."
 let config = {
 screenshotName: "Select-ID",
@@ -869,9 +684,6 @@ id: ["ID-1", "ID-2"], // Selecting elements by ID, you can select multiple at on
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by Class"
 let config = {
@@ -884,9 +696,6 @@ class: ["Class-1", "Class-2"], // Selecting elements by class, you can select mu
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to select by XPath"
 let config = {
 screenshotName: "Select-XPath",
@@ -898,10 +707,6 @@ xpath: ["Xpath-1", "Xpath-2"], // Selecting elements by XPath, you can select mu
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to select by CSS Selector"
 let config = {
 screenshotName: "Select-cssSelector",
@@ -912,9 +717,6 @@ cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS 
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
 
 ### Configuration for Puppeteer
 
@@ -928,77 +730,45 @@ The following are the different options which are currently supported:
 | `ignoreXPath` (object)      |  Specify a selector based on theXPath of the element that should be  excluded from the comparison |
 | `selectXPath` (object)      | Specify a selector based on theXPath of the element that should be included in the comparison |
 
-
-
-
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {id:["HTML DOM Id"]} }})}`)
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {class:["<CSS Class>"]} }})}`)
 ```
 
-
-
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  ignoreXPath: ['Xpath-1', 'Xpath-2']} })}`)
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {cssSelector:["<CSS Selector>"]} }})}`)
 ```
 
-
-
-
-
-
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {id:["HTML DOM Id"]} }})}`)
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {class:["<CSS Class>"]} }})}`)
 ```
 
-
-
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  selectXPath: ['Xpath-1', 'Xpath-2']} })}`)
 ```
 
-
-
-
-
 ```js title="This is a sample for your webhook configuration for Puppeteer"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {cssSelector:["<CSS Selector>"]} }})}`)
 ```
-
-
-
 
 ### Configuration for Playwright
 
@@ -1012,77 +782,45 @@ The following are the different options which are currently supported:
 | `ignoreXPath` (object)      |  Specify a selector based on theXPath of the element that should be  excluded from the comparison |
 | `selectXPath` (object)      | Specify a selector based on theXPath of the element that should be included in the comparison |
 
-
-
-
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {id:["HTML DOM Id"]} }})}`)
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {class:["<CSS Class>"]} }})}`)
 ```
 
-
-
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  ignoreXPath: ['Xpath-1', 'Xpath-2']} })}`)
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', ignoreDOM : {cssSelector:["<CSS Selector>"]} }})}`)
 ```
 
-
-
-
-
-
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {id:["HTML DOM Id"]} }})}`)
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {class:["<CSS Class>"]} }})}`)
 ```
 
-
-
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot',  selectXPath: ['Xpath-1', 'Xpath-2']} })}`)
 ```
 
-
-
-
-
 ```js title="This is a sample for your webhook configuration for Playwright"
 await page.evaluate((_) => {},
 `lambdatest_action: ${JSON.stringify({ action: 'smartui.takeScreenshot', arguments: { fullPage: false, screenshotName: 'dom-screenshot', selectDOM : {cssSelector:["<CSS Selector>"]} }})}`)
 ```
-
-
-
 
 ## Build Config & Options
 
@@ -1092,18 +830,12 @@ Build options let you group screenshots into builds, mark a build as a baseline,
 
 If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite. We have to enable the mapping with the `smartUI.build` to be added your capabilities.
 
-
-
-
 ```js title="Please add the following to your capabilities configuration"
 let capabilities = {
 // highlight-next-line
 "smartUI.build": <Your_Build_Name> // Please add your build name of choice here
 }
 ```
-
-
-
 
 ```json title="Please make the changes in lambdatest-config.json"
 "smart_ui": {
@@ -1112,8 +844,15 @@ let capabilities = {
 }
 ```
 
+```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
+const capabilities = {
+'LT:Options': {
+// highlight-next-line
+"smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
 
+}}
+```
 
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
@@ -1125,8 +864,6 @@ const capabilities = {
 }}
 ```
 
-
-
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
 const capabilities = {
@@ -1136,27 +873,10 @@ const capabilities = {
 
 }}
 ```
-
-
-
-```js title="Please add the following in <LT:Options> in your capabilities configuration "
-
-const capabilities = {
-'LT:Options': {
-// highlight-next-line
-"smartUIBuildName": <Your_Build_Name> // Please add your build name of choice here
-
-}}
-```
-
-
 
 ### Enabling build as a baseline
 
 If you want to mark your build as a baseline from your test suite while executing tests then you have to enable the below mentioned capability configuration needs to be enabled.
-
-
-
 
 ```js title="Please add the following to your capabilities configuration"
 let capabilities = {
@@ -1165,9 +885,6 @@ let capabilities = {
 };
 ```
 
-
-
-
 ```json title="Please make the changes in lambdatest-config.json"
 "smart_ui": {
 // highlight-next-line
@@ -1175,8 +892,15 @@ let capabilities = {
 }
 ```
 
+```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
+const capabilities = {
+'LT:Options': {
+// highlight-next-line
+"smartUIBaseline": true // Please add if you want to make this build as baseline
 
+}}
+```
 
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
@@ -1188,8 +912,6 @@ const capabilities = {
 }}
 ```
 
-
-
 ```js title="Please add the following in <LT:Options> in your capabilities configuration "
 
 const capabilities = {
@@ -1199,20 +921,6 @@ const capabilities = {
 
 }}
 ```
-
-
-
-```js title="Please add the following in <LT:Options> in your capabilities configuration "
-
-const capabilities = {
-'LT:Options': {
-// highlight-next-line
-"smartUIBaseline": true // Please add if you want to make this build as baseline
-
-}}
-```
-
-
 
 ### Build Features
 
@@ -1223,15 +931,11 @@ The following are the list of features that are available for the build process 
 - Add additional screenshots if needed for the existing build by using the same build name in the capabilities. This will add new screenshots to the build.
 - You can also update any build of choice as a new **Baseline** build.
 
-
 We currently only support one baseline for one project in our current version. We recommend you to create a new project for multiple baseline builds
-
 
 ### Build Status Information
 
 We are provide multiple build status options for the project owners to check the status of builds and take required actions to the screenshots by the approver(s).
-
-
 
 ## Multiple Projects per Repo
 
@@ -1249,7 +953,6 @@ Create a repository where you can organize your projects into various directorie
 **Sample repo**
 Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.
  View on GitHub
-
 
 #### Step 2: Create your Secrets
 - Click on the **Settings** of your repository.
@@ -1314,9 +1017,6 @@ If your runs do not currently send branch information, add it before migrating, 
 
 Every source below can be used in the same Omni project. Each one keeps the workflow it already has, because Omni changes where the results land, not how you capture them.
 
-
-
-
 Browser-based capture, through any of the supported routes:
 
 - **CLI exec mode**, to wrap an existing automation suite, for example `npx smartui exec -- npx cypress run`
@@ -1324,15 +1024,7 @@ Browser-based capture, through any of the supported routes:
 - **SDK hooks**, calling `smartui.snapshot()` directly inside your test code
 - **Web Scanner**, for no-code crawling of a site
 
-
-
-
-
 Native mobile app screenshots captured through the app automation SDKs (Appium, Espresso and XCUITest), using the SmartUI screenshot hook inside your test.
-
-
-
-
 
 Designs pulled straight from Figma with the CLI, so the intended design can sit in the same project as the implementation that is meant to match it.
 
@@ -1340,19 +1032,11 @@ Designs pulled straight from Figma with the CLI, so the intended design can sit 
 smartui upload-figma <designs.json>
 ```
 
-
-
-
-
 Component-library validation by crawling a running Storybook instance.
 
 ```bash
 npx smartui storybook <storybook-url>
 ```
-
-
-
-
 
 Multi-page document verification. Each page of the PDF becomes its own comparison.
 
@@ -1362,18 +1046,11 @@ smartui upload-pdf <path-to-pdfs>
 
 PDFs can also be uploaded through the SmartUI PDF API.
 
-
-
-
-
 Raw image assets uploaded directly, for cases where the screenshot is produced outside SmartUI.
 
 ```bash
 smartui upload <path-to-images>
 ```
-
-
-
 
 ### Where Each Source Is Set Up
 
@@ -1426,7 +1103,6 @@ Omni projects are released behind a feature flag and are rolled out progressivel
 
 **Enabled per organisation**
 Omni is switched on for an organisation as a whole, not per user or per project. Once it is enabled, every project you create is an Omni project regardless of which creation flow you use, and it accepts all six capture sources from the start.
-
 
 - **Existing projects are not converted.** Projects created before Omni was enabled keep their original type and continue to behave exactly as they did, accepting the single source they were created for. There is no in place conversion, so plan for new projects rather than a switch on existing ones.
 - **You can tell the two apart from the dashboard URL.** An Omni project opens under `/test/omni/`, while a standard project opens under its own platform, for example `/test/pdf/`.

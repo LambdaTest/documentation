@@ -27,7 +27,6 @@ The TestMu AI Capability Generator can auto-create the capabilities class for yo
 
 ## Related Puppeteer Guides
 
-
 Continue with the guides below to run and configure your Puppeteer tests on TestMu AI.
 
 - [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/) walks through the end-to-end setup.

@@ -12,14 +12,7 @@ Creating projects within Test Manager is the foundational step in organizing and
 
 2. Click on the **Create Project** button.
 
-
-
 3. Enter the **Project name**, **Description**, and **Tag(s)**. Be descriptive to ensure clarity for all team members. Click on **Create** to complete the project creation.
-
-
-
-
-
 
 ## Generate & Automate Tests with AI
 
@@ -34,8 +27,6 @@ The conversion flow has four stages:
 3. **Generate test scenarios**,AI creates structured test cases from your input
 4. **Automate and export code**,convert generated test cases into automation scripts across frameworks
 
-
-
 ### Step 1: Create a Project
 
 Start by creating a project in TestMu AI Test Manager. A project is the container for all your test cases, test runs, and configurations.
@@ -47,17 +38,11 @@ Start by creating a project in TestMu AI Test Manager. A project is the containe
 
 For detailed steps, see [Create Projects](/support/docs/create-projects/).
 
-
-
 ### Step 2: Generate Test Scenarios with AI
 
 Navigate to the **Test Case Listing** page within your project and click **Generate With AI**.
 
-
-
 You can also access this from KaneAI by clicking **Generate Scenarios** on the Agent page.
-
-
 
 #### Supported Input Formats
 
@@ -73,17 +58,9 @@ Provide your requirements in any of the following formats:
 | **Jira Tickets** | Link Jira issues (epics, stories, tasks) via the pin icon |
 | **Azure DevOps** | Link ADO work items via the pin icon |
 
-
-
-
 Before generating, configure **Max Scenarios**, **Max Test Cases per Scenario**, and toggle **Memory Enhancement** to leverage your existing test case repository and avoid duplicates.
 
-
-
-
 Press **Enter** to generate. The AI analyzes your input and produces structured test scenarios with test cases.
-
-
 
 Each scenario is tagged with priority (`Must have`, `Should have`, `Could have`) and each test case is categorized as **Positive**, **Negative**, or **Edge**.
 
@@ -91,21 +68,15 @@ Each scenario is tagged with priority (`Must have`, `Should have`, `Could have`)
 
 After generation, use the **Conversation Layer** to refine your test cases through natural language,add coverage, remove duplicates, reorganize scenarios, or update details without manual editing.
 
-
-
 For the full guide on conversational refinement, see [AI Test Case Generator](/support/docs/generate-test-cases-with-ai/#conversation-layer-refine-your-test-cases).
 
 ### Telemetry- and trace-driven test generation
 
 TestMu AI can ingest production telemetry, application logs and runtime execution traces to generate and maintain tests. Real user interactions and session traces are converted into structured, editable test scenarios that reflect how the application is actually used, and telemetry signals feed Test Intelligence to prioritise coverage where failures are most likely.
 
-
-
 ### Step 3: Save or Automate
 
 Once your test scenarios are ready, select the test cases you want to keep and choose one of two paths:
-
-
 
 #### Option A: Create Test Cases
 
@@ -115,8 +86,6 @@ Click **Create** to save the test cases to your **Test Case Repository** in Test
 
 Click **Create and Automate** to save the test cases and automatically send them to **KaneAI** for automation. KaneAI executes each test case using natural language understanding and generates automation scripts.
 
-
-
 ### Step 4: Generate Automation Code
 
 Once KaneAI has automated your test cases, you can generate code in multiple frameworks and languages.
@@ -124,8 +93,6 @@ Once KaneAI has automated your test cases, you can generate code in multiple fra
 1. Open the automated test case in KaneAI.
 2. Click **Generate New Code**.
 3. Select your desired framework and language.
-
-
 
 #### Supported Frameworks
 
@@ -141,8 +108,6 @@ The generated code is fully accessible,download it, customize it, and integrate 
 
 For the full code generation guide, see [KaneAI Code Generation](/support/docs/kane-ai-automation-code-generation/).
 
-
-
 ### Alternative Path: Record User Interactions
 
 Instead of providing written requirements, you can use KaneAI's **Manual Interaction Mode** to record real user actions and convert them into automated tests.
@@ -156,8 +121,6 @@ Instead of providing written requirements, you can use KaneAI's **Manual Interac
 This is useful when requirements are easier to demonstrate than describe, or when you want to capture existing user workflows as automated tests.
 
 For the full guide, see [KaneAI Manual Interaction Mode](/support/docs/kaneai-manual-interaction/).
-
-
 
 ### End-to-End Flow Summary
 
@@ -179,8 +142,6 @@ Cypress, Appium, etc.)
 ▼
 Download / CI/CD / HyperExecute
 ```
-
-
 
 ### Related Docs
 

@@ -8,8 +8,6 @@ Desired capabilities in Appium on TestMu AI are key-value pairs telling the Appi
 
 > **Note:** With TestMu AI [capabilities generator](https://www.testmuai.com/capabilities-generator/) run your App Automation leveraging Appium Desktop.
 
-
-
 ## Mandatory capabilities
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
 |-----|------- | ---------------------- |--------------|
@@ -78,7 +76,6 @@ Desired capabilities in Appium on TestMu AI are key-value pairs telling the Appi
 | enableBluetooth | TYPE: Boolean DEFAULT: false `enableBluetooth: true` | Used to enable the bluetooth functionality during the session.|  Real|
 | location | TYPE: HashMap   Python example:  `location: {"lat": "28.6235192", "long": "77.3662948"}`   For examples in other languages, please head over to [Capability Generator](https://www.testmuai.com/capabilities-generator/)  | Used to change the GPS Geolocation of the device to the location provided.  If this capability is not passed, the device will auto update the Geo Location based on the physical location of the device.  It needs to be passed in a HashMap structure with `lat` & `long` being passed separately. | Real &amp; Virtual|
 
-
 ## Device configuration
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
 |-----|--------| -----------------------|--------------|
@@ -92,8 +89,6 @@ Desired capabilities in Appium on TestMu AI are key-value pairs telling the Appi
 | tunnelName | TYPE: STRING  `tunnelName=RabbitHole` | Name of the tunnel. | Real &amp; Virtual|
 | dedicatedProxy | TYPE: BOOLEAN  `dedicatedProxy=TRUE`  OR  `dedicatedProxy=FALSE` | Dedicated Proxy. | Real &amp; Virtual|
 | blockDomains | TYPE: Array of Strings  `"blockDomains": ["www.facebook.com", "www.amazon.com"]  ` | It is used to block the mentioned domains on the device.|  Real|
-
-
 
 > Got any questions?
 > Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).

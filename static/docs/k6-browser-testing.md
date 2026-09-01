@@ -6,19 +6,11 @@ The [k6 Browser module](https://github.com/grafana/xk6-browser) brings browser a
 
 k6 browser module aims to provide rough compatibility with the Playwright API, so you don’t need to learn a completely new API.
 
-
-
-
-
-
-
 TestMu AI allows you to run k6 Browser tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with K6 testing on the TestMu AI platform.
 
 **Note**: k6 Browser is an experimental module that supports browser testing through the Chrome DevTools Protocol (CDP).
 
 ## Prerequisites
-
-
 
 > Note: All the code samples in this documentation can be found in the TestMu AI's Repository on GitHub. You can either
 > download or clone the repository to quickly run your tests.
@@ -28,8 +20,6 @@ TestMu AI allows you to run k6 Browser tests on a browser farm of 40+ real brows
 
 2. In order to run your k6 tests, you will need to set your TestMu AI username and access key in the environment
    variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
-
-
 
 **Windows**
 
@@ -46,8 +36,6 @@ export LT_ACCESS_KEY = "YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Run Your First k6 Test
-
-
 
 Shown below are the steps on running k6 tests on the TestMu AI platform.
 
@@ -130,12 +118,8 @@ K6_BROWSER_ENABLED=true k6 run k6_sample.js
 
 ## View your k6 test results
 
-
-
 The TestMu AI Automation Dashboard is where you can see the results of your k6 tests after running them on the TestMu AI platform.
 
 The below screenshot of TestMu AI Automation Dashboard shows the k6 build on the left and the build sessions associated with the selected build on the right.
-
-
 
 On clicking the session name of the respective test, you can view the details of k6 test session that you just executed. For example, the below screenshot shows a test execution details of k6 test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.

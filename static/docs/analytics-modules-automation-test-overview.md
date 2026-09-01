@@ -6,8 +6,6 @@ The Test Overview module in TestMu AI Analytics is a powerful tool that provides
 
 ## Test Health Snapshot
 
-
-
 The Test Health Snapshot widget enables you to quickly assess the flakiness or inconsistency of your tests executed on the TestMu AI platform. This widget displays the count of unique test names and their consistency in test status over a specified duration.
 
 #### How It Works
@@ -20,8 +18,6 @@ By identifying inconsistent tests, you can focus your efforts on stabilizing you
 
 ## Build Health Snapshot
 
-
-
 The Build Health Snapshot widget provides an overview of the performance and consistency of your builds created on the TestMu AI platform. It displays the count of unique build names and their consistency in build status over a specified duration.
 
 #### How It Works
@@ -33,8 +29,6 @@ The Build Health Snapshot widget provides an overview of the performance and con
 By monitoring the health of your builds, you can identify and resolve any inconsistencies or errors in your build process. This widget helps you ensure the reliability and stability of your builds, leading to a more efficient and effective testing workflow.
 
 ## Test Summary
-
-
 
 The Test Summary widget provides a high-level overview of the total tests run on the TestMu AI platform, grouped by their status. It also includes information about various test-related errors, such as test case errors, idle timeouts, queue timeouts, and Lambda errors.
 
@@ -59,8 +53,6 @@ For a comprehensive guide on how unique instances and retry attempts are detecte
 
 ## Test Browser Distribution
 
-
-
 The Test Browser Distribution widget provides a breakdown of the tests executed across different browsers on the TestMu AI platform. It displays the distribution of tests by browser and allows you to drill down into specific browser versions.
 
 #### How It Works
@@ -72,8 +64,6 @@ The Test Browser Distribution widget provides a breakdown of the tests executed 
 By understanding the browser distribution of your tests, you can ensure adequate coverage across different browsers and versions. This widget helps you identify any browser-specific issues and optimize your test coverage to deliver a seamless user experience across various browsers.
 
 ## Test OS Distribution
-
-
 
 The Test OS Distribution widget provides an overview of the tests executed across different operating systems on the TestMu AI platform. It displays the distribution of tests by operating system and allows you to drill down into specific OS versions.
 
@@ -87,8 +77,6 @@ Understanding the distribution of tests across different operating systems helps
 
 ## Test Trends
 
-
-
 The Test Trends widget provides a visual representation of the trends in test execution over time. It allows you to analyze the performance of your tests and compare current trends with historical data.
 
 #### How It Works
@@ -100,8 +88,6 @@ The Test Trends widget provides a visual representation of the trends in test ex
 By analyzing test trends, you can identify patterns, spikes, or dips in test execution. This information helps you understand the impact of changes in your testing process, identify areas for optimization, and make data-driven decisions to improve your overall testing strategy.
 
 ## Test Device Coverage
-
-
 
 The Test Device Coverage widget, specifically designed for App Automation, provides an overview of the tests executed across different mobile devices on the TestMu AI platform. It displays the distribution of tests by device and allows you to drill down into specific device models.
 
@@ -115,8 +101,6 @@ Understanding the device coverage of your tests is crucial for ensuring the comp
 
 ## Test Status Ratio
 
-
-
 The Test Status Ratio widget provides a breakdown of the test statuses (passed, failed, skipped, etc.) for the tests executed on the TestMu AI platform. It allows you to assess the overall quality and stability of your test cases.
 
 #### How It Works
@@ -126,8 +110,6 @@ The Test Status Ratio widget provides a breakdown of the test statuses (passed, 
 
 #### Value Proposition
 By analyzing the test status ratio, you can quickly identify the proportion of passing, failing, and skipped tests. This information helps you assess the overall health and reliability of your test suite. You can use this widget to track improvements in test stability over time and identify areas that require further attention and optimization.
-
-
 
 The Test Overview module in TestMu AI Analytics empowers you to gain comprehensive insights into your test performance, identify trends, and make data-driven decisions to optimize your testing process. By leveraging the various widgets available in this module, you can ensure test reliability, improve test coverage, and deliver high-quality applications across different browsers, operating systems, and devices.
 

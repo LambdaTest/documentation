@@ -6,60 +6,32 @@ Run your Java Playwright tests on the TestMu AI cloud grid to reach 50+ real des
 
 ## Prerequisites
 
-
 Complete these before running the test below.
 
 1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile. Don't have an account? Sign up for free.
-
-
 
 2. [JDK](https://www.oracle.com/java/technologies/downloads/) 8 or later and [Apache Maven](https://maven.apache.org/) installed. The sample projects are Maven projects, so Maven resolves the dependencies when you build.
 3. Clone the sample repository. Each framework lives in its own subdirectory.
 
 **Sample repo**
-Download or clone the code sample for the Playwright Java from the TestMu AI GitHub repository to run the tests.
-
  View on GitHub
 
-
-```bash
+```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 ```
 
 ## Set Your Credentials
 
-
 Your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
-
 ## How the Sample Test Works
-
 
 The test builds a `capabilities` object that carries the browser, version, platform, and your `LT:Options`, then connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. The credentials come from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set above:
 
@@ -82,14 +54,12 @@ JUnit wraps this same connection in a `@DataProvider` so one test runs across mu
 
 ## Run the Test With JUnit
 
-
 JUnit runs the connection through a `@DataProvider`, so a single test runs across multiple browser configurations (here Chrome and Microsoft Edge). You can use your own project, or the sample below.
 
 1. Clone the sample project and move into the JUnit subdirectory:
 
 **Sample repo**
  View on GitHub
-
 
 ```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
@@ -127,7 +97,6 @@ ltOptions1.addProperty("user", user);
 ltOptions1.addProperty("accessKey", accessKey);
 capabilities1.add("LT:Options", ltOptions1);
 
-
 JsonObject capabilities2 = new JsonObject();
 JsonObject ltOptions2 = new JsonObject();
 capabilities2.addProperty("browserName", "MicrosoftEdge"); // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
@@ -153,11 +122,9 @@ mvn clean test
 
 ## View Your Results
 
-
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms the test passed.
 
 ## Related Playwright Guides
-
 
 Continue with these related guides:
 

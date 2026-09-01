@@ -6,25 +6,28 @@ Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 
 ## Prerequisites
 
+Complete the following steps before you start Ruby automation testing with Selenium.
 
-1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
-2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
-3. Install [Ruby](https://www.ruby-lang.org/en/downloads/) and the `gem` package manager.
-4. Install the `selenium-webdriver` gem (and `parallel_tests` for parallel runs), pulled in by the sample projects via Bundler.
+1. Install **Ruby** and **gem** on your local system. Follow these instructions to install on different operating systems.
+   * For **Windows**, download from the [Ruby Installer for Windows](https://rubyinstaller.org/downloads/).
+   * For **Linux** or **Ubuntu**, run a simple apt command like below:
+```bash
+sudo apt-get install ruby-full
+```
+   * For **macOS**, run a [Homebrew](https://brew.sh/) command like this:
+```bash
+brew install ruby
+```
+2. Install the [parallel_tests](https://github.com/grosser/parallel_tests) gem to run tests in parallel.
+3. Get the TestMu AI binary file for running tests on your locally hosted web pages.
 
 ## Set Your Credentials
 
+Clone the repository and install dependencies.
 
 Your Username and Access Key are read from environment variables, set once per operating system.
 
-## Step 1: Clone the Sample Project
-
-Clone the repository and install dependencies.
-
-```bash
-git clone https://github.com/LambdaTest/ruby-selenium-sample.git
-cd ruby-selenium-sample
-```
+Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
 Install selenium dependencies:
 ```bash
@@ -37,34 +40,13 @@ Configure your credentials to connect to the TestMu AI Selenium Grid.
 
 Set TestMu AI Username and Access Key in environment variables.
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-
-
-
-
-
-
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ## How the Sample Test Works
-
 
 Define browser, version, and OS settings for your test run.
 
@@ -88,30 +70,33 @@ caps = {
 **Capabilities Generator**
 Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
 
-
-Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
-
-
 ## Run a Test in Your Framework
 
+Use AI coding assistants to generate and run Ruby Selenium tests with the TestMu AI Agent Skill.
 
-Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
-
-
-
-
-Capybara runs with Cucumber for BDD-style tests, driven by Bundler and Rake tasks.
-
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/Capybara-Cucumber-Ruby):
+Install the skill:
 
 ```bash
-ruby todo-click-test.rb
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/selenium-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/selenium-skill .cursor/skills/
 ```
 
-## Step 5: View Your Results
+2. Set your browser and OS in the capabilities hash:
 
-Check the test output on the console and the TestMu AI dashboard.
+```ruby
+@caps = {
+"browserName" => "chrome",
+"browserVersion" => "latest",
+"platformName" => "Windows 10",
+"build" => "capybara-lambdatest",
+"name" => "single-Test"
+}
+```
 
 3. Install the project dependencies:
 
@@ -122,18 +107,11 @@ bundle install
 4. Run a single test, or in parallel:
 
 ```bash
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/selenium-skill .claude/skills/
-
-# For Cursor / Copilot
-cp -r agent-skills/selenium-skill .cursor/skills/
+bundle exec rake single
+bundle exec rake parallel
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 RSpec loads capabilities from config YAML files and passes them to the remote WebDriver, run via Rake tasks.
 
@@ -159,10 +137,6 @@ bundle exec rake parallel
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 Test::Unit runs a Ruby test file directly, with capabilities inline, and no Bundler task runner.
 
@@ -199,19 +173,13 @@ ruby LambdaTest.rb
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 ## View Your Results
-
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 **Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

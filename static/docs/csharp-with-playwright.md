@@ -6,19 +6,15 @@ Run your C# Playwright tests on the TestMu AI cloud grid to reach 50+ real deskt
 
 ## Prerequisites
 
-
 Complete these before running the test below.
 
 1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile. Don't have an account? Sign up for free.
-
-
 
 2. The [.NET SDK](https://dotnet.microsoft.com/en-us/download) installed. The sample project uses the built-in Playwright tooling for .NET, so `dotnet restore` resolves the dependencies when you build.
 3. Clone the sample repository and move into the C# subdirectory.
 
 **Sample repo**
  View on GitHub
-
 
 ```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
@@ -34,37 +30,15 @@ dotnet restore
 
 ## Set Your Credentials
 
-
 Your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
-
 ## How the Sample Test Works
-
 
 The test builds a `capabilities` dictionary that carries the browser, version, platform, and your `LT:Options`, then connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. The credentials come from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set above. The full sample lives in `PlaywrightTestSingle.cs` in the `playwright-csharp` directory:
 
@@ -136,7 +110,6 @@ The `SetTestStatus` helper reports pass or fail back to the grid so the result s
 
 ## Run the Test With dotnet
 
-
 Build and run the sample from the `playwright-csharp` directory. You can use your own project or the sample above.
 
 1. Build the project:
@@ -151,17 +124,13 @@ dotnet build
 dotnet run single
 ```
 
-
 To run sessions on custom devices with emulation, run `dotnet run iphonetest` or `dotnet run ipadtest`.
 
-
 ## View Your Results
-
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms the test passed.
 
 ## Related Playwright Guides
-
 
 Continue with these related guides:
 

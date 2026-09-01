@@ -4,20 +4,11 @@
 
 ChromeOS is a lightweight, Linux-kernel-based operating system designed for Chromebooks. It prioritizes speed, security, and manageability, with a focus on cloud-based applications and services. This makes it ideal for resource-constrained environments and cloud-centric workflows like ed-tech business.
 
-
-
-
       ChromeOS Web Browser Testing
       Guidebook about the features offered for testing your webapps in ChromeOS
 
-
-
-
       ChromeOS App Testing
       Guidebook about the features offered for testing your apps in ChromeOS
-
-
-
 
 ## Benefits of using ChromeOS Testing
 

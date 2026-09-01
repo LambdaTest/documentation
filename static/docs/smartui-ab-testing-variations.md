@@ -20,7 +20,6 @@ You do **not** need a separate project type for A/B. Create or open the screensh
 **PDF projects**
 Set up PDF ingestion first if you are new to PDF comparison: [PDF Comparison in SmartUI](/support/docs/smartui-pdf-comparison/), [Upload PDFs via Java SDK](/support/docs/smartui-pdf-comparison/), or [PDF CLI upload](/support/docs/smartui-pdf-comparison/).
 
-
 ## Key terms
 
 | Term | Meaning |
@@ -40,9 +39,6 @@ Set up PDF ingestion first if you are new to PDF comparison: [PDF Comparison in 
 
 **UI labels**
 Button names may vary slightly (**End experiment**, **End A/B testing**, **Pick winner**). Use the action that **selects one variation as the sole baseline** and removes the rest. Contact [support](mailto:support@testmuai.com) if you are unsure.
-
-
-
 
 ## When to use A/B variations
 
@@ -67,8 +63,6 @@ Button names may vary slightly (**End experiment**, **End A/B testing**, **Pick 
 
 For **build-level** baselines (branches, approvals, Smart Git), see [Baseline Management](/support/docs/smartui-baseline-management/) and [Approval & Baseline Workflow](/support/docs/smartui-running-your-first-project/).
 
-
-
 ## Prerequisites
 
 - A TestMu AI account with **SmartUI** access and an existing **project** with at least one build.
@@ -76,32 +70,22 @@ For **build-level** baselines (branches, approvals, Smart Git), see [Baseline Ma
 - Permission to **review** and update baselines in that project.
 - No extra automation flags are required to **start** A/B from the UI—for web tests, keep the same **`screenshotName`**; for PDFs, keep the same page identity in your upload or SDK flow.
 
-
-
 ## Open the A/B testing panel
 
 1. Open your **SmartUI project** and select the **build** that contains the screenshot.
 2. Open the **screenshot** (comparison / review view).
 3. Click the **A/B** icon on the screenshot toolbar.
 
-
-
 The **variations pane** opens on the **right**. The steps below assume you stay in this pane unless noted.
-
-
 
 ## Default variation (dynamic baseline)
 
 When the pane opens, you see the **default variation**:
 
-
-
 - It reflects the **current baseline** for this screenshot in this **build context**, per your project’s **SmartUI baseline rules** (for example the latest **approved** reference for that build strategy).
 - It is **dynamic**: if the governing baseline changes (approval, move to baseline, branch rules), the default variation **follows** that reference—it is not a separate image you pin manually.
 
 You **cannot** assign another variation to replace this **default** slot. **Default** means the **platform baseline** for this screenshot, not a renameable card in your list.
-
-
 
 ## Activate A/B testing: Add new
 
@@ -109,13 +93,7 @@ You **cannot** assign another variation to replace this **default** slot. **Defa
 2. SmartUI creates a variation from the **current capture** (the screenshot you are viewing).
 3. From the **next build onward**, new captures for this name are compared against the **default** and **every user-added** variation. That activates multi-baseline A/B for this screenshot.
 
-
-
 Each added variation stays active until you **delete** it or **end A/B testing**.
-
-
-
-
 
 ## After new builds: Matched with and limits
 
@@ -123,13 +101,10 @@ Each added variation stays active until you **delete** it or **end A/B testing**
 
 When a new build processes this screenshot, the pane shows **Matched with** and the **variation name** when a capture aligns with one of your references. SmartUI picks the **closest** match among active variations (typically the **lowest diff percentage** within your comparison threshold).
 
-
-
-Only **one** variation is shown as the match for triage at a time, the best fit for that capture.
+Only **one** variation is shown as the match for triage at a time—the best fit for that capture.
 
 **Unmatched captures**
 If **no** variation is within threshold, the screenshot may still show as **changes found** or unmatched. Add a new variation from that capture, adjust thresholds, or **end A/B** once you know the intended winner. See [Mismatch Thresholds](/support/docs/smartui-mismatch-thresholds/).
-
 
 ### How many variations?
 
@@ -142,8 +117,6 @@ If **no** variation is within threshold, the screenshot may still show as **chan
 
 Every **active variation** is used when comparing **future** captures for that screenshot. Usage is counted like standard baseline comparison work across the full variation set. For plan-specific metering, contact [support](mailto:support@testmuai.com).
 
-
-
 ## Manage user variations (rename, update, delete)
 
 For variations you added with **Add new** (not the dynamic **default**):
@@ -154,13 +127,7 @@ For variations you added with **Add new** (not the dynamic **default**):
 | **Update** | Replace the variation’s reference with the **current capture** when that alternate “good” state changed. |
 | **Delete** | Remove a variation you no longer need. You cannot delete the **default** slot. |
 
-
-
-
-
 To return to a **single** baseline without picking a winner yet, delete user-added variations one by one. To **commit** to one outcome and remove the rest in one step, use **End A/B testing** below.
-
-
 
 ## End A/B testing (pick a winner)
 
@@ -170,19 +137,11 @@ When the experiment is finished:
 2. **Select the variation** that should be the **only** baseline for this screenshot going forward.
 3. Confirm. SmartUI promotes that choice and **deletes the other variations**, returning this screenshot to **single-baseline** mode until you add variations again.
 
-
-
-
-
-
-
 ## Limits and guardrails
 
 - **20 variations maximum** per screenshot (1 default + 19 user-added).
 - **Comparison mode** (pixel, layout, Smart Ignore, and so on) applies at the **screenshot** level for all variations on that screenshot.
 - **Branch and merge** behavior for baselines still follows your project settings; see [Baseline Management](/support/docs/smartui-baseline-management/) and [Branch merging](/support/docs/smartui-git-branching-strategy/#branch-level-merging) for Git-linked workflows.
-
-
 
 ## Troubleshooting
 
@@ -203,8 +162,6 @@ You can have at most **20** variations (including default). **Delete** unused us
 ### Can I mark my custom variation as default?
 
 No. The **default** card tracks the **platform baseline** for the build. User-added variations are managed with rename/update/delete; **End A/B testing** is how you make one variation the **sole** baseline.
-
-
 
 ## Related documentation
 

@@ -8,20 +8,15 @@ TestMu AI offers an online Appium automation grid to perform App automation. The
 
 ## Changes In The Test Script
 
-
 To move from the local grid to the cloud-based Appium grid, you need to make some changes to your automation scripts like authentication, desired capabilities etc.
 
 ## Authentication
-
 
 To run tests on TestMu AI, you will need TestMu AI authentication credentials: TestMu AI Username and a TestMu AI Access Key. If you do not have a TestMu AI account, visit the TestMu AI register page and create one.
 
 You can get the TestMu AI Username and TestMu AI Access Key from your TestMu AI Profile.
 
-
-
 ## Desired Capabilities In Appium
-
 
 Appium's Desired Capabilities are a collection of key-value pairs wrapped inside a JSON object. These key-value pairs request the Appium server for the required test automation session.
 
@@ -40,7 +35,6 @@ caps = [
 ```
 
 ## Running Tests On TestMu AI Appium Grid
-
 
 To begin, change the authentication in your test suite's configuration settings. To run the tests on TestMu AI Appium Grid, you need a valid user name and access key. If you were already performing tests on your local grid, you will need to modify your test script to initialize an Appium driver along with your desired capabilities.
 
@@ -71,7 +65,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from appium.webdriver.common.mobileby import MobileBy
 from appium import webdriver
 
-
 # This array 'caps' defines the capabilities of the browser, device, and OS combinations where the test will run
 caps = [
 
@@ -88,7 +81,6 @@ caps = [
 },
 ]
 # run_session function searches for 'lambdatest' on google.com
-
 
 def run_session(desired_cap):
 driver = webdriver.Remote(
@@ -118,7 +110,6 @@ assert(len(search_results) > 0)
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
 
-
 # The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel
 for cap in caps:
 Thread(target=run_session, args=(cap,)).start()
@@ -127,8 +118,6 @@ Thread(target=run_session, args=(cap,)).start()
 
 ## Testing Locally Hosted Apps
 
-
 ## Supported Languages And Frameworks
-
 
 >That’s all! In case you have any questions or need any additional information, you could reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.

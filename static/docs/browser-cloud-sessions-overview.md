@@ -7,7 +7,6 @@ through simple SDK calls. Each session is like giving your AI agent its own
 dedicated browser window, but running on TestMu AI Browser Cloud and controlled
 through your code.
 
-
 ## Sessions at a Glance
 
 When you create a session, you get a fully isolated Chrome browser running in
@@ -23,11 +22,9 @@ Specifically, each session gives you:
 3. A **debug URL** to watch the session on the TestMu AI dashboard
 4. A **session viewer URL** for real-time streaming of the browser
 
-
 ## Before You Begin
 
 If you have not set up your account and installed the SDK yet, [launch your first session](/support/docs/launch-first-session/) before working with sessions.
-
 
 ## How It Works
 

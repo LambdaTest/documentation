@@ -4,8 +4,6 @@
 
 **TestMu AI Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user's local machine and the real machine in the cloud. There are multiple connectivity options like **TCP with TLS 1.2 over port 443**, **Websocket (port 443)**,. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
 
-
-
 > All Tunnel credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the TestMu AI tunnel. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. TestMu AI assumes no liability for any losses arising from failure to comply.
 
 ## Why to Use TestMu AI Tunnel?
@@ -37,7 +35,6 @@ You can download the Tunnel Binary as per your respective machine architecture f
 | Solaris/AMD64 | https://downloads.lambdatest.com/tunnel/v3/solaris/amd64/LT |
 
 ## Minimum System Requirements for TestMu AI Tunnel
-
 
 To ensure optimal performance and reliability when running TestMu AI Tunnel, your system should meet or exceed the following requirements:
 

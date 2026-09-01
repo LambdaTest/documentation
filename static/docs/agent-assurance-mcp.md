@@ -73,7 +73,6 @@ rook mcp add notion \
 **Remote transport status**
 HTTP, SSE, and WebSocket definitions are accepted, stored, and listed for forward compatibility. The current pre-alpha release connects only to stdio MCP servers, so remote entries appear as `unsupported-transport`.
 
-
 ## Inspect a Definition
 
 ```bash

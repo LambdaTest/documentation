@@ -6,10 +6,7 @@ Manual accessibility testing ensures that your website is fully accessible and c
 
 Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.
 
-
 This feature is currently in **Beta**. Please reach out to our [Support](https://www.testmuai.com/support/) team for access.
-
-
 
 ## Accessing Screen Reader in Real Device Browser Testing
 
@@ -20,8 +17,6 @@ VoiceOver-enabled devices are available in a separate device pool. To access the
 **Step 2:** Click on **Advanced Settings** and navigate to the **Device Control** section.
 
 **Step 3:** Enable the **VoiceOver** toggle. This filters the device list to show only VoiceOver-enabled devices from the dedicated pool.
-
-
 
 **Step 4:** Select an iOS device from the filtered list, enter your URL, and click **Start** to launch your session. Once the session starts, the VoiceOver feature will be active on the device.
 
@@ -36,7 +31,6 @@ The VoiceOver feature is currently supported on selected iOS devices, allowing a
 | iPhone 15 | iOS 17 |
 | iPhone 16 | iOS 18 |
 | iPhone 17 | iOS 26 |
-
 
 ## How to Navigate using Keyboard Shortcuts
 
@@ -77,8 +71,5 @@ Below is a list of VoiceOver keyboard shortcuts, using `Control+Option` on macOS
 | Return to the previous screen                        | Option+Esc                                          | Windows+Esc+EscEsc                                  |
 
 By incorporating **VoiceOver** keyboard navigation into your accessibility testing workflow, you can identify usability barriers early, ensuring compliance with WCAG standards and delivering an **inclusive digital experience for all users**.
-
-
-
 
  If the keyboard shortcuts do not work initially, click on the device screen in your test session to ensure that it is in focus.

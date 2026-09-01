@@ -46,7 +46,6 @@ By default, your Selenified tests would be executed over a standalone server. To
 
 You can also run your Selenified test automation scripts on TestMu AI Selenium Grid by simply declaring your TestMu AI authentication credentials as the environment variables in your Selenified test automation script.
 
-
 >**Note:** TestMu AI clubs your test cases under a group and assigns them under a build. If you wish to override the build name, then you can do so by invoking the `buildName` parameter in your Selenified script.
 
 ```

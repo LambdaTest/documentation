@@ -11,27 +11,37 @@ This feature is available exclusively with the **Real Device Plus Automation Clo
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-
-
-
 ## Overview
 
 Audio Injection enables you to simulate microphone input on real devices by injecting pre-recorded audio files (MP3, WAV) into the device's mic pipeline during automated tests.
 
 Use it to test speech-to-text, voice commands, voice assistants, in-app recording, KYC voice verification, and any other microphone-dependent feature.
 
-
-
 ## Supported Devices
 
-| Platform | Minimum OS Version |
+**Audio Injection is supported on selected Real Devices only. It is not available on Emulators or Simulators.**
+
+### Android
+
+| Android Device | Android Version |
 |---|---|
-| **Android** | Android 13 (SDK 33) and above |
-| **iOS** | iOS 16 and above |
+| Galaxy S26 | 16 |
+| Galaxy S24 | 14 |
+| Galaxy S23 | 14 |
+| Pixel 10 | 16 |
+| Pixel 10 Pro | 16 |
+| Pixel 10 Pro XL | 16 |
+| Pixel 9 | 15 |
+| Pixel 8 | 14, 16 |
 
-Audio Injection is supported on **real devices only**. It is **not** available on emulators or simulators.
+### iOS
 
-
+| iOS Device | iOS Version |
+|---|---|
+| iPhone 17 Pro | 26 |
+| iPhone 17 | 26 |
+| iPhone 16 | 18 |
+| iPhone 15 | 17 |
 
 ## Supported File Formats
 
@@ -41,8 +51,6 @@ Audio Injection is supported on **real devices only**. It is **not** available o
 | WAV | 200 MB |
 
 The audio file must be uploaded to TestMu AI before it can be injected.
-
-
 
 ## Step 1 - Upload Audio File
 
@@ -63,25 +71,15 @@ curl -u "LT_USERNAME:LT_ACCESS_KEY"   -X POST "https://api.lambdatest.com/mfs/v1
 
 Save the returned `media_url`. You will use it in subsequent steps.
 
-
-
 ## Step 2 - Enable Audio Injection on Your Session
 
 Set the `enableAudioInjection` capability when creating your driver session.
-
-
-
-
 
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("enableAudioInjection", true);
 caps.setCapability("media", "lt://MEDIA1234567890abcdef"); // optional: pre-set audio
 ```
-
-
-
-
 
 ```python
 desired_caps = {
@@ -91,10 +89,6 @@ desired_caps = {
 }
 ```
 
-
-
-
-
 ```javascript
 const capabilities = {
 enableAudioInjection: true,
@@ -103,15 +97,7 @@ media: "lt://MEDIA1234567890abcdef", // optional
 };
 ```
 
-
-
-
-
-
 Setting the `media` capability pre-injects the audio when the session starts. You can still use the `lambda-audio-injection` hook later to switch to a different file mid-session.
-
-
-
 
 ## Step 3 - Inject and Control Audio with Lambda Hooks
 
@@ -122,10 +108,6 @@ Use the following hooks via `driver.executeScript`:
 | `lambda-audio-injection=` | Set the audio file to be injected |
 | `lambda-audio-start` | Start playing the injected audio into the device microphone |
 | `lambda-audio-stop` | Stop audio playback |
-
-
-
-
 
 ```java
 // 1. Set the audio file
@@ -143,10 +125,6 @@ driver.executeScript("lambda-audio-start");
 driver.executeScript("lambda-audio-stop");
 ```
 
-
-
-
-
 ```python
 driver.execute_script("lambda-audio-injection=lt://MEDIA1234567890abcdef")
 driver.find_element(AppiumBy.ID, "recordButton").click()
@@ -154,10 +132,6 @@ driver.execute_script("lambda-audio-start")
 # ...
 driver.execute_script("lambda-audio-stop")
 ```
-
-
-
-
 
 ```javascript
 await driver.executeScript("lambda-audio-injection=lt://MEDIA1234567890abcdef");
@@ -167,12 +141,6 @@ await driver.executeScript("lambda-audio-start");
 await driver.executeScript("lambda-audio-stop");
 ```
 
-
-
-
-
-
-
 ## Execution Rules
 
 - Audio must be **injected before** triggering the microphone in the app. The last injected audio is the active input.
@@ -181,16 +149,12 @@ await driver.executeScript("lambda-audio-stop");
 - Multiple injections in the same session: the last injected audio is used on the next `lambda-audio-start`.
 - The app must be granted microphone permission. Audio Injection does **not** bypass permission prompts.
 
-
-
 ## Best Practices
 
 - Keep audio files short (under 5 minutes) for predictable timing.
 - Use 16 kHz mono PCM-encoded MP3 or WAV for best compatibility across devices.
 - Inject the audio file once at session start, then call `lambda-audio-start` / `lambda-audio-stop` around your test steps for precise control.
 - For voice-recognition tests, allow the device 1-2 seconds of silence before injecting speech to let the recognizer initialize.
-
-
 
 ## FAQs
 
@@ -218,14 +182,10 @@ Confirm:
 
 Yes. Call `lambda-audio-injection=` followed by `lambda-audio-start`. The new file replaces the previous one immediately.
 
-
-
 ## Related Features
 
 - [Camera Image Injection](/docs/camera-image-injection/): Inject images into the device camera
 - [Video Injection](/docs/video-injection/): Inject videos into the device camera
 - [Biometric Authentication](/docs/biometric-authentication/): Simulate fingerprint/face authentication
-
-
 
 **Need help?** Contact Support or chat with us at the bottom-right of any page.

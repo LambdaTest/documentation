@@ -8,14 +8,11 @@ TestMu AI supports Playwright versions v1.15.0 through the latest release, and a
 
 ## Prerequisites
 
-
 Set up the following before you run the test so Playwright can authenticate and connect to the TestMu AI grid.
 
 **Sample repo**
 
 Clone the TestMu AI Playwright sample repository used in this document to follow along with the same files shown here.  View on GitHub
-
-
 
 1. Clone the TestMu AI Playwright repository on your system.
 
@@ -33,8 +30,6 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 
 4. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find both values.
 
-
-
 **Windows**
 
 ```js
@@ -50,7 +45,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Run Your First Test
-
 
 This section builds a single Playwright script that connects to the TestMu AI grid and runs one test. Start with the connection snippet, then use the full script that searches Bing and reports its status.
 
@@ -134,7 +128,6 @@ node playwright-single.js
 ```
 
 ## Run Tests in Parallel
-
 
 Once your first test runs, you can execute the same test across multiple browser and OS configurations at once. Define a `capabilities` array with one entry per configuration, then run each through a shared function.
 
@@ -230,7 +223,6 @@ node playwright-parallel.js
 
 ## Run Tests With the SDK
 
-
 If you would rather not edit your scripts to connect to the grid, run your existing Playwright suite with the [`@lambdatest/playwright-node-sdk`](https://www.npmjs.com/package/@lambdatest/playwright-node-sdk) CLI and no code changes. You define credentials, capabilities, and run settings in a single `lambdatest.yml` file. The SDK also manages the TestMu AI Tunnel for local testing and drops into any CI/CD pipeline.
 
 **1. Install the SDK** as a dev dependency in your project:
@@ -244,7 +236,6 @@ npm install @lambdatest/playwright-node-sdk
 ```bash
 npx playwright-node-sdk --init
 ```
-
 
 Example lambdatest.yml
 
@@ -302,8 +293,6 @@ browserName: "chrome" # Or pw-firefox, pw-webkit
 browserVersion: "latest"
 ```
 
-
-
 **3. Run your tests** through the SDK wrapper (you can pass any standard Playwright CLI option):
 
 ```bash
@@ -314,19 +303,13 @@ When you run this, the SDK reads `lambdatest.yml`, starts the TestMu AI Tunnel i
 
 ## View Your Playwright Test Results
 
-
 The TestMu AI Automation Dashboard is where you review the results of your Playwright tests after running them on the grid. Use it to confirm a run passed and to open individual sessions for debugging.
 
 The screenshot below shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
-
-
 Click the session name of a test to view its details. For example, the screenshot below shows the test execution details of a Playwright test, including test name, test ID, selected configurations, test logs, basic info, input config, and the test session video.
 
-
-
 ## Related Playwright Guides
-
 
 Continue with the guides below to migrate, configure, and customize your Playwright runs on TestMu AI.
 

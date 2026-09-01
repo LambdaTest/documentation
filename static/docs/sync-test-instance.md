@@ -9,10 +9,8 @@ Each test instance tracks the **version** of the master test case it was created
 **Applies to Manual Test Runs Only**
 This feature is available only for **manual test runs**. KaneAI test runs always use the latest code export during execution, so syncing is not applicable.
 
-
 **Bulk Sync Coming Soon**
 Currently, you can only sync one test instance at a time. Bulk sync support is planned for a future release.
-
 
 ## Identifying Stale Test Instances
 
@@ -20,19 +18,13 @@ Currently, you can only sync one test instance at a time. Bulk sync support is p
 
 Each test instance card displays its current version (e.g., **v1**). A **grey** version label indicates the instance is up to date. If a newer version is available, the version label is highlighted in colour, and a **sync icon** appears next to it. Hover over the icon to see a tooltip (e.g., *Update to v2*), and click it to initiate the sync.
 
-
-
 ### From the Test Instance Detail
 
 When you open a stale test instance, a banner appears at the top indicating how many versions behind the instance is. From here, you can click **View comparison** to review the changes or **Update to vN** to sync.
 
-
-
 ## Comparing Versions
 
 Before syncing, you can review exactly what changed. Click **View comparison** from the version banner to open a side-by-side diff view. This highlights all differences between the test case version currently linked to the test instance and the latest version of the same test case, including changes to descriptions, preconditions, and individual steps.
-
-
 
 ## Syncing a Test Instance
 
@@ -42,25 +34,18 @@ When you click the sync action, a confirmation modal appears with the following 
 - **All statuses will be reset to Not Started**: both the overall instance status and every individual step status.
 - **Existing remarks and attachments will be preserved** for re-verification.
 
-
-
 Click **Update to Version** to confirm, or **Cancel** to keep the current version.
 
 ### After Syncing
 
 Once synced, the test instance is updated with the latest master test case content, including any changes to the title, step descriptions, expected outcomes, and step structure (added, removed, or reordered steps). The instance and all step statuses are reset to **Not Started**, and a success notification confirms the update.
 
-
-
 ## Audit Log
 
 Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-run-creation-and-management/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes, giving your team full traceability.
 
-
-
 **Duplicating a Test Run**
 When you duplicate a test run, all test instances in the new run are automatically linked to the **latest version** of their master test cases, regardless of which version was used in the original run. All statuses are set to **Not Started**.
-
 
 ## Limitations
 

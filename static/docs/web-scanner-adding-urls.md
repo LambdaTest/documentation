@@ -10,8 +10,6 @@ After configuring the scan type (Step 2), the **Add URLs** section (Step 3) allo
 
 Use this method when you want full control over each scanned URL or you’re testing only a handful of critical paths.
 
-
-
 **Instructions:**
 * Paste each URL in a new line or input box.
 * Ensure proper formatting (`https://` required).
@@ -19,11 +17,9 @@ Use this method when you want full control over each scanned URL or you’re tes
 **Best for:**
 * Login pages, checkout flows, admin pages.
 
-
 ### 2. Import via CSV File
 
 Use this method when you already maintain URL lists in a spreadsheet or text file.
-
 
 **CSV Format:**
 One URL per line (no header).
@@ -47,9 +43,6 @@ Ideal for:
 
 * Reusing URL sets across projects.
 
-
-
-
 ### 3. Import via Sitemap
 Use this method when:
 * you want to extract URLs from an existing sitemap
@@ -64,8 +57,6 @@ Use this method when:
 Ideal for:
 * Scanning large public websites.
 * Ensuring complete coverage.
-
-
 
 ### URL Limits and Validations
 **Max URL Limit**: would depend upon your SmartUI (*for visual scan*) and Accessibility (*for accessibility scan*) plan.

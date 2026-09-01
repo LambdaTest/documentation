@@ -67,14 +67,11 @@ Best when localhost network logs need to be captured and there are no port confl
 
 Port forwarding works at the network level, so **all HTTP libraries are supported**.
 
-
 - Ports must be in the range 1024-65535. Privileged ports (1-1023) are blocked.
 - Maximum 5 unique ports. No duplicate ports allowed.
 - Invalid port formats (e.g., strings like `"abc"`) are rejected.
 - Cannot be used together with `localhost`.
 - `network: true` is **not** required for port forwarding. It works independently.
-
-
 
 ## Troubleshooting
 

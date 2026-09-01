@@ -6,14 +6,11 @@ If you already write Cypress tests, running them on TestMu AI lets you execute t
 
 ## Prerequisites
 
-
 Set up the following before you run the test so the CLI can authenticate and locate your project.
 
 **Sample repo**
 
 Clone the TestMu AI sample Cypress Cloud repo used in this document to follow along with the same files shown here.  View on GitHub
-
-
 
 Complete these three steps to prepare your environment for the first run.
 
@@ -25,8 +22,6 @@ cd Cypress-Cloud
 ```
 
 2. To run Cypress tests, set your TestMu AI username and access key in the environment variables. You can get them from the TestMu AI Automation Dashboard.
-
-
 
 **Windows**
 
@@ -44,7 +39,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 3. Install Node.js version 12 or higher. You can download it from the [official Node.js website](https://nodejs.org/en/download/).
 
 ## Authentication
-
 
 TestMu AI reads your credentials in one of three ways. When more than one is set, this order of precedence applies: **CLI arguments > `lambdatest-config.json` > environment variables**.
 
@@ -72,7 +66,6 @@ lambdatest-cypress run --username=<your username> --ak=<your access key>
 
 ## Running Your First Test
 
-
 Follow these steps to run your first Cypress test on the TestMu AI platform. The steps cover both Cypress v10 and Cypress v9 projects, so pick the tab that matches your setup as you go.
 
 1. Install the TestMu AI Cypress CLI using the below command.
@@ -83,10 +76,6 @@ npm install -g lambdatest-cypress-cli
 
 2. Clone the Cypress kitchen sink repo using the following command.
 
-
-
-
-
 ```bash
 # Clone the kitchen sink repo
 git clone https://github.com/cypress-io/cypress-example-kitchensink.git
@@ -94,10 +83,6 @@ git clone https://github.com/cypress-io/cypress-example-kitchensink.git
 # Go to the cloned directory
 cd cypress-example-kitchensink
 ```
-
-
-
-
 
 ```bash
 # Clone the kitchen sink repo
@@ -110,15 +95,7 @@ cd cypress-example-kitchensink
 git checkout ab10094ef7b199ae7febafec413a0626414bcd3c
 ```
 
-
-
-
-
 Once you clone the kitchen sink repo, below will be the structure of your Cypress project.
-
-
-
-
 
 ```bash
 ...
@@ -129,10 +106,6 @@ cypress
 cypress.config.js
 ...
 ```
-
-
-
-
 
 ```bash
 ...
@@ -145,10 +118,6 @@ cypress.json
 ...
 ```
 
-
-
-
-
 3. Install the npm dependencies by passing the below command.
 
 ```bash
@@ -159,31 +128,15 @@ npm install
 
 Use `init` command to generate the sample configuration files.
 
-
-
-
-
 ```bash
 lambdatest-cypress init --cv=10
 ```
-
-
-
-
 
 ```bash
 lambdatest-cypress init
 ```
 
-
-
-
-
 Once you run the above command, below is the project structure for the `lambdatest-config.json` file.
-
-
-
-
 
 ```js
 {
@@ -226,10 +179,6 @@ Once you run the above command, below is the project structure for the `lambdate
 }
 }
 ```
-
-
-
-
 
 ```bash
 app
@@ -274,10 +223,6 @@ app
 }
 ```
 
-
-
-
-
 5. Pass the below command to run the test.
 
 ```bash
@@ -286,10 +231,7 @@ lambdatest-cypress run
 
 6. Visit the TestMu AI Automation dashboard to view your test results. The CLI also prints a link to view the Cypress test build.
 
-
-
 ## Run Your Tests in Parallel
-
 
 Once your first test runs, you can execute multiple Cypress tests at once to cut total run time. Configure parallel execution in either of two ways.
 
@@ -312,9 +254,7 @@ lambdatest-cypress run --parallels 5
 **NOTE**
 The number of parallel tests running at a time depends on the concurrency plan of your TestMu AI account. If you request more parallel tests than your plan allows, the extra tests are queued and run as running tests finish. For example, on a 5-session plan, running 50 tests runs 5 at a time and queues the other 45.
 
-
 ## Testing Locally Hosted or Privately Hosted Projects
-
 
 To test locally hosted websites on the TestMu AI platform, set up the [TestMu AI tunnel](/docs/testing-locally-hosted-pages/) and run commands using the CLI, or use [UnderPass](/docs/underpass-tunnel-application/), the TestMu AI GUI-based desktop app. Once the TestMu AI tunnel or UnderPass is set up and started, you can use Cypress to test locally hosted websites.
 
@@ -330,7 +270,6 @@ Next, activate the tunnel capability in the `lambdatest-config.json` file under 
 You can provide the name of the **TestMu AI tunnel** as per your requirements.
 
 ## Related Cypress Guides
-
 
 Continue with the guides below to generate, configure, and scale your Cypress runs on TestMu AI.
 

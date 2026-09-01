@@ -9,9 +9,6 @@ This feature is currently in **Beta** and available exclusively with the **Real 
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-
-
-
 ## Use Cases
 
 - Validate background refresh, sync, and automatic-download behavior when Low Power Mode / Power Saving Mode is active.
@@ -34,21 +31,13 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 
 **Step 2:** Open **Device Controls** in the session toolbar. The same feature is labeled **Low Power Mode** on iOS and **Battery Saver Mode** on Android.
 
-
-
 **Step 3:** Turn the toggle **On** to enable it on the device. Turn it **Off** at any time to restore normal power behavior.
 
 - **iOS enabled:**
 
-
-
 - **Android enabled:**
 
-
-
-
 - Disabling the mode is always allowed and has no restrictions.
-
 
 ## Things to Know
 

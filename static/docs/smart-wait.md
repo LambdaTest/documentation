@@ -10,7 +10,6 @@ You can use this feature to reduce the amount of code dedicated to explicit/impl
 
 ## How SmartWait Can Help You
 
-
 SmartWait improves your test automation workflow in multiple ways. To further stabilize flaky suites, pair it with the ability to auto-heal broken locators when the UI changes, and use the built-in tools to debug your Selenium tests when a check fails.
 
 - **Increased Accuracy**: SmartWait ensures that actions are only executed on elements that are ready and actionable, increasing the accuracy of your test results.
@@ -19,7 +18,6 @@ SmartWait improves your test automation workflow in multiple ways. To further st
 - **Intelligent Error Handling**: When actionability checks fail, SmartWait returns the relevant Selenium error, helping you identify and resolve issues more quickly.
 
 ## How to Use SmartWait Functionality
-
 
 Follow the below steps to configure SmartWait for your tests. SmartWait is set through `LT:Options` like the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
 
@@ -34,11 +32,9 @@ LT:Options {
 }
 ```
 
-
 - Min value of `smartWait` is 5 seconds and max is 120 seconds, default being 1 seconds.
 - The capability `smartWaitRetryDelay` to define the time interval of retries. If not provided, default interval of 1 second is considered.
 - Min value of `smartWaitRetryDelay` is 1 second and max is 4 seconds, default being 1 second.
-
 
 2. **Execute Test Suite:** Run your test suite as usual. SmartWait automatically performs actionability checks before each action on a webpage element.
 
@@ -47,7 +43,6 @@ LT:Options {
 TestMu AI's SmartWait feature enhances automated testing by intelligently managing wait times and ensuring actions execute at the most opportune time.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

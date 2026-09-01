@@ -25,8 +25,6 @@ version: '16'
 
 > Go through the documentation to understand the [runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) flag.
 
-
-
 ## Version 2.1.0
 
 ### Clone your Private Repositories via Tunnel
@@ -43,15 +41,11 @@ useInCodeSetUp: true
 
 > Refer to the detailed documentation on [how to clone your private repositories via tunnel](/support/docs/hyperexecute-how-to-configure-tunnel/#clone-a-repository-via-tunnel)
 
-
-
 ## Version 1.140.0
 
 ### Test Muting
 
 Test Muting is a new feature designed to enhance test efficiency and effectiveness by allowing users to temporarily disable specific test cases. This feature proves particularly useful for skipping consistently failing or irrelevant tests, streamlining test runs and enabling a sharper focus on crucial results.
-
-
 
 **Key Benefits**
 
@@ -66,8 +60,6 @@ Test Muting is a new feature designed to enhance test efficiency and effectivene
 - **Manual Mute/Unmute of Specific Test Cases:** Users retain complete control over Test Muting, with the ability to manually mute or unmute specific test cases as needed.
 
 > For detailed instructions on utilizing Test Muting, including automatic and manual muting and unmuting of test cases, please refer to the comprehensive [Test Muting documentation](/support/docs/hyperexecute-test-muting/).
-
-
 
 ## Version 1.139.0
 
@@ -87,8 +79,6 @@ HyperExecute is committed to continuously improving the user experience by imple
 
 - **Visual Enhancements:** Refined visual aesthetics and consistent design principles for a cohesive and appealing user interface.
 
-
-
 ## Version 1.138.0
 
 ### Infrastructure Improvement for Autoscaling
@@ -102,10 +92,6 @@ HyperExecute continuously strives to enhance its autoscaling infrastructure to e
 - **Automated Instance Termination:** Idle instances are automatically identified and terminated, preventing unnecessary resource consumption and optimizing infrastructure costs.
 
 - **Enhanced Load Balancing:** Load balancing strategies are refined to distribute traffic across multiple instances effectively, preventing bottlenecks and ensuring optimal resource utilization.
-
-
-
-
 
 ## Version 1.137.0
 
@@ -125,15 +111,11 @@ HyperExecute is committed to continuously refining its performance, ensuring tha
 
 - **Reduced Test Result Processing Latency:** Experience slightly faster test result processing times, enabling testers to access their results promptly and make informed decisions.
 
-
-
 ## Version 1.136.0
 
 ### Security Improvements
 
 HyperExecute is committed to prioritizing security and safeguarding our users' data and infrastructure. This release introduces a comprehensive set of security enhancements that reinforce our commitment to providing a secure and reliable testing platform.
-
-
 
 ## Version 1.135.0
 
@@ -159,8 +141,6 @@ HyperExecute now extends its support to encompass four widely used testing frame
 
 - **WDIO/Jasmine:** Another JavaScript testing framework that employs Jasmine as its test runner, offering behavior-driven development (BDD) features and a concise syntax.
 
-
-
 ## Version 1.134.0
 
 ### Semaphore CI/CD Integration
@@ -168,8 +148,6 @@ HyperExecute now extends its support to encompass four widely used testing frame
 Semaphore CI/CD is a popular cloud-based platform that helps engineering teams of all sizes build, test, and deploy their software faster and more reliably. HyperExecute is a powerful test execution platform that offers unparalleled speed, efficiency, scalability, and compatibility.
 
 The new integration between Semaphore CI/CD and HyperExecute will allow teams to execute their tests on HyperExecute's cloud infrastructure seamlessly. This can help teams significantly shorten their test cycles and deliver software faster.
-
-
 
 > Refer to the detailed documentation on how to integrate [Semaphore CI/CD](/support/docs/semaphore-integration-with-hyperexecute/) with HyperExecute.
 
@@ -179,11 +157,7 @@ Smart UI Testing is a powerful tool that enables you to execute regression testi
 
 HyperExecute now supports the Cypress framework, allowing teams to run their Cypress UI tests on our cloud infrastructure, thus helping teams improve the quality of their UI tests and reduce the time to test their applications.
 
-
-
 > To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](/support/docs/smartui-hooks-with-hyperexecute/) using HyperExecute.
-
-
 
 ## Version 1.133.0
 
@@ -193,8 +167,6 @@ Bamboo is a continuous integration (CI) and continuous delivery (CD) server from
 
 The new integration between Bamboo CI and HyperExecute will allow teams to execute their tests on HyperExecute's cloud infrastructure seamlessly. This can help teams significantly shorten their test cycles and deliver software faster.
 
-
-
 > Refer to the detailed documentation on how to integrate [Bamboo CI](/support/docs/bamboo-integration-with-hyperexecute/) with HyperExecute.
 
 ### GoCD Integration
@@ -203,11 +175,7 @@ GoCD, short for "Go Continuous Delivery," is an open-source continuous integrati
 
 The integration between GoCD and HyperExecute will allow teams to execute their tests on HyperExecute's cloud infrastructure seamlessly and shorten the test cycles and deliver software faster.
 
-
-
 > Refer to the detailed documentation on how to integrate [GoCD](/support/docs/gocd-integration-with-hyperexecute/) with HyperExecute.
-
-
 
 ## Version 1.131.0
 

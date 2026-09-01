@@ -17,11 +17,8 @@ This feature is available exclusively with the **Real Device Plus Automation Clo
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-
 **Automating with Playwright?**
 Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
-
-
 
 ## Use Cases
 
@@ -30,7 +27,6 @@ Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari
 - **CI/CD Integration**: Run Apple Pay scenarios as part of continuous integration pipelines to catch payment flow issues early.
 - **Cross-Network Stability**: Test across Visa, MasterCard, and other networks to ensure consistent user experiences.
 - **Security & Compliance**: Confirm that sensitive flows like passcode entry and secure card handling behave as expected during automation.
-
 
 ## Supported Devices
 Currently, the Device Passcode feature in App Automation is enabled on the following iOS real devices:
@@ -52,11 +48,7 @@ Currently, the Device Passcode feature in App Automation is enabled on the follo
 | **applePay**                | Boolean    | true    | Mandatory           | Enables Apple Pay provisioning including Wallet, Sandbox card, AssistiveTouch, and Passcode on supported real iOS devices. |
 | **applePayCardType**        | Array      | None    | Optional           | Specify preferred payment networks. Currently, you can choose from four supported cards: `["amex", "visa", "master", "discover"]`.|
 
-
 The `applePayCardType` array follows a **priority order**. The order you provide determines which card type is used first. For example, `["visa", "master"]` will prioritize Visa over MasterCard.
-
-
-
 
 ## Apple Pay Workflow in Automation Test
 
@@ -66,15 +58,9 @@ The `applePayCardType` array follows a **priority order**. The order you provide
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
-
 ### Step 2: Add Desired Capabilities
 
 To enable Apple Pay automation, include the following capability in your automation session as highlighted in the Capabilities:
-
-
-
-
-
 
 {`desired_caps = {
     "deviceName": "iPhone 16",
@@ -90,24 +76,12 @@ To enable Apple Pay automation, include the following capability in your automat
     "applePayCardType": ["visa", "master"]
 }`}
 
-
-
-
-
-
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
-
-
 
 ### Step 3: Update Shipping, Billing, and Contact Details (Optional)
 
 Before confirming the Apple Pay payment, you can optionally update the shipping details, billing details, and contact information using the `lambda-applepay-details` hook. This allows you to customize the payment information dynamically during your automation test.
-
-
-
 
 {`driver.execute_script("lambda-applepay-details", {
     "shippingDetails": {
@@ -133,9 +107,6 @@ Before confirming the Apple Pay payment, you can optionally update the shipping 
         "phone": "+441234567890"
     }
 })`}
-
-
-
 
 {`Map shippingDetails = new HashMap<>();
 shippingDetails.put("firstName", "John");
@@ -166,9 +137,6 @@ applePayDetails.put("contact", contact);
 
 driver.executeScript("lambda-applepay-details", applePayDetails);`}
 
-
-
-
 {`await driver.executeScript("lambda-applepay-details", {
     shippingDetails: {
         firstName: "John",
@@ -194,9 +162,6 @@ driver.executeScript("lambda-applepay-details", applePayDetails);`}
     }
 });`}
 
-
-
-
 #### Hook Parameters
 
 | Parameter | Type | Description |
@@ -205,17 +170,12 @@ driver.executeScript("lambda-applepay-details", applePayDetails);`}
 | **billingDetails** | Object | Billing address information with the same fields as shippingDetails. |
 | **contact** | Object | Contact information including email and phone number. |
 
-
 All parameters are optional. You can provide only the details you need to update. For example, you can update only the billing details without providing shipping or contact information.
-
-
-
 
 ### Step 4: Confirm Apple Pay Payment
 
 - To confirm Apple Pay payment at the payment step, add a hook to confirm and complete the payment.
 - This can be done using TestMu AI hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:
-
 
 ```python
 driver.execute_script(
@@ -223,16 +183,12 @@ driver.execute_script(
 )
 ```
 
-
-
 ### Step 5: Enter Passcode to Complete Payment
 
 - After confirming the Apple Pay payment, the device will prompt for the passcode to securely authorize the transaction. Your automation script must handle this prompt by entering the passcode using Appium's keyboard input methods to simulate the user securely confirming the payment.
 
-
 ```Python
 driver.find_element(By.XPATH,"//*[@name=\"Passcode field\"]").send_keys("123456")
 ```
-
 
  The default passcode is `123456` unless configured differently on the device. This step is essential to simulate secure confirmation and complete the Apple Pay transaction during automation.

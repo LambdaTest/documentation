@@ -8,15 +8,11 @@ TestMu AI Analytics Modules provide comprehensive insights into your test groups
 
 ### Usage by Groups
 
-
-
 The Usage by Groups widget provides insights into the performance of your test groups. You can this widget to your dashboard and apply required filters to view the performance of your test groups. The widget displays the following information:
 
 * **Group Name**: The name of the test group.
 * **Total Test Cases**: The total number of test cases in the group.
 * **Total Hours of Usage**: The total number of test hours executed in the group.
-
-
 
 ## Support and Assistance
 

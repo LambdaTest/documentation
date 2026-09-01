@@ -11,11 +11,7 @@ By the end of this document, you will be able to:
 - Validate the response returned by the `lambda_executor` hook
 - Use the same hook inside Web Automation tests running on iOS Real Devices
 
-
 This feature also works in **Web Automation tests on Real Devices**. The same `lambda_executor` script can be used inside your Appium-based web automation session.
-
-
-
 
 ## Supported Platforms
 
@@ -24,13 +20,9 @@ This feature also works in **Web Automation tests on Real Devices**. The same `l
 | iOS Real Device    | iOS 16 and above    |
 | iOS Simulator (Virtual) | All OS   |
 
-
-
 ## Support for Automation on Mobile Devices
 
 To trigger a shake gesture, use the `lambda_executor` Appium hook with the `gestures` action. No additional capability is required.
-
-
 
 ## Supported Arguments
 
@@ -41,12 +33,7 @@ To trigger a shake gesture, use the `lambda_executor` Appium hook with the `gest
 
 > 💡 **Note:** The hook **can be invoked multiple times** in the same session.
 
-
-
 ### Appium Hook Example
-
-
-
 
 ```python
 response = driver.execute_script(
@@ -55,20 +42,12 @@ response = driver.execute_script(
 # response → "shake gesture triggered successfully"
 ```
 
-
-
-
 ```java
 String response = (String) ((JavascriptExecutor) driver).executeScript(
 "lambda_executor: {\"action\": \"gestures\", \"arguments\": {\"shake\": true}}"
 );
 // response → "shake gesture triggered successfully"
 ```
-
-
-
-
-
 
 ## Response References
 

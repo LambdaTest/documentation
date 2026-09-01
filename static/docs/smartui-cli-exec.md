@@ -126,29 +126,17 @@ Both commands check if the server is running at the address specified in `SMARTU
 
 For most test frameworks (except Selenium Java and JavaScript), you'll need to set the server address:
 
-
-
-
 ```bash
 export SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
-
-
-
 
 ```bash
 set SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
 
-
-
-
 ```powershell
 $env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
 ```
-
-
-
 
 ### Step 2: Execute Your Tests
 
@@ -173,83 +161,43 @@ When running tests from IDEs like IntelliJ:
 
 ## Best Practices
 
-
-
-
 **Server Termination**
 
 Always use `exec:stop` to properly terminate the server.
-
-
-
-
 
 **Timeouts**
 
 Set appropriate timeouts for your tests.
 
-
-
-
-
 **Snapshot Naming**
 
 Use meaningful names for your snapshots.
-
-
-
-
 
 **Environment Variables**
 
 Configure environment variables before starting your IDE.
 
-
-
-
-
 **Configuration Files**
 
 Consider using configuration files for complex setups.
 
-
-
-
 ## Troubleshooting
-
-
-
 
 **Server Status**
 
 Verify the server is running using `exec:ping`.
 
-
-
-
-
 **Server Address**
 
 Check if the server address is correctly configured.
-
-
-
-
 
 **Port Conflicts**
 
 Ensure no other process is using the default port.
 
-
-
-
-
 **Server Logs**
 
 Review the server logs for error messages.
-
-
-
 
 ### Getting Help
 
@@ -258,7 +206,6 @@ If you encounter issues not covered here:
 - Check [CLI Documentation](/support/docs/smartui-cli-complete-reference/) for general CLI usage
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
-
 
 ## Additional Resources
 

@@ -30,7 +30,7 @@ Add the following dependency to your `pom.xml` file:
 <dependency>
 <groupId>io.github.lambdatest</groupId>
 <artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.8</version>
+<version>1.0.23</version>
 </dependency>
 ```
 
@@ -40,29 +40,17 @@ You can configure your project token in one of two ways:
 
 1. **Using Environment Variables**:
 
-
-
-
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-
-
-
 
 ```bash
 set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
-
-
-
 ```powershell
 $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
-
-
-
 
 2. **Directly in the Configuration**:
 You can pass the project token directly in your test configuration as shown in Step 3.
@@ -167,9 +155,7 @@ ssConfig.put("deviceName", "Custom Device Name"); // Use the same name consisten
 ssConfig.put("platform", "iOS/Android"); // Use the actual platform
 ```
 
-
 The device name and platform you specify here are used only for screenshot organization and comparison. The actual device selection is handled by your cloud provider's capabilities configuration.
-
 
 ## Region-Based Ignore/Select Functionality for Dynamic Content
 
@@ -243,7 +229,6 @@ config.put("selectBoxes", gson.toJson(selectBoxesMap));
 - Avoid using both `ignoreBoxes` and `selectBoxes` in the same config — they are mutually exclusive.
 - Ensure XPath expressions are unique and stable across test runs.
 
-
 ## View SmartUI Results
 
 After test execution, visit your SmartUI project dashboard to:
@@ -254,12 +239,7 @@ After test execution, visit your SmartUI project dashboard to:
 4. Approve or reject changes
 5. Manage baseline images
 
-
-
 ## Best Practices
-
-
-
 
 **Screenshot Naming**
 
@@ -274,9 +254,6 @@ SmartUISnapshot.smartuiSnapshot(driver, HomeScreen-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 ```
 
-
-
-
 **Wait for Screen Load**
 
 - Always wait for screens to fully load before taking screenshots
@@ -290,26 +267,17 @@ wait.until(ExpectedConditions.presenceOfElementLocated(By.id(main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ```
 
-
-
-
 **Handle Dynamic Content**
 
 - Use `ignoreBoxes` for elements that change between runs (ads, timestamps, user avatars)
 - Use `selectBoxes` when you only need to compare specific regions
 - Test XPath locators using Appium Inspector before integrating
 
-
-
-
 **Device Configuration**
 
 - Use consistent `deviceName` and `platform` combinations across builds
 - Document device configurations for reference
 - Test on devices that match your user base
-
-
-
 
 **Test Organization**
 
@@ -318,9 +286,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Run tests on consistent device configurations
 
 **Troubleshooting**
-
-
-
 
 **Issue: Screenshots Not Captured**
 
@@ -345,16 +310,13 @@ echo $PROJECT_TOKEN
 <dependency>
 <groupId>io.github.lambdatest</groupId>
 <artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.2</version>
+<version>1.0.23</version>
 </dependency>
 ```
 
 4. Check network connectivity to TestMu AI servers
 
 5. Review test execution logs for error messages
-
-
-
 
 **Issue: Project Not Found" Error**
 
@@ -371,9 +333,6 @@ echo $PROJECT_TOKEN
 2. Copy project token directly from Project Settings
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check credentials match the account with the project
-
-
-
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -401,9 +360,6 @@ wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("main-content")))
 
 4. Verify app is in correct state before screenshot
 
-
-
-
 **Issue: ignoreBoxes/selectBoxes Not Working**
 
 **Symptoms**: Dynamic content still causing false positives
@@ -424,9 +380,6 @@ ignoreBoxes.put(xpath", new String[]{"//*[@text="'Dynamic" Ad']"});
 
 4. Test XPath locators in isolation before using in config
 
-
-
-
 **Issue: Maven Dependencies Not Resolving**
 
 **Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
@@ -444,9 +397,6 @@ mvn clean
 ```
 3. Verify internet connectivity for Maven repository access
 4. Check pom.xml for version conflicts
-
-
-
 
 **Issue: Screenshot Names Not Matching Baseline**
 
@@ -472,10 +422,6 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
-
-
-
-
 
 ## Additional Resources
 

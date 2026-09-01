@@ -1,14 +1,12 @@
-# Image Analyzer Testing With TestMu AI
+# How to Test an Image Analyzer Agent With TestMu AI Agent Testing Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI tests an image agent by submitting prompts or images and scoring the returned output against the prompt and any criteria you define. Each image gets a Quality Score from 0 to 100, plus a breakdown of what matched and what did not. It covers image generation, content moderation, and photo validation.
+The Agent Testing Platform tests an image agent by submitting prompts or images and scoring the returned output against the prompt and any criteria you define. Each image gets a Quality Score from 0 to 100, plus a breakdown of what matched and what did not. It covers image generation, content moderation, and photo validation.
 
 You upload images by file or URL, define what a correct image looks like, and the platform scores them. A single run analyzes up to 50 images, which suits regression testing after a model update.
 
 ## Features
-
-
 
 **Image Analysis.** Upload single images or batch-process up to 50 at once, by file upload, URL, or drag and drop. Supported formats are JPG, JPEG, PNG, GIF, WEBP, and BMP, with a maximum of 20 MB per image.
 
@@ -26,8 +24,6 @@ All criteria support create, edit, delete, and search by name, description, or t
 
 ## Metrics
 
-
-
 Each image is scored on a single Quality Score from 0 to 100, plus a set of qualitative outputs.
 
 | Metric | Scale | What it measures |
@@ -41,7 +37,5 @@ Each image is scored on a single Quality Score from 0 to 100, plus a set of qual
 Quality Score bands: 90 to 100 excellent, 80 to 89 good, 60 to 79 fair, and 0 to 59 poor. For each active custom criterion, results show a Pass, Fail, or Partial status with compliance details.
 
 ## Related TestMu AI Guides
-
-
 
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

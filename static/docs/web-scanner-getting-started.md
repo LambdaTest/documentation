@@ -10,8 +10,6 @@ If you use **Accessibility Test Scheduling** inside the main Accessibility produ
 
 You will see a unified dashboard with the following primary controls:
 
-
-
 ### Scan Type Tabs
 
 At the top left, you can switch between:
@@ -36,8 +34,6 @@ These configurations ensure that login-protected or session-gated URLs can still
 
 The primary CTA on the dashboard, **Schedule Scan**, triggers the full scan creation wizard.
 
-
-
 ## How to Create a New Scan
 
 Click the **Schedule Scan** button to launch the 4-step wizard. This process applies to both Visual and Accessibility scans. Platform-specific configuration steps appear based on your selection.
@@ -48,8 +44,6 @@ Click the **Schedule Scan** button to launch the 4-step wizard. This process app
 * **Platform:** Choose between:
     * Visual UI
     * Accessibility
-
-
 
 ### Step 2: Scan Type Configuration (Dynamic)
 
@@ -67,9 +61,6 @@ You can populate the scan target using three options:
 
 The maximum limit is 1,000 URLs per scan.
 
-
-
-
 For more details you may refer to our guide on [Adding URLs for Web Scanner](/support/docs/web-scanner-adding-urls).
 
 ### Step 4: Schedule the Scan
@@ -82,15 +73,11 @@ Choose the frequency and timing for this scan:
     * Select timezone (e.g., UTC+5:30 Asia/Calcutta)
 * Enable/disable **Run Initial Scan** (Visual UI only)
 
-
-
 ## Post-Scan Scheduling
 
 Once scheduled, the scan appears in the appropriate tab of the dashboard.
 * **Visual UI:** Scan redirects to SmartUI comparison build
 * **Accessibility:** Scan redirects to detailed Accessibility report
-
-
 
 Each scan has an action menu (3-dots icon) with the following options:
 

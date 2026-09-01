@@ -2,6 +2,12 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+## Version 3.2.33 (23rd August 2026)
+- **Multiple `--expose` Services**
+  - Fixed only the first service being forwarded when several named services were exposed over a TCP-mode tunnel. Each exposed service now runs on its own data channel, so all of them stay reachable for the lifetime of the tunnel.
+- **Deprecated Flags**
+  - `--byod`, `--forceLocal` and `--transport-mode` are now deprecated. They are hidden from `--help` and print a warning when used, but continue to work in this release and will be removed in a future one.
+
 ## Version 3.2.32 (09th August 2026)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE
@@ -84,25 +90,17 @@
 - **Support for Wildcard in `allowHosts` and `bypassHosts`**
   - Added the ability to use wildcards in the `allowHosts` and `bypassHosts` configurations, providing more flexibility in defining tunnel access rules.
 
-
-
 ## Version 3.2.10 (18th December 2024)
 - **Security Certificate Update**
   - Updated security certificates to ensure enhanced security compliance and prevent potential vulnerabilities.
-
-
 
 ## Version 3.2.9 (24th November 2024)
 - **Logger Level Configurability**
   - Introduced support for configuring logger levels in the Tunnel Client. This allows users to customize the verbosity of logs based on their requirements.
 
-
-
 ## Version 3.2.8 (22nd December 2024)
 - **Fix for Tunnel Stop Issue**
   - Resolved a bug that caused issues when stopping the tunnel, ensuring smoother operation during tunnel termination.
-
-
 
 ## Version 3.2.7 (25th October 2024)
 - **Security Updates and Stability Fixes**

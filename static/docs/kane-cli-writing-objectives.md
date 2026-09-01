@@ -12,9 +12,7 @@ The objective string is the most important input to Kane CLI. How you phrase it 
 | ✅ **Assertion** | assert, verify, confirm, check that, ensure | Validates a condition: produces pass/fail |
 | 📦 **Extraction** | store X as 'name' | Reads a value from the page, persists in output |
 
-
 **Assertions** and **extractions** are evaluated as [Checkpoints](/support/docs/kane-cli-checkpoints/). See the reference for all analyze methods (Visual, Textual, URL, Title, DevTools) and comparison operators.
-
 
 ### Actions
 
@@ -57,8 +55,6 @@ Extractions read a value from the page and store it in the run output's `final_s
 "store the page title as 'page_title'"
 ```
 
-
-
 ## Combining Patterns
 
 Chain all three patterns in one objective:
@@ -73,8 +69,6 @@ assert the page contains 'Account Settings'"
 ```
 
 This objective: navigates → extracts two values → validates a condition → performs an action → validates the result.
-
-
 
 ## Real Examples
 
@@ -133,8 +127,6 @@ assert the page contains 'Order Confirmed',
 store the order number as 'order_id'"
 ```
 
-
-
 ## Assertion Types
 
 | Type | Example |
@@ -146,8 +138,6 @@ store the order number as 'order_id'"
 | Negative | `assert no error message is visible` |
 | Positional | `assert 'Settings' appears in the left sidebar` |
 
-
-
 ## Dos and Don'ts
 
 | ✅ Do | ❌ Don't |
@@ -158,8 +148,6 @@ store the order number as 'order_id'"
 | Use `{{variables}}` for credentials and URLs | Hardcode secrets in the objective |
 | Always provide `--url` | Assume the agent knows where to start |
 | Split objectives with >15 steps | Cram 30 steps into one objective |
-
-
 
 ## Objectives on Mobile
 
@@ -194,6 +182,5 @@ In **Headless CLI**, use `--max-steps` to cap each run:
 kane-cli run "login flow" --url https://myapp.com --max-steps 10
 kane-cli run "dashboard check" --url https://myapp.com --max-steps 10
 ```
-
 
 A good rule: if your objective has more than three `assert` statements or more than five distinct actions, consider splitting it.

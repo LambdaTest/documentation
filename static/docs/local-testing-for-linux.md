@@ -8,27 +8,19 @@ Feel more confident than ever, before deploying any UI specific change into Prod
 
 > Note: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for Linux](/docs/local-testing-linux/).
 
-
 You can download the binary file responsible for establishing a TCP with TLS 1.2 connection between your local device and our testing cloud by clicking on the downloadable link below.
-
 
 Download TestMu AI Tunnel For Linux
 
-
 ## Configuring TCP with TLS 1.2 connection with TestMu AI tunnel
 
-
 **Step 1**: Click the button "**Configure Tunnel**". Download the binary zip file by clicking the "**Download Link**". Also, hit the 'Copy' button in the form that opens up to copy the complete string to your system's clipboard.
-
-
 
 **What is this zip file for?**
 
 This zip file will help in establishing a secure connection to TestMu AI cloud servers so you could test your locally hosted web pages.
 
 **Step 2**: Extract the downloaded zip file. Go to terminal and route your pointer to the same directory where you extracted the zip file.
-
-
 
 **Step 3**: Paste the copied string to execute the downloaded binary file. The command will look like:
 
@@ -38,35 +30,21 @@ So for example, if your user login email is example@lambdatest.com and your user
 
 `LT --user example@lambdatest.com --key 123asd123 --cui`
 
-
-
 >**Note:** After you execute the command, you may be asked for user permission. Make sure you have administrator access to allow the file to run successfully.
 
 In a few seconds, after you execute the command, an TCP with TLS 1.2 connection will be established. You will receive a message inside your command prompt mentioning "***Secure connection established, you may start your tests now***".
 
-
-
 ## Testing Locally Hosted Web Pages Using TestMu AI tunnel
-
-
 
 **Step 1**: Navigate to '**Real Time Testing**' menu and enter the local host URL you want to test in the text field provided to enter URL.
 
 **Step 2**: Select the tunnel via which you want to run the test.
 
-
-
 **Step 3**: Select the test configuration of your choice. You can select from various major browsers & their assorted versions to perform a test session. You may also choose from a variety of Operating System & screen resolutions to check the **RWD(Responsive Web Design)** of the website when rendering on different resolutions.
-
-
 
 **Step 4:** Make sure you turn on **XAMPP** or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, hit ‘**Start**‘ for Apache under ‘**Services**‘. If you also want to test the back-end functionality for your website then make sure you hit the ‘**Start**‘ button for **MySQL** as well.
 
-
-
 **Step 5:** Once you are done selecting your configurations and hosting a web server. Hit the ‘Start’ button in Real Time Test. Your test will start and you will be navigated to your localhost URL.
-
-
 
 >**Important Note:** Some Safari browsers, on both Mac machines and iOS browsers, doesn’t support automatic resolution of URL string "localhost". Therefore if you test on URLs like "`http://localhost/`" or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to replace the string "`localhost`" with machine IP address. For example if you wanted to test "`http://localhost/dashboard`" or "`http://localhost/dashboard:8080`", and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`" or "`http://192.168.2.6/dashboard:8080`".
 
@@ -86,11 +64,7 @@ In a few seconds, after you execute the command, an TCP with TLS 1.2 connection 
 
 **Step 2:** After you establish a TCP with TLS 1.2 connection, go to TestMu AI and navigate to **Real Time test**. Enter local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
 
-
-
 **Step 3:** Hit the ‘Start’ button. Once the VM(Virtual Machine) is launched, you will be able to access your local folders on a testing environment hosted by our cloud servers.
-
-
 
 > **Note:** Similarly, if you want to run any file in the specified directory, you need to give URL as local-folder.lambdatest.com/filename.
 
@@ -104,11 +78,7 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 
 You will receive the below highlighted messages indicating the termination on TCP with TLS 1.2 Connection.
 
-
-
 **Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of TestMu AI interface, you will find a button that says "**Tunnel active**:". This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'X'. Hit the 'x' to terminate the TCP with TLS 1.2 tunnel.
-
-
 
 ## Geolocation Testing Through VPN with TestMu AI tunnel
 
@@ -181,14 +151,8 @@ Access Key is pivotal for establishing a TCP with TLS 1.2 connection through Tes
 
 Find your Access Key while performing any type of testing, from the left navigation menu. You will find a button that says "Configure Tunnel". Click on that button & a string containing your access key will be presented.
 
-
-
 For instance, if you go to **Real-Time Test**, you will observe a button that says "**Configure Tunnel**" on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
 
-
-
 You can also find your **Access Key** by going to ‘**Settings**’ in the left navigation menu and routing to ‘Profile’.
-
-
 
 >**TestMu AI tunnel Update:** Earlier, when our TestMu AI tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.testmuai.com/) experience of locally hosted web pages. Not anymore! We have now updated the TestMu AI tunnel binary in a way that it auto-updates to the latest version every time you execute the TestMu AI tunnel from cmd/terminal.

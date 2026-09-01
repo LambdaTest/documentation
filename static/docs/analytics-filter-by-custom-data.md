@@ -32,20 +32,14 @@ You can use the `customData` capability to send custom data to the TestMu AI pla
 
 ```
 
-
 ## How To Access Custom Filters?
 
-
-
 Currently, the feature is in the  phase and will be supported for Build Comparison for Web Automation.
-
-
 
 1. Go to the `Insights` tab on the left navigation bar and click on the `Builds Comparison`.
 2. Select the `Build` from the list to drill-down.
 3. Now, search for `Test Case` widgets in the `Web Automation, App Automation & HyperExecute` products.
 4. Add the widgets to the dashboard by clicking on the `Add Widget` button.
-
 
 ## Custom Filters Use Cases
 

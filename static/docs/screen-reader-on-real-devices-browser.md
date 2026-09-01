@@ -8,7 +8,6 @@ TestMu AI's Live Screen Reader feature empowers you to perform manual accessibil
 
 > This feature is currently in **Beta**
 
-
 ## Accessing Screen Reader in Real Device Browser Testing
 
 **Step 1:** Click on the **Real Devices** > **Browser Testing**
@@ -16,8 +15,6 @@ TestMu AI's Live Screen Reader feature empowers you to perform manual accessibil
 **Step 2:** Select your required device and add your url to test and start session.
 
 **Step 3:** Click on the **screen reader** option from toolbar and use toggle to enable and disable talkBack feature on your device.
-
-
 
 ## Supported Devices
 
@@ -30,7 +27,6 @@ TestMu AI's Live Screen Reader feature empowers you to perform manual accessibil
 |Google Pixel 7 Pro|Android 13|
 |Samsung Galaxy S22 5G|Android 12|
 |Google Pixel 6 Pro|Android 12|
-
 
 ## How to Navigate using Keyboard Shortcuts
 

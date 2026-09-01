@@ -4,13 +4,9 @@
 
 KaneAI is an AI-powered next-gen testing assistant that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
 
-
-
 ## KaneAI Releases
 
-
 ### September, 2024
-
 
 | Release Number | Release Date |
 |----------------|--------------|

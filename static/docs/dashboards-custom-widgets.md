@@ -4,15 +4,7 @@
 
 Custom widgets in TestMu AI Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
 
-
-
-
-
-
-
-
 You can also let AI CoPilot build a custom widget for you — describe the insight you want and the agent proposes a widget for your approval. See [Building Widgets with CoPilot](/docs/analytics-dashboard-copilot/#building-widgets-with-copilot)  — contact [support@testmuai.com](mailto:support@testmuai.com) to have it enabled for your organization.
-
 
 ## Prerequisites
 
@@ -65,9 +57,7 @@ Use filters to narrow down your data based on specific requirements:
 4. Select or enter the **Value** to filter by.
 5. Add multiple filters as needed to refine your dataset.
 
-
 Use filters to focus on specific release versions, custom parameters, or other attributes. This helps create more targeted and actionable visualizations.
-
 
 ### Next Steps: Widget-Specific Configuration
 
@@ -105,15 +95,11 @@ Custom widgets support multiple visualization types, each optimized for differen
 - **Pie Chart**: Visualize the distribution of values across categories (documentation coming soon)
 - **Billboard**: Display key metrics prominently on your dashboard (documentation coming soon)
 
-
 ## Available Keys for Custom Widgets
 
 The following keys are available for configuring custom widgets across all visualization types. The availability of specific keys depends on the selected product and data source. These keys can be used for filtering, grouping, axis configuration, and column definitions depending on your widget type.
 
-
 Choose keys that represent categorical dimensions (like browser, OS, project name) for grouping and comparisons, and numeric or countable fields for aggregations. For time-based trends, use timestamp fields.
-
-
 
 Web Automation Keys
 
@@ -148,9 +134,6 @@ The following keys are available for Web Automation widgets:
 
 **Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
 
-
-
-
 App Automation Keys
 
 The following keys are available for App Automation widgets:
@@ -181,9 +164,6 @@ The following keys are available for App Automation widgets:
 | `username` | User who executed the test | Grouping, filtering |
 
 **Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
-
-
-
 
 HyperExecute Keys
 
@@ -225,8 +205,6 @@ The following keys are available for HyperExecute widgets:
 | `username` | User who executed the test | Grouping, filtering |
 
 **Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
-
-
 
 ## Use Cases for Custom Widgets
 
@@ -290,7 +268,5 @@ Same data as the table above, rendered as a bar chart for visual comparison.
 Create one widget for **App Automation** and one for **Real Device** testing.
 
 The screenshot below shows a sample Private Real Device dashboard with all six widgets configured:
-
-
 
 > If you have any questions or need assistance with creating custom widgets, please reach out to our support team at [support@testmuai.com](mailto:support@testmuai.com) or visit our [Support Center](https://www.testmuai.com/support/).

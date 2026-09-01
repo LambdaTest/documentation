@@ -6,19 +6,13 @@ Test Logs is a library where you can find logs of all cross browser testing perf
 
 ## Accessing Test Logs
 
-
 **Step 1:** Log in to your account.
 
 **Step 2:** Select **'Test Logs'** from the menu bar on the left-hand side.
 
-
-
 **Step 3:** After selecting **'Test Logs'**, you'll see a list of tests you performed. Select any of the tests to get the details.
 
-
-
 ## From Where Can I Access The Details Of My Project 'Untitled'?
-
 
 **Step 1:** Open **'Test Logs'** from the menu bar.
 
@@ -26,10 +20,7 @@ Test Logs is a library where you can find logs of all cross browser testing perf
 
 **Step 3:** From the panel on the right-hand side, you can access the details of the project tests performed in the project **Untitled**.
 
-
-
 ## How To Move A Test From One Project To Another?
-
 
 **Step 1:** From the **'Test Logs'** menu, open the project from where you want to move the test.
 

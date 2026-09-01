@@ -4,11 +4,7 @@
 
 TestMu AI Usage Report provides comprehensive insights into your product usage. These insights help you optimize your testing efforts by providing detailed insights into your product usage, test count, and more.
 
-
 The Usage Report is currently in  . If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
-
-
-
 
 ## Usage Frequency per product
 

@@ -6,8 +6,6 @@ By default, Kane CLI uploads each session to TestMu AI Test Manager as a test ca
 
 This is the default behaviour for every session in both the TUI and the CLI. You do not need to opt in.
 
-
-
 ## What Gets Uploaded
 
 When a session ends, Kane CLI runs an upload pipeline that finalises the test case in Test Manager. Two kinds of artefacts move from your machine to TestMu AI:
@@ -18,8 +16,6 @@ When a session ends, Kane CLI runs an upload pipeline that finalises the test ca
 You see a short progress indicator at exit covering these stages: `convert` (preparing metadata), `zip` (packaging run directories), `presign` (requesting upload URLs), `upload` (sending the zip and metadata), and `finalize` (committing the test case in Test Manager). If code export is enabled, a `code_export` stage runs after `finalize`. If it is disabled, that stage is reported as skipped.
 
 If the upload fails, Kane CLI prints the error and exits. The local session directory is preserved either way, see [Session History on Disk](#session-history-on-disk).
-
-
 
 ## Choosing Where Uploads Land
 
@@ -63,8 +59,6 @@ If you try to set a folder before choosing a project, Kane CLI asks you to pick 
 
 After a successful upload, Kane CLI prints two links to the terminal (see [Share Links at Session Exit](#share-links-at-session-exit)). Both lead into the TestMu AI Test Manager for the test case that was just created.
 
-
-
 ## Code Export
 
 Code export converts a completed test case into runnable Playwright code that you can check into your repository or extend by hand.
@@ -106,8 +100,6 @@ Generated code is downloaded into a local directory under your session, by defau
 
 The same code is also available alongside the test case in Test Manager.
 
-
-
 ## Share Links at Session Exit
 
 When the upload finishes successfully, Kane CLI prints a small links block to the terminal. You see up to three links, depending on what was generated:
@@ -117,8 +109,6 @@ When the upload finishes successfully, Kane CLI prints a small links block to th
 - **CodeExport**: a `file://` link to the directory on your machine that holds the generated Playwright code. Only shown when code export is enabled and produced files.
 
 The links survive the terminal exit and remain in your scrollback.
-
-
 
 ## Feedback Prompt
 
@@ -132,8 +122,6 @@ You can also submit feedback after the fact for a known test case:
 kane-cli feedback --test-id <test-id> --feedback-type positive
 kane-cli feedback --test-id <test-id> --feedback-type negative --details "..."
 ```
-
-
 
 ## Session History on Disk
 

@@ -20,17 +20,11 @@ const capability = {
 ```
 **Step 2:** Now, trigger your test on HyperExecute using the mentioned command. Please replace the placeholder values with your details.
 
-
-
   {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 **Step 3:** Now visit the HyperExecute Dashboard to check your triggered test. Click on the **View Test Detail** button.
 
 **Step 4:** Click on the **band-aid** icon as shown below to check what part of your test case is healed.
-
-
 
 ## How Auto Healing Works
 
@@ -55,7 +49,6 @@ By using these hooks, you can:
 This provides precise control over when element healing should be applied, improving reliability and reducing flakiness without impacting unrelated steps.
 
 > To learn how to use AutoHeal hooks in your Selenium scripts, refer to the detailed guide: [How to Use AutoHeal using Hooks](/support/docs/auto-healing/)
-
 
 ## Benefits of Auto Healing
 

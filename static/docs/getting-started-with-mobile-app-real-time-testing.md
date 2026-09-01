@@ -11,10 +11,6 @@ Real-Time Mobile App Testing allows you to test mobile applications directly on 
 - To test your application, enter its URL or upload your application from your local machine and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
 - Afterwards click on the **Start** button to initiate the testing process.
 
-
-
-
-
 ## Dashboard Walkthrough
 The Real-Time Testing dashboard provides an intuitive interface for managing your testing sessions:
 

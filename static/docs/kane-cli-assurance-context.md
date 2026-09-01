@@ -17,7 +17,9 @@ kane-cli context list                           # see what you have
 kane-cli context ingest <src...> [--as <id>]
 ```
 
-Snapshots one or more files into `.context/` (the store is created on first use). Each source gets a stable id — by default the filename slug (`prd-online-store.md` → `prd-online-store`), or pass `--as ` to name it yourself.
+Snapshots one or more sources into `.context/` (the store is created on first use). A source is a file path or a remote URL — a Jira issue, a Confluence page, a Linear issue or document, or a public web page. See [Requirement Sources](/support/docs/kane-cli-assurance-sources/) for every accepted type.
+
+Each source gets a stable id — by default the filename slug (`prd-online-store.md` → `prd-online-store`), or the issue key for a ticket (`ENG-42` → `eng-42`). Pass `--as ` to name it yourself.
 
 Ingest is deterministic about identity:
 
@@ -33,7 +35,23 @@ $ kane-cli context ingest ./prd-online-store.md
 created  prd-online-store  source sha256:0661…  blob sha256:3db8…
 ```
 
-Accepted media: text (`.txt`) and markdown (`.md`, `.markdown`) up to 2 MB — cited verbatim by line; PNG/JPEG/WebP images up to 5 MB — cited whole-image. Anything else is rejected with `UNSUPPORTED_MEDIA`; oversized files with `FILE_TOO_LARGE`.
+### Accepted sources
+
+Files: text and structured text up to 2 MB, images up to 5 MB, PDF and Word documents up to 25 MB.
+
+Remote sources, passed as a URL and requiring the matching connection on your account:
+
+```bash
+kane-cli context ingest https://<your-site>/browse/PROJ-123              # Jira issue
+kane-cli context ingest https://<site>/wiki/spaces/<KEY>/pages/<id>/…    # Confluence page
+kane-cli context ingest https://linear.app/<workspace>/issue/KEY-123     # Linear issue
+kane-cli context ingest https://linear.app/<workspace>/document/<slug>   # Linear document
+kane-cli context ingest https://docs.example.com/guide                   # public web page
+```
+
+Anything else is rejected with `UNSUPPORTED_MEDIA`, and oversized files with `FILE_TOO_LARGE`. Every source type, with its size cap, citation granularity, identity rules and refusal codes, is documented in [Requirement Sources](/support/docs/kane-cli-assurance-sources/).
+
+A Jira `ENG-42` and a Linear `ENG-42` both mint the id `eng-42`. A URL whose id is already backed by a different kind of source refuses and offers a recovery rather than replacing it silently.
 
 When the new bytes are a **changed version of a source you already extracted from**, prefer [`kane-cli maintain reconcile`](/support/docs/kane-cli-assurance-maintain/) over a bare re-ingest — it records the same head move *and* triages what the change means for your suite, in one step.
 
@@ -235,6 +253,7 @@ Headless extraction (`--mode agent|ci|override`), the NDJSON event stream, exit 
 
 ## Next steps
 
+- [Requirement sources](/support/docs/kane-cli-assurance-sources/) — every accepted file type and remote URL.
 - [Designing tests](/support/docs/kane-cli-assurance-design/) — turn a trusted use-case into ACs, scenarios, and runnable tests.
 - [Maintaining the suite](/support/docs/kane-cli-assurance-maintain/) — what to do when a source changes.
 - [Automation](/support/docs/kane-cli-assurance-automation/) — the headless contract.

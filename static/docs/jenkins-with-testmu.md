@@ -12,15 +12,11 @@ Jenkins is a widely popular Continuous Integration (CI) tool. It is free to use,
 
 ## Prerequisites
 
-
-
 *   A TestMu AI account
 *   An existing Jenkins CI server (version 2.138.2+)
 *   A Jenkins User with root access.
 
 ## Installing the Jenkins Plugin
-
-
 
 Download TestMu AI Jenkins plugin to run your Selenium tests with Jenkins on TestMu AI. You need to be granted administrator-level access before proceeding with Jenkins installation.
 
@@ -32,19 +28,13 @@ Make sure to have no active build jobs in execution or queue before heading forw
 4.  You will encounter a list of plugins where you need to select **TestMu AI**.
 5.  To install TestMu AI Jenkins plugin, you would have to select the checkbox in front of TestMu AI. After successful installation of the plugin, you will be able to find the TestMu AI Jenkins plugin under your installed plugins
 
-
-
 Sometimes your recently installed plugins fail to synchronize with your available plugins on Jenkins. If you don't find TestMu AI plugin under your available plugins, you can force Jenkins to refresh the list by simply clicking the **Check Now** button to fetch the latest plugins from the Jenkins update center.
 
 ## How To Configure Your TestMu AI Credentials?
 
-
-
 After installing the TestMu AI Jenkins plugin to perform automated cross browser testing, you would need to configure the TestMu AI credentials in your Jenkins CI server for integrating your Selenium WebDriver tests with Jenkins. You would need to work with Jenkins UI to proceed with the configuration.
 
 ## To Configure TestMu AI Credentials Using Jenkins UI
-
-
 
 Follow these steps to configure TestMu AI with Jenkins:
 
@@ -55,29 +45,19 @@ Follow these steps to configure TestMu AI with Jenkins:
 5.  Enter the relevant data in the fields and click **Verify Credentials**. After verification, click the **OK** button. Jenkins will generate the ID, which is visible on the **Credential** page.
 6.  Save your changes.
 
-
-
 Once you successfully add your credentials, then Jenkins will generate an ID. To retrieve this ID for TestMu AI Credentials, you would have to go to Jenkins home page and click on **Credentials** from the left navigation menu.
 
 From the Jenkins home page, click **Credentials** from the left menu. You can copy the ID for TestMu AI credentials.
 
 ## Configuring The Build Environment Through Jenkins UI
 
-
-
 To enable Lambda Tunnel to perform tests on your locally hosted web application or website: Visit the tab for **Build Environment** and mark the tick on the box left to **LAMBDATEST**.
-
-
 
 That is all you need for performing automated cross browser testing on your locally hosted web pages or web files using the TestMu AI Jenkins plugin with Lambda Tunnel. In the next section, you will learn how to enable the Lambda Tunnel.
 
 ## Configure TestMu AI Tunnel
 
-
-
 Here we will look at the process of enabling Lambda Tunnel to test your locally hosted web apps. Visit the tab for **Build Environment** and mark the tick on the box left to **LAMBDATEST**.
-
-
 
 1.  We would recommend keeping the TestMu AI Local Path empty; that way, the plugin will automatically download the LT binary file. However, if you wish to use a binary by downloading externally, you need to provide the file's location as the 'TestMu AI Local Path.' But if your Jenkins works on the master-slave configuration set up, then it would be best to leave the path empty for allowing the plugin to download the relevant binary file for the operating system of your local machine.
 2.  You can configure additional settings with Lambda Tunnel by using the option to Use Local Tunnel.
@@ -96,7 +76,6 @@ Here we will look at the process of enabling Lambda Tunnel to test your locally 
 |$LT_BUILD_NUMBER|Represents a particular build number.|
 |$LT_BROWSERS|An array of combinations.|
 |$LT_TUNNEL_NAME|Name of your Lambda Tunnel for local testing.|
-
 
 Using the above variables you will receive an output in the below format.
 
@@ -119,23 +98,13 @@ sample Output $LT_BROWSERS:
 
 ## Running Your First Test
 
-
-
 To run your first test using Jenkins TestMu AI plugin, you need to set a test build. You can perform that easily through Jenkins UI by clicking on **Build Now**.
-
-
 
 As you click on **Build Now**, you will find a new build generating under the build history.
 
-
-
 If you click on the build you will find the logs for console output. You will also notice TestMu AI icon on the left which will provide you in-depth details regarding your Selenium test through an i-frame.
 
-
-
 When you click on the TestMu AI Report icon from the left side, a report table with details for the Selenium test will load.
-
-
 
 Kudos! You successfully executed your Selenium test suite using Jenkins with TestMu AI plugin.
 

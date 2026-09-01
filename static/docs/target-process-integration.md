@@ -8,52 +8,32 @@ Using TestMu AI integration with TargetProcess, you’ll be able to log bugs ove
 
 ## How To Integrate TargetProcess With Your TestMu AI Account?
 
-
 **Step 1**: Login to your TestMu AI account. You would need to have Admin or User level access to see and install integrations.
 
 **Step 2**: Select Integrations from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your TestMu AI account. Search for TargetProcess and click on the block.
 
-
-
 >**Note**: If you have already installed a TestMu AI integration to any project management tool then you would come across a prompt asking you to disable your existing TestMu AI integration for integrating TargetProcess with your TestMu AI account.
-
 
 **Step 3**: You would now be routed to a screen where you’ll need to enter your TargetProcess **Dashboard URL**, Access Domain and **TargetProcess Access Token**.
 
-
-
-
 **What is Dashboard URL?**
 TargetProcess uses boards to visualise data. The dashboard URL would be the link of your customised board that you would create to track any project, tasks, or bugs etc. We will be using the highlighted User Story for demonstration.
-
 
 **What are Access Tokens?**
 
 Access tokens are strings with the authorization key required to access an API. They are issued to the client-server and are usually opaque. They are used for requesting access to protected, user-specific resources. Access tokens are vital from a security point of view & can be generated in different formats, depending upon security requirements specified on the resource server.
 
-
-
 ## Where can I create my TargetProcess Access Token?
 
 You can generate your TargetProcess access token by clicking on the user avatar displayed on the top right and going to **Admin User**.
 
-
-
 Go to Access Tokens tab and Add a new token.
-
-
 
 As you create a new token a key would be generated. Copy this key as you will need to provide it on TestMu AI application to integrate with TargetProcess.
 
-
-
 **Step 4**: Provide the access token, Dashboard URL and Domain URL to TestMu AI for integrating TargetProcess and hit the install button.
 
-
-
 Kudos! You’ve successfully integrated TestMu AI with TargetProcess. You will find TargetProcess Integration highlighted under the section **"My Integration"**.
-
-
 
 ## How To Log Bug Using TestMu AI Integration To TargetProcess?
 
@@ -61,15 +41,9 @@ Kudos! You’ve successfully integrated TestMu AI with TargetProcess. You will f
 
 **Step 2**: Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start’.
 
-
-
 **Step 3**: After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel to capture a screenshot of the bug.
 
-
-
 **Step 4**: After a screenshot is captured, you can annotate any issue or a task with a built-in image editor. Once you are done highlighting the bug, click on the button that says Mark as Bug.
-
-
 
 **Step 5**: After clicking on Mark as Bug button a form specific to TargetProcess would open up. Fill the fields as per your requirement, and create the issue.
 
@@ -81,17 +55,11 @@ Kudos! You’ve successfully integrated TestMu AI with TargetProcess. You will f
 * Summary and description to help relay the observation.
 * Different tags as well(comma separated).
 
-
-
 > **Note**: After you click on Create Issue, you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message Bug successfully marked indicating that the screenshot has been pushed to your TargetProcess project.
 
 **Step 6**: Visit your Task Board in TargetProcess and you’ll find the bug that you logged from TestMu AI in it on the appropriate User Story that you specified while logging the bug.
 
-
-
 **Step 7**: If you click on the bug, you will find all the details specified by you while logging it from TestMu AI. Along with the screenshot of the bug, test ID, environment details and a link to reproduce the issue which would open the same test environment over TestMu AI.
-
-
 
 ## How To Remove TestMu AI Integration With TargetProcess?
 
@@ -102,7 +70,5 @@ Kudos! You’ve successfully integrated TestMu AI with TargetProcess. You will f
 **Step 2**: Select **Integrations** from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3**: Under **"My Integrations"**, you’ll find the TargetProcess Integration. Click on Remove button to uninstall the integration with TestMu AI and TargetProcess.
-
-
 
 That was all you need to know for TestMu AI + TargetProcess Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always **available on chat** to help you out with any roadblock regarding our product. Happy testing!

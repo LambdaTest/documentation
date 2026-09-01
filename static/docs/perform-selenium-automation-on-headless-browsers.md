@@ -14,8 +14,6 @@ For headless browser testing on TestMu AI, enable the capability for headless br
 
 Visit the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/). Under the **Browser Specific Capabilities**, find the toggle button to enable **Headless** browsing. Switch the button to true.
 
-
-
 ### Enable Headless Browser Testing via Code
 
 Add the headless capability directly in your test script code.
@@ -157,7 +155,6 @@ caps.setCapability("console", true);
 // Capability setting to enable Headless browsing
 caps.setCapability("headless",true);
 
-
 System.out.println("Desired Caps: " + caps);
 driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
 }
@@ -166,7 +163,6 @@ catch(Exception e)
 System.out.println(e);
 }
 }
-
 
 @Test
 public static void testAssertion() {
@@ -203,14 +199,9 @@ driver.quit();
 
 After you execute the above code, the test runs on TestMu AI successfully. View the status of the test on your [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline). To reproduce a real-user session in headless runs, you can also upload a custom Chrome profile with your preferred browser settings.
 
-
-
-
-
 That's it folks! If you have any doubt or questions, feel free to contact our experts at **24/7 Customer chat support** or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
 ## Next Steps
-
 
 Continue with these related guides:
 

@@ -1,11 +1,10 @@
-# Mobile App Testing Patterns
+# How to Test Native Mobile Apps With KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Mobile native app testing in KaneAI follows many of the same principles as web testing, but with platform-specific nuances for Android and iOS. This guide covers the patterns, workarounds, and best practices that will help you write reliable mobile app tests.
+Mobile native app testing in KaneAI uses the same natural-language authoring as web testing, with platform-specific patterns for Android and iOS. This page is a lookup reference: each section covers one interaction (keyboards, OTP fields, scrolling, pickers, popups, and more), the natural-language keyword to use, and a worked scenario.
 
-## Getting Started with Mobile Tests
-
+## Start a Mobile Test
 
 Author a mobile test in five steps before you apply the patterns below.
 
@@ -17,11 +16,9 @@ Author a mobile test in five steps before you apply the patterns below.
 
 ## Keyboard Handling
 
-
 The keyboard is one of the biggest differences between web and mobile testing. On mobile, the on-screen keyboard persists after typing and can block elements below it.
 
 ### Android
-
 
 The keyboard typically auto-dismisses on most interactions, but you can explicitly dismiss it:
 
@@ -30,7 +27,6 @@ hide keyboard
 ```
 
 ### iOS
-
 
 iOS keyboards are more persistent. The best approach is to use `press Enter` after typing, which both submits the current field and dismisses the keyboard:
 
@@ -45,12 +41,9 @@ click on "Done" button on the keyboard
 click on "Cancel" button on the keyboard
 ```
 
-
 If you skip keyboard dismissal on iOS, the keyboard may cover the next element you need to interact with, causing the step to fail. Always dismiss the keyboard before moving to the next field.
 
-
 ### Scenario: Login Form on iOS
-
 
 ```
 type "admin@example.com" in the email field and press Enter
@@ -62,7 +55,6 @@ assert "Welcome" is visible
 
 ## OTP & PIN Fields
 
-
 Mobile apps frequently use individual digit boxes for OTP entry. Use the `OTP` keyword. KaneAI automatically distributes digits across the boxes.
 
 ```
@@ -70,12 +62,9 @@ enter OTP "123456"
 enter OTP "7890"
 ```
 
-
 Do **not** type into each box individually. The `OTP` keyword handles multi-box distribution.
 
-
 ### Scenario: SMS OTP Verification
-
 
 ```
 type "+1-555-0123" in the phone number field and press Enter
@@ -88,7 +77,6 @@ assert "Phone verified" is visible
 
 ## Scrolling on Mobile
 
-
 Mobile scrolling works differently from web. There's no pixel-based scroll. Use count-based or directional scrolling.
 
 ```
@@ -99,7 +87,6 @@ scroll down 1 time
 
 ### The Scroll → Wait Pattern
 
-
 Always add a wait after scrolling on mobile. Content may need time to load, and the scroll animation needs to complete.
 
 ```
@@ -108,8 +95,7 @@ wait for 2 seconds
 assert "Contact Us" section is visible
 ```
 
-### Scenario: Scrolling Through a Long Settings Page
-
+### Scenario: Scrolling a Settings Page
 
 ```
 scroll down 3 times
@@ -121,17 +107,13 @@ click on "Delete Account"
 assert confirmation dialog is visible
 ```
 
-
 `scroll until element is visible` is currently supported only on **Web**. On mobile, use `scroll down X times` combined with waits and assertions.
 
-
 ## Pickers, Wheels & Sliders
-
 
 KaneAI interacts with native picker wheels and sliders using the patterns below.
 
 ### Native Pickers
-
 
 Mobile apps use native picker wheels for dates, numbers, and selections. KaneAI supports the following element classes:
 
@@ -147,7 +129,6 @@ Mobile apps use native picker wheels for dates, numbers, and selections. KaneAI 
 
 ### Interacting With Picker Wheels
 
-
 Reference each wheel by its column position when setting a value.
 
 ```
@@ -158,7 +139,6 @@ enter "2026" in the third column
 
 ### Slider Interactions
 
-
 Set a slider by value or percentage.
 
 ```
@@ -168,16 +148,14 @@ set the brightness slider to 50
 
 ### Troubleshooting Pickers
 
-
 If a picker doesn't respond to natural language, verify its element class.
 
-1. Open LambdaTest **App Live** with the [UI Inspector](https://www.testmuai.com/support/docs/ui-inspector/)
+1. Open TestMu AI **App Live** with the [UI Inspector](https://www.testmuai.com/support/docs/ui-inspector/)
 2. Inspect the picker element to verify its class name
 3. Confirm the class is one of the supported types listed above
 4. If the class is a custom implementation, you may need to use **manual interaction** mode
 
 ## Partially Clickable Text (Spannable Text)
-
 
 In mobile apps, text labels often contain partially clickable links, for example, "By signing up, you agree to our **Terms and Conditions** and **Privacy Policy**" where only "Terms and Conditions" is tappable.
 
@@ -190,11 +168,9 @@ click on spannable text: "Privacy Policy" in the sign-up footer
 
 ## Dismissing Popups & Dialogs
 
-
 Mobile apps frequently show permission dialogs, promotional popups, or system alerts that don't have visible close buttons.
 
 ### Generic Dialog Dismissal
-
 
 Dismiss any dialog without targeting a specific button.
 
@@ -203,7 +179,6 @@ dismiss dialog
 ```
 
 ### Permission Dialogs
-
 
 Handle permission prompts with conditional taps so the test does not fail when a prompt is absent.
 
@@ -214,15 +189,13 @@ if "Don't Allow" button is visible then click on "Don't Allow"
 
 ### App Rating Dialogs
 
-
 Dismiss a rating prompt only when it appears.
 
 ```
 if "Rate this app" dialog is visible then dismiss dialog
 ```
 
-### Scenario: Handling Permission Prompts on App Launch
-
+### Scenario: Handling Permission Prompts
 
 ```
 -- App launches and asks for location permission --
@@ -239,11 +212,9 @@ assert the home screen is visible
 
 ## Typing & Special Keys
 
-
 Use these keywords to delete characters and press special keys during input.
 
 ### Deleting Characters
-
 
 ```
 press Del
@@ -260,7 +231,6 @@ type "new_username" in the "Username" field
 
 ### Pressing Enter/Return
 
-
 ```
 press Enter
 ```
@@ -268,7 +238,6 @@ press Enter
 This can trigger form submission, keyboard dismissal, or moving to the next field depending on the app's implementation.
 
 ## Using Explicit Element Identifiers
-
 
 On mobile, adding element type keywords improves accuracy because there may be multiple elements with similar text.
 
@@ -291,20 +260,15 @@ assert the profile button's background color is blue
 
 ## Deep Links
 
-
 KaneAI supports deep links for navigating directly to specific screens in your app, bypassing the normal navigation flow using the slash command.
-
 
 Deep links are useful for test setup. Jump directly to the screen under test instead of navigating the whole app flow. See how to add [KaneAI Deeplink Support](/support/docs/kane-ai-deeplink-support/).
 
-
 ## Mobile-Specific Testing Scenarios
-
 
 These end-to-end scenarios combine the patterns above into complete mobile flows.
 
 ### Scenario: E-Commerce Purchase Flow
-
 
 ```
 -- Handle initial permissions --
@@ -333,13 +297,12 @@ assert "Wireless Earbuds" is visible in the cart
 click on "Checkout" button
 ```
 
-### Scenario: Banking App - Check Balance with Biometric
-
+### Scenario: Banking Biometric Login
 
 ```
 -- App launches with biometric authentication enabled from advanced settings --
 wait for 5 seconds
--- (Biometrics pop-up visible via LambdaTest device settings) --
+-- (Biometrics pop-up visible via TestMu AI device settings) --
 click "pass" in modal
 assert the home screen is visible
 
@@ -354,8 +317,7 @@ wait for 2 seconds
 assert "Recent Transactions" section is visible
 ```
 
-### Scenario: Social Media App - Post with Image
-
+### Scenario: Social Media Post
 
 ```
 click on the "New Post" button
@@ -373,11 +335,9 @@ assert "Post shared successfully" is visible
 
 ## Network Conditions & Geolocation
 
-
 Simulate network throttling and mock GPS location to test environment-dependent behavior.
 
 ### Testing Network Conditions
-
 
 Set network throttling before or during the test session to simulate real-world conditions:
 
@@ -385,10 +345,9 @@ Set network throttling before or during the test session to simulate real-world 
 - **2G/3G**: Test on slow connections
 - **Custom**: Define specific bandwidth limits
 
-See [Network Throttling](/support/docs/kaneai-network-throttling) for configuration.
+See how to configure [KaneAI Network Throttling](/support/docs/kaneai-network-throttling/).
 
 ### GPS Mocking (Mobile)
-
 
 Test location-dependent features by mocking GPS coordinates:
 
@@ -398,10 +357,9 @@ Test location-dependent features by mocking GPS coordinates:
 assert "Stores near New York" is visible
 ```
 
-See [Geolocation Testing](/support/docs/kane-ai-geolocation-tunnel-proxy).
+See how to configure [KaneAI Geolocation Tunnel Proxy](/support/docs/kane-ai-geolocation-tunnel-proxy/).
 
 ## Best Practices
-
 
 Follow these practices for reliable mobile app tests:
 
@@ -417,7 +375,6 @@ Follow these practices for reliable mobile app tests:
 | **Use `spannable text` for inline links** | Essential for "Terms and Conditions" style partial links |
 
 ## Next Steps
-
 
 Build on these patterns with related KaneAI mobile features.
 

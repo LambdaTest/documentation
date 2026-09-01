@@ -234,7 +234,7 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 ```yaml
 steps:
 - name: Running SmartUI Figma CLI Tests
-- run: |
+run: |
 npm install @lambdatest/smartui-cli
 npx playwright install-deps
 npx smartui upload-figma designs.json

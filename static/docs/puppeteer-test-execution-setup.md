@@ -8,7 +8,6 @@ The TestMu AI Capability Generator can auto-create the capabilities class for yo
 
 ## Choosing the Browser and OS
 
-
 To run a Puppeteer test on TestMu AI, define the browser, browser version, and platform in your automation script. The three capabilities below set the exact environment the test targets.
 
 | Key | Expected Values | Description | Example |
@@ -18,7 +17,6 @@ To run a Puppeteer test on TestMu AI, define the browser, browser version, and p
 | platform  |  **Windows**: 11, 10, 8, 8.1, 7  **macOS**: Monterey, Big Sur, Catiline, Mojave |    Specify the platform name    | `const capability = { "LT:Options": {"platform": "Windows 10",}}`
 
 ## Organizing Tests With Build and Name Capabilities
-
 
 Name your test cases and group your builds so runs stay easy to find in the dashboard. Use the capabilities below to organize your Puppeteer tests.
 
@@ -83,7 +81,6 @@ console.log("Error - ", e);
 
 ## Getting Session Details
 
-
 Each Puppeteer test generates its own logs on TestMu AI. To read the information for the current session, add the snippet below to your Puppeteer test script.
 
 ```js
@@ -124,7 +121,6 @@ status: 'success'
 
 ## Changing Desktop Resolutions
 
-
 Puppeteer tests run at `1920x1080` by default on desktop browsers. Set the `resolution` capability to run at a different screen resolution.
 
 | Capability | Description  | Expected Values | Example |
@@ -132,7 +128,6 @@ Puppeteer tests run at `1920x1080` by default on desktop browsers. Set the `reso
 | resolution   |  Specifying your desktop resolution before initiating the test |   String, **Default value**: 1920x1080   **Windows 11 & 10**: `1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080 and 2048x1536`  **macOS**: `1024x768, 1280x960, 1280x1024, 1600x1200 and 1920x1080`  | const caps = &lbrace;'resolution': '1024x768',&rbrace;; |
 
 ## Changing Browser Window Size
-
 
 To change the browser window size during a Puppeteer test, call `page.setViewport()` as shown below.
 
@@ -146,7 +141,6 @@ deviceScaleFactor: 1,
 
 ## Naming Your Project
 
-
 Group related builds under a project by setting the `projectName` key to a name of your choice. Use the capability below.
 
 | Key | Values | Description | Capability |
@@ -154,7 +148,6 @@ Group related builds under a project by setting the `projectName` key to a name 
 | projectName   | Example: My Test |   Represent the name of your project    |  `const capabilities = { 'LT:Options': {'projectName': 'My Test',}}` |
 
 ## Debugging Tests With Logs and Video
-
 
 Enable network logs, console logs, and video recording to debug failed Puppeteer sessions. Set the capabilities below to capture each type of log.
 
@@ -165,7 +158,6 @@ Enable network logs, console logs, and video recording to debug failed Puppeteer
 | video   |  true/false |    Enable Video recording of the entire screen     | `const capabilities = { 'LT:Options': {'video': true,}}` |
 
 ## Mark Tests as Passed or Failed
-
 
 A test that fails on your local machine can still pass on TestMu AI, so set the status explicitly to match your own assertions. By default, a test that finishes without error is marked **Completed**, and one that hits an error is marked **Failed**. Use the `setTestStatus` action to override this.
 
@@ -180,9 +172,6 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 ```js
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)
 ```
-
-## Capabilities Reference
-
 
 The TestMu AI Capability Generator can auto-create the capabilities class for your Puppeteer scripts. The full set of capabilities you can configure is listed below.
 
@@ -206,7 +195,6 @@ The TestMu AI Capability Generator can auto-create the capabilities class for yo
 | idleTimeout | number| Specifies the timeout of the commands in seconds.  Default value: 300  Max value: 1800 If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "",}}`|
 
 ## Related Puppeteer Guides
-
 
 Continue with the guides below to run and scale your Puppeteer tests on TestMu AI.
 

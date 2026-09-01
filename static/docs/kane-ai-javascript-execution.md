@@ -1,32 +1,22 @@
-# KaneAI - JavaScript Execution
+# How to Execute JavaScript With KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-With KaneAI’s new JavaScript Execution feature, you now have the flexibility to write or paste custom JavaScript code snippets to perform tests. This allows for more advanced and customized test scenarios alongside KaneAI’s plain English test-writing format.
+When a test interaction cannot be expressed in plain English, write or paste a JavaScript snippet and KaneAI runs it in the current test session. This gives you direct DOM access for cases natural language cannot reliably handle: read-only date pickers, exact table-cell assertions, string manipulation, clipboard, and browser storage. You switch between natural language and JavaScript step by step, with no setup.
 
-This can be very useful for:
-- **Advanced Interactions:** If you need more granular control over interactions that can’t be expressed in plain English.
-- **Complex Test Scenarios:** For scenarios that involve manipulating the DOM, testing specific elements, or interacting with APIs directly.
-- **Flexibility:** Switch between natural language and JavaScript to suit your testing needs.
-- **Precision:** Perform tests that require more detailed code logic.
-- **Seamless Execution:** Test JavaScript code directly without any setup.
-
+## Prerequisites
 
 Before you begin, make sure you have:
-
 
 Before you add a JavaScript step, make sure you have the following.
 - A KaneAI test session open in the test editor.
 - The JavaScript snippet you want to run, tested in your browser DevTools console first.
 
-
 ## Execute a Custom JavaScript Step
-
 
 Follow these steps to write and run a JavaScript snippet as a test step.
 
 ### Step 1: Open Write a Step
-
 
 In KaneAI's test editor, go to the **Write a Step** field where you write test scenarios in plain English.
 
@@ -34,13 +24,11 @@ In KaneAI's test editor, go to the **Write a Step** field where you write test s
 
 ### Step 2: Switch to JavaScript Mode
 
-
 To switch to JavaScript execution mode, type the forward slash `/` or click the `+` icon. When the JavaScript option appears, click it to change the input mode to custom JavaScript.
 
 **Result:** The step input accepts JavaScript instead of natural language.
 
 ### Step 3: Write Your JavaScript
-
 
 Write or paste your custom JavaScript snippet directly into the text field. For example:
 
@@ -75,14 +63,11 @@ simulateTyping(inputElement3, 'amanc@lambdatest.com');
 return {"First name": "Aman", "Last name": "Chopra", "email": "amanc@lambdatest.com"};
 ```
 
-The provided code snippet simulates typing into text fields programmatically by dispatching key-related events such as keydown, input, keyup, and change. It mimics real user interaction by typing each character into the field and updating its value accordingly. The example provided fills in the first name, last name, and email fields with specific values and returns them in an object format.
+This snippet simulates typing into text fields by dispatching key-related events (`keydown`, `input`, `keyup`, and `change`), mimicking real user interaction character by character. It fills the first name, last name, and email fields, then returns them as an object.
 
-### Step 4: Execute the Test
-Once your code is ready, simply press Enter. KaneAI will run your custom JavaScript snippet in the current testing environment.
+**Result:** The snippet sits in the step input, ready to run.
 
-#### Handling Return Values and Variable Usage
-If your JavaScript snippet contains return values, KaneAI will automatically save these values in a variable that can be used later in the test. The output from your JavaScript code will be captured and assigned to a variable. This variable will be available for use throughout your test execution.
-
+### Step 4: Execute the Step
 
 When your code is ready, press Enter. KaneAI runs the snippet in the current test session.
 
@@ -99,22 +84,16 @@ return {"First name": "Aman", "Last name": "Chopra", "email": "amanc@lambdatest.
 
 The returned object with the keys `First name`, `Last name`, and `email` will be stored in a variable. You can reference this variable later in your test to validate or reuse the values.
 
-> Variables created from return values can be used in subsequent test steps. To use the variable, simply refer to the specific property (e.g., First name) in your test steps for verification or further actions.
+> To use a variable created from a return value in a later step, reference the specific property (for example, First name) for verification or further actions.
 
 #### JavaScript Snippets in Generated Code
 When your test runs, KaneAI adds your snippet directly into the generated test code. Custom JavaScript interactions become part of the overall test logic, so you can track, debug, and modify them alongside the rest of the test.
 
-
-
-
-
 ## JS Snippet Workarounds by Scenario
-
 
 Now that you can run a JavaScript step, the rest of this page is a library of ready-to-use snippets for the scenarios where natural language falls short. Each section below names where natural language is unreliable and gives the exact snippet to use instead.
 
 ### Add a JS Snippet as a Step
-
 
 Follow these steps to run a snippet as a test step.
 
@@ -125,10 +104,7 @@ Follow these steps to run a snippet as a test step.
 
 The snippet runs in the context of the page with full access to the DOM, `document`, `window`, and any JavaScript variables the page has defined.
 
-
-
 ### Date Picker Interactions
-
 
 **Problem:** Many date pickers use read-only inputs that reject typed values. Natural language typing doesn't trigger the custom event handlers these components rely on.
 
@@ -179,11 +155,7 @@ endDate.dispatchEvent(new Event('input', { bubbles: true }));
 return 'Date range set: Feb 1 - Feb 28, 2026';
 ```
 
-
-
-
 ### String Manipulation & Data Transformation
-
 
 **Problem:** Operations like converting text to lowercase, extracting substrings, or formatting data are not reliably handled via natural language.
 
@@ -224,10 +196,7 @@ throw new Error('FAIL: Expected "' + expected + '", got "' + actual + '"');
 }
 ```
 
-
-
 ### Table & List Validation
-
 
 **Problem:** KaneAI can't reliably assert specific cell values in complex tables (e.g., "the 5th column of the 3rd row contains X").
 
@@ -268,10 +237,7 @@ throw new Error('FAIL: Table is not sorted. Got: ' + values.join(', '));
 }
 ```
 
-
-
 ### Clipboard Operations
-
 
 **Problem:** Natural language can't directly read or write clipboard content.
 
@@ -290,10 +256,7 @@ const clipText = await navigator.clipboard.readText();
 return 'Clipboard contains: ' + clipText;
 ```
 
-
-
 ### Local Storage & Session Storage
-
 
 **Problem:** You may need to verify, set, or clear browser storage for test setup or validation.
 
@@ -322,9 +285,7 @@ sessionStorage.clear();
 return 'Session storage cleared';
 ```
 
-
 ### Quick Reference: JS Snippets
-
 
 | Scenario | Natural Language? | JS Snippet Needed? |
 |---|---|---|
@@ -341,7 +302,6 @@ return 'Session storage cleared';
 
 ### Best Practices for JS Snippets
 
-
 | Practice | Details |
 |---|---|
 | **Use natural language first** | Only fall back to JS when natural language is unreliable |
@@ -351,7 +311,6 @@ return 'Session storage cleared';
 | **Test snippets in browser DevTools first** | Paste into the Console to verify before adding to KaneAI |
 
 ## Next Steps
-
 
 Combine JavaScript steps with the rest of your KaneAI test flow.
 

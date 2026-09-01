@@ -19,8 +19,6 @@ pip install Appium-Python-Client
 
 The above code installs the latest Python client library for Appium which only supports `w3c : True` capability.
 
-
-
 ## Performing Mobile Web Automation on Real Devices
 
 Pass the isRealMobile capability in your test scripts to run on a real device.
@@ -104,7 +102,5 @@ python todo.py
 ```
 
 Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) to find the mobile web automation test details along with the `REAL DEVICE (BETA)` label as highlighted below.
-
-
 
 >That’s all! you have successfully executed the mobile web automation test on real devices. In case you have any questions or need any additional information, you could reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.

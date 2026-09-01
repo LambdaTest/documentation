@@ -10,12 +10,9 @@ TestMu AI now allows you to perform your WebView Testing using its online cloud-
 
 ## How To Perform WebView Testing On TestMu AI
 
-
-
 **Step 1:** You will need an account on TestMu AI. If you already have an account on TestMu AI, you can directly skip to the next step. If you don't have an account yet, you can register for free.
 
 **Step 2:** Login to your TestMu AI account using this link.
-
 
 **Step 3:** Navigate to "Real Time Testing" from the left navigation menu.
 
@@ -36,8 +33,6 @@ TestMu AI now allows you to perform your WebView Testing using its online cloud-
 **Step 10:** Once the **WebView Browser Tester** is open, you can perform your WebView Testing as per your requirement.
 
 ## How To Mark Bug While Performing WebView Testing On TestMu AI
-
-
 
 **Step 1:** Open the WebView Browser Tester as per the steps given above.
 

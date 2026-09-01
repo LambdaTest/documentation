@@ -6,8 +6,6 @@ The TestMu AI Selenium Java SDK enables you to run your existing Selenium TestNG
 
 ## Key Features
 
-
-
 Review what the SDK offers out of the box.
 
 - **Zero Code Changes** - Run your existing Selenium tests without modifying your test code
@@ -18,8 +16,6 @@ Review what the SDK offers out of the box.
 
 ## Prerequisites
 
-
-
 Complete these steps before using the SDK.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you do not have one.
@@ -29,8 +25,6 @@ Complete these steps before using the SDK.
 5. Prepare an existing Java test project using TestNG (support for additional frameworks is coming soon).
 
 ## Quick Start
-
-
 
 Get running on the cloud grid in three steps.
 
@@ -114,9 +108,7 @@ Add the TestMu AI Selenium Java SDK dependency to your `pom.xml`. Configure the 
 
 ```
 
-
 Check the latest version of [testmuai-selenium-java-sdk](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-selenium-java-sdk) and update the version accordingly.
-
 
 ### Step 2: Create Configuration File
 
@@ -163,7 +155,6 @@ Set these environment variables before running your tests:
 - `LT_USERNAME` - Your TestMu AI username
 - `LT_ACCESS_KEY` - Your TestMu AI access key
 
-
 ### Step 3: Add TestNG Listener
 
 Add the TestMu AI status listener to your TestNG configuration:
@@ -187,8 +178,6 @@ Add the TestMu AI status listener to your TestNG configuration:
 That's it! Your tests are now configured to run on TestMu AI. No code changes required in your existing test methods.
 
 ## Thread Safety
-
-
 
 The SDK handles parallel execution without additional synchronization.
 
@@ -216,8 +205,6 @@ The SDK fully supports parallel test execution with TestNG:
 ```
 
 ## Example Test
-
-
 
 See how your existing tests work without any modifications.
 
@@ -266,8 +253,6 @@ driver.quit();
 
 ## Troubleshooting
 
-
-
 Resolve common issues when running tests with the SDK.
 
 ### Common Issues
@@ -290,8 +275,6 @@ Resolve common issues when running tests with the SDK.
 
 ## Additional Resources
 
-
-
 Find related guides and tools for further configuration.
 
 - [TestMu AI Selenium Grid Documentation](/support/docs/testmu-running-your-first-selenium-test)
@@ -300,8 +283,6 @@ Find related guides and tools for further configuration.
 - [TestMu AI Support](https://www.testmuai.com/support)
 
 ## Changelog
-
-
 
 Track SDK version history and feature additions.
 

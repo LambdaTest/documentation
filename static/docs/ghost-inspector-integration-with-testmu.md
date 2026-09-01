@@ -4,7 +4,6 @@
 
 TestMu AI provides support with Selenium WebDriver for pacing the execution of your automation test scripts. TestMu AI is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.testmuai.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Ghost Inspector on TestMu AI.
 
-
 ## What is Ghost Inspector?
 
 Ghost Inspector is a codeless automation tool that lets a software tester automate the process of writing test scripts.
@@ -17,26 +16,10 @@ As a result, you’ll be able to expand your test coverage, analyze and extract 
 
 * All the test suites will be reflected in the Ghost Inspector dashboard.
 
-
-
-
-
 * Click on the desired test suite.
 * Click on the desired test case under test suites.
 
-
-
-
-
 * Once you have selected the desired test case, click on **More** -> **Export Suite** and select the format as New Selenium IDE (.side).
-
-
-
-
-
-
-
-
 
 ### Setup Selenium IDE Side Runner:
 
@@ -50,33 +33,16 @@ npm install -g selenium-side-runner
 ```
 * You also need your TestMu AI authentication credentials, which includes your TestMu AI username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your TestMu AI automation dashboard and click on the "key" icon left to the help button, on the top right corner.
 
-
-
-
-
 * Open Selenium IDE and click on ‘Open an existing project'.
-
-
-
-
 
 * Right click on the test suite and go to Settings. Test Suite Settings.
 
-
-
-
-
 * In the Settings window, tick the Run in Parallel checkbox. Test Suite Properties.
-
-
-
-
 
 * Save the SIDE project.
 * We have successfully activated Parallel Testing in Selenium IDE. Now we can execute tests Selenium IDE tests in parallel on TestMu AI Selenium Cloud Grid.
 
 ## Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid
-
 
 * Set the Desired Capabilities in Selenium. For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
 * The TestMu AI Selenium Desired Capabilities Generator is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.

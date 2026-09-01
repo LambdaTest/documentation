@@ -8,18 +8,12 @@ This is an **advanced** setting. It applies where issues are grouped by **web pa
 
 **Default:** The feature is **disabled**. When it is off, URLs that share the same base path but use different fragments are treated as **one** URL for issue tracking.
 
-
-
 ## Enabling Fragment Identifier
-
-
 
 1. Open **Accessibility DevTools** → **Settings**.
 2. Open the **Other Settings** section.
 3. Find **Fragment Identifier**.
 4. Turn the toggle **on**.
-
-
 
 ## How fragment identifiers work
 
@@ -45,16 +39,12 @@ The same three URLs are tracked as **distinct** targets:
 
 **Result:** Issues are categorized and reported **per full URL**, including the fragment. That supports clearer ownership and trends when hash fragments reflect real differences in content or flow.
 
-
-
 ## Benefits
 
 - **Granular issue tracking**: See and triage issues for specific sections or hash states instead of one blended bucket.
 - **Better SPA support**: Hash-based routing and deep links are easier to reason about in the dashboard and reports.
 - **Clearer workflow**: Assign and manage work per fragment when that matches how your app is structured.
 - **Richer reporting**: Reports can reflect section- or state-specific findings where the base URL alone would hide variation.
-
-
 
 ## Related docs
 

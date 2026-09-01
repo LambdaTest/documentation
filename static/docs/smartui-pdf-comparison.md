@@ -4,7 +4,7 @@
 
 SmartUI PDF Testing is a visual regression capability that captures snapshots of every page in a PDF and compares them against a baseline to surface pixel-level differences. Upload your PDFs through the REST API, the Java SDK, or the CLI, and review the highlighted changes directly in the SmartUI dashboard.
 
-This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo/).
+This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo).
 
 ## Prerequisites for Using SmartUI
 

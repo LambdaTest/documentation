@@ -30,7 +30,4 @@ Passing `deviceName` using REGEX:
 ``Pixel.*-12``
 ``Pixel.*``
 
-
-
-
 REGEX is currently possible on the `deviceName` as of now and *not* on the ``platformVerison``.

@@ -41,7 +41,6 @@ These Android rule summaries are a quick reference for findings that appear in A
 | Minimum Text Size   | Best Practice | - | Minor | Text renders below the recommended minimum readable size (16dp), making it difficult to read for users with low vision. Increase non-scalable text to at least the recommended minimum and prefer `sp` units. | [Open rule](/support/docs/accessibility-rule-repository/) |
 | Text Spacing   | Best Practice | - | Minor | Text is rendered with line height, word spacing, or paragraph gaps below the readability floor. The scanner enforces a minimum of 0.9x line height; 1.2–1.5x is recommended for best readability. | [Open rule](/support/docs/accessibility-rule-repository/) |
 
-
 > We are continuously expanding our App Accessibility guidelines. Visit this page for the latest updates and new requirements.
 
 ## Related docs

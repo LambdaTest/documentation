@@ -6,18 +6,14 @@ Regular expressions in Appium on TestMu AI widen your device search when an exac
 
 **Supported on:** Real devices
 
-
 TestMu AI provides RegEx support for both **deviceName** and **platformVersion**, making it easier to find the right devices for your tests.
-
 
 **Note:** Regular Expression support is currently available **only for App Automation**.
 It is **not supported for Web Automation on Virtual Devices** at this time.
 
-
 ## Why Use RegEx?
 
 Imagine you want to run a test on an iPhone. You don't need a specific model, just any iPhone. Using **RegEx**, you can specify this requirement, and TestMu AI will allocate any available iPhone. This flexibility can significantly broaden the search and increase the chances of finding a suitable device quickly.
-
 
 ## Regex Characters for `deviceName`
 
@@ -42,6 +38,5 @@ Imagine you want to run a test on an iPhone. You don't need a specific model, ju
 |  \|  | The  \| is used to match any of the specified platform versions in the list. **In the example given**:  1. We have added 2 regex characters  \|  and `.*` to show that using both in combination, we'll fetch any platform version that contains the string 13 or 14.  2. You'll be allocated any available platform version 13 or 14.| "(1(3\|4).*)"  |
 
 > To run tests on **minor OS versions** while using `platformVersion` capability, please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
-
 
 You can pass both `deviceName` and `platformVersion` regex patterns together or use any one of them as per your requirements. This flexibility allows you to match specific devices, versions, or combinations based on your needs.

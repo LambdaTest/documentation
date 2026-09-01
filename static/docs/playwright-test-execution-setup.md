@@ -6,7 +6,6 @@ When you run a Playwright test on TestMu AI, you set the operating system, brows
 
 ## Choosing the Browser and OS
 
-
 Every Playwright run needs a target browser and platform. Define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts to choose the combination you want.
 
 | Key | Expected Values | Description | Capability|
@@ -17,9 +16,7 @@ Every Playwright run needs a target browser and platform. Define the `browserNam
 
 ### Playwright Supported Browsers
 
-
 Each Playwright version ships with its own bundled browser builds. The table below lists the compatible bundled browsers you can use to run tests on TestMu AI for each Playwright version.
-
 
 View compatible bundled browsers for each Playwright version
 
@@ -56,17 +53,13 @@ View compatible bundled browsers for each Playwright version
 | v1.16               | **Chromium** 97.0  **Firefox** 93.0  **WebKit** 15.4   |
 | v1.15               | **Chromium** 96.0  **Firefox** 92.0  **WebKit** 15.0   |
 
-
-
 ### Bundled Browser Versions
-
 
 Use this table when you want TestMu AI to match the bundled browser version to your local Playwright version. When you set the `useSpecificBundleVersion: true` capability, TestMu AI selects the Chromium, Firefox, or WebKit version that matches your local machine's Playwright version.
 
 ```yaml
 const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}
 ```
-
 
 View available bundled browser versions for each Playwright version
 
@@ -100,10 +93,7 @@ View available bundled browser versions for each Playwright version
 |1.25| 104-113 | 103-112 | 16 |
 |1.24| 103-104 | 100-102 | 16 |
 
-
-
 ## Organizing Tests
-
 
 Naming and tagging your runs makes them easier to find and filter in the TestMu AI dashboard. Use the following capabilities to name test cases and group your Playwright builds by build number, build name, test tags, and build tags.
 
@@ -115,10 +105,7 @@ Naming and tagging your runs makes them easier to find and filter in the TestMu 
 | tags   |  ["tag1", "tag2", "tag3"] |  Group your Playwright tests |``const capability = {"LT:Options": { "tags": ["tag1", "tag2", "tag3"], }}`` |
 | buildTags   |  ["build1", "build2", "build3"] |  Group your Playwright builds |`const capability = {"LT:Options": { "buildTags": ["build1", "build2", "build3"] }}` |
 
-
-
 ## Changing Desktop Resolutions
-
 
 Playwright tests run at `1920x1080` by default for desktop browsers. Set the `resolution` capability when you need to reproduce a specific screen size. The supported values per platform are listed below.
 
@@ -127,7 +114,6 @@ Playwright tests run at `1920x1080` by default for desktop browsers. Set the `re
 | resolution   |  Specifying your desktop resolution before initiating the test |   String, **Default value**: 1920x1080   **Windows 11 & 10**: `1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080 and 2048x1536`  **macOS**: `1024x768, 1280x960, 1280x1024, 1600x1200 and 1920x1080`  | `const capabilities = { 'LT:Options': {'resolution': '2048x1536',}}` |
 
 ## Changing Browser Window Size
-
 
 The viewport controls the drawable area inside the browser, separate from the desktop resolution. The default viewport for Playwright tests is 1280x720. To set a different viewport, create the browser context with the size you want, as shown below.
 
@@ -146,7 +132,6 @@ await page.setViewportSize({ width: 1600, height: 1200 });
 ```
 
 ## Setting Browser Options
-
 
 Playwright lets you pass browser arguments to Chromium based browsers. For Chrome and Edge, set browser options through the `'goog:chromeOptions'` and `'ms:edgeOptions'` capabilities, as shown below.
 
@@ -206,7 +191,6 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 
 ## Getting Session Details
 
-
 Each Playwright test on TestMu AI generates logs and metadata tied to its session. To retrieve details such as the test ID, status, and log URLs for the current session, add the snippet below to your Playwright test scripts.
 
 ```js
@@ -247,7 +231,6 @@ status: 'success'
 
 ## Configuring Geolocation
 
-
 Geolocation testing lets you verify how your application behaves for users in different countries. Run your Playwright tests across 53+ geographies with the `'geoLocation'` capability, as shown below.
 
 | Key | Values | Description | Capability |
@@ -255,7 +238,6 @@ Geolocation testing lets you verify how your application behaves for users in di
 | geoLocation   |  US | Represents the geolocation - United States  |`const capabilities = { "LT:Options": { 'geoLocation': 'US', }}`  |
 
 ## Debugging Tests
-
 
 When a test fails on TestMu AI, the captured logs help you trace what went wrong. Enable the debugging capabilities below to record network logs, console logs, and video for your Playwright sessions.
 
@@ -266,7 +248,6 @@ When a test fails on TestMu AI, the captured logs help you trace what went wrong
 | video   |  true/false |    Enable Video recording of the entire screen     | `const capabilities = { 'LT:Options': {'video': true,}}` |
 
 ## Marking Tests as Passed or Failed
-
 
 A test that fails on your local instance can pass on TestMu AI, so the automatic status does not always reflect your intended outcome. Mark each test as **Passed** or **Failed** explicitly to record the result you expect.
 
@@ -287,7 +268,6 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 ```
 
 ## Capabilities Reference
-
 
 This is the complete set of capabilities you can configure for Playwright tests on TestMu AI. The TestMu AI Capabilities Generator can auto-create this capabilities class for your scripts.
 
@@ -316,7 +296,6 @@ This is the complete set of capabilities you can configure for Playwright tests 
 | lambdaSetBrowserPosition | | The `lambdaSetBrowserPosition` function is designed to arrange two browser windows on the screen, ensuring each occupies exactly half of the available screen space. This layout facilitates side-by-side browser comparisons or multitasking workflows.   OS Supported - Windows  Browsers supported : Chrome, Microsoft Edge , pw-chroium, pw-webkit & pw-firefox | `const capability = {action: 'lambdaSetBrowserPosition',}` |
 
 ## Related Playwright Guides
-
 
 Continue with the guides below to configure and run your Playwright tests on TestMu AI.
 

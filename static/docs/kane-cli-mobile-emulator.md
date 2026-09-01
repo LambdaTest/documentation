@@ -4,13 +4,9 @@
 
 Set up Google's Android Emulator once, and Kane CLI can run mobile tests against it. This guide targets **macOS on Apple Silicon (arm64)**, the only supported host for this release. See [Mobile Testing](/support/docs/kane-cli-mobile/) for the full picture.
 
-
 On Apple Silicon, always use an **`arm64-v8a`** system image. The x86 and x86_64 images do not run natively and are effectively unusable. This is the single most common setup mistake.
 
-
-
 The exact Android API levels and device profiles in the supported matrix are pinned by the product team. The values shown below, API 35 and Pixel, are current, working examples. Confirm the officially supported set before you rely on a specific one.
-
 
 ## 1. Install Android Studio
 

@@ -12,8 +12,6 @@ Hooks are grouped into three categories so you can quickly find what applies to 
 
 ## How Lambda Hooks Are Invoked
 
-
-
 The invocation syntax differs by framework.
 
 **Selenium**: pass the hook as a string to the JavascriptExecutor:
@@ -36,8 +34,6 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 
 ## Common Lambda Hooks (Selenium & Playwright)
 
-
-
 These capabilities are available in both frameworks. Note that the hook name and syntax differ per framework, so use the form shown for your framework. For example, the `lighthouseReport` hook lets you generate Lighthouse reports for any URL during a session.
 
 | Hook | Selenium | Playwright | Description |
@@ -50,8 +46,6 @@ These capabilities are available in both frameworks. Note that the hook name and
 | **lambda-accessibility-scan** | `driver.executeScript("lambdatest_executor:{\"action\":\"lambda-accessibility-scan\"}");` | Use the `lambda-accessibility-scan` action via the `lambdatest_action` pattern. | Run an accessibility scan. |
 
 ## Selenium-Only Lambda Hooks
-
-
 
 These hooks work only through the Selenium JavascriptExecutor and are not available in Playwright sessions. Some behaviors that these hooks toggle at runtime can also be enabled up front through [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
 
@@ -81,8 +75,6 @@ These hooks work only through the Selenium JavascriptExecutor and are not availa
 
 ## Playwright-Only Lambda Hooks
 
-
-
 These hooks are available only in Playwright (and other CDP-based) sessions, using the `lambdatest_action` pattern.
 
 | Hook | Description |
@@ -93,7 +85,6 @@ These hooks are available only in Playwright (and other CDP-based) sessions, usi
 > **Note**: These hooks only work if you are connected to your TestMu AI Hub URL. If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment`
 
 ## Next Steps
-
 
 Continue with these related guides:
 

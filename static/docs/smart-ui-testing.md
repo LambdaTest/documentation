@@ -17,20 +17,11 @@ HyperExecute's SmartUITesting offers the following features:
 
 To execute SmartUI Testing using HyperExecute, you can opt for the following methods:
 
-
-
-
       Using Selenium
       HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Selenium.
 
-
-
-
       Using Cypress
       HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Cypress.
-
-
-
 
       Using Playwright
       HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Playwright.

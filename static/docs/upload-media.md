@@ -13,8 +13,6 @@ By the end of this topic, you will be able to:
 2. Use Upload File and Media feature in App Automation.
 3. Use Upload File and Media feature in Browser (web) Automation.
 
-
-
 ## File Storage Paths on Devices
 
 Where an uploaded file lands on the device depends on whether it is an **App** or **Browser** session. Everything else about the upload flow is identical.
@@ -47,12 +45,8 @@ This section provides a comprehensive guide on leveraging this feature within au
 
 You can use the following curl command to upload any file `media` and `non-media` from your system to the TestMu AI cloud.
 
-
-
 {`curl --user "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type=image" -F "custom_id=SampleImage"`
 }
-
-
 
 **Request Parameters**
 - `media_file`: This parameter denotes the media file to be uploaded from your local.
@@ -73,50 +67,24 @@ Below is a sample response demonstrating the return of the `media_url` parameter
 
 You can also utilize TestMu AI's user-friendly UI to upload the files on TestMu AI cloud and get the `media_url` using the upload button located at the top of the automation dashboard.
 
-
-
 ### Step 2 : Setting Capability in Your Test Script
 
 Once the files are uploaded to TestMu AI's cloud, seamlessly integrate files into your automation tests via the capability. Set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
 
-
-
-
-
         {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 desiredCapabilities.setCapability("uploadMedia", Arrays.asList("lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"));`}
 
-
-
-
-
-
-
         {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]);`}
-
-
-
-
-
-
 
         {`desired_capabilities = {
   "uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]
 }`}
 
-
-
-
-
-
-
 - Each automation session permits a maximum of five file uploads.
 - The `uploadMedia` capability is set the same way for **app** and **browser (web)** automation.
 - In manual testing, iOS app needs to installed first to upload non-media files.
 - For non-media files, make sure your iOS app's Info.plist file includes the UIFileSharingEnabled and LSSupportsOpeningDocumentsInPlace keys set to true. This configuration is necessary to enable your app's folder accessibility within the Files app.
-
-
 
 **Browser automation: differences to note**
 - **iOS documents** uploaded in a browser session appear under **Chrome** in the Files app, even when testing in Safari. This is by design, as only Chrome on iOS exposes a browsable file container. Pick the file via *Choose File → On My iPhone → Chrome*.

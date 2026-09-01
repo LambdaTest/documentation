@@ -10,7 +10,6 @@ This documentation guides you how to configure the desired capability for app, d
 
 ## Configure App
 
-
 In order to fetch and install apps on TestMu AI cloud, you will need to use the `app` capability to connect with your uploaded apps.
 
 | Key | Values | Description | Desired Capability |
@@ -18,7 +17,6 @@ In order to fetch and install apps on TestMu AI cloud, you will need to use the 
 | app   |  `lt://APP10051525539885437397` |    Configure the app to test on    | `"app":"lt://APP10051525539885437397"`        |
 
 ## Select Device And OS
-
 
 To perform Appium mobile testing on real Android and iOS devices, you need to define the `deviceName`, `platformName`, and `platformVersion` capabilities in your Appium automation scripts.
 
@@ -30,7 +28,6 @@ To perform Appium mobile testing on real Android and iOS devices, you need to de
 
 ## Group Tests
 
-
 For better analysis, you can name your test cases and organize your builds by build name and project.  To organize Appium automated tests, you will need to use name, build and projectName capability.
 
 | Key | Values | Description | Desired Capability |
@@ -40,7 +37,6 @@ For better analysis, you can name your test cases and organize your builds by bu
 | projectName   |  Test1 |     Represent the name of a project     | `capabilities.setCapability("projectName", "Test1")` |
 
 ## Debugging
-
 
 By specifying the capabilities for the debugging tools, you can debug and fix your failed Appium test sessions using Appium logs, device logs, network logs, crash logs, screenshots, video logs, or app profiling data.
 
@@ -55,7 +51,6 @@ By specifying the capabilities for the debugging tools, you can debug and fix yo
 
 ## Viewing Appium Test Results
 
-
 You can view the results of your app automation tests on the TestMu AI App Automation dashboard and using the REST API. Configure **build** and **project** capabilities to segregate your test sessions into distinct builds and projects.
 
 | Key | Values | Description | Desired Capability |
@@ -64,7 +59,6 @@ You can view the results of your app automation tests on the TestMu AI App Autom
 | project | Sprint |   Name of the project to group tests  | `capabilities.setCapability("project", "Sprint")` |
 
 ## Mark Tests As Passed Or Failed
-
 
 While performing mobile app automation on TestMu AI Appium Grid, you may encounter a scenario in which a test that you labeled as failed in your local instance turns out to be performed successfully on TestMu AI. It's crucial to mark an automated test as **Passed** or **Failed** based on your testing requirements for validating expected behavior.
 
@@ -79,6 +73,5 @@ You can mark a test status as failed/passed using JavaScript executer on TestMu 
 2. To mark test status as **passed**.
 
 `driver.executeScript('lambda-status=passed')`
-
 
 >In case you have any questions or need any additional information, drop them at our **24X7 Chat Support** or mail us directly at support@testmuai.com.

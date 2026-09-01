@@ -23,9 +23,7 @@ ltOptions.put("visual", false);   // Disable step-by-step screenshots
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
-
 Console, network, and visual capabilities are `false` by default. Only set them explicitly if a previous configuration enabled them.
-
 
 ## Run Tests in Parallel
 
@@ -121,7 +119,6 @@ traceroute hub.lambdatest.com
 ```
 
 ## Next Steps
-
 
 Continue with these related guides:
 

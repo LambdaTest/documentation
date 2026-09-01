@@ -8,16 +8,10 @@ This is a one-time, **organization-level** setup. Once a tester is added, you ca
 
 You can manage testers from the sidebar under **Real Device → App Management and Distribution → Beta Testers**.
 
-
-
-
-
 ## Before You Begin
 
 - A TestMu AI account with **App Distribution enabled** for your organization.
 - The **email addresses** of the testers you want to invite. Testers can be inside or outside your organization, new builds can be accessed via the link received in their mail inbox.
-
-
 
 ## Add Beta Testers
 
@@ -33,21 +27,13 @@ Beta Testers are the individual people you invite to access authenticated builds
 
 **Step 5:** Click **Add Tester**. This sends the tester a welcome email so they can join your organization as a Beta Tester.
 
-
-
 **Pending invites**
 
 Until the tester accepts the invite, a **Pending** tag appears next to their email in the Beta Testers list. You can't add a tester to a team until they accept the invite.
 
-
-
-
-
 ## Create Beta Teams
 
 Teams are groups of testers that make it easier to manage access and notifications at scale. Instead of adding individual testers to each app, you assign a team, and all current (and future) members of that team get access automatically.
-
-
 
 **Step 1:** Navigate to **Beta Teams**.
 
@@ -59,11 +45,7 @@ Teams are groups of testers that make it easier to manage access and notificatio
 
 **Step 5:** Click **Create Team**.
 
-
-
 When a team is assigned to an app's sharing list, all members of that team can download authenticated builds and receive notifications.
-
-
 
 ## Related Resources
 

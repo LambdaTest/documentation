@@ -6,6 +6,7 @@ Run your PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/d
 
 ## Prerequisites
 
+Complete the following steps before you begin automation testing with Selenium.
 
 Before you start, you need a TestMu AI account with your credentials, plus PHP, Composer, and the Selenium WebDriver for PHP installed.
 
@@ -15,23 +16,6 @@ Before you start, you need a TestMu AI account with your credentials, plus PHP, 
 4. Install the Selenium WebDriver for PHP (pulled in by the sample projects via Composer).
 
 ## Set Your Credentials
-
-
-   * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. For the latest **MacOS** versions starting with **Monterey**, download and install **PHP** manually:
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install php
-```
-   * **Windows:** Download **PHP** from [PHP for Windows](http://windows.php.net/download/). Also, refer to the [PHP Windows installation guide](http://php.net/manual/en/install.windows.php) to ensure PHP is accessible through Command Prompt (cmd).
-
-2. Download **composer** in the project directory ([Linux/MacOS](https://getcomposer.org/download/), [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)).
-
-   **Note:** To use the **composer** command directly, it either should have been downloaded in the project directory or should be accessible globally which can be done by the command below:
-```bash
-mv composer.phar /usr/local/bin/composer
-```
-
-## Step 1: Clone the Sample Project
 
 Clone the repository and install dependencies.
 
@@ -51,34 +35,13 @@ Configure your credentials to connect to the TestMu AI Selenium Grid.
 
 Set TestMu AI `Username` and `Access Key` in environment variables.
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-
-
-
-
-
-
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ## How the Sample Test Works
-
 
 Define browser, version, and OS settings for your test run.
 
@@ -103,30 +66,40 @@ $capabilities = array(
 **Capabilities Generator**
 Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
 
-
-Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
-
-
 ## Run a Test in Your Framework
 
+Use AI coding assistants to generate and run PHP Selenium tests with the TestMu AI Agent Skill.
 
-Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
-
-
-
-
-Behat is BDD for PHP: feature files plus step definitions, with the grid config in a Behat YAML file.
-
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/behat-selenium-sample):
+Install the skill:
 
 ```bash
-php tests/LambdaTest.php
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/selenium-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/selenium-skill .cursor/skills/
 ```
 
-## Step 5: View Your Results
+2. Set your browser and OS in the Behat config:
 
-Check the test output on the console and the TestMu AI dashboard.
+```yaml title="behat.yml"
+default:
+context:
+parameters:
+lambdatest:
+server: "hub.lambdatest.com"
+user: "YOUR_LAMBDATEST_USERNAME"
+key: "YOUR_LAMBDATEST_ACCESS_KEY"
+capabilities:
+build: "behat-selenium-sample"
+name: "single-behat-test"
+environments:
+- browserName: chrome
+version: 71.0
+platform: Win10
+```
 
 The `user` and `key` values are read from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set in the [Set Your Credentials](#set-your-credentials) section.
 
@@ -139,18 +112,11 @@ composer install
 4. Run a single test, or in parallel:
 
 ```bash
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/selenium-skill .claude/skills/
-
-# For Cursor / Copilot
-cp -r agent-skills/selenium-skill .cursor/skills/
+composer single
+composer parallel
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 Laravel Dusk provides a fluent browser-automation API. Credentials and the grid live in the project's `.env` and `tests/DuskTestCase.php`.
 
@@ -186,10 +152,6 @@ php artisan dusk
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 Codeception configures the grid in its acceptance suite's WebDriver module, with credentials in the host URL.
 
@@ -234,10 +196,6 @@ composer install
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 PHPUnit keeps capabilities inline in `LambdaTestSetup.php`, with Composer scripts for single and parallel runs.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Php-PhpUnit-Selenium):
@@ -275,19 +233,13 @@ composer test
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 ## View Your Results
-
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 **Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

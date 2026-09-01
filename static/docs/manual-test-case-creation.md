@@ -8,23 +8,13 @@ Test Manager streamlines the process of creating, managing, and editing test cas
 
 After selecting your project, type your test case **title** to create a new test case. You can create a **folders** to organize and store the test cases.
 
-
-
 To add a new test case, click on the **Add Test Case** button on the right side or use `Command + \` for Mac and `Control + \` for Windows shortcut to create a new test case.
-
 
 Press **shift + Enter** to create multiple test cases simultaneously.
 
-
-
 After test case is created you will be redirected to a screen listing all the test cases.
 
-
  By default test cases having no parent folder are stored under **Untitled** folder.
-
-
-
-
 
 ## Manage Test Case
 
@@ -32,20 +22,11 @@ After test case is created you will be redirected to a screen listing all the te
 
 When you select a test case, you’ll be redirected to the Test Case Details page, where you can view Test Case details such as: **Test Case Title**, **Description**, **Precondition** , **Attachments**, **System Fields**: **Type**, **Status**, **Priority**, **Tag(s)** & **Custom Fields**
 
-
-
-
-
-
 ### Test Case Steps
 
 Test Steps can be accessed from the `Test Steps` section, present in the Summary Page of a Test Case.
 
-
-
 The Test Manager offers a comprehensive Steps section with a rich text editor and these features:
-
-
 
 **1. Add Step level Attachments**
 
@@ -61,30 +42,19 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
-
 In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/create-modules/).
-
 
 #### Add New Step:
 
 To add a new step click on on the `Add Test Step` button.
 
-
-
-
-
 You can use the **Generate with AI** option to ask agent to analyse your test case details & generate the next step of action for you.
-
 
 #### Save Changes:
 
 To save the changes made in the Test Case click on the `Save Changes` button OR use the `Command + /` for Mac & `Ctrl + /` shortcut.
 
-
  Any change in the Test Case, on **saving** will create a new version for that Test Case. You can add a commit message to note the reason for changes. To know more about how versioning works checkout the [Versioning doc](/support/docs/test-case-versioning/).
-
-
-
 
 ### Test Case Runs Section
 
@@ -94,22 +64,14 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 - This section displays test instances that have been executed. You can filter the test instances based on the **executor** and the **current status**.
 
-
-
 #### Planned Test Instances of Test Case
 - This section shows Planned Instances that are included in a Test Run but their execution is not yet started. You can filter Test Instances based on the **Assignee** of the Test Instance.
 
-
-
 - On clicking on that Test Case's execution you will be redirected to `Automation Dashboard` if its a Automation execution, the `Test Instance Page` if its Manual Instance or `Test Runs Page` if its a unexecuted Automation Instance.
-
-
 
 ### Issues section
 
 This section lists the linked Jira/ADO Issues with the Test Case. For more information refer [this page](/support/docs/link-jira-issues-with-test-manager/)
-
-
 
 ### Version History
 

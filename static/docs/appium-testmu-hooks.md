@@ -8,7 +8,6 @@ LambdaHooks on TestMu AI are JavaScript-executor snippets you drop into Appium s
 
 ## Adding custom status & remark
 
-
 To add custom status & remark, just add the code snippet using the ```JavascriptExecutor```.
 
 ```JavascriptExecutor``` accepts two arguments as shown below:
@@ -65,11 +64,7 @@ driver.quit();
 
 Once you have added the code snippet, the status and remark will be visible on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) as shown below:
 
-
-
-
 ## Update Test Name
-
 
 To update the name of the test, just add the code snippet using the ```JavascriptExecutor```.
 
@@ -82,7 +77,6 @@ Arguments | Example
 ```
 
 ## Differentiating Test Cases in Single Session
-
 
 TestMu AI has introduced a LambdaHook to help automation engineers differentiate between multiple test cases within a single Appium session. This feature aims to improve debugging capabilities, making it easier to identify which test cases may be causing errors or taking longer to execute.
 
@@ -114,13 +108,9 @@ Any command logs executed between `lambda-testCase-start` and `lambda-testCase-e
 
 You can also filter the command logs based on these labels.A screenshot has been provided below, demonstrating the use of labels and how to filter command logs based on them.
 
-
-
 ### Viewing Test Cases and Their Trends
 
 Every test case you mark with the start and end hooks is also listed on the automation session details page. Click the test case selector above the command logs to open the **Select Test Case** panel, which lists all the test cases recorded in the session along with the trend of their last five runs.
-
-
 
 The panel shows the following details:
 
@@ -133,16 +123,11 @@ The panel shows the following details:
 
 Selecting a test case from the panel filters the command logs to the commands executed between that test case's start and end hooks, so you can jump straight to the section of the session you want to debug.
 
-
 The **Last 5 runs** trend lets you tell a genuinely broken test case from a flaky one without opening older sessions. A test case that is red across all five runs points to a consistent failure, whereas a mix of red and green points to flakiness that is worth investigating separately.
-
 
 ## Command Annotations
 
-
 Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **TestMu AI Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
-
-
 
 ### Using Command Annotations
 
@@ -165,13 +150,9 @@ To close the executor at the end of your script, pass `data` as an empty string:
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"\"}}");
 ```
 
-
 **Mutual exclusivity:** Test case and Command Annotations cannot be used together in the same script. You can only use **one** of them per session.
 
-
 ## Install and Uninstall App Hooks
-
-
 
 TestMu AI now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device. TestMu AI enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
 
@@ -218,12 +199,6 @@ Testing app upgrades is important because users often update to the latest versi
 
 **Python example:**
 
-
-
-
-
-
-
 ```python
 # Payload required to retain app data while uninstalling it
 data = {
@@ -241,18 +216,9 @@ data = {
 driver.execute_script("lambda-install-app", data)
 ```
 
-
-
-
-
-
-
-
-
 ```python
 # Send the current app in background
 driver.background_app(-1)
-
 
 # Payload required while installing the new upgrade
 data = {
@@ -269,12 +235,6 @@ data = {
 }
 
 ```
-
-
-
-
-
-
 
 ### Validation Errors
 
@@ -294,7 +254,6 @@ Multiple errors may occur based on the scenario. Understanding these errors will
 > **Note:** If the user had enabled any of the following capabilities in the previously installed app, they will remain available and functional in the upgraded app as well : `EnableScreenshotUnblock`,`EnableImageInjection`,`EnableVideoInjection`,`Network`,`AppProfiling`,`EnableWebContentsDebugging`,`EnableBiometricInjection`.This ensures that key testing features continue to work seamlessly after the app is updated, without requiring additional configuration.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

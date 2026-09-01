@@ -11,7 +11,6 @@ If you are moving from BrowserStack or Sauce Labs, use these dedicated migration
 
 ## Prerequisites
 
-
 Make sure you have the following set up before you start.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -20,36 +19,15 @@ Make sure you have the following set up before you start.
 
 ## Step 1: Set Your Credentials
 
-
 Add your TestMu AI credentials as environment variables so your tests can authenticate with the grid.
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 $env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
 ## Step 2: Replace Your Local Driver With RemoteWebDriver
-
 
 Point your tests to the TestMu AI hub instead of launching a local browser. The values you pass in `LT:Options` come from the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/), so you can tune build name, platform, and logging to match your suite.
 
@@ -60,10 +38,6 @@ https://{YOUR_USERNAME}:{YOUR_ACCESS_KEY}@hub.lambdatest.com/wd/hub
 ```
 
 Here is what the change looks like in each language:
-
-
-
-
 
 **Before (local):**
 ```java
@@ -88,10 +62,6 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 WebDriver driver = new RemoteWebDriver(new URL(hubURL), browserOptions);
 ```
-
-
-
-
 
 **Before (local):**
 ```javascript
@@ -121,10 +91,6 @@ const driver = new Builder()
 .build();
 ```
 
-
-
-
-
 **Before (local):**
 ```python
 driver = webdriver.Chrome()
@@ -153,10 +119,6 @@ options.set_capability("LT:Options", lt_options)
 driver = webdriver.Remote(command_executor=hub_url, options=options)
 ```
 
-
-
-
-
 **Before (local):**
 ```csharp
 IWebDriver driver = new ChromeDriver();
@@ -183,10 +145,6 @@ options.AddAdditionalOption("LT:Options", ltOptions);
 IWebDriver driver = new RemoteWebDriver(new Uri(hubURL), options);
 ```
 
-
-
-
-
 **Before (local):**
 ```php
 $driver = ChromeDriver::start();
@@ -212,10 +170,6 @@ $capabilities = [
 $driver = RemoteWebDriver::create($hubURL, $capabilities);
 ```
 
-
-
-
-
 **Before (local):**
 ```ruby
 driver = Selenium::WebDriver.for :chrome
@@ -240,15 +194,9 @@ w3c: true,
 driver = Selenium::WebDriver.for :remote, url: hub_url, capabilities: options
 ```
 
-
-
-
-
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities code for any browser, version, and OS combination.
 
-
 ## Step 3: Run Your Tests
-
 
 Execute your tests the same way you normally would. The only difference is they now run on the cloud. If you are new to the grid, first walk through how to run your first Selenium test to confirm your setup before migrating a full suite.
 
@@ -274,13 +222,11 @@ bundle exec rspec
 
 ## Step 4: View Your Results
 
-
 Check the Automation Dashboard to see exactly what happened during your test.
 
 Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your results. Each session captures video playback, screenshots, console logs, network logs, and Selenium command logs. If a migrated test fails, use these artifacts to debug your Selenium tests and find the cause.
 
 ## What Stays the Same
-
 
 Everything except the driver setup. Here is what does not change when you move to the cloud.
 
@@ -294,7 +240,6 @@ Everything except the driver setup. Here is what does not change when you move t
 | Local browser install requirement | **Removed** |
 
 ## Next Steps
-
 
 Continue with these related guides:
 

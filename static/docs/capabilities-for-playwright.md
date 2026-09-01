@@ -32,7 +32,6 @@ The table below lists the capabilities you can configure, the values each one ac
 
 ## Related Playwright Guides
 
-
 Continue with the guides below to run and stabilize your Playwright tests on TestMu AI.
 
 - [Run your first Playwright test on TestMu AI](/support/docs/playwright-testing/) walks through executing a Playwright script on the cloud grid.

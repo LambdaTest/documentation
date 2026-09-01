@@ -8,11 +8,9 @@ This document covers the customHeaders capability, which lets you add custom hea
 
 ## About CustomHeaders
 
-
 Custom headers carry information about the request or response, such as the method, URL, and body content. You can modify the parameters of HTTP requests sent by your tests by manipulating these headers, thereby working around firewall restrictions. `customHeaders` is one of many network controls available on the platform; see the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) for related options.
 
 ## How to Use CustomHeaders Capability on TestMu AI
-
 
 Add custom headers using the Capabilities class.
 
@@ -31,25 +29,21 @@ In the above code snippet, replace "headerName" and "headerValue" with the actua
 
 ## CustomHeader Capability: Your Key to Bypass Firewalls
 
-
 The customHeaders capability lets you inject custom headers into your HTTP requests to bypass firewalls or simulate specific client behavior.
 
 Custom headers are an integral part of HTTP requests and responses. They can carry authentication tokens, user agents, API versioning, and more. By modifying these headers in your tests, you can adjust the network behavior of the browser and ensure compatibility with restricted environments.
 
 ## Targeted Control with customUrlFilters
 
-
 The customUrlFilters capability, used together with customHeaders, lets you specify exactly which URLs should receive the custom headers. This ensures that headers are only applied to requests matching your defined filters.
 
 ### Key Behavior
-
 
 - If customHeaders are defined without customUrlFilters, the headers apply globally to all outgoing network requests.
 - If customUrlFilters are provided, the customHeaders only apply to requests matching the filter criteria.
 - Filters can be exact URLs or regular expressions, providing flexible targeting.
 
 ### Implementation Example
-
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -69,7 +63,6 @@ capabilities.setCapability("customUrlFilters", urlFilters);
 
 ### Behavior of This Example
 
-
 The headers `WebView: Enable` and `X-Custom-Token: secure-token-123` are only applied to:
 
 - `https://www.xhaus.com/headers`
@@ -79,11 +72,9 @@ A request to `https://lambdatest.github.io/sample-todo-app/` will not contain an
 
 ## A Responsible Approach to Bypassing Firewalls
 
-
 While the ability to add and control custom headers is useful, always follow your organization's security and compliance policies. These capabilities are designed to facilitate secure, realistic testing - not to bypass security controls inappropriately. For related network configuration, you can also apply custom DNS mapping to redirect domains or run tests behind a proxy for restricted environments.
 
 ## Use Cases
-
 
 The following examples show common use cases for custom headers.
 
@@ -169,7 +160,6 @@ X-Experiment-ID: variant_b
 
 ## Conclusion
 
-
 The customHeaders and customUrlFilters capabilities let you simulate request scenarios, bypass firewalls responsibly, and selectively apply network rules - providing a flexible, developer-centric approach to browser testing.
 
 By turning obstacles like firewalls into controllable conditions, TestMu AI simplifies testing and enhances the realism and effectiveness of your QA process.
@@ -177,7 +167,6 @@ By turning obstacles like firewalls into controllable conditions, TestMu AI simp
 Happy testing!
 
 ## Next Steps
-
 
 Continue with these related guides:
 

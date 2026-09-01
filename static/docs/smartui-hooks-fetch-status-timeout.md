@@ -26,9 +26,6 @@ Pass a config object with the `screenshotName` and the `timeout` in seconds.
 
 ### Selenium
 
-
-
-
 ```javascript
 const result = await driver.executeScript("smartui.fetchScreenshotStatus", {
 screenshotName: "checkout-page",
@@ -37,9 +34,6 @@ timeout: 120
 console.log("status:", JSON.stringify(result, null, 2));
 ```
 
-
-
-
 ```python
 result = driver.execute_script("smartui.fetchScreenshotStatus", {
 "screenshotName": "checkout-page",
@@ -47,9 +41,6 @@ result = driver.execute_script("smartui.fetchScreenshotStatus", {
 })
 print("status:", result)
 ```
-
-
-
 
 ```java
 import java.util.HashMap;
@@ -64,9 +55,6 @@ Object result = ((JavascriptExecutor) driver)
 .executeScript("smartui.fetchScreenshotStatus", config);
 System.out.println(result);
 ```
-
-
-
 
 ### Playwright / Puppeteer
 

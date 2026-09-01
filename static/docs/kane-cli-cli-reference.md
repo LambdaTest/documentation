@@ -12,8 +12,6 @@ Launch the interactive TUI.
 kane-cli --tui
 ```
 
-
-
 ### `kane-cli run`
 
 Run a browser automation test.
@@ -55,8 +53,6 @@ kane-cli run "<objective>" [options]
 
 On the `desktop` target, `--device` and `--app` are ignored. See [Mobile Testing](/support/docs/kane-cli-mobile/) for setup.
 
-
-
 ### `kane-cli doctor`
 
 Check the mobile tooling on this machine, and install the tooling Kane CLI manages.
@@ -68,8 +64,6 @@ kane-cli doctor --targets    # also list the emulators and simulators available
 ```
 
 `doctor` prints one line per required check. Run `kane-cli login` before `--install`. See [Mobile Testing](/support/docs/kane-cli-mobile/).
-
-
 
 ### `kane-cli login`
 
@@ -85,8 +79,6 @@ kane-cli login --username <user> --access-key <key> [--profile <name>]
 
 See [Authentication](/support/docs/kane-cli-authentication/) for details on profiles and auth methods.
 
-
-
 ### `kane-cli logout`
 
 Revoke tokens and remove stored credentials for the active profile.
@@ -94,8 +86,6 @@ Revoke tokens and remove stored credentials for the active profile.
 ```bash
 kane-cli logout
 ```
-
-
 
 ### `kane-cli whoami`
 
@@ -107,8 +97,6 @@ kane-cli whoami [--profile <name>]
 
 Prints profile, environment, auth method, username, and token state (for OAuth).
 
-
-
 ### `kane-cli balance`
 
 Show credit balance for the active profile.
@@ -116,8 +104,6 @@ Show credit balance for the active profile.
 ```bash
 kane-cli balance [--profile <name>]
 ```
-
-
 
 ### `kane-cli profiles`
 
@@ -130,8 +116,6 @@ kane-cli profiles delete <name>  # Delete a profile
 ```
 
 See [Authentication: Profiles](/support/docs/kane-cli-authentication/#profiles) for details.
-
-
 
 ### `kane-cli config`
 
@@ -149,13 +133,9 @@ kane-cli config set-device <id>            # Set default mobile device
 kane-cli config set-app <path|APPid>       # Set default app under test for mobile runs
 ```
 
-
 Commands without arguments (`chrome-profile`, `project`, `folder`) launch an interactive picker UI. AI agents cannot run these. Ask the user to run them directly.
 
-
 See [Configuration](/support/docs/kane-cli-configuration/) for the full settings reference.
-
-
 
 ### `kane-cli feedback`
 
@@ -168,8 +148,6 @@ kane-cli feedback \
 --details "optional message"
 ```
 
-
-
 ## Exit Codes
 
 | Code | Meaning |
@@ -178,8 +156,6 @@ kane-cli feedback \
 | `1` | Test failed (assertion not met) |
 | `2` | Error (auth failure, Chrome crash, infra issue) |
 | `3` | Timeout or cancelled |
-
-
 
 ## TUI Slash Commands
 
@@ -202,8 +178,6 @@ kane-cli feedback \
 | `/clear` | | Clear chat history |
 | `/exit` | | Quit Kane CLI |
 
-
-
 ## Keyboard Shortcuts
 
 | Shortcut | Action |
@@ -215,8 +189,6 @@ kane-cli feedback \
 | Esc | Go back / close picker |
 | Up / Down | Navigate menu or input history |
 | Tab | Accept autocomplete |
-
-
 
 ## Settings Reference
 
@@ -234,8 +206,6 @@ kane-cli feedback \
 | `code_export.skip_validation` | `true` | TUI menu or `--skip-code-validation` flag |
 
 Settings are stored at `~/.testmuai/kaneai/tui-config.json`. See [Configuration](/support/docs/kane-cli-configuration/) for details.
-
-
 
 ## Directory Structure
 

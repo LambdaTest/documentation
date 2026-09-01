@@ -14,16 +14,13 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
-
 ### Step 1: Setup your Projects in GitLab
 - Click on the **New Project** > **Run CI/CD for external repository**.
-
 
 - Enter your repository URL and click on Create Project.
 
 ### Step 2: Create a New Workflow
 -  Navigate to the **Build** section > **Pipelines**.
-
 
 - Select your required template for CI/CD workflow file. For the demo we are using the Test template.
 - Now, write your workflow YAML file. Here is the sample file for your reference.
@@ -33,20 +30,13 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/gitlab/.gitlab-ci.yml
 ```
 
-
 You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your GitLab project repository.
-
 
 ### Step 3: Check the output
 
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)
 
-
-
 ## Best Practices
-
-
-
 
 **Secret Management**
 
@@ -54,9 +44,6 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 - Use GitLab CI/CD Variables for all sensitive data
 - Rotate secrets regularly
 - Use different secrets for different environments
-
-
-
 
 **Pipeline Optimization**
 
@@ -73,9 +60,6 @@ only:
 - merge_requests
 ```
 
-
-
-
 **Build Naming**
 
 - Use meaningful build names that include branch/commit info
@@ -85,11 +69,8 @@ only:
 **Example:**
 ```yaml
 variables:
-BUILD_NAME: MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
+BUILD_NAME: "MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
 ```
-
-
-
 
 **Error Handling**
 
@@ -98,9 +79,6 @@ BUILD_NAME: MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-
-
-
 **Resource Management**
 
 - Limit concurrent pipeline runs
@@ -108,23 +86,14 @@ BUILD_NAME: MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
 - Monitor pipeline execution time
 - Optimize test execution order
 
-
-
-
 **Resource Management**
 
 - Limit concurrent pipeline runs
 - Clean up old builds regularly
 - Monitor pipeline execution time
 - Optimize test execution order
-
-
-
 
 ## Troubleshooting
-
-
-
 
 **Issue: Pipeline Fails with "Variable Not Found"**
 
@@ -145,9 +114,6 @@ BUILD_NAME: MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
 3. Check variable scope (project, group, or instance level)
 
 4. Verify variables are not protected if needed for protected branches
-
-
-
 
 **Issue: PROJECT_TOKEN Not Available**
 
@@ -170,9 +136,6 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 3. Check variable is not masked if you need to see it in logs
 
 4. Verify variable scope includes your branch
-
-
-
 
 **Issue: Tests Run But No Results in Dashboard**
 
@@ -198,9 +161,6 @@ after_script:
 3. Verify network connectivity in pipeline
 
 4. Check if SmartUI CLI step completed successfully
-
-
-
 
 **Issue: Pipeline Times Out**
 
@@ -229,9 +189,6 @@ matrix:
 3. Optimize test execution
 4. Split tests across multiple pipeline stages
 
-
-
-
 **Issue: Dependencies Installation Fails**
 
 **Symptoms**: npm install or dependency installation fails
@@ -257,9 +214,6 @@ before_script:
 3. Use package-lock.json for consistent installs
 
 4. Check for version conflicts in package.json
-
-
-
 
 **Issue: SmartUI CLI Not Found**
 
@@ -296,10 +250,6 @@ If you encounter issues not covered here:
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
-
-
-
-
 
 ## Additional Resources
 

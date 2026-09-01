@@ -15,16 +15,11 @@ This feature is available exclusively with the **Real Device Plus Automation Clo
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-
-
-
 ## Use Cases
 
 - Validate apps requiring a system passcode prompt before login or secure workflows.
 - Ensure authentication flows function correctly when the device is protected by a passcode.
 - Automate enterprise test cases where passcodes are enforced by MDM policies.
-
-
 
 ## Supported Platforms
 
@@ -33,12 +28,9 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 | iOS      | 14 and above |
 | Android  | 11 and above |
 
-
-
 ## Default Passcode
 - **iOS:**  `123456`
 - **Android:**  `1234`
-
 
 ## Capability to Enable Passcode
 
@@ -47,10 +39,6 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 | Capability        | Type    | Default | Description |
 |-------------------|---------|---------|-------------|
 | **enablePasscode** | Boolean | `false` | Enable passcode devices for running tests. Use `true` to start the session with a system passcode configured. |
-
-
-
-
 
 ```python
 {
@@ -63,11 +51,6 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 }
 ```
 
-
-
-
-
-
 ```python
 {
 "platformName": "android",
@@ -78,10 +61,6 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 "enablePasscode": True
 }
 ```
-
-
-
-
 
 - Passcode entry screens are **not visible** in the stream for security reasons. You may see a blank screen briefly during automation.
 - Enabling passcode for iOS Devices may increase the setup time of your test by **25-30 seconds** compared to regular sessions.

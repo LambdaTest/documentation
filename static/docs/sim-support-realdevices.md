@@ -13,9 +13,6 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-
-
-
 ## Use Cases
 
 - **OTP & Two-Factor Testing**: Manually trigger SMS-based login or sign-up and verify OTP delivery and entry.
@@ -23,15 +20,10 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 - **SMS Interrupt Testing**: Receive SMS messages during testing and check how the app responds to message interrupts.
 - **Messaging Workflows**: Validate outbound and inbound SMS behavior while interacting with the app manually.
 
-
-
-
 ## Configuring SIM Support for Manual Testing
 
 ### Step 1: Enable SIM Support
 On the App Testing Dashboard, click **Advanced Settings** and enable the **SIM Enabled** toggle. This will unlock additional options for configuring SIM and eSIM.
-
-
 
 ### Step 2: Select SIM Configurations
 Choose your **Country**, **Carrier**, and **SIM Type**. The availability of SIM types may vary by region and device.
@@ -42,20 +34,14 @@ Choose your **Country**, **Carrier**, and **SIM Type**. The availability of SIM 
 | India   | Airtel, Jio, Vodafone | Physical SIM                |
 | USA     | T-Mobile, Verizon, AT&T | Physical SIM / eSIM (iOS only) |
 
-
-
-
 - For customers with the **region filter** enabled, the country option will not be available for selection. In such cases, the country is automatically determined by the chosen region.
 - Currently, **eSIM support is limited to selected iPhone models only**. Android devices support **physical SIM** at this time.
-
 
 ### Step 3: Start a Manual Session
 Launch a real device session from the dashboard.
 
 ### Step 4: Verify Device Details
 From the session toolbar, open **Switch** to view details such as **Phone Number**, **Region**, **Carrier**, and **SIM Type**. Verify that the device matches your intended test configuration.
-
-
 
 ### Step 5: Begin Testing
 With the device configured and details verified, you can now proceed to test your application under real SIM conditions. Use the session to validate how your app interacts with SMS messages, confirm that authentication flows work as expected, and observe the overall user experience in a live environment.

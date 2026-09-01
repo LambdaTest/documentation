@@ -4,8 +4,6 @@
 
 The **Visual AI Agent** is an intelligent layer on top of SmartUI that reduces noise in visual testing. Unlike traditional pixel-by-pixel comparison, the AI Agent understands the context of visual elements, allowing it to distinguish between critical visual defects and insignificant rendering differences between your baseline and captured screenshots. This allows you to instantly focus on significant UI shifts and understand the context of the changes without getting lost in minor, irrelevant noise.
 
-
-
 ## What Problems Does SmartUI Visual Agent Solve?
 
 Traditional pixel-to-pixel comparison can be noisy and time-consuming. SmartUI Visual Agent eliminates the guesswork by providing context-aware, intelligent analysis.
@@ -16,21 +14,11 @@ Traditional pixel-to-pixel comparison can be noisy and time-consuming. SmartUI V
 | It's hard to understand the scope or meaning of a change from a simple highlighted area. | Get a plain-English summary that explains the entire change in context. |
 | Reviewing hundreds of minor visual differences is slow and inefficient. | Focus your attention only on significant UI and UX regressions that impact the user experience. |
 
-
-
 ## How to Use SmartUI Visual Agent
-
-
 
 ### Step 1: Activate Visual AI Mode
 
 Navigate to any SmartUI comparison build. In the toolbar above the screenshots, locate and click the **Visual AI** toggle. This activates the "Human Intelligence AI Agent."
-
-
-
-
-
-
 
 ### Step 2: Investigate AI-Detected Differences
 
@@ -42,15 +30,9 @@ Once Visual AI is active, the system automatically draws boxes around what it ha
 | **Hover** on a diff box | The box under your cursor highlights slightly, indicating it is interactive. |
 | **Click** a diff box | The box turns red to confirm your selection, and a floating summary panel appears with a description of the change. |
 
-
-
 ### Step 3: Understand the AI-Generated Summary
 
 When you click on a diff box, a panel appears with a concise, human-readable explanation of the change. This summary describes the full scope of the difference, allowing for quick recognition and understanding. For example, it might summarize a complex visual change as "Content Grid Replaced with Placeholders."
-
-
-
-
 
 ## Benefits for Your Team
 

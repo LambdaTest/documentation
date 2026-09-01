@@ -14,7 +14,6 @@ This lets you keep a spreadsheet as the source of truth for your suite: export y
 **Keep a spreadsheet in sync with Test Manager**
 The most reliable loop is **export → edit → re-import**. An [exported CSV](/support/docs/export-test-cases/) already contains the `TestCaseId` column, which is the safest thing to match on.
 
-
 ## Before you begin
 
 - Your file must be a valid `.csv`, up to **10 MB**. If it's larger, split it into smaller files and import them one after another.
@@ -29,15 +28,11 @@ Follow these steps to import test cases using a CSV file:
 - **Choose Project:** Select the project into which you want to import the test cases.
 - **CSV Upload Option:** If you have created a new project, you’ll see the **Drop your CSV or browse** option. Alternatively, navigate to ` Add Test Case > Import CSV ` to initiate the import.
 
-
-
 - **Select CSV Layout:** Tell Test Manager how your file is arranged:
   - **Test cases use a single row** — steps, outcomes, or BDDs of a test case are combined in one row and indexed like: ``` 1. Go to lambdatest.com 2. click on login button ```
   - **Test cases use multiple rows** — steps, outcomes, or BDDs of a test case are provided in separate rows.
 - **File Preview:** After selecting your CSV file, a preview will appear displaying the contents of the file to be imported, along with the number of valid rows found.
 - **Next Step:** Click Next to proceed to the Field Mapping stage.
-
-
 
 ### 2. Map fields
 In this step, you will map the CSV file headers to corresponding fields in Test Manager. This enables Test Manager to understand where each piece of information from the CSV should be placed.
@@ -57,21 +52,15 @@ You don't have to map every header:
 - **Skip a column** — leave it as **Ignore Field**. Ignored columns are never written to a test case, and on an update they leave the existing value untouched.
 - **Create a custom field on the fly** — if a column has no matching field in Test Manager, use **Add New Field** to create a custom field for it without leaving the import.
 
-
 Create your custom fields before you start the import and map the columns to them directly. It keeps the mapping step quick and gives you full control over each field's type and settings.
 
-
-
 Mapping at least one CSV header to the **Title** field is mandatory, as every test case needs a name. This is separate from matching — see the next section.
-
 
 #### Choose a match key (to update existing test cases)
 
 The **match key** is the column Test Manager uses to look up each row against the test cases that already exist in the scope you're importing into. That lookup is what decides the outcome of every row — whether it **updates** an existing test case, **creates** a new one, or is **skipped**. You'll find a **Set as match key** option next to the columns that can be used for matching.
 
-
 No match key is selected for you — you have to choose one. If you don't select a match key, no lookup happens and every row is created as a new test case, exactly like earlier imports.
-
 
 | Match key | When to use it | Things to watch out for |
 |---|---|---|
@@ -86,8 +75,6 @@ No match key is selected for you — you have to choose one. If you don't select
 - Values are compared after trimming spaces and ignoring letter casing, so `" tc-1358 "` still matches `TC-1358`.
 - Test Case IDs are assigned when a test case is created. If you created test cases through a CSV import, [export them](/support/docs/export-test-cases/) first to get their IDs before your next update import.
 
-
-
 ### 3. Map values
 Once you've mapped the CSV headers to Test Manager fields, it's time to map the CSV field values to the selected fields.
 
@@ -95,15 +82,11 @@ Once you've mapped the CSV headers to Test Manager fields, it's time to map the 
 - **Custom Fields Values:** Values will be automatically generated and applied.
 - **Folder Names:** If your CSV includes folder paths, you can select the appropriate delimiter to split the folder path when parsing. For example, use ` / ` to split the folder path ` "folder1/folder2/folder3" `
 
-
-
 ### 4. Preview import
 
 Before anything is written, Test Manager checks every row against your existing test cases and shows you a summary of what the import will do.
 
-
 Preparing the file can take a few minutes for large imports. Keep the tab open until preparation finishes — closing or refreshing it stops the preparation and you'll have to start again.
-
 
 The summary tells you how many test cases:
 
@@ -124,17 +107,9 @@ Alongside the counts you'll see the CSV layout and match key that were used, and
 
 Once you're happy with the summary, start the import. Progress is shown as it runs, and the import continues in the background — you can keep working and check back later.
 
-
-
-
-
-
 By default the Test Cases not having any folder defined for them, go into the **Untitled** folder.
 
-
 Let's see the imported data:
-
-
 
 ## What counts as a change
 
@@ -143,14 +118,11 @@ A matched test case is updated only when a **mapped** field's value actually dif
 - **Unmapped columns are never touched.** Only the columns you mapped in Step 2 can change a test case. If you don't want a field to change, leave its column out of the mapping.
 - **Re-importing an unchanged file changes nothing.** Every row resolves to *Already up to date*, so no duplicates and no versions are created.
 
-
 ## Versions created by an import
 
 Every test case updated by a CSV import gets a new entry in its **Version History**, exactly like a manual edit. The version carries an auto-generated commit message identifying the import (the file name and date), and you can optionally set a single commit message for the whole import.
 
 All the usual actions apply to these versions — compare, view an older version, and revert. Nothing is ever erased, so an unwanted change can always be rolled back. See [Test Case Versioning](/support/docs/test-case-versioning/) for details.
-
-
 
 ## Troubleshooting
 

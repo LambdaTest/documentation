@@ -6,7 +6,6 @@ Instead of manually setting up your Selenium project, use **Agent Skills** to le
 
 ## What Agent Skills Are
 
-
 Self-contained packages of instructions, code patterns, and configurations for specific testing frameworks.
 
 Once installed, your AI assistant works like a senior QA automation architect with knowledge of:
@@ -19,7 +18,6 @@ Once installed, your AI assistant works like a senior QA automation architect wi
 
 ## Prerequisites
 
-
 Make sure you have the following set up before you start.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -27,7 +25,6 @@ Make sure you have the following set up before you start.
 3. Install an AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
 
 ## Step 1: Install the Selenium Agent Skill
-
 
 Clone the repository and copy the Selenium skill into your AI tool's skills directory.
 
@@ -47,12 +44,9 @@ cp -r agent-skills/selenium-skill .github/skills/
 cp -r agent-skills/selenium-skill .gemini/skills/
 ```
 
-
 Install **all available framework skills** at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
 
-
 ## Step 2: Set Your Credentials
-
 
 Add your TestMu AI credentials as environment variables so the generated tests can authenticate with the grid.
 
@@ -64,7 +58,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Step 3: Run Your First Test
-
 
 Ask your AI assistant to write tests in natural language.
 
@@ -89,7 +82,6 @@ The Agent Skill automatically handles:
 
 ## What's Included in the Selenium Skill
 
-
 A breakdown of everything the skill package contains.
 
 ```
@@ -111,11 +103,9 @@ selenium-skill/
 
 ## Supported Languages and Frameworks
 
-
 The Selenium Agent Skill supports 6 languages. Each framework below also has its own dedicated Agent Skill with framework-specific patterns.
 
 ### Java
-
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
@@ -128,7 +118,6 @@ The Selenium Agent Skill supports 6 languages. Each framework below also has its
 | Serenity BDD | [serenity-bdd-skill](https://github.com/LambdaTest/agent-skills/tree/main/serenity-bdd-skill) | [Serenity BDD](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=serenity) |
 
 ### JavaScript
-
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
@@ -145,7 +134,6 @@ The Selenium Agent Skill supports 6 languages. Each framework below also has its
 
 ### C#
 
-
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
 | NUnit | [nunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/nunit-skill) | [NUnit with Selenium](/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=nunit) |
@@ -154,7 +142,6 @@ The Selenium Agent Skill supports 6 languages. Each framework below also has its
 | SpecFlow | [specflow-skill](https://github.com/LambdaTest/agent-skills/tree/main/specflow-skill) | [SpecFlow with Selenium](/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=specflow) |
 
 ### Python
-
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
@@ -166,7 +153,6 @@ The Selenium Agent Skill supports 6 languages. Each framework below also has its
 
 ### PHP
 
-
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
 | PHPUnit | [phpunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/phpunit-skill) | [PHPUnit](/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=phpunit) |
@@ -176,7 +162,6 @@ The Selenium Agent Skill supports 6 languages. Each framework below also has its
 
 ### Ruby
 
-
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
 | RSpec | [rspec-skill](https://github.com/LambdaTest/agent-skills/tree/main/rspec-skill) | [RSpec](/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=rspec) |
@@ -184,7 +169,6 @@ The Selenium Agent Skill supports 6 languages. Each framework below also has its
 | Test::Unit | [testunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/testunit-skill) | [Test::Unit](/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=testunit) |
 
 ## Supported AI Tools
-
 
 Pick the tool you use and install the skill to the corresponding path.
 
@@ -199,7 +183,6 @@ Pick the tool you use and install the skill to the corresponding path.
 | Claude.ai | Web | Settings > Features > Skills |
 
 ## Next Steps
-
 
 Continue with these related guides:
 

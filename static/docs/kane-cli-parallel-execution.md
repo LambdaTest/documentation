@@ -15,8 +15,6 @@ Split objectives and run in parallel when:
 
 Each sub-objective must be **self-contained**: it navigates to its own URL, authenticates independently, and asserts its own outcomes.
 
-
-
 ## Sequential Pattern
 
 Run three tests one after another:
@@ -28,8 +26,6 @@ kane-cli run "Complete checkout and confirm order" --url https://myapp.com --hea
 ```
 
 **Total time:** sum of all three durations.
-
-
 
 ## Parallel Pattern (Shell Background Processes)
 
@@ -77,8 +73,6 @@ rm -rf "$RESULTS_DIR"
 
 **Total time:** duration of the longest test.
 
-
-
 ## Batch Summary Format
 
 After all tests complete, present results like this:
@@ -96,8 +90,6 @@ After all tests complete, present results like this:
 
 📊 Pass rate: 3/4 (75%) · Total steps: 27 · Total time: 25s (longest test)
 ```
-
-
 
 ## AI Agent Sub-Task Pattern
 
@@ -117,10 +109,7 @@ After the command completes:
 4. Return: { status, steps, duration, summary, session_dir, failure_step, screenshot_path }
 ```
 
-
-
 ## Resource Limits
-
 
 Each parallel Kane CLI instance opens its own Chrome browser. Monitor resources when running many parallel tests:
 
@@ -129,7 +118,5 @@ Each parallel Kane CLI instance opens its own Chrome browser. Monitor resources 
 - Each instance uses its own CDP port (9222–9230)
 
 Start with 4 parallel tests and scale up based on your environment.
-
-
 
 Always use `--headless` for parallel runs: multiple visible browser windows cause confusion and unnecessary resource overhead.

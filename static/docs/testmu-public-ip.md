@@ -20,11 +20,7 @@ If this page's slug changes, update that regex or the buttons silently stop appe
 console warning (see VALID_VALUE in copy-ips.js) — extend it before adding IPv6 or ranges.
 */}
 
-
-
-
 **Note:** The IP addresses listed below are static Public IPs. If your application or network is protected by IP-based firewall rules, you can whitelist the relevant TestMu AI IP ranges to allow TestMu AI cloud devices to access your environment.
-
 
 These are the list of the IP ranges that you need to whitelist with respect to the specific TestMu AI products.
 
@@ -49,8 +45,6 @@ Whitelist these Firewall IPs to allow TestMu AI cloud infrastructure to access y
 | **137.174.189.0/26** |  ✅  |  ✅  |  ✅  |
 | **217.112.145.88/29** |  ✅  |  ❌  |  ✅  |
 | **149.6.5.8/29** |  ✅  |  ❌  |  ✅  |
-
-
 
 ## KaneAI IPs {#kaneai-ips}
 
@@ -89,11 +83,9 @@ Whitelist these IP addresses to allow the Tunnel client to establish outbound co
 
 Whitelist this IP address to allow TestMu AI integration tools to access applications hosted within your firewall-protected environment. Configure it as an **inbound** allow rule.
 
-
 | IP Address |
 |------------|
 | `3.208.126.109` |
-
 
 ## Stun Servers {#stun-server-ips}
 
@@ -125,7 +117,6 @@ Configure it as an **outbound** allow rule.
 
 Instead of adding each hostname individually, you can whitelist the wildcard domain **`*.lambdatest.com`** to allow all of them at once.
 
-
 ## Guacamole Servers {#guacamole-servers-ips}
 
 Whitelist these IP addresses for browser-based remote access sessions falls back to a Guacamole session. Configure them as **outbound** allow rules.
@@ -138,7 +129,6 @@ Whitelist these IP addresses for browser-based remote access sessions falls back
 | `3.111.139.20` |
 | `54.255.17.88` |
 | `3.64.247.89` |
-
 
 ## WebSocket Connections {#websocket-connections-ips}
 
@@ -155,7 +145,6 @@ Whitelist these IP addresses to allow WebSocket (WS/WSS) communication for devic
 | `18.138.79.89` |
 | `54.254.173.86` |
 
-
 ## SSE Connections {#sse-connections-ips}
 
 Whitelist these domains to allow Server-Sent Events (SSE) streaming, which delivers real-time session, device, and test execution updates to your browser or client. Configure them as **outbound** allow rules.
@@ -168,14 +157,11 @@ Whitelist these domains to allow Server-Sent Events (SSE) streaming, which deliv
 
 Instead of adding each hostname individually, you can whitelist the wildcard domain **`*.lambdatest.com`** to allow all of them at once.
 
-
-
 - If you prefer not to whitelist the product-specific public IP ranges listed below, consider using a **Dedicated Proxy**.
 
 - It provides a unique static IP exclusively for your organization, making firewall management, auditing, and access control simpler. This is especially useful for organizations with strict security or compliance requirements that want to whitelist a single dedicated IP instead of multiple product-specific IP ranges.
 
 - For more information, refer to the documentation links provided below.
-
 
 ## Additional Links
 

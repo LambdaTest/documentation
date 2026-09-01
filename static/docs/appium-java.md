@@ -12,7 +12,6 @@ The account setup, environment variables, and app upload are the same for every 
 
 ## Prerequisites
 
-
 Make sure you have the following set up before you start.
 
 - Your TestMu AI [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
@@ -22,71 +21,31 @@ Make sure you have the following set up before you start.
 
 ## Set Your Credentials
 
-
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
 ## Upload Your App
-
 
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
 
-
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
-
-
-
-
-
-
-
 
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on TestMu AI by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
 
-
-
 ## Run a Test With Your Framework
 
-
 Choose your Java test framework below. Each tab contains the complete flow for that framework, get the sample project, update the automation script, configure the capabilities, and execute your tests. Ensure you have already set your credentials and uploaded your app as described above.
-
-
-
-
 
 Trigger an automation script of **Java** for application testing with **Appium** on TestMu AI using plain, framework-free Vanilla Java.
 
@@ -97,13 +56,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-
-
 
 ```java title="vanilla_android.java"
 
@@ -198,10 +153,6 @@ driver.quit();
 }
 ```
 
-
-
-
-
 ```java title="vanilla_ios.java"
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -240,9 +191,7 @@ caps.setCapability("name", "Sample Test Java");
 caps.setCapability("devicelog", true);
 caps.setCapability("network", false);
 
-
 driver = new IOSDriver(new URL("https://" + userName + ":" + accessKey + "@beta-hub.lambdatest.com/wd/hub"), caps);
-
 
 Thread.sleep(2000);
 
@@ -308,22 +257,13 @@ driver.quit();
 }
 ```
 
-
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
 
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -342,13 +282,7 @@ capabilities.setCapability("visual", true);
 capabilities.setCapability("devicelog", true);
 ```
 
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
-
 
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
@@ -364,16 +298,9 @@ caps.setCapability("devicelog", true);
 caps.setCapability("network", false);
 ```
 
-
-
-
-
-
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `false` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -385,28 +312,15 @@ mvn clean install
 
 - The tests can be executed in the terminal using the following command:
 
-
-
-
 ```bash
 mvn test -P android
 ```
-
-
-
 
 ```bash
 mvn test -P ios
 ```
 
-
-
-
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-
-
-
 
 Trigger an automation script of **JUnit** for application testing with **Appium** on TestMu AI.
 
@@ -417,13 +331,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-
-
 
 ```java
 package com.lambdatest;
@@ -524,14 +434,7 @@ driver.quit();
 }
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
-
 
 ```java
 package com.lambdatest;
@@ -632,23 +535,13 @@ driver.quit();
 }
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
-
 
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -666,10 +559,6 @@ capabilities.setCapability("network",false);
 capabilities.setCapability("visual",true);
 ```
 
-
-
-
-
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("build", "JUNIT Native App automation");
@@ -686,18 +575,10 @@ capabilities.setCapability("network",false);
 capabilities.setCapability("visual",true);
 ```
 
-
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -709,28 +590,15 @@ mvn clean
 
 - The tests can be executed in the terminal using the following command:
 
-
-
-
 ```bash
 mvn test -P android
 ```
-
-
-
 
 ```bash
 mvn test -P ios
 ```
 
-
-
-
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-
-
-
 
 Trigger an automation script of **JBehave** for application testing with **Appium** on TestMu AI, running behavior-driven stories across single and parallel device configurations.
 
@@ -740,7 +608,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
-
 
 ### Step 2: Update your Automation Script
 
@@ -774,7 +641,6 @@ import org.junit.runners.Parameterized.Parameter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 
 @RunWith(Parameterized.class)
 public class LambdaTestJBehaveRunner {
@@ -830,9 +696,7 @@ capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString())
 
 String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");  //Replace YOUR_LT_USERNAME with your LambdaTest username
 
-
 String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY"); //Replace YOUR_LT_ACCESS_KEY with your LambdaTest accessKey
-
 
 driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
 }
@@ -854,18 +718,13 @@ storyEmbedder.runStoriesAsPaths(storyPaths);
 }
 ```
 
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
 
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
 
 ```java
 //Single Tests
@@ -886,10 +745,6 @@ The capabilities object in the sample code are defined as:
 ]
 }
 ```
-
-
-
-
 
 ```java
 //Parallel Tests
@@ -921,19 +776,10 @@ The capabilities object in the sample code are defined as:
 }
 ```
 
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -945,34 +791,19 @@ mvn clean install
 
 - The tests can be executed in the terminal using the following command:
 
-
-
-
 ```bash
 mvn test -P single
 ```
-
-
-
 
 ```bash
 mvn test -P parallel
 ```
 
-
-
-
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-
-
-
 
 Trigger an automation script of **Cucumber** for application testing with **Appium** on TestMu AI, driving your BDD scenarios across single and parallel device suites.
 
-
 Cucumber for Java requires the latest Java development environment i.e. JDK 8 or higher. We recommend using the < JDK 11 version.
-
 
 ### Step 1: Get a Sample Project
 
@@ -980,7 +811,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
-
 
 ### Step 2: Update your Automation Script
 
@@ -1004,7 +834,6 @@ import org.testng.annotations.Parameters;
 
 import org.openqa.selenium.JavascriptExecutor;
 import java.net.MalformedURLException;
-
 
 @CucumberOptions(
 features = "src/main/java/Features/todo.feature",
@@ -1031,7 +860,6 @@ String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESSKEY" 
 
 DesiredCapabilities capability = new DesiredCapabilities();
 
-
 capability.setCapability("platformName", platformName);
 capability.setCapability("deviceName", deviceName);
 capability.setCapability("platformVersion",platformVersion);
@@ -1053,7 +881,6 @@ System.out.println(capability);
 System.out.println(connection.getSessionId());
 }
 
-
 @DataProvider
 public Object[][] features() {
 return testNGCucumberRunner.provideScenarios();
@@ -1066,18 +893,13 @@ testNGCucumberRunner.finish();
 }
 ```
 
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
 
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
 
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1095,10 +917,6 @@ preserve-order="true">
 </test> <!-- Test -->
 </suite>
 ```
-
-
-
-
 
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1127,19 +945,10 @@ preserve-order="true">
 </suite>
 ```
 
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -1151,28 +960,15 @@ mvn clean install
 
 - The tests can be executed in the terminal using the following command:
 
-
-
-
 ```bash
 mvn test -D suite=single.xml
 ```
-
-
-
 
 ```bash
 mvn test -D suite=parallel.xml
 ```
 
-
-
-
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-
-
-
 
 Trigger an automation script of **TestNG** for application testing with **Appium** on TestMu AI.
 
@@ -1183,13 +979,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-
-
 
 ```java title="AndroidApp.java"
 import io.appium.java_client.AppiumDriver;
@@ -1298,10 +1090,6 @@ e.printStackTrace();
 }
 ```
 
-
-
-
-
 ```java title="iOSApp.java"
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -1403,28 +1191,17 @@ e.printStackTrace();
 }
 }
 
-
 }
 }
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
-
 
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -1443,10 +1220,6 @@ capabilities.setCapability("visual", true);
 capabilities.setCapability("devicelog", true);
 ```
 
-
-
-
-
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("build","Java TestNG iOS");
@@ -1464,19 +1237,11 @@ capabilities.setCapability("visual", true);
 capabilities.setCapability("devicelog", true);
 ```
 
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -1488,36 +1253,21 @@ mvn clean install
 
 - The tests can be executed in the terminal using the following command:
 
-
-
-
 ```bash
 mvn test -P android-single
 ```
-
-
-
 
 ```bash
 mvn test -P ios-single
 ```
 
-
-
-
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-
-
-
-
 ## View Your Results
-
 
 Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build). Each session includes a video recording, step-by-step screenshots, device logs, and network logs.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

@@ -1,14 +1,12 @@
-# How to Integrate a Chat Agent API
+# How to Test Chat Agent With TestMu AI Agent Testing API
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
+The Agent Testing Platform connects to your chat agent over standard HTTP. It sends multi-turn test conversations to your API endpoint and scores the replies, with no code changes to your agent.
 
 It works with any chatbot provider or framework. You provide the endpoint URL, the authentication, and the request and response shape, and the platform matches whatever structure your API uses.
 
 ## How the Platform Sends Requests to Your Chat Agent
-
-
 
 The platform sends each message as an HTTP POST request with a JSON body. The example below shows the shape, followed by a breakdown of each component.
 
@@ -22,9 +20,7 @@ curl -X POST https://api.examplechatbot.com/chat \
 }'
 ```
 
-
 The field names above (`assistantId`, `input`) are illustrative. Your chat agent may use different field names (for example `message`, `query`, `botId`, `agentId`). The platform adapts to whatever request structure your API expects.
-
 
 ### Request Components
 
@@ -40,10 +36,7 @@ The field names above (`assistantId`, `input`) are illustrative. Your chat agent
 **Header Flexibility**
 The platform sends the exact URL, token, and headers you configure. If your chat agent requires headers beyond Authorization and Content-Type, provide them, and the platform forwards all configured headers with every request.
 
-
 ## How to Connect Your Chat Agent
-
-
 
 The platform supports three connection methods, based on where your agent runs and how it is reachable. Choose the option that matches your environment.
 
@@ -101,13 +94,9 @@ For chat agents running on a local development machine (for example `localhost:3
 | **Firewall changes needed?** | None | None (outbound only) | None |
 | **Typical use case** | Production, cloud-hosted | Enterprise, on-premise | Development, staging |
 
-
 Whatever the connection method, the platform sends the exact authentication and custom headers you configure with every request. The proxy agent handles network reachability only. It does not bypass or replace your agent's authentication.
 
-
 ## How the Platform Reads Your Chat Agent's Response
-
-
 
 The platform reads the reply from each response, uses it to continue the conversation, and scores the result. Response shapes vary by provider, and the platform adapts to yours.
 
@@ -141,10 +130,7 @@ Most chat agent APIs return some variation of the following. The exact field nam
 **Provider Flexibility**
 The platform is not tied to any specific chat agent provider. Whether your bot runs on a third-party platform or a custom-built API, TestMu AI configures the request and parses the response to match your schema.
 
-
 ## What You Provide to Connect a Chat Agent
-
-
 
 To connect your agent, provide the following. No code changes or infrastructure changes are required on your side.
 
@@ -158,8 +144,6 @@ To connect your agent, provide the following. No code changes or infrastructure 
 
 ## How the Platform Runs a Chat Evaluation
 
-
-
 Once credentials are configured, The platform runs the evaluation autonomously.
 
 `Credentials Configured` → `Test Scenarios Generated` → `API Calls Sent to Your Agent` → `Responses Captured` → `Quality Scored`
@@ -171,10 +155,7 @@ Once credentials are configured, The platform runs the evaluation autonomously.
 **Security**
 All credentials are encrypted at rest and decrypted only at runtime during test execution. They are never exposed in reports or logs.
 
-
 ## Troubleshoot Chat Agent Connection Failures
-
-
 
 Most connection failures come from authentication, the response path, or network reach. Each has a direct fix.
 
@@ -189,8 +170,6 @@ Most connection failures come from authentication, the response path, or network
 - **What you see:** the connection fails on a public endpoint. **Why:** the URL is not served over HTTPS, or the TLS certificate is invalid. **Fix:** serve the endpoint over HTTPS with a valid certificate, or use the proxy method for internal agents.
 
 ## Related TestMu AI Guides
-
-
 
 - See how to [test chat agents from the terminal](/support/docs/agent-testing-cli/), including custom body templates and response paths.
 - See how the platform [runs an evaluation end to end](/support/docs/architecture-and-how-evaluation-works/).

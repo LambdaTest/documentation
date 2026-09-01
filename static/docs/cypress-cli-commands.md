@@ -6,7 +6,6 @@ When you run Cypress tests on TestMu AI, the `lambdatest-cypress` CLI is how you
 
 ## General Syntax
 
-
 Every TestMu AI Cypress CLI command follows the same pattern: the CLI name, a command, then optional flags. Use this basic syntax as the template for the commands documented below.
 
 ```bash
@@ -29,14 +28,11 @@ The table below lists the top-level commands and Visual UI arguments available a
 
 ## `init` Command
 
-
 Run the `init` command to generate an initial TestMu AI configuration file for your project. It scaffolds the config and reporter files the CLI needs before its first run.
 
 ```bash
 lambdatest-cypress init
 ```
-
-
 
 On running the above command, the CLI generates the `base_reporter_config.json`, `custom_support_file.js`, and `lambdatest-config.json` files.
 
@@ -48,12 +44,10 @@ On running the above command, the CLI generates the `base_reporter_config.json`,
 
 ## `run` Command
 
-
 The `run` command starts a Cypress test build on TestMu AI and accepts a large set of flags to control browsers, parallelism, tunneling, and reporting.
 
 **Note**
 For detailed examples of each Cypress flag, see [how to configure Cypress run settings](/support/docs/run-settings/).
-
 
 To start running the test build, use the command below.
 
@@ -117,7 +111,6 @@ The table below lists the additional flags available with the `run` command, alo
 
 ## `build-info` Command
 
-
 Use the `build-info` command to fetch details about a specific build, such as its status and session breakdown, from the terminal.
 
 ```bash
@@ -132,10 +125,7 @@ The table below lists the additional arguments available with the `build-info` c
 | `--user, --username` | Your TestMu AI username | String |
 | `--ak, --access_key` | Your TestMu AI access key | String |
 
-
-
 ## `build-stop` Command
-
 
 Use the `build-stop` command to stop all the tests in a build, either by session id or by targeting the last test session.
 
@@ -152,14 +142,9 @@ The table below lists the additional arguments available with the `build-stop` c
 
 Passing `--stop_last_session` stops the most recent test session.
 
-
-
 Passing `--session_id` stops the specific session you identify.
 
-
-
 ## Related Cypress Guides
-
 
 Continue with the guides below to run and scale your Cypress tests on TestMu AI.
 

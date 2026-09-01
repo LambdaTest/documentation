@@ -14,19 +14,13 @@ IE Mode is the right choice when:
 - **You are migrating from IE11.** During the transition to modern browsers, IE Mode lets you verify that pages render identically in compatibility mode before removing IE-specific code.
 - **Compliance or policy mandates IE support.** Some organizations require IE compatibility for internal tools until all systems are upgraded.
 
-
 IE Mode is available only on Windows. The Edge browser version must support IE Mode, and Microsoft controls which versions include this feature through enterprise policy.
-
 
 ## Set Up IE Mode Capabilities
 
 Configure `InternetExplorerOptions` with Edge attachment to run tests in IE Mode on TestMu AI.
 
 To run tests in IE Mode, use the `InternetExplorerOptions` class with `platformName` set to `Windows 11` and `browserVersion` set to `11.0`. TestMu AI handles the Edge attachment server-side. Pass your credentials in `LT:Options` as usual. For the complete set of options you can combine with these settings, see the supported [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
-
-
-
-
 
 ```java title="IEModeTest.java"
 import org.openqa.selenium.ie.InternetExplorerOptions;
@@ -57,10 +51,6 @@ driver.quit();
 }
 ```
 
-
-
-
-
 ```csharp title="IEModeTest.cs"
 using OpenQA.Selenium;
 using OpenQA.Selenium.IE;
@@ -85,10 +75,6 @@ Console.WriteLine("Page title: " + driver.Title);
 driver.Quit();
 ```
 
-
-
-
-
 ## Key Configuration Options
 
 Review the IE Mode capabilities and their expected values.
@@ -111,12 +97,9 @@ IE Mode uses the Trident rendering engine, which handles focus and click events 
 
 IE Mode sessions can take longer to initialize than standard browser sessions. Increase your session timeout in `LT:Options` if you encounter timeout errors during startup.
 
-
 IE Mode does not support all Selenium features available in modern browsers. Features like shadow DOM access, modern CSS selectors, and certain JavaScript APIs are unavailable when the page renders through the Trident engine.
 
-
 ## Next Steps
-
 
 Continue with these related guides:
 

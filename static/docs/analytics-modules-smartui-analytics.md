@@ -4,13 +4,9 @@
 
 The SmartUI Analytics module provides a suite of widgets to help you analyze and optimize your visual regression testing efforts on the TestMu AI platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
 
-
 The SmartUI Analytics module is currently in  . If you have any feedback or suggestions, please feel free to reach out to us at [support@testmuai.com](mailto:support@testmuai.com).
 
-
 ## SmartUI Snapshot
-
-
 
 The SmartUI Snapshot widget provides a comprehensive overview of the Visual Regression tests run on the TestMu AI platform. It offers key metrics to help you understand the scale and efficiency of your visual testing efforts.
 
@@ -23,8 +19,6 @@ By leveraging the SmartUI Snapshot widget, you can easily track the volume of yo
 
 ## Builds Summary
 
-
-
 The Builds Summary widget offers a detailed breakdown of the status distribution for the Visual Regression tests run on the TestMu AI platform. It provides valuable insights into the overall health and success rate of your visual testing builds.
 
 #### How It Works
@@ -36,8 +30,6 @@ The Builds Summary widget offers a detailed breakdown of the status distribution
 By analyzing the Builds Summary widget, you can gain a deeper understanding of the effectiveness and reliability of your visual testing process. The status distribution helps you identify any potential issues or bottlenecks in your visual testing workflow, enabling you to take corrective actions and optimize your testing efforts.
 
 ## Builds Trends
-
-
 
 The Builds Trends widget provides a visual representation of the status trends for the Visual Regression tests run on the TestMu AI platform over time. It allows you to analyze the performance and consistency of your visual testing builds.
 
@@ -54,8 +46,6 @@ By examining the Builds Trends widget, you can identify patterns, fluctuations, 
 
 ## Screenshot Trends
 
-
-
 The Screenshot Trends widget provides a visual representation of the screenshot comparison trends for the Visual Regression tests run on the TestMu AI platform over time. It allows you to track the volume and progress of your visual testing screenshots.
 
 - X-Axis: Represents the time intervals at which the screenshot trends are measured.
@@ -71,8 +61,6 @@ By analyzing the Screenshot Trends widget, you can gain insights into the volume
 
 ## Screenshots Browsers/Device Coverage
 
-
-
 The Screenshots Browsers/Device Coverage widget provides a detailed breakdown of the browser and device coverage for the Visual Regression tests run on the TestMu AI platform. It helps you understand the distribution of your visual testing efforts across different browsers and devices.
 
 #### How It Works
@@ -84,8 +72,6 @@ By leveraging the Screenshots Browsers/Device Coverage widget, you can ensure th
 
 ## Screenshots Viewport Coverage
 
-
-
 The Screenshots Viewport Coverage widget provides a comprehensive overview of the viewport coverage for the Visual Regression tests run on the TestMu AI platform. It helps you understand the distribution of your visual testing efforts across different viewport sizes.
 
 #### How It Works
@@ -96,8 +82,6 @@ The Screenshots Viewport Coverage widget provides a comprehensive overview of th
 By analyzing the Screenshots Viewport Coverage widget, you can ensure that your visual testing efforts are well-distributed across different viewport sizes. This information helps you identify any gaps in your visual testing coverage and make informed decisions to optimize your testing strategy, ensuring a consistent visual experience for your users across various screen sizes and resolutions.
 
 ## Build Status Ratio
-
-
 
 The Build Status Ratio widget provides a visual representation of the status ratio trends for the Visual Regression tests run on the TestMu AI platform over time. It allows you to track the proportion of builds with different statuses and monitor the overall health of your visual testing process.
 
@@ -111,8 +95,6 @@ The Build Status Ratio widget provides a visual representation of the status rat
 
 #### Value Proposition
 By examining the Build Status Ratio widget, you can gain insights into the overall quality and efficiency of your visual testing process. The status ratio trends help you identify any shifts or imbalances in the approval process, allowing you to take corrective actions and optimize your visual testing workflow to ensure a higher proportion of approved builds.
-
-
 
 The SmartUI Analytics widgets provide a comprehensive suite of tools to analyze and optimize your visual regression testing efforts on the TestMu AI platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
 

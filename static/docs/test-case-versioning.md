@@ -13,25 +13,13 @@ Every edit to a test case whether it’s updating steps, descriptions, or fields
 
 - In the `Version History` tab, you can view all commits made to that test case.
 
-
-
-
-
-
-
 ## Managing Versions
-
-
 
 ### Version Comparison
 To see the change log and compare different versions of a test case, click the `Compare` button in the **Version History** tab.
 
-
-
 ### View Older Versions
 To view the details of a test case at a specific version, open the desired commit and switch to **View Mode**. This shows the state of the test case at that point in time.
-
-
 
 ### Revert to a Version
 When you revert a test case to a specific version, a new version is created that copies the contents of the selected version.

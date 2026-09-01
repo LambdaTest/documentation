@@ -10,7 +10,6 @@ Prefer another language? See [all supported Appium languages and frameworks](/su
 
 ## Prerequisites
 
-
 Make sure you have the following set up before you start.
 
 - Your TestMu AI [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
@@ -20,70 +19,32 @@ Make sure you have the following set up before you start.
 
 ## Set Your Credentials
 
-
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
 ## Upload Your App
-
 
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
 
-
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
-
-
-
-
-
-
 
   - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
   - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
   - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on TestMu AI by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
   - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step.
 
-
 ## Run a Test With Your Framework
 
-
 Pick your framework below. Each tab contains the complete flow for that framework: automation script, capabilities, execution commands, and its agent skill. The credentials and app upload from the sections above are shared across all three.
-
-
-
-
 
 ### Step 1: Get a Sample Project
 
@@ -92,14 +53,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application available above has been provided here. Ensure to update the `APP_URL`, `username` and `accesKey` in the code scripts before running the tests.
-
-
-
-
 
 ```javascript title="iOS.js"
 var wd = require("wd");
@@ -196,10 +152,6 @@ driver.quit();
 iOStest();
 ```
 
-
-
-
-
 ```javascript title="Android.js"
 const wd = require("wd");
 //highlight-next-line
@@ -282,23 +234,13 @@ driver.quit();
 runAndroidTest();
 ```
 
-
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
 
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
-
 
 ```javascript
 desired_capabilities = {
@@ -315,9 +257,6 @@ name: "Sample Test - NodeJS",
 };
 ```
 
-
-
-
 ```javascript
 desired_capabilities = {
 deviceName: "Galaxy S20",
@@ -333,20 +272,10 @@ name: "Sample Test - NodeJS",
 };
 ```
 
-
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -358,28 +287,15 @@ npm i wd
 
 - The tests can be executed in the terminal using the following command:
 
-
-
-
 ```bash
 node IOS.js
 ```
-
-
-
 
 ```bash
 node Android.js
 ```
 
-
-
-
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-
-
-
 
 ### Step 1: Get a Sample Project
 
@@ -388,14 +304,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application available above has been provided here. Ensure to update the `APP_URL`, `username` and `accesKey` in your scripts inside `specs` directory the  before running the tests.
-
-
-
-
 
 ```javascript title="specs/ios-test.js"
 describe("Proverbial APK", () => {
@@ -454,10 +365,6 @@ driver.back();
 });
 ```
 
-
-
-
-
 ```javascript title="specs/android-test.js"
 describe("Proverbial APK", () => {
 it("Changes color", async () => {
@@ -515,17 +422,11 @@ driver.back();
 });
 ```
 
-
-
 ### Step 3: Configure the Test Capabilities
 
 You need to update your capabilities in `*.conf.js` files. In this sample project, we have provided the examples for running tests on both **Android** and **iOS** apps. You can find the configs for both iOS and Android in the `ios-sample` and `android-sample` directories correspondingly.
 
 We are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. You need to pass the path of your test script in `specs` object to run your own automation script. The capabilities object in the sample code for a single test are defined as:
-
-
-
-
 
 ```javascript title="ios-sample/ios-single.conf.js"
 exports.config = {
@@ -571,13 +472,7 @@ timeout: 20000,
 };
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
 
 ```javascript title="android-sample/android-single.conf.js"
 exports.config = {
@@ -622,21 +517,10 @@ timeout: 20000,
 };
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
-
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -658,10 +542,6 @@ npm run single
 
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-
-
-
-
 ### Step 1: Get a Sample Project
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -669,14 +549,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application available above has been provided here.
-
-
-
-
 
 ```javascript title="ios_test.js"
 const driver= require("appium-base-driver")
@@ -689,7 +564,6 @@ require("appium-base-driver")
 var assert= require("assert"),
 webdriver = require("selenium-webdriver"),
 conf_file= process.argv[3] || "conf/ios.conf.js";
-
 
 var caps = require("../" + conf_file).capabilities;
 
@@ -730,10 +604,6 @@ driver.quit()
 
 ```
 
-
-
-
-
 ```javascript title="android_test.js"
 const { default: driver } = require("appium-android-driver/build/lib/driver");
 const { By } = require("selenium-webdriver");
@@ -743,7 +613,6 @@ require("appium-android-driver")
 var assert= require("assert"),
 webdriver = require("selenium-webdriver"),
 conf_file= process.argv[3] || "conf/Appp.conf.js";
-
 
 var caps = require("../" + conf_file).capabilities;
 
@@ -760,11 +629,9 @@ LT_ACCESS_KEY +
 .build();
 };
 
-
 describe("Mocha Appium Test " + caps.browserName, function() {
 var driver;
 this.timeout(0);
-
 
 it ('Application is launched', function name(done) {
 driver=buildDriver(caps);
@@ -784,27 +651,16 @@ driver.quit()
 })
 });
 
-
 });
 ```
 
-
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
 
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
-
-
-
-
 
 ```javascript title="android.conf.js"
 LT_USERNAME = process.env.LT_USERNAME || "<your username>";      //Enter your LambdaTest username here
@@ -825,13 +681,7 @@ exports.capabilities = {
 };
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
 
 ```javascript title="ios.conf.js"
 LT_USERNAME = process.env.LT_USERNAME || "<your username>";        //Enter your LambdaTest username here
@@ -852,17 +702,9 @@ exports.capabilities = {
 };
 ```
 
-
-
-
-
-
-
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -878,39 +720,23 @@ npm install --save
 ```
 - The tests can be executed in the terminal using the following command:
 
-
-
-
 ```js
 npm run android    //to run single test
 npm run parallel_android    //to run parallel tests
 ```
-
-
-
-
 
 ```js
 npm run ios    //to run single test
 npm run parallel_ios    //to run parallel tests
 ```
 
-
-
-
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-
-
-
-
 ## View Your Results
-
 
 Open the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) to see your test. Each session includes a video recording, step-by-step screenshots, device logs, and network logs.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

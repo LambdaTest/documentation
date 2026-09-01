@@ -16,19 +16,13 @@ We recommend that you expand the open file limit to 2000 for a seamless browser 
 
 ## How To Expand The Open File Limit Using macOS/Linux?
 
-
-
 You can increase the open file limit either temporarily or permanently for your profile. In case of temporary modification, your profile settings will be restored once the terminal is shut down.
 
 ### Increasing The Open File Limit Temporarily
 
-
-
 **Step 1**: Gain Sudo rights and run the below command to set the open file limit to 2000.
 
 `ulimit -SHn 2000`
-
-
 
 > Note: If your system is capable of handling a higher limit then please feel free to set the limit above 2000. However, 2000 is the minimum recommendation.
 
@@ -39,8 +33,6 @@ You can increase the open file limit either temporarily or permanently for your 
 **Step 3**: Restart the tunnel and you’re ready to go!
 
 ### Increasing The Open File Limit Permanently
-
-
 
 **Step 1**: You would have to edit the profile settings and set the file limit in the your `.profile` or `.bashrc` file. Add the below command in your `.profile` or `.bashrc` file.
 

@@ -22,8 +22,6 @@ Before using the Custom CSS feature, ensure you meet the following requirements:
 - SmartUI CLI v4.1.40+ (supports both `exec` and `capture` commands)
 - Valid PROJECT_TOKEN configured in your environment
 
-
-
 # Custom CSS Configuration in SmartUI
 
 SmartUI supports two methods for providing custom CSS: file path (recommended for maintainability) and embedded string (quick and portable). Choose the method that best fits your workflow.
@@ -120,8 +118,6 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 }
 ```
 
-
-
 ## Known Limitations
 
 The Custom CSS feature has the following limitations:
@@ -132,14 +128,9 @@ The Custom CSS feature has the following limitations:
 
 - **File Path Resolution**: Ensure CSS file paths are correctly specified relative to your project root. Files outside the project directory may not be accessible.
 
-
-
 ## Use Cases for Custom CSS
 
 The custom CSS feature is particularly valuable in the following scenarios:
-
-
-
 
 ```css
 /* Hide elements that change between runs */
@@ -149,9 +140,6 @@ The custom CSS feature is particularly valuable in the following scenarios:
 [data-testid="rotating-copy"] { font-size: 0 !important; }
 [data-testid="rotating-copy"]::after { content: "Stable text for snapshots"; }
 ```
-
-
-
 
 ```css
 /* Force consistent light theme */
@@ -163,17 +151,11 @@ body { font-family: "Inter", system-ui, sans-serif !important; color: #111827; b
 body { background: #0f172a !important; color: #e5e7eb !important; } */
 ```
 
-
-
-
 ```css
 /* Center content and unify spacing (use carefully) */
 #root, main, section { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 12px !important; }
 * { text-align: center !important; }
 ```
-
-
-
 
 ```css
 /* Hide IPs, locations, or IDs */
@@ -181,9 +163,6 @@ body { background: #0f172a !important; color: #e5e7eb !important; } */
 #ip-value::after { content: "0.0.0.0" !important; }
 #location-value::after { content: "Unknown" !important; }
 ```
-
-
-
 
 ```css
 /* Deliberately apply a very different theme */
@@ -196,27 +175,16 @@ color: #e6e6e6 !important;
 }
 ```
 
-
-
-
 ```css
 /* Disable transitions/animations */
 *, *::before, *::after { transition: none !important; animation: none !important; }
 ```
-
-
-
 
 ```css
 /* Override brand cues (colors, shadows, shapes) */
 header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !important; }
 .btn, a { border-radius: 10px !important; border: 1px solid rgba(255,255,255,.25) !important; }
 ```
-
-
-
-
-
 
 ## Minimal Configuration Templates
 
@@ -243,9 +211,6 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 "customCSS": "body{font-family:'Inter',sans-serif!important;} .ad,.banner{display:none!important;}"
 }
 ```
-
-
-
 
 ## Additional Resources
 

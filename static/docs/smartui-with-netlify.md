@@ -19,27 +19,19 @@ This document will show you how to integrate Netlify Pipeline with SmartUI.
 - Go to your Netlify Dashboard.
 - Click on the Integrations tab, search for **TestMu AI** and click on the **Enable** button.
 
-
-
 - You need to provide your configuration details
     - Enter your **Username** and **Access Key** from the **TestMu AI Dashboard**.
     - Enter your **Smart-UI Project Name**
-
 
 For the Smart-UI Project Name, you can enter any project name. Even if you have not set up any projects in the SmartUI Dashboard.
 
 You can also enter your already-existing smart-UI project name.
 
-
 - Click on the **Save** button
-
-
 
 ### Step 2: Deploy the Site for which you want to compare the results
 
 - Go to the **Deploys** section, click on **Deploy site** button and deploy your project.
-
-
 
 - This deployment is before any changes you have made and will be your **Baseline** image.
 - Now you need to make the required changes in your project and push the changes.
@@ -47,22 +39,13 @@ You can also enter your already-existing smart-UI project name.
 
 Your changes will be triggered and deployed.
 
-
-
 ### Step 4: Compare the Changes Smart-UI Dashboard
 
 - Go to your Smart-UI Dashbard. You will notice there is already a project with the same name you entered while configuring in **Step 1**
 
-
-
 - Go on that project. Click on the latest build. You can now compare the changes done to your project with-respect-to the provious build.
 
-
-
 ## Best Practices
-
-
-
 
 **Project Naming**
 
@@ -71,18 +54,12 @@ Your changes will be triggered and deployed.
 - Avoid special characters that might cause issues
 - Use consistent naming conventions across deployments
 
-
-
-
 **Baseline Management**
 
 - Establish baseline from stable deployment
 - Review baseline before using for comparisons
 - Update baseline when intentional changes are made
 - Document baseline deployment for reference
-
-
-
 
 **Deployment Strategy**
 
@@ -91,9 +68,6 @@ Your changes will be triggered and deployed.
 - Use meaningful deployment messages
 - Tag important deployments
 
-
-
-
 **Integration Configuration**
 
 - Keep TestMu AI credentials secure
@@ -101,9 +75,6 @@ Your changes will be triggered and deployed.
 - Rotate credentials regularly
 - Use different projects for different environments
 
-
-
-
 **Comparison Workflow**
 
 - Review visual differences carefully
@@ -111,23 +82,14 @@ Your changes will be triggered and deployed.
 - Document reasons for baseline updates
 - Use SmartUI dashboard for detailed analysis
 
-
-
-
 **Comparison Workflow**
 
 - Review visual differences carefully
 - Approve intentional changes promptly
 - Document reasons for baseline updates
 - Use SmartUI dashboard for detailed analysis
-
-
-
 
 ## Troubleshooting
-
-
-
 
 **Issue: Screenshots Not Appearing in Dashboard**
 
@@ -155,9 +117,6 @@ Your changes will be triggered and deployed.
 
 5. Review Netlify deployment logs for errors
 
-
-
-
 **Issue: Project Not Found" Error**
 
 **Symptoms**: Error indicating SmartUI project cannot be found
@@ -178,9 +137,6 @@ Your changes will be triggered and deployed.
 3. Update project name in Netlify integration settings
 
 4. Check credentials match the account with the project
-
-
-
 
 **Issue: Integration Not Triggering**
 
@@ -208,9 +164,6 @@ Your changes will be triggered and deployed.
 
 4. Review Netlify deployment logs for integration errors
 
-
-
-
 **Issue: Baseline Not Set Correctly**
 
 **Symptoms**: Comparisons show unexpected differences or baseline issues
@@ -234,9 +187,6 @@ Your changes will be triggered and deployed.
 3. Review deployment history:
    - Check which deployment was used as baseline
    - Verify deployment was successful
-
-
-
 
 **Issue: Comparison Results Unexpected**
 
@@ -274,10 +224,6 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
-
-
-
-
 
 ## Additional Resources
 

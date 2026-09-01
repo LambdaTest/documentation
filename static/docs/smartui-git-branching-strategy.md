@@ -4,7 +4,6 @@
 
 This is the guide to understand Git Branching with SmartUI projects, which can detect your commit history and execute the appropriate actions for your visual regression testing. It works across every CLI-based project type — SmartUI SDK, Static CLI, and Storybook.
 
-
 ## Prerequisites
 
 - You have an account with [TestMu AI](https://www.testmuai.com/login/).
@@ -14,17 +13,11 @@ This is the guide to understand Git Branching with SmartUI projects, which can d
 **Warning**
 This feature is supported for tests ran through CLI project type ([SDK](/support/docs/smartui-selenium-js-sdk/), [Static CLI](/support/docs/smartui-cli-complete-reference/), [Storybook](/support/docs/smart-ui-storybook/)) projects on the SmartUI platform. Please contact support@testmuai.com for further information or requests.
 
-
 The following steps will guide you in running your Git branching Visual Regression test on TestMu AI SmartUI platform:
-
 
 **Baseline Branch**: A baseline branch build is a set of screenshots which are captured using SmartUI where all the screenshots are compared against for the non-baseline branch builds.
 
 **Non-Baseline Branches**: A non-baseline branch(s) build is a set of screenshots which are captured using SmartUI where all the screenshots are compared against with the **Baseline** build which are matched with the screenshot names.
-
-
-
-
 
 ## Getting Started with Git Branching
 
@@ -35,8 +28,6 @@ The following are the steps to add a **Baseline** branch to your SmartUI project
 1. Go to **Project Settings** page for the created project.
 2. Search for **Git Settings** and add your required **Baseline** branch in the input box.
 3. Click on **Update Settings** button to update the project settings and set your **Baseline** Git branch.
-
-
 
 Now, after the successful setup of your **Baseline** branch of your project.
 
@@ -50,9 +41,7 @@ The following are the steps to execute your SmartUI CLI with Git commits:
 git init --y
 ```
 
-
 You can ignore the above step if you already have a repository with `Git` initialized
-
 
 2. Make your changes and commit them to your `Git`:
 
@@ -62,22 +51,13 @@ git commit -m "Your commit message"
 
 3. Execute your SmartUI command to run the Visual Regression tests. Choose the tab for your project type:
 
-
-
-
 ```bash
 npx smartui --config .smartui.json exec -- <Your execution command>
 ```
 
-
-
-
 ```bash
 smartui capture urls.json --config .smartui.json
 ```
-
-
-
 
 For a locally hosted Storybook server:
 
@@ -93,11 +73,6 @@ npm run build-storybook                                           // Creates a S
 smartui storybook ./storybook-static --config .smartui.json       // Captures all the stories added in the static build folder
 ```
 
-
-
-
-
-
 ## Git Branching Workflows and Strategies
 
 ### Ability to set the **Baseline Branch**
@@ -112,35 +87,21 @@ You can set any `branch` name as your **Baseline** branch in the SmartUI project
 
 You can also set the Baseline branch name through your terminal by setting the following environment variable which will automatically update your project settings as well once the test is run.
 
-
-
-
 ```bash
 export BASELINE_BRANCH="Required baseline branch"
 ```
-
-
-
 
 ```bash
 set BASELINE_BRANCH="Required baseline branch"
 ```
 
-
-
-
 ```powershell
 $env:BASELINE_BRANCH="Required baseline branch"
 ```
 
-
-
-
 **Default Selection of Baseline Branch**
 
 In case, if there is no branch is set in your new or existing project created. Then, the `repository's` where SmartUI CLI command is executed to run the tests, **HEAD Branch** will be updated as the **Baseline** branch for that project by default.
-
-
 
 ### Displaying the Git Commit Meta data
 
@@ -151,13 +112,7 @@ If you are using the `Git` based workflow with `SmartUI CLI` then the following 
 - The **commit message** of the Git commit of the `commit ID` to the current repository.
 - The commit author **username** of the Git commit to the current repository.
 
-
-
-
-
 The above metadata is displayed only for **Git** repositories (StoryBook and CLI).
-
-
 
 ### Git Baseline Branch Selection and Comparison Strategy:
 
@@ -166,9 +121,6 @@ The above metadata is displayed only for **Git** repositories (StoryBook and CLI
 In this workflow, if you are working on the same branch name and want to execute the `SmartUI CLI` command to run the Visual Regression tests for your project.
 
 And, if you have created a project and set your **Baseline** branch name to `master` then executed the following commands:
-
-
-
 
 ```bash
 // Your current branch name
@@ -183,9 +135,6 @@ $ git commit -m "Your commit message"
 $ npx smartui --config .smartui.json exec -- <Execution command>
 ```
 
-
-
-
 ```bash
 // Your current branch name
 $ git branch
@@ -199,17 +148,11 @@ $ git commit -m "Your commit message"
 $ smartui storybook <Your localhost URL or Static Build folder path> --config .smartui.json
 ```
 
-
-
-
 Then, a new build will be created with your `Current Active Branch` on the SmartUI Web App - Build Lists page for the project in which the `SmartUI CLI` command is executed.
 
 If the current Baseline build branch is set to `Current Active Branch` in the SmartUI project settings, then SmartUI will compare the screenshots captured to the latest `APPROVED` status build of the `Current Active Branch` branch available in the same project.
 
 Here is an example of the above workflow:
-
-
-
 
 ```bash
 $ git branch
@@ -220,9 +163,6 @@ $ git commit -m "Second Build Changes"
 $ npx smartui --config .smartui.json exec -- <Execution command>
 ```
 
-
-
-
 ```bash
 $ git branch
 * master
@@ -232,36 +172,19 @@ $ git commit -m "Second Build Changes"
 $ smartui storybook http://localhost:6006 --config .smartui.json
 ```
 
-
-
-
-
-
 You can streamline your workflow by setting the current branch name directly through your terminal. By configuring the following environment variable, you can automatically designate the input branch name as the branch for that build. This approach effectively overwrites the current Git branch from which you are running the test, providing a convenient method to manage new branches according to specific use cases without altering the Git configuration.
-
-
-
 
 ```bash
 export CURRENT_BRANCH="Required branch"
 ```
 
-
-
-
 ```bash
 set CURRENT_BRANCH="Required branch"
 ```
 
-
-
-
 ```powershell
 $env:CURRENT_BRANCH="Required branch"
 ```
-
-
-
 
 ### Updating the Baseline Branch Name
 
@@ -285,25 +208,15 @@ In this case, the new build run with the `development` git branch name will be s
 **Note**
 For the first build generated for the **Baseline branch build** in the SmartUI Projects will be automatically set to **SYSTEM APPROVED** status by default.
 
-
-
-
 ### Detect changes for Git commit added to **Baseline Branch**
 
 In this workflow, if I make changes in the set Baseline branch in the SmartUI project that is master and make an commit to the Git then,
 
 Execute `SmartUI CLI` commands to execute the tests (or `.stories` tests) will compare the results with the latest **APPROVED** build run for **Baseline Branch** build in the SmartUI project.
 
-
-
-
 On approval of the all the screenshots then the new build will be updated as Baseline build for the baseline branch.
 
-
 Here is an example of the above workflow:
-
-
-
 
 ```bash
 // Step 1 - Commit changes to Git
@@ -314,9 +227,6 @@ $ git commit -am "Changes in login Flow"
 $ npx smartui --config .smartui.json exec -- <Execution command>
 ```
 
-
-
-
 ```bash
 // Step 1 - Commit changes to Git
 $ git commit -am "Changes in login stories"
@@ -325,9 +235,6 @@ $ git commit -am "Changes in login stories"
 // Step 2 - Execute SmartUI CLI to trigger Build in the SmartUI project
 $ smartui storybook http://localhost:6006 --config .smartui.json
 ```
-
-
-
 
 ### Comparing Non-Baseline Branch builds with **Baseline** branch builds
 
@@ -339,9 +246,6 @@ Step 2: Then run the SmartUI CLI command to execute the tests should compare the
 
 Here is an example of the above workflow:
 
-
-
-
 ```bash
 // Baseline Branch
 $ git branch
@@ -355,9 +259,6 @@ master
 // Executing SmartUI Build with Non-Baseline Git branch
 $ npx smartui --config .smartui.json exec -- <Execution command>
 ```
-
-
-
 
 ```bash
 // Baseline Branch
@@ -373,15 +274,9 @@ master
 $ smartui storybook http://localhost:6006 --config .smartui.json
 ```
 
-
-
-
-
-
 ### Handling Builds with Missing Screenshots
 
 When a build is executed in the same branch as the **Baseline Branch**, SmartUI will compare it against the latest approved baseline build. If some screenshots (or variants) that were present in the baseline are missing from the current build, a `Missing Screenshots` warning  will be displayed.
-
 
 If this build with missing screenshots shows no visual changes compared to the baseline, it will be automatically approved. However, SmartUI will mark it as an `Incomplete` build and will not set it as a new baseline.
 
@@ -393,42 +288,26 @@ For builds with missing screenshots that do contain visual changes, you can manu
 
 In this workflow, once all the `Changes Found` are approved by the `approver` for the screenshots in the **Baseline** branch's **Non-Baseline** build then the `latest` approved **Baseline Branch** build will be updated to the `Baseline`.
 
-
-
-
 In case if the **Baseline** branch does not have an existing build then by default the new build run will be set as Baseline build.
-
 
 ### Running Force Builds
 
 In this workflow, if you have not added any commit to your current `Git` in the repository after making the changes then SmartUI will consider that no changes are made to your files, and you will need to use the `--force-rebuild` flag to execute the build:
 
-
-
-
 ```bash
 $ npx smartui --config .smartui.json exec -- <Execution command> --force-rebuild
 ```
-
-
-
 
 ```bash
 $ smartui storybook <Your localhost URL or Static Build folder path> --config .smartui.json --force-rebuild
 ```
 
-
-
-
 **Warning**
 In the above workflow, if there are no changes which are committed to your `Git` repository and if a build with the same commit number already exists in the build history of the SmartUI project.
 
-
 ## Smart Git Strategy
 
-
 Smart Git is an advanced feature in SmartUI that provides intelligent branch comparison and management capabilities. This guide explains how to use Smart Git effectively in your visual regression testing workflow.
-
 
 ### What is Smart Git?
 
@@ -445,29 +324,17 @@ Smart Git is a feature that enhances the default Git branching strategy in Smart
 
 Smart Git can be enabled using an environment variable:
 
-
-
-
 ```bash
 export SMART_GIT=true
 ```
-
-
-
 
 ```bash
 set SMART_GIT=true
 ```
 
-
-
-
 ```powershell
 $env:SMART_GIT="true"
 ```
-
-
-
 
 ### How Smart Git Works
 
@@ -562,9 +429,7 @@ export SMART_GIT=true
 npx smartui --config .smartui.json exec -- <Your execution command>
 ```
 
-
 The Smart Git management works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.
-
 
 **Result**:
 - Quick visual regression testing for hotfix
@@ -573,52 +438,27 @@ The Smart Git management works consistently across all SmartUI CLI commands (`ex
 
 ### Best Practices
 
-
-
-
 **Branch Naming**
 
 Use clear, consistent branch naming conventions.
-
-
-
-
 
 **Regular Updates**
 
 Keep branches up to date with their parent branches.
 
-
-
-
-
 **Approval Process**
 
 Establish clear approval criteria for each branch.
-
-
-
-
 
 **Documentation**
 
 Document branch-specific visual changes.
 
-
-
-
-
 **Cleanup**
 
 Regularly clean up old branches and their builds.
 
-
-
-
 ### Troubleshooting
-
-
-
 
 **Comparison Issues**
 
@@ -627,10 +467,6 @@ Regularly clean up old branches and their builds.
    - Check branch name: `git branch --show-current`
    - Ensure previous builds exist in the branch
 
-
-
-
-
 **Approval Issues**
 
 1. **Approval Issues**:
@@ -638,18 +474,13 @@ Regularly clean up old branches and their builds.
    - Check if the build is in an approvable state
    - Ensure the branch has previous approved builds
 
-
-
-
 #### Getting Help
 
 If you encounter any issues with Smart Git, please contact our support team at support@testmuai.com.
 
 ## Branch-Level Merging
 
-
 This guide explains how to effectively merge branches in SmartUI for managing your visual regression testing workflow.
-
 
 ### Branch-Level Merging
 
@@ -733,17 +564,11 @@ npx smartui merge branch --source release/v1.0.0 --target main
 
 ### Best Practices
 
-
-
-
 **Merge Planning**
 
 - Plan merges in advance
    - Document merge strategies
    - Establish approval processes
-
-
-
 
 **Branch Management**
 
@@ -751,22 +576,13 @@ npx smartui merge branch --source release/v1.0.0 --target main
    - Clean up merged branches
    - Maintain clear branch naming
 
-
-
-
 **Approval Process**
 
 - Establish clear approval criteria
    - Document approval decisions
    - Maintain audit trail
 
-
-
-
 ### Troubleshooting
-
-
-
 
 Merge Conflicts
 
@@ -774,18 +590,12 @@ Merge Conflicts
    - Verify branch status
    - Review merge history
 
-
-
-
 Status Issues
 
 - Verify build status
    - Check permissions
    - Review approval history
 If you encounter any issues with branch merging in SmartUI, please contact our support team at support@testmuai.com.
-
-
-
 
 ### Pull Request Workflow with Branch Merging
 
@@ -899,15 +709,11 @@ npx smartui merge branch --source ${{ github.event.pull_request.head.ref }} --ta
    - Update documentation
    - Check merge naming in SmartUI dashboard
 
-
 The branch merging process works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.
-
 
 ## Build-Level Merging
 
-
 This guide explains how to effectively merge builds in SmartUI for granular control over your visual regression testing workflow.
-
 
 ### Build-Level Merging
 
@@ -980,17 +786,11 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 
 ### Best Practices
 
-
-
-
 **Build Management**
 
 - Use meaningful build names
    - Document build purposes
    - Regular cleanup of old builds
-
-
-
 
 **Merge Planning**
 
@@ -1001,9 +801,6 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 **Getting Help**
 
 If you encounter any issues with build merging in SmartUI, please contact our support team at support@testmuai.com.
-
-
-
 
 1. **Build Management**:
    - Use meaningful build names

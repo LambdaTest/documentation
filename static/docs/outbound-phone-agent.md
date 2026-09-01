@@ -1,14 +1,12 @@
-# Outbound Phone Agent Testing With TestMu AI
+# How to Test an Outbound Phone Agent With TestMu AI Agent Testing Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-An outbound phone agent places calls. To test one, TestMu AI provisions a recipient number from an outbound pool, the agent under test calls it, and the platform answers and scores the conversation. Typical use cases are sales dialers, lead qualification, collections, and appointment reminders.
+An outbound phone agent places calls. To test one, the Agent Testing Platform provisions a recipient number from an outbound pool, the agent under test calls it, and the platform answers and scores the conversation. Typical use cases are sales dialers, lead qualification, collections, and appointment reminders.
 
 Outbound testing shares the same two modes as inbound, pre-evaluation and post-evaluation, and the same features, with a few outbound-specific differences in pre-evaluation.
 
 ## What Differs From Inbound Testing
-
-
 
 Outbound pre-evaluation changes five things compared to the inbound flow.
 
@@ -20,13 +18,9 @@ Outbound pre-evaluation changes five things compared to the inbound flow.
 
 ## Outbound Number Pool
 
-
-
 Outbound test calls originate against numbers reserved from a dedicated pool. You can view the pool status and available numbers, view and manage the reservations held per suite, and clear reservations to release numbers when a run is done.
 
 ## Everything Else Mirrors Inbound Testing
-
-
 
 Aside from the differences above, outbound testing is identical to inbound. Phone number management, voice and background-noise configuration, agent profiles, test suites, call execution, post-evaluation recording analysis, the go-live assessment, and scheduling all work the same way.
 
@@ -34,15 +28,11 @@ For the full detail on each, see [inbound phone agent testing](/support/docs/inb
 
 ## Metrics
 
-
-
 Outbound agents are evaluated across the same 8 metric categories and 30+ individual metrics as inbound: conversation flow and interaction dynamics, accuracy and effectiveness, user experience and satisfaction, business operational metrics, audio voice quality, speech-to-text evaluation, validation results, and automated issue tags.
 
 For the full metric tables and thresholds, see the [inbound phone agent metrics](/support/docs/inbound-phone-agent/#metrics).
 
 ## Related TestMu AI Guides
-
-
 
 - See how to [test an inbound phone agent](/support/docs/inbound-phone-agent/) for the shared features and full metrics.
 - See the [phone agent testing overview](/support/docs/phone-agent/) for both testing modes.

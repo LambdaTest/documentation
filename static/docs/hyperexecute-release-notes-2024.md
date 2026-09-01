@@ -22,8 +22,6 @@ To generate reports for your XCUI tests, add the `reports: true` flag in your [H
 
 > 📕 Refer to our detailed documentation to [Generate XCUI Reports](/support/docs/hyperexecute-xcui-testing/#step-5-generate-reports-and-artifacts)
 
-
-
 ## Version 2.6.2
 
 ### Support for Appium and Maestro Android Emulator
@@ -49,8 +47,6 @@ HyperExecute expands its support for the latest versions of dev and beta browser
 - **Dev version:** 132.0.2957.11
 - **Beta version:** 132.0.2957.11
 
-
-
 ## Version 2.6.0
 
 ### Label-Based Filtering for Test History
@@ -61,10 +57,6 @@ Some of the specific benefits of the Test History Labels feature include:
 - Quickly identifying and grouping similar test runs (e.g., all regression tests, all tests for a particular environment).
 - Simplifying the process of retrieving test runs for a specific sprint, feature, or environment.
 - Enhancing overall test management and organization for development teams.
-
-
-
-
 
 ## Version 2.5.9
 
@@ -95,8 +87,6 @@ Now, you can download artifacts for your test runs on both **Espresso** and **XC
 
   HyperExecute has upgraded to Selenium JAR version 4.26.0. This update includes stability enhancements and bug fixes for better compatibility and reliability across various browsers.
 
-
-
 ## Version 2.5.8
 
 ### Added Bitbucket Support in Projects Feature ✨
@@ -107,8 +97,6 @@ HyperExecute Projects now supports Bitbucket repositories for workflow schedulin
 - Schedule and automate workflows from Bitbucket repositories
 - Maintain existing GitHub integration with unchanged functionality
 > 📕 Refer to the [Projects Documentation](/support/docs/hyperexecute-projects/)
-
-
 
 ## Version 2.5.7
 
@@ -122,8 +110,6 @@ HyperExecute now includes a Remote Test Discovery Mode to enhance the test disco
 
 > For more details, go through the [Remote Discovery Documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery)
 
-
-
 ## Version 2.5.6
 
 ### Browser Version Updates:
@@ -132,8 +118,6 @@ HyperExecute now includes a Remote Test Discovery Mode to enhance the test disco
 - **Chrome :** Upgraded to Chrome-129 to include the newest features and security updates.
 
 These updates ensure broader coverage for cross-browser testing and improve test stability across the latest browser versions.
-
-
 
 ## Version 2.5.5
 
@@ -155,8 +139,6 @@ type: xml
 frameworkName: junit
 ```
 
-
-
 ## Version 2.5.4
 
 ### Browser and Selenium Version Updates
@@ -171,24 +153,16 @@ frameworkName: junit
 
 These updates enhance test reliability and support for modern browser functionalities, ensuring seamless cross-browser testing.
 
-
-
 ## Version 2.5.3
 
 ### New Feature: Commit Information Display
 
 The top panel now displays detailed information about the latest commit, including the commit ID and the contributor's name. This enhancement provides better visibility into the latest code changes and helps developers track contributions more efficiently.
 
-
-
-
-
 ## Version 2.5.2
 
 ### 1. Cypress Detailed Command Logs for Enhanced Debugging
 **Detailed Cypress Command Logs** in HyperExecute generate an extensive, human-readable record of all Cypress commands and their corresponding results, both in the console and as a file. It helps narrow down test logs, making debugging and troubleshooting Cypress tests easier.
-
-
 
 > 📕 Learn how to enable [Detailed Command Logs](/support/docs/cypress-detailed-command-logs/) for your Cypress tests.
 
@@ -205,8 +179,6 @@ The following updates are now live:
 - **Firefox:** version 129.0
 - **Chrome:** version 128.0
 - **Selenium Jars:** version 4.24
-
-
 
 ## Version 2.5.1
 
@@ -229,8 +201,6 @@ HyperExecute expands its support for the latest versions of dev and beta browser
 - **Dev version:** 130.0
 - **Beta version:** 128.0.2739.42
 
-
-
 ## Version 2.5.0
 
 ### HyperExecute - New Version Release for Beta and Dev Edge Browser
@@ -238,8 +208,6 @@ HyperExecute expands its support for the latest versions of dev and beta browser
 
 - **Dev version:** 129.0
 - **Beta version:** 128.0.2739.22
-
-
 
 ## Version 2.4.8
 
@@ -267,8 +235,6 @@ Pass the value of your email address via CLI by running the command
 
 > 📕 Read the documentation - [How to dynamically set your email address?](/support/docs/hyperexecute-artifacts/#receive-job-reports-and-artifacts-via-email) to learn more about it.
 
-
-
 ## Version 2.4.7
 
 ### HyperExecute: Accessibility Testing Support for Selenium and Cypress
@@ -292,10 +258,6 @@ To start accessibility testing with Cypress, you have to pass `accessibility: tr
 
 > 📕 Follow our step-by-step documentation to set up and run accessibility checks in [Cypress v10](/support/docs/cypress-v10-hyprerexecute-accessibility-tests/) or [Cypress v9](/support/docs/cypress-v9-hyprerexecute-accessibility-tests/) on HyperExecute.
 
-
-
-
-
 ## Version 2.4.6
 
 ### HyperExecute CLI `--runson` flag
@@ -316,8 +278,6 @@ Add the `--runson` flag to your HyperExecute CLI command, followed by the desire
 
 > 📕 Read the documentation - [HyperExecute CLI `runson`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--runson) to learn more about it.
 
-
-
 ## Version 2.4.5
 
 ### Selenium Version Support Expanded
@@ -325,8 +285,6 @@ HyperExecute now supports **Selenium versions 4.16 to 4.21**. This update ensure
 
 ### Firefox Browser Updated
 To maintain browser compatibility and access the newest features, we've incorporated support for **Firefox version 128**. This update guarantees reliable testing on the latest Firefox releases.
-
-
 
 ## Version 2.4.4
 
@@ -352,8 +310,6 @@ HE_CONTEXT_K6_SETUP_DEFAULT_BROWSER_PATH: true
 
 📕 Check the [k6 integration documentation](/support/docs/hyperexecute-k6-testing/) to learn more about it.
 
-
-
 ## Version 2.4.0
 
 ### Debug your Cypress Tests with Network HAR Logs
@@ -370,8 +326,6 @@ Benefits of Network HAR Logs:
 
 📕 Check the [Cypress documentation](/support/docs/cypress-integration-with-hyperexecute/#run-a-cypress-test-in-hyperexecute) to learn more about it.
 
-
-
 ## Version 2.3.8
 
 ### Location Support for TimeZone Capability 🚀
@@ -382,7 +336,6 @@ With this exciting update, you can now use location names (e.g., "Kolkata") alon
 
 **note**
 This capability will work with Selenium, Playwright, Puppeteer, Cypress, and Appium, except for Espresso and XCUI frameworks.
-
 
 Previously, you might have needed to use:
 ```yaml
@@ -395,8 +348,6 @@ capabilities.setCapability("timezone", "Kolkata");
 ```
 
 📕 Learn how to use [timezone capability](/support/docs/selenium-automation-capabilities/#lambdatest-advanced-selenium-capabilities:~:text=Name%20not%20exists-,timezone,-Example%3A%20UTC%2B07)
-
-
 
 ## Version 2.3.7
 
@@ -412,8 +363,6 @@ It empowers you to:
   - Utilize attributes for simpler filtering with higher precedence over queries.
 - **Index JSON objects**: Enhance distribution efficiency by indexing objects using a chosen key with the index configuration.
 
-
-
 ## Version 2.3.6
 
 ### HyperExecute Expands Browser Support for Faster, More Comprehensive Testing! 🚀
@@ -425,8 +374,6 @@ HyperExecute expands its support for the latest versions of browsers for all ope
 - Firefox: 126
 
 With this expanded compatibility, you can streamline your testing process and deliver exceptional user experiences with confidence!
-
-
 
 ## Version 2.3.3
 
@@ -458,8 +405,6 @@ to:
 
 > 📕 Read the documentation - [Test Reports](/support/docs/hyperexecute-job-reports/) to learn more about it.
 
-
-
 ## Version 2.3.1
 
 ### Mask Your Sensitive Data
@@ -474,15 +419,11 @@ Test recordings often capture all user interactions, including potentially sensi
 
 📕 Check the documentation - [Playwright Capabilities](/support/docs/capabilities-for-playwright/) to learn more about it.
 
-
-
 ## Version 2.3.0
 
 ### Test Summary Hyperlinks for Enhanced Debugging Efficiency
 
 [Test Summary Hyperlinks](/support/docs/hyperexecute-guided-walkthrough/#test-summary-hyperlink) provide a seamless redirection from your test summary to detailed test information within the automation dashboard. This eliminates the need for time-consuming navigation, allowing you to focus on what matters most - analyzing results and optimizing your tests.
-
-
 
 ### Benefits:
 
@@ -490,8 +431,6 @@ Test recordings often capture all user interactions, including potentially sensi
 - **Improved Workflow Efficiency:** Minimize time spent navigating between screens and maximize focus on actionable insights.
 - **Enhanced User Experience:** Experience an intuitive workflow that prioritizes clear visibility into your test results.
 Start Testing 🚀
-
-
 
 ## Version 2.2.9
 
@@ -507,8 +446,6 @@ version: 8.6.5
 
 📕 Refer to our [runtime YAML flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime/) to know more!
 
-
-
 ## Version 2.2.8
 
 With the all-new Team Management feature, enhance team collaboration across your organization's automation testing efforts. By enabling isolated testing environments, this functionality streamlines workflow and improves productivity within teams.
@@ -522,10 +459,6 @@ Here's why Team Management can be a game changer for your automation testing eff
 - **Enhanced Team Collaboration:** This feature fosters better communication and knowledge sharing within teams, enabling a more integrated and informed testing process.
 
 📕 Refer to our comprehensive [Team Management documentation](/support/docs/team-management/) to know more!
-
-
-
-
 
 ## Version 2.2.7
 
@@ -541,8 +474,6 @@ You can seamlessly integrate SmartUI with your favorite frameworks - Selenium, P
 
 HyperExecute now supports the beta versions of Chrome and Edge, allowing you to run your Cypress tests seamlessly on our blazing-fast platform.
 
-
-
 ## Version 2.2.6
 
 ### Support for Native TestNG Test Reports
@@ -550,12 +481,6 @@ HyperExecute now supports the beta versions of Chrome and Edge, allowing you to 
 HyperExecute now supports the Native TestNG Reports that offer a standardized and easily accessible summary of information extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job.
 
 > Read the [Native TestNG documentation](/support/docs/hyperexecute-job-reports/#native-testng-reports) to understand how to generate it.
-
-
-
-
-
-
 
 ## Version 2.2.5
 
@@ -568,8 +493,6 @@ These secrets within the designated file are accessible only within the scope of
 
 ### Microsoft Edge Canary Support for macOS 🚀
 HyperExecute users running macOS can now leverage Microsoft Edge Canary for testing.
-
-
 
 ## Version 2.2.3
 
@@ -590,19 +513,13 @@ HyperExecute now supports integration with SmartUI for your Playwright tests. Th
 
 > :green_book: Check the [documentation](/support/docs/smartui-hooks-with-hyperexecute/) to trigger your tests.
 
-
-
 ## Version 2.2.2
 
 ### Testsigma Integration
 
 Testsigma is an AI Native, cloud-based test automation platform designed to help testers create, run, and maintain automated tests for various applications. It caters to web, mobile, and API testing, aiming to simplify the automation process for users of all experience levels.
 
-
-
 > Refer to the detailed documentation on how to integrate [Testsigma](/support/docs/hyperexecute-testsigma-integration/) with HyperExecute.
-
-
 
 ## Version 2.2.1
 
@@ -611,8 +528,6 @@ Testsigma is an AI Native, cloud-based test automation platform designed to help
 The `errorCategorizedOnFailureOnly` flag lets you control when error categorization happens after a job runs. Normally, errors are categorized for every stage, even if the stage succeeded. Enabling this flag ensures that errors are only categorized for stages that failed (not green).
 
 > Refer to the documentation for more details on the [errorCategorizedOnFailureOnly](/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedonfailureonly)
-
-
 
 ## Version 2.2.0
 
@@ -644,8 +559,6 @@ You can selectively exclude specific elements from visual comparisons during you
 
 > 📕 Learn more about the [ignoreDOM](/support/docs/smartui-hooks-with-hyperexecute/) flag
 
-
-
 ## Version 2.1.6
 
 ### Improved test execution flow with `alwaysRunPostSteps` flag
@@ -659,8 +572,6 @@ alwaysRunPostSteps: true
 ```
 
 > 📕 Check the documentation to understand more about the [alwaysRunPostSteps](/support/docs/deep-dive-into-hyperexecute-yaml/#alwaysrunpoststeps) flag
-
-
 
 ## Version 2.1.5
 
@@ -682,8 +593,6 @@ Artifact management is simplified by allowing you to replace artifact names with
 
 > Go through the documentation to learn [how to change the artifacts folder name value](/support/docs/hyperexecute-artifacts/#:~:text=You%20can%20replace%20the%20Artifacts%20folder%20name%20value%20with%20any%20of%20the%20Matrix%20parameters%20value.)
 
-
-
 ## Version 2.1.3
 
 ### Beta Browser Support in HyperExecute 🚀
@@ -697,8 +606,6 @@ You can now test your web applications on the latest beta versions of popular br
 - **Beta Browser Deployment:** Easily deploy beta browsers on HyperExecute, just as you would stable browsers.
 
 - **Expanded Testing Coverage:** Expand your testing coverage to include beta browser versions, identifying potential compatibility issues before they impact your users.
-
-
 
 ## Version 2.1.1
 

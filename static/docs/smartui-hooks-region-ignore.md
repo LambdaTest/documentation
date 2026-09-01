@@ -15,12 +15,7 @@ This gives the Web Hooks path the same region controls already available on RD H
 
 Pass a `coordinates` entry (a list of `"x1,y1,x2,y2"` strings) under `ignoreDOM`. SmartUI excludes those rectangles from the comparison. The four values are the left, top, right, and bottom edges of the rectangle in pixels.
 
-
-
 For example, `"50,50,300,300"` defines the region whose top-left corner is at `(left=50, top=50)` and whose bottom-right corner is at `(right=300, bottom=300)`, a 250 × 250 rectangle.
-
-
-
 
 ```java
 import java.util.HashMap;
@@ -39,9 +34,6 @@ config.put("ignoreDOM", ignoreByCoord);
 // the 847,185 -> 1571,734 rectangle is excluded from the comparison
 ```
 
-
-
-
 ```javascript
 await driver.executeScript('smartui.takeScreenshot', {
 screenshotName: 'home',
@@ -50,9 +42,6 @@ coordinates: ['847,185,1571,734'], // left, top, right, bottom
 },
 });
 ```
-
-
-
 
 ```python
 driver.execute_script("smartui.takeScreenshot", {
@@ -63,19 +52,11 @@ driver.execute_script("smartui.takeScreenshot", {
 })
 ```
 
-
-
-
-
 The origin the coordinates are measured from depends on `fullPage`: viewport-relative for a normal shot, full stitched-page-relative for a full-page shot. See [Coordinate space](#3-coordinate-space-viewport-vs-full-page).
-
 
 ## 2. Select a region instead of ignoring it (`selectDOM`)
 
 Everything above works identically for `selectDOM`. Where `ignoreDOM` excludes a region, `selectDOM` restricts the comparison to only the given region(s). Both DOM selectors and `coordinates` are supported.
-
-
-
 
 ```java
 // compare ONLY this rectangle
@@ -89,9 +70,6 @@ selectBySelector.put("cssSelector", new String[]{"#price-table"});
 config.put("selectDOM", selectBySelector);
 ```
 
-
-
-
 ```javascript
 // compare ONLY this rectangle
 config.selectDOM = { coordinates: ['0,0,1280,200'] };
@@ -100,9 +78,6 @@ config.selectDOM = { coordinates: ['0,0,1280,200'] };
 config.selectDOM = { cssSelector: ['#price-table'] };
 ```
 
-
-
-
 ```python
 # compare ONLY this rectangle
 config["selectDOM"] = {"coordinates": ["0,0,1280,200"]}
@@ -110,9 +85,6 @@ config["selectDOM"] = {"coordinates": ["0,0,1280,200"]}
 # ...or compare only the region of a matched element
 config["selectDOM"] = {"cssSelector": ["#price-table"]}
 ```
-
-
-
 
 ## 3. Coordinate space: viewport vs full page
 
@@ -129,9 +101,6 @@ So for a full-page screenshot, supply coordinates relative to the whole page (a 
 
 Within a single `ignoreDOM` (or `selectDOM`) the two input modes are **additive**: all resolved regions are combined.
 
-
-
-
 ```java
 Map<String, Object> ignore = new HashMap<>();
 ignore.put("cssSelector", new String[]{".promo"});          // selector
@@ -142,9 +111,6 @@ config.put("ignoreDOM", ignore);
 // both regions are ignored
 ```
 
-
-
-
 ```javascript
 config.ignoreDOM = {
 cssSelector: ['.promo'],         // selector
@@ -154,9 +120,6 @@ await driver.executeScript('smartui.takeScreenshot', config);
 // both regions are ignored
 ```
 
-
-
-
 ```python
 config["ignoreDOM"] = {
 "cssSelector": [".promo"],          # selector
@@ -165,9 +128,6 @@ config["ignoreDOM"] = {
 driver.execute_script("smartui.takeScreenshot", config)
 # both regions are ignored
 ```
-
-
-
 
 ## Validation and errors
 

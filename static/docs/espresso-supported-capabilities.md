@@ -31,11 +31,7 @@ Espresso supported capabilities on TestMu AI configure Android instrumentation t
 | networkProfile Real| String | Set a predefined [network throttling](/support/docs/app-auto-network-throttling/) profile during test execution. Requires `network: true`. **Default:** `null`. Example: `networkProfile: 2g-gprs-good` |
 | uploadMedia | String | Upload media files to the device for testing. Provide the media URL generated after [uploading the file](/support/docs/upload-media/). **Default:** `null`. Example: `uploadMedia: lt://MEDIA123456789` |
 
-
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
-
-
-
 
 **Important**
 You can either use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.

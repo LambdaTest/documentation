@@ -8,15 +8,11 @@ A voice agent uses the same setup as a chat agent: upload the documents that des
 
 ## How Voice Agent Testing Works
 
-
-
 The platform conducts a voice-based conversation with your agent, following a generated scenario. The agent's voice responses are captured and transcribed, and the evaluation runs on the full audio conversation transcript.
 
 A voice agent is functionally identical to a chat agent, so every chat feature applies: workflow-based scenario generation, test suites, endpoint profiles, the playground, thresholds, go-live assessment, and scheduled runs. See how to [test a chat agent](/support/docs/chat-agent/) for the shared setup.
 
 ## What Makes Voice Testing Different From Chat
-
-
 
 Voice testing differs from chat in the medium, not the metrics.
 
@@ -25,8 +21,6 @@ Voice testing differs from chat in the medium, not the metrics.
 - Evaluation runs on the full audio conversation transcript.
 
 ## Features
-
-
 
 A voice agent has all the features of a chat agent.
 
@@ -42,8 +36,6 @@ A voice agent has all the features of a chat agent.
 - **Scheduled runs.**
 
 ## Metrics
-
-
 
 Voice agents are evaluated on the same 9 quality metrics as chat agents, each scored on a 0 to 100% scale.
 
@@ -62,8 +54,6 @@ Voice agents are evaluated on the same 9 quality metrics as chat agents, each sc
 Every evaluation result includes the overall score, per-metric scores with pass or fail badges, detailed analysis, the full conversation transcript, identified strengths, areas for improvement, actionable recommendations, and validation criteria results.
 
 ## Related TestMu AI Guides
-
-
 
 - See how to [test a chat agent](/support/docs/chat-agent/), which shares the same setup and metrics.
 - See how to [test phone agents](/support/docs/phone-agent/) for spoken agents over the telephone.

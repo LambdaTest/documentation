@@ -27,7 +27,6 @@ Follow these guidelines when using wildcards in domain names:
 **Note**
 Enclose the argument in **quotes** to prevent shell expansion of the **asterisk (*)**.
 
-
 ## Benefits of Wildcard Support in `--allowHosts`
 - **Simplifies Configuration :** No need to manually list each subdomain.
 - **Increased Flexibility :** Easily manage multiple subdomains with a single entry.

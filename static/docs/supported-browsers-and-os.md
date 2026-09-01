@@ -30,7 +30,6 @@ You can run Cypress tests across multiple browser and OS combinations in two way
 
 ## Configuring the Browser and Platform Keys in lambdatest-config.json
 
-
 To run Cypress tests on multiple browser and OS configurations, add the `browsers` object to `lambdatest-config.json` and define a list of browsers, browser versions, and platforms. Each entry sets one browser, its platform, and the versions to run, as shown in the syntax below.
 
 ```js
@@ -47,7 +46,6 @@ To run Cypress tests on multiple browser and OS configurations, add the `browser
 
 ## Using the Cypress CLI Command
 
-
 You can also select the browser and platform at run time with the Cypress CLI instead of editing `lambdatest-config.json`. The `--browsers` flag takes one or more `platform:browser:version` values, as described below.
 
 | Flag | Purpose | Type |
@@ -61,7 +59,6 @@ lambdatest-cypress run --browsers "platform:browser:version"
 ```
 
 ## Supported Cypress Versions
-
 
 TestMu AI supports every major, minor, and patch release of Cypress across both release lines: Cypress 10 and above, and Cypress 9 and below. Use the latest version where possible to benefit from recent fixes and improvements.
 
@@ -83,7 +80,6 @@ The example below sets both `npm_dependencies` and `cypress_version` in `lambdat
 ```
 
 ## Test on WebKit
-
 
 WebKit is Safari's browser engine, so running your Cypress tests on WebKit shows how your site behaves in Safari. To target it, set the browser to `Webkit` in the `browsers` array of `lambdatest-config.json`, as shown below.
 
@@ -111,7 +107,6 @@ WebKit runs on **Cypress v10.8.0 only**, so pin both Cypress and `playwright-web
 - Supported on **Windows 10 and 11**, and **macOS Big Sur and Monterey**.
 
 ## Related Cypress Guides
-
 
 Continue with the guides below to configure and run your Cypress tests on TestMu AI.
 

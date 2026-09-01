@@ -17,8 +17,6 @@ qTest is a comprehensive test management tool designed for Project Management, B
    * Login to qTest Manager as an Administrator and access the Resources page.
    * Expand the APIs and SDK section.
 
-
-
 3. Setup host and agent
 
   Start the host by running the following command:
@@ -26,8 +24,6 @@ qTest is a comprehensive test management tool designed for Project Management, B
 /path/to/agentctl-[version]$ ./agentctl start
 ```
   Navigate to [http://localhost:6789](http://localhost:6789) and add your details.
-
-
 
 4. Run Tests
 

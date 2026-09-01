@@ -6,8 +6,6 @@ The `Error Insights` module enables the users to get all the insights into the t
 
 ## Error Stats
 
-
-
 The `Error Stats` widget allows the user to easily analyze the tests categorized by their Status on the TestMu AI platform including Test Case Errors, Idle Timeout, Queue Timeout, and Lambda Error. The user can even filter the graph by clicking on the relevant legends at the bottom of the graph.
 
 **Use case**

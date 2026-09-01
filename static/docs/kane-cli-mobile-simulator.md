@@ -4,9 +4,7 @@
 
 Set up Apple's iOS Simulator once, and Kane CLI can run mobile tests against it. This guide targets **macOS on Apple Silicon (arm64)**, the only supported host for this release. See [Mobile Testing](/support/docs/kane-cli-mobile/) for the full picture.
 
-
 The exact iOS runtime versions and simulator device models in the supported matrix are pinned by the product team. The versions shown below are current, working examples. Confirm the officially supported set before you rely on a specific one.
-
 
 ## 1. Install Xcode 16 or Newer
 

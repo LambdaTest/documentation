@@ -8,7 +8,6 @@ Running Appium Python tests on TestMu AI executes native and hybrid mobile autom
 
 ## Prerequisites
 
-
 - Your TestMu AI [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - You should have [Python](https://www.python.org/downloads/) installed.
 - Download and install [**pip**](https://pip.pypa.io/en/stable/installation/).
@@ -20,71 +19,31 @@ pip install pytest
 
 ## Set Your Credentials
 
-
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
 ## Upload Your App
-
 
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
 
-
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
-
-
-
-
-
-
-
 
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on TestMu AI by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
 
-
-
 ## Run a Test With Your Framework
 
-
 Pick your framework below. Each tab contains the complete flow for that framework: the sample repository, the automation script, the test capabilities, and the command to execute your tests. The credentials and app upload you set above are shared across all of them.
-
-
-
-
 
 ### Step 1: Get a Sample Project
 
@@ -93,14 +52,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-
-
-
 
 ```python title="ios.py"
 from appium import webdriver
@@ -123,7 +77,6 @@ desired_caps = {
 "visual": True,
 "video": True
 }
-
 
 def startingTest():
 if os.environ.get("LT_USERNAME") is None:
@@ -178,13 +131,8 @@ driver.quit()
 except:
 driver.quit()
 
-
 startingTest()
 ```
-
-
-
-
 
 ```python title="android.py"
 from appium import webdriver
@@ -207,7 +155,6 @@ desired_caps = {
 "visual": True,
 "video": True
 }
-
 
 def startingTest():
 if os.environ.get("LT_USERNAME") is None:
@@ -271,28 +218,16 @@ driver.quit()
 except:
 driver.quit()
 
-
 startingTest()
 ```
 
-
-
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
 
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
-
 
 ```python title="iOS(.ipa)"
 desired_caps = {
@@ -310,9 +245,6 @@ desired_caps = {
 }
 ```
 
-
-
-
 ```python title="Android(.apk)"
 desired_caps = {
 "deviceName":"Galaxy S20",
@@ -329,17 +261,9 @@ desired_caps = {
 }
 ```
 
-
-
-
-
-
-
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -351,33 +275,15 @@ pip install -r requirements.txt
 
 - Run the following command in the directory where your project has been saved to execute your build.
 
-
-
-
-
 ```bash
 python3 ios.py
 ```
-
-
-
-
 
 ```bash
 python3 android.py
 ```
 
-
-
-
-
-
 If you are unable to run the automation script with the above mentioned commands try **'python'** command except for **'python3'**.
-
-
-
-
-
 
 ### Step 1: Get a Sample Project
 
@@ -386,14 +292,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. You can write or add your own Appium automation scripts in `*StepDef.py` directory to run different tests on your app.
-
-
-
-
 
 ```python title="AndroidStepDef.py"
 import sys
@@ -463,9 +364,6 @@ driver.quit()
 except:
 driver.quit()
 ```
-
-
-
 
 ```python title="iOSStepDef.py"
 import sys
@@ -540,20 +438,11 @@ driver.quit()
 
 ```
 
-
-
-
-
 ### Step 3: Configure the Test Capabilities
 
 You need to update your capabilities in `appConfig.py` files. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code for a single test are defined as:
 
-
 The capabilities for running tests on both **Android** and **iOS** apps are:
-
-
-
-
 
 ```python title="appConfig.py"
 app_ios_desired_caps = {
@@ -574,13 +463,7 @@ app_ios_desired_caps = {
 }
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
 
 ```python title="appConfig.py"
 app_android_desired_caps = {
@@ -600,22 +483,11 @@ app_android_desired_caps = {
 }
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
-
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -627,29 +499,13 @@ pip install -r requirements.txt
 
 - Execute the following command to run your test on TestMu AI platform:
 
-
-
-
-
 ```bash
 behave --tags @iosApp
 ```
 
-
-
-
-
 ```bash
 behave --tags @androidApp
 ```
-
-
-
-
-
-
-
-
 
 ### Step 1: Get a Sample Project
 
@@ -657,7 +513,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
-
 
 #### Set-up Your Virtual Environment for Linux/macOS
 
@@ -728,19 +583,12 @@ Close test app
 Close All Applications
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
 
 ### Step 2: Update your Automation Script
 
 An automation script file `*StepDef.py` for the sample application given above has been provided here.
-
-
-
-
 
 ```python title="IOS.robot"
 *** Settings ***
@@ -763,10 +611,6 @@ Click element  id=toast
 Click element  id=notification
 Click element  id=geoLocation
 ```
-
-
-
-
 
 ```python title="Android.robot"
 *** Settings ***
@@ -801,10 +645,6 @@ Click element  id=find
 
 ```
 
-
-
-
-
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts `Makefile` file. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
@@ -817,12 +657,8 @@ test_Web_Android:
 robot --variable version:11 --variable platformName:android --variable deviceName:"Galaxy.*" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true  Tests/AndroidIosWeb.robot
 ```
 
-
-
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -834,29 +670,13 @@ pip install -r requirements.txt
 
 - Execute the following command to run your test on TestMu AI platform:
 
-
-
-
-
 ```bash
 make test_iOS1
 ```
 
-
-
-
-
 ```bash
 make test_Android1
 ```
-
-
-
-
-
-
-
-
 
 ### Step 1: Get a Sample Project
 
@@ -864,7 +684,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
-
 
 ### Step 2: Update your Automation Script
 
@@ -932,14 +751,11 @@ caps['deviceName'] = 'Galaxy S21 Ultra 5G'
 caps['app'] = 'APP_URL'   #add app url here
 }
 
-
 ```
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -958,10 +774,6 @@ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python  #for MacOS/Linux
 gauge run specs
 ```
 
-
-
-
-
 ### Step 1: Get a Sample Project
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -969,14 +781,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-
-
-
 
 ```python title="ios.py"
 from os import environ
@@ -1022,10 +829,6 @@ rep = outcome.get_result()
 setattr(item, "rep_" + rep.when, rep)
 ```
 
-
-
-
-
 ```python title="conftest.py"
 from os import environ
 import pytest
@@ -1070,19 +873,11 @@ rep = outcome.get_result()
 setattr(item, "rep_" + rep.when, rep)
 ```
 
-
-
-
-
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
-
 
 ```python title="iOS(.ipa)"
 caps = {
@@ -1097,9 +892,6 @@ caps = {
 }
 ```
 
-
-
-
 ```python title="Android(.apk)"
 caps = {
 "deviceName": "Galaxy S21 5G",
@@ -1113,18 +905,9 @@ caps = {
 }
 ```
 
-
-
-
-
-
-
-
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -1136,41 +919,21 @@ pip install -r requirements.txt
 
 - Run the following command in the directory where your project has been saved to execute your build.
 
-
-
-
-
 ```bash
 pytest test_ios.py
 ```
-
-
-
-
 
 ```bash
 pytest test.py
 ```
 
-
-
-
-
-
 If you are unable to run the automation script with the above mentioned commands try using `python -m` before the given commands.
 
-
-
-
-
-
 ## View Your Results
-
 
 Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build). Each session includes a video recording, step-by-step screenshots, device logs, and network logs.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

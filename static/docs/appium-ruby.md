@@ -10,15 +10,10 @@ Set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/
 
 ## Prerequisites
 
-
 Make sure you have the following set up before you start.
 
 - Your TestMu AI [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Install **Ruby** on your local system. Follow these instructions to install on different operating systems.
-
-
-
-
 
 For **macOS**, you can run a [Homebrew](https://brew.sh/) command like this:
 
@@ -26,21 +21,13 @@ For **macOS**, you can run a [Homebrew](https://brew.sh/) command like this:
 brew install ruby
 ```
 
-
-
-
 For **Linux** or **Ubuntu**, you can run a simple apt command like below:
 
 ```bash
 sudo apt-get install ruby-full
 ```
 
-
-
-
 For **Windows**, you can download from the [official website](https://rubyinstaller.org/downloads/).
-
-
 
 - Ensure you have Dependency manager bundler installed (required for the **Cucumber** and **RSpec** frameworks). If not installed, you can install with the following command:
 
@@ -50,71 +37,31 @@ gem install bundler
 
 ## Set Your Credentials
 
-
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [TestMu AI Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
 ## Upload Your App
-
 
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
 
-
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
-
-
-
-
-
-
-
 
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on TestMu AI by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
 
-
-
 ## Run a Test With Your Framework
 
-
 Pick the Ruby framework you want to use. Each tab contains the complete flow: get the sample project, update the automation script, configure the capabilities, and execute your tests on TestMu AI.
-
-
-
-
 
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -122,14 +69,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-
-
-
 
 ```ruby title="ios.rb"
 require 'rubygems'
@@ -182,18 +124,10 @@ driver.back
 
 puts "Found results - Test Passed"
 
-
 driver.quit
 ```
 
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-
-
-
-
-
 
 ```ruby title="android.rb"
 require 'rubygems'
@@ -247,18 +181,11 @@ puts "Found results - Test Passed"
 driver.quit
 ```
 
-
-
-
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
-
-
-
-
 
 ```ruby title="iOS(.ipa)"
 caps = {
@@ -275,9 +202,6 @@ caps = {
 } }
 ```
 
-
-
-
 ```ruby title="Android(.apk)"
 caps = {
 "LT:Options" => {
@@ -293,24 +217,13 @@ caps = {
 } }
 ```
 
-
-
-
 > In case you're using capabilities generated using the JSON Wire Protocol, then it's recommended to use ```appium_lib``` version ```10.6.0```. Run ```gem install appium_lib -v 10.6.0``` command to install it.
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
-
-
 ### Step 4: Execute and Monitor your Tests
-
-
-
-
 
 If you are using an **iOS** app, the cURL command will generate an app URL for the corresponding iOS app and install the same for running the tests. You can either use our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) or upload your own app as discussed earlier.
 
@@ -326,10 +239,6 @@ cd ios
 ruby ios-sample.rb
 ```
 
-
-
-
-
 If you are using an **android** app, the cURL command will generate an app URL for the corresponding Android app and install the same for running the tests. You can either use our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or upload your own app as discussed earlier.
 
 - Navigate to the corresponding directory based on your app.
@@ -343,12 +252,6 @@ cd android
 ```bash
 ruby android-sample.rb
 ```
-
-
-
-
-
-
 
  For Windows Users
 
@@ -378,12 +281,7 @@ gem install ffi
 ruby android-sample.rb
 ```
 
-
 > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-
-
-
 
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -391,14 +289,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script file `first_steps.rb` for the sample application given above has been provided here.
-
-
-
-
 
 ```ruby title="first_steps.rb"
 When /^I click on buttons app$/ do
@@ -436,10 +329,6 @@ end
 
 ```
 
-
-
-
-
 ```ruby title="first_steps.rb"
 When /^I click on buttons app$/ do
 
@@ -468,18 +357,11 @@ $driver.execute_script("lambda-status=passed")
 end
 ```
 
-
-
-
 ### Step 3: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 Ensure to update the `APP_URL`, `username` and `accesKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
-
-
-
-
 
 ```ruby title="first.config.yml iOS"
 server: "mobile-hub.lambdatest.com"
@@ -490,7 +372,6 @@ common_caps:
 
 "build": "br-2"
 
-
 browser_caps:
 -
 "isRealMobile": "true"
@@ -500,19 +381,14 @@ browser_caps:
 "app": "APP_URL"      # Add your app url here
 ```
 
-
-
-
 ```ruby title="first.config.yml Android"
 server: "mobile-hub.lambdatest.com"
 user: "LT_USERNAME"    # Add Lambdatest username here
 key: "LT_ACCESS_KEY"   # Add Lambdtest accessKey here
 
-
 common_caps:
 
 "build": "br-1"
-
 
 browser_caps:
 -
@@ -523,17 +399,9 @@ browser_caps:
 "app": "APP_URL"      # Add your app url here
 ```
 
-
-
-
-
-
-
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -549,23 +417,15 @@ bundle exec rake first
 ```
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-
-
-
-
 ### Step 1: Get a Sample Project
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 **Sample repo**
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
 ### Step 2: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-
-
 
 ```ruby title="single.config.yml"
 server: "mobile-hub.lambdatest.com"
@@ -583,10 +443,6 @@ browser_caps:
 "platformVersion": "10"
 "app": "APP_URL"        #Add the app url here
 ```
-
-
-
-
 
 ```ruby title="parallel.config.yml"
 server: "mobile-hub.lambdatest.com"
@@ -620,14 +476,8 @@ app_caps:
 "app": "APP_URL"   #Add the app url here
 ```
 
-
-
-
-
-
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
 
 ### Step 3: Configure the Test Capabilities
 
@@ -649,13 +499,9 @@ caps={
 }},
 ```
 
-
-
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-
 
 ### Step 4: Execute and Monitor your Tests
 
@@ -671,17 +517,11 @@ bundle exec rake single
 
 > In order to run parallel tests, run `bundle exec rake parallel`. Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-
-
-
-
 ## View Your Results
-
 
 Open the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) to see your test. Your test results are displayed on the test console (or CLI if you are using terminal/cmd) and each session includes a video recording, step-by-step screenshots, device logs, and network logs.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

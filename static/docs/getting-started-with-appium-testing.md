@@ -4,19 +4,14 @@
 
 Running your first Appium test on TestMu AI executes native and hybrid mobile app automation on real Android and iOS devices. Clone a sample project, set credentials, upload your app, configure desired capabilities, and view detailed results on the dashboard.
 
-
 **Sample repo**
 All the code is in the TestMu AI sample repository. Clone it to follow along with the same files.
 
-
  View on GitHub
-
-
 
 Prefer another language? See [all supported Appium languages and frameworks](/support/docs/appium-agent-skills/#supported-languages-and-frameworks).
 
 ## Prerequisites
-
 
 Make sure you have the following set up before you start.
 
@@ -25,7 +20,6 @@ Make sure you have the following set up before you start.
 3. Install [Python](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installation/).
 
 ## Step 1: Clone the Sample Project
-
 
 Pull the sample repo to your machine, move into it, and install its dependencies.
 
@@ -37,72 +31,28 @@ pip install -r requirements.txt
 
 ## Step 2: Set Your Credentials
 
-
 Export your TestMu AI **Username** and **Access Key** as environment variables so the test can authenticate with the device cloud.
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
 ## Step 3: Upload Your App
-
 
 Upload your Android (`.apk`/`.aab`) or iOS (`.ipa`) app to TestMu AI with the REST API. Pass your credentials as `Username:AccessKey` for authentication, and point `appFile` at your app.
 
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@/Users/macuser/Downloads/proverbial_android.apk" -F "name=proverbial_app"`}
 
-
-
-
-
-
-
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
-
-
-
-
-
-
 
 - No app of your own yet? Use a sample app: [Android](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or [iOS](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 - The response is a JSON object with an `app_url` of the form `lt://APP123456789123456789`. Copy it for the next step.
 
-
 ## Step 4: Configure the Test
 
-
 The sample test builds a `desired_caps` object with the device, platform, and app, then connects to the TestMu AI hub at `mobile-hub.lambdatest.com/wd/hub`. Set the `app` value to the `app_url` from Step 3. Pick your platform:
-
-
-
-
 
 ```python title="android.py"
 from appium import webdriver
@@ -125,7 +75,6 @@ desired_caps = {
 "visual": True,
 "video": True
 }
-
 
 def startingTest():
 if os.environ.get("LT_USERNAME") is None:
@@ -161,13 +110,8 @@ except Exception as e:
 print(e)
 driver.quit()
 
-
 startingTest()
 ```
-
-
-
-
 
 ```python title="ios.py"
 from appium import webdriver
@@ -190,7 +134,6 @@ desired_caps = {
 "visual": True,
 "video": True
 }
-
 
 def startingTest():
 if os.environ.get("LT_USERNAME") is None:
@@ -219,65 +162,32 @@ except Exception as e:
 print(e)
 driver.quit()
 
-
 startingTest()
 ```
-
-
-
-
-
 
 - Add the `app_url` from Step 3 to the `app` capability.
 - Set `isRealMobile` to `False` to run on virtual devices instead of real ones.
 - Generate a capabilities set for any device/OS with the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/). For every supported key, see [Appium automation capabilities](/support/docs/desired-capabilities-in-appium/).
 
-
 ## Step 5: Run the Test
-
 
 Run the script for your platform from the project directory.
 
-
-
-
-
-
-
   {`python3 android.py`}
-
-
-
-
-
-
-
-
 
   {`python3 ios.py`}
 
-
-
-
-
-
-
-
 If `python3` is not recognized, use `python` instead.
 
-
 ## Step 6: View Your Results
-
 
 Open the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build) to see your test. Each session includes a video recording, step-by-step screenshots, device logs, and network logs.
 
 ## Test Locally Hosted Apps
 
-
 To test an app hosted on your local machine, a private staging server, or a host behind your firewall, route the test through the TestMu AI tunnel. The tunnel opens a secure connection between your machine and the TestMu AI device cloud so the test can reach apps it cannot access directly.
 
 ### Set Up the Tunnel
-
 
 Download and start the tunnel binary before you run the test.
 
@@ -294,7 +204,6 @@ Download and start the tunnel binary before you run the test.
 
 ### Enable the Tunnel Capability
 
-
 With the tunnel running, set the `tunnel` capability to `true` in your `desired_caps` object so the test routes through it.
 
 | Capability | Values | Description |
@@ -304,7 +213,6 @@ With the tunnel running, set the `tunnel` capability to `true` in your `desired_
 You can also add the `tunnel` capability from the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
 
 ## Next Steps
-
 
 Continue with these related guides:
 
