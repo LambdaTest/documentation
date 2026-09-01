@@ -1,4 +1,4 @@
-# Video Agent Testing With TestMu AI
+# How to Test Video Agents With TestMu AI Agent Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 

@@ -27,3 +27,7 @@ The TestMu AI dashboard is designed to simplify the testing process. Here's a br
 - **Tunnel :** For testing on environments that are not publicly accessible, configure the Tunnel settings to enable testing on staging or local sites.
 
 - **Start Button :** Located on the right side of the URL field, this button initializes the testing session once you have chosen your device and browser configuration.
+
+## Related guides
+
+- [Real-Time Mobile Browser Testing Tools](/support/docs/real-time-mobile-browser-testing-tools/) — explore the developer tools available during a real-time mobile browser session.

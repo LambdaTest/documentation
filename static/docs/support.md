@@ -96,7 +96,7 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
               Overview
               Supported Agent Types
               Test Your First Agent
-              Test With Agent Testing CLI
+             Test With Agent Testing CLI
               Integrate a Chat Agent API
               Agent Assurance &nbsp;
               FAQs

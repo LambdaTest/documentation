@@ -1,8 +1,8 @@
-# How the AI Agent Testing Platform Evaluates Agents
+# How the TestMu AI Agent Testing Platform Evaluates Agents
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The AI Agent Testing Platform runs every evaluation through five phases: configure context, generate scenarios, run the testing agents, score each interaction, and return a production readiness verdict. 15+ specialized testing agents drive it, each probing one quality dimension, all in parallel against your agent's real endpoint.
+The Agent Testing Platform runs every evaluation through five phases: configure context, generate scenarios, run the testing agents, score each interaction, and return a production readiness verdict. 15+ specialized testing agents drive it, each probing one quality dimension, all in parallel against your agent's real endpoint.
 
 You run it from one hosted web application, the REST API, the CLI, or a CI/CD pipeline. There is no SDK to install and no local infrastructure to operate.
 

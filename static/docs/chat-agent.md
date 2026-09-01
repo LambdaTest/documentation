@@ -1,8 +1,8 @@
-# Chat Agent Testing With TestMu AI
+# How to Test Chat Agents With TestMu AI Agent Testing Platform
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-TestMu AI tests a chat agent by holding multi-turn conversations with it through its API, following AI-generated scenarios, and scoring each conversation across quality metrics. It covers text chatbots, virtual assistants, IT helpdesks, and FAQ bots.
+The Agent Testing Platform tests a chat agent by holding multi-turn conversations with it through its API, following AI-generated scenarios, and scoring each conversation across quality metrics. It covers text chatbots, virtual assistants, IT helpdesks, and FAQ bots.
 
 You provide the endpoint, the agent's intended behavior, and any requirement documents. The platform generates the scenarios and runs the conversations. No code changes to your agent are required.
 

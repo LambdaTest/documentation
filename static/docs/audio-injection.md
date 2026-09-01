@@ -15,14 +15,31 @@ Audio Injection enables you to simulate microphone input on real devices by inje
 
 Use it to test speech-to-text, voice commands, voice assistants, in-app recording, KYC voice verification, and any other microphone-dependent feature.
 
-## Supported Platforms
+## Supported Devices
 
-| Platform | Minimum OS Version |
+**Audio Injection is supported on selected Real Devices only. It is not available on Emulators or Simulators.**
+
+### Android
+
+| Android Device | Android Version |
 |---|---|
-| **Android** | Android 13 (SDK 33) and above |
-| **iOS** | iOS 16 and above |
+| Galaxy S26 | 16 |
+| Galaxy S24 | 14 |
+| Galaxy S23 | 14 |
+| Pixel 10 | 16 |
+| Pixel 10 Pro | 16 |
+| Pixel 10 Pro XL | 16 |
+| Pixel 9 | 15 |
+| Pixel 8 | 14, 16 |
 
-Audio Injection is supported on **real devices only**. It is **not** available on emulators or simulators.
+### iOS
+
+| iOS Device | iOS Version |
+|---|---|
+| iPhone 17 Pro | 26 |
+| iPhone 17 | 26 |
+| iPhone 16 | 18 |
+| iPhone 15 | 17 |
 
 ## Supported File Formats
 
