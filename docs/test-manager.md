@@ -1,6 +1,6 @@
 ---
 id: test-manager
-title: "Test Manager: Test Management Platform By TestMu AI | Documentation"
+title: "Test Manager | TestMu AI Documentation"
 hide_title: true
 toc_max_heading_level: 2
 sidebar_label: Overview
@@ -18,6 +18,7 @@ keywords:
   - test runs
   - test execution
   - jira sync
+  - azure devops sync
   - testrail migration
   - zephyr migration
   - xray migration
@@ -57,10 +58,55 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${BRAND_URL}/support/docs/test-manager/#faq`,
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "Is Test Manager free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. TestMu AI offers a no-cost tier that includes core test case creation, management, and execution features. Paid plans unlock advanced AI-powered authoring, unlimited test runs, and priority support. See <a href='https://www.testmuai.com/pricing/?product=test-manager'>Test Manager pricing</a> for details."
+          }
+        },{
+          "@type": "Question",
+          "name": "Can I import my existing test cases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use the migration wizard for TestRail, Zephyr, Xray, or qTest, or import from any tool via CSV. Custom fields and values are mapped automatically."
+          }
+        },{
+          "@type": "Question",
+          "name": "Does Test Manager support both manual and automated tests?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Manual and automated test cases live in the same repository, run in the same workspace, and report into the same dashboards."
+          }
+        },{
+          "@type": "Question",
+          "name": "How does the AI generate test cases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Click Generate with AI while authoring, then describe what you want to test in natural language, or provide a Jira ticket, PDF, image, audio, or video. Test Manager generates structured, editable test steps with preconditions, expected results, and priorities."
+          }
+        },{
+          "@type": "Question",
+          "name": "Which tools does Test Manager integrate with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jira and Azure DevOps with two-way sync, plus marketplace apps for both. Test Manager also integrates with GitHub, GitLab, and all major issue trackers."
+          }
+        }]
+      })
+    }}
+></script>
+
 # Introduction to Test Manager
 ***
 
-Test Manager is <BrandName />'s AI-native test management platform for planning, creating, executing, and reporting on software tests. It gives QA teams a single workspace for manual and automated test cases, test runs, two-way Jira sync, and release-readiness reporting, with AI that generates test cases from natural language.
+Test Manager is <BrandName />'s AI-native test management platform for planning, creating, executing, and reporting on software tests. It gives QA teams a single workspace for manual and automated test cases, test runs, two-way sync with Jira and Azure DevOps, and release-readiness reporting, with AI that generates test cases from natural language.
 
 ## What you can do with Test Manager
 
@@ -69,14 +115,14 @@ Test Manager covers the full test management lifecycle:
 - Generate test cases with AI from natural language, Jira tickets, PDFs, images, audio, or video.
 - Create, organize, and maintain manual and automated test cases in one central repository.
 - Plan test runs, execute them step by step, and record results with evidence.
-- Sync test cases and defects two-way with Jira.
+- Sync test cases and defects two-way with Jira and Azure DevOps.
 - Migrate from TestRail, Zephyr, Xray, or qTest with automated field mapping.
 - Track pass rates, defect trends, coverage, and release readiness on real-time dashboards.
 - Run guided exploratory testing sessions on desktop and mobile.
 
 ## AI test case generation
 
-Press the **Tab** key while creating a test case to trigger AI generation, or describe the scenario in natural language. For example, *"Generate test cases to validate user login with invalid credentials."* Test Manager also accepts Jira tickets, PDFs, images, audio, and video as input, and produces structured test steps with preconditions, expected results, and priority assignments.
+Create test cases using natural language descriptions or existing inputs such as Jira tickets, PDFs, images, audio, and video. Test Manager analyzes the provided context and generates structured test cases with detailed test steps, preconditions, expected results, and priority assignments.
 
 Every generated test case is fully editable, with support for custom fields, tags, and attachments. Context-aware AI detects duplicate tests so you can reuse common cases instead of recreating them, and suggests edge cases to improve coverage. Teams cut test case creation time by up to 60%, which frees testers to focus on strategy, coverage, and quality decisions.
 
@@ -91,11 +137,11 @@ You can also import existing test cases in bulk using CSV. The import supports c
 Create a test run, add test cases, and assign them to testers. During manual execution, testers see each test step in sequence and record pass/fail results with attached evidence. Automated tests can be triggered from the same workspace, and results from manual and automated runs flow into one unified view, executed against real browsers and devices in the <BrandName /> cloud.
 
 
-## Two-way Jira sync
+## Two-way Jira and Azure DevOps sync
 
-Connect your Jira account using your hostname and credentials to link Jira issues with test cases, test runs, and results. Updates made on either side are reflected across both platforms automatically, with no copy-pasting and no version mismatches.
+Connect your Jira or Azure DevOps account to link issues and work items with test cases, test runs, and results. Updates made on either side are reflected across both platforms automatically, with no copy-pasting and no version mismatches.
 
-Installing the <BrandName /> Jira App from the Atlassian Marketplace adds story-level tracking: see test cases and runs inside a Jira story, track linked issues, and update test case status without leaving Jira. QA-to-dev handoffs can trigger automatically based on issue status changes.
+<BrandName /> also publishes Test Manager apps on both the Atlassian Marketplace and the Azure DevOps Marketplace, which add story-level tracking: see test cases and runs inside a Jira story or an Azure DevOps work item, track linked issues, and update test case status without leaving the tool your team already works in. QA-to-dev handoffs can trigger automatically based on issue status changes.
 
 ## Migrate from TestRail, Zephyr, or Xray
 
@@ -111,14 +157,14 @@ Run guided exploratory testing sessions across desktop and mobile. Attach eviden
 
 ## Integrations
 
-Beyond Jira, Test Manager links tests to bugs, stories, and features across Azure DevOps, GitHub, GitLab, and all major issue trackers, giving you complete traceability from requirement to result.
+<BrandName /> also publishes Test Manager apps on both the Atlassian Marketplace and the Azure DevOps Marketplace, which add story-level tracking: see test cases and runs inside a Jira story or an Azure DevOps work item, track linked issues, and update test case status without leaving the tool your team already works in. QA-to-dev handoffs can trigger automatically based on issue status changes.
 
 ## Getting started
 
-1. **Create a free account** at [testmuai.com](https://www.testmuai.com/register/) and open Test Manager from your dashboard.
-2. **Create your first test case** by pressing **Tab** for AI generation, describing the scenario in natural language, writing steps manually, or importing existing cases via CSV.
-3. **Organize and run** by grouping test cases into folders creating a test run, assigning testers, and executing.
-4. **Connect your tools** by linking Jira or your issue tracker under Integrations to sync test cases and defects.
+1. **Create an account** at [testmuai.com](https://www.testmuai.com/register/) and open Test Manager from your dashboard.
+2. **Create your first test case** by clicking **Generate with AI** and describing the scenario in natural language, writing steps manually, or importing existing cases via CSV.
+3. **Organize and run** by grouping test cases into folders, creating a test run, assigning testers, and executing.
+4. **Connect your tools** by linking Jira or Azure DevOps under Integrations to sync test cases and defects.
 5. **Review results** on the dashboard to track pass rates, coverage, and release readiness.
 
 Start with [Set up your project](/support/docs/create-projects/) to create your first Test Manager project.
@@ -127,7 +173,7 @@ Start with [Set up your project](/support/docs/create-projects/) to create your 
 
 ### Is Test Manager free?
 
-Yes. <BrandName /> offers a free tier that includes core test case creation, management, and execution features. Paid plans unlock advanced AI-powered authoring, unlimited test runs, and priority support. See [Test Manager pricing](https://www.testmuai.com/pricing/?product=test-manager) for details.
+Yes. <BrandName /> offers a no-cost tier that includes core test case creation, management, and execution features. Paid plans unlock advanced AI-powered authoring, unlimited test runs, and priority support. See [Test Manager pricing](https://www.testmuai.com/pricing/?product=test-manager) for details.
 
 ### Can I import my existing test cases?
 
@@ -139,11 +185,11 @@ Yes. Manual and automated test cases live in the same repository, run in the sam
 
 ### How does the AI generate test cases?
 
-Describe what you want to test in natural language, or provide a Jira ticket, PDF, image, audio, or video, and Test Manager generates structured, editable test steps with preconditions, expected results, and priorities. Press **Tab** while authoring to trigger it.
+Click **Generate with AI** while authoring, then describe what you want to test in natural language, or provide a Jira ticket, PDF, image, audio, or video. Test Manager generates structured, editable test steps with preconditions, expected results, and priorities.
 
 ### Which tools does Test Manager integrate with?
 
-Jira (two-way sync plus an Atlassian Marketplace app), Azure DevOps, GitHub, GitLab, and all major issue trackers.
+Jira and Azure DevOps with two-way sync, plus marketplace apps for both. Test Manager also integrates with GitHub, GitLab, and all major issue trackers.
 
 ## Related resources
 
