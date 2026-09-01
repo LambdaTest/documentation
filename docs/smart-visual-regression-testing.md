@@ -131,6 +131,6 @@ Extend your visual testing setup with these SmartUI SDKs, integrations, and feat
 - [SmartUI Diff Highlighter](/support/docs/smartui-diff-highlighter/) — fine-tune how visual differences are highlighted in comparisons.
 - [SmartUI Slack Integration](/support/docs/smartui-slack-integration/) — get SmartUI build and diff notifications in Slack.
 - [SmartUI with Travis CI](/support/docs/smartui-with-travis-ci/) — run SmartUI visual tests in a Travis CI pipeline.
-- [SmartUI GitLab PR checks & hooks](/support/docs/smartui-github-app-integration/#gitlab-pr-checks-with-smartui-hooks) — add SmartUI visual checks to GitLab merge requests.
+- [SmartUI GitLab PR checks & hooks](/support/docs/smartui-with-gitlab/#gitlab-pr-checks-with-smartui-hooks) — add SmartUI visual checks to GitLab merge requests.
 - [Group screenshots by test case](/support/docs/smartui-group-by-test-cases/) — organize SmartUI screenshots by test case.
 - [SmartUI Capture on HyperExecute](/support/docs/smartui-hooks-with-hyperexecute/) — run SmartUI Capture as part of a HyperExecute job.
