@@ -2,6 +2,7 @@
 id: test-manager
 title: "Test Manager: Test Management Platform By TestMu AI | Documentation"
 hide_title: true
+toc_max_heading_level: 2
 sidebar_label: Overview
 description: Test Manager is TestMu AI's AI-native test management platform. Create, organize, execute, and report on manual and automated tests from one workspace.
 keywords:
