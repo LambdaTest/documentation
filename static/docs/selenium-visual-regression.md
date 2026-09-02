@@ -9,30 +9,20 @@ Using the TestMu AI platform, perform regression testing in just one click and f
 - Access your Hub for your selenium **remote connection** instance at `hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-
-
-
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
-
-
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 
-
-
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
 $env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
-
-
-
 
 The following steps will guide you in running your first Visual Regression test on TestMu AI platform -
 
@@ -47,8 +37,6 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-
-
 ### Step 2: Configure your test with Selenium Desired Capabilities
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
@@ -61,9 +49,6 @@ git clone https://github.com/LambdaTest/smartui-node-sample
 
 2. Set up the TestMu AI credentials by following the instructions mentioned in the `README.md` file.
 3. Edit the required capabilities for your test suite.
-
-
-
 
 ```javascript title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 let capabilities = {
@@ -95,10 +80,6 @@ let driver = await new webdriver.Builder()
 .build();
 ```
 
-
-
-
-
 ```python title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 options = ChromeOptions()
 options.browser_version = "120.0"
@@ -114,16 +95,12 @@ lt_options["w3c"] = True;
 lt_options["plugin"] = "python-python";
 options.set_capability('LT:Options', lt_options);
 
-
 options.set_capability('LT:Options', lt_options);
 
 #Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
 command_executor="https://" + "<Your Username>" + ":" + "<Your Access Key>" + "@hub.lambdatest.com/wd/hub", options=options)
 ```
-
-
-
 
 ```ruby title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 options = Selenium::WebDriver::Options.chrome
@@ -146,9 +123,6 @@ options.set_capability('LT:Options', lt_options);
 self.driver = webdriver.Remote(
 command_executor="https://" + "<Your Username>" + ":" + "<Your Access Key>" + "@hub.lambdatest.com/wd/hub", options=options)
 ```
-
-
-
 
 ```csharp title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 String LT_USERNAME = GetEnvironmentVariable("LT_USERNAME");
@@ -174,9 +148,6 @@ capabilities.AddAdditionalOption("LT:Options", ltOptions);
 driver = new RemoteWebDriver(new Uri("https://hub.lambdatest.com/wd/hub/"), capabilities);
 ```
 
-
-
-
 ```java title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration"
 ChromeOptions browserOptions = new ChromeOptions();
 browserOptions.setPlatformName("Windows 10");
@@ -196,60 +167,35 @@ browserOptions.setCapability("LT:Options", ltOptions);
 driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), capabilities);
 ```
 
-
-
-
 - Installing dependency and for executing the test.
-
-
-
 
 ```
 npm i && node <file_name>
 ```
 
-
-
-
 ```
 pip install -r requirements.txt && python3 <file_name>
 ```
-
-
 
 ```
 sudo gem install selenium-webdriver && ruby <file_name>
 ```
 
-
-
-
 ```
 cd Packages nuget.exe install ..NUnitSeleniumpackages.config nmake clean build make <file_name>
 ```
-
-
-
 
 ```
 mvn clean install && mvn test -P <file_name>
 ```
 
-
-
-
-
-
 Here you can explore multiple features and execute more such builds.
 
 ## Step 3: Configure your Screenshot Capturing Options
 
-
 ### For taking viewport screenshot
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
-
-
 
 ```javascript
 let config = {
@@ -258,17 +204,12 @@ screenshotName: '<Name of your screenshot>'
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ```python
 config = {
 'screenshotName': '<Your Screenshot Name>'
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
-
-
 
 ```ruby
 config = {
@@ -277,9 +218,6 @@ config = {
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
-
-
-
 ```csharp
 var config = new Dictionary<string, string> {
 {"screenshotName", "<Your Screenshot Name>"}
@@ -287,17 +225,11 @@ var config = new Dictionary<string, string> {
 driver.ExecuteScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ```java
 Map<String, Object> config = new HashMap<>();
 config.put("screenshotName", "<Your Screenshot Name>");
 ((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
 
 ### For capturing full page screenshot
 
@@ -305,38 +237,21 @@ You can capture the full page screenshot for all different websites which have a
 
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
 
-
-
-
-
 ```javascript
 await driver.executeScript("smartui.takeScreenshot", { screenshotName: "<Your Screenshot Name>", fullPage: true });
 ```
-
-
-
-
 
 ```python
 driver.execute_script("smartui.takeScreenshot", {"screenshotName": "<Your Screenshot Name>", "fullPage": True})
 ```
 
-
-
-
 ```ruby
 driver.execute_script("smartui.takeScreenshot", {"screenshotName" => "<Your Screenshot Name>", "fullPage" => true})
 ```
 
-
-
-
 ```csharp
 driver.ExecuteScript("smartui.takeScreenshot", new Dictionary<string, object> { { "screenshotName", "<Your Screenshot Name>" }, { "fullPage", true } });
 ```
-
-
-
 
 ```java
 Map<String, Object> config = new HashMap<>();
@@ -345,47 +260,26 @@ config.put("fullPage", true);
 ((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
-
 The following feature is applicable for `Selenium >= 4.0.0 with Chrome` versions only. Please ensure that the `Lambdatest Capabilities` are updated in your project for executing full page screenshot(s).
-
-
 
 #### SmartScroll (For browsers other than Chrome)
 For browsers other than chrome (Mozilla, Safari etc.) and for websites `Full Page Screenshot` fails, you can use smartscroll to take a full page screenshot of your web page by adding this hook in your test script.
-
-
-
-
 
 ```javascript
 await driver.executeScript("smartui.takeScreenshot", { screenshotName: "<screenshot-name>", fullPage: true, smartScroll: true });
 ```
 
-
-
-
 ```python
 driver.execute_script("smartui.takeScreenshot", {"screenshotName": "<screenshot-name>", "fullPage": True, "smartScroll": True})
 ```
-
-
 
 ```ruby
 driver.execute_script("smartui.takeScreenshot", {"screenshotName" => "<screenshot-name>", "fullPage" => true, "smartScroll" => true})
 ```
 
-
-
-
 ```csharp
 driver.ExecuteScript("smartui.takeScreenshot", new Dictionary<string, object> { { "screenshotName", "<screenshot-name>" }, { "fullPage", true }, { "smartScroll", true } });
 ```
-
-
-
 
 ```java
 Map<String, Object> config = new HashMap<>();
@@ -395,17 +289,11 @@ config.put("smartScroll", true);
 ((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ### For capturing the screenshot of a specific element
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application.
 
 Add the following **Webhook** to your test cases where you need to capture the screenshot of a particular element on your UI.
-
-
-
 
 ```javascript
 let config = {
@@ -416,9 +304,6 @@ element: '<Required Element>'
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ```python
 config = {
 'screenshotName': '<Your Screenshot Name>',
@@ -427,8 +312,6 @@ config = {
 }
 driver.execute_script("smartui.takeScreenshot", config)
 ```
-
-
 
 ```ruby
 config = {
@@ -439,9 +322,6 @@ config = {
 driver.execute_script("smartui.takeScreenshot", config)
 ```
 
-
-
-
 ```csharp
 var config = new Dictionary<string, string> {
 {"screenshotName", "<Your Screenshot Name>"},
@@ -451,9 +331,6 @@ var config = new Dictionary<string, string> {
 driver.ExecuteScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ```java
 Map<String, Object> config = new HashMap<>();
 config.put("screenshotName", "<Your Screenshot Name>");
@@ -461,9 +338,6 @@ config.put("elementType", "xpath"/"css_selector"/"id"/"class"); //Choose one fro
 config.put("element", "<Required Element>");                    //Add your required element here
 ((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
 
 ## Step 4: View SmartUI Results
 
@@ -473,87 +347,49 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 
 ## Fetching Screenshot Status and Results using WebHook
 
-
 You can fetch the status of the screenshot captured and the results of the screenshot captured using the following webhook.
-
-
 
 ```javascript
 driver.executeScript("smartui.fetchScreenshotStatus")
 ```
 
-
-
-
-
 ```python
 driver.execute_script("smartui.fetchScreenshotStatus")
 ```
 
-
-
-
 ```ruby
 driver.execute_script("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
 ```
-
-
-
 
 ```csharp
 driver.ExecuteScript("smartui.fetchScreenshotStatus");
 ```
 
-
-
-
 ```java
 ((JavascriptExecutor)driver).executeScript("smartui.fetchScreenshotStatus");
 ```
 
-
-
-
 For fetching results specific to a screenshot, you can use the following webhook by adding the `Screenshot Name` to the WebHook.
-
-
-
-
 
 ```javascript
 driver.executeScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
 ```
 
-
-
-
-
 ```python
 driver.execute_script("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
 ```
-
-
-
 
 ```ruby
 driver.execute_script("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
 ```
 
-
-
-
 ```csharp
 driver.ExecuteScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>");
 ```
 
-
-
-
 ```java
 ((JavascriptExecutor)driver).executeScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>");
 ```
-
-
 
 The following webhook will return the status of the screenshot captured. The status can be one of the following:
 
@@ -593,7 +429,6 @@ The following are the description of the parameters:
 | `buildName`          | Name of the build in which the screenshot was captured.       |
 | `projectName`        | Name of the project in which the screenshot was captured.     |
 
-
 **Please Note**
 
 The webhook will return the result of the screenshot captured only if the screenshot is processed and the result is available.
@@ -602,19 +437,13 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
 
 ## Advanced Options for Screenshot Comparison
 
-
   **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smartui-project-settings/).
 
-
   **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](/support/docs/smartui-project-settings/).
-
 
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/smartui-project-settings/).
 
 ## Best Practices
-
-
-
 
 ### Capability Configuration
 
@@ -633,17 +462,11 @@ build: "Release 1.0",
 };
 ```
 
-
-
-
 ### Screenshot Timing
 
 - Wait for page elements to load before capturing screenshots
 - Use explicit waits for dynamic content
 - Consider page load time when setting up tests
-
-
-
 
 ### Screenshot Naming
 
@@ -651,40 +474,25 @@ build: "Release 1.0",
 - Include context (page, component, state) in names
 - Avoid special characters
 
-
-
-
 ### Baseline Management
 
 - Establish baselines from stable builds
 - Review and approve baselines before using
 - Update baselines when intentional changes are made
 
-
-
-
 ### Viewport Selection
 
 - Test on viewports that match your user base
 - Include mobile, tablet, and desktop viewports
 - Consider both portrait and landscape orientations
 
-
-
-
 ### Viewport Selection
 
 - Test on viewports that match your user base
 - Include mobile, tablet, and desktop viewports
 - Consider both portrait and landscape orientations
-
-
-
 
 ## Troubleshooting
-
-
-
 
 ### Issue: Screenshots Not Captured
 
@@ -718,9 +526,6 @@ echo $LT_ACCESS_KEY
 
 4. Check network connectivity to TestMu AI
 
-
-
-
 ### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
@@ -735,9 +540,6 @@ echo $LT_ACCESS_KEY
 2. Copy project name directly from dashboard
 3. Check credentials match the account with the project
 4. Ensure project name is in capabilities, not just in dashboard
-
-
-
 
 ### Issue: Screenshots Show Blank Pages
 
@@ -764,9 +566,6 @@ await driver.wait(until.elementIsVisible(By.css('.main-content')), 10000);
 
 4. Check viewport size matches expected dimensions
 
-
-
-
 ### Issue: Build Name Conflicts
 
 **Symptoms**: Screenshots appear in wrong build or build name issues
@@ -785,9 +584,6 @@ await driver.wait(until.elementIsVisible(By.css('.main-content')), 10000);
 2. Avoid special characters in build names
 
 3. Use consistent naming convention across team
-
-
-
 
 ### Issue: Webhook Not Receiving Results
 
@@ -810,9 +606,6 @@ await new Promise(resolve => setTimeout(resolve, 10000)); // Wait 10 seconds
 3. Check webhook endpoint is publicly accessible
 
 4. Verify webhook is receiving requests (check server logs)
-
-
-
 
 ### Issue: Mismatch Percentage Unexpected
 
@@ -848,9 +641,6 @@ If you encounter issues not covered here:
 - Check [Advanced Test Settings](/support/docs/smartui-project-settings/) for comparison options
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
-
-
-
 
 ## Additional Resources
 

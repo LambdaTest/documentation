@@ -6,7 +6,6 @@
 
 TestMu AI Analytics help you intelligently analyze your test execution steps on the platform. It provides you with the insights on the errors that are causing your test runs to fail.
 
-
 ### Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
 1. You should have a TestMu AI account. If you don't have one, you can sign up here.
@@ -16,7 +15,6 @@ The following are the steps to use Command Logs Analytics:
 5. Select the `Command Logs` option from the `Analytics Modules` section.
 6. Click on `Add` for the widgets required to your dashboard.
 7. Input your `Dashboard Name` and click on `Create Dashboard` to create your dashboard.
-
 
 ### **Command Status Summary Widget**
 
@@ -44,8 +42,6 @@ The following are the steps to use Command Logs Analytics:
    **Widget Simulation**
 
    A line or bar chart is displayed with the x-axis representing the timestamp of the tests run and the y-axis representing the total number of unique errors in tests with command logs of respective response statuses.
-
-
 
    **Use Cases**
    1. Tracking response status trends over time
@@ -80,8 +76,6 @@ The following are the steps to use Command Logs Analytics:
    **Widget Simulation**
 
    A table displays unique error messages, occurrences dots, the percentage of occurrences, the timestamp of the last error message, and tests with the error message command logs.
-
-
 
    **Use Cases**
    6. Identifying common error messages for prioritizing bug fixes

@@ -6,8 +6,6 @@ Jenkins Pipeline is also referred to as "Pipeline" offers a suite of plugins to 
 
 ## Prerequisites For Configuring Jenkins Pipeline With TestMu AI
 
-
-
 1.  Jenkins 2.X or greater version.
 2.  A Jenkins User with root access.
 3.  Ensure you have the Pipeline plugin, although, it is displayed under the "suggested plugins" during the post-installation setup of Jenkins.
@@ -30,8 +28,6 @@ $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 ```
 
 ## Setting Up Jenkins Pipeline
-
-
 
 You can find the Jenkins file for the Pipeline [here](https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/Jenkinsfile) or you can find the code for the Pipeline below. Below is the code for the Jenkins Pipeline.
 
@@ -93,7 +89,6 @@ Refer to our [Github sample repository](https://github.com/LambdaTest/nightwatch
 **Step 1:** Create a new project for Pipeline by going to Jenkins --> New Item.
 
  **Step 2:** Select the Pipeline.
-
 
   **Step 3:** Scroll down to Advanced Project Options. Paste the Code in the code pane or fetch it via SCM & hit the **Save** button.
    **Note:** To run on the tunnel, Either you can use LT_TUNNEL Environment variable to set the tunnelling capability or you can pass in the code. Instructions on the tunnel are written in Repo Readme file.

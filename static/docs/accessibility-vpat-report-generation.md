@@ -7,7 +7,6 @@
 
 What you **do** get from **Accessibility Testing** are **testing artifacts** (issues, severities, URLs or screens, exports, integrations) that **you** may choose to cite while **your team** completes the official **ITI VPAT** (or equivalent) and assigns **Conformance** levels. This page is only a **workflow guide** for that evidence work.
 
-
 A **Voluntary Product Accessibility Template (VPAT®)** is a structured way to document how a product meets accessibility criteria (commonly WCAG 2.x and/or Section 508 / EN 301 549, depending on the template version you use). Buyers and compliance teams use it in **procurement** and **audit** conversations.
 
 **TestMu AI Accessibility Testing** can speed up **evidence collection** (issue lists, severities, URLs or screens, remediation notes, and exports), but it does **not** auto-generate a finished VPAT or ACR. Filling the official template, assigning **Conformance** levels per criterion, and signing off for your organization remain **human** steps, often with accessibility specialists and legal review.

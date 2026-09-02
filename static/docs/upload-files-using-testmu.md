@@ -8,27 +8,22 @@ This document explains how to upload a file on the TestMu AI platform and access
 
 ## Upload Files on the TestMu AI Platform
 
-
 Upload files to the cloud-based Selenium Grid using the [API for uploading user-files](/api-doc/).
 
 1. Open [TestMu AI's API for uploading user-files](/api-doc/).
 2. Click on the Lock icon to authorize your account. ]
 3. Enter your TestMu AI username and access key to validate your credentials. Click the "Authorise" button to verify the credentials, and click Close to close the window.
 
-
 > Get your TestMu AI Username and Access Key from your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). Click on the "key" icon in the top right corner.
-
 
 4. Click on the "Try it out" button.
 5. Select the file using the "Choose File" button and click Execute to upload it on the TestMu AI platform.
-
 
 > **Note**: You can upload multiple files to lambda storage. A maximum of 150 files can be uploaded per organization. The file size limit is 20 MB per API call. If your total file sizes reach the limit, upload your files in multiple API calls.
 
 Once the file uploads successfully, you will see a response body with 200 response code, as shown in the image below:
 
 ## Test the Uploaded File on the TestMu AI Platform
-
 
 Test the uploaded file on the TestMu AI platform to perform automation testing on the cloud-based Selenium Grid. To learn how each capability shapes your test session, review the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
 
@@ -127,10 +122,7 @@ WebElement addFile = driver.findElement(By.xpath(".//input[@type='file']"));
 addFile.sendKeys("/Users/ltuser/Downloads/804402.png");
 ```
 
-
-
 # Download Files from TestMu AI Storage During Test Execution
-
 
 Once your files are uploaded and in use, you may also need to test the download functionality of your web application or website. With TestMu AI Selenium Grid, you can test the download feature on 3000+ real browsers for mobile and desktop, downloading a file inside the test machine through your Selenium test automation script by Base64 encryption and decryption.
 
@@ -161,9 +153,6 @@ Response: List of files in downloads dir starting with sample
 ## Downloading File Using Selenium with Java
 
 Use the lambda-file hooks in Java to verify, inspect, and download files from the test VM.
-
-
-
 
 ```java
 import java.io.FileOutputStream;
@@ -263,10 +252,6 @@ driver.quit();
 }
 }
 ```
-
-
-
-
 
 ```java
 import java.io.FileOutputStream;
@@ -371,10 +356,6 @@ driver.quit();
 }
 }
 ```
-
-
-
-
 
 ## Downloading File Using Selenium with Python
 
@@ -738,12 +719,9 @@ puts(fileCon)
 end
 ```
 
-
-
 You can now successfully upload files and use them with Selenium Automation testing on TestMu AI's cloud server. If you are new to the platform, start by learning how to run your first Selenium test before wiring file upload into your suite. If you face any issues, reach out to us via our **24/7 chat support**, or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!
 
 ## Next Steps
-
 
 Continue with these related guides:
 

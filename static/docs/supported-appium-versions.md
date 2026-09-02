@@ -6,14 +6,11 @@ Supported Appium versions and plugins on TestMu AI let you pick the exact Appium
 
 **Supported on:** Real &amp; Virtual devices
 
-
 - We also provide Support for Appium 3.0.2 on following versions
   - **Android Devices:** 13, 15, 16
   - **iOS Devices:** 16, 17, 18, 26
 
-
 ## Appium Version Configuration for Real Devices
-
 
 To configure the Appium version for your tests on TestMu AI, use the `appiumVersion` capability in your test scripts. Below is a table of supported Appium versions for different platforms:
 
@@ -40,7 +37,6 @@ capabilities.setCapability("platformName", "ios");
 
 ## Supported Driver Versions
 
-
 Each Appium version maps to specific iOS and Android driver versions. Use the table below to confirm the driver versions bundled with your chosen Appium version:
 
 | Appium Version | iOS Driver                     | Android Driver                        |
@@ -60,13 +56,10 @@ Each Appium version maps to specific iOS and Android driver versions. Use the ta
 | 2.11.4         | appium-xcuitest-driver@7.26.4  | appium-uiautomator2-driver@3.7.11     |
 | 2.12.1         | appium-xcuitest-driver@7.28.3  | appium-uiautomator2-driver@3.8.0      |
 
-
 - If a user passes any Appium version other than the mentioned versions, appropriate error will be thrown.
 - For devices running iOS 17 and newer, it is recommended to use Appium versions `2.2.1` and `above` to ensure the best compatibility and performance.
 
-
 ## Appium Version Configuration for Virtual Devices
-
 
 For virtual devices, the following Appium versions are supported per platform:
 
@@ -76,8 +69,6 @@ For virtual devices, the following Appium versions are supported per platform:
 | iOS |1.22.3, 2.0.0, 2.1.3, 2.16.2 |
 
 ## Supported Appium Plugins
-
-
 
 Enhance your testing experience on TestMu AI by leveraging a variety of Appium plugins. Plugins offer various ways to extend or modify Appium's behavior. They are completely optional and are not needed for standard automation functionality, but you may find them useful for more specialized automation workflows.
 By using these plugins, you can tailor your testing environment to better suit your project's specific needs, leading to more efficient and effective test automation.
@@ -101,14 +92,9 @@ capabilities = {
 }
 ```
 
-
-
 - Appium plugins are only supported with version 2.0.0 and above appium versions. Please ensure that the `appiumVersion` capability is set correctly to utilize these plugins.
 
-
-
 ## Next Steps
-
 
 Continue with these related guides:
 

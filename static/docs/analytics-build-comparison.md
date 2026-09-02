@@ -16,13 +16,9 @@ Build Comparison allows you to compare two builds side by side to instantly see 
 
 When you first open the Compare tab, you'll see an empty state prompting you to select a build for comparison.
 
-
-
 Click **Select build to compare** to open the build selection dialog.
 
 ### Build Selection Dialog
-
-
 
 The dialog provides options to find builds:
 
@@ -42,19 +38,12 @@ Each build in the list displays:
 
 Select a build and click **Compare Builds** to run the comparison. The selected build becomes the **Compare** build, while the current build you navigated from becomes the **Base** build.
 
-
 For release validation, select your last stable production build as **Base** and the release candidate as **Compare**.
-
-
-
 
 ## Key Comparison Metrics
 
-
-
 **Understanding Failed Statuses**
 The following statuses are considered **failed statuses**: **Failed**, **Error**, **Lambda Error**, **Idle Timeout**, and **Queue Timeout**. Change detection is based on whether a test transitions to or from these statuses.
-
 
 | Metric | Description | When to Act |
 |--------|-------------|-------------|
@@ -76,11 +65,7 @@ The **New Failures** metric includes two scenarios:
 
 Both scenarios are counted together in the **New Failures** metric shown in the summary cards and charts. In the Test Instances table, tests that didn't exist in Base are labeled as **New Failure (Additional)** to help you distinguish between regressions in existing tests versus failures in newly added tests.
 
-
-
 ## Results Comparison Chart
-
-
 
 The horizontal bar chart compares test counts by status between builds:
 - **Purple bar**: Base build
@@ -99,11 +84,7 @@ The donut chart categorizes tests by how their status changed:
 | **Stable Instances** | Passed → Passed | No action - reliable tests ✓ |
 | **Consistent Failures** | Failed in both builds | Triage - document or fix before release |
 
-
-
 ## Test Instances Comparison Table
-
-
 
 | Column | Description | Use Case |
 |--------|-------------|----------|
@@ -123,11 +104,7 @@ The donut chart categorizes tests by how their status changed:
 | **Browser** | Filter by browser type |
 | **Test Tags** | Filter by custom tags |
 
-
 Use filters to isolate platform-specific issues. If failures only occur on a specific browser or OS, it helps prioritize the fix.
-
-
-
 
 ## Common Use Cases
 
@@ -146,8 +123,6 @@ Compare production build (Base) with staging build (Compare) to identify environ
 ### Cross-Browser Compatibility
 Compare Chrome build (Base) with Firefox/Safari builds (Compare) to catch browser-specific issues.
 
-
-
 ## Best Practices
 
 1. **Compare similar test suites** - Comparing different test sets leads to misleading Additional/Dropped counts.
@@ -156,8 +131,6 @@ Compare Chrome build (Base) with Firefox/Safari builds (Compare) to catch browse
 4. **Monitor Duration Changes** - Increases >20-30% may indicate performance issues.
 5. **Document Consistent Failures** - Maintain a list of known, accepted failures.
 6. **Establish comparison baselines** - Define standard comparison points (last production release, previous nightly, sprint-start).
-
-
 
 ## FAQ
 

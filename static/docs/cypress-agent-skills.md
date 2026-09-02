@@ -8,7 +8,6 @@ The cypress-skill is part of the [TestMu AI Agent Skills](https://github.com/Lam
 
 ## About Agent Skills
 
-
 Agent Skills are self-contained packages of instructions, code patterns, debugging guides, and CI/CD configurations for specific testing frameworks. Once installed, your AI assistant works like a **Senior QA automation architect** with knowledge of:
 
 - Proper project structure for each framework
@@ -19,7 +18,6 @@ Agent Skills are self-contained packages of instructions, code patterns, debuggi
 
 ## Prerequisites
 
-
 Before you install the skill, make sure you have an account, your credentials, and a supported AI coding assistant in place.
 
 - A TestMu AI account. If you don't have one, sign up for free.
@@ -27,7 +25,6 @@ Before you install the skill, make sure you have an account, your credentials, a
 - An AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
 
 ## Installing the Cypress Agent Skill
-
 
 Clone the repository and copy the Cypress skill into your AI tool's skills directory. Each tool reads skills from its own folder, so use the command that matches your assistant.
 
@@ -47,12 +44,9 @@ cp -r agent-skills/cypress-skill .github/skills/
 cp -r agent-skills/cypress-skill .gemini/skills/
 ```
 
-
 If you prefer installing **all available framework skills**, clone the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
 
-
 ## Set Up Your Authentication
-
 
 The skill runs your tests on the TestMu AI cloud, so it needs your credentials at runtime. Configure your TestMu AI **Username** and **Access Key** as environment variables:
 
@@ -62,7 +56,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Running Your First Test Using Agent Skills
-
 
 Once installed, describe the tests you want in natural language and the AI assistant generates and runs them. Any of the prompts below is a valid starting point:
 
@@ -87,7 +80,6 @@ The Agent Skill automatically handles:
 
 ## What's Included in the Cypress Skill
 
-
 The skill ships as a small package of instruction files that your AI assistant reads to learn the framework. Its structure and the topics each part covers are shown below.
 
 ```
@@ -109,7 +101,6 @@ cypress-skill/
 
 ## Supported AI Tools
 
-
 The Cypress Agent Skill works with any assistant that reads local skill files. Install it into the path that matches your tool from the table below.
 
 | Tool | Type | Installation Path |
@@ -123,7 +114,6 @@ The Cypress Agent Skill works with any assistant that reads local skill files. I
 | Claude.ai | Web | Settings > Features > Skills |
 
 ## Related Cypress Guides
-
 
 Continue with the guides below to run and configure your Cypress tests on TestMu AI.
 

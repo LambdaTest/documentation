@@ -6,11 +6,7 @@ A Kane CLI **skill** is a markdown instruction file that teaches an AI coding ag
 
 Skills work on top of [Agent Mode](/support/docs/kane-cli-agent-mode/) (`--agent` flag). The skill tells the agent to always use `--agent`, parse the NDJSON stream, and present structured results back to you.
 
-
 Skills are plain markdown files. Review and customize them by editing the installed file after download.
-
-
-
 
 ## Install
 
@@ -22,13 +18,7 @@ npx @testmuai/kane-cli-skill
 
 If you prefer to install manually for a specific agent, follow the instructions below.
 
-
-
 ## Install by Agent
-
-
-
-
 
 The Kane CLI skill for Claude Code is a `SKILL.md` file placed in your skills directory.
 
@@ -67,10 +57,6 @@ After installing, Claude Code automatically loads the skill. No restart required
 "Search for 'laptops' on Amazon and store the top 3 prices"
 ```
 
-
-
-
-
 The Kane CLI skill for Codex CLI is appended to your `AGENTS.md` file. Codex reads `AGENTS.md` at the project root or from `~/.codex/AGENTS.md` globally.
 
 **Global install** (available in all projects):
@@ -106,10 +92,6 @@ cat /tmp/kane-cli-agents.md >> AGENTS.md
 "Run the login test and tell me what happened"
 ```
 
-
-
-
-
 The Kane CLI skill for Gemini CLI is a `SKILL.md` file placed in your Gemini skills directory.
 
 **Global install** (available in all projects):
@@ -142,27 +124,15 @@ https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skill
 "Verify the registration flow works end to end"
 ```
 
-
-
-
-
-
-
 ## First-Time Auth in Agent Contexts
 
 OAuth login opens a browser window: AI agents cannot complete this flow. Use Basic Auth instead:
-
-
 
 {`kane-cli login \\
   --username "${ YOUR_LAMBDATEST_USERNAME()}" \\
   --access-key "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
 Get credentials from the TestMu AI [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**. Verify with `kane-cli whoami`.
-
-
 
 ## How Skills Work
 
@@ -175,8 +145,6 @@ When you ask your AI agent to test something on the web, the skill:
 5. Presents structured results: status, steps, duration, extracted values, assertion results
 6. If failed: inspects `run_dir` logs and screenshots to diagnose the issue
 7. Rates the run and suggests a bug report for low-quality agent failures
-
-
 
 ## Skill File Locations
 

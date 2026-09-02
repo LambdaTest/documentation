@@ -8,7 +8,6 @@ Beyond preventing scheduling conflicts, Device Reservation also helps organizati
 
 > Device Reservation feature is currently in **closed beta** and continuously improving based on user feedback. please reach out via **24×7 chat** or email us at **support@testmuai.com** to enable it for your organization and try it out.
 
-
 ## Use Cases
 
 - **Release-Day Reliability**: Reserve devices in advance to guarantee uninterrupted testing during production releases or hotfix rollouts.
@@ -16,7 +15,6 @@ Beyond preventing scheduling conflicts, Device Reservation also helps organizati
 - **Cross-Team Coordination**: Schedule device bookings across QA, Dev, and Ops teams to align on shared testing timelines.
 - **Peak Hour Management**: Prevent conflicts during high-demand periods by ensuring fair access and availability through reservations.
 - **Optimized Resource Utilization**: Track and manage reservations to avoid idle devices and maximize the ROI of your private cloud setup.
-
 
 ## Device Reservation Workflow
 
@@ -29,10 +27,6 @@ Beyond preventing scheduling conflicts, Device Reservation also helps organizati
 
 First-time visitors will see an empty calendar and must create a reservation to begin scheduling devices.
 
-
-
-
-
 ### Admin Privilege
 
 Admins have additional controls to manage device reservations, accessible inside **Go to Reservations** under the settings button (as shown below):
@@ -42,8 +36,6 @@ Admins have additional controls to manage device reservations, accessible inside
 - **Active Reservations per Member** – Limit the number of active reservations per member (1–99).
 - **Devices per Reservation** – Define how many devices can be booked in one reservation.
 
-
-
 ### Calendar View and Permissions
 
 The **calendar** view differs for members and admins:
@@ -52,8 +44,6 @@ The **calendar** view differs for members and admins:
   - The member view shows a calendar with reservation blocks for devices.
   - `Blue blocks` represent the member’s own reservations, which can be edited or deleted.
   - `Grey blocks` represent reservations made by other team members. Members cannot edit or delete these.
-
-
 
 - **Admins:**
   - Admins can view and manage all reservations on the calendar.
@@ -67,14 +57,11 @@ To create a reservation, click **Reserve Device** from the calendar view. Then c
 
 - **Future Reservation** – Schedule a reservation for a later date/time within the allowed scheduling window.
 
-
 Select **one or multiple devices** based on availability and confirm the reservation.
 
 ### Viewing and Editing Reservations
 
 After adding reservation slots, the user can view them under **My Reservations** and make edits or cancellations if required.
-
-
 
 ### Session Expiry and Extensions
 
@@ -84,7 +71,6 @@ These rules apply to both admins and members, except admins can still override r
 - If no pre-booked reservation exists for the device, the user will have the option to extend the session.
 - If another booking is already scheduled for the device, the extension option will still appear, but the request will **fail**.
 - Once the reserved time ends, the device session is automatically closed and released.
-
 
 - Reservation cannot be edited after the slot has been started.
 - If an **admin** deletes any reservation, it is **cancelled** immediately.

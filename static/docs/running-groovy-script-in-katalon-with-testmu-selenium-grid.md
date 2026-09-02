@@ -49,7 +49,6 @@ TestSuiteContext suiteContext;
 @BeforeTestCase
 def sampleBeforeTestCase(TestCaseContext testCaseContext) {
 
-
 //To set the test name at LambdaTest.
 RunConfiguration.setDriverPreferencesProperty("Remote", "name", testCaseContext.getTestCaseId());
 if (suiteContext != null){

@@ -16,40 +16,24 @@ The TestMu AI GoodDay integration helps you in filing bug-related issues to your
 
 **Step 3:** Click on ‘ADD’ under the block that says ‘GoodDay’.
 
-
-
 **Step 4:** Once you click on Add icon, you will be redirected to the below screen. You will be asked to provide your GoodDay API Token credentials in the highlighted fields to establish integration with TestMu AI.
-
-
 
 > **What is an API token?**
 What is an API token? When two different applications interact with each other, a server-to-server communication is established. API token is needed for authenticating user identity from one server to another, by fetching user-owned resources available on the server from where the communication is initiated. API token has been a necessity for maintaining security and data integrity of any application. They are just as vital to an end user as they are to an application. API tokens are relevant if an end user logs in an application through a 2-step verification process.
 
 **Step 5:** You can find your API token from your GoodDay account. If you have not generated one before, you can generate an API token by going to the settings. You will find the "Settings" icon on the top right corner of your dashboard.
 
-
-
 **Step 6:** As you click on "Settings", you will see a section named "Integrations" on the left side navigation bar. Upon clicking "Integrations", you need to select "API" from the drop-down.
 
-
-
 **Step 7:** Now click on the button "Generate" in order to generate your API token.
-
-
 
 > You can keep a note of this API token with you for future authentication. Although, in case you forget to do so, or you end up neglecting it due to some reason. Then there is no need to panic! You can create a new token by defining a new label. You can also delete a previously declared API Key, in case you feel that your API Key has been placed in some wrong hands. You can delete an API Key by hovering over the label and clicking on the bin icon.
 
 **Step 8:** Copy the newly generated API token.
 
-
-
 **Step 9:** Paste the API token into the field provided at TestMu AI & hit the ‘Install’ button. You are all set to experience one-click bug logging to share your issues directly from your TestMu AI account to your project on GoodDay.
 
-
-
 That’s it! Go to Integrations again and you will be able to notice a green tick indicating that GoodDay is successfully installed.
-
-
 
 ## How To Log Your First Bug Through GoodDay Integration?
 
@@ -57,15 +41,9 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start‘.
 
-
-
 **Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for capturing a screenshot of the same.
 
-
-
 **Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says "Mark as Bug".
-
-
 
 **Step 5:** After clicking on "Mark as Bug" button a GoodDay specific form would open up. Fill the fields as per your requirement. Click on "Create Issue" & observe it being successfully marked through a single click effort. You can select the following:
 
@@ -75,20 +53,11 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 * You can mention the **Summary** as well to easily organize your bugs.
 * You also get to post a **Description** to help relate the cause of the issue or the task.
 
-
-
 **Step 6:** Visit your GoodDay dashboard. Under "Pinned Projects", you will find the recently raised issue being highlighted.
-
-
-
 
 **Step 8:** As you click on the recently raised issue under the "Not Started" tab, you will notice that all the data which you provided through TestMu AI would already be presented in it. TestMu AI automatically includes test environment details and related screenshots in the ticket as attachments.
 
-
-
-
 ## How To Uninstall GoodDay Integration?
-
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to `uninstall` your current integration. Here is how you can do that.
 
@@ -97,7 +66,5 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 **Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3:** Click on ‘REMOVE’. You can find the remove button right under the ‘GoodDay’ block which would be highlighted with a green tick.
-
-
 
 > That was all you need to know for TestMu AI + GoodDay Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on **chat** to help you out with any roadblock regarding our product. Happy testing!

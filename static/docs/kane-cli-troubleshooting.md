@@ -17,8 +17,6 @@ Before diagnosing, know where to look:
 
 The `run_end` event in Agent Mode provides `session_dir` and `run_dir` directly.
 
-
-
 ## Chrome Issues
 
 ### "Chrome failed to launch"
@@ -61,8 +59,6 @@ ps aux | grep kane-cli
 ```
 Kill any existing processes, then retry.
 
-
-
 ## Authentication Issues
 
 ### "Authentication failed" (exit code 2)
@@ -84,13 +80,9 @@ kane-cli whoami
 
 Verify both values against the credentials shown in your TestMu AI dashboard, then pass them on the command line:
 
-
-
 {`kane-cli run "" \\
   --username "${ YOUR_LAMBDATEST_USERNAME()}" \\
   --access-key "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
 
 If they still do not work, regenerate the access key in the dashboard and retry.
 
@@ -100,10 +92,7 @@ If they still do not work, regenerate the access key in the dashboard and retry.
 
 **Fix:** Run the login flow:
 
-
 {`kane-cli login --username "${ YOUR_LAMBDATEST_USERNAME()}" --access-key "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
 
 Get credentials from the TestMu AI [dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) > **Credentials**.
 
@@ -112,8 +101,6 @@ Get credentials from the TestMu AI [dashboard](https://www.testmuai.com/login/?r
 **Cause:** Wrong username or access key.
 
 **Fix:** Verify your credentials on the TestMu AI dashboard. Username and access key are case-sensitive. Make sure you're using the access key (not the password).
-
-
 
 ## Run Issues
 
@@ -159,8 +146,6 @@ kane-cli run "log in as {{user}}" \
 2. Refine the assertion: use `assert the page contains` (substring) instead of exact text
 3. Add a wait: `"wait for the confirmation message to appear, then assert..."`
 
-
-
 ## Upload Issues
 
 ### "Upload failed" or "Test Manager error"
@@ -175,8 +160,6 @@ kane-cli run "log in as {{user}}" \
 kane-cli config show
 ```
    If `project_id` is empty, set it with `kane-cli config project` or pick one in the TUI.
-
-
 
 ## Agent Mode Issues
 
@@ -206,8 +189,6 @@ kane-cli run "..." --agent 2>/dev/null | tail -1 | jq .
 ```
 "click Sign Up, fill email with '{{email}}', fill password with '{{password}}', click Create Account"
 ```
-
-
 
 ## Installation Issues
 
@@ -239,9 +220,7 @@ node --version   # Must be 18 or higher
 
 **Symptom:** `npm install -g @testmuai/kane-cli` fails with `sharp: Please add node-addon-api to your dependencies` (any Node version, any platform).
 
-
 Kane CLI 0.3.4+ treats `sharp` as an optional dependency, so the install still succeeds even if sharp fails. Screenshots simply upload as PNG instead of WebP (about 30% larger, no functional impact). On an older version, upgrade first with `npm install -g @testmuai/kane-cli@latest`.
-
 
 **Cause:** `sharp` powers optional PNG to WebP screenshot compression. When it cannot load its prebuilt binary it tries to build from source, which fails. The most common trigger on macOS is a system-wide libvips (often pulled in by `brew install appium`, `imagemagick`, or `gdal`).
 
@@ -261,8 +240,6 @@ echo 'export SHARP_IGNORE_GLOBAL_LIBVIPS=1' >> ~/.zshrc && source ~/.zshrc
 
 Two other triggers: npm configured to skip optional dependencies (`npm config get omit` should not contain `optional`, so clear it with `npm config delete omit` and reinstall), and a proxy or private registry that does not forward the `@img` scope (add an `@img:registry=https://registry.npmjs.org/` pass-through). If you are fine with PNG screenshots, no action is needed.
 
-
-
 ## Mobile Issues
 
 Mobile testing is supported on **macOS Apple Silicon (arm64) only**. Start every mobile problem with `doctor`, which prints one line per required check, each with a fix:
@@ -278,15 +255,11 @@ The common setup failures for each platform, and their fixes, are listed on the 
 - [iOS Simulator setup](/support/docs/kane-cli-mobile-simulator/#common-failures)
 - [Android Emulator setup](/support/docs/kane-cli-mobile-emulator/#common-failures)
 
-
-
 ## "Update available" Notice
 
 Kane CLI checks the public npm registry for a newer release once every 24 hours. The result is cached locally so the check itself is non-blocking and silent on failure. When a newer version exists, Kane CLI surfaces an "update available" notification with the current and latest versions and a severity label (`major`, `minor`, or `patch`).
 
 The notice is informational, your current version still works. To upgrade, follow the steps in [Updates](/support/docs/kane-cli-installation/#update).
-
-
 
 ## Filing a Bug Report
 

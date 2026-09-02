@@ -6,7 +6,6 @@ If you already write end-to-end tests with the Playwright test runner, you can r
 
 ## Prerequisites
 
-
 Before you run tests, clone the sample repository and set your credentials in your environment. The code samples on this page come from the TestMu AI Playwright sample repository, which you can download or clone to run the tests as shown.
 
  View on GitHub
@@ -20,8 +19,6 @@ npm install
 ```
 
 3. Set your TestMu AI username and access key in your environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find both values.
-
-
 
 **Windows**
 
@@ -38,7 +35,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Run Playwright Tests With the Playwright Test Runner
-
 
 In your `playwright.config.js` file, add the `browserName`, `browserVersion`, and `platform` to each project in the `projects` configuration below.
 
@@ -80,7 +76,6 @@ npm run test
 Visit the TestMu AI Automation Dashboard to view the results of your test executed with the Playwright test runner.
 
 ## Migrate an Existing Playwright Test Suite to TestMu AI
-
 
 If you are migrating an existing Playwright test suite to TestMu AI, follow the steps below to wire in the setup file and point your config at the cloud.
 
@@ -167,7 +162,6 @@ expect(title).toEqual(expect.stringContaining('LambdaTest'))
 To generate Playwright tests with AI coding assistants, see [how to run Playwright tests with agent skills](/support/docs/playwright-agent-skills/).
 
 ## Related Playwright Guides
-
 
 Continue with the guides below to extend your Playwright setup on TestMu AI.
 

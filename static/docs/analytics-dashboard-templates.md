@@ -14,8 +14,6 @@ With various templates available for different test analytics purposes, testers 
 
 You should have an account subscribed to [TestMu AI Account](https://www.testmuai.com/login/) and have relevant test data available in the system.
 
-
-
 ## How to use it?
 
 To use a dashboard template, follow these steps:
@@ -77,7 +75,6 @@ The following are the use cases for the template:
 3. Gain valuable insights into error patterns, leading to more effective debugging and resolution efforts.
 4. Improve collaboration between QA and development teams by sharing error insights and promoting a shared understanding of issues.
 5. Prioritize error resolution efforts based on the severity and frequency of identified issues.
-
 
 ### Resource Consumption and Concurrency usage
 
@@ -148,7 +145,6 @@ The following are the use cases for the template:
 3. Gain insights into test case health across browsers and operating systems, helping prioritize resolution efforts.
 4. Optimize resource allocation by understanding the distribution of tests across different platforms.
 5. Enhance collaboration between QA and development teams by sharing browser and OS-specific insights.
-
 
 ### HyperExecute Report
 

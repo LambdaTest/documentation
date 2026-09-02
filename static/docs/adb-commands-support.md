@@ -122,7 +122,6 @@ params = {"command": "shell", "text": "rm /sdcard/Download/tempfile.txt"}
 result = driver.execute_script("lambda-adb",params)
 ```
 
-
 - **adb shell mkdir** Real
 
   The `adb shell mkdir` command is used to create new directories on an Android device’s filesystem. It is especially useful when preparing the device environment before automated test runs, ensuring that the required folder structure exists for storing screenshots, logs, or other test-related files. The following is a Python sample using the adb command:
@@ -149,7 +148,6 @@ result = driver.execute_script("lambda-adb",params)
 params = {"command": "shell", "text": "content query --uri content://contacts/phones"}
 result = driver.execute_script("lambda-adb",params)
 ```
-
 
 - **adb shell am** Real
 
@@ -181,7 +179,6 @@ result = driver.execute_script("lambda-adb",params)
 params = {"command": "shell", "text": "getprop"}
 result = driver.execute_script("lambda-adb",params)
 ```
-
 
 - **adb shell setprop** Real
 
@@ -249,8 +246,6 @@ params = {"command": "shell", "text": "cat /sdcard/Movies/test_video.mp4"}
 result = driver.execute_script("lambda-adb", params)
 ```
 
-
-
 ### Additional ADB Shell Commands
 
 - **adb shell ping -c 4 YOUR_URL** Virtual
@@ -263,7 +258,6 @@ params = {"command": "shell", "text": "ping -c 4 google.com"}
 result = driver.execute_script("lambda-adb",params)
 ```
 
-
 ### Enable/Disable Notification
 
 - **enableNotification** Real &amp; Virtual
@@ -275,10 +269,8 @@ params = {"command": "enable-notification", "enableNotification":True/False}
 result = driver.execute_script("lambda-adb",params)
 ```
 
-
   - These commands are compatible with Android versions 13 and above.
   - When you disable app notification permissions using the command, the app go into the background. This behavior occurs due to limitations with ADB, and you need to reactivate the app through test script.
-
 
 ### Enable/Disable Battery Optimization
 

@@ -6,8 +6,6 @@
 
 Our analytics platform now supports regular expressions (Regex) for advanced text searching, pattern matching, and data extraction. This feature enhances your ability to filter and analyze data with greater precision and flexibility.
 
-
-
 ## Accessing Regex Mode
 
 1. Navigate to your dashboard.
@@ -19,16 +17,11 @@ Our analytics platform now supports regular expressions (Regex) for advanced tex
 
 Once in Regex mode, you can enter Regex patterns in the filter input field. As you type, you'll see auto-suggestions for common Regex patterns.
 
-
-
-
 ### Key Features:
 
 - **Auto-suggest**: Get suggestions for commonly used Regex patterns.
 - **Result Preview**: See a list of matching results and the total count of filtered items.
 - **Persistent Mode**: Regex mode remains active across different filter types until you switch back to list mode.
-
-
 
 ## Supported Regex Patterns
 

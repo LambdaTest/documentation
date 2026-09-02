@@ -10,10 +10,6 @@ Pass a UTC offset string in `LT:Options` to configure the test VM's system timez
 
 Add the `timezone` capability to your `LT:Options` configuration. The value is a UTC offset string in the format `UTC+HH:MM` or `UTC-HH:MM` (e.g., `UTC+05:30`). The default is `UTC+00:00`.
 
-
-
-
-
 ```java title="TimezoneTest.java"
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -41,10 +37,6 @@ driver.quit();
 }
 ```
 
-
-
-
-
 ```javascript title="timezone-test.js"
 const { Builder } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
@@ -71,10 +63,6 @@ await driver.quit();
 })();
 ```
 
-
-
-
-
 ```python title="timezone_test.py"
 import os
 from selenium import webdriver
@@ -100,10 +88,6 @@ driver.get("https://example.com")
 driver.quit()
 ```
 
-
-
-
-
 ```csharp title="TimezoneTest.cs"
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -125,10 +109,6 @@ new Uri("https://hub.lambdatest.com/wd/hub"), browserOptions);
 driver.Navigate().GoToUrl("https://example.com");
 driver.Quit();
 ```
-
-
-
-
 
 ```php title="TimezoneTest.php"
 <?php
@@ -153,10 +133,6 @@ $driver->get("https://example.com");
 $driver->quit();
 ```
 
-
-
-
-
 ```ruby title="timezone_test.rb"
 require "selenium-webdriver"
 
@@ -180,10 +156,6 @@ driver.navigate.to("https://example.com")
 driver.quit
 ```
 
-
-
-
-
 ## Common Timezone Values
 
 Use these UTC offset strings with the `timezone` capability.
@@ -201,9 +173,7 @@ Use these UTC offset strings with the `timezone` capability.
 | `UTC-03:00` | Sao Paulo, Buenos Aires |
 | `UTC+03:00` | Moscow, Istanbul |
 
-
 The timezone capability is case sensitive. Use the exact format `UTC+HH:MM` or `UTC-HH:MM`.
-
 
 ## When to Configure Timezones
 
@@ -216,12 +186,9 @@ Consider setting the `timezone` capability in these scenarios:
 - **Time-based business logic.** Test features like cutoff times, availability windows, or session expiration that depend on the user's timezone.
 - **Cross-timezone consistency.** Run the same test suite across multiple timezones to catch discrepancies in time-dependent logic.
 
-
 Combine the `timezone` capability with geolocation to simulate a complete locale environment for your tests.
 
-
 ## Next Steps
-
 
 Continue with these related guides:
 

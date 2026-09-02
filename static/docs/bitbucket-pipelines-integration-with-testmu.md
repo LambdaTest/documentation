@@ -14,7 +14,6 @@ In this topic, you will learn about the:
 
 ## Prerequisites
 
-
 **Important:** Visit TestMu AI [GitHub repository for Bitbucket Pipelines](https://github.com/qa-repo/protractor-selenium-bitbucket-sample).
 
 - Make sure you have your [Bitbucket Credentials](https://bitbucket.org/dashboard/overview).
@@ -38,10 +37,7 @@ $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 
 ## Integrating TestMu AI With Bitbucket Pipelines
 
-
 **Step 1:** Log in to your Bitbucket account. Go to repositories & import the TestMu AI Git repository for Bitbucket Pipelines. You will be facing the below screen after import is successful.
-
-
 
 **Step 2:** After importing the Git repository, fetch the [yml file](https://github.com/qa-repo/protractor-selenium-bitbucket-sample/blob/master/bitbucket-pipelines.yml) to run your automation tests using the Protractor framework on TestMu AI Selenium Grid.
 
@@ -64,11 +60,7 @@ script: # Modify the commands below to build your repository.
 ```
 **Step 3:** Now, you need to add TestMu AI environment variables into your Bitbucket pipelines. These environment variables will help to authenticate your test before they are executed on TestMu AI Selenium Grid. Go to **Settings** --> **General** --> **Username aliases** --> **Repository variables**.
 
-
-
 **Step 4:** After adding the environment variables, you need to visit your pipeline & click on **Rerun**.
-
-
 
 **Step 5:** Run the below command to execute a test on TestMu AI Selenium Grid.
 

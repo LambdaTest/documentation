@@ -4,7 +4,6 @@
 
 Persist and reuse browser state - cookies, auth, and settings - across separate script runs. Profiles auto-save when the browser closes and auto-load when you use the same profile ID.
 
-
 ## Why You Need This
 
 The [Context service for cookies](/support/docs/browser-cloud-context/) transfers state between sessions
@@ -23,7 +22,6 @@ You might have a "salesforce-login" profile, a "github-login" profile, or a
 "competitor-research" profile - each maintaining its own authentication state
 and preferences.
 
-
 ## How It Works
 
 1. You set `profileId` in your session config
@@ -31,7 +29,6 @@ and preferences.
 3. If found, the saved cookies are loaded into the browser
 4. On `browser.close()`, the current cookies are automatically saved back to the file
 5. Next time you create a session with the same `profileId`, the saved state is restored
-
 
 ## Getting Started
 
@@ -72,7 +69,6 @@ await page2.goto('https://app.example.com/dashboard');
 > This is normal. The profile file is created when `browser.close()` is called.
 > Subsequent runs will find and load it.
 
-
 ## Profile File Format
 
 Profiles are stored as JSON files at `.profiles/{profileId}.json`:
@@ -95,7 +91,6 @@ Profiles are stored as JSON files at `.profiles/{profileId}.json`:
 }
 ```
 
-
 ## Manual Profile Management
 
 Beyond the automatic `profileId` flow, you can manage profiles directly:
@@ -114,7 +109,6 @@ const profiles = await client.profiles.listProfiles();
 await client.profiles.deleteProfile('my-profile');
 ```
 
-
 ## Profiles vs Context Service
 
 | | Context Service | Profile Service |
@@ -128,13 +122,11 @@ await client.profiles.deleteProfile('my-profile');
 **Use Profiles** when your agent runs on a schedule and needs to stay logged in
 between invocations.
 
-
 ## Works With All CDP Adapters
 
 - **Puppeteer:** Saves/loads cookies via CDP page methods
 - **Playwright:** Saves/loads cookies via `context.addCookies()` / `context.cookies()`
 - **Selenium:** Saves/loads cookies via `driver.manage().addCookie()`, grouped by domain
-
 
 ## Security Note
 

@@ -9,24 +9,16 @@ This guide outlines the steps required to create, configure, and manage test run
 - Navigate to the Test Manager and click on **Create Test Run**.
 - Enter a Test Run Name and an optional Description to define the purpose of the test run.
 
-
 Use descriptive names to easily identify test runs later.
-
-
-
 
 ### Add Tags
 - Assign relevant Tags to categorize the test run.
 - Click **Create Test Run** to proceed.
 
-
-
 ## 2. Adding and Configuring Test Cases
 ### Access the Test Cases Tab
 - Upon successful creation, you will be redirected to the Test Cases tab.
 - Here, you can add multiple test cases to the test run.
-
-
 
 ### Assign Test Cases
 - Select the desired test cases from the list.
@@ -34,13 +26,9 @@ Use descriptive names to easily identify test runs later.
 - Add test case configurations individually or in bulk.
 > Note: Configurations allow you to define environment settings, such as browser and device combinations.
 
-
-
 ### Add Configurations
 - Choose multiple configurations from the dropdown or create new configurations as needed.
 - Apply configurations to the selected test cases.
-
-
 
 ## 3. Saving and Managing Test Runs
 ### Finalize the Test Run
@@ -53,22 +41,14 @@ Test instances are organized using a **Folders** sidebar on the left, reflecting
 - Collapse or expand folders for easier navigation.
 - Click the **three-dot menu** on the **Folders** header to toggle **Include Child Folders**. When enabled (default), selecting a parent folder also displays test instances from its child folders.
 
-
-
-
-
 ### Bulk Update Options
 - To update multiple test instances:
 - Select multiple test instances.
 - Use the Select Assignee and Select Status options to apply changes in bulk.
 
-
-
 ### Update Test Step Status
 - Within any test instance, individually update the status of each test step.
 - Add remarks or actual outcomes for manual test steps.
-
-
 
 ## 4. Filtering Test Instances
 
@@ -80,30 +60,21 @@ A filter bar above the test instance list lets you narrow down a test run by:
 
 Filters work on both Manual and Automation test runs, apply at the **All Test Instances** view as well as at any folder, and persist as you switch between folders. The active filter state is also reflected in the page URL, so you can bookmark or share a filtered view.
 
-
-
 **Supported Custom Field types**
 Custom Fields can be filtered only for types: **Single Select Dropdown**, **Multi Select Dropdown**, **User**, **Boolean**, and **Date**.
-
 
 ## 5. Enhancing Test Runs with Test Evidences
 ### Adding Remarks and Attachments
 - Add Remarks or actual outcomes to enhance test instance execution details.
 - You can add remarks and attachments at both the individual test step level and the overall test instance level.
 
-
-
 The Remark field supports **rich text formatting**, including:
 - Inline image embedding: paste images directly into the field.
 - Text styling such as bold, italic, bullet lists, and other standard rich text options.
 
-
 Remarks have a maximum limit of **5000 characters**.
 
-
 - Attach supporting files or screenshots to the remarks for better context.
-
-
 
 ## 6. Execute Test Runs on TestMu AI Cloud
 
@@ -113,19 +84,13 @@ Execute your manual test instances directly on TestMu AI Cloud, no local setup o
 
 1. Click the **Play** icon on any test instance to launch execution on TestMu AI Cloud.
 
-
-
 2. During execution, update the status of individual test cases and test steps in real time as you verify each one.
-
-
 
 **Why execute on the Cloud?**
 Running test instances on TestMu AI Cloud gives you access to a wide range of real browsers, devices, and OS combinations, without maintaining local infrastructure. It ensures consistent, reliable test execution across environments.
 
-
 **Track bugs during execution**
 Bugs raised or linked while executing an instance are surfaced under that Test Case instance. To link Jira or Azure DevOps tickets at the instance and step level, see [Track Bugs and Issues in Test Runs](/support/docs/test-run-creation-and-management/#track-bugs-and-issues-in-test-runs).
-
 
 ## 7. Test Run Options
 
@@ -137,10 +102,6 @@ You can manage your test runs using the options available in the **three-dot men
 | **Duplicate** | Create a copy of the test run for re-execution or variation testing. |
 | **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
 | **Delete** | Permanently remove a test run that is no longer needed. |
-
-
-
-
 
 ## Track Bugs and Issues in Test Runs
 
@@ -179,13 +140,9 @@ Use this when the defect is already tracked in Jira or Azure DevOps and you want
 1. Open the Test Run and stay on the **Test Instances** tab.
 2. On the test instance you want, open the bug menu on its row and select **Link Issue**.
 
-
-
 3. In the **Link Issues** dialog, choose the tracker: **Jira** or **Azure DevOps**. Only trackers you have integrated are available.
 4. Enter the issue key or paste its URL.
 5. Click **Link Issue**.
-
-
 
 The issue is now linked, and the test instance row shows a bug count. That count is your at-a-glance signal for which tests in the run have known defects.
 
@@ -198,13 +155,9 @@ Use this when you find a defect while executing a test and no ticket exists yet.
 3. Fill in the issue details, such as the project, issue type, and summary. Required fields are marked. The panel already carries the test instance's context.
 4. Click **Create Issue**.
 
-
-
 Test Manager files the ticket in your bug tracker without leaving the run. When the ticket is created in Jira or Azure DevOps, it is associated with the test instance and appears in the same views as a linked issue.
 
-
 Mark as Bug can file tickets in several bug trackers, but only Jira and Azure DevOps tickets are tracked back to the test instance. See [Supported trackers and visibility](#supported-trackers-and-visibility).
-
 
 ### Review the issues on an instance
 
@@ -214,8 +167,6 @@ You can review the bugs on a test instance in two ways:
 - **From the instance**: open the test instance and go to its **Issues** tab. The tab header shows how many issues the instance carries. This is only possible in Manual Test Runs.
 
 Each issue entry shows its title, key, type, status, priority, the project it belongs to, and who created it, enough to triage without opening the tracker. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
-
-
 
 ### Add a bug while reviewing an instance or a step
 
@@ -258,17 +209,8 @@ With Audit logs you can store the execution history of your tests and even run p
 
 You can view the Audit Logs by clicking on the `View Execution Log`.
 
-
-
-
-
 For the Steps level execution logs, you can preview the step with respect to which the log was created.
 
-
  As step level Audit logs are with respect to that specific steps in case the step changes the old logs will still show the preview of the older step.
-
-
-
-
 
  When you delete a configuration or a test case, all associated audit logs are removed. This is because the action deletes the entire instance. If you then add the same test case and configuration again, it creates a brand new instance with no prior audit history.

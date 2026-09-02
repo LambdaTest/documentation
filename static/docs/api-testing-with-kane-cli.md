@@ -8,13 +8,7 @@ Each one runs as a single `kane-cli run "..."` command. Kane CLI opens a real br
 
 ## Smoke Test an Endpoint
 
-
-
 A smoke test is the fastest way to confirm that a service is alive and responding correctly before deeper testing. This use case shows how to check a health endpoint end to end in a single Kane CLI command.
-
-
-
-
 
 1. Open a terminal and start your command with `kane-cli run` followed by your full instruction in quotes.
 2. Tell it which page to open, for example `Go to https://your-app.com`.
@@ -27,13 +21,7 @@ A smoke test is the fastest way to confirm that a service is alive and respondin
 
 ## Auth-Token Chaining
 
-
-
 Many APIs require you to log in first and then use the returned token to call a protected endpoint. Kane CLI can describe this entire login-then-call flow as one instruction, automatically passing the token from the first response into the second request.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/health/login with JSON body {"email":"...","password":"..."}"`.
 2. Assert the login worked and capture the token, for example `confirm the response status is 200 and the token is non-empty`.
@@ -45,13 +33,7 @@ Many APIs require you to log in first and then use the returned token to call a 
 
 ## Schema and Field Validation
 
-
-
 Checking a status code is not enough on its own. This use case validates that a response body has the right structure, the right top-level fields, and the right values nested inside an array.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a GET request to /api/shop/products?category=gaming"`.
 2. Add a status assertion, for example `confirm the response status is 200`.
@@ -62,13 +44,7 @@ Checking a status code is not enough on its own. This use case validates that a 
 
 ## Server-Side Business Logic
 
-
-
 Some endpoints apply computed business rules rather than just storing data, for example routing a submitted symptom to the correct type of specialist. This use case confirms that the server-side logic produces the expected outcome.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/health/consult with header Content-Type: application/json and this raw JSON body: {"symptom":"itchy skin rash and acne","phone":"9876543210"}"`.
 2. Assert the request was accepted, for example `confirm the response status is 201`.
@@ -80,13 +56,7 @@ Some endpoints apply computed business rules rather than just storing data, for 
 
 ## Negative Path Testing (401 Unauthorized)
 
-
-
 Good API coverage also proves that invalid requests are correctly rejected rather than accidentally accepted. This use case sends deliberately wrong credentials and confirms the API fails closed.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/insurance/login with header Content-Type: application/json and this raw JSON body: {"email":"notauser@example.com","password":"x"}"`.
 2. Add the negative assertion, for example `confirm the request is rejected with response status 401 and the error field is 'invalid credentials'`.
@@ -96,13 +66,7 @@ Good API coverage also proves that invalid requests are correctly rejected rathe
 
 ## Latency and SLA Gate Testing
 
-
-
 A correct response is not useful if it arrives too slowly. This use case adds a response-time assertion alongside the usual functional checks, turning a normal test into an SLA gate.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a GET request to /api/telecom/plans"`.
 2. Add a functional assertion, for example `confirm the response status is 200 and the count field is 5`.
@@ -112,13 +76,7 @@ A correct response is not useful if it arrives too slowly. This use case adds a 
 
 ## Migrating an Existing curl Command
 
-
-
 If you already have a working curl command from Postman, documentation, or a teammate, Kane CLI can run it exactly as written instead of you having to translate it into a new format.
-
-
-
-
 
 1. Copy your existing curl command exactly as it is, including its headers and JSON payload.
 2. Run `kane-cli run "Open [your site], then run this exact request:"` followed by the full curl command in quotes, for example:
@@ -135,13 +93,7 @@ curl -X POST https://your-app.com/api/telecom/recharge \
 
 ## Input Validation Boundaries (400 then 201)
 
-
-
 Boundary testing checks both sides of a validation rule in one flow: an invalid input that should be rejected, and a corrected input that should then succeed.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/gov/report with header Content-Type: application/json and this raw JSON body: {"category":"identity-theft","details":"too short"}"`.
 2. Assert the rejection, for example `confirm it is rejected with response status 400 and an error mentioning min 10 chars`.
@@ -152,13 +104,7 @@ Boundary testing checks both sides of a validation rule in one flow: an invalid 
 
 ## Cross-Endpoint Data Consistency
 
-
-
 This use case confirms that a value returned by one endpoint, such as a listed price, matches the value used or returned by a second, related endpoint, such as a booking total, catching mismatches between services or caches.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a GET request to /api/travel/listings?city=Rishikesh"`.
 2. Assert on the listing data, for example `confirm the response status is 200, the count field is 3, and the listings list contains a listing with id 'rk1' whose price is 7800`.
@@ -169,13 +115,7 @@ This use case confirms that a value returned by one endpoint, such as a listed p
 
 ## Filter a Catalog, Then Act on a Result
 
-
-
 A very common real-world flow is searching or filtering a catalog and then performing an action on one of the returned items, such as picking a title from search results and starting playback.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a GET request to /api/stream/titles?genre=Comedy"`.
 2. Assert on the filtered results, for example `confirm the response status is 200, the count is 8, and the titles include the id 'Friends'`.
@@ -186,13 +126,7 @@ A very common real-world flow is searching or filtering a catalog and then perfo
 
 ## Create a Record (Seed Data)
 
-
-
 Sometimes you simply need to create a brand-new record and confirm it was stored correctly, useful for seeding test data or verifying a creation endpoint on its own.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/travel/book with a JSON body containing the listing id, check-in date, check-out date, and number of guests"`.
 2. Add your assertions, for example `confirm the response status is 201, the status field is 'confirmed', and the bookingId starts with 'BKG-'`.
@@ -202,13 +136,7 @@ Sometimes you simply need to create a brand-new record and confirm it was stored
 
 ## Multi-Step API Transaction
 
-
-
 Real-world workflows often span several dependent API calls, for example logging in, adding an item to a cart, and then placing an order. Kane CLI can chain all of these into a single end-to-end test, passing data forward automatically at each step.
-
-
-
-
 
 1. Run `kane-cli run "Open [your site], then send a POST request to /api/shop/login with a JSON body of {"email":"...","password":"..."}"`.
 2. Assert the login succeeded and capture the token, for example `confirm the response status is 200 and the token is non-empty`.

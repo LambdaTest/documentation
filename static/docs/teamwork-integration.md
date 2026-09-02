@@ -18,20 +18,10 @@ TestMu AI integrates with Teamwork Projects, allowing users to file issues direc
 
 **Step 4:** Now, provide your Teamwork API Token and Teamwork site address to establish integration with TestMu AI and click on **install** button.
 
-
-
-
-
 **Fetch your Teamwork API Token**
 
 - Visit your Teamwork account -> **Edit my details** button.
 - You will find the "**API Token**" under the section **API & Mobile**. Copy your API token.
-
-
-
-
-
-
 
 ## Lodge your First Bug
 
@@ -52,10 +42,6 @@ TestMu AI integrates with Teamwork Projects, allowing users to file issues direc
 
 **Step 5:** Click on **Mark as Bug** button. Now go to your dashboard and check a ticket will be created for the same.
 
-
-
-
-
 ## Uninstall Teamwork Integration
 
 **Step 1:** Login to your TestMu AI account. You should have Admin or User level access to see and install integrations.
@@ -63,9 +49,5 @@ TestMu AI integrates with Teamwork Projects, allowing users to file issues direc
 **Step 2:** Click on Settings -> Integrations -> Project Management.
 
 **Step 3:** Click on the **Remove** button.
-
-
-
-
 
 > That was all you need to know for TestMu AI + Teamwork Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always **available on chat** to help you out with any roadblock regarding our product. Happy testing!

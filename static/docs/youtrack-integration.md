@@ -8,31 +8,20 @@ With TestMu AI and YouTrack integration, you can push bugs directly from TestMu 
 
 ## How To Integrate YouTrack With Your TestMu AI Account?
 
-
-
 **Step 1**: Login to your TestMu AI account. To install integrations, you need to have admin or user level access.
 
 **Step 2**: Go to **'Integrations'** from the left menu bar. You will be routed to the integration page where you can find list of third-party applications.
 
 **Step 3**: From the **'Bug Tracker'** category, click on the **'YouTrack'** block.
 
-
-
 >
 **Note:** If you already have an existing TestMu AI integration with any project management tool then you will be asked to uninstall the existing TestMu AI integration.
-
 
 **Step 4**: You will come across two different options to choose from - **Cloud** and **Self Hosted**.
 
 **Step 5:** When you select the **Cloud** option, you need to enter your YouTrack URL as shown below.
 
-
-
-
-
 **Step 6:** When you select the **Self Hosted** option, you need to enter YouTrack Host as shown below.
-
-
 
 >
 *   **What is YouTrack URL?**
@@ -43,37 +32,21 @@ An API token is required to authenticate a user's identity from one server to an
 
 **Step 5**: To get the API token, log in to your YouTrack account and navigate to Profile on the top-right.
 
-
-
 **Step 6**: Click on the link that says _**'Update personal information and manage logins'**_.
-
-
 
 **Step 7**: Select the **'Authentication'** tab.
 
-
-
 **Step 8**: Click on **'New Token'**.
 
-
-
 **Step 9**: Enter the token name and click on **'Create'**.
-
-
 
 **Step 10**: Your new token will be generated. Click on **'Copy Token'**.
 
 **Step 11**: Enter the Youtrack Domain and copied API token in the provided field and then press **'Install'**.
 
-
-
 You have successfully integrated YouTrack with your TestMu AI account. Visit the **'Integrations'** again and you'll notice a green check on YouTrack block under the category _My Integrations_.
 
-
-
 ## Logging First Bug Through YouTrack Integration
-
-
 
 For demonstration, we will log bugs while performing Real time testing.
 
@@ -82,8 +55,6 @@ For demonstration, we will log bugs while performing Real time testing.
 **Step 2**: Enter the test URL, select browser, browser version, operating system and resolutions. Then press **'START'**.
 
 **Step 3**: A new virtual machine will fire up where you can perform live interactive testing of websites & web apps for filing bugs. To file a bug, click on the Bug icon to capture a screenshot.
-
-
 
 **Step 4**: Once the screenshot is captured, you can annotate any bugs or tasks by using in-built image editor tools. Then click on **'Mark As Bug'**.
 
@@ -97,20 +68,13 @@ For demonstration, we will log bugs while performing Real time testing.
 *   You can provide the **Description** of the issue.
 *   You can also choose **Task type**, **Task Priority**, **Task State**.
 
-
 Your bug will be marked successfully.
 
 **Step 6**: Visit your YouTrack agile board, you'll notice your marked bugs and tasks.
 
-
-
 Click on your Project, you'll find all the test environment details along with captured screenshots.
 
-
-
 ## Uninstalling The YouTrack Integration
-
-
 
 **Step 1**: Login to your TestMu AI account. Visit Integrations and navigate to **'My Integrations'**.
 

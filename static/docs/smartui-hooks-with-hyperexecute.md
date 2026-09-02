@@ -12,14 +12,9 @@ There are two ways to run SmartUI visual regression tests on HyperExecute. You c
 - [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) file which contains all the necessary instructions.
 - To run SmartUI tests, you need to have a **Baseline Image** and a **Comparison** image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
 
-
 After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
 
-
 ## Run Your Test Suite with SmartUI Hooks
-
-
-
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
@@ -31,7 +26,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 Download or Clone the code sample for the TestNG from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
  View on GitHub
-
 
 If you are using your own project, make sure you update the **HUB endpoint** in your tests file.
 
@@ -81,31 +75,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 3: Configure YAML in your Test Suite
 
@@ -181,23 +155,13 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 ### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
-
-
-
-
 Here you can see the difference.
-
-
 
 ### Handling Dynamic Data with DOM Configuration
 
@@ -207,9 +171,6 @@ Here you can see the difference.
 | `fullPage` (boolean) | Specify `true` if you want to take a Full Page Screenshot and `false` for viewport screenshots; `fullPage: true` is currently only supported for `Chrome`. |
 | `ignoreDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or Xpath` used by your webpage that should be excluded from the comparison. |
 | `selectDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or XPath` used by your webpage that should be included in the comparison. |
-
-
-
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by ID"
 let config = {
@@ -222,9 +183,6 @@ id: ["ID-1", "ID-2"], // Ignoring elements by ID, you can ignore multiple at onc
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by Class"
 let config = {
 screenshotName: "Ignore-Class",
@@ -235,9 +193,6 @@ class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore mul
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by XPath"
 let config = {
@@ -250,10 +205,6 @@ xpath: ["Xpath-1", "Xpath-2"], // Ignoring elements by XPath, you can ignore mul
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector"
 let config = {
 screenshotName: "Ignore-cssSelector",
@@ -264,12 +215,6 @@ cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS s
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
-
-
-
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by ID."
 let config = {
@@ -282,9 +227,6 @@ id: ["ID-1", "ID-2"], // Selecting elements by ID, you can select multiple at on
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to select by Class"
 let config = {
 screenshotName: "Select-Class",
@@ -295,9 +237,6 @@ class: ["Class-1", "Class-2"], // Selecting elements by class, you can select mu
 };
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
-
-
-
 
 ```js title="This is a sample for your webhook configuration for JavaScript to select by XPath"
 let config = {
@@ -310,10 +249,6 @@ xpath: ["Xpath-1", "Xpath-2"], // Selecting elements by XPath, you can select mu
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
-
 ```js title="This is a sample for your webhook configuration for JavaScript to select by CSS Selector"
 let config = {
 screenshotName: "Select-cssSelector",
@@ -325,13 +260,7 @@ cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS 
 await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
-
-
-
 > **NOTE :** Please contact [Customer Support](mailto:support@testmuai.com) team to enable the **ignoreDOM** feature.
-
-
-
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Cypress
 
@@ -416,14 +345,7 @@ To execute the project run the below command in your terminal at the root folder
 
 - Click on the **SmartUI Tests** button.
 
-
-
 - Click on **Compare** button to compare the changes made.
-
-
-
-
-
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Playwright.
 
@@ -435,7 +357,6 @@ You can use your own project to configure and test it. For demo purposes, we are
 Download or Clone the code sample for the Playwright JavaScript from the TestMu AI GitHub repository to run the tests on the HyperExecute.
 
  View on GitHub
-
 
 If you are using your own project, make sure you update the **CDP endpoint** in your tests file.
 
@@ -490,31 +411,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 3: Configure YAML in your Test Suite
 
@@ -575,40 +476,23 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 3.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 ### Step 5: Monitor the Test Execution
 
 - Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. Click on the **Approved** button.
 
-
-
 - This will redirect you the SmartUI dashboard where you can see all the images you have pushed for the testing.
-
-
 
 - Now you can make the changes in the UI as per your requirement and trigger the Job once again.
 
 - Again click on the **Apprved** button again.
 
-
-
 - Now, you will find two builds in your dashboard. One will be the **Baseline Build** and the other one will be the **Non Baseline Build**
-
-
 
 - Open any screenshot from the **Non Baseline Build**, and you can see the comparison between the two screenshots, i.e. the Baseline Image and the Non Baseline Image.
 
 - You can now approve or reject the changes directly from the dashboard as well.
-
-
-
-
-
 
 ## No-Code URL Capture with the SmartUI CLI
 
@@ -630,7 +514,6 @@ Before you begin, ensure you have the following:
 
 **Node.js Version Requirement**
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-
 
 ### Overview
 
@@ -660,7 +543,6 @@ The first step is to create a SmartUI project in the dashboard. This project wil
 
 **Project Token**
 After creating the project, you will receive a `PROJECT_TOKEN`. Save this token securely as you'll need it in the next steps. The token format looks like: `123456#1234abcd-****-****-****-************`
-
 
 ### Step 2: Set Up Your Project Structure
 
@@ -719,7 +601,6 @@ cd smartui-playwright-sample
 
  View on GitHub
 
-
 ### Step 4: Configure Environment Variables
 
 Set up your environment variables for authentication and configuration.
@@ -728,65 +609,40 @@ Set up your environment variables for authentication and configuration.
 
 The `PROJECT_TOKEN` is required for SmartUI CLI capture commands.
 
-
-
-
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-
-
-
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
-
-
-
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
-
-
-
 #### Set HyperExecute Credentials
 
 For HyperExecute, you'll need your LambdaTest username and access key.
-
-
-
 
 ```bash
 export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
 
-
-
-
 ```bash
 set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
-
-
-
 
 ```powershell
 $env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
 
-
-
-
 **Getting Your Credentials**
 - **Username and Access Key**: Available in your [LambdaTest Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
 - **Project Token**: Available in your SmartUI project settings after creation
-
 
 ### Step 5: Create URL Configuration Files
 
@@ -839,7 +695,6 @@ Each URL object supports the following properties:
 - Higher timeout values increase test execution time
 - Start with lower values (1000-3000ms) and increase if needed
 - Consider using `execute` options for more complex interactions
-
 
 #### Splitting URLs for Parallel Execution
 
@@ -928,7 +783,6 @@ Create `config.json` with your desired settings:
 
 **Advanced Configuration**
 For more configuration options, refer to the [SmartUI SDK Config Options](/support/docs/smartui-sdk-config-options/) documentation.
-
 
 ### Step 7: Create HyperExecute YAML Configuration
 
@@ -1028,7 +882,6 @@ jobLabel: ['HYP', 'SmartUI', 'Capture', 'Parallel']
 
 **HyperExecute YAML Documentation**
 For detailed YAML configuration options, refer to the [HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config).
-
 
 ### Step 8: Execute Tests on HyperExecute
 
@@ -1149,9 +1002,6 @@ For detailed information, see the [Fetch Results Documentation](/support/docs/sm
 
 #### 1. URL Organization
 
-
-
-
 **Separate Test and Production URLs**
 
 Keep test and production URLs in separate files:
@@ -1160,10 +1010,6 @@ Keep test and production URLs in separate files:
 - `urlProd.json` - Production environment
 
 This allows you to test both environments independently.
-
-
-
-
 
 **Split Large URL Lists**
 
@@ -1178,10 +1024,6 @@ test/
 
 This enables better parallel execution and easier management.
 
-
-
-
-
 **Use Descriptive Names**
 
 Use clear, descriptive names for your URLs:
@@ -1195,15 +1037,9 @@ Use clear, descriptive names for your URLs:
 
 Avoid generic names like `"page1"` or `"test"`.
 
-
-
-
 #### 1.1. URL Grouping Strategies for Large Test Suites
 
 When working with large numbers of URLs (e.g., 1000+ URLs) that can be logically divided into sections or groups (e.g., Section 1: Product Category A, Section 2: Product Category B, Section 3: Product Category C, etc.), you have two primary strategies for organizing your SmartUI projects:
-
-
-
 
 **Single Project with Branching Strategy**
 
@@ -1295,10 +1131,6 @@ npx smartui capture sections/section1_category_a.json --config config.json --bui
 - Teams requiring completely isolated section management
 - Organizations with different approval workflows per section
 - Projects where sections have vastly different configurations
-
-
-
-
 
 **Separate Projects Strategy**
 
@@ -1402,9 +1234,6 @@ export PROJECT_TOKEN="${PROJECT_TOKEN_CATEGORY_B}"
 - Projects with shared configurations
 - Teams preferring centralized management
 
-
-
-
 ##### Decision Matrix
 
 Use this matrix to decide which strategy fits your needs:
@@ -1451,9 +1280,6 @@ npx smartui capture sections/category_a_staging.json --config config.json
 
 #### 2. Configuration Management
 
-
-
-
 **Select Relevant Browsers**
 
 Only test browsers that your users actually use:
@@ -1467,10 +1293,6 @@ Only test browsers that your users actually use:
 ```
 
 Avoid testing unnecessary browsers to reduce execution time and costs.
-
-
-
-
 
 **Optimize Viewport Sizes**
 
@@ -1488,10 +1310,6 @@ Test realistic viewport sizes:
 
 Focus on viewports your users actually use.
 
-
-
-
-
 **Optimize Wait Timeouts**
 
 Start with minimal timeouts and increase only when needed:
@@ -1504,13 +1322,7 @@ Start with minimal timeouts and increase only when needed:
 
 Higher timeouts increase execution time.
 
-
-
-
 #### 3. HyperExecute Configuration
-
-
-
 
 **Optimize Concurrency**
 
@@ -1521,10 +1333,6 @@ concurrency: 3  # For 20-30 URLs
 ```
 
 Too high concurrency may cause resource issues.
-
-
-
-
 
 **Set Realistic Timeouts**
 
@@ -1537,10 +1345,6 @@ testSuiteTimeout: 150    # 2.5 hours per suite
 
 Account for network latency and page load times.
 
-
-
-
-
 **Enable Dependency Caching**
 
 Cache node_modules to speed up subsequent runs:
@@ -1552,9 +1356,6 @@ cacheDirectories:
 ```
 
 This significantly reduces setup time.
-
-
-
 
 #### 4. Build Naming
 
@@ -1577,9 +1378,6 @@ Use descriptive build names that include:
 
 #### Common Issues and Solutions
 
-
-
-
 **Issue**: `PROJECT_TOKEN is not set` or authentication failures
 
 **Solutions**:
@@ -1597,10 +1395,6 @@ echo %PROJECT_TOKEN%  # Windows CMD
 3. Verify token in SmartUI dashboard project settings
 
 4. For HyperExecute, also verify `LT_USERNAME` and `LT_ACCESS_KEY`
-
-
-
-
 
 **Issue**: Errors with SmartUI CLI v4.x.x
 
@@ -1622,10 +1416,6 @@ nvm use 20.3
 npm --version
 ```
 
-
-
-
-
 **Issue**: Tests timing out or incomplete captures
 
 **Solutions**:
@@ -1646,10 +1436,6 @@ testSuiteTimeout: 300
 
 3. Check network connectivity and page load times
 
-
-
-
-
 **Issue**: Some URLs not captured or missing in dashboard
 
 **Solutions**:
@@ -1658,10 +1444,6 @@ testSuiteTimeout: 300
 3. Ensure `waitForTimeout` is sufficient for page load
 4. Review SmartUI dashboard for error messages
 5. Check HyperExecute logs for execution errors
-
-
-
-
 
 **Issue**: Tests failing with parallel execution
 
@@ -1675,10 +1457,6 @@ concurrency: 1  # Start with 1, increase gradually
 3. Check system resources and network bandwidth
 4. Verify HyperExecute account limits
 
-
-
-
-
 **Issue**: HyperExecute YAML parsing errors
 
 **Solutions**:
@@ -1686,9 +1464,6 @@ concurrency: 1  # Start with 1, increase gradually
 2. Check indentation (YAML is space-sensitive)
 3. Verify all required fields are present
 4. Review [HyperExecute YAML documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config)
-
-
-
 
 #### Debugging Tips
 

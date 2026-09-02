@@ -23,12 +23,8 @@ To enable integration, you need to create an OAuth application in your ServiceNo
    - **Redirect URL:** https://integrations.lambdatest.com/servicenow/auth/callback
    - **Logo URL:** https://assets.testmuai.com/resources/images/logos/logo.svg
 
-
 5. Click **Submit** to create the application.
 6. After creation, copy the **Client ID** and **Client Secret**. You will need these values to complete the integration in TestMu AI.
-
-
-
 
 Once the OAuth application is set up, proceed with the integration steps below.
 
@@ -46,12 +42,7 @@ Once the OAuth application is set up, proceed with the integration steps below.
 - **Client ID:** The Client ID from your ServiceNow OAuth application.
 - **Client Secret:** The Client Secret from your ServiceNow OAuth application.
 
-
 After filling in the details, click on the **Install** button to establish the integration.
-
-
-
-
 
 ## Log your First Incident
 
@@ -70,9 +61,6 @@ After filling in the details, click on the **Install** button to establish the i
 
 **Step 4:** Click on the **Create Issue** button. The incident will be logged into your ServiceNow instance, and you can view it directly from your ServiceNow dashboard.
 
-
-
-
 ## Resync ServiceNow Integration
 
 To ensure that the latest users from your ServiceNow system are available in TestMu AI, you can resync the integration.
@@ -84,7 +72,6 @@ To ensure that the latest users from your ServiceNow system are available in Tes
 - This will fetch the latest users from your ServiceNow system.
 
 - If your refresh token has expired, you will be prompted to reauthorize your ServiceNow integration.
-
 
 Once resynced, the latest data will be available for use.
 

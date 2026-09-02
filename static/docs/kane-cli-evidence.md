@@ -19,9 +19,7 @@ Opened in the viewer (or unzipped), a pack contains:
 
 For a mobile run, the result summary records the **device** in the run environment, for example the device model and OS version.
 
-
 The pack is the **only** place run artifacts live. There is no separate per-run log directory on disk.
-
 
 ## Where packs live
 

@@ -10,7 +10,6 @@ To test localised strings in your android app, configure Appium's language capab
 
 Language to be passed in the capability - language:'fr' where fr is language code for french
 
-
 ### Android Language and Language Codes
 
 | Language               | Language Code              |
@@ -57,9 +56,7 @@ Language to be passed in the capability - language:'fr' where fr is language cod
 
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
 
-
 Locale to be passed in the capability - locale:'FR' where FR is the locale code for France
-
 
 | Locale                 | Locale Code                |
 | -----------------------| ---------------------------|
@@ -116,7 +113,6 @@ Locale to be passed in the capability - locale:'FR' where FR is the locale code 
 | Vietnam                |  VN                        |
 | Zimbabwe               |  ZA                        |
 
-
 ## How to Setup Locale and Language
 
 You can also configure both locale and language during Espresso test execution for a seamless user experience in diverse linguistic and regional contexts of your app.
@@ -155,7 +151,6 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
 "locale": "CA"
 }'
 ```
-
 
 - Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.
 - App should support the language and locale mentioned in the API request to work.

@@ -9,7 +9,6 @@ the scenes.
 This is useful when your agent needs data from a page but doesn't need to
 interact with it beyond extraction.
 
-
 ## Scrape
 
 Extract content from any webpage in your choice of format.
@@ -54,7 +53,6 @@ metadata?: Record<string, string>; // Meta tags
 | `readability` | Cleaned article content (like Reader Mode) | When the page has an article you want to extract |
 | `markdown` | HTML converted to markdown | When you want structure + low token count for LLMs |
 
-
 ## Screenshot
 
 Capture a visual snapshot of any webpage.
@@ -76,7 +74,6 @@ delay: 2000,             // Wait before capturing
 
 **Response:** `{ data: Buffer, format: string, width: number, height: number }`
 
-
 ## PDF
 
 Generate a PDF document from any webpage.
@@ -97,7 +94,6 @@ margin: { top: '1cm', right: '1cm', bottom: '1cm', left: '1cm' },
 ```
 
 **Response:** `{ data: Buffer, pageCount: number }`
-
 
 ## Standalone vs Session Mode
 

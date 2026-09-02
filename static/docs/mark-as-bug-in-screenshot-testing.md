@@ -25,42 +25,23 @@ TestMu AI offers more than 3000+ real browsers and browser versions on every typ
 
 **Step 1:** Go to Screenshot testing from the left navigation menu, select your desired browser to test from, and hit the **Capture** button.
 
-
-
 **Step 2:** Once you hit the **Capture** button, you will find a message on the top indicating that the screenshot test has begun.
 
-
-
 **Step 3:** Once the screenshot testing is complete, you will have all the screenshots categorized by browsers selected from your input. Double-click on any screenshot you may want to validate.
-
-
 
 **Step 4:** As you double-click on any screenshot, an image editor will pop up with various buttons to help you highlight and annotate your UI observation before sharing the screenshot with your colleagues.
 
 - You can highlight the bug through different shapes like square, rectangular, circular, or you can even underline. Environment details of the test will be presented at the bottom-left of the image editor.
 
-
-
-
 - You can also scribble the bug using the pencil icon & add text for annotating the screenshot with the text button's help.
-
-
 
 - Choose from a variety of colors available to make the bug more noticeable.
 
-
-
 - The eraser icon highlighted below will help you to erase any unwanted highlights.
-
-
 
 -  If you have got too much to erase, then the last button at the bottom will do the job for you. It will help you undo any unwanted change in the screenshot.
 
-
-
 **Step 4:** Once you are done annotating the screenshot, you need to click on the **"Mark as Bug"** button at the bottom-right of the image editor.
-
-
 
 ## Pushing Bugs To Third Party Tools
 
@@ -102,8 +83,6 @@ As you click on the "**Mark as Bug**" button, an integration specific form would
 - You can also provide a summary to help you organize & easily identify your tasks.
 
 - You also get to post a description in the description field to help relate the cause of the issue or the card.
-
-
 
 All the fields you populate will be directly reflected in your respective project based upon the integration you have configured with your TestMu AI account. In the above case, the changes would reflect on the respective Asana instance.
 

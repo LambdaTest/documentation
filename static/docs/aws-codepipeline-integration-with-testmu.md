@@ -8,7 +8,6 @@ TestMu AI integration with AWS CodePipeline will help you perform automated cros
 
 ## Prerequisite
 
-
 * Login details in [AWS CodePipeline CI](https://aws.amazon.com/codepipeline/).
 * A GitHub repository. Here is our sample GitHub repository for [AWS CodePipeline](https://github.com/LambdaTest/protractor-selenium-awscodepipeline-sample.git).
 * **TestMu AI Authentication Credentials**
@@ -28,30 +27,17 @@ $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 
 ## Integrating Your TestMu AI Account With AWS CodePipeline
 
-
 **Step 1:** Login to your AWS CodePipeline instance. Visit the Pipelines page and create a new pipeline.
-
-
 
 **Step 2:** Set your pipeline settings for a **new service role**.
 
-
-
 **Step 3:** Now, provide your git details in the next step to **Add Source Stage**.
-
-
 
 **Step 4:** Follow the steps in AWS CodePipeline & fill the form page on the next step to **Add build stage**.
 
-
-
 **Step 5:** Create a new build project while adding a **Build Stage**.
 
-
-
 **Step 6:**  Choose a **Deploy Provider** on **deploy stage** screen and click on **Next**.
-
-
 
 >**Note:** Find the sample code from our [GitHub repository for AWS CodePipeline](https://github.com/LambdaTest/protractor-selenium-awscodepipeline-sample).
 

@@ -10,21 +10,13 @@ The TestMu AI Trello Integration allows you to create a card directly in Trello 
 
 ## How To Integrate Trello With Your TestMu AI Account?
 
-
-
 **Step 1:** Login to your TestMu AI account. You would need to have Admin or User level access to see and install integrations.
 
 **Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3:** Click on **'Add'** under the block that says 'Trello'.
 
-
-
 **Step 4:** Once you click on add, you'll redirected to the below screen if you are already logged into Trello. Click on the green button that says **'Allow'**.
-
-
-
-
 
 * **Why do you require a login with Trello?**
 
@@ -45,11 +37,7 @@ https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read&r
 
 If you are not logged into Trello then you will be redirected to the below screen. Kindly login to your account via gmail or create your account by given option.
 
-
-
 **Step 5:** That's it! Go to Integrations again and you will be able to notice a **green tick** indicating that Trello is successfully **installed**. You can now create cards in a fly from any of your running test session in LambdaTest to your Trello dashboard directly by a single click.
-
-
 
 ## How To Log Your First Bug Through Trello Integration?
 
@@ -57,44 +45,24 @@ If you are not logged into Trello then you will be redirected to the below scree
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit '**Start**'.
 
-
-
 **Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the **Bug icon** from the left panel for capturing a screenshot of the same. We have highlighted that option with yellow in the below image.
-
-
 
 **Step 4:** After a screenshot is captured, you can annotate any issue or a task with an **in-built image editor**. Once you are done highlighting the bug, click on the button that says **"Mark as Bug"**.
 
-
-
 **Step 5:** After clicking on **"Mark as Bug"** button a form would open up. Fill the fields as per your requirement.
-
-
 
 * You can select which **board** should the card go under.
 * You can select the **list** for that particular card.
 * You can assign the bug to a colleague by populating the field **'Assignee'**.
 * You also get to post a **description** to help relate the cause of the issue or the card.
 
-
-
-
-
 **Step 6:** Click on **"Create Issue"** & observe it being successfully marked through a single click effort. Once you hit the button, you will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning "**Bug successfully marked**" indicating that the card has been generated in your dashboard.
-
-
 
 **Step 7:** Visit your dashboard. You will be able to notice the logged issue right away!
 
-
-
 Click on the recent card and you will find all the data that you provided through LambdaTest already presented in it. TestMu AI automatically includes test environment details and related screenshots in the card as attachments.
 
-
-
 ## How To Remove Trello Integration?
-
-
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **remove** your current integration. Here is how you can do that.
 
@@ -103,7 +71,5 @@ Click on the recent card and you will find all the data that you provided throug
 **Step 2:** Select 'Settings' from the left navigation menu bar & click on 'Integrations'. This will guide you to a screen where you will find 3rd party applications, available to integrate with your TestMu AI account.
 
 **Step 3:** Click on **'REMOVE'**. You can find the remove button right under the **'Trello'** block which would be highlighted with a green tick.
-
-
 
 That was all you need to know for TestMu AI + Trello Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always **available on chat** to help you out with any roadblock regarding our product. Happy testing!

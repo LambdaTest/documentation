@@ -28,59 +28,35 @@ For this article, we have cloned and used this [Github repository](https://githu
 
 3. You also need your TestMu AI authentication credentials, which includes your TestMu AI username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner.
 
-
-
 ## Activating A Github Repository For CI/CD
 
 To activate and integrate your Github repository with Drone CI on TestMu AI, you need to first setup your VPN port and activate it, since Drone is not publicly accessible. Once the VPN is activated, here is the stepwise illustration of how to activate your git repo for CI/CD:
 
 **Step 1:** Enter URL `https://drone.lambdatest.io/` on any browser.
 
-
-
 **Step 2:** Authorize your GitHub account to access drone.
-
-
 
 **Step 3:** Click on the Sync button to sync all the repositories.
 
-
-
 **Step 4:** You will see the repository which you want to use after the sync is completed.
-
-
 
 **Step 5:** You need to activate the repository for which you want to integrate Drone CI, by clicking on the Activate button.
 
-
-
 You may not be able to activate it for CI/CD. (This is because the drone admin user is robot-lt and this user should be the admin of the repository to activate it for CI/CD). You can try by clicking on the repository and then clicking on the "Activate Repository" button.
-
-
-
 
 After clicking on "Activate Repository," it might happen that the repository is not activated and states that "There was a problem"
 
-
-
 To resolve this error, kindly add the robot-lt user as admin of the repository and authorize it to make it activated or ask the owner of the repository to make it active.
-
-
 
 **Step 6:** After enabling your repository, the Settings tab will appear. Check the Trusted checkbox in the Project Settings row (this might not occur if the OAuth is already trusted) and select the Private radio button in the Project visibility row and enter the name of your YAML configuration file (in which pipelines will be defined) in the text box in Configuration row. Here we have entered the ".drone.yml" file name, as we are integrating Drone CI.
 
-
-
 **Step 7:** Add the Secrets that are required to execute the Drone CI. These secrets are sensitive information for the repository, such as passwords, tokens, keys, etc. You can add your own secrets in the repository secrets on the Drone server by using the drone-cli. Also, you can add these secrets from drone UI in the Settings as shown below.
-
-
 
 (Note: Do not forget to check this allow pull request checkbox if you have any build step to be executed on the pull request.)
 
 Congratulations!! Now you have successfully activated your repository for CI/CD.
 
 ## Running Tests Using Drone CI with TestMu AI
-
 
 Now we will see an example in which we will be creating a TestMu AI Tunnel and install node in it. For this, make a YAML configuration file as see shown below:
 
@@ -191,7 +167,6 @@ commands:
 
 In this step, we are just installing node on our TestMu AI Tunnel.
 
-
 Similarly, we can also write a Test to deploy our executable formed in the build step to s3 using the s3 plugin. (To see the full list of supported plugins and their documentation refer to this [link](https://docs.aws.amazon.com/s3/index.html).)
 
 ```
@@ -211,8 +186,6 @@ acl: public-read
 
 Here AWS credentials are fetched through the secrets.
 
-
-
 Now push your code and enjoy the CI/CD pipeline.
 
 ## Execution Of The Drone CI Pipeline
@@ -221,26 +194,15 @@ Below is the step-by-step execution of the Drone CI pipeline.
 
 1. Edit the ".drone.yml" and add the code as discussed above.
 
-
-
 2. Once the edit is complete, click on "Commit Changes" to save and commit the changes made. Drone CI is activated as soon as this step is done since we have used "push event" for triggering the Drone CI.
 
-
-
-
-
 3. As soon as the Drone CI is triggered (through push event in this case), a new activity can be seen in the "ACTIVITY FEED" tab. The current status of this activity will be "running" or "executing".
-
-
 
 4. The series of execution of steps includes cloning, followed by the provided tests in the .drone.yml file. For example, we have provided two tests by name "Tunnel" and "SampleTest". Hence the series of steps to be executed will be:
 
     * Clone
     * Tunnel
     * SampleTest
-
-
-
 
 Drone provides functionality of default clone in its workspace, and we are using the same.
 If you want to restrict the default clone in the pipeline and want to use your custom clone then you can add below-mentioned YAML snippet to restrict the clone.
@@ -250,19 +212,11 @@ clone:
 disable:  true
 ```
 
-
-
 5. Now based on the tests in the .drone.yml file, this activity can pass or fail. If passed, a green tick will appear on the left of the activity name. Else if failed, a red cross will appear instead, as shown below.
-
-
 
 6. You can view the status and details about each activity by clicking on it. After opening an activity, you can click on any of the passed or failed test cases to view the log. For example, in the below image, we have clicked on the failed test "SampleTest" and its log has appeared on its right.
 
-
-
 7. A successful activity will have a green tick on its left in the ACTIVITY FEED as well on the left of each step and tests.
-
-
 
 ## Parallel Testing
 
@@ -271,7 +225,5 @@ Parallel Testing is one of the most demanding features of TestMu AI Selenium Gri
 ```
 npm test
 ```
-
-
 
 Deploy your code in a reliable manner at scale using Drone CI integration with TestMu AI, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!

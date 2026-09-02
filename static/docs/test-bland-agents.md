@@ -6,8 +6,6 @@ Bland builds agents as node-based Conversational Pathways rather than a single p
 
 ## Before You Begin
 
-
-
 Before you connect a Bland agent, make sure you have:
 
 - Bland account with a published Conversational Pathway
@@ -17,15 +15,11 @@ Before you connect a Bland agent, make sure you have:
 
 ## Test a Bland Phone Agent
 
-
-
 Phone testing covers inbound and outbound callers running over the phone network. Import the pathway or paste the prompt to generate scenarios across every labeled branch, then add the number under Phone Numbers and pick from 100+ voices, background noise conditions, and personas. It covers DTMF entry, warm transfers, voicemail detection, and carrier latency.
 
 Full setup: [Phone agent testing](/support/docs/phone-agent/)
 
 ## Test a Bland Voice Agent
-
-
 
 Voice testing applies to web agents reached in the browser rather than over a phone number. Import the pathway or paste the prompt to generate scenarios, then create the endpoint profile using the Web Agents API. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise in the results.
 
@@ -33,15 +27,11 @@ Full setup: [Voice agent testing](/support/docs/voice-agent/)
 
 ## Test a Bland Chat Agent
 
-
-
 Chat testing covers text conversations through the Bland web chat widget, which runs the same pathway as the phone agent. Upload the pathway export and supporting docs to generate scenarios, then create the endpoint profile using the widget ID or the chat API. It catches branching and reasoning failures, and because one pathway serves every channel, it also exercises the voice path.
 
 Full setup: [Chat agent testing](/support/docs/chat-agent/)
 
 ## What You Get With Agent Testing
-
-
 
 Every Bland run, on any surface it supports, is scored across:
 
@@ -54,8 +44,6 @@ Every Bland run, on any surface it supports, is scored across:
 
 ## Bland-Specific Considerations
 
-
-
 A few Bland behaviours are worth building dedicated scenarios around:
 
 - Pathways are graphs, not prompts. Unexpected phrasing breaks condition matching and strands the caller on a node
@@ -67,8 +55,6 @@ A few Bland behaviours are worth building dedicated scenarios around:
 - One pathway serves phone, web, chat, and SMS, so a text fix can break the voice branch
 
 ## Troubleshooting
-
-
 
 Common failure modes to watch for:
 

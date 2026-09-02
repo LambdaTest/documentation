@@ -12,13 +12,11 @@ With the TestMu AI Webhooks Integration, you can:
 
 ## Prerequisites
 
-
 - You should have Admin or User level access to see and install integrations.
 - You will require Webhook access for successful integration.
 - A valid webhook URL endpoint that can receive POST requests.
 
 ## Integrate Webhooks with your TestMu AI Account
-
 
 **Step 1:** Login to your TestMu AI account. You should have Admin or User level access to see and install integrations.
 
@@ -34,10 +32,7 @@ After successful addition, you will start receiving build data on every build co
 
 ## Configure Notification Preferences
 
-
 Once the webhook is connected, you can customize which notifications you want to receive. Click on the **Webhooks** block to open the configuration modal.
-
-
 
 In the **Notification Preferences** section, you can enable or disable the following notification types:
 
@@ -53,7 +48,6 @@ You can also configure the **Notification Time** to set a delay before receiving
 
 ## Webhook Payload
 
-
 When a build completes, TestMu AI sends a POST request to your configured webhook URL with the build data. The payload includes information about:
 
 - Build status and results
@@ -63,14 +57,12 @@ When a build completes, TestMu AI sends a POST request to your configured webhoo
 
 ## Use Cases
 
-
 1. **CI/CD Integration:** Trigger downstream jobs in your pipeline based on test results.
 2. **Custom Dashboards:** Push test data to your internal monitoring and reporting tools.
 3. **Team Notifications:** Forward build results to custom notification systems.
 4. **Automated Reporting:** Generate and distribute test reports automatically upon build completion.
 
 ## Remove Webhooks Integration
-
 
 **Step 1:** Login to your TestMu AI account. You should have Admin or User level access to see and install integrations.
 

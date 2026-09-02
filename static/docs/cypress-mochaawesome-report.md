@@ -6,11 +6,9 @@ If you run Cypress tests on TestMu AI, you can consolidate their results into a 
 
 ## Generating a Consolidated HTML Report
 
-
 The Mochawesome reporter writes per-spec JSON files that TestMu AI merges into one HTML report. Follow these steps to enable the reporter and generate that consolidated report.
 
 ### Update Your Cypress Configuration
-
 
 In your Cypress configuration file `cypress.config.js`, add the following code to enable Mochawesome as a reporter.
 
@@ -29,14 +27,11 @@ In your Cypress configuration file `cypress.config.js`, add the following code t
 }
 ```
 
-
 - The `overwrite` parameter should be set to `true` to ensure the report is replaced with the latest run results.
 - The `html` option should be set to `false` because the JSON files are merged later, and the mocha-merge utility does not support HTML files.
 - Ensure the `reportDir` path is set to `"cypress/results"`. This path is used to generate logs that will be visible on the dashboard. **Do not change this path.**
 
-
 ### Configure the HyperExecute YAML File
-
 
 In your HyperExecute YAML configuration, define the [`report` parameters in the HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#report) so the run collects the Mochawesome output.
 
@@ -50,15 +45,9 @@ type: html
 
 ### Execute Your Tests
 
-
 Run your Cypress tests on HyperExecute using the CLI. After the job completes, open the HyperExecute dashboard to download and view the consolidated Mochawesome report.
 
-
-
-
-
 ## Send Cypress Results to ReportPortal.io
-
 
 By default, the TestMu AI Cypress multi-reporter generates a Mochawesome report. To send results to ReportPortal.io instead, define a separate reporter configuration file and add the ReportPortal agent as a dependency.
 
@@ -69,7 +58,6 @@ By default, the TestMu AI Cypress multi-reporter generates a Mochawesome report.
 5. Run your tests, then open the dashboard to view the results in ReportPortal.
 
 ## Related Cypress Guides
-
 
 Continue with the guides below to download and debug your Cypress runs on TestMu AI.
 

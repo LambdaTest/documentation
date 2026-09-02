@@ -23,56 +23,29 @@ TestMu AI offers more than 2000 real browsers and browser versions on every type
 
 ## How Can I Mark As Bug While Responsive Testing?
 
-
 **Note:** Below is a demonstration of marking a bug from Responsive testing.
 
 **Step 1:** Go to Responsive testing from the left navigation menu, provide the testing URL, and hit the **Generate** button to start your responsive test session.
 
-
-
 **Step 2:** Once you hit the **Generate** button. You will find a loader  on devices mentioned on the right side of the screen, an indication that the screenshot test has begun. A counter will represent the number of devices for which the screenshot has been successfully generated. You can **stop** the test anytime by using the Stop button.
 
-
-
-
 **Step 3:** Once your responsive test session is complete, you can perform a vertical-scroll to find your desired device for ensuring your RWD(Responsive Web Design). After selecting the device, double-click on the camera icon on top for marking a bug.
-
-
-
-
 
 **Step 4:** As you double-click on any screenshot, an image editor will pop up with various buttons to help you highlight and annotate your UI observation before sharing the screenshot with your colleagues.
 
  - You can highlight the bug through different shapes like square, rectangular, circular, or you can even underline. Environment details of the test will be presented at the bottom-left of the image editor.
 
-
-
   - You can also scribble the bug using the pencil icon & add text for annotating the screenshot with the text button's help.
-
-
 
  -  Choose from a variety of colors to make the bug more noticeable.
 
-
-
-
  -  The eraser icon highlighted below will help you to erase any unwanted highlights.
-
-
-
-
 
  - If you have got too much to erase, then the last button at the bottom will do the job for you. It will help you undo any unwanted change in the screenshot.
 
-
-
 **Step 4:** Once you are done annotating the screenshot, you need to click on the **Mark as Bug** button at the bottom-right of the image editor.
 
-
-
-
 ## Pushing Bugs To Third Party Tools
-
 
 TestMu AI provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. The **"Mark as Bug"** button will help you to push your edited screenshot to your integrated workspace instantly. You can integrate with the below mentioned 3rd party tools.
 
@@ -109,13 +82,8 @@ As you click on the **"Mark as Bug"** button, an integration specific form would
 - You can also provide a summary to help you organize & easily identify your tasks.
 - You also get to post a description in the description field to help relate the cause of the issue or the card.
 
-
-
 All the fields you populate will be directly reflected in your respective project based upon the integration you have configured with your TestMu AI account. In the above case, the changes would be reflecting on the respective Asana instance.
 
-
-
 **Got any questions?**
-
 
 Feel free to share them with our **24/7 chat support**, or you can drop us a mail at support@testmuai.com. Happy testing!

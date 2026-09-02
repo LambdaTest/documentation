@@ -57,7 +57,6 @@ The sections below describe every available option in detail.
 | `profileId` | `string` | Load/save persistent browser profile |
 | `sessionContext` | `SessionContext` | Pre-load cookies, localStorage, sessionStorage |
 
-
 ## Browser Options
 
 | Option | Type | Default | Description |
@@ -80,14 +79,11 @@ The sections below describe every available option in detail.
 | `region` | `string` | TestMu AI data center region |
 | `optimizeBandwidth` | `boolean \| config` | Block images/media/styles |
 
-
 ## Extension Options
 
 | Option | Type | Description |
 |--------|------|----------------|
 | `extensionIds` | `string[]` | Chrome extension IDs to load |
-
-
 
 ## Session Object
 

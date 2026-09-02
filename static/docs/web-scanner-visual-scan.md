@@ -12,8 +12,6 @@ Scans run across combinations of:
 
 Results are redirected to the SmartUI Dashboard for detailed comparison.
 
-
-
 ## Step 2 (If Visual Scan is Selected)
 
 Once **Visual UI** is selected in Step 1 of the scheduling wizard, the following configuration appears.
@@ -24,8 +22,6 @@ Once **Visual UI** is selected in Step 1 of the scheduling wizard, the following
 * **Resolutions:** Desktop (1920x1080, 1366x768, 1024x768), Tablet, Mobile (Galaxy A12, Galaxy A31, iPhone 14 Pro)
 * **Full Page Mode “ON“:** Captures the full length of your website regardless of viewport height limitations.
 * **Delay “5 Seconds“:** To wait for animations or content to stabilize.
-
-
 
 ### Advanced Options (Visual UI)
 
@@ -38,10 +34,7 @@ You can create your own `.smartui.json` file for full control over:
 * Delay setting
 * The integrated JSON validator checks your configuration.
 
-
-
 #### Default SmartUI Config
-
 
 {`
   "web": {
@@ -78,40 +71,25 @@ You can create your own `.smartui.json` file for full control over:
   "useGlobalCache": false
 `}
 
-
 > **Note:** Using a SmartUI config bypasses manual browser, resolution, and delay selections, even in the "Edit Config" mode.
 
-
 #### Navigating Results for your Visual Scan
-
 
 ## Dashboard Overview
 
 After running your tests, the **Visual Build** becomes available in the dashboard.
 
-
-
 ### Build Status
 Easily track the state of each screenshot: **Approved**, **Changes Found**, **New**, **Under Review**, and more.
 
-
-
-
-
 ### Three-Dot Menu Options
 Access additional functions for your build:
-
-
 
 1. **View History**
    Browse older builds with complete stats for quick comparison.
 
 2. **Edit Scan Config**
    Modify scan settings such as **schedule** and **viewports**.
-
-
-
-
 
 3. **Run Scan Now**
    Run a new scan on demand and create a new build for comparison.
@@ -121,7 +99,6 @@ Access additional functions for your build:
 
 5. **Stop Recurring Scan**
    Halt any scheduled recurring scans instantly.
-
 
 **Access your SmartUI Dashboard**:
 SmartUI detects pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.

@@ -6,11 +6,9 @@ Chrome options, also known as Chrome arguments, are command-line switches that c
 
 ## Configure Chrome Options
 
-
 Follow these steps to add Chrome options to a web test session.
 
 ### Step 1: Create a Web Test
-
 
 In the KaneAI Web Agent interface, click **Create a Web Test** to open **Advanced Settings**.
 
@@ -18,28 +16,21 @@ In the KaneAI Web Agent interface, click **Create a Web Test** to open **Advance
 
 ### Step 2: Add Chrome Options
 
-
 Enable the Chrome options toggle, then enter each command-line switch. For each switch, select the argument type (**String** or **File**). You can enter up to 10 Chrome options. For example:
 
 - `--headless`
 - `--disable-gpu`
 - `--use-file-for-fake-audio-capture=/path/to/audio/file`
 
-
-
 **Result:** The Chrome options are queued to apply when the session launches.
 
 ### Step 3: Start the Web Agent
 
-
 Start the Web Agent to launch the session.
-
-
 
 **Result:** The browser launches with your Chrome options applied.
 
 ## Argument Types
-
 
 Each Chrome option accepts one of the following argument types.
 
@@ -50,7 +41,6 @@ Each Chrome option accepts one of the following argument types.
 
 ## Limitations
 
-
 Keep these limitations in mind:
 
 - You can configure up to 10 Chrome options per session.
@@ -58,7 +48,6 @@ Keep these limitations in mind:
 - If you provide no Chrome options, the browser launches with its default configuration.
 
 ## Next Steps
-
 
 Continue with these guides:
 

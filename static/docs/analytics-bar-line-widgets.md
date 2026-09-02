@@ -15,8 +15,6 @@ Bar chart widgets display data using rectangular bars where the length of each b
 - **Highlighting differences** between categories at a glance
 - **Grouped comparisons** when using the Group By feature
 
-
-
 ### Line Chart Widgets
 
 Line chart widgets display data as a series of points connected by lines. They are particularly effective for:
@@ -25,8 +23,6 @@ Line chart widgets display data as a series of points connected by lines. They a
 - **Identifying patterns** and anomalies in time series data
 - **Comparing multiple series** on the same chart
 - **Forecasting** based on historical patterns
-
-
 
 ## Prerequisites
 
@@ -37,14 +33,11 @@ Before creating a bar or line chart widget, ensure you have completed the [commo
 **Common Steps**
 For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the [Common Steps for Creating Custom Widgets](/docs/dashboards-custom-widgets#common-steps-for-creating-custom-widgets) section in the main Custom Widgets documentation.
 
-
 ### Step 6: Choose Visualization Type
 
 1. In the **Choose Visualisation** section, select either:
    - **Bar** for bar chart visualization
    - **Line** for line chart visualization
-
-
 
 ### Step 7: Configure What to Plot
 
@@ -74,9 +67,7 @@ This is the most critical step for creating meaningful charts:
 
 3. **Label for Y-Axis** (Optional): Provide a custom label for the Y-axis (e.g., "Number of Tests", "Average Duration (seconds)").
 
-
 For a complete list of available keys for each product, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
-
 
 ### Step 8: Configure Group By (Optional)
 
@@ -277,9 +268,7 @@ Bar and line charts provide interactive features to explore your data in detail:
 
 For a complete list of available keys that can be used for X-axis, Y-axis, and Group By fields in bar and line chart widgets, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 
-
 Choose keys that represent categorical dimensions (like browser, OS, project name) for X-axis, and numeric or countable fields for Y-axis aggregation. For time-based trends, use timestamp fields for the X-axis.
-
 
 ## Best Practices for Bar and Line Chart Widgets
 

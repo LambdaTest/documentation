@@ -8,8 +8,6 @@ Kane CLI closes that gap. Install one skill file and your agent gains a real Chr
 
 ## How AI Builders Work With Kane CLI
 
-
-
 The architecture is the same no matter which builder you use, and it has only three moving parts.
 
 **One skill file teaches the agent when and how to reach for a browser.** The skill is plain markdown. It tells the agent to use `kane-cli` rather than Playwright or Puppeteer directly, to always pass `--agent`, how to build the command, how to parse the output, and how to diagnose a failure. Install it once and the agent handles browser work automatically whenever you ask for it.
@@ -48,11 +46,7 @@ kane-cli login --username "<your-username>" --access-key "<your-access-key>"
 
 Confirm with `kane-cli whoami`. The skill runs this check itself before its first browser task. Sandboxed builders such as Lovable will ask you to complete the OAuth step in your own terminal and then hand them the username and access key.
 
-
-
 ## Claude Code
-
-
 
 The longest of these walkthroughs, and the one that covers the whole loop: static review, live verification, failure diagnosis, test authoring, and suite maintenance, all inside one session on a Next.js app with Supabase email-OTP login.
 
@@ -65,11 +59,7 @@ The longest of these walkthroughs, and the one that covers the whole loop: stati
 7. **Replay the suite and let the agent maintain it.** `kane-cli testmd run .testmuai/tests/kanecli-demo_test.md --agent` replays 12 cached steps with no LLM cost. On a later run it fails at step 7: the New-project modal's submit button had been renamed from **Create** to **Add project**, so the cached locator no longer matched. Claude reads the failure screenshot, correctly calls it an app change rather than a bug, and edits that one step so it re-authors against the current UI on the next run.
 8. **Finish on a verdict you can act on.** The final session reports Passed in 18 steps and 127.2s, with an assertions table listing each expectation against what was actually found, and a link straight into the KaneAI dashboard.
 
-
-
 ## Lovable
-
-
 
 Lovable builds the app and Kane CLI proves it works, without you opening the page yourself. The demo is a waitlist landing page for a fictional AI fitness product, tested end to end from inside Lovable's own sandbox.
 
@@ -82,13 +72,7 @@ Lovable builds the app and Kane CLI proves it works, without you opening the pag
 7. **Read the result.** Test passed in 11 steps and 188s, with every captured value quoted back: the heading it read, the email it typed, and the exact success text the page rendered.
 8. **Keep the test.** The run lands in Test Manager as **Join Waitlist and Verify Success Message**, with each assertion as its own replayable step alongside the recorded video.
 
-
-
 ## Cursor
-
-
-
-
 
 The one-time passcode is usually where browser automation stops. In Cursor it is just another clause in the sentence.
 
@@ -102,13 +86,7 @@ Kane CLI authenticates, launches Chrome, and generates a task with checkpoints f
 
 The run finishes with a plain-language summary of each of those steps and a share link to the generated test case, **Log In and Verify Welcome Message**, which replays the whole sign-in in Test Manager with the OTP step included. Nothing in the objective names a selector, and nothing in it works around the passcode.
 
-
-
 ## Gemini CLI
-
-
-
-
 
 A complete find, fix, and re-verify loop without leaving the CLI. This is the clearest example on the page of a failing run being useful.
 
@@ -120,13 +98,7 @@ A complete find, fix, and re-verify loop without leaving the CLI. This is the cl
 
 The failure is what made the bug visible. A test that only passed would have told you nothing about the price the customer would actually have been charged.
 
-
-
 ## Kiro
-
-
-
-
 
 Kane CLI ships as a first-class Kiro **Power**, so there is no skill file to place by hand.
 
@@ -138,13 +110,7 @@ Kane CLI ships as a first-class Kiro **Power**, so there is no skill file to pla
 
 Form validation, the error path, the successful auth, the redirect, and the protected page all verified from one sentence, with the run's `.evidence` pack kept locally for anything you want to inspect afterwards.
 
-
-
 ## Antigravity
-
-
-
-
 
 The lightest possible install: hand the agent a URL and let it read the skill for itself.
 
@@ -156,13 +122,7 @@ The lightest possible install: hand the agent a URL and let it read the skill fo
 
 Use the hosted skill URL for any agent that has no dedicated integration. It is the same instruction set the installer writes to disk.
 
-
-
 ## GLM
-
-
-
-
 
 Not every verification is functional. This one is a performance budget on a page built to look expensive.
 
@@ -177,8 +137,6 @@ GLM builds a cinematic, scroll-driven landing page for a premium audio brand: pi
 Kane CLI generates checkpoints from that description, scrolls the page to trigger lazy-loaded images and gallery requests, waits for each section to settle, and extracts the five metrics one at a time. The last step is the gate, and in the recorded run it is where the run ends rather than passing. That is the point of a budget: it holds the page to a number instead of to an impression, and it tells you the moment the number stops being met.
 
 Note the `--max-steps` cap on the command. A measurement objective with this many discrete extractions benefits from an explicit ceiling.
-
-
 
 ## Patterns That Work in Any Agent
 
@@ -195,9 +153,7 @@ The highest-value use of Kane CLI inside a coding agent is closing the loop betw
 5. It reports back in plain language whether the change works, quoting the assertions that passed or failed rather than telling you it "should" work.
 6. If the run failed, the agent already has everything it needs to iterate. Ask it to fix and re-verify, and it repeats the loop until the assertions pass.
 
-
 Ask for the verification in the same message as the change: *"…and verify it on staging when you're done."* The agent then treats a failing run as part of the task, not as a new one.
-
 
 ### Reproduce a Bug Report
 

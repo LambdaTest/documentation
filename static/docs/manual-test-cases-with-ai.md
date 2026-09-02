@@ -8,18 +8,10 @@ Test Manager enhances the process of manual test case creation by integrating AI
 
 1. After selecting your project and clicking to create a new test case, press Tab to generate the title using AI, in order to create a new test case.
 
-
-
 2. The test case is then created, redirecting to a screen listing all the test cases created.
-
-
 
 3. To add a new test case, click on the **Add Test Case** button on the right side and press Tab to generate the title using AI.
 
-
-
 4. Add steps to your test cases by clicking **Generate** or **Press Tab** allowing AI to create the test step.
-
-
 
 5. Click on **Save Test Case** to create the test steps and update your AI generated test cases.

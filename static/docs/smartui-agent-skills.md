@@ -33,16 +33,11 @@ cp -r agent-skills/smartui-skill .github/skills/
 cp -r agent-skills/smartui-skill .gemini/skills/
 ```
 
-
 If you prefer installing all available framework skills, clone the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
-
 
 ## Set Up Your Authentication
 
 Export your TestMu AI credentials and SmartUI project token as environment variables so the agent can run tests on the cloud:
-
-
-
 
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -50,17 +45,11 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 export PROJECT_TOKEN="YOUR_SMARTUI_PROJECT_TOKEN"
 ```
 
-
-
-
 ```powershell
 $env:LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 $env:LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 $env:PROJECT_TOKEN="YOUR_SMARTUI_PROJECT_TOKEN"
 ```
-
-
-
 
 ## How to Run Visual Tests Using the SmartUI Skill
 

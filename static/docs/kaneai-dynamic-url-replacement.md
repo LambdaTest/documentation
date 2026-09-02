@@ -8,26 +8,20 @@ Dynamic URL Replacement lets you run the same KaneAI test cases across multiple 
 
 ## Prerequisites
 
-
 You must have already set up your [KaneAI HyperExecute Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/).
 
 ## Use Dynamic URL Replacement
 
-
 Follow these steps to open a test run, set the pattern and replacement URLs, and execute the run against a different environment.
 
 ### Step 1: Open Test Run
-
 
 - Log in to TestMu AI.
 - Go to the Test Manager > Test Runs section.
 - Click on your desired **Test Run**.
 - Click the **Run on HyperExecute** button.
 
-
-
 ### Step 2: Configure Execution URL
-
 
 - In the Run on HyperExecute side drawer, locate the new field labeled **Replace Test Execution URL**.
 - Enter the **Pattern URL** (your original URL used in the tests) and **Replacement URL** (URL of different environment you want to test) in the text field.
@@ -36,20 +30,15 @@ Follow these steps to open a test run, set the pattern and replacement URLs, and
 
 ### Step 3: Execute Test Run
 
-
 - If the **Replace Test Execution URL** field is filled, the entered URL will override the default (Pattern) URL during execution.
 - If left empty, the test will run with the default URL.
 - Click on the **Execute** button
 
-
-
 ## Use It via API
-
 
 If you prefer to use the API to configure and execute tests with Dynamic URL Replacement, follow the instructions below:
 
 ### API Endpoint
-
 
 ```text title="POST request"
 https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
@@ -57,14 +46,12 @@ https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 
 ### Request Headers
 
-
 ```javascript
 Content-Type: application/json
 Authorization: Basic <Base64Auth>
 ```
 
 ### Request Body
-
 
 The following JSON payload demonstrates how to use the API to configure Dynamic URL Replacement:
 
@@ -94,7 +81,6 @@ The following JSON payload demonstrates how to use the API to configure Dynamic 
 
 ### Parameters Explained
 
-
 | Parameter | Description |
 |-----------|-------------|
 | `test_run_id` | The unique identifier for the test run. |
@@ -105,7 +91,6 @@ The following JSON payload demonstrates how to use the API to configure Dynamic 
 | `accessibility` | (Optional) Enable or disable accessibility testing. |
 
 ### Example cURL Command
-
 
 Here’s an example cURL command to trigger a test run with Dynamic URL Replacement:
 
@@ -133,7 +118,6 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 - Multiple `replaced_url` entries can be added to replace different URLs dynamically.
 
 ## Next Steps
-
 
 Continue with these guides:
 

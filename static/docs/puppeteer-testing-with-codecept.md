@@ -6,14 +6,12 @@ Learn how to run your Puppeteer tests with CodeceptJS across real browsers and o
 
 ## Prerequisites
 
-
 1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 **Sample repo**
 Download or clone the code sample for the Puppeteer Codecept from the TestMu AI GitHub repository to run the tests.
 
  View on GitHub
-
 
 ```js
 git clone https://github.com/LambdaTest/puppeteer-sample.git
@@ -36,9 +34,6 @@ npm install codeceptjs puppeteer --save
 
 4. To run Puppeteer tests with CodeceptJS, set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-
-
-
 **Windows**
 
 ```js
@@ -55,11 +50,9 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 ## Running Tests Using CodeceptJS
 
-
 >**Test Scenario**: The below test script searches TestMu AI on DuckDuckGo and verifies the website title.
 
 1. Navigate to the `codecept.conf.js` file in the `puppeteer-codecept` directory.
-
 
 ```js
 const { setHeadlessWhen } = require('@codeceptjs/configure');

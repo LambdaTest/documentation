@@ -10,14 +10,8 @@ A test case repository serves as a centralized location for all test cases withi
 
 2. By clicking on **Status**, filter the test cases by their current state - Draft, Open or Closed.
 
-
-
 3. The **Creator** option allows you to select test cases based on assignee.
 
-
-
 4. Select test cases based on **Tags**, which helps categorize and access tests more efficiently according to specific criteria.
-
-
 
 5. Lastly, there's flexibility to **Edit** or **Delete** the test cases enabling easy management and updates to your testing workflow.

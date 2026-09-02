@@ -8,7 +8,6 @@ TestMu AI integration with GoCD will help your perform Selenium test automation 
 
 ## Prerequisites
 
-
 1. Copy the YAML configuration file from our [GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample/blob/master/nightwatch-gocd-sample.gocd.yaml).
 
 2. **TestMu AI Authentication Credentials**
@@ -16,57 +15,34 @@ TestMu AI integration with GoCD will help your perform Selenium test automation 
 
     * **For Linux/Mac:**
 
-
     $ export LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
     $ export LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 
-
-
     * **For Windows:**
-
 
     $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
     $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 
-
-
 3. Make sure to install GoCD in your system.
 
 ## Configuring GoCD Pipeline For TestMu AI Selenium Grid
 
-
 **Step 1:** Visit your GoCD Dashboard and create a new pipeline by selecting the option to "Use Pipeline as Code".
-
-
 
 **Step 2:** Scroll-down to the section to "Register Your Pipelines as Code Repo with GoCD" and untick the box for using the same SCM repository.
 
-
-
 **Step 3:** Provide the [TestMu AI GitHub repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample) as the repository URL. Test you connection and provide a label for this repository. In our case, we have provided the label as Sample-Pipeline, you may keep something else for your instance.
-
-
 
 **Step 4:** After providing the GitHub repository, you will need to Scan it. Hit the highlighted button to Scan repository and you will notice that a respective YAML definition file would be through the repository.
 
-
-
 **Step 5:** After scanning the repository, you need to scroll to bottom and hit finish. Make sure to specify the username and password under the advanced setting, for private repositories.
-
-
 
 **Step 6:** Once you hit the finish button. Under the Config repositories, you will find the details of the repository as specified by you.
 
-
-
 **Step 7:** Now, if you visit your GoCD dashboard, you will find the pipeline generated and the job in running state.
 
-
-
 **Step 8:** If you open the pipeline and refer to the console then you will notice the current job status as passed.
-
-
 
 Great work! You have successfully integrated your GoCD instance with your TestMu AI account. Follow our another documentation, if you wish to configure a private YAML and then integrate your GoCD pipeline with TestMu AI.

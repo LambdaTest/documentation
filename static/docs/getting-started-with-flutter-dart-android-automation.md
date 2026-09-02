@@ -16,11 +16,7 @@ In this section, we will run your first Flutter Dart test on an **Android** devi
 2. You will need a TestMu AI username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
 3. Access to an android **Sample** app (.apk) and an **Sample Test Suite** app (.apk file).
 
-
-
 If you do not have any **Flutter Android** app (.apk) and an **Flutter Test Suite** app (.apk) file, you can run your sample tests on TestMu AI by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/sample-flutter-app.apk) and a sample :link: [Test Suite](https://prod-mobile-artefacts.lambdatest.com/assets/docs/sample-flutter-testsuite.apk).
-
-
 
 ### Run Your First Test
 
@@ -73,9 +69,7 @@ pushd android
 popd
 ```
 
-
 Avoiding this step might result in **No Tests Ran** issue on the dashboard
-
 
 To create APKs with optional Flutter parameters, first run the Flutter tests in verbose mode with the flutter cli. This allows you to see the Gradle command used internally to build the APKs.
 
@@ -97,37 +91,14 @@ Upload your **android** application (.apk file) to the TestMu AI servers using o
 
 **Using App File:**
 
-
-
-
-
-
-
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/sample-flutter-app.apk"' \
 --form 'type="flutter-android"'`}
 
-
-
-
-
-
-
-
-
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/proverbial_android.apk"" --form "type=\"flutter-android\""`}
 
-
-
-
-
-
-
-
 Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789123456789`` and will be used in the last step.
-
-
 
 #### Step 3: Uploading Test Suite
 
@@ -135,66 +106,28 @@ Upload your **test suite** (.apk file) to the TestMu AI servers using our **REST
 
 **Using App File:**
 
-
-
-
-
-
-
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/sample-flutter-testsuite.apk"' \
 --form 'type="flutter-android"'`}
 
-
-
-
-
-
-
-
-
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/proverbial_android_expressotest.apk"" --form "type=\"flutter-android\""`}
 
-
-
-
-
-
-
-
 Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789123456789`` and will be used in the next step.
-
-
 
 #### Step 4: Executing The Test
 
 ##### Basic Authentication
 
-
 You will need base64 encoded authentication in order to execute your Flutter automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
 
-
-
-
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-
-
 
 ##### Execute Command
 
 Once you have uploaded your app and test suite, you need to you can execute your test by running the following command:
 
-
 Make sure to enter your **basic authentication**, **app url** (generated in the first step) and **testSuite url** (generated in the second step) in the below command.
-
-
-
-
-
-
-
-
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \
@@ -210,30 +143,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 }'
 ```
 
-
-
-
-
-
-
-
-
-
-
 ```bash
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/android/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"], \"deviceLog\": true,\"network\": false,\"build\" : \"Sample-Flutter\"}"
 ```
 
-
-
-
-
-
-
 #### Step 5: View Test Execution
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [TestMu AI Automation](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
 
 ### Running Tests in Parallel
 
@@ -254,10 +170,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 }'
 ```
 
-
 Do note that Flutter builds when run in parallel, result in separate builds being generated for each parallel run.
-
-
 
 ### Auto-Grant Permissions for Android Apps
 
@@ -281,8 +194,6 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 }'
 ```
 
-
-
 ## Flutter Dart Testing on iOS
 
 In this section, we will explore how to run your first Flutter Dart test on an iOS device using the TestMu AI Real Device Cloud. By combining the capabilities of Flutter Dart and TestMu AI, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
@@ -293,11 +204,7 @@ In this section, we will explore how to run your first Flutter Dart test on an i
 2. You will need a TestMu AI username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/).
 3. Access to a Flutter **Sample** test suite (.zip).
 
-
-
 If you do not have any **Flutter iOS** test suite (.zip), you can run your sample tests on TestMu AI by using our sample :link: [Flutter iOS](https://prod-mobile-artefacts.lambdatest.com/assets/docs/Flutter_iOS.zip).
-
-
 
 ### Run Your First Test
 
@@ -307,12 +214,6 @@ Upload your **iOS** test suite (.zip file) to the TestMu AI servers using our **
 
 **Using App File:**
 
-
-
-
-
-
-
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/flutter-ios.zip"' \
@@ -320,55 +221,23 @@ Upload your **iOS** test suite (.zip file) to the TestMu AI servers using our **
 --form 'name="Sample App"'
 --form 'custom_id="Sample"'`}
 
-
-
-
-
-
-
-
-
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/flutter-ios.zip"" --form "type=\"flutter-ios\"" --form "name=\"Sample App\"" --form "custom_id=\"Sample\""`}
 
-
-
-
-
-
-
-
 Response of above cURL will be a **JSON** object containing the `App id` of the format - ``lt://APP123456789123456789123456789`` and will be used in the last step.
-
-
 
 #### Step 2: Executing The Test
 
 ##### Basic Authentication
 
-
 You will need base64 encoded authentication in order to execute your Flutter automation test suite. You need to enter your username:accesskey **[here](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** in order and click on encode to generate the base64 authentication. Take note of the **base64** encoded authentication which needs to be added in the next step.
 
-
-
-
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-
-
 
 ##### Execute Command
 
 Once you have uploaded your test suite, you can execute your test by running the following command:
 
-
 Make sure to enter your **basic authentication** and **app id** (generated in the first step) in the below command.
-
-
-
-
-
-
-
-
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build' \
@@ -385,25 +254,9 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 }'
 ```
 
-
-
-
-
-
-
-
-
-
-
 ```powershell
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"iPhone 14-16\"], \"video\": true, \"deviceLog\": true, \"queueTimeout\" : \"9000\",\"idleTimeout\" : \"600\",\"network\": true,\"build\" : \"Flutter iOS\"}"
 ```
-
-
-
-
-
-
 
 #### Step 3: View Test Execution
 
@@ -426,10 +279,7 @@ The following capabilities are supported:
 11. **gpsLocation:** This capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`.
 12. **enableBluetooth:** This capability is used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`
 
-
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
-
-
 
 ### Running Tests in Parallel on iOS
 
@@ -449,7 +299,5 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 "build": "Flutter iOS - Parallel"
 }'
 ```
-
-
 
 Do note that Flutter builds when run in parallel, result in separate builds being generated for each parallel run.

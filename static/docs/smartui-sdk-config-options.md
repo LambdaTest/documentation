@@ -12,13 +12,11 @@ To generate the SmartUI SDK configuration file, please execute the following com
 npx smartui config:create .smartui.json
 ```
 
-
 For the latest features including advanced configurations, ensure you are using the latest version of SmartUI CLI. Install or update using:
 
 ```bash
 npm install -g @lambdatest/smartui-cli@latest
 ```
-
 
 ## Configuration File Structure
 
@@ -55,9 +53,6 @@ The SmartUI configuration file follows a JSON structure. Below is a sample confi
 ```
 
 ## Configuration Options
-
-
-
 
 **browsers**
 
@@ -106,8 +101,6 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 ],
 ```
 
-
-
 **customViewports**
 
 The `customViewports` property provides a way to define precisely which browser + viewport combinations should be rendered. This bypasses the default **cartesian product behavior** (where every viewport is automatically rendered on every specified browser).
@@ -118,7 +111,6 @@ This is particularly useful if you need to enforce a specific screen size only o
 The `customViewports` option and the standard `browsers` / `viewports` arrays are **mutually exclusive**.
 - To use the standard cartesian matrix, configure `browsers` + `viewports`.
 - To specify distinct pairs, use `customViewports` **only**, and ensure `browsers` and `viewports` are removed from your `web` object.
-
 
 **How to configure `customViewports`:**
 
@@ -135,18 +127,12 @@ Below is an example of providing targeted sizes depending on the browser context
 
 *Note: As demonstrated with `safari` above, the `height` property within a viewport object is optional. If omitted, SmartUI performs a full-page capture automatically.*
 
-
-
-
-
 **devices**
 
 An array of mobile devices to capture screenshots from. List of supported device names can be found [here](#list-of-supported-device-viewports).
 
-
  Mobile viewports are emulated in desktop environments.Android devices will have the screenshots rendered in Chrome, while iOS devices in Safari.
  SmartUI SDK will soon be supported simulation in case of iOS devices.
-
 
 **fullPage**
 
@@ -155,10 +141,6 @@ Specifies whether to capture full-page screenshots for mobile devices. By defaul
 **orientation**
 
 Specifies the orientation of the mobile device. You can choose from `portrait` or `landscape` according to your usecase. By default, the orientation is taken as portrait.
-
-
-
-
 
 **waitForPageRender**
 
@@ -175,10 +157,6 @@ The `enableJavaScript` option is a boolean parameter that determines whether Jav
 **allowedHostnames**
 
 The `allowedHostnames` option controls the capture of assets from specific hostnames. By default, the SmartUI SDK only captures assets that match the hostname of the snapshot location. For instance, if snapshots are taken on `https://xyz.com`, assets hosted on `https://cdn.xyz.com` will not be captured. To include assets from other hostnames, each additional hostname needs to be added to the allowedHostnames configuration.
-
-
-
-
 
 **lazyLoadConfiguration**
 
@@ -208,12 +186,7 @@ Add the following configuration to your `.smartui.json` file:
 - `scrollDelay`: Delay in milliseconds between scroll actions (default: 250)
 - `scrollStep`: Pixels to scroll in each step (default: 250)
 
-
-
-
-
 **List of supported Device viewports**
-
 
 **Note:** Use the exact string names provided below in the `devices` array of your `.smartui.json` mobile configuration.
 

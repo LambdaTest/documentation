@@ -4,32 +4,20 @@
 
 TestMu AI allows you to run your tests from different geographies across the world.
 
-
-
-
-
-
-
 **NOTE**
 You cannot perform Geolocation testing with locally hosted web applications using TestMu AI Tunnel in a single test case. If you wish to perform both, then you can leverage parallel testing to run two tests simultaneously, one for Geolocation and the other for TestMu AI Tunnel.
 
-
-
 ## The geoLocation Capability
-
 
 | Key | Values | Capability Description  | Alias | Value Type | Example | Possible Errors |
 |-----|--------|-------------------------|-------|------------|---------|-----------------|
 | `geoLocation` | Example: US | This capability lets you run Selenium automation tests from different countries. `capabilities.setCapability("geoLocation","US");` |geo | String |`capabilities.setCapability("geoLocation","US");`|Case Sensitive Invalid location error
 
-
 > **NOTE:** Verify whether your geolocation IP address is working via [MaxMind's GeoIP Web Services](https://www.maxmind.com/en/geoip-web-services-demo).
 
 ## Supported Countries
 
-
 You can run Selenium automation tests from the following countries.
-
 
 View all supported countries (100+)
 
@@ -139,13 +127,9 @@ View all supported countries (100+)
 | Venezuela       | "VE" |
 | Vietnam         | "VN" |
 
-
-
 ## List of Supported Timezones
 
-
 The following timezones are supported for automation testing on the TestMu AI platform. Pair the `geoLocation` capability with a timezone override to test across different timezones and validate locale-specific behavior. To reproduce real-world regional conditions more closely, you can also simulate network conditions such as 2G, 3G, or LTE alongside the location. See the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) to combine geolocation with other test configurations.
-
 
 View all supported timezones
 
@@ -578,10 +562,7 @@ View all supported timezones
 | Wake | Pacific/Wake | UTC+12 |
 | Wallis | Pacific/Wallis | UTC+12 |
 
-
-
 ## Next Steps
-
 
 Continue with these related guides:
 

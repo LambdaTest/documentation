@@ -53,9 +53,7 @@ A test marked `passed` that still has a `failed` or `broken` step is a **warning
 
 kane-cli packs carry the captured layer, so they validate at `L1`. That is the default for this command.
 
-
 A missing per-step screenshot is a **warning**, not an error. Not every framework captures a frame per step, and not every step needs a folder.
-
 
 ## When a pack will not open
 

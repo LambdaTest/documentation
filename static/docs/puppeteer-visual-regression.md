@@ -10,29 +10,17 @@ This documentation will act as your step-by-step guide in to perform Puppteer te
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-
-
-
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
-
-
-
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
-
-
-
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
 ```
-
-
-
 
 The following steps will guide you in running your first Visual Regression test on TestMu AI platform -
 
@@ -46,8 +34,6 @@ To create a SmartUI Project, follow these steps:
 3. Select the platform as Web for executing your `Puppeteer` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
-
-
 
 ### **Step 2:** Configure your test with Puppeteer Desired Capabilities
 

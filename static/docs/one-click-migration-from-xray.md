@@ -12,9 +12,7 @@ TestMu AI Test Manager supports one-click migration from **X-Ray (Jira Cloud)**,
 - **Attachments included**: File attachments are downloaded from Jira and re-uploaded to Test Manager, including step-level references.
 - **Real-time progress tracking**: A progress bar shows migration status so you know exactly where things stand.
 
-
 This migration supports **X-Ray Cloud (Jira Cloud)** only. X-Ray Server and Data Center are not supported at this time.
-
 
 ## Prerequisites
 
@@ -32,9 +30,7 @@ You need your X-Ray Cloud API credentials (Client ID and Client Secret). Refer t
 3. Under **API Keys**, generate a new API key pair if you do not already have one.
 4. Copy the **Client ID** and **Client Secret**.
 
-
 The Client Secret is shown only once. Store it securely before proceeding.
-
 
 #### Jira Cloud Credentials
 
@@ -54,8 +50,6 @@ To migrate linked Jira issues and requirements, you must have the corresponding 
 - Your Jira account must have **read access** to the project you are migrating.
 - Your X-Ray API key must have permission to access test cases and test sets in the target project.
 
-
-
 ## Step-by-Step Migration Guide
 
 ### Step 1: Open the Migration Tool
@@ -64,8 +58,6 @@ To migrate linked Jira issues and requirements, you must have the corresponding 
 2. Navigate to **Test Manager Projects** from the left sidebar.
 3. Click the **Import data** option on the Project Listing page.
 4. Select **X-Ray Cloud** as the migration source from the **Import from** dropdown.
-
-
 
 ### Step 2: Enter Your Credentials
 
@@ -81,27 +73,18 @@ Fill in the following fields:
 
 Click **Continue**. The system validates both your Jira and X-Ray credentials in parallel. If either set is invalid, an error message indicates which credentials need to be corrected.
 
-
-
 ### Step 3: Select the Jira Project
 
 1. After successful validation, a list of your Jira projects containing X-Ray test cases is displayed.
 2. Select the **project** you want to migrate from. You can select multiple projects at once.
 3. Click **Start Migration**.
 
-
-
 ### Step 4: Monitor Progress
 
 - A **progress bar** shows real-time migration status.
 - The migration processes test cases in batches. Depending on the size of your test library, the complete process may take some time.
 
-
-
 - You can navigate away from the page and continue other work. The migration continues in the background. Once the migration is complete, you will receive an email notification.
-
-
-
 
 ### Step 5: Review the Results
 
@@ -111,10 +94,6 @@ Once migration completes:
 2. Navigate to the **Test Cases** section in any of your migrated projects.
 3. Verify that your test cases, folder structure, and attachments have been imported correctly.
 4. Check a few test cases to confirm that steps, custom fields, and linked requirements are intact.
-
-
-
-
 
 ## What Gets Migrated
 
@@ -132,13 +111,10 @@ The following entities and data are transferred from X-Ray to Test Manager durin
 | **Linked Issues / Requirements** | Jira issue links and requirement associations are preserved. Requires [Jira integration](https://www.testmuai.com/support/docs/link-jira-issues-with-test-manager/) to be configured. |
 | **X-Ray Test Key** | The original X-Ray test key is imported within tags, enabling quick reference and filtering in Test Manager. |
 
-
 X-Ray fields that cannot be directly mapped to system fields in Test Manager are automatically imported as custom fields. These may include Reporter, Assignee, Environment, Fix Version, Components, etc.
-
 
 **Test Data Migration**
 Test Data from X-Ray steps is migrated as a single textarea custom field at the test case level, with textual data consolidated together. This is because Test Manager does not currently support a step-level Test Data field.
-
 
 ## What Does Not Get Migrated
 
@@ -151,8 +127,6 @@ The migration focuses exclusively on your **test library**: definitions, structu
 | **Datasets** | Datasets and their corresponding parameters are not imported. |
 | **Standalone Preconditions** | Precondition text is captured within individual test cases, but standalone precondition objects are not migrated as independent reusable entities. |
 
-
-
 ## Test Steps Handling
 
 ### Manual Tests
@@ -160,8 +134,6 @@ Manual test cases are migrated with their full step definitions. Each step's **S
 
 ### BDD / Gherkin Tests
 For BDD-type test cases in X-Ray, the full **Gherkin scenario** text (Given/When/Then) is extracted and stored in the test case as structured BDD content under the **BDD Scenarios** template in Test Steps.
-
-
 
 ## Troubleshooting
 
@@ -173,8 +145,6 @@ For BDD-type test cases in X-Ray, the full **Gherkin scenario** text (Given/When
 | **Migration stalls or takes too long** | Large projects (thousands of test cases with attachments) may take 10–30 minutes. If it does not resume after 30 minutes, re-initiate the migration. |
 | **Missing attachments** | Verify that the Jira API token has permission to download attachments from the source project. |
 | **Custom fields not appearing** | Custom fields are auto-created during migration. Navigate to **Project Settings > Custom Fields** to verify they exist and are enabled. |
-
-
 
 ## FAQ
 
@@ -190,7 +160,6 @@ No. The migration is **read-only** on the X-Ray side. Your X-Ray test cases, tes
 
 Yes. You can re-run the migration for the same project(s). Review the results after each run.
 
-
 **Are Gherkin/BDD scenarios preserved exactly as written?**
 
 Yes. The full Gherkin text (Feature, Scenario, Given/When/Then blocks) is extracted and stored in the Test Manager test case with formatting and step structure preserved.
@@ -202,8 +171,6 @@ Test cases without steps are still migrated. The test case metadata (title, desc
 **Is X-Ray Server (Data Center) supported?**
 
 No. This migration currently supports **X-Ray Cloud** (on Jira Cloud) only.
-
-
 
 ## Known Limitations
 

@@ -18,7 +18,6 @@ Even when the CPU architecture (e.g., arm64) matches between device and Simulato
 **Common Mistake**
 Building your app for a physical device (e.g., selecting **Any iOS Device** in Xcode) and then uploading it to the Simulator will cause an immediate crash with errors like **"App quit unexpectedly."** You must build targeting the **iOS Simulator** SDK.
 
-
 ## Prerequisites
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) installed on a Mac (macOS 13 or later recommended)
@@ -35,7 +34,6 @@ This is the most common method. Xcode handles the platform switching automatical
 
 **Important**
 Do **not** select **Any iOS Device** or a physical device plugged into your Mac. You must select a Simulator destination.
-
 
 **Step 3:** Press **Cmd + B** or go to **Product > Build** to build the application.
 
@@ -66,9 +64,7 @@ xcodebuild -project YourProject.xcodeproj \
 build
 ```
 
-
 If your project uses a **workspace** (e.g., with CocoaPods), replace `-project YourProject.xcodeproj` with `-workspace YourProject.xcworkspace`.
-
 
 **Key flags explained:**
 
@@ -133,7 +129,6 @@ lipo -info YourApp.app/YourApp
 ```
 This displays the architectures included in the binary (e.g., `arm64`).
 
-
 ## Uploading to TestMu AI
 
 Once you have a verified Simulator build (`.zip` containing the `.app`):
@@ -165,7 +160,5 @@ Ensure you are compressing the `.app` bundle directly into a `.zip` file. The `.
 
 ### Build fails with architecture errors
 Ensure the `-arch arm64` flag is set. Your Simulator build must include the arm64 architecture.
-
-
 
 That's all! In case you have any questions or need any additional information, you could reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.

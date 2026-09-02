@@ -4,9 +4,7 @@
 
 Capabilities in Selenium test scripts, encoded as key-value pairs, allow you to define specific test environment requirements. These requirements include operating systems, browser combinations, versions, and other parameters supported by TestMu AI's Cloud Grid to run your automation framework tests.
 
-
 You can also use TestMu AI [Automation Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to autogenerate your required capabilities class to run Selenium test scripts on TestMu AI.
-
 
 >The values provided for any capability are both **space-insensitive** and **case-insensitive**. This means that any value you provide as **Mac OS X 10.13** or **mac os x 10.13** would be correct.
 
@@ -91,147 +89,67 @@ Beyond the version-specific capabilities above, the following ones give you more
 
 Once you have configured the capabilities above, explore the related guides below for headless testing, custom profiles, network controls, logs, tunnels, and other advanced session features.
 
-
-
-
     Headless Browser Testing
     Run automated tests in browsers without a graphical user interface.
-
-
-
-
 
     Custom Chrome Profile
     Configure a custom Chrome profile with specific extensions or settings for your tests.
 
-
-
-
-
     Network Throttling
     Simulate different internet connection speeds to test website behavior under various network conditions.
-
-
-
-
 
     Custom DNS Mapping
     Map custom domain names to specific IP addresses for your testing needs.
 
-
-
-
-
     Lighthouse Performance Metrics
     Analyze website performance metrics within your tests using Lighthouse.
-
-
-
-
 
     Generate Multiple Lighthouse Reports
     Run multiple Lighthouse audits and generate reports for comparison.
 
-
-
-
-
     Debugging Options
     Use debugging tools provided by TestMu AI to troubleshoot your tests.
-
-
-
-
 
     Telemetry Logs
     Access detailed logs generated during your test execution for analysis.
 
-
-
-
-
     SmartWait Functionality
     Use TestMu AI's SmartWait feature to wait for elements to become interactive before proceeding with tests.
-
-
-
-
 
     CustomHeaders
     Set custom headers in your test requests to simulate specific scenarios.
 
-
-
-
-
     Autohealing
     Use TestMu AI's autohealing functionality to recover automatically from unexpected session issues.
-
-
-
-
 
     Command Annotations
     Use TestMu AI's command annotations to control test execution flow.
 
-
-
-
-
     HAR Logs
     Analyze network traffic during your tests using HTTP Archive (HAR) logs.
-
-
-
-
 
     Mask your Sensitive Data
     Protect sensitive information like passwords or tokens from being exposed in test logs.
 
-
-
-
-
     Test in IE Mode on Microsoft Edge
     Run legacy Internet Explorer tests in IE mode on Microsoft Edge.
-
-
-
-
 
     Run a Pre-Test Executable
     Execute a pre-run executable to prepare the VM before your test starts.
 
-
-
-
-
     WebDriver BiDi Testing
     Run web automation tests using the WebDriver BiDi protocol.
-
-
-
-
 
     Inject a Mock Video Stream
     Inject a mock video stream into Selenium and Chromium web automation tests.
 
-
-
-
-
     Test Locally Hosted Websites
     Test locally hosted websites with Selenium using TestMu AI Tunnel.
-
-
-
-
 
 >Got any questions?
 Please reach out at our **24x7 Chat Support** or you could also mail us at support@testmuai.com.
 
 ## Next Steps
-
 
 Continue with these related guides:
 
@@ -240,8 +158,6 @@ Continue with these related guides:
 - [IE Mode on Edge](/support/docs/ie-mode-on-edge/)
 - [Run Selenium Tests Behind the Proxy](/support/docs/selenium-tests-behind-proxy/)
 - [Custom DNS Map](/support/docs/custom-dns-map/)
-
-
 
 [1]: https://www.testmuai.com/capabilities-generator/
 

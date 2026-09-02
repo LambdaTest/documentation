@@ -14,17 +14,11 @@ TestMu AI's integration with PractiTest will further help to log bugs to your pr
 
 **Step 3:** Click on **Connect** button of PractiTest block.
 
-
-
-
-
 **Step 4:** Now, provide your PractiTest API Token and Teamwork site address to establish integration with TestMu AI and click on install button.
 
 **How to Get your API Token**
 
 Visit your PractiTest Dashboard -> Settings -> API Tokens.
-
-
 
 ## Lodge your First Bug
 
@@ -41,10 +35,6 @@ Visit your PractiTest Dashboard -> Settings -> API Tokens.
 - Set the priority of the issue.
 - Mention the Title as well to easily organize your bugs.
 - Write a description to help relate the cause of the issue or the task.
-
-
-
-
 
 ## Uninstall PractiTest Integration
 

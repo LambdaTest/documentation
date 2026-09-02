@@ -6,7 +6,6 @@ Run your Playwright tests on the TestMu AI cloud grid to reach 50+ real desktop 
 
 ## Prerequisites
 
-
 Before running any framework below, you need a TestMu AI account, your credentials, Node.js and npm, and the Playwright sample repository.
 
 1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile section. Don't have an account? Sign up for free.
@@ -16,7 +15,6 @@ Before running any framework below, you need a TestMu AI account, your credentia
 **Sample repo**
  View on GitHub
 
-
 ```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
@@ -24,41 +22,17 @@ cd playwright-sample
 
 You can find your Username and Access Key on the TestMu AI Automation Dashboard by clicking the **Access Key** button at the top-right.
 
-
-
 ## Set Your Credentials
 
-
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
-
 ## How the Sample Test Works
-
 
 Every framework below builds a `capabilities` object (browser, version, platform, and your `LT:Options`) and connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`:
 
@@ -68,18 +42,11 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 
 What changes between them is only the setup file that holds this connection: a Playwright test fixture, a runner config, or a Cucumber.js world. That is what each tab covers.
 
-
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
-
 
 ## Run a Test in Your Framework
 
-
 Each tab lists the framework-specific pieces. Move into the matching subdirectory of the cloned repo, edit the setup file that holds the grid connection, install dependencies, then run.
-
-
-
-
 
 The JavaScript path connects to the grid through a Playwright Test fixture in `lambdatest-setup.js`, which patches the capabilities per project and reports test status.
 
@@ -173,10 +140,6 @@ await use(page)
 ```bash
 npm run test
 ```
-
-
-
-
 
 TypeScript uses the same fixture pattern, written in `lambdatest-setup.ts`, which builds the capabilities object and connects Playwright to the grid.
 
@@ -286,10 +249,6 @@ export default test;
 npm run test
 ```
 
-
-
-
-
 Jest connects through `jest-playwright.config.js`, which defines a `connectOptions` endpoint per browser (Chromium, Firefox, WebKit), each with its own capabilities.
 
 1. Go to the sample directory and install dependencies:
@@ -381,10 +340,6 @@ browsers: ['chromium', 'firefox', 'webkit'],
 ```bash
 npm run test
 ```
-
-
-
-
 
 Cucumber.js runs BDD scenarios written in Gherkin. The grid connection lives in a `setup.js` file, where a Cucumber `Before` hook builds the capabilities object and connects Playwright to the grid.
 
@@ -519,17 +474,11 @@ throw(e);
 
 4. Run your test.
 
-
-
-
-
 ## View Your Results
-
 
 Go to the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your Playwright test results, including video, network logs, and command-by-command execution.
 
 ## Related Playwright Guides
-
 
 Continue with these related guides:
 

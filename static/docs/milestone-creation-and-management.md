@@ -11,7 +11,6 @@ This guide provides a comprehensive walkthrough for creating and managing milest
 - Navigate to the Milestone section in the TestMu AI dashboard.
 - Click **"Create Milestone**" and locate the Create Milestone button and click it to start the creation process.
 
-
 ### Step 2: Provide the required configurations
 - Enter the following mandatory fields:
     - **Milestone Name :** Provide a clear and descriptive name for the milestone.
@@ -23,11 +22,9 @@ This guide provides a comprehensive walkthrough for creating and managing milest
         - **Duration :** Set the expected duration for completing the milestone.
         - **Attachments :** Upload any relevant files or documentation.
 
-
 ### Step 3: Finalize the Milestone
 - Review all entered details for accuracy.
 - Click **Create Milestone** to finalize the creation.
-
 
 ## Managing Milestones
 ### Viewing Milestone Details
@@ -35,17 +32,14 @@ Once created, all milestones are listed for easy tracking. You can:
 - Select a specific milestone to view its detailed information.
 - Access associated test runs and other milestone attributes.
 
-
 ### Marking Milestones as Completed
 When a milestone is finished, you can mark it as Completed:
 - Navigate to the desired milestone.
 - Use the Mark as Completed option to update its status.
 
-
 ### Viewing Completed Milestones
 To review completed milestones:
 - Navigate to the View Completed section in the milestone management area.
 - This section provides a history of all milestones marked as complete.
-
 
 ## Video Explanation

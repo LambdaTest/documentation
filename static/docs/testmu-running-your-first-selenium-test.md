@@ -7,13 +7,9 @@ This guide walks you through running a sample Selenium test on the TestMu AI clo
 **Sample repo**
 All the code used in this guide is available in the sample repository. Clone it to get started.
 
-
  View on GitHub
 
-
-
 ## Prerequisites
-
 
 Make sure you have the following set up before you start.
 
@@ -22,7 +18,6 @@ Make sure you have the following set up before you start.
 3. Install [Python](https://www.python.org/downloads/) 3.7 or later (`pip` is included).
 
 ## Step 1: Clone the Sample Project
-
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
@@ -33,7 +28,6 @@ cd pytest-selenium-sample
 
 ## Step 2: Install Dependencies
 
-
 Install the project's Python dependencies, including Selenium, pytest, and pytest-xdist (for parallel runs), from `requirements.txt`.
 
 ```bash
@@ -42,38 +36,17 @@ pip install -r requirements.txt
 
 ## Step 3: Set Your Credentials
 
-
 Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
 Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then set them as environment variables:
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
-
-
-
 
   {`$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 $env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
 ## Step 4: Configure Your Test Capabilities
-
 
 Define which browser, version, and OS your test runs on.
 
@@ -102,40 +75,17 @@ Within the fixture, `selenium_endpoint`, `test_name`, and `build` are derived fr
 
 You can customize these values to test on any browser, version, or OS. Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities code for your target configuration.
 
-
 For the full list of supported capabilities, see [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
-
 
 ## Step 5: Run the Test
 
-
 Trigger the test from your terminal. Run a single test, or run in parallel with `pytest-xdist`:
-
-
-
-
-
-
 
   {`pytest -s tests/lt_sample_todo.py`}
 
-
-
-
-
-
-
-
-
   {`pytest -s -n=2 tests/lt_sample_todo.py`}
 
-
-
-
-
-
 ## Step 6: View Your Results
-
 
 Check the Automation Dashboard to see exactly what happened during your test.
 
@@ -147,10 +97,7 @@ Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redir
 - **Network logs** for every request and response
 - **Selenium command logs** showing each driver action
 
-
-
 ## Next Steps
-
 
 Continue with these related guides:
 

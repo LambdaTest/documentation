@@ -6,8 +6,6 @@ Pipecat is an open-source Python framework where the pipeline is assembled by ha
 
 ## Before You Begin
 
-
-
 Before you connect a Pipecat bot, make sure you have:
 
 - A deployed Pipecat bot with a reachable transport
@@ -17,23 +15,17 @@ Before you connect a Pipecat bot, make sure you have:
 
 ## Test a Pipecat Phone Agent
 
-
-
 Phone testing covers callers arriving over Twilio, Telnyx, or Plivo media streams. Paste the agent's prompt to generate scenarios, then add the number bound to the telephony transport and pick from 100+ voices, background noise conditions, and personas. It covers DTMF entry, transfers, voicemail handling, and carrier latency.
 
 Full setup: [Phone agent testing](/support/docs/phone-agent/)
 
 ## Test a Pipecat Voice Agent
 
-
-
 Voice testing applies to bots reached over a direct audio stream rather than a phone number. Paste the prompt to generate scenarios, then create the endpoint profile using WebRTC or WebSocket, matching the transport the bot was built on. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise in the results.
 
 Full setup: [Voice agent testing](/support/docs/voice-agent/)
 
 ## What You Get With Agent Testing
-
-
 
 Every Pipecat run, on any surface it supports, is scored across:
 
@@ -46,8 +38,6 @@ Every Pipecat run, on any surface it supports, is scored across:
 
 ## Pipecat-Specific Considerations
 
-
-
 A few Pipecat behaviours are worth building dedicated scenarios around:
 
 - No hosted dashboard and no agent ID. Connection details come from the team's own deployment
@@ -57,8 +47,6 @@ A few Pipecat behaviours are worth building dedicated scenarios around:
 - There is no text channel to test, so the page covers phone and voice only
 
 ## Troubleshooting
-
-
 
 Common failure modes to watch for:
 

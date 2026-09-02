@@ -131,48 +131,27 @@ await smartuiSnapshot(driver, 'Content Only', options);
 
 ## Best Practices
 
-
-
-
 **Trust Automatic Handling**
 
 SmartUI's automatic handling works for most cases. Only use manual configuration if you encounter specific issues.
-
-
-
 
 **Test Sticky Element Pages**
 
 Verify that pages with sticky elements work correctly with SmartUI before running full test suites.
 
-
-
-
 **Review Snapshots**
 
 Occasionally review captured snapshots to ensure sticky elements are handled correctly.
 
-
-
-
 **Combine with Other Features**
 
 You can combine sticky element handling with other SmartUI features like dynamic data handling.
 
-
-
-
 **Combine with Other Features**
 
 You can combine sticky element handling with other SmartUI features like dynamic data handling.
-
-
-
 
 ## Troubleshooting
-
-
-
 
 **Issue: Sticky Elements Still Causing False Positives**
 
@@ -193,9 +172,6 @@ cssSelector: [".sticky-header .notification-badge"]
 await smartuiSnapshot(driver, 'Page', options);
 ```
 
-
-
-
 **Issue: Sticky Elements Not Visible in Snapshots**
 
 **Symptoms**: Sticky elements don't appear in captured screenshots
@@ -211,9 +187,6 @@ await driver.wait(until.elementLocated(By.css('.sticky-header')), 10000);
 await smartuiSnapshot(driver, 'Page');
 ```
 
-
-
-
 **Issue: Sticky Elements Overlapping Content**
 
 **Symptoms**: Sticky elements appear to overlap with page content
@@ -222,9 +195,6 @@ await smartuiSnapshot(driver, 'Page');
 1. This is normal behavior - SmartUI positions elements at their original location
 2. If overlap causes issues, use `ignoreDOM` for the sticky element
 3. Consider using viewport screenshots instead of full-page for specific tests
-
-
-
 
 ## Limitations
 
@@ -242,7 +212,6 @@ await smartuiSnapshot(driver, 'Page');
 
 - Very complex sticky behaviors (multiple sticky elements, conditional stickiness) may need manual configuration
 - Test thoroughly before relying on automatic handling
-
 
 ## Additional Resources
 

@@ -4,7 +4,6 @@
 
 Transfer files between your local machine and cloud browser sessions. Handle document uploads, file exports, and downloads without external storage services.
 
-
 ## Why You Need This
 
 Your agent is filling out a government form that requires a document upload. The
@@ -17,7 +16,6 @@ and a remote cloud browser on TestMu AI Browser Cloud - without needing
 external storage services like S3 or GCS. Files are sent directly through the
 browser's page context using Base64 encoding.
 
-
 ## Upload a File to the Cloud Browser
 
 ```typescript
@@ -27,7 +25,6 @@ await client.files.uploadToSession(session.id, fileBuffer, 'document.pdf');
 
 **How it works:** The buffer is Base64-encoded, sent to the cloud browser via
 `page.evaluate()`, decoded in the browser, and set on the file input element.
-
 
 ## Download a File from the Cloud Browser
 
@@ -47,7 +44,6 @@ fs.writeFileSync('report.csv', result);
 For files triggered by button clicks (not direct URLs), the service uses CDP's
 `Fetch.enable` to intercept the download.
 
-
 ## Session-Scoped File API
 
 All file operations are also available under `client.sessions.files`:
@@ -65,7 +61,6 @@ await client.sessions.files.delete(session.id, '/path/to/file');
 
 await client.sessions.files.deleteAll(session.id);
 ```
-
 
 ## File Info
 

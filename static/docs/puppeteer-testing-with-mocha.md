@@ -6,12 +6,9 @@ If you write Puppeteer tests with Mocha, you can run the same specs across real 
 
 ## Prerequisites
 
-
 Before you run your first suite, clone the sample repository and set the credentials TestMu AI uses to authenticate your session.
 
-
 All the code samples in this documentation are available in the TestMu AI repository on GitHub. Download or clone the repository to run your tests quickly.
-
 
  View on GitHub
 
@@ -24,8 +21,6 @@ npm install
 ```
 
 3. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find them.
-
-
 
 **Windows**
 
@@ -42,7 +37,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Run Puppeteer Mocha Tests on TestMu AI
-
 
 The sample test script searches for TestMu AI on DuckDuckGo and verifies the page title. Configure the capabilities, then run the suite with a single command.
 
@@ -138,7 +132,6 @@ npm run test
 
 ## Using the Mocha Agent Skill With TestMu AI
 
-
 The Mocha Agent Skill helps AI coding assistants generate production-ready Mocha test automation for TestMu AI. It is part of the [TestMu AI agent skills collection](https://github.com/LambdaTest/agent-skills/), and you can read the [Mocha Agent Skill reference on GitHub](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill).
 
 The mocha-skill package includes the following files:
@@ -162,7 +155,6 @@ It provides structured guidance for the following areas:
 
 ### Installing the Mocha Agent Skill
 
-
 Clone the agent skills repository and copy the Mocha Agent Skill into your tool's skills directory.
 
 ```bash
@@ -174,12 +166,9 @@ cp -r agent-skills/mocha-skill .claude/skills/
 cp -r agent-skills/mocha-skill .cursor/skills/
 ```
 
-
 To install all available framework skills instead of only the Mocha Agent Skill, clone the repository directly into your tool's skills directory (for example, `.claude/skills/`, `.cursor/skills/`, `.gemini/skills/`, or `.agent/skills/`).
 
-
 ## Related Puppeteer Guides
-
 
 Continue with the guides below to configure and scale your Puppeteer runs on TestMu AI.
 

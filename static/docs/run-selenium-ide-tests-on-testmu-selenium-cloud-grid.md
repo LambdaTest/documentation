@@ -8,8 +8,6 @@ In this document, we will see how to run Selenium IDE tests on TestMu AI cloud [
 
 ## Prerequisites
 
-
-
 *   [Node.js](https://nodejs.org/en/download/) programming language (version 8 or 10).
 *   [NPM or Node.js Package Manager](https://www.npmjs.com/get-npm).
 *   Selenium IDE Plugin, for either [Google Chrome](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd?hl=en) and [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/).
@@ -19,16 +17,11 @@ In this document, we will see how to run Selenium IDE tests on TestMu AI cloud [
 npm install -g selenium-side-runner
 ```
 
-
 *   You also need your TestMu AI authentication credentials, which includes your TestMu AI username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [TestMu AI automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner.
-
-
 
 For the demonstration of executing Selenium IDE tests on the TestMu AI grid, we’ll create a test suite that comprises of four test cases- two to perform a search for ‘TestMu AI’ on Google & DuckDuckGo, and the other two to perform a search for ‘TestMu AI Blog’ on Google & DuckDuckGo.
 
 ## Enabling Parallel Testing for Selenium IDE
-
-
 
 The parallel testing on the [Cloud Selenium Grid](https://www.testmuai.com/selenium-automation/) works only when the tests are executed using the SIDE Runner, and not the Selenium IDE. So we will enable the Parallel testing for Selenium IDE.
 
@@ -39,8 +32,6 @@ The parallel testing on the [Cloud Selenium Grid](https://www.testmuai.com/selen
 We have successfully activated Parallel Testing in Selenium IDE. Now we can execute tests Selenium IDE tests in parallel on TestMu AI Selenium Cloud Grid.
 
 ## Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid
-
-
 
 1.  **Set the [Selenium Automation Capabilities](/docs/selenium-automation-capabilities/).** For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
 
@@ -62,13 +53,11 @@ In the string format, it will be represented as: **"browserName='chrome' version
 https://user-name:access-key@hub.lambdatest.com/wd/hub
 ```
 
-
 3.  **Specify the desired capabilities along with the Grid URL.** Replace the desired capabilities and the Grid URL from the above steps in the below code:
 
 ```javascript
 selenium-side-runner --server <lambdatest grid="" url=""> --capabilities </lambdatest>
 ```
-
 
 4.  **Mention the number of parallel processes to be executed at a time.** You can use any of the below syntax to specify the count of parallel processes to be executed at the above mentioned Grid URL:
 ```javascript
@@ -88,14 +77,11 @@ selenium-side-runner --max-workers <num of="" parallel="" processes="">--server 
 selenium-side-runner -w 4 "LambdaTest-IDE.side" --server https://user-name:acces-key@hub.lambdatest.com/wd/hub -c "browserName='chrome' version='72.0' platform='Windows 10'"
 ```
 
-
 We have successfully executed all the steps to run Selenium IDE tests on TestMu AI Selenium Cloud Grid. Now you can see our tests being executed along with their status in the [Automation Timeline of your TestMu AI profile](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline).
 
 Below are the execution snapshots of the SIDE Runner and the automation timeline instance, that shows the successful execution of the desired tests:
 
 ## How To Run Multiple Test Cases Within Same Test Suite?
-
-
 
 You might have lots of individual tests in a single test suite to test all features of a site. When you run these tests normally, you might experience that the test suites get broken into individual tests, thereby requiring a new session and the variables being passed again each time.
 
@@ -108,8 +94,5 @@ Selenium IDE provides the feature to overcome this as well. In order to run mult
 ```javascript
 selenium-side-runner --params "a='example-value' a.b='another example-value' a.b.c=[1,2,3]"
 ```
-
-
-
 
 Congrats! We have successfully executed our Selenium IDE tests on TestMu AI Selenium Cloud Grid, which allows you to perform live interactive and automated [cross browser testing](https://www.testmuai.com) on 3000+ real browsers and operating systems online.

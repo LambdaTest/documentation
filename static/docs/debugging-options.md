@@ -68,12 +68,6 @@ To trace each request, you can use Selenium 4 and OpenTelemetry integration to a
 
 Managing several requests, tracing logs, and troubleshooting request failures in a distributed environment can be challenging. In such instances, you can integrate Telemetry logs with Jaeger - a distributed tracing system - to quickly visualize and query traces.
 
-
-
-
-
-
-
 ### Supported Operating Systems
 
 Telemetry logs are available on these operating systems.
@@ -90,7 +84,6 @@ Pass the `seTelemetryLogs` and `selenium_version` capabilities to activate telem
 
 **Note**
 TestMu AI Automation supports Telemetry logs on Selenium versions above 4.2.0.
-
 
 By default, Telemetry logs are disabled for Selenium automation on TestMu AI. To enable them in your test sessions:
 
@@ -120,8 +113,6 @@ Here are the steps to integrate Jaeger with your test suites:
 
 3. Download Telemetry logs of your test session from the **Telemetry Logs** tab of your TestMu AI Automation Dashboard.
 
-
-
 4. Start the Jaeger UI to visualize the Telemetry logs by running the below command.
 
 ```bash
@@ -129,8 +120,6 @@ jaeger-all-in-one
 ```
 
 5. Visit `http://localhost:16686/search` and click the **Upload** tab to upload the downloaded Telemetry logs from the TestMu AI Automation Dashboard.
-
-
 
 After uploading, you can view the request traces in the Jaeger UI for your TestMu AI test sessions.
 
@@ -140,46 +129,37 @@ Use analytics widgets to track test health, trends, browser distribution, and er
 
 ### Test Case Health Snapshot
 
-
 The Test Case Health Snapshot widget allows you to quickly analyze the flakiness of the tests executed on the platform. Track the performance of the tests by viewing the count of tests that are consistently passing or failing.
 
 ### Test Summary
-
 
 The Test Summary widget lets you track the total tests run on the platform grouped by their status and includes information about errors like test case errors, idle timeouts, queue timeouts, and Lambda errors.
 
 ### Test Browser
 
-
 The Test Browser widget displays the overall distribution of tests on various browsers on the platform. Click on a particular browser to see the specific versions where the tests ran.
 
 ### Test OS
-
 
 The Test OS widget displays the overall distribution of tests on various operating systems. Click on a particular OS to see the specific versions where the tests ran.
 
 ### Test Trends
 
-
 The Test Trends widget allows you to analyze the trends of tests executed on the platform over a period of time. Compare the current trends with previous trends by clicking on the legends at the bottom of the graph.
 
 ### Test Device Coverage
-
 
 The Test Device Coverage widget is an App Automation-specific widget that displays the overall distribution of tests on various mobile devices on the platform. Click on a particular mobile device to see the specific models where the tests ran.
 
 ### Test Status Ratio
 
-
 The Test Status Ratio widget provides information about the quality of your current test cases based on the status marked on the platform. Filter the information by clicking on the relevant legends at the bottom of the graph.
 
 ### Error Insights
 
-
 The Error Stats widget allows you to quickly analyze the tests categorized by their status on the TestMu AI platform, including Test Case Errors, Idle Timeout, Queue Timeout, and Lambda Error. Filter the graph by clicking on the relevant legends at the bottom.
 
 ### Concurrency Trends
-
 
 The Concurrency Trends widget allows you to view the tests kept in the queue and the tests in a running state. Filter the information by clicking on the relevant legends at the bottom of the graph.
 
@@ -223,8 +203,6 @@ TestMu AI supports the following extended debugging methods:
 | `lambda-throttle-network` | Configure and simulate network conditions |
 | `lt:downloadHAR` | Download HTTP Archive files for analysis |
 
-
-
 ### 1. Intercept Network Requests
 
 Modify outgoing network requests to test redirect, mock, and error scenarios.
@@ -233,11 +211,9 @@ TestMu AI provides three methods to intercept and modify network requests, enabl
 
 #### Method 1: Redirect Requests (`lt:intercept:redirect`)
 
-
 Redirect outgoing requests to a different URL using the `lt:intercept:redirect` command.
 
 ##### Parameters
-
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -245,7 +221,6 @@ Redirect outgoing requests to a different URL using the `lt:intercept:redirect` 
 | `redirectUrl` | String | Yes | Target URL to redirect the request to. |
 
 ##### Example Usage
-
 
 **Python:**
 ```python
@@ -273,15 +248,11 @@ await driver.get("https://www.google.com");
 }
 ```
 
-
-
 #### Method 2: Mock Response (`lt:intercept:response`)
-
 
 Mock a custom response for the intercepted URL using the `lt:intercept:response` command.
 
 ##### Parameters
-
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -292,7 +263,6 @@ Mock a custom response for the intercepted URL using the `lt:intercept:response`
 | `response.body` | String | No | Response body content (use JSON string for JSON responses). |
 
 ##### Example Usage
-
 
 **Python:**
 ```python
@@ -337,15 +307,11 @@ await driver.get("https://jsonplaceholder.typicode.com/todos/1");
 }
 ```
 
-
-
 #### Method 3: Simulate Error Response (`lt:intercept:error`)
-
 
 Inject error responses to test how your application handles failures using the `lt:intercept:error` command.
 
 ##### Parameters
-
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -353,7 +319,6 @@ Inject error responses to test how your application handles failures using the `
 | `error` | String | Yes | Error type to simulate. See supported error types below. |
 
 ##### Example Usage
-
 
 **Python:**
 ```python
@@ -383,7 +348,6 @@ await driver.get("https://example.com/images/photo.jpg");
 
 ##### Supported Error Types
 
-
 | Error Type | Description |
 |------------|-------------|
 | `Failed` | Generic network failure |
@@ -399,8 +363,6 @@ await driver.get("https://example.com/images/photo.jpg");
 | `InternetDisconnected` | Internet connection lost |
 | `AddressUnreachable` | Network address unreachable |
 
-
-
 ### 2. Throttle CPU Performance
 
 Simulate slower CPU to measure application performance under resource constraints.
@@ -409,13 +371,11 @@ The `lt:throttle:cpu` method simulates lower or higher CPU usage on the testing 
 
 #### Parameters
 
-
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `rate` | Integer | Yes | Rate of slowdown. Example: `2` equals 2x slowdown, `4` equals 4x slowdown. |
 
 #### Example Usage
-
 
 **Python:**
 ```python
@@ -443,9 +403,6 @@ await driver.get("https://www.wikipedia.org");
 - A rate of `4` means 4x slower than normal
 - Higher values simulate lower-end devices or heavy CPU load scenarios
 
-
-
-
 ### 3. Throttle Network Conditions
 
 Simulate various network speeds and latency to test application behavior on different connections.
@@ -453,7 +410,6 @@ Simulate various network speeds and latency to test application behavior on diff
 The `lambda-throttle-network` method enables you to simulate various network conditions including slower speeds, high latency, and offline modes. This helps ensure your application performs well across different connection types.
 
 #### Parameters
-
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -464,7 +420,6 @@ The `lambda-throttle-network` method enables you to simulate various network con
 Alternatively, you can pass a predefined network profile name as a string (e.g., `"Regular 3G"`, `"Offline"`).
 
 #### Custom Network Configuration
-
 
 **Python:**
 ```python
@@ -496,7 +451,6 @@ await driver.get("https://www.cnn.com");
 
 #### Using Predefined Network Profiles
 
-
 **Python:**
 ```python
 driver.execute_script("lambda-throttle-network", "Offline")
@@ -510,7 +464,6 @@ await driver.get("https://www.nytimes.com");
 ```
 
 #### Predefined Network Profiles
-
 
 TestMu AI provides predefined network profiles for quick testing across common connection types:
 
@@ -527,8 +480,6 @@ TestMu AI provides predefined network profiles for quick testing across common c
 | `WiFi` | 30 Mb/s | 15 Mb/s | 2 |
 | `online` | No Restrictions | No Restrictions | No Restrictions |
 
-
-
 ### 4. Download HAR File
 
 Download network activity data in HAR format for detailed performance analysis.
@@ -537,14 +488,12 @@ The `lt:downloadHAR` method downloads network activity data in HAR (HTTP Archive
 
 #### Parameters
 
-
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `job_id` | String | Yes | Unique job identifier for the test session. |
 | `output_file` | String | Yes | Filename to save the HAR file. |
 
 #### Example Usage
-
 
 **Python:**
 ```python
@@ -578,9 +527,6 @@ HAR files can be analyzed using tools like:
 
 These files contain detailed information about request/response headers, timing data, cookies, and more.
 
-
-
-
 ### Best Practices
 
 Follow these guidelines when using extended debugging options in your tests.
@@ -602,17 +548,13 @@ Once you have captured HAR data, the built-in HAR Log Viewer lets you analyze it
 
 ### How to Use the HAR Log Viewer
 
-
 Enable HAR logging by passing `network.full.har = true` in your test capabilities.
 
 Once the test runs, open the Web Automation Dashboard and navigate to the **Network** tab to see the waterfall chart.
 
-
-
 Each resource (HTML, CSS, JavaScript, images) appears as a horizontal bar. The bar length shows load time, and the sequence reflects the order the browser requested them.
 
 ### Use Cases
-
 
 Apply the HAR Log Viewer to diagnose and improve page performance.
 
@@ -657,14 +599,9 @@ Review the supported platforms, browsers, and session time limits before using L
 **note**
 Safari browser will be added in upcoming releases.
 
-
 ### How to Use the Live Interaction Feature
 
 Open the test summary page and click "Click to view live test" to take manual control.
-
-
-
-
 
 Follow the below steps to interact with the browser manually in an automation test:
 
@@ -687,9 +624,7 @@ Re-Run offers two options:
 **Limited Availability**
 Re-Run is not generally available yet and may not be enabled for your account. Its behavior may change before general availability. To get it enabled for your organization, reach out to our **24/7 chat support** or email us at [support@testmuai.com](mailto:support@testmuai.com).
 
-
 ### Re-Run a Test
-
 
 1. Open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) and select a build.
 2. Select a test from the Test List Panel to open its Test Detail Page.
@@ -699,7 +634,6 @@ Re-Run is not generally available yet and may not be enabled for your account. I
 The **Re-runs** field in the test summary shows how many times the test has been re-run.
 
 ### Replay
-
 
 **Replay** runs the test again on the grid, against your application as it exists now. Unlike Reproduce, it does not use the captured data from the original run, so the result reflects the current state of your application and environment.
 
@@ -711,7 +645,6 @@ Use Replay to:
 
 ### Reproduce
 
-
 **Reproduce** replays the test against the network and DOM data captured during the original run, rather than against your live application. This replicates the conditions the test originally encountered, which is what makes it useful for intermittent failures that will not recur on demand.
 
 Reproduce reads the HAR (HTTP Archive) network logs recorded during the original test. If those logs were not captured, the option is unavailable.
@@ -722,7 +655,6 @@ A test is eligible for Reproduce only if both of the following are true:
 - It finished with a passed, failed, or completed status. Tests that did not run to completion cannot be reproduced.
 
 #### Enable Reproduce
-
 
 Reproduce requires HAR logging on the original run. Pass the following capability in your test:
 
@@ -736,12 +668,9 @@ If the original test ran without this capability, **Reproduce** appears greyed o
 
 In this case, add the capability and run the test again. The new run is then eligible for Reproduce.
 
-
 `network.full.har` applies to web tests. Enabling it also populates the **Network** tab with a waterfall chart. See [HAR Log Viewer With Waterfall](#har-log-viewer) for how to read it.
 
-
 ### Choosing Between Replay and Reproduce
-
 
 | | Replay | Reproduce |
 | --- | --- | --- |
@@ -753,7 +682,6 @@ In this case, add the capability and run the test again. The new run is then eli
 If you are not sure which to use, start with **Replay**. Reach for **Reproduce** when a failure will not recur on a live run and you need the original conditions back.
 
 ### Next Steps
-
 
 - Explore the Automation Dashboard
 - [HAR Log Viewer With Waterfall](#har-log-viewer)
@@ -771,8 +699,6 @@ Lambda Exceptions let you manage and display GET request errors like AssertionEr
 Lambda Exception is a feature of TestMu AI that lets you manage and handle GET request errors, like AssertionError. The error gets displayed as an exception in the Exception tab of your test.
 
 For example:
-
-
 
 ### How to Use Lambda Exception
 
@@ -889,8 +815,6 @@ driver.quit();
 
 When you execute the above test as a TestNG script, the test will fail. This is because we provided an incorrect value in the ExpectedTitle variable for demo purposes. When you open the test view and navigate to the Exception tab, you will find a message displaying this error:
 
-
-
 #### View StackTrace on the Dashboard Using Lambda Exception
 
 You can also view the full StackTrace on the dashboard using Lambda Exceptions.
@@ -987,8 +911,6 @@ driver.quit();
 
 When you execute the above test as a TestNG script, it produces the same result as the view exception section because of the incorrect ExpectedTitle value. Open the test view and navigate to the Exception tab to find the full StackTrace:
 
-
-
 Below is the full StackTrace printed on the TestMu AI platform from the above script.
 
 ```javascript
@@ -1030,11 +952,9 @@ org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251) at
 org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ```
 
-
 That’s it! You can now easily handle and manage exceptions using the Lambda Exceptions feature. If you still have any doubt, please feel free to reach out to us via **24/7 chat support** or by mailing to us on [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
 
 ## Next Steps
-
 
 Continue with these related guides:
 

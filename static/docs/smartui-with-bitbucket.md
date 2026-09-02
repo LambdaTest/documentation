@@ -14,15 +14,11 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
-
 ### Step 1: Setup your Projects and Repository in Bitbucket
 - Click on the **Create** >> **Project**.
 - Enter your Project details and click on **Create Project**.
 
-
 - Now click on the **Create Repository** button. You can either create a new repository or import your existing repository.
-
-
 
 ### Step 2: Create a New Workflow
 - Navigate to the **Deployment** section. Select your required template for CI/CD workflow file. For the demo we are using the Test template.
@@ -33,20 +29,13 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/bitbucket/bitbucket-pipelines.yml
 ```
 
-
 You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as secrets in your Bitbucket project repository.
-
 
 ### Step 3: Check the output
 
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/projects)
 
-
-
 ## Best Practices
-
-
-
 
 **Secret Management**
 
@@ -54,9 +43,6 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 - Use Bitbucket Pipelines Variables for all sensitive data
 - Rotate secrets regularly
 - Use different secrets for different environments
-
-
-
 
 **Pipeline Optimization**
 
@@ -73,9 +59,6 @@ main:
 name: Run Visual Tests
 ```
 
-
-
-
 **Build Naming**
 
 - Use meaningful build names that include branch/commit info
@@ -88,9 +71,6 @@ variables:
 BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 ```
 
-
-
-
 **Error Handling**
 
 - Set up proper error handling in pipelines
@@ -98,9 +78,6 @@ BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-
-
-
 **Resource Management**
 
 - Limit concurrent pipeline runs
@@ -108,23 +85,14 @@ BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 - Monitor pipeline execution time
 - Optimize test execution order
 
-
-
-
 **Resource Management**
 
 - Limit concurrent pipeline runs
 - Clean up old builds regularly
 - Monitor pipeline execution time
 - Optimize test execution order
-
-
-
 
 ## Troubleshooting
-
-
-
 
 **Issue: Pipeline Fails with "Variable Not Found"**
 
@@ -145,9 +113,6 @@ BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 3. Check variable scope (repository, workspace, or deployment level)
 
 4. Verify variables are secured if needed
-
-
-
 
 **Issue: PROJECT_TOKEN Not Available**
 
@@ -170,9 +135,6 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 3. Check variable is secured if needed
 
 4. Verify variable scope includes your branch
-
-
-
 
 **Issue: Tests Run But No Results in Dashboard**
 
@@ -199,9 +161,6 @@ after-script:
 
 4. Check if SmartUI CLI step completed successfully
 
-
-
-
 **Issue: Pipeline Times Out**
 
 **Symptoms**: Pipeline execution exceeds time limit
@@ -226,9 +185,6 @@ name: Test Group 2
 
 3. Optimize test execution
 4. Split tests across multiple pipeline steps
-
-
-
 
 **Issue: Dependencies Installation Fails**
 
@@ -256,9 +212,6 @@ script:
 3. Use package-lock.json for consistent installs
 
 4. Check for version conflicts in package.json
-
-
-
 
 **Issue: SmartUI CLI Not Found**
 
@@ -295,10 +248,6 @@ If you encounter issues not covered here:
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
-
-
-
-
 
 ## Additional Resources
 

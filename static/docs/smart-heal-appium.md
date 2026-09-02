@@ -11,16 +11,12 @@ This feature is available exclusively with the **Real Device Plus Automation Clo
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-
-
-
 ## Use Cases
 
 - **Frequent UI Updates**: When product teams ship fast and locator changes are common, Smart Heal prevents brittle tests from breaking on every release and make shipments fast.
 - **CI/CD Reliability**: Reduce flaky build failures by automatically recovering from locator issues in pipelines.
 - **Maintenance Reduction**: Spend less time fixing scripts manually and more time building new coverage.Deploy first and fix later.
 - **Audit & Debugging**: Use healed locator logs and screenshots to understand changes quickly and improve your scripts over time.
-
 
 ## Smart Heal Workflow
 
@@ -41,9 +37,6 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 5. **Fallback and Suggestions**
    If Smart Heal cannot confidently identify an alternative, it records **AI-driven suggestions** in the dashboard. These insights help you quickly update or strengthen your locators to avoid repeated failures in future runs.
 
-
-
-
 ## Smart Heal in Automation Tests
 
 ### 1. Upload Your App
@@ -54,14 +47,9 @@ Before enabling Smart Heal, ensure your app is uploaded to TestMu AI.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
-
-
 ### 2. Enable Smart Heal with Capabilities
 
 To enable Smart Heal, add `"smartHeal": true` to your desired capabilities in your Appium test script.
-
-
-
 
 ```python
 desired_caps = {
@@ -77,10 +65,6 @@ desired_caps = {
 }
 ```
 
-
-
-
-
 ```python
 desired_caps = {
 "deviceName": "Galaxy S25",
@@ -95,12 +79,7 @@ desired_caps = {
 }
 ```
 
-
-
-
-
 You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
 
 ### 3. Enable Smart Heal with Runtime Hooks
 
@@ -119,8 +98,6 @@ driver.executeScript("lambda-heal-start");
 
 Once your app is uploaded and Smart Heal is enabled (either via capabilities or runtime hooks), execute your test script as usual with your preferred automation framework. Smart Heal will monitor for locator failures during the run, apply healing when possible, and log all details to the TestMu AI dashboard for review.
 
-
-
 ## Viewing Results in Dashboard
 
 ### Accessing the Dashboard
@@ -131,31 +108,20 @@ To display only healed builds, click on the **Configure** option at the top of t
 
 - The following image shows the **Configure box**, with the **Features** tab highlighted:
 
-
 - When you open the **Features** tab, a pop-up appears where you can enable **Auto-Heal** to filter and display only executions where Smart Heal was applied:
 
-
 - Once filtering is applied, the dashboard highlights all healed elements in your tests. In this view, healed elements are marked clearly, while those that could not be healed are highlighted in red:
-
-
 
 ### Hovering Over Healed Builds
 Each healed build has an associated icon. Hovering over this icon provides a tooltip that shows a brief summary of the session and the healing actions performed.
 
-
-
 ### Session Details
 Access detailed execution logs that clearly differentiate between **original and healed selectors**, along with AI suggestions, and compare before-and-after screenshots. These insights help you understand how the Auto-Heal mechanism worked during execution and guide you in refining locators over time.
-
 
 ### AI Review on Failures
 When a test case fails, the dashboard provides **AI-powered analysis and suggestions** to help you quickly identify root causes and fix issues.
 
-
-
-
 Smart Heal delivers the best results when applied to **static components** such as buttons or form fields, where locators remain relatively consistent across runs.
-
 
 ## Related Docs
 

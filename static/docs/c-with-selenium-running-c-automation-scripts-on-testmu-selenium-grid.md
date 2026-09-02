@@ -6,7 +6,6 @@ Run your C# Selenium tests on the TestMu AI cloud grid across 10,000+ browser/de
 
 ## Prerequisites
 
-
 Complete these before running any framework below.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -16,37 +15,15 @@ Complete these before running any framework below.
 
 ## Set Your Credentials
 
-
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
-
 ## How the Sample Test Works
-
 
 Every framework below connects to the grid and passes your browser and OS choices through an `LT:Options` object:
 
@@ -67,18 +44,11 @@ browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 
 What changes between frameworks is only the test runner and how you launch it. That is what each tab covers.
 
-
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build an `LT:Options` block for any browser, version, and OS combination.
-
 
 ## Run a Test in Your Framework
 
-
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then build and run.
-
-
-
-
 
 NUnit runs from the Visual Studio Test Explorer, or from the CLI on Linux/macOS.
 
@@ -113,10 +83,6 @@ dotnet test
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 MSTest requires .NET Core SDK 3.0.0 and runs via `dotnet test` or the Test Explorer.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/MSTest-Selenium-Sample):
@@ -150,13 +116,8 @@ dotnet test MS-Test-Cross-Browser.csproj
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 **Deprecated**
 SpecFlow is no longer actively maintained; its vendor, Tricentis, discontinued it. For current C# BDD testing, use the **Reqnroll** framework instead (see the Reqnroll tab), its actively-maintained open-source successor.
-
 
 SpecFlow is BDD for .NET: you write Gherkin feature files, and step definitions drive WebDriver. Requires SpecFlow installed.
 
@@ -186,10 +147,6 @@ browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 3. Build the solution, then run in the Test Explorer (use **Run All** for parallel tests).
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 xUnit reads its capabilities and environments from a `config.json`, filtered by profile.
 
@@ -234,10 +191,6 @@ dotnet test --filter "profile=parallel"
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 Reqnroll is the actively-maintained, open-source successor to SpecFlow. It is a BDD framework for .NET: you write Gherkin feature files, and step definitions drive WebDriver. Requires Reqnroll and a .NET Core SDK 2.1 or greater installed.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/reqnroll-automation-sample):
@@ -258,12 +211,7 @@ make reqnroll-automation-test
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 ## View Your Results
-
 
 Your test results appear on the TestMu AI Automation Dashboard.
 
@@ -272,7 +220,6 @@ Your test results, including video, network logs, and command-by-command executi
 **Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

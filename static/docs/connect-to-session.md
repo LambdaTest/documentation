@@ -26,8 +26,6 @@ Make sure you have completed the following before connecting to a session:
 - **Session credentials configured** - Set your `LT_USERNAME` and `LT_ACCESS_KEY` environment variables.
 - **Quickstart completed** - If this is your first time using TestMu AI Browser Cloud, [launch your first session](/support/docs/launch-first-session/) first.
 
-
-
 ## Basic Usage
 
 ### Puppeteer
@@ -77,10 +75,8 @@ existing Puppeteer knowledge applies.
 Like Puppeteer, the main change is how you connect - replacing
 `chromium.launch()` with `client.playwright.connect()`.
 
-
 Playwright requires **Node.js 18+**. If you see a version error,
 upgrade with `nvm install 18 && nvm use 18`.
-
 
 ```typescript
 import { Browser } from '@testmuai/browser-cloud';
@@ -151,12 +147,7 @@ await client.sessions.release(session.id);
 The `driver` object is a standard Selenium `WebDriver`. Use it exactly as you
 would with plain `selenium-webdriver`.
 
-
-
 ## What the SDK Does for You
-
-
-
 
 When you call `client.puppeteer.connect(session)`, the SDK handles several
 things automatically based on your session configuration:
@@ -170,9 +161,6 @@ things automatically based on your session configuration:
 4. **Humanized interactions.** If `humanizeInteractions` is true, `page.click()` and `page.type()` are monkey-patched to add random delays that mimic human behavior.
 
 5. **Profile loading.** If `profileId` is set, saved cookies are loaded from disk. And when you call `browser.close()`, the profile is automatically saved with the current cookies.
-
-
-
 
 When you call `client.playwright.connect(session)`:
 
@@ -189,9 +177,6 @@ When you call `client.playwright.connect(session)`:
 5. **Patches interactions** (if humanize enabled) - `page.click()`, `page.type()`, and `page.fill()` get random delays
 6. **Loads/saves profile** (if `profileId` set)
 
-
-
-
 When you call `client.selenium.connect(session)`:
 
 1. **Connects** to the TestMu AI Selenium Hub at `https://hub.lambdatest.com/wd/hub` via HTTP
@@ -200,11 +185,6 @@ When you call `client.selenium.connect(session)`:
 4. **Connects** over the standard WebDriver protocol
 
 The Selenium adapter **ignores** `session.websocketUrl` and builds its own connection.
-
-
-
-
-
 
 ## Adding Session Features
 
@@ -222,12 +202,7 @@ lambdatestOptions: { ... }
 });
 ```
 
-
-
 ## Full Working Example
-
-
-
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -269,9 +244,6 @@ await client.sessions.release(session.id);
 main().catch(console.error);
 ```
 
-
-
-
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
 
@@ -310,9 +282,6 @@ await client.sessions.release(session.id);
 
 main().catch(console.error);
 ```
-
-
-
 
 A complete script that creates a session, scrapes a page title, and cleans up
 with proper error handling:
@@ -353,16 +322,9 @@ await client.sessions.release(session.id);
 main().catch(console.error);
 ```
 
-
-
-
-
 Sessions remain active until explicitly released or timed out.
 Always call `client.sessions.release()` when finished instead of waiting for
 the timeout.
-
-
-
 
 ## When to Choose
 
@@ -375,12 +337,6 @@ the timeout.
 | Multi-page workflows | Playwright | Better context management for complex navigation |
 | Existing Selenium test suite | Selenium | Minimal migration - same WebDriver API |
 | Simple return type | Puppeteer | Returns a single `Browser` object (vs Playwright's 3 objects) |
-
-
-
-
-
-
 
 ## Related guides
 

@@ -4,8 +4,6 @@
 
 ## Tutorial To Run Your First Test On TestMu AI
 
-
-
 Running Apple TV Appium tests on TestMu AI lets you automate tvOS apps and validate remote-based navigation across real Apple TV models in the cloud. Configure desired capabilities, run Python Appium scripts, and get broad device coverage without physical hardware.
 
 **Supported on:** Real devices
@@ -17,9 +15,6 @@ In this guide, you will learn how to set up and run your **Apple TV** automation
 This feature is available exclusively with the **Private Cloud** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
-
-
-
 
 ## Objective
 
@@ -33,19 +28,13 @@ By the end of this topic, you will be able to:
 
 All the code samples in this documentation can be found on **TestMu AI's Github Repository**. You can either download or clone the repository to quickly run your tests.  View on GitHub
 
-
-
 ## Prerequisites
-
-
 
 Before you can start performing App automation testing with Appium, you would need to follow these steps:
 
 - You have access to TestMu AI username and accessKey. If you have not registered yet, you can do the same by visiting our website. You will be able to access the credentials in the [TestMu AI Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
-
-
 
 ## Supported Models ##
 
@@ -56,27 +45,16 @@ Before you can start performing App automation testing with Appium, you would ne
 
 ## Run your first test
 
-
-
 ### 1. Upload your application
 Upload your **Apple TV** application (.ipa file) to the TestMu AI servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
 
-
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/apple-tv-sample-app.ipa"" -F "name="appletv_app""
 `}
 
-
-
-
-
-
-
 - If you do not have any **.ipa** file, you can run your sample tests on TestMu AI by using our sample :link: [AppleTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/apple-tv-sample-app.ipa).
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
-
-
 
 ### 2. Clone the sample project
 
@@ -91,34 +69,15 @@ cd LT-appium-appletv
 
 Make sure you have your TestMu AI credentials with you to run test automation scripts on TestMu AI. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/). Then, set TestMu AI `Username` and `Access Key` in environment variables with following commands.
 
-
-
-
-
-
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
 export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-
-
-
-
-
-
-
-
 
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
 ### 4. Write your automation script
 
 An automation script for the sample application available above has been provided below. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
 
 ```python title="appletv.py"
 from appium import webdriver
@@ -249,8 +208,6 @@ desired_caps = {"lt:options": ltOPtions}
 - You must add the generated **APP_URL** to the `"app"` capability in the config file.
 - You can generate capabilities for your test requirements with the help of our inbuilt **Capabilities Generator**.For more details, please refer to our guide on [Desired Capabilities in Appium](/support/docs/desired-capabilities-in-appium/).
 
-
-
 ### 5. Execute your test case
 
 1. Install the required packages from the cloned project directory:
@@ -265,16 +222,11 @@ pip install -r requirements.txt
 python appletv.py
 ```
 
-
 If you are unable to run the automation script with the above mentioned commands try **'python3'** command except for **'python'**.
-
 
 Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-
 ## Additional Links
-
-
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)

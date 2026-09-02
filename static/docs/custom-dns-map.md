@@ -22,7 +22,6 @@ Here `` and `` are the domain names to be redirected, and `` and `` are the corr
 
 ## Use Cases
 
-
 The customDnsMap capability serves a variety of testing purposes.
 
 - **Domain Redirection for Testing:** Redirect a domain to a different IP address, such as a staging or development server, when testing a web application that needs to connect to a specific backend.
@@ -47,7 +46,6 @@ With this configuration, whenever a user accesses `example.com`, the request red
 
 ## Benefits
 
-
 The `customDnsMap` capability offers the following benefits.
 
 - **Flexibility:** Easily and dynamically redirect traffic to different IP addresses without global configuration changes.
@@ -58,11 +56,9 @@ The `customDnsMap` capability offers the following benefits.
 
 ## Conclusion
 
-
 The `customDnsMap` capability improves the efficiency and flexibility of testing and development workflows on the TestMu AI platform. Use it to redirect domains, simulate server failures, and test against specific backend servers. For other environment options, see the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) and how to route tests through a Selenium proxy.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

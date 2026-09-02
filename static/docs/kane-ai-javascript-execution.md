@@ -6,22 +6,17 @@ When a test interaction cannot be expressed in plain English, write or paste a J
 
 ## Prerequisites
 
-
 Before you begin, make sure you have:
-
 
 Before you add a JavaScript step, make sure you have the following.
 - A KaneAI test session open in the test editor.
 - The JavaScript snippet you want to run, tested in your browser DevTools console first.
 
-
 ## Execute a Custom JavaScript Step
-
 
 Follow these steps to write and run a JavaScript snippet as a test step.
 
 ### Step 1: Open Write a Step
-
 
 In KaneAI's test editor, go to the **Write a Step** field where you write test scenarios in plain English.
 
@@ -29,13 +24,11 @@ In KaneAI's test editor, go to the **Write a Step** field where you write test s
 
 ### Step 2: Switch to JavaScript Mode
 
-
 To switch to JavaScript execution mode, type the forward slash `/` or click the `+` icon. When the JavaScript option appears, click it to change the input mode to custom JavaScript.
 
 **Result:** The step input accepts JavaScript instead of natural language.
 
 ### Step 3: Write Your JavaScript
-
 
 Write or paste your custom JavaScript snippet directly into the text field. For example:
 
@@ -76,7 +69,6 @@ This snippet simulates typing into text fields by dispatching key-related events
 
 ### Step 4: Execute the Step
 
-
 When your code is ready, press Enter. KaneAI runs the snippet in the current test session.
 
 **Result:** The snippet executes on the live page, and any return value is saved as a variable for later steps.
@@ -97,17 +89,11 @@ The returned object with the keys `First name`, `Last name`, and `email` will be
 #### JavaScript Snippets in Generated Code
 When your test runs, KaneAI adds your snippet directly into the generated test code. Custom JavaScript interactions become part of the overall test logic, so you can track, debug, and modify them alongside the rest of the test.
 
-
-
-
-
 ## JS Snippet Workarounds by Scenario
-
 
 Now that you can run a JavaScript step, the rest of this page is a library of ready-to-use snippets for the scenarios where natural language falls short. Each section below names where natural language is unreliable and gives the exact snippet to use instead.
 
 ### Add a JS Snippet as a Step
-
 
 Follow these steps to run a snippet as a test step.
 
@@ -118,10 +104,7 @@ Follow these steps to run a snippet as a test step.
 
 The snippet runs in the context of the page with full access to the DOM, `document`, `window`, and any JavaScript variables the page has defined.
 
-
-
 ### Date Picker Interactions
-
 
 **Problem:** Many date pickers use read-only inputs that reject typed values. Natural language typing doesn't trigger the custom event handlers these components rely on.
 
@@ -172,11 +155,7 @@ endDate.dispatchEvent(new Event('input', { bubbles: true }));
 return 'Date range set: Feb 1 - Feb 28, 2026';
 ```
 
-
-
-
 ### String Manipulation & Data Transformation
-
 
 **Problem:** Operations like converting text to lowercase, extracting substrings, or formatting data are not reliably handled via natural language.
 
@@ -217,10 +196,7 @@ throw new Error('FAIL: Expected "' + expected + '", got "' + actual + '"');
 }
 ```
 
-
-
 ### Table & List Validation
-
 
 **Problem:** KaneAI can't reliably assert specific cell values in complex tables (e.g., "the 5th column of the 3rd row contains X").
 
@@ -261,10 +237,7 @@ throw new Error('FAIL: Table is not sorted. Got: ' + values.join(', '));
 }
 ```
 
-
-
 ### Clipboard Operations
-
 
 **Problem:** Natural language can't directly read or write clipboard content.
 
@@ -283,10 +256,7 @@ const clipText = await navigator.clipboard.readText();
 return 'Clipboard contains: ' + clipText;
 ```
 
-
-
 ### Local Storage & Session Storage
-
 
 **Problem:** You may need to verify, set, or clear browser storage for test setup or validation.
 
@@ -315,9 +285,7 @@ sessionStorage.clear();
 return 'Session storage cleared';
 ```
 
-
 ### Quick Reference: JS Snippets
-
 
 | Scenario | Natural Language? | JS Snippet Needed? |
 |---|---|---|
@@ -334,7 +302,6 @@ return 'Session storage cleared';
 
 ### Best Practices for JS Snippets
 
-
 | Practice | Details |
 |---|---|
 | **Use natural language first** | Only fall back to JS when natural language is unreliable |
@@ -344,7 +311,6 @@ return 'Session storage cleared';
 | **Test snippets in browser DevTools first** | Paste into the Console to verify before adding to KaneAI |
 
 ## Next Steps
-
 
 Combine JavaScript steps with the rest of your KaneAI test flow.
 

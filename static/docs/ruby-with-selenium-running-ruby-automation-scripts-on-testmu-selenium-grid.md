@@ -6,7 +6,6 @@ Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 
 ## Prerequisites
 
-
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install [Ruby](https://www.ruby-lang.org/en/downloads/) and the `gem` package manager.
@@ -14,39 +13,17 @@ Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 
 ## Set Your Credentials
 
-
 Your Username and Access Key are read from environment variables, set once per operating system.
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
-
-
-
 
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
-
 ## How the Sample Test Works
-
 
 Every framework below connects to the grid and passes your browser and OS choices through a capabilities hash:
 
@@ -63,18 +40,11 @@ caps = {
 
 What changes between frameworks is only how the test is structured and launched. That is what each tab covers.
 
-
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
-
 
 ## Run a Test in Your Framework
 
-
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
-
-
-
-
 
 Capybara runs with Cucumber for BDD-style tests, driven by Bundler and Rake tasks.
 
@@ -112,10 +82,6 @@ bundle exec rake parallel
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 RSpec loads capabilities from config YAML files and passes them to the remote WebDriver, run via Rake tasks.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/RSpec-Selenium-Sample):
@@ -140,10 +106,6 @@ bundle exec rake parallel
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 Test::Unit runs a Ruby test file directly, with capabilities inline, and no Bundler task runner.
 
@@ -180,19 +142,13 @@ ruby LambdaTest.rb
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 ## View Your Results
-
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 **Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

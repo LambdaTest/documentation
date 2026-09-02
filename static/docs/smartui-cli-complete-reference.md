@@ -6,13 +6,6 @@ The SmartUI CLI is a command line tool for visual regression testing on the Test
 
 This reference covers every method to get screenshots into SmartUI along with the complete CLI command, option, flag, and configuration reference.
 
-
-
-
-
-
-
-
 ## Prerequisites
 
 - Node.js v20.3+ installed (required for SmartUI CLI v4.x.x)
@@ -21,16 +14,11 @@ This reference covers every method to get screenshots into SmartUI along with th
 - TestMu AI account credentials, logged in to [TestMu AI SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/)
 - SmartUI project created
 
-
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
-
 
 ## Installation
 
 Install the SmartUI CLI or Storybook CLI globally, or add the SmartUI CLI locally to your project.
-
-
-
 
 **Global Installation (Recommended):**
 ```bash
@@ -44,15 +32,10 @@ npm install @lambdatest/smartui-cli
 
 **Current Version**: v4.1.43+
 
-
-
 ```bash
 npm install -g @lambdatest/smartui-storybook@latest
 ```
 **Current Version**: v1.1.29+
-
-
-
 
 ## Create a SmartUI Project
 
@@ -74,33 +57,17 @@ projectToken = "123456#1234abcd-****-****-****-************"
 
 Set the project token shown in the SmartUI app so the CLI can authenticate to your project.
 
-
-
-
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-
-
-
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
-
-
-
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-
-
-
-
-
-
-
 
 ## Upload Existing Screenshots via CLI
 
@@ -136,9 +103,7 @@ Please read the following table for more information about the options available
 |    | --accessKey &lt;string&gt; | Override TestMu AI access key | `npx smartui upload  --accessKey "key"`|
 |    | --config &lt;filepath&gt; | Configuration file path | `npx smartui upload  --config .smartui.json`|
 
-
 You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.
-
 
 ### Setup with Continuous Integration (CI)
 
@@ -186,10 +151,6 @@ npx smartui upload <directoryName>  --buildName "Sample Build Name"
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-
-
-
-
 ## Capture Static URLs via CLI
 
 Use the `capture` command to run visual regression tests against a list of static URLs defined in a web static config file.
@@ -221,8 +182,6 @@ smartui config:create-web-static urls.json
    The `waitForTimeout` is an optional configuration.
 
    If you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
-
-
 
 2. Create and configure the SmartUI config. Generate the configuration file:
 
@@ -293,9 +252,7 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 ],
 ```
 
-
 You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
-
 
 ### SmartUI CLI Config Options
 
@@ -408,8 +365,6 @@ smartui capture urls.json --config smartui-web.json
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-
-
 ### Parallel execution of static URLs
 
 You can reduce the build time by executing parallel URLs in the following way.
@@ -447,15 +402,11 @@ The maximum number of parallel threads is calculated using the formula: log2(N) 
 - Monitor system resources during execution
 - Ensure stable internet connection for reliable parallel processing
 
-
-
 ## Upload Screenshots via Upload API (v2)
 
 Upload local screenshots to a SmartUI project programmatically over HTTP, without the CLI. This is version 2 of the SmartUI upload API.
 
-
 This is the guide to setup the **version 2** of the SmartUI upload API.
-
 
 **Prerequisites for the Upload API:**
 
@@ -474,7 +425,6 @@ API_URL="https://api.lambdatest.com/automation/smart-ui/v2/upload"
 **NOTE**
    For more information, please visit our [API documentation](https://www.testmuai.com/support/api-doc/).
 
-
 2. Add the following information to your API payload `form-body`:
 
    | Variable            | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                           | Is Mandatory? |
@@ -488,21 +438,13 @@ API_URL="https://api.lambdatest.com/automation/smart-ui/v2/upload"
 **NOTE**
    We only support the following formats: `.png` `.jpeg` `.jpg`
 
-
    Expected result: the uploaded screenshots are grouped into a build in your SmartUI project.
 
 Please see the below screenshots for adding the screenshots which need to be uploaded for your project to generate a build.
 
-
-
-
-
-
 ## SmartUI CLI Commands
 
 ### Main Commands Overview
-
-
 
 | Command | Description | Usage |
 |---------|------------|-------|
@@ -511,18 +453,12 @@ Please see the below screenshots for adding the screenshots which need to be upl
 | `upload` | Upload screenshots from directory | `smartui upload [options] ` |
 | `upload-pdf` | Upload PDFs for visual comparison | `smartui upload-pdf [options] ` |
 
-
-
-
 | Command | Description | Usage |
 |---------|------------|-------|
 | `exec:start` | Start SmartUI snapshot server | `smartui exec:start [options]` |
 | `exec:stop` | Stop SmartUI snapshot server | `smartui exec:stop` |
 | `exec:ping` | Check if server is running | `smartui exec:ping` |
 | `exec:pingTest` | Ping server using default HTTP client | `smartui exec:pingTest` |
-
-
-
 
 | Command | Description | Usage |
 |---------|------------|-------|
@@ -532,32 +468,18 @@ Please see the below screenshots for adding the screenshots which need to be upl
 | `config:create-figma-web` | Create Figma config with browsers | `smartui config:create-figma-web [filepath]` |
 | `config:create-figma-app` | Create Figma config for mobile apps | `smartui config:create-figma-app [filepath]` |
 
-
-
-
 | Command | Description | Usage |
 |---------|------------|-------|
 | `upload-figma` | Capture Figma screenshots | `smartui upload-figma [options] ` |
 | `upload-figma-web` | Capture Figma into CLI build | `smartui upload-figma-web [options] ` |
 | `upload-figma-app` | Capture Figma into App build | `smartui upload-figma-app [options] ` |
 
-
-
-
 | Command | Description | Usage |
 |---------|------------|-------|
 | `merge branch` | Merge source branch into target | `smartui merge branch [options]` |
 | `merge build` | Merge source build into target | `smartui merge build [options]` |
 
-
-
-
-
-
-
 ## Command Details
-
-
 
 **Execute Tests**
 
@@ -603,8 +525,6 @@ smartui exec --config custom-config.json -- npm test
 smartui exec --userName "user" --accessKey "key" -- npm test
 ```
 
-
-
 **Capture Static URLs**
 
 Capture screenshots of static URLs from a configuration file.
@@ -649,9 +569,6 @@ smartui capture urls.json --buildName "Daily-Run" --fetch-results daily-results.
 **Parallel Execution:**
 - Maximum parallel threads: `log₂(N)` where N = total URLs
 - Example: 100 URLs = max 6 threads, 50 URLs = max 5 threads
-
-
-
 
 **Upload Screenshots**
 
@@ -701,8 +618,6 @@ smartui upload ./screenshots --ignoreDir temp,old
 smartui upload ./screenshots -R -E --buildName "Test-Run"
 ```
 
-
-
 **Upload PDFs**
 
 Upload PDF files for visual comparison.
@@ -740,8 +655,6 @@ smartui upload-pdf ./pdfs --markBaseline --buildName "Baseline-v1.0"
 # With results
 smartui upload-pdf ./pdfs --fetch-results pdf-results.json
 ```
-
-
 
 **Start Server**
 
@@ -789,8 +702,6 @@ npm test
 smartui exec:stop
 ```
 
-
-
 **Stop Server**
 
 Stop the SmartUI snapshot server.
@@ -800,9 +711,6 @@ Stop the SmartUI snapshot server.
 smartui exec:stop
 ```
 **Important:** Always use `exec:stop` instead of Ctrl+C. Using Ctrl+C will cause the build to stop after 12 minutes.
-
-
-
 
 **Check Server Status**
 
@@ -820,9 +728,6 @@ smartui exec:pingTest
 |---------|-------------|-------------|
 | `exec:ping` | Check server status | Custom HTTP client |
 | `exec:pingTest` | Check server status | Default HTTP client |
-
-
-
 
 **Merge Branches/Builds**
 
@@ -859,11 +764,7 @@ smartui merge branch --source feature/new-ui --target main
 smartui merge build --source "Build-123" --target "Baseline-Build"
 ```
 
-
-
 **Figma Integration Commands**
-
-
 
 Upload Figma designs for visual comparison.
 
@@ -883,9 +784,6 @@ smartui upload-figma [options] <file>
 |--------|-------------|---------|
 | `--markBaseline` | Mark uploaded images as baseline | `false` |
 | `--buildName ` | Name of the build | Random |
-
-
-
 
 Capture Figma screenshots into CLI build.
 
@@ -907,9 +805,6 @@ smartui upload-figma-web [options] <file>
 | `--buildName ` | Build name | Random |
 | `--fetch-results [filename]` | Fetch results and save to JSON | `results.json` |
 
-
-
-
 Capture Figma screenshots into App build.
 
 **Syntax:**
@@ -929,15 +824,6 @@ smartui upload-figma-app [options] <file>
 | `--markBaseline` | Mark as baseline | `false` |
 | `--buildName ` | Build name | Random |
 | `--fetch-results [filename]` | Fetch results and save to JSON | `results.json` |
-
-
-
-
-
-
-
-
-
 
 ## Global Options
 
@@ -960,11 +846,7 @@ The following are the core supported `CLI (Command Line Interface)` options for 
 | --config     | This is the reference configuration file containing the SmartUI Cloud Configuration | Optional |
 | --help       | This will print all help information for the SmartUI CLI options                    | Optional |
 
-
-
 ## Storybook CLI Commands
-
-
 
 **Main Command**
 
@@ -1005,8 +887,6 @@ smartui storybook ./storybook-static --force-rebuild
 smartui storybook http://localhost:6006 --env stage
 ```
 
-
-
 **Config Command**
 
 **Syntax:**
@@ -1027,11 +907,6 @@ smartui config create [filepath]
 
 **Description:**
 Create a SmartUI Storybook configuration file with default settings.
-
-
-
-
-
 
 ## Advanced Options
 
@@ -1069,10 +944,7 @@ smartui capture urls.json --parallel 10 --force
 smartui storybook ./storybook-static --force-rebuild
 ```
 
-
 ## Environment Variables
-
-
 
 | Variable | Description | Required |
 |----------|-------------|----------|
@@ -1080,17 +952,11 @@ smartui storybook ./storybook-static --force-rebuild
 | `LT_USERNAME` | TestMu AI username | Yes (for Hooks) |
 | `LT_ACCESS_KEY` | TestMu AI access key | Yes (for Hooks) |
 
-
-
-
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `PROJECT_NAME` | Project name (creates if doesn't exist) | - |
 | `BASELINE_BRANCH` | Baseline branch for CLI projects | - |
 | `CURRENT_BRANCH` | Current branch for CLI projects | - |
-
-
-
 
 | Variable | Description | Format |
 |----------|-------------|--------|
@@ -1100,27 +966,16 @@ smartui storybook ./storybook-static --force-rebuild
 | `SMARTUI_HTTPS_PROXY` | Proxy for SmartUI HTTPS traffic | - |
 | `SMARTUI_API_PROXY` | Proxy for SmartUI API traffic | - |
 
-
-
-
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `SMARTUI_SERVER_ADDRESS` | Server address for SDKs | `http://localhost:49152` |
-
-
-
 
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `LT_SDK_DEBUG` | Enable debug mode | `false` |
 | `SMARTUI_DO_NOT_USE_CAPTURED_COOKIES` | Disable captured cookies | `false` |
 
-
-
-
 **Setting Environment Variables:**
-
-
 
 ```bash
 export PROJECT_TOKEN="123456#token"
@@ -1130,7 +985,6 @@ export HTTP_PROXY="http://proxy:8080"
 export LT_SDK_DEBUG=true
 ```
 
-
 ```bash
 set PROJECT_TOKEN="123456#token"
 set LT_USERNAME="username"
@@ -1138,7 +992,6 @@ set LT_ACCESS_KEY="access_key"
 set HTTP_PROXY="http://proxy:8080"
 set LT_SDK_DEBUG=true
 ```
-
 
 ```powershell
 $env:PROJECT_TOKEN="123456#token"
@@ -1148,13 +1001,7 @@ $env:HTTP_PROXY="http://proxy:8080"
 $env:LT_SDK_DEBUG="true"
 ```
 
-
-
-
-
 ## End-to-End Workflows
-
-
 
 **Basic Static URL Capture**
 ```bash
@@ -1175,8 +1022,6 @@ npx smartui capture urls.json --config .smartui.json
 npx smartui capture urls.json --fetch-results results.json
 ```
 
-
-
 **SDK Test Execution**
 ```bash
 # 1. Set project token
@@ -1195,8 +1040,6 @@ npm test
 npx smartui exec:stop
 ```
 
-
-
 **Upload Existing Screenshots**
 ```bash
 # 1. Set project token
@@ -1212,7 +1055,6 @@ npx smartui upload ./screenshots \
 --buildName "Test-Run" \
 --fetch-results results.json
 ```
-
 
 **Storybook Testing**
 ```bash
@@ -1233,8 +1075,6 @@ npm run build-storybook
 smartui storybook ./storybook-static --config .smartui.json
 ```
 
-
-
 **PDF Testing**
 ```bash
 # 1. Set project token
@@ -1246,8 +1086,6 @@ npx smartui upload-pdf ./pdfs --buildName "PDF-Release-v1.0"
 # 3. Mark as baseline
 npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
 ```
-
-
 
 **CI/CD Integration**
 
@@ -1270,13 +1108,7 @@ script:
 - npx smartui exec --buildName "$CI_COMMIT_SHA" -- npm test
 ```
 
-
-
-
-
 ## Best Practices
-
-
 
 **Build Naming**
 
@@ -1295,17 +1127,12 @@ script:
 --buildName "build-$(date)"
 ```
 
-
-
 **Configuration Management**
 
 - Keep config files in version control
 - Use environment variables for sensitive data
 - Document custom configurations
 - Use separate configs for different environments
-
-
-
 
 **Parallel Execution**
 
@@ -1314,8 +1141,6 @@ script:
 - Use `--force` only when necessary
 - Calculate optimal threads: `log₂(N)`
 
-
-
 **Server Management**
 
 - Always use `exec:stop` to terminate server
@@ -1323,18 +1148,12 @@ script:
 - Use custom ports to avoid conflicts
 - Set `SMARTUI_SERVER_ADDRESS` before running tests
 
-
-
-
 **Error Handling**
 
 - Always use `--fetch-results` for CI/CD
 - Check exit codes in scripts
 - Implement retry logic for transient failures
 - Log errors for debugging
-
-
-
 
 **Results Reporting**
 
@@ -1352,9 +1171,6 @@ npx smartui capture urls.json --config config.json --fetch-results results.json
 **Alternative**: Fetch results via [SmartUI API](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots)
 
 For detailed steps, see [Fetch Results Documentation](/support/docs/smartui-sdk-fetch-results/#using-smartui-reporter-tool).
-
-
-
 
 **URL Grouping for Large Test Suites**
 
@@ -1397,14 +1213,7 @@ npx smartui capture kitchens/urls.json --config config.json
 
 For detailed guidance, see [SmartUI Capture Onboarding with HyperExecute](/support/docs/smartui-hooks-with-hyperexecute/).
 
-
-
-
-
-
 ## Troubleshooting
-
-
 
 **Server Not Running**
 ```bash
@@ -1418,16 +1227,12 @@ npx smartui exec:start
 echo $SMARTUI_SERVER_ADDRESS
 ```
 
-
-
 **Port Conflicts**
 ```bash
 # Use custom port
 npx smartui exec:start -P 5000
 npx smartui exec -P 5000 -- npm test
 ```
-
-
 
 **Authentication Issues**
 ```bash
@@ -1440,7 +1245,6 @@ echo $LT_ACCESS_KEY
 npx smartui capture urls.json --userName "user" --accessKey "key"
 ```
 
-
 **Configuration Errors**
 ```bash
 # Validate JSON
@@ -1449,11 +1253,6 @@ cat .smartui.json | python -m json.tool
 # Check config path
 npx smartui capture urls.json --config .smartui.json
 ```
-
-
-
-
-
 
 ## Additional Resources
 

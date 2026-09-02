@@ -87,7 +87,6 @@ Execute the above NUnit test scripts, and you can run your Selenium tests direct
 
 ## Whitelist the Proxy
 
-
 Beyond configuring proxy settings, a firewall-protected network may still block the connection to TestMu AI, and you may encounter error messages. In such scenarios, you need to whitelist the TestMu AI domain. Whitelisting tells your firewall-protected network to allow access for a set of IP addresses, IP range, or an entire domain that you trust. It is a security procedure to help users access a website or web-app that their network security team considers non-malicious.
 
 Relay the below domain to your network security team and ask them to whitelist it so you can connect with TestMu AI from your firewall-protected network. If your setup also needs to route traffic to internal hosts, you can configure custom DNS mapping alongside your proxy. To inject authentication or routing values into every request, you can also set custom HTTP headers for the session.
@@ -99,7 +98,6 @@ Relay the below domain to your network security team and ask them to whitelist i
 If you have any questions or require an additional information, you can contact us at our **24/7 chat support**. You can also drop us a mail at support@testmuai.com.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

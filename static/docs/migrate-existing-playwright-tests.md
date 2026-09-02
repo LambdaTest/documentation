@@ -6,7 +6,6 @@ If you already run Playwright tests on a local grid, you can move them to TestMu
 
 ## Sample Playwright Script Running on a Local Machine
 
-
 Start from a working local test so you can see exactly which lines change during migration. The sample Playwright script below launches a browser on your local machine and runs the script.
 
 ```js
@@ -33,7 +32,6 @@ await browser.close()
 ```
 
 ## Changes in Scripts to Run Playwright Tests on TestMu AI
-
 
 The local script uses `playwright['chromium'].launch`, which opens a browser on your own machine. To run the same test on TestMu AI, replace that launch call with a connection to the TestMu AI CDP endpoint, as shown below.
 
@@ -68,11 +66,9 @@ In the code snippet above, the `chromium.connect` method connects to the CDP end
 
 ## Selecting Browser-OS Combinations for Test Runs
 
-
 You can run your script on any supported browser and OS combination. Specify the `browserName`, `browserVersion`, and `platform` in the `capabilities` JSON before calling the CDP endpoint.
 
 ## Related Playwright Guides
-
 
 Continue with the guides below to configure and expand your Playwright runs on TestMu AI.
 

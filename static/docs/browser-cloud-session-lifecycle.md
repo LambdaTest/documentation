@@ -5,7 +5,6 @@
 Learn how sessions move from creation to release, and how to manage timeouts and cleanup.
 Understanding the session lifecycle helps you avoid leaked sessions, reduce wasted resources, and ensure clean recordings on your dashboard.
 
-
 ## Session States
 
 Every session passes through a simple set of states during its lifetime:
@@ -25,7 +24,6 @@ recording is saved to the TestMu AI dashboard.
 
 **Failed.** Something went wrong - a crash, connection loss, or infrastructure
 error. Failed sessions are automatically cleaned up.
-
 
 ## Session Timeout
 
@@ -47,7 +45,6 @@ For quick scrapes, the default 5 minutes is usually enough. For multi-step
 workflows where your agent navigates through several pages, you may want
 10–30 minutes.
 
-
 ## Releasing Sessions
 
 When your agent is done, release the session explicitly. This frees resources
@@ -66,7 +63,6 @@ them at once:
 await client.sessions.releaseAll();
 ```
 
-
 ## Listing and Retrieving Sessions
 
 You can check which sessions are currently active and retrieve details about any
@@ -80,7 +76,6 @@ const sessions = client.sessions.list();
 const session = client.sessions.retrieve('session_12345_abc');
 ```
 
-
 ## Live Session Details
 
 While a session is running, you can get real-time information about it:
@@ -92,7 +87,6 @@ console.log(details.pages);            // Currently open pages/tabs
 console.log(details.wsUrl);            // WebSocket URL
 console.log(details.sessionViewerUrl); // Live viewer URL
 ```
-
 
 ## Best Practices
 

@@ -6,7 +6,6 @@ Trigger KaneAI test runs directly from your CI/CD pipeline so tests execute auto
 
 ## Prerequisites
 
-
 Before you begin, make sure you have:
 
 - Access to Test Manager.
@@ -15,31 +14,22 @@ Before you begin, make sure you have:
 
 ## Set up CI/CD Automation
 
-
 Follow these steps to copy a test run ID and trigger it from your CI/CD pipeline using the Test Manager API.
 
 ### Step 1: Open Test Manager
 
-
 - Log in to the KaneAI platform and go to the Test Manager page.
 - Access the project where the test run is located.
 
-
-
 ### Step 2: Copy Run ID
-
 
 Inside your selected project, navigate to the Test Runs section. Select the desired test run for integration or direct triggering from your CI/CD pipeline.
 
 Open the test run to view its URL. Copy the Test Run ID from the URL. This ID will be used in the API call for integration.
 
-
 A list of test instances with various configurations will be displayed for each test run.
 
-
-
 ### Step 3: Configure API Call
-
 
 Replace `` with the actual ID from the URL and set additional optional parameters:
 
@@ -64,9 +54,7 @@ Replace `` with the actual ID from the URL and set additional optional parameter
 - **extent_report_enabled**: Set to `true` to generate an Extent report for the test run. The report can be accessed from the HyperExecute Job page after execution. Only one report type can be enabled at a time. Use either `report_enabled` or `extent_report_enabled`, not both.
 - **report_email_to**: An array of email addresses to receive the test run report via email after execution. Maximum 10 email addresses. Only works when `report_enabled` is set to `true`.
 
-
 Test case failure retries are supported only for code exported from **May 10, 2026 onwards**. For previously exported code, retries are triggered only on test runner command failure. To use this capability, regenerate the code export for your test cases in Test Manager.
-
 
 #### Example API Call:
 
@@ -133,38 +121,29 @@ The API response contains the job ID for both jobs created for desktop web tests
 }
 ```
 
-
 ### Step 4: Authenticate and Trigger
-
 
 - Provide your TestMu AI username and access key for Basic Authentication.
 - Submit the API call to trigger the job. The process will start within seconds.
 
 > **Important :** Keep your credentials secure to maintain platform integrity.
 
-
 ### Step 5: Monitor Test Executions
-
 
 - Follow the link provided in the API response to view the HyperExecute Job.
 - Monitor running executions in real time through the dashboard.
 
-
-
 ## GitHub Actions Sample
-
 
 Use the sample below to integrate the API with GitHub Actions in your repository.
 
 ### Step 1: Create a Workflow File
-
 
 In your Git repository, navigate to `.github/workflows/` and create a file named `sanity-test.yml`.
 
 **Result:** An empty workflow file is ready for the sample below.
 
 ### Step 2: Add the Workflow YAML
-
 
 The sample below executes a test run using `test_run_id` and then verifies the result using the HyperExecute job status API. See the [HyperExecute API reference](https://www.testmuai.com/support/api-doc/?key=hyperexecute) and update the API call in the file based on your needs.
 
@@ -222,13 +201,11 @@ echo "Sanity tests passed successfully."
 
 ### Step 3: Define Workflow Triggers
 
-
 Set the workflow to trigger on `push` and `pull_request` events under the `on` section of the YAML above. Modify the triggers based on your needs.
 
 **Result:** The workflow runs your KaneAI test run automatically on each matching push or pull request.
 
 ## Next Steps
-
 
 Continue with these guides:
 
@@ -237,8 +214,6 @@ Continue with these guides:
 
 ## Video Explanation
 
-
 Watch a short walkthrough:
-
 
 The video consists of old configuration with Test Plans and Builds instead of Test Runs. Please keep this in mind while going through the video. The video will be updated soon.

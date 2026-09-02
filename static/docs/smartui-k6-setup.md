@@ -10,29 +10,17 @@ This documentation will act as your step-by-step guide in to perform K6 test wit
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-
-
-
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
-
-
-
 
 ```bash
 set LT_USERNAME=YOUR_USERNAME"
 ```
 
-
-
-
 ```powershell
 $env:LT_USERNAME=YOUR_USERNAME"
 ```
-
-
-
 
 The following steps will guide you in running your first Visual Regression test on TestMu AI platform -
 
@@ -46,8 +34,6 @@ To create a SmartUI Project, follow these steps:
 3. Select the platform as Web for executing your `K6` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
-
-
 
 ### **Step 2:** Configure your test with K6 Desired Capabilities
 
@@ -68,27 +54,15 @@ npm install @lambdatest/smartui-cli @lambdatest/k6-driver
 
 3. Install k6 by referring to the installation guide `https://k6.io/docs/get-started/installation/`:
 
-
-
-
 ```bash
 brew install k6
 ```
-
-
-
 
 ```bash
 winget install k6
 ```
 
-
-
-
 4. Set up the TestMu AI credentials by using the commands below in the terminal. The account details are available on your [TestMu AI Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
-
-
-
 
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -96,26 +70,17 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 export PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 ```
 
-
-
-
 ```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 set PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 ```
 
-
-
-
 ```powershell
 $env:LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 $env:LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 $env:PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 ```
-
-
-
 
 5. Create and configure SmartUI config file:
 
@@ -150,9 +115,6 @@ npx smartui exec k6 run test.js
 
 ## Best Practices
 
-
-
-
 **Screenshot Naming**
 
 - Use descriptive, consistent names for screenshots
@@ -168,9 +130,6 @@ smartuiSnapshot(response1, "HomePage-Header");
 const response2 = http.get('https://example.com/products');
 smartuiSnapshot(response2, "ProductPage-MainContent");
 ```
-
-
-
 
 **Wait for Page Load**
 
@@ -192,17 +151,11 @@ sleep(2); // Wait for dynamic content
 smartuiSnapshot(response, "Page-Loaded");
 ```
 
-
-
-
 **Handle Dynamic Content**
 
 - Use `ignoreDOM` for elements that change between runs
 - Use `selectDOM` when you only need to compare specific areas
 - Document why elements are ignored for future reference
-
-
-
 
 **Configuration Management**
 
@@ -210,22 +163,13 @@ smartuiSnapshot(response, "Page-Loaded");
 - Use environment variables for sensitive data
 - Document custom configuration choices
 
-
-
-
 **Test Organization**
 
 - Group related screenshots in the same build
 - Use meaningful build names
 - Run tests in consistent environments
 
-
-
-
 ## Troubleshooting
-
-
-
 
 **Issue: Screenshots Not Appearing in Dashboard**
 
@@ -254,9 +198,6 @@ npx smartui exec k6 run test.js
 
 5. Review test execution logs for error messages
 
-
-
-
 **Issue: Project Not Found" Error**
 
 **Symptoms**: Error message indicating project cannot be found
@@ -271,9 +212,6 @@ npx smartui exec k6 run test.js
 2. Copy project token directly from Project Settings
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
-
-
-
 
 **Issue: Screenshots Show Blank or Incorrect Content**
 
@@ -310,9 +248,6 @@ smartuiSnapshot(response, 'Screenshot-Name');
 
 3. Verify viewport size in smartui-web.json configuration file
 
-
-
-
 **Issue: SmartUI CLI Not Working**
 
 **Symptoms**: Tests fail with SmartUI-related errors
@@ -343,9 +278,6 @@ k6 version
 npx smartui exec k6 run test.js
 ```
 
-
-
-
 **Issue: Screenshot Status Not Approved**
 
 **Symptoms**: Screenshots appear but status is not Approved"
@@ -366,9 +298,6 @@ if (screenshot.screenshotStatus !== "Approved") {
 2. Review comparison results in SmartUI dashboard
 3. Verify baseline exists and is correct
 4. Adjust pixel threshold if needed
-
-
-
 
 **Issue: Screenshot Names Not Matching Baseline**
 
@@ -396,10 +325,6 @@ If you encounter issues not covered here:
 - Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
 - Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
 
-
-
-
-
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
@@ -416,8 +341,6 @@ For additional information about K6 framework please explore the documentation [
 ## Advanced Options for Screenshot Comparison
 
 **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smartui-project-settings/).
-
-
 
 ## Advanced Options for Screenshot Comparison
 

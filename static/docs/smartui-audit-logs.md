@@ -4,8 +4,6 @@
 
 **Audit Logs** give you a permanent, searchable record of every important action in your SmartUI projects: who did it, when, and what changed. Use them for compliance, accountability, and tracing baseline history across projects, builds, and individual screenshots.
 
-
-
 ## Why use Audit Logs
 
 | Need | How Audit Logs help |
@@ -16,8 +14,6 @@
 | **Human vs system** | Clearly separate manual approvals/rejections from auto-approvals and system-driven changes. |
 | **Bulk action clarity** | One log entry per bulk approve/reject, with a visual preview of which screenshots were included. |
 
-
-
 ## Where to look: project, build, or screenshot
 
 Logs are available at three levels. Choose the level that matches what you need to prove or investigate.
@@ -27,8 +23,6 @@ Logs are available at three levels. Choose the level that matches what you need 
 | **Project** | Audit project creation/deletion, settings changes, and baseline merges. |  |
 | **Build** | Audit build lifecycle, bulk approvals/rejections, and who changed what in a test run. |  |
 | **Screenshot** | See full baseline and status history for a single asset (approvals, rejections, annotations). |  |
-
-
 
 ## Tracking baseline and screenshot history
 
@@ -47,24 +41,13 @@ Use this table to go straight to the right log and filters.
 ****Baseline history in one place****
 For a **single screenshot**, the **screenshot-level** log is that asset’s baseline history. For **project-wide** baseline changes (e.g. merge to baseline), use **project-level** logs. For **bulk** updates in a build, use **build-level** logs and the bulk-action preview.
 
-
-
-
 ## What each level shows
 
 **Project history**: Project created/deleted; settings updated; builds merged to baseline.
 
-
-
 **Build history**: Build created/completed/failed; re-runs (re-execute vs re-run comparison); bulk approve/reject; build deleted.
 
-
-
 **Screenshot history**: Approvals and rejections (single and bulk); live comparisons; ignore zones/annotations; screenshot added/deleted.
-
-
-
-
 
 ## What each log entry contains
 
@@ -78,35 +61,19 @@ Every event shows **who**, **when**, and **what**:
 | **Description** | Short summary of the action. |
 | **Metadata (visuals)** | For bulk actions: list and preview of affected screenshots. |
 
-
-
 ## Filters: find the right events quickly
 
 Use filters to narrow by **who** (user or system), **what** (event type), **branch**, or **screenshot name**.
 
 **By user or system**: Filter by specific users for accountability, or by **System** to see only automated events (e.g. auto-approvals).
 
-
-
-
-
 **By event type**: e.g. Approve, Reject, Merged to Baseline, Build Re-executed.
-
-
 
 **By branch**: Restrict to a Git branch.
 
-
-
 **By screenshot name**: Search for a specific snapshot.
 
-
-
 **Bulk actions**: One event per bulk approve/reject; hover or click to see a visual preview of the screenshots included.
-
-
-
-
 
 ## Common scenarios: how to get the answer
 
@@ -134,8 +101,6 @@ Open **Audit Log** (project- or build-level). Filter by **Users** → select tha
 
 Open **Audit Log** (build or project). Use the **Screenshot** or **Search** filter and enter the snapshot name. Review the filtered events for that snapshot’s history.
 
-
-
 ## Events that are logged
 
 | Scope | Events |
@@ -145,8 +110,6 @@ Open **Audit Log** (build or project). Use the **Screenshot** or **Search** filt
 | **Screenshot** | Approved, Rejected, Annotation Updated, Status Changed, Live Comparison Triggered, Added, Deleted. |
 
 Use the **Event type** filter in the UI to restrict to these categories.
-
-
 
 ## Related documentation
 

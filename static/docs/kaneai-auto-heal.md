@@ -8,17 +8,14 @@ Instead of failing the test the moment a locator breaks, KaneAI finds a new loca
 
 ## How It Works
 
-
 Auto-Heal recovers a broken step in two stages, then falls back to visual matching where the DOM is not enough.
 
 ### Multi-Locator Fallback
-
 
 - Every element KaneAI identifies is generated with **multiple locators** (XPath, CSS, ID, and others).
 - During execution on HyperExecute, if the primary locator fails, the script tries the fallback locators in priority order, ranked by confidence score.
 
 ### Natural Language Locator Healing
-
 
 - If all locators fail, KaneAI re-evaluates the **original natural language instruction** that generated the step.
 - It re-parses the instruction with context from nearby elements, page structure, and DOM hierarchy, then rebuilds the locator at runtime from the intent (for example, "Click on the 'Submit' button").
@@ -26,21 +23,17 @@ Auto-Heal recovers a broken step in two stages, then falls back to visual matchi
 
 ### Visual Query Fallback
 
-
 - When a locator cannot be determined from the DOM, KaneAI uses **visual queries** to identify the element by its appearance and relative position.
 
 ### Scope
-
 
 Auto-Heal applies to any command that requires an element locator, such as **Click**, **Type**, or **Hover**.
 
 ## Human-in-the-Loop Review
 
-
 Self-heal and agent-driven test modifications are surfaced for human review before they become permanent. When KaneAI adapts a locator or refactors a step, the change is captured with a before/after diff and an attributed audit-log entry. A reviewer can accept, reject, or edit the adaptation from the test summary; changes are never silently committed. Confidence-scored element matching blocks low-confidence actions, and every accepted or rejected modification is recorded in Audit Logs for compliance.
 
 ## Benefits
-
 
 Auto-Heal offers the following benefits for your test suite:
 
@@ -52,14 +45,12 @@ Auto-Heal offers the following benefits for your test suite:
 
 ## Roadmap
 
-
 The following capabilities are planned and not yet available:
 
 - **Detailed healing reports:** Reporting of healed locators, fallback paths taken, and suggestions for locator improvements.
 - **Auto-update healed locators:** Automatically writing auto-healed locators back into a new version of the KaneAI-generated test script.
 
 ## Video Explanation
-
 
 Watch this walkthrough to see Auto-Heal in action:
 
@@ -71,7 +62,6 @@ The video walkthrough covers:
 - How KaneAI finds new locators using the original instruction.
 
 ## Next Steps
-
 
 Continue with these guides:
 

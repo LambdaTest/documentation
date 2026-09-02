@@ -8,7 +8,6 @@ Instead of manually wiring up your Espresso project, use **Agent Skills** to let
 
 ## What Agent Skills Are
 
-
 Self-contained packages of instructions, code patterns, and configurations for a specific testing framework.
 
 Once installed, your AI assistant works like a senior Android QA automation architect with knowledge of:
@@ -21,7 +20,6 @@ Once installed, your AI assistant works like a senior Android QA automation arch
 
 ## Prerequisites
 
-
 Make sure you have the following set up before you start.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -29,7 +27,6 @@ Make sure you have the following set up before you start.
 3. Install an AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
 
 ## Step 1: Install the Espresso Agent Skill
-
 
 Clone the repository and copy the Espresso skill into your AI tool's skills directory.
 
@@ -49,12 +46,9 @@ cp -r agent-skills/espresso-skill .github/skills/
 cp -r agent-skills/espresso-skill .gemini/skills/
 ```
 
-
 Install **all available framework skills** at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
 
-
 ## Step 2: Set Your Credentials
-
 
 Add your TestMu AI credentials as environment variables so the generated tests can authenticate with the real device cloud.
 
@@ -66,7 +60,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Step 3: Run Your First Test
-
 
 Ask your AI assistant to write tests in natural language.
 
@@ -91,7 +84,6 @@ The Agent Skill automatically handles:
 
 ## What's Included in the Espresso Skill
 
-
 A breakdown of everything the skill package contains.
 
 ```
@@ -113,7 +105,6 @@ espresso-skill/
 
 ## Supported AI Tools
 
-
 Pick the tool you use and install the skill to the corresponding path.
 
 | Tool | Type | Installation Path |
@@ -127,7 +118,6 @@ Pick the tool you use and install the skill to the corresponding path.
 | Claude.ai | Web | Settings > Features > Skills |
 
 ## Next Steps
-
 
 Continue with these related guides:
 

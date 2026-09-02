@@ -25,9 +25,6 @@ To enable Slack notifications for your App Automation tests, add the `slackChann
 
 ### Configuration Examples
 
-
-
-
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("platformName", "Android");
@@ -39,9 +36,6 @@ capabilities.setCapability("isRealMobile", true);
 //highlight-next-line
 capabilities.setCapability("slackChannel", "mobile-test-results");
 ```
-
-
-
 
 ```python
 desired_caps = {
@@ -56,9 +50,6 @@ desired_caps = {
 }
 ```
 
-
-
-
 ```javascript
 const capabilities = {
 platformName: "Android",
@@ -71,9 +62,6 @@ isRealMobile: true,
 slackChannel: "mobile-test-results"
 };
 ```
-
-
-
 
 ## What Notifications You Receive
 
@@ -88,9 +76,7 @@ TestMu AI sends two types of Slack notifications:
 
 The `slackChannel` capability is set at the session level. If you update the channel name in a subsequent session under the same build, notifications for that session onward are sent to the updated channel.
 
-
 When multiple users or multiple sessions specify different channels concurrently within the same build, all channels are merged and notifications are sent to all of them.
-
 
 ## Fallback Behavior
 
@@ -102,7 +88,6 @@ If the `slackChannel` capability is not provided or the specified channel is inv
 
 **Important**
 Slack notifications never block or impact your test execution. If a notification fails to deliver for any reason, the test continues to run normally.
-
 
 ## Related Resources
 

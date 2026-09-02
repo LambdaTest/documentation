@@ -6,7 +6,6 @@ Run your PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/d
 
 ## Prerequisites
 
-
 Before you start, you need a TestMu AI account with your credentials, plus PHP, Composer, and the Selenium WebDriver for PHP installed.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -16,37 +15,15 @@ Before you start, you need a TestMu AI account with your credentials, plus PHP, 
 
 ## Set Your Credentials
 
-
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
-
 ## How the Sample Test Works
-
 
 Every framework below connects to the grid and passes your browser and OS choices through a capabilities array:
 
@@ -62,18 +39,11 @@ $capabilities = array(
 
 What changes between frameworks is only how those capabilities are supplied: a YAML config, a suite file, or an inline setup class. That is what each tab covers.
 
-
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
-
 
 ## Run a Test in Your Framework
 
-
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
-
-
-
-
 
 Behat is BDD for PHP: feature files plus step definitions, with the grid config in a Behat YAML file.
 
@@ -120,10 +90,6 @@ composer parallel
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 Laravel Dusk provides a fluent browser-automation API. Credentials and the grid live in the project's `.env` and `tests/DuskTestCase.php`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/php-laravel-dusk-todo):
@@ -158,10 +124,6 @@ php artisan dusk
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 Codeception configures the grid in its acceptance suite's WebDriver module, with credentials in the host URL.
 
@@ -206,10 +168,6 @@ composer install
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 PHPUnit keeps capabilities inline in `LambdaTestSetup.php`, with Composer scripts for single and parallel runs.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Php-PhpUnit-Selenium):
@@ -247,19 +205,13 @@ composer test
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 ## View Your Results
-
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 **Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

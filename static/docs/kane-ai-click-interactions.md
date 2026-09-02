@@ -6,7 +6,6 @@ KaneAI supports advanced click variants beyond a standard single click: **press 
 
 ## Authoring Modes
 
-
 You can author any of the three click variants in two ways:
 
 - **Natural Language (NL)**: describe the click in plain English (e.g. `long press the menu icon for 5 seconds`).
@@ -20,7 +19,6 @@ You can author any of the three click variants in two ways:
 
 ## Supported Platforms
 
-
 This table shows which click types and Manual Interaction are available on each platform:
 
 | Platform | Press and Hold | Multi-Click | Right Click | Manual Interaction |
@@ -30,19 +28,13 @@ This table shows which click types and Manual Interaction are available on each 
 | **iOS App** | ✅ | ✅ | ❌ | ✅ (Portrait only) |
 | **Mobile Web** | ✅ | ✅ | ❌ | ❌ (NL only) |
 
-
 **Right click is web-only.** On mobile, use **long press** to open context menus. KaneAI does not silently convert one to the other because they have different semantics.
 
-
-
-
 ## Press and Hold (Long Press)
-
 
 Author a long press with natural language or capture it through Manual Interaction:
 
 ### Author With Natural Language
-
 
 ```
 long press the menu icon
@@ -80,7 +72,6 @@ Only phrases containing **`long press`**, **`press and hold`**, **`tap and hold`
 
 ### Manual Interaction Capture
 
-
 In Recording mode, the capture layer classifies touch gestures by duration and movement:
 
 | Gesture | Rule |
@@ -92,7 +83,6 @@ In Recording mode, the capture layer classifies touch gestures by duration and m
 
 ### Common Use Cases
 
-
 | Use Case | Typical Duration |
 |----------|------------------|
 | Developer mode entry | 5–10 seconds |
@@ -101,15 +91,11 @@ In Recording mode, the capture layer classifies touch gestures by duration and m
 | Multi-select mode | 0.5–1 second |
 | Hidden settings access | 3–15 seconds |
 
-
-
 ## Multi-Click (Double / N-Click)
-
 
 Author a multi-click with natural language or capture it through Manual Interaction:
 
 ### Author With Natural Language
-
 
 ```
 double click on the submit button
@@ -127,9 +113,7 @@ tap thrice on the notification bell
 | Click N times | `click the button 5 times` | N |
 | Tap twice / thrice | `tap twice on the like button` | 2 / 3 |
 
-
 On mobile, **`click`** and **`tap`** are interchangeable. `double click X` maps to the same multi-click action as `double tap X`.
-
 
 #### Frequency Rules
 
@@ -138,7 +122,6 @@ On mobile, **`click`** and **`tap`** are interchangeable. `double click X` maps 
 
 ### Manual Interaction Capture
 
-
 The capture layer detects multi-click via a **debounce window**:
 
 - **Window:** 200 ms between consecutive clicks
@@ -146,19 +129,13 @@ The capture layer detects multi-click via a **debounce window**:
 - **Classification:** Two clicks within the window at the same spot = double click, three = triple click, and so on
 - **Inter-click interval:** Recorded for accurate replay
 
-
-
 ## Right Click (Context Click)
-
 
 Author a right click with natural language or capture it through Manual Interaction:
 
-
 Right click is supported on **Desktop Web only**. On mobile, use long press instead.
 
-
 ### Author With Natural Language
-
 
 ```
 right click on the file item
@@ -189,13 +166,9 @@ The word **`right`** must directly modify the verb (`click` / `tap` / `press`) t
 
 ### Manual Interaction Capture
 
-
 On Desktop Web, right-clicking fires a `contextmenu` event that is captured as a right-click step automatically.
 
-
-
 ## Mutual Exclusivity Rules
-
 
 The three click modifiers cannot be combined on a single operation. Attempting to combine them returns `INVALID_PARAMETER`.
 
@@ -210,10 +183,7 @@ The three click modifiers cannot be combined on a single operation. Attempting t
 - `right double-click on X`
 - `right click and hold X`
 
-
-
 ## UI Rendering
-
 
 Each click type displays a distinct icon and pill label in the **Sidebar**, **Test Case Summary**, and **Module view**:
 
@@ -225,11 +195,7 @@ Each click type displays a distinct icon and pill label in the **Sidebar**, **Te
 | N-click (3+) | MULTI CLICK | Multi-click |
 | Right click | RIGHT CLICK | Context menu |
 
-
-
-
 ## Best Practices
-
 
 Follow these practices for reliable tests:
 
@@ -242,10 +208,7 @@ Follow these practices for reliable tests:
 - Use [KaneAI Using Variables](/support/docs/kane-ai-using-variables/) to parameterize: `long press the button for ${hold_duration} seconds`.
 - Use [KaneAI Conditional Logic](/support/docs/kaneai-conditional-logic/) to apply click types contextually: `if popup is visible then right click on it`.
 
-
-
 ## FAQs
-
 
 Answers to common questions:
 
@@ -285,10 +248,7 @@ Yes. [KaneAI Auto-Heal](/support/docs/kaneai-auto-heal/) re-locates the element 
 **Can I use these click types inside a Module?**
 Yes. All three work inside [KaneAI Modules](/support/docs/kane-ai-modules/): create, import, edit, and version-bump as usual.
 
-
-
 ## Limitations
-
 
 Keep these limitations in mind:
 
@@ -304,15 +264,11 @@ Keep these limitations in mind:
 10. **Secrets as duration values.** `long press for {{secrets.user.DURATION}} seconds` is not supported. Secret values cannot be parsed as numeric durations.
 11. **No silent conversion.** Right click is not auto-converted to long press on mobile, and long press is not auto-converted to right click on web. Each gesture must be authored explicitly.
 
-
-
 ## Drag and Drop
-
 
 Drag extends the same press-then-move model as long press: KaneAI picks the element up, then moves it to a target. Use it for Kanban boards and any other drag-driven UI flow. As with the click variants above, you author a drag step either with natural language (e.g. `drag "Card A" to "Column B"`) or by performing the gesture yourself in Manual Interaction.
 
 ### Drag-and-Drop vs Click-and-Drag
-
 
 KaneAI supports two distinct drag interactions. They look similar but behave differently, and they are **not interchangeable**:
 
@@ -325,12 +281,9 @@ KaneAI supports two distinct drag interactions. They look similar but behave dif
 | **Platforms** | Desktop Web, Android App, iOS App, Mobile Web | Desktop Web only |
 | **Typical scenarios** | Kanban cards, list reordering, container-to-container transfer | Sliders, canvas drawing, element resizing, range selection |
 
-
 If a drag step fails on an element that doesn't respond to a long press (for example a slider thumb or a canvas), the element likely expects **Click and Drag** rather than Drag and Drop. Click and Drag has its own constraints, see [Drag Limitations](#drag-limitations).
 
-
 ### Drag Supported Platforms
-
 
 | Platform        | Natural Language | Manual Interaction |
 | --------------- | :--------------: | :----------------: |
@@ -340,7 +293,6 @@ If a drag step fails on an element that doesn't respond to a long press (for exa
 | **Mobile Web**  | ✅                | ❌                  |
 
 ### Choosing a Drag Mode
-
 
 | Use Case                                                                   | Recommended Mode       |
 | -------------------------------------------------------------------------- | ---------------------- |
@@ -353,12 +305,9 @@ If a drag step fails on an element that doesn't respond to a long press (for exa
 | Element resizing / canvas operations / flow charts                         | **Manual (recommended)** |
 | Drag with no stable element identifier                                     | Manual (recommended)   |
 
-
 **Sliders and confirmation gestures cannot be authored with NL.** Use Manual Interaction to capture the gesture directly. KaneAI records source, target, and drag vector in a coordinate-safe form.
 
-
 ### Author Drag With Natural Language
-
 
 Type the instruction into the KaneAI authoring panel.
 
@@ -382,15 +331,12 @@ drag the top card to the bottom of the list
 move task card from "To Do" column to "In Progress" column
 ```
 
-
 Natural language drag and drop works best when:
 - Drop zones are **explicitly defined and visible**.
 - You're moving items between containers.
 - The target location is **static** (not dynamically generated).
 
-
 ### Author Drag With Manual Interaction
-
 
 Switch to **Manual Interaction** mode in the KaneAI authoring panel and perform the drag directly on the device viewport.
 
@@ -403,9 +349,7 @@ Switch to **Manual Interaction** mode in the KaneAI authoring panel and perform 
 | Movement ≥ 10 px                       | Swipe       |
 | **Hold ≥ 1 second + Movement ≥ 10 px** | **Drag**    |
 
-
 For tap, long-press, multi-click, and right-click authoring, see the click sections above on this page.
-
 
 #### When Manual Interaction is Required
 
@@ -415,17 +359,13 @@ For tap, long-press, multi-click, and right-click authoring, see the click secti
 - **Canvas-based interactions**, drawing tools, and flow chart manipulation.
 - **Element resizing** and precise positioning.
 
-
 Manual recording is recommended for any scenario where the **drop location isn't explicitly defined** or the target **changes during the drag**.
 
-
 ### Drag Replay Behavior
-
 
 - Elements are **re-resolved at runtime**. KaneAI does **not** use cached coordinates when an element is resolvable.
 - **Stale element on replay** → 1 automatic retry, then hard fail.
 - **Minor coordinate drift** → auto-corrected on Desktop Web.
-
 
 **Mobile drag steps do not auto-heal.** Manual Interaction drags on Android and iOS rely on the captured drag vector and coordinates from the recording device. Replays on a device with a **different screen resolution or aspect ratio** may fail. To maximize cross-device reliability:
 
@@ -433,9 +373,7 @@ Manual recording is recommended for any scenario where the **drop location isn't
 - Replay Manual Interaction drags on devices with the **same resolution / form factor** as the recording device.
 - Capture the gesture once and reuse it in a Module scoped to a specific device profile.
 
-
 ### Drag Best Practices
-
 
 - **Use NL for static layouts**: Kanban boards, sortable grids, multi-container drags. Fastest authoring path.
 - **Use Manual for sliders, confirmation gestures, and dynamic targets.** These require touch-driven capture.
@@ -446,7 +384,6 @@ Manual recording is recommended for any scenario where the **drop location isn't
 - Use `{{variable_name}}` syntax to **parameterize** source / target references for data-driven runs.
 
 ### Drag Example Use Cases
-
 
 #### E-commerce Product Sorting
 
@@ -478,7 +415,6 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 
 ### Drag Limitations
 
-
 - **Multi-touch gestures** (two-finger drag, pinch-drag): not supported.
 - **Drag path waypoints**: only start and end coordinates are captured; intermediate path points are not preserved.
 - **Mobile Browser manual recording**: not supported. Use NL only.
@@ -493,7 +429,6 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 - **Editing manual drag steps**: source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
 
 ### Drag FAQs
-
 
 **What is the difference between Drag and Drop and Click and Drag?**
 Drag and Drop long-presses the element to pick it up before moving it, and works on all platforms. Click and Drag presses and moves the element immediately without a long press, and is available on Desktop Web only. See [Drag and Drop vs Click and Drag](#drag-and-drop-vs-click-and-drag).
@@ -529,7 +464,6 @@ Yes. Drag steps can be placed inside conditional blocks (`if X is visible then d
 Yes, drag works on both real devices and the device cloud for App testing. Real Device Web also supports manual drag.
 
 ## Next Steps
-
 
 Continue with these guides:
 

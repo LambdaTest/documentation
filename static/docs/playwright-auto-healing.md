@@ -6,7 +6,6 @@ When Playwright tests break because a locator changed after a UI update, Auto He
 
 ## Enable Auto Healing With the autoHeal Capability
 
-
 To turn on Auto Healing, pass `autoHeal: true` as a capability in your Playwright configuration. The example below shows it inside the `LT:Options` block alongside the other test options.
 
 ```js
@@ -27,18 +26,11 @@ autoHeal: true,
 };
 ```
 
-
 Auto Healing has no prerequisites. Enable it directly through the `autoHeal` capability.
-
 
 ### Enable Auto Healing in Your Language
 
-
 The `autoHeal` capability works the same way across languages. Select your language below to see how to pass it when connecting to the TestMu AI Playwright endpoint.
-
-
-
-
 
 For **JavaScript/NodeJS**, you can use the following code:
 
@@ -63,10 +55,6 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 }
 };
 ```
-
-
-
-
 
 For **Python**, you can use the following code:
 
@@ -96,10 +84,6 @@ ws_endpoint=f"wss://cdp.lambdatest.com/playwright?capabilities={urllib.parse.quo
 )
 ```
 
-
-
-
-
 For **C#**, you can use the following code:
 
 ```csharp
@@ -122,10 +106,6 @@ var capabilities = new Dictionary<string, object>()
 
 var browser = await Playwright.Chromium.ConnectAsync($"wss://cdp.lambdatest.com/playwright?capabilities={Uri.EscapeDataString(JsonSerializer.Serialize(capabilities))}");
 ```
-
-
-
-
 
 For **Java**, you can use the following code:
 
@@ -151,23 +131,15 @@ capabilities.put("LT:Options", ltOptions);
 Browser browser = playwright.chromium().connect("wss://cdp.lambdatest.com/playwright?capabilities=" + URLEncoder.encode(new Gson().toJson(capabilities), "UTF-8"));
 ```
 
-
-
-
-
 ## How Auto Healing Works
 
-
 Auto Healing watches the page during execution and rebuilds locators that no longer match. The diagram below shows how it detects a broken locator and recovers the correct element.
-
-
 
 Auto-healing adjusts broken locators by merging attributes and context. During runtime, it monitors the web page to identify DOM (Document Object Model) changes.
 
 When an element is successfully located using Playwright's locator methods (`page.locator('#username').click()`, etc.), its DOM path is recorded. If that same element is later referenced on the same page and is missing, the system evaluates the current page and generates new locators for altered elements based on previous benchmarks.
 
 ## Auto Detection of a Changed Locator
-
 
 Web elements often change their locators after an update to the web application. In these cases, Auto Healing detects the new locator and continues the test execution without a failure.
 
@@ -210,7 +182,6 @@ npx playwright test auto-heal.spec.js
 
 ## Benefits of Auto Healing
 
-
 Auto Healing pays off most in suites that break often on small UI changes. The benefits below explain what you gain by enabling it.
 
 - **Increased Test Stability:** Playwright tests remain consistent even when the web application's UI undergoes minor changes, reducing flakiness.
@@ -218,7 +189,6 @@ Auto Healing pays off most in suites that break often on small UI changes. The b
 - **Reliable CI/CD Pipeline:** Stable tests feeding into CI/CD pipelines reduce unexpected failures and ensure smoother deployments.
 
 ## Limitations of Auto Healing
-
 
 Auto Healing handles a wide range of issues, but it does not cover every failure. Be aware of the limitations below before you rely on it.
 
@@ -233,7 +203,6 @@ Auto Healing handles a wide range of issues, but it does not cover every failure
 Auto Healing enhances test suite robustness but does not replace good test design. Review healed tests regularly for issues that may be masked by the feature.
 
 ## Related Playwright Guides
-
 
 Continue with the guides below to run and configure your Playwright tests on TestMu AI.
 

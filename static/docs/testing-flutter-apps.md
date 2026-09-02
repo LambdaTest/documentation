@@ -10,7 +10,6 @@ You can now test Flutter apps on the TestMu AI Appium testing platform across 50
 
 ## Testing Apps Using Appium Flutter Driver
 
-
 Before automating Flutter apps using Appium, make sure you have the following things configured.
 
 1. Your Flutter App must be compiled in `debug` or `profile` mode, as  Appium Flutter Driver does not support Flutter App running in release mode.
@@ -89,11 +88,9 @@ print(counter_element.text)
 
 ## Testing Apps Using Appium Flutter Integration Driver
 
-
 The [Appium Flutter Integration Driver](https://www.testmuai.com/support/docs/appium-flutter-integration/) lets you write tests in languages like Java, Python, JavaScript, and others that Appium supports. It works by embedding a small server inside your Flutter app which talks back to Appium and drives UI interactions.
 
 Check out this [Flutter Appium Java GitHub](https://github.com/LambdaTest/flutter-appium-java/) repository for a hands-on reference.
-
 
 To run Appium tests using the Flutter Integration Driver on TestMu AI, set the *automationName* capability to *FlutterIntegration*.
 
@@ -167,10 +164,5 @@ driver.quit();
 ```
 
 Below is a screenshot showing Appium test automation running with the Flutter Integration Driver on the TestMu AI platform.
-
-
-
-
-
 
 >In case you have any questions or need any additional information, you could reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.

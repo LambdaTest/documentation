@@ -31,11 +31,9 @@ This gives you a middle ground that the existing options do not cover:
 
 ### Prerequisites
 
-
 For **web** comparisons, a Layout Region works only when the DOM was recorded at capture time. SmartUI compares the recorded structure of the two captures, so a build that carries a screenshot image alone has nothing to analyze. See [DOM Recording Requirement](#dom-recording-requirement-for-web-comparisons) for which capture flows record it.
 
 **PDF** comparisons are not affected. They read the structure out of the document itself, so no DOM is involved.
-
 
 **Step 1:** Open a screenshot comparison in your SmartUI project and click the **Actions** button (annotation icon) to open the annotation tool.
 
@@ -47,16 +45,11 @@ For **web** comparisons, a Layout Region works only when the DOM was recorded at
 
 **What Happens:** The comparison re-runs. Inside the region SmartUI reports only structural changes. Outside the region the comparison is unchanged. Layout Regions persist to later builds for the same screenshot exactly like Ignore Regions do, and they appear in the annotation overlay in **green**.
 
-
 You can draw more than one Layout Region on a capture, and you can mix Layout Regions with Ignore, Select, Floating, and Ignore Colors regions on the same screenshot. For PDF comparisons, regions are drawn per page.
-
 
 ## How It Works
 
 SmartUI does not read pixels inside a Layout Region. It compares a structural description of the region taken from the baseline against the same description taken from the comparison capture, then highlights only the elements that do not line up.
-
-
-
 
 For web captures, SmartUI uses the DOM element data recorded alongside each screenshot. This requires the capture flow to have recorded the DOM, as described in [DOM Recording Requirement](#dom-recording-requirement-for-web-comparisons).
 
@@ -68,10 +61,6 @@ For web captures, SmartUI uses the DOM element data recorded alongside each scre
 
 Because the match is structural, a text or value change inside an element that is otherwise unchanged does not raise a difference. That is the intended behavior of the region.
 
-
-
-
-
 For PDF comparisons, SmartUI extracts the text lines and table cells on the page and matches them between the baseline document and the comparison document within the region you drew.
 
 1. Lines and table structures inside the region are extracted from both documents for the page you are viewing.
@@ -79,9 +68,6 @@ For PDF comparisons, SmartUI extracts the text lines and table cells on the page
 3. Lines or cells present on only one side are highlighted as structural differences on that side.
 
 A value that changes inside an otherwise matching cell is not reported, which is what lets generated identifiers and timestamps pass while a missing row or a shifted table is still caught.
-
-
-
 
 ## DOM Recording Requirement for Web Comparisons
 
@@ -97,9 +83,7 @@ The structural analysis behind a web Layout Region reads the DOM that was record
 
 DOM recording is on by default for SmartUI CLI and SDK web captures, because those flows capture the page structure and render it on the TestMu AI cloud. It is **not** on by default for captures taken inside an automation session. If you are running SmartUI through Lambda Hooks or through your automation suite and want Layout Regions to analyze structure, contact [support](mailto:support@testmuai.com) to have DOM recording enabled for your organization.
 
-
 When the DOM was not recorded, the region does not fail or error. It quietly behaves like an [Ignore Region](/support/docs/smartui-draw-on-ui/), which means the area stops being validated at all. If you drew a Layout Region and it never reports anything, check the capture flow first.
-
 
 ## Where the Option Is Available
 
@@ -125,9 +109,6 @@ For these test types the dropdown shows the Ignore, Select, Floating, and Ignore
 
 ## Troubleshooting
 
-
-
-
 **Issue:** The annotation type dropdown does not list **Layout Region**.
 
 **Solutions:**
@@ -135,20 +116,12 @@ For these test types the dropdown shows the Ignore, Select, Floating, and Ignore
 - Make sure you are on a screenshot comparison view and not on a build listing.
 - Refresh the page so the annotation tool reloads with the current screenshot's test type.
 
-
-
-
-
 **Issue:** Content clearly changed inside the region and no difference is reported.
 
 **Solutions:**
 - This is expected when only the content changed. A Layout Region reports elements that were added, removed, or moved, not text or value changes.
 - If the section did change structurally, check that the region actually covers the elements. An element is considered part of the region when its center falls inside the box.
 - If you need the content validated, use the normal comparison for that area instead.
-
-
-
-
 
 **Issue:** The region suppresses everything and never reports a structural change.
 
@@ -159,19 +132,12 @@ For these test types the dropdown shows the Ignore, Select, Floating, and Ignore
 - Reduce the size of the region. Very large regions over element heavy pages are skipped and fall back to ignore behavior
 - For PDF comparisons, confirm you are annotating the page that actually contains the section
 
-
-
-
-
 **Issue:** The region highlights far more elements than expected.
 
 **Solutions:**
 - Tighten the region so it frames one section rather than a large part of the page.
 - Check whether the section really was rebuilt between the two captures. A container that is re-rendered with a different structure legitimately produces many unmatched elements.
 - If the area is genuinely rebuilt on every run and you do not need it validated, an Ignore Region is the better fit.
-
-
-
 
 ## Additional Resources
 

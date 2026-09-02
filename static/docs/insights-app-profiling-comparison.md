@@ -8,11 +8,7 @@ The **Comparison** view plots individual test sessions against one another inste
 
 Where Trends charts a metric over calendar time, Comparison charts it over **elapsed time within each run** — every session starts at `0:00`, so runs of different lengths and different start times line up and can be read against each other.
 
-
-
-
 Comparison is a different feature from **Compare mode** on the Trends widgets. Compare mode overlays a *dimension* — OS, device, build or label — on a single widget. Comparison overlays whole *test sessions* across every metric at once. See [Compare mode](/support/docs/insights-app-profiling/#compare-mode).
-
 
 ## How to access
 
@@ -43,11 +39,7 @@ The rail lists every session that matches the current filters, with a running co
 | Checkbox | Adds or removes that session from the comparison |
 | **Set as Baseline** | Makes that session the reference every other session is measured against |
 
-
-
-
 You can compare up to five sessions at once — deselect one to add another — and at least one session must stay selected, so the charts are never left empty.
-
 
 ## How the graphs are drawn
 
@@ -61,8 +53,6 @@ Each metric renders as its own card, in this order: **CPU Utilization**, **Memor
 - **A stats table** under every chart with **Avg**, **Min**, **Max** and **P90** per session.
 
 **Startup Time** is a grouped bar chart rather than a line — it reports one Cold and one Hot value per run, with the Cold and Hot SLA lines drawn across it. Its **Load Time** variant switches to per-page-label load times, plotted by label instead of by elapsed time.
-
-
 
 ## Avg, Min, Max and P90
 

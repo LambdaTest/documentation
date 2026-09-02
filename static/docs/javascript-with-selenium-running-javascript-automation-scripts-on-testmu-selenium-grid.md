@@ -6,7 +6,6 @@ Run your JavaScript Selenium tests on the TestMu AI cloud grid across 10,000+ br
 
 ## Prerequisites
 
-
 Before running any framework below, you need a TestMu AI account, your credentials, Node.js and npm, and the Selenium JavaScript bindings.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -16,37 +15,15 @@ Before running any framework below, you need a TestMu AI account, your credentia
 
 ## Set Your Credentials
 
-
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
-
-
-
-
-
-
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-
-
-
-
-
-
 ## How the Sample Test Works
-
 
 Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities object. A minimal one looks like this:
 
@@ -66,18 +43,11 @@ video: true
 
 What changes between frameworks is only how those capabilities are wired in: an inline object, a `.conf.js` file, or a runner config. That is what each tab covers.
 
-
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
-
 
 ## Run a Test in Your Framework
 
-
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), set your browser and OS in its config, then run.
-
-
-
-
 
 Mocha reads its capabilities from a `conf/single.conf.js` file.
 
@@ -118,10 +88,6 @@ npm run single
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 Nightwatch reads its grid setup from `nightwatch.conf.js` in the cloned project.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/nightwatch-selenium-sample):
@@ -145,10 +111,6 @@ npm run single
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 WebdriverIO reads user, key, and capabilities from `conf/single.conf.js`.
 
@@ -195,10 +157,6 @@ npm run single
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 Jest defines capabilities inline in the test file, so there is no separate config to edit.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/jest-selenium-webdriver-sample):
@@ -232,10 +190,6 @@ npm test single.test.js
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 CucumberJS runs BDD feature files, with grid capabilities set in `conf/single.conf.js`.
 
@@ -271,10 +225,6 @@ npm run single
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 Jasmine runs through Karma, which defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
 
@@ -317,10 +267,6 @@ karma start karma.conf.js
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 Karma with Angular CLI defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/angular-karma-sample):
@@ -362,10 +308,6 @@ karma start karma.conf.js
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 TestCafe connects through an npm plugin rather than a sample repo, so there is nothing to clone.
 
 1. Install the plugin in your TestCafe project:
@@ -379,10 +321,6 @@ npm install testcafe-browser-provider-lambdatest
 ```bash
 testcafe "lambdatest:Chrome@74.0:Windows 8" 'path/to/test/file.js'
 ```
-
-
-
-
 
 NemoJS reads its capabilities from `nemo.config.js`.
 
@@ -420,10 +358,6 @@ npx nemo -P chrome
 ```
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-
-
-
 
 CodeceptJS uses a WebDriver helper in `codecept.conf.js`, with an optional service to sync test names and statuses to the dashboard.
 
@@ -470,13 +404,8 @@ npm test
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 **Deprecated**
 Protractor reached end-of-life in August 2023 and is no longer maintained. For new projects, use the actively maintained **WebdriverIO** framework instead (see the WebdriverIO tab).
-
 
 Protractor reads its grid setup from the config file in the cloned project.
 
@@ -502,13 +431,8 @@ npm run single
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 **Deprecated**
 WD is no longer maintained. For new projects, use the actively maintained **WebdriverIO** framework instead (see the WebdriverIO tab).
-
 
 WD reads its capabilities from `conf/single.conf.js` in the cloned project.
 
@@ -534,13 +458,8 @@ npm run single
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 **Deprecated**
 AngularJS reached end-of-life in December 2021 and is no longer maintained. For new projects, use the actively maintained **Karma** framework instead (see the Karma tab).
-
 
 AngularJS runs through Karma, which defines cloud browsers in `customLaunchers` inside `karma.conf.js`.
 
@@ -566,19 +485,13 @@ karma start karma.conf.js
 
 The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
-
-
-
-
 ## View Your Results
-
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
 
 **Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

@@ -6,7 +6,6 @@ TestMu AI Selenium Automation Grid is a cloud based scalable [Selenium testing](
 
 ## Prerequisites
 
-
 - Make sure that you have the latest Python build installed. You can download the latest Python build from [this page](https://www.python.org/downloads/).
 
 - You would need Python package manager, pip, as well. Usually latest python installers come prepacked with pip. However, if you don’t have pip, you can install it using the below command:
@@ -15,14 +14,12 @@ TestMu AI Selenium Automation Grid is a cloud based scalable [Selenium testing](
 
 ## Installing Selenium Dependencies For Python
 
-
 Make sure that you have installed Selenium dependencies before executing your tests. You can use pip to install Selenium using following command:
 
     pip install selenium
     export PYTHONWARNINGS="ignore:Unverified HTTPS request"   //Disable SSL warning
 
 ## Sample Python & Selenium Test To Get You started
-
 
 Now we are all set to execute the first Python test on TestMu AI Selenium Grid. Checkout the sample code below. This is a simple python code that uses TestMu AI Selenium grid to open up Google. You can also download it from our [GitHub repo](https://github.com/LambdaTest/python-selenium-sample).
 

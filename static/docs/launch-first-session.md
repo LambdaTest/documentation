@@ -7,9 +7,7 @@ your first browser session on TestMu AI Browser Cloud, and driving it using
 TypeScript/Puppeteer. In just a few minutes, you'll be programmatically
 controlling a cloud browser.
 
-
 ## Prerequisites
-
 
 **Step 1**: [Sign up on TestMu AI](https://www.testmuai.com/register/)
 
@@ -30,9 +28,7 @@ LT_ACCESS_KEY=your_access_key
 
 > Make sure to add `.env` to your `.gitignore` file to keep your credentials secure.
 
-
 ## Installing the TestMu AI Browser SDK
-
 
 ```bash
 npm i @testmuai/browser-cloud
@@ -40,15 +36,10 @@ npm i @testmuai/browser-cloud
 
 **Requirements:** Node.js 16+ (Node 18+ required if using the Playwright adapter)
 
-
 ## Create Your First Session
-
 
 Let's create a simple script that launches a cloud browser, navigates to a page,
 and cleans up:
-
-
-
 
 ```typescript
 // my-first-session.ts
@@ -89,12 +80,7 @@ console.log('Session released');
 main().catch(console.error);
 ```
 
-
-
-
-
 Playwright requires **Node.js 18+**.
-
 
 ```typescript
 // my-first-session.ts
@@ -133,9 +119,6 @@ console.log('Session released');
 
 main().catch(console.error);
 ```
-
-
-
 
 ```typescript
 // my-first-session.ts

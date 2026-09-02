@@ -4,15 +4,7 @@
 
 HyperExecute MCP Tool is part of the [TestMu AI MCP Server](/support/docs/testmu-mcp-server/). It lets you set up HyperExecute test jobs, generate YAML configurations, and monitor runs directly from your IDE using natural language prompts.
 
-
-
-
-
-
-
 ## Key Benefits
-
-
 
 Here are the key benefits of using the HyperExecute tool:
 
@@ -26,8 +18,6 @@ Here are the key benefits of using the HyperExecute tool:
 
 ## Capabilities
 
-
-
 The HyperExecute MCP Tool provides five capabilities:
 
 1. **Test Runner Command Generation:** Analyzes your project structure and generates appropriate test commands.
@@ -37,8 +27,6 @@ The HyperExecute MCP Tool provides five capabilities:
 5. **HyperExecute Sessions:** Fetches session details for a given test run.
 
 ## How to Invoke
-
-
 
 Once your MCP client is connected, use natural language to interact with the HyperExecute tool. Example prompts:
 

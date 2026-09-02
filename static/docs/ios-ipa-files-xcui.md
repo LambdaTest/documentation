@@ -41,7 +41,6 @@ You can use the generated .ipa file for testing on the **TestMu AI** Platform.
 **note**
 The **.app file** is generated in your Xcode project's **Products Directory**.
 
-
 **Step 4:** After generating the **.app** bundle, proceed with building an **.ipa** file:
 
 > - Firstly, create an empty directory with the name `Payload`.
@@ -56,7 +55,6 @@ Follow the below mentioned steps to create your Test package:
 **Step 1:** Open your application project in Xcode. Choose **Generic iOS Device** or **Any iOS Device (arm64)** for the project's device target.
 
 **Step 2:** Confirm that your UI Tests are included in **Target Membership** and the said targets are selected to be built in your **Xcode Build Scheme.** _UI Tests Targets are specially selected to be built at the "Test" build action._
-
 
 **Step 3:** Click on **Product** -> **Build For** -> **Testing** to create your test package.
 

@@ -8,8 +8,6 @@
 
 ## Prerequisites For Integrating AppVeyor CI With Our Online Selenium Grid
 
-
-
 To perform your tests with TestMu AI, you would need the below things to be already set up:
 
 1.  A GitHub or BitBucket repository on which you want to activate the CI pipeline.
@@ -24,8 +22,6 @@ Update your username and access key in the "Config.properties" file.
 
 ## Activating A Github Repository For CI/CD
 
-
-
 Here are the steps to activate and integrate your Github repository with AppVeyor CI on TestMu AI:
 
 Login to your [AppVeyor CI](https://ci.appveyor.com/) platform and click on **New Project** to enable CI/CD on your selected repository. For demo purposes, we have used the GitHub repository mentioned in the Prerequisites above. ]
@@ -36,13 +32,9 @@ Once your repository is added, go to the **Settings -> Build**, and select the t
 mvn test
 ```
 
-
-
 Congratulations!! Now you have successfully activated your repository for CI/CD on the AppVeyor platform.
 
 ## Execution Of The AppVeyor CI Pipeline On TestMu AI
-
-
 
 Below is the step-by-step execution of the AppVeyor CI pipeline.
 
@@ -54,7 +46,5 @@ Below is the step-by-step execution of the AppVeyor CI pipeline.
 4.  As soon as the AppVeyor CI is triggered (through push event in this case), a new build can be seen in the "Timeline" on your [TestMu AI's automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline/). The current status of this build will be "running" or "executing".
 
 5.  Now based on the tests, this build can pass or fail. If passed, a green tick along with the term **Passed** will appear in the summary of the test. Else if failed, a red cross will appear instead, along with the term **Failed**, as shown below.
-
-
 
 > Deploy your code in a reliable manner at scale using AppVeyor CI integration with TestMu AI, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. If you have any doubt, please feel free to reach out to us via **24/7 chat support** or by mailing to us on [support@testmuai.com](mailto:support@testmuai.com). Happy testing!

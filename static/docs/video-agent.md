@@ -10,8 +10,6 @@ The only requirement is a web URL that a person could join with a camera and a m
 
 ## What You Can Test
 
-
-
 You can test anything reachable at a web URL that a person could join with a camera and a microphone. If you can send a colleague a link and they can join the conversation in a browser, TestMu AI can test it.
 
 | Target | Supported | Notes |
@@ -23,21 +21,15 @@ You can test anything reachable at a web URL that a person could join with a cam
 
 ## Before You Start
 
-
-
 Before you create a video agent, make sure you have the following in place.
 
 1. **A joinable URL for the agent you want to test.** A staging URL is ideal. Every test is a real conversation with whatever is behind that link, so point it at an environment you are comfortable exercising.
 2. **Video agent testing enabled for your organization.** This is switched on per organization. If you do not see the option when creating an agent, ask your administrator.
 3. **A clear definition of what "working" means.** This is the part worth thinking about, because it is what makes results useful rather than decorative. The [success criteria](#success-criteria-decide-the-verdict) section covers it in depth.
 
-
 Every session is a real conversation with whatever is behind the URL you supply. If you point it at production, it exercises production. Use a staging URL wherever you can.
 
-
 ## Core Concepts
-
-
 
 Five concepts define a video agent test, and they nest inside one another. A scenario is the script for a situation, a session is one performance of it, and a suite is the whole show.
 
@@ -51,19 +43,13 @@ Five concepts define a video agent test, and they nest inside one another. A sce
 
 ## How to Run Your First Video Agent Test
 
-
-
 A first run has five steps: create the agent, add scenarios, group them into a suite, run it, and read the results.
 
 ### Create the Agent
 
-
-
 Choose the video agent type and give it a name. This is where you set the URL of the video agent under test.
 
 ### Add Scenarios
-
-
 
 Add scenarios in any of three ways, and you can mix them in one suite.
 
@@ -73,13 +59,9 @@ Add scenarios in any of three ways, and you can mix them in one suite.
 
 ### Group Scenarios Into a Suite
 
-
-
 Group the scenarios you want to run together into a suite. A smoke suite of five to eight scenarios that you run on every change is worth more than a sprawling pack nobody runs.
 
 ### Run the Suite
-
-
 
 Open the run dialog and fill in the fields below. These control who joins, how the candidate presents on camera, and how long the conversation runs.
 
@@ -93,19 +75,13 @@ Open the run dialog and fill in the fields below. These control who joins, how t
 
 ### Read the Results
 
-
-
 Sessions appear as they finish. Each session carries its own recording, transcript, and verdict. The [Reading Your Results](#reading-your-results) section covers how to read them.
 
 ## Writing Scenarios That Find Real Problems
 
-
-
 Scenario quality decides whether your results are worth anything. A scenario has two parts that matter most: the description, which becomes the simulated candidate's brief, and the success criteria, which decide the verdict.
 
 ### Write the Description as a Brief, Not a Script
-
-
 
 The candidate improvises. It watches your agent, listens, and responds in the moment. It is not reading lines. So the description should read like a briefing you would give an actor, not a screenplay.
 
@@ -122,8 +98,6 @@ A scenario that says "candidate answers interview questions" tests nothing. A sc
 
 ### Success Criteria Decide the Verdict
 
-
-
 Criteria are the single highest-leverage thing you write. When a scenario has them, the verdict is anchored to them: your agent passes only if every criterion is met. Anything the evaluator cannot confirm counts as not met, which is deliberately strict. A criterion nobody can verify from the recording is not evidence of success.
 
 Write criteria as observable, single facts. One behavior per criterion. If a criterion contains "and," it is probably two.
@@ -139,8 +113,6 @@ If you leave criteria off entirely, you still get a verdict, but it comes from t
 
 ### Scenario Categories You Can Target
 
-
-
 When generating scenarios, you can steer toward specific situations. A good pack is weighted toward `error_recovery` and `edge_case`, because the happy path tends to work.
 
 | Category | Surfaces |
@@ -155,8 +127,6 @@ When generating scenarios, you can steer toward specific situations. A good pack
 
 ### CSV Columns for Bulk Import
 
-
-
 When you bulk import scenarios, the CSV uses the following columns. Download the template from the import dialog so the header row matches.
 
 | Column | Notes |
@@ -169,8 +139,6 @@ When you bulk import scenarios, the CSV uses the following columns. Download the
 | `max_turns` | Conversation length ceiling |
 
 ## Covering More Ground With Fan-Out
-
-
 
 A single scenario tested once tells you it worked once. Real confidence comes from the same situation under varied conditions. Each scenario can expand across four independent axes, and an empty axis counts as one, so a scenario with nothing set runs exactly once.
 
@@ -191,8 +159,6 @@ Iterations deserve emphasis. Conversational agents are not deterministic. A beha
 
 ## Single Test vs Suite Run
 
-
-
 You can run one ad-hoc test or a full suite. Start with single tests while you learn what your agent does, then move to suites once you know what you want to guard.
 
 | | Single test | Suite run |
@@ -204,13 +170,9 @@ You can run one ad-hoc test or a full suite. Start with single tests while you l
 
 ## Reading Your Results
 
-
-
 Each session reports a status, a recording with transcript, and an evaluation. Read the status first to know whether the result reflects your agent or the test harness, then open the evaluation for the verdict.
 
 ### Session Status Values
-
-
 
 A session ends in one of five states. Inconclusive is the one to understand, because it exists to protect your pass rate.
 
@@ -226,8 +188,6 @@ Inconclusive means a problem on the TestMu AI side, not yours. If the simulated 
 
 ### The Recording Tab
 
-
-
 The Recording tab shows the session as it happened, plus the transcript. This is the fastest route from a verdict such as "the agent did not follow up" to seeing it not follow up.
 
 - **Watch the recording.** Where your agent's platform exposes its own recording, you get its view. Otherwise you get the TestMu AI capture of the session.
@@ -238,8 +198,6 @@ The Recording tab shows the session as it happened, plus the transcript. This is
 The transcript does not scroll itself while the video plays. Scrolling is yours, so you can read back through earlier turns without playback yanking you around.
 
 ### The Evaluation Tab
-
-
 
 The Evaluation tab is laid out in the order that matters: the headline verdict, a short summary, your criteria one row at a time, and then pillar scores as diagnostics.
 
@@ -271,13 +229,9 @@ Use pillars to explain a result, not to define one. A pass with a low conversati
 
 ### The Session Details Tab
 
-
-
 The Session Details tab shows the configuration behind the run: which persona, which face, how long, and whether the join succeeded. It is useful when you compare two runs that behaved differently.
 
 ## How the Verdict Is Decided
-
-
 
 The verdict is trustworthy because of what it is built on. Grading watches the actual session, anchors to your criteria, refuses to guess, and judges your agent rather than the test harness.
 
@@ -287,8 +241,6 @@ The verdict is trustworthy because of what it is built on. Grading watches the a
 4. **The evaluation is about your agent.** It is not about the simulated candidate, and not about the TestMu AI infrastructure. Where a problem cannot be attributed confidently, the evaluator says so rather than penalize you.
 
 ## Limits and Known Constraints
-
-
 
 Plan large runs around the following limits. Video sessions are heavy, so concurrency is the constraint that most affects wall-clock time.
 
@@ -308,8 +260,6 @@ Two things are not supported yet:
 
 ## Getting Good Results
 
-
-
 The difference between a decorative test pack and a useful one comes down to a few habits.
 
 - **Start narrow.** Five scenarios covering the paths that matter, run on every change, beat fifty run once a quarter.
@@ -321,13 +271,9 @@ The difference between a decorative test pack and a useful one comes down to a f
 
 ## Troubleshooting Video Agent Tests
 
-
-
 Most failed runs trace back to an unreachable URL, a thin scenario, or a criterion that cannot be observed. Match your symptom below.
 
 ### Every Session Failed With No Media
-
-
 
 **What you see.** Every session in the run ends as Failed with no recorded conversation.
 
@@ -337,8 +283,6 @@ Most failed runs trace back to an unreachable URL, a thin scenario, or a criteri
 
 ### The Agent Barely Spoke
 
-
-
 **What you see.** The recording is short and your agent produced only a few turns.
 
 **Why it happens.** This is usually a thin scenario description. The candidate improvises from that brief, so a thin brief produces a thin conversation.
@@ -346,8 +290,6 @@ Most failed runs trace back to an unreachable URL, a thin scenario, or a criteri
 **Fix.** Enrich the scenario description toward the 250 to 400 word range, and check the session length is enough for the conversation you expect.
 
 ### A Criterion Keeps Returning "Cannot Verify"
-
-
 
 **What you see.** The same criterion comes back as could-not-verify across runs.
 
@@ -357,8 +299,6 @@ Most failed runs trace back to an unreachable URL, a thin scenario, or a criteri
 
 ### Results Feel Inconsistent Run to Run
 
-
-
 **What you see.** The same scenario passes on one run and fails on the next.
 
 **Why it happens.** These are non-deterministic conversations, so some variation is expected.
@@ -366,8 +306,6 @@ Most failed runs trace back to an unreachable URL, a thin scenario, or a criteri
 **Fix.** Raise iterations and judge on the pattern rather than a single run.
 
 ### Runs Keep Coming Back Inconclusive
-
-
 
 **What you see.** Sessions repeatedly end as Inconclusive.
 
@@ -377,49 +315,33 @@ Most failed runs trace back to an unreachable URL, a thin scenario, or a criteri
 
 ## Frequently Asked Questions
 
-
-
 Common questions about how video agent testing behaves and what it touches.
 
 ### Whether Video Agent Testing Touches Production
-
-
 
 Only if you point it at production. Every session is a real conversation with whatever is behind the URL you supply. Use a staging URL where you can.
 
 ### Whether You Need to Change Your Agent
 
-
-
 No. TestMu AI joins the way a person would, so you do not add an SDK or modify your agent.
 
 ### Testing Agents Built on Any Platform
-
-
 
 Yes, provided the agent is reachable at a joinable web URL. Where your platform exposes its own recording and transcript, TestMu AI uses them for richer results.
 
 ### How Long Recordings Are Kept
 
-
-
 Recordings are stored with your test results and are downloadable from the session view.
 
 ### Sharing a Result Outside the Tool
-
-
 
 Download the recording and attach it. The transcript and evaluation are visible to anyone in your organization with access to the project.
 
 ### Whether Your Agent Is Scored on Candidate Video Quality
 
-
-
 No. The simulated candidate is test equipment. Problems on the TestMu AI side are excluded from your score or mark the run Inconclusive.
 
 ## Related TestMu AI Guides
-
-
 
 - See how to [test a voice agent](/support/docs/voice-agent/) for spoken conversations scored on transcribed audio.
 - See how to [test a phone agent](/support/docs/phone-agent/) for voice agents reached over a real call.

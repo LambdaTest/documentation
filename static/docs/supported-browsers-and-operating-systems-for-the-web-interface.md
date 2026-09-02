@@ -6,7 +6,6 @@ TestMu AI supports 10,000+ browser/device combinations for Selenium and Appium t
 
 ## Desktop Browsers for Selenium
 
-
 Supported desktop browsers and the operating systems they run on.
 
 | Browser | Versions | Supported OS |
@@ -21,7 +20,6 @@ Supported desktop browsers and the operating systems they run on.
 
 ## Supported Operating Systems
 
-
 All desktop operating systems available on the TestMu AI grid.
 
 | Platform | Versions |
@@ -32,7 +30,6 @@ All desktop operating systems available on the TestMu AI grid.
 
 ## Browser Version Syntax
 
-
 Use these version formats in your capabilities.
 
 | Format | Example | Description |
@@ -40,6 +37,5 @@ Use these version formats in your capabilities.
 | `latest` | `"browserVersion": "latest"` | Most recent stable release |
 | `latest-N` | `"browserVersion": "latest-5"` | N versions before the latest |
 | Specific version | `"browserVersion": "120.0"` | Exact version number |
-
 
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to see the exact browser versions and OS combinations currently available. The list updates as new browser versions are released.

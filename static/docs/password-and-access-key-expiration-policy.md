@@ -18,28 +18,15 @@ By default, password expiration policy is set to **Never**. To change this, foll
 
 **Step 2:** Click on the Settings -> **Organization Settings**, navigate to **Security** tab and click on the **Password Expiry** button
 
-
-
 **Step 2:** Click on the Edit Button to edit your Password Expiry duration.
-
-
 
 **Step 3:** Select the number of days after which your password will expire. Click on the **Save** button.
 
-
-
 **Step 4:** If you have selected any number of days, and if there are users who have already passed the timeline, they will be immediately logged out. But they will be able to reset their password.
-
-
 
 You can also view the password expiration policy for **All the Users** and when their password will expire. You can also add users to the **Excluded Users** list, whose password will never expire (For example, an admin user). You can filter the data based on their specific **Role** as well by clicking on the drop-down menu.
 
-
-
-
 You will receive a mail 3 days before the expiration of your password to set a new password. If this action is not performed before the expiration date, your password will expire. After expiration, you will receive a mail that your password has expired with a link to set your new password. Until this action is performed, you will not be able to access your account.
-
-
 
 ## Setup Access Key Expiry Policy
 
@@ -49,31 +36,18 @@ By default, access key expiration policy is set to Never. To change this, follow
 
 **Step 2:** Click on the Settings -> **Organization Settings**, navigate to **Security** tab and click on the **Access Key Expiry** button
 
-
-
 **Step 2:** Click on the Edit Button to edit your Access Key Expiry duration.
 
-
-
 **Step 3:** Select the number of days after which your Access Key will expire. Click on the **Save** button.
-
-
 
 **Step 4:** If you have selected any number of days, and if there are users who have already passed the timeline, they will be immediately get unauthorized.
 
 > After the expiration of the access key, it will be regenerated automatically.
 
-
-
 **Step 5:** Select the user for whom you want to regenerate the access key, click on the three dots and then select the **Regenerate Key** button.
-
-
 
 You can also check the access key expiration policy for **All the Users** of the organization. You can filter the data based on the **User Type** as well by clicking on the drop-down menu.
 
 > **Excluded User** are those users for whom there are no aceess key expiration policy.
-
-
-
 
 You will receive a mail 3 days before the expiration of your access key. You can regenerate this key on your account dashboard. If this action is not performed before the expiration date, your access key will expire. After expiration, your access key will be regenerated automatically, and you will receive an email to get your new access key from the dashboard. For service accounts, admins will receive the mail regarding expiry, and the access keys for service accounts can be found on the members page in organization settings.

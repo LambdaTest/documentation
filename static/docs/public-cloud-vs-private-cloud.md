@@ -6,8 +6,6 @@ In mobile app development, thorough testing on real devices is essential for per
 
 Our detailed document compares Public Device Cloud and Private Device Cloud, focusing on their benefits for real device testing. It considers factors such as device access, session duration, settings control, and testing capabilities allowing organizations to make informed decisions about their testing strategies based on their needs and goals.
 
-
-
 ## Why Choose Private Cloud
 
 Here is the detailed comparison of Public Cloud and Private Cloud:

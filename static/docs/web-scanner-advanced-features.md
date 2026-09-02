@@ -13,10 +13,6 @@ The advanced features are accessible from the **Advanced Configurations** sectio
 - **Geolocation**: Simulate scans from different geographic locations
 - **Tunnel**: Scan locally hosted web pages and applications
 
-
-
-
-
 ## Authentication
 
 Web Scanner supports two types of authentication methods to scan pages that require login credentials:
@@ -71,8 +67,6 @@ Form Authentication allows you to authenticate using login forms on your website
    - Enter the CSS selector for the password field (e.g., `#password`, `.login-password`, `input[type="password"]`)
 6. Click **Add & save configuration**
 
-
-
 #### Finding CSS Selectors
 
 To find the CSS selector for form fields:
@@ -96,8 +90,6 @@ Common CSS selector patterns:
 - **Verify Selectors**: Test your CSS selectors before running full scans
 - **Handle Dynamic Content**: Ensure selectors work even if page structure changes slightly
 - **Multiple Configurations**: You can create multiple authentication configurations for different environments
-
-
 
 ## Dedicated Proxy
 
@@ -140,8 +132,6 @@ For detailed information about dedicated proxy configuration and IP whitelisting
 - Your organization must have a dedicated proxy enabled (enterprise feature)
 - Network resources must be publicly discoverable but access-restricted
 - The dedicated proxy IP must be whitelisted by your network administrators
-
-
 
 ## Geolocation
 
@@ -193,8 +183,6 @@ Web Scanner supports geolocation simulation for numerous countries and regions w
 - Some features may not be available in all regions
 - Geolocation cannot be used simultaneously with Tunnel in a single scan (use parallel scans if both are needed)
 
-
-
 ## Tunnel
 
 Tunnel enables Web Scanner to access locally hosted web pages and applications. This is essential for testing development environments, staging servers, or applications behind firewalls.
@@ -223,9 +211,6 @@ TestMu AI Tunnel creates a secure, encrypted connection between your local machi
 
 Download the TestMu AI Tunnel binary for your platform:
 
-
-
-
 **Windows (64-bit)**
 ```
 https://downloads.lambdatest.com/tunnel/v3/windows/amd64/LT.exe
@@ -235,9 +220,6 @@ https://downloads.lambdatest.com/tunnel/v3/windows/amd64/LT.exe
 ```
 https://downloads.lambdatest.com/tunnel/v3/windows/386/LT.exe
 ```
-
-
-
 
 **macOS (Intel)**
 ```
@@ -249,9 +231,6 @@ https://downloads.lambdatest.com/tunnel/v3/mac/amd64/LT
 https://downloads.lambdatest.com/tunnel/v3/mac/arm64/LT
 ```
 
-
-
-
 **Linux (64-bit)**
 ```
 https://downloads.lambdatest.com/tunnel/v3/linux/amd64/LT
@@ -262,28 +241,16 @@ https://downloads.lambdatest.com/tunnel/v3/linux/amd64/LT
 https://downloads.lambdatest.com/tunnel/v3/linux/arm64/LT
 ```
 
-
-
-
 #### Step 2: Start the Tunnel
-
-
-
 
 ```bash
 LT.exe --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --tunnelName YOUR_TUNNEL_NAME
 ```
 
-
-
-
 ```bash
 chmod +x LT
 ./LT --user YOUR_LAMBDATEST_USERNAME --key YOUR_LAMBDATEST_ACCESS_KEY --tunnelName YOUR_TUNNEL_NAME
 ```
-
-
-
 
 Replace:
 - `YOUR_LAMBDATEST_USERNAME`: Your TestMu AI username
@@ -320,8 +287,6 @@ Replace:
 - **Timeout Errors**: Check your local server is running and accessible
 - **Firewall Issues**: Ensure your firewall allows the tunnel binary to make outbound connections
 
-
-
 ## Combining Advanced Features
 
 You can combine multiple advanced features in a single scan:
@@ -331,8 +296,6 @@ You can combine multiple advanced features in a single scan:
 - **Authentication + Geolocation**: Test authenticated pages from specific geographic locations
 
 > **Note:** Some feature combinations may have limitations. For example, Tunnel and Geolocation cannot be used simultaneously in a single scan. Use parallel scans if you need both features.
-
-
 
 ## Additional Resources
 

@@ -4,12 +4,6 @@
 
 AI CoPilot is an AI agent for your TestMu AI Analytics dashboards. Ask it what your test data is telling you and it reasons over that data to answer in plain language. With the widget builder, describe the insight you want and CoPilot plans a widget, builds it, and proposes it for your approval — you stay in the loop on every change.
 
-
-
-
-
-
-
 ## Prerequisites
 
 1. **TestMu AI paid account with AI features enabled**: AI CoPilot requires an active paid account with AI features turned on for your organization, and an AI credit balance.
@@ -18,11 +12,7 @@ AI CoPilot is an AI agent for your TestMu AI Analytics dashboards. Ask it what y
 
 To request either capability for your organization, contact [support@testmuai.com](mailto:support@testmuai.com).
 
-
 Any role except **Guest** can use AI CoPilot — you do not need to be an admin.
-
-
-
 
 ## Opening AI CoPilot
 
@@ -32,8 +22,6 @@ Any role except **Guest** can use AI CoPilot — you do not need to be an admin.
 4. **Launch AI CoPilot**: Click the **CoPilot** button in the dashboard action bar, next to **Add Widget**. CoPilot opens as a side panel beside the dashboard.
 5. **Start a conversation**: Type your question or a description of the widget you want.
 
-
-
 ## Analyzing a Dashboard with CoPilot
 
 Ask CoPilot about the data already on your dashboard and it answers in natural language — no configuration, no query syntax.
@@ -42,23 +30,15 @@ Ask CoPilot about the data already on your dashboard and it answers in natural l
 - **Trend and comparative analysis**: CoPilot surfaces patterns over time, and compares metrics, environments and time periods.
 - **Grounded in your data**: CoPilot reads the data behind the widgets on your dashboard, so every answer is grounded in what you are looking at rather than guessed.
 
-
-
-
 CoPilot reads the data behind **custom widgets**. For prebuilt module widgets it can see the widget, but not the data inside it.
-
 
 ## Building Widgets with CoPilot
 
-
-
 Building a widget normally means picking a product, a field, an aggregation and a chart type. With CoPilot you describe the question you want answered instead, and the agent works out the configuration for you and returns a working [custom widget](/docs/dashboards-custom-widgets/).
-
 
 This capability is in **beta** and needs widget builder access — see [Prerequisites](#prerequisites). Without it, CoPilot still answers questions about your dashboard but cannot build widgets.
 
 Always verify a generated widget against your data before relying on it.
-
 
 ### Describe the outcome you want
 
@@ -79,8 +59,6 @@ CoPilot proposes; you decide. Nothing reaches your dashboard until you approve i
 - A **What changes** summary of what the agent built and why.
 - Any **assumptions** it had to make to interpret your request.
 
-
-
 For a brand-new widget, the card offers:
 
 | Action | What it does |
@@ -95,9 +73,7 @@ If a request proposes more than one widget, CoPilot asks you to pick which ones 
 
 Widgets are saved to your dashboard as soon as you approve them; there is no separate save step.
 
-
 **Replace** overwrites the original widget's configuration and cannot be undone. Use **Keep both** if you want to compare the two versions before removing one.
-
 
 ### Refine through conversation
 

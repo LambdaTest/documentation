@@ -18,8 +18,6 @@ In the TUI, run `/doctor`. It reports:
 - The project storage directory
 - Registered agents
 
-
-
 ## Installation Problems
 
 ### `rook: command not found`
@@ -125,8 +123,6 @@ Create and verify a profile:
 /profile add
 /profile test <name>
 ```
-
-
 
 ### The profile invokes successfully but extracts the wrong value
 

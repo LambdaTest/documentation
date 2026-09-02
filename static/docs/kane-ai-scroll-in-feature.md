@@ -6,28 +6,22 @@ Scroll within elements in KaneAI using natural language commands. You describe e
 
 ## Prerequisites
 
-
 Before you begin, make sure you have:
-
 
 - A TestMu AI account with access to KaneAI.
 - An active test session with the scrollable content on screen.
 
-
 ## Scroll Within an Element
-
 
 Follow these steps to scroll a specific element in a direction:
 
 ### Step 1: Identify the Element to Scroll
-
 
 Determine the scrollable element you want to move, such as a sidebar, list, dropdown, or the main page.
 
 **Result:** You know which element the scroll command targets.
 
 ### Step 2: Enter a Scroll Command
-
 
 Enter a direction command in the test editor, naming the element when you scroll inside a container:
 
@@ -42,18 +36,15 @@ For example, use `Scroll right in the sidebar` to move right in a horizontal sid
 
 ### Step 3: Verify the Content Is in View
 
-
 Confirm the target content is visible after the scroll action before your next step interacts with it.
 
 **Result:** The content you scrolled to is in view and ready for the next instruction.
 
 ## Scroll Until Element
 
-
 The commands above scroll within an element in a direction. When you do not know how far the target sits, describe the element you want to reach instead and KaneAI scrolls until it becomes visible. This locates elements that sit below the fold or deep in long, scrollable pages without manual scroll logic or coordinates.
 
 ### Step 1: Identify the Target
-
 
 Reference the element by what is visibly present on screen:
 
@@ -66,7 +57,6 @@ Natural language commands do **not** support technical selectors such as IDs, XP
 
 ### Step 2: Formulate the Command
 
-
 Enter an action-oriented command that names both the element to find and the action to perform once it is found:
 
 - `Scroll until search bar is visible and click on it.`
@@ -76,7 +66,6 @@ Enter an action-oriented command that names both the element to find and the act
 **Result:** KaneAI scrolls until the target is visible, then performs the specified action.
 
 ## Command Reference
-
 
 This table pairs common scroll scenarios with example natural language commands:
 
@@ -92,11 +81,9 @@ This table pairs common scroll scenarios with example natural language commands:
 
 ## Limitations
 
-
 Keep these limitations in mind:
 
 ### Mobile App Authoring
-
 
 Mobile app authoring supports **horizontal scrolling** and **scrolling inside nested containers** (element scrolling). You can scroll left or right inside carousels, and scroll within specific container elements such as dropdowns, lists, and subsections instead of only the main viewport.
 
@@ -105,13 +92,11 @@ Mobile app authoring supports **horizontal scrolling** and **scrolling inside ne
 
 ### Mobile Browser Authoring
 
-
 - **Element eligibility:** Applies **only to interactable elements** (buttons, links, dropdowns, inputs). Plain text or static labels are not supported.
 - **Native popups:** Scrolling inside native browser popups or system alerts is not supported.
 - **Horizontal scrolling:** Not supported.
 
 ## Troubleshooting
-
 
 This table lists common scroll errors, their causes, and fixes:
 
@@ -123,7 +108,6 @@ This table lists common scroll errors, their causes, and fixes:
 | Command Not Recognized | Usage of IDs, XPaths, or attributes | Rewrite using visible text or element type (for example, `button`) |
 
 ## Next Steps
-
 
 Continue with these guides:
 

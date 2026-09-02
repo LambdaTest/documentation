@@ -8,8 +8,6 @@ TestMu AI Web Scanner is an AI-powered, browser-based scanning platform designed
 
 This tool empowers QA teams, developers, and compliance managers to perform scheduled scans on public or locally-hosted sites, compare builds visually with pixel-perfect precision, and generate audit-ready accessibility reports.
 
-
-
 ## Why Web Scanner?
 
 Manual testing of large web applications for layout shifts, broken UI, or WCAG non-compliance is slow and error-prone. TestMu AI Web Scanner solves this by enabling:
@@ -26,8 +24,6 @@ Manual testing of large web applications for layout shifts, broken UI, or WCAG n
 
 Visual scans detect pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.
 
-
-
 #### Key Capabilities
 
 - **Cross-Browser Validation**: Test UI across Chrome, Firefox, Edge, and Safari.
@@ -39,8 +35,6 @@ Visual scans detect pixel-based layout changes, design mismatches, missing eleme
 ### 2. Accessibility Scan
 
 Accessibility scans audit your pages against WCAG 2.x standards, surfacing violations and recommendations to improve inclusivity.
-
-
 
 **Key Features:**
 * WCAG 2.0/2.1 AA compliance and more

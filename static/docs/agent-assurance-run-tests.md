@@ -96,8 +96,6 @@ Use higher concurrency only when the target isolates sessions and fixtures. Conc
 
 Rook shows the exact target and whether discovery found write-capable tools.
 
-
-
 The answers mean:
 
 | Answer | Effect |

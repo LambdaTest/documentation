@@ -8,7 +8,6 @@ The [Playwright Agent Skill](https://github.com/LambdaTest/agent-skills/tree/mai
 
 ## About Agent Skills
 
-
 Agent Skills are self-contained packages of instructions, code patterns, debugging guides, and CI/CD configurations for specific testing frameworks. Once installed, your AI assistant works like a senior QA automation architect with knowledge of:
 
 - Proper project structure for each framework
@@ -19,7 +18,6 @@ Agent Skills are self-contained packages of instructions, code patterns, debuggi
 
 ## Prerequisites
 
-
 Make sure you have an account, your credentials, and a supported assistant before installing the skill.
 
 - A TestMu AI account. If you don't have one, sign up for free.
@@ -27,7 +25,6 @@ Make sure you have an account, your credentials, and a supported assistant befor
 - An AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
 
 ## Installing the Playwright Agent Skill
-
 
 Clone the Agent Skills repository, then copy the Playwright skill into your AI tool's skills directory.
 
@@ -47,12 +44,9 @@ cp -r agent-skills/playwright-skill .github/skills/
 cp -r agent-skills/playwright-skill .gemini/skills/
 ```
 
-
 If you prefer installing **all available framework skills**, clone the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
 
-
 ## Set Up Your Authentication
-
 
 Configure your TestMu AI credentials as environment variables so the skill can connect to the grid.
 
@@ -62,7 +56,6 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ## Running Your First Test Using Agent Skills
-
 
 Once the skill is installed, describe the tests you want in natural language and let the assistant generate and run them. Any of the prompts below is enough to get started.
 
@@ -87,7 +80,6 @@ The Agent Skill automatically handles:
 
 ## What's Included in the Playwright Skill
 
-
 The skill ships as a small set of Markdown files that the assistant reads to build your project. The tree below shows the layout, and the table maps each area of coverage.
 
 ```text
@@ -109,11 +101,9 @@ playwright-skill/
 
 ## Supported Languages and Frameworks
 
-
 The Playwright Agent Skill supports five languages. Several framework docs also reference their own dedicated Agent Skills, listed in the second table below.
 
 ### Languages
-
 
 Pick your language to see which skill applies and where its dedicated doc lives.
 
@@ -127,7 +117,6 @@ Pick your language to see which skill applies and where its dedicated doc lives.
 
 ### Frameworks With Dedicated Agent Skills
 
-
 These test runners ship their own Agent Skills that build on the Playwright skill.
 
 | Framework | Agent Skill | Documentation |
@@ -137,7 +126,6 @@ These test runners ship their own Agent Skills that build on the Playwright skil
 | CucumberJS | [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) | [CucumberJS with Playwright](/docs/javascript-with-playwright/?framework=cucumberjs) |
 
 ## Supported AI Tools
-
 
 The skill installs into any of the AI coding tools below. Copy it into the installation path that matches your tool.
 
@@ -152,7 +140,6 @@ The skill installs into any of the AI coding tools below. Copy it into the insta
 | Claude.ai | Web | Settings > Features > Skills |
 
 ## Related Playwright Guides
-
 
 Continue with the guides below to run, scale, and configure Playwright tests on TestMu AI.
 

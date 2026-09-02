@@ -8,30 +8,23 @@ This collaboration delivers substantial advantages to customers using both platf
 
 ## Prerequisites
 
-
 1. Ensure you have a TestMu AI account. If you do not have an account, register for free.
 
 2. Ensure you have a GenRocket account.
 
 ## Creating User In GenRocket
 
-
 GenRocket is sold to enterprise (of all sizes) customers. It is not available to "unaffiliated" individuals and/or general public. Access to GenRocket is provided during a qualified Proof of Concept (POC) phase.
 
 ## Setting Up A Project for Data Generation
 
-
 As described above, users need to setup the test data project ("Model" and "Design") for the test data needed.
-
-
 
 For the purpose of this integration, we have used a [sample project with Java + TestNG](https://github.com/prateekLambda/GenRocket-HyperExecute-Sample). In the sample project test case we are opening the browser and calling the GenRocket API to get the username and web application URL (the generated data) and opening those URLs in the browser as a sample test case.
 
 In order to generate data using GenRocket, you can follow the steps given below:
 
 **Step 1:** Users need to create the HyperExecute Machine path profile in the Genrocket Dashboard.
-
-
 
 >**Note:** Users can Generate a Scenario through GenRocket Dashboard by [following this documentation](https://genrocket.freshdesk.com/support/solutions/folders/19000164896).
 
@@ -41,16 +34,11 @@ In order to generate data using GenRocket, you can follow the steps given below:
 
 **Step 4:** All the GenRocket dependency jars are added in the pom.xml of the project and they get automatically downloaded when the project is run. Follow the [steps in the link](https://genrocket.freshdesk.com/support/solutions/articles/19000114946-how-to-integrate-genrocket-with-a-java-maven-project) to add the dependency.
 
-
 **Step 5:** Users can call GenRocket methods to access the Genrocket API to generate data while running test suite in Hyper Execute
 
 The following code snippet shows how to use the GenRocket API to generate the data:
 
-
-
-
 ## Setup On HyperExecute
-
 
 Till now you have learnt how to set up your generators on GenRocket. Now, in order to run those tests on HyperExecute, please follow the steps given below:
 
@@ -58,22 +46,13 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 
 **Step 2:** Once logged in, click on **HyperExecute** on the Left Menu Bar.
 
-
-
 **Step 3:** New users can avail a free trial of HyperExecute on this page by clicking **Try Now**.
-
-
 
 **Step 4:** Once done, you are all set to run your sample project on HyperExecute.
 
 ## Setting Up A Sample Project
 
-
 **Step 1:** Before proceeding further you need to access your **TestMu AI Username** and **Access Key**, which you can find in the Profile section. **Profile section** can be accessed from the top right side of the page as shown below:
-
-
-
-
 
 **Step 2:** For the purpose of this integration, we have used the same [sample project](https://github.com/prateekLambda/GenRocket-HyperExecute-Sample) which you would have downloaded already as part of GenRocket Setup.
 
@@ -87,11 +66,7 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 
 **Step 4:** Once downloaded, make sure the HyperExecute binary is at the root directory of your project.
 
-
-
-
 ## Running Your First Test With Data From GenRocket on HyperExecute
-
 
 **Step 1:** In order to run your tests in HyperExecute, you need a basic settings file, known as **HyperExecute YAML** configuration file. This file contains a list of settings and commands that one can execute on HyperExecute. [Learn more](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
@@ -115,8 +90,6 @@ cp ******Profile.grp /home/ltuser/.genrocket
 
 * Once done, the [pre section](/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre) inside the HyperExecute YAML will look like as shown below (already present inside the sample project).
 
-
-
 >**Note:** You will need to create a HyperExecute YAML configuration file specific to your project if you are not using the given sample project. In that case, the pre-section would remain the same however, other commands will need relevant changes. [Learn More](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
 **Step 2:** Once you have the HyperExecute YAML ready, you just need to execute the HyperExecute CLI command. This command would trigger the CLI which will initiate a Job on HyperExecute Platform to run your test cases.
@@ -129,7 +102,5 @@ cp ******Profile.grp /home/ltuser/.genrocket
 ```
 
 **Step 3:** You have successfully setup genrocket and executed your first job on HyperExecute. Once a Job is executed, you should be able to see the test results & logs on the HyperExecute Portal as shown below:
-
-
 
 To learn more about HyperExecute visit our [documentation](/support/docs/getting-started-with-hyperexecute/) or contact our support team from the in app support section.

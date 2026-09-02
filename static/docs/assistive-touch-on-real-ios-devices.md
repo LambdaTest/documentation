@@ -10,9 +10,6 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-
-
-
 ## Use Cases
 
 - Navigate to the Home Screen after completing a flow (e.g., logout, relaunch).
@@ -27,7 +24,6 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 |-------------|----------------------|
 | iPhone      | iOS 14 and above     |
 | iPad        | iPadOS 14 and above  |
-
 
 ## Supported Actions
 
@@ -44,7 +40,5 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 **Step 1:** Start a manual testing session on a real iOS device in **App Live** or **Browser Live**.
 
 **Step 2:** From the session toolbar, open the **iOS Settings** panel and toggle **Assistive Touch on** .
-
-
 
 **Step 3:** Tap the Assistive Actions icon to open the gesture menu, then select the desired action to simulate it on the device

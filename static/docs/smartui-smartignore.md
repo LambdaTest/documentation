@@ -4,13 +4,6 @@
 
 SmartUI's `Smart Ignore` engine is specifically designed to address the challenges that arise when testing dynamic and content-rich web applications. Often, when content is added or removed from a page, it causes other elements to be displaced, leading to numerous false positives in traditional pixel-by-pixel comparisons. Smart Ignore intelligently hides these displacement differences, allowing you to concentrate on actual content changes that impact the user experience.
 
-
-
-
-
-
-
-
 ### Key Features of Smart Ignore
 
 #### 1. Displacement-Aware Comparison:
@@ -20,13 +13,9 @@ Smart Ignore distinguishes between content changes and mere content displacement
 
 In scenarios where large areas of the page are impacted by content displacement, traditional pixel to pixel comparison would highlight these areas in a blurred and cluttered manner making it difficult to identify the actual content changes. Smart Ignore minimizes this clutter, highlighting only those areas where content has genuinely changed. In the image below you can see confusing comparison due to the `pixel to pixel` approach, which is unable to highlight the actual reasons behind the mismatch.
 
-
-
 #### 3. Targeted Visual Testing:
 
 By focusing only on the significant changes, **Smart Ignore** enhances the precision of your visual testing. This feature is particularly useful when testing pages where frequent updates or dynamic content are expected, ensuring that only the most relevant differences are brought to your attention. In the image below you can see the actual changes being highlighted as Smart Ignore understands the images and yields out the best results.
-
-
 
 ## How to Use Smart Ignore?
 
@@ -35,15 +24,11 @@ By focusing only on the significant changes, **Smart Ignore** enhances the preci
 In your SmartUI dashboard, navigate to your project settings.
 Under "Comparison Options," switch on the `Smart Ignore` toggle across all visual tests in the project.This ensures Smart Ignore will be applied throughout the project with option to see other comparison modes as well on screenshot level according to the usecase.
 
-
-
 #### 2. Using Smart Ignore per Screenshot
 
 After running your visual test, go to the comparison page.
 For each screenshot, choose the "Smart Ignore" mode from the "Diff Options" dropdown.
 This allows you to selectively apply Smart Ignore to specific screenshots, making it easier to identify true differences in content.
-
-
 
 #### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
 
@@ -110,15 +95,9 @@ Smart Ignore may not be suitable for:
 
 ## Best Practices
 
-
-
-
 **Start with Project-Level Toggle**
 
 Enable Smart Ignore at the project level for consistent behavior across all tests. You can still switch to other comparison modes per screenshot if needed.
-
-
-
 
 **Combine with Other Features**
 
@@ -127,34 +106,19 @@ Smart Ignore works well with:
 - Layout comparison for structure-focused testing
 - Custom CSS for test-specific styling
 
-
-
-
 **Review Results Regularly**
 
 While Smart Ignore reduces false positives, regularly review results to ensure it's not hiding important changes.
 
-
-
-
 **Use Per-Screenshot Mode for Testing**
 
 When testing Smart Ignore, use per-screenshot mode to compare results with other comparison modes and find the best approach for each test case.
 
-
-
-
 **Use Per-Screenshot Mode for Testing**
 
 When testing Smart Ignore, use per-screenshot mode to compare results with other comparison modes and find the best approach for each test case.
-
-
-
 
 ## Troubleshooting
-
-
-
 
 **Issue: Smart Ignore Not Available**
 
@@ -164,9 +128,6 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 1. Verify you're using a supported SmartUI plan
 2. Check if your project type supports Smart Ignore
 3. Contact support if the feature should be available
-
-
-
 
 **Issue: Too Many Differences Still Shown**
 
@@ -178,9 +139,6 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 3. Consider using Layout Comparison mode for layout-only testing
 4. Combine with `ignoreDOM` for specific elements
 
-
-
-
 **Issue: Important Changes Hidden**
 
 **Symptoms**: Smart Ignore hides changes you want to see
@@ -191,9 +149,6 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 3. Review the baseline to ensure it's correct
 4. Consider if the change is actually a displacement vs content change
 
-
-
-
 **Issue: Inconsistent Results**
 
 **Symptoms**: Smart Ignore shows different results for similar changes
@@ -203,9 +158,6 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 2. Check if page content is loading consistently
 3. Verify Smart Ignore is enabled consistently
 4. Review page structure for dynamic content issues
-
-
-
 
 ## Comparison with Other Modes
 
@@ -227,14 +179,11 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 | Displacement | ✅ Ignored | ✅ Ignored |
 | Best For | Content + layout | Layout only |
 
-
 ## Additional Resources
 
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Layout Comparison](/support/docs/smartui-layout-testing)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Baseline Management](/support/docs/smartui-baseline-management)
-
-
 
 > **Note**: Smart Ignore is continuously being improved. Features like element ignoring and enhanced Project Settings integration are planned for future releases. Check the [release notes](/support/docs/) for updates.

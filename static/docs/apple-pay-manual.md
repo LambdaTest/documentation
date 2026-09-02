@@ -11,18 +11,12 @@ This feature is available exclusively with the **Real Device Plus Live** Plan.
 
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
-
-
-
-
 ## Use Cases
 
 - **Manual Checkout Testing**: Ensure Apple Pay works correctly across different devices.
 - **Wallet Verification**: Confirm users can select the correct card type (Visa, MasterCard, etc.).
 - **Passcode Flow**: Validate that passcode entry and Assistive Touch work as expected.
 - **End-to-End Transaction Confirmation**: Simulate real user behavior to confirm Apple Pay transactions.
-
-
 
 ## Supported Devices
 
@@ -38,8 +32,6 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
 
 > We are actively working on expanding coverage to **all supported iOS devices** on TestMu AI Real Device Cloud.
 
-
-
 ## Manual Apple Pay Workflow in App Live
 
 ### Step 1: Enable Apple Pay in Advanced Settings
@@ -47,9 +39,6 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
 1. Open **App Testing Live** or **Browser Testing Live** and select your desired iOS device.
 2. Navigate to **Advanced Settings**.
 3. Locate the **Apple Pay** toggle and enable it, and confirm the device selection accordingly.
-
-
-
 
 ### Step 2: Configure Wallet
 
@@ -59,18 +48,11 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
 
 4. Wait 1–3 minutes for Apple Pay to configure.
 
-
-
-
 ### Step 4: Use Apple Pay in App Live
 
 Within the App Live session, you can use Apple Pay via the **Assistive Touch** option. Simply click on Apple Pay, and you will be prompted to enter the device passcode (default is `123456`). Once the passcode is entered, you can complete a payment through Apple Pay, simulating a real user transaction.
 
-
 - Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session and continue adding your desired card.
-
-
-
 
 ## FAQs
 
@@ -91,8 +73,6 @@ The **Hold Near Reader** prompt appears when Apple Pay is opened directly throug
 For example, when visiting the Apple Pay Demo website, opening Apple Pay directly before clicking the **Pay** button and reaching the screen that displays the final checkout amount will trigger the **Hold Near Reader** prompt.
 
 To avoid this, first initiate the payment flow on a supported website or application, then select **Apple Pay** at checkout.
-
-
 
 ## Additional Links
 

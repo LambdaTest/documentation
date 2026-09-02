@@ -13,11 +13,7 @@ The Concurrency Usage Insights module enables QA Managers to get an overview of 
 | SubOrg Concurrency Trends | Sub-organization level concurrency utilization |
 | Custom Concurrency Trends | Custom KPI-based concurrency with dimension breakdowns |
 
-
-
 ## Concurrency Trends (Org Level)
-
-
 
 The Concurrency Trends widget provides a visual representation of your parallel test execution at the organization level on the TestMu AI platform. It allows you to monitor the number of concurrent sessions running over time, helping you optimize resource utilization and identify peak testing periods.
 
@@ -32,8 +28,6 @@ The Concurrency Trends widget provides a visual representation of your parallel 
 - It presents the concurrency trends in a graph format, displaying the number of sessions in use and the number of sessions queued at each time interval
 - You can hover over specific data points to view the exact number of sessions in use and queued at that particular time
 
-
-
 ## Group Concurrency Trends
 
 The Group Concurrency Trends widget provides concurrency utilization data segmented by groups within your organization. This helps you understand how different teams or groups are utilizing the parallel test execution capacity.
@@ -43,8 +37,6 @@ The Group Concurrency Trends widget provides concurrency utilization data segmen
 - View concurrency patterns for each group
 - Compare resource utilization across different groups
 - Identify which groups have higher queue times
-
-
 
 ## SubOrg Concurrency Trends
 
@@ -56,13 +48,9 @@ The SubOrg Concurrency Trends widget provides concurrency utilization data at th
 - Track queued vs in-use sessions per sub-organization
 - Optimize resource allocation across sub-organizations
 
-
-
 ## Custom Concurrency Trends
 
 The Custom Concurrency Trends widget visualizes queued and running test concurrency over time for custom KPIs. It highlights peak usage trends with clear visibility into maximum concurrency levels and their corresponding timestamps for the selected KPI.
-
-
 
 Unlike the standard Concurrency Trends widgets, Custom Concurrency Trends allows you to break down concurrency data by specific dimensions (KPIs), giving you granular insights into resource utilization patterns.
 
@@ -92,12 +80,9 @@ Unlike the standard Concurrency Trends widgets, Custom Concurrency Trends allows
 
 **Step 4:** From the widget list, select **Custom Concurrency Trends**, enter a Dashboard Name, and click **Create Dashboard**.
 
-
 ### Configure Widget
 
 Click on the three-dot menu (⋯) on the widget and select **Configure** to customize the widget.
-
-
 
 #### Supported Filters
 
@@ -131,8 +116,6 @@ When visualizing concurrency trends across all dimensions (e.g., all projects at
 
 When focusing on a single dimension (e.g., one specific project), keep **both In-Use and Queued visible**. This gives you a complete picture of concurrency utilization for that specific project.
 
-
-
 **How to configure:**
 1. Open **Configure Widget** > **General**
 2. Filter by the specific **Project Name** you want to analyze
@@ -142,12 +125,8 @@ When focusing on a single dimension (e.g., one specific project), keep **both In
 **Coming Soon**
 Drilldown functionality for Custom Concurrency Trends widget is coming soon. This will allow you to click through to individual test details from the aggregated concurrency view.
 
-
-
-
 **Minute-Level Granularity**
 When you apply a time filter of **1 day or less**, the concurrency data is displayed at **minute-level granularity**. This is useful for pinpointing exact concurrency spikes, debugging queue buildups during specific test runs, or analyzing resource usage during dedicated time windows.
-
 
 ## Value Proposition
 

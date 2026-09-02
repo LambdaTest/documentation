@@ -21,8 +21,6 @@ Build Insights organizes your test data into two main views:
 
 Use this page to monitor all builds at a glance and decide which ones need attention.
 
-
-
 ### Search Functionality
 
 Use the search bar to quickly find a specific build (for example, by suite name like **Smoke**, **Regression**, or **Nightly**) instead of scrolling through the full list.
@@ -115,16 +113,12 @@ Your Show Unique Instances preference is automatically saved, so you don't need 
 **Processing Time**
 Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished a build, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
 
-
 **Learn More**
 Want to understand exactly how unique instances and retry attempts are detected? See our comprehensive guide on [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/) for step-by-step examples and best practices.
-
 
 ## Tab 1: Insights
 
 Use the **Insights** tab to understand the overall health and performance of the selected build before you dive into individual tests.
-
-
 
 ### Key Metrics Summary
 
@@ -186,9 +180,6 @@ Use the **Tests** tab when you are ready to debug at the individual test level.
 
 **Build Comparison**
 Want to compare two builds side by side? Use the **Compare** tab to identify new failures, fixed tests, and stability changes between any two builds. This is especially useful for release validation and regression detection. Learn more in the [Build Comparison](/support/docs/analytics-build-comparison/) documentation.
-
-
-
 
 ### Search Functionality
 

@@ -9,13 +9,9 @@ When you need to validate your web app on Chrome for Android, you can run Playwr
 - **Java, C#, and Python** use the `chromium.connect()` API. **Node.js** supports both `chromium.connect()` and the Android-native `_android.connect()` API. All use stock Playwright packages, no custom forks required.
 - Playwright v1.53.0 is currently supported for Playwright C# (for Android & iOS).
 
-
 ## Prerequisites
 
-
 Before you run a test, set your TestMu AI username and access key as environment variables. You can find both under your TestMu AI **Profile > Account Settings > Password & Security**.
-
-
 
 **Windows**
 
@@ -31,29 +27,17 @@ export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-
-
-
-
 Install the Playwright package:
 
 ```bash
 npm install playwright
 ```
 
-
-
-
-
 Install the Playwright package:
 
 ```bash
 pip install playwright
 ```
-
-
-
-
 
 Add the Playwright dependency to your `pom.xml`:
 
@@ -65,28 +49,15 @@ Add the Playwright dependency to your `pom.xml`:
 </dependency>
 ```
 
-
-
-
-
 Add the Playwright NuGet package:
 
 ```bash
 dotnet add package Microsoft.Playwright
 ```
 
-
-
-
-
 ## Run Your First Test
 
-
 Pick your language below, then use the sample script to connect to TestMu AI and run a search test on a real Android device.
-
-
-
-
 
 Node.js supports both the Chromium API (`chromium.connect()`) and the Android-native API (`_android.connect()`).
 
@@ -222,23 +193,17 @@ await device.close();
 })();
 ```
 
-
 The timeout value specified in the Playwright configuration may default to 30 seconds on real devices. To set a custom timeout, add:
 
 ```javascript
 context.setDefaultTimeout(120000);  // Set your desired timeout value.
 ```
 
-
 Run the test:
 
 ```bash
 node playwright-android-test.js
 ```
-
-
-
-
 
 ```python title="playwright_android_test.py"
 import os, json, urllib.parse
@@ -303,10 +268,6 @@ Run the test:
 ```bash
 python playwright_android_test.py
 ```
-
-
-
-
 
 ```java title="PlaywrightAndroidTest.java"
 package com.lambdatest;
@@ -380,10 +341,6 @@ Run the test:
 mvn compile exec:java -Dexec.mainClass="com.lambdatest.PlaywrightAndroidTest"
 ```
 
-
-
-
-
 ```csharp title="PlaywrightAndroidTest.cs"
 using Microsoft.Playwright;
 using System.Text.Json;
@@ -449,31 +406,19 @@ Run the test:
 dotnet run
 ```
 
-
-
-
-
-
 For Java, C#, and Python on Android, the CDP connection returns an existing browser context and page. Always check for existing contexts/pages before creating new ones, as shown in the examples above.
 
-
 ## View Your Playwright Test Results
-
 
 The TestMu AI Automation Dashboard shows the results of your Playwright tests after each run on the TestMu AI platform. Open it to review builds, sessions, logs, and video.
 
 The screenshot below shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
-
-
 ## Capabilities Reference
-
 
 Configure these capabilities in your `LT:Options` object to control how your Playwright Android tests run.
 
-
 Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
-
 
 | Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
 |-----------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -494,12 +439,9 @@ Use the [Playwright Android Capability Generator](https://www.lambdatest.com/pla
 
 ### Using a REGEX for the Device Name
 
-
 When you run a test on a specific device, the exact model you selected may not be available. A regular expression (REGEX) widens the device search so you get any matching device. For example, to run on any Pixel device rather than one specific model, use a REGEX for `deviceName`. See [how to match devices with a REGEX](/support/docs/regular-expression-appium/) for details.
 
-
 ## Related Playwright Guides
-
 
 Continue with these related guides to extend your Playwright coverage on TestMu AI.
 

@@ -8,8 +8,6 @@ Testing hybrid apps or mobile websites that rely on embedded web views often req
 
 This enables seamless inspection of DOM elements, console logs, network activity, and JavaScript execution giving developers the same debugging power they enjoy on desktop browsers.
 
-
-
 ## Access DevTools on TestMu AI Real Devices
 
 **Step 1:** Log into your TestMu AI dashboard and navigate to **Real Devices** > **App Testing**.
@@ -20,17 +18,11 @@ This enables seamless inspection of DOM elements, console logs, network activity
 
 **Step 4:** In the session toolbar, click on the **Chrome DevTools** button.
 
-
-
 **Step 5:** A debugging window will open:
 - On **Android**, this launches Chrome DevTools.
 - On **iOS**, you can choose between Safari Web Inspector or Chrome DevTools.
 
-
-
 Use the DevTools interface to inspect HTML structure, debug JavaScript, monitor network requests, and view console logs in real time.
-
-
 
 ## Supported Platforms
 
@@ -39,13 +31,10 @@ Use the DevTools interface to inspect HTML structure, debug JavaScript, monitor 
 | Android  | Chrome DevTools           | Android 9 and above    |
 | iOS      | Safari Web Inspector, Chrome DevTools | iOS 13 and above    |
 
-
 With Hybrid application, release builds must enable the ability to inspect web views in your application.
 
 - On Android 4.4*, call WebView.setWebContentsDebuggingEnabled.
 - On iOS 16.4+, set isinspectable to true on on the Webkit/WKWebView instance.
-
-
 
 ## Use Cases
 

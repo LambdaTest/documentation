@@ -12,8 +12,6 @@ Testing Flutter apps requires embedding the **Flutter Integration Server** insid
 
 After preparing your Flutter app with this integration (refer to the setup documentation below), you can build, upload, and execute your tests on TestMu AI real devices using the Appium Flutter Integration Driver.
 
-
-
 ## Native Flutter Integration Driver vs Appium Flutter Integration Driver
 
 | Feature / Use Case                                   | Native Flutter Driver | Appium Flutter Integration Driver |
@@ -24,9 +22,6 @@ After preparing your Flutter app with this integration (refer to the setup docum
 | Compatible with device farms supporting Appium     | No                   | Yes                              |
 | Interaction beyond Flutter context (e.g., OTP apps) | No                   | Yes                              |
 
-
-
-
 ## Why Use Appium Flutter Integration Driver?
 
 - **Multi-language support:** Write tests in Java, Python, Ruby, JavaScript, and more.
@@ -35,8 +30,6 @@ After preparing your Flutter app with this integration (refer to the setup docum
 - **Powerful gesture support:** Supports long press, drag and drop, scroll to element, double-click, and more.
 - **Element chaining:** Easily find child elements under specific parent widgets.
 - **Real device cloud ready:** Supported on TestMu AI real Android and iOS devices.
-
-
 
 ## Getting Your Flutter App Ready for Testing
 
@@ -79,44 +72,19 @@ await tester.pumpWidget(const app.MyApp());
 
 ### 3. Build your Flutter app with integration test
 
-
-
-
 {`./gradlew app:assembleDebug -Ptarget=$(pwd)/../integration_test/appium_test.dart`}
-
-
-
-
 
 {`flutter build ios integration_test/appium_test.dart --simulator`}
 
-
-
-
-
 {`flutter build ipa --release integration_test/appium_test.dart`}
 
-
-
-
-
-
 ## Uploading Your Flutter App to TestMu AI
-
-
 
 - For detailed instructions on how to upload your application to TestMu AI, please refer to our comprehensive guide.
 - Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-via-the-rest-api) documentation to learn more.
 - Use the returned **App ID** from above step in your automation scripts.
 
-
-
-
-
 ## Sample Desired Capabilities Real &amp; Virtual
-
-
-
 
 {`desired_caps = {
     "deviceName":"Galaxy S20",
@@ -131,10 +99,6 @@ await tester.pumpWidget(const app.MyApp());
 
 `}
 
-
-
-
-
 {`desired_caps = {
     "deviceName":"iPhone 16",
     "platformName":"ios",
@@ -147,11 +111,6 @@ await tester.pumpWidget(const app.MyApp());
 }
 
 `}
-
-
-
-
-
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**

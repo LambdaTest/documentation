@@ -16,8 +16,6 @@ You can enable performance tracking in your existing automation tests with the f
 
 > This feature is available for Appium tests on **iOS and Android (version 9+)**. For full functionality, ensure the `resignApp` capability is set to `true`.
 
-
-
 ## Basic Summary
 Here is a description of each metric from the App Profiling summary:
 
@@ -44,8 +42,6 @@ The CPU handles all operations within a mobile device. High CPU usage impacts ov
 
 Using these insights, you can minimize CPU-intensive operations, delivering a smoother user experience and enhancing device efficiency.
 
-
-
 ### 2. Memory Consumption
 RAM is a critical resource for mobile apps. Excessive memory consumption can lead to memory leaks, degraded performance, and application crashes.
 
@@ -56,14 +52,11 @@ TestMu AI offers three memory metrics:
 
 By tracking these, you can optimize memory utilization and prevent crashes caused by memory leaks.
 
-
 ### 3. Disk Usage
 The Disk Usage metric provides insights into how much disk space is being utilized by both the system and the application during a session. Monitoring disk usage is crucial for optimizing storage consumption and ensuring efficient app performance, especially on devices with limited storage capacity.
 
 - **System Disk (MB):** Indicates the total amount of disk space used by the entire system, including the operating system and other background processes, displayed in megabytes (MB).
 - **App Disk (MB):** Shows the disk space specifically consumed by your application (App Under Test) during the session, helping you track how much space your app is utilizing and whether it might cause storage-related issues.
-
-
 
 ### 4. Rendering (Frame Rate)
 Smooth rendering directly affects how responsive your app feels to users. Rendering performance is a typical performance issue that any app faces. It is measured at different stages in the app’s lifecycle to ensure that users do not have a bad experience with the app.
@@ -71,8 +64,6 @@ Smooth rendering directly affects how responsive your app feels to users. Render
 TestMu AI measures your app's Frames Per Second (FPS) across its lifecycle, which helps you identify performance bottlenecks in rendering and improve user experience.
 
 - **Frames Per Second (FPS):** Real-time measurement of rendering performance throughout the session.
-
-
 
 ### 5. Network Usage
 Understanding how your app utilizes network resources is essential for optimizing data transfer and ensuring efficient performance.
@@ -86,25 +77,17 @@ This helps you to monitor:
 - **Data Efficiency:** Optimize data usage to enhance performance and reduce costs.
 - **Performance Optimization:** Identify and mitigate high network usage areas that may affect app responsiveness.
 
-
-
 ### 6. Battery Consumption
 Apps that consume excessive battery negatively affect user experience. With TestMu AI, you can monitor how your app impacts battery drain, identify features that are energy hogs, and optimize them. This will help extend battery life for devices running your app.
 
 - **Battery Drain Rate:** Amount of battery consumed while using the app.
 
-
-
-
 Battery consumption data is only displayed for Android applications. This feature is not available for iOS applications.
-
 
 ### 7. Temperature Monitoring
 High device temperature can degrade performance and harm the user experience. TestMu AI lets you monitor battery temperature during app usage, helping you optimize features causing excessive heat generation and reducing the risk of device overheating.
 
 - **Temperature:** Temperature of the device battery during app usage.
-
-
 
 ### 8. ANR (Application Not Responding)
 
@@ -125,30 +108,17 @@ TestMu AI provides an API that allows you to programmatically access detailed ap
 
 To retrieve profiling details, simply make a request to the TestMu AI API using your **authentication token (username and access key)** and the relevant **session ID**. The response will include comprehensive metrics in JSON format, allowing easy integration with other tools or reporting systems for further insights.
 
-
-
     {`https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/SESSION_ID/log/appmetrics`}
-
-
 
 **Step 1:** Run your app automation test on the Real Device Cloud.
 
 **Step 2:** Get your **SESSION_ID** from the **Meta Data** section.
 
-
 **Step 3:** Replace the `YOUR_SESSION_ID` parameter in the given API with your actual session id.
-
-
 
     {`https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/YOUR_SESSION_ID/log/appmetrics`}
 
-
-
 **Step 4:** Now go to any API testing platform, and pass the above URL (GET Method) to fetch the relevant results.
-
-
-
-
 
 > Got any questions?
 > Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).

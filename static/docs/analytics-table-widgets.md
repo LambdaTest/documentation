@@ -14,8 +14,6 @@ A table widget displays data in rows and columns, providing a structured view of
 - **Grouping data** by multiple fields to create hierarchical views
 - **Creating summary reports** with multiple columns of information
 
-
-
 ## Prerequisites
 
 Before creating a table widget, ensure you have completed the [common prerequisites and setup steps](/docs/dashboards-custom-widgets#prerequisites) for custom widgets.
@@ -24,7 +22,6 @@ Before creating a table widget, ensure you have completed the [common prerequisi
 
 **Common Steps**
 For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the [Common Steps for Creating Custom Widgets](/docs/dashboards-custom-widgets#common-steps-for-creating-custom-widgets) section in the main Custom Widgets documentation.
-
 
 ### Step 6: Choose Table Visualization
 
@@ -61,9 +58,7 @@ This is the most critical step for creating meaningful tables. You can add multi
 
 6. **Add Another**: Click this button to add additional columns to your table.
 
-
 For a complete list of available keys for each product, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
-
 
 **Example Configuration:**
 - **Column 1**: `test_name` (no aggregation, no group by) - Creates a "Test Name" column showing individual test names
@@ -229,9 +224,7 @@ The **SubHeader** option allows you to create hierarchical table structures:
 
 For a complete list of available keys that can be used for configuring table columns, aggregations, and grouping, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 
-
 Choose keys that represent categorical dimensions (like browser, OS, project name) for row identifiers, and numeric or countable fields for aggregations. For grouped columns, use fields with a reasonable number of unique values to avoid creating too many sub-columns.
-
 
 ## Best Practices for Table Widgets
 

@@ -6,7 +6,6 @@ TestMu AI Selenium Automation Grid is a secure, scalable, and reliable [Selenium
 
 ## Prerequisites
 
-
 First, you would have to install Ruby and gem on your local system. We recommend installing the latest version of Ruby. Installing these platforms is a little different in each operating system
 
 - For windows, you can download the latest installed the [official website](https://rubyinstaller.org/downloads/).
@@ -21,13 +20,11 @@ First, you would have to install Ruby and gem on your local system. We recommend
 
 ## Installing Selenium Dependencies For Ruby
 
-
 Once you have Ruby and Gem setup, you would now have to install Selenium dependencies. You can install Selenium via simple gem command-
 
     gem install selenium-webdriver
 
 ## Sample Ruby & Selenium Test To Get You started
-
 
 Once you have installed necessary dependencies, you are all set to run your Ruby automation scripts on TestMu AI Selenium grid. To get started you can try out the code below. It’s a simple Ruby scripts that opens up [Google.com](https://www.google.com/), searches TestMu AI in Google search bar, and then displays the title of the search result page. You can also fork it from our [Ruby GitHub repository](https://github.com/LambdaTest/ruby-selenium-sample).
 
@@ -121,8 +118,6 @@ The first thing to note in this code is the use of remote webdriver. To access T
 
 In this example we are running a test on **Windows 10**, **Chrome 67 environment**. You can test your own choice of an environment by changing the parameters in the object. You can leverage our capabilities generator tool to create code for your environments.
 
-
 LambdaTest Capability Generator Tool
-
 
 > **Tear Down**: The tear down method helps TestMu AI platform understand when the execution of a test is finished. It’s important to tear down each test or else it will give timeout errors.

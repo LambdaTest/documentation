@@ -6,7 +6,6 @@ Inject a custom video file as a fake camera feed in Chromium-based Selenium test
 
 ## How It Works
 
-
 Upload a video file, pre-load it onto the test VM, and pass Chrome flags to use it as a fake camera device.
 
 1. Upload your `.mjpeg` or `.y4m` video file to TestMu AI using the web automation user-files API.
@@ -17,7 +16,6 @@ Chrome treats the file as a looping camera feed, so any `getUserMedia({ video: t
 
 ## Prerequisites
 
-
 Verify the following before configuring mock video injection.
 
 1. Get a TestMu AI account with Web Automation access, and find your credentials on the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
@@ -26,11 +24,9 @@ Verify the following before configuring mock video injection.
 
 ## Step 1: Upload the Video File
 
-
 Upload your `.mjpeg` file using the web automation user-files API.
 
 ### cURL
-
 
 ```bash
 curl -X POST \
@@ -40,7 +36,6 @@ curl -X POST \
 ```
 
 ### Response
-
 
 ```json
 {
@@ -55,19 +50,15 @@ curl -X POST \
 }
 ```
 
-
 **Limits**: maximum 20 MB per upload and maximum 150 files per organization.
 
 The `/mfs/v1.0/media/upload` endpoint is for mobile and app automation. For web automation, use `/automation/api/v1/user-files`.
 
-
 ## Step 2: Configure Selenium Capabilities
-
 
 Add the video file and Chrome flags to your Selenium capabilities configuration. For the complete reference of options you can set here, see the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
 
 ### Java (Selenium 4, W3C)
-
 
 ```java
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -104,7 +95,6 @@ options
 
 ### Python
 
-
 ```python
 from selenium import webdriver
 
@@ -131,7 +121,6 @@ options=options,
 ```
 
 ### JavaScript (WebDriverIO or Raw WebDriver)
-
 
 ```javascript
 const capabilities = {
@@ -160,7 +149,6 @@ args: [
 
 ## Step 3: Verify the Video Feed in Your Test
 
-
 Navigate to a page that requests camera access and confirm the fake stream is active.
 
 After the session starts, navigate to a page that requests camera access and confirm the fake stream is being used.
@@ -179,7 +167,6 @@ Boolean isPlaying = (Boolean) driver.executeScript(
 
 ## File Paths by OS
 
-
 The `lambda:userFiles` capability places files in these directories.
 
 | Platform | File Path |
@@ -192,7 +179,6 @@ Adjust the `--use-file-for-fake-video-capture` path to match your target platfor
 
 ## Chrome Flags Reference
 
-
 The following Chrome flags control fake media device behavior.
 
 | Flag | Purpose |
@@ -203,7 +189,6 @@ The following Chrome flags control fake media device behavior.
 | `--use-file-for-fake-audio-capture=` | Uses the specified file as fake microphone input (`.wav` format) |
 
 ## Troubleshooting
-
 
 Refer to the following table for common issues and solutions.
 
@@ -218,7 +203,6 @@ Refer to the following table for common issues and solutions.
 | macOS video does not render | This is a known Chrome limitation; use Linux when visual verification is required |
 
 ## Next Steps
-
 
 Continue with these related guides:
 

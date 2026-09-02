@@ -15,7 +15,6 @@ Flaky Test Detection serves various use cases, including:
 **Flaky Test Analytics**
 To read more about the Flaky Tests Analytics, you can refer the documentation at [Flaky Tests Analytics](/docs/analytics-modules-test-intelligence-flaky-test-analytics/)
 
-
 ## How to use Flaky Test Detection?
 
 There are following Prerequisites to use Flaky Test Detection:
@@ -28,7 +27,6 @@ There are following Prerequisites to use Flaky Test Detection:
 ### What are Flaky Tests?
 
 Flaky tests refer to tests that exhibit inconsistent behavior when executed multiple times under the same conditions. These tests may produce varying results (pass or fail) when run repeatedly, even without any changes to the application or test script.
-
 
 ### Flaky Test Detection Logics Supported
 
@@ -79,8 +77,6 @@ Flaky Test Detection on the platform supports two complementary methods for iden
 **Supported Frameworks**
 Currently, these features only support `Selenium` based tests for Web Automation and HyperExecute subscribers. Integration with Playwright reporter infrastructure is ensured. Support for additional frameworks is upcoming.
 
-
-
 ## How to view the Flaky Test Detection for Web Automation tests?
 
 To view the Flaky Test Detection report, you can follow the below steps:
@@ -90,8 +86,6 @@ To view the Flaky Test Detection report, you can follow the below steps:
 - For flaky marked tests, you will see a Flake icon   in the test list.
 - Now, select the test for which you want to view the flaky test details.
 - You will be redirected to the Test Details page. Here, you can view the flaky test details in the right corner of the page.
-
-
 
 ## Exploring Different Metrics in Flaky Test Detection
 
@@ -112,7 +106,6 @@ In Flaky Test Detection, several metrics play a crucial role in assessing and ca
 
    **Use Case:** Within a test, individual commands may produce inconsistent results. The Command Flakiness Percentage identifies the fluctuations in each command, aiding in precise root cause analysis.
 
-
 Understanding these metrics allows you to:
 
 - Assess the overall consistency of tests within a group.
@@ -120,15 +113,10 @@ Understanding these metrics allows you to:
 - Drill down to individual commands to pinpoint sources of flakiness  (when Command Logs Mapping is active).
 - Prioritize improvements and optimizations based on the level of inconsistency revealed by these metrics.
 
-
-
-
 ## Customizing Flaky Test Detection
 ### How to use the Custom Flaky Test Detection settings?
 
 Go to the `Test Intelligence` section in `Org Product Preferences` under `Organization Settings` to locate the following settings:
-
-
 
 - **Grouping Mechanism:**
   The grouping mechanism provides you with the ability to determine the criteria for categorizing tests for flakiness . By default, tests are grouped based on your testing environment specified in the [capabilities](https://www.testmuai.com/capabilities-generator/), which include parameters such as test name, browser, operating system (OS), and resolution.
@@ -151,7 +139,6 @@ const capability = {
 }
 ```
 
-
   The primary criterion for grouping is the `test name`, and you also have the flexibility to tailor this grouping according to your specific needs. This customization can be achieved by deselecting one or more of the environment variables, allowing you to precisely define how tests are categorized.
 
 - **Sliding Window of previous test runs:**
@@ -160,12 +147,8 @@ The sliding window represents the number of preceding tests taken into account w
 - **Flake Rate Threshold:**
 You can set the flake rate threshold to define when a test is marked as flaky. The default threshold is 20%. Tests crossing this threshold will be marked flaky . By adjusting the threshold, you can fine-tune the sensitivity of flakiness detection. Lowering it may result in more tests being flagged as flaky, helping you catch minor inconsistencies, while increasing it can provide a higher level of tolerance, focusing on more significant deviations in test behavior. Selecting an appropriate threshold empowers you to tailor your flakiness detection precisely to your testing needs.
 
-
-
-
 ## Identifying flakiness in test status
 Flakiness is characterized by the inconsistency observed in prior executions of the same test, which implies that a test can be deemed flaky even in the absence of flaky individual commands within the test. Since flakiness is predicated on the variability of the test's status across executions, a test will retain its flaky classification until its Flake Rate falls below the predefined threshold. The decline in the Flake Rate corresponds to achieving consistency in test executions.
-
 
 ## Support for Cypress, Playwright, Puppeteer and Appium
 

@@ -15,10 +15,6 @@ This functionality addresses the need for:
 - Go to the **Settings** page > select **Organization Settings** section.
 - Click on the **Teams** tab and edit your **Organization Name**.
 
-
-
-
-
 ## Create your First Team
 
 - Click on the **Create Team** button in the Teams page.
@@ -28,20 +24,12 @@ You cannot leave the Team name as empty. It is mandatory to enter the name of yo
 
 - Select all the **users** you want to add to your team and click on **Finish** button.
 
-
-
-
-
 ## Edit your Team Settings
 
 - Go to your **Teams** section.
 - Click on the **three dots (...)** > **Edit** button.
 - Edit your team setting by updating your teams name or by adding/removing the users from the team.
 - Click on the **Finish** button.
-
-
-
-
 
 ## Delete your Team
 
@@ -50,17 +38,11 @@ You cannot leave the Team name as empty. It is mandatory to enter the name of yo
 
 Your created team will be permanently deleted.
 
-
-
-
-
 ## Access Rules for Builds, Tests, and Test Details
 
 This section outlines a series of cases designed to verify test visibility within the system.
 
-
 - All the user roles (admin, user, guest) are independent of the tests visibility in teams.
-
 
 The following scenarios explain who can see the test results and under what circumstances:
 

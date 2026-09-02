@@ -21,19 +21,11 @@ The Pre-Loaded Chrome Extensions feature in TestMu AI's real-time testing allows
 
 **Step 4:** Now again click on the Chrome Extension drop down button and select all the extensions that you want to apply for your testing purpose and click on the **Apply** button.
 
-
-
-
-
 ## Removing the Chrome Extension
 
 **Step 1:** Navigate to Real Time Desktop Web Browser Testing console.
 
 **Step 2:** Unselect all those extensions that you want to remove, and click on **Apply** button.
-
-
-
-
 
 ## Use Cases for Chrome Extensions in Real-Time Testing
 - **Testing with Ad Blockers :** Ensure that your web application functions correctly when ad blockers are enabled.

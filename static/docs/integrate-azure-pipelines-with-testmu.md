@@ -18,21 +18,15 @@ TestMu AI now integrates with Azure to boost your go-to-market delivery. Perform
 
     * **For Linux/Mac:**
 
-
     $ export LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
     $ export LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 
-
-
     * **For Windows:**
-
 
     $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
 
     $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
-
-
 
 ## Integrating TestMu AI with Azure Pipelines
 
@@ -40,11 +34,7 @@ TestMu AI now integrates with Azure to boost your go-to-market delivery. Perform
 
 **Step 1:** First and foremost, we need to create a project. Populate the relevant fields as you wish and hit the create button.
 
-
-
 **Step 2:** Now, Azure Pipelines will ask you about the location of your code. If you have your code repository in GitHub then select the option for GitHub from the values.
-
-
 
 **Step 3:** After you choose an option for your code repository, you will be asked to login. Post login, you need to choose the particular repository. The repository will pick the azure-pipelines.yml file.
 
@@ -79,8 +69,6 @@ displayName: 'npm install and build'
 ```
 
 **Step 4:** Executing the above file will run the script in TestMu AI Grid successfully. See the below image of the output.
-
-
 
 ## Parallel Testing
 

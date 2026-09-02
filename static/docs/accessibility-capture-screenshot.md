@@ -6,19 +6,13 @@ Automatically capture visual evidence of accessibility issues during automated t
 
 ## Enable Capture Screenshot
 
-
 ### Manual Testing
-
-
 
 1. Navigate to **Accessibility Tool** → **Settings** → **Other Settings**
 2. Enable **Capture Screenshots**
 3. Run your accessibility scan to capture annotated screenshots
 
-
 ### Automation Testing
-
-
 
 Add the `accessibility.captureScreenshot: true` capability to your test configuration:
 
@@ -35,8 +29,6 @@ Add the `accessibility.captureScreenshot: true` capability to your test configur
 
 ## Understanding Screenshot Capture
 
-
-
 ### Visual Annotations
 
 Screenshots include visual indicators that help identify accessibility issues:
@@ -49,21 +41,15 @@ Screenshots include visual indicators that help identify accessibility issues:
 
 ## Results and Dashboard
 
-
-
 ### Accessibility Dashboard
 
 When enabled, screenshots appear in the Accessibility tab of your Automation Dashboard:
-
-
 
 - **Image View Section**: Dedicated area for viewing captured screenshots
 - **Thumbnail Gallery**: Quick overview of all captured screenshots from the test session
 - **Issue Correlation**: Click on violations to see corresponding highlighted areas on screenshots
 
 ## When to Enable
-
-
 
 **Enable screenshot capture when:**
 

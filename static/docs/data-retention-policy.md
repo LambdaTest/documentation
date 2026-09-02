@@ -7,8 +7,6 @@ This page provides a comprehensive overview of how long your data is retained ac
 **Enterprise Retention**
 Enterprise customers can request extended retention periods for most data types. Contact your account manager or [support@testmuai.com](mailto:support@testmuai.com) for details.
 
-
-
   Web Automation
   App Automation
   Real Device Cloud
@@ -22,9 +20,6 @@ Enterprise customers can request extended retention periods for most data types.
   Web Scanner
   Platform
 
-
-
-
 ## Web Automation
 
 | Data Type | Retention Period | Notes |
@@ -33,8 +28,6 @@ Enterprise customers can request extended retention periods for most data types.
 | Videos | 30 days | Test session video recordings |
 | Logs | 30 days | Console, network, and command logs |
 | Screenshots | 30 days | Captured during test execution |
-
-
 
 ## App Automation
 
@@ -45,8 +38,6 @@ Enterprise customers can request extended retention periods for most data types.
 | Logs | 30 days | Console, network, and command logs |
 | Screenshots | 30 days | Captured during test execution |
 
-
-
 ## Real Device Cloud
 
 | Data Type | Retention Period | Notes |
@@ -54,15 +45,11 @@ Enterprise customers can request extended retention periods for most data types.
 | Uploaded apps (APK/IPA) | 30 days | Apps uploaded for testing |
 | App Profiling data | 30 days | Performance profiling reports |
 
-
-
 ## Real-Time Testing
 
 | Data Type | Retention Period | Notes |
 |-----------|-----------------|-------|
 | Uploaded apps (APK/IPA) | 30 days | Apps uploaded for manual testing |
-
-
 
 ## HyperExecute
 
@@ -73,11 +60,7 @@ Enterprise customers can request extended retention periods for most data types.
 | Job artifacts & reports | 30 days | Stored automatically after job completion |
 | Shareable links | 2-30 days | Configurable via `linkValidity` in YAML; default is 2 days |
 
-
 Use the `linkValidity` key in your HyperExecute YAML to set how long shareable artifact links remain active (2-30 days).
-
-
-
 
 ## SmartUI
 
@@ -88,8 +71,6 @@ Use the `linkValidity` key in your HyperExecute YAML to set how long shareable a
 | Shareable links | Retained until build/project deleted | Linked to the lifecycle of the parent build/project |
 | Audit logs | 30 days | Dependent on internal log retention policies |
 
-
-
 ## Test Manager
 
 | Data Type | Retention Period | Notes |
@@ -99,11 +80,7 @@ Use the `linkValidity` key in your HyperExecute YAML to set how long shareable a
 | Test Runs | No retention limit | Retained as long as the account is active |
 | Insights | No retention limit | Retained as long as the account is active |
 
-
 Test Manager entities (projects, test cases, test runs) have no retention limit. However, if a test case is linked to an automation run, the **linked automation data** inherits the retention policy of the corresponding automation product (e.g., Web Automation = 30 days).
-
-
-
 
 ## KaneAI
 
@@ -114,16 +91,12 @@ Test Manager entities (projects, test cases, test runs) have no retention limit.
 | Databases | No retention limit | Database connections |
 | Variables | No retention limit | Variables and secrets |
 
-
-
 ## Accessibility
 
 | Data Type | Retention Period | Notes |
 |-----------|-----------------|-------|
 | Automation scan reports (App/Web) | 30 days | Higher retention available on request for Enterprise |
 | Manual scan reports (App/Web) | 30 days | Higher retention available on request for Enterprise |
-
-
 
 ## Analytics / Insights
 
@@ -134,8 +107,6 @@ Test Manager entities (projects, test cases, test runs) have no retention limit.
 | App Profiling reports | 30 days | Performance profiling data |
 | Shareable dashboard links | 7, 15, 30 days, or Never | Links set to "Never" require a password for access |
 
-
-
 ## Web Scanner
 
 | Data Type | Retention Period | Notes |
@@ -143,15 +114,11 @@ Test Manager entities (projects, test cases, test runs) have no retention limit.
 | Projects (visual / accessibility) | Retained until deleted | Active as long as the account is active |
 | Schedules (visual / accessibility) | 1 year | Dependent on job execution infrastructure |
 
-
-
 ## Platform
 
 | Data Type | Retention Period | Notes |
 |-----------|-----------------|-------|
 | Audit logs | 30 days | Enterprise customers can request higher retention |
-
-
 
 ## Key Points
 
@@ -161,8 +128,6 @@ Test Manager entities (projects, test cases, test runs) have no retention limit.
 - **Enterprise flexibility**: Enterprise customers can negotiate custom retention periods for most data types.
 - **Linked data**: When test management entities reference automation data, the automation data follows its own product's retention policy.
 - **Deletion**: Data is permanently deleted after the retention period expires and cannot be recovered.
-
-
 
 ## Need Extended Retention?
 

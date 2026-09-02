@@ -47,10 +47,8 @@ Your Show Unique Instances preference is automatically saved, so you don't need 
 **Processing Time**
 Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished running tests, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
 
-
 **Learn More**
 Want to understand exactly how unique instances and retry attempts are detected? See our comprehensive guide on [Unique Test Instances and Intelligent Retry Detection](/support/docs/analytics-unique-instances-retry-detection/) for step-by-step examples and best practices.
-
 
 ## Use Cases for Test Insights
 

@@ -6,7 +6,6 @@ TestMu AI’s [Selenium grid](https://www.testmuai.com/blog/why-selenium-grid-is
 
 ## Prerequisites
 
-
 - The first step is to download and install Node.js and node package manager or npm. We recommend using the latest version of node.js.
 
 - You can download it from [official NodeJS website](https://nodejs.org/en/).
@@ -17,19 +16,15 @@ TestMu AI’s [Selenium grid](https://www.testmuai.com/blog/why-selenium-grid-is
 
 ## Installing Selenium Dependencies For Node.js
 
-
 The next step is to install Selenium dependencies for Node.js using npm. Here’s the command that you can run:
 
         npm i selenium-webdriver
 
 ## Sample Node.js & Selenium Test To Get You Started
 
-
 Once you have installed the necessary dependencies, you are all set to run your Node.js automation scripts on the TestMu AI Selenium grid. To get started, you can try out the code below. It’s a simple Node.js script that opens up Google.com, searches TestMu AI in Google search, and then outputs the search result page's title. You can also fork it from our [Node.js GitHub repository](https://github.com/LambdaTest/nodejs-selenium-sample). Make sure to create the JS file in the same folder where you have downloaded Selenium.
 
-
 ## Sample Node.js & Selenium Automation Script
-
 
 Do make sure to add the **Username** and **Key** in the code below. You can find your username and access key using the key icon on the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) or in your [Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) section.
 
@@ -111,8 +106,6 @@ Do note the use of the remote webdriver here. We have passed browser environment
 
 To set up your own choice of environment for the test in the code, you can leverage our Capability Generator tool.
 
-
 TestMu AI Capability Generator Tool
-
 
 > **Tear Down**: The tear down method helps the TestMu AI platform understand when the test’s execution is finished. It’s important to tear down each test, or else it will give timeout errors.

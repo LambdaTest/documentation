@@ -12,25 +12,15 @@ With features like real-time navigation, detailed UI element inspection, and the
 
 ## How to use Live Debugger for App Automation
 
-
-
 **Step 1:** Run your app automation test on the TestMu AI platform. You can perform app automation testing across 5000+ real devices and 10,000+ browser/device combinations. Using debug mode to run the test is preferred as you can inspect applications at debug points.
-
-
 
 **Step 2:** After executing your test, head to the TestMu AI App Automation dashboard and open your recently executed app automation test.
 
-
-
 **Step 3:** While an app automation test runs on the dashboard, a **Live Debug** option is available above the live test video.
-
-
 
 >**Note:**  Live interaction on iOS devices is currently under beta. Please reach out to [support@testmuai.com](mailto:support@testmuai.com) for any query.
 
 **Step 4:** You can simply click the Live Debug option to access the extended UI Inspector and inspect the frames.
-
-
 
 **Step 5:** Selecting the Live Debug option smoothly transitions to the enhanced UI inspector, which tailors its behavior to the user's script and allows commands to run according to the Appium session.
 

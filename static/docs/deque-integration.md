@@ -6,7 +6,6 @@ Deque's axe is a world-class digital accessibility toolkit that allows you to in
 
 Learn how to automate your Web Accessibility tests with TestMu AI and Deque using Webdriver IO framework.
 
-
 1. Ensure you have the below dependency for running accessibility tests.
 
 ```js
@@ -42,7 +41,6 @@ client: browser
 browser.addCommand('getAxeResults', async () => {
 return axeWdio.analyze()
 .then(async (result) => {
-
 
 return result
 })

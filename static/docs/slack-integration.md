@@ -18,10 +18,6 @@ The TestMu AI Slack Integration enables users to share or push bugs to their spe
 
 **Step 4:** Now click on **install** button. If you’re already logged into your Slack account, you just have to post to a channel to confirm your identity. However, if you’re not logged into your Slack account, provide the Slack URL of your workplace.
 
-
-
-
-
 ## Lodge your First Bug
 
 > Note: If you are using Slack for the first time, then make sure to create a channel for yourself. It is a pre-requisite in order to push messages from your TestMu AI account.
@@ -43,9 +39,5 @@ The TestMu AI Slack Integration enables users to share or push bugs to their spe
 **Step 2:** Click on Settings -> Integrations -> Communication.
 
 **Step 3:** Click on the **Remove** button.
-
-
-
-
 
 >That was all you need to know for TestMu AI + Slack Integration. Increase your productivity multifold with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always **available on chat** to help you out with any roadblock regarding our product. Happy testing!

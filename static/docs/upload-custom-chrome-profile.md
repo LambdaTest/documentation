@@ -69,7 +69,6 @@ Once your profile is in place, you can pair it with other run modes, such as whe
 
 ## Next Steps
 
-
 Continue with these related guides:
 
 - [Perform Selenium Automation on Headless Browsers](/support/docs/perform-selenium-automation-on-headless-browsers/)

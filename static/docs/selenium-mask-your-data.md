@@ -8,7 +8,6 @@ When used, this capability hides all the keystrokes and other required values, a
 
 ## Syntax
 
-
 Add the maskCommands capability to your capabilities configuration. It sits alongside the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can set for a test session.
 
 **Syntax (Java)**:
@@ -16,7 +15,6 @@ Add the maskCommands capability to your capabilities configuration. It sits alon
 `capabilities.setCapability("lambdaMaskCommands", {""});`
 
 ## Supported Values
-
 
 Use the following comma-separated values to specify what data to mask.
 
@@ -27,7 +25,6 @@ Use the following comma-separated values to specify what data to mask.
 | `getCookies` | Hide/Redact all the cookie values obtained using the getCookies and getCookieNamed command.|
 
 ## Language Examples
-
 
 The following examples show how to configure maskCommands in each supported language.
 
@@ -42,18 +39,15 @@ The following examples show how to configure maskCommands in each supported lang
 
 ## Network Data Masking
 
-
 While `maskCommands` hides values sent through commands like `sendKeys` and `addCookie`, you can also mask sensitive data at the network layer. This is especially useful when you set custom HTTP headers that carry authentication tokens or keys you do not want surfaced in logs. TestMu AI's network data masking capability automatically masks sensitive data in network logs on the TestMu AI platform, ensuring that confidential information like passwords, tokens, and authentication keys are not exposed in test logs and network traffic reports.
 
 ### How Network Data Masking Works
-
 
 Network data masking automatically identifies and masks sensitive information in HTTP network logs on the TestMu AI platform during test execution.
 
 When enabled, the system scans for predefined sensitive keywords in network requests and responses, replacing their values with masked placeholders to prevent data exposure.
 
 ### Sensitive Keywords Detected
-
 
 The system automatically masks values for keys containing the following keywords.
 
@@ -71,11 +65,9 @@ The system automatically masks values for keys containing the following keywords
 
 ### Configuration
 
-
 Set the `network.mask` capability to `true` to enable network data masking.
 
 #### Java Implementation
-
 
 ```java
 // Java code for configuring Network Masking in tests on LambdaTest
@@ -85,7 +77,6 @@ capabilities.setCapability("network.mask", "true");
 ```
 
 #### Alternative Language Examples
-
 
 **Python:**
 
@@ -107,7 +98,6 @@ const capabilities = {
 
 ### Supported Values
 
-
 The capability accepts the following values.
 
 | Value | Description |
@@ -117,11 +107,9 @@ The capability accepts the following values.
 
 ### Masking Coverage
 
-
 Network data masking covers the following areas of HTTP traffic.
 
 #### Request Headers
-
 
 - Authorization headers containing tokens or keys
 - Custom headers with sensitive authentication data
@@ -129,13 +117,11 @@ Network data masking covers the following areas of HTTP traffic.
 
 #### Response Headers
 
-
 - Set-Cookie headers with sensitive session data
 - Authentication response headers
 - Custom security headers
 
 #### Request/Response Cookies
-
 
 - Session cookies containing tokens
 - Authentication cookies
@@ -143,11 +129,9 @@ Network data masking covers the following areas of HTTP traffic.
 
 ### Example Scenarios
 
-
 The following examples show how network logs appear before and after masking.
 
 #### Before Masking (network.mask: false)
-
 
 ```
 Request Headers:
@@ -161,7 +145,6 @@ auth_token=abc123xyz789; session_key=def456uvw012
 
 #### After Masking (network.mask: true)
 
-
 ```
 Request Headers:
 Authorization: Bearer ********
@@ -174,7 +157,6 @@ auth_token=********; session_key=********
 
 ### Use Cases
 
-
 Network data masking supports several testing and security scenarios.
 
 - **Security Compliance**: Ensure sensitive data does not appear in test logs for compliance with security standards and regulations.
@@ -184,7 +166,6 @@ Network data masking supports several testing and security scenarios.
 - **Debug and Troubleshooting**: Review network traffic for debugging while keeping sensitive authentication data protected. Combine masking with the other tools available to debug your Selenium tests for a safe, complete view of a failing session.
 
 ## Next Steps
-
 
 Continue with these related guides:
 

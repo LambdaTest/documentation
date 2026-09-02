@@ -15,7 +15,6 @@ JavascriptExecutor jse = (JavascriptExecutor)driver;
 jse.executeScript("lambdatest_executor: {\"action\": \"generateLighthouseReport\", \"arguments\": {\"url\": \"<any url>\"}}");
 ```
 
-
 ## Generating Lighthouse Report Using Lambda Hooks
 
 Execute the hook multiple times with different URLs to generate reports for each.
@@ -34,8 +33,6 @@ Execute the hook multiple times with different URLs to generate reports for each
 ```
 
 - Lighthouse reports for all hooks executed are visible on the TestMu AI Web Automation Dashboard under the **Performance** tab. To learn how to use Lambda Hooks for other test operations, refer to the complete hooks reference.
-
-
 
 ## View Lighthouse Performance Metrics
 
@@ -104,32 +101,19 @@ Follow the below steps to view the **Lighthouse performance metrics** on TestMu 
 
 **1.**  Go to the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com). Here you can see your recently executed Selenium automation tests. For this demo, we used a sample **TestNG** script from this [GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium).
 
-
-
 **2.**  Click on the test in which you activated the **Lighthouse performance** feature, as shown above.
-
-
 
 **3.**  Click on the **Performance** tab.
 
-
-
 **4.**  You can see the Lighthouse performance metrics on your screen for the website under test. For example, in the below image, the website under test is [https://lambdatest.github.io/sample-todo-app/](https://lambdatest.github.io/sample-todo-app/), which we used for our demo.
-
-
 
 **5.**  Click on any of the metrics to view it in detail, along with the individual factor scores. For example, clicking on _Accessibility_ opens its details.
 
-
-
 Similarly, you can click on any of the performance metrics to view it in detail. Performance reports can also be downloaded in various formats. TestMu AI also helps you view the Passed Audits, individual metrics, detailed diagnosis, and improvement opportunities for that particular Lighthouse Audit.
-
-
 
 That's it folks! That's all about the Lighthouse Performance Metrics with TestMu AI. You can read more about the Lighthouse Audits and Performance Metrics from [web.dev](https://web.dev/lighthouse-performance/)page. If you have any doubt or questions, feel free to contact our experts at **24/7 chat support** or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! :)
 
 ## Next Steps
-
 
 Continue with these related guides:
 

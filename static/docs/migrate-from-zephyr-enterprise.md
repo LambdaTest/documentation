@@ -211,7 +211,6 @@ Zephyr Enterprise's test case fields are Name, Alt ID, Priority, Tags, Descripti
 | Zephyr test case ID | — | Custom field | Keep it — your permanent link back to Zephyr for audits and reconciliation. |
 | Zephyr version | Version History | Not mappable | Versioning restarts in Test Manager at import. |
 
-
 ### C. Value mapping
 
 Field mapping connects columns; value mapping connects the contents. Zephyr's priority scheme is admin-configurable, so yours may not match Test Manager's out of the box:
@@ -225,7 +224,6 @@ Field mapping connects columns; value mapping connects the contents. Zephyr's pr
 | Trivial | Lowest | Create new value |
 
 Do the same for any custom dropdown fields. Where a Zephyr value has no sensible home, **Create new value** adds it rather than forcing a bad match — but agree the scheme with your team first, or you'll end up with both "Blocker" and "Critical" in the same project.
-
 
 ## Why this migration uses CSV
 

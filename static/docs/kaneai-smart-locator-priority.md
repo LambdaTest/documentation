@@ -6,13 +6,9 @@ Smart Locator Priority sets the order in which KaneAI prefers supported locator 
 
 ## Prerequisites
 
-
-
 You need **organization-admin** access. Locator priority is set in Organization Settings and applies across the whole organization.
 
-
 ## Locator Strategies
-
 
 KaneAI supports prioritizing these locator strategies. The strategy at the top of the list takes precedence over those below it.
 
@@ -28,31 +24,23 @@ Adjust the order when your application produces more stable selectors of one typ
 
 ## Configure Locator Priority
 
-
 Follow these steps to set the locator strategy order for your organization.
 
 ### Step 1: Open Smart Locator Priority
 
-
 Open [Smart Locator Priority in Organization Settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/smart-locator-priority). In TestMu AI, this is under **Org Product Preferences** &rarr; **KaneAI** &rarr; **Smart locator priority**.
-
-
 
 **Result:** The list of supported locator strategies opens.
 
 ### Step 2: Reorder the Strategies
 
-
 Drag and drop the locator types into your preferred order, keeping the most preferred strategy at the top.
 
 **Result:** The new order becomes the organization-level preference for any newly authored or edited test cases.
 
-
 The priority change does not apply to already authored test cases. It applies only when a test step is authored or re-authored in the KaneAI playground.
 
-
 ## Limitations
-
 
 Keep these limitations in mind:
 
@@ -60,7 +48,6 @@ Keep these limitations in mind:
 - The priority order controls which locator type is preferred first. It does not replace the need for stable page structure and reliable element identification.
 
 ## Next Steps
-
 
 Continue with these guides:
 

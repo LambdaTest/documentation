@@ -21,24 +21,16 @@ Visual testing often tells you that something is wrong but not what caused it. S
 | The layout shifted because of a small style change. | RCA pinpoints the exact CSS properties that changed. |
 | Invisible elements are affecting the layout. | RCA highlights changes to all elements, even invisible ones. |
 
-
-
-
 ## How to Use Root Cause Analysis
 
 ### Prerequisites
 
-
 Before you begin, please ensure the build was generated using a **TestMu AI CLI (exec)** command.
-
 
 ### Step 1: Activate RCA Mode
 
 1.  Open a visual build from your [SmartUI dashboard](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 2.  In the comparison toolbar, click the **RCA** icon.
-
-
-
 
 When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure, you're ready to investigate immediately.
 
@@ -56,10 +48,6 @@ As soon as RCA mode is on, you can interact with the highlighted differences to 
 ### Step 3: Understand Detailed Changes in the RCA Panel
 
 Once an element is selected, the RCA panel opens on the right sidebar. It displays structured diff breakdowns across several categories:
-
-
-
-
 
 | Category | What You'll See |
 |---|---|

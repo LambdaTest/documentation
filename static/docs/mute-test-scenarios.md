@@ -11,9 +11,7 @@ Muting works for Selenium and Playwright web automation, and for Appium app and 
 **Limited Availability**
 Muting is enabled per organization and may not be turned on for your account yet. To get it enabled, reach out to our **24/7 chat support** or email us at [support@testmuai.com](mailto:support@testmuai.com).
 
-
 ## Mute a Test
-
 
 1. Open the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) and select a build, or open the test's detail page.
 2. Wait for the test to finish. Muting acts on a result, so the action appears only once the test has settled on **Passed** or **Failed**.
@@ -27,7 +25,6 @@ To lift a mute, select **Unmute Test...** from the same menu. The build recomput
 There is no capability to set. Mute rules are applied server-side when a test is created, so your existing suite picks them up on the next run with no change to your script or capabilities block.
 
 ## What a Combination Matches On
-
 
 A combination rule is stored against your **organization**, so it applies to everyone on the team and persists until it is removed. Incoming tests are matched on:
 
@@ -43,12 +40,9 @@ A combination rule is stored against your **organization**, so it applies to eve
 
 Matching is **exact**. If the browser, device, OS, or OS version differs at all from the rule, including `13` versus `13.0`, the rule does not apply.
 
-
 The app build ID is deliberately excluded. It changes on every upload, so including it would silently break your mutes each time you shipped a new APK or IPA. Real and virtual devices are kept separate for the opposite reason: a mute for a physical Pixel 4 is not a request to mute an emulated one.
 
-
 ## What Muting Changes
-
 
 - **The test still runs.** It executes as before and records its real status, shown in the test list with a muted badge. Muting is not skipping and not hiding.
 - **The badge appears while the test is still queued.** A test caught by a saved rule is marked from the moment it is created, in the test list, the build page, and the test detail header.
@@ -59,7 +53,6 @@ The app build ID is deliberately excluded. It changes on every upload, so includ
 
 ## Limitations
 
-
 | Limitation | Detail |
 | --- | --- |
 | **Only Passed and Failed tests can be muted** | The action is offered only on tests that settled on **Passed** or **Failed**. It is not available on queued or running tests, or on tests that ended in any other status, such as **Stopped**, **Cancelled**, **Lambda Error**, **Aborted**, **Error**, **Timeout**, **Skipped**, or **Unknown**, because there is no definitive result to silence. To silence a test that always ends in one of these states, use **Mute the combination** from a run that did pass or fail. |
@@ -69,7 +62,6 @@ The app build ID is deliberately excluded. It changes on every upload, so includ
 | **Org-level control only** | No per-test, per-user, or per-team scoping in this release. |
 
 ## Next Steps
-
 
 - [Explore the Automation Dashboard](/support/docs/inside-testmu-platform/) - read build and test results for web automation
 - [App Automation Dashboard](/support/docs/app-automation-dashboard/) - read build and session results for app automation
