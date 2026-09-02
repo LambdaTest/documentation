@@ -72,7 +72,7 @@ This feature is designed to save time, improve test coverage, and streamline the
 
 Choose how the AI writes your test steps. Generate conventional **Manual Test Steps** with expected results, or **BDD Scenarios** in Gherkin syntax using `Given` / `When` / `Then`.
 
-- **Set it once**: Pick the format with the **Gherkin Format** toggle before generating; the choice is remembered for the rest of the session.
+- **Set it once**: Optional — the default is Manual Test Steps. Turn on the **Gherkin Format** toggle in **Advanced settings** before generating, and the choice is remembered for the rest of the session.
 - **Works everywhere in the session**: Conversation Layer refinements and regeneration both preserve the format.
 - **Saves natively**: BDD test cases land in Test Manager with the **Behaviour Driven Development** template, ready to edit in the Gherkin editor.
 - **Automation-ready**: KaneAI automates BDD test cases directly from their Gherkin steps.
@@ -212,9 +212,12 @@ Currently, the AI Test Case Generator can only access **publicly available URLs*
 
 #### Choose the Output Format
 
-Before generating, choose how you want the test steps written. Use the **Gherkin Format** toggle in the input box.
+Choosing an output format is optional. By default the AI writes **Manual Test Steps**, so you can generate without changing anything.
 
-<!-- IMAGE PLACEHOLDER: the input box with the Gherkin Format toggle visible, showing both states.
+To generate **BDD Scenarios** instead, open **Advanced settings** before you generate and turn on the **Gherkin Format** toggle. It sits with the other [generation settings](#configure-generation-settings), below **Memory Enhancement**.
+
+<!-- IMAGE PLACEHOLDER: the Advanced settings dialog with the Gherkin Format toggle turned on,
+     shown below Memory Enhancement.
      Suggested filename: ../assets/images/mobile-app-testing/gherkin_format_toggle.png
      <img loading="lazy" src={require('../assets/images/mobile-app-testing/gherkin_format_toggle.png').default} alt="gherkin-format-toggle" width="1347" height="616" className="doc_img"/> -->
 
