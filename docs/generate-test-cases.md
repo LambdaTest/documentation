@@ -329,9 +329,14 @@ Before triggering a generation session, you can configure the following settings
 | **Max Test Scenarios** | Set the maximum number of test scenarios the AI will generate in the session |
 | **Max Test Cases per Scenario** | Set the upper limit for test cases within each individual scenario |
 | **Memory Enhancement** | Toggle to enable or disable the [Smart Context: Memory Layer](#smart-context-memory-layer), which retrieves relevant existing test cases from your repository to improve generation quality |
+| **Gherkin Format** | Toggle to generate test case steps as [BDD scenarios](#bdd-scenario-output) in Gherkin (`Given` / `When` / `Then`) instead of step and outcome pairs. Off by default |
 | **Project Instructions** | View and verify the [project-level custom instructions](#project-level-custom-instructions) that will be applied to the session |
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/configure_generation_settings.png').default} alt="configure-generation-settings" width="1347" height="616" className="doc_img"/>
+
+<!-- IMAGE PLACEHOLDER: the screenshot above predates the Gherkin Format toggle and should be re-captured
+     so the Advanced settings dialog shows it below Memory Enhancement.
+     Replace configure_generation_settings.png in place, or add a new capture here. -->
 
 
 :::tip
