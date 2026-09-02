@@ -1,4 +1,4 @@
-# How to Test Locally Hosted Websites With Selenium on TestMu AI
+# Test Locally Hosted Websites With Selenium
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,7 +6,7 @@ TestMu AI Tunnel creates a secure, encrypted connection between your local machi
 
 ## How It Works
 
-The tunnel binary runs on your machine and establishes an encrypted connection to the TestMu AI cloud. When you set `tunnel: true` in your test capabilities, the cloud browser routes traffic through this connection to reach your local app. This works alongside the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you configure for a test.
+The tunnel binary runs on your machine and establishes an encrypted connection to the TestMu AI cloud. When you set `tunnel: true` in your test capabilities, the cloud browser routes traffic through this connection to reach your local app.
 
 ```
 Your Machine (localhost:3000) <-- Encrypted Tunnel --> TestMu AI Grid <--> Cloud Browser
@@ -24,7 +24,7 @@ Download the binary for your operating system and architecture.
 | **Linux** (AMD64) | https://downloads.lambdatest.com/tunnel/v3/linux/amd64/LT |
 | **Linux** (ARM64) | https://downloads.lambdatest.com/tunnel/v3/linux/arm64/LT |
 
-For the full list of platform binaries, see the TestMu AI Tunnel documentation.
+For the full list of platform binaries, see the [TestMu AI Tunnel documentation](/support/docs/testing-locally-hosted-pages/).
 
 After downloading, make the binary executable (macOS/Linux):
 
@@ -141,7 +141,7 @@ driver.get("http://localhost:3000");
 
 ## Common Issues
 
-Quick fixes for problems you might hit with local testing. If your local environment sits behind a corporate proxy, see how to run tests behind a proxy, and use custom DNS mapping when you need to resolve internal hostnames to a specific IP.
+Quick fixes for problems you might hit with local testing.
 
 | Problem | Solution |
 |---------|----------|
@@ -152,11 +152,3 @@ Quick fixes for problems you might hit with local testing. If your local environ
 | SSL certificate errors on localhost | Start the tunnel with `--mitm` flag to test sites with self-signed certificates on your local machine or internal network. |
 
 For YAML-based configuration, verbose logging, Info APIs, MITM mode, and all advanced options, see the [TestMu AI Tunnel documentation](/support/docs/testing-locally-hosted-pages/) and [TestMu AI Tunnel Features](/support/docs/advanced-tunnel-features/).
-
-## Next Steps
-
-Continue with these related guides:
-
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
-- [Run Selenium Tests Behind the Proxy](/support/docs/selenium-tests-behind-proxy/)
-- [Custom DNS Map](/support/docs/custom-dns-map/)

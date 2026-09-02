@@ -1,3 +1,5 @@
+# Testsigma Integration With HyperExecute
+
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Testsigma is an AI Native, cloud-based test automation platform that helps testers create, run, and maintain automated tests for web, mobile, and API applications.
@@ -180,33 +182,11 @@ Trigger your test plan on HyperExecute.
 
 - Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 > In case of MAC, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences → Security & Privacy → General tab**.
 
@@ -217,7 +197,5 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ```
 
 OR use this command if you have not exported your username and access key.
-
-
 
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}

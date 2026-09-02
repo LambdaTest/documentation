@@ -1,10 +1,8 @@
-# How to Configure Network Logs on TestMu AI
+# Network Logs and Configurations
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Network configurations on TestMu AI capture and analyze HTTP/S traffic in real time on real devices during automation. Logs stored in HAR format record API calls, requests, responses, and load times, while content capture and domain filtering help reduce noise.
-
-**Supported on:** Real devices
+Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services, all without leaving your testing workflow.
 
 On TestMu AI, you can enable **network configurations** to capture and analyze this traffic in real time on real devices. With flexible options such as content capture and domain-based filtering, you can focus on the most relevant network interactions while reducing noise from unrelated requests. This helps ensure faster debugging, clearer insights, and more efficient test runs.
 
@@ -49,7 +47,7 @@ When you enable **network logging** on TestMu AI, traffic passes through a **sec
 
 Before enabling network configurations, ensure your app is uploaded to TestMu AI.
 
-1. **Uploading Your App** - Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/) guide.
+1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](/support/docs/upload-apps-on-real-device-cloud/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 

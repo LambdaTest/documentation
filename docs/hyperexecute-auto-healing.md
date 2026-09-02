@@ -1,10 +1,8 @@
 ---
 id: hyperexecute-auto-healing
 title: Auto Healing in HyperExecute
-
-toc_max_heading_level: 2
 hide_title: true
-sidebar_label: "Auto Heal"
+sidebar_label: Auto Heal
 description: This documentation will help you to understand the concept of auto healing in hyperexecute
 keywords:
 - hyperexecute auto healing
@@ -107,7 +105,7 @@ By using these hooks, you can:
 
 This provides precise control over when element healing should be applied, improving reliability and reducing flakiness without impacting unrelated steps.  
 
-> To learn how to use AutoHeal hooks in your Selenium scripts, refer to the detailed guide: [How to Use AutoHeal using Hooks](/support/docs/auto-healing/)
+> To learn how to use AutoHeal hooks in your Selenium scripts, refer to the detailed guide: [How to Use AutoHeal using Hooks](/support/docs/autoheal-with-hooks/)
 
 
 ## Benefits of Auto Healing

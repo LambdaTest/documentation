@@ -137,5 +137,5 @@ await page.evaluate(`lambdatest_action: ${JSON.stringify({
 
 - [Smart Ignore](/support/docs/smartui-smartignore/)
 - [Region Ignore + Select on Web Hooks](/support/docs/smartui-hooks-region-ignore/)
-- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/smartui-project-settings/)
+- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/html-dom-smartui-options/)
 - [Selenium Visual Regression](/support/docs/selenium-visual-regression/)

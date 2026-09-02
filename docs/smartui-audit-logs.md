@@ -191,5 +191,5 @@ Use the **Event type** filter in the UI to restrict to these categories.
 
 ## Related documentation
 
-- [Approval & Baseline Management](/support/docs/smartui-running-your-first-project/): How approve, reject, move, and merge affect baselines.
-- [Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/): How bulk actions work and how they appear in audit logs.
+- [Approval & Baseline Management](/support/docs/smartui-approval-workflow-guide/) — How approve, reject, move, and merge affect baselines.
+- [Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/) — How bulk actions work and how they appear in audit logs.

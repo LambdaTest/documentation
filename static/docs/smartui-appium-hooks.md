@@ -214,7 +214,7 @@ ignoreBoxes.put("xpath", new String[]{
 });
 
 configIgnore.put("ignoreBoxes", ignoreBoxes);
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
+((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
 
 ```
 
@@ -275,7 +275,7 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 ```java
-((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
+((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 ### For capturing full page screenshot in Native Apps
@@ -331,7 +331,7 @@ Map config = new HashMap<>();
 config.put("screenshotName", "");
 config.put("fullPage", true);
 config.put("pageCount", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
+((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
 </TabItem>

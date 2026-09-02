@@ -73,7 +73,7 @@ HyperExecute now supports **Katalon Reports** generation, including all new repo
 - **Seamless Katalon Report Integration:** You can now generate Katalon HTML reports directly within your HyperExecute workflow.
 - **Support for Latest Report Structure:** HyperExecute is fully compatible with the new report schema and format updates introduced in Katalon Studio 10+.
 
-> 📘 Refer to our [Katalon Report Generation Guide](/support/docs/hyperexecute-job-reports/#katalon-report) for a detailed setup walkthrough and examples.
+> 📘 Refer to our [Katalon Report Generation Guide](/support/docs/hyperexecute-katalon-report/) for a detailed setup walkthrough and examples.
 
 ## Version 3.0.8
 ### Job Insights View in HyperExecute
@@ -158,7 +158,7 @@ With Workflow Variables, you can now customize your workflow execution. This mak
 ## Version 3.0.0
 ### Language Support for Android Real Device Maestro Framework
 
-We have introduced language support for Maestro tests on Android devices in HyperExecute. Now, you can configure the language parameter directly in your HyperExecute YAML under the [framework](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) flag.
+We have introduced language support for Maestro tests on Android devices in HyperExecute. Now, you can configure the language parameter directly in your HyperExecute YAML under the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag.
 
 This enhancement is particularly useful when your testing applications in non-English environments. For example, you can now run tests in Spanish by setting:
 
@@ -300,7 +300,7 @@ version: latest
 video: false
 ```
 
-> 📘 Refer to our detailed documentation for [`ltOptions`](/support/docs/deep-dive-into-hyperexecute-yaml/#yaml-based-capability-overrides-for-selenium-tests-on-hyperexecute) flag.
+> 📘 Refer to our detailed documentation for [`ltOptions`](/support/docs/hyperexecute-yaml-capability-overrides/) flag.
 
 ### Network Logs & Tunnel Support for Maestro Framework
 HyperExecute now supports `network logs` and `tunnel` capabilities for Maestro tests running on both virtual devices and real devices using the Raw Framework configuration.

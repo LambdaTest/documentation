@@ -1,4 +1,4 @@
-# How to Auto-Heal Selenium Tests on TestMu AI
+# Auto Healing for Selenium Web Automation
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,7 +6,7 @@ The TestMu AI Auto Healing feature for Selenium testing automatically recovers f
 
 ## Enabling Auto Healing
 
-Pass the `autoHeal: true` capability in your WebDriver configuration to enable this feature. For the full set of options you can combine with it, see the [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
+Pass the `autoHeal: true` capability in your WebDriver configuration to enable this feature.
 
 ```js
 const capability = {
@@ -21,9 +21,9 @@ const capability = {
 }
 }
 ```
-> **Warning:** The `autoHeal` capability only works when `smartWait` is **disabled**. Both features cannot be enabled together in the same test session. If you need to synchronize on element readiness instead, use SmartWait in a separate session.
+> **Warning:** The `autoHeal` capability only works when `smartWait` is **disabled**. Both features cannot be enabled together in the same test session.
 
-No prerequisites are required. Enable auto-healing directly via capabilities.
+No prerequisites are required. Enable auto-healing directly via desired capabilities.
 
 ### Language Preferences
 
@@ -192,7 +192,7 @@ To run the test, execute the below command:
 ./node_modules/.bin/mocha autohealingTest.js
 ```
 
-## Using Auto Heal With Hooks
+## Using Auto Heal with Hooks
 
 You can start or stop Auto Heal at any point in your test script using hooks. This gives you fine-grained control over when element healing should be applied.
 
@@ -221,10 +221,6 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 ```python title="Test.py"
 import os
 import time
-
-# How to Use Auto Healing for Selenium Test Suites
----
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -261,8 +257,6 @@ driver.quit()
 
 ## Benefits of Auto Healing
 
-Auto Healing improves test stability, reduces maintenance effort, and keeps CI pipelines reliable.
-
 - **Increased Test Stability:** Tests remain consistent even when the web application's UI undergoes minor changes, reducing flakiness.
 - **Reduced Test Maintenance:** The system automatically adapts to evolving interfaces, reducing the manual effort required to update test scripts.
 - **Reliable CI Pipeline:** Stable tests feeding into CI pipelines reduce unexpected failures and ensure smoother deployments.
@@ -273,7 +267,7 @@ While the Auto Healing feature handles a wide range of issues, there are certain
 
 * **Non-recoverable errors**: Auto Healing cannot recover from certain types of errors, such as WebDriver initialization errors or system-level failures.
 
-* **Test accuracy**: While Auto Healing reduces test flakiness, it may also mask real issues in your web application or test scripts. Review the logs and debug your Selenium tests to understand why a test needed healing.
+* **Test accuracy**: While Auto Healing reduces test flakiness, it may also mask real issues in your web application or test scripts. Review the logs and understand why a test needed healing.
 
 * **Performance impact**: While typically minimal, enabling Auto Healing can have a slight impact on test execution time due to additional checks and recovery mechanisms.
 
@@ -287,11 +281,3 @@ The Auto Healing feature enhances your test suite, but it does not replace good 
 - [Auto-Heal in KaneAI](/support/docs/kaneai-auto-heal/):AI-native auto-heal with natural language understanding for KaneAI-authored tests
 
 > If you have any questions, please feel free to let us know. Our experts are always available on **chat** to help you out with any roadblock regarding our product. Happy testing!
-
-## Next Steps
-
-Continue with these related guides:
-
-- [SmartWait](/support/docs/smart-wait/)
-- [Debugging Options](/support/docs/debugging-options/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)

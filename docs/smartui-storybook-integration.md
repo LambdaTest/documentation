@@ -1,7 +1,6 @@
 ﻿---
 id: smart-ui-storybook
 title: Getting started with SmartUI using Storybook On TestMu AI
-sidebar_label: Storybook Testing
 description: In this documentation, learn how to perform Visual UI Testing with Storybook on the TestMu AI Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression

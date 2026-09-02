@@ -100,7 +100,7 @@ There are [test automation](https://www.testmuai.com/automation-testing) framewo
 
 Tesbo is a hybrid framework for test automation that works on a keyword-driven approach. It allows you to write automation scripts in plain English like you’d do with a BDD framework. Built on top of Selenium, Tesbo helps you to perform cross browser testing over a Selenium Grid in parallel.
 
-Check our support document to run your first [Tesbo script over TestMu AI Selenium Grid](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=tesbo).
+Check our support document to run your first [Tesbo script over TestMu AI Selenium Grid](/docs/executing-tesbo-automation-script-over-online-selenium-grid/).
 
 You can run any framework which supports Selenium execution over TestMu AI Selenium Grid.
 

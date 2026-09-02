@@ -1,9 +1,8 @@
 ---
 id: katalon-integration-with-hyperexecute
-title: Katalon
-toc_max_heading_level: 2
+title: Katalon
 hide_title: true
-sidebar_label: "Katalon"
+sidebar_label: Katalon
 description: Integrate Katalon Studio with HyperExecute for cross-platform testing! Follow our guide to perform web & mobile automation testing on multiple OS with codeless UI validation.
 keywords:
     - hyperexecute integrations

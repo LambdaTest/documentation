@@ -1,6 +1,5 @@
 ---
 id: agent-skills
-displayed_sidebar: MCPServerSidebar
 title: TestMu AI Agent Skills for Test Automation Frameworks
 hide_title: true
 sidebar_label: AI Agent Skills

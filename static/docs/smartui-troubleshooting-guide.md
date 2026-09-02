@@ -493,7 +493,7 @@ npm install -g @lambdatest/smartui-cli@latest
 npx smartui --help
 npx smartui exec --help
 ```
-**Related Documentation**: [CLI Documentation](/support/docs/smartui-cli-complete-reference/), [Configuration Options](/support/docs/smartui-sdk-config-options)
+**Related Documentation**: [CLI Documentation](/support/docs/smartui-cli), [Configuration Options](/support/docs/smartui-sdk-config-options)
 
 **Issue: Dependencies Not Resolving**
 
@@ -553,7 +553,7 @@ node --version
    - Use `requirements.txt` with pinned versions for pip
    - Use `pom.xml` with specific versions for Maven
 
-**Related Documentation**: [SDK Documentation](/support/docs/smartui-selenium-js-sdk/), [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+**Related Documentation**: [SDK Documentation](/support/docs/smartui-selenium-java-sdk), [CLI Documentation](/support/docs/smartui-cli)
 
 **Issue: Pipeline/Workflow Fails with "Secret/Variable Not Found"**
 
@@ -890,7 +890,7 @@ Get-ChildItem Env: | Where-Object { $_.Name -like "*PROJECT_TOKEN*" -or $_.Name 
    - **Use CI/CD secrets**: Store sensitive values in CI/CD platform secrets/variables
    - **Validate on startup**: Check if required variables are set before running tests
 
-**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-running-your-first-project/), [Running Your First Project](/support/docs/smartui-running-your-first-project)
+**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-cli-env-variables), [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
 **Issue: Proxy Configuration Not Working**
 
@@ -923,7 +923,7 @@ export NO_PROXY="localhost,127.0.0.1"
 echo $HTTP_PROXY
 echo $HTTPS_PROXY
 ```
-**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-running-your-first-project/)
+**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-cli-env-variables)
 
 **Issue: Tunnel Connection Issues**
 
@@ -986,4 +986,4 @@ If you encounter issues not covered in this guide:
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [CLI Documentation](/support/docs/smartui-cli)

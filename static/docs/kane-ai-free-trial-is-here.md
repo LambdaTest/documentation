@@ -10,7 +10,7 @@ With KaneAI's free trial access, every team can access GenAI-Native testing capa
 
 [**Start testing with KaneAI today →**](https://www.testmuai.com/kane-ai)
 
-## Here's What It Has to Offer
+## Here's What it Has to Offer
 
 With KaneAI free trial, you get access to:
 

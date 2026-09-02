@@ -68,7 +68,7 @@ name: Run Visual Tests
 **Example:**
 ```yaml
 variables:
-BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
+BUILD_NAME: $BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 ```
 
 **Error Handling**
@@ -154,7 +154,7 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 2. Check pipeline logs for errors:
 ```yaml
 after-script:
-- echo "Checking logs..."
+- echo Checking logs..."
 ```
 
 3. Verify network connectivity in pipeline
@@ -245,13 +245,13 @@ script:
 If you encounter issues not covered here:
 
 - Review [Bitbucket Pipelines Documentation](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
-- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 ## Additional Resources
 
-- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli)
 - [Bitbucket Pipelines Documentation](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

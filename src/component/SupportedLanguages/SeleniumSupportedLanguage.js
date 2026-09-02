@@ -16,22 +16,22 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/selenide-tests-with-lambdatest-online-selenium-grid-for-automated-cross-browser-testing/">Selenide</a>
         </li>
         <li>
-          <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=gauge">Gauge</a>
+          <a href="/support/docs/running-gauge-tests-on-testmu-selenium-grid/">Gauge</a>
         </li>
         <li>
-          <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=testng">TestNG</a>
+          <a href="/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/">TestNG</a>
         </li>
         <li>
-          <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=geb">Geb</a>
+          <a href="/support/docs/run-geb-tests-on-selenium-grid/">Geb</a>
         </li>
         <li>
-          <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=junit">JUnit</a>
+          <a href="/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/">JUnit</a>
         </li>
         <li>
-          <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=cucumber">Cucumber</a>
+          <a href="/support/docs/running-cucumber-scripts-with-testng-and-selenium/">Cucumber</a>
         </li>
         <li>
-          <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=serenity">Serenity BDD</a>
+          <a href="/support/docs/serenity-test-on-selenium-grid/">Serenity BDD</a>
         </li>
         </ul>
         </div>
@@ -46,16 +46,16 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/">PHP</a>
         </li>
         <li>
-          <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=laravel">Laravel</a>
+          <a href="/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/">Laravel</a>
         </li>
         <li>
-          <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=codeception">Codeception</a>
+          <a href="/support/docs/codeception-integration-with-testmu/">Codeception</a>
         </li>
         <li>
-          <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=phpunit">PHPUnit</a>
+          <a href="/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/">PHPUnit</a>
         </li>
         <li>
-          <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=behat">Behat</a>
+          <a href="/support/docs/behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid/">Behat</a>
         </li>
       </ul>
     </div>
@@ -69,13 +69,13 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/">Ruby</a>
         </li>
         <li>
-          <a href="/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=rspec">RSpec</a>
+          <a href="/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/">RSpec</a>
         </li>
         <li>
-          <a href="/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=testunit">Test::Unit</a>
+          <a href="/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/">Test::Unit</a>
         </li>
         <li>
-          <a href="/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=capybara">Capybara</a>
+          <a href="/support/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid/">Capybara</a>
         </li>
       </ul>
     </div>
@@ -90,16 +90,16 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/">C#</a>
         </li>
         <li>
-          <a href="/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=specflow">SpecFlow</a>
+          <a href="/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/">SpecFlow</a>
         </li>
         <li>
-          <a href="/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=mstest">MSTest</a>
+          <a href="/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/">MSTest</a>
         </li>
         <li>
-          <a href="/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=nunit">NUnit</a>
+          <a href="/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/">NUnit</a>
         </li>
          <li>
-          <a href="/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=xunit">xUnit</a>
+          <a href="/support/docs/selenium-with-xunit/">xUnit</a>
         </li>
       </ul>
     </div>
@@ -114,19 +114,19 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/">Python</a>
         </li>
         <li>
-          <a href="/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=pytest">Pytest</a>
+          <a href="/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/">Pytest</a>
         </li>
         <li>
-          <a href="/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=behave">Behave</a>
+          <a href="/support/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid/">Behave</a>
         </li>
         <li>
-          <a href="/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=robot">Robot</a>
+          <a href="/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/">Robot</a>
         </li>
         <li>
-          <a href="/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=unittest">Unittest</a>
+          <a href="/support/docs/running-unit-testing-in-python-on-testmu-selenium-grid/">Unittest</a>
         </li> 
          <li>
-          <a href="/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=lettuce">Lettuce</a>
+          <a href="/support/docs/automation-testing-selenium-with-lettuce/">Lettuce</a>
         </li> 
       </ul>
     </div>
@@ -141,43 +141,43 @@ export default function SeleniumSupportedLanguage() {
           <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/">JavaScript</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=webdriverio">WebDriverIO 5.6.2</a>
+          <a href="/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/">WebDriverIO 5.6.2</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=nightwatch">NightwatchJS</a>
+          <a href="/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/">NightwatchJS</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=webdriverio">WebDriverIO</a>
+          <a href="/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/">WebDriverIO</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=mocha">Mocha</a>
+          <a href="/support/docs/automation-testing-with-mocha-and-selenium/">Mocha</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=wd">WD</a>
+          <a href="/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/">WD</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=jest">Jest Library</a>
+          <a href="/support/docs/automation-testing-with-selenium-and-jest/">Jest Library</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=angular">AngularJS With Karma</a>
+          <a href="/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/">AngularJS With Karma</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=cucumberjs">CucumberJS For BDD</a>
+          <a href="/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid/">CucumberJS For BDD</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=jasmine">Jasmine For BDD</a>
+          <a href="/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/">Jasmine For BDD</a>
         </li>
         <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=karma">Karma Test Runner</a>
+          <a href="/support/docs/karma-integration-with-testmu/">Karma Test Runner</a>
         </li>
         <li>
           <a href="/support/docs/npm-plugin-for-testcafe-integration-with-lambdatest/">TestCafe</a>
         </li>
          <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=nemojs">NemoJS</a>
+          <a href="/support/docs/selenium-tests-with-nemojs/">NemoJS</a>
         </li>
          <li>
-          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=protractor">Protractor</a>
+          <a href="/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/">Protractor</a>
         </li>
       </ul>
     </div>

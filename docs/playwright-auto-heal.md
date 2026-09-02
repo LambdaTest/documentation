@@ -1,16 +1,23 @@
 ---
 id: playwright-auto-heal
-title: How to Use Auto-Healing for Playwright on TestMu AI
+title: How to use Auto Healing for your Playwright test suites
 hide_title: true
-toc_max_heading_level: 2
-sidebar_label: "Auto Healing"
-description: Learn how to enable TestMu AI Auto-Healing for Playwright tests to recover broken locators, reduce flakiness, and improve reliability.
+sidebar_label: Playwright Auto Healing
+description: Learn how to use TestMu AI Auto Healing feature in your Playwright tests to avoid test flakiness and increase reliability of your test suites.
 keywords:
-  - playwright auto healing testmu ai
-  - self-healing playwright locators
+  - auto heal testmu ai
+  - auto heal test flakiness restrictions
+  - auto healing testmu ai
+  - playwright self-healing locators
+  - auto-heal broken locators playwright
+  - smart heal playwright
+  - self-healing playwright tests
+  - autoheal playwright lambdatest
+  - playwright locator recovery
+  - AI self-healing playwright
   - fix broken locators playwright
-  - reduce playwright test flakiness
-  - autoHeal capability playwright
+  - DOM healing playwright tests
+  - playwright flaky test fix
 url: https://www.testmuai.com/support/docs/playwright-auto-healing/
 site_name: TestMu AI
 slug: playwright-auto-healing/
@@ -21,15 +28,17 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-# How to Use Auto-Healing for Playwright on TestMu AI
-***
+# Auto Healing for Playwright Web Automation
 
-When Playwright tests break because a locator changed after a UI update, Auto Healing on TestMu AI recovers the session instead of failing the run. It detects broken locators at runtime and generates new ones, which reduces flakiness and keeps your test suites reliable. You turn it on by passing a single `autoHeal: true` capability in your Playwright configuration.
+---
 
-## Enable Auto Healing With the autoHeal Capability
-***
+The <BrandName /> Auto Healing feature for Playwright testing automatically recovers from certain types of failures during test execution. When enabled, it reduces test flakiness and improves test reliability by detecting broken locators and handling unexpected errors in your test suites.
 
-To turn on Auto Healing, pass `autoHeal: true` as a capability in your Playwright configuration. The example below shows it inside the `LT:Options` block alongside the other test options.
+## Enabling Auto Healing
+
+---
+
+To enable the Auto Healing feature, you need to pass the `autoHeal: true` as a capability in your Playwright configuration. For example:
 
 ```js
 const capabilities = {
@@ -49,14 +58,11 @@ const capabilities = {
 };
 ```
 
-:::note
-Auto Healing has no prerequisites. Enable it directly through the `autoHeal` capability.
-:::
+> **Note:** There are no Prerequisites required for enabling the auto-healing feature. You can enable the auto-healing feature directly via desired capabilities.
 
-### Enable Auto Healing in Your Language
-***
+### Language Preferences:
 
-The `autoHeal` capability works the same way across languages. Select your language below to see how to pass it when connecting to the TestMu AI Playwright endpoint.
+---
 
 <Tabs className="docs__val">
 
@@ -178,9 +184,8 @@ Browser browser = playwright.chromium().connect("wss://cdp.lambdatest.com/playwr
 </Tabs>
 
 ## How Auto Healing Works
-***
 
-Auto Healing watches the page during execution and rebuilds locators that no longer match. The diagram below shows how it detects a broken locator and recovers the correct element.
+---
 
 <img loading="lazy" src={require('../assets/images/selenium/auto-heal.png').default} alt="Auto Healing workflow diagram showing how broken locators are detected and recovered" width="1346" height="647" className="doc_img"/>
 
@@ -188,10 +193,11 @@ Auto-healing adjusts broken locators by merging attributes and context. During r
 
 When an element is successfully located using Playwright's locator methods (`page.locator('#username').click()`, etc.), its DOM path is recorded. If that same element is later referenced on the same page and is missing, the system evaluates the current page and generates new locators for altered elements based on previous benchmarks.
 
-## Auto Detection of a Changed Locator
-***
+## Auto Detection of New Locator
 
-Web elements often change their locators after an update to the web application. In these cases, Auto Healing detects the new locator and continues the test execution without a failure.
+---
+
+In some scenarios, web elements might change their locators due to updates in the web application. However, the Auto Healing feature can automatically detect the new locator and continue the test execution.
 
 Here is an example test case demonstrating this:
 
@@ -222,7 +228,7 @@ test.describe('Browse LambdaTest in different search engines', () => {
 });
 ```
 
-The test case interacts with an element before and after a DOM change occurs on the TestMu AI auto-healing playground. Auto Healing detects that the element's locator has changed and adapts to it, so the test continues to execute successfully.
+In the above test case, we are interacting with an element before and after a DOM change occurs on <BrandName />'s auto-healing playground. The Auto Healing feature will automatically detect if the element's locator has changed and adapt accordingly, ensuring the test continues to execute successfully.
 
 To run the test, execute the below command:
 
@@ -230,19 +236,19 @@ To run the test, execute the below command:
 npx playwright test auto-heal.spec.js
 ```
 
-## Benefits of Auto Healing
-***
+## Benefits Of Auto Healing
 
-Auto Healing pays off most in suites that break often on small UI changes. The benefits below explain what you gain by enabling it.
+---
 
 - **Increased Test Stability:** Playwright tests remain consistent even when the web application's UI undergoes minor changes, reducing flakiness.
 - **Reduced Test Maintenance:** The system automatically adapts to evolving interfaces, reducing the manual effort required to update test scripts.
 - **Reliable CI/CD Pipeline:** Stable tests feeding into CI/CD pipelines reduce unexpected failures and ensure smoother deployments.
 
 ## Limitations of Auto Healing
-***
 
-Auto Healing handles a wide range of issues, but it does not cover every failure. Be aware of the limitations below before you rely on it.
+---
+
+While the Auto Healing feature is designed to handle a wide range of issues, there are certain limitations to be aware of:
 
 - **Non-recoverable errors**: Auto Healing cannot recover from certain types of errors, such as Playwright browser initialization errors, network connectivity issues, or system-level failures.
 
@@ -254,14 +260,19 @@ Auto Healing handles a wide range of issues, but it does not cover every failure
 
 Auto Healing enhances test suite robustness but does not replace good test design. Review healed tests regularly for issues that may be masked by the feature.
 
-## Related Playwright Guides
-***
+---
 
-Continue with the guides below to run and configure your Playwright tests on TestMu AI.
+## Related Docs
 
-- [Run your first Playwright test on TestMu AI](/support/docs/playwright-testing/) walks through executing a Playwright script on the cloud grid.
-- [Migrate existing Playwright tests to TestMu AI](/support/docs/migrate-existing-playwright-tests/) moves your current suite onto the cloud grid.
-- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) covers the `autoHeal` capability and every other test option.
+- [Selenium Auto Healing](/support/docs/auto-healing/):Auto-heal for Selenium web automation tests
+- [Smart Heal for Appium](/support/docs/smart-heal-appium/):AI-powered self-healing for mobile app automation on real devices
+- [Auto Healing in HyperExecute](/support/docs/hyperexecute-auto-healing/):Auto-heal for tests executed via HyperExecute
+- [Auto-Heal in KaneAI](/support/docs/kaneai-auto-heal/):AI-native auto-heal with natural language understanding for KaneAI-authored tests
+
+---
+
+> That was all you need to know for the Auto-Healing feature with Playwright. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -32,8 +32,6 @@ You can abort a running job directly from the HyperExecute portal. Once a job is
 
 When a job is aborted, all active test sessions within that job are terminated immediately and no residual processes remain. The remaining tests that were not yet executed will be marked as **Cancelled**.
 
-
-
 ## 2. Task Level Status
 
 A Task is a further subdivision within a job, often representing the execution of tests on a specific browser and operating system combination.
@@ -116,7 +114,5 @@ Consider the following Decreasing Order of Priority among Users with marked stat
 |P3|Ignored|Completed|
 |P4|Skipped|Completed|
 |P5|Unknown|Completed|
-
-
 
 Now that you have understood the concepts of HyperExecute, you can [get started](/support/docs/hyperexecute-running-your-first-job/#quick-run) with it quickly. Learn more about other [HyperExecute features](/support/docs/key-features-of-hyperexecute/).

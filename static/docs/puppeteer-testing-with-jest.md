@@ -1,18 +1,19 @@
-# How to Run Puppeteer Tests With Jest on TestMu AI
+# Puppeteer Testing With Jest
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you write Puppeteer tests with Jest, you can run the same specs across real browsers and operating systems on TestMu AI instead of a single local machine. This gives you Jest's structured output and assertions on a browser farm, whether you target a single test or an entire suite. You connect Puppeteer to the TestMu AI cloud grid through a `browserWSEndpoint` in your Jest configuration, then run the suite with the standard `npm run test` command.
+Jest is a Facebook-maintained framework for developing frontend and backend unit tests in JavaScript and executing end-to-end testing using Playwright. It provides you with the flexibility to target a single test, delivering structured output, or an entire suite for common assertions.
+
+TestMu AI allows you to run Puppeteer tests with Jest on a browser farm of real browsers and operating system combinations.
+
+This guide will cover the basics of getting started with Puppeteer testing with Jest on the TestMu AI platform.
 
 ## Prerequisites
 
-Before you run your first suite, clone the sample repository and set the credentials TestMu AI uses to authenticate your session.
-
-All the code samples in this documentation are available in the TestMu AI repository on GitHub. Download or clone the repository to run your tests quickly.
-
+>Note: All the code samples in this documentation can be found in the TestMu AI's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
  View on GitHub
 
-1. Clone the TestMu AI Puppeteer repository on your system.
+1. Clone the TestMu AI-Puppeteer repository on your system.
 
 2. Install the npm dependencies.
 
@@ -20,7 +21,7 @@ All the code samples in this documentation are available in the TestMu AI reposi
 npm install
 ```
 
-3. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find them.
+3. In order to run your Puppeteer tests with Jest, you will need to set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 **Windows**
 
@@ -36,11 +37,11 @@ export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-## Run Puppeteer Jest Tests on TestMu AI
+## Running Tests Using Jest
 
-The sample test script searches for TestMu AI on DuckDuckGo and verifies the page title. Configure the capabilities, then run the suite with a single command.
+>**Test Scenario**: The below test script searches TestMu AI on DuckDuckGo and verifies the website title.
 
-1. To run the Puppeteer tests using Jest on TestMu AI, make the required changes to the `jest-puppeteer.config.js` file.
+1. To run the Puppeteer tests using Jest on TestMu AI, you need make some tweaks to the `jest-puppeteer.config.js` file.
 
 ```js
 const caps_chrome = {
@@ -81,21 +82,21 @@ JSON.stringify(caps_chrome)
 
 ```
 
-2. Run the following command to execute your test.
+2. Pass the below command to run the test.
 
-```bash
+```
 npm run test
 ```
 
 3. Visit the TestMu AI Automation Dashboard to see the results of your Puppeteer Jest tests.
 
-## Using the Jest Agent Skill With TestMu AI
+## Using the Jest Agent Skill with TestMu AI
 
-The Jest Agent Skill helps AI coding assistants generate production-ready Jest test automation for TestMu AI. It is part of the [TestMu AI agent skills collection](https://github.com/LambdaTest/agent-skills/), and you can read the [Jest Agent Skill reference on GitHub](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill).
+The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
-The jest-skill package includes the following files:
+The jest-skill package includes:
 
-```text
+```
 jest-skill/
 ├── SKILL.md
 └── reference/
@@ -103,7 +104,7 @@ jest-skill/
 └── advanced-patterns.md
 ```
 
-It provides structured guidance for the following areas:
+It provides structured guidance for:
 
 * Project structure and setup
 * Dependency configuration
@@ -112,11 +113,11 @@ It provides structured guidance for the following areas:
 * Debugging patterns
 * CI/CD integration
 
-### Installing the Jest Agent Skill
+### Installing Jest Agent Skill
 
-Clone the agent skills repository and copy the Jest Agent Skill into your tool's skills directory.
+Install a Jest Agent Skill using the command below:
 
-```bash
+```
 # Clone the repo and copy the skill you need
 git clone https://github.com/LambdaTest/agent-skills.git
 cp -r agent-skills/jest-skill .claude/skills/
@@ -125,12 +126,4 @@ cp -r agent-skills/jest-skill .claude/skills/
 cp -r agent-skills/jest-skill .cursor/skills/
 ```
 
-To install all available framework skills instead of only the Jest Agent Skill, clone the repository directly into your tool's skills directory (for example, `.claude/skills/`, `.cursor/skills/`, `.gemini/skills/`, or `.agent/skills/`).
-
-## Related Puppeteer Guides
-
-Continue with the guides below to configure and scale your Puppeteer runs on TestMu AI.
-
-* [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/)
-* [Run Puppeteer tests with Mocha](/support/docs/puppeteer-testing-with-mocha/)
-* [Configure Puppeteer capabilities](/support/docs/capabilities-for-puppeteer/)
+**Note**: If you prefer installing all available framework skills instead of only jest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

@@ -10,7 +10,7 @@ This document details the seamless integration between HyperExecute and Testim, 
 
 - You will need your Testim account.
 - TestMu AI account. You can [sign up for free](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).
-- TestMu AI [Username and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key)
+- TestMu AI [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 
 ## Step 1: Setup the Grid
 

@@ -4,10 +4,7 @@
 
 This document will help you debug your failed job if you are facing any CLI issues.
 
-
 If you are encountering any error which is properly not detailed, it is recommend to use [**`verbose`**](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--verbose) mode in HyperExecute CLI command.
-
-
 
 ## Symbolic Link Error
 
@@ -17,25 +14,15 @@ You can encounter this error when you try to upload the **node_modules** directo
 
 To resolve this issue, either you remove that directory or you simply add node_modules to the **.gitignore** file. This ensures you have a smooth development process without unnecessary hiccups.
 
-
-
 ## Snooper Failed Error
 
 It's crucial to understand a specific characteristic of Gherkin – it exclusively supports the use of **Examples** with the **Scenario Outline**. If you come across an error, it likely indicates that the **Scenario** is being employed with **Examples** instead of the intended **Scenario Outline**. To resolve this, ensure that you use the appropriate structure, employing the Scenario Outline when incorporating Examples.
-
-
-
-
 
 ## Authentication Error
 
 There may be cases where, when trying to connect to HyperExecute services, the CLI throws the following error:
 
-
-
 Now, to validate the connectivity and to make sure the **auth.hyperexecute.cloud** is reachable, you have to run a `scan` command in your CLI, as shown below. If the network scan fails, then you are required to whitelist the IP address.
-
-
 
 #### IPs to be Whitelisted
 

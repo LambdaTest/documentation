@@ -1,18 +1,19 @@
-# How to Run Puppeteer Tests With Mocha on TestMu AI
+# Puppeteer Testing With Mocha
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you write Puppeteer tests with Mocha, you can run the same specs across real browsers and operating systems on TestMu AI instead of a single local machine. This gives you serial, structured Mocha reporting on a browser farm that maps failures back to the right test cases. You connect Puppeteer to the TestMu AI cloud grid through a `browserWSEndpoint`, define your browser capabilities, and run the suite with the standard `npm run test` command.
+Mocha is a JavaScript automation testing framework to run the tests on Node.js and the browser. It enables you to run test cases serially, providing greater flexibility and accurate test reporting while mapping unidentified bugs to the correct test cases.
+
+TestMu AI allows you to run Puppeteer tests with Mocha on a browser farm of real browsers and operating system combinations.
+
+This guide will cover the basics of getting started with Puppeteer testing with Mocha on the TestMu AI platform.
 
 ## Prerequisites
 
-Before you run your first suite, clone the sample repository and set the credentials TestMu AI uses to authenticate your session.
-
-All the code samples in this documentation are available in the TestMu AI repository on GitHub. Download or clone the repository to run your tests quickly.
-
+>Note: All the code samples in this documentation can be found in the TestMu AI's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
  View on GitHub
 
-1. Clone the TestMu AI Puppeteer repository on your system.
+1. Clone the TestMu AI-Puppeteer repository on your system.
 
 2. Install the npm dependencies.
 
@@ -20,7 +21,7 @@ All the code samples in this documentation are available in the TestMu AI reposi
 npm install
 ```
 
-3. Set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to find them.
+3. In order to run your Puppeteer tests with Mocha, you will need to set your TestMu AI username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 **Windows**
 
@@ -36,11 +37,11 @@ export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-## Run Puppeteer Mocha Tests on TestMu AI
+## Running Tests Using Mocha
 
-The sample test script searches for TestMu AI on DuckDuckGo and verifies the page title. Configure the capabilities, then run the suite with a single command.
+>**Test Scenario**: The below test script searches TestMu AI on DuckDuckGo and verifies the website title.
 
-1. To run the Puppeteer Mocha tests on TestMu AI, make the required changes to the `google.spec.js` file.
+1. To run the Puppeteer Mocha tests on TestMu AI, you need make some tweaks to the `google.spec.js` file.
 
 ```js
 const puppeteer = require('puppeteer');
@@ -122,21 +123,21 @@ await browser.close();
 });
 ```
 
-2. Run the following command to execute your test.
+2. Now pass the below command to run your test.
 
-```bash
+```
 npm run test
 ```
 
 3. Visit the TestMu AI Automation Dashboard to see the results of your Puppeteer Mocha tests.
 
-## Using the Mocha Agent Skill With TestMu AI
+## Using the Mocha Agent Skill with TestMu AI
 
-The Mocha Agent Skill helps AI coding assistants generate production-ready Mocha test automation for TestMu AI. It is part of the [TestMu AI agent skills collection](https://github.com/LambdaTest/agent-skills/), and you can read the [Mocha Agent Skill reference on GitHub](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill).
+The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
-The mocha-skill package includes the following files:
+The mocha-skill package includes:
 
-```text
+```
 mocha-skill/
 ├── SKILL.md
 └── reference/
@@ -144,7 +145,7 @@ mocha-skill/
 └── advanced-patterns.md
 ```
 
-It provides structured guidance for the following areas:
+It provides structured guidance for:
 
 * Project structure and setup
 * Dependency configuration
@@ -153,11 +154,11 @@ It provides structured guidance for the following areas:
 * Debugging patterns
 * CI/CD integration
 
-### Installing the Mocha Agent Skill
+### Installing Mocha Agent Skill
 
-Clone the agent skills repository and copy the Mocha Agent Skill into your tool's skills directory.
+Install a Mocha Agent Skill using the command below:
 
-```bash
+```
 # Clone the repo and copy the skill you need
 git clone https://github.com/LambdaTest/agent-skills.git
 cp -r agent-skills/mocha-skill .claude/skills/
@@ -166,12 +167,4 @@ cp -r agent-skills/mocha-skill .claude/skills/
 cp -r agent-skills/mocha-skill .cursor/skills/
 ```
 
-To install all available framework skills instead of only the Mocha Agent Skill, clone the repository directly into your tool's skills directory (for example, `.claude/skills/`, `.cursor/skills/`, `.gemini/skills/`, or `.agent/skills/`).
-
-## Related Puppeteer Guides
-
-Continue with the guides below to configure and scale your Puppeteer runs on TestMu AI.
-
-* [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/)
-* [Run Puppeteer tests with Jest](/support/docs/puppeteer-testing-with-jest/)
-* [Configure Puppeteer capabilities](/support/docs/capabilities-for-puppeteer/)
+**Note**: If you prefer installing all available framework skills instead of only mocha-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

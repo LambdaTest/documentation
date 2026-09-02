@@ -1,7 +1,7 @@
 ﻿---
 id: smartui-troubleshooting-guide
 title: Comprehensive Troubleshooting Guide for SmartUI
-sidebar_label: Troubleshooting Errors
+sidebar_label: Troubleshooting Guide
 description: Comprehensive troubleshooting guide for common SmartUI issues, including solutions, best practices, and diagnostic steps
 keywords:
   - troubleshooting
@@ -574,7 +574,7 @@ Before diving into specific issues, run through this quick checklist:
    npx smartui --help
    npx smartui exec --help
    ```
-**Related Documentation**: [CLI Documentation](/support/docs/smartui-cli-complete-reference/), [Configuration Options](/support/docs/smartui-sdk-config-options)
+**Related Documentation**: [CLI Documentation](/support/docs/smartui-cli), [Configuration Options](/support/docs/smartui-sdk-config-options)
 
 ---
 
@@ -636,7 +636,7 @@ Before diving into specific issues, run through this quick checklist:
    - Use `requirements.txt` with pinned versions for pip
    - Use `pom.xml` with specific versions for Maven
 
-**Related Documentation**: [SDK Documentation](/support/docs/smartui-selenium-js-sdk/), [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+**Related Documentation**: [SDK Documentation](/support/docs/smartui-selenium-java-sdk), [CLI Documentation](/support/docs/smartui-cli)
 
 </TabItem>
 
@@ -996,7 +996,7 @@ Before diving into specific issues, run through this quick checklist:
    - **Use CI/CD secrets**: Store sensitive values in CI/CD platform secrets/variables
    - **Validate on startup**: Check if required variables are set before running tests
 
-**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-running-your-first-project/), [Running Your First Project](/support/docs/smartui-running-your-first-project)
+**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-cli-env-variables), [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
 </TabItem>
 
@@ -1032,7 +1032,7 @@ Before diving into specific issues, run through this quick checklist:
    echo $HTTP_PROXY
    echo $HTTPS_PROXY
    ```
-**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-running-your-first-project/)
+**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-cli-env-variables)
 
 ---
 
@@ -1104,4 +1104,4 @@ If you encounter issues not covered in this guide:
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [CLI Documentation](/support/docs/smartui-cli)

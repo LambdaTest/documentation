@@ -33,6 +33,4 @@ You can go through the table below to understand exactly why HyperExecute Privat
 | Increased Flexibility |  ❌ | ✅ |
 | Whitelabled Dashboards |  ❌ | ✅ |
 
-
-
 > If you need more information about the HyperExecute Private Cloud, reach out to us at [hyperexecute-privatecloudsupport@testmuai.com](mailto:hyperexecute-privatecloudsupport@testmuai.com). Happy testing!

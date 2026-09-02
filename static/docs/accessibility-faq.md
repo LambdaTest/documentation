@@ -45,7 +45,7 @@ Our system uses a proprietary algorithm to assign severity statuses to accessibi
 This nuanced approach helps you prioritize your accessibility improvements effectively.
 
 ## What frameworks are supported for web automation?
-Accessibility Automation supports Selenium, Cypress (v9 and v10+), Playwright, WebdriverIO, TestNG, JUnit 5, NUnit (C#), Robot Framework, and Cucumber (Java). All of these can also run on HyperExecute. See [Accessibility Automation](/support/docs/accessibility-automation-test/) for the full list.
+Accessibility Automation supports Selenium, Cypress (v9 and v10+), Playwright, WebdriverIO, TestNG, JUnit 5, NUnit (C#), Robot Framework, and Cucumber (Java). All of these can also run on HyperExecute. See [Accessibility Automation](/support/docs/accessibility-automation/) for the full list.
 
 ## Can I share the dashboard link with anyone?
 Yes, you can share dashboard links with anyone within your organization. However, for security reasons, access is limited to members of your organization to protect potentially sensitive information about your web applications.

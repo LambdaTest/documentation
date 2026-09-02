@@ -6,10 +6,7 @@
 
 With TestMu AI Real Time browser testing, you can either inject a **pre-uploaded audio file** or stream **Live Input** directly from your system microphone into the device browser.
 
-**Plus Plan Feature**
-This feature is available exclusively with the **Real Device Plus Live** Plan.
-
-To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
+> To enable it for your organization, please contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
 
 ## Use Cases
 
@@ -19,31 +16,14 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 - **WebRTC and conferencing**: Verify mic capture in browser conferencing tools.
 - **Live exploratory testing**: Use Live Input to drive ad-hoc voice interactions on web pages in real time.
 
-## Supported Devices
+## Supported Platforms
 
-**Audio Injection is supported on selected Real Devices only. It is not available on Emulators or Simulators.**
-
-### Android
-
-| Android Device | Android Version |
+| Platform | Minimum OS Version |
 |---|---|
-| Galaxy S26 | 16 |
-| Galaxy S24 | 14 |
-| Galaxy S23 | 14 |
-| Pixel 10 | 16 |
-| Pixel 10 Pro | 16 |
-| Pixel 10 Pro XL | 16 |
-| Pixel 9 | 15 |
-| Pixel 8 | 14, 16 |
+| **Android** | Android 13 (SDK 33) and above
+| **iOS** | iOS 16 and above
 
-### iOS
-
-| iOS Device | iOS Version |
-|---|---|
-| iPhone 17 Pro | 26 |
-| iPhone 17 | 26 |
-| iPhone 16 | 18 |
-| iPhone 15 | 17 |
+Audio Injection is supported on **selected real devices only**
 
 ## Supported File Formats
 

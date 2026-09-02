@@ -337,20 +337,18 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 ```yaml
 steps:
 - name: Running SmartUI StoryBook Tests
-run: |
-npm i
-npm install @lambdatest/smartui-storybook -g
-npm run build-storybook
-smartui storybook ./storybook-static --config .smartui.json
+- run: npm i
+- run: npm install @lambdatest/smartui-storybook -g
+- run: npm run build-storybook
+- run: smartui storybook ./storybook-static --config .smartui.json
 ```
 
 ```yaml
 steps:
 - name: Running SmartUI StoryBook Tests
-run: |
-npm i
-npm install @lambdatest/smartui-storybook -g
-smartui storybook https://<replace_with_your_url> --config .smartui.json
+- run: npm i
+- run: npm install @lambdatest/smartui-storybook -g
+- run: smartui storybook https://<replace_with_your_url> --config .smartui.json
 ```
 
 #### CLI Options and Keys

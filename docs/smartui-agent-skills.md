@@ -2,7 +2,7 @@
 id: smartui-agent-skills
 title: Run Your SmartUI Visual Tests Using Agent Skills
 hide_title: false
-sidebar_label: Run Test With Agent Skills
+sidebar_label: SmartUI Agent Skills
 description: Use TestMu AI Agent Skills to let AI coding agents generate and run SmartUI visual regression tests (screenshot comparison across browsers and viewports) directly from natural language prompts.
 keywords:
     - TestMu AI

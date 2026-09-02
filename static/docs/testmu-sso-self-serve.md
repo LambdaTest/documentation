@@ -45,6 +45,4 @@ Create Connection without Metadata URL
 
 7. Once the connection is created, you will be redirected to the SSO settings page. From here you can Manage SSO Connection.
 
-8. If your organization uses **Groups**, you can choose which group new SSO users are added to from the SSO settings page. See Assign a Group to SSO-Provisioned Users.
-
 That's all you need to know for Configuring TestMu AI SSO Integration Using SAML. In case you have any questions please feel free to reach out to us via the **24/7 chat support** or email us over [support@testmuai.com](mailto:support@testmuai.com).

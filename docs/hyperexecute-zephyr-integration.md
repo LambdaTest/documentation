@@ -1,8 +1,7 @@
 ---
 id: hyperexecute-zephyr-scale-integration
 title: Integrate Zephyr Scale with HyperExecute
-toc_max_heading_level: 2
-sidebar_label: "Zephyr"
+sidebar_label: Zephyr
 description:  Zephyr, a test case management tool, and HyperExecute, a cloud-based test execution platform streamline your testing process by efficiently managing test cases.
 keywords:
   - TestMu AI Hyperexecute
@@ -56,7 +55,7 @@ This document details the seamless integration between HyperExecute and qTest, e
 
 - Install the [Zephyr Scale - Test Management](https://marketplace.atlassian.com/apps/1213259/zephyr-scale-test-management-for-jira?hosting=cloud&tab=overview) for Jira application from the Atlassian Marketplace.
 - <BrandName /> account. You can [sign up for free](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).
-- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key)
+- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - A Jira Project key.
 - A Zephyr Scale Access token. You can get this from the `profiles and settings` option of your Jira Board.
 

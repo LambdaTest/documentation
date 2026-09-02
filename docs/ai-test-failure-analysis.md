@@ -1,9 +1,8 @@
 ---
 id: rca
-title: AI Native Test Failure Analysis in HyperExecute
-toc_max_heading_level: 2
+title: AI Native Test Failure Analysis in HyperExecute
 hide_title: false
-sidebar_label: "AI Test Failure Analysis"
+sidebar_label: AI Native Root Cause Analysis
 description: This documentation will help you leverage Root Cause Analysis and Error Classification features in HyperExecute to view different kinds of errors and directly land on corrective measures or fixes.
 keywords:
 - hyperexecute error classification

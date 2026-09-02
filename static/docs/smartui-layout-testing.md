@@ -174,5 +174,5 @@ await smartuiSnapshot(driver, "HomePageLayout", options);
 
 - [SmartUI SDK Documentation](/docs/smartui-sdk-config-options)
 - [Visual Regression Testing Guide](/support/docs/smart-visual-regression-testing/)
-- [Comparison Settings Documentation](/support/docs/smartui-project-settings/#test-settings)
+- [Comparison Settings Documentation](/docs/test-settings-options)
 - [Hooks: Layout + Full Page + Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)

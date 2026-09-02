@@ -88,7 +88,7 @@ Since you have the <BrandName /> Executor ready, you can now execute your tests 
 
 Now if you open your [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline), you can see your Cerberus test case running as per the chosen Robot Executor details. <img loading="lazy" src={require('../assets/images/uploads/cerbeus-9.webp').default} alt="<BrandName /> Test Automation Dashboard" width="1281" height="576" className="doc_img"/>
 
-Once the test is complete, you can view the result of the test on <BrandName />, with all its details. You can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more for each executed test from your <BrandName /> platform. To explore more about the <BrandName />'s Automation Dashboard, refer [inside <BrandName /> platform guide](/docs/inside-testmu-platform/).
+Once the test is complete, you can view the result of the test on <BrandName />, with all its details. You can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more for each executed test from your <BrandName /> platform. To explore more about the <BrandName />'s Automation Dashboard, refer [inside <BrandName /> platform guide](/docs/inside-testmu-platform/).
 
 * * *
 

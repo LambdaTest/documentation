@@ -10,12 +10,8 @@ Utilize bulk action feature that streamlines the process of updating system & Cu
 
 2. Click on the `Update Fields` option.
 
-
-
 3. Select the fields you want to update the values for.
 
 4. Update the values of the fields & Click on `Update Fields` to apply the updates.
-
-
 
 A notification will appear at the top right confirming the fields have been Updated.

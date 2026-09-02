@@ -20,8 +20,6 @@ The **App Control** feature offers you the ability to perform actions with your 
 - **Kill App:** By selecting this option, you can easily kill all your installed applications.
 - **Uninstall App:** By selecting this option, you can easily uninstall all the installed applications.
 
-Clicking the **Uninstall App** button under **App Controls** uninstalls **all** the user-installed applications on the device at once. This is the expected behavior of this option.
-
 ### Screenshot
 
 The **Screenshot** feature allows you to take a screenshot of the current screen of the device that you are currently testing on. You can access the screenshots and even download them in the gallery section.

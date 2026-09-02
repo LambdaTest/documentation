@@ -85,7 +85,7 @@ Protect credentials, tokens, and other confidential values from showing up in ne
 - **Compliance-ready logs**: share test results, debug network traffic, and store CI/CD reports without exposing production secrets
 
 **Documentation:**
-- [Network Data Masking for Selenium](/support/docs/selenium-mask-your-data/#network-data-masking)
+- [Network Data Masking for Selenium](/support/docs/network-data-masking/)
 - [HyperExecute Lambda Masking (Release 2.3.1)](/support/docs/hyperexecute-release-notes-2024/#version-231)
 
 ---

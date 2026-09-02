@@ -1,10 +1,8 @@
 ---
 id: lambda-hooks
-title: How to Use Lambda Hooks in Selenium on TestMu AI
-toc_max_heading_level: 2
-hide_title: true
-sidebar_label: "Lambda Hooks"
-description: Use Lambda Hooks in Selenium and Playwright tests on TestMu AI to set test status, manage files, throttle the network, and more.
+title: Lambda Hooks for Automation Testing
+sidebar_label: Use Lambda Hooks
+description: Use Lambda Hooks to modify test status, download files, throttle networks, and manage sessions in your Selenium and Playwright scripts.
 keywords:
   - lambda hooks selenium commands
   - lambda hooks playwright
@@ -46,25 +44,25 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Use Lambda Hooks in Selenium on TestMu AI
+# Lambda Hooks for Automation Testing
 
----
+* * *
 
-TestMu AI offers a set of hooks (Lambda Hooks) that you can use to modify your automation test cases and perform multiple operations in your automation scripts: set the test status, verify downloaded files, throttle the network, capture screenshots, and more.
+TestMu AI offers a set of hooks (Lambda Hooks) that you can use to modify your automation test cases and perform multiple operations in your automation scripts — set the test status, verify downloaded files, throttle the network, capture screenshots, and more.
 
 Hooks are grouped into three categories so you can quickly find what applies to your framework:
 
-- **Common Lambda Hooks**: capabilities available in both Selenium and Playwright sessions
-- **Selenium-only Lambda Hooks**: available only via the Selenium JavascriptExecutor
-- **Playwright-only Lambda Hooks**: available only in Playwright (and other CDP-based) sessions
+- **Common Lambda Hooks** — capabilities available in both Selenium and Playwright sessions
+- **Selenium-only Lambda Hooks** — available only via the Selenium JavascriptExecutor
+- **Playwright-only Lambda Hooks** — available only in Playwright (and other CDP-based) sessions
 
-## How Lambda Hooks Are Invoked
+## How Lambda Hooks are invoked
 
 ---
 
 The invocation syntax differs by framework.
 
-**Selenium**: pass the hook as a string to the JavascriptExecutor:
+**Selenium** — pass the hook as a string to the JavascriptExecutor:
 
 ```java
 ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
@@ -76,7 +74,7 @@ Some Selenium hooks (AutoHeal, Lighthouse, accessibility scan) instead take a JS
 driver.executeScript("lambdatest_executor:{\"action\":\"lambda-heal-start\"}");
 ```
 
-**Playwright**: pass a `lambdatest_action` JSON payload as the argument of an (empty) `page.evaluate` call:
+**Playwright** — pass a `lambdatest_action` JSON payload as the argument of an (empty) `page.evaluate` call:
 
 ```javascript
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`);
@@ -86,7 +84,7 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 
 ---
 
-These capabilities are available in both frameworks. Note that the hook name and syntax differ per framework, so use the form shown for your framework. For example, the `lighthouseReport` hook lets you generate Lighthouse reports for any URL during a session.
+These capabilities are available in both frameworks. Note that the hook name and syntax differ per framework — use the form shown for your framework.
 
 | Hook | Selenium | Playwright | Description |
 | ---- | --------- | ---------- | ----------- |
@@ -97,11 +95,11 @@ These capabilities are available in both frameworks. Note that the hook name and
 | **lighthouseReport** | `driver.executeScript("lambdatest_executor:{\"action\":\"lighthouseReport\"}");`<br /><br />Lighthouse reports are also generated automatically on navigation when the `performance` capability is enabled. | `await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lighthouseReport"}');` | Generate a Lighthouse performance report. |
 | **lambda-accessibility-scan** | `driver.executeScript("lambdatest_executor:{\"action\":\"lambda-accessibility-scan\"}");` | Use the `lambda-accessibility-scan` action via the `lambdatest_action` pattern. | Run an accessibility scan. |
 
-## Selenium-Only Lambda Hooks
+## Selenium-only Lambda Hooks
 
 ---
 
-These hooks work only through the Selenium JavascriptExecutor and are not available in Playwright sessions. Some behaviors that these hooks toggle at runtime can also be enabled up front through [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
+These hooks work only through the Selenium JavascriptExecutor and are not available in Playwright sessions.
 
 | Hook | Description | Example |
 | ---- | ----------- | ------- |
@@ -125,9 +123,9 @@ These hooks work only through the Selenium JavascriptExecutor and are not availa
 | **lambda:network** | Fetches the network log entries in array format during session. | `driver.execute_script("lambda:network");`- Fetch the network log from last fetch request time to current time.<br /><br />`driver.execute_script("lambda:network=all");`- Fetch from start of test session to current time. |
 | **lambda:network=full.har** | Fetches the complete network HAR log at runtime during the test session. | **Syntax :** `driver.execute_script("lambda:network=full.har");`<br /><br />**Note :**<br />**Required Capabilities:** Both `network` and `network.full.har` must be set to `true` in your test capabilities |
 | **lambda-test-tags** | Dynamically update your test tags for a test session which can be used to organize and filter your test results. | **Syntax :** `driver.executeScript("lambda-test-tags", "Tag 1,Tag 3,Tag 2");`<br /><br />**Limitations :**<br />**1. Maximum Character Length per Tag:** Each tag can have up to 50 characters.<br />**2. Maximum Number of Tags:** A maximum of 15 tags can be assigned to a single test session. |
-| **lambda-heal-start* / *lambda-heal-stop** | Enables / disables [AutoHeal with hooks](/support/docs/auto-healing/) for the portion of the test between the two calls, so locator failures are healed automatically. | `driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')`<br /><br />`// ...steps with dynamic locators...`<br /><br />`driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')` |
+| **lambda-heal-start* / *lambda-heal-stop** | Enables / disables [AutoHeal](/support/docs/autoheal-with-hooks/) for the portion of the test between the two calls, so locator failures are healed automatically. | `driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')`<br /><br />`// ...steps with dynamic locators...`<br /><br />`driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')` |
 
-## Playwright-Only Lambda Hooks
+## Playwright-only Lambda Hooks
 
 ---
 
@@ -138,15 +136,7 @@ These hooks are available only in Playwright (and other CDP-based) sessions, usi
 | *getTestDetails* | Returns details of the running test, such as the test ID and session information.<br /><br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "getTestDetails"}');` |
 | *lambdaSetBrowserPosition* | Sets the browser window position (useful when running multiple browser windows in a single session).<br /><br />`await page.evaluate(_ => {}, 'lambdatest_action: {"action": "lambdaSetBrowserPosition"}');` |
 
-> **Note**: These hooks only work if you are connected to your TestMu AI Hub URL. If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment`
-
-## Next Steps
----
-
-Continue with these related guides:
-
-- [Generate Multiple Lighthouse Reports](/support/docs/generate-multiple-lighthouse-reports/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+> **Note**: These hooks only work if you are connected to your [TestMu AI Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment`
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

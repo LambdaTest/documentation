@@ -1,10 +1,8 @@
-# How to Upload Contacts to Devices on TestMu AI
+# Upload Contacts (.vcf) on Real Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Uploading contacts on TestMu AI preloads .vcf vCard files onto real Android and iOS devices, automatically injecting them into the native Contacts app before your session starts. This lets you test messaging, dialer, CRM, and contact-picker flows on real devices.
-
-**Supported on:** Real devices
+Preload contacts on real devices before your test session begins. Upload `.vcf` (vCard) contact files using the Upload Media API, and they are automatically injected into the device's native Contacts app when your session starts.
 
 This is useful for testing:
 - Messaging and dialer apps

@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-rerun-failed-tests
-title: Rerun Failed Tests on HyperExecute
-toc_max_heading_level: 2
+title: Rerun Failed Tests on HyperExecute
 hide_title: false
-sidebar_label: "Rerun Failed Tests"
+sidebar_label: Rerun Failed Tests
 description: Speed up debugging by rerunning only failed tests or entire jobs on HyperExecute using the rerun job feature.
 keywords:
   - TestMu AI Hyperexecute

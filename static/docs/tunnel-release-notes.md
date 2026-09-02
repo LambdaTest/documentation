@@ -2,12 +2,6 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-## Version 3.2.33 (23rd August 2026)
-- **Multiple `--expose` Services**
-  - Fixed only the first service being forwarded when several named services were exposed over a TCP-mode tunnel. Each exposed service now runs on its own data channel, so all of them stay reachable for the lifetime of the tunnel.
-- **Deprecated Flags**
-  - `--byod`, `--forceLocal` and `--transport-mode` are now deprecated. They are hidden from `--help` and print a warning when used, but continue to work in this release and will be removed in a future one.
-
 ## Version 3.2.32 (09th August 2026)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE

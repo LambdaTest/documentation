@@ -1,4 +1,4 @@
-# How to Run Selenium Tests With Java on TestMu AI
+# Selenium With Java
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,14 +6,16 @@ Run your Java Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 
 ## Prerequisites
 
-Before running any framework below, set up a TestMu AI account, your credentials, the JDK, and Maven.
+Complete these steps before running Java Selenium tests.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
 4. Install [Apache Maven](https://maven.apache.org/). The framework sample projects below all build with Maven.
 
-## Set Your Credentials
+Navigate to **Dependencies** in module settings, click **+**, and add the downloaded Selenium JARs.
+
+## Step 1: Create the Test File
 
 Every framework authenticates the same way: your Username and Access Key are passed in the grid URL. Set them as environment variables so you don't hard-code them. Pick your operating system:
 

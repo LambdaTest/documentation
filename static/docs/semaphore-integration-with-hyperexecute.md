@@ -27,7 +27,7 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
 **Step 5:** Select the  **Customize** button for custom setting in the workflow.
 
-**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your TestMu AI [UserName and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
+**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your TestMu AI [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute

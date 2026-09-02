@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-emu-simu-devices-list
-title: HyperExecute Emulator and Simulator Devices
-toc_max_heading_level: 2
+title: HyperExecute Emulator and Simulator Devices
 hide_title: false
-sidebar_label: "Emulator & Simulator Devices"
+sidebar_label: Devices List - Emu/Simu
 description: List of devices available on HyperExecute for Emulator and Simulator
 keywords:
   - hyperexecute device list

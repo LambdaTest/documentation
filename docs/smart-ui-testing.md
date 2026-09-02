@@ -70,19 +70,19 @@ HyperExecute's SmartUITesting offers the following features:
 To execute SmartUI Testing using HyperExecute, you can opt for the following methods:
 
 <div className="support_main">
-  <a href="/support/docs/smartui-hooks-with-hyperexecute/">
+  <a href="/support/docs/hyperexecute-smart-ui-testing-using-selenium/">
     <div className="support_inners mb-5">
       <h3>Using Selenium</h3>
       <p>HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Selenium.</p>
     </div>
   </a>
-  <a href = "/support/docs/smartui-hooks-with-hyperexecute/">
+  <a href = "/support/docs/hyperexecute-smart-ui-testing-using-cypress/">
     <div className="support_inners">
       <h3>Using Cypress</h3>
       <p>HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Cypress.</p>
     </div>
   </a>
-    <a href = "/support/docs/smartui-hooks-with-hyperexecute/">
+    <a href = "/support/docs/hyperexecute-smart-ui-test-using-playwright/">
     <div className="support_inners">
       <h3>Using Playwright</h3>
       <p>HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Playwright.</p>

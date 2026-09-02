@@ -8,19 +8,11 @@ The `Task Trends` widget allows you to analyze the trends of the Task for each J
 
 If you want to know the status distribution of the Tasks in the Jobs executed by the team to understand the performance of their application. You can identify if any particular Task in the Job is failing and get the information about it.
 
-
-
-
-
 ## Task Summary
 
 The `Task Summary` widget enables the user to track the total Tasks being run on the platform grouped by their status including **Completed**, **Skipped**, **Failed**, **Aborted**, etc.
 
 If you wants to get a total of the Tasks being executed on the platform for a specific environment or status. With the Task Summary widget you can see the total count of the desired use cases.
-
-
-
-
 
 ## Task Status Ratio
 

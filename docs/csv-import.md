@@ -2,7 +2,7 @@
 id: csv-import
 title: Import Test Cases from CSV
 hide_title: false
-sidebar_label: Import from CSV
+sidebar_label: Import CSV
 description: Simplify your csv import with TestMu AI's Test Manager. Create new test cases or update existing ones from a CSV file, with a new version recorded for every change.
 keywords:
   - test case import

@@ -1,8 +1,6 @@
-# Supported Locales and Languages for XCUI on TestMu AI
+# Supported Locales And Languages - XCUI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Supported locales on TestMu AI define the language and region codes you can set through Appium's language and locale capabilities to test localized strings in iOS apps, letting you validate translations, formats, and region-specific behavior across many languages on devices.
 
 Use the given below list of supported locale and language codes for app testing.
 

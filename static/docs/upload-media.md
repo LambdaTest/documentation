@@ -1,10 +1,8 @@
-# How to Upload Files and Media on TestMu AI
+# Uploading Files and Media on Real Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Uploading files and media on TestMu AI pushes media and non-media files to cloud real devices during testing. The uploadMedia capability works across App and Browser automation, enriching test scenarios and letting you validate your application's functionality with realistic files.
-
-**Supported on:** Real devices
+TestMu AI's file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to TestMu AI's cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use the `uploadMedia` capability while running your test scripts. The same capability works for both **App** and **Browser** (web) automation — no separate capability to learn.
 
 ## Objectives
 By the end of this topic, you will be able to:
@@ -86,7 +84,7 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
 - In manual testing, iOS app needs to installed first to upload non-media files.
 - For non-media files, make sure your iOS app's Info.plist file includes the UIFileSharingEnabled and LSSupportsOpeningDocumentsInPlace keys set to true. This configuration is necessary to enable your app's folder accessibility within the Files app.
 
-**Browser automation: differences to note**
+**Browser automation — differences to note**
 - **iOS documents** uploaded in a browser session appear under **Chrome** in the Files app, even when testing in Safari. This is by design, as only Chrome on iOS exposes a browsable file container. Pick the file via *Choose File → On My iPhone → Chrome*.
 - **iOS images and videos** appear in the **Photo Library** and are picked from the native *Photo Library* picker.
 - On Android, all uploaded files land in **Downloads**, reachable from the browser file picker. Inputs using `accept="image/*"` may open the photo picker instead; the default file input works across the board.

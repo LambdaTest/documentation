@@ -1,15 +1,15 @@
 ---
 id: playwright-caps
-title: How to Configure Playwright Capabilities on TestMu AI
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: "Supported Capabilities"
-description: Configure Playwright capabilities on TestMu AI to set the browser, version, platform, resolution, network logs, tunnel, and other test options.
+title: Capabilities for Playwright Testing
+hide_title: false
+sidebar_label: Playwright Capabilities
+description: Master Playwright testing with our guide on configuring capabilities! Select browsers & OS, organize tests, adjust desktop resolution, and more for efficient and precise testing outcomes.
 keywords:
-  - playwright capabilities testmu ai
-  - configure playwright test options
-  - playwright local testing
-  - playwright tunnel
+  - playwright testing
+  - playwright e2e testing
+  - playwright mobile testing
+  - playwright testing tool
+  - playwright testing on testmu ai
   - playwright testing testmu ai
 
 url: https://www.testmuai.com/support/docs/capabilities-for-playwright/
@@ -19,8 +19,6 @@ canonical: https://www.testmuai.com/support/docs/capabilities-for-playwright/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-# How to Configure Playwright Capabilities on TestMu AI
-***
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,10 +43,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-
-When you run Playwright tests on TestMu AI, capabilities tell the cloud grid which browser, version, platform, and test options to use for each session. Setting them correctly gives you control over resolution, network and console logs, video, tunnels, and geolocation across the grid. You define these values as a `capabilities` object in your Playwright configuration, either by hand or by generating them with the TestMu AI Capability Generator.
-
-The table below lists the capabilities you can configure, the values each one accepts, and a code example for setting it.
+The <BrandName /> Capability Generator allows you to automatically create the capabilities class needed to run your
+Playwright automation scripts on <BrandName />. Here are a few capabilities that you can configure to run your Playwright
+tests.
 
 | Key | Expected Values | Description |Capability|
 |----|----------|----------|------------|
@@ -66,19 +63,10 @@ The table below lists the capabilities you can configure, the values each one ac
 | console| true/false| Enable browser console logs| `const capabilities = { "LT:Options": {"console": true,}}`|
 | video| true/false| Enable video recording of the entire screen| `const capability = { "LT:Options": {"video": true,}}`|
 | visual| true/false| Captures screenshot for every command| `const capability = { "LT:Options": {"visual": true,}}`|
-| tunnel| true/false| Enable the tunnel to test locally hosted or privately hosted pages| `const capability = { "LT:Options": {"tunnel": true,}}`|
-| tunnelName | String (optional) | Identify a specific tunnel instance when you run more than one tunnel | `const capability = { "LT:Options": {"tunnelName": "<tunnel_name>",}}`|
+| tunnel| true/false| Enable tunnel for local testing| `const capability = { "LT:Options": {"tunnel": true,}}`|
+| tunnelName | true /false | Specify tunnel name | `const capability = { "LT:Options": {"tunnelName": "<tunnel_name>",}}`|
 | geoLocation | AR (Argentina) | Specify country code | `const capability = { "LT:Options": {"geoLocation": "AR",}}`|
 | idleTimeout | number| Specifies the timeout of the commands in seconds. <br /><br /> <b>Default value:</b> 300 <br /><br /> <b>Max value:</b> 1800<br /><br /> If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "<number>",}}`|
 | lambdaMaskCommands | array | <b> `sendType` or `sendFill` </b> Masks the type method of the ElementHandle and Locator class. <br /><br /> <b>`sendPress`</b> Masks the press method of the ElementHandle and Locator class. <br /><br /> <b>`setHTTPCredentials`</b> Masks the HTTP credentials parameter in the newContext and newPage method of the browser class. <br/><br /> <b>`setStorageState`</b> Masks the storage state parameter in the newContext and newPage method of the browser class <br /><br /> <b>`setGeolocation`</b> Masks the Geolocation parameter in the newContext and newPage method of the browser class.|`const capability = { "LT:Options": {'lambdaMaskCommands': ["sendType", "sendFill", "sendPress", "setHTTPCredentials", "setStorageState", "setGeolocation"]}}` <br /><br /> |
-| useSpecificBundleVersion | Boolean | If set **`true`:** TestMu AI will select the playwright server version as per the browser version you have passed in the capabilities. Check the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers). <br /><br /> If the value set in the `browser version` capability is supported by multiple Playwright versions, TestMu AI checks your Playwright client version and sets the Playwright version accordingly. <br /><br /><br /> If set **`false` :** TestMu AI will run your playwright tests with the same version as setup in your local system and the browser version will also be used the compatible one as per the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers) and not your defined one. | `const capability = { "LT:Options": {"useSpecificBundleVersion": true,}}` |
+| useSpecificBundleVersion | Boolean | If set **`true`:** <BrandName /> will select the playwright server version as per the browser version you have passed in the capabilities. Check the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers). <br /><br /> If the value set in the `browser version` capability is supported by multiple Playwright versions, <BrandName /> checks your Playwright client version and sets the Playwright version accordingly. <br /><br /><br /> If set **`false` :** <BrandName /> will run your playwright tests with the same version as setup in your local system and the browser version will also be used the compatible one as per the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers) and not your defined one. | `const capability = { "LT:Options": {"useSpecificBundleVersion": true,}}` |
 | lambdaSetBrowserPosition | | The `lambdaSetBrowserPosition` function is designed to arrange two browser windows on the screen, ensuring each occupies exactly half of the available screen space. This layout facilitates side-by-side browser comparisons or multitasking workflows. <br /> <br /> OS Supported - Windows <br /><br /> Browsers supported : Chrome, Microsoft Edge , pw-chroium, pw-webkit & pw-firefox | `const capability = {action: 'lambdaSetBrowserPosition',}` |
-
-## Related Playwright Guides
-***
-
-Continue with the guides below to run and stabilize your Playwright tests on TestMu AI.
-
-- [Run your first Playwright test on TestMu AI](/support/docs/playwright-testing/) walks through executing a Playwright script on the cloud grid.
-- [Configure the Playwright test runner](/support/docs/playwright-test-runner/) covers running tests through the Playwright test runner.
-- [Enable auto-healing for Playwright tests](/support/docs/playwright-auto-healing/) recovers broken locators during execution.

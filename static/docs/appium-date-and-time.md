@@ -1,8 +1,13 @@
-# How to Set Device Date and Time on TestMu AI
+# Set Device Date & Time
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Setting device date and time on TestMu AI lets you configure custom date, time, and hour format on real devices during Appium automation, simulating scheduled events, alarms, chats, and time-format localization by using the lambda_executor hook with the updateDeviceSettings action.
+TestMu AI now supports configuring custom **date**, **time**, and **hour-format** on Real Devices via Appium during automation testing sessions. This allows developers and testers to simulate specific date/time conditions to validate use cases like scheduled events, alarms, chats, or localization for time formats.
+
+By the end of this document, you will be able to:
+- Set a specific date and time on the device
+- Toggle between 12-hour and 24-hour formats
+- Enable/disable automatic time syncing with network settings
 
 ## Support for Automation on Real Devices
 

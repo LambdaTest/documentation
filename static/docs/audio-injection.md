@@ -1,10 +1,8 @@
-# How to Inject Audio Into Real Devices on TestMu AI
+# Audio Injection on Real Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Audio injection on TestMu AI feeds pre-recorded audio files straight into a real device microphone during Appium or Selenium tests, letting you validate voice commands, speech recognition, and microphone-dependent features across real Android and iOS devices without physical microphone input.
-
-**Supported on:** Real devices
+Test audio-driven and microphone-dependent features on real Android and iOS devices through Appium / Selenium automation. Inject pre-recorded audio files directly into the device microphone, no physical mic input required.
 
 **Plus Plan Feature**
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.
@@ -17,31 +15,14 @@ Audio Injection enables you to simulate microphone input on real devices by inje
 
 Use it to test speech-to-text, voice commands, voice assistants, in-app recording, KYC voice verification, and any other microphone-dependent feature.
 
-## Supported Devices
+## Supported Platforms
 
-**Audio Injection is supported on selected Real Devices only. It is not available on Emulators or Simulators.**
-
-### Android
-
-| Android Device | Android Version |
+| Platform | Minimum OS Version |
 |---|---|
-| Galaxy S26 | 16 |
-| Galaxy S24 | 14 |
-| Galaxy S23 | 14 |
-| Pixel 10 | 16 |
-| Pixel 10 Pro | 16 |
-| Pixel 10 Pro XL | 16 |
-| Pixel 9 | 15 |
-| Pixel 8 | 14, 16 |
+| **Android** | Android 13 (SDK 33) and above |
+| **iOS** | iOS 16 and above |
 
-### iOS
-
-| iOS Device | iOS Version |
-|---|---|
-| iPhone 17 Pro | 26 |
-| iPhone 17 | 26 |
-| iPhone 16 | 18 |
-| iPhone 15 | 17 |
+Audio Injection is supported on **real devices only**. It is **not** available on emulators or simulators.
 
 ## Supported File Formats
 

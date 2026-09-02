@@ -1,65 +1,61 @@
-# How to Download Artefacts for Cypress Tests on TestMu AI
+# Downloading Artefacts For A Cypress Project
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-When your Cypress tests run on the TestMu AI cloud machine, the screenshots, videos, logs, and downloaded files they produce stay on that remote machine. You can pull those artefacts back into your local project to debug failures, attach evidence to a report, or archive a run. You do it by adding a `downloads` capability to `lambdatest-config.json`, running the test with `--sync`, then generating a report that fetches everything into a local `lambdatest-artifacts` folder.
+This article guides you on how to download the artefacts for a Cypress project from TestMu AI Cloud machine.
 
 **Sample repo**
-This guide uses the TestMu AI [sample Cypress Cloud repository](https://github.com/LambdaTest/Cypress-Cloud). Clone it to follow along with the same files shown here.
 
-## Download Artefacts From the TestMu AI Cloud Machine
+In this demo we are demonstrating using TestMu AI's sample Cypress Cloud repo. You can find all the resources used for this article in the linked repo.  View on GitHub
 
-These steps assume you have already run a Cypress test on TestMu AI. If you have not, see [how to run your first Cypress test](/support/docs/getting-started-with-cypress-testing/) first, then return here to fetch its artefacts.
+## Downloading The Data From The TestMu AI Cloud Machine
 
-### Update the TestMu AI Cypress CLI
+Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on TestMu AI), you need to follow these steps below:
 
-Update the CLI first so the `--sync` and `generate-report` commands are available. Install the latest version:
+### Update TestMu AI Cypress CLI
+
+Before getting started, you would have to update the **lambdatest-cypress cli** using the command below:
 
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
-### Add the downloads Capability
+### Add downloads Capability
 
-Tell TestMu AI which files to bring back by adding a `downloads` capability to `lambdatest-config.json`. List each file or directory path you want, separated by commas.
+Add **"downloads"** capability in the `lambdatest-config.json` file and define the files/directories that you wanted to download in this capability. You can mention multiple file paths in this capability separated by a comma. Refer to the below example for the same.
 
-### Add the --sync Flag
+### Add --sync Flag
 
-Run the test with the `--sync` flag so the CLI waits for execution to finish before it fetches the artefacts:
+Append `-sync` flag in the run command as mentioned below and run your test on the TestMu AI platform.
 
 ```bash
 lambdatest-cypress run --sync=true
 ```
 
-Once the run completes, the console prints a `build_id` for the executed test.
+Once the test gets executed, you will find a `build_id` on the console corresponding to the executed test.
 
-### Get the session_id
+### Get session_id In lambdatest_run.json
 
-Open `lambdatest_run.json` in your project and copy the `session_id`:
+Go to your `lambdatest_run.json` file and copy the `session_id`.
 
-```json title="lambdatest_run.json"
+```json title=lambdatest_run.json
 {
 "build_id": "7724863",
 "session_id": "6c899177-047e-4432-a9a7-17776e23aae3"
 }
 ```
 
-Pass that `session_id` to the `generate-report` command to pull the artefacts:
+Now pass the session_id by running the following command.
 
-```bash
+```json
 lambdatest-cypress generate-report --session_id 6c899177-047e-4432-a9a7-17776e23aae3
 ```
 
-### View the Downloaded Folder
+### View The Downloaded Folder
 
-The CLI creates a `lambdatest-artifacts` folder in your project root and downloads every requested file into it.
+- A new folder with the name **lambdatest-artifacts** will get created in the **root** directory of your project and all the files will be downloaded in this folder.
 
-Each file is named with the `session_id` combined with the browser name, browser version, and test id it came from, so you can trace every artefact back to its session.
+- The file name will be created with the session_id combined with the browser name, browser version, and the test id corresponding to it.
 
-## Related Cypress Guides
-
-Continue with the guides below to configure and debug your Cypress runs on TestMu AI.
-
-- [Configure Cypress run settings](/support/docs/run-settings/) covers the downloads capability, the sync flag, and every other run option.
-- [Run Cypress tests with private dependencies](/support/docs/private-dependencies-cypress/) handles tests that install from a private registry.
-- [Reference the Cypress CLI commands](/support/docs/cypress-cli-commands/) documents `generate-report` and the other commands used here.
+**Support**
+That's all! In case you have any questions or need any additional information, you could reach out at our **[24X7 Chat Support]** or mail us directly at support@testmuai.com.

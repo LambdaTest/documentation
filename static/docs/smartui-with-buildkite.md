@@ -73,7 +73,7 @@ commands:
 
 **Example:**
 ```yaml
-branches: main develop
+branches: main develop"
 ```
 
 **Build Naming**
@@ -85,7 +85,7 @@ branches: main develop
 **Example:**
 ```yaml
 env:
-BUILD_NAME: "${BUILDKITE_BRANCH}-${BUILDKITE_COMMIT:0:7}"
+BUILD_NAME: ${BUILDKITE_BRANCH}-${BUILDKITE_COMMIT:0:7}"
 ```
 
 **Error Handling**
@@ -147,7 +147,7 @@ BUILD_NAME: "${BUILDKITE_BRANCH}-${BUILDKITE_COMMIT:0:7}"
 2. Pass variable to step:
 ```yaml
 env:
-PROJECT_TOKEN: "${PROJECT_TOKEN}"
+PROJECT_TOKEN: ${PROJECT_TOKEN}"
 ```
 
 3. Check variable is accessible to the pipeline
@@ -171,7 +171,7 @@ PROJECT_TOKEN: "${PROJECT_TOKEN}"
 
 2. Check pipeline logs for errors:
 ```yaml
-- label: "Check Logs"
+- label: Check Logs"
 if: "build.state == 'failed'"
 commands:
 - cat /tmp/*.log || true
@@ -270,14 +270,14 @@ commands:
 If you encounter issues not covered here:
 
 - Review [Buildkite Documentation](https://buildkite.com/docs)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
-- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli)
 - [Buildkite Documentation](https://buildkite.com/docs)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

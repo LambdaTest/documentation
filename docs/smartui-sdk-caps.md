@@ -97,7 +97,7 @@ This capability specifies the project Name where your screenshots will be stored
 This capability allows you to group your screenshots into specific builds. This is particularly useful when you want to organize your screenshots and compare them against specific baselines. The build name should be unique and descriptive to help identify the purpose of that particular test run.
 
 ### smartUI.baseline
-This boolean capability determines whether the current build should be set as the baseline for future comparisons. When set to `true`, the build will be automatically approved and set as the baseline build. This capability works in conjunction with the [Git branching strategy](/support/docs/smartui-git-branching-strategy/), meaning it will also update the baseline branch accordingly.
+This boolean capability determines whether the current build should be set as the baseline for future comparisons. When set to `true`, the build will be automatically approved and set as the baseline build. This capability works in conjunction with the [Git branching strategy](/support/docs/smartui-cli-git-branching-strategy/), meaning it will also update the baseline branch accordingly.
 
 :::info Note
 If you need capabilities' support for SDKs other than Selenium Java and JavaScript, please contact support@testmuai.com. Our team will be happy to assist you with integrating SmartUI capabilities into your preferred testing framework.

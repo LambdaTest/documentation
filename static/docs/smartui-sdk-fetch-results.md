@@ -50,7 +50,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
 
 #### Default Usage
-If no filename is specified, results are written to `.json` in the current directory:
+If no filename is specified, results will be stored in `results.json`:
 
 ```bash
 npx smartui --config .smartui.json exec --fetch-results -- <execution-command>
@@ -308,7 +308,7 @@ npx smartui capture urlTest.json --config config.json --fetch-results results.js
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [CLI Documentation](/support/docs/smartui-cli)
 - [CLI Exec Commands](/support/docs/smartui-cli-exec)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

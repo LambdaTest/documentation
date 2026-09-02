@@ -1,8 +1,6 @@
 ---
 id: playwright-accessibility-test
-title: Playwright Accessibility Testing
-hide_title: true
-toc_max_heading_level: 2
+title: Automation Tests with Accessibility Tool using Playwright
 sidebar_label: Playwright
 description: Use TestMu AI Accessibility Automation with Playwright to detect and report accessibility issues during automated test execution.
 keywords:
@@ -46,12 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-
-# Playwright Accessibility Testing
-
----
-
-Playwright accessibility automation runs WCAG accessibility checks against your web pages inside your existing Playwright test flow, then reports the violations in the <BrandName /> Automation dashboard. Enable it with a single capability, choose whether scans fire on demand or on every navigation, and review the results alongside the rest of your automation run.
+This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using <BrandName />'s Accessibility Tool.
 
 > **Note:** Accessibility Testing for Playwright is currently supported on the **Chrome browser**. It is **not supported on `pw-chromium`**.
 
@@ -65,19 +58,10 @@ With **Playwright's bundled Chromium (`pw-chromium`)**, the required extension i
 
 ## Prerequisites
 
-Before you run your first accessibility scan, make sure you have the following in place:
-
-- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/).
-- A local machine set up for your testing framework.
-- Chrome as the browser target, since accessibility reports are not generated reliably on `pw-chromium`.
-
-## How it works
-
-Accessibility automation is controlled entirely through capabilities. Set `accessibility: true` on your Chrome session, then decide when scans run: trigger them on demand with the `lambda-accessibility-scan` hook, or scan every page automatically with `accessibility.autoScan`. During the run, a Chrome extension captures each scan and streams the WCAG violations to the Automation dashboard, where the session and its accessibility report appear under the Accessibility tab.
+- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
+- Setup your local machine as per your testing framework.
 
 ## Step-by-Step Guide to Trigger Your Test
-
-Follow the numbered steps below in order. By the end, the session and its accessibility report appear in the Automation dashboard.
 
 ### Step 1: Setup Your Test Suite
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -109,8 +93,6 @@ Configure the desired capabilities based on your test requirements. For example:
 
 > You can generate capabilities for your test requirements with the help of our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator</a>.
 
-**Expected result:** Your test suite points at the <BrandName /> Hub endpoint and defines a Chrome capabilities object ready for accessibility settings.
-
 ### Step 2: Establish User Authentication
 
 Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile).
@@ -141,8 +123,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 </TabItem>
 </Tabs>
-
-**Expected result:** Your terminal session has valid `LT_USERNAME` and `LT_ACCESS_KEY` values, so your tests can authenticate against the <BrandName /> Hub.
 
 ### Step 3: Configure the Necessary Capabilities
 
@@ -188,15 +168,11 @@ const capabilities = {
 };
 ```
 
-For the full list of settings you can tune, including the WCAG version, Best Practice, and rule groups, see the [Supported Automation Capabilities reference](/support/docs/accessibility-automation-scan-configurations/).
-
 :::note Browser choice for Playwright accessibility
 If your Playwright project is not browser-specific, use **Chrome** for accessibility automation until `pw-chromium` extension loading is supported reliably.
 
 This is the safest workaround when reports are not being generated for `pw-chromium`.
 :::
-
-**Expected result:** Your capabilities include `accessibility: true` and either the `lambda-accessibility-scan` hook or `accessibility.autoScan`, so scans are generated during the run.
 
 ### Step 4: Add the following add-on Script
 <BrandName /> uses a Chrome extension for accessibility scans and report generation. In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
@@ -214,8 +190,6 @@ If you run the same setup on **Playwright bundled Chromium (`pw-chromium`)**, th
 At the moment, there is no confirmed public workaround for this behavior. Use **Chrome** for accessibility automation on Playwright.
 :::
 
-**Expected result:** The accessibility extension is loaded and enabled in the Chrome session, so scans can be captured and reported.
-
 ### Step 5: Execute and Monitor your Test
 
 Now execute your tests and visit the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
@@ -230,11 +204,7 @@ You can access the detailed accessibility report from the [Accessibility Automat
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/playwright/playwright-accessibility.png').default} alt="automation-dashboard" className="doc_img"/>
 
-**Expected result:** The test run completes and the session, along with its accessibility report, appears under the Accessibility tab in the Automation dashboard. Open the report to review the WCAG violations detected on each scanned page.
-
 ## Troubleshooting
-
-Use the table below to map common symptoms to the recommended fix.
 
 | Issue | What it means | Recommended action |
 |---|---|---|
@@ -242,8 +212,3 @@ Use the table below to map common symptoms to the recommended fix.
 | Hook executes but no report appears | `lambda-accessibility-scan` ran, but the accessibility extension was not active in the session | Use **Chrome**, then rerun the test |
 | Unsure whether this is a product bug or setup issue | The test may be correct, but the browser target is unsupported for accessibility automation | Verify the browser is **Chrome**, not `pw-chromium` |
 | Customer needs immediate unblock | Browser is not central to the use case | Ask the customer to run functional + accessibility automation on **Chrome** until the limitation is resolved |
-
-## Next steps
-
-- Review your findings in depth with the [Navigating the Dashboard guide](/support/docs/accessibility-testing-navigating-dashboard/) to read the Accessibility Score, break down issues in Issue Summary and All Issues, and file bugs into your tracker.
-- Refine which pages get scanned by switching between the on-demand `lambda-accessibility-scan` hook and `accessibility.autoScan`, as covered in Step 3 above.

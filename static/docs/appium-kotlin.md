@@ -1,10 +1,8 @@
-# How to Run Appium Kotlin Tests on TestMu AI
+# Appium With Kotlin
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Running Appium tests with Kotlin on TestMu AI automates native and hybrid mobile apps across a real device cloud of 3000+ Android and iOS devices. Configure your project, set desired capabilities, upload your app, and run scripts to view results.
-
-**Supported on:** Real &amp; Virtual devices
+In this documentation, you will learn how to configure and run your **Kotlin** automation testing scripts with **Appium** on TestMu AI, set the desired capabilities for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites
 
@@ -270,6 +268,44 @@ mvn clean install
 3. Then run the current file by using **Run** button in the IDE.
 
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
+
+## Using the Appium Agent Skill with TestMu AI
+
+The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The appium-skill package includes:
+
+```
+appium-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing Appium Agent Skill
+
+Install a Appium Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/appium-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/appium-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only appium-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
 ## Reference Guides
 

@@ -1,4 +1,4 @@
-# How to Analyze a Test Run With KaneAI
+# Test Run Instance View
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -44,7 +44,7 @@ Steps that include sub-actions - such as loops, conditionals, or JavaScript snip
 
 #### Auto-Heal Visibility
 
-When [KaneAI Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a step during execution, that step displays an **auto-heal indicator** icon next to its execution duration in the steps panel. This gives you clear, step-level visibility into exactly which steps were healed in a run, without digging through execution logs.
+When [Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a step during execution, that step displays an **auto-heal indicator** icon next to its execution duration in the steps panel. This gives you clear, step-level visibility into exactly which steps were healed in a run, without digging through execution logs.
 
 #### Autoplay Steps
 
@@ -133,16 +133,12 @@ Anyone with an active shared link can view the test run instance (including the 
 
 ## Limitations
 
-Keep these limitations in mind:
-
 - **Mobile Browser not supported**: The enhanced Test Run Instance view is currently not supported for Mobile Browser test executions.
 - **Applies to newly generated code only**: This view is available only for test cases whose code was generated after the feature was enabled. For older test cases, the previous automation details page will continue to be shown.
 
-## Next Steps
+## Related Guides
 
-Continue with these guides:
-
-- [KaneAI HyperExecute Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/): Create and execute test runs.
-- [KaneAI Sequential Test Runs](/support/docs/kaneai-sequential-test-runs/): Run dependent test cases in order.
-- [Test Runs Configurations](/support/docs/test-runs-configurations/): Manage browser and device configurations.
-- [KaneAI Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/): Automate test run scheduling.
+- [Execute Test Runs on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/) - Create and execute test runs
+- [Sequential Test Runs](/support/docs/kaneai-sequential-test-runs/) - Run dependent test cases in order
+- [Test Run Configurations](/support/docs/test-runs-configurations/) - Manage browser and device configurations
+- [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/) - Automate test run scheduling

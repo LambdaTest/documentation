@@ -1,8 +1,8 @@
-# How to Test an Outbound Phone Agent With TestMu AI Agent Testing Platform
+# Outbound Phone Agent Testing With TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-An outbound phone agent places calls. To test one, the Agent Testing Platform provisions a recipient number from an outbound pool, the agent under test calls it, and the platform answers and scores the conversation. Typical use cases are sales dialers, lead qualification, collections, and appointment reminders.
+An outbound phone agent places calls. To test one, TestMu AI provisions a recipient number from an outbound pool, the agent under test calls it, and the platform answers and scores the conversation. Typical use cases are sales dialers, lead qualification, collections, and appointment reminders.
 
 Outbound testing shares the same two modes as inbound, pre-evaluation and post-evaluation, and the same features, with a few outbound-specific differences in pre-evaluation.
 

@@ -1,6 +1,6 @@
 ---
 id: csharp-with-playwright
-title: How to Run Playwright Tests With C# on TestMu AI
+title: Run your C# automation scripts with Playwright on TestMu AI
 hide_title: true
 sidebar_label: C#
 description: Run your C# automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
@@ -19,8 +19,6 @@ canonical: https://www.testmuai.com/support/docs/csharp-with-playwright/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
@@ -49,74 +47,45 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
-# How to Run Playwright Tests With C# on TestMu AI
-***
+# C# with Playwright: Running Your First Test
+* * *
 
-Run your C# Playwright tests on the TestMu AI cloud grid to reach 50+ real desktop browsers and operating systems without maintaining local infrastructure. You connect Playwright over a CDP WebSocket, pass your capabilities, then run the sample with dotnet.
+Learn how to use Playwright with C# to automate web application testing across real browsers and operating systems on <BrandName /> cloud platform.
+
 
 ## Prerequisites
 ***
 
-Complete these before running the test below.
-
-1. A TestMu AI **Username** and **Access Key**. Get them from your TestMu AI Profile. Don't have an account? <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>Sign up for free</a>.
-
-<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="TestMu AI Profile page showing the Username and Access Key credentials" width="1444" height="703"  className="doc_img"/>
-
-2. The [.NET SDK](https://dotnet.microsoft.com/en-us/download) installed. The sample project uses the built-in Playwright tooling for .NET, so `dotnet restore` resolves the dependencies when you build.
-3. Clone the sample repository and move into the C# subdirectory.
+1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-<a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-csharp" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="GitHub icon linking to the Playwright C# sample subdirectory" className="doc_img"/> View on GitHub</a>
+Download or clone the code sample for the Playwright C# from the <BrandName /> GitHub repository to run the tests.
+
+<a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-csharp" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-```bash
+```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 cd playwright-csharp
 ```
 
-4. Restore the .NET dependencies from the project directory:
+2. Install the npm dependencies.
 
-```bash
-dotnet restore
+```
+npm install
 ```
 
-## Set Your Credentials
-***
+3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, <a href="https://www.testmuai.com/register/" onClick={CookieTrackingSignup}>sign up for free</a>.
 
-Your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
+<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-<Tabs className="docs__val" groupId="os">
+4. To run Playwright tests, set your <BrandName /> Username and Access key in the Environment Variables.
 
-<TabItem value="macos" label="macOS / Linux" default>
+## Run your Playwright tests with C#
+---
 
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-<TabItem value="win-cmd" label="Windows (CMD)">
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-batch">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-</Tabs>
-
-## How the Sample Test Works
-***
-
-The test builds a `capabilities` dictionary that carries the browser, version, platform, and your `LT:Options`, then connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. The credentials come from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set above. The full sample lives in `PlaywrightTestSingle.cs` in the `playwright-csharp` directory:
+Navigate to the `PlaywrightTestSingle.cs` file in the `playwright-csharp` directory.
 
 ```csharp
 using Microsoft.Playwright;
@@ -182,59 +151,67 @@ class PlaywrightTestSingle
 }
 ```
 
-The `SetTestStatus` helper reports pass or fail back to the grid so the result shows on your dashboard.
+1. Pass the below command in the terminal:
 
-## Run the Test With dotnet
-***
-
-Build and run the sample from the `playwright-csharp` directory. You can use your own project or the sample above.
-
-1. Build the project:
-
-```bash
+```js
 dotnet build
 ```
 
-2. Run the single test:
+2. To run the test, pass the below command:
 
-```bash
+```js
 dotnet run single
 ```
 
-:::note
-To run sessions on custom devices with emulation, run `dotnet run iphonetest` or `dotnet run ipadtest`.
-:::
+**Note**: To run sessions on custom devices with emulation, run `dotnet run iphonetest` or `dotnet run ipadtest`.
 
-## View Your Results
+## View your test results
+---
+
+Go to the [<BrandName /> Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to see your Playwright C# test results.
+
+
+
+
+
+
+## Using the Playwright Agent Skill with TestMu AI
 ***
 
-Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Web Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms the test passed.
+The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
-## Related Playwright Guides
+The playwright-skill package includes:
+
+```
+playwright-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+
+### Installing Playwright Agent Skill
 ***
 
-Continue with these related guides:
+Install a Playwright Agent Skill using the command below:
 
-- [Configure Playwright Capabilities for the TestMu AI Grid](/support/docs/capabilities-for-playwright/)
-- [Get Started With Playwright Testing on TestMu AI](/support/docs/playwright-testing/)
-- [Set Up Playwright Test Execution on TestMu AI](/support/docs/playwright-test-execution-setup/)
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/playwright-skill .claude/skills/
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      C# with Playwright
-      </span>
-    </li>
-  </ul>
-</nav>
+# Or for Cursor / Copilot
+cp -r agent-skills/playwright-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

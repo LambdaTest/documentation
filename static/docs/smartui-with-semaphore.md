@@ -51,7 +51,7 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 ```yaml
 auto_cancel:
 running:
-when: "branch != 'main'"
+when: branch != 'main'"
 ```
 
 **Build Naming**
@@ -64,7 +64,7 @@ when: "branch != 'main'"
 ```yaml
 env_vars:
 - name: BUILD_NAME
-value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
+value: ${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 ```
 
 **Error Handling**
@@ -181,13 +181,13 @@ task:
 jobs:
 - name: Run Tests
 commands:
-- npx smartui exec -- <your-test-command>
+- npx smartui exec -- <command">
 - name: Test Group 2
 task:
 jobs:
 - name: Run Tests
 commands:
-- npx smartui exec -- <your-test-command>
+- npx smartui exec -- <command">
 ```
 
 3. Optimize test execution
@@ -256,14 +256,14 @@ commands:
 If you encounter issues not covered here:
 
 - Review [Semaphore Documentation](https://docs.semaphoreci.com/)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
-- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli)
 - [Semaphore Documentation](https://docs.semaphoreci.com/)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

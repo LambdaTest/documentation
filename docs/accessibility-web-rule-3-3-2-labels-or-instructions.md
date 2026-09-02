@@ -1,0 +1,43 @@
+---
+id: accessibility-web-rule-3-3-2-labels-or-instructions
+title: Labels or Instructions (3.3.2)
+sidebar_label: Labels or Instructions (3.3.2)
+description: Rule-level Accessibility guidance for Labels or Instructions (WCAG 3.3.2 Level A).
+slug: accessibility-web-rule-3-3-2-labels-or-instructions/
+---
+
+# Labels or Instructions (3.3.2)
+
+Form fields and interactive controls must have labels or instructions that describe the expected input.
+
+:::info WCAG Reference
+**Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html)
+:::
+
+## What this rule checks
+
+The scanner verifies that form inputs have visible labels programmatically associated with the control, and that fields requiring specific formats include instructions.
+
+## Why it matters
+
+Without labels, screen-reader users hear only "edit text" or "combo box" with no indication of what information is expected. Sighted users benefit from persistent labels too, especially when revisiting a partially completed form.
+
+## Common failure patterns
+
+- input fields that rely on placeholder text as the only label (disappears on focus)
+- labels that exist visually but are not associated with the input (`for`/`id` mismatch)
+- date or phone fields with no format hint (e.g., "MM/DD/YYYY")
+- groups of related fields (address, payment) with no group label or `<fieldset>`
+
+## Remediation guidance
+
+- add a visible `<label>` element with a matching `for` attribute for every form control
+- include format instructions or examples near the field (e.g., "Enter date as MM/DD/YYYY")
+- use `<fieldset>` and `<legend>` for logically grouped fields
+- never use placeholder as a substitute for a visible label
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

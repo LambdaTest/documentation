@@ -1,12 +1,12 @@
-# How to Run Puppeteer Tests With Agent Skills on TestMu AI
+# Run Your Puppeteer Tests Using Agent Skills
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you write Puppeteer tests with an AI coding assistant, Agent Skills let that assistant generate production-ready Puppeteer automation instead of you setting up the project by hand. You get correct project structure, dependency versions, and both local and TestMu AI cloud execution patterns without wiring them together yourself. You install the [puppeteer-skill](https://github.com/LambdaTest/agent-skills/tree/main/puppeteer-skill) into your tool's skills directory, then describe the test you want in natural language.
+Instead of manually setting up your Puppeteer project, you can use **Agent Skills** to let your AI coding assistant generate production-ready Puppeteer automation for you.
 
-The puppeteer-skill is part of TestMu AI Agent Skills, structured packages that teach AI coding assistants how to write production-grade test automation code.
+The [puppeteer-skill](https://github.com/LambdaTest/agent-skills/tree/main/puppeteer-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation code.
 
-## About Agent Skills
+## What Are Agent Skills?
 
 Agent Skills are self-contained packages of instructions, code patterns, debugging guides, and CI/CD configurations for specific testing frameworks. Once installed, your AI assistant works like a **Senior QA automation architect** with knowledge of:
 
@@ -18,15 +18,13 @@ Agent Skills are self-contained packages of instructions, code patterns, debuggi
 
 ## Prerequisites
 
-Before you install the skill, make sure you have the following in place.
-
 - A TestMu AI account. If you don't have one, sign up for free.
 - Your TestMu AI **Username** and **Access Key** from the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/).
 - An AI coding assistant: [Claude Code](https://claude.ai/code), [GitHub Copilot](https://github.com/features/copilot), [Cursor](https://cursor.sh/), [Gemini CLI](https://github.com/google-gemini/gemini-cli), or any compatible tool.
 
 ## Installing the Puppeteer Agent Skill
 
-Clone the repository and copy the Puppeteer skill into your AI tool's skills directory. Use the command that matches your tool.
+Clone the repository and copy the Puppeteer skill into your AI tool's skills directory:
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
@@ -48,7 +46,7 @@ If you prefer installing **all available framework skills**, clone the repositor
 
 ## Set Up Your Authentication
 
-Configure your TestMu AI credentials as environment variables so the generated tests can connect to the cloud.
+Configure your TestMu AI credentials as environment variables:
 
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -57,17 +55,17 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 ## Running Your First Test Using Agent Skills
 
-Once the skill is installed, ask your AI assistant to write tests in natural language. The examples below show the kind of prompt the skill responds to.
+Once installed, simply ask your AI assistant to write tests in natural language:
 
-```text
+```
 "Write Puppeteer tests to scrape product data and run them on TestMu AI cloud"
 ```
 
-```text
+```
 "Set up Puppeteer with Jest for E2E testing and generate PDF reports"
 ```
 
-```text
+```
 "Run headless Chrome tests on TestMu AI with network interception"
 ```
 
@@ -80,9 +78,7 @@ The Agent Skill automatically handles:
 
 ## What's Included in the Puppeteer Skill
 
-The skill ships as a small set of files, with each part of the reference mapped to a specific area of Puppeteer automation. The structure and coverage are shown below.
-
-```text
+```
 puppeteer-skill/
 ├── SKILL.md
 └── reference/
@@ -99,19 +95,17 @@ puppeteer-skill/
 | **Debugging Guide** | 12+ common issues mapped to solutions |
 | **Best Practices** | Actionable recommendations for production code |
 
-## Supported Frameworks With Dedicated Agent Skills
+## Supported Frameworks with Dedicated Agent Skills
 
-The following framework docs under Puppeteer reference their own dedicated Agent Skills. Use the table to find the skill and guide for each framework.
+The following framework docs under Puppeteer reference their own dedicated Agent Skills:
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
-| Jest | [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) | [Run Puppeteer tests with Jest](/docs/puppeteer-testing-with-jest/) |
-| Mocha | [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) | [Run Puppeteer tests with Mocha](/docs/puppeteer-testing-with-mocha/) |
-| pytest (Pyppeteer) | [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) | [Run Puppeteer tests with pytest](/docs/puppeteer-testing-with-pytest-pyppeteer/) |
+| Jest | [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) | [Puppeteer with Jest](/docs/puppeteer-testing-with-jest/) |
+| Mocha | [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) | [Puppeteer with Mocha](/docs/puppeteer-testing-with-mocha/) |
+| pytest (Pyppeteer) | [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) | [Puppeteer with pytest](/docs/puppeteer-testing-with-pytest-pyppeteer/) |
 
 ## Supported AI Tools
-
-Agent Skills work across the AI coding tools below. Each row shows where to place the skill for that tool.
 
 | Tool | Type | Installation Path |
 |------|------|-------------------|
@@ -122,11 +116,3 @@ Agent Skills work across the AI coding tools below. Each row shows where to plac
 | Codex CLI | CLI | `.codex/skills/` |
 | OpenCode | CLI | `.opencode/skills/` |
 | Claude.ai | Web | Settings > Features > Skills |
-
-## Related Puppeteer Guides
-
-Continue with these related guides to run and configure Puppeteer tests on TestMu AI.
-
-- [Run your first Puppeteer test on TestMu AI](https://www.testmuai.com/support/docs/puppeteer-testing/) walks through a full cloud run from scratch.
-- [Configure your environment to execute Puppeteer tests](https://www.testmuai.com/support/docs/puppeteer-test-execution-setup/) covers the setup needed before a cloud run.
-- [Set browser, OS, and build capabilities for Puppeteer](https://www.testmuai.com/support/docs/capabilities-for-puppeteer/) documents the full capabilities reference.

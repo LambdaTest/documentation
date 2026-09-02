@@ -201,9 +201,9 @@ For additional information about Playwright framework please explore the documen
 
 ## Advanced Options for Screenshot Comparison
 
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smartui-project-settings/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
-  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/smartui-project-settings/).
+  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
 ## Best Practices
 
@@ -392,14 +392,14 @@ await page.waitForSelector('.main-content', { state: 'visible' });
 
 If you encounter issues not covered here:
 
-- Review [SmartUI Build Options](/support/docs/smartui-project-settings/) documentation
-- Check [Advanced Test Settings](/support/docs/smartui-project-settings/) for comparison options
-- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+- Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
+- Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
+- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 ## Additional Resources
 
-- [SmartUI Build Options](/support/docs/smartui-project-settings/)
-- [Advanced Test Settings](/support/docs/smartui-project-settings/)
+- [SmartUI Build Options](/support/docs/smart-ui-build-options)
+- [Advanced Test Settings](/support/docs/test-settings-options/)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Project Settings](/support/docs/smartui-project-settings)

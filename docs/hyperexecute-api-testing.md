@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-api-testing
 title: How to Perform API Testing With REST Assured on HyperExecute
-toc_max_heading_level: 2
 hide_title: false
-sidebar_label: "Rest Assured"
+sidebar_label: "REST Assured"
 description: Run a REST Assured (Java + Maven) API test suite on HyperExecute. Download the CLI, set your credentials, configure hyperexecute.yaml, and trigger a cloud run.
 keywords:
   - hyperexecute api testing
@@ -186,6 +185,6 @@ Open the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=htt
 </div>
 
 <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-  <DocCard heading="Auto-split test execution" link="/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy" description="Distribute tests across parallel machines automatically." />
-  <DocCard heading="HyperExecute FAQs" link="https://www.testmuai.com/support/faq/?tab=hye" description="Common questions on YAML, the CLI, and the platform." />
+  <DocCard heading="Auto-split test execution" link="/support/docs/hyperexecute-auto-split-strategy/" description="Distribute tests across parallel machines automatically." />
+  <DocCard heading="HyperExecute FAQs" link="/support/docs/hyperexecute-faqs/" description="Common questions on YAML, the CLI, and the platform." />
 </div>

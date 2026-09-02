@@ -46,7 +46,7 @@ LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
 run: mvn -q -Dgroups=a11y test
 ```
 
-Adapt `run` to your build tool; the important part is that the invoked tests set Accessibility capabilities per [Selenium](/support/docs/accessibility-automation-test/) and [settings](/support/docs/accessibility-automation-scan-configurations/).
+Adapt `run` to your build tool; the important part is that the invoked tests set Accessibility capabilities per [Selenium](/support/docs/accessibility-automation-test/) and [settings](/support/docs/accessibility-automation-settings/).
 
 ## Example: Jenkins (pattern)
 
@@ -57,10 +57,10 @@ Adapt `run` to your build tool; the important part is that the invoked tests set
 ## Where to review results
 
 - **Automation** build → **Accessibility** tab for the session ([Selenium flow](/support/docs/accessibility-automation-test/)).
-- For **HyperExecute**, see [HyperExecute integration: Selenium accessibility automation](/support/docs/accessibility-testng-test/).
+- For **HyperExecute**, see [HyperExecute integration: Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/).
 
 ## Related docs
 
-- [Accessibility Automation (Overview)](/support/docs/accessibility-automation-test/)
-- [Configure Accessibility Automation](/support/docs/accessibility-automation-scan-configurations/)
-- [HyperExecute integration: Selenium accessibility automation](/support/docs/accessibility-testng-test/)
+- [Accessibility Automation (Overview)](/support/docs/accessibility-automation/)
+- [Configure Accessibility Automation](/support/docs/accessibility-automation-settings/)
+- [HyperExecute integration: Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/)

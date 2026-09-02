@@ -9,14 +9,14 @@ TestMu AI now integrates with the QMetry platform to help you execute cross-brow
 Once you have your project set up in the QMetry app and test suite ready, you need to specify and activate your TestMu AI account in the QMetry app to execute it over the TestMu AI's cloud-based Selenium Grid. Below is the step by step guide to help you do just that:
 1.  Once you have your test suite ready, click on the **Execute** button on the app, and select **Remote**.
 
-2.  In the window that opens, navigate to **TestMu AI** tab. Here, you will need to enter your account details and the [Selenium Automation Capabilities](/docs/selenium-automation-capabilities/) to execute the test over your TestMu AI account.
+2.  In the window that opens, navigate to **TestMu AI** tab. Here, you will need to enter your account details and the [desired capabilities](/docs/selenium-automation-capabilities/) to execute the test over your TestMu AI account.
 
 3.  Now, you need to provide access of your TestMu AI account to the QMetry app. To do so, add your _username_ and _access key_ over their corresponding fields, and click on **FETCH PLATFORM LIST** button. This will verify your credentials and connect your TestMu AI account with the QMetry app successfully, based on your current plan.
 
 >To get your Username and Access Key, go to your TestMu AI automation dashboard and click on the "key" icon left to the help button, on the top right corner.
 
->If you are on _[Lite](https://www.testmuai.com/pricing/)_ or _[Live](https://www.testmuai.com/pricing/)_ plan, and your provided automation minutes have been exhausted; the above step will throw an error. In such a case, you can wait for the next availability of automation minutes, or you can [upgrade](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/billing/plans) your account. To learn more about how to manage and upgrade your account, refer [this guide](/docs/manage-subscriptions/).
-6.  Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to [Selenium Automation Capabilities](/docs/selenium-automation-capabilities/).
+>If you are on _[Lite](https://www.testmuai.com/pricing)_ or _[Live](https://www.testmuai.com/pricing)_ plan, and your provided automation minutes have been exhausted; the above step will throw an error. In such a case, you can wait for the next availability of automation minutes, or you can [upgrade](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/billing/plans) your account. To learn more about how to manage and upgrade your account, refer [this guide](/docs/manage-subscriptions/).
+6.  Once done, you will be able to select your desired capabilities in their corresponding fields, like the platform, browser, browser version, resolution, etc. To know more about desired capabilities, refer to [this guide](/docs/selenium-automation-capabilities/).
 
 7.  Click on **Save**, once you have selected the desired capabilities. The current account info and the capabilities will be saved with a name that you provide.
 
@@ -49,7 +49,7 @@ The test execution will then start, and you can see the same on the automation d
 
 Once the test is complete, you can view the test result on the automation dashboard by clicking on the test case. You can see and verify if the test has been passed or failed in the Automation Logs.
 
-For each test executed overthe TestMu AI platform, you can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more.
+For each test executed overthe TestMu AI platform, you can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more.
 
 ## Running QMetry Tests on HyperExecute
 

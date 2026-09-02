@@ -93,7 +93,7 @@ configuration.profiles=lambdatest/web,web/desktop/safari
 
 * Once the test is complete, you can view the test result on the automation dashboard by clicking on the test case. You can see and verify if the test has been passed or failed in the Automation Logs.
 
-For each test executed overthe TestMu AI platform, you can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more.
+For each test executed overthe TestMu AI platform, you can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more.
 
 ## Running Tests From Vividus In Parallel On TestMu AI Platform
 

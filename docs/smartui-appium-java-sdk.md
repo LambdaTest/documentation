@@ -1,7 +1,7 @@
 ﻿---
 id: smartui-appium-java-sdk
 title: SmartUI App SDK Integration Guide
-sidebar_label: Appium
+sidebar_label: Appium Java SDK
 description: Learn how to integrate SmartUI App SDK with your existing mobile app testing framework to perform visual regression testing on any cloud provider.
 keywords:
   - Visual Regression
