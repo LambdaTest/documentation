@@ -62,6 +62,7 @@ Apart from these features, <BrandName /> also offers you the
 ## Device Controls
 The Device Control feature allows you tp perform certain actions with your device  within your current test session:
 
+- **Home:** Return to the device's home screen instantly during your test session. This is useful for testing how your web application behaves when sent to the background and resumed, or for navigating between apps without ending the session.
 - **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
 - **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
 
