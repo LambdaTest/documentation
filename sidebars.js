@@ -2320,6 +2320,7 @@ module.exports = {
         collapsed: true,
         label: "Connect Your Tools",
         items: [
+          "run-tests-with-webdriver-bidi",
           "selenium-bidi-integration",
           "lambda-hooks",
           "command-annotations",

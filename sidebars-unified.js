@@ -208,10 +208,6 @@ const backToMCP = {
 };
 const MCPServerSidebar = [backToMCP, ...items(s.LTMCPServerSidebar)];
 
-// CDP and BiDi are standalone Web Automation pages — each gets its own focused sidebar.
-const CDPTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-chrome-devtools-protocol', label: 'CDP Testing' }];
-const BiDiTestingSidebar = [backToDocs, { type: 'doc', id: 'run-tests-with-webdriver-bidi', label: 'BiDi Testing' }];
-
 module.exports = {
   docsSidebar,
   webAutomationSidebar,
@@ -246,6 +242,4 @@ module.exports = {
   LambdaTestMigrationGuideSidebar,
   ConcurrencyWidgetSidebar,
   TestManagementSidebar,
-  CDPTestingSidebar,
-  BiDiTestingSidebar,
 };
