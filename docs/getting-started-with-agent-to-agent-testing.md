@@ -56,10 +56,11 @@ It is the first platform to test chat, voice, phone, and image agents in one pla
 <div style={{ width: "50%", aspectRatio: "16 / 9", margin: "20px auto", borderRadius: "8px", overflow: "hidden" }}>
   <iframe
     style={{ display: "block", width: "100%", height: "100%", border: 0 }}
-    src="https://www.youtube-nocookie.com/embed/DrdnovKzUQY?rel=0&showinfo=0"
+    src="https://www.youtube.com/embed/DrdnovKzUQY?rel=0"
     title="Agent Testing by TestMu AI: The QA Layer AI Agents Never Had"
     loading="lazy"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
     allowFullScreen
   ></iframe>
 </div>

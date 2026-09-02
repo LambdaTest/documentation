@@ -52,10 +52,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <div style={{ width: "50%", aspectRatio: "16 / 9", margin: "20px auto", borderRadius: "8px", overflow: "hidden" }}>
   <iframe
     style={{ display: "block", width: "100%", height: "100%", border: 0 }}
-    src="https://www.youtube-nocookie.com/embed/Uc525e7RXs0?rel=0&showinfo=0"
+    src="https://www.youtube.com/embed/Uc525e7RXs0?rel=0"
     title="Getting Started With KaneAI"
     loading="lazy"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
     allowFullScreen
   ></iframe>
 </div>
