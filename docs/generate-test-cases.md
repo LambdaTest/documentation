@@ -332,10 +332,6 @@ Before triggering a generation session, you can configure the following settings
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/configure_generation_settings.png').default} alt="configure-generation-settings" width="1347" height="616" className="doc_img"/>
 
-<!-- IMAGE PLACEHOLDER: the screenshot above predates the Gherkin Format toggle and should be re-captured
-     so the Advanced settings dialog shows it below Memory Enhancement.
-     Replace configure_generation_settings.png in place, or add a new capture here. -->
-
 
 :::tip
 Configure these settings before pressing Enter to ensure the AI generates test cases aligned with your session requirements. Organization-level instructions, if configured, are automatically applied in addition to project instructions.
@@ -379,9 +375,6 @@ You can **edit** any part of the test case if you want to add more context or al
 
 For test cases generated in **BDD Scenarios** format, the details panel shows a **BDD Scenarios** section in place of Test Steps and Expected Outcomes. Each scenario opens in a Gherkin editor with syntax highlighting, and you can edit the scenario text directly.
 
-<!-- IMAGE PLACEHOLDER: test case details panel showing the BDD Scenarios section with the Gherkin editor.
-     Suggested filename: ../assets/images/mobile-app-testing/bdd_scenarios_test_case_details.png
-      -->
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_scenarios_test_case_details.png').default} alt="bdd-scenarios-test-case-details" width="1347" height="616" className="doc_img"/>
 
 ---
@@ -611,9 +604,6 @@ Select the desired test cases and click **Create** to save them directly to your
 
 Test cases generated in **BDD Scenarios** format are saved with the **Behaviour Driven Development** template, and their scenarios appear under the **Test steps** tab. Test cases generated in **Manual Test Steps** format are saved with the **Manual Test Steps** template. The format is carried over from the generation session — you do not need to select a template when saving.
 
-<!-- IMAGE PLACEHOLDER: a saved BDD test case in Test Manager, showing Template set to "Behaviour Driven Development" and the scenario rendered under Test steps.
-     Suggested filename: ../assets/images/mobile-app-testing/bdd_saved_test_case_test_manager.png
-      -->
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_saved_test_case_test_manager.png').default} alt="bdd-saved-test-case-test-manager" width="1347" height="616" className="doc_img"/>
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/> -->
 
