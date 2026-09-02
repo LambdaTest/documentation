@@ -97,38 +97,6 @@ export default function Home() {
         {/* Product grid */}
         <div className="product_sections">
                     <div className="product_section">
-            <h2 className="product_section_label"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Web Automation</h2>
-            <div className="product_grid">
-              <a href="/support/docs/testmu-running-your-first-selenium-test/"><span className="ps_title">Selenium Testing</span><span className="ps_desc">Run Selenium tests on cloud</span></a>
-              <a href="/support/docs/playwright-testing/"><span className="ps_title">Playwright Testing</span><span className="ps_desc">Cross-browser Playwright on the cloud</span></a>
-              <a href="/support/docs/puppeteer-testing/"><span className="ps_title">Puppeteer Testing</span><span className="ps_desc">Headless Chrome automation testing</span></a>
-              <a href="/support/docs/getting-started-with-cypress-testing/"><span className="ps_title">Cypress Testing</span><span className="ps_desc">Run Cypress in the cloud</span></a>
-              <a href="/support/docs/k6-browser-testing/"><span className="ps_title">K6 Testing</span><span className="ps_desc">Browser performance and load testing</span></a>
-              <a href="/support/docs/run-tests-with-chrome-devtools-protocol/"><span className="ps_title">CDP Testing</span><span className="ps_desc">Chrome DevTools Protocol testing</span></a>
-              <a href="/support/docs/run-tests-with-webdriver-bidi/"><span className="ps_title">BiDi Testing</span><span className="ps_desc">WebDriver BiDi protocol testing</span></a>
-            </div>
-          </div>
-          <div className="product_section">
-            <h2 className="product_section_label"><Icon light="appAutomation-light-icon.svg" dark="appAutomation-dark-icon.svg" alt="" />App Automation</h2>
-            <div className="product_grid">
-              <a href="/support/docs/getting-started-with-appium-testing/"><span className="ps_title">Appium Testing</span><span className="ps_desc">Native and hybrid app testing</span></a>
-              <a href="/support/docs/getting-started-with-espresso-testing/"><span className="ps_title">Espresso Testing</span><span className="ps_desc">Android native UI automation</span></a>
-              <a href="/support/docs/getting-started-with-xcuitest/"><span className="ps_title">XCUI Testing</span><span className="ps_desc">iOS native UI automation</span></a>
-              <a href="/support/docs/getting-started-with-flutter-dart-android-automation/"><span className="ps_title">Flutter Testing</span><span className="ps_desc">Automate Flutter mobile apps</span></a>
-              <a href="/support/docs/app-automation-on-emulators-simulators/"><span className="ps_title">Virtual Devices</span><span className="ps_desc">Emulators and simulators at scale</span></a>
-            </div>
-          </div>
-          <div className="product_section">
-            <h2 className="product_section_label"><Icon light="testManager-light.svg" dark="testManager-dark.svg" alt="" />Test Manager</h2>
-            <div className="product_grid">
-              <a href="/support/docs/test-manager/"><span className="ps_title">Get Started</span><span className="ps_desc">Create projects and test cases</span></a>
-              <a href="/support/docs/csv-import/"><span className="ps_title">Import Test Cases</span><span className="ps_desc">Migrate from CSV, TestRail, Zephyr</span></a>
-              <a href="/support/docs/generate-test-cases-with-ai/"><span className="ps_title">Manage Test Cases</span><span className="ps_desc">Organize, version, and reuse cases</span></a>
-              <a href="/support/docs/test-run-creation-and-management/"><span className="ps_title">Test Runs</span><span className="ps_desc">Plan, execute, and track runs</span></a>
-              <a href="/support/docs/link-jira-issues-with-test-manager/"><span className="ps_title">Integrations</span><span className="ps_desc">Sync Jira and issue trackers</span></a>
-            </div>
-          </div>
-          <div className="product_section">
             <h2 className="product_section_label"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />KaneAI</h2>
             <div className="product_grid">
               <a href="/support/docs/getting-started-with-kane-ai/"><span className="ps_title">Get Started</span><span className="ps_desc">Author your first AI test</span></a>
@@ -153,6 +121,16 @@ export default function Home() {
             </div>
           </div>
           <div className="product_section">
+            <h2 className="product_section_label"><Icon light="testManager-light.svg" dark="testManager-dark.svg" alt="" />Test Manager</h2>
+            <div className="product_grid">
+              <a href="/support/docs/test-manager/"><span className="ps_title">Get Started</span><span className="ps_desc">Create projects and test cases</span></a>
+              <a href="/support/docs/csv-import/"><span className="ps_title">Import Test Cases</span><span className="ps_desc">Migrate from CSV, TestRail, Zephyr</span></a>
+              <a href="/support/docs/generate-test-cases-with-ai/"><span className="ps_title">Manage Test Cases</span><span className="ps_desc">Organize, version, and reuse cases</span></a>
+              <a href="/support/docs/test-run-creation-and-management/"><span className="ps_title">Test Runs</span><span className="ps_desc">Plan, execute, and track runs</span></a>
+              <a href="/support/docs/link-jira-issues-with-test-manager/"><span className="ps_title">Integrations</span><span className="ps_desc">Sync Jira and issue trackers</span></a>
+            </div>
+          </div>
+          <div className="product_section">
             <h2 className="product_section_label"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Testing</h2>
             <div className="product_grid">
               <a href="/support/docs/getting-started-with-agent-testing-platform/"><span className="ps_title">Overview</span><span className="ps_desc">Test AI agents end to end</span></a>
@@ -164,16 +142,43 @@ export default function Home() {
             </div>
           </div>
           <div className="product_section">
-            <h2 className="product_section_label"><Icon light="hyp-light-icon.svg" dark="hyp-dark-icon.svg" alt="" />HyperExecute</h2>
+            <h2 className="product_section_label"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Real Time</h2>
             <div className="product_grid">
-              <a href="/support/docs/getting-started-with-hyperexecute/"><span className="ps_title">Get Started</span><span className="ps_desc">Run your first HyperExecute job</span></a>
-              <a href="/support/docs/hyperexecute-selenium-testing/"><span className="ps_title">Languages & Frameworks</span><span className="ps_desc">Selenium, Playwright, Appium, and more</span></a>
-              <a href="/support/docs/hyperexecute-test-splitting-and-multiplexing/"><span className="ps_title">Features</span><span className="ps_desc">Test splitting, artifacts, auto-heal</span></a>
-              <a href="/support/docs/hyperexecute-how-to-save-and-manage-secrets/"><span className="ps_title">Guides</span><span className="ps_desc">Secrets, tunnels, and concurrency</span></a>
-              <a href="/support/docs/aws-codepipeline-with-hyperexecute/"><span className="ps_title">Integrations</span><span className="ps_desc">CI/CD and cloud pipelines</span></a>
-              <a href="/support/docs/hyperexecute-private-cloud-setup/"><span className="ps_title">Private Cloud</span><span className="ps_desc">Run on your own infrastructure</span></a>
-              <a href="/support/docs/hyperexecute-yaml-parameters/"><span className="ps_title">References</span><span className="ps_desc">YAML and CLI reference</span></a>
-              <a href="/support/docs/hyperexecute-release-notes/"><span className="ps_title">Release Notes</span><span className="ps_desc">Latest updates and changes</span></a>
+              <a href="/support/docs/getting-started-with-desktop-browser-real-time-testing/"><span className="ps_title">Web Browser Testing</span><span className="ps_desc">Live desktop browser testing</span></a>
+              <a href="/support/docs/getting-started-with-mobile-browser-real-time-testing/"><span className="ps_title">Mobile Browser Testing</span><span className="ps_desc">Live mobile web testing</span></a>
+              <a href="/support/docs/getting-started-with-mobile-app-real-time-testing/"><span className="ps_title">Mobile App Testing</span><span className="ps_desc">Live native app testing</span></a>
+              <a href="/support/docs/chrome-os-testing/"><span className="ps_title">ChromeOS Testing</span><span className="ps_desc">Test on ChromeOS devices</span></a>
+              <a href="/support/docs/developer-tools/"><span className="ps_title">Key Features</span><span className="ps_desc">DevTools, screenshots, and more</span></a>
+            </div>
+          </div>
+          <div className="product_section">
+            <h2 className="product_section_label"><Icon light="realDevice-light.svg" dark="realDevice-dark.svg" alt="" />Real Device</h2>
+            <div className="product_grid">
+              <a href="/support/docs/app-testing-on-real-devices/"><span className="ps_title">Real Device App Testing</span><span className="ps_desc">Test apps on real devices</span></a>
+              <a href="/support/docs/browser-testing-on-real-devices/"><span className="ps_title">Real Device Browser Testing</span><span className="ps_desc">Browser testing on real devices</span></a>
+              <a href="/support/docs/public-cloud-vs-private-cloud/"><span className="ps_title">Private Cloud</span><span className="ps_desc">Dedicated real device cloud</span></a>
+            </div>
+          </div>
+          <div className="product_section">
+            <h2 className="product_section_label"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Web Automation</h2>
+            <div className="product_grid">
+              <a href="/support/docs/testmu-running-your-first-selenium-test/"><span className="ps_title">Selenium Testing</span><span className="ps_desc">Run Selenium tests on cloud</span></a>
+              <a href="/support/docs/playwright-testing/"><span className="ps_title">Playwright Testing</span><span className="ps_desc">Cross-browser Playwright on the cloud</span></a>
+              <a href="/support/docs/puppeteer-testing/"><span className="ps_title">Puppeteer Testing</span><span className="ps_desc">Headless Chrome automation testing</span></a>
+              <a href="/support/docs/getting-started-with-cypress-testing/"><span className="ps_title">Cypress Testing</span><span className="ps_desc">Run Cypress in the cloud</span></a>
+              <a href="/support/docs/k6-browser-testing/"><span className="ps_title">K6 Testing</span><span className="ps_desc">Browser performance and load testing</span></a>
+              <a href="/support/docs/run-tests-with-chrome-devtools-protocol/"><span className="ps_title">CDP Testing</span><span className="ps_desc">Chrome DevTools Protocol testing</span></a>
+              <a href="/support/docs/run-tests-with-webdriver-bidi/"><span className="ps_title">BiDi Testing</span><span className="ps_desc">WebDriver BiDi protocol testing</span></a>
+            </div>
+          </div>
+          <div className="product_section">
+            <h2 className="product_section_label"><Icon light="appAutomation-light-icon.svg" dark="appAutomation-dark-icon.svg" alt="" />App Automation</h2>
+            <div className="product_grid">
+              <a href="/support/docs/getting-started-with-appium-testing/"><span className="ps_title">Appium Testing</span><span className="ps_desc">Native and hybrid app testing</span></a>
+              <a href="/support/docs/getting-started-with-espresso-testing/"><span className="ps_title">Espresso Testing</span><span className="ps_desc">Android native UI automation</span></a>
+              <a href="/support/docs/getting-started-with-xcuitest/"><span className="ps_title">XCUI Testing</span><span className="ps_desc">iOS native UI automation</span></a>
+              <a href="/support/docs/getting-started-with-flutter-dart-android-automation/"><span className="ps_title">Flutter Testing</span><span className="ps_desc">Automate Flutter mobile apps</span></a>
+              <a href="/support/docs/app-automation-on-emulators-simulators/"><span className="ps_title">Virtual Devices</span><span className="ps_desc">Emulators and simulators at scale</span></a>
             </div>
           </div>
           <div className="product_section">
@@ -190,13 +195,26 @@ export default function Home() {
             </div>
           </div>
           <div className="product_section">
-            <h2 className="product_section_label"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Browser Cloud</h2>
+            <h2 className="product_section_label"><Icon light="hyp-light-icon.svg" dark="hyp-dark-icon.svg" alt="" />HyperExecute</h2>
             <div className="product_grid">
-              <a href="/support/docs/what-is-browser-cloud/"><span className="ps_title">Get Started</span><span className="ps_desc">Launch your first cloud session</span></a>
-              <a href="/support/docs/browser-cloud-sessions-overview/"><span className="ps_title">Manage Your Sessions</span><span className="ps_desc">Session lifecycle and API</span></a>
-              <a href="/support/docs/browser-cloud-context/"><span className="ps_title">Preserve Browser State</span><span className="ps_desc">Cookies, storage, and profiles</span></a>
-              <a href="/support/docs/browser-cloud-stealth/"><span className="ps_title">Extend Your Browser</span><span className="ps_desc">Stealth, files, and extensions</span></a>
-              <a href="/support/docs/browser-cloud-debugging/"><span className="ps_title">Debug and Troubleshoot</span><span className="ps_desc">Replay and inspect sessions</span></a>
+              <a href="/support/docs/getting-started-with-hyperexecute/"><span className="ps_title">Get Started</span><span className="ps_desc">Run your first HyperExecute job</span></a>
+              <a href="/support/docs/hyperexecute-selenium-testing/"><span className="ps_title">Languages & Frameworks</span><span className="ps_desc">Selenium, Playwright, Appium, and more</span></a>
+              <a href="/support/docs/hyperexecute-test-splitting-and-multiplexing/"><span className="ps_title">Features</span><span className="ps_desc">Test splitting, artifacts, auto-heal</span></a>
+              <a href="/support/docs/hyperexecute-how-to-save-and-manage-secrets/"><span className="ps_title">Guides</span><span className="ps_desc">Secrets, tunnels, and concurrency</span></a>
+              <a href="/support/docs/aws-codepipeline-with-hyperexecute/"><span className="ps_title">Integrations</span><span className="ps_desc">CI/CD and cloud pipelines</span></a>
+              <a href="/support/docs/hyperexecute-private-cloud-setup/"><span className="ps_title">Private Cloud</span><span className="ps_desc">Run on your own infrastructure</span></a>
+              <a href="/support/docs/hyperexecute-yaml-parameters/"><span className="ps_title">References</span><span className="ps_desc">YAML and CLI reference</span></a>
+              <a href="/support/docs/hyperexecute-release-notes/"><span className="ps_title">Release Notes</span><span className="ps_desc">Latest updates and changes</span></a>
+            </div>
+          </div>
+          <div className="product_section">
+            <h2 className="product_section_label"><Icon light="analytics-light-icon.svg" dark="analytics-dark-icon.svg" alt="" />Insights</h2>
+            <div className="product_grid">
+              <a href="/support/docs/analytics-dashboard-templates/"><span className="ps_title">Getting Started</span><span className="ps_desc">Prebuilt analytics dashboards</span></a>
+              <a href="/support/docs/analytics-dashboard-copilot/"><span className="ps_title">Dashboards</span><span className="ps_desc">Build and customize your views</span></a>
+              <a href="/support/docs/analytics-widgets/"><span className="ps_title">Widgets</span><span className="ps_desc">Add metrics and charts</span></a>
+              <a href="/support/docs/analytics-test-insights/"><span className="ps_title">Test Intelligence - AI</span><span className="ps_desc">Flaky and failure analysis</span></a>
+              <a href="/support/docs/insights-usage-report/"><span className="ps_title">Reports</span><span className="ps_desc">Usage and execution reports</span></a>
             </div>
           </div>
           <div className="product_section">
@@ -224,31 +242,13 @@ export default function Home() {
             </div>
           </div>
           <div className="product_section">
-            <h2 className="product_section_label"><Icon light="analytics-light-icon.svg" dark="analytics-dark-icon.svg" alt="" />Insights</h2>
+            <h2 className="product_section_label"><Icon light="automation-light-icon.svg" dark="automation-dark-icon.svg" alt="" />Browser Cloud</h2>
             <div className="product_grid">
-              <a href="/support/docs/analytics-dashboard-templates/"><span className="ps_title">Getting Started</span><span className="ps_desc">Prebuilt analytics dashboards</span></a>
-              <a href="/support/docs/analytics-dashboard-copilot/"><span className="ps_title">Dashboards</span><span className="ps_desc">Build and customize your views</span></a>
-              <a href="/support/docs/analytics-widgets/"><span className="ps_title">Widgets</span><span className="ps_desc">Add metrics and charts</span></a>
-              <a href="/support/docs/analytics-test-insights/"><span className="ps_title">Test Intelligence - AI</span><span className="ps_desc">Flaky and failure analysis</span></a>
-              <a href="/support/docs/insights-usage-report/"><span className="ps_title">Reports</span><span className="ps_desc">Usage and execution reports</span></a>
-            </div>
-          </div>
-          <div className="product_section">
-            <h2 className="product_section_label"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Real Time</h2>
-            <div className="product_grid">
-              <a href="/support/docs/getting-started-with-desktop-browser-real-time-testing/"><span className="ps_title">Web Browser Testing</span><span className="ps_desc">Live desktop browser testing</span></a>
-              <a href="/support/docs/getting-started-with-mobile-browser-real-time-testing/"><span className="ps_title">Mobile Browser Testing</span><span className="ps_desc">Live mobile web testing</span></a>
-              <a href="/support/docs/getting-started-with-mobile-app-real-time-testing/"><span className="ps_title">Mobile App Testing</span><span className="ps_desc">Live native app testing</span></a>
-              <a href="/support/docs/chrome-os-testing/"><span className="ps_title">ChromeOS Testing</span><span className="ps_desc">Test on ChromeOS devices</span></a>
-              <a href="/support/docs/developer-tools/"><span className="ps_title">Key Features</span><span className="ps_desc">DevTools, screenshots, and more</span></a>
-            </div>
-          </div>
-          <div className="product_section">
-            <h2 className="product_section_label"><Icon light="realDevice-light.svg" dark="realDevice-dark.svg" alt="" />Real Device</h2>
-            <div className="product_grid">
-              <a href="/support/docs/app-testing-on-real-devices/"><span className="ps_title">Real Device App Testing</span><span className="ps_desc">Test apps on real devices</span></a>
-              <a href="/support/docs/browser-testing-on-real-devices/"><span className="ps_title">Real Device Browser Testing</span><span className="ps_desc">Browser testing on real devices</span></a>
-              <a href="/support/docs/public-cloud-vs-private-cloud/"><span className="ps_title">Private Cloud</span><span className="ps_desc">Dedicated real device cloud</span></a>
+              <a href="/support/docs/what-is-browser-cloud/"><span className="ps_title">Get Started</span><span className="ps_desc">Launch your first cloud session</span></a>
+              <a href="/support/docs/browser-cloud-sessions-overview/"><span className="ps_title">Manage Your Sessions</span><span className="ps_desc">Session lifecycle and API</span></a>
+              <a href="/support/docs/browser-cloud-context/"><span className="ps_title">Preserve Browser State</span><span className="ps_desc">Cookies, storage, and profiles</span></a>
+              <a href="/support/docs/browser-cloud-stealth/"><span className="ps_title">Extend Your Browser</span><span className="ps_desc">Stealth, files, and extensions</span></a>
+              <a href="/support/docs/browser-cloud-debugging/"><span className="ps_title">Debug and Troubleshoot</span><span className="ps_desc">Replay and inspect sessions</span></a>
             </div>
           </div>
           <div className="product_section">
@@ -278,6 +278,14 @@ export default function Home() {
             </div>
           </div>
           <div className="product_section">
+            <h2 className="product_section_label"><Icon light="other-light-icon.svg" dark="other-dark-icon.svg" alt="" />Other Docs</h2>
+            <div className="product_grid">
+              <a href="/support/docs/lt-browser/"><span className="ps_title">LT Browser</span><span className="ps_desc">Responsive testing browser tool</span></a>
+              <a href="/support/docs/test-intelligence-overview/"><span className="ps_title">Test Intelligence</span><span className="ps_desc">Test analytics and insights</span></a>
+              <a href="/support/docs/concurrency-widget/"><span className="ps_title">Concurrency Widget</span><span className="ps_desc">Calculate parallel test needs</span></a>
+            </div>
+          </div>
+          <div className="product_section">
             <h2 className="product_section_label"><Icon light="settings-light-icon.svg" dark="settings-dark-icon.svg" alt="" />Settings and Security</h2>
             <div className="product_grid">
               <a href="/support/docs/account-management/"><span className="ps_title">Account & Organization</span><span className="ps_desc">Account, billing, and sub-orgs</span></a>
@@ -285,14 +293,6 @@ export default function Home() {
               <a href="/support/docs/multi-factor-authentication/"><span className="ps_title">Security & Network</span><span className="ps_desc">MFA, audit logs, whitelisting</span></a>
               <a href="/support/docs/single-sign-on/"><span className="ps_title">Single Sign-On (SSO)</span><span className="ps_desc">SAML and OIDC single sign-on</span></a>
               <a href="/support/docs/scim/"><span className="ps_title">SCIM Provisioning</span><span className="ps_desc">Automated user provisioning</span></a>
-            </div>
-          </div>
-          <div className="product_section">
-            <h2 className="product_section_label"><Icon light="other-light-icon.svg" dark="other-dark-icon.svg" alt="" />Other Docs</h2>
-            <div className="product_grid">
-              <a href="/support/docs/lt-browser/"><span className="ps_title">LT Browser</span><span className="ps_desc">Responsive testing browser tool</span></a>
-              <a href="/support/docs/test-intelligence-overview/"><span className="ps_title">Test Intelligence</span><span className="ps_desc">Test analytics and insights</span></a>
-              <a href="/support/docs/concurrency-widget/"><span className="ps_title">Concurrency Widget</span><span className="ps_desc">Calculate parallel test needs</span></a>
             </div>
           </div>
         </div>
