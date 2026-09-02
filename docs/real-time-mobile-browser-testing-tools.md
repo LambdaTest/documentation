@@ -70,7 +70,7 @@ Record your entire test session for detailed analysis and playback. Click on the
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/recordings.png').default} alt="Image" className="doc_img"/>
 
 ## Gallery
-All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
+All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon. To mark multiple screenshots as bugs, select the images by clicking their checkboxes and then click on Bug icon.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/gallery.png').default} alt="Image" className="doc_img"/>
 
