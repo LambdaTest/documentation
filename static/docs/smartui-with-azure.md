@@ -99,7 +99,7 @@ include:
 **Example:**
 ```yaml
 variables:
-BUILD_NAME: $(Build.SourceBranchName)-$(Build.SourceVersion)"
+BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
 ```
 
 **Error Handling**

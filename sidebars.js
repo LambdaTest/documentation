@@ -2440,6 +2440,11 @@ module.exports = {
         label: "Introduction to Test Manager",
         id: "test-manager",
       },
+      {
+        type: "doc",
+        label: "Create Projects",
+        id: "create-projects",
+      },
       "manual-to-automated-test-conversion",
       {
         type: "category",

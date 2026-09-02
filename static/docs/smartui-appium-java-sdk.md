@@ -30,7 +30,7 @@ Add the following dependency to your `pom.xml` file:
 <dependency>
 <groupId>io.github.lambdatest</groupId>
 <artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.8</version>
+<version>1.0.23</version>
 </dependency>
 ```
 
@@ -310,7 +310,7 @@ echo $PROJECT_TOKEN
 <dependency>
 <groupId>io.github.lambdatest</groupId>
 <artifactId>lambdatest-java-sdk</artifactId>
-<version>1.0.2</version>
+<version>1.0.23</version>
 </dependency>
 ```
 

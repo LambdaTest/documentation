@@ -13,7 +13,7 @@ Download or clone the code sample for the Playwright Java from the TestMu AI Git
 
  View on GitHub
 
-```bash
+```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 cd playwright-java

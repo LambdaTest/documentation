@@ -68,7 +68,7 @@ name: Run Visual Tests
 **Example:**
 ```yaml
 variables:
-BUILD_NAME: $BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
+BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 ```
 
 **Error Handling**
@@ -154,7 +154,7 @@ PROJECT_TOKEN: $PROJECT_TOKEN
 2. Check pipeline logs for errors:
 ```yaml
 after-script:
-- echo Checking logs..."
+- echo "Checking logs..."
 ```
 
 3. Verify network connectivity in pipeline

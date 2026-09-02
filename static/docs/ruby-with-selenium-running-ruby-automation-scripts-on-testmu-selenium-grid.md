@@ -6,41 +6,70 @@ Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 
 ## Prerequisites
 
-1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
-2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
-3. Install [Ruby](https://www.ruby-lang.org/en/downloads/) and the `gem` package manager.
-4. Install the `selenium-webdriver` gem (and `parallel_tests` for parallel runs), pulled in by the sample projects via Bundler.
+Complete the following steps before you start Ruby automation testing with Selenium.
+
+1. Install **Ruby** and **gem** on your local system. Follow these instructions to install on different operating systems.
+   * For **Windows**, download from the [Ruby Installer for Windows](https://rubyinstaller.org/downloads/).
+   * For **Linux** or **Ubuntu**, run a simple apt command like below:
+```bash
+sudo apt-get install ruby-full
+```
+   * For **macOS**, run a [Homebrew](https://brew.sh/) command like this:
+```bash
+brew install ruby
+```
+2. Install the [parallel_tests](https://github.com/grosser/parallel_tests) gem to run tests in parallel.
+3. Get the TestMu AI binary file for running tests on your locally hosted web pages.
 
 ## Step 1: Clone the Sample Project
 
-Your Username and Access Key are read from environment variables, set once per operating system.
+Clone the repository and install dependencies.
 
-Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
+```bash
+git clone https://github.com/LambdaTest/ruby-selenium-sample.git
+cd ruby-selenium-sample
+```
+
+Install selenium dependencies:
+```bash
+sudo gem install selenium-webdriver
+```
+
+## Step 2: Set Your Credentials
+
+Configure your credentials to connect to the TestMu AI Selenium Grid.
+
+Set TestMu AI Username and Access Key in environment variables.
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ## Step 3: Configure Your Test Capabilities
 
-Every framework below connects to the grid and passes your browser and OS choices through a capabilities hash:
+Define browser, version, and OS settings for your test run.
+
+In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
 
 ```ruby
 caps = {
 :browserName => "chrome",
-:version     => "latest",
-:platform    => "Windows 10",
-:name        => "Ruby Selenium Test",
-:build       => "Ruby Selenium Build",
-:video       => true
+:version =>   "67.0",
+:platform =>  "win10",
+:geoLocation =>  "US",
+:name =>  "LambdaTest ruby google search name",
+:build =>  "LambdaTest ruby google search build",
+:network =>  false,
+:visual =>  false,
+:video =>  true,
+:console =>  false
 }
 ```
 
-What changes between frameworks is only how the test is structured and launched. That is what each tab covers.
-
-Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
+**Capabilities Generator**
+Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
 
 ## Step 4: Run the Test
 
@@ -62,15 +91,18 @@ Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redir
 
 ## Run Ruby Selenium Tests Using Agent Skills
 
-Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
+Use AI coding assistants to generate and run Ruby Selenium tests with the TestMu AI Agent Skill.
 
-Capybara runs with Cucumber for BDD-style tests, driven by Bundler and Rake tasks.
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/Capybara-Cucumber-Ruby):
+Install the skill:
 
 ```bash
-git clone https://github.com/LambdaTest/Capybara-Cucumber-Ruby
-cd Capybara-Cucumber-Ruby
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/selenium-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/selenium-skill .cursor/skills/
 ```
 
 Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).

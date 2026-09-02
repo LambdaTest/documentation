@@ -13,16 +13,27 @@ Download or clone the code sample for the Playwright JavaScript from the TestMu 
 
  View on GitHub
 
-```bash
+```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 cd playwright-test-js
+```
+
+2. Install the npm dependencies.
+
+```
 npm install
 ```
 
-2. The grid connection lives in `lambdatest-setup.js`, a Playwright test fixture that patches the capabilities per project and reports test status:
+3. A TestMu AI Username and Access key. You can get it from your TestMu AI Profile section. Don't have an account, sign up for free.
 
-```js title="lambdatest-setup.js"
+4. To run Playwright tests, set your TestMu AI Username and Access key in the Environment Variables.
+
+## Run your Playwright tests with JavaScript
+
+Navigate to the `lambdatest-setup.js` file in the `playwright-test-js` directory.
+
+```js
 /**
 * Add the file in your test suite to run tests on LambdaTest.
 * Import `test` object from this file in the tests.
@@ -98,9 +109,9 @@ await use(page)
 })
 ```
 
-3. Run the test:
+Pass the below command in the terminal to run the test.
 
-```bash
+```js
 npm run test
 ```
 

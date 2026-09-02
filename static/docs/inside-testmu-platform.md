@@ -37,6 +37,8 @@ Use the action buttons next to the test ID to copy the ID, create an issue, rena
 
 Use the **Re-Run** button to execute the test again from the dashboard. See [Re-Run Automation Tests](/support/docs/rerun-automation-tests/).
 
+Use **Mute Test...** in the test's options menu to keep a known-broken or known-flaky test out of the build's pass/fail verdict and counts. The test still runs and still reports its real result. See [Mute Test Scenarios](/support/docs/mute-test-scenarios/).
+
 ### Command Logs and Network
 
 View every command executed during the test and all associated logs.
@@ -58,5 +60,6 @@ Now that you know how to read the dashboard, explore more ways to manage and deb
 - [Filter your tests](/support/docs/filter-your-selenium-tests/) - narrow down results by browser, OS, status, or tags
 - [Share test results](/support/docs/sharing-test-results/) - send results to teammates
 - [Mark as bug](/support/docs/mark-as-bug-in-automation-testing/) - file a bug directly from a test session
+- [Mute test scenarios](/support/docs/mute-test-scenarios/) - stop a known-broken test from failing the build
 - [Debug your tests](/support/docs/debugging-options/) - enable extended logging for deeper analysis
 - [Group tests with tags](/support/docs/group-tests-using-custom-tags/) - organize tests using custom tags

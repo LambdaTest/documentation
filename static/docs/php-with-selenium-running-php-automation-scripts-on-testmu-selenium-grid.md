@@ -6,7 +6,9 @@ Run your PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/d
 
 ## Prerequisites
 
-Before you start, you need a TestMu AI account with your credentials, plus PHP, Composer, and the Selenium WebDriver for PHP installed.
+Complete the following steps before you begin automation testing with Selenium.
+
+1. Install the latest **PHP** on your system. Use the following commands in the terminal:
 
    * **MacOS:** Previous versions of **MacOS** have **PHP** installed by default. For the latest **MacOS** versions starting with **Monterey**, download and install **PHP** manually:
 ```bash
@@ -24,31 +26,54 @@ mv composer.phar /usr/local/bin/composer
 
 ## Step 1: Clone the Sample Project
 
-Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
+Clone the repository and install dependencies.
+
+```bash
+git clone https://github.com/LambdaTest-sample-test-frameworks/Php-Selenium
+cd Php-Selenium
+```
+
+Install the composer dependencies:
+```bash
+composer install
+```
+
+## Step 2: Set Your Credentials
+
+Configure your credentials to connect to the TestMu AI Selenium Grid.
+
+Set TestMu AI `Username` and `Access Key` in environment variables.
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ## Step 3: Configure Your Test Capabilities
 
-Every framework below connects to the grid and passes your browser and OS choices through a capabilities array:
+Define browser, version, and OS settings for your test run.
+
+In the test script, update your test capabilities to select OS, browser, browser version, and other settings.
 
 ```php
+//Basic Test Configurations For PHP
+
 $capabilities = array(
 "build" => "your build name",
 "name" => "your test name",
-"platform" => "Windows 10",
-"browserName" => "Chrome",
-"version" => "latest"
-);
+"platform" => "macOS High Sierra",
+"browserName" => "Firefox",
+"version" => "64.0",
+"resolution" => "1280x1024",
+"selenium_version" => "3.13.0",
+"screenshot" => true,
+"firefox.driver" => "v0.23.0"
+)
 ```
 
-What changes between frameworks is only how those capabilities are supplied: a YAML config, a suite file, or an inline setup class. That is what each tab covers.
-
-Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
+**Capabilities Generator**
+Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
 
 ## Step 4: Run the Test
 
@@ -70,15 +95,18 @@ Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redir
 
 ## Run PHP Selenium Tests Using Agent Skills
 
-Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
+Use AI coding assistants to generate and run PHP Selenium tests with the TestMu AI Agent Skill.
 
-Behat is BDD for PHP: feature files plus step definitions, with the grid config in a Behat YAML file.
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/behat-selenium-sample):
+Install the skill:
 
 ```bash
-git clone https://github.com/LambdaTest/behat-selenium-sample
-cd behat-selenium-sample
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/selenium-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/selenium-skill .cursor/skills/
 ```
 
 Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).

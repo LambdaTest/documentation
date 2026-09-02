@@ -6,21 +6,42 @@ Run your C# Selenium tests on the TestMu AI cloud grid across 10,000+ browser/de
 
 ## Prerequisites
 
-Complete these before running any framework below.
+Complete the following steps before running C# Selenium tests.
+
+1. Download and install **Selenium WebDriver** from its [official website](https://www.selenium.dev/downloads/).
+2. Install the latest version of C#.
+3. Install the **.Net** framework for developing applications using C#.
+4. Download [Selenium WebDriver Language Binding](https://www.selenium.dev/downloads/) for C# and extract them to the appropriate folder.
+5. Install a [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) of 2.1 or greater version.
+6. [Install .NET Runtime](https://dot.net/v1/dotnet-install.sh) to execute tests on Linux or macOS.
+7. Get your TestMu AI Username and Access Key from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 
 ## Step 1: Clone the Sample Project
 
-Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
+Clone the repository and navigate to the project directory.
+
+```bash
+git clone https://github.com/LambdaTest/CSharp-Selenium-Sample
+cd CSharp-Selenium-Sample
+```
+
+## Step 2: Set Your Credentials
+
+Configure your credentials to connect to the TestMu AI Selenium Grid.
+
+Set TestMu AI Username and Access Key in environment variables.
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ## Step 3: Configure Your Test Capabilities
 
-Every framework below connects to the grid and passes your browser and OS choices through an `LT:Options` object:
+Define browser, version, and OS settings for your test run.
+
+In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -32,14 +53,14 @@ var ltOptions = new Dictionary<string, object>
 { "username", LT_USERNAME },
 { "accessKey", LT_ACCESS_KEY },
 { "project", "Demo LT" },
-{ "w3c", true }
+{ "w3c", true },
+{ "plugin", "c#-c#" }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
 
-What changes between frameworks is only the test runner and how you launch it. That is what each tab covers.
-
-Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build an `LT:Options` block for any browser, version, and OS combination.
+**Capabilities Generator**
+Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
 
 ## Step 4: Run the Test
 
@@ -71,15 +92,18 @@ Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redir
 
 ## Run C# Selenium Tests Using Agent Skills
 
-Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then build and run.
+Use AI coding assistants to generate and run C# Selenium tests with the TestMu AI Agent Skill.
 
-NUnit runs from the Visual Studio Test Explorer, or from the CLI on Linux/macOS.
+The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
-1. Clone the [sample GitHub project](https://github.com/LambdaTest/CSharp-NUnit-Selenium):
+Install the skill:
 
 ```bash
-git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium
-cd CSharp-NUnit-Selenium
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/selenium-skill .claude/skills/
+
+# For Cursor / Copilot
+cp -r agent-skills/selenium-skill .cursor/skills/
 ```
 
 Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., `.claude/skills/`, `.cursor/skills/`).
