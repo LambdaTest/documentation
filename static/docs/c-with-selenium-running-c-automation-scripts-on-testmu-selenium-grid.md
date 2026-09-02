@@ -6,8 +6,6 @@ Run your C# Selenium tests on the TestMu AI cloud grid across 10,000+ browser/de
 
 ## Prerequisites
 
-Complete the following steps before running C# Selenium tests.
-
 Complete these before running any framework below.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -17,30 +15,17 @@ Complete these before running any framework below.
 
 ## Set Your Credentials
 
-Clone the repository and navigate to the project directory.
-
-```bash
-git clone https://github.com/LambdaTest/CSharp-Selenium-Sample
-cd CSharp-Selenium-Sample
-```
-
-## Step 2: Set Your Credentials
-
-Configure your credentials to connect to the TestMu AI Selenium Grid.
-
-Set TestMu AI Username and Access Key in environment variables.
+Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
+set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 ## How the Sample Test Works
 
-Define browser, version, and OS settings for your test run.
-
-In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
+Every framework below connects to the grid and passes your browser and OS choices through an `LT:Options` object:
 
 ```csharp
 var browserOptions = new ChromeOptions();
@@ -52,29 +37,26 @@ var ltOptions = new Dictionary<string, object>
 { "username", LT_USERNAME },
 { "accessKey", LT_ACCESS_KEY },
 { "project", "Demo LT" },
-{ "w3c", true },
-{ "plugin", "c#-c#" }
+{ "w3c", true }
 };
 browserOptions.AddAdditionalOption("LT:Options", ltOptions);
 ```
 
-**Capabilities Generator**
-Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
+What changes between frameworks is only the test runner and how you launch it. That is what each tab covers.
+
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build an `LT:Options` block for any browser, version, and OS combination.
 
 ## Run a Test in Your Framework
 
-Use AI coding assistants to generate and run C# Selenium tests with the TestMu AI Agent Skill.
+Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then build and run.
 
-The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+NUnit runs from the Visual Studio Test Explorer, or from the CLI on Linux/macOS.
 
-Install the skill:
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/CSharp-NUnit-Selenium):
 
 ```bash
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/selenium-skill .claude/skills/
-
-# For Cursor / Copilot
-cp -r agent-skills/selenium-skill .cursor/skills/
+git clone https://github.com/LambdaTest/CSharp-NUnit-Selenium
+cd CSharp-NUnit-Selenium
 ```
 
 2. Set your browser and OS in the `LT:Options` object:

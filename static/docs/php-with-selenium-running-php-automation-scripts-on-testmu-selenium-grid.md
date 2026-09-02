@@ -6,8 +6,6 @@ Run your PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/d
 
 ## Prerequisites
 
-Complete the following steps before you begin automation testing with Selenium.
-
 Before you start, you need a TestMu AI account with your credentials, plus PHP, Composer, and the Selenium WebDriver for PHP installed.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -17,69 +15,43 @@ Before you start, you need a TestMu AI account with your credentials, plus PHP, 
 
 ## Set Your Credentials
 
-Clone the repository and install dependencies.
-
-```bash
-git clone https://github.com/LambdaTest-sample-test-frameworks/Php-Selenium
-cd Php-Selenium
-```
-
-Install the composer dependencies:
-```bash
-composer install
-```
-
-## Step 2: Set Your Credentials
-
-Configure your credentials to connect to the TestMu AI Selenium Grid.
-
-Set TestMu AI `Username` and `Access Key` in environment variables.
+Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
+set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 ## How the Sample Test Works
 
-Define browser, version, and OS settings for your test run.
-
-In the test script, update your test capabilities to select OS, browser, browser version, and other settings.
+Every framework below connects to the grid and passes your browser and OS choices through a capabilities array:
 
 ```php
-//Basic Test Configurations For PHP
-
 $capabilities = array(
 "build" => "your build name",
 "name" => "your test name",
-"platform" => "macOS High Sierra",
-"browserName" => "Firefox",
-"version" => "64.0",
-"resolution" => "1280x1024",
-"selenium_version" => "3.13.0",
-"screenshot" => true,
-"firefox.driver" => "v0.23.0"
-)
+"platform" => "Windows 10",
+"browserName" => "Chrome",
+"version" => "latest"
+);
 ```
 
-**Capabilities Generator**
-Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
+What changes between frameworks is only how those capabilities are supplied: a YAML config, a suite file, or an inline setup class. That is what each tab covers.
+
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 
 ## Run a Test in Your Framework
 
-Use AI coding assistants to generate and run PHP Selenium tests with the TestMu AI Agent Skill.
+Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
 
-The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+Behat is BDD for PHP: feature files plus step definitions, with the grid config in a Behat YAML file.
 
-Install the skill:
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/behat-selenium-sample):
 
 ```bash
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/selenium-skill .claude/skills/
-
-# For Cursor / Copilot
-cp -r agent-skills/selenium-skill .cursor/skills/
+git clone https://github.com/LambdaTest/behat-selenium-sample
+cd behat-selenium-sample
 ```
 
 2. Set your browser and OS in the Behat config:

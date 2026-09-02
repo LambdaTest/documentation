@@ -6,8 +6,6 @@ Run your Python Selenium tests on the TestMu AI cloud grid across 10,000+ browse
 
 ## Prerequisites
 
-Complete these steps before running your first Python Selenium test.
-
 Have these in place before you run any of the frameworks below.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
@@ -17,36 +15,17 @@ Have these in place before you run any of the frameworks below.
 
 ## Set Your Credentials
 
-Clone the repository and install dependencies.
-
-```bash
-git clone https://github.com/LambdaTest/python-selenium-sample
-cd python-selenium-sample
-```
-
-Install the Selenium driver using pip:
-```bash
-pip install selenium
-export PYTHONWARNINGS="ignore:Unverified HTTPS request"   //Disable ssl warning
-```
-
-## Step 2: Set Your Credentials
-
-Configure your credentials to connect to the TestMu AI Selenium Grid.
-
-Set TestMu AI `Username` and `Access Key` in environment variables.
+Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
+set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 ## How the Sample Test Works
 
-Define browser, version, and OS settings for your test run.
-
-In the Python script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
+Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities dictionary:
 
 ```python
 capabilities = {
@@ -58,23 +37,21 @@ capabilities = {
 }
 ```
 
-**Capabilities Generator**
-Use the TestMu AI [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities class for your test requirements.
+What changes between frameworks is only how those capabilities are supplied: inline, a `conftest.py`, a `.robot` variables block, or a JSON config. That is what each tab covers.
+
+Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 
 ## Run a Test in Your Framework
 
-Use AI coding assistants to generate and run Python Selenium tests with the TestMu AI Agent Skill.
+Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
 
-The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
+The standard-library `unittest` framework connects a remote WebDriver to the grid, with capabilities inline in the test.
 
-Install the skill:
+1. Clone the [sample GitHub project](https://github.com/LambdaTest/Python-UnitTest-Selenium):
 
 ```bash
-git clone https://github.com/LambdaTest/agent-skills.git
-cp -r agent-skills/selenium-skill .claude/skills/
-
-# For Cursor / Copilot
-cp -r agent-skills/selenium-skill .cursor/skills/
+git clone https://github.com/LambdaTest/Python-UnitTest-Selenium
+cd Python-UnitTest-Selenium
 ```
 
 2. Set your browser and OS in the capabilities dictionary:

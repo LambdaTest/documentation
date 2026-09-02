@@ -16,7 +16,7 @@ Complete these before running the test below.
 **Sample repo**
  View on GitHub
 
-```js
+```bash
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
 ```
