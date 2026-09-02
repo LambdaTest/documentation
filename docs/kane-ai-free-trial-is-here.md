@@ -1,8 +1,7 @@
 ﻿---
 id: kane-ai-free-trial-is-here
 title: KaneAI Free Trial is here!
-hide_title: true
-toc_max_heading_level: 2
+hide_title: false
 sidebar_label: KaneAI Free Trial
 description: Here's what your KaneAI free trial plan includes. 
 keywords:
@@ -15,11 +14,9 @@ slug: kane-ai-free-trial-is-here/
 canonical: https://www.testmuai.com/support/docs/kane-ai-free-trial-is-here/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,8 +42,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+
 # KaneAI Free Trial is Here!
-***
 
 Every great product begins with a vision, but that vision can only become reality when it works flawlessly for real users. Whether you're a solo developer launching your first app, a startup team racing to validate your breakthrough idea, or a growing company looking to scale without breaking things, you face the same fundamental challenge: How do you ensure quality without slowing down innovation?
 
@@ -56,8 +53,7 @@ With KaneAI's free trial access, every team can access GenAI-Native testing capa
 
 [**Start testing with KaneAI today →**](https://www.testmuai.com/kane-ai)
 
-## Here's What It Has to Offer
-***
+## Here's What it Has to Offer
 
 With KaneAI free trial, you get access to: 
 

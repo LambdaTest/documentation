@@ -71,7 +71,7 @@ Author and manage datasets directly inside KaneAI Test Manager to drive the same
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/5.png').default} alt="Autofill with AI populating dataset values automatically" className="doc_img img_center"/>
 
 **Documentation:**
-- [KaneAI Datasets](/support/docs/kane-ai-using-parameters/#datasets)
+- [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
 
 ---
 
@@ -106,9 +106,10 @@ Pass dynamic values into test cases at runtime so a single test runs across envi
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/3.png').default} alt="Create Parameter dialog with name and value fields in KaneAI" className="doc_img img_center"/>
 
 **Documentation:**
+- [KaneAI Variables & Parameters Overview](/support/docs/kaneai-variables-and-parameters/)
 - [Using Variables](/support/docs/kane-ai-using-variables/)
 - [Using Parameters](/support/docs/kane-ai-using-parameters/)
-- [Secrets](/support/docs/kane-ai-using-variables/#secrets)
+- [Secrets](/support/docs/kane-ai-secrets/)
 
 ---
 

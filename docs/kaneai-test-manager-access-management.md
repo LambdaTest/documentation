@@ -1,10 +1,9 @@
 ---
 id: kaneai-test-manager-access-management
-title: How to Manage Access With KaneAI
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: Access Management
-description: Organization admins manage KaneAI and Test Manager access, allocating licenses to users across the organization.
+title: Access Management - KaneAI <> Test Manager
+hide_title: false
+sidebar_label: Access Management - KaneAI <> Test Manager
+description: This documentation will help you to understand how to allocate licence to all the users present in your organization
 keywords:
 - users management testmu ai
 - manage user
@@ -39,26 +38,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-
-# How to Manage Access With KaneAI
-***
-
-Access management in <BrandName /> controls who can use KaneAI and Test Manager. The access management functionality is exclusive to **organization administrators**, allowing them to allocate licenses to users as per the organization's requirements.
+This document provides guidelines on managing access to KaneAI and Test Manager within <BrandName />. The access management functionality is exclusive to **organization administrators**, allowing them to allocate licenses to users as per the organization's requirements.
 
 ## License Allocation Rules
-***
-
 - **License Limitation :** Administrators can only allocate as many licenses as they have purchased or gained licenses through trials.
 - **User Addition :** A user can only be added if there is an available license.
 - **License Reassignment :** An admin can revoke a license from one user and assign it to another, ensuring optimal resource utilization.
 - **Real-Time Monitoring :** Admins can view the current usage of licenses through the Access Management Dashboard.
 
-## Allocate Licenses to Users
-***
+## Step-by-Step Guide for Managing Access
 
 ### Accessing the License Management Panel
-***
-
 **Step 1 :** Log in to your <BrandName /> Admin Account. <br />
 **Step 2 :** Navigate to **Settings** > **Organization Settings** > **Products**. <br />
 **Step 3 :** Select KaneAI or Test Manager tab to allocate the desired product license.
@@ -68,8 +58,6 @@ Access management in <BrandName /> controls who can use KaneAI and Test Manager.
 </video>
 
 ### Assigning a License to a User
-***
-
 **Step 1 :** Navigate to KaneAI or Test Manager tab for which you want to allocate the license. <br />
 **Step 2 :** Click on **Allocate Licenses** button. <br />
 **Step 3 :** Select the plan name for which you want to allocate the licenses to your users.<br />
@@ -81,8 +69,6 @@ Access management in <BrandName /> controls who can use KaneAI and Test Manager.
 </video>
 
 ### Removing or Reassigning a License
-***
-
 **Step 1 :** Locate the user from the User List. <br />
 **Step 2 :** You can select multiple users or for individual users click on the **...** button. <br />
 **Step 3 :** Click **Revoke License** to remove access. <br />
