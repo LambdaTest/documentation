@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-jobs-archiving
-title: Jobs Archiving
-toc_max_heading_level: 2
+title: Jobs Archiving
 hide_title: false
-sidebar_label: "Jobs Archiving"
+sidebar_label: Jobs Archiving
 description: Optimize  your workspace with HyperExecute job archiving to boost productivity. Keep only relevant jobs. Learn more!
 keywords:
   - TestMu AI Hyperexecute

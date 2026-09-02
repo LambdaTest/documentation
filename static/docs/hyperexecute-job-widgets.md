@@ -8,21 +8,11 @@ The `Job Trends` Widget empowers you to analyze the trends of executed Jobs on t
 
 You can leverage the widget to understand the distribution of Job statuses, enabling a comprehensive assessment of your team's application performance. By utilizing legends for seamless filtering, you can quickly identify specific failing Job numbers and troubleshoo
 
-
-
-
-
 ## Job Summary
 
 The `Job Summary` widget enables you to track the total Jobs being run on the platform grouped by their status including **Completed**, **Partially Completed**, **Failed**, **Aborted**, etc.
 
 If you wants to get a total number of the Jobs being executed on the platform for a specific environment or status. With the Job Summary widget you can see the total count of the desired use cases.
-
-
-
-
-
-
 
 ## Job Queue Time Trends
 

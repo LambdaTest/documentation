@@ -1,10 +1,9 @@
 ---
 id: kaneai-chrome-options
-title: How to Set Chrome Options With KaneAI
-hide_title: true
-toc_max_heading_level: 2
+title: Chrome Options
+hide_title: false
 sidebar_label: Chrome Options
-description: Pass Chrome command-line options to your KaneAI web test to change browser behavior during a session.
+description: This documentation will help you to understand how to use the Chrome Options feature while testing your test cases via KaneAI.
 keywords:
   - modules versioning
   - enhancements
@@ -38,75 +37,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to use Chrome Options in KaneAI",
+          "name": "Chrome Options",
           "item": `${BRAND_URL}/support/docs/kaneai-chrome-options/`
         }]
       })
     }}
 ></script>
+Chrome options, also known as Chrome arguments, are command-line switches that alter the default behavior of the Chrome browser. These options provide flexibility to users by enabling or disabling certain browser features, modifying settings, and configuring custom behaviors such as headless browsing or disabling GPU acceleration.
 
-# How to Set Chrome Options With KaneAI
-***
+In KaneAI Web Agent, Chrome options are used to tailor the testing environment to suit the specific needs of automated tests. By defining Chrome options, users can configure the browser behavior before initiating a test session, allowing for a more customized and controlled testing setup. This guide will walk you through the steps to configure and use Chrome options in the KaneAI Web Agent:
 
-Chrome options, also known as Chrome arguments, are command-line switches that change the default behavior of the Chrome browser, such as running headless or disabling GPU acceleration. In KaneAI Web Agent, you set Chrome options in **Advanced Settings** to configure the browser before a web test session starts.
+## Steps to use Chrome Options in KaneAI Web Agent
+Using Chrome options in KaneAI Web Agent is simple and involves defining specific configurations before launching a test. Follow the steps below to add and manage Chrome options for your tests.
 
-## Configure Chrome Options
-***
+### Step 1: Navigate to the Test Configuration Page
+- Begin by accessing the Test Configuration page within the KaneAI Web Agent interface. Click on the **Create a Web Test** button.
 
-Follow these steps to add Chrome options to a web test session.
+### Step 2: Locate the Chrome Options Section
+- Enable the toggle to add Chrome browser command-line options when launching your instance.
+- Enter your Command line switches and you can provide the type of argument as well i.e. String or File for that particular command line.
+- You can enter up to 10 Chrome options in the provided input fields.
+- For example:
+  - `--headless`
+  - `--disable-gpu`
+  - `--use-file-for-fake-audio-capture=/path/to/audio/file`
 
-### Step 1: Create a Web Test
-***
-
-In the KaneAI Web Agent interface, click **Create a Web Test** to open **Advanced Settings**.
-
-**Result:** The web test configuration opens, including the Chrome options section.
-
-### Step 2: Add Chrome Options
-***
-
-Enable the Chrome options toggle, then enter each command-line switch. For each switch, select the argument type (**String** or **File**). You can enter up to 10 Chrome options. For example:
-
-- `--headless`
-- `--disable-gpu`
-- `--use-file-for-fake-audio-capture=/path/to/audio/file`
-
-<img loading="lazy" src={require('../assets/images/kane-ai/features/chrome-options/1.png').default} alt="Add Chrome Options" className="doc_img"/>
-
-**Result:** The Chrome options are queued to apply when the session launches.
+<img loading="lazy" src={require('../assets/images/kane-ai/features/chrome-options/1.png').default} alt="Image" className="doc_img"/>
 
 ### Step 3: Start the Web Agent
-***
+- Once the configuration is done, initiate the Web Agent. The browser will launch with the specified Chrome options applied, allowing you to perform your tests under the customized environment.
 
-Start the Web Agent to launch the session.
+<img loading="lazy" src={require('../assets/images/kane-ai/features/chrome-options/2.png').default} alt="Image" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/chrome-options/2.png').default} alt="Start the Web Agent" className="doc_img"/>
-
-**Result:** The browser launches with your Chrome options applied.
-
-## Argument Types
-***
-
-Each Chrome option accepts one of the following argument types.
-
-| Type | Description |
-|---|---|
-| **String** | A plain-text command-line value, such as `--headless` or `--disable-gpu`. |
-| **File** | A command-line value that points to a file, such as `--use-file-for-fake-audio-capture`. KaneAI injects the Downloads folder path by default, so you do not have to specify the path manually. |
-
-## Limitations
-***
-
-Keep these limitations in mind:
-
-- You can configure up to 10 Chrome options per session.
-- KaneAI validates the options you enter. If an option is unsupported, an error message prompts you to correct it.
-- If you provide no Chrome options, the browser launches with its default configuration.
-
-## Next Steps
-***
-
-Continue with these guides:
-
-- [KaneAI Advanced Settings](/support/docs/kaneai-advanced-settings/)
-- [KaneAI Custom Headers](/support/docs/kaneai-custom-headers/)
+## Considerations
+- **Maximum Options :** You can configure up to 10 Chrome options per session. Ensure you only input the necessary options for your test case.
+- **Supported Options :** KaneAI Web Agent will validate that only supported Chrome options are entered. If you enter an unsupported option, an error message will notify you to correct the configuration.
+- **File Paths :** If a Chrome option requires a file path (for instance, `--use-file-for-fake-audio-capture`), KaneAI will automatically inject the Downloads folder path by default. This simplifies the process and removes the need to manually specify file paths for certain features.
+- **Default Browser Configuration :** If no Chrome options are provided, KaneAI will default to the standard browser configuration, meaning the browser will launch with its default settings.

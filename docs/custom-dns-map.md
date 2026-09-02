@@ -1,10 +1,8 @@
 ---
 id: custom-dns-map
-title: How to Map Custom DNS in Selenium on TestMu AI
-toc_max_heading_level: 2
-hide_title: true
-sidebar_label: "Custom DNS Entry"
-description: Map custom DNS entries in Selenium tests on TestMu AI using the customDnsMap capability to redirect domains to specific IP addresses.
+title: Custom DNS Mapping for Selenium Tests
+sidebar_label: Map a Custom DNS Entry
+description: Define custom IP addresses for specific domains during Selenium tests using the customDnsMap capability.
 keywords:
   - custom dns mapping selenium capability
   - redirect domain IP selenium testing
@@ -41,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Map Custom DNS in Selenium on TestMu AI
+## Overview
 ---
 
 The `customDnsMap` capability lets you define custom IP addresses for specific domains.
@@ -94,23 +92,14 @@ The `customDnsMap` capability offers the following benefits.
 
 - **Flexibility:** Easily and dynamically redirect traffic to different IP addresses without global configuration changes.
 
-- **Control:** Gain full control over how domains are resolved, which is essential for testing and debugging. To shape the requests themselves, you can also set custom HTTP headers on the same test.
+- **Control:** Gain full control over how domains are resolved, which is essential for testing and debugging.
 
 - **Efficiency:** Improve testing and development workflows by eliminating the need to switch between different environments manually.
 
 ## Conclusion
 ---
 
-The `customDnsMap` capability improves the efficiency and flexibility of testing and development workflows on the TestMu AI platform. Use it to redirect domains, simulate server failures, and test against specific backend servers. For other environment options, see the full list of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) and how to route tests through a Selenium proxy.
-
-## Next Steps
----
-
-Continue with these related guides:
-
-- [Custom Headers](/support/docs/custom-headers/)
-- [Run Selenium Tests Behind the Proxy](/support/docs/selenium-tests-behind-proxy/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
+The `customDnsMap` capability improves the efficiency and flexibility of testing and development workflows on the TestMu AI platform. Use it to redirect domains, simulate server failures, and test against specific backend servers.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -1,8 +1,6 @@
-# How to Test Flutter Apps on TestMu AI
+# Testing Flutter Apps With Appium
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Testing Flutter apps on TestMu AI lets you run cross-platform automation with Appium's Flutter driver across 5000+ real Android and iOS devices. Upload your debug or profile build, add the required Flutter dependencies, then execute tests using a Dart codebase.
 
 Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
 
@@ -166,3 +164,41 @@ driver.quit();
 Below is a screenshot showing Appium test automation running with the Flutter Integration Driver on the TestMu AI platform.
 
 >In case you have any questions or need any additional information, you could reach out at our **24X7 Chat Support** or mail us directly at support@testmuai.com.
+
+## Using the Flutter Testing Agent Skill with TestMu AI
+
+The [flutter-testing-skill](https://github.com/LambdaTest/agent-skills/tree/main/flutter-testing-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The flutter-testing-skill package includes:
+
+```
+flutter-testing-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing Flutter Testing Agent Skill
+
+Install a Flutter Testing Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/flutter-testing-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/flutter-testing-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only flutter-testing-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

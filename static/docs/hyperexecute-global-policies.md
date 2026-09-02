@@ -41,7 +41,7 @@ Phase 1 covers five YAML parameters. Each parameter has exactly one applicable m
 | [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) | `append` | Adds your commands after the job's own global post-run steps. If the job has no `globalPost` block, one is created. |
 | [`failFast`](/support/docs/deep-dive-into-hyperexecute-yaml/#failfast) | `set` | Forces the fail-fast setting — a maximum failure count and a failure level (scenario or test). |
 | [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) | `set` | Forces reporting on or off. |
-| [`cacheKey`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) and [`cacheDirectories`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) | `require` | Requires that [caching](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) is configured, by checking that both parameters are present in the YAML. |
+| [`cacheKey`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) and [`cacheDirectories`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) | `require` | Requires that [caching](/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/) is configured, by checking that both parameters are present in the YAML. |
 | [`maxRetries`](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) | `constrain` | Bounds the retry count within a range, so a runaway retry setting can't choke your concurrency. |
 
 ## How severity works

@@ -1,8 +1,6 @@
-# How to Use REGEX for Espresso Devices on TestMu AI
+# Regular Expression - Espresso
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Using REGEX for Espresso device selection on TestMu AI lets you match any available device instead of a fixed one. When your chosen device is busy, pass a pattern in the `deviceName` capability so TestMu AI allots any match automatically.
 
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 

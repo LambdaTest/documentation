@@ -1,6 +1,6 @@
 ---
 id: group-folder-redirects
-title: How to Enable Group Folder Redirect on TestMu AI
+title: Group Folder Redirect for iOS Apps in Appium Tests
 sidebar_label: Group Folder Redirect
 description: Learn how to enable Group Folder Redirect for iOS apps during Appium testing on TestMu AI Real Device Cloud.
 keywords:
@@ -18,14 +18,11 @@ canonical: https://www.testmuai.com/support/docs/group-folder-redirects/
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-# How to Enable Group Folder Redirect on TestMu AI
-
-Enabling Group Folder Redirect on TestMu AI forces your iOS app to use its private container instead of the shared group container, which becomes inaccessible after resigning on real devices. Set one capability to preserve file access during Appium tests.
-
-**Supported on:** Real devices
-
+# Group Folder Redirect for iOS Apps
+<RealDeviceTag value="Real Device" /> 
 <BrandName /> now supports **Group Folder Redirect** for iOS apps during automation testing with Appium.  
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 
@@ -47,7 +44,7 @@ This feature is being rolled out gradually. Please contact your <BrandName /> su
 
 ### 1. Upload Your Application
 - Upload your iOS app to <BrandName /> following standard procedures.  
-- Refer to the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-via-the-rest-api) documentation for detailed instructions.  
+- Refer to the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-your-application) documentation for detailed instructions.  
 - Note the **App ID** returned after uploading, you will use this in your automation scripts.
 
 ---

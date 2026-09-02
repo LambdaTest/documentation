@@ -1,3 +1,5 @@
+# How to Perform Dependent Test Case Discovery
+
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Dependent tests signify that one test relies on the outcome of another. To achieve this, TestNG offers the '**dependsOnMethods**' attribute within @Test annotations.
@@ -95,7 +97,6 @@ discoveryFlags: ["-DexcludedGroups=database"]
 ```
 
 This discovers all test of groups except database.
-
 
 Alternatively, you can also specify the groups or excluded groups directly in the pom.xml file using the Maven Surefire Plugin
 

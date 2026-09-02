@@ -1,10 +1,6 @@
-# How to Run XCUITest on TestMu AI
+# XCUI Testing on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Running XCUITest on TestMu AI executes Apple's XCTest-based UI automation for your iOS apps across 5000+ real devices and OS combinations. Upload your app and test bundle, configure capabilities, trigger the run, and review results on the TestMu AI dashboard.
-
-**Supported on:** Real &amp; Virtual devices
 
 Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. TestMu AI lets you perform automated app testing of your iOS apps using XCUITest across 5000+ real devices and OS combinations.
 
@@ -165,3 +161,41 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 --header "Content-Type: application/json" ^
 --data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"iPhone 11-14.0\",\"iPhone 12 Pro-15.0\",\"iPhone X-13.0\"],\"video\":true,\"queueTimeout\":10800,\"isVirtualDevice\":true,\"idleTimeout\":150,\"devicelog\":true,\"network\":false,\"build\":\"Proverbial-XCUITest\"}"
 ```
+
+## Using the XCUITest Agent Skill with TestMu AI
+
+The [xcuitest-skill](https://github.com/LambdaTest/agent-skills/tree/main/xcuitest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The xcuitest-skill package includes:
+
+```
+xcuitest-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing XCUITest Agent Skill
+
+Install a XCUITest Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/xcuitest-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/xcuitest-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only xcuitest-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

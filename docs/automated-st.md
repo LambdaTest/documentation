@@ -19,10 +19,6 @@ canonical: https://www.testmuai.com/support/docs/automated-screenshot-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -62,8 +62,6 @@ frameworkName: extent-native
 - Define the `location` where the JSON reports will be stored.
 - Provide a meaningful `frameworkName` for the Extent Native Reports.
 
-
-
 ## Conclusion
 
 By following these steps, your HyperExecute job will generate Extent Native Reports, providing a consolidated HTML report derived from individual JSON reports. This enhancement allows customers to access comprehensive and standardized reports conveniently at the conclusion of their HyperExecute jobs.

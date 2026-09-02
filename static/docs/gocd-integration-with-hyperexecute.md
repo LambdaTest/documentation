@@ -19,7 +19,6 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
-
 ### Step 1: Start the GoCD Server
 
 - Go to the gocd/bin folder and run the following commands:
@@ -37,8 +36,6 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
 - Click on the New Pipeline Button.
 
-
-
 ### Step 2: Configure the GoCD Pipeline
 
 #### Part 1: Material
@@ -51,8 +48,6 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
 - Enter the **Username** and **Password** of your GitHub. (It is required in case the access to the repo needed authentication).
 
-
-
 #### Part 2: Pipeline Name
 
 - Enter your **Pipeline Name**.
@@ -62,8 +57,6 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 A Stage is a group of Jobs and a Job is a work which needs to be executed.
 
 - Enter your **Stage Details**.
-
-
 
 #### Part 4: Job and Tasks
 
@@ -84,27 +77,19 @@ chmod +x hyperexecute
 
 - Click on **Save + Run This Pipeline** button.
 
-
-
 ### Job Running
 
 Now the Job is executed and running. You can check the status of Job in the:
 
 - #### GoCD GUI
 
-
 - #### GoCD Console
-
 
 - #### HyperExecute Dashboard
 
 After the build is successful, go to your HyperExecute Dashboard and check the output of the triggered Job.
 
-
-
 - #### Job Status Passed
-
-
 
 ## Sample Workflow File
 

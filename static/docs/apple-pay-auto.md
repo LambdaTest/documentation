@@ -1,10 +1,6 @@
-# How to Automate Apple Pay on TestMu AI
+# Apple Pay Automation on Real Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Automating Apple Pay on TestMu AI validates end-to-end payment flows on real iOS devices. Provision Wallet with sandboxed test cards, inject payment details, confirm the payment sheet, and enter the device passcode to verify checkout without relying on production cards.
-
-**Supported on:** Real devices
 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.
 
@@ -18,7 +14,7 @@ This feature is available exclusively with the **Real Device Plus Automation Clo
 To unlock this feature, purchase or upgrade to the required [plan](https://www.testmuai.com/pricing/). If you need assistance, please contact your TestMu AI support representative, reach out to our **[24×7 Chat Support]**, or email us at **support@testmuai.com**.
 
 **Automating with Playwright?**
-Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
+This guide covers the **Appium** flow. Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
 
 ## Use Cases
 
@@ -54,7 +50,7 @@ The `applePayCardType` array follows a **priority order**. The order you provide
 
 ### Step 1: Upload Your App to TestMu AI
 
-1. **Uploading Your App** - Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/#upload-via-the-rest-api) guide.
+1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 

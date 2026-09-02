@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-how-to-resolve-version-conflict
-title: How to Resolve Version Conflict Issues
-toc_max_heading_level: 2
+title: How to Resolve Version Conflict Issues
 hide_title: false
-sidebar_label: "Resolve Version Conflict Issues"
+sidebar_label: How to Resolve Version Conflict Issues
 description: Resolve version conflicts by ensuring consistency across YAML, package files, and environment variables for frameworks like Selenium, Playwright, and Cypress to avoid errors.
 keywords:
     - hyperexecute yaml

@@ -1,8 +1,7 @@
 ---
 id: kaneai-failure-conditions
-title: How Failure Conditions Work in KaneAI
-hide_title: true
-toc_max_heading_level: 2
+title: Failure Conditions
+hide_title: false
 sidebar_label: Failure Conditions
 description: Failure Conditions for test steps to decide on the behavior of test execution & status on failure of individual steps
 keywords:
@@ -10,12 +9,14 @@ keywords:
   - assertion
   - hard assertion
   - kane ai instructions
-url: https://www.testmuai.com/support/docs/kaneai-failure-conditions/
+url: https://www.testmuai.com/support/docs/kane-ai-failure-conditions/
 site_name: TestMu AI
 slug: kaneai-failure-conditions/
 canonical: https://www.testmuai.com/support/docs/kaneai-failure-conditions/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -36,21 +37,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Failure Conditions",
-          "item": `${BRAND_URL}/support/docs/kaneai-failure-conditions`
+          "item": `${BRAND_URL}/support/docs/kane-ai-failure-conditions`
         }]
       })
     }}
 ></script>
-
-# How Failure Conditions Work in KaneAI
-***
-
 Failure conditions in KaneAI allow you to define how the test execution in a Test Run should behave when a particular test step fails. These conditions give you fine-grained control over how failures are handled at the step level and how they impact the overall execution result.
 
 Failure conditions are configurable for every type of command or step in KaneAI Authoring mode and are essential for aligning your tests with your quality and failure tolerance.
 
 :::tip
-Failure conditions are set in Authoring mode but apply only during a Test Run. Your test flow while authoring and code generation are not affected by this setting.
+Failure conditions are set in the Authoring mode but they are applicable only in Test Run your Test's flow while authoring & code generation will not be affected by this. 
 :::
 
 Below are the failure conditions available in KaneAI:
@@ -70,11 +67,10 @@ You can set the failure condition in the Authoring mode by clicking on the three
 >This change will not affect your existing test cases or the generated code where you’ve used hard/soft assertions. However, when you edit these tests, the new failure conditions will be applied.
  
 ## Default Failure Condition Setting
-***
 
 By default, the failure condition for each step is set to **Fail test immediately**, ensuring that the execution stops as soon as a step fails.
 
-The default failure condition can be configured at the Organization level in the [KaneAI failure conditions settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/failure-conditions), within the **Org Product Preferences** section of **Organization settings**.
+The default failure condition can be configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, [here](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/failure-conditions).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/failure-conditions/failure-conditions-org-settings.png').default} alt="failure_conditions_default_settings" className="doc_img"/>
 
@@ -85,11 +81,3 @@ The default failure condition can be configured at the Organization level in the
 :::info
 If you are transitioning from a Hard & Soft Assertions approach, think of **Fail test immediately** as your **Hard Assertion**, which halts on assertion failure, and **Warn but continue execution** as your **Soft Assertion**, which logs the failure but continues execution.
 :::
-
-## Next Steps
-***
-
-Continue with these guides:
-
-- [KaneAI HyperExecute Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/): Execute a test run where your failure conditions take effect.
-- [KaneAI Test Run Instance View](/support/docs/kaneai-test-run-instance-view/): Inspect which step failed and how the condition was applied.

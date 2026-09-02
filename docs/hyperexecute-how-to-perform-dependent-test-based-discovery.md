@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-how-to-perform-dependent-test-based-discovery
-title: How to Perform Dependent Test Case Discovery
-toc_max_heading_level: 2
+title: How to Perform Dependent Test Case Discovery
 hide_title: false
-sidebar_label: "Dependent Test Case Discovery"
+sidebar_label: How to Perform Dependent Test Case Discovery
 description: How to Perform Dependent Test Case Discovery
 keywords:
     - hyperexecute yaml

@@ -2,8 +2,7 @@
 id: web-scanner-visual-scan
 title: Starting a Visual UI Scan with Web Scanner
 hide_title: false
-sidebar_label: Visual Testing with Web Scanner
-displayed_sidebar: VisualRegressionTestingSidebar
+sidebar_label: Starting a Visual UI Scan
 description: Learn how to configure a Visual UI scan, including default settings for browsers and resolutions, and advanced options using a SmartUI JSON config.
 keywords:
   - testmu ai

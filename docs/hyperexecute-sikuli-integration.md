@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-sikuli-integration
-title: Integrate Sikuli with HyperExecute
-toc_max_heading_level: 2
+title: Integrate Sikuli with HyperExecute
 hide_title: false
-sidebar_label: "Sikuli"
+sidebar_label: Sikuli
 description:  Automate the visual testing of any software by integrating Sikuli with HyperExecute.
 keywords:
   - TestMu AI Hyperexecute
@@ -176,30 +175,3 @@ OR use this command if you have not exported your username and access key in the
 </div>
 
 > Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
-
-## Leveraging Custom Libraries in SikuliX for Advanced Visual Verification
-
-Suppose you want to automate interactions with a desktop application, but traditional frameworks like Selenium fall short because the UI elements lack proper identifiers.
-
-SikuliX, an automation solution, adept at automating interactions with the graphical user interface (GUI) of desktop computers running Windows, Mac, or select Linux/Unix distributions. With its robust image recognition capabilities of OpenCV, SikuliX excels in scenarios where traditional automation frameworks lack access to GUI internals or application source code.
-
-SikuliX extends its versatility through support for multiple scripting languages, enabling developers to leverage their preferred language for automation tasks. The supported scripting languages include:
-
-- Python (level 2.7, supported by Jython)
-- RobotFramework text-scripts
-- Ruby (level 1.9 and 2.0, supported by JRuby)
-- JavaScript (supported by the Java Scripting Engine)
-
-### HyperExecute's Role in SikuliX Automation
-
-HyperExecute serves as the backbone for managing and executing SikuliX automation workflows efficiently. By leveraging HyperExecute, developers can ensure seamless execution of SikuliX scripts across diverse environments, without being constrained by platform-specific dependencies or configurations.
-
-### Benefits of Automating SikuliX with HyperExecute
-
-- **Build Visual UI tests:** SikuliX handles element identification, while HyperExecute orchestrates test execution and reporting.
-
-- **Run tests across different machines:** HyperExecute ensures consistent environments regardless of local configurations.
-
-- **Automate legacy applications:** SikuliX tackles even outdated UIs, making HyperExecute your vintage automation champion.
-
-- **Leverage multiple languages:** Choose your preferred scripting language for SikuliX, knowing HyperExecute handles the execution infrastructure.

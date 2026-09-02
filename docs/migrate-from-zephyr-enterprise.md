@@ -289,7 +289,7 @@ Behaviour described in this guide comes from the Test Manager product docs:
 | Layouts, field mapping, preview, skipped rows | [Import Test Cases from CSV](/support/docs/csv-import/) |
 | Creating custom fields before import | [System and Custom Fields](/support/docs/system-and-custom-fields/) |
 | Connecting Jira before import | [Link Jira Issues with Test Manager](/support/docs/link-jira-issues-with-test-manager/) |
-| Editing fields in bulk after import | [Bulk Update Test Case Fields](/support/docs/system-and-custom-fields/#bulk-update-fields) |
+| Editing fields in bulk after import | [Bulk Update Test Case Fields](/support/docs/bulk-update-fields/) |
 | Exporting from Test Manager to verify results | [Export Test Cases](/support/docs/export-test-cases/) |
 | Organizing test cases after import | [Copy and Move Test Cases](/support/docs/copy-and-move-support-for-test-cases/) |
 

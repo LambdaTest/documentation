@@ -1,9 +1,8 @@
----
+﻿---
 id: saucelabs-to-hyperexecute-migrate
 title: Sauce Labs to HyperExecute
-toc_max_heading_level: 2
 hide_title: true
-sidebar_label: "Migrate from SauceLabs"
+sidebar_label: Sauce Labs to HyperExecute
 description: Understand how to migrate from Sauce Labs to HyperExecute
 keywords:
   - TestMu AI HyperExecute
@@ -49,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ## Overview
 
-Sauce Labs and HyperExecute are both cloud-based testing platforms that provide a wide range of browsers and devices for running automated tests. However, HyperExecute provides you with a variety of [features](/support/docs/getting-started-with-hyperexecute/#key-features-of-hyperexecute) to help you manage and analyze your test results more easily and efficiently.
+Sauce Labs and HyperExecute are both cloud-based testing platforms that provide a wide range of browsers and devices for running automated tests. However, HyperExecute provides you with a variety of [features](/support/docs/key-features-of-hyperexecute) to help you manage and analyze your test results more easily and efficiently.
 
 By making the switch to HyperExecute, you're not just migrating; you're upgrading your entire testing experience. This document ensures that you have all the information required for a successful migration. Whether you're driven by cost-efficiency, scalability, performance, or advanced features, HyperExecute is the perfect choice for your automated testing needs.
 
@@ -63,11 +62,11 @@ There are several benefits to migrating your tests from Sauce Labs to HyperExecu
 
 - **Test Orchestration :** HyperExecute is a cloud-based Test Orchestration platform that enables teams to run tests efficiently across multiple devices and browsers, featuring parallel execution, smart test distribution, automatic test reordering, retry logic, and real-time reporting and analytics.
 
-- **Cost-Efficiency :** HyperExecute doesn't just offer superior [features](/support/docs/getting-started-with-hyperexecute/#key-features-of-hyperexecute); it's also cost-effective. By reducing testing time and enhancing productivity, you can optimize your testing budget, allocating resources to other critical areas of your project.
+- **Cost-Efficiency :** HyperExecute doesn't just offer superior [features](/support/docs/key-features-of-hyperexecute); it's also cost-effective. By reducing testing time and enhancing productivity, you can optimize your testing budget, allocating resources to other critical areas of your project.
 
 - **Seamless Integration :** HyperExecute provides out-of-the-box support for popular tools such as [Tosca](/support/docs/tosca-integration-with-hyperexecute/), [Katalon](/support/docs/katalon-integration-with-hyperexecute/), and [ACCELQ](/support/docs/hyperexecute-accelq-integration/). This means you can effortlessly integrate your testing workflow with your preferred tools, streamlining your testing processes.
 
-- **CI/CD Tools :** We offer robust support for [CI/CD](/support/docs/getting-started-with-hyperexecute/) tools, allowing you to automate testing and release processes seamlessly, resulting in faster software delivery.
+- **CI/CD Tools :** We offer robust support for [CI/CD](/support/docs/hyperexecute-integration-with-ci-cd-tools/) tools, allowing you to automate testing and release processes seamlessly, resulting in faster software delivery.
 
 ## Steps to Migrate
 
@@ -77,7 +76,7 @@ To migrate your Test from Sauce Labs to HyperExecute, you need to follow the bel
 
 ### Step 1: Create your account in HyperExecute
 
-Before starting the migration process, make sure you have created your account in [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/) and that you have also configured your HyperExecute [UserName and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
+Before starting the migration process, make sure you have created your account in [HyperExecute](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/) and that you have also configured your HyperExecute [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ### Step 2: Configure CLI and Environment Variables
 
@@ -167,7 +166,7 @@ jobLabel: [selenium-testng, mac, autosplit, migration]
 
 ```
 
-- Replace the Sauce Labs Hooks with [Lambda Hooks](/support/docs/lambda-hooks/) (if required). 
+- Replace the Sauce Labs Hooks with [<BrandName /> Hooks](/support/docs/lambda-hooks/) (if required). 
 - Update the Sauce Labs Dependencies and Capabilities.
 
 **Sauce Labs** 

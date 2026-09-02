@@ -30,13 +30,9 @@ testRunnerCommand: <your_test_execution_command>
 ```
 You can simply add the path to the folder of files that you want to run in the _**featureFilePaths**_ argument, and your test execution command under the _**testRunnerCommand**_ parameter.
 
-
-
 #### 2. What can I do with pre steps and post steps in the YAML file?
 
 Pre and post steps open doors to large amounts of flexibility. You can add certificates just before running tests, start a background process to facilitate testing, compile applications, download dependencies and everything else that you need to do just before and after running your tests in the CI or your system.
-
-
 
 #### 3. How can I install private artifactory dependencies that can only be accessed on my organization’s internal network on HyperExecute Machines?
 
@@ -56,7 +52,6 @@ Moreover, add one of the following parameters in the `preDirectives` field depen
     `npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`
     `npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`
 
-
 Therefore, if you want to use a tunnel for connecting HyperExecute with your organization (that is working with a maven project), you should configure your YAML file like this:
 
 ```yaml
@@ -75,8 +70,6 @@ commands:
 
 > **Note**: The variables ‘LT_PROXY_HOST’ and ‘LT_PROXY_PORT’ are exposed with the tunnel proxy value by default on HyperExecute machines when the tunnel flag is set to _true_ in the HyperExecute YAML.
 
-
-
 #### 4. How can I install and set a private node registry on the HyperExecute Machine?
 
 You can do this by adding the following command in the preDirectives section of the HyperExecute YAML file.
@@ -89,8 +82,6 @@ commands:
 
 **Note**: Replace the placeholder value &lt;artifactory_URL&gt; with the link to your private node registry.
 
-
-
 #### 5. Can I run WDIO tests on HyperExecute via proxy?
 
 Yes, you can. Use the following parameters in the testRunnerCommand of the HyperExecute YAML file:
@@ -98,7 +89,6 @@ Yes, you can. Use the following parameters in the testRunnerCommand of the Hyper
 ```bash
 testRunnerCommand: $env:GLOBAL_AGENT_NO_PROXY="hub.lambdatest.com";$env:GLOBAL_AGENT_HTTP_PROXY=$env:LT_PROXY
 ```
-
 
 #### 6. I want to use a specific version of gradle for my project. How can I set that up on HyperExecute machines?
 
@@ -113,7 +103,6 @@ addons:
 version: "7.0"
 ```
 
-
 #### 7. I want to pass a specific package through npm in the YAML file,  instead of npm picking the package present in the directory. Can I do that with HyperExecute?
 
 You can accomplish this by running the following command in the preDirectives section of the YAML file:
@@ -125,7 +114,6 @@ commands:
 ```
 This command will install a package called **my_package.json** from the path that you have provided.
 
-
 #### 8. How can I use the Jenkins job choice parameters in the YAML file?
 
 You can do this by directly calling the parameter keys in the HyperExecute YAML file and use the Jenkins choice parameters.
@@ -136,8 +124,6 @@ testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 d
 ```
 In this example, **browser** and **version** are the two choice parameters from Jenkins, as shown in the image below. You can call them in the YAML file as &#36;&lbrace;browser&rbrace; and &#36;&lbrace;version&rbrace; in the testRunnerCommand or testDiscovery command.
 
-
-
 ```bash
 testDiscovery:
 type: raw
@@ -146,8 +132,6 @@ command: grep 'test name' src/test/java/${xml} | awk '{print$2}' | sed 's/name=/
 
 testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 dependency:resolve `-Dbrowser=${browser} `-Dversion=${version}
 ```
-
-
 
 #### 9. I run a lot of tests with the same YAML configurations. Is there any way where I can run my tests without specifying the same configurations over and over again?
 
@@ -162,9 +146,6 @@ yamls:
 
 To learn more about how to use this feature, go through [this page](/support/docs/hyperexecute-inherit-config/).
 
-
-
-
 #### 10. I want to test the code in my Git repository. Is there a way where I can accomplish that with HyperExecute?
 
 You can use the `sourcePayload` parameter for the same. Your test scripts are directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and uploaded through the HyperExecute CLI. To learn more about how this feature works, go through [this page](/support/docs/hyperexecute-how-to-configure-sourcePayload/).
@@ -177,29 +158,19 @@ ref: master
 accessToken: <your_personal_access_token>
 ```
 
-
-
 #### 11. I am running a non-hub based test on HyperExecute. How can I capture a video of it?
 
 You can use HyperExecute’s video recording feature even while running non-hub based tests (Selenium, Cypress, CDP are all hub-based). All you need to do is, set the `captureScreenRecordingForScenarios` flag to `true` in your [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file to capture the video of your test scenarios.
 
 `captureScreenRecordingForScenarios: true`
 
-
-
 You can access the recorded video on the Tasks page by clicking on the **Watch Video** button on the right-hand side of your test.
 
-
-
 You can use this feature if you want to trigger a command and want to record it. This will also be useful when you want to record any applications that were triggered on your desktop during the test execution process.
-
-
 
 #### 12. How to check if there is any private dependency in testng YAML?
 
 We can detect any private dependency in testng YAML using `analyze` flag in CLI.
-
-
 
 #### 13. How to handle Maven SSL Cert Error while executing the test?
 
@@ -209,13 +180,9 @@ Pass this maven arguments which require to handle mvn ssl cert errors
 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
 ```
 
-
-
 #### 14. Will my YAML parameters overwrite properties in my XML configuration?
 
 No, your XML configurations are not overwritten by YAML parameters.
-
-
 
 For more information on the HyperExecute YAML file, visit this [page](/support/docs/deep-dive-into-hyperexecute-yaml/).
 

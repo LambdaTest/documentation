@@ -294,14 +294,14 @@ command: npm install -g @lambdatest/smartui-cli
 If you encounter issues not covered here:
 
 - Review [CircleCI Documentation](https://circleci.com/docs/)
-- Check [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) for CLI-specific issues
-- Visit [TestMu AI Support](https://www.testmuai.com/support/) for additional resources
-- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support/)
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Visit [TestMu AI Support](https://www.testmuai.com/support) for additional resources
+- Contact support at support@testmuai.com or use [24/7 Chat Support](https://www.testmuai.com/support)
 
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli)
 - [CircleCI Documentation](https://circleci.com/docs/)
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

@@ -7,8 +7,6 @@ HyperExecute offers integrations with numerous CI/CD tools to assist you to:
 - Deliver faster
 - Reduce risk
 
-
-
 To integrate any CI pipeline with HyperExecute, follow these steps:
 
 1. **Download the HyperExecute CLI Binary:**
@@ -46,64 +44,35 @@ hyperexecute.exe –user LT_USERNAME –key LT_ACCESS_KEY –config path of the 
 
 Below are detailed instructions for CI/CD tool integrations to help you get the most out of HyperExecute.
 
-
 AWS CodePipeline Integration
-
-
 
 Azure DevOps Pipeline Integration
 
-
-
 GitHub Actions Pipeline Integration
-
-
 
 GitLab Pipeline Integration
 
-
-
 CircleCI Pipeline Integration
-
-
 
 Jenkins Integration
 
-
-
 Bitbucket Pipeline Integration
-
-
 
 Travis CI Integration
 
-
-
 TeamCity Integration
-
-
 
 GoCD Integration
 
-
-
 Bamboo CI Integration
 
-
-
 Semaphore Integration
-
-
-
 
 Want to know more about HyperExecute? Here’s a [link](/support/docs/getting-started-with-hyperexecute/) to our Documentation.
 
 >If your favourite CI/CD tool is not in the list mentioned above, then just give us a shout and we will have it ready shortly for you.
 
-
-
 ## Using the CI/CD Pipeline Agent Skill with TestMu AI
-
 
 The [cicd-pipeline-skill](https://github.com/LambdaTest/agent-skills/tree/main/cicd-pipeline-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
@@ -126,9 +95,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-
 ### Installing CI/CD Pipeline Agent Skill
-
 
 Install a CI/CD Pipeline Agent Skill using the command below:
 

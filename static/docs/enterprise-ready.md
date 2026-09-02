@@ -166,8 +166,8 @@ TestMu AI provides built-in capabilities to generate, manage, and protect the te
 **Documentation:**
 - [Test Data Generation Overview](/support/docs/test-data-generation/)
 - [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
-- [KaneAI Variables & Parameters](/support/docs/kane-ai-using-variables/)
-- [Network Data Masking for Selenium](/support/docs/selenium-mask-your-data/#network-data-masking)
+- [KaneAI Variables & Parameters](/support/docs/kaneai-variables-and-parameters/)
+- [Network Data Masking for Selenium](/support/docs/network-data-masking/)
 - [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2024/#version-231)
 
 ## Reporting & Analytics
@@ -255,7 +255,7 @@ TestMu AI provides tools for controlled test execution management and scheduled 
 
 **Documentation:**
 - [HyperExecute Workflows](/support/docs/hyperexecute-workflows/)
-- [Test Chains](/support/docs/hyperexecute-workflows/#hyperexecute-test-chains)
+- [Test Chains](/support/docs/hyperexecute-test-chains/)
 
 ## Product Assortment
 

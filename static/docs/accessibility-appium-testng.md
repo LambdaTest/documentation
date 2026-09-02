@@ -25,11 +25,7 @@ options.setCapability("accessibility", true);
 AppiumDriver driver = new AndroidDriver(new URL("https://mobile-hub.lambdatest.com/wd/hub"), options);
 ```
 
-Use the **official capability set** your account documentation lists for the current Appium version. The critical addition is `"accessibility": true`.
-
-
-`accessibility.autoscan` is a **web automation** capability and is **not supported on real devices**. On real devices, each screen you want covered has to be scanned with the `lambda-accessibility-scan` hook. See [Scan Configurations via Capabilities](/support/docs/accessibility-automation-scan-configurations/).
-
+Use the **official capability set** your account documentation lists for the current Appium version; the critical addition is `"accessibility": true`.
 
 ### 2. Call the scan hook after navigation
 

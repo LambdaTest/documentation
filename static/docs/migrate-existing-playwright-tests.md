@@ -1,12 +1,14 @@
-# How to Migrate Existing Playwright Tests to TestMu AI
+# Migrate Your Existing Playwright Tests
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If you already run Playwright tests on a local grid, you can move them to TestMu AI to execute the same scripts across real browsers and operating systems in the cloud. The migration takes only a few lines of change: you point Playwright at the TestMu AI CDP endpoint and pass a `capabilities` object that selects the browser and OS combination for each run.
+TestMu AI offers an online automation platform for test automation. Therefore you can easily migrate Playwright tests from your local grid to the TestMu AI platform.
 
-## Sample Playwright Script Running on a Local Machine
+In this documentation, we look at how to migrate your existing Playwright test scripts (or test suites) from your local grid to TestMu AI. This lets you automate Playwright scripts across real browsers and operating systems on TestMu AI cloud platform.
 
-Start from a working local test so you can see exactly which lines change during migration. The sample Playwright script below launches a browser on your local machine and runs the script.
+## Sample Playwright Script Running On A Local Machine
+
+With just a few lines of code tweaks in your test script, you can migrate your Playwright tests running on a local grid to TestMu AI. A sample Playwright script below launches a browser on your local machine and runs the script.
 
 ```js
 const { chromium } = require('playwright')
@@ -31,9 +33,9 @@ await browser.close()
 })()
 ```
 
-## Changes in Scripts to Run Playwright Tests on TestMu AI
+## Changes In Scripts To Run Playwright Tests On TestMu AI
 
-The local script uses `playwright['chromium'].launch`, which opens a browser on your own machine. To run the same test on TestMu AI, replace that launch call with a connection to the TestMu AI CDP endpoint, as shown below.
+The above script shows that `playwright['chromium'].launch` runs in a Chromium browser window. To run the test scripts on TestMu AI platform, you will need to add the following instead of `playwright['chromium'].launch`.
 
 ```js
 const { chromium } = require('playwright')
@@ -62,16 +64,46 @@ await browser.close()
 })()
 ```
 
-In the code snippet above, the `chromium.connect` method connects to the CDP endpoint at TestMu AI. The `capabilities` variable contains the parameters that assign a specific browser and OS combination to your test on TestMu AI.
+In the above code snippet, you need to connect to the CDP endpoint at TestMu AI using `chromium.connect` method. The `capabilities` variable contains additional parameters that enable a specific browser and OS combination to be assigned to your test on TestMu AI.
 
-## Selecting Browser-OS Combinations for Test Runs
+## Selecting Browser-OS Combinations For Test Runs
 
-You can run your script on any supported browser and OS combination. Specify the `browserName`, `browserVersion`, and `platform` in the `capabilities` JSON before calling the CDP endpoint.
+To run your script, you can choose any of the browsers and OS combinations. Just specify the browserName, browserVersion, platform in the capabilities JSON before calling the CDP endpoint.
 
-## Related Playwright Guides
+## Using the Playwright Agent Skill with TestMu AI
 
-Continue with the guides below to configure and expand your Playwright runs on TestMu AI.
+The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
-- [Set up the Playwright test execution environment](/support/docs/playwright-test-execution-setup/) covers capabilities for browsers, resolution, and debugging.
-- [Configure Playwright capabilities](/support/docs/capabilities-for-playwright/) documents the full capability reference.
-- [Use Playwright agent skills](/support/docs/playwright-agent-skills/) extends your runs with agent-based testing.
+The playwright-skill package includes:
+
+```
+playwright-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing Playwright Agent Skill
+
+Install a Playwright Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/playwright-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/playwright-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only playwright-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

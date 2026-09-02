@@ -157,7 +157,7 @@ Smart UI Testing is a powerful tool that enables you to execute regression testi
 
 HyperExecute now supports the Cypress framework, allowing teams to run their Cypress UI tests on our cloud infrastructure, thus helping teams improve the quality of their UI tests and reduce the time to test their applications.
 
-> To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](/support/docs/smartui-hooks-with-hyperexecute/) using HyperExecute.
+> To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](/support/docs/hyperexecute-smart-ui-testing-using-cypress/) using HyperExecute.
 
 ## Version 1.133.0
 

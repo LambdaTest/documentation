@@ -21,7 +21,6 @@ Before you begin, ensure you have the following:
 **Node.js Version Requirement**
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 
-
 ## Overview
 
 SmartUI Capture on HyperExecute combines the power of:
@@ -50,7 +49,6 @@ The first step is to create a SmartUI project in the dashboard. This project wil
 
 **Project Token**
 After creating the project, you will receive a `PROJECT_TOKEN`. Save this token securely as you'll need it in the next steps. The token format looks like: `123456#1234abcd-****-****-****-************`
-
 
 ## Step 2: Set Up Your Project Structure
 
@@ -109,7 +107,6 @@ cd smartui-playwright-sample
 
  View on GitHub
 
-
 ## Step 4: Configure Environment Variables
 
 Set up your environment variables for authentication and configuration.
@@ -118,65 +115,40 @@ Set up your environment variables for authentication and configuration.
 
 The `PROJECT_TOKEN` is required for SmartUI CLI capture commands.
 
-
-
-
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
-
-
-
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
-
-
-
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
-
-
-
 ### Set HyperExecute Credentials
 
 For HyperExecute, you'll need your LambdaTest username and access key.
-
-
-
 
 ```bash
 export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
 
-
-
-
 ```bash
 set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
-
-
-
 
 ```powershell
 $env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
 
-
-
-
 **Getting Your Credentials**
 - **Username and Access Key**: Available in your [LambdaTest Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile)
 - **Project Token**: Available in your SmartUI project settings after creation
-
 
 ## Step 5: Create URL Configuration Files
 
@@ -229,7 +201,6 @@ Each URL object supports the following properties:
 - Higher timeout values increase test execution time
 - Start with lower values (1000-3000ms) and increase if needed
 - Consider using `execute` options for more complex interactions
-
 
 ### Splitting URLs for Parallel Execution
 
@@ -318,7 +289,6 @@ Create `config.json` with your desired settings:
 
 **Advanced Configuration**
 For more configuration options, refer to the [SmartUI SDK Config Options](/support/docs/smartui-sdk-config-options/) documentation.
-
 
 ## Step 7: Create HyperExecute YAML Configuration
 
@@ -417,8 +387,7 @@ jobLabel: ['HYP', 'SmartUI', 'Capture', 'Parallel']
 | `matrix` | Matrix for parallel execution | Multiple URL files |
 
 **HyperExecute YAML Documentation**
-For detailed YAML configuration options, refer to the [HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config).
-
+For detailed YAML configuration options, refer to the [HyperExecute YAML Documentation](/support/docs/hyperexecute-yaml-version0.2/).
 
 ## Step 8: Execute Tests on HyperExecute
 
@@ -539,9 +508,6 @@ For detailed information, see the [Fetch Results Documentation](/support/docs/sm
 
 ### 1. URL Organization
 
-
-
-
 **Separate Test and Production URLs**
 
 Keep test and production URLs in separate files:
@@ -550,10 +516,6 @@ Keep test and production URLs in separate files:
 - `urlProd.json` - Production environment
 
 This allows you to test both environments independently.
-
-
-
-
 
 **Split Large URL Lists**
 
@@ -568,10 +530,6 @@ test/
 
 This enables better parallel execution and easier management.
 
-
-
-
-
 **Use Descriptive Names**
 
 Use clear, descriptive names for your URLs:
@@ -585,15 +543,9 @@ Use clear, descriptive names for your URLs:
 
 Avoid generic names like `"page1"` or `"test"`.
 
-
-
-
 ### 1.1. URL Grouping Strategies for Large Test Suites
 
 When working with large numbers of URLs (e.g., 1000+ URLs) that can be logically divided into sections or groups (e.g., Section 1: Product Category A, Section 2: Product Category B, Section 3: Product Category C, etc.), you have two primary strategies for organizing your SmartUI projects:
-
-
-
 
 **Single Project with Branching Strategy**
 
@@ -602,7 +554,7 @@ Use a single SmartUI project and leverage SmartUI's branching capabilities to or
 #### How It Works
 
 - **Single Project**: All URL groups/sections are managed in one SmartUI project
-- **Branching Strategy**: Use SmartUI's [Smart Git feature](/support/docs/smartui-git-branching-strategy/#smart-git-strategy) to create separate branches for each section/group
+- **Branching Strategy**: Use SmartUI's [Smart Git feature](/support/docs/smartui-smart-git-strategy/) to create separate branches for each section/group
 - **Unified Tracking**: All URLs and automation are tracked in a single project dashboard
 - **Independent Baselines**: Each branch maintains its own baseline and comparison history
 
@@ -685,10 +637,6 @@ npx smartui capture sections/section1_category_a.json --config config.json --bui
 - Teams requiring completely isolated section management
 - Organizations with different approval workflows per section
 - Projects where sections have vastly different configurations
-
-
-
-
 
 **Separate Projects Strategy**
 
@@ -792,9 +740,6 @@ export PROJECT_TOKEN="${PROJECT_TOKEN_CATEGORY_B}"
 - Projects with shared configurations
 - Teams preferring centralized management
 
-
-
-
 #### Decision Matrix
 
 Use this matrix to decide which strategy fits your needs:
@@ -841,9 +786,6 @@ npx smartui capture sections/category_a_staging.json --config config.json
 
 ### 2. Configuration Management
 
-
-
-
 **Select Relevant Browsers**
 
 Only test browsers that your users actually use:
@@ -857,10 +799,6 @@ Only test browsers that your users actually use:
 ```
 
 Avoid testing unnecessary browsers to reduce execution time and costs.
-
-
-
-
 
 **Optimize Viewport Sizes**
 
@@ -878,10 +816,6 @@ Test realistic viewport sizes:
 
 Focus on viewports your users actually use.
 
-
-
-
-
 **Optimize Wait Timeouts**
 
 Start with minimal timeouts and increase only when needed:
@@ -894,13 +828,7 @@ Start with minimal timeouts and increase only when needed:
 
 Higher timeouts increase execution time.
 
-
-
-
 ### 3. HyperExecute Configuration
-
-
-
 
 **Optimize Concurrency**
 
@@ -911,10 +839,6 @@ concurrency: 3  # For 20-30 URLs
 ```
 
 Too high concurrency may cause resource issues.
-
-
-
-
 
 **Set Realistic Timeouts**
 
@@ -927,10 +851,6 @@ testSuiteTimeout: 150    # 2.5 hours per suite
 
 Account for network latency and page load times.
 
-
-
-
-
 **Enable Dependency Caching**
 
 Cache node_modules to speed up subsequent runs:
@@ -942,9 +862,6 @@ cacheDirectories:
 ```
 
 This significantly reduces setup time.
-
-
-
 
 ### 4. Build Naming
 
@@ -967,9 +884,6 @@ Use descriptive build names that include:
 
 ### Common Issues and Solutions
 
-
-
-
 **Issue**: `PROJECT_TOKEN is not set` or authentication failures
 
 **Solutions**:
@@ -987,10 +901,6 @@ echo %PROJECT_TOKEN%  # Windows CMD
 3. Verify token in SmartUI dashboard project settings
 
 4. For HyperExecute, also verify `LT_USERNAME` and `LT_ACCESS_KEY`
-
-
-
-
 
 **Issue**: Errors with SmartUI CLI v4.x.x
 
@@ -1012,10 +922,6 @@ nvm use 20.3
 npm --version
 ```
 
-
-
-
-
 **Issue**: Tests timing out or incomplete captures
 
 **Solutions**:
@@ -1036,10 +942,6 @@ testSuiteTimeout: 300
 
 3. Check network connectivity and page load times
 
-
-
-
-
 **Issue**: Some URLs not captured or missing in dashboard
 
 **Solutions**:
@@ -1048,10 +950,6 @@ testSuiteTimeout: 300
 3. Ensure `waitForTimeout` is sufficient for page load
 4. Review SmartUI dashboard for error messages
 5. Check HyperExecute logs for execution errors
-
-
-
-
 
 **Issue**: Tests failing with parallel execution
 
@@ -1065,20 +963,13 @@ concurrency: 1  # Start with 1, increase gradually
 3. Check system resources and network bandwidth
 4. Verify HyperExecute account limits
 
-
-
-
-
 **Issue**: HyperExecute YAML parsing errors
 
 **Solutions**:
 1. Validate YAML syntax using online validators
 2. Check indentation (YAML is space-sensitive)
 3. Verify all required fields are present
-4. Review [HyperExecute YAML documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config)
-
-
-
+4. Review [HyperExecute YAML documentation](/support/docs/hyperexecute-yaml-version0.2/)
 
 ### Debugging Tips
 
@@ -1158,7 +1049,7 @@ testSuites:
 
 Now that you've set up SmartUI Capture with HyperExecute, explore these resources:
 
-- **[SmartUI Dashboard Guide](/support/docs/smartui-project-settings/#projects-page)**: Learn to manage tests and approve changes
+- **[SmartUI Dashboard Guide](/support/docs/smartui-guided-walkthrough/)**: Learn to manage tests and approve changes
 - **[Baseline Management](/support/docs/smartui-baseline-management/)**: Understand baseline workflows
 - **[Handling Dynamic Content](/support/docs/smartui-handle-dynamic-data/)**: Test pages with dynamic elements
 - **[Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/)**: Comprehensive troubleshooting solutions
@@ -1169,8 +1060,8 @@ Now that you've set up SmartUI Capture with HyperExecute, explore these resource
 
 ## Additional Resources
 
-- [SmartUI CLI Documentation](/support/docs/smartui-cli-complete-reference/) - Complete CLI guide
+- [SmartUI CLI Documentation](/support/docs/smartui-cli/) - Complete CLI guide
 - [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options/) - All configuration options
-- [HyperExecute YAML Reference](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) - YAML configuration details
+- [HyperExecute YAML Reference](/support/docs/hyperexecute-yaml-version0.2/) - YAML configuration details
 - [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) - Common issues and solutions
 - [LambdaTest Support](https://www.testmuai.com/support) - Get help from our support team

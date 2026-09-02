@@ -1,8 +1,8 @@
 ---
 id: button-text-click
-title: How to Click Buttons by Text (OCR) on TestMu AI
+title: Button Click By Text (OCR)
 sidebar_label: Button Click By Text
-description: Click a button by its visible text or icon description using OCR on TestMu AI when native locators are unavailable, across Android and iOS devices.
+description: Click a button by its visible text or icon description using OCR on LambdaTest Real Device Cloud. Works across Android & iOS real and virtual devices when native locators are unavailable.
 keywords:
   - button click by text
   - OCR button click
@@ -26,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -46,15 +48,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Click Buttons by Text (OCR) on TestMu AI",
+          "name": "Button Click By Text",
           "item": `${BRAND_URL}/support/docs/button-text-click/`
         }]
       })
     }}
 ></script>
-Button Click by Text on TestMu AI uses OCR to click UI elements by their visible text or icon description when native locators fail. Powered by an LLM, it accepts natural language labels and works across Android and iOS devices.
-
-**Supported on:** Real &amp; Virtual devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+Button Click By Text is an OCR-powered feature that allows you to click UI elements using their visible text or icon description when traditional locator strategies are not feasible.
 
 Because the feature is powered by an LLM, you can also provide a natural language description of an icon (for example, "label": "search icon" or "label": "three-dot menu"), and the system will intelligently identify and click the matching element on the screen.
 

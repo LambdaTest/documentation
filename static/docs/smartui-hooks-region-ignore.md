@@ -149,5 +149,5 @@ Coordinates are validated at two levels. Note that only the **format** check hap
 - [SmartUI Hooks: Layout, Full-Page Screenshots, and Smart Ignore](/support/docs/smartui-hooks-layout-fullpage-smartignore/)
 - [Set SmartUI Comparison Modes at the Session Level](/support/docs/smartui-comparison-capabilities/)
 - [Take a Screenshot of a Specific Element (SmartUI Hooks)](/support/docs/smartui-hooks-element-screenshot/)
-- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/smartui-project-settings/)
+- [Handling Dynamic Data with DOM Configuration and Options](/support/docs/html-dom-smartui-options/)
 - [Selenium Visual Regression](/support/docs/selenium-visual-regression/)

@@ -1,8 +1,10 @@
-# How to Run App Tests on Emulators on TestMu AI
+# App Automation Using Emulators and Simulators on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-App automation on TestMu AI runs mobile app tests across cloud-based emulators and simulators, eliminating physical devices while validating functionality across many configurations. It supports the Appium framework, letting you clone a sample project, upload your app, and set capabilities.
+TestMu AI enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations.
+
+In this documеntation, learn how to run app automated tests on Emulators and Simulators using TestMu AI virtual testing cloud.
 
 **Note**
 

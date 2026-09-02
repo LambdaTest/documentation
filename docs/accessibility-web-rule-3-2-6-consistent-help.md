@@ -1,0 +1,45 @@
+---
+id: accessibility-web-rule-3-2-6-consistent-help
+title: Consistent Help (3.2.6)
+sidebar_label: Consistent Help (3.2.6)
+description: Rule-level Accessibility guidance for Consistent Help (WCAG 3.2.6 Level A).
+slug: accessibility-web-rule-3-2-6-consistent-help/
+---
+
+# Consistent Help (3.2.6)
+
+If a set of web pages provides help mechanisms (contact information, chat, FAQ links, self-help options), they must appear in the same relative order on each page.
+
+
+:::info WCAG Reference
+**Applies to:** WCAG 2.2
+**Introduced in:** WCAG 2.2 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html)
+:::
+
+
+## What this rule checks
+
+The scanner verifies that help-related UI elements maintain consistent placement and ordering across pages within the same site.
+
+## Why it matters
+
+Users with cognitive disabilities rely on predictable patterns to find help. If a help link or chat button moves to a different position on every page, users must search for it each time, increasing cognitive load and frustration.
+
+## Common failure patterns
+
+- a "Contact Support" link in the footer on some pages and in the header on others
+- a help chat widget that appears on the right on some pages and the left on others
+- FAQ links included on product pages but missing from checkout pages
+- help navigation items in a different order across different sections of the site
+
+## Remediation guidance
+
+- place help mechanisms in the same relative position across all pages (e.g., always last in the footer)
+- use a shared layout component to ensure consistent ordering automatically
+- if multiple help options exist, keep their order fixed (e.g., FAQ, then Chat, then Email)
+- audit help element placement across page templates to confirm consistency
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

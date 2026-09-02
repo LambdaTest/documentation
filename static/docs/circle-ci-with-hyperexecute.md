@@ -1,3 +1,5 @@
+# CircleCI Integration with Hyperexecute
+
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 CircleCI allows you to build fully automated pipelines from testing to deployment, freeing up your time to focus on the real work of innovation. Using CircleCI, you can automate your entire testing suite for new commits, reducing the possibility of human error, while also automating deploys with orbs.
@@ -5,8 +7,6 @@ CircleCI allows you to build fully automated pipelines from testing to deploymen
 This document will show you how to integrate CircleCI Pipeline with HyperExecute to greatly shorten your test cycles.
 
 ## How To Integrate CircleCI Pipeline with HyperExecute
-
-
 
 To integrate CircleCI Pipeline with HyperExecute, follow the below steps:
 
@@ -17,9 +17,7 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
-
 ### 1. Log into your CircleCI account
-
 
 ### 2. Create a New Project
 
@@ -28,8 +26,6 @@ Follow these steps to create a new project in CircleCI:
 - In CircleCI, click **Projects** in the sidebar.
 
 - Find your project and click the blue **Set Up Project** button next to it.
-
-
 
 If you cannot see your project, check that you have selected the correct organization in the top left-hand corner of CircleCI.
 
@@ -78,23 +74,12 @@ CircleCI then uses the specified config.yml file to run your pipeline. You can s
 
 To make changes to your pipeline, either edit the .circleci/config.yml file in your repo, or click the ellipsis next your project in the Dashboard and choose **Configuration File**.
 
-
-
-
 ### 4. Run Your Job
 - Once your changes are made and your configuration is valid, you may commit and re-run the pipeline by clicking the **Save and Run** button.
 
-
-
 - A modal will pop up, and you will see the option to commit on the branch you are working from, or you can choose to create a new branch for the commit.
 
-
-
-
-
-
 **Below is an example of a HyperExecute job that was triggered through the above pipeline:**
-
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

@@ -1,4 +1,4 @@
-# How to View Selenium Test Results on TestMu AI
+# Explore the Automation Dashboard
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -35,7 +35,7 @@ It displays:
 
 Use the action buttons next to the test ID to copy the ID, create an issue, rename, share, or delete the test.
 
-Use the **Re-Run** button to execute the test again from the dashboard. See [Re-Run Automation Tests](/support/docs/debugging-options/#re-run-automation-tests).
+Use the **Re-Run** button to execute the test again from the dashboard. See [Re-Run Automation Tests](/support/docs/rerun-automation-tests/).
 
 Use **Mute Test...** in the test's options menu to keep a known-broken or known-flaky test out of the build's pass/fail verdict and counts. The test still runs and still reports its real result. See [Mute Test Scenarios](/support/docs/mute-test-scenarios/).
 
@@ -55,8 +55,11 @@ Watch a full video playback of your test execution to see exactly what happened 
 
 ## Next Steps
 
-Continue with these related guides:
+Now that you know how to read the dashboard, explore more ways to manage and debug your tests.
 
-- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
-- [Debugging Options](/support/docs/debugging-options/)
-- [Error Messages](/support/docs/error-messages/)
+- [Filter your tests](/support/docs/filter-your-selenium-tests/) - narrow down results by browser, OS, status, or tags
+- [Share test results](/support/docs/sharing-test-results/) - send results to teammates
+- [Mark as bug](/support/docs/mark-as-bug-in-automation-testing/) - file a bug directly from a test session
+- [Mute test scenarios](/support/docs/mute-test-scenarios/) - stop a known-broken test from failing the build
+- [Debug your tests](/support/docs/debugging-options/) - enable extended logging for deeper analysis
+- [Group tests with tags](/support/docs/group-tests-using-custom-tags/) - organize tests using custom tags

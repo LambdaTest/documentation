@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-snooper
-title: Using Snooper Command on Hyperexecute
-toc_max_heading_level: 2
+title: Using Snooper Command on Hyperexecute
 hide_title: false
-sidebar_label: "Snooper"
+sidebar_label: Using Snooper on Hyperexecute
 description: Learn more about Using Snooper on Hyperexecute
 keywords:
   - TestMu AI Hyperexecute

@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-shared-cloud-usage-limit
 title: Daily Usage Limit Per Organization | HyperExecute
-toc_max_heading_level: 2
 hide_title: false
-sidebar_label: "Daily Usage Limit"
+sidebar_label: Daily Usage Limit Per Organization
 description: TestMu AI enforces a daily test execution time limit at the organization level, based on the number of concurrent sessions, to ensure fair usage and system stability.
 keywords:
   - over-exploitation
@@ -38,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Daily Usage Limit",
-          "item": `${BRAND_URL}/support/docs/hyperexecute-shared-cloud-usage-limit/`
+          "item": `${BRAND_URL}/support/docs/daily-usage-limit/`
         }]
       })
     }}

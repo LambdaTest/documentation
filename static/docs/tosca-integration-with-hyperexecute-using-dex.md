@@ -18,25 +18,17 @@ This documentation provides a detailed guide on seamlessly integrating Tosca wit
 
 - Click on the **Setup a New Project** button.
 
-
-
 - Select **Tosca with DEX** tool. Enter your **Project Name**. Click on Continue.
-
-
 
 ### Step 2: Manage your License and Credentials
 
 - Select the **Type** as Cloud License. Enter the **License Details**, i.e. Username and Password with which you want to execute your tests. **Cloud Server id** field is optional.
-
-
 
 - Now select your **Database Type**. For the demo purpose, we are using Oracle. Choose how you want to establish the connection, i.e, **via Connection Data** or **via Connection String**, to access the common repository associated with your workspace.
 
 For demo purposes, we are selecting the **Connection String**. Enter the connection string for your database.
 
 Enter the **Workspace Details**, i.e., Username (mandatory) and Password (optional), that you want to use for this project. Click on the **Continue** button.
-
-
 
 ### Step 3: Configure DEX Server Details
 
@@ -48,25 +40,17 @@ Enter the **Workspace Details**, i.e., Username (mandatory) and Password (option
 
 Click on **Save** button.
 
-
-
 ### Step 4: Execute Your Project
 
 - Please wait for the discovered test events to get populated. Now, select the desired test events that you want to execute, and then click on the **Run** button.
 
-
-
 - Now set the total number of **Concurrent Sessions** that you want to run on HyperExecute, enable the [Retry on Failure](#auto-retry-for-non-assertion-errors) (optional) and click on the **Run** button.
-
-
 
 ### Step 5: Check the Logs Status in Dashboard
 
 - Now go to the [**Jobs**](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/jobs) section and check the results.
 
 You can also download the video output.
-
-
 
 ## Auto Retry for Non-Assertion Errors
 
@@ -78,14 +62,8 @@ To enable the **Auto Retry** on Failure of tests:
 
 **Step 2:** Now enable the toggle button for **Retry on Failure** and click on the Run button.
 
-
-
 Now, once your execution is finished, the platform will automatically analyze your execution list results and logs.
 
-
-
 If your execution lists fail due to any non-assertion error, HyperExecute will automatically trigger those specific failed lists again.
-
-
 
 > **NOTE :** Your event name should be same with the execution list.

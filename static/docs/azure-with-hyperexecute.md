@@ -4,17 +4,9 @@
 
 Azure DevOps offers developer services that enable teams to plan their work, collaborate on code development, and build and deploy applications. Azure DevOps fosters a collaborative culture and set of processes that bring together software developers, project managers, and contributors. It enables organizations to create and improve products at a much faster rate than traditional software development approaches allow.
 
-
-
-
-
-
-
 This document will show you how to integrate Azure Devops Pipeline with HyperExecute to greatly shorten your test cycles.
 
 ## How To Integrate Azure DevOps Pipeline with HyperExecute
-
-
 
 To integrate Azure DevOps Pipeline with HyperExecute, follow the below steps:
 
@@ -25,21 +17,16 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
-
 ### 1. Log into your Azure DevOps account
 
 ### 2. Create a New Project
  Go to the top-right corner of your Azure Devops profile page and click the **+ New Project** button.
-
-
 
 Follow the prompts to successfully create a new project.
 
 ### 3. Create a New Pipeline
 
 Next, you need to create a new pipeline. To create a new pipeline, click the **Pipelines** button from the left panel or from the main page.
-
-
 
 ### 4. Configure the Azure Pipeline YAML to Execute HyperExecute CLI Binary:
 
@@ -80,26 +67,12 @@ Here, the **main** branch is selected as the test repository to commit the Azure
 
 > **Note**: Ensure that your username and access key for your TestMu AI account is visible in the script.
 
-
-
-
-
-
-
 ### 5. Run the Pipeline
 To run the new pipeline that you just created, click the **Run** or **Save and Run** button at the top-right corner of the page.
 
-
-
-
 **An example of how a test that is run on the Azure DevOps pipeline gets executed:**
 
-
-
-
 **An example of a HyperExecute job that was triggered through the above pipeline:**
-
-
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

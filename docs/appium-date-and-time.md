@@ -1,9 +1,9 @@
 ---
 id: appium-date-and-time
-title: How to Set Device Date and Time on TestMu AI
+title: Configure Date, Time & Hour Format on Real Devices Using Appium
 hide_title: true
 sidebar_label: Set Date and Time 
-description: Configure date, time, and hour format on real devices using Appium automation on TestMu AI, including 12-hour and 24-hour formats and network time sync.
+description: This document provides information about configuring date, time, and hour-format on Real Devices using Appium automation on TestMu AI.
 keywords:
  - Appium
  - TestMu AI
@@ -44,16 +44,21 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Set Device Date and Time on TestMu AI",
+          "name": "Set Custom Date, Time & Hour Format on Real Devices",
           "item": `${BRAND_URL}/support/docs/appium-date-and-time/`
         }]
       })
     }}
 ></script>
 
-# How to Set Device Date and Time on TestMu AI
+# Set Device Date & Time
 
-Setting device date and time on TestMu AI lets you configure custom date, time, and hour format on real devices during Appium automation, simulating scheduled events, alarms, chats, and time-format localization by using the lambda_executor hook with the updateDeviceSettings action.
+<BrandName /> now supports configuring custom **date**, **time**, and **hour-format** on Real Devices via Appium during automation testing sessions. This allows developers and testers to simulate specific date/time conditions to validate use cases like scheduled events, alarms, chats, or localization for time formats.
+
+By the end of this document, you will be able to:
+- Set a specific date and time on the device
+- Toggle between 12-hour and 24-hour formats
+- Enable/disable automatic time syncing with network settings
 
 ---
 
@@ -136,7 +141,7 @@ If you encounter this error, retry your automation run on a different Android de
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Set Device Date and Time on TestMu AI
+       IP Geolocation
       </span>
     </li>
   </ul>

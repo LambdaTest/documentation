@@ -1,4 +1,4 @@
-# How to Run a Pre-Test Executable on TestMu AI
+# Install Custom Certificates on the VM Through Pre-run Executables
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -12,7 +12,7 @@ To use certificates for Selenium tests, you need 3 things:
 
 ## Instructions
 
-Upload your certificate file, installation, and uninstallation script using the below steps. The `prerun` and `lambda:userFiles` keys shown here are part of the broader set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to a test.
+Upload your certificate file, installation, and uninstallation script using the below steps.
 
 1. Upload your certificate using the below command.
 
@@ -76,7 +76,7 @@ curl --request POST \
 
 ## Leverage the Use of APIs to Pre-run Tests
 
-Use the following prerun APIs to manage pre-run files. If you are still setting up your environment, first learn how to run your first Selenium test before adding pre-run scripts to the flow.
+Use the following prerun APIs to manage pre-run files.
 
 * **GET/`files`:** Fetch all pre run files uploaded by the user.
 * **POST/`files`:** Upload pre run executable file to lambda storage.
@@ -125,10 +125,3 @@ Get-ChildItem Cert:\CurrentUser\Root\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-It
 
 >Got any questions?
 Please reach out at our **24x7 Chat Support** or you could also mail us at support@testmuai.com.
-
-## Next Steps
-
-Continue with these related guides:
-
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
-- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)

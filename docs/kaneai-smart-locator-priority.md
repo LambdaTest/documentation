@@ -1,10 +1,9 @@
 ---
 id: kaneai-smart-locator-priority
-title: How to Set Smart Locator Priority With KaneAI
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: Smart Locators
-description: Configure Smart Locator Priority in KaneAI to define which locator strategy takes precedence during Smart Locator resolution for your organization.
+title: Smart Locator Priority
+hide_title: false
+sidebar_label: Smart Locator Priority
+description: Learn how to configure Smart Locator Priority in KaneAI Org Product Preferences so your organization can define which locator strategy should take precedence during Smart Locator resolution.
 keywords:
   - kaneai smart locator priority
   - locator priority
@@ -44,43 +43,42 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Set Smart Locator Priority With KaneAI
-***
+# Smart Locator Priority
 
+Smart Locator Priority lets your organization define the order in which KaneAI should prefer supported locator strategies while authoring test cases in KaneAI.
 
-Smart Locator Priority sets the order in which KaneAI prefers supported locator strategies while authoring test cases, applied consistently across your organization. Set it in **Organization Settings** when your application is more stable with one locator type than another.
+This is useful when your application is more stable with one locator type over another and you want that preference applied consistently at the organization level.
 
-## Prerequisites
-***
+## What It Does
 
-:::note
-You need **organization-admin** access. Locator priority is set in Organization Settings and applies across the whole organization.
-:::
+Smart Locator currently supports prioritizing these locator strategies:
 
-## Locator Strategies
-***
+1. **CSS selector**
+2. **XPath**
+3. **Full XPath**
 
-KaneAI supports prioritizing these locator strategies. The strategy at the top of the list takes precedence over those below it.
+The locator type placed at the top of the list is given higher priority than the locator types below it.
 
-| Strategy | Description |
-|---|---|
-| **CSS selector** | Resolves elements using CSS selectors. |
-| **XPath** | Resolves elements using XPath expressions. |
-| **Full XPath** | Resolves elements using absolute XPath expressions. |
+For example:
 
-For example, if **CSS selector** is above **XPath**, KaneAI prefers CSS selector first. If **XPath** is moved to the top, KaneAI prefers XPath first.
+- If **CSS selector** is placed above **XPath**, KaneAI will prefer CSS selector first.
+- If **XPath** is moved to the top, KaneAI will prefer XPath first.
 
-Adjust the order when your application produces more stable selectors of one type, or when you want one consistent strategy across the organization.
+## Why This Matters
 
-## Configure Locator Priority
-***
+Different applications behave better with different locator strategies.
 
-Follow these steps to set the locator strategy order for your organization.
+You may want to adjust the default order if:
 
-### Step 1: Open Smart Locator Priority
-***
+- your application generates more stable CSS selectors than XPath expressions
+- your current pages rely more heavily on XPath-based resolution
+- your team wants one consistent Smart Locator strategy across the organization
 
-Open [Smart Locator Priority in Organization Settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/smart-locator-priority). In <BrandName />, this is under **Org Product Preferences** &rarr; **KaneAI** &rarr; **Smart locator priority**.
+## Where to Find It
+
+- [Open Smart Locator Priority in Organization Settings](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/org-settings/kane-ai/smart-locator-priority)
+
+The following screen shows where the setting is located:
 
 <img
   loading="lazy"
@@ -89,32 +87,34 @@ Open [Smart Locator Priority in Organization Settings](https://www.testmuai.com/
   className="doc_img"
 />
 
-**Result:** The list of supported locator strategies opens.
+## How to Configure Smart Locator Priority
 
-### Step 2: Reorder the Strategies
-***
+1. Open **Organization Settings** in <BrandName />.
+2. Navigate to **Org Product Preferences**.
+3. Expand the **Kane AI** section in the left navigation.
+4. Open **Smart locator priority**.
+5. Drag and drop the supported locator types into your preferred order.
+6. Keep the most preferred locator strategy at the top of the list.
 
-Drag and drop the locator types into your preferred order, keeping the most preferred strategy at the top.
-
-**Result:** The new order becomes the organization-level preference for any newly authored or edited test cases.
+Once updated, the new order becomes the organization-level Smart Locator preference for any newly authored or edited test cases in KaneAI.
 
 :::note
-The priority change does not apply to already authored test cases. It applies only when a test step is authored or re-authored in the KaneAI playground.
+The change in priority will not reflect in already authored test cases and will only be updated when a test step is authored or re-authored in KaneAI playground.
 :::
 
+## Best Practices
+
+- Choose one order for your organization and avoid changing it too frequently.
+- Validate the preferred strategy on a few representative KaneAI flows before standardizing it across teams.
+- If locator behavior changes after a UI update in your product, review whether the current priority order is still appropriate.
+
 ## Limitations
-***
 
-Keep these limitations in mind:
+- This setting currently supports only the locator strategies shown in the UI.
+- The priority order controls which locator type is preferred first; it does not replace the need for stable page structure and reliable element identification.
 
-- This setting supports only the locator strategies shown in the UI.
-- The priority order controls which locator type is preferred first. It does not replace the need for stable page structure and reliable element identification.
+## Related Docs
 
-## Next Steps
-***
-
-Continue with these guides:
-
-- [KaneAI Failure Conditions](/support/docs/kaneai-failure-conditions/)
+- [Failure Conditions](/support/docs/kaneai-failure-conditions/)
 - [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)
-- [Generate Test Cases With AI](/support/docs/generate-test-cases-with-ai/)
+- [Custom Instructions in KaneAI Test Generation](/support/docs/generate-test-cases-with-ai/)

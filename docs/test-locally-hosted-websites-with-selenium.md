@@ -1,10 +1,8 @@
 ---
 id: test-locally-hosted-websites-with-selenium
-title: How to Test Locally Hosted Websites With Selenium on TestMu AI
-toc_max_heading_level: 2
-hide_title: true
-sidebar_label: "Local Testing"
-description: Test locally hosted and privately staged websites with Selenium on TestMu AI using the secure TestMu AI Tunnel.
+title: Test Locally Hosted Websites With Selenium
+sidebar_label: Test Locally Hosted Websites
+description: Test locally hosted or staging web apps on the TestMu AI cloud grid using TestMu AI Tunnel with Selenium.
 keywords:
   - selenium local testing
   - testmu ai tunnel selenium
@@ -50,16 +48,14 @@ import { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test Locally Hosted Websites With Selenium on TestMu AI
 ---
-
 
 TestMu AI Tunnel creates a secure, encrypted connection between your local machine and the TestMu AI cloud grid. Use it to test web apps running on `localhost`, staging servers, or behind a firewall without exposing them to the internet. The tunnel uses TCP with TLS 1.2 over port 443 or WebSocket.
 
 ## How It Works
 ---
 
-The tunnel binary runs on your machine and establishes an encrypted connection to the TestMu AI cloud. When you set `tunnel: true` in your test capabilities, the cloud browser routes traffic through this connection to reach your local app. This works alongside the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you configure for a test.
+The tunnel binary runs on your machine and establishes an encrypted connection to the TestMu AI cloud. When you set `tunnel: true` in your test capabilities, the cloud browser routes traffic through this connection to reach your local app.
 
 ```
 Your Machine (localhost:3000) <-- Encrypted Tunnel --> TestMu AI Grid <--> Cloud Browser
@@ -78,7 +74,7 @@ Download the binary for your operating system and architecture.
 | **Linux** (AMD64) | https://downloads.lambdatest.com/tunnel/v3/linux/amd64/LT |
 | **Linux** (ARM64) | https://downloads.lambdatest.com/tunnel/v3/linux/arm64/LT |
 
-For the full list of platform binaries, see the TestMu AI Tunnel documentation.
+For the full list of platform binaries, see the [TestMu AI Tunnel documentation](/support/docs/testing-locally-hosted-pages/).
 
 After downloading, make the binary executable (macOS/Linux):
 
@@ -225,7 +221,7 @@ driver.get("http://localhost:3000");
 ## Common Issues
 ---
 
-Quick fixes for problems you might hit with local testing. If your local environment sits behind a corporate proxy, see how to run tests behind a proxy, and use custom DNS mapping when you need to resolve internal hostnames to a specific IP.
+Quick fixes for problems you might hit with local testing.
 
 | Problem | Solution |
 |---------|----------|
@@ -238,15 +234,6 @@ Quick fixes for problems you might hit with local testing. If your local environ
 :::note
 For YAML-based configuration, verbose logging, Info APIs, MITM mode, and all advanced options, see the [TestMu AI Tunnel documentation](/support/docs/testing-locally-hosted-pages/) and [TestMu AI Tunnel Features](/support/docs/advanced-tunnel-features/).
 :::
-
-## Next Steps
----
-
-Continue with these related guides:
-
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
-- [Run Selenium Tests Behind the Proxy](/support/docs/selenium-tests-behind-proxy/)
-- [Custom DNS Map](/support/docs/custom-dns-map/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

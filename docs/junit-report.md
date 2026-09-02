@@ -1,8 +1,8 @@
 ---
 id: espresso-junit-report
-title: How to Get Espresso JUnit XML Reports on TestMu AI
+title: Espresso JUnit XML Reports
 sidebar_label: JUnit XML Reports
-description: Retrieve JUnit XML reports for Espresso tests on TestMu AI, including non-shard builds and shard builds for individual shards or all shards collectively.
+description: Espresso Junit Report
 keywords:
   - espresso
   - java
@@ -41,7 +41,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Get Espresso JUnit XML Reports on TestMu AI",
+          "name": "Report",
           "item": `${BRAND_URL}/support/docs/espresso-junit-report/`
         }]
       })
@@ -53,7 +53,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ## Introduction
 ---
 
-Espresso JUnit XML reports on TestMu AI give a detailed summary of your test execution outcomes. Using the report APIs, you can fetch JUnit reports for non-shard Espresso builds and for shard builds, retrieving results per individual shard or collectively.
+JUnit reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving JUnit reports for Espresso tests executed on the <BrandName /> platform.
 
 ## Objective
 ---
@@ -124,7 +124,7 @@ To fetch the JUnit reports for `all shards` in a shard build, use:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Get Espresso JUnit XML Reports on TestMu AI
+      espresso Testing 
       </span>
     </li>
   </ul>

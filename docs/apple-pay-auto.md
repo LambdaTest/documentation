@@ -1,6 +1,6 @@
 ﻿---
 id: apple-pay-auto
-title: How to Automate Apple Pay on TestMu AI
+title: Apple Pay Automation on Real Devices
 sidebar_label: Apple Pay
 description: Learn how to automate Apple Pay flows on iOS public devices, including capabilities, payment injection, passcode entry, and limitations.
 keywords:
@@ -17,14 +17,11 @@ url: https://www.testmuai.com/support/docs/apple-pay-auto/
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-# How to Automate Apple Pay on TestMu AI
-
-Automating Apple Pay on TestMu AI validates end-to-end payment flows on real iOS devices. Provision Wallet with sandboxed test cards, inject payment details, confirm the payment sheet, and enter the device passcode to verify checkout without relying on production cards.
-
-**Supported on:** Real devices
-
+# Apple Pay Automation on Real Devices
+<RealDeviceTag value="Real Device" /> 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.
 
 For **testing payment flows**, validating Apple Pay becomes critical. Automation of Apple Pay ensures you can reliably test end-to-end purchase scenarios, confirm that payment sheets open correctly, details are pre-filled, and transactions are processed securely, without relying on production cards.
@@ -38,7 +35,7 @@ To unlock this feature, purchase or upgrade to the required [plan](https://www.t
 :::
 
 :::info Automating with Playwright?
-Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
+This guide covers the **Appium** flow. Apple Pay is also supported for **Playwright** tests on real iOS devices (Safari, Node.js) over the CDP endpoint. See [Apple Pay Automation in the Playwright iOS guide](/support/docs/playwright-ios-device/#apple-pay-automation).
 :::
 
 ---
@@ -81,7 +78,7 @@ The `applePayCardType` array follows a **priority order**. The order you provide
 
 ### Step 1: Upload Your App to <BrandName />
 
-1. **Uploading Your App** - Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/#upload-via-the-rest-api) guide.
+1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 

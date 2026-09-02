@@ -1,10 +1,8 @@
-# How to Click Buttons by Text (OCR) on TestMu AI
+# Button Click By Text (OCR)
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Button Click by Text on TestMu AI uses OCR to click UI elements by their visible text or icon description when native locators fail. Powered by an LLM, it accepts natural language labels and works across Android and iOS devices.
-
-**Supported on:** Real &amp; Virtual devices
+Button Click By Text is an OCR-powered feature that allows you to click UI elements using their visible text or icon description when traditional locator strategies are not feasible.
 
 Because the feature is powered by an LLM, you can also provide a natural language description of an icon (for example, "label": "search icon" or "label": "three-dot menu"), and the system will intelligently identify and click the matching element on the screen.
 

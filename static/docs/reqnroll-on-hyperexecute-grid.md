@@ -34,8 +34,6 @@ Download or Clone the code sample for the Reqnroll from the TestMu AI GitHub rep
 
  View on GitHub
 
-
-
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
 
 By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
@@ -73,33 +71,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 3: Configure YAML in your Test Suite
 
@@ -178,11 +154,7 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
 
 ### Step 5: Monitor the Test Execution
 
@@ -195,11 +167,6 @@ You can seamlessly navigate between JobId's and taskId's. You need to click on t
 ### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
-
-
-
-
-
 
 > For any query or doubt, please feel free to contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
 Happy testing!

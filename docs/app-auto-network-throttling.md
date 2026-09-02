@@ -1,9 +1,9 @@
 ---
 id: app-auto-network-throttling
-title: How to Throttle Network for Appium on TestMu AI
+title: Network Throttling for Appium tests
 hide_title: false
 sidebar_label: Network Throttling
-description: Simulate 2G, 3G, LTE, and offline network conditions for Appium tests on TestMu AI, validating app behavior under varying upload and download speeds.
+description: Now validate your mobile applications over low latency networks (2G/3G/LTE) or in offline mode with varying upload and download speeds. TestMu AI empowers you to simulate these mobile network conditions through its desired capabilities, ensuring comprehensive testing of your mobile applications.
 keywords:
     - cross platform testing
     - network throttling
@@ -27,6 +27,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -47,17 +49,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Throttle Network for Appium on TestMu AI",
+          "name": "Network Throttling",
           "item": `${BRAND_URL}/support/docs/app-auto-network-throttling/`
         }]
       })
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-Network throttling on TestMu AI simulates 2G, 3G, LTE, and offline conditions during Appium tests, letting you validate how your mobile app behaves under varying upload and download speeds while the device keeps uninterrupted connectivity, replicating real-world usage across devices.
+In Appium testing, assessing your app's performance under diverse network conditions (2G/3G/LTE) and offline scenarios, is crucial. Fluctuating upload and download speeds can significantly impact your app's behavior across different devices.
 
-**Supported on:** Real &amp; Virtual devices
+<BrandName /> simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
 
 ## Workflow
 ### Initialization
@@ -162,7 +165,7 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Throttle Network for Appium on TestMu AI
+        Network Throttling
       </span>
     </li>
   </ul>

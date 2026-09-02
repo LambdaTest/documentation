@@ -1,56 +1,50 @@
-# How to Use Private Dependencies in Cypress on TestMu AI
+# Execute Cypress Tests Including Private Dependencies
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-If your Cypress project installs packages from a private registry, you can run those tests on TestMu AI without the build failing on the missing dependency. TestMu AI installs and uses your private packages during the run, so tests that once failed with a `LambdaError` now execute against the same private code they use locally. You set this up by declaring the private dependency in `package.json` or `lambdatest-config.json`, adding a `.npmrc` file, and passing any access token through the `dep_token` capability.
+This article guides you on how to execute your **Cypress** tests including the **private dependencies** on **TestMu AI platform**.
+Earlier if your project includes any private dependency, the tests will error out with the **LambdaError** on our platform but now we have built the support for handling the private dependencies.
 
-**Sample repo**
-This guide uses the TestMu AI [sample Cypress Cloud repository](https://github.com/LambdaTest/Cypress-Cloud). Clone it to follow along with the same files shown here.
+> In this demo we are demonstrating using [TestMu AI's Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.
 
-## Execute Cypress Tests With Private Dependencies
+## Steps To Execute Using Private Dependencies
 
-These steps assume you have already run a Cypress test on TestMu AI. If you have not, see [how to run your first Cypress test](/support/docs/getting-started-with-cypress-testing/) first, then return here to add private dependencies.
+Assuming that you have run a Cypress test on TestMu AI platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on TestMu AI), you need to follow these steps below:
 
-### Update the TestMu AI Cypress CLI
+### Update TestMu AI Cypress CLI
 
-Update the CLI first so it supports private dependency installation. Install the latest version:
+- Before getting started, you would have to update the **lambdatest-cypress cli** using the command below:
 
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
-The CLI version should be the latest, which is 2.3.0. Check the installed version:
+- The CLI version should be the latest i.e. is 2.3.0. You can check the CLI version by running the below command.
 
 ```bash
 lambdatest-cypress --version
 ```
 
-### Add the Private Dependency
+### Add Private Dependencies
 
-You can declare a private dependency in either the `package.json` file or the `lambdatest-config.json` file. Follow the steps for whichever approach fits your project.
+You can either add private dependency in the `package.json` file or in the `lambdatest-config.json` file. Refer to the below steps for both approaches.
 
-- **If passing the private dependency in the `package.json` file**
+- **If passing private dependency in package.json file **
 
-  Add the private dependency, create a `.npmrc` file in the root directory of your project as highlighted below, and define the dependency in the `.npmrc` file as well.
+  Add the private dependency and create `.npmrc` file in the root directory of your project as highlighted below and define the same in `.npmrc` file as well.
 
-- **If passing the private dependency in the `lambdatest-config.json` file**
+- **If passing private dependency in lambdatest-config.json file -**
 
-  If you define the dependencies in the `lambdatest-config.json` file, it overrides the `package.json` file, and the TestMu AI cloud grid reads the dependencies from `lambdatest-config.json`. Define the dependencies in the `npm_dependencies` object inside `run_settings` of the `lambdatest-config.json` file. Here as well, create a `.npmrc` file and define the private dependency in it.
+  If you define the dependencies in the `lambdatest-config.json` file, it will override the `package.json` file and our cloud grid will read the dependencies from the `lambdatest-config.json` file. You can define the dependencies in the npm_dependencies object available in the run_settings of `lambdatest-config.json` file. Also, here as well, you have to create `.npmrc` file and there you have to define the private dependency.
 
-  If the private dependency uses an **access token** whose value comes from an **environment variable**, add the `dep_token` capability and list those environment variables in it. Pass multiple environment variables as a comma-separated list.
+  > If you are using an **access token** in the private dependency and you are accessing its value from the **environment variable**, in that case, you have to add `dep_token` capability and define all those in environment variables in it. You can pass multiple environment variables as comma-separated.
 
-  The screenshot below shows the `dep_token` capability defined with its environment variables.
+  Refer the below screenshot for the help.
 
-  Every key present in `dep_token` is replaced in the `.npmrc` file. If a key is not present in the environment variable, the run throws an error.
+  > All the keys present in **dep_tokens** will be replaced in the `.npmrc` file and if the key is not present in the environment variable, it will throw an error.
 
-After completing this setup, run your tests on the TestMu AI platform. The tests now execute with the private dependencies installed.
+After doing this setup, run your tests on the **TestMu AI platform** and now the test will execute perfectly with the **private dependencies**.
 
-To download packages over a tunnel, set environment variables, or change screen resolution, see [how to configure Cypress run settings](/support/docs/run-settings/).
+> To download private dependencies over tunnel follow this [documentation](/support/docs/npm-via-tunnel/).
 
-## Related Cypress Guides
-
-Continue with the guides below to run and debug your Cypress tests on TestMu AI.
-
-- [Download artefacts from a Cypress run](/support/docs/download-artefacts-cypress/) pulls screenshots, videos, and logs from the cloud machine after a run.
-- [Reference the Cypress CLI commands](/support/docs/cypress-cli-commands/) documents every `lambdatest-cypress` command and flag.
-- [Run your first Cypress test](/support/docs/getting-started-with-cypress-testing/) clones the sample project and runs a test end to end.
+> That's all! In case you have any questions or need any additional information, you could reach out at our **[24X7 Chat Support]** or mail us directly at support@testmuai.com.

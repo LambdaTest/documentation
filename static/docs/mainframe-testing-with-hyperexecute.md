@@ -196,7 +196,7 @@ Open the job link printed at the end of the run, or go to the [HyperExecute Dash
 
 - **Job summary** shows pass and fail counts, per-VM timing, and the autosplit distribution.
 - **Reports tab** holds the merged Robot Framework `report.html` and `log.html`.
-- **Artifacts** lets you download the `FNB_Reports` archive with everything under `results/**`. See [HyperExecute Job Artifacts](/support/docs/hyperexecute-artifacts/) and [HyperExecute Job Reports](/support/docs/hyperexecute-job-reports/).
+- **Artifacts** lets you download the `FNB_Reports` archive with everything under `results/**`. See [HyperExecute Job Artifacts](/support/docs/hyperexecute-artifacts/) and [HyperExecute Job Reports](/support/docs/hyperexecute-reports/).
 - **Scenario video** plays the per-scenario recording. For `tests/10` this shows the real `x3270` green screen being driven.
 
 Locally, the CLI also writes `hyperexecute-cli.log` (the full job log, the first place to look on a failure) and a `.hyperexecute/` run directory.

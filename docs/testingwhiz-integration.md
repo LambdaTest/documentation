@@ -84,7 +84,7 @@ In TestingWhiz, record your test scenario. Once done, click on the Execute butto
 
 As soon as you do, an automation test will start instantly, and you can view its build running directly on your <BrandName /> automation dashboard. Once the test is complete, you can view the result of the test on <BrandName />, with all its details, as shown in the image below: <img loading="lazy" src={require('../assets/images/uploads/testingwhiz-6.webp').default} alt="<BrandName /> Automation Logs" width="1281" height="582" className="doc_img"/>
 
-You can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more for each executed test from your <BrandName /> platform.
+You can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more for each executed test from your <BrandName /> platform.
 
 * * *
 

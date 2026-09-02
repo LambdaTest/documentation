@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Every [Omni project](/support/docs/smartui-project-settings/#omni-projects) is created with a **baseline strategy**: the rule SmartUI uses to decide which build a new build is compared against. You pick it once, in the New Project drawer, and it cannot be changed afterwards.
+Every [Omni project](/support/docs/smartui-omni-projects/) is created with a **baseline strategy**: the rule SmartUI uses to decide which build a new build is compared against. You pick it once, in the New Project drawer, and it cannot be changed afterwards.
 
 There are two options:
 
@@ -76,7 +76,7 @@ At build creation SmartUI looks for the most recent build that is **approved**, 
 
 Two controls change the lookup:
 
-- [Smart Git](/support/docs/smartui-git-branching-strategy/#smart-git-strategy) (`SMART_GIT=true`) swaps the lookup to the build's own branch, so a branch compares against its own last approved build.
+- [Smart Git](/support/docs/smartui-smart-git-strategy/) (`SMART_GIT=true`) swaps the lookup to the build's own branch, so a branch compares against its own last approved build.
 - `--baselineBranch ` overwrites the project's baseline branch. It is a project level setting, not a per run override.
 
 The build list stays one chronological list, and each build carries the branch it ran on.
@@ -100,7 +100,7 @@ Standard single source projects are unaffected. A Website, App or PDF project ke
 
 ## Additional Resources
 
-- [Omni Projects](/support/docs/smartui-project-settings/#omni-projects)
+- [Omni Projects](/support/docs/smartui-omni-projects/)
 - [Baseline Management](/support/docs/smartui-baseline-management/)
-- [Smart Git Strategy](/support/docs/smartui-git-branching-strategy/#smart-git-strategy)
+- [Smart Git Strategy](/support/docs/smartui-smart-git-strategy/)
 - [Baseline History](/support/docs/smartui-baseline-history/)

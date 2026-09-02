@@ -1,9 +1,9 @@
 ---
 id: appium-ip-geolocation
-title: How to Set IP Geolocation on TestMu AI
+title: IP Geolocation 
 hide_title: true
 sidebar_label: IP Geolocation 
-description: Configure IP Geolocation on TestMu AI to test websites and mobile apps from different countries, using the geoLocation capability on real and virtual devices.
+description: This document provides information about configuring IP Geolocation for tests on the TestMu AI platform and also provides a list of supported geolocations on Real Devices.
 keywords:
  - IP Geolocation
  - geolocation testing
@@ -24,6 +24,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,22 +44,19 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Set IP Geolocation on TestMu AI",
+          "name": "IP Geolocation",
           "item": `${BRAND_URL}/support/docs/appium-ip-geolocation/`
         }]
       })
     }}
 ></script>
 
-# How to Set IP Geolocation on TestMu AI
-
-Setting IP Geolocation on TestMu AI lets you test websites and mobile apps as if traffic originates from countries and regions worldwide. Pass the geoLocation capability with a two-letter code to simulate a device's location in automated and manual tests.
-
-**Supported on:** Real &amp; Virtual devices
+# IP Geolocation 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <BrandName />'s IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
 
-You'll learn to use this feature in both manual and automation tests, plus the full list of supported IP geolocations on <BrandName />.
+By the end of this document, you'll learn how to use this feature in both manual and automation tests. Additionally, this document will provide a list of all supported IP geolocations on <BrandName />.
 
 ## Support for Automation on Real Devices
 
@@ -275,7 +274,7 @@ Below is the list of supported countries along with their respective country cod
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Set IP Geolocation on TestMu AI
+       IP Geolocation
       </span>
     </li>
   </ul>

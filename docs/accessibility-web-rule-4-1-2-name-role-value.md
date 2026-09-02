@@ -1,0 +1,43 @@
+---
+id: accessibility-web-rule-4-1-2-name-role-value
+title: Name, Role, Value (4.1.2)
+sidebar_label: Name, Role, Value (4.1.2)
+description: Rule-level Accessibility guidance for Name, Role, Value (WCAG 4.1.2 Level A).
+slug: accessibility-web-rule-4-1-2-name-role-value/
+---
+
+# Name, Role, Value (4.1.2)
+
+All user interface components must expose their name, role, states, properties, and values to assistive technologies, and notification of changes must be available programmatically.
+
+:::info WCAG Reference
+**Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
+:::
+
+## What this rule checks
+
+The scanner verifies that interactive elements have an accessible name, an appropriate ARIA or native role, and that state changes (expanded, checked, selected, disabled) are communicated programmatically.
+
+## Why it matters
+
+Assistive technologies rely on the accessibility tree to describe controls to users. If a custom widget lacks a role, name, or state information, screen-reader users cannot tell what the control is, what it does, or what state it is in.
+
+## Common failure patterns
+
+- custom toggle switches built with `<div>` that have no `role="switch"` or `aria-checked`
+- accordion headers that do not expose `aria-expanded`
+- custom dropdowns that do not announce the selected value
+- buttons with no accessible name (empty text, no `aria-label`)
+
+## Remediation guidance
+
+- use native HTML elements whenever possible (`<button>`, `<input>`, `<select>`)
+- for custom widgets, add the appropriate ARIA role and maintain state attributes (`aria-expanded`, `aria-checked`, `aria-selected`)
+- ensure every interactive element has an accessible name through visible text, `aria-label`, or `aria-labelledby`
+- update ARIA states dynamically when the user interacts with the control
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

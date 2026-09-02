@@ -1,8 +1,8 @@
 ﻿---
 id: app-automation-app-sim
-title: How to Run App Tests on Emulators on TestMu AI
-sidebar_label: "Run First Test"
-description: Run app automated tests on cloud emulators and simulators with TestMu AI, no physical devices needed, using the Appium framework across many configurations.
+title: App Automation Using Emulators and Simulators on TestMu AI
+sidebar_label: App Automation (Emu/Sim)
+description: Learn how to run app automated tests on using Emulators and Simulators on TestMu AI.
 keywords:
   - app automation emulators simulators
   - app automation emulators 
@@ -36,14 +36,14 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Run App Tests on Emulators on TestMu AI",
+          "name": "App Automation Using Emulators and Simulators on TestMu AI",
           "item": `${BRAND_URL}/support/docs/app-automation-on-emulators-simulators/`
         }]
       })
     }}
 ></script>
 
-App automation on <BrandName /> runs mobile app tests across cloud-based emulators and simulators, eliminating physical devices while validating functionality across many configurations. It supports the Appium framework, letting you clone a sample project, upload your app, and set capabilities.
+<BrandName /> enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="ZcgYzi60Nmo" data-loading-attribute="eager">
@@ -52,6 +52,8 @@ App automation on <BrandName /> runs mobile app tests across cloud-based emulato
 </div>
 
 ---
+
+In this documеntation, learn how to run app automated tests on Emulators and Simulators using <BrandName /> virtual testing cloud. 
 
 :::info Note
 

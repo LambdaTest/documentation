@@ -49,7 +49,7 @@ Use the product as an **evidence engine** alongside manual testing and policy re
 - **Automated and semi-automated findings** tied to pages, components, or builds (web and mobile, depending on your setup).
 - **Coverage signals** (what was scanned, when, and under which WCAG target) to support your “evaluation methods used” narrative.
 - **Triage and remediation context**: issue detail, hide/restore for noise, bug export, so engineering and accessibility leads can align before you freeze wording in the VPAT.
-- **Exports and integrations** for stakeholders who work outside the dashboard ([Exporting & Sharing Reports](/support/docs/accessibility-testing-navigating-dashboard/), [Integrations (Jira / Slack)](/support/docs/accessibility-report-integrations/)).
+- **Exports and integrations** for stakeholders who work outside the dashboard ([Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/), [Integrations (Jira / Slack)](/support/docs/accessibility-report-integrations/)).
 
 What Accessibility Testing **does not** replace:
 
@@ -72,30 +72,30 @@ Follow these phases in order; later phases assume earlier decisions are document
 
 ### Phase 2: Baseline automated coverage
 
-1. **Run scans** that match your VPAT scope: DevTools sessions for targeted UX, **[Automation](/support/docs/accessibility-automation-test/)** for regression suites (including the **[HyperExecute integration: Selenium accessibility](/support/docs/accessibility-testng-test/)** guide where you use that integration), **[Test Scheduling](/support/docs/accessibility-test-scheduling/)** or **[Web Scanner](/support/docs/web-scanner-getting-started/)** for broader URL coverage where applicable.
-2. Open completed work in the dashboard using **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)**; use **[Issue Summary](/support/docs/accessibility-testing-navigating-dashboard/#issue-summary)** and **[All Issues](/support/docs/accessibility-testing-navigating-dashboard/#all-issues)** for a severity- and criteria-oriented view.
+1. **Run scans** that match your VPAT scope: DevTools sessions for targeted UX, **[Automation](/support/docs/accessibility-automation/)** for regression suites (including the **[HyperExecute integration: Selenium accessibility](/support/docs/selenium-hyperexecute-accessibility-tests/)** guide where you use that integration), **[Test Scheduling](/support/docs/accessibility-test-scheduling/)** or **[Web Scanner](/support/docs/web-scanner-getting-started/)** for broader URL coverage where applicable.
+2. Open completed work in the dashboard using **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)**; use **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** and **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** for a severity- and criteria-oriented view.
 3. Capture **what was in scope** for each run (URLs, app package, scan type). You will reuse this wording in VPAT “remarks” or evaluation-method sections.
 
 ### Phase 3: Manual verification and gaps
 
 VPAT readers expect evidence beyond automation.
 
-1. Walk **core user journeys** keyboard-only and with assistive technologies relevant to your audience; use your checklist docs as a matrix: **[Web](/support/docs/accessibility-web-what-we-cover/)**, **[iOS](/support/docs/accessibility-web-what-we-cover/)**, **[Android](/support/docs/accessibility-web-what-we-cover/)** (including **manual test checklist** sections where present).
+1. Walk **core user journeys** keyboard-only and with assistive technologies relevant to your audience; use your checklist docs as a matrix: **[Web](/support/docs/accessibility-web-what-we-cover/)**, **[iOS](/support/docs/accessibility-ios-what-we-cover/)**, **[Android](/support/docs/accessibility-android-what-we-cover/)** (including **manual test checklist** sections where present).
 2. Log **pass/fail/needs retest** per journey or per WCAG theme, not only per automated issue ID.
 3. For anything **Partially Supports** or **Does Not Support**, collect **screenshots, short repro steps, and dates**. The same artifacts you would attach in a bug or audit response.
 
 ### Phase 4: Triage, remediate, re-scan
 
 1. Use **[Hide and Restore Issues](/support/docs/accessibility-hide-restore-issues/)** only for agreed false positives or noise; document the rationale so your VPAT story matches the report.
-2. Route fixes through engineering; use **[Bug Report](/support/docs/accessibility-testing-navigating-dashboard/#report-a-bug)** or **[Integrations](/support/docs/accessibility-report-integrations/)** if issues should live in your tracker.
+2. Route fixes through engineering; use **[Bug Report](/support/docs/accessibility-report-bug/)** or **[Integrations](/support/docs/accessibility-report-integrations/)** if issues should live in your tracker.
 3. **Re-run** the same scan types after fixes and keep **before/after** exports if procurement asks for remediation history.
 
 ### Phase 5: Package evidence for VPAT tables
 
-1. **Export** the report state you want frozen for this VPAT version ([Exporting & Sharing Reports](/support/docs/accessibility-testing-navigating-dashboard/)). Exports reflect **filters and hide/restore** at export time. Export intentionally.
+1. **Export** the report state you want frozen for this VPAT version ([Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)). Exports reflect **filters and hide/restore** at export time. Export intentionally.
 2. Build an **evidence index**: map each major VPAT section or WCAG theme to one or more attachments (export file name, dashboard link if permitted internally, ticket IDs).
 3. **Draft table rows** in the official template: for each criterion, add **Conformance**, **Remarks**, and pointers to evidence. Prefer concise remarks that quote scan type, date, and scope (“WCAG 2.1 AA DevTools scan on v2.3.1, 2026-04-10, customer checkout only”).
-4. For **Accessibility Score** or similar summaries, use them only as **supporting context**, not as a substitute for criterion-by-criterion statements—see **[Accessibility Score](/support/docs/accessibility-testing-navigating-dashboard/#accessibility-score)**.
+4. For **Accessibility Web Score** or similar summaries, use them only as **supporting context**, not as a substitute for criterion-by-criterion statements. See **[Accessibility Web Score](/support/docs/accessibility-web-score/)**.
 
 ### Phase 6: Internal review and publication
 
@@ -107,7 +107,7 @@ VPAT readers expect evidence beyond automation.
 
 You will not find a one-to-one button from “issue type” to “VPAT row.” Instead:
 
-- **Rule or issue categories** in the dashboard often **align to WCAG success criteria** or platform checks; use your **[rule repository](/support/docs/accessibility-rule-repository/)** (web) or platform equivalents to justify which criterion each finding relates to.
+- **Rule or issue categories** in the dashboard often **align to WCAG success criteria** or platform checks; use your **[rule repository](/support/docs/accessibility-web-rule-repository/)** (web) or platform equivalents to justify which criterion each finding relates to.
 - **“Supports”** usually requires both absence of blocking defects **and** documented manual checks for that criterion’s intent.
 - **“Partially Supports”** is common when automation passes but assistive technology or keyboard behavior still has gaps, or when only part of the product was evaluated.
 - **“Not Applicable”** needs a short justification (e.g. “product has no video; criterion x.x.x not applicable”).
@@ -137,8 +137,8 @@ Before you call the VPAT draft “ready for review,” confirm you have:
 
 - [Accessibility Compliance Guide (ADA / WCAG / EAA / 508)](/support/docs/accessibility-compliance-guide/)
 - [Supported WCAG Versions & Browsers](/support/docs/accessibility-supported-wcag-browsers/)
-- [Choosing the Right Tool](/support/docs/accessibility-testing/)
+- [Choosing the Right Tool](/support/docs/accessibility-choosing-the-right-tool/)
 - [Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
-- [Exporting & Sharing Reports](/support/docs/accessibility-testing-navigating-dashboard/)
-- [Accessibility Score](/support/docs/accessibility-testing-navigating-dashboard/#accessibility-score)
+- [Exporting & Sharing Reports](/support/docs/accessibility-exporting-sharing-reports/)
+- [Accessibility Score](/support/docs/accessibility-web-score/)
 - [Screen reader testing overview](/support/docs/screen-reader-on-accessibility/)

@@ -1,10 +1,9 @@
 ---
 id: kane-ai-mobile-app-capabilities
-title: KaneAI Mobile App Capabilities
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: Mobile Authoring Capabilities
-description: Use advanced KaneAI mobile-app authoring capabilities, including biometric authentication, camera image injection, and screenshot-block control.
+title: Mobile App advanced authoring capabilities
+hide_title: false
+sidebar_label: Advanced Mobile Features
+description: Learn how to use advanced capabilities in the KaneAI authoring for mobile app tests
 keywords:
   - testmu ai automation
   - testmu ai kaneai
@@ -21,61 +20,44 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-mobile-app-capabilities
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-# KaneAI Mobile App Capabilities
-***
+> This document provides detailed instructions for utilizing advanced features in KaneAI's mobile app authoring. It covers enabling video and image injections, configuring biometrics, and other advanced settings to enhance test authoring.
 
-KaneAI mobile app authoring supports advanced capabilities for authoring mobile app tests: disabling the screenshot block, biometric authentication, image injection, and video injection. You enable each one from advanced settings before you author your test.
+## Introduction
 
-<img loading="lazy" src={require('../assets/images/kane-ai/mobile-app-features/image1.jpg').default} alt="KaneAI Mobile App Capabilities" className="doc_img img_center"/>
+KaneAI's mobile app authoring support various advanced capabilities for authoring mobile app tests. Users can navigate to advanced settings to enable options such as disabling screenshot block, enabling biometric authentication, image injection, and video injection for creating tests within KaneAI.
 
-## Prerequisites
-***
-
-:::note
-An active KaneAI mobile app authoring session. Each capability is enabled from **Advanced Settings** when you start or edit the session.
-:::
+<img loading="lazy" src={require('../assets/images/kane-ai/mobile-app-features/image1.jpg').default} alt="Image" className="doc_img img_center"/>
 
 ## Disable Screenshot Block
-***
 
-If your app blocks screenshots and you want to author tests without that hindrance, use this capability. It disables the screenshot block check added in the application so you can author test cases in <BrandName />.
+If your app doesn't allow screenshot to be taken of the app and you want to test your app's performance without any hindrance, you can use this capability. It will disable the screenshot block check added in the application to allow authoring test cases in <BrandName />.
 
-Enable it from advanced settings before you author your test on KaneAI. For more details, see [Disable Screenshot Block](/support/docs/disable-screenshot-block/).
+You need to ensure to enable it from advanced settings before authoring your test on KaneAI. You can find more details about this capability [here](/support/docs/disable-screenshot-block/).
 
 ## Biometrics Authentication
-***
 
-Biometric authentication verifies a user's identity from their unique biological characteristics, and native applications often use it for secure sign-in. This capability lets you test your application's biometric authentication functionality across devices and platforms.
+Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience. This capability allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
 
-Enable it from advanced settings before you author your test on KaneAI. For more details, see [Biometric Authentication](/support/docs/biometric-authentication/).
+You can find more details about this capability [here](/support/docs/biometric-authentication/).&#x20;
 
 ## Image Injection
-***
 
-Camera image injection lets you author tests with **image capturing, QR code scanning**, and **barcode scanning** functionality in your app across **real devices** on <BrandName />.
+Camera Image Injection feature allows you to author tests with **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **real devices** on the <BrandName />.
 
-Enable it from advanced settings before you author your test on KaneAI. Once enabled, use the image-injection "slash" command in-session before you select the option that triggers the camera API in your application workflow. For more details, see [Camera Image Injection](/support/docs/camera-image-injection/).
+You need to ensure to enable it from advanced settings before authoring your test on KaneAI. Once enabled, you will get an option to inject image in "slash" commands in-session which needs to be used before you select the option to trigger camera API in your application workflow.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/mobile-app-features/image2.jpg').default} alt="Image Injection" className="doc_img img_center"/>
+You can find more details about this capability [here](/support/docs/camera-image-injection/).
+
+<img loading="lazy" src={require('../assets/images/kane-ai/mobile-app-features/image2.jpg').default} alt="Image" className="doc_img img_center"/>
 
 ## Video Injection
-***
 
-Video injection lets you test video-based functionality such as **live streaming, real-time video capture,** and **video processing** in your app across **real devices** on <BrandName />.
+Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across **real devices** on the <BrandName />.
 
-Enable it from advanced settings before you author your test on KaneAI. Once enabled, use the video-injection "slash" command in-session before you select the option that triggers the camera API in your application workflow. For more details, see the [Video Injection](/support/docs/video-injection/).
+You need to ensure to enable it from advanced settings before authoring your test on KaneAI. Once enabled, you will get an option to inject video in "slash" commands in-session which needs to be used before you select the option to trigger camera API in your application workflow.
+
+You can find more details about this capability [here](/support/docs/video-injection/).
 
 ## Video Explanation
-***
 
-Watch this walkthrough to see these capabilities used in KaneAI authoring:
-
-**[Watch how mobile app advanced capabilities can be leveraged in KaneAI authoring](https://app.trupeer.ai/view/SZxMvBbih)**
-
-## Next Steps
-***
-
-Continue with these guides:
-
-- Author mobile tests with the [KaneAI Command Guide](/support/docs/kane-ai-command-guide/).
-- Resolve authoring issues with the [Error Handling KaneAI](/support/docs/error-handling-kaneai/).
+🎥 **[Watch how mobile app advanced capabilities can be leveraged in KaneAI authoring](https://app.trupeer.ai/view/SZxMvBbih)**  

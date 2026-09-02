@@ -18,7 +18,7 @@ Author and manage datasets directly inside KaneAI Test Manager to drive the same
 - **Version history**: track changes, revert, or restore previous dataset versions for audit and recovery
 
 **Documentation:**
-- [KaneAI Datasets](/support/docs/kane-ai-using-parameters/#datasets)
+- [KaneAI Datasets](/support/docs/kane-ai-using-datasets/)
 
 ## Data Masking
 
@@ -30,7 +30,7 @@ Protect credentials, tokens, and other confidential values from showing up in ne
 - **Compliance-ready logs**: share test results, debug network traffic, and store CI/CD reports without exposing production secrets
 
 **Documentation:**
-- [Network Data Masking for Selenium](/support/docs/selenium-mask-your-data/#network-data-masking)
+- [Network Data Masking for Selenium](/support/docs/network-data-masking/)
 - [HyperExecute Lambda Masking (Release 2.3.1)](/support/docs/hyperexecute-release-notes-2024/#version-231)
 
 ## Parameterization
@@ -45,9 +45,10 @@ Pass dynamic values into test cases at runtime so a single test runs across envi
 - **Datasets**: combine parameters into rows for data-driven runs across multiple inputs
 
 **Documentation:**
+- [KaneAI Variables & Parameters Overview](/support/docs/kaneai-variables-and-parameters/)
 - [Using Variables](/support/docs/kane-ai-using-variables/)
 - [Using Parameters](/support/docs/kane-ai-using-parameters/)
-- [Secrets](/support/docs/kane-ai-using-variables/#secrets)
+- [Secrets](/support/docs/kane-ai-secrets/)
 
 ## Related Resources
 

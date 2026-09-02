@@ -17,7 +17,7 @@ Run your own Karate (Java + Maven) project or the ready-made sample used in the 
 
 Before you start, make sure you have:
 
-- **A TestMu AI account.** Get your `LT_USERNAME` and `LT_ACCESS_KEY` from [Username and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
+- **A TestMu AI account.** Get your `LT_USERNAME` and `LT_ACCESS_KEY` from [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 - **Git**, to clone the sample repository.
 
 HyperExecute builds and runs the suite on the grid, so you do not need Java or Maven installed locally. Install them only if you want to run the suite on your own machine first.
