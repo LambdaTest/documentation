@@ -216,11 +216,6 @@ Choosing an output format is optional. By default the AI writes **Manual Test St
 
 To generate **BDD Scenarios** instead, open **Advanced settings** before you generate and turn on the **Gherkin Format** toggle. It sits with the other [generation settings](#configure-generation-settings), below **Memory Enhancement**.
 
-<!-- IMAGE PLACEHOLDER: the Advanced settings dialog with the Gherkin Format toggle turned on,
-     shown below Memory Enhancement.
-     Suggested filename: ../assets/images/mobile-app-testing/gherkin_format_toggle.png
-     <img loading="lazy" src={require('../assets/images/mobile-app-testing/gherkin_format_toggle.png').default} alt="gherkin-format-toggle" width="1347" height="616" className="doc_img"/> -->
-
 | Toggle | Output | Test case looks like |
 |--------|--------|----------------------|
 | **Off** (default) | **Manual Test Steps** | Numbered steps, each with an expected result |
@@ -386,8 +381,8 @@ For test cases generated in **BDD Scenarios** format, the details panel shows a 
 
 <!-- IMAGE PLACEHOLDER: test case details panel showing the BDD Scenarios section with the Gherkin editor.
      Suggested filename: ../assets/images/mobile-app-testing/bdd_scenarios_test_case_details.png
-     <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_scenarios_test_case_details.png').default} alt="bdd-scenarios-test-case-details" width="1347" height="616" className="doc_img"/> -->
-
+      -->
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_scenarios_test_case_details.png').default} alt="bdd-scenarios-test-case-details" width="1347" height="616" className="doc_img"/>
 
 ---
 
@@ -618,8 +613,8 @@ Test cases generated in **BDD Scenarios** format are saved with the **Behaviour 
 
 <!-- IMAGE PLACEHOLDER: a saved BDD test case in Test Manager, showing Template set to "Behaviour Driven Development" and the scenario rendered under Test steps.
      Suggested filename: ../assets/images/mobile-app-testing/bdd_saved_test_case_test_manager.png
-     <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_saved_test_case_test_manager.png').default} alt="bdd-saved-test-case-test-manager" width="1347" height="616" className="doc_img"/> -->
-
+      -->
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_saved_test_case_test_manager.png').default} alt="bdd-saved-test-case-test-manager" width="1347" height="616" className="doc_img"/>
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/> -->
 
 #### Option 2: Create and Automate with KaneAI
