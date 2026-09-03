@@ -78,10 +78,28 @@ Homebrew also installs Google Chrome automatically through the `google-chrome` c
 Kane CLI requires **Google Chrome** installed on your system. Chrome is used as the automation browser and is launched automatically when you run a test. The npm install additionally requires **Node.js 18 or higher**. The Homebrew install bundles Chrome for you and needs no Node.js.
 :::
 
+## Install with pnpm or yarn
+
+Installing kane-cli via **pnpm** is not currently supported. pnpm places packages inside a nested `node_modules/.pnpm/` store, so the project-root `node_modules/` ends up deeper on disk than it would with npm. kane-cli's resolver for the platform-specific `v16-runner` binary does not yet search that far up the directory tree, so the runner is never found and the CLI aborts. The symptom is a silent exit with status 2 shortly after startup — see [CLI exits with code 2 and no output](/support/docs/kane-cli-troubleshooting/#cli-exits-with-code-2-and-no-output) in the troubleshooting guide. This limitation is tracked in [issue #24](https://github.com/LambdaTest/kane-cli/issues/24).
+
+Until that is resolved, install kane-cli through one of the supported paths:
+
+- **npm** globally (`npm install -g @testmuai/kane-cli`, above).
+- **Homebrew** on macOS or Linux (`brew install LambdaTest/kane/kane-cli`). Does not require Node.
+- The **shell installer** for any POSIX system (`curl -fsSL https://raw.githubusercontent.com/LambdaTest/kane-cli/main/install.sh | sh`).
+
+yarn (classic and Berry) has not been verified end-to-end. If you use yarn, prefer the Homebrew or shell-installer path until it is explicitly supported.
+
 ## Verify
 
 ```bash
 kane-cli --version
+```
+
+Expected output:
+
+```text
+0.1.0
 ```
 
 If the command is not found, your shell is not seeing the npm global `bin` directory. Open a new terminal or update `PATH`, then try again.
@@ -93,6 +111,7 @@ If the command is not found, your shell is not seeing the npm global `bin` direc
 | macOS | Apple Silicon (ARM) | ✅ |
 | macOS | Intel (x64) | ✅ |
 | Linux | x64 | ✅ |
+| Linux | arm64 (aarch64) | ✅ |
 | Windows | x64 | ✅ |
 
 :::note
@@ -151,3 +170,5 @@ node --version
 ## Next Step
 
 [Quick Start](/support/docs/kane-cli-quickstart/): Authenticate and run your first test.
+
+- [Authentication](/support/docs/kane-cli-authentication/)
