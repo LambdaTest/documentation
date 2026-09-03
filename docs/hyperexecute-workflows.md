@@ -113,7 +113,41 @@ You can update the schedule and end date at any time by editing the workflow fro
 
 ## Manage Workflows
 
-Once a workflow is created, you can manage it from the workflow list within your Project. Each workflow row displays the schedule, last execution status, and the last 5 jobs.
+Once a workflow is created, you can manage it from the workflow list within your Project. Each workflow row displays the schedule, current status, last execution status, and the last 5 jobs.
+
+### Workflow States
+
+Every workflow sits in one of three states, shown in the **Status** column.
+
+| State | What it means | Set by |
+|-------|---------------|--------|
+| **Active** | The workflow triggers jobs on its schedule. | You |
+| **Paused** | The workflow is retained but triggers no new jobs. The row also shows the date it was paused. | You |
+| **Expired** | The workflow's **Workflow ends on** date has passed, so it no longer triggers jobs. | Automatically |
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflows/workflow-states.webp').default} alt="Workflow list showing Active, Paused and Expired states" className="doc_img"/>
+
+**Expired** is derived from the end date, so it cannot be set manually. To bring an expired workflow back, edit it and extend the **Workflow ends on** date.
+
+### Pause and Resume a Workflow
+
+Use **Paused** to stop a workflow temporarily without editing or deleting it, for example while you investigate repeated failures or wait out a maintenance window.
+
+Open the **Status** dropdown on the workflow row, choose **Active** or **Paused**, then select **Apply Status**.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/workflows/workflow-set-status.webp').default} alt="Set Status dropdown with Active and Paused options" className="doc_img"/>
+
+While a workflow is paused:
+
+- No new jobs are triggered from it, and the **Play** button is disabled.
+- Jobs already running continue to completion.
+- The schedule, end date, and every other setting stay exactly as they were.
+
+Setting it back to **Active** resumes the existing schedule from that point onward. Occurrences that fell inside the paused period are not run retrospectively.
+
+:::note
+Only Org Admins and Project Admins can change a workflow's status.
+:::
 
 ### Retrigger a Workflow
 
