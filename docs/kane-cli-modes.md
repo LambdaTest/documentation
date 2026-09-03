@@ -181,6 +181,62 @@ kane-cli run "Search for 'automation testing' on Google" \
 
 This mode is best for shell scripts, CI/CD pipelines, and any scenario where the interactive TUI is not needed.
 
+### Run options
+
+The customer-facing flags accepted by `kane-cli run`:
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--headless` | Run Chrome in headless mode. | Off |
+| `--max-steps <n>` | Maximum agent steps. | `30` |
+| `--timeout <seconds>` | Kill the run after N seconds. | None |
+| `--url <url>` | Start URL for the run. Overrides the configured `default_url`; bare domains are normalized to `https://`. See [Default start URL](/support/docs/kane-cli-configuration/). | Config `default_url` |
+| `--allow-missing-url` | Non-TTY only: proceed from the browser's current page instead of failing when no start URL resolves (a provided `--url` is still used). | Off |
+| `--cdp-endpoint <url>` | Connect to an existing Chrome via CDP. | None |
+| `--ws-endpoint <url>` | Connect to a Playwright WebSocket endpoint (e.g. TestmuAI `wss://`). | None |
+| `--global-context <file>` | Override the global context Markdown file. | `~/.testmuai/kaneai/global-memory.md` |
+| `--local-context <file>` | Override the local context Markdown file. | `<cwd>/.testmuai/context.md` |
+| `--variables <json>` | Inline variables JSON. | None |
+| `--variables-file <path>` | Load variables from a JSON file. | None |
+| `--session-context <json>` | Prior runs context JSON. | None |
+| `--username <user>` | Basic auth username (skip OAuth). | None |
+| `--access-key <key>` | Basic auth access key (skip OAuth). | None |
+| `--env <name>` | Environment (`prod`). | Active profile's env |
+| `--mode <name>` | Run mode: `action` (strict) or `testing` (lenient). | Config value, otherwise `testing` |
+| `--bug-detection <mode>` | Detect product bugs while authoring: `off`, `stop` (halt the run on a confirmed bug), or `continue` (record it and keep going). Overrides `config set-bug-detection`. See [Configuration](/support/docs/kane-cli-configuration/). | Config value, otherwise `off` |
+| `--agent` | Plain NDJSON output, no colors or UI. | Off |
+| `--code-export` | Generate code export after upload. | Off |
+| `--code-language <lang>` | Code export language (currently `python`). | `python` |
+| `--skip-code-validation` | Skip post-codegen worker-side validation. | On |
+| `--no-skip-code-validation` | Force post-codegen worker-side validation. | Off |
+
+For variables and context file behavior, see [Variables and context](/support/docs/kane-cli-variables-and-context/). For code export and the run mode toggle, see [Configuration](/support/docs/kane-cli-configuration/).
+
+### Mobile runs
+
+By default a run targets the **desktop** browser (Chrome), so every example above is unchanged. On macOS Apple Silicon you can instead point a run at a virtual mobile device: an `emulator` (a virtual Android device) or a `simulator` (a virtual iOS device). Every mobile run needs an app under test.
+
+```bash
+# desktop (default): nothing changes for web runs
+kane-cli run "Search for 'noise-cancelling headphones' on amazon.com"
+
+# emulator (Android): install an .apk build and run against it
+kane-cli run "Add the first item to the cart" --target emulator --app ./builds/app-debug.apk
+
+# simulator (iOS): install a .zip build and run against it
+kane-cli run "Sign in and open the account tab" --target simulator --app ./builds/MyApp.zip
+```
+
+The mobile run flags:
+
+- `--target desktop|emulator|simulator`: which target to run against. Defaults to the saved session target, otherwise `desktop`.
+- `--device <id>`: pick a device by name, serial, `ip:port`, or udid. In the TUI/TTY, omitting it opens a one-time picker and the choice is saved; in non-interactive runs a device must already be set (via `--device` or `kane-cli config set-device`) or the run exits with the fix spelled out.
+- `--app <path|APPid>`: the app under test, required for every mobile run. Pass a build (emulator: `.apk`, simulator: `.zip`) or an uploaded app id (`APP` followed by six or more digits). On the `desktop` target, `--device` and `--app` are ignored.
+
+In the interactive TUI, a first run offers a Desktop / Emulator / Simulator chooser, and you can switch targets at any time with `/mobile` and `/desktop`. Run `/doctor` to check mobile tooling and devices.
+
+For setup (Xcode or Android Studio, `kane-cli login`, and `kane-cli doctor --install`) and the app formats each target accepts, see [Mobile testing](/support/docs/kane-cli-mobile/).
+
 ### Output Streams
 
 | Stream | Contents |
@@ -207,6 +263,8 @@ When stdin is not a TTY, Kane CLI automatically switches to plain NDJSON mode (t
 | `2` | Error (auth failure, Chrome crash) |
 | `3` | Timeout or cancelled |
 
+Use these codes to gate downstream CI steps.
+
 ### What You See at the End of a Run
 
 When a run finishes, Kane CLI prints a result summary:
@@ -227,6 +285,10 @@ Below the summary, Kane CLI prints any of the following links:
 | `ShareLink` | A shareable session URL on <BrandName /> Test Manager |
 | `TestCase` | The test case detail page in <BrandName /> Test Manager |
 | `CodeExport` | The local directory containing generated code (when code export is enabled) |
+
+Modern terminals render these as clickable hyperlinks. For details on what each link leads to, see [Test Manager integration](/support/docs/kane-cli-tms-integration/).
+
+The run is also captured as a sealed [evidence pack](/support/docs/kane-cli-evidence/) — screenshots, per-step console/network logs, and failure records. In a terminal, kane-cli offers to open it in the browser viewer; in agent or non-interactive runs it prints a one-line `evidence: view locally with …` hint to stderr instead.
 
 ### Feedback Prompt
 
