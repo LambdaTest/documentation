@@ -58,6 +58,20 @@ kane-cli context ingest <src...> [--as <id>]
 
 Snapshots one or more sources into `.context/` (the store is created on first use). A source is a file path or a remote URL — a Jira issue, a Confluence page, a Linear issue or document, or a public web page. See [Requirement Sources](/support/docs/kane-cli-assurance-sources/) for every accepted type.
 
+Snapshots one or more files into `.context/` (the store is created on first use) **and then extracts them** *(0.7.1)*:
+
+- On a terminal, the run continues straight into the interactive extract chat.
+- `--mode agent` extracts headless on the NDJSON stream (one `ingested` event per landing, before the extraction begins — see [Automation](/support/docs/kane-cli-assurance-automation/#the-ndjson-stream---mode-agent)); `--mode override` extracts headless too, auto-taking every default.
+- `--mode ci` — or piped stdin without a `--mode` — **lands only**: the files snapshot, nothing extracts, exit `0`, with a guidance line on stderr telling you what to run next.
+- `--plan`, `--force`, and `--trust` pass through to the extraction; they refuse under the land-only modes.
+
+Receipts adapt to the surface: a terminal prints the human copy (`landed prd (prd.md) — new source`); `ci`/piped runs keep the byte-exact script contract below. *(0.7.2)* Under `--mode agent` nothing prints outside the stream — the landing receipt is the `ingested` event itself.
+
+```
+$ kane-cli context ingest ./prd-online-store.md --mode ci
+created  prd-online-store  source sha256:0661…  blob sha256:3db8…
+```
+
 Each source gets a stable id — by default the filename slug (`prd-online-store.md` → `prd-online-store`), or the issue key for a ticket (`ENG-42` → `eng-42`). Pass `--as <id>` to name it yourself.
 
 Ingest is deterministic about identity:
@@ -73,6 +87,11 @@ Ingest is deterministic about identity:
 $ kane-cli context ingest ./prd-online-store.md
 created  prd-online-store  source sha256:0661…  blob sha256:3db8…
 ```
+
+Two lineage helpers:
+
+- **`--as` records versions**: a colleague hands you `PRD-v2.md` of an existing source `prd` — `ingest PRD-v2.md --as prd` records it as a new *version* of `prd` (head moves, dependents go stale). `--as` names one identity, so it refuses more than one file.
+- **Version suggestion (terminal only)**: ingesting `prd-v2.md` when a source `prd` already exists prompts "looks like a new version of `prd` — ingest as `prd`?". Accept and it versions `prd`; decline and `prd-v2` mints as its own source. Piped runs never prompt and never auto-link — pass `--as` explicitly in scripts.
 
 ### Accepted sources
 
@@ -172,6 +191,8 @@ kane-cli context extract --resume <sid> --message "Account required — the upda
 
 ```bash
 kane-cli context review [--queue derived|skipped|archived|drift] [--verdicts <file>] [--json]
+kane-cli context review --approve <refs...> | --skip <refs...> | --defer <refs...>       # 0.7.1
+kane-cli context review --verdicts <file> --allow-archive --because "<reason>"           # 0.7.1
 ```
 
 Walks existing nodes through the same review checklist, landing every verdict as one batched record:
@@ -190,6 +211,10 @@ In any queue: approve promotes, reject archives (a trusted node *can* be demoted
 ```
 
 with `resolution` one of `approved | edited | rejected | skipped | supersede` (plus optional `reason`, `edit`, `supersede_target`). It is atomic: every ref must resolve and sit in a verdict queue, or nothing commits (exit `2`). With `--json`, each landed verdict echoes as one NDJSON row. There is deliberately no auto-approve mode for review — trust requires a human decision.
+
+**Archives need explicit consent** *(0.7.1)*. A headless rejection no longer destroys anything: `--verdicts` holds rejected entries as non-destructive `pending_archive` facts (exit `0`, with a loud summary). Actually archiving them requires `--allow-archive` **and** `--because "<reason>"` — the reason goes on the record. Under `--mode ci`, archives are refused under any flag (exit `2`, atomic).
+
+**Structured verdicts** *(0.7.1)* — the flag form for scripted single decisions: `--approve <refs...>` lands approvals; `--skip` and `--defer` record nothing and leave the items queued. The three are mutually exclusive with `--verdicts`.
 
 ## Inspecting the graph {#inspect}
 
@@ -242,7 +267,7 @@ kane-cli context name <ref> <slug>          # name one node
 kane-cli context name --backfill [--yes]    # assign ids to every unnamed node
 ```
 
-Assigns a stable kebab-case name. Names are never part of a node's identity — renaming never re-addresses — and names follow edits, so a name assigned to version 1 keeps resolving to the current version.
+Assigns a stable kebab-case name. Names are never part of a node's identity — renaming never re-addresses — and names follow edits, so a name assigned to version 1 keeps resolving to the current version. The sequential-id namespace (`uc-3`, `ac-12`, …) is reserved for ids assigned at mint — `name` refuses it (exit `2`).
 
 ### `context revert`
 
@@ -278,6 +303,7 @@ Freshness is orthogonal: `fresh` / `stale` (the source snapshot moved) / `orphan
 ├── derived/             # regenerable read caches (delete any time; rebuild restores)
 ├── proposals/<ts>/      # proposal + review artifacts per extract run
 ├── sessions/<sid>/      # resumable paused sessions (expire after 24h)
+├── locks/               # advisory run locks (transient)
 ├── logs/                # per-run trace files
 ├── design/              # design rationale sidecars + technique overrides
 ├── reconcile/plans/     # stored reconcile plans
@@ -285,6 +311,10 @@ Freshness is orthogonal: `fresh` / `stale` (the source snapshot moved) / `orphan
 ```
 
 Two rules worth repeating from the [overview](/support/docs/kane-cli-assurance/#the-store-context): the store is **single-writer**, and it is **not git-mergeable** — gitignore it and share by re-ingesting sources.
+
+### Tracing a run
+
+Every extract and design run prints a `trace: <path>` line naming its log file — the first place to look when a run surprises you.
 
 Every extract run also writes a per-run trace to `.context/logs/extract-<ts>.log` (the path is printed at the start of the run) — the first place to look when a run surprises you.
 

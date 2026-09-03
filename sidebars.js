@@ -2764,6 +2764,21 @@ module.exports = {
             label: "Test.md",
             id: "kane-cli-testmd",
           },
+          {
+            type: "doc",
+            label: "Composing Tests (@import)",
+            id: "kane-cli-testmd-composition",
+          },
+          {
+            type: "doc",
+            label: "Running test.md Files",
+            id: "kane-cli-testmd-running",
+          },
+          {
+            type: "doc",
+            label: "Batch Runs (testrun)",
+            id: "kane-cli-testrun",
+          },
         ],
       },
       {
@@ -3033,9 +3048,20 @@ module.exports = {
             id: "kane-cli-error-codes",
           },
           {
-            type: "doc",
+            type: "category",
+            collapsed: true,
             label: "Troubleshooting",
-            id: "kane-cli-troubleshooting",
+            link: {
+              type: "doc",
+              id: "kane-cli-troubleshooting",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "sharp Install Failure",
+                id: "kane-cli-troubleshooting-sharp",
+              },
+            ],
           },
           {
             type: "doc",

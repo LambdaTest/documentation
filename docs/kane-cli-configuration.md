@@ -105,6 +105,7 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 | `target` | `"desktop"` \| `"emulator"` \| `"simulator"` | `"desktop"` | Default run target. `desktop` runs the Chrome browser; `emulator` and `simulator` run against a virtual Android or iOS device (macOS Apple Silicon only). See [Mobile Target](#mobile-target). | `kane-cli config set-target <desktop\|emulator\|simulator>` |
 | `device` | string \| null | `null` | Default mobile device, by name, serial, `ip:port`, or udid. When empty, a TTY run prompts once and saves the choice; a non-interactive run needs `--device` or this key set. Ignored on the `desktop` target. | `kane-cli config set-device <id>` |
 | `app` | string \| null | `null` | Default app under test for mobile runs: a build path (`.apk` or `.zip`) or an uploaded app id. Ignored on the `desktop` target. | `kane-cli config set-app <path\|APPid>` |
+| `bug_detection` | `"off"` \| `"stop"` \| `"continue"` | `"off"` | Whether the agent flags suspected product bugs while authoring. See [Bug detection](#bug-detection). | `kane-cli config set-bug-detection <mode>`, or per-run `--bug-detection` |
 | `code_export.enabled` | boolean | `false` | Generate code export after upload completes. | TUI menu, or `--code-export` flag |
 | `code_export.language` | `"python"` \| `"javascript"` | `"python"` | Output language for generated code. Accepts `python` or `javascript`. | `--code-language <lang>` |
 | `code_export.skip_validation` | boolean | `true` | Skip post-codegen worker-side validation. | TUI menu, or `--skip-code-validation` |
@@ -125,19 +126,41 @@ The format is `WIDTHxHEIGHT` (lowercase `x` separator). Width must be between 80
 
 In TUI mode, the same setting can be edited through an interactive window-size picker.
 
+### Default start URL
+
+kane-cli needs a start URL for the first navigation of a run. It resolves one in this order, first match wins:
+
+1. The `--url <url>` flag on `kane-cli run` / `kane-cli testmd run`.
+2. (test.md only) the `url:` key in the file's frontmatter.
+3. The configured `default_url` — set with `config set-url`.
+
+```bash
+kane-cli config set-url https://app.example.com
+```
+
+Bare domains are accepted and normalized — `config set-url example.com` stores `https://example.com`. The value is rejected without changing the saved config if it is not a valid URL. The built-in playground value (`https://kaneai-playground.lambdatest.io`) counts as "unset", so a fresh install behaves as if no default were configured.
+
+In TUI mode, set the same value with `/config set-url <url>`, or pick **Default URL** from the interactive `/config` menu.
+
+If none of the three sources supplies a URL, kane-cli falls back to a site named in the objective itself (e.g. "Go to amazon.com and …"). When nothing provides a start URL at all, an interactive terminal asks you for one, while a non-interactive (CI) run fails — pass `--allow-missing-url` to a non-TTY run to proceed from the browser's current page instead. See [Run options](/support/docs/kane-cli-modes/#run-options).
+
 ### Test Manager Project
 
 ```bash
 kane-cli config project
 ```
 
-In a TTY, this opens an interactive project picker. The picker fetches the projects available to your active profile, lets you search and arrow-key through them, and saves the chosen `project_id` and `project_name`. Login is required before the picker can fetch projects.
+In a TTY, this opens an interactive project picker. The picker fetches the projects available to your active profile, lets you search and arrow-key through them, and saves the chosen `project_id` and `project_name`. Login is required before the picker can fetch projects. Either OAuth or basic-auth credentials are sufficient — you no longer have to also store a username/access-key pair to use the picker.
 
 You can also set a project ID directly without the picker:
 
 ```bash
 kane-cli config project <project-id>
 ```
+
+In a non-interactive shell (CI, pipes), pass an explicit `<project-id>`. To discover the right ID first, use `kane-cli projects list` (see [Test Manager Integration](/support/docs/kane-cli-tms-integration/)).
+
+If you don't configure a project at all, kane-cli auto-resolves a sensible default when the first run starts — see "Auto-default on first run" in [Test Manager Integration](/support/docs/kane-cli-tms-integration/).
 
 See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how project selection feeds into uploads.
 
@@ -147,7 +170,7 @@ See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how 
 kane-cli config folder
 ```
 
-Opens an interactive folder picker for the currently selected project. Folders are searchable and shown with their hierarchy. You must have a project selected first.
+Opens an interactive folder picker for the currently selected project. Folders are searchable and shown with their hierarchy. The picker writes both `folder_id` and `folder_name`. You must have a project selected first. OAuth and basic-auth profiles are both supported.
 
 To set a folder ID without the picker:
 
@@ -155,7 +178,13 @@ To set a folder ID without the picker:
 kane-cli config folder <folder-id>
 ```
 
+For scripted discovery in non-TTY contexts, use `kane-cli folders list` — see [Test Manager Integration](/support/docs/kane-cli-tms-integration/).
+
 See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how folder selection feeds into uploads.
+
+### Self-healing for stale IDs
+
+If a previously-configured project or folder later becomes unusable (deleted, renamed, you lost access, or you typed an invalid ID by accident), kane-cli detects the bad ID on the next run, clears it, and auto-resolves a new default instead of letting the run proceed with a dead value and silently failing the upload. To rebind explicitly, run `kane-cli config project` again (or `kane-cli projects list` followed by `kane-cli config project <id>`).
 
 ### Mode
 
@@ -187,11 +216,27 @@ kane-cli config set-app ./builds/app-debug.apk
 
 A run reads these as its defaults. Override any of them for a single run with `--target`, `--device`, and `--app`. Setup and the full list of accepted app formats are in [Mobile Testing](/support/docs/kane-cli-mobile/).
 
+### Bug detection
+
+```bash
+kane-cli config set-bug-detection continue
+```
+
+`bug_detection` controls whether the agent watches for **product bugs** — not test failures — while it authors steps. When enabled, the agent can flag a suspicious behaviour mid-run (a broken flow, a wrong value, an error where none should be); the suspicion is investigated, and either rejected (the run continues, nothing fails) or confirmed as a product bug:
+
+- **`off`** (default) — no bug detection; behaviour is identical to previous releases.
+- **`stop`** — a confirmed product bug fails the step and ends the run.
+- **`continue`** — the confirmed bug is recorded (in the run result and the [evidence pack](/support/docs/kane-cli-evidence/)) and the run keeps going.
+
+This applies to **authoring** steps only. Replayed steps don't need it: a failed replay is always investigated automatically, regardless of this setting.
+
+Override the saved value for a single run with `--bug-detection <off|stop|continue>` on `kane-cli run`, `kane-cli testmd run`, or `kane-cli testrun run`. The setting appears in the TUI Config screen as **Bug Detection** and in `kane-cli config show` output.
+
 ### Code Export
 
 The `code_export` block enables and configures generated code output produced after a successful Test Manager upload. There is no `kane-cli config` subcommand for this block. Set it from one of:
 
-- **The TUI**: open the config menu, choose Code Export, and toggle the `enabled` and `skip_validation` switches.
+- **The TUI**: open the config menu, choose Code Export, and toggle the `enabled` and `skip_validation` switches. The TUI writes the change back to `tui-config.json`.
 - **Per-run flags** on `kane-cli run`:
   - `--code-export` to enable for this run only
   - `--code-language <lang>` to pick the output language (`python` or `javascript`)
@@ -236,6 +281,19 @@ Headless mode is per-run; there is no persistent setting. It is the right choice
 ### Window Size
 
 The Chrome window dimensions for both headed and headless modes come from the `window_size` setting. See [Window Size](#window-size) above to update them.
+
+### Chrome environment variables
+
+A handful of environment variables control how kane-cli locates and launches Chrome. They are read from the process environment, not from `tui-config.json`, so they are convenient for CI and one-off overrides.
+
+| Variable | Effect |
+|----------|--------|
+| `KANE_CLI_CHROME_PATH` | Absolute path to the Chrome binary. Use it when Chrome is installed somewhere kane-cli does not search by default. |
+| `KANE_CLI_SKIP_BROWSER_DOWNLOAD` | Any truthy value (`1` / `true` / `yes`) bypasses the Chrome-availability startup check; kane-cli then uses whatever `chrome` resolves on `PATH`. Useful in air-gapped or pre-provisioned CI images. |
+| `KANE_CLI_CDP_TIMEOUT_MS` | Per-attempt timeout, in milliseconds, for Chrome to become reachable over the DevTools Protocol. Default `30000`. Raise it on slow or cold CI runners. |
+| `KANE_CLI_CDP_RETRIES` | Extra Chrome launch attempts after the first when CDP readiness fails. Default `2` (so up to three attempts total); set `0` for a single attempt. Each retry uses a short backoff. |
+
+The CDP timeout and retry settings only affect transient launch failures (Chrome started but did not become reachable in time) — a missing or invalid binary fails immediately without retrying. See [Chrome failed to launch](/support/docs/kane-cli-troubleshooting/#chrome-failed-to-launch) for the matching troubleshooting steps.
 
 ---
 
