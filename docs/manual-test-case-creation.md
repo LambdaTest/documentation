@@ -130,6 +130,21 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 ***
 
+### Automate with KaneAI
+
+A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
+
+This works for both test case templates:
+
+| Template | What KaneAI receives |
+|----------|----------------------|
+| **Manual Test Steps** | The ordered steps and their expected results |
+| **Behaviour Driven Development** | The `Given` / `When` / `Then` scenarios, read directly — no conversion is needed |
+
+:::note
+The action requires KaneAI access, and the test case must have content — a test case with no steps or no scenarios cannot be automated.
+:::
+
 ### Test Case Runs Section
 
 **Test Case Runs Section** provides an overview of a test case's executions & plannings, whether are manual or automated. It includes detailed information of Test Instances of the Test case such as **applied configuration**, **executed by**, **Test Run name**, **Test Instance Execution Status**, **Execution time** and filters based on available fields. 

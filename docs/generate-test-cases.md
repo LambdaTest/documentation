@@ -3,7 +3,7 @@ id: generate-test-cases-with-ai
 title: Generate Test Cases with AI
 hide_title: true
 sidebar_label: Generate Test Cases with AI
-description: Learn efficient test case generation with in TestMu AI's Test Manager using AI.
+description: Learn efficient test case generation with in TestMu AI's Test Manager using AI, in manual steps or BDD (Gherkin) format.
 keywords:
   - test case creation
   - test case
@@ -19,6 +19,10 @@ keywords:
   - codeless test automation
   - automated test case creation
   - generate tests from requirements
+  - BDD test case generation
+  - Gherkin test cases
+  - Given When Then
+  - behaviour driven development test cases
 url: https://www.testmuai.com/support/docs/generate-test-cases-with-ai/
 site_name: TestMu AI
 slug: generate-test-cases-with-ai/
@@ -63,6 +67,18 @@ This feature is designed to save time, improve test coverage, and streamline the
 ---
 
 ## Highlights
+
+### Output Format: Manual Steps or BDD Scenarios
+
+Test steps can be written in either of two formats, and the rest of the workflow is identical for both.
+
+By default the AI generates **Manual Test Steps** — numbered steps with expected results. Turn on the **Gherkin Format** toggle in **Advanced settings** to generate **BDD Scenarios** instead, written in `Given` / `When` / `Then`. The choice is optional and is remembered for the rest of the session.
+
+Whichever format you choose:
+
+- **Refining**: Conversation Layer messages and regeneration work the same way and preserve the format.
+- **Saving**: test cases are saved to Test Manager with the matching template — **Manual Test Steps** or **Behaviour Driven Development** — and open in that template's editor.
+- **Automating**: KaneAI automates test cases in either format, reading the manual steps or the Gherkin steps directly.
 
 ### Conversation Layer
 Refine, correct, expand, and restructure your AI-generated test scenarios and test cases using natural language, no manual editing required. The Conversation Layer brings a **chat-driven workflow** directly into your generation session, letting you iterate in real time without starting over.
@@ -197,6 +213,54 @@ Currently, the AI Test Case Generator can only access **publicly available URLs*
 **Support for private URLs is coming soon.**
 :::
 
+#### Choose the Output Format
+
+Choosing an output format is optional. By default the AI writes **Manual Test Steps**, so you can generate without changing anything.
+
+To generate **BDD Scenarios** instead, open **Advanced settings** before you generate and turn on the **Gherkin Format** toggle. It sits with the other [generation settings](#configure-generation-settings), below **Memory Enhancement**.
+
+| Toggle | Output | Test case looks like |
+|--------|--------|----------------------|
+| **Off** (default) | **Manual Test Steps** | Numbered steps, each with an expected result |
+| **On** | **BDD Scenarios** | Gherkin scenarios written in `Given` / `When` / `Then` |
+
+A test case is written in one format or the other — never both. Switching the toggle changes the format for test cases generated from that point on; it does not rewrite test cases you have already generated.
+
+:::note
+The format you choose is remembered for the rest of the session. Follow-up messages in the [Conversation Layer](#conversation-layer-refine-your-test-cases) and any regeneration continue in the same format, so you only need to set it once.
+:::
+
+##### BDD Scenario Output
+
+With the toggle on, each test case carries one or more Gherkin scenarios instead of manual steps:
+
+```gherkin
+Scenario: Complete a motorcycle purchase successfully
+  Given I am on the homepage "https://www.example.com"
+  When I type "motorcycle" into the **Search** bar and submit
+  And I click on the first product result in the list
+  Then the product detail page for the motorcycle is displayed
+  When I click the **Add to Cart** button
+  And I navigate to the cart and click **Proceed to Buy**
+  Then I see an order confirmation page with the message "Order placed, thank you!"
+```
+
+What the AI generates:
+
+- **1-3 scenarios** per test case, each self-contained.
+- **4-10 steps** per scenario, each 40 words or fewer.
+- The first step is always a `Given` that establishes the entry URL or page.
+- `Then` steps describe visible, verifiable UI outcomes.
+
+Keywords used are `Scenario:`, `Given`, `When`, `Then`, `And` and `But`. The following are intentionally **not** generated:
+
+| Not generated | Why | What you get instead |
+|---------------|-----|----------------------|
+| `Scenario Outline:` and `Examples:` tables | The BDD editor has no interface for parameterised tables | A separate `Scenario:` for each data set |
+| `Feature:` | The test case title and its folder already name the feature | Each scenario starts at `Scenario:` |
+| `Background:` | Each scenario is written to stand alone | Setup steps repeated, or static facts placed in **Pre-conditions** |
+| Tags such as `@smoke` | Tags are a separate field on the test case | Use the test case **Tags** field |
+
 #### Add Input Requirements
 
 ##### Text Input
@@ -266,6 +330,7 @@ Before triggering a generation session, you can configure the following settings
 | **Max Test Scenarios** | Set the maximum number of test scenarios the AI will generate in the session |
 | **Max Test Cases per Scenario** | Set the upper limit for test cases within each individual scenario |
 | **Memory Enhancement** | Toggle to enable or disable the [Smart Context: Memory Layer](#smart-context-memory-layer), which retrieves relevant existing test cases from your repository to improve generation quality |
+| **Gherkin Format** | Toggle to generate test case steps as [BDD scenarios](#bdd-scenario-output) in Gherkin (`Given` / `When` / `Then`) instead of step and outcome pairs. Off by default |
 | **Project Instructions** | View and verify the [project-level custom instructions](#project-level-custom-instructions) that will be applied to the session |
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/configure_generation_settings.png').default} alt="configure-generation-settings" width="1347" height="616" className="doc_img"/>
@@ -311,6 +376,9 @@ You can **edit** any part of the test case if you want to add more context or al
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/edit_suggested_test_cases.png').default} alt="edit_suggested_test_cases" className="doc_img"/>
 
+The details panel matches the format the test case was generated in. Manual Test Steps show as **Test Steps and Expected Outcomes**; BDD Scenarios show as a **BDD Scenarios** section, where each scenario opens in a Gherkin editor with syntax highlighting and can be edited directly.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_scenarios_test_case_details.png').default} alt="bdd-scenarios-test-case-details" width="1347" height="616" className="doc_img"/>
 
 ---
 
@@ -537,6 +605,9 @@ Once you have generated and refined your test scenarios and test cases, it's tim
 #### Option 1: Create Test Cases
 Select the desired test cases and click **Create** to save them directly to your **Test Case Repository** in <BrandName /> Test Manager. These saved test cases can then be assigned to test runs, shared with teams, or used in manual test planning. Any files attached during the generation session will also be saved as attachments on the created test cases.
 
+Test cases generated in **BDD Scenarios** format are saved with the **Behaviour Driven Development** template, and their scenarios appear under the **Test steps** tab. Test cases generated in **Manual Test Steps** format are saved with the **Manual Test Steps** template. The format is carried over from the generation session — you do not need to select a template when saving.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_saved_test_case_test_manager.png').default} alt="bdd-saved-test-case-test-manager" width="1347" height="616" className="doc_img"/>
 <!-- <img loading="lazy" src={require('../assets/images/mobile-app-testing/create_test_cases.png').default} alt="create-test-cases" width="1347" height="616" className="doc_img"/> -->
 
 #### Option 2: Create and Automate with KaneAI
@@ -562,6 +633,10 @@ Configure environment-level settings for your test run. All platforms support **
 The **Create and Automate** option requires KaneAI access. If you do not have KaneAI enabled on your account, use the **Create** option to save test cases manually.
 :::
 
+:::note
+Test cases are sent to KaneAI in whichever format they were generated in. KaneAI reads manual steps and Gherkin scenarios directly, so no conversion happens either way. The same is true of the **Automate with KaneAI** action on an individual saved test case.
+:::
+
 :::info Experimental Feature
 Create and Automate is currently an experimental feature. Review your test steps once the test cases have been created and automated.
 :::
@@ -578,6 +653,8 @@ Create and Automate is currently an experimental feature. Review your test steps
 | File upload fails | Verify the file does not exceed the 50 MB size limit and that you have not exceeded the 10-file session limit. |
 | Credits deducted but no changes appeared | This can occur if the AI could not interpret your request or if there was a connection interruption. Check the conversation history for an error message. |
 | Regeneration removed refined scenarios | Regeneration replaces all current output. Use targeted conversational messages instead to preserve specific scenarios. |
+| Test cases generated as manual steps after turning on the Gherkin toggle | The toggle applies to test cases generated after it is switched on. Test cases already on screen keep the format they were generated in. Regenerate, or start a new session, to produce them as BDD scenarios. |
+| Some test cases are BDD and others are manual steps in the same session | This happens if the toggle was changed mid-session. Each test case keeps the format it was generated in. Regenerate to bring the whole session into one format. |
 
 
 ---
@@ -613,6 +690,22 @@ Your session context, including generated scenarios and conversation history, is
 **Can I export the refined test cases?**
 
 Yes. After refining your test cases through the Conversation Layer, you can export or save them to your Test Manager project using the same export workflows available in the Test Case Generator.
+
+**Can I switch a test case between Manual Test Steps and BDD Scenarios after it is generated?**
+
+Not from the generator. The **Gherkin Format** toggle sets the format for test cases generated after you change it; existing test cases keep the format they were generated in. To convert a whole session, regenerate with the toggle in the format you want. Once a test case is saved, you can change its template in Test Manager, but the existing content is not rewritten into the new format.
+
+**Do BDD test cases work with the Conversation Layer?**
+
+Yes. Refinement messages work the same way in either format. When the session is in BDD format, the AI edits the Gherkin scenarios rather than manual steps, and the format is preserved across turns.
+
+**Can BDD test cases be automated with KaneAI?**
+
+Yes. KaneAI reads the `Given` / `When` / `Then` steps directly, so BDD test cases can be automated exactly like manual-step test cases.
+
+**Why does the AI not generate `Scenario Outline:` or `Examples:` tables?**
+
+Test Manager's BDD editor has no interface for parameterised tables, so a scenario written that way could not be edited after saving. The AI writes a separate `Scenario:` for each data set instead.
 
 **Is the Conversation Layer available for all plans?**
 
