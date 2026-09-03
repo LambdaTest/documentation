@@ -134,10 +134,6 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
 
-<!-- IMAGE PLACEHOLDER: test case detail with the Automate section and the Automate with KaneAI button.
-     Suggested filename: ../assets/images/test-manager/test-cases/automate-with-kaneai.png
-     <img loading="lazy" src={require('../assets/images/test-manager/test-cases/automate-with-kaneai.png').default} alt="automate-with-kaneai" width="1347" height="616" className="doc_img"/> -->
-
 This works for both test case templates:
 
 | Template | What KaneAI receives |
