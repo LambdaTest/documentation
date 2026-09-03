@@ -70,12 +70,15 @@ This feature is designed to save time, improve test coverage, and streamline the
 
 ### Output Format: Manual Steps or BDD Scenarios
 
-Choose how the AI writes your test steps. Generate conventional **Manual Test Steps** with expected results, or **BDD Scenarios** in Gherkin syntax using `Given` / `When` / `Then`.
+Test steps can be written in either of two formats, and the rest of the workflow is identical for both.
 
-- **Set it once**: Optional — the default is Manual Test Steps. Turn on the **Gherkin Format** toggle in **Advanced settings** before generating, and the choice is remembered for the rest of the session.
-- **Works everywhere in the session**: Conversation Layer refinements and regeneration both preserve the format.
-- **Saves natively**: BDD test cases land in Test Manager with the **Behaviour Driven Development** template, ready to edit in the Gherkin editor.
-- **Automation-ready**: KaneAI automates BDD test cases directly from their Gherkin steps.
+By default the AI generates **Manual Test Steps** — numbered steps with expected results. Turn on the **Gherkin Format** toggle in **Advanced settings** to generate **BDD Scenarios** instead, written in `Given` / `When` / `Then`. The choice is optional and is remembered for the rest of the session.
+
+Whichever format you choose:
+
+- **Refining**: Conversation Layer messages and regeneration work the same way and preserve the format.
+- **Saving**: test cases are saved to Test Manager with the matching template — **Manual Test Steps** or **Behaviour Driven Development** — and open in that template's editor.
+- **Automating**: KaneAI automates test cases in either format, reading the manual steps or the Gherkin steps directly.
 
 ### Conversation Layer
 Refine, correct, expand, and restructure your AI-generated test scenarios and test cases using natural language, no manual editing required. The Conversation Layer brings a **chat-driven workflow** directly into your generation session, letting you iterate in real time without starting over.
@@ -373,7 +376,7 @@ You can **edit** any part of the test case if you want to add more context or al
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/edit_suggested_test_cases.png').default} alt="edit_suggested_test_cases" className="doc_img"/>
 
-For test cases generated in **BDD Scenarios** format, the details panel shows a **BDD Scenarios** section in place of Test Steps and Expected Outcomes. Each scenario opens in a Gherkin editor with syntax highlighting, and you can edit the scenario text directly.
+The details panel matches the format the test case was generated in. Manual Test Steps show as **Test Steps and Expected Outcomes**; BDD Scenarios show as a **BDD Scenarios** section, where each scenario opens in a Gherkin editor with syntax highlighting and can be edited directly.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd_scenarios_test_case_details.png').default} alt="bdd-scenarios-test-case-details" width="1347" height="616" className="doc_img"/>
 
@@ -631,7 +634,7 @@ The **Create and Automate** option requires KaneAI access. If you do not have Ka
 :::
 
 :::note
-Test cases in **BDD Scenarios** format can be automated the same way as manual-step test cases. KaneAI reads the `Given` / `When` / `Then` steps directly, so no conversion is needed. This also applies to the **Automate with KaneAI** action on an individual saved test case.
+Test cases are sent to KaneAI in whichever format they were generated in. KaneAI reads manual steps and Gherkin scenarios directly, so no conversion happens either way. The same is true of the **Automate with KaneAI** action on an individual saved test case.
 :::
 
 :::info Experimental Feature
