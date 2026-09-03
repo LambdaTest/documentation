@@ -5249,6 +5249,21 @@ module.exports = {
             label: "Test.md",
             id: "kane-cli-testmd",
           },
+          {
+            type: "doc",
+            label: "Composing Tests (@import)",
+            id: "kane-cli-testmd-composition",
+          },
+          {
+            type: "doc",
+            label: "Running test.md Files",
+            id: "kane-cli-testmd-running",
+          },
+          {
+            type: "doc",
+            label: "Batch Runs (testrun)",
+            id: "kane-cli-testrun",
+          },
         ],
       },
       {
