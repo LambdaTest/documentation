@@ -44,7 +44,7 @@ const docsSidebar = [
   { type: 'link', label: 'Web Scanner', href: '/support/docs/web-scanner-overview/' },
   { type: 'link', label: 'Insights', href: '/support/docs/analytics-overview/' },
   { type: 'link', label: 'Real Time', href: '/support/docs/getting-started-with-desktop-browser-real-time-testing/' },
-  { type: 'link', label: 'Agent Testing Platform', href: '/support/docs/getting-started-with-agent-testing-platform/' },
+  { type: 'link', label: 'Agent Assurance Platform', href: '/support/docs/getting-started-with-agent-testing-platform/' },
   { type: 'link', label: 'Real Device', href: '/support/docs/app-testing-on-real-devices/' },
   { type: 'link', label: 'Test Manager', href: '/support/docs/test-manager/' },
   { type: 'link', label: 'Integration', href: '/support/docs/bug-tracking-tools/' },

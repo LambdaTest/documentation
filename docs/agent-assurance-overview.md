@@ -380,8 +380,12 @@ Exit code 0 means no defect was recorded in the verdicts that were produced. Als
 ## Next Steps
 
 - [Get started with Agent Assurance](/support/docs/agent-assurance-quickstart/)
+- [Follow the complete Rook sequence](/support/docs/rook-sequence/)
+- [Understand the local and cloud architecture](/support/docs/rook-architecture/)
 - [Connect and explore agents](/support/docs/agent-assurance-connect-and-explore-agents/)
 - [Configure invocation profiles](/support/docs/agent-assurance-profiles/)
+- [Generate profiles and configure lifecycle hooks](/support/docs/rook-profiles-and-hooks/)
 - [Generate and curate scenarios](/support/docs/agent-assurance-scenarios/)
 - [Run tests safely](/support/docs/agent-assurance-run-tests/)
+- [Review permissions, secrets, and workspace files](/support/docs/rook-permissions-and-safety/)
 - [Browse every command](/support/docs/agent-assurance-command-reference/)

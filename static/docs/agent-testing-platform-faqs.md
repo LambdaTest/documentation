@@ -1,8 +1,8 @@
-# Agent Testing Platform FAQs: Setup, Security, Pricing
+# Agent Assurance Platform FAQs: Setup, Security, Pricing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Common questions about TestMu AI's Agent Testing Platform, grouped by plans, setup, security, and evaluation quality.
+Common questions about TestMu AI's Agent Assurance Platform, grouped by plans, setup, security, and evaluation quality.
 
 ## Plans and Pricing
 

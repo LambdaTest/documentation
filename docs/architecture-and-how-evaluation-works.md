@@ -1,9 +1,9 @@
 ---
 id: architecture-and-how-evaluation-works
-title: How the TestMu AI Agent Testing Platform Evaluates Agents
+title: How the TestMu AI Agent Assurance Platform Evaluates Agents
 hide_title: false
 sidebar_label: Architecture & How Evaluation Works
-description: See how the Agent Testing Platform works. Its layered architecture and the five-phase evaluation loop that turns uploaded context into a go-live verdict.
+description: See how the Agent Assurance Platform works. Its layered architecture and the five-phase evaluation loop that turns uploaded context into a go-live verdict.
 keywords:
  - how ai agent testing works
  - ai agent evaluation architecture
@@ -43,11 +43,11 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How the TestMu AI Agent Testing Platform Evaluates Agents
+# How the TestMu AI Agent Assurance Platform Evaluates Agents
 
 ---
 
-The Agent Testing Platform runs every evaluation through five phases: configure context, generate scenarios, run the testing agents, score each interaction, and return a production readiness verdict. 15+ specialized testing agents drive it, each probing one quality dimension, all in parallel against your agent's real endpoint.
+The Agent Assurance Platform runs every evaluation through five phases: configure context, generate scenarios, run the testing agents, score each interaction, and return a production readiness verdict. 15+ specialized testing agents drive it, each probing one quality dimension, all in parallel against your agent's real endpoint.
 
 You run it from one hosted web application, the REST API, the CLI, or a CI/CD pipeline. There is no SDK to install and no local infrastructure to operate.
 

@@ -2590,3 +2590,252 @@ h6[id]::before {
 @media (max-width: 640px) { .kane-hub-grid { grid-template-columns: 1fr; } }
 [data-theme=dark] .kane-hub-card { border-color: #33373d; background: #1e2125; }
 [data-theme=dark] .kane-hub-card:hover { border-color: #2f81f7; box-shadow: 0 8px 24px rgba(0,0,0,.45); }
+/* Rook architecture: a text-first system map that remains readable in the
+   narrow documentation column and on mobile. */
+.rookArchitecture {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0 36px;
+  padding: 20px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 18px;
+  background: linear-gradient(145deg, var(--ifm-background-surface-color), var(--ifm-background-color));
+}
+
+.rookArchitecture__caption {
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.rookArchitecture__zone,
+.rookArchitecture__boundary {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 14px;
+  background: var(--ifm-background-color);
+}
+
+.rookArchitecture__zone--local {
+  border-top: 3px solid #ff6200;
+}
+
+.rookArchitecture__zone--cloud {
+  border-top: 3px solid #4b9cff;
+}
+
+.rookArchitecture__zoneLabel {
+  margin: 0 0 14px;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rookArchitecture__node {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+}
+
+.rookArchitecture__node--orange {
+  border-left: 4px solid #ff6200;
+}
+
+.rookArchitecture__node--blue {
+  border-left: 4px solid #4b9cff;
+}
+
+.rookArchitecture__nodeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.rookArchitecture__nodeHeader strong {
+  min-width: 0;
+  color: var(--ifm-heading-color);
+  font-size: 1rem;
+  text-wrap: balance;
+}
+
+.rookArchitecture__node p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.rookArchitecture__badge {
+  flex: none;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(255, 98, 0, 0.13);
+  color: #c94e00;
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+[data-theme='dark'] .rookArchitecture__badge {
+  color: #ff9a5c;
+}
+
+.rookArchitecture__badge--blue {
+  background: rgba(75, 156, 255, 0.14);
+  color: #176dc2;
+}
+
+[data-theme='dark'] .rookArchitecture__badge--blue {
+  color: #8cc4ff;
+}
+
+.rookArchitecture__connector {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 8px 12px;
+  color: var(--ifm-color-emphasis-700);
+  text-align: center;
+}
+
+.rookArchitecture__connector > span {
+  color: var(--ifm-color-primary);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.rookArchitecture__connector strong {
+  color: var(--ifm-color-emphasis-900);
+  font-size: 0.82rem;
+}
+
+.rookArchitecture__connector small {
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.rookArchitecture__boundary {
+  display: grid;
+  gap: 10px;
+  border-style: dashed;
+}
+
+.rookArchitecture__services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rookArchitecture__boundary .rookArchitecture__zoneLabel {
+  margin-bottom: 2px;
+}
+
+.rookArchitecture__boundaryRow {
+  display: grid;
+  grid-template-columns: minmax(105px, 0.65fr) minmax(155px, 1fr);
+  gap: 2px 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.rookArchitecture__boundaryRow strong,
+.rookArchitecture__boundaryRow span,
+.rookArchitecture__boundaryRow small {
+  overflow-wrap: anywhere;
+}
+
+.rookArchitecture__boundaryRow strong {
+  grid-row: span 2;
+  align-self: center;
+  color: var(--ifm-heading-color);
+}
+
+.rookArchitecture__boundaryRow span {
+  color: var(--ifm-color-emphasis-900);
+  font-weight: 650;
+}
+
+.rookArchitecture__boundaryRow small {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.4;
+}
+
+.rookArchitectureCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 18px 0 32px;
+}
+
+.rookArchitectureCards article {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+}
+
+.rookArchitectureCards h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  text-wrap: balance;
+}
+
+.rookArchitectureCards p {
+  margin: 0 0 8px;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.rookArchitectureCards p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .rookArchitecture {
+    gap: 14px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .rookArchitecture__zone,
+  .rookArchitecture__boundary {
+    padding: 14px;
+  }
+
+  .rookArchitecture__nodeHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .rookArchitecture__boundaryRow {
+    grid-template-columns: 1fr;
+  }
+
+  .rookArchitecture__services {
+    grid-template-columns: 1fr;
+  }
+
+  .rookArchitecture__boundaryRow strong {
+    grid-row: auto;
+  }
+
+  .rookArchitectureCards {
+    grid-template-columns: 1fr;
+  }
+}
