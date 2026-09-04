@@ -422,12 +422,17 @@ Parse errors abort **before** any browser launch with exit code `2`:
 |---------------|-----|
 | `frontmatter is missing closing '---'` | Add the trailing `---` |
 | `invalid YAML in frontmatter` | Validate the YAML block |
+| `step-config fenced \`\`\`yaml block is not closed` | A per-step `yaml` block is missing its closing `\`\`\``. |
+| `invalid YAML in step config: <details>` | Per-step YAML is malformed. |
 | `step body must be exactly one of prose / @import` | Split into two steps |
+| `step config 'optional' must be boolean: got <type>` | `optional` was set to a non-boolean. |
+| `variable '<k>' must be a string or { value: ... } object` | A variable entry is the wrong shape. |
 | `step config on @import may only contain 'optional'` | Remove other keys from the yaml block |
 | `cannot @import a test file` | Imports may only reference helpers (not files ending in `_test.md`) |
 | `cyclic reference` | Restructure helpers to break the circular dependency |
 | `chrome config is global-only` | Move Chrome key to root frontmatter |
 | `'<key>' is run-level and cannot be set per-step` | Move `mode` / `on_lock_conflict` to root frontmatter |
+| `tags must be a non-empty list of non-empty strings` | `tags:` is present but empty, or one of its entries is empty. |
 | `unknown config key` | Remove or fix the key |
 | `auth/identity keys are CLI-only` | Pass `username` / `access_key` as CLI flags, not in frontmatter |
 
