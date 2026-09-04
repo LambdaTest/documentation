@@ -35,6 +35,8 @@ Rule of thumb: `agent` when something can read the pause and answer (an AI agent
 
 The same matrix drives `maintain reconcile`, with two reconcile-specific rules: no headless mode ever archives anything — ARCHIVE decisions wait for an interactive session — and a `ci`-mode run that hits a decision needing a human **stores the plan and exits `2`** (the work isn't lost; walk the stored plan interactively or apply it in `agent` mode).
 
+`context ingest` follows the matrix with one extra rule *(0.7.1)*: it lands the files and then runs the extraction under the given mode — except `--mode ci`, or piped stdin without any `--mode`, which **lands only** (exit `0`, with a stderr guidance line naming the next command). Two extraction dials also matter headless: `--trust hold` holds everything new for review instead of committing it (headless-only; `ci` refuses the flag entirely with exit `2`), and `--trust auto` is the default everywhere.
+
 ## Exit codes
 
 Consistent across extract, design, and the maintain commands that embed them:
@@ -43,8 +45,8 @@ Consistent across extract, design, and the maintain commands that embed them:
 |---|---|
 | `0` | Complete. |
 | `1` | Runtime failure. For extract and design, a `ci`-mode fail-close on a high-risk question also exits `1`; reconcile's `ci` fail-close stores the plan and exits `2` instead. |
-| `2` | Usage / auth / refusal — bad flags, failed input validation, no store, bare non-TTY without `--mode`, missing `--yes` on a destructive command. Nothing was mutated. |
-| `3` | **Paused and resumable** — the only meaning of 3. A session is saved; resume it within 24 hours. |
+| `2` | Usage / auth / refusal — bad flags, failed input validation, no store, bare non-TTY without `--mode`, missing `--yes` on a destructive command. Nothing was mutated — with two durable exceptions: a merged ingest whose *extraction* refused keeps its landed sources (the run says they're safe), and reconcile's `ci` fail-close keeps its stored plan. |
+| `3` | **Paused and resumable** — the only meaning of 3. A session is saved; resume it within 24 hours. Since 0.7.1 sessions are durable from the first turn, so a crash that left a checkpoint also exits `3` and names the exact resume command (a crash before anything durable — or a failed pause save — still exits `1`). |
 
 ## The NDJSON stream (`--mode agent`)
 
