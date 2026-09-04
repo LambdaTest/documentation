@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-The Agent Testing Platform tests phone voice agents by placing real telephone calls, not simulations. An AI-powered simulated caller follows a scenario, the platform records the full conversation, and it scores the call across 30+ call quality metrics. It covers inbound support lines, IVR flows, and outbound dialers.
+The Agent Assurance Platform tests phone voice agents by placing real telephone calls, not simulations. An AI-powered simulated caller follows a scenario, the platform records the full conversation, and it scores the call across 30+ call quality metrics. It covers inbound support lines, IVR flows, and outbound dialers.
 
 Phone agents come in two directions, inbound and outbound, and each has its own workflow. This page covers what is shared across both. See the dedicated guides for [inbound phone agent testing](/support/docs/inbound-phone-agent/) and [outbound phone agent testing](/support/docs/outbound-phone-agent/).
 

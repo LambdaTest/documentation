@@ -151,17 +151,17 @@ export default function Home() {
               <a href="/support/docs/connect-to-session/"><p className="p_home_inners">Connect to a Session</p></a>
             </div>
           </div>
-          <div className="home_inners_box">
-            <h2 className="homeMain_h2"><Icon light="visual-light-icon.svg" dark="visual-dark-icon.svg" alt="" />SmartUI</h2>
-            <div className="home_inners">
-              <a href="/support/docs/smart-visual-regression-testing/"><p className="p_home_inners">Getting Started</p></a>
-              <a href="/support/docs/smartui-selenium-js-sdk/"><p className="p_home_inners">Explore SDKs</p></a>
-              <a href="/support/docs/smartui-cli/"><p className="p_home_inners">CLI</p></a>
-              <a href="/support/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload Screenshots</p></a>
-              <a href="/support/docs/smartui-pdf-comparison/"><p className="p_home_inners">Smart PDF Comparison</p></a>
-              <a href="/support/docs/smart-ui-build-options/"><p className="p_home_inners">Build Config and Options</p></a>
-              <a href="/support/docs/test-settings-options/"><p className="p_home_inners">Advance Comparison Options</p></a>
-              <a href="/support/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
+          <div className="product_section">
+            <h2 className="product_section_label"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Assurance Platform</h2>
+            <div className="product_grid">
+              <a href="/support/docs/getting-started-with-agent-testing-platform/"><span className="ps_title">Conversational Agent Testing</span><span className="ps_desc">Test chat, voice, video, and phone agents</span></a>
+              <a href="/support/docs/agent-assurance-overview/"><span className="ps_title">Autonomous Agent Testing &nbsp;<NewTag value="NEW" /></span><span className="ps_desc">Validate coding agents with Rook</span></a>
+              <a href="/support/docs/testing-your-first-ai-agent/"><span className="ps_title">Conversational Quickstart</span><span className="ps_desc">Test your first conversational agent</span></a>
+              <a href="/support/docs/agent-assurance-quickstart/"><span className="ps_title">Rook Quickstart</span><span className="ps_desc">Run your first autonomous-agent test</span></a>
+              <a href="/support/docs/rook-architecture/"><span className="ps_title">Rook Architecture</span><span className="ps_desc">Understand local and cloud boundaries</span></a>
+              <a href="/support/docs/rook-profiles-and-hooks/"><span className="ps_title">Profiles, Phases & Hooks</span><span className="ps_desc">Control setup, prompts, and lifecycle behavior</span></a>
+              <a href="/support/docs/agent-assurance-command-reference/"><span className="ps_title">Rook Command Reference</span><span className="ps_desc">Browse CLI and TUI commands</span></a>
+              <a href="/support/docs/agent-testing-platform-faqs/"><span className="ps_title">Frequently Asked Questions</span><span className="ps_desc">Common agent assurance questions</span></a>
             </div>
           </div>
           <div className="home_inners_box">
