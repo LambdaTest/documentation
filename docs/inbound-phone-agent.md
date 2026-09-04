@@ -47,7 +47,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-An inbound phone agent answers calls. To test one, the Agent Testing Platform places a real call to the agent's phone number, and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
+An inbound phone agent answers calls. To test one, the Agent Assurance Platform places a real call to the agent's phone number, and a simulated caller drives the scenario. Typical use cases are IVR menus, inbound support, appointment scheduling, and billing.
 
 Inbound testing runs in two modes: **pre-evaluation** with live simulated calls, and **post-evaluation** on recordings from real production calls.
 

@@ -153,14 +153,16 @@ export default function Home() {
             </div>
           </div>
           <div className="product_section">
-            <h2 className="product_section_label"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Testing</h2>
+            <h2 className="product_section_label"><Icon light="Realtime-light-icon.svg" dark="Realtime-dark-icon.svg" alt="" />Agent Assurance Platform</h2>
             <div className="product_grid">
-              <a href="/support/docs/getting-started-with-agent-testing-platform/"><span className="ps_title">Overview</span><span className="ps_desc">Test AI agents end to end</span></a>
-              <a href="/support/docs/chat-agent/"><span className="ps_title">Supported Agent Types</span><span className="ps_desc">Chat, voice, and more</span></a>
-              <a href="/support/docs/testing-your-first-ai-agent/"><span className="ps_title">Getting Started</span><span className="ps_desc">Test your first AI agent</span></a>
-              <a href="/support/docs/test-retell-agents/"><span className="ps_title">Guides</span><span className="ps_desc">Retell, API, and patterns</span></a>
-              <a href="/support/docs/agent-testing-platform-faqs/"><span className="ps_title">Frequently Asked Questions</span><span className="ps_desc">Common agent testing questions</span></a>
-              <a href="/support/docs/agent-assurance-overview/"><span className="ps_title">Agent Assurance &nbsp;<NewTag value="NEW" /></span><span className="ps_desc">Continuous agent quality checks</span></a>
+              <a href="/support/docs/getting-started-with-agent-testing-platform/"><span className="ps_title">Conversational Agent Testing</span><span className="ps_desc">Test chat, voice, video, and phone agents</span></a>
+              <a href="/support/docs/agent-assurance-overview/"><span className="ps_title">Autonomous Agent Testing &nbsp;<NewTag value="NEW" /></span><span className="ps_desc">Validate coding agents with Rook</span></a>
+              <a href="/support/docs/testing-your-first-ai-agent/"><span className="ps_title">Conversational Quickstart</span><span className="ps_desc">Test your first conversational agent</span></a>
+              <a href="/support/docs/agent-assurance-quickstart/"><span className="ps_title">Rook Quickstart</span><span className="ps_desc">Run your first autonomous-agent test</span></a>
+              <a href="/support/docs/rook-architecture/"><span className="ps_title">Rook Architecture</span><span className="ps_desc">Understand local and cloud boundaries</span></a>
+              <a href="/support/docs/rook-profiles-and-hooks/"><span className="ps_title">Profiles, Phases & Hooks</span><span className="ps_desc">Control setup, prompts, and lifecycle behavior</span></a>
+              <a href="/support/docs/agent-assurance-command-reference/"><span className="ps_title">Rook Command Reference</span><span className="ps_desc">Browse CLI and TUI commands</span></a>
+              <a href="/support/docs/agent-testing-platform-faqs/"><span className="ps_title">Frequently Asked Questions</span><span className="ps_desc">Common agent assurance questions</span></a>
             </div>
           </div>
           <div className="product_section">

@@ -179,162 +179,183 @@ module.exports = {
     [
       {
         type: "category",
-        label: "Overview",
-        collapsed: false,
-        items: [
-          {
-            type: "doc",
-            label: "What is Agent Testing",
-            id: "getting-started-with-agent-testing-platform",
-          },
-          {
-            type: "doc",
-            label: "Architecture & Working",
-            id: "architecture-and-how-evaluation-works",
-          },
-        ],
-      },
-
-       {
-        type: "category",
-        label: "Supported Agent Types",
-        collapsed: false,
-        items: [
-          {
-            type: "doc",
-            label: "Chat Agent Testing",
-            id: "chat-agent",
-          },
-          {
-            type: "doc",
-            label: "Voice Agent Testing",
-            id: "voice-agent",
-          },
-          {
-            type: "doc",
-            label: "Video Agent Testing",
-            id: "video-agent",
-          },
-          {
-            type: "doc",
-            label: "Phone Agent Testing",
-            id: "phone-agent",
-          },
-          {
-            type: "doc",
-            label: "Inbound Phone Agent Testing",
-            id: "inbound-phone-agent",
-          },
-          {
-            type: "doc",
-            label: "Outbound Phone Agent Testing",
-            id: "outbound-phone-agent",
-          },
-          {
-            type: "doc",
-            label: "Image Analyzer Testing",
-            id: "image-analyzer",
-          },
-        ],
-      },
-
-      {
-        type: "category",
-        label: "Getting Started",
-        collapsed: false,
-        items: [
-          {
-            type: "doc",
-            label: "Quickstart (UI)",
-            id: "testing-your-first-ai-agent",
-          },
-          {
-            type: "doc",
-            label: "Quickstart (CLI)",
-            id: "agent-testing-cli",
-          },
-          {
-            type: "doc",
-            label: "Quickstart (API)",
-            id: "chat-agent-api-integration",
-          },
-
-        ],
-      },
-
-      {
-        type: "category",
-        label: "Guides",
+        label: "Conversational Agent Testing",
         collapsed: true,
         items: [
-          { type: "doc", label: "Test Retell Agents", id: "test-retell-agents" },
-          { type: "doc", label: "Test Vapi Agents", id: "test-vapi-agents" },
-          { type: "doc", label: "Test Bland Agents", id: "test-bland-agents" },
-          { type: "doc", label: "Test ElevenLabs Agents", id: "test-elevenlabs-agents" },
-          { type: "doc", label: "Test LiveKit Agents", id: "test-livekit-agents" },
-          { type: "doc", label: "Test Pipecat Agents", id: "test-pipecat-agents" },
-          { type: "doc", label: "Test Synthflow Agents", id: "test-synthflow-agents" },
-          { type: "doc", label: "Test Voiceflow Agents", id: "test-voiceflow-agents" },
-          { type: "doc", label: "Test Twilio IVR", id: "test-twilio-ivr" },
-          { type: "doc", label: "Test Amazon Connect Bots", id: "test-amazon-connect-bots" },
-          { type: "doc", label: "Test LangGraph Agents", id: "test-langgraph-agents" },
-          { type: "doc", label: "Test Vertex Agent Builder Agents", id: "test-vertex-agent-builder-agents" },
-          { type: "doc", label: "Test Copilot Studio Agents", id: "test-copilot-studio-agents" },
-          { type: "doc", label: "Test Amazon Lex Bots", id: "test-amazon-lex-bots" },
-          { type: "doc", label: "Test watsonx Assistant Bots", id: "test-watsonx-assistant-bots" },
-        ],
-      },
-
-      {
-        type: "category",
-        label: "Frequently Asked Questions",
-        collapsed: false,
-        items: [
-          {
-            type: "doc",
-            label: "FAQs",
-            id: "agent-testing-platform-faqs",
-          },
-        ],
-      },
-      {
-        type: "category",
-        label: "Agent Assurance",
-        collapsed: false,
-        items: [
-          { type: "doc", label: "Overview", id: "agent-assurance-overview" },
-          { type: "doc", label: "Getting Started", id: "agent-assurance-quickstart" },
-           { type: "doc", label: "Command Reference", id: "agent-assurance-command-reference" },
           {
             type: "category",
-            label: "Configure",
+            label: "Overview",
             collapsed: true,
             items: [
-              { type: "doc", label: "Connect and Explore Agents", id: "agent-assurance-connect-and-explore-agents" },
-              { type: "doc", label: "Invocation Profiles", id: "agent-assurance-profiles" },
-              { type: "doc", label: "Scenarios", id: "agent-assurance-scenarios" },
-              { type: "doc", label: "MCP Servers", id: "agent-assurance-mcp" },
+              {
+                type: "doc",
+                label: "What is Agent Testing",
+                id: "getting-started-with-agent-testing-platform",
+              },
+              {
+                type: "doc",
+                label: "Architecture & Working",
+                id: "architecture-and-how-evaluation-works",
+              },
             ],
           },
           {
             type: "category",
-            label: "Run & Review",
+            label: "Supported Agent Types",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Chat Agent Testing", id: "chat-agent" },
+              { type: "doc", label: "Voice Agent Testing", id: "voice-agent" },
+              { type: "doc", label: "Video Agent Testing", id: "video-agent" },
+              { type: "doc", label: "Phone Agent Testing", id: "phone-agent" },
+              { type: "doc", label: "Inbound Phone Agent Testing", id: "inbound-phone-agent" },
+              { type: "doc", label: "Outbound Phone Agent Testing", id: "outbound-phone-agent" },
+              { type: "doc", label: "Image Analyzer Testing", id: "image-analyzer" },
+            ],
+          },
+          {
+            type: "category",
+            label: "Getting Started",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Quickstart (UI)", id: "testing-your-first-ai-agent" },
+              { type: "doc", label: "Quickstart (CLI)", id: "agent-testing-cli" },
+              { type: "doc", label: "Quickstart (API)", id: "chat-agent-api-integration" },
+            ],
+          },
+          {
+            type: "category",
+            label: "Guides",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Test Retell Agents", id: "test-retell-agents" },
+              { type: "doc", label: "Test Vapi Agents", id: "test-vapi-agents" },
+              { type: "doc", label: "Test Bland Agents", id: "test-bland-agents" },
+              { type: "doc", label: "Test ElevenLabs Agents", id: "test-elevenlabs-agents" },
+              { type: "doc", label: "Test LiveKit Agents", id: "test-livekit-agents" },
+              { type: "doc", label: "Test Pipecat Agents", id: "test-pipecat-agents" },
+              { type: "doc", label: "Test Synthflow Agents", id: "test-synthflow-agents" },
+              { type: "doc", label: "Test Voiceflow Agents", id: "test-voiceflow-agents" },
+              { type: "doc", label: "Test Twilio IVR", id: "test-twilio-ivr" },
+              { type: "doc", label: "Test Amazon Connect Bots", id: "test-amazon-connect-bots" },
+              { type: "doc", label: "Test LangGraph Agents", id: "test-langgraph-agents" },
+              { type: "doc", label: "Test Vertex Agent Builder Agents", id: "test-vertex-agent-builder-agents" },
+              { type: "doc", label: "Test Copilot Studio Agents", id: "test-copilot-studio-agents" },
+              { type: "doc", label: "Test Amazon Lex Bots", id: "test-amazon-lex-bots" },
+              { type: "doc", label: "Test watsonx Assistant Bots", id: "test-watsonx-assistant-bots" },
+            ],
+          },
+          {
+            type: "category",
+            label: "Frequently Asked Questions",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "FAQs", id: "agent-testing-platform-faqs" },
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        label: "Autonomous Agent Testing",
+        collapsed: false,
+        items: [
+          {
+            type: "category",
+            label: "Start",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Overview", id: "agent-assurance-overview" },
+              { type: "doc", label: "Install Rook", id: "rook-installation" },
+              { type: "doc", label: "Quickstart", id: "agent-assurance-quickstart" },
+              { type: "doc", label: "The Sequence", id: "rook-sequence" },
+            ],
+          },
+          {
+            type: "category",
+            label: "Understand",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Concepts", id: "rook-concepts" },
+              { type: "doc", label: "Architecture", id: "rook-architecture" },
+              { type: "doc", label: "Scenarios & Taxonomy", id: "agent-assurance-scenarios" },
+              { type: "doc", label: "Profiles & Hooks", id: "rook-profiles-and-hooks" },
+              { type: "doc", label: "Verdicts & Reports", id: "agent-assurance-results-and-evidence" },
+            ],
+          },
+          {
+            type: "category",
+            label: "Operate",
             collapsed: true,
             items: [
               { type: "doc", label: "Run Tests", id: "agent-assurance-run-tests" },
-              { type: "doc", label: "Results and Evidence", id: "agent-assurance-results-and-evidence" },
+              { type: "doc", label: "Permissions & Safety", id: "rook-permissions-and-safety" },
+              { type: "doc", label: "Environment & Secrets", id: "rook-environment-and-secrets" },
+              { type: "doc", label: "MCP Servers", id: "agent-assurance-mcp" },
               { type: "doc", label: "CI/CD and Automation", id: "agent-assurance-ci-cd" },
+              { type: "doc", label: "Workspace Files", id: "rook-workspace-files" },
             ],
           },
-
-           { type: "doc", label: "Troubleshooting", id: "agent-assurance-troubleshooting" },
-         
-        
+          {
+            type: "category",
+            label: "Reference",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Command Reference", id: "agent-assurance-command-reference" },
+              { type: "doc", label: "Flags, Variables, Exits & Keys", id: "rook-cli-reference" },
+              { type: "doc", label: "Troubleshooting", id: "agent-assurance-troubleshooting" },
+              {
+                type: "category",
+                label: "Detailed Command Guides",
+                collapsed: true,
+                items: [
+                  { type: "doc", label: "rook", id: "rook-command-start" },
+                  { type: "doc", label: "rook ask", id: "rook-command-ask" },
+                  { type: "doc", label: "/project", id: "rook-command-project" },
+                  { type: "doc", label: "/explore", id: "rook-command-explore" },
+                  { type: "doc", label: "/agent", id: "rook-command-agent" },
+                  { type: "doc", label: "/generate", id: "rook-command-generate" },
+                  { type: "doc", label: "/profile", id: "rook-command-profile" },
+                  { type: "doc", label: "/sync", id: "rook-command-sync" },
+                  { type: "doc", label: "/status", id: "rook-command-status" },
+                  { type: "doc", label: "/runs", id: "rook-command-runs" },
+                  { type: "doc", label: "/scenarios", id: "rook-command-scenarios" },
+                  { type: "doc", label: "/run", id: "rook-command-run" },
+                  { type: "doc", label: "/ui", id: "rook-command-ui" },
+                  { type: "doc", label: "rook report", id: "rook-command-report" },
+                  { type: "doc", label: "/plan", id: "rook-command-plan" },
+                  { type: "doc", label: "/auth", id: "rook-command-auth" },
+                  { type: "doc", label: "rook whoami", id: "rook-command-whoami" },
+                  { type: "doc", label: "/login", id: "rook-command-login" },
+                  { type: "doc", label: "/logout", id: "rook-command-logout" },
+                  { type: "doc", label: "/env", id: "rook-command-env" },
+                  { type: "doc", label: "/mcp", id: "rook-command-mcp" },
+                  { type: "doc", label: "/doctor", id: "rook-command-doctor" },
+                  { type: "doc", label: "/docs", id: "rook-command-docs" },
+                  { type: "doc", label: "/update", id: "rook-command-update" },
+                  { type: "doc", label: "/guide", id: "rook-command-guide" },
+                  { type: "doc", label: "/help", id: "rook-command-help" },
+                  { type: "doc", label: "/clear", id: "rook-command-clear" },
+                  { type: "doc", label: "/exit", id: "rook-command-exit" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "category",
+            label: "More Rook Guides",
+            collapsed: true,
+            items: [
+              { type: "doc", label: "Feature Map", id: "rook-features" },
+              { type: "doc", label: "Connect and Explore Agents", id: "agent-assurance-connect-and-explore-agents" },
+              { type: "doc", label: "Prompt-Based Profile Authoring", id: "agent-assurance-profiles" },
+              { type: "doc", label: "Lifecycle Phases", id: "rook-hooks-and-phases" },
+            ],
+          },
         ],
       },
     ],
   ],
-
   KaneAISidebar: [
     {
       type: "link",
