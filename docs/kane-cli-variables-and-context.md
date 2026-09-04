@@ -52,6 +52,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ### Format
 
+`{{variables}}` resolve anywhere a value is typed or set — form fills, cookie and localStorage values, and clipboard writes alike.
+
 Variables are JSON objects keyed by name. Each entry describes a single variable:
 
 ```json
@@ -65,6 +67,7 @@ Variables are JSON objects keyed by name. Each entry describes a single variable
 |-------|----------|------|---------|-------------|
 | `value` | Yes | string | None | The variable's value. Entries without `value` are ignored. |
 | `secret` | No | boolean | `false` | When `true`, the value is masked in logs and routed to the <BrandName /> secrets store instead of being synced as plain Test Manager variables. |
+| `syntax` | no | string | `{{<name>}}` | Custom placeholder syntax. Defaults to the double-brace form using the variable name. |
 
 ### Usage in Objectives
 
@@ -110,6 +113,8 @@ Point at a single JSON file:
 kane-cli run "Log in as {{username}}" \
   --variables-file ./vars.json
 ```
+
+The file must be a JSON object whose values are variable entries (see [Format](#format)).
 
 ### Project-Local Variables
 
