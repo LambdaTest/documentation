@@ -100,7 +100,7 @@ The updated GPS location takes effect immediately on the device and remains acti
 ## Limitations
 
 - GPS override is applied only during session initialization and can be changed mid-session.
-- Replay/Edit sessions reuse GPS values from the original session.
+- Reopened or edited sessions reuse GPS values from the original session.
 
 ## Troubleshooting
 

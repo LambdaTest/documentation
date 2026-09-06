@@ -621,6 +621,10 @@ module.exports = {
               "kaneai-scroll-until-mobile",
             ],
           },
+          "kaneai-authoring-session",
+          "kane-ai-command-guide",
+          "kane-ai-automation-code-generation",
+          "error-handling-kaneai",
         ],
       },
 

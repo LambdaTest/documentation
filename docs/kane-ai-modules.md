@@ -70,8 +70,13 @@ Begin by authoring your test in KaneAI and executing the steps that you want to 
 
 ### Step 2: Select Test Steps
 
-1. Click the **Pause Test** button.
-2. Select the test steps you want to include in the module. For example, highlight the steps that handle login functionality.
+1. Pause the session. Multi-select is available only while the session is **Paused**.
+2. Tick the checkbox on each step you want to include in the module — for example, the steps that handle login. A select-all checkbox sits in the panel header if you want every step.
+3. A selection toolbar appears showing how many steps are selected, with **Create Module** and **Delete** actions.
+
+The selection must be **contiguous** — adjacent steps with no gaps — and must not already sit inside a conditional block, While loop, module, or generative instruction. If it does not qualify, an explanation tells you why.
+
+Checkboxes do not appear in Authoring Steps, Running, or Setting up, and any selection is cleared when you leave Paused. Selecting steps is independent of the cursor — ticking a checkbox does not move it.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/2.png').default} alt="select-test-steps" className="doc_img"/>
 
@@ -116,7 +121,7 @@ Modules that contain KaneAI instructions, such as variable steps, If-Else blocks
 
 ### Step 3: Execute
 
-Click **Add in Queue** to execute the module's test steps. The steps run automatically as part of the test.
+Click **Add in Queue** to execute the module's test steps. The steps run automatically as part of the test. Any step that has not run yet carries the **Queued** status until it does — see [Step Statuses](/support/docs/kaneai-authoring-session/#step-statuses).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/7.png').default} alt="execute-module" className="doc_img"/>
 
@@ -163,6 +168,19 @@ The example below is a module built in a mobile browser session, carrying an ass
 Modules are platform-specific, and a module containing a network assertion is no exception. Create a separate module for each platform you test, and name it accordingly, for example `[Web] Checkout API Check` and `[Android-App] Checkout API Check`. See [Create Platform-Specific Modules](#create-platform-specific-modules).
 
 A network assertion can only be added from a KaneAI session, so it cannot be added to a simple module created directly on the Modules page. Where the assertion cannot apply, KaneAI blocks the action and states the reason inline rather than adding a step that would check nothing.
+
+---
+
+## How Modules Behave in a Session
+
+A module is a **labelled group of ordinary steps**, not a single execution unit. This is what separates it from conditional blocks, While loops, and generative instructions, which all run as a whole.
+
+- **Steps inside a module run individually.** Run This Step, Run From Here, and Run Till Here all work on them, and a run range may start or end inside a module.
+- **The cursor moves freely inside a module.** You can place it between any two internal steps and insert a new step there.
+- **Editing inside a module updates the module.** Adding, editing, or reordering steps creates a new module version, following normal [versioning](/support/docs/kaneai-modules-versions-and-enhancement/) behavior.
+- **A module cannot contain another module.**
+
+For how this compares with the other block types, see [Blocks run as a unit](/support/docs/kaneai-authoring-session/#blocks-run-as-a-unit).
 
 ---
 
@@ -279,6 +297,7 @@ Add a meaningful description to every module so other team members understand wh
 
 - [Versioning and Enhancements](/support/docs/kaneai-modules-versions-and-enhancement/): Track changes, compare versions, and revert modules
 - [Bulk Module Update](/support/docs/kaneai-bulk-module-update/): Update a module version across multiple test cases in one action
+- [Authoring Session](/support/docs/kaneai-authoring-session/): Session states, the cursor, and how steps are run and verified
 
 ---
 

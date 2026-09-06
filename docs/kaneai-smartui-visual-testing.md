@@ -84,7 +84,7 @@ The first time the test is executed, it captures an initial screenshot that beco
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/establish-baseline.png').default} alt="Baseline screenshot created" className="doc_img"/>
 
 ### Rerun and Analyze the Comparison
-When the test case is replayed or re-run during authoring, a new screenshot is captured and compared against the baseline. Click **Show Comparison** to open the SmartUI view. This interface highlights any visual differences found between the two images.
+When the step is run again during authoring, a new screenshot is captured and compared against the baseline. Click **Show Comparison** to open the SmartUI view. This interface highlights any visual differences found between the two images.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/analyze-comparison.png').default} alt="Analyze the visual comparison between baseline and new screenshot" className="doc_img"/>
 
@@ -100,7 +100,7 @@ You can also adjust project settings like **Compare Type** and **Mis-Match Thres
 ## Saving and Automating Your Visual Test
 
 ### Save Your Test Case
-Once your test flow is complete, click **Finish test**. You will be prompted to save the session, where you can define the **Project**, **Folder**, **Test Name**, and **Description**.
+Once your test flow is complete, click **Save** in the top-right header. You will be prompted to save the session, where you can define the **Project**, **Folder**, **Test Name**, and **Description**.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/save-test-case.png').default} alt="Save the test case session" className="doc_img"/>
 

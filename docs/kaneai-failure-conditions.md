@@ -65,7 +65,18 @@ You can set the failure condition in the Authoring mode by clicking on the three
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/failure-conditions/failure_conditions.png').default} alt="failure_conditions" className="doc_img"/>
 
 >This change will not affect your existing test cases or the generated code where you’ve used hard/soft assertions. However, when you edit these tests, the new failure conditions will be applied.
- 
+
+## Failure Conditions vs Authoring Errors
+
+A failure condition and an authoring error are different situations, and only one of them affects your authoring session.
+
+| | What happened | Result |
+|---|---|---|
+| **Assertion failure** | The step ran, but its check returned false. | The failure condition you configured applies — fail immediately, fail but continue, or warn but continue. |
+| **Error** | The agent could not execute the step on the application at all, for example the element was not found or the page did not load. | The authoring session pauses with the Error flag set. Failure conditions do not apply. |
+
+Because an errored step never ran, KaneAI blocks run actions on the steps after it and disables Resume until you re-run, edit, or delete it. See [The Error flag](/support/docs/kaneai-authoring-session/#the-error-flag).
+
 ## Default Failure Condition Setting
 
 By default, the failure condition for each step is set to **Fail test immediately**, ensuring that the execution stops as soon as a step fails.

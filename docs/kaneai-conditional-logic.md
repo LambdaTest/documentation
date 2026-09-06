@@ -51,22 +51,22 @@ Each branch can contain multiple steps, including regular actions, **modules**, 
 
 ## How It Works
 
-1. Insert a conditional block from the **/** slash command menu while your authoring session is running.
+1. Insert a conditional block from the **/** slash command menu while your session is in the **Authoring Steps** state.
 2. Define a condition using variables and comparison operators.
 3. Optionally add **Else‑If** branches for additional conditions.
 4. Add steps, including modules, JS, API, and DB steps, inside each branch.
 5. During authoring, only the branch whose condition is true gets executed. Steps in the remaining branches are queued.
 6. In automation, KaneAI evaluates the conditions top‑to‑bottom at runtime and executes the first matching branch automatically.
 
-:::note Conditional blocks require a running session
-A conditional block can only be inserted while the authoring session is running, because KaneAI needs a running session to analyze the condition. Adding a conditional block from the **+ Add step** option while a test is paused is not currently supported. Conditional blocks that already exist in the test can still be extended while paused, for example by adding an Else‑If branch.
+:::note Conditional blocks require the Authoring Steps state
+A conditional block can only be inserted while the session is in **Authoring Steps**, because KaneAI needs a live session to analyze the condition. Adding a conditional block while the session is **Paused** is not currently supported. Conditional blocks that already exist in the test can still be extended while paused, for example by adding an Else‑If branch.
 :::
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/if-else/slash-if-else.png').default} alt="If / Else-If / Else block in the KaneAI authoring panel" className="doc\_img"/>
 
 ## Prerequisites
 
-- A KaneAI authoring session that is running. Conditional blocks cannot be inserted while the session is paused.
+- A KaneAI session in the **Authoring Steps** state. Conditional blocks cannot be inserted while the session is Paused.
 - Variables or element states available to build your conditions (e.g., smart variables, global variables, or extracted values).
 
 ## Step‑by‑step Guide
@@ -130,11 +130,26 @@ Each branch (**If**, **Else‑If**, **Else**) supports multiple steps. You can a
 - **JavaScript steps**: execute custom JS within a branch.
 - **API steps**: make API calls as part of a conditional flow.
 - **DB steps**: run database queries conditionally.
-- **Manual interaction**: click the **manual interaction icon** next to the step input field to perform actions directly on the browser within the branch.
+- **Direct interaction**: place the cursor inside the branch and interact with the application directly. While the session is in Authoring Steps the action is captured and the step lands at the cursor, inside that branch.
 
 Use the step input field or press **/** inside a branch to access the slash command menu.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/if-else/slash-command-add-steps.png').default} alt="Adding steps and manual interaction inside a conditional branch" className="doc\_img"/>
+
+#### Where steps land inside a block
+
+The cursor decides which branch a new step belongs to. Inside an If / Else‑If / Else block it can sit at any step boundary:
+
+| Cursor position | Allowed | The inserted step lands |
+|---|---|---|
+| Between two steps inside a branch | Yes | Inside that branch, at that point |
+| Immediately after a branch header | Yes | As the first step of that branch, including empty branches |
+| Immediately before the next branch header or **End if** | Yes | As the last step of that branch |
+| Before the **If** header | Yes | Outside the block, above it |
+| After **End if** | Yes | Outside the block, below it |
+| On a condition row | No | The cursor snaps to the nearest valid position |
+
+For the full set of cursor rules, see [Cursor in conditional blocks](/support/docs/kaneai-authoring-session/#cursor-in-conditional-blocks).
 
 ### Step 4: Add Else‑If Branches
 
@@ -146,7 +161,7 @@ To handle additional conditions beyond the initial **If**:
 4. Repeat to add as many **Else‑If** branches as needed.
 
 :::note Authoring vs. Automation behavior
-During authoring only one condition can be true at a time, so only the matching branch's steps are executed. Steps under the remaining branches go into a **queued** state. When the test runs in automation, all queued branches are evaluated automatically and the first matching branch is executed.
+During authoring only one condition can be true at a time, so only the matching branch's steps are executed. Steps under the remaining branches take the **Queued (branch)** status. These do not count towards the unverified total when you save, because they verify whenever their branch matches. When the test runs in automation, all branches are evaluated automatically and the first matching branch is executed.
 :::
 
 ### Step 5: Add Steps to the Else Branch
@@ -176,17 +191,34 @@ To add a module inside a branch:
 - **Leverage modules for reusable logic.** Instead of duplicating steps across branches, create a module and embed it.
 - **Test each branch independently.** During authoring, verify that each branch executes the correct steps before saving.
 
+## Running a Conditional Block
+
+A conditional block executes as a single unit. You can insert a step anywhere inside a branch, but you cannot run that step on its own.
+
+- The block header carries a single **Run block** control. It evaluates the conditions and runs the branch that matches, to completion. Execution then continues past the block.
+- Steps inside a branch have no individual run control. Anything that would run an interior step runs the whole block instead.
+- When a run range passes over the block, the block runs as a whole in sequence. Steps in the matching branch become **Verified**; steps in the branches that did not match stay **Queued (branch)**.
+- If a run targets a step that turns out to be in a non‑matching branch at runtime, execution stops at the end of the block and you are told *Target step was in a non-matching branch*.
+- If a step errors while the block runs, the session pauses with the Error flag and everything after the errored step is blocked until it is resolved.
+
+See [Blocks run as a unit](/support/docs/kaneai-authoring-session/#blocks-run-as-a-unit) for how this compares with While loops, generative instructions, and modules.
+
 ## Limitations
 
-- **Nested conditions are not supported.** You cannot place an If / Else‑If / Else block inside another conditional block.
-- **New conditional blocks cannot be created while a test is paused.** The **/** slash command menu and the **+ Add step** option do not offer **Add If-Else** in the Draft state. Conditional blocks that already exist in the test can still be extended while paused.
+- **Nested conditions are not supported.** You cannot place an If / Else‑If / Else block inside another conditional block. Inserting one while the cursor is inside a branch is refused with an explanation.
+- **New conditional blocks cannot be created while the session is Paused.** The **/** slash command menu does not offer **Add If-Else** in that state. Conditional blocks that already exist in the test can still be extended while paused.
+- **Steps inside a branch cannot be run individually.** Use the **Run block** control on the block header.
 - **Conditional blocks are read-only on the Modules page.** In the Classic experience, a module can contain a conditional block, but changes to it must be made in the KaneAI test case it was authored from. Modules containing conditional blocks cannot be added to manual test cases in Test Manager.
 
 ## FAQ
 
 ### Can I add an Else‑If branch after I have already authored the test?
 
-Yes. On a conditional block that already exists in your test, you can add Else‑If branches, including while the test is paused. What you cannot do while paused is create a new conditional block, because **Add If-Else** is not offered in the **/** slash command menu or the **+ Add step** option in that state.
+Yes. On a conditional block that already exists in your test, you can add Else‑If branches, including while the session is Paused. What you cannot do while paused is create a new conditional block, because **Add If-Else** is not offered in the **/** slash command menu in that state.
+
+### Can I run a single step inside a branch?
+
+No. Conditional blocks execute as a whole through the **Run block** control on the block header. If you add a step inside a branch, run the block to verify it — the condition is evaluated and the matching branch runs in real context. Steps inside a [module](/support/docs/kane-ai-modules/) are the exception and do run individually.
 
 ### How many Else‑If branches can I add?
 
