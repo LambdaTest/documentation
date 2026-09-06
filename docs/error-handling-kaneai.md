@@ -50,6 +50,10 @@ This page provides a comprehensive reference for common errors encountered when 
 
 Use this guide to quickly identify, understand, and correct authoring issues to ensure your test cases run smoothly.
 
+:::note
+These are authoring errors — instructions KaneAI cannot accept or execute. When the agent cannot execute a step on your application, the session pauses with the **Error flag** set: run actions on later steps are blocked and Resume is unavailable until you re-run, edit, or delete the errored step. See [The Error flag](/support/docs/kaneai-authoring-session/#the-error-flag).
+:::
+
 ## Error Categories for Web and App Authoring 
 
 ### Unsupported Operation

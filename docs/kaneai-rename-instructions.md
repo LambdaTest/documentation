@@ -60,11 +60,11 @@ The **Rename Test Steps** feature allows users to change a test step’s name wi
 
 ## How to Use
 
-1. Ensure the authoring session is running and the relevant step is visible.
-2. Pause the session. Renaming only works in "DRAFT" session state after session is Paused. 
+1. Ensure the authoring session is open and the relevant step is visible.
+2. Pause the session. Renaming is available only while the session is **Paused**, along with the other step editing actions. See [Session states](/support/docs/kaneai-authoring-session/#session-states).
 3. Click on the step name to make it editable.  
 4. Enter the new name and press **Enter** or click outside to save.
-5. Resume the session.  
+5. Click **Resume**. Your device is not restarted and no steps are re-run — the session simply returns to Authoring Steps, with the cursor back at the bottom-most step.
 
 > **Note:** Only the step name changes; the instruction logic and behavior remain the same.
 

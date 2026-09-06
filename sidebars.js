@@ -1217,6 +1217,7 @@ module.exports = {
               "kane-ai-using-datasets",
             ],
           },
+          "kaneai-authoring-session",
           "kane-ai-command-guide",
           "kane-ai-automation-code-generation",
           "error-handling-kaneai",
