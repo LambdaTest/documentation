@@ -73,11 +73,13 @@ In this guide, we'll walk you through how you can author your mobile app tests u
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-test-authoring.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> 
 
-**Step 7:** You can also leverage the **Manual Interaction Mode** to perform any particular step or action directly in the instance window and KaneAI would record it and create an automation step for the same. 
+**Step 7:** You can also perform a step directly on the device instead of describing it. While your session is in the **Authoring Steps** state, KaneAI captures the action and creates an automation step for it — there is nothing to switch on. See [Manual Interaction](/support/docs/kaneai-manual-interaction/).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/mobile-app-manual-interaction.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-As you add each instruction, KaneAI queues them in real-time without waiting for completion. This allows you to build comprehensive test flows quickly and efficiently. Once you've outlined all your test steps, click Finish Test to finalize your automated test case.
+As you add each instruction, KaneAI queues them in real-time without waiting for completion. This allows you to build comprehensive test flows quickly and efficiently. Once you've outlined all your test steps, click **Save** in the top-right header to finalize your automated test case.
+
+Your test is saved as **Ready** when every step has run and passed, which is also when automation code is generated. If some steps were never run, or a step errored, it saves as Unverified or Fault instead and you can finish it later. See [Save states](/support/docs/kaneai-authoring-session/#save-states).
 
 **Step 8:** Now, select your **Project** and the folder where you want to save your test cases. The **Test Name** and **Description** will be generated automatically, but you can also edit them. Select your test's **Type** and **Status**, as well as the necessary tags that will allow you to search for it later.
 

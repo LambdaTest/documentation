@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-KaneAI supports advanced click variants beyond a standard single click: **press and hold (long press)**, **multi-click (double / triple / N-click)**, and **right click (context click)**, across Desktop Web, Android apps, iOS apps, and Mobile Web. Each can be authored with natural language or captured via Manual Interaction, and renders as a distinct step with its own icon and pill label.
+KaneAI supports advanced click variants beyond a standard single click: **press and hold (long press)**, **multi-click (double / triple / N-click)**, and **right click (context click)**, across Desktop Web, Android apps, iOS apps, and Mobile Web. Each can be authored with natural language or captured via Manual Interaction, and each renders as its own distinct step in the step list.
 
 ## Overview
 
@@ -119,7 +119,7 @@ Only phrases containing **`long press`**, **`press and hold`**, **`tap and hold`
 
 ### Manual Interaction Capture
 
-In Recording mode, the capture layer classifies touch gestures by duration and movement:
+While the session is in the **Authoring Steps** state, the capture layer classifies touch gestures by duration and movement:
 
 | Gesture | Rule |
 |---------|------|

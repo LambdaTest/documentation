@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 ## Introduction
 
-Teams often need to test SSO or MFA‑protected applications where the second factor is a six‑digit OTP. Native TOTP support in KaneAI generates those codes on the fly from the shared secret key, keeps the entire login journey inside KaneAI with identical behavior in Replay, generated code, and CI, and lets you inject the code directly into your test steps, no external scripts or servers required.
+Teams often need to test SSO or MFA‑protected applications where the second factor is a six‑digit OTP. Native TOTP support in KaneAI generates those codes on the fly from the shared secret key, keeps the entire login journey inside KaneAI with identical behavior in the authoring session, generated code, and CI, and lets you inject the code directly into your test steps, no external scripts or servers required.
 
 TOTP variables are now **global by default**. You create them once and reuse them across all test cases and modules in your organization.
 

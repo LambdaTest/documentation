@@ -116,7 +116,7 @@ Natural language drag and drop works best when:
 
 ## Author with Manual Interaction
 
-Switch to **Manual Interaction** mode in the KaneAI authoring panel and perform the drag directly on the device viewport.
+With the session in the **Authoring Steps** state, perform the drag directly on the device viewport. The gesture is captured and the step lands at the cursor — there is no mode to switch to.
 
 ### Gesture Classification
 
@@ -212,7 +212,7 @@ Use Manual Interaction to adjust date-range sliders, resize chart panels, and re
 - **NL slider authoring**: not supported. Use Manual Interaction.
 - **NL confirmation gestures** (slide-to-confirm): not supported. Use Manual Interaction.
 - **Drag and drop on canvas-based elements via NL**: canvas elements rely on custom rendering; use Manual Interaction.
-- **Editing manual drag steps**: source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
+- **Editing manual drag steps**: available while the session is **Paused**. Source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
 
 ## FAQs
 
@@ -232,7 +232,7 @@ No. Confirmation gestures depend on dynamic UI state and must be captured via Ma
 KaneAI replays use element resolution by default. Cross-device failures usually indicate that the source or target element identifier changed across builds. Inspect the step logs to see the resolution path used (element vs. coordinate) and ensure the elements expose stable accessibility IDs.
 
 **Why isn't manual recording available on Mobile Web?**
-The KaneAI agent does not enter Recording state for mobile browser sessions. Use natural language instructions or slash commands instead.
+Interaction capture is not supported for mobile browser sessions. Use natural language instructions or slash commands instead.
 
 **Can I edit a captured Manual Interaction drag step?**
 You can edit the source / target locators and step-level configuration. The drag vector and gesture timing are immutable for Manual steps to preserve replay fidelity.

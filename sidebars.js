@@ -1261,6 +1261,64 @@ module.exports = {
               "kaneai-rename-instructions",
               "kaneai-conditional-logic",
               "kaneai-while-loops",
+              "kane-ai-javascript-execution",
+              "kaneai-kb-js-snippets-and-workarounds",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Session Configuration",
+            items: [
+              "kaneai-advanced-settings",
+              "kaneai-chrome-options",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Mobile Testing",
+            items: [
+              "kaneai-kb-mobile-app-testing-patterns",
+              "kaneai-scroll-until-mobile",
+            ],
+          },
+          "kaneai-authoring-session",
+          "kane-ai-command-guide",
+          "kane-ai-automation-code-generation",
+          "error-handling-kaneai",
+        ],
+      },
+
+      // 3. Test Data & Variables
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Data & Variables",
+        items: [
+          "kaneai-variables-and-parameters",
+          "kane-ai-using-variables",
+          "kane-ai-secrets",
+          "kane-ai-smart-variables",
+          "kane-ai-using-parameters",
+          "kane-ai-using-datasets",
+        ],
+      },
+
+      // 4. Advanced Testing
+      {
+        type: "category",
+        collapsed: true,
+        label: "Advanced Testing",
+        items: [
+          "kane-ai-geolocation-tunnel-proxy",
+          {
+            type: "category",
+            collapsed: true,
+            label: "API & Network",
+            items: [
+              "kane-ai-api-testing",
+              "kaneai-kb-api-testing-and-network-assertions",
               "kane-ai-network-assertions",
               "kaneai-advanced-settings",
               "kaneai-custom-headers",
