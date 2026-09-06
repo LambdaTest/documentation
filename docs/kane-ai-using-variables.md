@@ -127,12 +127,6 @@ For details on secrets and parameters, see [KaneAI Secrets](/support/docs/kane-a
 ## How to leverage variables during authoring
 Variables can be used to enhance your test cases, making them more dynamic.
 
-:::note Variable order when inserting steps
-A local variable is created by a step, so it only exists from that step onwards. If you insert a step that uses a local variable created by a step **below** the cursor, KaneAI shows a non-blocking warning naming the step that creates it. The step is still inserted — the warning is there so you can reorder if the sequence was unintentional. You get the same warning if you delete or move a variable-creating step so that it ends up below a step that uses it.
-
-Global variables, environment variables, smart variables, secrets, and parameters do not come from a step, so no ordering check applies to them. See [Variable warnings](/support/docs/kaneai-authoring-session/#variable-warnings).
-:::
-
 ### Syntax for Assertions
 Variable usage can be done using the `{{` prefix to list all existing variables in the KaneAI session input box. When making assertions in your test case, you can use variables for inputing a value or as part of the assertion logic.
 

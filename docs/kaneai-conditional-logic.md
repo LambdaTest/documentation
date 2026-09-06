@@ -130,7 +130,6 @@ Each branch (**If**, **Else‑If**, **Else**) supports multiple steps. You can a
 - **JavaScript steps**: execute custom JS within a branch.
 - **API steps**: make API calls as part of a conditional flow.
 - **DB steps**: run database queries conditionally.
-- **Direct interaction**: place the cursor inside the branch and interact with the application directly. While the session is in Authoring Steps the action is captured and the step lands at the cursor, inside that branch.
 
 Use the step input field or press **/** inside a branch to access the slash command menu.
 
