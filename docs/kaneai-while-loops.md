@@ -146,7 +146,6 @@ You can add any of the following inside a loop body:
 - **JavaScript steps**: execute custom JS for data extraction, array handling, or index management.
 - **API steps**: make API calls as part of the iteration.
 - **DB steps**: run database queries inside each iteration.
-- **Direct interaction**: place the cursor inside the loop body and interact with the application directly. While the session is in Authoring Steps the action is captured and the step lands at the cursor, inside the body.
 - **If / Else blocks**: insert a conditional block inside the loop body via the slash command menu to add branching logic within iterations.
 
 #### Where steps land inside the loop body

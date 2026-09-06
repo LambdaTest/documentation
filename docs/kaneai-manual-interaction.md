@@ -58,7 +58,7 @@ Manual Interaction is how KaneAI turns what you do directly on your application 
 
 This is especially useful when you need to reach a very specific UI state, handle a complex flow, or work with elements that are difficult to describe in words.
 
-Manual Interaction is **always active while your session is in the Authoring Steps state**. There is nothing to switch on. Captured steps land at the cursor, exactly like instructions you type. When you want to interact with the application *without* those actions becoming steps, use [Pause Recording](#pause-recording).
+Manual Interaction is **always active while your session is in the Authoring Steps state**. There is nothing to switch on. Captured steps append to the end of the step list, exactly like instructions you type in Authoring Steps, because the cursor is pinned to the bottom in that state. When you want to interact with the application *without* those actions becoming steps, use [Pause Recording](#pause-recording).
 
 For the full session model — the states, the cursor, and the run actions — see [Authoring Session](/support/docs/kaneai-authoring-session/).
 
@@ -327,7 +327,7 @@ This use case applies when you need to navigate your app to a specific starting 
 
 - Use Manual Interaction to reach complex UI states quickly.
 - Use typed instructions for validations and assertions — they cannot be captured by interacting.
-- Place the cursor where you want captured steps to land before you start interacting.
+- Remember that captured steps append to the end of the step list. To move one elsewhere, pause afterwards and restructure.
 - Review recorded steps to ensure they reflect the intended behavior.
 - Avoid unsupported interactions to prevent incomplete steps.
 - Use Pause Recording when you need to log in, navigate, or set up app state without those actions being captured as test steps.
