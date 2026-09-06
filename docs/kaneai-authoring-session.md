@@ -61,7 +61,7 @@ This model is the same across Desktop Web, Mobile Web, and Mobile App authoring,
 **Available on request.** Please reach out to Support to enable it. These features are partially rolled out and will soon be generally available for all users.
 :::
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/session-overview.png').default} alt="KaneAI authoring session showing the application view, the step list, and the cursor" className="doc_img img_center"/> */}
+<img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/session-overview.png').default} alt="KaneAI authoring session showing the application view, the step list, and the cursor" className="doc_img img_center"/>
 
 ## Session States
 
@@ -73,17 +73,13 @@ The device or browser is being brought up and your application is being installe
 
 The state you build tests in. Anything you do on the application is captured and converted into a test step, and you can also type instructions or use slash commands. New steps are inserted at the cursor and execute as they are added. The application view shows a *Recording steps* indicator while capture is active.
 
-You can place the cursor and use all four run actions here. What you cannot do in Authoring Steps is edit, duplicate, or delete steps — those are reserved for Paused, so that the step list does not change underneath a session that is actively capturing.
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/state-authoring-steps.png').default} alt="Session in the Authoring Steps state" className="doc_img img_center"/> */}
+In Authoring Steps the cursor is pinned to the bottom of the step list and cannot be moved, so new steps always append to the end. What you cannot do in Authoring Steps is edit, duplicate, or delete steps, or move the cursor — those are reserved for Paused, so that the step list does not change underneath a session that is actively capturing.
 
 ### Paused
 
 Click **Pause** above the step list to move from Authoring Steps to Paused. You can still interact with the application, but nothing you do on it is captured as a step — useful when you need to log in, dismiss a dialog, or navigate somewhere without those actions ending up in the test. The application view confirms this with a *Step recording paused* indicator.
 
 Paused is also where you restructure a test. On top of everything Authoring Steps allows, you can edit, duplicate, and delete steps, and select several steps at once to group or remove them. You can still type instructions and run slash commands, and they still land at the cursor.
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/state-paused.png').default} alt="Session in the Paused state" className="doc_img img_center"/> */}
 
 ### Running
 
@@ -98,7 +94,7 @@ One exception: a run you start from Authoring Steps returns to Authoring Steps, 
 | Interact with the application | No | Yes | Yes | No |
 | Interactions captured as steps | No | Yes | No | No |
 | Add steps in natural language or slash commands | No | Yes | Yes | No |
-| Place the cursor | No | Yes | Yes | No |
+| Place the cursor | No | No — pinned to the bottom | Yes | No |
 | Run, Run Till Here, Run From Here, Run This Step | No | Yes | Yes | No |
 | Edit a step | No | No | Yes | No |
 | Duplicate or delete a step | No | No | Yes | No |
@@ -119,13 +115,13 @@ An errored session behaves like Paused in almost every respect. You can still ed
 | Constraint | Effect |
 |---|---|
 | Resume | Unavailable, with the reason shown: *Fix the errored step before resuming*. Authoring Steps cannot be entered while a step is errored. |
-| Run actions after the errored step | Unavailable. The controls are inactive and the keyboard shortcuts produce the same explanation. |
+| Run actions after the errored step | Unavailable. The controls are inactive and show the same explanation. |
 | Cursor placement after the errored step | Snaps to immediately before the errored step. |
 | Steps added after the errored step | Can be added and edited, but do not run until the flag clears. |
 
 Steps after the errored one depend on application state the errored step was supposed to create. Running them in isolation would either fail for the same upstream reason or pass against state that was never set up, so KaneAI blocks them rather than producing a misleading result.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/error-flag-banner.png').default} alt="Session banner showing the Error flag and the step that failed" className="doc_img img_center"/> */}
+<img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/error-flag-banner.png').default} alt="Session banner showing the Error flag and the step that failed" className="doc_img img_center"/>
 
 ### Clearing the flag
 
@@ -150,26 +146,25 @@ The cursor is a row in the step list that marks where the next authored step wil
 
 Before the cursor existed, a new step could only be appended relative to a fixed position. The cursor lets you put a step exactly where it belongs, including between two steps in the middle of a finished test.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/cursor-row.png').default} alt="Step list with the cursor positioned between two steps" className="doc_img img_center"/> */}
+<img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/cursor-row-and-move-control.png').default} alt="Step list in the Paused state showing the cursor at rest between two steps, and the Move Cursor here control appearing on hover in a gap further down" className="doc_img img_center"/>
 
 ### Placing the cursor
 
-In both Authoring Steps and Paused you can:
+The cursor can only be moved while the session is **Paused**. In Authoring Steps it is pinned to the bottom of the step list, so captured and typed steps append to the end; to place a step anywhere else, pause first.
+
+While Paused you can:
 
 - Hover between two steps and click the **Move Cursor here** control that appears.
 - Click the empty area below the last step to move the cursor to the end.
 - Use the **Move to top** and **Move to bottom** links in the hint bar below the step list. Each is unavailable when the cursor is already there.
-- Press <kbd>Home</kbd> or <kbd>End</kbd>.
 - Right-click a step and choose **Place cursor before** or **Place cursor after**.
 - Click a step to select it, which also moves the cursor.
 
-The same hint bar has a **Go to CURSOR** link, which scrolls the step list back to the cursor when it has moved out of view. This only changes what you are looking at — it does not move the cursor.
+The same hint bar has a **Go to Cursor** link, which scrolls the step list back to the cursor when it has moved out of view. This only changes what you are looking at — it does not move the cursor.
 
 While the session is Running the cursor is read-only — it shows the step the agent is executing, insert controls are not offered, and it cannot be moved.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/cursor-insert-affordance.png').default} alt="Move Cursor here control appearing between two steps in the step list" className="doc_img img_center"/> */}
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/cursor-move-links.png').default} alt="Go to CURSOR, Move to top and Move to bottom links in the hint bar" className="doc_img img_center"/> */}
+On **Resume**, the session returns to Authoring Steps and the cursor jumps back to the bottom-most step, wherever you had placed it while Paused.
 
 ### How insertion works
 
@@ -183,6 +178,8 @@ For example, in a five-step test with the cursor between step 3 and step 4:
 The final order is *step 3 → click profile → click logout → original step 4 → original step 5*, matching the order you typed.
 
 If you want several steps at the same anchor point instead, move the cursor back to that point before each insertion.
+
+Inserting above steps that have already run marks them as out of sync — see [Flow changes and out-of-sync steps](#flow-changes-and-out-of-sync-steps).
 
 ### Cursor in conditional blocks
 
@@ -198,8 +195,6 @@ Inside an If / Else-If / Else block, the cursor can be placed at any step bounda
 | On a condition row | No | The cursor snaps to the nearest valid position |
 
 Adding a step inside a branch and running it are governed by different rules — see [Blocks run as a unit](#blocks-run-as-a-unit).
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/cursor-in-if-else.png').default} alt="Cursor positioned inside a conditional branch" className="doc_img img_center"/> */}
 
 ### Cursor in While loops
 
@@ -236,16 +231,6 @@ Before it has run for the first time, a generative instruction is a single unit.
 - The cursor cannot land between two consecutive system marker rows, and no insert control is offered there.
 - Any placement that becomes invalid snaps to the nearest valid position.
 
-### Variable warnings
-
-If you insert a step that uses a local variable created by a step **below** the cursor, KaneAI shows a non-blocking warning naming the step that creates it, for example *`{'{{order_id}}'}` is created at step 5, below this step*. The step is still inserted — the warning is there so you can reorder if the sequence was unintentional. You get the same warning if you delete or move a variable-creating step so that it ends up below a step that uses it.
-
-Running a step whose local variable has not been produced yet in this session also prompts you, naming the step that creates it, so you can proceed or cancel.
-
-Global variables, environment variables, smart variables, secrets, and parameters do not come from a step, so no ordering check applies to them.
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/cursor-variable-warning.png').default} alt="Inline warning that a variable is created by a later step" className="doc_img img_center"/> */}
-
 ## Running Steps During Authoring
 
 Four actions cover every way of executing steps in a session. All four are available in both Authoring Steps and Paused.
@@ -258,8 +243,6 @@ Runs the whole test from step 1. Invoking it always opens a confirmation with tw
 - **Run Directly** — runs from step 1 against the current application state, with no reinstall.
 
 The confirmation appears every time and cannot be suppressed. The other three actions do not show it.
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/run-confirmation.png').default} alt="Confirmation offering Reset Session and Run or Run Directly" className="doc_img img_center"/> */}
 
 ### Run Till Here
 
@@ -284,7 +267,7 @@ The same two actions behave differently depending on where you trigger them from
 
 Both refuse with an explanation when the resulting range contains no runnable steps.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/cursor-row-run-controls.png').default} alt="Run Till Here and Run From Here controls on the cursor row" className="doc_img img_center"/> */}
+All four run actions stay available in Authoring Steps, but because the cursor is pinned to the bottom there, the useful ranges narrow to two: **Run From Here** on a step runs that step down to the end of the test, and **Run Till Here** on the cursor row runs the whole test. The other two combinations resolve to an empty range and are refused, since no step sits below the cursor. Pause first if you need a range bounded somewhere other than the end.
 
 ### Where the run controls live
 
@@ -294,21 +277,10 @@ Both refuse with an explanation when the resulting range contains no runnable st
 | Per-step control | Run This Step |
 | Step overflow menu | All applicable run actions, plus cursor placement |
 | Right-click on a step | The same actions as the overflow menu |
-| Keyboard | See below |
 
-In Authoring Steps the overflow menu lists run and cursor-placement actions only; edit, duplicate, and delete appear there when the session is Paused.
+In Authoring Steps the overflow menu lists run actions only; cursor placement, edit, duplicate, and delete appear there when the session is Paused.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/step-run-menu.png').default} alt="Step overflow menu showing the run and cursor placement actions" className="doc_img img_center"/> */}
-
-### Keyboard shortcuts
-
-| Shortcut | Action |
-|---|---|
-| <kbd>⌘</kbd> + <kbd>]</kbd> | Run Till Here |
-| <kbd>⌘</kbd> + <kbd>[</kbd> | Run From Here |
-| <kbd>⌘</kbd> + <kbd>Enter</kbd> | Run This Step |
-| <kbd>Home</kbd> | Move the cursor to the top |
-| <kbd>End</kbd> | Move the cursor to the end |
+<img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/step-run-menu.png').default} alt="Step overflow menu showing the run and cursor placement actions" className="doc_img img_center"/>
 
 ### Blocks run as a unit
 
@@ -322,8 +294,6 @@ You can insert a step anywhere inside a conditional block or a loop body, but yo
 | Module | The exception. A module is a labelled group, so its steps run individually — Run This Step, Run From Here, and Run Till Here all work on them, and a range may start or end inside a module. |
 
 Steps inside a block therefore have no individual run control. Anything that would run an interior step runs the whole block instead.
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/run-block-control.png').default} alt="Run block control on a conditional block header" className="doc_img img_center"/> */}
 
 ### Running across a conditional block
 
@@ -343,8 +313,6 @@ A queued step can end up sitting between steps that have already run — for exa
 - The range being executed is bracketed in the step list: a **Run from here** marker above the first step in the range and a **Run till here** marker below the last. Both clear when the run completes.
 - The authored and queued counts update live as steps pass.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/running-overlay.png').default} alt="Application view covered while the agent executes steps" className="doc_img img_center"/> */}
-
 ## Step Statuses
 
 Every step in the list carries a status. The statuses determine what happens when you save.
@@ -355,12 +323,24 @@ Every step in the list carries a status. The statuses determine what happens whe
 | **Queued** | The step was added but has never run. Counts as unverified. |
 | **Queued (branch)** | A queued step inside a conditional branch, decided by where it sits rather than how it got there. Does **not** count as unverified — it verifies whenever its branch matches, either in the session or in a Test Run. |
 | **Errored** | The agent could not run the step. Sets the [Error flag](#the-error-flag). |
+| **Out of sync** | A Verified step that passed before a new step was inserted above it. It stays Verified, with a marker noting it may no longer reflect the current flow. See [Flow changes and out-of-sync steps](#flow-changes-and-out-of-sync-steps). |
 
-Editing a Verified step returns it to Queued and marks it *(edited)* in the step list. Steps after it keep their own statuses — there is no cascade reset. Running the full test verifies everything again.
 
-Queued steps in a **While** loop body count as normal unverified steps, because the loop body is on the main path rather than a conditional branch.
+### Flow changes and out-of-sync steps
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/step-statuses.png').default} alt="Step list showing verified, queued, and errored steps" className="doc_img img_center"/> */}
+Inserting a step between steps that have already run changes the application flow from that point onwards. The steps below it ran against the old flow, so what they verified may no longer hold.
+
+KaneAI marks this rather than silently discarding the earlier results:
+
+- A **Flow changed from here** divider appears in the step list at the insertion point.
+- Every already-executed step below the divider keeps its Verified status but gains an out-of-sync marker. Hovering it explains why: *This step passed before the flow changed. A full test run will verify it.*
+- The session header counts these separately, alongside the authored and queued counts.
+
+The steps are not re-run automatically and are not reset to Queued — they passed, and that result is kept. The marker records that they passed under different conditions, because KaneAI has not authored through them since the new step was added. Running the full test re-verifies them against the current flow and clears the markers.
+
+A test saved with out-of-sync steps saves as **Unverified**, because it never ran end to end as one continuous flow. Automation code is still generated, as long as every step has executed at some point. See [Save states](#save-states).
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/flow-changed-out-of-sync.png').default} alt="Paused session showing the Flow changed from here divider above an inserted step, and already-executed steps below it carrying the out-of-sync marker" className="doc_img img_center"/>
 
 ## Saving a Test
 
@@ -371,26 +351,25 @@ Save is always available, from the single **Save** button in the top-right of th
 | Condition at save | Saved state | Code generation |
 |---|---|---|
 | Every step has run and passed | **Ready** | Code is generated |
-| One or more steps errored (the Error flag is set) | **Fault** | No code generated |
+| One or more steps errored (the Error flag is set) | **Faulty** | No code generated |
 | Queued steps present, no errors | **Unverified** | No code generated |
+| Every step has run, but some are [out of sync](#flow-changes-and-out-of-sync-steps) | **Unverified** | Code is generated |
 
-Saving into Fault or Unverified shows a warning first, explaining that code will not be generated. Both can be reopened and finished later — running the remaining or errored steps to success and saving again moves the test to Ready, and code is generated then.
+Saving into Faulty or Unverified shows a warning first. The modal spells out what you are getting — including whether code will be generated, which is not the same answer for every Unverified test. Both states can be reopened and finished later — running the remaining or errored steps to success and saving again moves the test to Ready, and code is generated then.
 
 A step that was edited but not re-run counts as Queued for this purpose. The edited marker tells you *why* a step is unverified — its instruction changed rather than it never having run — but it does not change how the save behaves. A test mixing executed, edited, and newly inserted steps saves as Unverified.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/save-unverified-confirmation.png').default} alt="Warning shown before saving a test that still has queued steps" className="doc_img img_center"/> */}
-
 ### Save state and code generation
 
-Code generation needs a step to have run at least once — that is how the agent learns the exact elements and actions involved. A step that has never run has nothing to generate code from, which is why Fault and Unverified tests produce no code.
+Code generation needs a step to have run at least once — that is how the agent learns the exact elements and actions involved. A step that has never run has nothing to generate code from, which is why a test with queued steps produces no code.
+
+The requirement is per step, not per run. A test whose steps all ran, but in separate runs rather than one continuous pass, still has everything code generation needs. This is the out-of-sync case: inserting a step above executed ones saves the test as **Unverified**, because it never completed as a single flow, yet code is still generated because every individual step has executed. The save modal states this, so you can tell it apart from an Unverified test that produces nothing.
 
 The save state is not the same thing as the state of the generated code. Once a test saves as Ready and code is produced, the **Code** tab tracks that code through its own states. See [Code Generation](/support/docs/kane-ai-automation-code-generation/) for those.
 
 ## The Steps Panel
 
 Two counts sit directly above the step list in both Authoring Steps and Paused: how many steps are **authored** (have run and passed) and how many are **queued** (added but not yet run). The same **Authored** and **Queued** counts appear in the session header, and both update live as a run progresses.
-
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/steps-panel-counts.png').default} alt="Authored and queued counts above the step list" className="doc_img img_center"/> */}
 
 ### Selecting multiple steps
 
@@ -401,13 +380,13 @@ Multi-select is available only while the session is Paused. Each step shows a ch
 
 Checkboxes do not appear in Authoring Steps, Running, or Setting up, and any selection is dropped when you leave Paused. Selecting steps is independent of the cursor — ticking a checkbox does not move it.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/multi-select-toolbar.png').default} alt="Selection toolbar with Create Module and Delete actions" className="doc_img img_center"/> */}
-
 ## Resume and Reset Session
 
 ### Resume
 
-**Resume** returns the session from Paused to Authoring Steps. It never re-initialises the device — the application stays live exactly where it is, with no boot delay, and no steps are re-run automatically. Editing a step does not re-initialise the device either. On Resume the cursor returns to the bottom-most step.
+**Resume** returns the session from Paused to Authoring Steps. It never re-initialises the device — the application stays live exactly where it is, with no boot delay, and no steps are re-run automatically. Editing a step does not re-initialise the device either.
+
+On Resume the cursor returns to the bottom-most step and stays pinned there for as long as the session is in Authoring Steps. Any position you set while Paused is not carried over, so pause again if you need to insert somewhere other than the end.
 
 Resume is unavailable while the Error flag is set, because Authoring Steps cannot be entered with a step errored. The control explains this: *Fix the errored step before resuming*.
 
@@ -425,11 +404,9 @@ Until you run it, the edited step's run control is presented as the primary next
 
 After a reset the application is fresh, so steps that had already been executed are treated as unrun.
 
-{/* <img loading="lazy" src={require('../assets/images/kane-ai/features/authoring-session/reset-session-control.png').default} alt="Reset Session control in the application view header" className="doc_img img_center"/> */}
-
 ## Manual Interaction in an Authoring Session
 
-While the session is in Authoring Steps, interacting directly with your application is captured as test steps automatically on supported platforms. There is no switch to turn this on or off — pausing the session is how you stop capture, and resuming is how you start it again. Captured steps land at the cursor, exactly like typed instructions.
+While the session is in Authoring Steps, interacting directly with your application is captured as test steps automatically on supported platforms. There is no switch to turn this on or off — pausing the session is how you stop capture, and resuming is how you start it again. Captured steps append to the end of the step list, exactly like typed instructions, because the cursor is pinned to the bottom in Authoring Steps.
 
 | Platform | Capture support |
 |---|---|
@@ -485,7 +462,7 @@ Editing, duplicating, deleting, and multi-select are Paused-only. If the session
 
 Yes. Save is never blocked. The test saves in the **Unverified** state after a warning, and no code is generated until those steps have run.
 
-### Why did my test save as Fault?
+### Why did my test save as Faulty?
 
 A step was errored at the time you saved. Reopen the test, resolve the errored step, and save again to move it to Ready.
 

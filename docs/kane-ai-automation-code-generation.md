@@ -149,7 +149,7 @@ After code generation completes, the **Code** tab shows the status of each gener
 
 ### What determines whether code is generated
 
-Code generation depends on the state your test case was saved in. A test saved as **Ready** — every step has run and passed — generates code. A test saved as **Fault** (a step errored) or **Unverified** (steps were added or edited but never run) does not, because code generation needs a step to have run at least once in order to learn the exact elements and actions involved.
+Code generation depends on the state your test case was saved in. A test saved as **Ready** — every step has run and passed — generates code. A test saved as **Faulty** (a step errored) or **Unverified** (steps were added or edited but never run) does not, because code generation needs a step to have run at least once in order to learn the exact elements and actions involved.
 
 To move such a test to Ready, reopen it, run the remaining or errored steps to success, and save again. See [Save states](/support/docs/kaneai-authoring-session/#save-states).
 
