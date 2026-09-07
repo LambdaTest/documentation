@@ -209,7 +209,9 @@ kane-cli config set-target emulator
 kane-cli run "Add the first item to the cart" --app ./builds/app-debug.apk
 ```
 
-The simulator target accepts a `.zip` build, the emulator target accepts an `.apk` build, and both accept an uploaded app id, `APP` followed by six or more digits.
+`--app` is required for every mobile run. The simulator target accepts a `.zip` build, the emulator target accepts an `.apk` build, and both accept an uploaded app id, `APP` followed by six or more digits.
+
+You also need a device. In the interactive TUI, leaving `--device` off opens a one-time picker and saves your choice. A non-interactive run, such as one in CI, needs a device already set with `--device` or `kane-cli config set-device`, or the run exits and prints the fix. On the `desktop` target, `--device` and `--app` are ignored.
 
 In the interactive TUI, switch targets with `/mobile` and `/desktop`, and run `/doctor` to check mobile tooling and devices.
 
