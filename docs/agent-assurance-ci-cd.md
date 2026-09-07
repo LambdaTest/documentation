@@ -155,15 +155,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install pinned Rook build
-        env:
-          ROOK_VERSION: <reviewed-commit-sha>
+      - name: Install pinned public Rook release
         run: |
-          curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
+          curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+            | bash -s -- --version 0.1.1 --dir "$RUNNER_TEMP/rook-bin"
+          echo "$RUNNER_TEMP/rook-bin" >> "$GITHUB_PATH"
 
       - name: Verify Rook environment
         run: |
@@ -193,7 +189,7 @@ jobs:
           path: .testmuai/rook/agents/refund-desk/runs/
 ```
 
-**Pin Rook by commit SHA** and review updates before changing it. Scope the repository token to read access for the private release repository.
+**Pin Rook by a published semantic version** and review the public [Rook release notes](https://github.com/LambdaTest/rook/releases) before changing it. The shell installer downloads from the public repository and verifies the published SHA-256 checksum; it does not need a GitHub repository token.
 
 ## Separate Generation From the Gate
 

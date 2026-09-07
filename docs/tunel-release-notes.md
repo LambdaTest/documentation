@@ -41,6 +41,10 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+## Version 3.2.34 (6th September 2026)
+- **Security Updates and Stability Fixes**
+  - Security Fixes for CVE
+
 ## Version 3.2.33 (23rd August 2026)
 - **Multiple `--expose` Services**
   - Fixed only the first service being forwarded when several named services were exposed over a TCP-mode tunnel. Each exposed service now runs on its own data channel, so all of them stay reachable for the lifetime of the tunnel.

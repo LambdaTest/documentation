@@ -33,36 +33,47 @@ This section installs the packaged <code>rook</code> CLI. You do not clone the s
 
 ### Prerequisites
 
-- macOS or Linux.
-- Node.js 20 or newer.
+- macOS or Linux on arm64 or x64.
 - A TestMu AI account with Agent Assurance access.
 - The runtime needed by your own target agent. For example, a remote HTTP agent must be reachable and a local command agent must be installed on <code>PATH</code>.
 
-Check Node.js:
-
-~~~bash
-node --version
-~~~
-
-The major version must be 20 or newer.
+The Homebrew and shell packages include a matching Node.js runtime. If you choose npm, <code>npm</code> must already be available.
 
 ### Step 1: Install the packaged CLI
 
-Run:
+Choose one public installation method.
+
+**Homebrew**
+
+~~~bash
+brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git
+brew install lambdatest/rook/rook
+~~~
+
+Use the fully qualified <code>lambdatest/rook/rook</code> formula name so Homebrew trusts the third-party tap.
+
+**Shell installer**
 
 ~~~bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
 ~~~
 
-The installer:
+The shell installer:
 
-1. Checks for Node.js 20 or newer.
-2. Finds the newest <code>rook</code> release.
-3. Downloads and verifies the release archive.
-4. Installs it below <code>~/.testmuai/rook/versions/&lt;version&gt;</code>.
-5. Links the <code>rook</code> executable into a writable directory on <code>PATH</code>.
+1. Finds the newest public <code>rook</code> release for your OS and architecture.
+2. Downloads the archive and its SHA-256 sidecar from GitHub Releases.
+3. Verifies the archive before extracting it below <code>~/.testmuai/rook-&lt;version&gt;/</code>.
+4. Links the <code>rook</code> executable into <code>~/.local/bin</code> by default.
 
 If the final message prints a PATH command, run that exact command and open a new terminal.
+
+**npm**
+
+~~~bash
+npm install -g @testmuai/rook
+~~~
+
+See [Install Rook](/support/docs/rook-installation/) for installer options, upgrade commands, public releases, and checksums.
 
 ### Step 2: Verify the CLI
 
@@ -99,21 +110,21 @@ Authentication is global. Multiple <code>rook</code> sessions on the same machin
 
 ### Install a specific release
 
-Release identifiers use a commit SHA. Pin a known version for CI or a controlled rollout:
+Pin a published semantic version for CI or a controlled rollout:
 
 ~~~bash
-export ROOK_VERSION="<commit-sha>"
-
-curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+  | bash -s -- --version 0.1.1
 ~~~
 
-Installed versions remain side by side, so installing a new build does not overwrite the previous version directory.
+Shell-installed versions remain side by side. Find published versions on the [public Rook releases page](https://github.com/LambdaTest/rook/releases).
 
 ### Update the CLI
 
-Run the same installer again, then verify the selected version:
+Check for a newer release, follow the upgrade command Rook prints for the detected installation channel, and then verify the selected version:
 
 ~~~bash
+rook update
 rook --version
 rook doctor
 ~~~
@@ -123,7 +134,8 @@ rook doctor
 | Symptom | What to do |
 |---|---|
 | <code>rook: command not found</code> | Run the PATH or link command printed by the installer, then open a new terminal. |
-| Node.js version error | Install Node.js 20 or newer and rerun the installer. |
+| npm reports a Node.js engine error | Run npm with Node.js 22 or newer, or use Homebrew or the shell installer. |
+| Homebrew refuses to load an untrusted formula | Install the fully qualified <code>lambdatest/rook/rook</code> formula. |
 | Release asset connection resets | Retry outside the VPN or corporate proxy; the download uses GitHub's release asset CDN. |
 | Agent Assurance account is not recognized | Run <code>rook login</code>, then <code>rook whoami</code>. |
 
