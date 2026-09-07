@@ -226,10 +226,9 @@ kane-cli doctor --install    # install the test tooling Kane CLI manages
 kane-cli doctor --targets    # list the emulators and simulators available
 ```
 
-The common setup failures for each platform, and their fixes, are listed on the setup pages:
+The common setup failures for each platform, and their fixes, are listed on the mobile testing page:
 
-- [iOS Simulator setup](/support/docs/kane-cli-mobile-simulator/#common-failures)
-- [Android Emulator setup](/support/docs/kane-cli-mobile-emulator/#common-failures)
+- [Mobile testing common failures](/support/docs/kane-cli-mobile/#common-failures)
 
 ## "Update available" Notice
 
