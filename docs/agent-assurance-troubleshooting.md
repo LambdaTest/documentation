@@ -59,24 +59,29 @@ command -v rook
 echo "$PATH"
 ```
 
-If you installed a tarball manually, link `rook-<sha>/bin/rook` into a directory already on `PATH`.
+For a shell installation, rerun the public installer with a writable directory that is already on `PATH`:
 
-### Node.js version error
+```bash
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+  | bash -s -- --dir "$HOME/bin"
+```
 
-Rook requires Node.js 20 or newer:
+### npm reports a Node.js engine error
+
+Homebrew and shell installations carry a matching Node.js runtime. The npm installation requires npm to run under Node.js 22 or newer:
 
 ```bash
 node --version
 ```
 
-Upgrade Node.js and rerun `rook --version`.
+Upgrade the Node.js version used by npm and rerun `npm install -g @testmuai/rook`, or use Homebrew or the shell installer.
 
 ### Download resets after the release lookup
 
-Release assets are served from a different GitHub asset domain. A VPN or corporate proxy can allow the repository request but reset the redirected asset download. Run the installer off VPN, or use:
+Release assets are served from a different GitHub asset domain. A VPN or corporate proxy can allow the public repository request but reset the redirected asset download. Allow `release-assets.githubusercontent.com`, retry outside the VPN, or rerun the public installer from an approved network:
 
 ```bash
-gh release download --repo LambdaTest/rook --pattern '*.tar.gz'
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
 ```
 
 ## Authentication and Credits

@@ -3,10 +3,12 @@ id: rook-installation
 title: Install Rook
 hide_title: false
 sidebar_label: Install
-description: Install a versioned Rook CLI build, verify its checksum and runtime, and diagnose private release download failures.
+description: Install the public Rook CLI with Homebrew, npm, or the checksum-verifying shell installer on macOS and Linux.
 keywords:
   - install rook cli
-  - rook installer
+  - rook homebrew
+  - rook npm
+  - rook install script
   - rook release archive
 url: https://www.testmuai.com/support/docs/rook-installation/
 site_name: TestMu AI
@@ -16,52 +18,98 @@ canonical: https://www.testmuai.com/support/docs/rook-installation/
 
 # Install Rook
 
-Rook is a single CLI binary that runs inside your agent repository. Versions install side by side so a newer build does not overwrite the previous one.
+Rook is publicly available from the [LambdaTest/rook repository](https://github.com/LambdaTest/rook). Install it with Homebrew, the shell installer, or npm. Use one method per machine so an older executable from another method does not take precedence on `PATH`.
 
 ## Prerequisites
 
 | Requirement | Why |
 |---|---|
-| Node.js 22 or newer | The only external Rook runtime requirement. Check with `node --version`. |
-| TestMu AI account | Supplies authentication and credits. The first-use browser flow takes only a few seconds. |
-| Your agent's dependencies | Rook invokes the agent exactly as you would. A CLI, local service, or supporting tool must already be available. |
-| Private repository access | Pre-alpha builds are released from the private Rook repository. Use `gh` or a token with repository access. |
+| macOS or Linux on arm64 or x64 | These are the platforms supported by the public Homebrew and shell packages. |
+| TestMu AI account | Supplies authentication and credits. You can sign in after installation. |
+| Your agent's dependencies | Rook invokes the target agent as you would. A local command, service, or supporting tool must already be available. |
 
-You do not need Docker, a cluster, or your own model API key. Model keys remain in the Rook controller.
+The Homebrew and shell packages carry a matching Node.js runtime. You do not need Docker, a cluster, the Rook source code, or your own model API key. If you choose npm, `npm` must already be available to run the install command.
 
-## Install With One Command
+## Install With Homebrew
 
-When GitHub CLI is already authenticated:
+The public formula is maintained in the [Rook Homebrew tap](https://github.com/LambdaTest/rook/blob/main/Formula/rook.rb).
 
 ```bash
-curl -fsSL -H "Authorization: Bearer $(gh auth token)" \
-  https://raw.githubusercontent.com/LambdatestIncPrivate/rook/stage/scripts/install.sh \
-  | bash
+brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git
+brew install lambdatest/rook/rook
 ```
 
-The repository is private, so both the script fetch and release download require a GitHub token. Without `gh`, export a personal access token with repository access as `ROOK_GITHUB_TOKEN` and use it in the authorization header.
+Use the fully qualified `lambdatest/rook/rook` formula name. Homebrew requires a third-party tap formula to be explicitly trusted; `brew install rook` can be rejected as an untrusted formula even after adding the tap.
 
-The installer unpacks the build below:
+To upgrade a Homebrew installation:
 
-```text
-~/.testmuai/rook/versions/<version>/
+```bash
+brew update
+brew upgrade lambdatest/rook/rook
 ```
 
-It then links `rook` onto your `PATH`. The version is the commit SHA, matching the controller image built from the same commit.
+## Install With the Shell Installer
 
-## Installer Variables
+The [public `install.sh` script](https://github.com/LambdaTest/rook/blob/main/install.sh) downloads and verifies the correct release for the current platform.
 
-Set these before the pipe:
+```bash
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
+```
 
-| Variable | Effect |
-|---|---|
-| `ROOK_VERSION=<sha>` | Install a specific build instead of the newest available build. |
-| `ROOK_PREFIX=<directory>` | Install somewhere other than `~/.testmuai/rook`. |
-| `ROOK_GITHUB_TOKEN=<token>` | Authenticate without GitHub CLI. |
+The public installer:
+
+1. Detects macOS or Linux and the arm64 or x64 architecture.
+2. Finds the latest public [GitHub release](https://github.com/LambdaTest/rook/releases/latest).
+3. Downloads the matching archive and its SHA-256 sidecar.
+4. Verifies the archive before extracting it.
+5. Installs the release under `~/.testmuai/rook-VERSION/`, where `VERSION` is the selected semantic release.
+6. Links `rook` into `~/.local/bin` by default.
+
+If `~/.local/bin` is not on `PATH`, the installer prints the exact export command to add. Run it and open a new terminal.
+
+### Pin a release or change the binary directory
+
+Pass installer options after `bash -s --`:
+
+```bash
+# Install the current production release explicitly.
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+  | bash -s -- --version 0.1.1
+
+# Link the executable into another writable directory.
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+  | bash -s -- --dir "$HOME/bin"
+```
+
+Run the installer with `--help` to list its supported options:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
+  | bash -s -- --help
+```
+
+The public installer uses `--version` and `--dir` flags and does not require GitHub authentication.
+
+## Install With npm
+
+The [`@testmuai/rook` package](https://www.npmjs.com/package/@testmuai/rook) is public on npm.
+
+```bash
+npm install -g @testmuai/rook
+```
+
+To upgrade an npm installation:
+
+```bash
+npm update -g @testmuai/rook
+```
+
+The npm package installs the `rook` executable and publishes platform runtime packages with it. If npm reports an engine error, update the Node.js version used to run npm to Node.js 22 or newer.
 
 ## Verify the Installation
 
 ```bash
+command -v rook
 rook --version
 rook doctor
 ```
@@ -73,55 +121,34 @@ cd your-project
 rook
 ```
 
-`rook doctor` checks Node.js, the workspace, selected deployment, controller and API reachability, identity, authentication, project selection, TTY mode, and local state.
+`rook doctor` checks the CLI version, workspace, production service reachability, identity, authentication, project selection, TTY mode, and local state.
 
-## Install From a Release Archive
+## Public Releases and Checksums
 
-Download a `rook-<sha>.tar.gz` archive from a `cli-<sha>` release tag. With GitHub CLI:
+Published versions and platform archives are available on the [Rook releases page](https://github.com/LambdaTest/rook/releases). Release assets follow this pattern:
 
-```bash
-gh release download \
-  --repo LambdatestIncPrivate/rook \
-  --pattern '*.tar.gz'
+```text
+rook-<version>-darwin-arm64.tar.gz
+rook-<version>-darwin-x64.tar.gz
+rook-<version>-linux-arm64.tar.gz
+rook-<version>-linux-x64.tar.gz
 ```
 
-Extract, verify, and link the downloaded build:
+Each archive has a matching `.sha256` file. Do not bypass a checksum mismatch; delete both downloads and fetch them again from the public release.
 
-```bash
-tar -xzf rook-<sha>.tar.gz
-./rook-<sha>/bin/rook --version
+## Troubleshoot Installation
 
-shasum -a 256 -c rook-<sha>.tar.gz.sha256
+| Symptom | What to do |
+|---|---|
+| `rook: command not found` | Add the installer directory to `PATH`, open a new terminal, and run `command -v rook`. |
+| Homebrew refuses to load an untrusted formula | Install the fully qualified `lambdatest/rook/rook` formula. |
+| Unsupported OS or architecture | Use macOS or Linux on arm64 or x64. On Windows, run Rook from WSL. |
+| Release download is reset | Allow GitHub and `release-assets.githubusercontent.com` through the VPN or proxy, then retry. |
+| Checksum verification fails | Delete the archive and checksum file. Download them again; never install an unverified archive. |
+| npm reports an engine mismatch | Run npm with Node.js 22 or newer, then retry the global install. |
 
-# macOS with Homebrew
-ln -sfn "$PWD/rook-<sha>/bin/rook" /opt/homebrew/bin/rook
-
-# Other common Unix installations
-ln -sfn "$PWD/rook-<sha>/bin/rook" /usr/local/bin/rook
-```
-
-Do not bypass a checksum mismatch. Delete the archive and download it again from the approved release.
-
-## Release Download Resets
-
-`Recv failure: Connection reset by peer` usually means the release lookup succeeded but the asset download did not. GitHub redirects assets to `release-assets.githubusercontent.com`; a VPN, proxy, or network security layer can interrupt that second hop even when GitHub status is healthy.
-
-The installer retries over HTTP/1.1, then IPv4, and finally through `gh`. If every attempt fails:
-
-1. Check VPN and proxy policy for the release-asset domain.
-2. Retry from an approved alternate network.
-3. Download the archive manually with `gh release download`.
-4. Verify the supplied SHA-256 file before installation.
-
-## Stay Current
-
-```bash
-rook update
-rook --version
-```
-
-`rook update` checks for a newer build and explains how to install it. When a newer version exists, `rook --version` also reports that status.
+If a public install path still fails, [open a Rook issue](https://github.com/LambdaTest/rook/issues/new/choose) with the OS, architecture, install method, and full error output.
 
 ## Next Step
 
-Continue with [Five Minutes with Rook](/support/docs/agent-assurance-quickstart/).
+Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assurance-quickstart/).
