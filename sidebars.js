@@ -5319,25 +5319,9 @@ module.exports = {
         ],
       },
       {
-        type: "category",
-        collapsed: true,
+        type: "doc",
         label: "Mobile Testing",
-        link: {
-          type: "doc",
-          id: "kane-cli-mobile",
-        },
-        items: [
-          {
-            type: "doc",
-            label: "iOS Simulator Setup",
-            id: "kane-cli-mobile-simulator",
-          },
-          {
-            type: "doc",
-            label: "Android Emulator Setup",
-            id: "kane-cli-mobile-emulator",
-          },
-        ],
+        id: "kane-cli-mobile",
       },
       {
         type: "category",
