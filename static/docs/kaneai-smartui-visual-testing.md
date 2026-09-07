@@ -28,7 +28,7 @@ Click **Create** to add the step to your test flow.
 The first time the test is executed, it captures an initial screenshot that becomes the **Baseline** for all future comparisons. You can view this image by clicking **Show Baseline**.
 
 ### Rerun and Analyze the Comparison
-When the test case is replayed or re-run during authoring, a new screenshot is captured and compared against the baseline. Click **Show Comparison** to open the SmartUI view. This interface highlights any visual differences found between the two images.
+When the step is run again during authoring, a new screenshot is captured and compared against the baseline. Click **Show Comparison** to open the SmartUI view. This interface highlights any visual differences found between the two images.
 
 ### Approve or Reject Changes
 Within the comparison view, you can review the changes and decide on a verdict.
@@ -40,7 +40,7 @@ You can also adjust project settings like **Compare Type** and **Mis-Match Thres
 ## Saving and Automating Your Visual Test
 
 ### Save Your Test Case
-Once your test flow is complete, click **Finish test**. You will be prompted to save the session, where you can define the **Project**, **Folder**, **Test Name**, and **Description**.
+Once your test flow is complete, click **Save** in the top-right header. You will be prompted to save the session, where you can define the **Project**, **Folder**, **Test Name**, and **Description**.
 
 ### Execution and Scheduling
 

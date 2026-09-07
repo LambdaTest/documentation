@@ -16,6 +16,9 @@ The KaneAI Knowledge Base is your go-to resource for writing effective test case
 
 Start here to learn how to write reliable test instructions for any scenario, from finding elements on the page to handling complex form interactions.
 
+      Authoring Session
+      Session states, the cursor that decides where new steps land, the four run actions, step statuses, and what happens when you save.
+
       Element Interactions
       Target elements precisely using text, type, position, and context cues. Covers scrolling, tab management, hover, and drag-and-drop.
 
@@ -84,10 +87,11 @@ New to KaneAI? Here's the recommended reading order:
 1. **[Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)**: Get started by authoring your first desktop browser test
 2. **[Author Your First Mobile Browser Test](/support/docs/author-your-first-mobile-browser-test/)**: Learn to author mobile browser tests with device selection and configuration
 3. **[Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)**: Build your first mobile app test with app upload and device configuration
-4. **[Element Interactions](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
-5. **[Forms & Inputs](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
-6. **[Assertions Guide](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
-7. **[Waits & Timing](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
-8. **[JS Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds/)**: When natural language isn't enough
+4. **[Authoring Session](/support/docs/kaneai-authoring-session/)**: Understand session states, the cursor, and how to run and verify steps
+5. **[Element Interactions](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
+6. **[Forms & Inputs](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
+7. **[Assertions Guide](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
+8. **[Waits & Timing](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
+9. **[JS Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds/)**: When natural language isn't enough
 9. **[Scroll Until Element for Mobile Authoring](/support/docs/kaneai-scroll-until-mobile/)**: Scroll until a target element is visible when authoring mobile tests
 10. **[Create Pull Requests from KaneAI Test Cases](/support/docs/kaneai-create-pr/)**: Turn KaneAI test cases into pull requests in your repository

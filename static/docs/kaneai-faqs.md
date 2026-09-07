@@ -14,6 +14,14 @@ KaneAI runs your tests on real browsers in the cloud on HyperExecute, across mul
 
 Every run is saved to Test Manager, and KaneAI gives you a shareable Test Summary link you can send to anyone.
 
+### Where did the Manual Interaction toggle go?
+
+It has been removed. Interaction capture is always active while your session is in the **Authoring Steps** state, so there is nothing to switch on. Use **Pause Recording** when you want to interact with your application without those actions becoming test steps. See [Manual Interaction](/support/docs/kaneai-manual-interaction/).
+
+### Why is Resume unavailable in my session?
+
+A step has errored, which sets the Error flag on the session. Authoring Steps cannot be entered while a step is errored. Re-run, edit, or delete every errored step and Resume becomes available again. See [The Error flag](/support/docs/kaneai-authoring-session/#the-error-flag).
+
 ## Bot protection and CAPTCHAs
 
 ### Why is my test blocked by a CAPTCHA or Cloudflare challenge?
