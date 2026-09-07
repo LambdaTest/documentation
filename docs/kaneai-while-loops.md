@@ -146,8 +146,22 @@ You can add any of the following inside a loop body:
 - **JavaScript steps**: execute custom JS for data extraction, array handling, or index management.
 - **API steps**: make API calls as part of the iteration.
 - **DB steps**: run database queries inside each iteration.
-- **Manual interaction**: perform actions directly on the browser within the loop body using the manual interaction control.
 - **If / Else blocks**: insert a conditional block inside the loop body via the slash command menu to add branching logic within iterations.
+
+#### Where steps land inside the loop body
+
+The cursor decides whether a new step joins the loop body or sits outside it:
+
+| Cursor position | Allowed | The inserted step lands |
+|---|---|---|
+| Between two steps inside the loop body | Yes | In the body, at that point — it runs on every iteration |
+| Immediately after the **While** header | Yes | As the first step of the body |
+| Immediately before **End while** | Yes | As the last step of the body |
+| Before the **While** header | Yes | Outside the loop, above it |
+| After **End while** | Yes | Outside the loop, below it |
+| On the condition row | No | The cursor snaps to the nearest valid position |
+
+For the full set of cursor rules, see [Cursor in While loops](/support/docs/kaneai-authoring-session/#cursor-in-while-loops).
 
 
 ### Step 4: Finalize the Loop with "End While"
@@ -166,7 +180,9 @@ Clicking **End While** starts execution immediately. KaneAI re‑evaluates the c
 
 Once a While Loop has been finalized, KaneAI runs it inline in the Playground. Each iteration evaluates the condition, runs the body steps in order if the condition is true, and then re‑evaluates. Execution finishes the moment the condition becomes false or the safety cap is reached.
 
-**While the loop is running**, the block header shows the current iteration so you can follow progress as it happens. A **Pause While** control is available during execution, which you can use to interrupt a run and inspect intermediate state.
+A While Loop executes as a single unit. Steps inside the body have no individual run control — to run the loop again later, use the **Run block** control on the block header, which evaluates the condition and runs the loop to completion. A run range that passes over the loop runs the whole loop in sequence. See [Blocks run as a unit](/support/docs/kaneai-authoring-session/#blocks-run-as-a-unit).
+
+**While the loop is running**, the session is in the **Running** state: the step list is read‑only and the application view is covered. The block header shows the current iteration so you can follow progress as it happens. A **Pause While** control is available during execution, which you can use to interrupt a run and inspect intermediate state.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/while-loops/while-loop-running.png').default} alt="While Loop executing with the current iteration shown in the block header" className="doc\_img"/>
 
@@ -255,7 +271,7 @@ Use the safety cap as a last line of defense. Design your condition so the loop 
 
 Once a While Loop has been finalized, you can still change it. The loop itself stays in sync automatically.
 
-- **Add, remove, or reorder body steps.** Use the edit instruction action on any step inside the loop; the loop updates automatically to reflect the change.
+- **Add, remove, or reorder body steps.** Use the edit instruction action on any step inside the loop; the loop updates automatically to reflect the change. Editing, duplicating, and deleting steps is available while the session is **Paused**.
 - **Change the condition.** Edit the While Loop step directly. The new condition applies on the next test run.
 - **Finalize later.** If you closed the authoring view before clicking **End While**, the loop remains unfinalized. Re‑open the test, add the remaining body steps, and click **End While** when ready.
 - **Loops inside modules.** When a While Loop is part of a [module](/support/docs/kane-ai-modules/), any change to the loop condition or body creates a new module version. Other tests using that module stay on the version they already reference until they accept the new one. In the Classic experience, the loop is read-only on the module's Overview tab. Make changes from the test case the module was authored from, and modules containing While Loops cannot be added to manual test cases in Test Manager.
@@ -269,6 +285,8 @@ The following nesting patterns are **not supported**:
 - A While Loop directly inside another While Loop.
 - A While Loop directly inside a conditional branch (If, Else‑If, or Else).
 
+These are refused at insert time: if the cursor is inside a conditional branch or another loop body, adding a While Loop is blocked with an explanation rather than creating an unsupported structure.
+
 ## Limitations
 
 - **No For‑Each loop construct.** Collection iteration can be handled using a While Loop with JavaScript steps for index management.
@@ -279,6 +297,9 @@ The following nesting patterns are **not supported**:
 - **Natural language cannot create a loop.** Phrases like "repeat this 10 times" or "while the spinner is visible, do X" will not create a loop. You must use the slash command and select **While Loop**. KaneAI surfaces this as the `WHILE_NOT_SUPPORTED_VIA_NL` error.
 - **Both operands in a condition cannot be parameters at the same time.** At least one side must be a runtime‑updated value. See `BOTH_OPERANDS_AS_PARAMETERS` in [Error Messages and Troubleshooting](#error-messages-and-troubleshooting).
 - **Local variables must be defined inside the block.** If a local variable referenced inside a While block was created outside the block, KaneAI shows an error when you click **End While**.
+- **New While Loops cannot be created while the session is Paused.** The **/** slash command menu does not offer **Add While Loop** in that state. A While Loop that already exists in the test can still be edited while paused.
+- **Body steps cannot be run individually.** The loop executes as a whole through the **Run block** control on the block header.
+- **Queued steps in a loop body count as unverified.** Unlike steps in a non‑matching conditional branch, the loop body is on the main path, so a step added there but never run keeps the test out of the Ready save state.
 
 ## Error Messages and Troubleshooting
 
@@ -369,6 +390,10 @@ Early exit (Break) and skip‑to‑next‑iteration (Continue) are not supported
 ### Can I nest a While Loop inside another While Loop?
 
 No. Nested loops are not supported, and a While Loop cannot be placed inside an If / Else branch either. A While Loop **can** contain conditional (If / Else) blocks in its body. See [Nesting Rules](#nesting-rules). If you need multi‑level iteration, split the logic across multiple test cases or use a single loop combined with JavaScript for inner bookkeeping.
+
+### Can I run one step inside my loop?
+
+No. A While Loop executes as a whole through the **Run block** control on the block header. You can still insert a step anywhere in the body — run the block to verify it, and the step runs in real loop context. Steps inside a [module](/support/docs/kane-ai-modules/) are the exception and do run individually.
 
 ### What happens if my condition is already false on the first check?
 
