@@ -31,16 +31,15 @@ Codes `1` and `2` are deliberately distinct. Both may stop a build, but only `2`
 
 | Variable | Effect |
 |---|---|
-| `ROOK_HOME` | Credentials, environment values, history, and installed versions. Default: `~/.testmuai/rook`. |
-| `ROOK_ENV` | Deployment selection: `prod`, `stage`, or `local`. A stage-branch tarball defaults to stage. |
+| `ROOK_HOME` | Credentials, environment values, history, and local state. Default: `~/.testmuai/rook`. |
+| `ROOK_ENV` | Deployment selection. Public Homebrew, npm, and shell packages default to `prod`. |
 | `ROOK_API_URL` | Overrides the versioned Rook API base URL. |
 | `ROOK_CONTROLLER_URL` | Overrides the controller base URL. |
 | `ROOK_AUTH_BASE_URL` / `AUTH_URL` | Overrides the authentication base URL. |
 | `ROOK_USER_AUTH_URL` / `USER_AUTH_URL` | Supplies a full user-auth endpoint rather than a base. |
-| `ROOK_VERSION` | Installer only: selects a specific build. |
-| `ROOK_PREFIX` | Installer only: selects the installation root. |
-| `ROOK_GITHUB_TOKEN` | Installer only: authenticates private release access without `gh`. |
 | `ROOK_SPRITE` | Controls boot animation; `--no-animation` disables it for one launch. |
+
+The public shell installer accepts `--version` and `--dir` command-line options. It does not require a GitHub token or use installer-specific `ROOK_*` variables. See [Install Rook](/support/docs/rook-installation/).
 
 ## Hook Context Variables
 
