@@ -4,6 +4,9 @@
 
 Auto-Heal automatically repairs broken element locators (IDs, XPaths, CSS selectors) at runtime, so your KaneAI-generated tests keep passing when the application UI changes.
 
+**Auto-Heal is not Adaptive Heal**
+Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) repairs the **step** and records the change as a version you can approve or decline. The two are separate features.
+
 Instead of failing the test the moment a locator breaks, KaneAI finds a new locator at runtime by re-using the original natural language instruction that generated the step. KaneAI generates these scripts across multiple languages and frameworks from natural language instructions, and Auto-Heal adds a runtime reliability layer on top.
 
 ## How It Works
