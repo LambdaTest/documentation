@@ -52,6 +52,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ## Device Controls
 The Device Controls feature allows you to simulate various actions on your test device during a testing session, enabling comprehensive testing of your web applications' behavior in real-world scenarios.
 
+- **Home:** Return to the device's home screen instantly during your test session. This is useful for testing how your web application behaves when sent to the background and resumed, or for navigating between apps without ending the session.
 - **Volume Control:** Adjust the device volume directly within your test session to test audio-related features, such as media playback or notifications, ensuring they function correctly at different volume levels.
 - **Lock Device:** Seamlessly lock or unlock the device during your testing session without interrupting your workflow. This is useful for verifying app behavior upon device unlocking or handling lock-screen notifications.
 - **Shake Device:** Simulate a device shake to test functionalities that rely on shake gestures, such as undo actions or triggering specific in-app events.
