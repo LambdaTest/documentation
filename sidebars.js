@@ -424,6 +424,7 @@ module.exports = {
           { type: "doc", id: "kaneai-network-throttling", label: "Mobile Network Throttling" },
           { type: "doc", id: "kaneai-gps-location", label: "Mobile GPS Location" },
           { type: "doc", id: "kaneai-smart-locator-priority", label: "Smart Locators" },
+          { type: "doc", id: "kaneai-healing-and-dynamic-test", label: "Adaptive Heal and Dynamic Test" },
         ],
       },
 
