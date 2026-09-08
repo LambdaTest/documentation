@@ -169,6 +169,8 @@ When you initiate a test case generation session, the following process occurs a
 
 The Memory Layer prevents duplicates from being created. To find and remove duplicates that already exist in your repository, see [Find and Remove Duplicate Test Cases](/support/docs/test-case-deduplication/).
 
+Archived test cases are excluded from the Memory Layer, so they neither inform generation nor count as existing coverage. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+
 :::note
 The Memory Layer operates automatically in the background, you can choose to enable or disable Memory enhancement feature before triggering a session.
 :::

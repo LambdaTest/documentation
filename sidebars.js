@@ -2494,8 +2494,39 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Projects",
-        items: ["create-projects", "system-and-custom-fields"],
+        label: "Import Test Case Data",
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Import Test Cases",
+            items: ["csv-import", "one-click-migration-from-testrail", "one-click-migration-from-xray", "one-click-migration-from-zephyr-scale", "migrate-from-zephyr-enterprise", "one-click-migration-from-qtest"],
+          },
+          "generate-test-cases-with-ai",
+          // "create-manage-test-cases",
+          "manual-test-case-creation",
+          "test-case-versioning",
+          "create-modules",
+          "modules-in-manual-testcases",
+          "copy-and-move-support-for-test-cases",
+          "test-case-deduplication",
+          "test-case-archive",
+          "update-fields",
+          "export-test-cases",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Linking Automated Test Cases",
+            link: {
+              type: "doc",
+              id: "automated-test-cases-with-ai",
+            },
+            items: [
+              "automated-test-cases-linked-using-dashboard",
+              "automated-test-cases-linked-using-capability",
+            ],
+          },
+        ],
       },
       {
         type: "category",
