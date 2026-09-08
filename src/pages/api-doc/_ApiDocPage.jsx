@@ -70,7 +70,6 @@ const NAV_SECTIONS = [
 
 const TOP_LINKS = [
   { label: 'Status', href: 'https://status.lambdatest.io/' },
-  { label: 'Community', href: 'https://community.testmuai.com/' },
   { label: 'Blog', href: 'https://www.testmuai.com/blog/' },
 ];
 
@@ -176,7 +175,7 @@ function MobileSidebarDrawer({ open, onClose, apis, activeApiSlug, activeGroupSl
             {NAV_SECTIONS.map(s => <option key={s.label} value={s.label}>{s.label}</option>)}
           </select>
 
-          {/* Status / Community / Blog */}
+          {/* Status / Blog */}
           <div style={{ marginBottom: '12px' }}>
             {TOP_LINKS.map(({ label, href }) => (
               <a key={label} href={href} target="_blank" rel="noreferrer"
