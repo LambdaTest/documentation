@@ -4,7 +4,6 @@
 
 TestMu AI is built for enterprise-scale testing. This page provides a comprehensive overview of how TestMu AI meets the requirements of enterprise buyers across security, compliance, access control, deployment, integrations, and more.
 
-
   Single Sign-On
   Audit Logs
   RBAC
@@ -18,7 +17,6 @@ TestMu AI is built for enterprise-scale testing. This page provides a comprehens
   Data Protection & GDPR
   Change Management
   Product Assortment
-
 
 ## Single Sign-On
 
@@ -38,8 +36,6 @@ TestMu AI supports enterprise Single Sign-On (SSO) to centralize user authentica
 - [PingOne SCIM Integration](/support/docs/pingone-scim/)
 - [JumpCloud SCIM Integration](/support/docs/jumpcloud-scim/)
 
-
-
 ## Audit Logs
 
 TestMu AI provides comprehensive audit logging to track user and organization-level activity. Audit logs are essential for compliance, security investigations, and operational visibility.
@@ -54,8 +50,6 @@ TestMu AI provides comprehensive audit logging to track user and organization-le
 - [Audit Logs](/support/docs/audit-logs/)
 - [Data Retention Policy](/support/docs/data-retention-policy/)
 
-
-
 ## Role-Based Access Control
 
 TestMu AI provides granular RBAC to control who can access, view, and manage resources across the platform. Administrators can define custom roles with fine-grained permissions at both the product and entity level.
@@ -69,8 +63,6 @@ TestMu AI provides granular RBAC to control who can access, view, and manage res
 
 **Documentation:**
 - [Roles and Permissions (RBAC)](/support/docs/rbac-roles-and-permissions/)
-
-
 
 ## Product Security
 
@@ -98,8 +90,6 @@ TestMu AI maintains enterprise-grade security across the platform with industry-
 - [Security & Trust Page](https://www.testmuai.com/trust/security#platform-security)
 - [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/)
 
-
-
 ## Deployment Options
 
 TestMu AI offers flexible deployment options to meet your organization's infrastructure and compliance requirements.
@@ -124,8 +114,6 @@ TestMu AI offers flexible deployment options to meet your organization's infrast
 
 TestMu AI supports regional data residency and tenant isolation for regulated deployments. Each organization's data is isolated by tenant ID within its own VPC, with production segregated from non-production. Private-cloud and on-premise (including Private Real Device Cloud) keep test data, app binaries and session content inside the customer boundary. Test execution can run fully air-gapped; note that AI-agent features require connectivity to TestMu AI APIs. Regional residency options (e.g. US, EU) and sovereign-cloud deployments are available on enterprise contracts.
 
-
-
 ## Team Management
 
 TestMu AI provides comprehensive team management capabilities to organize users, control access, and manage testing at scale across your organization.
@@ -140,8 +128,6 @@ TestMu AI provides comprehensive team management capabilities to organize users,
 - [Team Management](/support/docs/team-management/)
 - [Sub Organizations](/support/docs/sub-organizations/)
 - [Account Management](/support/docs/account-management/)
-
-
 
 ## Integrations
 
@@ -168,8 +154,6 @@ TestMu AI integrates with the tools your enterprise already uses, from project m
 - [Integrations Overview](/support/docs/integrations-with-ci-cd-tools/)
 - [GitHub App Integration](/support/docs/github-app-integration/)
 
-
-
 ## Test Data Generation
 
 TestMu AI provides built-in capabilities to generate, manage, and protect the test data your teams use across automation. Teams can author synthetic datasets for data-driven tests, mask sensitive payloads in network logs and recordings, and parameterize tests so the same flow runs across environments and inputs without rework.
@@ -185,8 +169,6 @@ TestMu AI provides built-in capabilities to generate, manage, and protect the te
 - [KaneAI Variables & Parameters](/support/docs/kaneai-variables-and-parameters/)
 - [Network Data Masking for Selenium](/support/docs/network-data-masking/)
 - [HyperExecute Lambda Masking](/support/docs/hyperexecute-release-notes-2024/#version-231)
-
-
 
 ## Reporting & Analytics
 
@@ -212,8 +194,6 @@ TestMu AI provides enterprise-grade reporting and analytics with AI-powered insi
 
 TestMu AI emits JUnit XML and JSON for CI, NDJSON event streams for agents, and framework report schemas (Allure, Extent, Cucumber, Mochawesome). OpenTelemetry spans are available via Selenium telemetry logs. SARIF is not emitted natively; security findings export as JSON via REST/MCP and can be transformed to SARIF where a consumer requires it.
 
-
-
 ## SLA & Support
 
 TestMu AI provides enterprise support with dedicated resources and guaranteed response times.
@@ -233,8 +213,6 @@ TestMu AI provides enterprise support with dedicated resources and guaranteed re
 **Contact:**
 - Email: [support@testmuai.com](mailto:support@testmuai.com)
 - Documentation: [testmuai.com/support/docs](https://www.testmuai.com/support/docs/)
-
-
 
 ## Data Protection & GDPR
 
@@ -263,8 +241,6 @@ TestMu AI is GDPR compliant and provides comprehensive data protection controls 
 - [Privacy Policy](https://www.testmuai.com/legal/privacy)
 - [Data Processing Agreement](https://www.testmuai.com/resources/LambdaTest_DPA_with_SCC_V2.4.pdf)
 
-
-
 ## Change Management
 
 TestMu AI provides tools for controlled test execution management and scheduled rollouts, ensuring enterprises can manage changes systematically.
@@ -279,8 +255,6 @@ TestMu AI provides tools for controlled test execution management and scheduled 
 **Documentation:**
 - [HyperExecute Workflows](/support/docs/hyperexecute-workflows/)
 - [Test Chains](/support/docs/hyperexecute-test-chains/)
-
-
 
 ## Product Assortment
 
@@ -304,8 +278,6 @@ TestMu AI offers multiple product tiers designed for different organizational ne
 - Priority support SLA
 
 **For pricing details**: [lambdatest.com/pricing](https://www.testmuai.com/pricing)
-
-
 
 ## Need More Information?
 
