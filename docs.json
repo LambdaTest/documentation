@@ -76,14 +76,7 @@
                   "docs/kane-cli-testrun"
                 ]
               },
-              {
-                "group": "Mobile Testing",
-                "pages": [
-                  "docs/kane-cli-mobile",
-                  "docs/kane-cli-mobile-simulator",
-                  "docs/kane-cli-mobile-emulator"
-                ]
-              },
+              "docs/kane-cli-mobile",
               {
                 "group": "Use Cases",
                 "pages": [
@@ -277,6 +270,16 @@
     {
       "source": "/docs/scim/azure",
       "destination": "/docs/scim-azure"
+    },
+    {
+      "source": "/docs/kane-cli-mobile-simulator",
+      "destination": "/docs/kane-cli-mobile",
+      "permanent": true
+    },
+    {
+      "source": "/docs/kane-cli-mobile-emulator",
+      "destination": "/docs/kane-cli-mobile",
+      "permanent": true
     }
   ]
 }
