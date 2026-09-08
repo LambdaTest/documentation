@@ -2488,6 +2488,7 @@ module.exports = {
           "modules-in-manual-testcases",
           "copy-and-move-support-for-test-cases",
           "test-case-deduplication",
+          "test-case-archive",
           "update-fields",
           "export-test-cases",
           {
