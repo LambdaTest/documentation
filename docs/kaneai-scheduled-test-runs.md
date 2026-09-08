@@ -65,6 +65,20 @@ In this documentation, you will learn how to create a scheduled test run using p
 
 **Step 6:** Click on any existing schedule to view detailed information, including a summary of test outcomes, passed and failed cases, and their respective instances. This helps in easily reviewing and proceeding with the tests.
 
+### Step 1: Open the Test Runs Section
+***
+
+Navigate to **Test Manager**, select your project, and open the **Test Runs** section.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/test-run-one.png').default} alt="Scheduling a KaneAI test run"  className="doc_img" />
+
+**Result:** The Test Runs section lists your existing test runs.
+
+### Step 2: Create a Schedule
+***
+
+Click the three dots next to a test run and select **Create Schedule**. Alternatively, open the **Scheduled runs** section to view all existing schedules, then click **Create a Scheduled Run**.
+
 <img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/2.png').default} alt="Scheduling a KaneAI test run"  className="doc_img" />
 
 **Result:** The schedule creation form opens.
