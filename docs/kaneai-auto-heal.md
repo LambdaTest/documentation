@@ -58,6 +58,8 @@ KaneAI, the GenAI Native testing assistant from <BrandName />, generates automat
 Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) repairs the **step** and records the change as a version you can approve or decline. The two are separate features.
 :::
 
+Instead of failing the test the moment a locator breaks, KaneAI finds a new locator at runtime by re-using the original natural language instruction that generated the step. KaneAI generates these scripts across multiple languages and frameworks from natural language instructions, and Auto-Heal adds a runtime reliability layer on top.
+
 **Auto-Heal** ensures your automation scripts remain robust, even when the application under test undergoes changes like modified element locators (IDs, XPaths, CSS selectors). Instead of failing the test immediately when locators break, KaneAI dynamically finds new locators at runtime by leveraging the original natural language instruction used to execute the test case.
 
 
