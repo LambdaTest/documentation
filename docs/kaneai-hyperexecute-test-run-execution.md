@@ -180,6 +180,8 @@ Before clicking **Execute**, you can optionally click **Advanced Configurations*
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/advanced-configurations-panel.webp').default} alt="Advanced Configurations panel open on Test Configuration, showing console logs, network logs, timezone, and retry on failure" className="doc_img"/>
 
+The panel below is what a run shows when it uses the **Classic report**. A run using **Evidence Reporting** shows a different, shorter panel, described in [Test Configurations for Evidence Reporting runs](#test-configurations-for-evidence-reporting-runs).
+
 The following settings are available:
 
 | Setting | Description |
@@ -209,6 +211,28 @@ The following settings are available:
 :::note
 Test case failure retries are supported only for code exported from **May 10, 2026 onwards**. For previously exported code, retries are triggered only on test runner command failure. To use this capability, regenerate the code export for your test cases in Test Manager.
 :::
+
+### Test Configurations for Evidence Reporting runs
+***
+
+A run using **Evidence Reporting** shows a different Advanced Configurations panel. Instead of the full set of sections above, it shows **Test Configurations** only, holding the settings that decide what the run does when a step fails.
+
+| Setting | Description |
+|---|---|
+| **Failure handling** | Turn on to keep the run going when a step fails, then pick one strategy. Off by default, and with it off the run stops at the first failed step. |
+| **Adaptive Heal** | Repair a step that fails to replay, so the run continues instead of stopping at the failure. The repair is saved as a new version of the test case. |
+| **Dynamic Test** | Author the test from its objective instead of replaying the recorded steps. Every run consumes authoring credits. |
+| **Retry on Failure** | Run the whole test again from the start after it fails. Nothing about the test is changed. |
+| **Maximum Retries** | Appears under Retry on Failure. Sets how many further attempts to make, up to 5. |
+| **Auto-approve changes** | Appears under Adaptive Heal and Dynamic Test. Makes the new version current immediately instead of holding it in Version History for approval. |
+
+Only one of Adaptive Heal, Dynamic Test and Retry on Failure can be active at a time. Selecting one clears the others.
+
+:::info Which panel a run shows
+A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience** on **Chrome** can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Test Configurations panel instead.
+:::
+
+See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how repaired versions are reviewed.
 
 ### Reports
 
