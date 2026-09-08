@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
-<a href="https://docusaurus.io/"><img src="https://img.shields.io/badge/Built%20with-Docusaurus-3ECC5F.svg?style=for-the-badge&labelColor=000000" alt="Docusaurus"></a>
+<a href="https://docusaurus.io/"><img src="https://img.shields.io/badge/Built%20with-Docusaurus-3ECC5F.svg?style=for-the-badge&labelColor=000000" alt="Docusaurus"></a>  <a href="https://community.testmuai.com/"><img src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&labelColor=000000" alt="Community"></a>
 </p>
 
 ## Getting Started
@@ -69,6 +69,10 @@ Merges to `main` deploy to the live documentation site.
 ## Contributions
 
 Contributions are welcome. Open an issue to discuss your idea before submitting a pull request. When reporting bugs, include your Node.js version, OS, and a link to the affected doc page.
+
+## TestMu AI (Formerly LambdaTest) Community
+
+Connect with testers and developers in the [TestMu AI Community](https://community.testmuai.com/). Ask questions, share what you are building, and discuss best practices in test automation and DevOps.
 
 ## TestMu AI (Formerly LambdaTest) Certifications
 

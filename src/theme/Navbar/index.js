@@ -44,6 +44,7 @@ function applyThemeChoice(choice) {
 
 const NAV_LINKS = [
   { to: '/support/docs/', label: 'Home', icon: HomeIcon },
+  { to: '/support/docs/getting-started-with-testmu-automation/', label: 'Docs', icon: DocsIcon },
   { to: '/support/docs/agent-skills/', label: 'Skills', icon: SkillsIcon },
   { to: '/support/api-doc/', label: 'API Reference', icon: ApiIcon },
   { to: '/support/faq/', label: 'FAQ', icon: FaqIcon },
@@ -55,6 +56,17 @@ function HomeIcon() {
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
       <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  );
+}
+
+function DocsIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="7" height="7" />
+      <rect x="14" y="3" width="7" height="7" />
+      <rect x="3" y="14" width="7" height="7" />
+      <rect x="14" y="14" width="7" height="7" />
     </svg>
   );
 }
@@ -152,6 +164,13 @@ function isActiveLink(pathname, to, label) {
   // Skills link - only match the agent-skills doc itself
   if (label === 'Skills') {
     return AGENT_SKILLS_PATHS.includes(normalizedPath);
+  }
+  // Docs link - match any /support/docs/* path EXCEPT /support/docs/ and the Skills doc
+  if (label === 'Docs') {
+    return normalizedPath.startsWith('/support/docs/') &&
+           normalizedPath !== '/support/docs/' &&
+           normalizedPath !== '/support/docs' &&
+           !AGENT_SKILLS_PATHS.includes(normalizedPath);
   }
   // API Reference should match any /support/api-doc/* path
   if (normalizedTo.startsWith('/support/api-doc/')) return normalizedPath.startsWith('/support/api-doc/');

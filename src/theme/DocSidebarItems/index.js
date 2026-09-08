@@ -8,6 +8,11 @@ const TOP_LINKS = [
     icon: 'https://d3gk2c5xim1je2.cloudfront.net/v7.1.0/solid/signal.svg',
   },
   {
+    label: 'Community',
+    href: 'https://community.testmuai.com/',
+    icon: 'https://d3gk2c5xim1je2.cloudfront.net/v7.1.0/solid/users.svg',
+  },
+  {
     label: 'Blog',
     href: 'https://www.testmuai.com/blog/',
     icon: 'https://d3gk2c5xim1je2.cloudfront.net/v7.1.0/solid/newspaper.svg',

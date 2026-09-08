@@ -282,6 +282,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 
 **Contact:**
 - Email: [support@testmuai.com](mailto:support@testmuai.com)
+- Community: [community.testmuai.com](https://community.testmuai.com/)
 - Documentation: [testmuai.com/support/docs](https://www.testmuai.com/support/docs/)
 
 ---
