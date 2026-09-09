@@ -15,7 +15,7 @@ module.exports = {
     require.resolve('./src/js/copy-ips.js')
   ],
   scripts: [
-  
+
     {
       src: 'https://assets.testmuai.com/resources/js/salesforce_chatwidget.js',
       defer: true,
@@ -29,9 +29,9 @@ module.exports = {
       defer: true,
       onload: "sf_messaging()",
     },
-   
+
   ],
-  themes: ['docusaurus-theme-search-typesense','docusaurus-theme-github-codeblock'],
+  themes: ['docusaurus-theme-search-typesense', 'docusaurus-theme-github-codeblock'],
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
     function tailwindPlugin() {
@@ -90,7 +90,7 @@ module.exports = {
       typesenseServerConfig: {
         nodes: [
           {
-            host: process.env.HOST ,
+            host: process.env.HOST,
             port: 443,
             protocol: 'https',
           },
@@ -141,20 +141,32 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-         sitemap: {
+        sitemap: {
           lastmod: 'date',
           priority: 0.9,
+          createSitemapItems: async ({ defaultCreateSitemapItems, routes, frontMatter }) => {
+            const allowedPath = '/support/api-doc/selenium-automation-api/build/fetch-all-builds-of-an-account/';
+            return routes.filter(route => {
+              const pageMeta = frontMatter[route.id] || {}; // Access frontmatter metadata
+              // Exclude pages marked as redirect or noindex
+              if (pageMeta && (pageMeta.redirect || pageMeta.robots === 'noindex')) {
+                return false;
+              }
+              // Include only the specific desired URL
+              return route.path === allowedPath;
+            });
+          },
           ignorePatterns: [
-          '/support/',
-          '/support/api-doc/',
-          '/support/docs/accessibility-rules-checklist/',
-          '/support/docs/kane-cli-getting-started/',
-          '/support/docs/accessibility-android-what-we-do-not-cover/',
-          '/support/docs/accessibility-getting-started-quick-setup/',
-          '/support/docs/kane-cli-agent-output/',
-          '/support/docs/accessibility-web-what-we-do-not-cover/',
-          '/support/docs/accessibility-ios-what-we-do-not-cover/'
-        ],
+            '/support/',
+            '/support/api-doc/',
+            '/support/docs/accessibility-rules-checklist/',
+            '/support/docs/kane-cli-getting-started/',
+            '/support/docs/accessibility-android-what-we-do-not-cover/',
+            '/support/docs/accessibility-getting-started-quick-setup/',
+            '/support/docs/kane-cli-agent-output/',
+            '/support/docs/accessibility-web-what-we-do-not-cover/',
+            '/support/docs/accessibility-ios-what-we-do-not-cover/'
+          ],
         },
       },
     ],
