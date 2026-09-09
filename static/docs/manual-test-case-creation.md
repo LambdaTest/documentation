@@ -18,6 +18,8 @@ After test case is created you will be redirected to a screen listing all the te
 
 ## Manage Test Case
 
+To retire a test case without deleting it, use **Archive** in the test case's three-dot menu. An archived test case leaves the repository and becomes read-only, but keeps its version history, past run results, and linked issues, and can be restored at any time. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+
 ### Test Case Details
 
 When you select a test case, you’ll be redirected to the Test Case Details page, where you can view Test Case details such as: **Test Case Title**, **Description**, **Precondition** , **Attachments**, **System Fields**: **Type**, **Status**, **Priority**, **Tag(s)** & **Custom Fields**
@@ -55,6 +57,19 @@ You can use the **Generate with AI** option to ask agent to analyse your test ca
 To save the changes made in the Test Case click on the `Save Changes` button OR use the `Command + /` for Mac & `Ctrl + /` shortcut.
 
  Any change in the Test Case, on **saving** will create a new version for that Test Case. You can add a commit message to note the reason for changes. To know more about how versioning works checkout the [Versioning doc](/support/docs/test-case-versioning/).
+
+### Automate with KaneAI
+
+A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
+
+This works for both test case templates:
+
+| Template | What KaneAI receives |
+|----------|----------------------|
+| **Manual Test Steps** | The ordered steps and their expected results |
+| **Behaviour Driven Development** | The `Given` / `When` / `Then` scenarios, read directly — no conversion is needed |
+
+The action requires KaneAI access, and the test case must have content — a test case with no steps or no scenarios cannot be automated.
 
 ### Test Case Runs Section
 

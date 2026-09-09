@@ -19,6 +19,14 @@ In this documentation, you will learn how to create a scheduled test run using p
 **Which settings a schedule shows**
 A schedule made of **Classic** test cases shows the full Advanced Configurations panel. A schedule whose test cases are all **New Experience** on **Chrome** can use Evidence Reporting, which shows a shorter **Test Configurations** panel with [Failure handling](/support/docs/kaneai-healing-and-dynamic-test/) instead. Retry on Failure is available in both.
 
+**Step 6:** Click on any existing schedule to view detailed information, including a summary of test outcomes, passed and failed cases, and their respective instances. This helps in easily reviewing and proceeding with the tests.
+
+### Step 1: Open the Test Runs Section
+
+Navigate to **Test Manager**, select your project, and open the **Test Runs** section.
+
+**Result:** The Test Runs section lists your existing test runs.
+
 ### Step 2: Create a Schedule
 
 Click the three dots next to a test run and select **Create Schedule**. Alternatively, open the **Scheduled runs** section to view all existing schedules, then click **Create a Scheduled Run**.

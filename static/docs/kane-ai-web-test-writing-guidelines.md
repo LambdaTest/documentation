@@ -41,11 +41,11 @@ Example: `Hover over the navigation bar.`
 
 - **Use Numbers to Indicate Positions or Quantities :** When specifying positions or quantities, use numbers for clarity. Example: `Scroll down 100 pixels.`
 
-- **Verify Steps Before Saving Test Cases :** Use the re-run option to ensure KaneAI executes all steps correctly and without errors before saving the test case.
+- **Verify Steps Before Saving Test Cases :** Use **Run** to execute the whole test, or **Run This Step** and the range actions to check part of it, so you know every step passes before saving. A test saves as Ready only when all steps have run and passed. See [Running steps during authoring](/support/docs/kaneai-authoring-session/#running-steps-during-authoring).
 
 - **Validate Test Flow While Editing :** Let the test run to validate if the flow is correct while editing a test case. Click "Resume" only after all steps are completed.
 
-- **Use Manual Interaction When Necessary :** If KaneAI struggles to execute the desired action, manually intervene to guide the AI appropriately.
+- **Use Manual Interaction When Necessary :** If KaneAI struggles to execute the desired action, perform it directly on the application. While the session is in Authoring Steps the action is captured as a step.
 
 ### DON'Ts
 - **Avoid Vague Terms :** Do not use terms like "Click that" or "Do this" without specifying which element or action.

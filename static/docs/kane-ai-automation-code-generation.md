@@ -71,7 +71,15 @@ The table below shows the frameworks and languages KaneAI can generate code in, 
 
 After code generation completes, the **Code** tab shows the status of each generated code entry and lets you run a Sample Run Execution to validate it before adding the test case to a full Test Run.
 
+### What determines whether code is generated
+
+Code generation depends on the state your test case was saved in. A test saved as **Ready** — every step has run and passed — generates code. A test saved as **Faulty** (a step errored) or **Unverified** (steps were added or edited but never run) does not, because code generation needs a step to have run at least once in order to learn the exact elements and actions involved.
+
+To move such a test to Ready, reopen it, run the remaining or errored steps to success, and save again. See [Save states](/support/docs/kaneai-authoring-session/#save-states).
+
 ### Code Generation States
+
+The states below describe generated code on the **Code** tab. They are separate from the save state of the test case — code generation only starts once a test is saved as Ready.
 
 | State | What it means |
 |---|---|

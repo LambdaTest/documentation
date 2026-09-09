@@ -47,7 +47,7 @@ You can edit the session value for the variables here which will lead to updatio
 
 ### From a Manual Interaction step
 
-While reviewing a Manual Interaction step, you can replace any hard-coded value in the step's instruction with a Parameter, Variable, or Secret, without deleting or re-recording the step. This flow is available on both **Desktop** and **Mobile App** Manual Interaction sessions.
+While reviewing a Manual Interaction step, you can replace any hard-coded value in the step's instruction with a Parameter, Variable, or Secret, without deleting or re-recording the step. This flow is available on both **Desktop** and **Mobile App** sessions, and works while the session is **Paused**, where step editing is available.
 
 #### Steps to convert a value
 

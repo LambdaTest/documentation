@@ -132,11 +132,11 @@ The footer bar tracks your selection across the whole scan, not just the group y
 
 Test Manager deletes the marked test cases and returns you to the project's test cases list.
 
-Deletion is permanent. Deleted test cases cannot be restored, and there is no archive to recover them from. Review your marked selection in the footer breakdown before you commit.
+Deletion is permanent. Deleted test cases cannot be restored. Review your marked selection in the footer breakdown before you commit.
 
 ## Limitations
 
-- **Deletion cannot be undone.** There is no archive or restore for test cases removed through the duplicate scan.
+- **Deletion cannot be undone.** The duplicate scan deletes the test cases you mark. There is no archive step in this flow, and removed test cases cannot be restored.
 - **Each scan costs 5 credits**, charged only when the scan produces at least one duplicate group. The cost is flat, regardless of how many test cases are scanned or how many duplicates are found.
 - **One scan at a time.** A project can only run a single duplicate scan at once.
 - **A scope needs at least two test cases** before a scan can start.

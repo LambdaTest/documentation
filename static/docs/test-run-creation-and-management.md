@@ -102,3 +102,5 @@ You can manage your test runs using the options available in the **three-dot men
 | **Duplicate** | Create a copy of the test run for re-execution or variation testing. |
 | **Archive** | Move completed test runs to the archive to keep your workspace clean and organized. |
 | **Delete** | Permanently remove a test run that is no longer needed. |
+
+Archiving a test run is not the same as archiving a test case. An archived test case stays in any run it was already part of and keeps its executions as history, but it is not offered when you create a new test run and is not carried across when you duplicate one. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
