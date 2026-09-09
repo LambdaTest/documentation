@@ -161,7 +161,6 @@ module.exports = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
-        sitemap: {
           lastmod: 'date',
           priority: 0.9,
           // Structural routes only. Patterns here are exact — micromatch anchors
