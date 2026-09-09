@@ -144,15 +144,13 @@ module.exports = {
         sitemap: {
           lastmod: 'date',
           priority: 0.9,
-          createSitemapItems: async ({ defaultCreateSitemapItems, routes, frontMatter }) => {
+          createSitemapItems: async ({ routes, frontMatter }) => {
             const allowedPath = '/support/api-doc/selenium-automation-api/build/fetch-all-builds-of-an-account/';
             return routes.filter(route => {
-              const pageMeta = frontMatter[route.id] || {}; // Access frontmatter metadata
-              // Exclude pages marked as redirect or noindex
+              const pageMeta = frontMatter[route.id] || {}; // Ensure correct access
               if (pageMeta && (pageMeta.redirect || pageMeta.robots === 'noindex')) {
-                return false;
+                return false; // exclude redirect and noindex pages
               }
-              // Include only the specific desired URL
               return route.path === allowedPath;
             });
           },
