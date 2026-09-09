@@ -48,35 +48,31 @@ Test Manager connects your testing work to the issues your team already tracks i
 ### Before you begin
 
 - Integrate Linear with your <BrandName /> account. Follow the steps in [Linear App Integration](/support/docs/linear-app-integration/).
-- Until Linear is connected, it is not available as a source in the **Link Issue** dialog.
+- Until Linear is connected, it cannot be selected as a source in the **Link Issue** dialog. The dialog shows the connection state of each tracker.
 - Searching and linking are limited to the Linear projects you selected during setup. Issues from any other project are not returned.
 
 ### Linking Linear Issues in Test Manager
 
 Once the integration is complete, follow these steps to link issues with your test cases or test runs:
 
-1. Head to the issues section in Test Manager, click on **Link Issue** and go to Linear.
+1. Head to the issues section in Test Manager and click on **Link Issue**.
 > Note: Issue linking is supported at the Test Case, Test Run, Test Case instance, and step level. To link issues, go to the Issues tab within a Test Case or a Test Run. For linking at the instance and step level within a Test Run, see [Track Bugs and Issues in Test Runs](/support/docs/track-issues-in-test-runs/).
 
-<!-- IMAGE PLACEHOLDER: Link Issues dialog with Linear selected as the source.
-     Suggested filename: ../assets/images/test-manager/linear/link-issue-dialog-linear.png
-     <img loading="lazy" src={require('../assets/images/test-manager/linear/link-issue-dialog-linear.png').default} alt="link-issue-dialog-with-linear-selected" className="doc_img"/> -->
+<img loading="lazy" src={require('../assets/images/test-manager/linear/link-issue-dialog-linear.png').default} alt="issues-tab-with-link-issue-button" className="doc_img"/>
 
-2. Enter the Linear issue ID or URL in the input field and click on **Link Issue**.
+2. Select **Linear** as the source, enter the Linear issue ID or URL in the input field, and click on **Link Issue**.
 
-<!-- IMAGE PLACEHOLDER: Linear issue ID entered in the Link Issue field.
-     Suggested filename: ../assets/images/test-manager/linear/enter-linear-issue-id.png
-     <img loading="lazy" src={require('../assets/images/test-manager/linear/enter-linear-issue-id.png').default} alt="enter-linear-issue-id" className="doc_img"/> -->
+<img loading="lazy" src={require('../assets/images/test-manager/linear/enter-linear-issue-id.png').default} alt="link-issues-dialog-with-linear-selected-and-issue-id-entered" className="doc_img"/>
 
 3. The Linear issue from your integrated Linear project is successfully linked and listed.
 
-<!-- IMAGE PLACEHOLDER: linked Linear issue listed in the Issues tab.
-     Suggested filename: ../assets/images/test-manager/linear/linear-issue-listed.png
-     <img loading="lazy" src={require('../assets/images/test-manager/linear/linear-issue-listed.png').default} alt="linked-linear-issue-listed" className="doc_img"/> -->
+<img loading="lazy" src={require('../assets/images/test-manager/linear/linear-issue-listed.png').default} alt="linked-linear-issue-listed" className="doc_img"/>
 
 ### What a linked Linear issue shows
 
-A linked issue lists its title, identifier, status, priority, and assignee, along with an action to open the issue in Linear.
+A linked issue lists its title, identifier, issue type, status, priority, creation date, and creator, and can be opened in Linear.
+
+Linked issues are grouped by tracker, so Linear issues are listed under Linear alongside any Jira or Azure DevOps issues on the same test artifact. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
 
 Test Manager does not store any of these details. They are fetched from Linear every time you view the test case, test run, or instance, so what you see always reflects the current state of the issue in Linear.
 
@@ -91,9 +87,7 @@ To **unlink an issue**, click on the unlink button located on the right side of 
 
 Unlinking removes the association in Test Manager only. The issue itself stays in Linear.
 
-<!-- IMAGE PLACEHOLDER: unlink action on a linked Linear issue.
-     Suggested filename: ../assets/images/test-manager/linear/unlink-linear-issue.png
-     <img loading="lazy" src={require('../assets/images/test-manager/linear/unlink-linear-issue.png').default} alt="unlink-linear-issue" className="doc_img"/> -->
+<img loading="lazy" src={require('../assets/images/test-manager/linear/unlink-linear-issue.png').default} alt="unlink-linear-issue" className="doc_img"/>
 
 ### Behaviour in specific situations
 
