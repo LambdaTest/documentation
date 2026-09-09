@@ -2,7 +2,7 @@
 id: lambdatest-azure-devops-app
 title: TestMu AI Azure DevOps App
 hide_title: true
-sidebar_label: Azure DevOps App
+sidebar_label: TestMu AI Azure DevOps App
 description: Efficiently manage your tests with TestMu AI Azure DevOps App, seamlessly integrating Test Manager capabilities into your Azure DevOps environment to enhance collaboration.
 keywords:
   - Azure DevOps app

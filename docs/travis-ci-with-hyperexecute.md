@@ -1,9 +1,8 @@
 ---
 id: travis-ci-with-hyperexecute
-title: Travis CI Integration
-toc_max_heading_level: 2
+title: Travis CI Integration
 hide_title: true
-sidebar_label: "Travis CI"
+sidebar_label: Travis CI
 description: HyperExecute integrates with Travis CI Pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - testmu ai integrations

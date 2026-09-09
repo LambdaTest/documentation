@@ -33,7 +33,7 @@ We have successfully activated Parallel Testing in Selenium IDE. Now we can exec
 
 ## Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid
 
-1.  **Set the [Selenium Automation Capabilities](/docs/selenium-automation-capabilities/).** For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
+1.  **Set the [Desired Capabilities in Selenium](/docs/selenium-automation-capabilities/).** For this article, we have set the Chrome browser (version 72.0) for Windows 10, to run our Selenium IDE tests.
 
     The [TestMu AI Selenium Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/) is used to generate the capabilities. Below are the desired capabilities used in this article for the required test combination, provided in Python Language.
 ```javascript

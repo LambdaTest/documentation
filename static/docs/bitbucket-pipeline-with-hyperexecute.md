@@ -6,8 +6,6 @@ Bitbucket Pipelines is a CI/CD service that is built into Bitbucket. It enables 
 
 This document will show you how to integrate Bitbucket Pipelines with HyperExecute to greatly shorten your test cycles
 
-
-
 ### Prerequisites:
 -	You need to have a Bitbucket Cloud account.
 -	Your workspace must have at least one repository.
@@ -21,31 +19,18 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
-
 ### 1. Log into your [Bitbucket](https://www.atlassian.com/software/bitbucket/bundle) cloud account.
-
-
 
 ### 2. Select a Repository
 - If you do not have a repository set up yet, select **Repositories** then select **Create your own repository** as shown below.
 
-
-
 - Fill in the required information, then select **Create repository**.
-
 
 ### 3. Create Your Pipeline
 
 - In your repository, go to the sidebar on the left and select **Pipelines**
 
-
-
-
-
 - Click **Create your first pipeline** to scroll down to the template section.
-
-
-
 
 - Select **Starter pipeline**
 
@@ -53,32 +38,18 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 - In the sidebar, go into your repository settings.
 - In the **Pipelines** section, select **Deployments**
 
-
-
 - Click on any environment to:
   - Change its name
   - Set environment-specific deployment variables.
 
-
-
 - You can define custom variables that you can use in the YAML file. To add a variable, fill in the name, the value, check whether you want to encrypt it by clicking the secured box, and click **Add**.
-
-
-
-
 
 ### 5. Run Your Job
 After configuring your environment variables, select **Commit file** at the bottom of your screen to commit  and run your test job.
 
-
-
 - You will be redirected to the screen below
 
-
-
-
 **Below is an example of a HyperExecute job that was triggered through the above pipeline:**
-
 
 ## Sample Bitbucket Workflow File
 

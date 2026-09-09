@@ -1,9 +1,8 @@
 ---
 id: smartui-github-app-integration
-toc_max_heading_level: 3
-title: GitHub Pull Request Testing with SmartUI
-sidebar_label: GitHub
-description: Integrate SmartUI with the GitHub App to post visual regression results as pull request checks on GitHub. Step-by-step setup to surface pass/fail visual status on every pull request for Selenium, Playwright, WebdriverIO, Appium, and more.
+title: GitHub App Integration with SmartUI
+sidebar_label: GitHub App
+description: Integrate GitHub with TestMu AI SmartUI for seamless CI and visual regression testing. Follow our guide to set up, configure, and run your first test suite.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,10 +14,6 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-  - GitHub App
-  - GitHub App integration
-  - Pull request testing
-  - SmartUI GitHub App
 url: https://www.testmuai.com/support/docs/smartui-github-app-integration/
 site_name: TestMu AI
 slug: smartui-github-app-integration/
@@ -52,23 +47,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "WebDriverIO With Appium",
-          "item": `${BRAND_URL}/support/docs/smartui-cli-complete-reference/`
+          "item": `${BRAND_URL}/support/docs/smartui-upload-api-v2/`
         }]
       })
     }}
 ></script>
 
-SmartUI can post visual-test results as pull request checks on GitHub using the GitHub App. This lets your team catch visual regressions directly in the code review workflow, with pass/fail status surfaced on each pull request. Whether you use GitHub Actions, Selenium, Playwright, WebdriverIO, or Appium, SmartUI ties visual results back to the exact commit under review.
-
-:::tip Using GitLab?
-See [SmartUI GitLab Integration](/support/docs/smartui-with-gitlab/) for GitLab pipeline integration and merge-request PR checks (SmartUI Hooks and Exec/SDK).
-:::
-
-## GitHub App
-
 This is the guide to setup your GitHub Repos with SmartUI projects and run your CI along with visual regression testing.
 
-### Prerequisites
+## Prerequisites
 
 - An account with GitHub with valid permission to install new applications to your repositories.
 - Basic understanding of Continuous Integration tools (CI) is required.
@@ -76,7 +63,7 @@ This is the guide to setup your GitHub Repos with SmartUI projects and run your 
 
 The following steps will guide you in running your first Visual Regression test on <BrandName /> SmartUI platform using GitHub App-
 
-### Step 1: Integrate the your <BrandName /> Account with GitHub App
+## Step 1: Integrate the your <BrandName /> Account with GitHub App
 
 The following are the steps to integrate your account with GitHub App:
 
@@ -98,7 +85,7 @@ The following are the steps to integrate your account with GitHub App:
 
 Now, after the successful installation of the GitHub Integration, please follow the below steps to configure to your project repo:
 
-### Step 2: Select your GitHub repository
+## Step 2: Select your GitHub repository
 
 Go to your GitHub repository where you want to configure your SmartUI project.
 
@@ -108,7 +95,7 @@ Please check out GitHub sample here: https://github.com/LambdaTest/smartui-node-
 
 :::
 
-### Step 3: Configure your test suite
+## Step 3: Configure your test suite
 
  Add the `GitHub` capability to your current test configuration:
 
@@ -129,7 +116,7 @@ const capabilities: {
 }
 ```
 
-### Step 4: Setting up your CI configuration
+## Step 4: Setting up your CI configuration
 
 Setting up your **CI** workflow to execute on **GitHub**. Here is an example setup with `GitHub Actions`:
 
@@ -173,7 +160,7 @@ We also support other Continuous Integrations (CI) tools to execute the similar 
 
 :::
 
-### Step 5: Execute your test suite with CI
+## Step 5: Execute your test suite with CI
 
 After the setup is completed, you can now execute your test suite with the Continuous Integration (CI) pipeline with any tool of your choice.
 
@@ -185,7 +172,7 @@ If your current pipeline is set to `GitHub Actions` then you can configure your 
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/github-app-sample.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
-### GitHub App Feedback State
+## GitHub App Feedback State
 
 Here is an example of **Successful** feedback app state:
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/approved-state-1.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
@@ -200,3 +187,4 @@ You can click on `Details` link which will redirect the user to the build of the
 :::
 
 To understand more about the GitHub Actions, setup please read this article : https://docs.github.com/en/actions/quickstart
+

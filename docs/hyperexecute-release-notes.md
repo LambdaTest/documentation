@@ -1,7 +1,6 @@
 ﻿---
 id: hyperexecute-release-notes
-title: HyperExecute Release Notes
-toc_max_heading_level: 2
+title: HyperExecute Release Notes
 hide_title: false
 sidebar_label: Release Notes
 description: See the release notes for HyperExecute to stay informed about new features, fixes, and enhancements that improve your testing performance.

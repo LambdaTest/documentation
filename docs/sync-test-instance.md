@@ -93,7 +93,7 @@ Once synced, the test instance is updated with the latest master test case conte
 
 ## Audit Log
 
-Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-run-creation-and-management/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes, giving your team full traceability.
+Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-instance-audit-logs/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes, giving your team full traceability.
 
 <img loading="lazy" src={require('../assets/images/test-manager/sync-test-instance/audit-logs.png').default} alt="Audit logs showing version sync and status reset events" className="doc_img"/>
 

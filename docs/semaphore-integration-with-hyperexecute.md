@@ -1,9 +1,8 @@
 ---
 id: semaphore-integration-with-hyperexecute
 title: Semaphore CI Integration With HyperExecute
-toc_max_heading_level: 2
 hide_title: true
-sidebar_label: "Semaphore"
+sidebar_label: Semaphore
 description: Semaphore CI/CD, a cloud-based platform, now seamlessly integrates with TestMu AI HyperExecute for enhanced testing performance.
 keywords:
   - testmu ai integrations
@@ -80,7 +79,7 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/4.png').default} alt="Image"  className="doc_img"/>
 
-**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your <BrandName /> [UserName and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
+**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your <BrandName /> [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute

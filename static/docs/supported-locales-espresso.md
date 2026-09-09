@@ -1,8 +1,8 @@
-# Supported Espresso Locales & Languages on TestMu AI
+# Supported Locales And Languages - Espresso
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Espresso testing on TestMu AI supports a wide range of Android and iOS locales and language codes. Use the tables to find the correct code, then configure Appium's language capability to test how your app renders localized strings across regions.
+Use the given below list of supported locale and language codes for app testing.
 
 ## Android Locales and Language Codes
 

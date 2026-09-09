@@ -1,4 +1,4 @@
-# How to Run Selenium Tests With Java on TestMu AI
+# Selenium With Java
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -6,14 +6,12 @@ Run your Java Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 
 ## Prerequisites
 
-Before running any framework below, set up a TestMu AI account, your credentials, the JDK, and Maven.
-
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
 4. Install [Apache Maven](https://maven.apache.org/). The framework sample projects below all build with Maven.
 
-## Set Your Credentials
+## Set your credentials
 
 Every framework authenticates the same way: your Username and Access Key are passed in the grid URL. Set them as environment variables so you don't hard-code them. Pick your operating system:
 
@@ -23,7 +21,7 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
-## How the Sample Test Works
+## How the sample test works
 
 All the framework repos below run the **same** sample test, so you only need to understand it once. The test opens the [to-do app](https://lambdatest.github.io/sample-todo-app/), marks the first two items done, adds a new item, and verifies it appears:
 
@@ -57,7 +55,7 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 
 **What changes between frameworks is only how that test is *structured and run***: the runner, its setup/teardown hooks, and any config files. That's what each tab below covers.
 
-## Run a Test in Your Framework
+## Run a test in your framework
 
 Each tab lists just the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run the command shown.
 
@@ -94,8 +92,6 @@ mvn test -D suite=single.xml
 mvn test -D suite=parallel.xml
 ```
 
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
 JUnit runs the same test as TestNG. The only difference is the lifecycle annotations: it uses `@Before` / `@After` instead of `@BeforeClass` / `@AfterClass`.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/junit-selenium-sample):
@@ -125,8 +121,6 @@ browserOptions.setCapability("LT:Options", ltOptions);
 mvn test -P single
 mvn test -P parallel
 ```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 Parallel JUnit runs need a custom `Parallelized` runner (extends `Parameterized` with a `ThreadPoolScheduler`). The cloned repo includes it; see [the sample](https://github.com/LambdaTest/junit-selenium-sample) for the full class.
 
@@ -172,8 +166,6 @@ browserOptions.setCapability("LT:Options", ltOptions);
 mvn test
 ```
 
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
 `@CucumberOptions` sets the `features` and `glue` paths; `TestNGCucumberRunner` feeds scenarios into TestNG. The full runner and step definitions are in the cloned repo.
 
 Selenide wraps WebDriver with a concise API (`$()`, `open()`) and reads browser/OS choices from **JSON config files** instead of inline capabilities.
@@ -210,8 +202,6 @@ The test reads that config in `@BeforeMethod`, calls `WebDriverRunner.setWebDriv
 mvn test -P single
 mvn test -P parallel
 ```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 Gauge is a BDD runner where steps are Java methods annotated with `@Step`, and the driver comes from a `DriverFactory`.
 
@@ -261,8 +251,6 @@ browserOptions.setCapability("LT:Options", ltOptions);
 mvn test
 ```
 
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
 Parallel runs are configured by adding multiple browser specs under the `env` folder of the cloned project.
 
 Geb is a Groovy wrapper around WebDriver. Its distinguishing trait is that capabilities live in a **separate JSON file** passed via a Maven property.
@@ -292,8 +280,6 @@ mvn compile
 mvn -Dlambdageb.capabilities=capabilities clean test
 ```
 
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
 Serenity is BDD on top of Cucumber with rich reporting. You connect to the grid with a custom `DriverSource` and drive scenarios with page objects.
 
 1. Clone the [sample GitHub project](https://github.com/LambdaTest/Serenity-Selenium-Sample):
@@ -311,8 +297,6 @@ Scenarios are written in Gherkin and the grid connection lives in a `DriverSourc
 mvn verify -P single
 mvn verify -P parallel
 ```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 Parallel Serenity runs use one runner class per browser, each extending a shared base test. The full `DriverSource` and runners are in the cloned repo.
 
@@ -347,8 +331,6 @@ cd LamdaTest_Tesbo_Demo
 ```
 
 3. Run the test from your IDE. Hit the run button, and your scripts execute on the grid.
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 The **Java SDK** is the zero-code option: it runs your **existing** TestNG tests on the grid unchanged, injecting credentials and capabilities from a YAML file via a Java agent. Use this when you already have a local suite and don't want to edit test code. See the [SDK reference project on GitHub](https://github.com/Lambdatest/lambdatest-java-selenium-sdk).
 
@@ -387,19 +369,6 @@ tunnel: true
 mvn test -D suite=testng.xml
 ```
 
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
-## View Your Results
+## View your results
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
-
-**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
-
-## Next Steps
-
-Continue with these related guides:
-
-- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
-- [Debugging Options](/support/docs/debugging-options/)
-- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)

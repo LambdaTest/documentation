@@ -9,8 +9,6 @@ It will provide you the details like:
   - **browsers name** and **versions**
   - **resolutions**
 
-
-
 ## API Endpoint and Authorization
 
 The Endpoint for the Browser List API is:
@@ -18,8 +16,6 @@ The Endpoint for the Browser List API is:
 ```bash
 https://api.hyperexecute.cloud/v2.0/browsers
 ```
-
-
 
 ```
 Request Type : GET
@@ -101,8 +97,6 @@ The response will be in JSON format, containing an array of objects representing
 "status": 200
 }
 ```
-
-
 
 ## Params
 

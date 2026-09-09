@@ -4,12 +4,6 @@
 
 [Katalon Studio](https://www.katalon.com) is an automation tool for testing web, API, mobile, and desktop applications. It offers a flexible automation platform that fits teams and projects of all sizes and purposes. It also helps uses create tests, execute them and integrate them with the CI/CD ecosystem.
 
-
-
-
-
-
-
 > Katalon Studio Integration with HyperExecute enables cross-platform testing, from web automation on Windows, macOS, and Linux to mobile automation on Android and iOS.
 
 It also comes with a built-in interface for codeless automation testing and validating the UI elements of your web application.
@@ -26,13 +20,9 @@ It also comes with a built-in interface for codeless automation testing and vali
 
    a. Generate a command for Console mode through the Katalon UI. Click on the **Command Builder** button on the top of the screen.
 
-
-
    b. Select the test suite that you want to use and click on **Generate Command**.
 
    c. Click on the **Copy to Clipboard** button to copy the command.
-
-
 
 2. Clear the contents of the .gitignore file in the root directory of your Katalon project.
 
@@ -76,6 +66,5 @@ maxRetries: 1
 Paste the command that you generated from the Katalon UI to fill the **testRunnerCommand** field in the _hyperexecute.yaml_ file.
 
 5. Run the HyperExecute CLI commands from the same path as your Katalon project.
-
 
 You have successfully integrated your Katalon Studio project with HyperExecute.

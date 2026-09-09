@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-build-mobile-apps-using-tools
-title: Building Mobile Applications Using Tools
-toc_max_heading_level: 2
+title: Building Mobile Applications Using Tools
 hide_title: false
-sidebar_label: "Build Mobile Apps"
+sidebar_label: Building Mobile Applications Using Tools
 description: Building Mobile Applications Using Tools
 keywords:
   - TestMu AI HyperExecute

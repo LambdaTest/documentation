@@ -1,9 +1,9 @@
 ---
 id: migrate-existing-appium-test-suites
-title:  How to Migrate Appium Tests to TestMu AI
+title:  Migrate Appium Tests From Local Grid
 hide_title: true
-sidebar_label: "Migrate Appium Tests"
-description: Migrate your existing Appium test suites from a local grid or another cloud to run on TestMu AI's real device automation cloud.
+sidebar_label: Migrate From Local Grid
+description: This documentation will guide you through the process of migrating your existing Appium test suites from your local grid setup or another cloud testing tools to run on TestMu AI.
 keywords:
 - migrate appium tests from local grid 
 - migrate appium tests from local grid to testmu ai cloud
@@ -35,19 +35,19 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Migrate Appium Tests to TestMu AI",
+          "name": "Migration",
           "item": `${BRAND_URL}/support/docs/migrate-existing-appium-test-suites/`
         }]
       })
     }}
 ></script>
 
-# How to Migrate Appium Tests to TestMu AI
+# Migrate Appium Tests From Local Grid
 ***
  
-Migrating Appium tests to TestMu AI moves your existing suites from a local grid or another cloud onto its real device automation cloud. Update authentication with your credentials, swap in TestMu AI desired capabilities, and execute the same scripts remotely.
+<BrandName /> offers an online Appium automation grid to perform App automation. Therefore you can easily migrate Appium tests from your local grid to the <BrandName /> platform. 
 
-<BrandName /> offers an online Appium automation grid to perform App automation. Therefore you can easily migrate Appium tests from your local grid to the <BrandName /> platform. You can use <BrandName />'s desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
+In this documentation, we look at how to leverage <BrandName /> cloud for App automation and migrate your test scripts (or test suites) from your local grid. You can use <BrandName />'s desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
 
 ## Changes In The Test Script
 ***
@@ -191,7 +191,7 @@ for cap in caps:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Migrate Appium Tests to TestMu AI
+      Migrate From Local Grid
       </span>
     </li>
   </ul>

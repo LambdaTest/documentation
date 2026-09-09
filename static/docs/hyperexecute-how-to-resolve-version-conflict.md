@@ -1,3 +1,5 @@
+# How to Resolve Version Conflict Issues
+
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Maintaining consistent versions across testing frameworks in your project setup is crucial to avoid runtime errors, compatibility issues, and unexpected behaviors. This guide focuses on specifying framework versions in YAML configuration files and aligning them with the version details in project-specific files like `package.json`, `pom.xml`, `.csproj`, and system environment variables for frameworks like Selenium, Playwright, Puppeteer, Cypress, Maestro, and Appium.

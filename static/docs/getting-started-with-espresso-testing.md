@@ -1,12 +1,10 @@
-# How to Run Espresso Tests on TestMu AI
+# Espresso Testing On TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Running Espresso tests on TestMu AI executes Android UI automation on real and virtual devices. Upload your app and Espresso test APKs, set the desired capabilities, trigger the build, and review results on the dashboard without a local device lab.
-
-**Supported on:** Real &amp; Virtual devices
-
 Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
+
+In this documentation, you will learn how to trigger a automation script of Java for application testing with Appium on TestMu AI, set the desired capabilities for appium testing, and other advanced features of TestMu AI.
 
 ## Prerequisites
 
@@ -165,3 +163,41 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/e
 --header "Content-Type: application/json" ^
 --data "{\"app\":\"APP_ID\",\"testSuite\":\"TEST_SUITE_ID\",\"device\":[\"Galaxy S20-10.0\",\"Galaxy S20-10.0\",\"Redmi Note 9-10.0\",\"Galaxy S10+-10.0\",\"Galaxy S7 edge-8.0\",\"Galaxy S9+-8.0\"],\"isVirtualDevice\":true,\"queueTimeout\":10800,\"IdleTimeout\":150,\"deviceLog\":true,\"network\":false,\"build\":\"Proverbial-Espresso\",\"geoLocation\":\"FR\"}"
 ```
+
+## Using the Espresso Agent Skill with TestMu AI
+
+The [espresso-skill](https://github.com/LambdaTest/agent-skills/tree/main/espresso-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
+
+The espresso-skill package includes:
+
+```
+espresso-skill/
+├── SKILL.md
+└── reference/
+├── playbook.md
+└── advanced-patterns.md
+```
+
+It provides structured guidance for:
+
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
+
+### Installing Espresso Agent Skill
+
+Install a Espresso Agent Skill using the command below:
+
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/espresso-skill .claude/skills/
+
+# Or for Cursor / Copilot
+cp -r agent-skills/espresso-skill .cursor/skills/
+```
+
+**Note**: If you prefer installing all available framework skills instead of only espresso-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).

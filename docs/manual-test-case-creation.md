@@ -1,7 +1,7 @@
 ---
 id: manual-test-case-creation
 title: Create & Manage Test Cases
-sidebar_label: Create Test Cases Manually
+sidebar_label: Create & Manage Test Cases
 description: Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.
 keywords:
   - test case creation
@@ -72,6 +72,10 @@ After test case is created you will be redirected to a screen listing all the te
 
 ## Manage Test Case
 
+:::note
+To retire a test case without deleting it, use **Archive** in the test case's three-dot menu. An archived test case leaves the repository and becomes read-only, but keeps its version history, past run results, and linked issues, and can be restored at any time. See [Archive and Restore Test Cases](/support/docs/test-case-archive/).
+:::
+
 ### Test Case Details
 
 When you select a test case, you’ll be redirected to the Test Case Details page, where you can view Test Case details such as: **Test Case Title**, **Description**, **Precondition** , **Attachments**, **System Fields**: **Type**, **Status**, **Priority**, **Tag(s)** & **Custom Fields** 
@@ -106,7 +110,7 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
 :::note
-In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/create-modules/).
+In the Classic experience, modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, run only in KaneAI test cases. Selecting one in the **Add Module** dialog leaves **Add in step** disabled. See [Importing Modules into Test Cases](/support/docs/modules-in-manual-testcases/).
 :::
 
 #### Add New Step:
@@ -129,6 +133,21 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 :::
 
 ***
+
+### Automate with KaneAI
+
+A saved test case can be handed to **KaneAI** for automated authoring. Open the test case and click **Automate with KaneAI** in the **Automate** section of the test case detail. This opens a KaneAI session pre-filled with the test case's steps, where you author the automated test and then execute it.
+
+This works for both test case templates:
+
+| Template | What KaneAI receives |
+|----------|----------------------|
+| **Manual Test Steps** | The ordered steps and their expected results |
+| **Behaviour Driven Development** | The `Given` / `When` / `Then` scenarios, read directly — no conversion is needed |
+
+:::note
+The action requires KaneAI access, and the test case must have content — a test case with no steps or no scenarios cannot be automated.
+:::
 
 ### Test Case Runs Section
 

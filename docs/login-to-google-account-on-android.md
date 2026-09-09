@@ -1,9 +1,9 @@
 ---
 id: login-google-android
-title: How to Log in to Google on Android on TestMu AI
+title: Login to Google account on Android
 # hide_title: true
 sidebar_label: Login To Google Account (Android)
-description: Sign in to a Google account on Android real devices during App Automation on TestMu AI to test features and services tied to that account.
+description: Learn how to login to Google Account on an Android device for App automation to test features or services that are linked to your Google Account.
 keywords:
   - login with google on android app automation
   - login to google account on android app automation
@@ -33,7 +33,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Log in to Google on Android on TestMu AI",
+          "name": "Login To Google Account (Android)",
           "item": `${BRAND_URL}/support/docs/login-to-google-account-on-android/`
         }]
       })
@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <!-- # Login to Google Account on Android Device
 --- -->
 
-Logging in to a Google account on Android real devices with TestMu AI lets you authenticate during App Automation using a credentials HashMap, so your scripts can test Play Store flows, sync, and features or services tied to that account.
+This documentation will guide you to log in to your Google Account on an Android Device on <BrandName /> so you can test features/services that are linked to your Google Account.
 
 
 ## Objective
@@ -165,7 +165,7 @@ Since we clean the Device after each session, ensure you are logging in to the a
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Log in to Google on Android on TestMu AI
+        Login To Google Account On Android
       </span>
     </li>
   </ul>

@@ -16,7 +16,7 @@ The new regions are:
 > 📕 Visit our [Performance Testing Documentation](/support/docs/hyperexecute-run-jmeter-tests/) for step-by-step instructions on configuring your tests and making the most of HyperExecute's enhanced regional coverage.
 
 ### Download Reports for XCUI Framework
-Now, you can download the [JUnit XML report](/support/docs/hyperexecute-job-reports/#junit-xml-report) for your test runs on the XCUI framework.
+Now, you can download the [JUnit XML report](/support/docs/junit-xml-report/) for your test runs on the XCUI framework.
 
 To generate reports for your XCUI tests, add the `reports: true` flag in your [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/) file and pass the `--download-report` flag with the CLI command.
 
@@ -39,7 +39,7 @@ args:
 isRealMobile: false
 ```
 
-> Refer to our detailed documentation for [Appium](/support/docs/hyperexecute-appium-testing/#appium-virtual-device-testing) and [Maestro](/support/docs/hyperexecute-maestro-testing/) on configuring and running tests with Android emulators.
+> Refer to our detailed documentation for [Appium](/support/docs/hyperexecute-appium-virtual-device/) and [Maestro](/support/docs/hyperexecute-maestro-testing/) on configuring and running tests with Android emulators.
 
 ### New Version Release for Beta and Dev Edge Browser
 HyperExecute expands its support for the latest versions of dev and beta browsers for the Windows platform. With this expanded compatibility, you can streamline your testing process and deliver exceptional user experiences with confidence!
@@ -63,7 +63,7 @@ Some of the specific benefits of the Test History Labels feature include:
 ### Consolidated JUnit XML Report Generation
 The consolidated JUnit XML report includes detailed information on all executed tests, i.e., which tests passed, failed, or were skipped, along with any error messages and stack traces for failed tests. It is widely supported across CI/CD tools, which makes it easy to integrate with existing workflows and with other tools or systems.
 
-> 📕 Refer to our documentation for detailed instructions on setting up your project and using the new [JUnit XML report](/support/docs/hyperexecute-job-reports/#junit-xml-report)
+> 📕 Refer to our documentation for detailed instructions on setting up your project and using the new [JUnit XML report](/support/docs/junit-xml-report/)
 
 ###  Generate Artifacts for Espresso & XCUI Frameworks
 Now, you can download artifacts for your test runs on both **Espresso** and **XCUI** frameworks and detailed reports for your **Espresso** test executions.
@@ -169,7 +169,7 @@ The top panel now displays detailed information about the latest commit, includi
 ### 2. Parameterized Report Email Handling in YAML
 HyperExecute now supports an enhanced approach for managing multiple email addresses within the YAML configuration file. Previously, you needed to define multiple variables for email addresses (`${email1}`, `${email2}`, etc.). With this update, a single variable can now hold multiple email addresses, separated by commas or underscores, simplifying report sharing. This enhancement eliminates the need for multiple variables, making maintaining and modifying email configurations easier.
 
-> 📕 Check the [Reports documentation](/support/docs/hyperexecute-artifacts/#receive-job-reports-and-artifacts-via-email) to learn more about it.
+> 📕 Check the [Reports documentation](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address) to learn more about it.
 
 ### 3. Browser and Selenium Updates for Linux, Windows, and macOS
 Updated the browser versions across multiple platforms and upgraded the Selenium jars. This ensures compatibility with the latest features and security updates, improving test stability across different environments.
@@ -233,7 +233,7 @@ Pass the value of your email address via CLI by running the command
 ./hyperexecute --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
 
-> 📕 Read the documentation - [How to dynamically set your email address?](/support/docs/hyperexecute-artifacts/#receive-job-reports-and-artifacts-via-email) to learn more about it.
+> 📕 Read the documentation - [How to dynamically set your email address?](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address) to learn more about it.
 
 ## Version 2.4.7
 
@@ -251,7 +251,7 @@ With this feature, you can seamlessly validate a range of accessibility issues t
 ### How to Use:
 - **For Selenium Users:**
 To start accessibility testing with Selenium, you have to pass `"accessibility", true` capability in your test files.
-> 📕 Check out our detailed guide on [HyperExecute integration: Selenium accessibility automation](/support/docs/accessibility-testng-test/).
+> 📕 Check out our detailed guide on [HyperExecute integration: Selenium accessibility automation](/support/docs/selenium-hyperexecute-accessibility-tests/).
 
 - **For Cypress Users:**
 To start accessibility testing with Cypress, you have to pass `accessibility: true` capability in the [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag of your YAML file as well as update other necessary configurations in your project.
@@ -266,7 +266,7 @@ The HyperExecute CLI now supports a [`--runson`](/support/docs/hyperexecute-cli-
 
 **Key Values**
 - **OS Override**: Overrides the OS value defined in the YAML file's `runson` flag
-- **Multi-Mode Support**: Compatible with all execution modes: [AutoSplit](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy), [Matrix](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy), and [Hybrid](/support/docs/hyperexecute-test-splitting-and-multiplexing/#hybrid-strategy-in-hyperexecute).
+- **Multi-Mode Support**: Compatible with all execution modes: [AutoSplit](/support/docs/hyperexecute-auto-split-strategy/), [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/), and [Hybrid](/support/docs/hyperexecute-hybrid-strategy/).
 - **Multi-OS Specification**: Enables defining multiple operating systems for Matrix and Hybrid modes.
 
 **Usage**
@@ -324,7 +324,7 @@ Benefits of Network HAR Logs:
 - **Performance Optimization:** Identify performance bottlenecks by pinpointing slow requests and optimizing network interactions.
 - **Improved Load Order Diagnosis:** Gain insights into load order issues that might affect your application's functionality.
 
-📕 Check the [Cypress documentation](/support/docs/cypress-integration-with-hyperexecute/#run-a-cypress-test-in-hyperexecute) to learn more about it.
+📕 Check the [Cypress documentation](/support/docs/cypressv10-on-hyperexecute/#har-logs) to learn more about it.
 
 ## Version 2.3.8
 
@@ -403,7 +403,7 @@ to:
 - johndoe@example.com
 ```
 
-> 📕 Read the documentation - [Test Reports](/support/docs/hyperexecute-job-reports/) to learn more about it.
+> 📕 Read the documentation - [Test Reports](/support/docs/hyperexecute-reports/) to learn more about it.
 
 ## Version 2.3.1
 
@@ -468,7 +468,7 @@ HyperExecute integrates seamlessly with SmartUI SDK to deliver effortless visual
 
 You can seamlessly integrate SmartUI with your favorite frameworks - Selenium, Playwright, Puppeteer, Cypress, or Appium.
 
-📕 Refer to our comprehensive documentation - [HyperExecute with SmartUI SDK](/support/docs/smartui-sdk-with-hyperexecute/)
+📕 Refer to our comprehensive documentation - [HyperExecute with SmartUI SDK](/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/)
 
 ### Support for Chrome and Edge Beta Versions 🧑‍💻
 
@@ -480,7 +480,7 @@ HyperExecute now supports the beta versions of Chrome and Edge, allowing you to 
 
 HyperExecute now supports the Native TestNG Reports that offer a standardized and easily accessible summary of information extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job.
 
-> Read the [Native TestNG documentation](/support/docs/hyperexecute-job-reports/#native-testng-reports) to understand how to generate it.
+> Read the [Native TestNG documentation](/support/docs/hyperexecute-native-testng-report/) to understand how to generate it.
 
 ## Version 2.2.5
 
@@ -505,13 +505,13 @@ HyperExecute now natively supports local Selenium drivers. This means you can ru
 ### Playwright Real Device Support 📲
 HyperExecute now supports running Playwright tests on real devices. This allows you to test your web applications on actual devices, ensuring they function correctly in real-world scenarios.
 
-> 📘 Read the [documentation](/support/docs/playwright-integration-with-hyperexecute/#real-device) to understand the step-by-step guidance.
+> 📘 Read the [documentation](/support/docs/playwright-real-device-on-hyperexecute/) to understand the step-by-step guidance.
 
 ### Smart UI Testing in HyperExecute using Playwright
 
 HyperExecute now supports integration with SmartUI for your Playwright tests. This allows you to use SmartUI's visual verification capabilities to ensure that your web applications are visually consistent and functional.
 
-> :green_book: Check the [documentation](/support/docs/smartui-hooks-with-hyperexecute/) to trigger your tests.
+> :green_book: Check the [documentation](/support/docs/hyperexecute-smart-ui-test-using-playwright/) to trigger your tests.
 
 ## Version 2.2.2
 
@@ -557,7 +557,7 @@ You can selectively exclude specific elements from visual comparisons during you
 
 - **Testing Specific Sections :** Target a particular area of your webpage for more granular testing.
 
-> 📕 Learn more about the [ignoreDOM](/support/docs/smartui-hooks-with-hyperexecute/) flag
+> 📕 Learn more about the [ignoreDOM](/support/docs/hyperexecute-smart-ui-testing-using-selenium/#smart-ui-test-keywords) flag
 
 ## Version 2.1.6
 
@@ -624,4 +624,4 @@ to:
 - <another_email_id@example.com>
 ```
 
-> Refer to the detailed documentation on [how to receive artifacts via email](/support/docs/hyperexecute-artifacts/#receive-job-reports-and-artifacts-via-email)
+> Refer to the detailed documentation on [how to receive artifacts via email](/support/docs/hyperexecute-email-reports/#how-to-receive-your-artifacts-via-email)

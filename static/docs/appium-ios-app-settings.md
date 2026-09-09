@@ -1,14 +1,10 @@
-# How to Change iOS App Settings on TestMu AI
+# iOS App Settings
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Changing iOS app settings on TestMu AI lets you toggle permissions and preferences like camera, location, and app resets during App Automation on real iOS devices, using the lambda-ios-settings hook to manipulate settings the public cloud otherwise blocks for security.
-
-**Supported on:** Real devices
-
 **iOS App Settings** are the permissions or preferences that can be enabled/disabled for an app through iOS settings. Accessing the device settings is restricted on the iOS public cloud devices of TestMu AI due to security constraints. However, in multiple cases, the native app must be tested for various permissions which can only be enabled and disabled with the settings app.
 
-Access and configure iOS device settings during an **App Automation session.**
+This document will guide you on how to access and use iOS settings for **App Automation session.**
 
 This feature is supported only on iOS 14 and above devices.
 
@@ -139,7 +135,7 @@ options = {
 }
 ```
 
-The keys and values follow the same rules as the hook: setting **titles must match the app's iOS Settings page exactly** and be unique, sliders use a 0-1 decimal scale, and textfields and sliders are indexed (e.g. `Slider-1`, `TextField-2`).
+The keys and values follow the same rules as the hook: setting **titles must match the app's iOS Settings page exactly** and be unique, sliders use a 0–1 decimal scale, and textfields and sliders are indexed (e.g. `Slider-1`, `TextField-2`).
 
 ### Errors and validation
 

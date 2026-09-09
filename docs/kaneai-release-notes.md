@@ -1,8 +1,7 @@
 ---
 id: kaneai-release-notes
 title: KaneAI Release Notes
-hide_title: true
-toc_max_heading_level: 2
+hide_title: false
 sidebar_label: Release Notes
 description: Keep yourself informed about new releases from KaneAI. View our AI-powered testing assistant's detailed release notes, which include new features and enhancements.
 keywords:
@@ -16,11 +15,8 @@ slug: kaneai-release-notes/
 canonical: https://www.testmuai.com/support/docs/kaneai-release-notes/
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,20 +41,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-
-# KaneAI Release Notes
-***
-
 KaneAI is an AI-powered next-gen testing assistant that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/release-notes/release-notes.gif').default} alt="KaneAI Release Notes"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/release-notes/release-notes.gif').default} alt="Image"  className="doc_img"/>
 
 ## KaneAI Releases
-***
 
 ### September, 2024
-***
-
 | Release Number | Release Date |
 |----------------|--------------|
 | [Version 0.0.2](/support/docs/kaneai-release-notes-0-0-2) | September 23, 2024|

@@ -1,10 +1,6 @@
-# What Is XCTestPlan on TestMu AI
+# XCTestPlan
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-XCTestPlan on TestMu AI manages how you run automated XCTest suites across iOS, iPadOS, macOS, watchOS, and tvOS apps. Create targeted test runs, upload your app and XCUI test IPA files, configure scenarios, and view execution logs for efficient testing.
-
-**Supported on:** Real devices
 
 XCTestPlan is a feature within Xcode used for building iOS, iPadOS, macOS, watchOS, tvOS, and audioOS applications. XCTestPlan helps manage how you run automated tests written with the XCTest framework.
 
@@ -138,6 +134,6 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI Automation.
 
-> **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/sharding-rd-hyperexec/#filters-for-xcui-tests) simultaneously
+> **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/speedup-xcui/) simultaneously
 
 To learn how to use XCTestPlan with sharding in XCUI, refer to the detailed guide in [Sharding for XCUI](/support/docs/sharding-rd-hyperexec/#xctestplan-in-sharding).

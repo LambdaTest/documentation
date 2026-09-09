@@ -14,21 +14,9 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
 
 - Navigate to the search bar in your Azure account and search for **Deploy Custom Template**. Select the option which matches the searched name.
 
-
-
-
-
 - You will be able to see **Custom Deployment** page.
 
-
-
-
-
 - Click on **Build your own template in the editor** to go to the **Edit template** section.
-
-
-
-
 
 - Clear all the text present in the editor and paste the contents of the ARM script provided below.
 
@@ -166,10 +154,6 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
 
 ```
 
-
-
-
-
 - Click on **Save** and fill out the parameters for the **Custom Deployment** template.
 
     **Parameters Used**
@@ -192,25 +176,11 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
 
     -   **Redis Private Dns Zone Name :** Private DNS zone name for the Redis Virtual Network Link. Please do not change this unless and until it is required.
 
-
-
-
-
-
-
-
-
 - Click on the **Review + create** button present at the bottom of the page to navigate to the page shown below.
-
-
-
-
 
 -   Verify all the details and click on **Create**. Your deployment will start and you will get the status of the page after the deployment is successful.
 
-
 If you have any questions about this process, you can reach out to the HyperExecute team and we will get back to you as soon as possible.
-
 
 **Note :**
 

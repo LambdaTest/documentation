@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-accelq-integration
-title: Accelq Integration with HyperExecute
-toc_max_heading_level: 2
+title: Accelq Integration with HyperExecute
 hide_title: true
-sidebar_label: "ACCELQ"
+sidebar_label: Accelq Integration
 description: Leverage TestMu AI's cloud mobile devices to run automation testing using Accelq Studio.
 keywords:
   - accelq studio

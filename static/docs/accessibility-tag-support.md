@@ -151,4 +151,4 @@ put("tags", Arrays.asList("Profile Screen"));
 - [Native App Accessibility Automation](/support/docs/accessibility-native-app-automation-test/)
 - [Accessibility App Scanner](/support/docs/accessibility-app-scanner/)
 - [Navigating Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)
-- [All Issues](/support/docs/accessibility-testing-navigating-dashboard/#all-issues)
+- [All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)

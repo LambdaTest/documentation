@@ -1,7 +1,7 @@
 ---
 id: smartui-cli-basic-auth
 title: Basic Authentication in SmartUI CLI
-sidebar_label: Basic Authentication
+sidebar_label: Capturing assets protected with authentication
 description: Learn how to capture screenshots of assets protected behind authentication using SmartUI CLI
 keywords:
   - Visual Regression

@@ -1,8 +1,7 @@
 ---
 id: gocd-integration-with-hyperexecute
-title: How to integrate GoCD With HyperExecute
-toc_max_heading_level: 2
-sidebar_label: "GoCD"
+title: How to integrate GoCD With HyperExecute
+sidebar_label: GoCD
 hide_title: true
 description: HyperExecute integration with GoCD will help your perform Test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your testing scripts directly from GoCD instance and they would be executed over your HyperExecute Dashboard.
 keywords:

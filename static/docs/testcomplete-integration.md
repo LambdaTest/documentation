@@ -11,7 +11,7 @@ TestMu AI integration with TestComplete lets you perform web and app automation 
 ## Prerequisites
 
 - TestMu AI account. You can sign up for free.
-- TestMu AI [Username and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key).
+- TestMu AI [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 - Download TestComplete from its official website and complete the signup process.
 - Generate your App Id by uploading it to the TestMu AI Server.
 

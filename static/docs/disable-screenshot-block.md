@@ -1,14 +1,11 @@
-# How to Disable Screenshot Block on TestMu AI
+# Disable Screenshot Block for Android
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Disabling screenshot block on TestMu AI lets you capture screenshots and video of apps that normally block them, so you can run App Live and app automation tests on real Android and iOS devices without black frames or missing captures.
-
-**Supported on:** Real &amp; Virtual devices
 
 ## Introduction
 
 If your app doesn't allow screenshot to be taken of the app and you want to test your app's performance without any hindrance, you can use this tool. You can test your apps with this tool in our app-live tests and app automation tests.
+This document details all you need to know about the tool.
 
 TestMu AI now supports disable screenshot block for Android real devices. This new feature allows you to test your application on our platform without any issue of video coming black in between or screenshots of the app not getting captured(due to app's properties)
 

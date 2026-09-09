@@ -10,7 +10,7 @@ The `concurrency` is one of the parameters in the HyperExecute Yaml. It indicate
 concurrency: 10
 ```
 
-This is a **required** parameter in case you are using [autosplit](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy). However if you are using [matrix](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) the number of concurrent threads is automatically defined by the possible permutations and combinations of parameters give.
+This is a **required** parameter in case you are using [autosplit](/support/docs/hyperexecute-auto-split-strategy/). However if you are using [matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) the number of concurrent threads is automatically defined by the possible permutations and combinations of parameters give.
 
 The platform automatically analyzes your usage and test cases and will guide you to increase the concurrency to obtain substantial time savings. You can find this information on the left side banner.
 

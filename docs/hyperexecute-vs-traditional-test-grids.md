@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-vs-traditional-test-grids
 title: HyperExecute vs Traditional Test Grids
-toc_max_heading_level: 2
 hide_title: false
-sidebar_label: "HyperExecute vs Traditional Grids"
+sidebar_label: HyperExecute vs Traditional Test Grids
 description: Discover the nuances in testing efficiency with HyperExecute vs. Traditional Test Grids Explore the comparison and choose the right approach for optimized testing. 
 keywords:
   - testmu ai automation
@@ -77,11 +76,11 @@ As seen above, tests are securely run on dedicated machines on the Azure cloud. 
 
 ### Features and Advantages
 
-- [**Auto Split Strategy**](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy): Enables parallel test execution by intelligently distributing test scenarios based on custom filters, that reduces test execution time.
+- [**Auto Split Strategy**](/support/docs/hyperexecute-auto-split-strategy/): Enables parallel test execution by intelligently distributing test scenarios based on custom filters, that reduces test execution time.
 
-- [**Matrix Multiplexing Strategy**](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy ): Empowers users to execute a single command across multiple scenarios, conditions, and environments, facilitating efficient regression testing and improving code stability.
+- [**Matrix Multiplexing Strategy**](/support/docs/hyperexecute-matrix-multiplexing-strategy/ ): Empowers users to execute a single command across multiple scenarios, conditions, and environments, facilitating efficient regression testing and improving code stability.
 
-- [**Smart Caching**](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) : Optimizes regression testing by intelligently caching test artifacts, speeding up the subsequent test runs.
+- [**Smart Caching**](/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/) : Optimizes regression testing by intelligently caching test artifacts, speeding up the subsequent test runs.
 
 - <b>Auto Purging of Environments:</b> Automates the cleanup of test environments after build completion, maintaining a clean and optimized testing setup.
 
@@ -89,4 +88,4 @@ As seen above, tests are securely run on dedicated machines on the Azure cloud. 
 
 - <b>Linux Autoscaling:</b> HyperExecute automatically scales computing resources up or down based on workload. When test demand increases, additional resources are provisioned dynamically, and when demand decreases, resources are released, ensuring optimal performance without manual intervention.
 
-> For more details, please refer to our guide on [Key Features of HyperExecute](/support/docs/getting-started-with-hyperexecute/#key-features-of-hyperexecute)
+> For more details, please refer to our guide on [Key Features of HyperExecute](/support/docs/key-features-of-hyperexecute/)

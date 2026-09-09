@@ -58,7 +58,6 @@ You can use the sum formula to add these two numbers, but if you want to run it 
 
 3.  Terminate Excel in the `@AfterClass` tag by calling the `stopExcel` function that was created earlier.
 
-
 Here is a sample java test file `Test.java` that accomplishes the function mentioned above. All of your test files should be placed in the `src/test` folder.
 
 ```bash

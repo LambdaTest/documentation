@@ -18,7 +18,7 @@ A/B variations use the **same in-product panel** whether the asset is a **standa
 You do **not** need a separate project type for A/B. Create or open the screenshot or PDF page in your existing SmartUI build, then use the **A/B** icon on that asset’s review screen.
 
 **PDF projects**
-Set up PDF ingestion first if you are new to PDF comparison: [PDF Comparison in SmartUI](/support/docs/smartui-pdf-comparison/), [Upload PDFs via Java SDK](/support/docs/smartui-pdf-comparison/), or [PDF CLI upload](/support/docs/smartui-pdf-comparison/).
+Set up PDF ingestion first if you are new to PDF comparison: [PDF Comparison in SmartUI](/support/docs/smartui-pdf-comparison/), [Upload PDFs via Java SDK](/support/docs/smartui-pdf-java-sdk/), or [PDF CLI upload](/support/docs/smartui-pdf-cli-upload/).
 
 ## Key terms
 
@@ -61,7 +61,7 @@ Button names may vary slightly (**End experiment**, **End A/B testing**, **Pick 
 - **Web:** A homepage runs a light/dark theme test. Run #1 matches the light **default**; run #2 flags a mismatch until you **Add new** for dark. Later runs auto-match light or dark; **End A/B testing** keeps only the winning theme.
 - **PDF:** A statement PDF ships two footer layouts. Page 3 mismatches until you **Add new** from the alternate upload; later builds show **Matched with** the correct layout; **End A/B testing** promotes the winner and removes the other variation.
 
-For **build-level** baselines (branches, approvals, Smart Git), see [Baseline Management](/support/docs/smartui-baseline-management/) and [Approval & Baseline Workflow](/support/docs/smartui-running-your-first-project/).
+For **build-level** baselines (branches, approvals, Smart Git), see [Baseline Management](/support/docs/smartui-baseline-management/) and [Approval & Baseline Workflow](/support/docs/smartui-approval-workflow-guide/).
 
 ## Prerequisites
 
@@ -141,7 +141,7 @@ When the experiment is finished:
 
 - **20 variations maximum** per screenshot (1 default + 19 user-added).
 - **Comparison mode** (pixel, layout, Smart Ignore, and so on) applies at the **screenshot** level for all variations on that screenshot.
-- **Branch and merge** behavior for baselines still follows your project settings; see [Baseline Management](/support/docs/smartui-baseline-management/) and [Branch merging](/support/docs/smartui-git-branching-strategy/#branch-level-merging) for Git-linked workflows.
+- **Branch and merge** behavior for baselines still follows your project settings; see [Baseline Management](/support/docs/smartui-baseline-management/) and [Branch merging](/support/docs/smartui-branch-merging/) for Git-linked workflows.
 
 ## Troubleshooting
 
@@ -166,7 +166,7 @@ No. The **default** card tracks the **platform baseline** for the build. User-ad
 ## Related documentation
 
 - [Baseline Management](/support/docs/smartui-baseline-management/)
-- [Approval & Baseline Workflow Guide](/support/docs/smartui-running-your-first-project/)
+- [Approval & Baseline Workflow Guide](/support/docs/smartui-approval-workflow-guide/)
 - [Mismatch Thresholds](/support/docs/smartui-mismatch-thresholds/)
 - [PDF Comparison in SmartUI](/support/docs/smartui-pdf-comparison/)
 - [Layout Comparison in SmartUI SDK](/support/docs/smartui-layout-testing/)

@@ -1,8 +1,8 @@
 ---
 id: espresso-env-variables-settings
-title: How to Set Espresso Env Variables on TestMu AI
+title: Setting Up Espresso Environment Variables
 sidebar_label: Environment Variable Settings
-description: Pass and retrieve environment variables like STAGE, PROD, or DEV during automated Espresso Android tests on TestMu AI's Real Device Cloud.
+description: Now you can run your Espresso framework on TestMu AI and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.
 keywords:
   - espresso
   - environment
@@ -43,14 +43,14 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Set Espresso Env Variables on TestMu AI",
+          "name": "Environment Variable Settings",
           "item": `${BRAND_URL}/support/docs/espresso-env-variables-settings/`
         }]
       })
     }}
 ></script>
 
-Setting Espresso environment variables on TestMu AI lets you pass values like STAGE, PROD, or DEV into automated Android tests at runtime. Define variables in your test suite, supply them during execution, and switch environments dynamically without rebuilding your APK.
+This feature allows you to dynamically set and test environment variables during Espresso test execution on <BrandName />.
 
 ## Step 1: Create Variables in Your Test Suite
 Define environment variables in your Espresso test suite to fetch the variable values during execution.

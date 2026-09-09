@@ -1,10 +1,9 @@
 ---
 id: ruby
-title: How to Run Selenium Tests With Ruby on TestMu AI
-toc_max_heading_level: 2
-hide_title: true
-sidebar_label: "Ruby"
-description: "Run Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers Capybara, RSpec, and Test::Unit."
+title: Selenium With Ruby
+hide_title: false
+sidebar_label: Ruby
+description: Run Ruby Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. Covers Capybara, RSpec, and Test::Unit.
 keywords:
   - ruby selenium grid setup
   - run ruby tests on cloud
@@ -50,9 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Run Selenium Tests With Ruby on TestMu AI
 ---
-
 
 Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
@@ -64,10 +61,8 @@ Run your Ruby Selenium tests on the TestMu AI cloud grid across 10,000+ browser/
 3. Install [Ruby](https://www.ruby-lang.org/en/downloads/) and the `gem` package manager.
 4. Install the `selenium-webdriver` gem (and `parallel_tests` for parallel runs), pulled in by the sample projects via Bundler.
 
-## Set Your Credentials
+## Set your credentials
 ---
-
-Your Username and Access Key are read from environment variables, set once per operating system.
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
 
@@ -97,7 +92,7 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 </Tabs>
 
-## How the Sample Test Works
+## How the sample test works
 ---
 
 Every framework below connects to the grid and passes your browser and OS choices through a capabilities hash:
@@ -119,7 +114,7 @@ What changes between frameworks is only how the test is structured and launched.
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 :::
 
-## Run a Test in Your Framework
+## Run a test in your framework
 ---
 
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
@@ -149,20 +144,12 @@ cd Capybara-Cucumber-Ruby
 }
 ```
 
-3. Install the project dependencies:
-
-```bash
-bundle install
-```
-
-4. Run a single test, or in parallel:
+3. Run a single test, or in parallel:
 
 ```bash
 bundle exec rake single
 bundle exec rake parallel
 ```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 </TabItem>
 
@@ -178,20 +165,12 @@ cd RSpec-Selenium-Sample
 ```
 
 2. Set your browser and OS in the config YAML.
-3. Install the project dependencies:
-
-```bash
-bundle install
-```
-
-4. Run a single test, or in parallel:
+3. Run a single test, or in parallel:
 
 ```bash
 bundle exec rake single
 bundle exec rake parallel
 ```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 </TabItem>
 
@@ -218,40 +197,20 @@ caps = {
 }
 ```
 
-3. Install the project dependencies:
-
-```bash
-bundle install
-```
-
-4. Run the test:
+3. Run the test:
 
 ```bash
 ruby LambdaTest.rb
 ```
 
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
 </TabItem>
 
 </Tabs>
 
-## View Your Results
+## View your results
 ---
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
-
-**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
-
-## Next Steps
----
-
-Continue with these related guides:
-
-- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
-- [Debugging Options](/support/docs/debugging-options/)
-- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

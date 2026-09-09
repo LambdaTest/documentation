@@ -1,10 +1,8 @@
 ---
 id: appium-lambdatest-hooks
-title: How to Use LambdaHooks for Appium on TestMu AI
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: "Appium Hooks"
-description: Use LambdaHooks in Appium scripts on TestMu AI to set custom status and remarks, rename tests, differentiate cases, annotate commands, and install apps.
+title: Lambda Hooks For Appium Automation
+sidebar_label: Lambda Hooks For Appium 
+description: Now you can add custom status & remark to your App Automation scripts that you run on TestMu AI.
 keywords:
   - appium
   - testmu ai hooks
@@ -14,7 +12,6 @@ keywords:
   - mobile test
   - app testing
   - real devices
-  - install uninstall app hook
 url: https://www.testmuai.com/support/docs/appium-testmu-hooks/
 site_name: TestMu AI
 slug: appium-testmu-hooks/
@@ -40,7 +37,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Use LambdaHooks for Appium on TestMu AI",
+          "name": "TestMu AI Hooks for Appium",
           "item": `${BRAND_URL}/support/docs/appium-testmu-hooks/`
         }]
       })
@@ -52,17 +49,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
-# How to Use LambdaHooks for Appium on TestMu AI
----
+
+<RealDeviceTag value="Real Device" /> 
+<VirtualDeviceTag value="Virtual Device" />
 
 
-LambdaHooks on <BrandName /> are JavaScript-executor snippets you drop into Appium scripts to control and annotate a test run without leaving your own code. Set a status and remarks, rename tests, differentiate cases per session, annotate commands, and install apps.
-
-**Supported on:** Real &amp; Virtual devices
+This document will help you provide lambdahooks which can be used to improve your test scripts to easily debug your test cases for **App Automation on Real Devices** on **<BrandName /> Cloud**.
 
 ## Adding custom status & remark
----
 
 To add custom status & remark, just add the code snippet using the ```JavascriptExecutor```.
 
@@ -192,8 +189,30 @@ Selecting a test case from the panel filters the command logs to the commands ex
 The **Last 5 runs** trend lets you tell a genuinely broken test case from a flaky one without opening older sessions. A test case that is red across all five runs points to a consistent failure, whereas a mix of red and green points to flakiness that is worth investigating separately.
 :::
 
-## Command Annotations 
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+      Mark test status
+      </span>
+    </li>
+  </ul>
+</nav>
+
 ---
+
+## Command Annotations 
 
 Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **<BrandName /> Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
 
@@ -223,157 +242,3 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 :::info
 **Mutual exclusivity:** Test case and Command Annotations cannot be used together in the same script. You can only use **one** of them per session.
 :::
-
-## Install and Uninstall App Hooks
----
-
-
-<BrandName /> now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device. <BrandName /> enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
-
-### Install App
-
-You can install apps uploaded to the <BrandName /> platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the <BrandName />-generated ID or a custom ID assigned during upload.
-
-**Python example:**
-```python
-driver.execute_script("lambda-install-app=myApp")
-driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
-```
-
-**JavaScript example:**
-```javascript
-await browser.execute("lambda-install-app", {
-  /* Change the App URL */
-  appUrl: "lt://APP1234567890ABCDEF1234567890",
-  /* Optional */
-  retainData: true
-});
-```
-
-### Uninstall App
-
-You can uninstall apps during the execution of an automation test using the command `lambda-uninstall-app` followed by the app's package name (for Android apps) or bundle ID (for iOS apps).
-
-**Python example:**
-```python
-driver.execute_script("lambda-uninstall-app=com.myApp.beta")
-driver.execute_script("lambda-uninstall-app=com.apple.myApp")
-```
-
-**JavaScript example:**
-```javascript
-/* Change the App ID */
-const APP_ID = "com.lambdatest.proverbial";
-await browser.execute(`lambda-uninstall-app=${APP_ID}`);
-```
-
-### Test App Upgrades with Hooks
-
-Testing app upgrades is important because users often update to the latest version instead of reinstalling the app. To ensure existing user data is preserved and the app continues to function properly after an upgrade, you can use the following hooks:
-
-**Python example:**
-
-<Tabs className="docs__val">
-<TabItem value="macos-file" label="Android" default>
-
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-
-```python
-# Payload required to retain app data while uninstalling it
-data = {
-  "appPackage": "sampleapp.android.app",
-  "retainData": True
-}
-
-driver.execute_script("lambda-uninstall-app", data)
-
-# Payload required to reuse data of the old app while installing the new one
-data = {
-  "appUrl": "lt://APPID",
-  "retainData": True
-}
-driver.execute_script("lambda-install-app", data)
-```
-</CodeBlock>
-</div>
-
-</TabItem>
-
-<TabItem value="windows-file" label="iOS" default>
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-powershell">
-
-```python
-# Send the current app in background
-driver.background_app(-1)
-
-
-# Payload required while installing the new upgrade 
-data = {
-  "appUrl": "lt://APPID",
-  "retainData": True
-}
-driver.execute_script("lambda-install-app", data)
-
-# Note : In case of enterprise app, user have to pass the below payload 
-data = {
-  "appUrl": "lt://APPID",
-  "resignApp": False,
-  "retainData": True
-}
-
-```
-</CodeBlock>
-</div>
-</TabItem>
-
-
-</Tabs>
-
-### Validation Errors
-
-You might encounter some errors while using these features. The following are some common validation errors and their meaning:
-
-| Error Message                                  | Meaning                                                        |
-| --------------------------------------------------- | -------------------------------------------------------------- |
-| `No app_url has been provided for lambda-install-app. Please check and try again.`| The install command is missing the app URL or ID.              |
-| `The app provided for lambda-install-app is not accessible. Please check and try again.`| The app ID does not belong to your account or is inaccessible. |
-| `Failed to fetch app details.`                      | The app ID is invalid or app is not found.                     |
-| `Failed to install the app using lambda-install-app.`  | Installation failed due to compatibility or other issues.      |
-| `No app package or app bundle id has been provided for lambda-uninstall-app. Please check and try again.` | The uninstall command is missing the app package or bundle ID. |
-| `Failed to uninstall the app using lambda-uninstall-app.`| Uninstallation failed; app may not be installed or wrong ID.|
-
-Multiple errors may occur based on the scenario. Understanding these errors will help you identify and resolve issues more efficiently, ensuring smooth test execution. Once the code snippets are added, the tests can be executed and will appear on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-> **Note:** If the user had enabled any of the following capabilities in the previously installed app, they will remain available and functional in the upgraded app as well : `EnableScreenshotUnblock`,`EnableImageInjection`,`EnableVideoInjection`,`Network`,`AppProfiling`,`EnableWebContentsDebugging`,`EnableBiometricInjection`.This ensures that key testing features continue to work seamlessly after the app is updated, without requiring additional configuration.
-
-## Next Steps
----
-
-Continue with these related guides:
-
-- [Run your first Appium test](/support/docs/getting-started-with-appium-testing/)
-- [Appium automation capabilities](/support/docs/desired-capabilities-in-appium/)
-- [Upload apps to the real device cloud](/support/docs/application-setup-via-api/)
-- [App Automation Dashboard](/support/docs/app-automation-dashboard/)
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        How to Use LambdaHooks for Appium on TestMu AI
-      </span>
-    </li>
-  </ul>
-</nav>

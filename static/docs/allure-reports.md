@@ -25,13 +25,11 @@ disableWebdriverScreenshotsReporting: true,
 
 - The `disableWebdriverStepsReporting` and `disableWebdriverScreenshotsReporting` parameters allow customization of reporting options.
 
-
 Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory.
 
 ```yaml title="allure.properties"
 allure.results.directory=reports/allure-results
 ```
-
 
 **Step 2:** Add the following report parameters in your HyperExecute YAML file
 
@@ -44,7 +42,6 @@ frameworkName: allure
 ```
 
 > **NOTE:** The above example is only for the WDIO framework and the baseline concept remains the same across all the frameworks that the allure-results should be saved in a parent folder and that location of the parent folder is to be provided in the location parameters of reports in the HyperExecute YAML file.
-
 
 To enrich Allure reports with more specific details, we can use custom plugins. These plugins require configurations to function properly.
 
@@ -59,8 +56,6 @@ configPath: allure-config.yml
 type: html
 frameworkName: allure
 ```
-
-
 
 ## Allure Test Insights
 

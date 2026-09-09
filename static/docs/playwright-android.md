@@ -1,8 +1,8 @@
-# How to Run Playwright Android Tests on TestMu AI
+# Getting Started With Playwright Testing on Android Real Devices
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-When you need to validate your web app on Chrome for Android, you can run Playwright tests on real Android devices with TestMu AI. You get access to 100+ real Android devices across **Node.js, Java, C#, and Python**, so you catch device-specific issues instead of emulator approximations. You connect Playwright to the TestMu AI cloud over a CDP endpoint, pass your capabilities, and run your existing test scripts against a live device.
+Playwright Android automation is supported on TestMu AI across **Node.js, Java, C#, and Python**. Run Playwright tests on Chrome for Android across 100+ real Android devices. This guide covers getting started with Playwright testing on Android devices on the TestMu AI platform.
 
 **Supported Versions**
 - Playwright versions **v1.53.0** to **v1.61.0** are supported for Android Real Device testing (excluding **v1.54.0**).
@@ -11,7 +11,7 @@ When you need to validate your web app on Chrome for Android, you can run Playwr
 
 ## Prerequisites
 
-Before you run a test, set your TestMu AI username and access key as environment variables. You can find both under your TestMu AI **Profile > Account Settings > Password & Security**.
+Set your TestMu AI username and access key in the environment variables. You can get your TestMu AI username and access key from your TestMu AI Profile > Account Settings > Password & Security.
 
 **Windows**
 
@@ -56,8 +56,6 @@ dotnet add package Microsoft.Playwright
 ```
 
 ## Run Your First Test
-
-Pick your language below, then use the sample script to connect to TestMu AI and run a search test on a real Android device.
 
 Node.js supports both the Chromium API (`chromium.connect()`) and the Android-native API (`_android.connect()`).
 
@@ -408,15 +406,15 @@ dotnet run
 
 For Java, C#, and Python on Android, the CDP connection returns an existing browser context and page. Always check for existing contexts/pages before creating new ones, as shown in the examples above.
 
-## View Your Playwright Test Results
+## View your Playwright test results
 
-The TestMu AI Automation Dashboard shows the results of your Playwright tests after each run on the TestMu AI platform. Open it to review builds, sessions, logs, and video.
+The TestMu AI Automation Dashboard is where you can see the results of your Playwright tests after running them on the TestMu AI platform.
 
-The screenshot below shows the Playwright build on the left and the build sessions associated with the selected build on the right.
+The below screenshot of TestMu AI Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
 ## Capabilities Reference
 
-Configure these capabilities in your `LT:Options` object to control how your Playwright Android tests run.
+Configure these capabilities to control your Playwright Android tests.
 
 Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
 
@@ -437,14 +435,21 @@ Use the [Playwright Android Capability Generator](https://www.lambdatest.com/pla
 | tunnelName      | true/false                     | Specify tunnel name                                                                                                                                                                                | `const capability = { "LT:Options": {"tunnelName": "",}}`               |
 | geoLocation     | AR (Argentina)                 | Specify country code                                                                                                                                                                               | `const capability = { "LT:Options": {"geoLocation": "AR",}}`                         |
 
-### Using a REGEX for the Device Name
+### Using REGEX for device name
+When you run a test on a specific device, the exact device you selected may not be available. A regular expression (REGEX) widens the device search so you get any matching device. For example, to run on any Pixel device rather than one specific model, use a REGEX for `deviceName`. See [REGEX for App/Browser Automation](/support/docs/regular-expression-appium/) for details.
 
-When you run a test on a specific device, the exact model you selected may not be available. A regular expression (REGEX) widens the device search so you get any matching device. For example, to run on any Pixel device rather than one specific model, use a REGEX for `deviceName`. See [how to match devices with a REGEX](/support/docs/regular-expression-appium/) for details.
+## WebView Testing
 
-## Related Playwright Guides
+To test embedded WebViews on a real Android device, add the mandatory `isPwMobileWebviewTest` capability to your options ([sample script](https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js)):
 
-Continue with these related guides to extend your Playwright coverage on TestMu AI.
+```javascript title="playwrightwebview.js"
+const capabilities = {
+"LT:Options": {
+"platformName": "android",
+"isRealMobile": true, //if true, test will run on real devices
+// highlight-next-line
+"isPwMobileWebviewTest": true, //mandatory capability to enable WebView testing
+},
+```
 
-- [How to test WebView apps with Playwright](/support/docs/playwright-webview-test/) covers the `isPwMobileWebviewTest` capability for hybrid apps.
-- [How to run Playwright tests on real iOS devices](/support/docs/playwright-ios-device/) mirrors this setup for iOS.
-- [How to configure Playwright capabilities](/support/docs/capabilities-for-playwright/) documents every supported capability key.
+Run the test as usual (for example, `node playwrightwebview.js`) and check the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) for results.

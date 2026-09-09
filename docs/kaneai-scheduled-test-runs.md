@@ -1,14 +1,12 @@
 ---
 id: kaneai-scheduled-test-runs
-title: How to Schedule Test Runs With KaneAI
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: Scheduled Test Runs
-description: Schedule recurring KaneAI test runs to execute automatically at set times.
+title: Scheduled Test Runs
+hide_title: false
+sidebar_label:  Scheduled Test Runs
+description: This documentation will help you to understand how to create a scheduled test runs via KaneAI
 keywords:
-- kaneai scheduled test runs
-- schedule test execution
-- recurring test runs
+- users management testmu ai
+- manage user
 url: https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/
 site_name: TestMu AI
 slug: kaneai-scheduled-test-runs/
@@ -35,29 +33,41 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Schedule Test Runs in KaneAI",
-          "item": `${BRAND_URL}/support/docs/kaneai-scheduled-test-runs/`
+          "name": "Scheduled Test Runs",
+          "item": `${BRAND_URL}/support/docs/kaneai-scheduled-test-runst/`
         }]
       })
     }}
 ></script>
+In this documentation, you will learn how to create a scheduled test run using pre-existing test runs. This involves navigating through your project, selecting test configurations, and setting up recurring schedules to automate test executions at specified times.
 
-# How to Schedule Test Runs With KaneAI
-***
+**Step 1:** Navigate to **Test Manager** >> select your desired project >> **Test Runs** section.
 
-Scheduled test runs re-execute an existing KaneAI test run automatically at set times. You select a test run, choose its configurations, and define a recurring schedule. The steps below show how.
+<img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/test-run-one.png').default} alt="testing"  className="doc_img" />
 
-## Prerequisites
-***
+**Step 2:** Here, you will see the details of your existing test runs. To create a schedule, click on the three dots next to a test run and select **Create Schedule**. Alternatively, you can go to the **Scheduled runs** section to view all existing schedules. If you don't have any existing schedule, click on **Create a Scheduled Run** button to create a scheduled run.
 
-:::note
-You need an existing test run. Create it before you schedule, you cannot schedule a run that does not exist yet.
+> Test Runs must be created before creating a test run schedule.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/2.png').default} alt="testing"  className="doc_img" />
+
+**Step 3:** Provide the details related to the test you want to schedule, like **Schedule Name**, select existing test run you want to schedule, and configure the date and time details.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/3.png').default} alt="testing"  className="doc_img" />
+
+**Step 4:** After making your selections, click **Next** to review a summary of the schedule, including the scheduled date and time.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/4.png').default} alt="testing"  className="doc_img" />
+
+**Step 5:** In the **Build Parameters** box, you can define your desired concurrency for the tests. Click on the **Advanced Configurations** button to configure additional settings such as [Failure handling](/support/docs/kaneai-healing-and-dynamic-test/), network throttling, URL replacement, visual regression, accessibility testing, and [report generation](/support/docs/kaneai-hyperexecute-test-run-execution/#reports). Finally, click **Schedule Test Run** to create a recurring schedule.
+
+:::info Which settings a schedule shows
+A schedule made of **Classic** test cases shows the full Advanced Configurations panel. A schedule whose test cases are all **New Experience** on **Chrome** can use Evidence Reporting, which shows a shorter **Test Configurations** panel with [Failure handling](/support/docs/kaneai-healing-and-dynamic-test/) instead. Retry on Failure is available in both.
 :::
 
-## Schedule a Test Run
-***
+<img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/5.png').default} alt="testing"  className="doc_img" />
 
-Follow these steps to select a test run, set its configurations, and define a recurring schedule.
+**Step 6:** Click on any existing schedule to view detailed information, including a summary of test outcomes, passed and failed cases, and their respective instances. This helps in easily reviewing and proceeding with the tests.
 
 ### Step 1: Open the Test Runs Section
 ***
@@ -126,9 +136,6 @@ Continue with these guides:
 - [Test Runs Configurations](/support/docs/test-runs-configurations/): Manage the browser and device configurations a schedule uses.
 
 ## Video Explanation
-***
-
-Watch a short walkthrough:
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/kane-ai/features/schedule-tests/output.mp4').default} type="video/mp4" />

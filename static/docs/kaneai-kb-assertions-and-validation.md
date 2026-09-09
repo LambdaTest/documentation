@@ -1,14 +1,12 @@
-# How to Write Assertions With KaneAI
+# Assertions & Validation
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Assertions verify that your application behaves correctly after an action. You write them in natural language, and KaneAI evaluates them against the current page state. This page covers every assertion type, how to write them reliably, and how to handle validation scenarios that need workarounds.
+Assertions verify that your application behaves correctly after performing actions. In KaneAI, you write assertions in natural language, and the AI evaluates them against the current page state. This guide covers every assertion type, shows how to write them reliably, and explains how to handle tricky validation scenarios.
 
-Every assertion has a configurable failure behavior. By default, a failed assertion fails the test during execution. You can change the default in Organisation Settings and override it per step (see [Configuring Assertion Failure Behavior](#configuring-assertion-failure-behavior) below).
+All assertions have an option for failure behavior. By default, a failure in assertion will fail the test during execution. You can configure the default failure behavior for assertions via Organisation Settings. See more details in [Failure Conditions](/support/docs/kaneai-failure-conditions/#default-failure-condition-setting).
 
 ## Assertion Categories
-
-KaneAI supports the following categories of assertions, each with its own natural-language patterns.
 
 ### Text Assertions
 
@@ -176,9 +174,7 @@ Negation is supported across all assertion types using "NOT", "is not", "isn't",
 - **Value length cap:** Attribute or CSS values exceeding 500 characters are truncated with a warning.
 - **Hidden element resolution:** Element finding relies on vision. Elements present in the DOM but not visible on the page may not be resolved correctly.
 
-## Do's and Don'ts
-
-Compare well-formed assertions against common mistakes:
+## Writing Good Assertions: Do's and Don'ts
 
 | Good Assertion | Bad Assertion | Why |
 |---|---|---|
@@ -188,8 +184,6 @@ Compare well-formed assertions against common mistakes:
 | `assert "Error" is not visible on the page` | `assert there are no errors` | Too vague; specify what kind of error |
 
 ## Key Rules for Reliable Assertions
-
-Follow these rules to write assertions that evaluate consistently.
 
 ### Be Specific, Not Subjective
 
@@ -224,8 +218,6 @@ assert the error border is visible   (instead of assert border is 2px solid red)
 ```
 
 ## Real-World Assertion Scenarios
-
-These end-to-end examples show assertions applied to common testing flows.
 
 ### Scenario: Login Flow Validation
 
@@ -284,7 +276,7 @@ assert the table contains a row with "john@example.com"
 assert "Active" status is shown next to "john@example.com"
 ```
 
-## Asserting With Variables
+## Asserting with Variables
 
 Variables make assertions dynamic and reusable, especially when combined with API responses or stored values.
 
@@ -325,7 +317,7 @@ if "Login" button is visible then click on it
 if price < 200 then click "Add to Cart" else select the second product
 ```
 
-Nested conditions (an If / Else block inside another If / Else block) are **not supported**. Keep conditional logic simple and flat. For complex branching, use Else‑If branches or break the test into separate test cases. See the full [KaneAI Conditional Logic](/support/docs/kaneai-conditional-logic/) guide.
+Nested conditions (an If / Else block inside another If / Else block) are **not supported**. Keep conditional logic simple and flat. For complex branching, use Else‑If branches or break the test into separate test cases. See the full [Conditional Logic](/support/docs/kaneai-conditional-logic/) guide.
 
 ## Unsupported Assertions (Current Limitations)
 
@@ -338,11 +330,11 @@ These assertion types are not yet available via natural language. Use **JS snipp
 | **Nested Conditions** | `assert A is true AND B is visible` | Split into two separate assertions |
 | **Changes Over Time** | `assert the spinner disappears after 5 seconds` | Use wait step, then assert spinner is not visible |
 
-For the full list of JS execution options, see [KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/) guide.
+For the full list of JS execution options, see [JS Snippets](/support/docs/kane-ai-javascript-execution/) guide.
 
 ## Configuring Assertion Failure Behavior
 
-By default, assertions fail the test immediately (unless configured otherwise in Organisation Settings). You can override this per step:
+By default, assertions fail the test immediately (unless configured otherwise in Organisation Settings). You can configure this per step:
 
 | Mode | Behavior |
 |---|---|
@@ -350,13 +342,6 @@ By default, assertions fail the test immediately (unless configured otherwise in
 | **Fail and Continue** | Assertion failure is recorded, but subsequent steps continue executing |
 | **Warn and Continue** | Assertion failure is logged as a warning; test is not marked as failed |
 
-To set it, open the step menu, select **Failure Condition**, and choose a behavior. Use **Fail and Continue** or **Warn and Continue** when you want to run every assertion in a test and get a complete report of what passed and failed, rather than stopping at the first failure. For the org-wide default, see [failure conditions](/support/docs/kaneai-failure-conditions/#default-failure-condition-setting).
+Configure via: Step menu → **Failure Condition** → Select behavior.
 
-## Next Steps
-
-Continue with these guides:
-
-- [KaneAI Dynamic Content Waits and Page State](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)
-- [KaneAI API Testing](/support/docs/kane-ai-api-testing/)
-- [KaneAI Using Variables](/support/docs/kane-ai-using-variables/)
-- [KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)
+This is useful when you want to run all assertions in a test and see a complete report of what passed and what failed, rather than stopping at the first failure.

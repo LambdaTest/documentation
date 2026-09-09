@@ -1,10 +1,8 @@
-# How to Migrate Appium Tests to TestMu AI
+# Migrate Appium Tests
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## From Local Grid, BrowserStack Or SauceLabs To TestMu AI
-
-Migrating Appium tests to TestMu AI lets you move existing suites from a local grid, BrowserStack, or Sauce Labs with only a few code tweaks. Update authentication and desired capabilities, then run your native and hybrid tests on the cloud.
 
 TestMu AI offers an online Appium automation grid to perform App automation. The online Appium Grid is available on local grid, BrowserStack, Sauce Labs and TestMu AI. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from local grid, Sauce Labs or BrowserStack to TestMu AI.
 

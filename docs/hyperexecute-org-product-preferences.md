@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-org-product-preferences
-title: Access and Change HyperExecute Org Product Preferences
-toc_max_heading_level: 2
+title: Access and Change HyperExecute Org Product Preferences
 hide_title: false
-sidebar_label: "Access Org Product Preferences"
+sidebar_label: How to Access and Change Org Product Preferences
 description: Find out how to access and change org product preferences for hyperexecute.
 keywords:
   - TestMu AI Hyperexecute

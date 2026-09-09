@@ -1,10 +1,9 @@
 ---
 id: kaneai-kb-assertions-and-validation
-title: How to Write Assertions With KaneAI
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: Assertions
-description: Write reliable assertions in KaneAI to validate text, elements, URLs, and visual state, with operators and normalization rules.
+title: Assertions & Validation
+hide_title: false
+sidebar_label: Assertions & Validation
+description: Comprehensive guide to writing reliable assertions in KaneAI with real-world examples, best practices, and workarounds for common validation scenarios
 keywords:
   - testmu ai automation
   - testmu ai kaneai
@@ -21,6 +20,9 @@ site_name: TestMu AI
 slug: kaneai-kb-assertions-and-validation/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -39,31 +41,23 @@ slug: kaneai-kb-assertions-and-validation/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Assertions & Validation in KaneAI",
+          "name": "Assertions & Validation",
           "item": "https://www.testmuai.com/support/docs/kaneai-kb-assertions-and-validation/"
         }]
       })
     }}
 ></script>
 
-# How to Write Assertions With KaneAI
-***
-
-
-Assertions verify that your application behaves correctly after an action. You write them in natural language, and KaneAI evaluates them against the current page state. This page covers every assertion type, how to write them reliably, and how to handle validation scenarios that need workarounds.
+Assertions verify that your application behaves correctly after performing actions. In KaneAI, you write assertions in natural language, and the AI evaluates them against the current page state. This guide covers every assertion type, shows how to write them reliably, and explains how to handle tricky validation scenarios.
 
 :::note
-Every assertion has a configurable failure behavior. By default, a failed assertion fails the test during execution. You can change the default in Organisation Settings and override it per step (see [Configuring Assertion Failure Behavior](#configuring-assertion-failure-behavior) below).
+All assertions have an option for failure behavior. By default, a failure in assertion will fail the test during execution. You can configure the default failure behavior for assertions via Organisation Settings. See more details in [Failure Conditions](/support/docs/kaneai-failure-conditions/#default-failure-condition-setting).
 :::
 
 
 ## Assertion Categories
-***
-
-KaneAI supports the following categories of assertions, each with its own natural-language patterns.
 
 ### Text Assertions
-***
 
 Check whether specific text content is present (or absent) on the page.
 
@@ -81,7 +75,6 @@ assert {{api_response.message}} contains "success"
 ```
 
 ### Visual Assertions
-***
 
 Verify that images, logos, icons, or visual elements appear correctly.
 
@@ -96,7 +89,6 @@ Visual assertions rely on screenshots. Elements smaller than 12×12 pixels may n
 :::
 
 ### URL & Browser State Assertions
-***
 
 Validate the browser state such as the current URL or page title.
 
@@ -107,7 +99,6 @@ assert the page title contains "Dashboard"
 ```
 
 ### Relative/Layout Assertions
-***
 
 Check the spatial relationship between elements.
 
@@ -117,7 +108,6 @@ assert the "Submit" button is below the form fields
 ```
 
 ### Mathematical Assertions
-***
 
 Validate calculations and numeric values.
 
@@ -127,7 +117,6 @@ assert the cart total equals the sum of item prices visible
 ```
 
 ## Element State & Attribute Assertions
-***
 
 Assert element states, DOM attributes, and computed CSS properties by querying the DOM directly. Describe the element using its visible text or description and state the condition you want to verify.
 
@@ -137,7 +126,6 @@ Element State & Attribute Assertions are currently supported on **desktop web** 
 
 
 ### Element State Assertions
-***
 
 Verify the interactive state of UI elements using natural language.
 
@@ -157,7 +145,6 @@ These two assertions behave differently when an element is not found:
 :::
 
 ### DOM Attribute Assertions
-***
 
 Assert the value of any HTML, ARIA, or data attribute on an element.
 
@@ -183,7 +170,6 @@ Assert the NoAlt image does not have an alt attribute
 ```
 
 ### CSS Property Assertions
-***
 
 Assert computed CSS property values for the following properties:
 
@@ -211,7 +197,6 @@ Named color normalization is exact-match only: "red" maps to `rgb(255, 0, 0)`, b
 :::
 
 ### Supported Operators
-***
 
 **String Operators**
 
@@ -238,17 +223,13 @@ Named color normalization is exact-match only: "red" maps to `rgb(255, 0, 0)`, b
 Negation is supported across all assertion types using "NOT", "is not", "isn't", or "does not have".
 
 ### Limitations
-***
 
 - **Shadow DOM not supported:** Elements inside shadow DOM boundaries are not accessible.
 - **No regex matching:** Pattern-based matching (e.g., "Assert data-id matches `[a-f0-9-]{36}`") is not supported.
 - **Value length cap:** Attribute or CSS values exceeding 500 characters are truncated with a warning.
 - **Hidden element resolution:** Element finding relies on vision. Elements present in the DOM but not visible on the page may not be resolved correctly.
 
-## Do's and Don'ts
-***
-
-Compare well-formed assertions against common mistakes:
+## Writing Good Assertions: Do's and Don'ts
 
 | Good Assertion | Bad Assertion | Why |
 |---|---|---|
@@ -258,12 +239,8 @@ Compare well-formed assertions against common mistakes:
 | `assert "Error" is not visible on the page` | `assert there are no errors` | Too vague; specify what kind of error |
 
 ## Key Rules for Reliable Assertions
-***
-
-Follow these rules to write assertions that evaluate consistently.
 
 ### Be Specific, Not Subjective
-***
 
 The assertion must have a clear true/false answer given the page state.
 
@@ -282,7 +259,6 @@ assert the "Search" input field is visible at the top of the page
 :::
 
 ### Avoid Asserting on Imperceivable Details
-***
 
 KaneAI uses a screenshot + DOM combination. Very small visual details may not be detectable.
 
@@ -299,12 +275,8 @@ assert the error border is visible   (instead of assert border is 2px solid red)
 ```
 
 ## Real-World Assertion Scenarios
-***
-
-These end-to-end examples show assertions applied to common testing flows.
 
 ### Scenario: Login Flow Validation
-***
 
 ```
 type "admin@example.com" in the email field
@@ -320,7 +292,6 @@ assert "Welcome, Admin" is visible
 ```
 
 ### Scenario: E-Commerce Cart Validation
-***
 
 ```
 click "Add to Cart" for the "Wireless Mouse" product
@@ -333,7 +304,6 @@ assert "Your cart is empty" is visible
 ```
 
 ### Scenario: Form Validation Messages
-***
 
 ```
 click the "Submit" button without filling any fields
@@ -346,7 +316,6 @@ assert "First name must be at least 2 characters" is visible
 ```
 
 ### Scenario: Search Results Verification
-***
 
 ```
 type "laptop" in the search field and press Enter
@@ -357,7 +326,6 @@ assert the results count is greater than 0
 ```
 
 ### Scenario: Data Table Content Validation
-***
 
 ```
 assert the "Users" table header is visible
@@ -365,13 +333,11 @@ assert the table contains a row with "john@example.com"
 assert "Active" status is shown next to "john@example.com"
 ```
 
-## Asserting With Variables
-***
+## Asserting with Variables
 
 Variables make assertions dynamic and reusable, especially when combined with API responses or stored values.
 
 ### String Variable Assertions
-***
 
 ```
 set expectedTitle as "Dashboard"
@@ -379,7 +345,6 @@ assert {{expectedTitle}} is visible on the page
 ```
 
 ### JSON Variable Assertions (from API)
-***
 
 After making an API call via the `/` command, the response is stored as a JSON variable:
 
@@ -390,7 +355,6 @@ assert {{api_response.data.items}} contains "Laptop"
 ```
 
 ### Cross-Referencing UI and API Data
-***
 
 Store a value from the UI, make an API call, and compare:
 
@@ -402,7 +366,6 @@ assert {{api_response.orderId}} equals {{orderID}}
 ```
 
 ## Conditional Assertions
-***
 
 KaneAI supports basic if-else logic for assertions that depend on page state.
 
@@ -412,11 +375,10 @@ if price < 200 then click "Add to Cart" else select the second product
 ```
 
 :::note
-Nested conditions (an If / Else block inside another If / Else block) are **not supported**. Keep conditional logic simple and flat. For complex branching, use Else‑If branches or break the test into separate test cases. See the full [KaneAI Conditional Logic](/support/docs/kaneai-conditional-logic/) guide.
+Nested conditions (an If / Else block inside another If / Else block) are **not supported**. Keep conditional logic simple and flat. For complex branching, use Else‑If branches or break the test into separate test cases. See the full [Conditional Logic](/support/docs/kaneai-conditional-logic/) guide.
 :::
 
 ## Unsupported Assertions (Current Limitations)
-***
 
 These assertion types are not yet available via natural language. Use **JS snippets** as workarounds where applicable.
 
@@ -428,13 +390,12 @@ These assertion types are not yet available via natural language. Use **JS snipp
 | **Changes Over Time** | `assert the spinner disappears after 5 seconds` | Use wait step, then assert spinner is not visible |
 
 :::info
-For the full list of JS execution options, see [KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/) guide.
+For the full list of JS execution options, see [JS Snippets](/support/docs/kane-ai-javascript-execution/) guide.
 :::
 
 ## Configuring Assertion Failure Behavior
-***
 
-By default, assertions fail the test immediately (unless configured otherwise in Organisation Settings). You can override this per step:
+By default, assertions fail the test immediately (unless configured otherwise in Organisation Settings). You can configure this per step:
 
 | Mode | Behavior |
 |---|---|
@@ -442,14 +403,6 @@ By default, assertions fail the test immediately (unless configured otherwise in
 | **Fail and Continue** | Assertion failure is recorded, but subsequent steps continue executing |
 | **Warn and Continue** | Assertion failure is logged as a warning; test is not marked as failed |
 
-To set it, open the step menu, select **Failure Condition**, and choose a behavior. Use **Fail and Continue** or **Warn and Continue** when you want to run every assertion in a test and get a complete report of what passed and failed, rather than stopping at the first failure. For the org-wide default, see [failure conditions](/support/docs/kaneai-failure-conditions/#default-failure-condition-setting).
+Configure via: Step menu → **Failure Condition** → Select behavior.
 
-## Next Steps
-***
-
-Continue with these guides:
-
-- [KaneAI Dynamic Content Waits and Page State](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)
-- [KaneAI API Testing](/support/docs/kane-ai-api-testing/)
-- [KaneAI Using Variables](/support/docs/kane-ai-using-variables/)
-- [KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)
+This is useful when you want to run all assertions in a test and see a complete report of what passed and what failed, rather than stopping at the first failure.

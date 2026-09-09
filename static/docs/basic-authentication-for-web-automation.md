@@ -1,8 +1,6 @@
-# How to Set Up Basic Authentication on TestMu AI
+# Basic Authentication for Safari Web Automation
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Basic Authentication on TestMu AI lets you pass HTTP username and password credentials during Safari web automation sessions on real iOS devices, using a lambda hook that answers Base64-encoded Authorization prompts automatically so your scripts reach protected pages without sign-in.
 
 ## Introduction
 

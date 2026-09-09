@@ -6,8 +6,6 @@ HyperExecute's Matrix Multiplexing Strategy allows you to execute test cases acr
 
 By utilizing the Matrix Multiplexing Strategy, you can parallelize your testing process and achieve faster results. HyperExecute generates permutations and combinations using key-value pairs, launching virtual machines for each combination and running tests in parallel.
 
-
-
 ## Configuration and Execution
 
 ### Setting Up Matrix Multiplexing

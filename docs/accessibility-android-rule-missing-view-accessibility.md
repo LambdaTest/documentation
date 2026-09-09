@@ -1,0 +1,42 @@
+---
+id: accessibility-android-rule-missing-view-accessibility
+title: Missing View Accessibility
+sidebar_label: Missing View Accessibility
+description: Rule-level Accessibility guidance for Missing View Accessibility on Android.
+slug: accessibility-android-rule-missing-view-accessibility/
+---
+
+# Missing View Accessibility
+
+Meaningful Android views must be accessible to assistive technologies rather than being invisible to the accessibility framework.
+
+:::info WCAG Reference
+**Maps to:** WCAG 4.1.2 Name, Role, Value | **Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
+:::
+
+## What this rule checks
+
+The scanner flags views that carry meaningful content or functionality but are marked as `importantForAccessibility="no"` or have `focusable="false"` when they should be focusable.
+
+## Why it matters
+
+When a view is excluded from the accessibility tree, TalkBack users cannot perceive or interact with it. If the view carries meaningful information or actions, those users lose access entirely.
+
+## Common failure patterns
+
+- setting `android:importantForAccessibility="no"` on views that contain meaningful text or actions
+- container layouts that suppress child accessibility without individual evaluation
+- custom views that do not call `sendAccessibilityEvent` after state changes
+
+## Remediation guidance
+
+- set `importantForAccessibility="yes"` on views that carry meaningful content
+- only mark truly decorative elements as `importantForAccessibility="no"`
+- ensure custom views implement `AccessibilityDelegate` or override accessibility methods
+- test with TalkBack to confirm all meaningful elements are announced
+
+## Related docs
+
+- [Android Rule Repository](/support/docs/accessibility-android-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

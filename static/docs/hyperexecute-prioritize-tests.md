@@ -1,3 +1,5 @@
+# Prioritize Your Tests
+
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 HyperExecute's job prioritization feature empowers you to ensure that your most crucial tests are executed with precision and timeliness. This feature not only enhances the order of execution but also enables effortless searchability within your testing repository.
@@ -14,15 +16,11 @@ You can prioritize your jobs by assigning the job labels **low**, **medium** or 
 jobLabel: ['high', 'medium', 'low']
 ```
 
-
 - By default, all of your jobs are assigned **medium** priority.
 - The priority keys are not case sensitive.
 - You can use the priority keys along with your regular job labels too.
 
-
 ## Visualizing Priority Levels
 As you can see in the diagram below, we have executed 6 jobs; one job is designated as **high** priority, three are assigned as **medium** priority, while the remaining two hold **lower** priority labels. HyperExecute is configured to adhere to this prioritization framework during execution. As a result, the high-priority job takes precedence and is processed first, followed sequentially by the medium-priority job and subsequently the low-priority job, even though the higher-priority job is executed later. This prioritized execution sequence ensures efficient task management aligned with the specified priority levels.
-
-
 
 >If you have more questions, then just give us a shout and we will answer them for you.

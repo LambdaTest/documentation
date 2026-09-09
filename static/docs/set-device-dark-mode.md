@@ -1,10 +1,6 @@
-# How to Set Device Dark Mode on TestMu AI
+# Set Device Dark Mode
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Setting device dark mode on TestMu AI lets you enable or disable dark and light themes during automation testing on real and virtual devices, so you can validate UI rendering, text contrast, and theme switching across mobile and web apps.
-
-**Supported on:** Real &amp; Virtual devices
 
 TestMu AI now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 

@@ -1,8 +1,8 @@
 ---
 id: mute-test-scenarios
-title: How to Mute Test Scenarios on TestMu AI
+title: Mute Test Scenarios
 sidebar_label: Mute Test Scenarios
-description: Mute flaky or known-broken tests on TestMu AI so they stop failing your build. A muted test still runs and reports its result but is excluded from the verdict.
+description: Mute known-broken or flaky tests so they stop failing your build. A muted test still runs and still reports its real result, but is excluded from the build verdict and counts, across web and app automation.
 keywords:
   - mute test scenarios
   - mute automation test
@@ -35,7 +35,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Mute Test Scenarios on TestMu AI",
+          "name": "Mute Test Scenarios",
           "item": `${BRAND_URL}/support/docs/mute-test-scenarios/`
         }]
       })
@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-Muting on TestMu AI lets you flag known-broken or flaky tests so they stop failing your build. A muted test still runs and reports its real result, but is excluded from the build's pass/fail verdict and summary counts across automation.
+Some tests stop telling you anything useful. They are stale, or flaky, and they fail whether or not the product is broken. One of them is enough to mark the whole build failed, so teams either stop trusting build status or delete the test and lose the coverage.
 
 Muting is the third option. A muted test **still runs and still reports its real result**, but it is excluded from the build's pass/fail verdict and summary counts. You keep the build green and keep the data to fix the test later.
 

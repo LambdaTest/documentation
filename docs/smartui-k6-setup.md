@@ -1,7 +1,7 @@
 ﻿---
 id: smartui-k6-setup
 title: Getting started with SmartUI using K6
-sidebar_label: k6
+sidebar_label: K6
 description: In this documentation, learn how to perform Visual Regression testing with K6 on the TestMu AI Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
@@ -445,7 +445,7 @@ For additional information about K6 framework please explore the documentation [
 
 ## Advanced Options for Screenshot Comparison
 
-**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smartui-project-settings/).
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
@@ -467,7 +467,7 @@ For additional information about K6 framework please explore the documentation [
 
 ## Advanced Options for Screenshot Comparison
 
-**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smartui-project-settings/).
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

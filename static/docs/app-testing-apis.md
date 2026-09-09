@@ -1,10 +1,8 @@
-# How to Use App Testing APIs on TestMu AI
+# Commonly Used APIs For Mobile App Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-App testing APIs on TestMu AI let you automate mobile workflows programmatically, fetching devices, uploading applications, managing builds, and controlling live or automated sessions from your scripts, so you optimize testing across real Android and iOS devices without manual work.
-
-**Supported on:** Real &amp; Virtual devices
+In this documentation, we look at some APIs that will help you optimize your mobile app testing workflow. If you are performing live or automated app testing, you can use these APIs in your scripts to perform various actions.
 
 ## Fetching The Devices Available for Testing
 

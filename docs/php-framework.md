@@ -1,10 +1,9 @@
 ---
 id: php-framework
-title: How to Run Selenium Tests With PHP on TestMu AI
-toc_max_heading_level: 2
-hide_title: true
-sidebar_label: "PHP"
-description: Run PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browsers. Covers Behat, Laravel Dusk, Codeception, and PHPUnit.
+title: Selenium With PHP
+hide_title: false
+sidebar_label: PHP
+description: Run PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. Covers Behat, Laravel Dusk, Codeception, and PHPUnit.
 keywords:
   - php selenium grid setup
   - run php tests on cloud
@@ -51,23 +50,19 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Run Selenium Tests With PHP on TestMu AI
 ---
-
 
 Run your PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.
 
 ## Prerequisites
 ---
 
-Before you start, you need a TestMu AI account with your credentials, plus PHP, Composer, and the Selenium WebDriver for PHP installed.
-
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 3. Install the latest [PHP](https://www.php.net/downloads) and [Composer](https://getcomposer.org/).
 4. Install the Selenium WebDriver for PHP (pulled in by the sample projects via Composer).
 
-## Set Your Credentials
+## Set your credentials
 ---
 
 Every framework authenticates the same way: your Username and Access Key are read from environment variables. Set them once. Pick your operating system:
@@ -98,7 +93,7 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 </Tabs>
 
-## How the Sample Test Works
+## How the sample test works
 ---
 
 Every framework below connects to the grid and passes your browser and OS choices through a capabilities array:
@@ -119,7 +114,7 @@ What changes between frameworks is only how those capabilities are supplied: a Y
 Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to build a capabilities block for any browser, version, and OS combination.
 :::
 
-## Run a Test in Your Framework
+## Run a test in your framework
 ---
 
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run.
@@ -156,22 +151,12 @@ default:
             platform: Win10
 ```
 
-The `user` and `key` values are read from the `LT_USERNAME` and `LT_ACCESS_KEY` environment variables you set in the [Set Your Credentials](#set-your-credentials) section.
-
-3. Install the dependencies:
-
-```bash
-composer install
-```
-
-4. Run a single test, or in parallel:
+3. Run a single test, or in parallel:
 
 ```bash
 composer single
 composer parallel
 ```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 </TabItem>
 
@@ -198,19 +183,11 @@ $capabilities = array(
 );
 ```
 
-3. Install the dependencies:
-
-```bash
-composer install
-```
-
-4. Run the test:
+3. Run the test:
 
 ```bash
 php artisan dusk
 ```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 </TabItem>
 
@@ -243,21 +220,11 @@ modules:
           version: '71.0'
 ```
 
-In the `host` value, `{username}` and `{token}` are your `LT_USERNAME` and `LT_ACCESS_KEY` environment variables set in the [Set Your Credentials](#set-your-credentials) section.
-
-3. Install the dependencies:
-
-```bash
-composer install
-```
-
-4. Run the test:
+3. Run the test:
 
 ```bash
 ./vendor/bin/codecept run --steps
 ```
-
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
 
 </TabItem>
 
@@ -284,13 +251,7 @@ $capabilities = array(
 );
 ```
 
-3. Install the dependencies:
-
-```bash
-composer install
-```
-
-4. Run a single test, in parallel, or both:
+3. Run a single test, in parallel, or both:
 
 ```bash
 composer single
@@ -298,28 +259,14 @@ composer parallel
 composer test
 ```
 
-The test then appears on the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build). A green status confirms it passed.
-
 </TabItem>
 
 </Tabs>
 
-## View Your Results
+## View your results
 ---
 
 Your test results, including video, network logs, and command-by-command execution, appear on the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build).
-
-**Next steps:** If this is your first run, walk through [running your first Selenium test](/support/docs/testmu-running-your-first-selenium-test/) end to end. From there, explore the full set of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) you can pass to the grid, learn how to [debug your Selenium tests](/support/docs/debugging-options/), and organize and [filter your Selenium tests](/support/docs/filter-your-selenium-tests/) as your suite grows.
-
-## Next Steps
----
-
-Continue with these related guides:
-
-- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
-- [Debugging Options](/support/docs/debugging-options/)
-- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

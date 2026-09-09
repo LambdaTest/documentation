@@ -2,7 +2,7 @@
 id: http-basic-authentication
 title: HTTP Basic Authentication
 hide_title: true
-sidebar_label: "Safari Basic Authentication"
+sidebar_label: HTTP Basic Authentication
 description: HTTP basic authentication represents a mechanism of challenge and response to help the server make a request authentication from a client, passing the User ID and password in the URL as the standard HTTP &quot;Authorization&quot; header.
 keywords:
   - http basic authentication

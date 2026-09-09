@@ -1,10 +1,9 @@
 ---
 id: test-runs-configurations
-title: How to Create Test Run Configurations With KaneAI
-hide_title: true
-toc_max_heading_level: 2
+title: 'Configurations in KaneAI & Test Manager'
+hide_title: false
 sidebar_label: Configurations
-description: Learn how to create, manage, and apply reusable environment configurations for your test runs in TestMu AI Test Manager.
+description: Learn how to create, manage, and apply reusable environment configurations for your test runs in LambdaTest Test Manager.
 keywords:
   - testmu ai automation
   - kaneai
@@ -19,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/test-runs-configurations/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,18 +44,18 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Create Test Run Configurations With KaneAI
-***
+# Configurations in KaneAI & Test Manager
 
 Configurations in Test Manager allow you to define reusable environment setups for your test runs. You can specify platform, browser, OS, and device combinations once and apply them across multiple test runs.
 
 **Key Benefits:**
-- **Centralized Management:** Create, edit, and delete configurations from a single dashboard
-- **Reusability:** Apply the same configuration across multiple test runs
-- **Multi-Platform Support:** Configure Desktop, Virtual Mobile, and Real Device environments
+- **Centralized Management** - Create, edit, and delete configurations from a single dashboard
+- **Reusability** - Apply the same configuration across multiple test runs
+- **Multi-Platform Support** - Configure Desktop, Virtual Mobile, and Real Device environments
+
+---
 
 ## Accessing Configurations
-***
 
 Navigate to configurations using either method:
 
@@ -66,10 +66,12 @@ Navigate to configurations using either method:
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/configurations-sidebar.png').default} alt="configurations-sidebar" className="doc_img"/>
 
+---
+
 ## Configurations Dashboard
-***
 
 The central dashboard displays all your configurations with the following features:
+
 
 | Feature | Description |
 |---------|-------------|
@@ -81,13 +83,13 @@ The central dashboard displays all your configurations with the following featur
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/configurations-dashboard.png').default} alt="configurations-dashboard" className="doc_img"/>
 
+---
+
 ## Creating a Configuration
-***
 
 You can create configurations from the central Configurations page or directly within a test run.
 
 ### Steps to Create
-***
 
 1. Click **Create a Configuration** button
 2. Toggle the **KaneAI** switch based on your test run type: set it to **ON** for KaneAI-generated test runs, or **OFF** for Non-KaneAI test runs.
@@ -98,7 +100,6 @@ You can create configurations from the central Configurations page or directly w
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/create-configuration.png').default} alt="create-configuration" className="doc_img"/>
 
 ### KaneAI Toggle
-***
 
 The KaneAI toggle determines which platforms and options are available:
 
@@ -107,8 +108,9 @@ The KaneAI toggle determines which platforms and options are available:
 | **ON** | Desktop, Real Device | KaneAI test cases |
 | **OFF** | Desktop, Virtual Mobile, Real Device | Non-KaneAI test cases |
 
+---
+
 ### Platform Options
-***
 
 | Platform | Details |
 |----------|---------|
@@ -117,7 +119,6 @@ The KaneAI toggle determines which platforms and options are available:
 | **Real Device** | Device Type, OS, Manufacturer, Device, OS Version, Browser/App |
 
 ### Desktop
-***
 
 Configure browser-based testing on desktop environments.
 
@@ -132,13 +133,13 @@ Configure browser-based testing on desktop environments.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/DesktopConfig.png').default} alt="desktop-configuration" className="doc_img"/>
 
+---
+
 ### Real Device
-***
 
 Configure testing on physical mobile devices. Supports both **Native App** and **Mobile Browser** testing.
 
 #### Native Application
-***
 
 :::info Note
 Native app testing on Real Devices is available only for KaneAI-generated test runs.
@@ -157,27 +158,25 @@ Native app testing on Real Devices is available only for KaneAI-generated test r
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/RealDeviceConfig.png').default} alt="real-device-configuration" className="doc_img"/>
 
 #### KaneAI-Exclusive Features
-***
 
 The following options are available only for KaneAI-generated test runs:
 
 **Device Type: Private Cloud vs Public Cloud**
 
 For organizations with a private cloud real device plan, you can choose between:
-- **Public Cloud:** Shared pool of devices available to all TestMu AI users
-- **Private Cloud:** Dedicated device pool exclusive to your organization
+- **Public Cloud** - Shared pool of devices available to all LambdaTest users
+- **Private Cloud** - Dedicated device pool exclusive to your organization
 
 **Multi-Select Support**
 
 KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version. This creates a larger device pool, ensuring test execution can proceed even if specific devices are unavailable.
 
 #### Application Options
-***
 
 | Option | Description |
 |--------|-------------|
 | **Auto Update** | Automatically updates the configuration when a new app version (matching `appPackage` or `bundleId`) is uploaded |
-| **Custom ID** | Links the configuration to an app uploaded via the [application upload API](/support/docs/application-setup-via-api/#upload-via-the-rest-api) with a specific `custom_id` |
+| **Custom ID** | Links the configuration to an app uploaded via [API](/support/docs/application-setup-via-api/#upload-your-application) with a specific `custom_id` |
 | **Pre-Installed App** | Available for Private Cloud only. Maps app capability to `Stock` for testing pre-installed applications |
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/UpdateApp.png').default} alt="auto-update-app" className="doc_img"/>
@@ -187,7 +186,6 @@ KaneAI allows selecting multiple values for Manufacturer, Device, and OS Version
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/PreinstalledApp.png').default} alt="preinstalled-app" className="doc_img"/>
 
 #### Mobile Browser
-***
 
 :::info Note
 Mobile browser testing on Real Devices is available for non-KaneAI test runs only.
@@ -204,8 +202,9 @@ Mobile browser testing on Real Devices is available for non-KaneAI test runs onl
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/RDWebBrowser.png').default} alt="real-device-browser-configuration" className="doc_img"/>
 
+---
+
 ### Virtual Mobile
-***
 
 :::info Note
 Virtual Mobile configurations are available for non-KaneAI test runs only.
@@ -214,7 +213,6 @@ Virtual Mobile configurations are available for non-KaneAI test runs only.
 Configure testing on emulators and simulators for both Native App and Mobile Browser testing.
 
 #### Native Application
-***
 
 **Environment Variables:**
 | Field | Description |
@@ -228,7 +226,6 @@ Configure testing on emulators and simulators for both Native App and Mobile Bro
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/VirtualWeb.png').default} alt="virtual-device-app-configuration" className="doc_img"/>
 
 #### Mobile Browser
-***
 
 **Environment Variables:**
 | Field | Description |
@@ -242,13 +239,11 @@ Configure testing on emulators and simulators for both Native App and Mobile Bro
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/VirtualApp.png').default} alt="virtual-device-browser-configuration" className="doc_img"/>
 
-## Managing Configurations
-***
+---
 
-You can edit or delete existing configurations from the Configurations page.
+## Managing Configurations
 
 ### Edit a Configuration
-***
 
 1. Navigate to the **Configurations** page from the sidebar
 2. Locate the configuration and click the **Actions menu** (⋮)
@@ -269,7 +264,6 @@ Edit functionality is only available on the Configurations page, not within the 
 :::
 
 ### Delete a Configuration
-***
 
 1. Navigate to the **Configurations** page from the sidebar
 2. Locate the configuration and click the **Actions menu** (⋮)
@@ -280,13 +274,13 @@ Edit functionality is only available on the Configurations page, not within the 
 Deleting a configuration is only allowed if it's not associated with any Test Instance.
 :::
 
+---
+
 ## Using Configurations in Test Runs
-***
 
 Apply configurations to test cases when creating or editing test runs.
 
-### Steps to Add
-***
+### Steps to Add Configurations
 
 1. Select the test cases you want to configure
 2. Click **Configure Test**
@@ -297,20 +291,20 @@ Apply configurations to test cases when creating or editing test runs.
    - Optionally, create a new configuration
    - Click **Manage Configurations** to open the central dashboard in a new tab
 
+<!-- <img loading="lazy" src={require('../assets/images/kane-ai/app-test/add-configuration-modal.png').default} alt="add-configuration-modal" className="doc_img"/> -->
+
 :::warning
 Adding configurations **appends** to existing ones. It does not replace previously assigned configurations.
 :::
 
 ### Bulk Selection
-***
 
 - Use the **Select All** toggle to select all configurations matching current filters
 - This is useful for applying multiple configurations to test instances at once
 
-## Best Practices
-***
+---
 
-Follow these practices for reliable tests:
+## Best Practices
 
 | Practice | Benefit |
 |----------|---------|
@@ -319,11 +313,3 @@ Follow these practices for reliable tests:
 | Enable Auto Update for apps | Always test with the latest app build |
 | Use multi-select for devices | Increase device pool availability for KaneAI test runs |
 | Review usage count before editing | Understand the impact of changes across test runs |
-
-## Next Steps
-***
-
-Continue with these guides:
-
-- [Run KaneAI Tests on HyperExecute](/support/docs/kaneai-hyperexecute-test-run-execution/): Apply your configurations to a test run and execute it.
-- [Sequential Test Runs](/support/docs/kaneai-sequential-test-runs/): Assign configurations per test case in a defined order.

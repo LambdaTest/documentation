@@ -1,6 +1,6 @@
 ---
 id: appium-upload-contacts
-title: How to Upload Contacts to Devices on TestMu AI
+title: Upload Contacts on Real Devices
 hide_title: true
 sidebar_label: Upload Contacts
 description: Upload custom .vcf contact files to real Android and iOS devices and inject them into the native Contacts app before your test session begins.
@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -43,18 +44,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Upload Contacts to Devices on TestMu AI",
+          "name": "Upload Contacts on Real Devices",
           "item": `${BRAND_URL}/support/docs/upload-contacts/`
         }]
       })
     }}
 ></script>
 
-# How to Upload Contacts to Devices on TestMu AI
+# Upload Contacts (.vcf) on Real Devices
+<RealDeviceTag value="Real Device" />
 
-Uploading contacts on TestMu AI preloads .vcf vCard files onto real Android and iOS devices, automatically injecting them into the native Contacts app before your session starts. This lets you test messaging, dialer, CRM, and contact-picker flows on real devices.
-
-**Supported on:** Real devices
+Preload contacts on real devices before your test session begins. Upload `.vcf` (vCard) contact files using the Upload Media API, and they are automatically injected into the device's native Contacts app when your session starts.
 
 This is useful for testing:
 - Messaging and dialer apps
@@ -139,7 +139,7 @@ desired_capabilities = {
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Upload Contacts to Devices on TestMu AI
+      Upload Contacts on Real Devices
       </span>
     </li>
   </ul>

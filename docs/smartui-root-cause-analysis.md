@@ -1,7 +1,7 @@
 ---
 id: smartui-root-cause-analysis
 title: SmartUI Root Cause Analysis (RCA)
-sidebar_label: Smart RCA
+sidebar_label: Smart RCA (Root Cause Analysis)
 description: Identify and resolve visual regression issues quickly with SmartUI Root Cause Analysis (RCA). Understand the underlying causes of visual mismatches.
 keywords:
   - SmartUI RCA
