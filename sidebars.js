@@ -1959,6 +1959,7 @@ module.exports = {
           { type: "doc", id: "lambdatest-jira-app", label: "TestMu AI Jira App" },
           { type: "doc", id: "link-ado-issues-with-test-manager", label: "Azure DevOps Integration for Test Manager" },
           { type: "doc", id: "lambdatest-azure-devops-app", label: "TestMu AI Azure DevOps App" },
+          { type: "doc", id: "link-linear-issues-with-test-manager", label: "Linear Integration for Test Manager" },
         ],
       },
     ]

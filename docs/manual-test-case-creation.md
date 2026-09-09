@@ -170,7 +170,7 @@ The action requires KaneAI access, and the test case must have content — a tes
 
 ### Issues section
 
-This section lists the linked Jira/ADO Issues with the Test Case. For more information refer [this page](/support/docs/link-jira-issues-with-test-manager/)
+This section lists the issues linked with the Test Case. You can link issues from Jira, Azure DevOps, and Linear. For more information, refer to [Link Jira Issues](/support/docs/link-jira-issues-with-test-manager/), [Link Azure DevOps Issues](/support/docs/link-ado-issues-with-test-manager/), or [Link Linear Issues](/support/docs/link-linear-issues-with-test-manager/).
 
 ***
 

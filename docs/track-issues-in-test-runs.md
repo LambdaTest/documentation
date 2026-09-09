@@ -3,12 +3,13 @@ id: track-issues-in-test-runs
 title: Track Bugs and Issues in Test Runs
 hide_title: true
 sidebar_label: Track Issues in Test Runs
-description: Connect failing tests to tracked defects by linking Jira and Azure DevOps issues to test instances in a Test Manager Test Run, and view every issue raised across the run.
+description: Connect failing tests to tracked defects by linking Jira, Azure DevOps, and Linear issues to test instances in a Test Manager Test Run, and view every issue raised across the run.
 keywords:
   - track bugs in test runs
   - test manager issues
   - link jira issues to test instance
   - link azure devops issues to test instance
+  - link linear issues to test instance
   - test run defect tracking
 url: https://www.testmuai.com/support/docs/track-issues-in-test-runs/
 site_name: TestMu AI
@@ -50,16 +51,17 @@ Test Manager connects the bugs found during testing to the test instances that e
 
 There are two ways to put a bug on a test instance:
 
-- **Link an existing issue**: connect a Jira or Azure DevOps ticket that already exists.
+- **Link an existing issue**: connect a Jira, Azure DevOps, or Linear issue that already exists.
 - **Raise a new bug with Mark as Bug**: create a new ticket in your bug tracker while you execute the test.
 
 This works in Manual, KaneAI, and Automation Test Runs.
 
 ## Before you begin
 
-- To link or raise bugs that are visible inside Test Manager, integrate **Jira** or **Azure DevOps** with your <BrandName /> account:
+- To link or raise bugs that are visible inside Test Manager, integrate **Jira**, **Azure DevOps**, or **Linear** with your <BrandName /> account:
   - [Link Jira Issues with Test Manager](/support/docs/link-jira-issues-with-test-manager/)
   - [Link Azure DevOps Issues with Test Manager](/support/docs/link-ado-issues-with-test-manager/)
+  - [Link Linear Issues with Test Manager](/support/docs/link-linear-issues-with-test-manager/)
 - Mark as Bug can also create tickets in other [bug tracking tools](/support/docs/bug-tracking-tools/). See [Supported trackers and visibility](#supported-trackers-and-visibility) for what that means inside Test Manager.
 
 ## How bug tracking works in a Test Run
@@ -74,14 +76,14 @@ You can add a bug from any of these points: from the run's instance list, from i
 
 ## Link an existing issue to a test instance
 
-Use this when the defect is already tracked in Jira or Azure DevOps and you want to connect it to the test that found it.
+Use this when the defect is already tracked in Jira, Azure DevOps, or Linear and you want to connect it to the test that found it.
 
 1. Open the Test Run and stay on the **Test Instances** tab.
 2. On the test instance you want, open the bug menu on its row and select **Link Issue**.
 
 <img loading="lazy" src={require('../assets/images/test-run-issues/test-instance-issue-menu.png').default} alt="Bug menu on a test instance row with Link Issue and View Issues options" className="doc_img"/>
 
-3. In the **Link Issues** dialog, choose the tracker: **Jira** or **Azure DevOps**. Only trackers you have integrated are available.
+3. In the **Link Issues** dialog, choose the tracker: **Jira**, **Azure DevOps**, or **Linear**. Only trackers you have integrated are available.
 4. Enter the issue key or paste its URL.
 5. Click **Link Issue**.
 
@@ -136,13 +138,15 @@ The Test Run's **Issues** tab is the consolidated view of every bug raised or li
 
 ## Unlink an issue
 
-If a bug no longer belongs on a test instance, open the instance's **Issues** tab (or the **View Issues** panel), find the issue, and use its unlink action. Unlinking removes the association in Test Manager only. The ticket itself stays in Jira or Azure DevOps.
+If a bug no longer belongs on a test instance, open the instance's **Issues** tab (or the **View Issues** panel), find the issue, and use its unlink action. Unlinking removes the association in Test Manager only. The ticket itself stays in Jira, Azure DevOps, or Linear.
 
 ## Supported trackers and visibility
 
-Linking an existing issue is available for **Jira** and **Azure DevOps**.
+The two ways of putting a bug on a test instance do not cover the same set of trackers.
 
-Mark as Bug can create tickets in several bug tracking tools, but only **Jira** and **Azure DevOps** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker is created successfully but does not appear in these views.
+Linking an existing issue is available for **Jira**, **Azure DevOps**, and **Linear**.
+
+Mark as Bug can create tickets in several bug tracking tools, but only **Jira** and **Azure DevOps** tickets are associated with, and visible in, Test Runs, Test Cases, and test instances. A bug raised in any other tracker, Linear included, is created successfully but does not appear in these views. To track a Linear issue against a test, link it instead.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

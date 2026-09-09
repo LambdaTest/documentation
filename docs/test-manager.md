@@ -95,7 +95,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "name": "Which tools does Test Manager integrate with?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jira and Azure DevOps with two-way sync, plus marketplace apps for both. Test Manager also integrates with GitHub, GitLab, and all major issue trackers."
+            "text": "Jira and Azure DevOps with two-way sync, plus marketplace apps for both. Linear issues can be linked to test cases, test runs, and test run instances, and used as input for AI test case generation. Test Manager also integrates with GitHub, GitLab, and all major issue trackers."
           }
         }]
       })
@@ -163,7 +163,7 @@ Run guided exploratory testing sessions across desktop and mobile. Attach eviden
 1. **Create an account** at [testmuai.com](https://www.testmuai.com/register/) and open Test Manager from your dashboard.
 2. **Create your first test case** by clicking **Generate with AI** and describing the scenario in natural language, writing steps manually, or importing existing cases via CSV.
 3. **Organize and run** by grouping test cases into folders, creating a test run, assigning testers, and executing.
-4. **Connect your tools** by linking Jira or Azure DevOps under Integrations to sync test cases and defects.
+4. **Connect your tools** under Integrations: Jira or Azure DevOps to sync test cases and defects, or Linear to link its issues to your test cases and runs.
 5. **Review results** on the dashboard to track pass rates, coverage, and release readiness.
 
 Start with [Set up your project](/support/docs/create-projects/) to create your first Test Manager project.
@@ -188,7 +188,7 @@ Click **Generate with AI** while authoring, then describe what you want to test 
 
 ### Which tools does Test Manager integrate with?
 
-Jira and Azure DevOps with two-way sync, plus marketplace apps for both. Test Manager also integrates with GitHub, GitLab, and all major issue trackers.
+Jira and Azure DevOps with two-way sync, plus marketplace apps for both. Linear issues can be linked to test cases, test runs, and test run instances, and used as input for AI test case generation. Test Manager also integrates with GitHub, GitLab, and all major issue trackers.
 
 ## Related resources
 
