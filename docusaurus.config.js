@@ -16,7 +16,7 @@ module.exports = {
     require.resolve('./src/js/copy-ips.js')
   ],
   scripts: [
-  
+
     {
       src: 'https://assets.testmuai.com/resources/js/salesforce_chatwidget.js',
       defer: true,
@@ -30,9 +30,9 @@ module.exports = {
       defer: true,
       onload: "sf_messaging()",
     },
-   
+
   ],
-  themes: ['docusaurus-theme-search-typesense','docusaurus-theme-github-codeblock'],
+  themes: ['docusaurus-theme-search-typesense', 'docusaurus-theme-github-codeblock'],
   plugins: [
     require.resolve("docusaurus-plugin-image-zoom"),
     function tailwindPlugin() {
@@ -91,7 +91,7 @@ module.exports = {
       typesenseServerConfig: {
         nodes: [
           {
-            host: process.env.HOST ,
+            host: process.env.HOST,
             port: 443,
             protocol: 'https',
           },
@@ -142,20 +142,38 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-         sitemap: {
+        sitemap: {
           lastmod: 'date',
           priority: 0.9,
+          createSitemapItems: async ({ routes, frontMatter }) => {
+            try {
+              console.log('routes:', routes);
+              console.log('frontMatter:', frontMatter);
+              const allowedPath = '/support/api-doc/selenium-automation-api/build/fetch-all-builds-of-an-account/';
+              return routes.filter(route => {
+                const pageMeta = frontMatter?.[route.id] ?? {}; // use optional chaining
+                console.log('route:', route, 'pageMeta:', pageMeta);
+                if (pageMeta && (pageMeta.redirect || pageMeta.robots === 'noindex')) {
+                  return false;
+                }
+                return route.path === allowedPath;
+              });
+            } catch (error) {
+              console.error('Error in createSitemapItems:', error);
+              return routes; // fallback to include everything
+            }
+          },
           ignorePatterns: [
-          '/support/',           // Exclude /support/ URL
-          '/support/api-doc/',    // Exclude /support/api-docs
-          '/support/docs/accessibility-rules-checklist/',
-          '/support/docs/kane-cli-getting-started/',
-          '/support/docs/accessibility-android-what-we-do-not-cover/',
-          '/support/docs/accessibility-getting-started-quick-setup/',
-          '/support/docs/kane-cli-agent-output/',
-          '/support/docs/accessibility-web-what-we-do-not-cover/',
-          '/support/docs/accessibility-ios-what-we-do-not-cover/'
-        ],
+            '/support/',           // Exclude /support/ URL
+            '/support/api-doc/',    // Exclude /support/api-docs
+            '/support/docs/accessibility-rules-checklist/',
+            '/support/docs/kane-cli-getting-started/',
+            '/support/docs/accessibility-android-what-we-do-not-cover/',
+            '/support/docs/accessibility-getting-started-quick-setup/',
+            '/support/docs/kane-cli-agent-output/',
+            '/support/docs/accessibility-web-what-we-do-not-cover/',
+            '/support/docs/accessibility-ios-what-we-do-not-cover/'
+          ],
         },
       },
     ],
