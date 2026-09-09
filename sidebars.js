@@ -535,15 +535,17 @@ module.exports = {
       },
     },
     [
-      // 1. Getting Started
       {
         type: "category",
         collapsed: true,
         label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "getting-started-with-kane-ai",
+        },
         items: [
-          // why-we-need-kane-ai & use-cases-of-kane-ai merged into the intro
-          // page. Files retained on disk (to be deleted later); removed from nav.
-          "getting-started-with-kane-ai",
+          "why-we-need-kane-ai",
+          "use-cases-of-kane-ai",
           {
             type: "category",
             collapsed: true,
@@ -551,74 +553,58 @@ module.exports = {
             items: [
               "author-your-first-desktop-browser-test",
               "author-your-first-mobile-browser-test",
-              "author-your-first-mobile-app-test",
+              "author-your-first-mobile-app-test"
             ],
           },
         ],
       },
-
-      // 2. Writing Tests (KB index repurposed as landing page)
       {
         type: "category",
         collapsed: true,
-        label: "Writing Tests",
+        label: "Knowledge Base",
+        link: {
+          type: "doc",
+          id: "kaneai-kb-knowledge-base-index",
+        },
         items: [
-          "kaneai-kb-knowledge-base-index",
-          {
-            type: "doc",
-            id: "kane-ai-command-guide",
-            label: "Command Types",
-          },
           {
             type: "category",
-            collapsed: true,
             label: "Authoring Guides",
+            collapsed: true,
             items: [
               "kaneai-kb-finding-and-interacting-with-elements",
               "kaneai-kb-forms-inputs-and-data-entry",
               "kaneai-kb-assertions-and-validation",
               "kaneai-kb-dynamic-content-waits-and-page-state",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Interactions",
-            items: [
-              "kane-ai-click-interactions",
-              "kane-ai-scroll-in-feature",
-              "kane-ai-drag-drop",
-              "kaneai-manual-interaction",
-              "kaneai-upload-and-download-files",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Logic & Control Flow",
-            items: [
-              "kaneai-conditional-logic",
-              "kaneai-while-loops",
-              "kane-ai-javascript-execution",
-              "kaneai-kb-js-snippets-and-workarounds",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Session Configuration",
-            items: [
-              "kaneai-advanced-settings",
-              "kaneai-chrome-options",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Mobile Testing",
-            items: [
               "kaneai-kb-mobile-app-testing-patterns",
-              "kaneai-scroll-until-mobile",
+            ],
+          },
+          {
+            type: "category",
+            label: "Advanced Testing",
+            collapsed: true,
+            items: [
+              "kaneai-kb-authentication-and-session-management",
+              "kaneai-kb-api-testing-and-network-assertions",
+              "kaneai-kb-js-snippets-and-workarounds",
+              "kaneai-failure-conditions",
+              "kaneai-smart-locator-priority",
+            ],
+          },
+          {
+            type: "category",
+            label: "Variables and Parameters",
+            collapsed: true,
+            link: {
+              type: "doc",
+              id: "kaneai-variables-and-parameters",
+            },
+            items: [
+              "kane-ai-using-variables",
+              "kane-ai-secrets",
+              "kane-ai-smart-variables",
+              "kane-ai-using-parameters",
+              "kane-ai-using-datasets",
             ],
           },
           "kaneai-authoring-session",
@@ -628,52 +614,59 @@ module.exports = {
         ],
       },
 
-      // 3. Test Data & Variables
       {
         type: "category",
         collapsed: true,
-        label: "Test Data & Variables",
+        label: "Features",
         items: [
-          { type: "doc", id: "kaneai-advanced-settings", label: "Advanced Settings" },
-          { type: "doc", id: "kaneai-chrome-options", label: "Chrome Options" },
-          { type: "doc", id: "kaneai-custom-headers", label: "Custom Headers" },
-          { type: "doc", id: "kane-ai-geolocation-tunnel-proxy", label: "Geolocation, Tunnel & Proxy" },
-          { type: "doc", id: "kaneai-network-throttling", label: "Mobile Network Throttling" },
-          { type: "doc", id: "kaneai-gps-location", label: "Mobile GPS Location" },
-          { type: "doc", id: "kaneai-smart-locator-priority", label: "Smart Locators" },
-          { type: "doc", id: "kaneai-healing-and-dynamic-test", label: "Adaptive Heal and Dynamic Test" },
-        ],
-      },
-
-      // 4. Advanced Testing
-      {
-        type: "category",
-        collapsed: true,
-        label: "Advanced Testing",
-        items: [
-          "kane-ai-geolocation-tunnel-proxy",
           {
             type: "category",
             collapsed: true,
-            label: "API & Network",
+            label: "Common",
             items: [
+              "kaneai-manual-interaction",
+              "kane-ai-javascript-execution",
+              "kane-ai-geolocation-tunnel-proxy",
+              "kaneai-auto-heal",
+              "kane-ai-scroll-in-feature",
+              "kane-ai-drag-drop",
+              "kane-ai-click-interactions",
+              "kane-ai-jira-integration",
               "kane-ai-api-testing",
-              "kaneai-kb-api-testing-and-network-assertions",
+              {
+                type: "category",
+                collapsed: true,
+                label: "Modules",
+                link: {
+                  type: "doc",
+                  id: "kane-ai-modules",
+                },
+                items: [
+                  "kaneai-modules-versions-and-enhancement",
+                  "kaneai-bulk-module-update",
+                ],
+              },
+              "kaneai-upload-and-download-files",
+              "kaneai-totp",
+              "kaneai-database",
+              "kaneai-rename-instructions",
+              "kaneai-conditional-logic",
+              "kaneai-while-loops",
               "kane-ai-network-assertions",
+              "kaneai-advanced-settings",
               "kaneai-custom-headers",
             ],
           },
           {
             type: "category",
             collapsed: true,
-            label: "Authentication & Security",
+            label: "Desktop Browser",
             items: [
-              "kaneai-kb-authentication-and-session-management",
-              "kaneai-totp",
+              "kaneai-dynamic-url-replacement",
+              "kaneai-chrome-options",
+              "kaneai-smartui-visual-testing",
             ],
           },
-          "kaneai-database",
-          "kaneai-smartui-visual-testing",
           {
             type: "category",
             collapsed: true,
@@ -683,100 +676,81 @@ module.exports = {
               "kane-ai-deeplink-support",
               "kaneai-network-throttling",
               "kaneai-gps-location",
+              "kaneai-scroll-until-mobile",
               "kaneai-mobile-app-accessibility",
             ],
           },
         ],
       },
 
-      // 5. Modules & Reusability
       {
         type: "category",
         collapsed: true,
-        label: "Modules & Reusability",
+        label: "Test Manager",
         items: [
-          "kane-ai-modules",
-          "kaneai-modules-versions-and-enhancement",
-          "kaneai-bulk-module-update",
-          "kaneai-rename-instructions",
-        ],
-      },
-
-      // 6. Running Tests
-      {
-        type: "category",
-        collapsed: true,
-        label: "Running Tests",
-        items: [
+          "kane-ai-test-plan",
+          "kaneai-hyperexecute-test-run-execution",
+          "kaneai-sequential-test-runs",
+          "kaneai-ci-cd-automation",
           "test-runs-configurations",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Execution",
-            items: [
-              "kaneai-hyperexecute-test-run-execution",
-              "kaneai-sequential-test-runs",
-              "kaneai-scheduled-test-runs",
-              "kaneai-dynamic-url-replacement",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Code Export & CI/CD",
-            items: [
-              "kane-ai-automation-code-generation",
-              "kaneai-ci-cd-automation",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Results",
-            items: [
-              "kaneai-test-run-instance-view",
-            ],
-          },
+          "kaneai-scheduled-test-runs",
+          "kaneai-test-run-instance-view",
         ],
       },
 
-      // 7. Debugging & Reliability
+      {
+        type: "doc",
+        label: "GitHub App Integration",
+        id: "github-app-integration",
+      },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Knowledge Base",
+      //   items: [
+      //     "kane-ai-command-guide",
+      //     "kaneai-failure-conditions",
+      //     "kane-ai-web-test-writing-guidelines",
+      //     "kane-ai-app-test-writing-guidelines",
+      //     "error-handling-kaneai",
+      //     "kane-ai-automation-code-generation",
+      //   ],
+      // },
       {
         type: "category",
         collapsed: true,
-        label: "Debugging & Reliability",
+        label: "Video Tutorials",
         items: [
-          "kaneai-auto-heal",
-          "kaneai-healing-and-dynamic-test",
-          "kaneai-smart-locator-priority",
-          "kaneai-failure-conditions",
-          "error-handling-kaneai",
+          "kaneai-test",
+          "kaneai-test-manual-interaction-video",
+          "kaneai-edit-test-steps",
         ],
       },
-
-      // 8. Integrations
-      {
-        type: "category",
-        collapsed: true,
-        label: "Integrations",
-        items: [
-          "kane-ai-jira-integration",
-          {
-            type: "doc",
-            id: "github-app-integration",
-            label: "KaneAI GitHub App Integration",
-          },
-        ],
-      },
-
-      // 9. FAQs
       {
         type: "doc",
         label: "FAQs",
         id: "kaneai-faqs",
       },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Release Notes",
+      //   link: {
+      //     type: "doc",
+      //     id: "kaneai-release-notes",
+      //   },
+      //   items: [
+      //     {
+      //       type: "category",
+      //       collapsed: true,
+      //       label: "September, 2024",
+      //       items: ["kaneai-release-notes-0-0-2", "kaneai-release-notes-0-0-1"],
+      //     },
+      //   ],
+      // },
     ],
   ],
+
 
   RealTimeBrowserTestingSiebar: [
     {
@@ -2135,10 +2109,11 @@ module.exports = {
     [
       
       {
-        type: "category",
+      type: "category",
         collapsed: false,
         label: "Get Started",
         items: [
+          { type: "doc", id: "getting-started-with-lambdatest-automation", label: "Overview" },
           { type: "doc", id: "lambdatest-running-your-first-selenium-test", label: "Run Your First Test" },
           { type: "doc", id: "selenium-agent-skills", label: "Run Tests With Agent Skills" },
            { type: "doc", id: "inside-lambdatest-automation-platform", label: "See Your Results (Dashboard)" },
