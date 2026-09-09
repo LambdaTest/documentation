@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-testim-integration
 title: Integrate Testim with HyperExecute
-toc_max_heading_level: 2
 hide_title: false
-sidebar_label: "Testim"
+sidebar_label: Testim
 description:  Testim, a test case management tool, and HyperExecute, a cloud-based test execution platform streamline your testing process by efficiently managing test cases.
 keywords:
   - TestMu AI Hyperexecute
@@ -58,7 +57,7 @@ This document details the seamless integration between HyperExecute and Testim, 
 
 - You will need your Testim account.
 - <BrandName /> account. You can [sign up for free](https://www.testmuai.com/register/?redirectTo=https://accounts.lambdatest.com/dashboard).
-- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-running-your-first-job/#how-to-get-my-username-and-access-key)
+- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 
 ## Step 1: Setup the Grid
 

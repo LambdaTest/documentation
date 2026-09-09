@@ -26,5 +26,5 @@ For Playwright Accessibility Automation, Chrome should be used instead of `pw-ch
 
 ## Related docs
 
-- [Accessibility Automation (Overview)](/support/docs/accessibility-automation-test/)
+- [Accessibility Automation (Overview)](/support/docs/accessibility-automation/)
 - [Accessibility FAQ](/support/docs/accessibility-faq/)

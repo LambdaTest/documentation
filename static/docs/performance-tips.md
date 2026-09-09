@@ -1,4 +1,4 @@
-# How to Speed Up Your Selenium Tests on TestMu AI
+# Performance Tips
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -30,8 +30,6 @@ Console, network, and visual capabilities are `false` by default. Only set them 
 Execute multiple tests simultaneously to reduce total build time.
 
 Sequential test execution multiplies wait time across every test. Use your framework's parallel execution feature (TestNG `parallel="methods"`, pytest-xdist, Mocha `--parallel`) and set the desired concurrency in your TestMu AI plan. This is the single most impactful change for reducing build duration.
-
-If a run is slow because of front-end performance rather than the grid, you can generate Lighthouse reports to pinpoint page-load bottlenecks in the website under test.
 
 ## Use the Latest Browser Version
 
@@ -105,8 +103,6 @@ driver.quit();
 
 Run a traceroute if performance remains slow after applying the above tips.
 
-If a specific test is failing rather than merely running slow, debug your Selenium tests with extended logging before reporting a latency issue.
-
 If you still experience latency after applying these optimizations, reach out to us on our **in-app chat support** or email [automationsupport@testmuai.com](mailto:automationsupport@testmuai.com). Include a screenshot of the traceroute output:
 
 For Windows:
@@ -117,10 +113,3 @@ For Linux/Mac:
 ```
 traceroute hub.lambdatest.com
 ```
-
-## Next Steps
-
-Continue with these related guides:
-
-- [Generate Multiple Lighthouse Reports](/support/docs/generate-multiple-lighthouse-reports/)
-- [Debugging Options](/support/docs/debugging-options/)

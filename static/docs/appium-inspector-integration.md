@@ -1,8 +1,8 @@
-# How to Use Appium Inspector on TestMu AI
+# Appium Inspector Integration on TestMu AI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Appium Inspector on TestMu AI is a GUI tool for inspecting mobile app elements on real Android and iOS devices. Upload your app to get a unique app URL, set desired capabilities, then interact with elements and run Appium commands.
+This post will help you in integrating **Appium Inspector** to interact with **TestMu AI's Real Devices**.
 
 ## Introduction
 

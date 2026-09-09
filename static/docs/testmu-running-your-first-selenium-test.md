@@ -1,8 +1,8 @@
-# How to Run Your First Selenium Test on TestMu AI
+# Run Your First Selenium Test
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-This guide walks you through running a sample Selenium test on the TestMu AI cloud grid using Python and the pytest framework. Clone a sample project, set your credentials, and execute a test.
+This guide walks you through running a sample Selenium test on the TestMu AI cloud grid using Java and TestNG. Clone a sample project, set your credentials, and execute a test.
 
 **Sample repo**
 All the code used in this guide is available in the sample repository. Clone it to get started.
@@ -15,26 +15,19 @@ Make sure you have the following set up before you start.
 
 1. [Create a TestMu AI account](https://www.testmuai.com/register/) if you don't have one.
 2. Get your **Username** and **Access Key** from the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
-3. Install [Python](https://www.python.org/downloads/) 3.7 or later (`pip` is included).
+3. Install [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/downloads/) 11 or later.
+4. Install [Maven](https://maven.apache.org/).
 
 ## Step 1: Clone the Sample Project
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
 ```bash
-git clone https://github.com/LambdaTest/pytest-selenium-sample
-cd pytest-selenium-sample
+git clone https://github.com/LambdaTest/java-testng-selenium
+cd java-testng-selenium
 ```
 
-## Step 2: Install Dependencies
-
-Install the project's Python dependencies, including Selenium, pytest, and pytest-xdist (for parallel runs), from `requirements.txt`.
-
-```bash
-pip install -r requirements.txt
-```
-
-## Step 3: Set Your Credentials
+## Step 2: Set Your Credentials
 
 Add your TestMu AI credentials as environment variables so the test can authenticate with the grid.
 
@@ -43,49 +36,43 @@ Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-  {`$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-$env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-## Step 4: Configure Your Test Capabilities
+## Step 3: Configure Your Test Capabilities
 
 Define which browser, version, and OS your test runs on.
 
-The sample keeps its capabilities in `conftest.py`, inside the `driver` fixture that starts the browser session. Here is the configuration from the sample:
+The sample project includes a preconfigured capabilities object that tells the grid which browser and OS to use. Here is an example:
 
-```python title="conftest.py"
-chrome_options = webdriver.ChromeOptions()
-option = {
-"platform": "Windows 10",
-"version": "latest",
-"name": test_name,
-"Build": build,
-"video": True,
-"visual": True,
-"network": True,
-"console": True
-}
-chrome_options.set_capability("LT:Options", option)
-browser = webdriver.Remote(
-command_executor=selenium_endpoint,
-options=chrome_options
-)
+```java
+ChromeOptions browserOptions = new ChromeOptions();
+browserOptions.setPlatformName("Windows 10");
+browserOptions.setBrowserVersion("latest");
+
+HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+ltOptions.put("build", "My First Test");
+ltOptions.put("name", "Sample Test - Single");
+ltOptions.put("w3c", true);
+
+browserOptions.setCapability("LT:Options", ltOptions);
 ```
-
-Within the fixture, `selenium_endpoint`, `test_name`, and `build` are derived from your credentials, the test parameters, and the `BUILD` environment variable.
 
 You can customize these values to test on any browser, version, or OS. Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator/) to auto-generate the capabilities code for your target configuration.
 
-For the full list of supported capabilities, see [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
+For the full list of supported capabilities, see [Desired Capabilities in Selenium](/support/docs/selenium-automation-capabilities/).
 
-## Step 5: Run the Test
+## Step 4: Run the Test
 
-Trigger the test from your terminal. Run a single test, or run in parallel with `pytest-xdist`:
+Trigger the test from your terminal using Maven.
 
-  {`pytest -s tests/lt_sample_todo.py`}
+Execute a single test or run multiple tests in parallel:
 
-  {`pytest -s -n=2 tests/lt_sample_todo.py`}
+  {`mvn test -D suite=single.xml`}
 
-## Step 6: View Your Results
+  {`mvn test -D suite=parallel.xml`}
+
+## Step 5: View Your Results
 
 Check the Automation Dashboard to see exactly what happened during your test.
 
@@ -99,9 +86,10 @@ Visit the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redir
 
 ## Next Steps
 
-Continue with these related guides:
+Now that your first test is running, explore what else you can do.
 
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
-- [Debugging Options](/support/docs/debugging-options/)
-- [Filter Your Selenium Tests](/support/docs/filter-your-selenium-tests/)
-- [Selenium Agent Skills](/support/docs/selenium-agent-skills/)
+- [Explore the dashboard](/support/docs/inside-testmu-platform/) - understand timelines, analytics, and automation logs
+- [Configure capabilities](/support/docs/selenium-automation-capabilities/) - set browsers, versions, OS, and advanced options
+- [Pick your language](/support/docs/selenium-supported-languages-and-frameworks/) - find framework-specific guides for Java, Python, JavaScript, C#, and more
+- [Test locally hosted apps](/support/docs/testing-locally-hosted-pages/) - use TestMu AI Tunnel to test staging or internal sites
+- [Debug your tests](/support/docs/debugging-options/) - enable extended logging and diagnostics

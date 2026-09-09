@@ -1,10 +1,6 @@
-# How to Test Flutter Apps With Appium on TestMu AI
+# Appium Flutter Integration Driver Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Testing Flutter apps on TestMu AI with Appium Flutter Integration Driver automates Flutter UI validation on real Android and iOS devices in the cloud, letting you write tests in multiple languages, switch contexts seamlessly, and drive gestures beyond native limits.
-
-**Supported on:** Real &amp; Virtual devices
 
 TestMu AI supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 
@@ -81,10 +77,10 @@ await tester.pumpWidget(const app.MyApp());
 ## Uploading Your Flutter App to TestMu AI
 
 - For detailed instructions on how to upload your application to TestMu AI, please refer to our comprehensive guide.
-- Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-via-the-rest-api) documentation to learn more.
+- Visit the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-your-application) documentation to learn more.
 - Use the returned **App ID** from above step in your automation scripts.
 
-## Sample Desired Capabilities Real &amp; Virtual
+## Sample Desired Capabilities
 
 {`desired_caps = {
     "deviceName":"Galaxy S20",

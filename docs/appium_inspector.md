@@ -1,8 +1,8 @@
 ﻿---
 id: appium-inspector
-title: How to Use Appium Inspector on TestMu AI
+title: Appium Inspector Integration on TestMu AI
 sidebar_label: Appium Inspector
-description: Integrate Appium Inspector with TestMu AI to inspect app elements on real Android and iOS devices using a unique app URL and desired capabilities.
+description: This documentation will help you integrate Appium Inspector with TestMu AI to interact with TestMu AI's Real Devices. With TestMu AI mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.
 keywords:
   - mobile app testing
   - realtime mobile testing on real devices
@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Use Appium Inspector on TestMu AI",
+          "name": "Appium Inspector Integration on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-inspector-integration/`
         }]
       })
@@ -49,7 +49,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-Appium Inspector on TestMu AI is a GUI tool for inspecting mobile app elements on real Android and iOS devices. Upload your app to get a unique app URL, set desired capabilities, then interact with elements and run Appium commands.
+This post will help you in integrating **Appium Inspector** to interact with **<BrandName />'s Real Devices**.
 
 ## Introduction
 
@@ -203,7 +203,7 @@ We have now successfully attached to the session and can see & perform operation
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Use Appium Inspector on TestMu AI
+      Appium Inspector 
       </span>
     </li>
   </ul>

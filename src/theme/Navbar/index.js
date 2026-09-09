@@ -44,11 +44,10 @@ function applyThemeChoice(choice) {
 
 const NAV_LINKS = [
   { to: '/support/docs/', label: 'Home', icon: HomeIcon },
-  { to: '/support/docs/testmu-running-your-first-selenium-test/', label: 'Docs', icon: DocsIcon },
-  { to: '/support/api-doc/', label: 'APIs Reference', icon: ApiIcon },
+  { to: '/support/docs/getting-started-with-testmu-automation/', label: 'Docs', icon: DocsIcon },
   { to: '/support/docs/agent-skills/', label: 'Skills', icon: SkillsIcon },
-  { to: '/support/docs/testmu-mcp-server/', label: 'MCP', icon: McpIcon },
-  { to: '/support/faq/', label: 'FAQs', icon: FaqIcon },
+  { to: '/support/api-doc/', label: 'API Reference', icon: ApiIcon },
+  { to: '/support/faq/', label: 'FAQ', icon: FaqIcon },
   { to: 'https://changelog.testmuai.com/', label: 'Changelog', icon: ChangelogIcon, external: true },
 ];
 
@@ -96,17 +95,6 @@ function SkillsIcon() {
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12 2l2.09 5.26L19.5 9l-5.41 1.74L12 16l-2.09-5.26L4.5 9l5.41-1.74L12 2z" />
       <path d="M18.5 14l.95 2.55L22 17.5l-2.55.95L18.5 21l-.95-2.55L15 17.5l2.55-.95L18.5 14z" />
-    </svg>
-  );
-}
-
-function McpIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="8" rx="2" />
-      <rect x="3" y="13" width="18" height="8" rx="2" />
-      <line x1="7" y1="7" x2="7.01" y2="7" />
-      <line x1="7" y1="17" x2="7.01" y2="17" />
     </svg>
   );
 }
@@ -169,9 +157,6 @@ function isActiveLink(pathname, to, label) {
   const normalizedTo = to.toLowerCase();
 
   const AGENT_SKILLS_PATHS = ['/support/docs/agent-skills/', '/support/docs/agent-skills'];
-  const MCP_SLUGS = ['testmu-mcp-server', 'hyperexecute-mcp-server', 'automation-mcp-server', 'native-app-automation-mcp', 'smartui-mcp-server', 'accessibility-mcp-server', 'test-manager-mcp-server'];
-  const isMcpPath = MCP_SLUGS.some((s) => normalizedPath === `/support/docs/${s}/` || normalizedPath === `/support/docs/${s}`);
-  const isSkillsOrMcp = AGENT_SKILLS_PATHS.includes(normalizedPath) || isMcpPath;
   // Home link (/support/docs/) - only match exact /support/docs/ or /support/docs
   if (label === 'Home') {
     return normalizedPath === '/support/docs/' || normalizedPath === '/support/docs';
@@ -180,16 +165,12 @@ function isActiveLink(pathname, to, label) {
   if (label === 'Skills') {
     return AGENT_SKILLS_PATHS.includes(normalizedPath);
   }
-  // MCP link - match any MCP server doc
-  if (label === 'MCP') {
-    return isMcpPath;
-  }
-  // Docs link - match any /support/docs/* path EXCEPT /support/docs/, the Skills doc, and MCP docs
+  // Docs link - match any /support/docs/* path EXCEPT /support/docs/ and the Skills doc
   if (label === 'Docs') {
     return normalizedPath.startsWith('/support/docs/') &&
            normalizedPath !== '/support/docs/' &&
            normalizedPath !== '/support/docs' &&
-           !isSkillsOrMcp;
+           !AGENT_SKILLS_PATHS.includes(normalizedPath);
   }
   // API Reference should match any /support/api-doc/* path
   if (normalizedTo.startsWith('/support/api-doc/')) return normalizedPath.startsWith('/support/api-doc/');

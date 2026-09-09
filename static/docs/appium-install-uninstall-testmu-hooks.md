@@ -8,7 +8,6 @@ TestMu AI now allows you to install and uninstall apps in the middle of your aut
 
 ## Installing and Uninstalling Apps
 
-
 TestMu AI enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
 
 ### Install App
@@ -54,12 +53,6 @@ Testing app upgrades is important because users often update to the latest versi
 
 **Python example:**
 
-
-
-
-
-
-
 ```python
 # Payload required to retain app data while uninstalling it
 data = {
@@ -77,18 +70,9 @@ data = {
 driver.execute_script("lambda-install-app", data)
 ```
 
-
-
-
-
-
-
-
-
 ```python
 # Send the current app in background
 driver.background_app(-1)
-
 
 # Payload required while installing the new upgrade
 data = {
@@ -106,13 +90,6 @@ data = {
 
 ```
 
-
-
-
-
-
-
-
 ## Validation Errors
 
 You might encounter some errors while using these features. The following are some common validation errors and their meaning:
@@ -126,9 +103,6 @@ You might encounter some errors while using these features. The following are so
 | `No app package or app bundle id has been provided for lambda-uninstall-app. Please check and try again.` | The uninstall command is missing the app package or bundle ID. |
 | `Failed to uninstall the app using lambda-uninstall-app.`| Uninstallation failed; app may not be installed or wrong ID.|
 
-
-
 Multiple errors may occur based on the scenario. Understanding these errors will help you identify and resolve issues more efficiently, ensuring smooth test execution. Once the code snippets are added, the tests can be executed and will appear on the[TestMu AI App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
 
 > **Note:** If the user had enabled any of the following capabilities in the previously installed app, they will remain available and functional in the upgraded app as well : `EnableScreenshotUnblock`,`EnableImageInjection`,`EnableVideoInjection`,`Network`,`AppProfiling`,`EnableWebContentsDebugging`,`EnableBiometricInjection`.This ensures that key testing features continue to work seamlessly after the app is updated, without requiring additional configuration.

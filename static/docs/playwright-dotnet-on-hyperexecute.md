@@ -34,14 +34,9 @@ Download or Clone the code sample for the JUnit from the TestMu AI GitHub reposi
 
  View on GitHub
 
-
-
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
 
 By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
-
-
-
 
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 Capabilities Generator.
 
@@ -67,33 +62,11 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-
-
-
-
-
-
-
-
-
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
-
-
-
-
-
-
-
-
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-
-
-
-
 
 ### Step 3: Configure YAML in your Test Suite
 
@@ -124,7 +97,6 @@ autosplit: true
 retryOnFailure: true
 
 maxRetries: 5
-
 
 env:
 NUGET_PACKAGES: 'C:\nuget_global_cache'
@@ -167,28 +139,15 @@ Run the below command in your terminal at the root folder of the project:
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-
-
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
-
-
-
-
-
-
-
 
 ### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status.
 
-
-
 ### Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
-
-
 
 ## 2. Testing Using Gitpod
 
@@ -198,26 +157,15 @@ Follow the below steps to run Test using Gitpod:
 
 **Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page. This button is configured to redirect you to the Gitpod platform where you will be able to execute our sample repository.
 
-
-
 **Step 2:** Login with TestMu AI credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the HyperExecute Dashboard.
-
-
 
 **Step 3:** Choose your preferred editor (we recommend VS Code Editor)
 
-
-
 **Step 4:**  As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated.
-
-
 
 **Step 5:**  Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
 
-
-
 You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
-
 
 ## Navigation in Automation Dashboard
 
@@ -225,19 +173,12 @@ Every test run on the HyperExecute has a unique *jobId* associated with it. Each
 
 You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
 
-
-
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
-
-
 
 > For any query or doubt, please feel free to contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.
 Happy testing!
 
-
-
 ## Using the Playwright Agent Skill with TestMu AI
-
 
 The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/playwright-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
@@ -260,9 +201,7 @@ It provides structured guidance for:
 * Debugging patterns
 * CI/CD integration
 
-
 ### Installing Playwright Agent Skill
-
 
 Install a Playwright Agent Skill using the command below:
 

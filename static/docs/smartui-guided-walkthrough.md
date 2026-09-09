@@ -7,8 +7,6 @@ This page gives you a guided walkthrough of all the things on the HyperExecute D
 ## Projects Page
 All the tests on SmartUI gets executed as a Project. All the Projects can be found on our Projects page. Each Project has a Approver, Tags, Platform, and a Sort By section followed by the details of the number of builds and who initiated the Project.
 
-
-
 ## Projects Dashboard Details
 The SmartUI dashboard presents a comparison between the baseline and the captured screenshots for visual regression testing. It provides essential insights to detect any UI anomalies.
 

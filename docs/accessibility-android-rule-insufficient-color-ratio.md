@@ -1,0 +1,43 @@
+---
+id: accessibility-android-rule-insufficient-color-ratio
+title: Insufficient Color Ratio
+sidebar_label: Insufficient Color Ratio
+description: Rule-level Accessibility guidance for Insufficient Color Ratio on Android.
+slug: accessibility-android-rule-insufficient-color-ratio/
+---
+
+# Insufficient Color Ratio
+
+Text and meaningful visual elements in Android apps must maintain sufficient contrast against their backgrounds for readability.
+
+:::info WCAG Reference
+**Maps to:** WCAG 1.4.3 Contrast (Minimum) | **Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** AA | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
+:::
+
+## What this rule checks
+
+The scanner measures the contrast ratio between foreground text or icon colors and their background, flagging pairs that fall below the 4.5:1 ratio for normal text or 3:1 for large text.
+
+## Why it matters
+
+Users with low vision, color-vision deficiencies, or those using devices in bright sunlight depend on adequate contrast to read text and distinguish UI elements. Low contrast makes content illegible.
+
+## Common failure patterns
+
+- light gray text on white backgrounds in settings or list items
+- placeholder text in input fields with very low contrast
+- status indicators using pale colors on light backgrounds
+- disabled-state styling that falls below minimum ratios while the element remains interactive
+
+## Remediation guidance
+
+- verify text contrast against backgrounds using a color contrast analyzer
+- use Material Design color tokens that are pre-validated for contrast compliance
+- ensure all text states (enabled, disabled, error, hint) meet minimum ratios
+- test on multiple devices and brightness levels to catch theme-specific failures
+
+## Related docs
+
+- [Android Rule Repository](/support/docs/accessibility-android-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

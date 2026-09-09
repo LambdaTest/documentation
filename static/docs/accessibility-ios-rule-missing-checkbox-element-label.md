@@ -1,0 +1,35 @@
+# Missing Checkbox Element Label
+
+> For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
+
+Checkbox-style controls in iOS apps must have an accessibility label that describes the option they control.
+
+**WCAG Reference**
+**Maps to:** WCAG 4.1.2 Name, Role, Value | **Applies to:** WCAG 2.0, WCAG 2.1, WCAG 2.2
+**Introduced in:** WCAG 2.0 | **Level:** A | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html)
+
+## What this rule checks
+
+The scanner flags toggle-like or checkbox-pattern elements that have no accessibility label, leaving VoiceOver to announce only the state (selected/not selected) without context.
+
+## Why it matters
+
+Hearing "not selected" without knowing what option is being referred to is useless. VoiceOver users need both the label and the state to understand the setting and decide whether to change it.
+
+## Common failure patterns
+
+- custom checkbox views built with images and tap gestures but no accessibility label
+- settings toggles where the label is a separate `UILabel` not programmatically associated
+- list cells with selection indicators but no per-cell accessibility description
+
+## Remediation guidance
+
+- set `accessibilityLabel` on the checkbox element to describe the option
+- group the checkbox and its label into a single accessibility element using `shouldGroupAccessibilityChildren`
+- in SwiftUI, use `.accessibilityLabel("Option description")` on toggle or checkbox views
+- test with VoiceOver to confirm the full announcement includes both the label and the state
+
+## Related docs
+
+- [iOS Rule Repository](/support/docs/accessibility-ios-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

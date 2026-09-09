@@ -4,9 +4,6 @@
 
 This document provides a comprehensive list of all the supported versions of programming languages across different operating systems on our platform.
 
-
-
-
 | Supported Languages | Version |
 |---------------------|---------|
 |Java| `1.8.0` **(default)**, `8`, `9`, `11`, `13`, `15`, `16`, `17`, `18`, `19`, `21`|
@@ -14,10 +11,6 @@ This document provides a comprehensive list of all the supported versions of pro
 |DotNet| `5`, `6.0.425` **(default)** , `7`, `8`|
 |Python | `3.8.10` **(default)** , `3.9`, `3.10`, `3.11`|
 |NodeJs | `12`, `13`, `14`, `15`, `16`, `17`, `18.20.0` **(default)**, `19`, `20` |
-
-
-
-
 
             | Supported Languages | Version |
             |---------------------|---------|
@@ -28,7 +21,6 @@ This document provides a comprehensive list of all the supported versions of pro
             |NodeJs | `12`, `13`, `14`, `15`, `16`, `17`, `18`, `18.17.1` **(default)**, `19`, `20` |
             |Katalon| `9.0.0`, `9.1.0`, `9.2.0`, `9.3.1`|
 
-
             | Supported Languages | Version |
             |---------------------|---------|
             |Java|  `1.8.0` **(default)**, `8`, `9`, `11`, `13`, `15`, `16`, `17`, `18`, `19`, `21`|
@@ -37,12 +29,6 @@ This document provides a comprehensive list of all the supported versions of pro
             |Python |`3.8`, `3.9`, `3.10`, `3.11`, `3.11.1` **(default)** |
             |NodeJs | `12`, `13`, `14`, `15`, `16`, `17`, `18`, `18.17.1` **(default)**, `19`, `20` |
 
-
-
-
-
-
-
             | Supported Languages | Version |
             |---------------------|---------|
             |Java| `8` **(default)**, `9`, `11`, `13`, `15`, `16`, `17`, `18`, `19`, `21`|
@@ -50,7 +36,6 @@ This document provides a comprehensive list of all the supported versions of pro
             |DotNet| `5`, `5.0.407` **(default)**, `6`, `7`, `8`|
             |Python |`3.8`, `3.9`, `3.10`, `3.10.11` **(default)**, `3.11` |
             |NodeJs | `12`, `13`, `14`, `15`, `16`, `17`, `18`, `18.17.1` **(default)**, `19`, `20` |
-
 
             | Supported Languages | Version |
             |---------------------|---------|

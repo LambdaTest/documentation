@@ -4,7 +4,6 @@
 
 This guide explains how to effectively merge branches in SmartUI for managing your visual regression testing workflow.
 
-
 ## Branch-Level Merging
 
 Branch-level merging allows you to merge visual regression test results from one branch to another, maintaining a clear history of changes and approvals.
@@ -87,17 +86,11 @@ npx smartui merge branch --source release/v1.0.0 --target main
 
 ## Best Practices
 
-
-
-
 **Merge Planning**
 
 - Plan merges in advance
    - Document merge strategies
    - Establish approval processes
-
-
-
 
 **Branch Management**
 
@@ -105,22 +98,13 @@ npx smartui merge branch --source release/v1.0.0 --target main
    - Clean up merged branches
    - Maintain clear branch naming
 
-
-
-
 **Approval Process**
 
 - Establish clear approval criteria
    - Document approval decisions
    - Maintain audit trail
 
-
-
-
 ## Troubleshooting
-
-
-
 
 Merge Conflicts
 
@@ -128,18 +112,12 @@ Merge Conflicts
    - Verify branch status
    - Review merge history
 
-
-
-
 Status Issues
 
 - Verify build status
    - Check permissions
    - Review approval history
 If you encounter any issues with branch merging in SmartUI, please contact our support team at support@testmuai.com.
-
-
-
 
 ## Pull Request Workflow with Branch Merging
 
@@ -252,6 +230,5 @@ npx smartui merge branch --source ${{ github.event.pull_request.head.ref }} --ta
    - Clean up old builds
    - Update documentation
    - Check merge naming in SmartUI dashboard
-
 
 The branch merging process works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.

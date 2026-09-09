@@ -1,3 +1,5 @@
+# Unleash the Power of JMeter Performance Testing with HyperExecute
+
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## Prerequisites
@@ -13,16 +15,11 @@ Download or Clone the code sample for the JMeter Performance Testing from the Te
 
  View on GitHub
 
-
 ## Step 1: Setup your JMeter Project
 
 - Go to the [HyperExecute Project's Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute/projects) and click on the **New Project** button.
 - Browse and Upload your JMeter test files to create a new performance test project.
 - Click on the **Save** button
-
-
-
-
 
 ## Step 2: Execute your Test Plans
 - Select your desired **.jmx** file and click on the **Run** button.
@@ -36,7 +33,6 @@ Download or Clone the code sample for the JMeter Performance Testing from the Te
   - **Machine count :**  Specify the number of machines (or nodes) to use for parallel test execution. This parameter is essential for scaling test workloads or reducing execution time.
   - **Java Version :** Choose the Java runtime to execute the tests with. Java 11 is the default; Java 25 is also available.
 
-
 **Supported Regions :** HyperExecute supports the following regions for performance testing
 - West US 2 (Moses Lake, Washington)
 - East US (Richmond, Virginia) (**default**)
@@ -44,7 +40,6 @@ Download or Clone the code sample for the JMeter Performance Testing from the Te
 - Southeast Asia (Singapore)
 - Brazil South (São Paulo State, Brazil)
 - Mexico Central (Querétaro State, Mexico)
-
 
 ### User Properties
 
@@ -86,17 +81,11 @@ Custom variables can be used for:
 - Timer delays
 - Assertions
 
-
 Custom variable overrides work only with JMeter properties defined using `${__P(name,default)}`. Variables defined using `${var}` with a User Defined Variables element cannot be overridden using `jmeter.variables`.
 
 For boolean values, custom variable substitution works when the JMX field uses ``. It does not work correctly when the field uses ``.
 
-
 - Click on the **Run Test** button.
-
-
-
-
 
 ## Step 3: Analyze Your Project Performance
 
@@ -112,32 +101,19 @@ For boolean values, custom variable substitution works when the JMX field uses `
   - **Load** and **Response Time** graph.
   - Additional details like **regions** and test duration.
 
-
-
 ### Timeline Report
-
-
 
 ### Request Stats
 
 You can analyze the number of requests sent on that particular time.
 
-
-
 ### Errors
 - Here you can check the Error Code type, Error Count, percentage of that error, and the percent of error in all the samples.
-
-
 
 ### Logs
 - You can check the logs of your Jobs executed.
 
-
-
 ## Overriding and Default Values
-
-
-
 
   Scenario 1: Overriding Values via Projects portal
 
@@ -166,8 +142,6 @@ You can analyze the number of requests sent on that particular time.
 
   This approach ensures smooth execution of performance tests and provides precise control over resource utilization, enabling you to simulate real-world scenarios effectively.
 
-
-
   Scenario 2: Default Parameters
 
   In this scenario, you proceed without overriding the default values in the HyperExecute Projects portal. The configuration parameters from your JMeter file and project setup are applied as-is.
@@ -193,9 +167,7 @@ You can analyze the number of requests sent on that particular time.
 
   This behavior highlights how HyperExecute ensures flexibility in test execution while allowing for configuration control based on project requirements.
 
-
 ## Frequently Asked Questions
-
 
 ### Why is my JMeter job failing before reaching 2000 users?
 

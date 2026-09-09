@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-yaml-parameters
 title: HyperExecute YAML
-toc_max_heading_level: 2
 hide_title: false
-sidebar_label: "YAML Parameters"
+sidebar_label: HyperExecute YAML
 description: This document list enumerates the diverse configuration options supported by HyperExecute YAML, providing you with the flexibility to tailor test execution according to the specific requirements of your project.
 keywords:
   - TestMu AI Hyperexecute
@@ -73,7 +72,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 
 | Key | Type | Description|
 |-----|------|------------|
-| [parallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#parallelism) | Integer | Parallelism defines number VMs to be spawned in case of [`hybrid`](/support/docs/hyperexecute-test-splitting-and-multiplexing/#hybrid-strategy-in-hyperexecute) mode, if the user is not defining the parallelism then he must define platform specific parallelism (win , mac and linux). If both are defined the preference will be given to platform base parallelism |
+| [parallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#parallelism) | Integer | Parallelism defines number VMs to be spawned in case of [`hybrid`](/support/docs/hyperexecute-hybrid-strategy/) mode, if the user is not defining the parallelism then he must define platform specific parallelism (win , mac and linux). If both are defined the preference will be given to platform base parallelism |
 | [macParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#macparallelism) | Integer | It defines number of mac VM to be spawned for job. |
 | [winParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#winparallelism) | Integer | It defines number of win VM to be spawned for job. |
 | [linuxParallelism](/support/docs/deep-dive-into-hyperexecute-yaml/#linuxparallelism) | Integer | It defines number of linux VM to be spawned for job. |

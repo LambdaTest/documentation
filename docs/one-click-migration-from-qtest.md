@@ -2,7 +2,7 @@
 id: one-click-migration-from-qtest
 title: One Click Migration from qTest
 hide_title: true
-sidebar_label: Import from qTest
+sidebar_label: One Click Migration from qTest
 description: Migrate your test cases, folder structures, custom fields, attachments, and linked Jira requirements from qTest to TestMu AI Test Manager in a single click.
 keywords:
   - qtest

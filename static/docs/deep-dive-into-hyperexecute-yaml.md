@@ -7,7 +7,7 @@ This document contains detailed explanations for all YAML flags, providing an in
 ## Mandatory Parameters
 
 ### `version`
-The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config).
+The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/hyperexecute-yaml-version0.2/).
 ```yaml
 version: 0.1
 ```
@@ -20,7 +20,7 @@ In this flag, you will define your required Operating System on which you want t
 runson: linux # mac, mac13, win, win11
 ```
 
-If you want to run a multi OS job, you can use [matrix method](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) as shown below
+If you want to run a multi OS job, you can use [matrix method](/support/docs/hyperexecute-matrix-multiplexing-strategy/) as shown below
 
 ```yaml
 runson: ${matrix.os}
@@ -42,7 +42,7 @@ pre:
 ## AutoSplit Mode Parameters
 
 ### `autosplit`
-Auto-Split mode automatically splits your [`scenarios`](/support/docs/hyperexecute-job-reports/#hyperexecute-status) among the concurrent number of [`tasks`](/support/docs/hyperexecute-job-reports/#hyperexecute-status) and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
+Auto-Split mode automatically splits your [`scenarios`](/support/docs/hyperexecute-status/#3-stage-level-status) among the concurrent number of [`tasks`](/support/docs/hyperexecute-status/#2-task-level-status) and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
 
 For instance, if you have a concurrency of 10 and you want to run 50 tests in total, AutoSplit mode will distribute these 50 tests on 10 VMs in the most efficient manner possible to reduce your overall job execution time.
 
@@ -52,10 +52,10 @@ For instance, if you have a concurrency of 10 and you want to run 50 tests in to
 autosplit: true
 ```
 
-> 📕 Take a closer look at the [AutoSplit mode](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy).
+> 📕 Take a closer look at the [AutoSplit mode](/support/docs/hyperexecute-auto-split-strategy/).
 
 ### `concurrency`
-This indicates the total number of concurrent sessions that can run in parallel for processing your test-cases. Your job will have as many virtual machines [(`tasks`)](/support/docs/hyperexecute-job-reports/#hyperexecute-status) as you have defined for this flag.
+This indicates the total number of concurrent sessions that can run in parallel for processing your test-cases. Your job will have as many virtual machines [(`tasks`)](/support/docs/hyperexecute-status/#2-task-level-status) as you have defined for this flag.
 
 > if you are using the [AutoSplit strategy](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) then it is mandatory for you to define the concurrency.
 
@@ -124,7 +124,7 @@ mode: remote
 
 The `remote` discovery mode addresses the limitations of `local` modes. Instead of running test discovery on your local machine (local), this mode centralizes the process by using a dedicated remote Virtual Machines.
 
-This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy), which allows you to discover and manage tests across different configurations more effectively.
+This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](/support/docs/hyperexecute-matrix-multiplexing-strategy/), which allows you to discover and manage tests across different configurations more effectively.
 
 > **NOTE :** [`type`](/support/docs/deep-dive-into-hyperexecute-yaml/#type) is not required with remote discovery.
 
@@ -160,7 +160,7 @@ testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="
 ## Matrix Mode Parameters
 
 ### `matrix`
-The [matrix mode](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
+The [matrix mode](/support/docs/hyperexecute-matrix-multiplexing-strategy/) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
 
 ```yaml
 runson: ${matrix.os}
@@ -173,7 +173,7 @@ files: ["@File1","@File2"]
 ```
 
 ### `exclusionMatrix`
-The [exclusion matrix](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) allows you to omit specific combinations of parameters from being tested. For instance, if Safari on Windows is not a valid combination, you can exclude it using the exclusionMatrix parameter, ensuring that invalid or irrelevant test combinations are skipped.
+The [exclusion matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/#exclusion-in-matrix-strategy) allows you to omit specific combinations of parameters from being tested. For instance, if Safari on Windows is not a valid combination, you can exclude it using the exclusionMatrix parameter, ensuring that invalid or irrelevant test combinations are skipped.
 
 ```yaml
 #runson defines the OS of your test execution node.
@@ -223,7 +223,7 @@ testSuites: - mvn test -Dtest=$files
 ## Hybrid Mode Parameters
 
 ### `parallelism`
-`parallelism` defines the number of virtual machines [('tasks')](/support/docs/hyperexecute-job-reports/#hyperexecute-status) to be spawned in the case of hybrid mode. If you are not defining the parallelism, then you must define operating system-specific parallelism (win, mac, and  Linux). If both are defined, then preference will be given to OS-based parallelism.
+`parallelism` defines the number of virtual machines [('tasks')](/support/docs/hyperexecute-status/#2-task-level-status) to be spawned in the case of hybrid mode. If you are not defining the parallelism, then you must define operating system-specific parallelism (win, mac, and  Linux). If both are defined, then preference will be given to OS-based parallelism.
 
 ```yaml
 runson: ${matrix.os}
@@ -275,7 +275,7 @@ testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="
 
 #### Platform specific `testRunnerCommand`
 
-In [hybrid mode](/support/docs/hyperexecute-test-splitting-and-multiplexing/#hybrid-strategy-in-hyperexecute), you can run your tests on multiple operating system using the same yaml. You can provide different `testRunnerCommand` for macOS, linux and windows.
+In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple operating system using the same yaml. You can provide different `testRunnerCommand` for macOS, linux and windows.
 
 If any of the specific operating system `testRunnerCommand` is not present it will consider the `testRunnerCommand` as the default value.
 
@@ -311,7 +311,7 @@ cacheDirectories:
 - .m2
 ```
 
-In [version 0.2 YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config), the support for caching is by default, you don't have to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster.
+In [version 0.2 YAML](/support/docs/hyperexecute-yaml-version0.2/), the support for caching is by default, you don't have to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster.
 
 If you add the `cacheDirectories` and `cacheKey` keys in your YAML file, then the default caching gets disabled and preference is given your specified cache.
 
@@ -358,7 +358,7 @@ The `runtime` flag is used to:
 
 Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk**, **katalon** and **python**
 
-> 📕 Check the [supported versions](/support/docs/getting-started-with-hyperexecute/) of all the languages along with the respective operating system.
+> 📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
 
 ```yaml
 runtime:
@@ -465,7 +465,7 @@ type: html
 frameworkName: testng
 ```
 
-Set `defaultReport` as false in the [`framework`](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) if you are using [`YAML version 0.2`](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) and you want to generate a report using `partialReports` as shown below.
+Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
 ```yaml
 framework:
 name: maven/testng
@@ -493,8 +493,8 @@ plugin = {
 }
 ```
 
-- 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-job-reports/)
-- Understand how you can [email the generated report](/support/docs/hyperexecute-artifacts/#receive-job-reports-and-artifacts-via-email)
+- 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)
+- Understand how you can [email the generated report](/support/docs/hyperexecute-email-reports/)
 - How you can generate [different types of report](/support/docs/hyperexecute-job-reports/) based on your requirements
 
 ### `errorCategorizedOnFailureOnly`
@@ -516,7 +516,7 @@ errorCategorizedReport:
 enabled: true
 ```
 
-> Refer to the [Error Categorized Report documentation](/support/docs/hyperexecute-job-reports/#error-categorization-report) for detailed instructions on generating this RCA report.
+> Refer to the [Error Categorized Report documentation](/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
 
 ### `jobLabel`
 The `jobLabel` YAML key is used to add tags or labels to jobs. This allows you to search your jobs using the labels or tags assigned to them.
@@ -622,7 +622,7 @@ commands:
 runson: linux
 ```
 
->📘 `globalPost` can also download every task's artifacts onto a VM, run custom commands against them, upload the processed output to the dashboard, and email the result. See [Download and Process Job Artifacts in Global Post](/support/docs/hyperexecute-artifacts/#download-and-process-job-artifacts-in-global-post).
+>📘 `globalPost` can also download every task's artifacts onto a VM, run custom commands against them, upload the processed output to the dashboard, and email the result. See [Download and Process Job Artifacts in Global Post](/support/docs/hyperexecute-global-post-artifacts/).
 
 #### Parameters
 | Parameter | Type | Description |
@@ -686,7 +686,7 @@ level: scenario
 > **NOTE :** You can specify `failFast` at either the test level or scenario level, depending on your requirements. Both configurations will work, but can lead to unexpected results, only one should be used at a time.
 
 ### `base`
-This feature allows you to use one YAML as a base for another YAML file. By inheriting the configurations of the base (or parent) YAML file, you don't need to specify those fields in the inheriting (child) file again. [Learn more](/support/docs/deep-dive-into-hyperexecute-yaml/#inherit-your-yaml-configurations).
+This feature allows you to use one YAML as a base for another YAML file. By inheriting the configurations of the base (or parent) YAML file, you don't need to specify those fields in the inheriting (child) file again. [Learn more](/support/docs/hyperexecute-inherit-config/).
 
 ```yaml
 base:
@@ -805,7 +805,7 @@ This flag is used to set the Name of your Projects which would later allow you t
 
 **note**
 - Once you have created a project, you can pass in your project ID and project name to trigger your job on the same project.
-- If you are using   [**Project Level Secrets**](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#managing-project-level-secrets), you must include the id field in your project configuration.
+- If you are using   [**Project Level Secrets**](/support/docs/hyperexecute-how-to-manage-project-level-secrets/), you must include the id field in your project configuration.
 
 ```yaml
 # 'id' is mandatory; 'name' is optional. You can pass both or just the 'id'.
@@ -957,7 +957,7 @@ cypress: true
 ```
 
 ### `cypressOps`
-This parameter is used to pass cypress specific options from the CLI. [Learn more](/support/docs/cypress-integration-with-hyperexecute/#run-a-cypress-test-in-hyperexecute)
+This parameter is used to pass cypress specific options from the CLI. [Learn more](/support/docs/cypressv10-on-hyperexecute/)
 
 Additional options include:
 - **Dedicated Proxy**: This is a boolean parameter to be passed in cypressOps. When  enabled user’s traffic will be passed to a dedicated proxy server, this feature has to be enabled from customer support team.
@@ -1518,473 +1518,3 @@ syncStart: true
   - If some VMs are still pending after 15 minutes → the job proceeds with the allocated VMs.
 
 > This feature is supported only in [`autosplit`](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) and [`matrix`](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) mode and not in hybrid mode
-
-## HyperExecute YAML generator: create your config file
-
-You can also generate the HyperExecute YAML directly from the HyperExecute Portal. To accomplish this, follow the below mentioned steps:
-
-**Step 1:**  Go to [HyperExecute dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute), click on the **Help Center**  and select **Generate YAML** from the dropdown.
-
-**Step 2:** Select your preferred test automation framework.
-
-**Step 3:** You will be redirected to the configuring section, where you can configure the HyperExecute YAML parameters. Click on **Generate YAML** button.
-
-**Step 4:**  Once done, you can download the YAML file using the small icon on top. Alternatively, you can copy the contents of the file and modify them further according to your needs on your favorite IDE.
-
-> HyperExecute supports multiple languages and testing frameworks. See the comprehensive list & samples [here](/support/docs/getting-started-with-hyperexecute/).
-
-### Sample HyperExecute YAML
-A sample HyperExecute YAML file looks like this:
-
-```yaml
----
-version: 0.1
-runson: linux
-
-autosplit: true
-concurrency: 2
-
-pre:
-- mvn dependency:resolve
-
-testDiscovery:
-type: raw
-mode: static
-command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
-
-testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
-
-retryOnFailure: true
-maxRetries: 1
-
-jobLabel: [selenium-testng, linux, v1, autosplit]
-```
-
-## Inherit Your YAML Configurations
-
-YAML inheritance in HyperExecute allows you to reuse common configuration settings across multiple YAML files, improving efficiency, consistency, and flexibility.
-
-For example, you can create a base YAML file with common settings like **browsers**, **OS versions**, and **devices**, and then inherit from it in other YAML files for different environments or test types. This **reduces boilerplate code and errors** while making it easy to switch between environments and manage complex test execution configurations.
-
-### Prerequisites
--   You must inherit a YAML file of the same version as your original file.
--   The mode of execution, i.e. Matrix, AutoSplit, or Hybrid, must remain the same in both of the YAML files.
--   The files that you want to inherit cannot be cyclically dependent. If you want to inherit **A.yaml** in **B.yaml**, then **A.yaml** cannot inherit **B.yaml**.
-
-### How do you use the Inheritance feature?
-
-You can use the inheritance feature by entering the following flag in your YAML file:
-
-```yaml
-base:
-yamls:
-- ./<baseConfiguration1.yaml>
-- ./<baseConfiguration2.yaml>
-```
--   Insert the path of the YAML files you want to inherit in place of the placeholder value ``. The path of the YAML file that you want to inherit is relative to the main YAML file.
-
--  If the configuration YAML file is passed via the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), then it will be treated as the main YAML. Hence, all values of the base YAML will be overwritten by the values from the parent YAML file. However, if the configuration YAML file has a flag that contains the Boolean value False or numeric value '0', then the values from the parent YAML are used (if they are present).
-
-> **Note**: If you want to inherit two YAML files, then the second YAML file takes precedence. If a key is not defined in the first file or the main YAML file, but it is defined in the second, then that key will take the value of the second file. Similarly, if a key is defined in the two YAML files that are inherited but not in the main file, then the value defined in the second file is used.
-
-Go through the example attached below to understand how the resultant YAML will function if you inherit a base YAML in your parent YAML file.
-
-#### Parent YAML
-
-```yaml
----
-version: 0.1
-# highlight-next-line
-runson: linux
-
-autosplit: true
-# highlight-next-line
-concurrency: 4
-
-base:
-yamls:
-- ./base.yaml
-
-pre:
-- mvn dependency:resolve
-
-# highlight-start
-testDiscovery:
-mode: remote
-command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
-# highlight-end
-
-testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
-
-retryOnFailure: true
-maxRetries: 1
-
-# highlight-next-line
-jobLabel: [selenium-testng, linux, v1, autosplit]
-```
-
-#### Base YAML
-```yaml
----
-version: 0.1
-# highlight-next-line
-runson: win
-
-autosplit: true
-# highlight-next-line
-concurrency: 2
-
-pre:
-- mvn dependency:resolve
-
-# highlight-start
-testDiscovery:
-type: raw
-mode: static
-command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
-# highlight-end
-
-testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
-
-retryOnFailure: true
-maxRetries: 1
-
-# highlight-next-line
-jobLabel: [selenium-testng, autosplit]
-```
-
-#### Resultant YAML
-```yaml
-version: 0.1
-# highlight-next-line
-runson: linux
-
-autosplit: true
-# highlight-next-line
-concurrency: 4
-
-base:
-yamls:
-- ./base.yaml
-
-pre:
-- mvn dependency:resolve
-
-# highlight-start
-testDiscovery:
-command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
-mode: remote
-# highlight-end
-
-testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
-
-maxRetries: 1
-retryOnFailure: true
-
-# highlight-next-line
-jobLabel: [selenium-testng, linux, v1, autosplit]
-```
-
-The parameter sections above document the full HyperExecute YAML configuration.
-
-## HyperExecute YAML v0.2: framework, flags and discovery config
-
-This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
-
-- Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, **gradle/spock**, **wdio/mocha**, and **wdio/jasmine** framework.
-- Version 0.2 supports all the fields available in Version 0.1, except for [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand)
-- The new [`framework`](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-v02-framework-flags-and-discovery-config) flag has been introduced to configure the test framework.
-
-### Why to use HyperExecute YAML Version 0.2?
-
-- The new framework feature supports caching by default. You do not have to specify any directories to cache for faster performance. If you adds the [`cacheKey`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) and [`cacheDirectories`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) keys in your yaml, the default caching gets disabled and preference is given to user specified cache.
-- In Version 0.2, the support for [matrix mode](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) has been removed, and only [static discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) is available. This means that the discovery command will run on your system rather than in a matrix.
-- Since the support for [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) is removed, the test orchestration will be managed automatically.
-
-### ```framework```
-
-The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configure the test framework settings. It provides more flexibility and customization options for your testing needs with the following parameters.
-
-| Parameters | Type | Mandatory | Description|
-|:---|:--|:---|:---|
-| [name](#name) | String | Yes | You need to specify which testing framework you are using in your repo.|
-| [flags](#flags) | Array | No | Command line flags to pass to the custom runner for both test discovery and execution.|
-| [discoveryFlags](#discoveryFlags) | Array | No | Command line flags to pass to the custom runner for test discovery only.|
-| [runnerFlags](#runnerFlags) | Array | No | Command line flags to pass to the custom runner for test execution only. |
-| [discoveryType](#discoveryType) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
-| [discoveryMode](#discoveryMode) | String | No | Specifies where the test discovery runs. Supported values are "local" and "remote".|
-| [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
-| [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
-| [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
-| [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |
-| [language](#language) | String | No | Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed. |
-| [locale](#locale) | String | No | Defines the regional format settings such as date, time, currency, and number conventions. |
-| [mitmProxy](#mitmProxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
-
-#### `name`
-Specifies the testing framework used in your repository.
-
-```yaml
-framework:
-name: "maven/testng"
-```
-
-To enable maven runner with Appium, you have to pass `appium: true` before the `framework` field
-
-```yaml
-appium: true
-framework:
-name: "maven/testng"
-```
-
-Both **Maven** and **Gradle** build tools are supported for the Java runners:
-
-| Runner | Build tool | Test framework |
-|:--|:--|:--|
-| `maven/testng` | Maven | TestNG |
-| `maven/junit4` | Maven | JUnit 4 |
-| `maven/junit5` | Maven | JUnit 5 |
-| `maven/spock` | Maven | Spock |
-| `gradle/testng` | Gradle | TestNG |
-| `gradle/junit4` | Gradle | JUnit 4 |
-| `gradle/junit5` | Gradle | JUnit 5 |
-| `gradle/spock` | Gradle | Spock |
-
-```yaml
-framework:
-name: gradle/testng
-```
-
-**Prerequisites for the Gradle runners**
-- **Gradle 7.0 or higher** and **JDK 8 or higher**.
-- Apply the `java` plugin in your `build.gradle`.
-- For **gradle/spock**, also apply the `groovy` plugin, since Spock specifications are written in Groovy.
-
-#### `flags`
-Specifies the command line flags to pass to the custom runner for both test discovery and execution.
-
-```yaml
-framework:
-name: "maven/testng"
-flags: ["-Dplatname=win", "-Dgroups=selenium-test"]
-```
-
-#### `discoveryFlags`
-Specifies the command line flags to pass to the custom runner for test discovery only.
-
-```yaml
-framework:
-name: "maven/testng"
-discoveryFlags: ["-Dgroups=selenium-test"]
-```
-
-#### `runnerFlags`
-Specifies the command line flags to pass to the custom runner for test execution only.
-
-```yaml
-framework:
-name: "maven/testng"
-runnerFlags: ["-Dgroups=database"]
-```
-
-#### `discoveryType`
-Specifies the level at which user wants to discover the tests. Supported values are "method" and "class". The default is "method".
-
-```yaml
-framework:
-name: maven/testng
-#highlight-next-line
-discoveryType: method
-# instead of method you can also use xmltest or class as a discovery type
-flags:
-- "-Dplatname=win"
-```
-
-- For **maven/testng** the supported discovery types are **method, class** and **xmltest**. The default is **method**.
-- For **maven/junit4** and **maven/junit5**  the supported discovery types are **method** and **class**. The default is **method**.
-- For **wdio/mocha** and **wdio/jasmine** the supported discovery types are **test, spec, suite** and **wdiosuite**. The default is **spec**.
-
-#### `discoveryMode`
-Specifies where the test discovery runs. Supported values are `local` and `remote`.
-
-- **`local`**: Test discovery runs on the same machine as the HyperExecute CLI and needs the framework dependencies available locally.
-- **`remote`**: Test discovery runs on a dedicated remote Virtual Machine instead of your local machine. This centralizes discovery, shares the cache across execution tasks, and removes the need to install the framework dependencies locally. See [discovery modes](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) for more details.
-
-```yaml
-framework:
-name: gradle/testng
-#highlight-next-line
-discoveryMode: remote
-```
-
-Remote discovery is supported for all Java runners: **maven/testng**, **maven/junit4**, **maven/junit5**, **maven/spock**, **gradle/testng**, **gradle/junit4**, **gradle/junit5**, and **gradle/spock**.
-
-#### `workingDirectory`
-
-The `working directory` specifies the location of the directory in which all test discovery and execution commands will be run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
-
-```yaml
-framework:
-name: maven/testng
-discoveryType: method
-workingDirectory: src/main
-flags:
-- "-Dplatname=win"
-```
-
-#### `defaultReports`
-Specifies whether to create default reports for the specified framework.
-
-```yaml
-framework:
-name: maven/testng
-defaultReports: false
-flags:
-- "-Dplatname=win"
-```
-
-#### `region`
-
-The region parameter specifies the region or location where the Appium tests will be executed. Our platform supports the following three regions:
-
-- ap (Asia-Pacific)
-- us (United States)
-- eu (European Union)
-
-> The region parameter should always be defined under the `args` parameter, as shown in the below sample code.
-
-```yaml
-framework:
-args:
-region: us
-```
-
-#### `artifacts`
-
-To generate artifacts for your Espresso tests, add the `artifacts: true` flag in your YAML file:
-
-```yaml
-framework:
-args:
-artifacts: true
-```
-
-> 📕 Learn [how to perform group-based test discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng)
-
-#### `language`
-
-Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed.
-
-```yaml
-framework:
-args:
-language: es
-```
-
-#### `locale`
-
-Defines the regional format settings such as date, time, currency, and number conventions.
-
-```yaml
-framework:
-args:
-locale: ES
-```
-
-#### `mitmProxy`
-
-You can now capture network logs directly from emulator sessions using MITM. This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
-
-```yaml
-framework:
-args:
-mitmProxy: true
-```
-
-### Sample Yaml Version 0.2
-
-```yaml
----
-version: 0.2
-runson: win
-
-autosplit: true
-concurrency: 2
-
-pre:
-# Skip execution of the tests in the pre step
-- mvn dependency:resolve
-
-framework:
-name: maven/testng
-flags:
-- "-Dplatname=win"
-discoveryFlags: ["-Dgroups=selenium-test"]
-runnerFlags: ["-Dgroups=database"]
-discoveryType: method
-discoveryMode: remote
-workingDirectory: src/main
-defaultReports: false
-args:
-region: ap
-language: es
-locale: es
-mitmProxy: true
-
-retryOnFailure: true
-maxRetries: 1
-
-post:
-- ls target/surefire-reports/
-
-mergeArtifacts: true
-uploadArtefacts:
-- name: ExecutionSnapshots
-path:
-- target/surefire-reports/html/**
-```
-
-## YAML-Based Capability Overrides for Selenium Tests on HyperExecute
-
-In Selenium-based testing, [capabilities](/support/docs/selenium-automation-capabilities/) are key-value pairs that define how and where your tests should run, such as browser type, version, OS, console logs, video recording, and more.
-
-Previously, these capabilities were typically defined within the test script. With this new feature, you can now override or inject these directly from your **HyperExecute YAML** file. This gives you greater flexibility and eliminates the need to modify test scripts every time you change execution parameters.
-
-### 🚀 Why Use YAML-Based Overrides?
-| Benefit                      | Description                                                                |
-| ---------------------------- | -------------------------------------------------------------------------- |
-| No Code Changes Required     | Easily change capabilities without modifying your test script.             |
-| Reusable & Configurable      | Use a single script across different environments with varying YAML files. |
-| Cleaner Test Scripts         | Keeps your scripts capability-agnostic and environment-independent.        |
-
-### ⚙️ How It Works
-- Define a new `ltOptions` section inside your HyperExecute YAML file.
-- Specify any desired capabilities as key-value pairs under `ltOptions`.
-- During test execution, HyperExecute automatically merges these with the final capabilities passed to the Selenium session.
-> All the capabilities defined under the `ltOptions` section are fully aligned with TestMu AI's standard capability structure. You can use any capability listed in our [TestMu AI Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
-
-### 🔑 Key Behavior Rules
-
-| Case                                                | Behavior                                                   |
-| --------------------------------------------------- | ---------------------------------------------------------- |
-| Capability present in **both test script and YAML** | The **YAML value takes precedence**.                       |
-| Capability present in **YAML but not in script**    | It is **automatically added** to the session capabilities. |
-| Capability only in script                           | Used as-is unless overridden in YAML.                      |
-
-> **📝 Note:** This feature is only supported for **Selenium**-based tests at the moment.
-
-### Sample YAML with Capability Overrides
-
-```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v1/testng_hyperexecute_linux_ltoptions.yaml
-```
-
-### 💡 Common Use Cases
-
-| Use Case                      | Example Capability           |
-| ----------------------------- | ---------------------------- |
-| Changing browser type/version | `browserName`, `version`     |
-| Controlling visual artifacts  | `video`, `console`, `visual` |
-| Defining test metadata        | `build`, `name`              |
-| Network capture and debugging | `network`, `tunnel`          |
-| Switching Selenium versions   | `selenium_version`           |

@@ -8,8 +8,6 @@ This document will show you how to integrate GitLab Pipeline with HyperExecute t
 
 ## How To Integrate GitLab Pipeline with HyperExecute
 
-
-
 To integrate GitLab Pipeline with HyperExecute, follow the below steps:
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -19,15 +17,11 @@ Download or Clone the code sample from the TestMu AI GitHub repository to run th
 
  View on GitHub
 
-
 ### 1. Log into your GitLab account
-
 
 ### 2. Create a New Project
 
 To create a new project and connect your external repository to GitLab CI/CD, click the **Run CI/CD for external repository** tab on the bottom right.
-
-
 
 ### 3. Connect Your External Repository:
 
@@ -35,18 +29,10 @@ On GitLab, you can either connect your external repository from [GitHub](https:/
 
 To connect your external repository by URL, fill in the required information in the form below and click the **Create Project** button at the bottom of the page.
 
-
-
-
 ### 4. Configure the Pipeline
 - To configure the new pipeline that you just created, click the **Configure Pipeline** button in the center of the page.
 
-
-
-
 - Click on the **+Set up CI/CD** button as shown below.
-
-
 
 - Create a new `.gitlab-ci.yml` file at the root of the repository.
 
@@ -81,12 +67,7 @@ script: |
 ### 5. Run Your Job
 - To commit your changes and run your job, click the **Commit Changes** button.
 
-
-
-
-
 **Below is an example of a HyperExecute job that was triggered through the above pipeline:**
-
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

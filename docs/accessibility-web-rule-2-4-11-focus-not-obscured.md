@@ -1,0 +1,45 @@
+---
+id: accessibility-web-rule-2-4-11-focus-not-obscured
+title: Focus Not Obscured (Minimum) (2.4.11)
+sidebar_label: Focus Not Obscured (2.4.11)
+description: Rule-level Accessibility guidance for Focus Not Obscured (WCAG 2.4.11 Level AA).
+slug: accessibility-web-rule-2-4-11-focus-not-obscured/
+---
+
+# Focus Not Obscured (Minimum) (2.4.11)
+
+When a user interface component receives keyboard focus, it must not be entirely hidden by author-created content such as sticky headers, footers, or overlays.
+
+
+:::info WCAG Reference
+**Applies to:** WCAG 2.2
+**Introduced in:** WCAG 2.2 | **Level:** AA | [Read the official specification →](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)
+:::
+
+
+## What this rule checks
+
+The scanner verifies that focused elements are not fully concealed behind sticky navigation bars, cookie banners, chat widgets, or other fixed-position elements.
+
+## Why it matters
+
+Keyboard users need to see which element has focus to understand where they are on the page. If the focused element is hidden behind a sticky header or modal backdrop, the user loses orientation and cannot confirm their next action.
+
+## Common failure patterns
+
+- focused items scrolled behind a sticky navigation header
+- cookie consent banners that cover the bottom of the viewport where focused elements appear
+- chat widgets or help bubbles that overlay interactive elements
+- modal backdrops that remain visible and cover page content behind them
+
+## Remediation guidance
+
+- add scroll padding (e.g., `scroll-padding-top`) to account for sticky header height
+- ensure cookie banners and chat widgets do not overlap focusable page content
+- implement `scrollIntoView` with appropriate offsets when managing focus programmatically
+- test by tabbing through the entire page and confirming every focused element is at least partially visible
+
+## Related docs
+
+- [Web Rule Repository](/support/docs/accessibility-web-rule-repository/)
+- [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

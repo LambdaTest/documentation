@@ -1,4 +1,4 @@
-# How to Fix Common Selenium Errors on TestMu AI
+# Error Messages During Test Execution
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -10,7 +10,7 @@ This error occurs when your Username or Access Key is missing or invalid.
 
 This happens when the Username or Access Key you passed is missing or invalid.
 
-### How to Resolve
+### How to Resolve?
 
 1. Go to the TestMu AI [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard).
 2. Click the key icon at the top-right of the dashboard.
@@ -32,10 +32,8 @@ This might result from several issues:
 ### Possible Solution
 
 * Break your test into smaller, atomic tests.
-* Use the maxDuration capability option to set how long you want to wait for your test to complete.
+* Use the maxDuration desired capability option to set how long you want to wait for your test to complete.
 * Check your test for endless loops.
-
-If tests routinely run close to the duration limit, apply these tips to speed up your Selenium tests and cut execution time.
 
 ## Test Cancellation - Status: Error
 
@@ -50,8 +48,6 @@ This might occur due to various reasons:
 * The connection between your local machine and the TestMu AI cloud server is aborted.
 * High latency may also cause your test script to get cancelled.
 * You cancel the test manually after placing it in the queue.
-
-If a corporate firewall or proxy is interrupting the connection, follow the steps to run Selenium tests behind a proxy.
 
 ## Exceeded Queue Limit Error
 
@@ -84,10 +80,8 @@ You may encounter a Lambda Error with the below message.
 There could be several reasons behind this error. The most common ones include:
 
 * Infrastructure Unavailability: With too many incoming requests, the cloud server may fail to allocate a VM for your request.
-* Incorrect Data Type for Capabilities: Sending a string input for an integer data type capability triggers a Lambda Error.
+* Incorrect Data Type for Desired Capabilities: Sending a string input for an integer data type capability triggers a Lambda Error.
 * Excessive web-traffic spikes may also cause Lambda Error.
-
-To inspect the exact input the grid received, debug your Selenium tests using the command logs, network logs, and video for the failed session.
 
 ## Element Click Intercepted - 400
 
@@ -403,7 +397,6 @@ Example:
 * To switch to the desired frame, use WebDriverWait for the frame to become available and then switch to it.
 
 ### Possible Solutions
-
 Implement suitable edits to either CSS selector or XPATH:
 
 * `CSS Selector`: `WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.CSS_SELECTOR,"iframe[id^='layui-layer-iframe'][src^='fangyuan']")))`
@@ -460,7 +453,6 @@ Example:
 * When an element is no longer attached to the DOM (it has been removed from the document or the document has changed), it is said to be stale. Staleness occurs, for example, when you have a web element reference and the document it was retrieved from navigates.
 
 ### Possible Solutions
-
 Common solutions include:
 
 * Refreshing the webpage:
@@ -661,10 +653,3 @@ This happens because of the default behavior of the driver when it encounters an
 The solution is to modify the default behavior of the driver to ("IGNORE"), so that it does not close the alert but just ignores it.
 
 Then use try-catch to catch any errors.
-
-## Next Steps
-
-Continue with these related guides:
-
-- [Debugging Options](/support/docs/debugging-options/)
-- [Performance Tips](/support/docs/performance-tips/)

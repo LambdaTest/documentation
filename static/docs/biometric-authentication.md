@@ -1,10 +1,6 @@
-# How to Test Biometric Authentication on TestMu AI
+# Biometric Authentication
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Testing biometric authentication on TestMu AI lets you validate fingerprint and face recognition flows in native apps on real iOS and Android devices. Simulate both successful and failed biometric prompts through supported APIs to confirm your app handles authentication securely.
-
-**Supported on:** Real devices
 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 

@@ -1,4 +1,4 @@
-# How to Use SmartWait in Selenium on TestMu AI
+# SmartWait Functionality for Selenium Automation
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
@@ -10,7 +10,7 @@ You can use this feature to reduce the amount of code dedicated to explicit/impl
 
 ## How SmartWait Can Help You
 
-SmartWait improves your test automation workflow in multiple ways. To further stabilize flaky suites, pair it with the ability to auto-heal broken locators when the UI changes, and use the built-in tools to debug your Selenium tests when a check fails.
+SmartWait improves your test automation workflow in multiple ways.
 
 - **Increased Accuracy**: SmartWait ensures that actions are only executed on elements that are ready and actionable, increasing the accuracy of your test results.
 - **Code Optimization**: Your test scripts will have fewer explicit and implicit wait commands, making them easier to read and maintain.
@@ -19,7 +19,7 @@ SmartWait improves your test automation workflow in multiple ways. To further st
 
 ## How to Use SmartWait Functionality
 
-Follow the below steps to configure SmartWait for your tests. SmartWait is set through `LT:Options` like the other [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/).
+Follow the below steps to configure SmartWait for your tests.
 
 1. **Set SmartWait Time Limit:** Specify the maximum amount of time you want your test script to wait until an element becomes actionable.
 
@@ -41,11 +41,3 @@ LT:Options {
 3. **View Test Results:** Review your results after execution. SmartWait returns the relevant Selenium error message if any actionability checks failed within the set timeframe.
 
 TestMu AI's SmartWait feature enhances automated testing by intelligently managing wait times and ensuring actions execute at the most opportune time.
-
-## Next Steps
-
-Continue with these related guides:
-
-- [Auto-Healing](/support/docs/auto-healing/)
-- [Debugging Options](/support/docs/debugging-options/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)

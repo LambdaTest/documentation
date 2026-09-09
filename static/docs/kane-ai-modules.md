@@ -52,7 +52,7 @@ Type a **slash (/)** to invoke the command menu and select **Add Module**.
 
 Browse the list of available modules and select the one you need.
 
-Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. This applies to the Classic experience. See [Modules in Manual Testcases](/support/docs/create-modules/).
+Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. This applies to the Classic experience. See [Modules in Manual Testcases](/support/docs/modules-in-manual-testcases/).
 
 ### Step 3: Execute
 

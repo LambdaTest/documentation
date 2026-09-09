@@ -52,7 +52,7 @@ The `Allure Test Insights` widget is available for the `HyperExecute` product on
 
 Additionally, you need to have the Allure report generated for your test cases within the `HyperExecute` YAML file changes and add the job label for the test cases to be displayed in the widget.
 
-Read more about the [HyperExecute Reports](/support/docs/hyperexecute-job-reports/#allure-report) product to get started.
+Read more about the [HyperExecute Reports](/docs/allure-reports/) product to get started.
 :::
 
 You can check the Allure Test Insights for your test environments by following the below steps:

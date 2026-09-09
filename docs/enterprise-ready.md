@@ -329,7 +329,7 @@ TestMu AI supports regional data residency and tenant isolation for regulated de
 
 **Documentation:**
 - [HyperExecute Workflows](/support/docs/hyperexecute-workflows/)
-- [Test Chains](/support/docs/hyperexecute-workflows/#hyperexecute-test-chains)
+- [Test Chains](/support/docs/hyperexecute-test-chains/)
 
 ---
 

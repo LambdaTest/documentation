@@ -1,12 +1,10 @@
-# How to Run Fire TV Appium Tests on TestMu AI
+# Fire TV With Appium
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Running Fire TV tests on TestMu AI executes Appium automation for Amazon Fire TV apps on the real device cloud. Configure the required desired capabilities, connect to the hub, and run scripts to validate Fire TV app behaviour without hardware.
-
-**Supported on:** Real devices
-
 ## Tutorial To Run Your First Test On TestMu AI
+
+In this topic, you will learn how to configure and run your **Fire TV** automation testing scripts with **Appium** on **TestMu AI Real Device Cloud platform**.
 
 **Plus Plan Feature**
 This feature is available exclusively with the **Real Device Plus Automation Cloud** Plan.

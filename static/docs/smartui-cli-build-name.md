@@ -91,7 +91,7 @@ This approach provides a structured and efficient way to manage visual tests:
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
-- [CLI Documentation](/support/docs/smartui-cli-complete-reference/)
+- [CLI Documentation](/support/docs/smartui-cli)
 - [CLI Exec Commands](/support/docs/smartui-cli-exec)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)

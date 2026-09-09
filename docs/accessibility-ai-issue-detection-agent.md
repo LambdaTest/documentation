@@ -25,13 +25,13 @@ AI issue analysis should support prioritization and understanding. It should not
 
 ## How to use it in a review (onboarding)
 
-1. Open **[Issue Summary](/support/docs/accessibility-testing-navigating-dashboard/#issue-summary)** or **[All Issues](/support/docs/accessibility-testing-navigating-dashboard/#all-issues)** after a scan completes.
+1. Open **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** or **[All Issues](/support/docs/accessibility-testing-dashboard-all-issues/)** after a scan completes.
 2. Select an issue or cluster where the UI exposes **AI-assisted** analysis (wording may appear as summary, explanation, or suggested next step).
-3. Read the AI output as **hypothesis support**, verify against the DOM, design intent, and WCAG rule text in the **[rule repositories](/support/docs/accessibility-rule-repository/)** where applicable.
+3. Read the AI output as **hypothesis support**, verify against the DOM, design intent, and WCAG rule text in the **[rule repositories](/support/docs/accessibility-web-rule-repository/)** where applicable.
 4. If the suggestion is wrong, capture that feedback through your usual QA process so the team does not over-trust automation.
 5. Pair AI hints with the **[Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)** for engineering-ready fix order.
 
 ## Related docs
 
-- [Issue Summary](/support/docs/accessibility-testing-navigating-dashboard/#issue-summary)
+- [Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)
 - [Accessibility Issue Remediation Guide](/support/docs/accessibility-issue-remediation-guide/)

@@ -1,8 +1,8 @@
 ---
 id: appium-rokutv
-title: How to Automate Roku TV Testing on TestMu AI
+title: Roku TV With Appium
 sidebar_label: Roku TV
-description: Configure and run your first Roku TV Appium automation script with the Roku WebDriver on the TestMu AI Real Device Cloud.
+description: Complete guide to running your first RokuTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.
 keywords:
   - python appium
   - rokutv
@@ -25,6 +25,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 
 <script type="application/ld+json"
@@ -44,16 +45,13 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Automate Roku TV Testing on TestMu AI",
+          "name": "Roku TV With Appium",
           "item": `${BRAND_URL}/support/docs/appium-rokutv/`
         }]
       })
     }}
 ></script>
-Automating Roku TV testing on TestMu AI lets you run Appium scripts through the Roku WebDriver on real TVs, validating remote-based navigation across Roku models so you gain broader device coverage and catch experience issues earlier without repetitive manual checks.
-
-**Supported on:** Real devices
-
+<RealDeviceTag value="Real Device" /> 
 ## Tutorial To Run Your First Test On <BrandName />
 
 
@@ -349,8 +347,8 @@ We utilise the Appium Roku Driver to run tests on Roku via Appium, here's a list
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Automate Roku TV Testing on TestMu AI
-      </span>
+      Roku TV With Appium
+</span>
     </li>
   </ul>
 </nav>

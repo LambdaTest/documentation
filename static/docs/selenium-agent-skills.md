@@ -1,10 +1,10 @@
-# How to Run Selenium Tests With Agent Skills on TestMu AI
+# Run Selenium Tests Using Agent Skills
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 Instead of manually setting up your Selenium project, use **Agent Skills** to let your AI coding assistant generate production-ready test automation for you. The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI assistants how to write production-grade test code.
 
-## What Agent Skills Are
+## What Are Agent Skills?
 
 Self-contained packages of instructions, code patterns, and configurations for specific testing frameworks.
 
@@ -109,64 +109,64 @@ The Selenium Agent Skill supports 6 languages. Each framework below also has its
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
-| TestNG | [testng-skill](https://github.com/LambdaTest/agent-skills/tree/main/testng-skill) | [TestNG with Selenium](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=testng) |
-| JUnit 5 | [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) | [JUnit with Selenium](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=junit) |
-| Cucumber | [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) | [Cucumber with Selenium](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=cucumber) |
-| Selenide | [selenide-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenide-skill) | [Selenide Framework](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=selenide) |
-| Gauge | [gauge-skill](https://github.com/LambdaTest/agent-skills/tree/main/gauge-skill) | [Gauge Framework](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=gauge) |
-| Geb | [geb-skill](https://github.com/LambdaTest/agent-skills/tree/main/geb-skill) | [Geb Framework](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=geb) |
-| Serenity BDD | [serenity-bdd-skill](https://github.com/LambdaTest/agent-skills/tree/main/serenity-bdd-skill) | [Serenity BDD](/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/?framework=serenity) |
+| TestNG | [testng-skill](https://github.com/LambdaTest/agent-skills/tree/main/testng-skill) | [TestNG with Selenium](/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/) |
+| JUnit 5 | [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5-skill) | [JUnit with Selenium](/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/) |
+| Cucumber | [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) | [Cucumber with Selenium](/docs/running-cucumber-scripts-with-testng-and-selenium/) |
+| Selenide | [selenide-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenide-skill) | [Selenide Framework](/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/) |
+| Gauge | [gauge-skill](https://github.com/LambdaTest/agent-skills/tree/main/gauge-skill) | [Gauge Framework](/docs/running-gauge-tests-on-testmu-selenium-grid/) |
+| Geb | [geb-skill](https://github.com/LambdaTest/agent-skills/tree/main/geb-skill) | [Geb Framework](/docs/run-geb-tests-on-selenium-grid/) |
+| Serenity BDD | [serenity-bdd-skill](https://github.com/LambdaTest/agent-skills/tree/main/serenity-bdd-skill) | [Serenity BDD](/docs/serenity-test-on-selenium-grid/) |
 
 ### JavaScript
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
-| Mocha | [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) | [Mocha with Selenium](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=mocha) |
-| Jest | [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) | [Jest with Selenium](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=jest) |
-| WebdriverIO | [webdriverio-skill](https://github.com/LambdaTest/agent-skills/tree/main/webdriverio-skill) | [WebdriverIO](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=webdriverio) |
-| Nightwatch.js | [nightwatchjs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nightwatchjs-skill) | [Nightwatch.js](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=nightwatch) |
-| Protractor | [protractor-skill](https://github.com/LambdaTest/agent-skills/tree/main/protractor-skill) | Protractor |
-| TestCafe | [testcafe-skill](https://github.com/LambdaTest/agent-skills/tree/main/testcafe-skill) | [TestCafe](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=testcafe) |
-| Jasmine | [jasmine-skill](https://github.com/LambdaTest/agent-skills/tree/main/jasmine-skill) | [Jasmine with Karma](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=jasmine) |
-| Karma | [karma-skill](https://github.com/LambdaTest/agent-skills/tree/main/karma-skill) | [Karma Integration](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=karma) |
-| CucumberJS | [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) | [CucumberJS](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=cucumberjs) |
-| NemoJS | [nemojs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nemojs-skill) | [NemoJS](/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/?framework=nemojs) |
+| Mocha | [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) | [Mocha with Selenium](/docs/automation-testing-with-mocha-and-selenium/) |
+| Jest | [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) | [Jest with Selenium](/docs/automation-testing-with-selenium-and-jest/) |
+| WebdriverIO | [webdriverio-skill](https://github.com/LambdaTest/agent-skills/tree/main/webdriverio-skill) | [WebdriverIO](/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/) |
+| Nightwatch.js | [nightwatchjs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nightwatchjs-skill) | [Nightwatch.js](/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/) |
+| Protractor | [protractor-skill](https://github.com/LambdaTest/agent-skills/tree/main/protractor-skill) | [Protractor](/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/) |
+| TestCafe | [testcafe-skill](https://github.com/LambdaTest/agent-skills/tree/main/testcafe-skill) | [TestCafe](/docs/npm-plugin-for-testcafe-integration-with-testmu/) |
+| Jasmine | [jasmine-skill](https://github.com/LambdaTest/agent-skills/tree/main/jasmine-skill) | [Jasmine with Karma](/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/) |
+| Karma | [karma-skill](https://github.com/LambdaTest/agent-skills/tree/main/karma-skill) | [Karma Integration](/docs/karma-integration-with-testmu/) |
+| CucumberJS | [cucumber-skill](https://github.com/LambdaTest/agent-skills/tree/main/cucumber-skill) | [CucumberJS](/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid/) |
+| NemoJS | [nemojs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nemojs-skill) | [NemoJS](/docs/selenium-tests-with-nemojs/) |
 
 ### C#
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
-| NUnit | [nunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/nunit-skill) | [NUnit with Selenium](/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=nunit) |
-| MSTest | [mstest-skill](https://github.com/LambdaTest/agent-skills/tree/main/mstest-skill) | [MSTest with Selenium](/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=mstest) |
-| xUnit | [xunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/xunit-skill) | [xUnit with Selenium](/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=xunit) |
-| SpecFlow | [specflow-skill](https://github.com/LambdaTest/agent-skills/tree/main/specflow-skill) | [SpecFlow with Selenium](/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/?framework=specflow) |
+| NUnit | [nunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/nunit-skill) | [NUnit with Selenium](/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/) |
+| MSTest | [mstest-skill](https://github.com/LambdaTest/agent-skills/tree/main/mstest-skill) | [MSTest with Selenium](/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/) |
+| xUnit | [xunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/xunit-skill) | [xUnit with Selenium](/docs/selenium-with-xunit/) |
+| SpecFlow | [specflow-skill](https://github.com/LambdaTest/agent-skills/tree/main/specflow-skill) | [SpecFlow with Selenium](/docs/specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/) |
 
 ### Python
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
-| pytest | [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) | [pytest with Selenium](/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=pytest) |
-| unittest | [unittest-skill](https://github.com/LambdaTest/agent-skills/tree/main/unittest-skill) | [unittest](/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=unittest) |
-| Robot Framework | [robot-framework-skill](https://github.com/LambdaTest/agent-skills/tree/main/robot-framework-skill) | [Robot Framework](/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=robot) |
-| Behave | [behave-skill](https://github.com/LambdaTest/agent-skills/tree/main/behave-skill) | [Behave with Selenium](/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/?framework=behave) |
-| Lettuce | [lettuce-skill](https://github.com/LambdaTest/agent-skills/tree/main/lettuce-skill) | Lettuce with Selenium |
+| pytest | [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) | [pytest with Selenium](/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/) |
+| unittest | [unittest-skill](https://github.com/LambdaTest/agent-skills/tree/main/unittest-skill) | [unittest](/docs/running-unit-testing-in-python-on-testmu-selenium-grid/) |
+| Robot Framework | [robot-framework-skill](https://github.com/LambdaTest/agent-skills/tree/main/robot-framework-skill) | [Robot Framework](/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/) |
+| Behave | [behave-skill](https://github.com/LambdaTest/agent-skills/tree/main/behave-skill) | [Behave with Selenium](/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid/) |
+| Lettuce | [lettuce-skill](https://github.com/LambdaTest/agent-skills/tree/main/lettuce-skill) | [Lettuce with Selenium](/docs/automation-testing-selenium-with-lettuce/) |
 
 ### PHP
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
-| PHPUnit | [phpunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/phpunit-skill) | [PHPUnit](/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=phpunit) |
-| Behat | [behat-skill](https://github.com/LambdaTest/agent-skills/tree/main/behat-skill) | [Behat](/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=behat) |
-| Laravel Dusk | [laravel-dusk-skill](https://github.com/LambdaTest/agent-skills/tree/main/laravel-dusk-skill) | [Laravel Dusk](/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=laravel) |
-| Codeception | [codeception-skill](https://github.com/LambdaTest/agent-skills/tree/main/codeception-skill) | [Codeception](/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/?framework=codeception) |
+| PHPUnit | [phpunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/phpunit-skill) | [PHPUnit](/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/) |
+| Behat | [behat-skill](https://github.com/LambdaTest/agent-skills/tree/main/behat-skill) | [Behat](/docs/behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid/) |
+| Laravel Dusk | [laravel-dusk-skill](https://github.com/LambdaTest/agent-skills/tree/main/laravel-dusk-skill) | [Laravel Dusk](/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/) |
+| Codeception | [codeception-skill](https://github.com/LambdaTest/agent-skills/tree/main/codeception-skill) | [Codeception](/docs/codeception-integration-with-testmu/) |
 
 ### Ruby
 
 | Framework | Agent Skill | Documentation |
 |-----------|------------|---------------|
-| RSpec | [rspec-skill](https://github.com/LambdaTest/agent-skills/tree/main/rspec-skill) | [RSpec](/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=rspec) |
-| Capybara | [capybara-skill](https://github.com/LambdaTest/agent-skills/tree/main/capybara-skill) | [Capybara](/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=capybara) |
-| Test::Unit | [testunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/testunit-skill) | [Test::Unit](/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/?framework=testunit) |
+| RSpec | [rspec-skill](https://github.com/LambdaTest/agent-skills/tree/main/rspec-skill) | [RSpec](/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/) |
+| Capybara | [capybara-skill](https://github.com/LambdaTest/agent-skills/tree/main/capybara-skill) | [Capybara](/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid/) |
+| Test::Unit | [testunit-skill](https://github.com/LambdaTest/agent-skills/tree/main/testunit-skill) | [Test::Unit](/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/) |
 
 ## Supported AI Tools
 
@@ -181,11 +181,3 @@ Pick the tool you use and install the skill to the corresponding path.
 | Codex CLI | CLI | `.codex/skills/` |
 | OpenCode | CLI | `.opencode/skills/` |
 | Claude.ai | Web | Settings > Features > Skills |
-
-## Next Steps
-
-Continue with these related guides:
-
-- [Running Your First Selenium Test](/support/docs/testmu-running-your-first-selenium-test/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
-- [Debugging Options](/support/docs/debugging-options/)

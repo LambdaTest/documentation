@@ -1,9 +1,8 @@
 ---
 id: bitbucket-pipeline-with-hyperexecute
-title: Bitbucket Pipeline Integration
-toc_max_heading_level: 2
+title: Bitbucket Pipeline Integration
 hide_title: true
-sidebar_label: "Bitbucket"
+sidebar_label: Bitbucket
 description: HyperExecute now integrates with Bitbucket CI to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - testmu ai integrations

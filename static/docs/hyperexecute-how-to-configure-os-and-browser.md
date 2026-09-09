@@ -34,7 +34,7 @@ The HyperExecute YAML configuration file is the blueprint for running your tests
 ```yaml title="hyperexecute_autosplit.yaml"
 runson: linux #linux, win, win11, mac, mac13
 ```
-    > 📕 Learn more about [AutoSplit Test Method](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy)
+    > 📕 Learn more about [AutoSplit Test Method](/support/docs/hyperexecute-auto-split-strategy/)
 
     [Matrix mode](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
 
@@ -47,4 +47,4 @@ runson: ${matrix.os}
 matrix:
 os: ["win", "mac", "linux"] #linux, win, win11, mac, mac13
 ```
-    > 📕 Learn more about [Matrix Test Method](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy)
+    > 📕 Learn more about [Matrix Test Method](/support/docs/hyperexecute-matrix-multiplexing-strategy/)

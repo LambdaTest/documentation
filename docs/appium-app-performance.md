@@ -1,9 +1,9 @@
 ---
 id: appium-app-performance
-title: How to Analyze App Performance on TestMu AI
+title: Application Performance Analytics
 # hide_title: true
 sidebar_label: App Performance Analytics
-description: Track CPU, memory, network, and startup metrics with App Profiling during Appium tests on TestMu AI real Android and iOS devices.
+description: Learn more about the metrics that are crucial in tracking the performance of your app. 
 keywords:
 - regular expression testmu ai
 - regular expression app automation
@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/appium-app-performance-analytic
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
@@ -36,16 +37,13 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Analyze App Performance on TestMu AI",
+          "name": "App Automation: Regular Expression",
           "item": `${BRAND_URL}/support/docs/appium-app-performance-analytics/`
         }]
       })
     }}
 ></script>
-App performance analytics on TestMu AI surface CPU, memory, network, and frame-rate metrics captured during Appium runs on real Android and iOS devices, helping you detect bottlenecks, startup delays, and resource leaks early so you can optimize apps before release.
-
-**Supported on:** Real devices
-
+<RealDeviceTag value="Real Device" /> 
 App performance is critical factor for user satisfaction and adoption. Identifying and resolving bottlenecks early is essential for delivering a high-quality experience but it requires constant monitoring and optimization across various device metrics. <BrandName />’s App Profiling feature helps you to detect and optimize performance issues before release by providing real-time insights into key metrics like CPU usage, memory consumption, and network activity on real devices.
 
 You can enable performance tracking in your existing automation tests with the following capability:
@@ -208,7 +206,7 @@ To retrieve profiling details, simply make a request to the <BrandName /> API us
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        How to Analyze App Performance on TestMu AI
+       Appium App Performance Analytics
       </span>
     </li>
   </ul>

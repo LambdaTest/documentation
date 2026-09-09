@@ -109,7 +109,7 @@ Other options:
 
 :::info
 
-[XCUI Testing On <BrandName />](/support/docs/xcui-supported-capabilities/)
+[XCUI Testing On <BrandName />](/support/docs/getting-started-with-xcuitest/#capabilities-supported)
 
 [Automation Capabilities Generator For Selenium and Appium](https://www.testmuai.com/capabilities-generator/)
 :::

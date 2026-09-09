@@ -61,7 +61,10 @@ const docsSidebar = [
     type: 'category', label: 'Real Device', collapsible: true, collapsed: true,
     items: s.RealDeviceSidebar.slice(1).flat(),
   },
-  { type: 'link', label: 'Test Manager', href: '/support/docs/test-manager/' },
+  {
+    type: 'category', label: 'Test Manager', collapsible: true, collapsed: true,
+    items: items(s.TestManagerSidebar),
+  },
   {
     type: 'category', label: 'Integration', collapsible: true, collapsed: true,
     items: items(s.IntegrationsSidebar),
@@ -144,21 +147,17 @@ const InsightsSidebar = [backToDocs, ...items(s.Analytics)];
 const BrowserCloudSidebar = [backToDocs, ...items(s.BrowserCloudSidebar)];
 const KaneAISidebar = [backToDocs, ...items(s.KaneAISidebar)];
 
-// Dedicated sidebar for Test Manager. Because the Test Manager entry in
-// docsSidebar is now a link (above), these docs live ONLY here — so Docusaurus
-// displays this dedicated sidebar whenever a reader is inside Test Manager.
-const TestManagerSidebar = [backToDocs, ...items(s.TestManagerSidebar)];
-
-// Dedicated sidebar for MCP docs. These docs surface through their own "MCP"
-// navbar tab. Because they live ONLY here, Docusaurus auto-associates each MCP
-// doc with this sidebar. The back link returns to the full Docs tree.
-const backToMCP = {
+// Dedicated sidebar for MCP docs. These docs were removed from docsSidebar and
+// now surface only through the "Skills & MCP" navbar tab. Because they live ONLY
+// here, Docusaurus auto-associates each MCP doc with this sidebar. The back link
+// returns to the Skills & MCP hub rather than the full Docs tree.
+const backToSkillsMCP = {
   type: 'link',
-  label: '← All Docs',
-  href: '/support/docs/',
+  label: '← Skills & MCP',
+  href: '/support/docs/agent-skills/',
   customProps: { className: 'back-to-main-menu' },
 };
-const MCPServerSidebar = [backToMCP, ...items(s.LTMCPServerSidebar)];
+const MCPServerSidebar = [backToSkillsMCP, ...items(s.LTMCPServerSidebar)];
 
 module.exports = {
   docsSidebar,
@@ -179,6 +178,5 @@ module.exports = {
   InsightsSidebar,
   BrowserCloudSidebar,
   KaneAISidebar,
-  TestManagerSidebar,
   MCPServerSidebar,
 };

@@ -13,18 +13,11 @@ Wait for the file to upload and process. A success message will indicate when yo
 - **Open App Settings :** Once uploaded, find your application in the list and click on the Settings button.
 - **Copy the App ID :** In the settings, locate the App ID field. Copy this ID, as it will be required to reference your app in automated tests or other configurations.
 
-
-
-
-
-
 > Learn how to [Upload Apps on TestMu AI’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
-
 
 - You can access the [**Virtual Device Dashboard**](https://www.testmuai.com/login/?redirectTo=https://app.lambdatest.com/console/realtime/app).
 - For **Virtual Devices**, the steps remain identical to those for Real Devices.
 - The only difference is that for **iOS applications**, you must upload a **.zip** file instead of an `.ipa` file, as simulators accept `.zip` format.
-
 
 ## Automation Dashboard
 - **Access the App Automation Dashboard :** Log in to your TestMu AI account and navigate to the [App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
@@ -32,10 +25,6 @@ Wait for the file to upload and process. A success message will indicate when yo
   - **Android :** Upload a `.aab` or `.apk` file.
   - **iOS :** Upload an `.ipa` file.
 - **Copy the App URL :** After uploading, an `app_url` will be generated (format: `"lt://"`). Copy this app_url and use it in your test scripts to identify your application.
-
-
-
-
 
 - The **App Automation Dashboard** supports both **Real** and **Virtual Devices**.
 - To perform testing on Virtual Devices, simply select the **Virtual Device** option during upload. The rest of the flow remains identical.

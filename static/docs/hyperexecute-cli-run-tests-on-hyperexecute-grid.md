@@ -126,7 +126,7 @@ hyperexecute --auto-proxy
 ```
 
 ### `--concurrency`
-This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy).
+This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
 ```bash
 --concurrency 2
 ```
@@ -200,7 +200,7 @@ The secrets file contains highly sensitive information and must be strictly excl
 
 **Exclude from Version Control**
 
-- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-running-your-first-job/#ignore-unnecessary-files-in-your-payload) file. This prevents accidental inclusion of the file in your code repository.
+- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
 
 ### `-k, --key`
 The access key of your TestMu AI account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
@@ -227,15 +227,15 @@ This flag allows you to preserve the job payload after the job is completed succ
 ```
 
 ### `--runson`
-This flag overrides the defined OS value in your YAML file's [`runson`](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag. You can also define multiple values for OS (comma separated) in the case of [Matrix](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) and [Hybrid](/support/docs/hyperexecute-test-splitting-and-multiplexing/#hybrid-strategy-in-hyperexecute) mode execution.
+This flag overrides the defined OS value in your YAML file's [`runson`](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag. You can also define multiple values for OS (comma separated) in the case of [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) and [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode execution.
 
-In case of [AutoSplit](/support/docs/hyperexecute-test-splitting-and-multiplexing/#autosplit-strategy) mode:
+In case of [AutoSplit](/support/docs/hyperexecute-auto-split-strategy/) mode:
 
 ```bash
 --runson linux
 ```
 
-In case of [Matrix](/support/docs/hyperexecute-test-splitting-and-multiplexing/#matrix-multiplexing-strategy) or [Hybrid](/support/docs/hyperexecute-test-splitting-and-multiplexing/#hybrid-strategy-in-hyperexecute) mode:
+In case of [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode:
 
 ```bash
 --runson linux,win,win11,mac,mac13
@@ -300,7 +300,7 @@ The username of your TestMu AI account.
 ### `--vars`
 This method allows you to name your variables. It helps you optimize the content of your YAML file by allowing for more flexibility.
 
-You can specify the email address for sharing [reports](/support/docs/hyperexecute-job-reports/) or [artifacts](/support/docs/hyperexecute-artifacts/) in a YAML configuration file using a variable. This allows you to dynamically set the email address and pass it via CLI, providing more flexibility than hardcoding the email address in the YAML file. Learn about this in [detail](/support/docs/hyperexecute-artifacts/#receive-job-reports-and-artifacts-via-email).
+You can specify the email address for sharing [reports](/support/docs/hyperexecute-reports/) or [artifacts](/support/docs/hyperexecute-artifacts/) in a YAML configuration file using a variable. This allows you to dynamically set the email address and pass it via CLI, providing more flexibility than hardcoding the email address in the YAML file. Learn about this in [detail](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address).
 ```bash
 --vars "org=Lambdatest" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
@@ -361,4 +361,4 @@ set CI=true # If it's not set to true, then use this command to set as true
 
 #### Output
 
-> 📕 Use the HyperExecute CLI's [Frequently Asked Questions](https://www.testmuai.com/support/faq/?tab=hye&sub=cli) to gain more knowledge about it.
+> 📕 Use the HyperExecute CLI's [Frequently Asked Questions](/support/docs/hyperexecute-cli-faqs/) to gain more knowledge about it.

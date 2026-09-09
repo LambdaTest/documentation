@@ -1,3 +1,5 @@
+# GitHub App Integration Support for HyperExecute
+
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 > This is currently in the **Beta** version.
@@ -161,6 +163,5 @@ For GitHub Enterprise Server or any tenant other than `github.com`:
    `github_app_private_key_ghes.yourcompany.com`
 
 3. Complete the registration on the TestMu AI setup page. The tenant is recorded automatically based on the GitHub App's origin.
-
 
 For the default tenant (`github.com`), the platform's built-in Marketplace GitHub App handles key management automatically, no manual secret creation is needed.

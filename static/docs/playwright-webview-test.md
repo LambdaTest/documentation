@@ -1,53 +1,41 @@
-# How to Test WebViews With Playwright on TestMu AI
+# Playwright Webview Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-When your Android app embeds a web browser, you can validate those WebViews with Playwright on real devices through TestMu AI. Testing on real hardware surfaces rendering and interaction defects that emulators miss. You enable the `isPwMobileWebviewTest` capability, point your script at the TestMu AI CDP endpoint, and run your test against a live Android device.
+WebView testing is an essential process for ensuring the functionality and reliability of applications that rely on embedded web browsers. This guide provides detailed steps to perform WebView testing using Playwright. It is designed for developers, QA engineers, and anyone involved in software quality assurance.
 
-Follow these steps to configure a WebView test and run it on a real Android device on TestMu AI.
+## Steps to perform Webview testing
 
-## Step 1: Set Up Your Test Suite
+### Step 1: Setup your test suite
 
-Use your own project or clone the sample repository to follow along with the same files shown here.
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-**Sample repo**
-Clone the code sample from the TestMu AI GitHub repository to run your tests.
+**sample repo**
+Download or Clone the code sample from the TestMu AI GitHub repository to run your tests.
 
  View on GitHub
 
-If you are using your own project, configure the `browserWSEndpoint` (browser endpoint URL) in your test script to run the test on TestMu AI.
+- If you are using your own project, configure the `browserWSEndpoint` (browser end point URL) in your test script to run the test on TestMu AI
 
 ```javascript
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
 
-Here is the sample test script for your reference:
+- Here is the sample test script for your reference:
 
 ```javascript reference title="playwrightwebview.js"
 https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js
 ```
 
-## Step 2: Update the Dependencies
-
-Update the outdated dependencies before you run the test.
+### Step 2: Update the dependencies
+Before proceeding forward, run the below command to update the outdated dependencies
 
 ```bash
 npm install
 ```
 
-## Step 3: Set Up Your TestMu AI Credentials
-
-Set your TestMu AI credentials in the terminal for your operating system. The commands below are prefilled if you are logged in to TestMu AI.
-
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-
-## Step 3: Update Your Test Capabilities
-
-Include the following field in the capabilities object to enable WebView testing.
+### Step 3: Update your test Capabilities
+Include the following field in the capabilities object to enable WebView testing:
 
 ```javascript title="playwrightwebview.js"
 const capabilities = {
@@ -59,22 +47,24 @@ const capabilities = {
 },
 ```
 
-Use the [Playwright capability generator](https://www.lambdatest.com/capabilities-generator/) to select from a range of options for customizing your tests.
+Use our [Capability Generator](https://www.lambdatest.com/capabilities-generator/) to select from a wide range of options for customizing your tests.
 
-## Step 4: Execute Your Test
+### Step 4: Setup your TestMu AI credentials
 
-Run the command below with your test file to execute the WebView test on TestMu AI. Replace `playwrightwebview.js` with your own file name if it differs.
+In your terminal (as per your respective Operating System), run these command to setup your TestMu AI credentials.
+> You can see your credentials below if you have logged into our platform.
+
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+
+### Step 5: Execute your test
+Replace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on TestMu AI:
 
 ```bash
 node playwrightwebview.js
 ```
 
-Open the [TestMu AI Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) to check the status of your test execution.
-
-## Related Playwright Guides
-
-Continue with these related guides to extend your Playwright coverage on TestMu AI.
-
-- [How to run Playwright tests on real Android devices](/support/docs/playwright-android/) covers browser testing across Node.js, Java, C#, and Python.
-- [How to configure Playwright capabilities](/support/docs/capabilities-for-playwright/) documents every supported capability key.
-- [How to set up Playwright test execution](/support/docs/playwright-test-execution-setup/) walks through connecting Playwright to TestMu AI.
+Visit the [TestMu AI Web Automation](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) page to check the status of your test execution.

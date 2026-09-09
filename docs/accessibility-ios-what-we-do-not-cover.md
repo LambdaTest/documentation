@@ -8,4 +8,4 @@ slug: accessibility-ios-what-we-do-not-cover/
 
 import { Redirect } from '@docusaurus/router';
 
-<Redirect to="/support/docs/accessibility-web-what-we-cover/" />
+<Redirect to="/support/docs/accessibility-ios-what-we-cover/#manual-test-checklist" />

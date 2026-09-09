@@ -1,9 +1,8 @@
 ---
 id: azure-with-hyperexecute
-title: Azure DevOps Integration
-toc_max_heading_level: 2
+title: Azure DevOps Integration
 hide_title: true
-sidebar_label: "Azure DevOps"
+sidebar_label: Azure DevOps
 description: TestMu AI now integrates with Azure DevOps Pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - testmu ai integrations

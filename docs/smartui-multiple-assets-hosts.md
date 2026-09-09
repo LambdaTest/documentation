@@ -1,7 +1,7 @@
 ---
 id: smartui-multiple-assets-hosts
 title: Capturing Multiple Assets Hosts
-sidebar_label: Multiple Asset Hosts
+sidebar_label: Capturing multiple asset hosts
 description: In this documentation, learn about how to capture multiple assts hosts
 keywords:
   - Visual Regression

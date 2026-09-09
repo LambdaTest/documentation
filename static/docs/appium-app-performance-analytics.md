@@ -1,10 +1,6 @@
-# How to Analyze App Performance on TestMu AI
+# Application Performance Analytics
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-App performance analytics on TestMu AI surface CPU, memory, network, and frame-rate metrics captured during Appium runs on real Android and iOS devices, helping you detect bottlenecks, startup delays, and resource leaks early so you can optimize apps before release.
-
-**Supported on:** Real devices
 
 App performance is critical factor for user satisfaction and adoption. Identifying and resolving bottlenecks early is essential for delivering a high-quality experience but it requires constant monitoring and optimization across various device metrics. TestMu AI’s App Profiling feature helps you to detect and optimize performance issues before release by providing real-time insights into key metrics like CPU usage, memory consumption, and network activity on real devices.
 

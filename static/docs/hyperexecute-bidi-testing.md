@@ -79,7 +79,7 @@ Optimize your test pipeline using the following advanced features:
 
 - ✅ [Smart Test Splitting](/support/docs/hyperexecute-test-splitting-and-multiplexing/) – Automatically distribute tests across parallel runners
 - ⚡ [Fail Fast](/support/docs/hyperexecute-failfast/) – Stop test runs on the first failure
-- 📊 [Detailed Reports](/support/docs/hyperexecute-job-reports/) – Real-time terminal logs & rich test reports
+- 📊 [Detailed Reports](/support/docs/hyperexecute-reports/) – Real-time terminal logs & rich test reports
 - 🔄 [Auto-Healing](/support/docs/hyperexecute-auto-healing/) – Automatically recover from certain failures
 
 > For any query or doubt, please feel free to contact us via **24×7 chat support** or you can also drop a mail to **support@testmuai.com**.

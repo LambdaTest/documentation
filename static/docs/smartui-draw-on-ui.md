@@ -341,7 +341,7 @@ Regions propagate on both PDF and website comparisons, but the axis they propaga
 
 > **Note:** Anchoring on web reads the DOM element data recorded alongside the screenshot, the same data that [Layout Regions](/support/docs/smartui-layout-regions/#dom-recording-requirement-for-web-comparisons) use. A build made from an uploaded image carries no DOM, so there is nothing to anchor to. PDF comparisons are not affected, since they read the structure out of the document itself.
 
-> **Note:** In an [Omni project](/support/docs/smartui-project-settings/#omni-projects), where PDF, website, app, Figma, Storybook and image sources all co-exist in one project, both propagation controls are available in the same place. The one you see for a given comparison follows the source of the screenshot you are annotating: PDF artifacts offer **Apply to all the pages of this PDF**, and website and app artifacts offer **Apply to all variants**.
+> **Note:** In an [Omni project](/support/docs/smartui-omni-projects/), where PDF, website, app, Figma, Storybook and image sources all co-exist in one project, both propagation controls are available in the same place. The one you see for a given comparison follows the source of the screenshot you are annotating: PDF artifacts offer **Apply to all the pages of this PDF**, and website and app artifacts offer **Apply to all variants**.
 
 ### Example
 

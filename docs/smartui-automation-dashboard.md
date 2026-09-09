@@ -1,7 +1,7 @@
 ---
 id: smartui-automation-dashboard
 title: SmartUI in the Automation Dashboard
-sidebar_label: View Test Results
+sidebar_label: SmartUI in Automation Dashboard
 description: View, group, and review SmartUI visual regression results directly inside the Automation Dashboard, without switching products. Every test run that captures SmartUI screenshots now has a dedicated SmartUI tab for in-context triage.
 keywords:
   - SmartUI

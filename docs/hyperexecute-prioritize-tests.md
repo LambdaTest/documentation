@@ -1,9 +1,8 @@
 ---
 id: hyperexecute-prioritize-tests
-title: Prioritize Your Tests
-toc_max_heading_level: 2
+title: Prioritize Your Tests
 hide_title: false
-sidebar_label: "Jobs Prioritization"
+sidebar_label: Jobs Prioritization
 description: Learn more about how to prioritize your tests with HyperExecute.
 keywords:
   - TestMu AI Hyperexecute

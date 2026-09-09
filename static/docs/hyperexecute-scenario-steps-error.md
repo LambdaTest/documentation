@@ -19,8 +19,6 @@ To resolve this issue, you have to visit our [Automation Capability Generator](h
 
 When you initiate a test execution and encounter the issue that your session is not getting started,
 
-
-
 This is possible due to the following reasons:
 
 - If your credentials are not correct.
@@ -32,8 +30,6 @@ To address this challenge, our recommended solution is to visit the [Automation 
 ## Invalid HUB Endpoint
 
 If you put the wrong HUB Endpoint in your test file, you will receive the following error:
-
-
 
 To rectify this issue, you need to cross-check your HUB URL. You can also visit [this](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/build) website and click on **Access Key** button to get your correct HUB URL.
 
@@ -66,8 +62,6 @@ When you encounter a situation where the stage appears to be stuck or unresponsi
 
 As you can see below, stage is taking a lot of time to allocate Virtual Machines to the tests.
 
-
-
 - **Identify the Task:** Begin by identifying the specific task or workflow where the machine appears to be stuck. This involves determining the action or process that triggered the unresponsive stage.
 
 - **Locate the Stuck Stage:** Once the task is identified, pinpoint the exact stage that is causing the delay. This can be done by reviewing the platform's progress indicators or monitoring tools.
@@ -89,8 +83,6 @@ After identifying the issue, follow these steps to resolve the situation:
 ## Test is Stuck
 
 When a particular test is taking longer than expected to complete, follow these measures to diagnose the issue:
-
-
 
 - **Identify the Stuck Test:** Begin by identifying the specific test that is hanging or exceeding the average execution time. This can be done by reviewing test execution reports or monitoring tools.
 
@@ -119,7 +111,6 @@ You can see the test has been being executed for a very long time, which is not 
 
 And when you click on the View Test button, you can see that the status of your test is Idle_Timeout.
 
-
 Measures to Take:
 
 - **Identify Task and Stage:** Determine the specific task and stage associated with the idle timeout. This information can be obtained from test execution reports or monitoring tools.
@@ -145,8 +136,6 @@ Remedy:
 ## API Timeout
 
 When the test encounters an API timeout, indicating that the API call did not receive a response within the specified timeout period, follow these measures to diagnose and address the issue.
-
-
 
 - **Identify Task and Test:** Determine the specific task and test associated with the API timeout. This information can be obtained from test execution reports or monitoring tools.
 

@@ -89,7 +89,7 @@ driver.executeScript(`lambda-testCase-end=${Name of test case}`)
 
 You can capture the test case insights by using the `reporter` configuration in your `YAML` file for capturing and seeing the test cases in our test case widgets on dashboard.
 
-Here is a link to documentation for setting up the reporter for `PlaywrightJS`: [Click here](/support/docs/hyperexecute-job-reports/#playwright-html)
+Here is a link to documentation for setting up the reporter for `PlaywrightJS`: [Click here](/docs/playwright-html-report/#step-1-update-your-playwright-configuration)
 
 #### Step 2 - Add the code to lambdatest-setup file
 

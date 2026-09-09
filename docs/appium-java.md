@@ -1,20 +1,16 @@
----
+﻿---
 id: appium-java
-title: "How to Run Appium Java Tests on TestMu AI"
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: "Java"
-description: "Run Appium Java tests on real Android and iOS devices on TestMu AI with Vanilla Java, JUnit, JBehave, Cucumber, or TestNG frameworks."
+title: Appium with Java
+sidebar_label: Java
+description: Automate Mobile Apps with ease using Java and Appium
 keywords:
-  - appium java
-  - appium java testng
-  - appium java junit
-  - appium java cucumber
-  - appium java jbehave
-  - mobile app automation appium
-  - appium real device cloud
+  - appium
+  - java
   - testmu ai java
-image: /assets/images/og-images/automation-testing-og.png
+  - framework on testmu ai
+  - testng
+  - app testing
+  - real devices
 url: https://www.testmuai.com/support/docs/appium-java/
 site_name: TestMu AI
 slug: appium-java/
@@ -25,8 +21,12 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,36 +45,31 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Run Appium Java Tests on TestMu AI",
+          "name": "WebDriverIO With Appium",
           "item": `${BRAND_URL}/support/docs/appium-java/`
         }]
       })
     }}
 ></script>
 
-# How to Run Appium Java Tests on TestMu AI
----
-
-Running Appium Java tests on TestMu AI automates native and hybrid mobile apps across real Android and iOS devices. Set credentials, upload the app, configure desired capabilities, then execute with Vanilla Java, JUnit, JBehave, Cucumber, or TestNG and view results.
-
-**Supported on:** Real &amp; Virtual devices
-
-Appium lets you automate native and hybrid mobile apps in **Java**, and TestMu AI runs those tests across a cloud of real Android and iOS devices. Along the way you'll set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for Appium testing and explore other advanced features of TestMu AI.
-
-The account setup, environment variables, and app upload are the same for every framework, so those are covered first. Pick your framework in the [Run a Test With Your Framework](#run-a-test-with-your-framework) section, where each tab carries the complete, framework-specific flow, code, capabilities, run commands, and all.
+In this documentation, you will learn how to trigger a automation script of **Java** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites
----
-
-Make sure you have the following set up before you start.
 
 - Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
-- You should have the [Java client library](https://github.com/appium/java-client) installed for Selenium and Appium.
-- Install the latest Java development environment i.e. JDK 8 or higher. We recommend using the < JDK 11 version.
+- You should have [Java client library](https://github.com/appium/java-client) installed for Selenium and Appium.
 - Download and install **Maven** from [the official website](https://maven.apache.org/). For **Linux/macOS** you can use [Homebrew](https://brew.sh/) package manager.
 
-## Set Your Credentials
----
+## Try our Sample Repository
+
+### Step 1: Get a Sample Project
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-java" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
+### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
@@ -97,9 +92,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-## Upload Your App
----
 
+### Step 3: Upload your Application
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
@@ -132,26 +126,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 :::
 
-## Run a Test With Your Framework
----
-
-Choose your Java test framework below. Each tab contains the complete flow for that framework, get the sample project, update the automation script, configure the capabilities, and execute your tests. Ensure you have already set your credentials and uploaded your app as described above.
-
-<Tabs groupId="framework" queryString="framework">
-
-<TabItem value="vanilla" label="Vanilla Java" default>
-
-Trigger an automation script of **Java** for application testing with **Appium** on TestMu AI using plain, framework-free Vanilla Java.
-
-### Step 1: Get a Sample Project
-
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
-
-:::tip Sample repo
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-java" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-:::
-
-### Step 2: Update your Automation Script
+### Step 4: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
@@ -369,7 +344,7 @@ public class vanilla_ios {
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 :::
 
-### Step 3: Configure the Test Capabilities
+### Step 5: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
@@ -428,7 +403,7 @@ DesiredCapabilities caps = new DesiredCapabilities();
 
 :::
 
-### Step 4: Execute and Monitor your Tests
+### Step 6: Execute and Monitor your Tests
 
 - Run the following commands to install the required dependencies:
 
@@ -457,1126 +432,54 @@ DesiredCapabilities caps = new DesiredCapabilities();
 
   > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
 
-</TabItem>
+## Using the Appium Agent Skill with TestMu AI
+***
 
-<TabItem value="junit" label="JUnit">
+The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
-Trigger an automation script of **JUnit** for application testing with **Appium** on TestMu AI.
+The appium-skill package includes:
 
-### Step 1: Get a Sample Project
-
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
-
-:::tip Sample repo
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/lambdatest/LT-appium-java-junit" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-:::
-
-### Step 2: Update your Automation Script
-
-An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-<Tabs className="docs__val">
-<TabItem value="android" label="Android" default>
-
-```java
-package com.lambdatest;
-
-import io.appium.java_client.MobileBy;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-public class android {
-    String username = System.getenv("LT_USERNAME") == null ? "LT_USERNAME" //Enter the Username here
-            : System.getenv("LT_USERNAME");
-    String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY"  //Enter the accessKey here
-            : System.getenv("LT_ACCESS_KEY");
-    public static RemoteWebDriver driver = null;
-    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
-    public String status = "passed";
-    @Before
-    public void setUp() throws Exception {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        capabilities.setCapability("build", "JUNIT Native App automation");
-        capabilities.setCapability("name", "Java JUnit Android Pixel 6");
-        capabilities.setCapability("platformName", "android");
-        capabilities.setCapability("deviceName", "Pixel 6"); 
-        capabilities.setCapability("isRealMobile", true);
-        capabilities.setCapability("platformVersion","12");
-        // highlight-next-line
-        capabilities.setCapability("app","APP_URL"); //Enter your app (.apk) url
-        capabilities.setCapability("deviceOrientation", "PORTRAIT");
-        capabilities.setCapability("console",true);
-        capabilities.setCapability("network",false);
-        capabilities.setCapability("visual",true);
-        try
-        {
-            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + gridURL), capabilities);
-        }
-        catch (MalformedURLException e)
-        {
-            System.out.println("Invalid grid URL");
-        } catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    @Test
-    public void testSimple() throws Exception
-    {
-        try
-        {
-            WebDriverWait wait = new WebDriverWait(driver, 30);
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("color"))).click();
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("geoLocation"))).click();;
-            Thread.sleep(5000);
-            driver.navigate().back();
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("Text"))).click();
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("notification"))).click();;
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("toast"))).click();
-
-            wait.until(ExpectedConditions.elementToBeClickable(By.id("Browser"))).click();;
-            Thread.sleep(10000);
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.testmuai.com/");
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("find"))).click();
-            Thread.sleep(5000);
-            driver.navigate().back();
-
-            status="passed";
-        }
-            catch (Exception e)
-             {
-                System.out.println(e.getMessage());
-                status="failed";
-             }
-    }
-    @After
-    public void tearDown() throws Exception
-    {
-        if (driver != null)
-        {
-            driver.executeScript("lambda-status=" + status);
-            driver.quit();
-        }
-    }
-}
+```
+appium-skill/
+├── SKILL.md
+└── reference/
+    ├── playbook.md
+    └── advanced-patterns.md
 ```
 
+It provides structured guidance for:
 
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
+* Project structure and setup
+* Dependency configuration
+* Local execution
+* TestMu AI cloud execution
+* Debugging patterns
+* CI/CD integration
 
-</TabItem>
 
-<TabItem value="ios" label="iOS" default>
+### Installing Appium Agent Skill
+***
 
-```java
-package com.lambdatest;
+Install a Appium Agent Skill using the command below:
 
-import io.appium.java_client.MobileBy;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.net.MalformedURLException;
-import java.net.URL;
+```
+# Clone the repo and copy the skill you need
+git clone https://github.com/LambdaTest/agent-skills.git
+cp -r agent-skills/appium-skill .claude/skills/
 
-public class ios {
-    String username = System.getenv("LT_USERNAME") == null ? "LT_USERNAME"   //Add username here
-            : System.getenv("LT_USERNAME");
-    String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "LT_ACCESS_KEY"   //Add accessKey here
-            : System.getenv("LT_ACCESS_KEY");
-    public static RemoteWebDriver driver = null;
-    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
-    public String status = "passed";
-    @Before
-    public void setUp() throws Exception {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        capabilities.setCapability("build", "JUNIT Native App automation");
-        capabilities.setCapability("name", "Java JUnit iOS iPhone 12");
-        capabilities.setCapability("platformName", "ios");
-        capabilities.setCapability("deviceName", "iPhone 12");
-        capabilities.setCapability("isRealMobile", true);
-        capabilities.setCapability("platformVersion","15");
-        // highlight-next-line
-        capabilities.setCapability("app","APP_URL"); //Enter your app (.ipa) url
-        capabilities.setCapability("deviceOrientation", "PORTRAIT");
-        capabilities.setCapability("console",true);
-        capabilities.setCapability("network",false);
-        capabilities.setCapability("visual",true);
-        try
-        {
-            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accessKey + gridURL), capabilities);
-        }
-        catch (MalformedURLException e)
-        {
-            System.out.println("Invalid grid URL");
-        } catch (Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    @Test
-    public void testSimple() throws Exception
-    {
-        try
-        {
-            WebDriverWait wait = new WebDriverWait(driver, 30);
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("color"))).click();
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("geoLocation"))).click();
-            Thread.sleep(5000);
-            driver.navigate().back();
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("Text"))).click();
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("notification"))).click();
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("toast"))).click();
-
-            wait.until(ExpectedConditions.elementToBeClickable(By.id("Browser"))).click();
-            Thread.sleep(10000);
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("url"))).sendKeys("https://www.testmuai.com/");;
-
-            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id("find"))).click();
-            Thread.sleep(5000);
-            driver.navigate().back();
-
-            status="passed";
-        }
-            catch (Exception e)
-             {
-                System.out.println(e.getMessage());
-                status="failed";
-             }
-    }
-    @After
-    public void tearDown() throws Exception
-    {
-        if (driver != null)
-        {
-            driver.executeScript("lambda-status=" + status);
-            driver.quit();
-        }
-    }
-}
+# Or for Cursor / Copilot
+cp -r agent-skills/appium-skill .cursor/skills/
 ```
 
+**Note**: If you prefer installing all available framework skills instead of only appium-skill, clone the repository directly into your tool's skills directory (for example, .claude/skills/, .cursor/skills/, .gemini/skills/, or .agent/skills/).
 
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
 
-</TabItem>
-
-</Tabs>
-
-### Step 3: Configure the Test Capabilities
-
-You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
-
-The capabilities object in the sample code are defined as:
-
-<Tabs className="docs__val">
-<TabItem value="android-config" label="Android" default>
-
-```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("build", "JUNIT Native App automation");
-        capabilities.setCapability("name", "Java JUnit Android Pixel 6");
-        capabilities.setCapability("platformName", "android");
-        capabilities.setCapability("deviceName", "Pixel 6");
-        capabilities.setCapability("isRealMobile", true);
-        capabilities.setCapability("platformVersion","12");
-        // highlight-next-line
-        capabilities.setCapability("app","YOUR_APP_URL");  //Enter your app (.apk) url
-        capabilities.setCapability("deviceOrientation", "PORTRAIT");
-        capabilities.setCapability("console",true);
-        capabilities.setCapability("network",false);
-        capabilities.setCapability("visual",true);
-```
-
-</TabItem>
-
-<TabItem value="ios-config" label="iOS" default>
-
-```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("build", "JUNIT Native App automation");
-        capabilities.setCapability("name", "Java JUnit iOS iPhone 12");
-        capabilities.setCapability("platformName", "ios");
-        capabilities.setCapability("deviceName", "iPhone 12");
-        capabilities.setCapability("isRealMobile", true);
-        capabilities.setCapability("platformVersion","15");
-        // highlight-next-line
-        capabilities.setCapability("app","YOUR_APP_URL");  //Enter your app (.ipa) url
-        capabilities.setCapability("deviceOrientation", "PORTRAIT");
-        capabilities.setCapability("console",true);
-        capabilities.setCapability("network",false);
-        capabilities.setCapability("visual",true);
-```
-
-</TabItem>
-</Tabs>
-
-
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
-
-:::info
-- You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-:::
-
-### Step 4: Execute and Monitor your Tests
-
-- Run the following commands to install the required dependencies:
-
-  ```bash
-  mvn clean
-  ```
-
-- The tests can be executed in the terminal using the following command:
-
-  <Tabs className="docs__val">
-  <TabItem value="android-exec" label="Android" default>
-
-  ```bash
-  mvn test -P android
-  ```
-  </TabItem>
-
-  <TabItem value="ios-exec" label="iOS" default>
-
-  ```bash
-  mvn test -P ios
-  ```
-
-  </TabItem>
-  </Tabs>
-
-  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-</TabItem>
-
-<TabItem value="jbehave" label="JBehave">
-
-Trigger an automation script of **JBehave** for application testing with **Appium** on TestMu AI, running behavior-driven stories across single and parallel device configurations.
-
-### Step 1: Get a Sample Project
-
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
-
-:::tip Sample repo
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-java-jbehave" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-:::
-
-### Step 2: Update your Automation Script
-
-An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-```java
-
-package com.lambdatest;
-import java.io.FileReader;
-import java.net.URL;
-import java.util.Map;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Iterator;
-import java.util.Collection;
-import java.lang.reflect.Constructor;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.JSONParser;
-
-import org.jbehave.core.embedder.Embedder;
-import org.junit.Test;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-import org.junit.runners.Parameterized.Parameter;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-
-@RunWith(Parameterized.class)
-public class LambdaTestJBehaveRunner {
-
-    public WebDriver driver;
-   // private Local l;
-
-    private static JSONObject config;
-
-    @Parameter(value = 0)
-    public int taskID;
-
-    @Parameters
-    public static Collection<Object[]> data() throws Exception {
-        List<Object[]> taskIDs = new ArrayList<Object[]>();
-        if(System.getProperty("config") != null) {
-            JSONParser parser = new JSONParser();
-            config = (JSONObject) parser.parse(new FileReader("src/test/resources/conf/" + System.getProperty("config")));
-            int envs = ((JSONArray)config.get("environments")).size();
-
-            for(int i=0; i<envs; i++) {
-              taskIDs.add(new Object[] {i});
-            }
-        }
-
-        return taskIDs;
-    }
-
-    @Before
-    public void setUp() throws Exception {
-        JSONArray envs = (JSONArray) config.get("environments");
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        capabilities.setCapability("isRealMobile", true);
-        capabilities.setCapability("app","APP_URL");    //Enter app_url here
-
-        Map<String, String> envCapabilities = (Map<String, String>) envs.get(taskID);
-        Iterator it = envCapabilities.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry)it.next();
-            capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
-        }
-        
-        Map<String, String> commonCapabilities = (Map<String, String>) config.get("capabilities");
-        it = commonCapabilities.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry)it.next();
-            if(capabilities.getCapability(pair.getKey().toString()) == null){
-                capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
-            }
-        }
-
-        String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");  //Replace YOUR_LT_USERNAME with your LambdaTest username
-
-
-        String accessKey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESS_KEY" : System.getenv("LT_ACCESS_KEY"); //Replace YOUR_LT_ACCESS_KEY with your LambdaTest accessKey
-
-
-        driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
-    }
-
-    @After
-    public void tearDown() throws Exception {
-        driver.quit();
-    }
-
-    @Test
-    public void runStories() throws Exception {
-        Class<?> c = Class.forName(System.getProperty("embedder"));
-        Constructor<?> cons = c.getConstructor(WebDriver.class);
-        Embedder storyEmbedder = (Embedder) cons.newInstance(driver);
-
-        List<String> storyPaths = Arrays.asList(System.getProperty("stories"));
-        storyEmbedder.runStoriesAsPaths(storyPaths);
-    }
-}
-```
-
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
-
-### Step 3: Configure the Test Capabilities
-
-You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
-
-The capabilities object in the sample code are defined as:
-
-<Tabs className="docs__val">
-<TabItem value="single-config" label="Single" default>
-
-```java
-//Single Tests
-{
-  "server": "mobile-hub.lambdatest.com",
-
-  "capabilities": {
-    "build": "jbehave-LambdaTest-AppAutomate-Single",
-    "name": "Single Test 1"
-  },
-
-  "environments": [
-    {
-    "platformName": "android",
-    "deviceName": "Galaxy S21 5G",
-    "platformVersion": "11"
-    }
-  ]
-}
-```
-
-</TabItem>
-
-<TabItem value="parallel-config" label="Parallel" default>
-
-```java
-//Parallel Tests
-{
-  "server": "mobile-hub.lambdatest.com",
-
-  "capabilities": {
-    "build": "jbehave-LambdaTest-AppAutomate-Parallel",
-    "name": "Parallel Test 1"
-  },
-
-  "environments": [
-    {
-      "platformName": "android",
-      "deviceName": "Galaxy S21 5G",
-      "platformVersion": "11"
-    },
-    {
-      "platformName": "android",
-      "deviceName": "OnePlus 10 Pro",
-      "platformVersion": "12"
-    },
-    {
-      "platformName": "android",
-      "deviceName": "Pixel 3a",
-      "platformVersion": "10"
-    }
-  ]
-}
-```
-
-</TabItem>
-</Tabs>
-
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
-
-:::info
-
-- You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-:::
-
-### Step 4: Execute and Monitor your Tests
-
-- Run the following commands to install the required dependencies:
-
-  ```bash
-  mvn clean install
-  ```
-
-- The tests can be executed in the terminal using the following command:
-
-  <Tabs className="docs__val">
-  <TabItem value="single-exec" label="Single" default>
-
-  ```bash
-  mvn test -P single
-  ```
-  </TabItem>
-
-  <TabItem value="parallel-exec" label="Parallel" default>
-
-  ```bash
-  mvn test -P parallel
-  ```
-
-  </TabItem>
-  </Tabs>
-
-  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-</TabItem>
-
-<TabItem value="cucumber" label="Cucumber">
-
-Trigger an automation script of **Cucumber** for application testing with **Appium** on TestMu AI, driving your BDD scenarios across single and parallel device suites.
-
-:::note
-Cucumber for Java requires the latest Java development environment i.e. JDK 8 or higher. We recommend using the < JDK 11 version.
-:::
-
-### Step 1: Get a Sample Project
-
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
-
-:::tip Sample repo
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-java-cucumber" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-:::
-
-### Step 2: Update your Automation Script
-
-An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-```java
-package MyRunner;
-import java.net.URL;
-
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.testng.CucumberOptions;
-import io.cucumber.testng.TestNGCucumberRunner;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.AppiumDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-
-import org.openqa.selenium.JavascriptExecutor;
-import java.net.MalformedURLException;
-
-
-@CucumberOptions(
-        features = "src/main/java/Features/todo.feature",
-        glue = {"stepDefinitions"},
-        plugin = "json:target/cucumber-reports/CucumberTestReport.json")
-
-public class TestRunner extends AbstractTestNGCucumberTests {
-    
-    private TestNGCucumberRunner testNGCucumberRunner;
-  
-    public static RemoteWebDriver connection;
-    
-    @BeforeClass(alwaysRun = true)
-    public void setUpCucumber() {
-         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-    }
-    
-    @BeforeMethod(alwaysRun = true)
-    @Parameters({ "deviceName", "platformVersion", "platformName" })
-    public void setUpClass(String deviceName, String platformVersion, String platformName) throws Exception {
-
-            String username = System.getenv("LT_USERNAME") == null ? "YOUR_LT_USERNAME" : System.getenv("LT_USERNAME");      //Enter your LambdaTest username at the place of YOUR_LT_USERNAME 
-            String accesskey = System.getenv("LT_ACCESS_KEY") == null ? "YOUR_LT_ACCESSKEY" : System.getenv("LT_ACCESS_KEY");     //Enter your LambdaTest accessKey at the place of YOUR_LT_ACCESSKEY
-
-            DesiredCapabilities capability = new DesiredCapabilities();         
-
-
-            capability.setCapability("platformName", platformName);
-            capability.setCapability("deviceName", deviceName);
-            capability.setCapability("platformVersion",platformVersion);
-                        
-            capability.setCapability("build", "Native App automate Demo");
-            capability.setCapability("test", "Test Parallel");          
-            capability.setCapability("isRealMobile", true);
-            // highlight-next-line
-            capability.setCapability("app","lt://proverbial-android");     //Enter the app url here
-            capability.setCapability("network", false);
-            capability.setCapability("video", true);
-            capability.setCapability("console", true);
-            capability.setCapability("visual", true);
-
-            String gridURL = "https://" + username + ":" + accesskey + "@mobile-hub.lambdatest.com/wd/hub";
-            System.out.println(gridURL);
-            connection = new RemoteWebDriver(new URL(gridURL), capability);
-            System.out.println(capability);
-            System.out.println(connection.getSessionId());
-}
-
-
-    @DataProvider
-    public Object[][] features() {
-        return testNGCucumberRunner.provideScenarios();
-    }
- 
-    @AfterClass(alwaysRun = true)
-    public void tearDownClass() {
-        testNGCucumberRunner.finish();
-    }
-}
-```
-
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
-
-### Step 3: Configure the Test Capabilities
-
-You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
-
-The capabilities object in the sample code are defined as:
-
-<Tabs className="docs__val">
-<TabItem value="single-config" label="Single" default>
-
-```java
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BDD Test Suite" verbose="1" parallel="tests"
-	thread-count="3" >
-    <test name="ANDROIDTEST" annotations="JDK"
-		preserve-order="true">
-        <parameter name="deviceName" value=".*"/>
-        <parameter name="platformVersion" value="12"/>
-        <parameter name="platformName" value="Android"/>
-        <classes>
-            <class name="MyRunner.TestRunner" />
-        </classes>
-    </test> <!-- Test -->
-</suite>
-```
-
-</TabItem>
-
-<TabItem value="parallel-config" label="Parallel" default>
-
-```java
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BDD Test Suite" verbose="1" parallel="tests"
-       thread-count="2">
-    <test name="Galaxy" annotations="JDK"
-          preserve-order="true">
-        <parameter name="deviceName" value="Galaxy.*"/>
-        <parameter name="platformVersion" value="11"/>
-        <parameter name="platformName" value="Android"/>
-        <classes>
-            <class name="MyRunner.TestRunner"/>
-        </classes>
-    </test> <!-- Test -->
-    <test name="OnePlus" annotations="JDK"
-          preserve-order="true">
-        <parameter name="deviceName" value="Pixel.*"/>
-        <parameter name="platformVersion" value="12"/>
-        <parameter name="platformName" value="Android"/>
-        <classes>
-            <class name="MyRunner.TestRunner"/>
-        </classes>
-    </test> <!-- Test -->
-
-</suite>
-```
-
-</TabItem>
-</Tabs>
-
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
-
-:::info
-
-- You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-:::
-
-### Step 4: Execute and Monitor your Tests
-
-- Run the following commands to install the required dependencies:
-
-  ```bash
-  mvn clean install
-  ```
-
-- The tests can be executed in the terminal using the following command:
-
-  <Tabs className="docs__val">
-  <TabItem value="single-exec" label="Single" default>
-
-  ```bash
-  mvn test -D suite=single.xml
-  ```
-  </TabItem>
-
-  <TabItem value="parallel-exec" label="Parallel" default>
-
-  ```bash
-  mvn test -D suite=parallel.xml
-  ```
-
-  </TabItem>
-  </Tabs>
-
-  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-</TabItem>
-
-<TabItem value="testng" label="TestNG">
-
-Trigger an automation script of **TestNG** for application testing with **Appium** on TestMu AI.
-
-### Step 1: Get a Sample Project
-
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
-
-:::tip Sample repo
-All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-java-testng" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-:::
-
-### Step 2: Update your Automation Script
-
-An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
-
-<Tabs className="docs__val">
-<TabItem value="android" label="Android" default>
-
-```java title="AndroidApp.java"
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-
-import java.net.URL;
-import java.util.List;
-
-public class AndroidApp {
-
-    String userName = System.getenv("LT_USERNAME") == null ?
-            "username" : System.getenv("LT_USERNAME"); //Add username here
-    String accessKey = System.getenv("LT_ACCESS_KEY") == null ?
-            "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
-
-    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
-
-    AppiumDriver driver;
-
-    @Test
-    @org.testng.annotations.Parameters(value = {"device", "version", "platform"})
-    public void AndroidApp1(String device, String version, String platform) {
-        try {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("build","Java TestNG Android");
-            capabilities.setCapability("name",platform+" "+device+" "+version);
-            capabilities.setCapability("deviceName", device);
-            capabilities.setCapability("platformVersion",version);
-            capabilities.setCapability("platformName", platform);
-            capabilities.setCapability("isRealMobile", true);
-            // highlight-next-line
-            capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
-            capabilities.setCapability("deviceOrientation", "PORTRAIT");
-            capabilities.setCapability("console", true);
-            capabilities.setCapability("network", false);
-            capabilities.setCapability("visual", true);
-            capabilities.setCapability("devicelog", true);
-
-            String hub = "https://" + userName + ":" + accessKey + gridURL;
-            driver = new AppiumDriver(new URL(hub), capabilities);
-
-            MobileElement color = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/color");
-            //Changes color to pink
-            color.click();
-            Thread.sleep(1000);
-            //Back to original color
-            color.click();
-
-            MobileElement text = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/Text");
-            //Changes the text to "Proverbial"
-            text.click();
-
-            //toast will be visible
-            MobileElement toast = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/toast");
-            toast.click();
-
-            //notification will be visible
-            MobileElement notification = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/notification");
-            notification.click();
-            Thread.sleep(2000);
-
-            //Opens the geolocation page
-            MobileElement geo = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/geoLocation");
-            geo.click();
-            Thread.sleep(5000);
-
-            //takes back to home page
-            MobileElement home = (MobileElement) driver.findElementByAccessibilityId("Home");
-            home.click();
-
-            //Takes to speed test page
-            MobileElement speedtest = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/speedTest");
-            speedtest.click();
-            Thread.sleep(5000);
-
-            MobileElement Home = (MobileElement) driver.findElementByAccessibilityId("Home");
-            Home.click();
-
-            //Opens the browser
-            MobileElement browser = (MobileElement) driver.findElementByAccessibilityId("Browser");
-            browser.click();
-
-            MobileElement url = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/url");
-            url.sendKeys("https://www.testmuai.com");
-
-            MobileElement find = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/find");
-            find.click();
-
-            driver.quit();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            try{
-                driver.quit();
-            }catch(Exception e1){
-                e.printStackTrace();
-            }
-        }
-    }
-}
-```
-
-</TabItem>
-
-<TabItem value="ios" label="iOS" default>
-
-```java title="iOSApp.java"
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import java.net.URL;
-import org.testng.annotations.Test;
-
-public class iOSApp {
-
-    String userName = System.getenv("LT_USERNAME") == null ?
-            "username" : System.getenv("LT_USERNAME"); //Add username here
-    String accessKey = System.getenv("LT_ACCESS_KEY") == null ?
-            "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
-
-    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
-
-    AppiumDriver driver;
-
-    @Test
-    @org.testng.annotations.Parameters(value = {"device", "version", "platform"})
-    public void iOSApp1(String device, String version, String platform) {
-
-        try {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("build","Java TestNG iOS");
-            capabilities.setCapability("name",platform+" "+device+" "+version);
-            capabilities.setCapability("deviceName", device);
-            capabilities.setCapability("platformVersion",version);
-            capabilities.setCapability("platformName", platform);
-            capabilities.setCapability("isRealMobile", true);
-            // highlight-next-line
-            capabilities.setCapability("app", "APP_URL"); //Enter your app (.ipa) url
-            capabilities.setCapability("deviceOrientation", "PORTRAIT");
-            capabilities.setCapability("console", true);
-            capabilities.setCapability("network", false);
-            capabilities.setCapability("visual", true);
-            capabilities.setCapability("devicelog", true);
-            //capabilities.setCapability("geoLocation", "HK");
-
-            String hub = "https://" + userName + ":" + accessKey + gridURL;
-            driver = new AppiumDriver(new URL(hub), capabilities);
-
-            WebDriverWait Wait = new WebDriverWait(driver,30);
-
-            //Changes the color of the text
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("color"))).click();
-            Thread.sleep(1000);
-
-            //Changes the text to "Proverbial"
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Text"))).click();
-            Thread.sleep(1000);
-
-            //Toast will be visible
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("toast"))).click();
-            Thread.sleep(1000);
-
-            //Notification will be visible
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("notification"))).click();
-            Thread.sleep(4000);
-
-            //Opens the geolocation page
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("geoLocation"))).click();
-            Thread.sleep(4000);
-
-            //Takes back
-            driver.navigate().back();
-
-            //Takes to speedtest page
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("speedTest"))).click();
-            Thread.sleep(4000);
-
-            driver.navigate().back();
-
-            //Opens the browser
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("Browser"))).click();
-            Thread.sleep(1000);
-
-            MobileElement url = (MobileElement) driver.findElementByAccessibilityId("url");
-            url.click();
-            url.sendKeys("https://www.testmuai.com");
-
-            Wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("find"))).click();
-            Thread.sleep(1000);
-
-            driver.quit();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            try{
-                driver.quit();
-            }catch(Exception e1){
-                e.printStackTrace();
-            }
-        }
-
-
-    }
-}
-```
-
-
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
-
-</TabItem>
-
-</Tabs>
-
-### Step 3: Configure the Test Capabilities
-
-You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
-
-The capabilities object in the sample code are defined as:
-
-<Tabs className="docs__val">
-<TabItem value="android-config" label="Android" default>
-
-```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("build","Java TestNG Android");
-            capabilities.setCapability("name",platform+" "+device+" "+version);
-            capabilities.setCapability("deviceName", device);
-            capabilities.setCapability("platformVersion",version);
-            capabilities.setCapability("platformName", platform);
-            capabilities.setCapability("isRealMobile", true);
-            // highlight-next-line
-            capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
-            capabilities.setCapability("deviceOrientation", "PORTRAIT");
-            capabilities.setCapability("console", true);
-            capabilities.setCapability("network", false);
-            capabilities.setCapability("visual", true);
-            capabilities.setCapability("devicelog", true);
-```
-
-</TabItem>
-
-<TabItem value="ios-config" label="iOS" default>
-
-```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("build","Java TestNG iOS");
-            capabilities.setCapability("name",platform+" "+device+" "+version);
-            capabilities.setCapability("deviceName", device);
-            capabilities.setCapability("platformVersion",version);
-            capabilities.setCapability("platformName", platform);
-            capabilities.setCapability("isRealMobile", true);
-            // highlight-next-line
-            capabilities.setCapability("app", "APP_URL"); //Enter your app (.ipa) url
-            capabilities.setCapability("deviceOrientation", "PORTRAIT");
-            capabilities.setCapability("console", true);
-            capabilities.setCapability("network", false);
-            capabilities.setCapability("visual", true);
-            capabilities.setCapability("devicelog", true);
-```
-
-</TabItem>
-</Tabs>
-
-:::tip
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-:::
-:::info
-
-- You must add the generated **APP_URL** to the `app` capability in the config file.
-- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
-
-:::
-
-### Step 4: Execute and Monitor your Tests
-
-- Run the following commands to install the required dependencies:
-
-  ```bash
-  mvn clean install
-  ```
-
-- The tests can be executed in the terminal using the following command:
-
-  <Tabs className="docs__val">
-  <TabItem value="android-exec" label="Android" default>
-
-  ```bash
-  mvn test -P android-single
-  ```
-  </TabItem>
-
-  <TabItem value="ios-exec" label="iOS" default>
-
-  ```bash
-  mvn test -P ios-single
-  ```
-
-  </TabItem>
-  </Tabs>
-
-  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build).
-
-</TabItem>
-
-</Tabs>
-
-## View Your Results
----
-
-Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build). Each session includes a video recording, step-by-step screenshots, device logs, and network logs.
-
-## Next Steps
----
-
-Continue with these related guides:
+## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
 - [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -1591,9 +494,7 @@ Continue with these related guides:
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        How to Run Appium Java Tests on TestMu AI
-      </span>
+      <span className="breadcrumbs__link">Java With Appium</span>
     </li>
   </ul>
 </nav>

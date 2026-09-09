@@ -1,8 +1,8 @@
-# How to Create iOS IPA Files on TestMu AI
+# Creating iOS Applications
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Creating iOS IPA files for XCUITest on TestMu AI uses Xcode to archive and export your app. Build the .ipa through Ad Hoc, Enterprise, or Development export methods, or generate a .app bundle and convert it into an uploadable .ipa.
+This document outlines the process of creating and testing iOS apps using Xcode. It covers two methods for creating.ipa files for testing: directly creating the.ipa file or creating an.app bundle and converting it into an.ipa file. The first method involves creating a.ipa file using various export methods, such as Ad Hoc, Enterprise, or Development. The second method involves creating an.app bundle and converting it into an.ipa file.
 
 ## Step 1: Create .ipa files for Testing
 

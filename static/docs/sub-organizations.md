@@ -17,33 +17,21 @@ Before setting up sub-organizations, review the following constraints:
 
 **Step 1:** Sign in to your TestMu AI account. If you don't have an account, register for free.
 
-**Step 2:** From the dashboard, go to **Settings** and select **Organization Settings**.
+**Step 2:** Navigate to **Settings** and select **Organization Settings** from the dropdown.
 
-**Step 3:** Open the **Sub Organizations** tab.
+**Step 3:** Open the **Sub Organization** tab.
 
-**Step 4:** Click **Create** in the top-right corner. Enter a name for your sub-organization.
+**Step 4:** Click **Create**.
 
-Allocate concurrency to at least one product using the sliders. Each row shows the concurrency allocated against your organization's total, for example `0/50`. You cannot create a sub-organization without allocating concurrency to at least one product.
+**Step 5:** Enter a name for your sub-organization and click **Create**.
 
-**Step 5:** Click **Create**.
-
-Your **sub-organization** appears in the list with its user and service account counts, and is ready to configure.
+Your **sub-organization** has been created and is ready to configure.
 
 ## Manage Your Sub-Organization
 
-The Sub Organizations list shows each sub-organization along with its user count and service account count.
-
-To manage a sub-organization, click the **three-dot (⋯) menu** at the end of its row. From this menu, you can **View**, **Edit**, or **Delete** the sub-organization.
-
-You can also rename a sub-organization from inside it, using the **pencil icon** next to its name.
+To manage a sub-organization, click the **three-dot (⋮) menu** next to its name. From this menu, you can **view, edit, or delete** the sub-organization.
 
 ## Manage Users in Your Sub-Organization
-
-Open the sub-organization from the list to manage its users. The **Users** tab is selected by default and lets you search the user list, filter by role, review pending invitations, export the list, and invite new users.
-
-Use the **All Roles** dropdown to filter the list to only **Admin**, **User**, or **Guest** members.
-
-Click **Pending Invitations** to review invitations that have been sent but not yet accepted. You can search by email address and filter by status or role.
 
 ### Invite a User
 
@@ -57,7 +45,7 @@ To **invite users** to your sub-organization, open the newly created sub-organiz
 
 After users have joined, you can manage them directly from the **Users** tab inside the sub-organization.
 
-Each user row has a **three-dot (⋯) menu** that provides the following actions:
+Each user row has a **three-dot (⋮) menu** that provides the following actions:
 
 - **View Username & Access Key:** View the user's username and access key for use in automation or scripts.
 - **Change Password:** Reset the password for the selected user.
@@ -68,7 +56,7 @@ Each user row has a **three-dot (⋯) menu** that provides the following actions
 
 The **Login As** action lets administrators sign in to TestMu AI as another user within the sub-organization. This is useful for troubleshooting access issues, validating role-based permissions, or reproducing problems reported by a team member.
 
-**Step 1:** Open the **three-dot (⋯) menu** next to the user and select **Login As**.
+**Step 1:** Open the **three-dot (⋮) menu** next to the user and select **Login As**.
 
 **Step 2:** You are now signed in as the selected user and will see TestMu AI exactly as they do. An **Assumed Identity** indicator appears in the top-right corner showing whose account you are using.
 

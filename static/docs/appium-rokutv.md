@@ -1,10 +1,6 @@
-# How to Automate Roku TV Testing on TestMu AI
+# Roku TV With Appium
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
-
-Automating Roku TV testing on TestMu AI lets you run Appium scripts through the Roku WebDriver on real TVs, validating remote-based navigation across Roku models so you gain broader device coverage and catch experience issues earlier without repetitive manual checks.
-
-**Supported on:** Real devices
 
 ## Tutorial To Run Your First Test On TestMu AI
 

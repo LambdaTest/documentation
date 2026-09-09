@@ -1,8 +1,8 @@
 ---
 id: virtual-device-flutter-apps
-title: How to Test Flutter Apps on Virtual Devices on TestMu AI
+title: How to test flutter apps using Appium framework on Virtual Devices
 hide_title: false
-sidebar_label: "Test Flutter Apps"
+sidebar_label: Flutter Apps
 description: Learn how to test flutter apps for Appium testing across 5000+ real Android and iOS devices for virtual devices
 keywords:
 - how to test flutter apps
@@ -35,13 +35,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Test Flutter Apps on Virtual Devices on TestMu AI",
+          "name": "Virtual Devices Flutter Apps With Appium",
           "item": `${BRAND_URL}/support/docs/virtual-device-flutter-apps/`
         }]
       })
     }}
 ></script>
-Testing Flutter apps on TestMu AI runs Appium's Flutter driver across 5000+ real Android and iOS devices, letting you automate cross-platform apps from a single codebase. Compile your app in debug or profile mode, upload it, and execute automated tests.
+Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
+
+You can now test Flutter apps on the <BrandName /> Appium testing platform across 5000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
 
 ## Prerequisites
 

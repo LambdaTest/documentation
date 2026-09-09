@@ -12,10 +12,6 @@ You can also generate the HyperExecute YAML directly from the HyperExecute Porta
 
 **Step 4:**  Once done, you can download the YAML file using the small icon on top. Alternatively, you can copy the contents of the file and modify them further according to your needs on your favorite IDE.
 
-
-
-
-
 > HyperExecute supports multiple languages and testing frameworks. See the comprehensive list & samples [here](/support/docs/hyperexecute-supported-languages-and-frameworks/).
 
 ## Sample HyperExecute YAML

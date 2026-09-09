@@ -38,6 +38,6 @@ Since you have the TestMu AI Executor ready, you can now execute your tests from
 
 Now if you open your [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/timeline), you can see your Cerberus test case running as per the chosen Robot Executor details.
 
-Once the test is complete, you can view the result of the test on TestMu AI, with all its details. You can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more for each executed test from your TestMu AI platform. To explore more about the TestMu AI's Automation Dashboard, refer [inside TestMu AI platform guide](/docs/inside-testmu-platform/).
+Once the test is complete, you can view the result of the test on TestMu AI, with all its details. You can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more for each executed test from your TestMu AI platform. To explore more about the TestMu AI's Automation Dashboard, refer [inside TestMu AI platform guide](/docs/inside-testmu-platform/).
 
 > Congrats! You have successfully executed your Cerberus test case on the TestMu AI platform, which provides you 10,000+ browser/device combinations to perform cross-browser testing. If you have any doubt or face any issues, please feel free to contact us via **24/7 chat support**, or you can also mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy Testing!! 🙂

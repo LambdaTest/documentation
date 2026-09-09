@@ -28,7 +28,7 @@ PDF accessibility should be treated as its own document-focused workflow. Do not
 1. **Confirm scope** with legal or design: which PDFs are in scope (marketing, invoices, user manuals)?
 2. **Upload or target** the PDF through the product flow your account supports for document scanning (menus vary by release).
 3. **Choose WCAG / PDF-UA expectations** aligned with your policy. Note that automated checks still require **manual reading order and tag inspection** for high-stakes filings.
-4. **Review findings** in the same dashboard patterns as web reports where applicable; export evidence for audits ([exporting](/support/docs/accessibility-testing-navigating-dashboard/#exporting-and-sharing-reports)).
+4. **Review findings** in the same dashboard patterns as web reports where applicable; export evidence for audits ([exporting](/support/docs/accessibility-exporting-sharing-reports/)).
 5. **Track remediation** in your CMS or document owner tool; re-upload after fixes and re-scan.
 
 ## Related docs

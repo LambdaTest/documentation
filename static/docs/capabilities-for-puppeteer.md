@@ -1,10 +1,8 @@
-# How to Configure Puppeteer Capabilities on TestMu AI
+# Capabilities for Puppeteer Testing
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-When you run a Puppeteer test on TestMu AI, capabilities tell the cloud machine which browser, OS, resolution, and logs each session needs. Setting them correctly means every test targets the exact environment you want and captures the debugging data you need. You define these capabilities in your Puppeteer script and pass them to the CDP endpoint at connection time.
-
-The TestMu AI Capability Generator can auto-create the capabilities class for your Puppeteer scripts. The table below lists the capabilities you can configure and an example of each.
+The TestMu AI Capability Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on TestMu AI. Here are a few capabilities that you can configure to run your Puppeteer tests.
 
 | Key | Expected Values | Description | Capability |
 | -------- | -----| ------- | ----------------- |
@@ -24,11 +22,3 @@ The TestMu AI Capability Generator can auto-create the capabilities class for yo
 | tunnelName   |  true/false | Specify tunnel name     | `const capability = { "LT:Options": {"tunnelName": "",}}` |
 | geoLocation   |  AR (Argentina) | Specify country code | `const capability = { "LT:Options": {"geoLocation": "AR",}}` |
 | idleTimeout | number| Specifies the timeout of the commands in seconds.  Default value: 300  Max value: 1800 If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "",}}`|
-
-## Related Puppeteer Guides
-
-Continue with the guides below to run and configure your Puppeteer tests on TestMu AI.
-
-- [Run your first Puppeteer test on TestMu AI](/support/docs/puppeteer-testing/) walks through the end-to-end setup.
-- [Set up the Puppeteer test environment](/support/docs/puppeteer-test-execution-setup/) covers browser selection, test organization, and debugging logs.
-- [Run Puppeteer tests with Mocha](/support/docs/puppeteer-testing-with-mocha/) covers the Mocha test runner integration.

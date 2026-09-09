@@ -42,7 +42,7 @@ Once synced, the test instance is updated with the latest master test case conte
 
 ## Audit Log
 
-Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-run-creation-and-management/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes, giving your team full traceability.
+Every sync action is recorded in the test instance's [Audit Log](/support/docs/test-instance-audit-logs/). The log captures the version update (e.g., v1 → v2), the instance and step-level status resets, and any related changes, giving your team full traceability.
 
 **Duplicating a Test Run**
 When you duplicate a test run, all test instances in the new run are automatically linked to the **latest version** of their master test cases, regardless of which version was used in the original run. All statuses are set to **Not Started**.
