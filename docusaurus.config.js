@@ -147,9 +147,9 @@ module.exports = {
           createSitemapItems: async ({ routes, frontMatter }) => {
             const allowedPath = '/support/api-doc/selenium-automation-api/build/fetch-all-builds-of-an-account/';
             return routes.filter(route => {
-              const pageMeta = frontMatter[route.id] || {}; // Ensure correct access
+              const pageMeta = frontMatter?.[route.id] ?? {}; // Use optional chaining or default to empty object
               if (pageMeta && (pageMeta.redirect || pageMeta.robots === 'noindex')) {
-                return false; // exclude redirect and noindex pages
+                return false;
               }
               return route.path === allowedPath;
             });
