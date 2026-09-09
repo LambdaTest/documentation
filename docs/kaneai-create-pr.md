@@ -1,8 +1,7 @@
 ﻿---
 id: kaneai-create-pr
 title: Create Pull Requests from KaneAI Test Cases
-hide_title: true
-toc_max_heading_level: 2
+hide_title: false
 sidebar_label: Create Pull Requests
 description: Export KaneAI-generated test code directly to GitHub or GitLab as pull requests. Set up repository integration, configure PR settings, and track PR status from Test Manager.
 keywords:
@@ -23,9 +22,6 @@ canonical: https://www.testmuai.com/support/docs/kaneai-create-pr/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-<head>
-  <meta name="robots" content="noindex, nofollow" />
-</head>
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -51,17 +47,15 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# Create Pull Requests from KaneAI Test Cases
-***
-
 KaneAI lets you export generated test code directly to your GitHub or GitLab repository as a pull request (PR) or merge request (MR). Instead of downloading ZIP files and manually copying code, you can raise PRs from the Test Manager in a few clicks, or automatically whenever code is generated.
+
+This guide covers how to integrate your Git provider, configure PR settings, create pull requests from test cases, and track their status.
 
 :::note Beta Feature
 This feature is currently in **beta** and is not generally available. If you would like access, please reach out to [support@testmuai.com](mailto:support@testmuai.com).
 :::
 
 ## Prerequisites
-***
 
 - A <BrandName /> account with access to KaneAI and Test Manager.
 - A GitHub or GitLab account with at least one repository.
@@ -69,7 +63,6 @@ This feature is currently in **beta** and is not generally available. If you wou
 - Admin role to configure integration and PR settings. Users with appropriate permissions can create PRs for their own test cases.
 
 ## Supported Platforms and Frameworks
-***
 
 | Platform | Framework | File Exported |
 |----------|-----------|---------------|
@@ -78,20 +71,17 @@ This feature is currently in **beta** and is not generally available. If you wou
 | Mobile App | Appium (Python) | `test.py` |
 
 ## Step 1: Integrate Your Git Provider
-***
 
 Before you can create pull requests, you need to connect your GitHub or GitLab account to <BrandName />.
 
 ### Connect via Integrations Page
-***
 
 Set up your Git provider from the <BrandName /> Integrations page:
 
-- **GitHub**: Supports OAuth, Repo-based OAuth, Cloud/PAT, and Self-Hosted (GitHub Enterprise) connection methods. See the [GitHub Integration](/support/docs/github-integration/) for detailed setup instructions.
-- **GitLab**: Supports OAuth, Personal Access Token, and Self-Managed instance connection methods. See the [GitLab Integration](/support/docs/gitlab-integration/) for detailed setup instructions.
+- **GitHub**: Supports OAuth, Repo-based OAuth, Cloud/PAT, and Self-Hosted (GitHub Enterprise) connection methods. See the [GitHub Integration guide](/support/docs/github-integration/) for detailed setup instructions.
+- **GitLab**: Supports OAuth, Personal Access Token, and Self-Managed instance connection methods. See the [GitLab Integration guide](/support/docs/gitlab-integration/) for detailed setup instructions.
 
-### Select Platform From Test Manager
-***
+### Select Platform from Test Manager
 
 When you initiate PR creation for the first time from the Test Manager, a **Select Platform to Create PR** dialog appears. This dialog shows the integration status for each provider.
 
@@ -108,14 +98,12 @@ Bitbucket support is coming soon. Currently, GitHub and GitLab are the supported
 :::
 
 ## Step 2: Configure Repository Settings (First-Time Setup)
-***
 
 After selecting your integrated provider, you are taken to the **Setup Pull Request** page. This is a one-time configuration that defines how test code is organized in your repository.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/create-pr/pr-setup-flow.png').default} alt="Setup Pull Request page with repository strategy and configuration options" className="doc_img"/>
 
 ### Repository Strategy
-***
 
 Choose how repositories are mapped to your projects:
 
@@ -125,7 +113,6 @@ Choose how repositories are mapped to your projects:
 | **Multiple Repositories** | Each project can be linked to its own repository. A default repository handles unmapped and new projects. |
 
 ### Configuration Fields
-***
 
 | Field | Description |
 |-------|-------------|
@@ -141,14 +128,12 @@ You can change all of these settings later from the [Test Manager Settings > Pul
 :::
 
 ### Single Repository Mode
-***
 
 In Single Repository mode, all test case PRs across all projects go to one repository. The settings page shows the selected repository, folder structure pattern, base branch, and Auto-PR toggle.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/create-pr/pr-setting-single.png').default} alt="Pull Requests settings tab showing Single Repository configuration" className="doc_img"/>
 
 ### Multiple Repositories Mode
-***
 
 In Multiple Repositories mode, you can map individual projects to specific repositories. The configuration table shows columns for **Project Name**, **Repository Name**, **Folder Path**, **Base Branch**, and **Auto-PR**.
 
@@ -160,12 +145,10 @@ In Multiple Repositories mode, you can map individual projects to specific repos
 Click **Update Setup** to save any changes.
 
 ## Step 4: Create a Pull Request
-***
 
 Once the integration and repository settings are configured, you can create PRs directly from the test case listing page or from the code section of an individual test case details page.
 
 ### PR Status in the Test Case Listing
-***
 
 Each test case in the listing displays its PR status inline:
 
@@ -175,7 +158,6 @@ Each test case in the listing displays its PR status inline:
 <img loading="lazy" src={require('../assets/images/kane-ai/features/create-pr/tc-listing-page-PR.png').default} alt="Test case listing showing PR status indicators and PR details tooltip" className="doc_img"/>
 
 ### How to Create a PR
-***
 
 1. Navigate to your project in **Test Manager**.
 2. Find the test case you want to create a PR for in the test case listing.
@@ -184,7 +166,6 @@ Each test case in the listing displays its PR status inline:
 5. Confirm the PR details and submit. The PR is created in your configured repository.
 
 ### Diff-Based Updates
-***
 
 KaneAI automatically tracks whether each code export version already has an associated PR. This detection happens in the background. The **Create PR** button only appears for a version when there is no existing PR for it.
 
@@ -196,14 +177,12 @@ In the **Code** section of a test case, each code export version shows its PR st
 - **Version with an existing PR**: The PR number is shown (e.g., `#2`) and the **Create PR** button is disabled since the code is already synced.
 
 ### Auto-PR
-***
 
 When Auto-PR is enabled in your settings, a pull request is automatically created whenever code generation completes for a test case. No manual action is required.
 
 - The PR uses your saved configuration (repository, folder structure, base branch).
 
 ## Step 5: Filter by PR Status
-***
 
 Use the **PR Status** filter to quickly find test cases based on their pull request state. Click the **More** filter option in the test case listing toolbar, then select **PR Status**.
 
@@ -222,10 +201,8 @@ Available filter options:
 Select one or more filters and click **Apply** to filter the listing.
 
 ## Additional Details
-***
 
 ### Folder Structure in the Repository
-***
 
 Test files are organized in your repository following the configured folder structure pattern. The default pattern is:
 
@@ -247,7 +224,6 @@ your-repo/
 You can customize this pattern during setup or in the Pull Requests settings tab.
 
 ### Permissions
-***
 
 | Action | Admin | User |
 |--------|-------|------|

@@ -1,25 +1,23 @@
 ---
 id: author-your-first-mobile-app-test
-title: How to Author Mobile App Tests With KaneAI
-hide_title: true
-toc_max_heading_level: 2
-sidebar_label: Author Mobile App Test
-description: Author a mobile app test in KaneAI by uploading your app and describing it in natural language. KaneAI runs your steps on real devices, no code required.
+title: Author Your First Mobile App Test
+hide_title: false
+sidebar_label: Mobile App Test
+description: In this detailed guide, you will learn how you can manually author your first mobile app test with KaneAI.
 keywords:
-  - ai testing tool
+ - ai testing tool
   - ai qa agent
   - genai qa agent
   - testmu ai automation
   - testmu ai kaneai
-  - kaneai App test
-  - kaneai guidelines
-  - instructions writings
 url: https://www.testmuai.com/support/docs/author-your-first-mobile-app-test/
 site_name: TestMu AI
 slug: author-your-first-mobile-app-test/
 canonical: https://www.testmuai.com/support/docs/author-your-first-mobile-app-test/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
@@ -39,136 +37,59 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Author Mobile App Test",
-          "item": `${BRAND_URL}/support/docs/author-your-first-mobile-app-test/`
+          "name": "Author Your First Mobile App Test",
+          "item": `${BRAND_URL}/support/docs/author-your-first-mobile-app-test`
         }]
       })
     }}
 ></script>
+# Author Your First Mobile App Test
 
-# How to Author Mobile App Tests With KaneAI
-***
+In this guide, we'll walk you through how you can author your mobile app tests using KaneAI
 
-Author a mobile app test in KaneAI by uploading your app and describing what you want in natural language. KaneAI translates your plain-English instructions into executable test steps that run on real devices, with no coding or scripting required.
+## Steps to Author Your Mobile App Test
 
-## Prerequisites
-***
+**Step 1:** From the KaneAI dashboard, click on **Author App Test**.
 
-Before you begin, make sure you have:
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-one.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-:::note
-- A <BrandName /> account with access to KaneAI.
-- Your app build (`.apk`, `.aab`, or `.ipa`) ready to upload.
-:::
+**Step 2:** A modal would appear from the side. Upload the app you want to test. 
 
-## Author a Mobile App Test
-***
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-two.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-Follow these steps to author and run a mobile app test:
+**Step 3:** Choose your preferred device and the OS version.
 
-### Step 1: Open the App Test Authoring Modal
-***
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-three.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-From the KaneAI dashboard, click **Author App Test**.
+**Step 4:** You can also select advanced configurations from the Advanced Settings option. 
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-one.png').default} alt="Open the App Test Authoring Modal" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-five.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-**Result:** The app test authoring modal opens from the side.
+**Step 5:** Once done, click on **Start Testing** to get started. 
 
-### Step 2: Upload Your App
-***
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-four.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-Upload the app build you want to test.
+**Step 6:** Now tell KaneAI what you want to author using natural language without the need for coding or scripting knowledge required. KaneAI translates your instructions into executable test steps automatically. 
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-two.png').default} alt="Upload Your App" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-test-authoring.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> 
 
-**Result:** Your app is uploaded and ready to install on a device.
+**Step 7:** You can also leverage the **Manual Interaction Mode** to perform any particular step or action directly in the instance window and KaneAI would record it and create an automation step for the same. 
 
-### Step 3: Choose the Device and OS Version
-***
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/mobile-app-manual-interaction.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-Choose your device and OS version.
+As you add each instruction, KaneAI queues them in real-time without waiting for completion. This allows you to build comprehensive test flows quickly and efficiently. Once you've outlined all your test steps, click Finish Test to finalize your automated test case.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-three.png').default} alt="Choose the Device and OS Version" width="1347" height="616"  className="doc_img"/>
+**Step 8:** Now, select your **Project** and the folder where you want to save your test cases. The **Test Name** and **Description** will be generated automatically, but you can also edit them. Select your test's **Type** and **Status**, as well as the necessary tags that will allow you to search for it later.
 
-**Result:** Your target device configuration is set.
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-save.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-### Step 4: Configure Advanced Settings
-***
+**Step 9:** To execute your test, click on the **Execute test case** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
 
-Optionally open **Advanced Settings** to select advanced configurations for the session. For the full list of options, see the [KaneAI Advanced Settings](/support/docs/kaneai-advanced-settings/) guide.
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/app-test-summary.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-five.png').default} alt="Configure Advanced Settings" width="1347" height="616"  className="doc_img"/>
 
-**Result:** Your selected advanced settings apply to the session.
 
-### Step 5: Start Testing
-***
 
-Click **Start Testing**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-four.png').default} alt="Start Testing" width="1347" height="616"  className="doc_img"/>
 
-**Result:** KaneAI launches a live device instance with your app installed and opens the authoring panel.
 
-### Step 6: Describe Your Test in Natural Language
-***
-
-Tell KaneAI what you want to test in plain English. KaneAI translates each instruction into an executable test step automatically. As you add instructions, KaneAI queues them in real time without waiting for completion, so you can build the full flow without pausing. When you finish, click **Finish Test** to finalize the test case.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-test-authoring.png').default} alt="Describe Your Test in Natural Language" width="1347" height="616"  className="doc_img"/> 
-
-**Result:** Each instruction appears as a distinct step in the test flow.
-
-### Step 7: Capture Steps With Manual Interaction
-***
-
-To capture an action that is hard to describe, use **Manual Interaction Mode**. Perform the step directly in the instance window, and KaneAI records it and creates the matching automation step. For the full gesture and platform matrix, see the [KaneAI Manual Interaction](/support/docs/kaneai-manual-interaction/) guide.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/mobile-app-manual-interaction.png').default} alt="Capture Steps With Manual Interaction" width="1347" height="616"  className="doc_img"/>
-
-**Result:** KaneAI adds the recorded action as an automation step in the flow.
-
-### Step 8: Save the Test Case
-***
-
-Select your **Project** and the folder where you want to save the test case. The **Test Name** and **Description** are generated automatically, and you can edit them. Set the test's **Type** and **Status**, and add tags so you can search for it later.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-save.png').default} alt="Save the Test Case" width="1347" height="616"  className="doc_img"/>
-
-**Result:** The test case is saved to the selected project and folder.
-
-### Step 9: Execute the Test
-***
-
-Click **Execute test case**.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/app-test-summary.png').default}  alt="Execute the Test" width="1347" height="616"  className="doc_img"/>
-
-**Result:** You are redirected to the HyperExecute dashboard, where your test runs. To interpret the run, see the [KaneAI HyperExecute Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/) guide.
-
-## Best Practices for Authoring App Tests
-***
-
-Follow these practices to improve the stability and accuracy of generated steps in native app tests:
-
-- **OTP and PIN fields:** For split-digit boxes, use the `OTP` keyword, for example `Enter OTP "1234"`.
-- **Partially clickable text:** For spannable links inside labels, use `spannable text`, for example `Click on spannable text: "Terms and Conditions"`.
-- **Wheels, sliders, and date pickers:** Target the column directly, for example `Enter "2" in first column`. Supported classes include `NumberPicker` and `SeekBar` (Android) and `XCUIElementTypePickerWheel`, `XCUIElementTypeDatePicker`, and `XCUIElementTypeSlider` (iOS); use App Live [UI Inspector](/support/docs/ui-inspector/) to confirm support.
-- **Popups:** Dismiss a popup that has no visible close button with `dismiss dialog`.
-- **Keyboard:** Use `hide keyboard` on Android; on iOS, add `press enter` after typing, for example `Type abcd and press enter`.
-- **Special keys:** Delete characters with `press Del`.
-- **Explicit waits:** Add a `wait` step when a screen or element takes time to load, for example a `Wait for 3 seconds` step before an assertion.
-- **Per-step timeout:** Each app step waits up to 10 seconds for its element by default. On slow screens, override it via the step's three-dot menu, then **Step Timeout** (1 to 300 seconds), instead of adding fixed `wait` steps. Supported on Android and iOS real devices.
-- **Explicit identifiers:** Name the element type for accuracy, for example `Click on continue 'text'` or `Type "2" in "username" input field`.
-
-## Next Steps
-***
-
-Continue with these guides:
-
-- [Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)
-- [Author Your First Mobile Browser Test](/support/docs/author-your-first-mobile-browser-test/)
-- [KaneAI Mobile App Testing Patterns](/support/docs/kaneai-kb-mobile-app-testing-patterns/)
-- [KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)
-- [KaneAI Upload and Download Files](/support/docs/kaneai-upload-and-download-files/)

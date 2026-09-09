@@ -2,7 +2,6 @@
 id: kaneai-kb-knowledge-base-index
 title: KaneAI Knowledge Base
 hide_title: true
-toc_max_heading_level: 2
 sidebar_label: Knowledge Base
 description: Central hub for all KaneAI test authoring guides, best practices, workarounds, and reference documentation
 keywords:
@@ -15,9 +14,10 @@ keywords:
 url: https://www.testmuai.com/support/docs/kaneai-kb-knowledge-base-index/
 site_name: TestMu AI
 slug: kaneai-kb-knowledge-base-index/
-canonical: https://www.testmuai.com/support/docs/getting-started-with-kane-ai/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,7 +44,6 @@ canonical: https://www.testmuai.com/support/docs/getting-started-with-kane-ai/
 ></script>
 
 # KaneAI Knowledge Base
-***
 
 export const BrandName = ({type = 'default'}) => {
   const getBrandName = () => 'TestMu AI';
@@ -58,7 +57,6 @@ export const BrandName = ({type = 'default'}) => {
 The KaneAI Knowledge Base is your go-to resource for writing effective test cases, handling complex testing scenarios, and getting the most out of KaneAI's natural language automation. Whether you're authoring your first test or working around advanced edge cases, these guides provide practical, scenario-driven instructions with real-world examples.
 
 ## Authoring Guides
-***
 
 Start here to learn how to write reliable test instructions for any scenario, from finding elements on the page to handling complex form interactions.
 
@@ -100,7 +98,6 @@ Start here to learn how to write reliable test instructions for any scenario, fr
 </div>
 
 ## Advanced Testing
-***
 
 Guides for complex testing scenarios involving authentication, API validation, and workarounds for natural language limitations.
 
@@ -119,7 +116,7 @@ Guides for complex testing scenarios involving authentication, API validation, a
     </div>
   </a>
 
-  <a href="/support/docs/kane-ai-javascript-execution/">
+  <a href="/support/docs/kaneai-kb-js-snippets-and-workarounds/">
     <div className="support_inners">
       <h3>JS Workarounds</h3>
       <p>When natural language isn't enough: JS snippets for date pickers, CSS validation, string manipulation, table cells, and more.</p>
@@ -135,7 +132,6 @@ Guides for complex testing scenarios involving authentication, API validation, a
 </div>
 
 ## Variables and Parameters
-***
 
 Manage dynamic data, secrets, and parameterized test inputs.
 
@@ -147,14 +143,14 @@ Manage dynamic data, secrets, and parameterized test inputs.
     </div>
   </a>
 
-  <a href="/support/docs/kane-ai-using-variables/">
+  <a href="/support/docs/kane-ai-secrets/">
     <div className="support_inners">
       <h3>Secrets</h3>
       <p>Securely stored sensitive data (e.g., passwords, API tokens) encrypted via HashiCorp Vault. Never exposed in logs or generated code.</p>
     </div>
   </a>
 
-  <a href="/support/docs/kane-ai-using-variables/">
+  <a href="/support/docs/kane-ai-smart-variables/">
     <div className="support_inners">
       <h3>Smart Variables</h3>
       <p>Predefined dynamic variables for dates, randomization, device info, and system details. Use `{{smart.current_date}}`, `{{smart.random_email}}`, and more.</p>
@@ -168,7 +164,7 @@ Manage dynamic data, secrets, and parameterized test inputs.
     </div>
   </a>
 
-  <a href="/support/docs/kane-ai-using-parameters/">
+  <a href="/support/docs/kane-ai-using-datasets/">
     <div className="support_inners">
       <h3>Datasets</h3>
       <p>Collections of test data used for data-driven testing, allowing you to run the same test with different inputs.</p>
@@ -177,7 +173,6 @@ Manage dynamic data, secrets, and parameterized test inputs.
 </div>
 
 ## Reference
-***
 
 <div className="support_main">
   <a href="/support/docs/kane-ai-command-guide/">
@@ -203,17 +198,16 @@ Manage dynamic data, secrets, and parameterized test inputs.
 </div>
 
 ## Quick Start Guide
-***
 
 New to KaneAI? Here's the recommended reading order:
 
 1. **[Author Your First Desktop Browser Test](/support/docs/author-your-first-desktop-browser-test/)**: Get started by authoring your first desktop browser test
 2. **[Author Your First Mobile Browser Test](/support/docs/author-your-first-mobile-browser-test/)**: Learn to author mobile browser tests with device selection and configuration
 3. **[Author Your First Mobile App Test](/support/docs/author-your-first-mobile-app-test/)**: Build your first mobile app test with app upload and device configuration
-4. **[KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
-5. **[KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
-6. **[KaneAI Assertions and Validation](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
-7. **[KaneAI Dynamic Content Waits and Page State](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
-8. **[KaneAI JavaScript Execution](/support/docs/kane-ai-javascript-execution/)**: When natural language isn't enough
-9. **[KaneAI Scroll in Feature](/support/docs/kane-ai-scroll-in-feature/)**: Scroll until a target element is visible when authoring mobile tests
-10. **[KaneAI Create PR](/support/docs/kaneai-create-pr/)**: Turn KaneAI test cases into pull requests in your repository
+4. **[Element Interactions](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)**: Learn how to describe elements so KaneAI can find them reliably
+5. **[Forms & Inputs](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)**: Handle every type of form element
+6. **[Assertions Guide](/support/docs/kaneai-kb-assertions-and-validation/)**: Verify your app works correctly
+7. **[Waits & Timing](/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/)**: Handle async behavior and timing
+8. **[JS Workarounds](/support/docs/kaneai-kb-js-snippets-and-workarounds/)**: When natural language isn't enough
+9. **[Scroll Until Element for Mobile Authoring](/support/docs/kaneai-scroll-until-mobile/)**: Scroll until a target element is visible when authoring mobile tests
+10. **[Create Pull Requests from KaneAI Test Cases](/support/docs/kaneai-create-pr/)**: Turn KaneAI test cases into pull requests in your repository

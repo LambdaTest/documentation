@@ -1,10 +1,9 @@
 ---
 id: kaneai-advanced-settings
-title: How to Configure Advanced Settings With KaneAI
-hide_title: true
-toc_max_heading_level: 2
+title: Advanced Settings in KaneAI Test Case
+hide_title: false
 sidebar_label: Advanced Settings
-description: Edit advanced settings for a KaneAI test from the test summary page across desktop web, mobile app, and mobile web.
+description: Learn how to edit advanced settings for your KaneAI test cases from the test summary page across desktop web, mobile app, and mobile web platforms.
 keywords:
   - kaneai advanced settings
   - edit advanced settings
@@ -47,19 +46,22 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Configure Advanced Settings With KaneAI
-***
+KaneAI allows you to edit the advanced settings of an existing test case directly from the **Test Summary** page. This gives you the flexibility to update configurations like network settings, timezone, Chrome options, and custom headers after a test has already been authored, without having to recreate it from scratch.
 
+This feature is supported across all platforms: **Desktop Web**, **Mobile App**, and **Mobile Web**.
 
-**Advanced Settings** in KaneAI let you edit the configuration of an existing test case, such as network settings, timezone, Chrome options, and custom headers, directly from the **Test Summary** page without recreating the test. Advanced Settings are supported on **Desktop Web**, **Mobile App**, and **Mobile Web**.
+## Overview
+
+When you edit advanced settings for a test case, you have two options:
+
+- **Apply Settings**: Saves the updated settings and generates a new version of the test case with regenerated code. Use this when the setting changes do not affect the test steps themselves.
+- **Edit Test Steps**: Saves the updated settings and opens the playground so you can make relevant changes to your test steps. Use this when the updated settings may require modifications to the test flow.
 
 ## Platform-Specific Advanced Settings
-***
 
-The available settings depend on the platform of your test case. Refer to the relevant section below for the complete list of configurable options.
+The available settings vary depending on the platform of your test case. Refer to the relevant section below for the complete list of configurable options.
 
 ### Desktop Web
-***
 
 | Setting | Control Type | Description |
 |---|---|---|
@@ -69,7 +71,6 @@ The available settings depend on the platform of your test case. Refer to the re
 | **Custom Headers** | Toggle + multi-input | Add up to 10 custom HTTP headers to inject in your test case |
 
 ### Android App
-***
 
 **Top-level settings:**
 
@@ -99,11 +100,10 @@ The available settings depend on the platform of your test case. Refer to the re
 | **Language** | Dropdown | Set language for test session |
 
 :::tip
-For more on mobile app capabilities like biometric authentication, image injection, and video injection, see [KaneAI Mobile App Capabilities](/support/docs/kane-ai-mobile-app-capabilities/).
+For more details on mobile app capabilities like biometric authentication, image injection, and video injection, see [Advanced Mobile Features](/support/docs/kane-ai-mobile-app-capabilities/).
 :::
 
 ### iOS App
-***
 
 **Top-level settings:**
 
@@ -129,96 +129,63 @@ For more on mobile app capabilities like biometric authentication, image injecti
 | **Language** | Dropdown | Set language |
 
 ### Android Web
-***
 
-Android Web test cases share most settings with **Android App**, with the following differences:
+Android Web test cases share most settings with [Android App](#android-app), with the following differences:
 
 - **Custom Headers** is available (Toggle + multi-input, add up to 10 custom HTTP headers)
 - **Biometric Authentication**, **Image Injection**, and **Video Injection** are **not** available
 
 ### iOS Web
-***
 
 iOS Web test cases share most settings with [iOS App](#ios-app), with the following differences:
 
 - **Custom Headers** is available (Toggle + multi-input, add up to 10 custom HTTP headers)
 - **Biometric Authentication**, **Image Injection**, and **Video Injection** are **not** available
 
-## Edit Advanced Settings
-***
+## How to Edit Advanced Settings
 
-Follow these steps to update the Advanced Settings of an existing test case.
+### Step 1: Open the Test Summary Page
 
-### Step 1: Open Test Summary
-***
+Navigate to your test case in KaneAI and open the **Test Summary** tab.
 
-Open your test case in KaneAI and go to the **Test Summary** tab.
+### Step 2: Open the Edit Test Steps Dialog
 
-**Result:** The test case summary opens.
-
-### Step 2: Open the Edit Dialog
-***
-
-Click **Edit Test Steps** to open the Advanced Settings panel.
+Click on **Edit Test Steps** to open the advanced settings panel. You will see the current configuration for your test case.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/edit-advanced-settings/edit-test-steps-advanced-settings.png').default} alt="Edit Test Steps - Advanced Settings" className="doc_img"/>
 
-**Result:** The panel shows the current configuration for your test case.
-
 ### Step 3: Modify the Settings
-***
 
-Update the settings as needed. For example:
+Update the settings as needed. For example, you can:
 
 - Change the **Network Configuration** from `None` to `Geolocation` and select a region.
 - Update the **Timezone** to a different zone.
 - Toggle **Chrome Options** on or off and add command-line switches.
 - Enable **Custom Headers** and add HTTP headers for your test.
 
+Settings that have been modified will display an **Edited** badge next to them.
+
 <img loading="lazy" src={require('../assets/images/kane-ai/features/edit-advanced-settings/advanced-settings-in-session.png').default} alt="Edited Advanced Settings" className="doc_img"/>
 
-**Result:** Modified settings display an **Edited** badge.
-
 ### Step 4: Save Your Changes
-***
 
-Choose one of the two save actions at the bottom of the dialog (see [Save actions](#save-actions)).
+Choose one of the two actions at the bottom of the dialog:
+
+- **Apply Settings**: Saves the settings and generates a new version with updated code. The test case remains on the Test Summary page.
+- **Edit Test Steps**: Saves the settings and opens the playground so you can adjust the test steps to reflect the new configuration.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/edit-advanced-settings/edited-advanced-settings.png').default} alt="Apply Settings or Edit Test Steps" className="doc_img"/>
 
-**Result:** KaneAI saves the updated settings and generates a new version of the test case.
-
-## Save Actions
-***
-
-Choose one of the following actions to save your settings changes.
-
-| Action | What it does | When to use |
-|---|---|---|
-| **Apply Settings** | Saves the settings and generates a new version with regenerated code. The test case stays on the Test Summary page. | The setting changes do not affect the test steps. |
-| **Edit Test Steps** | Saves the settings and opens the playground so you can adjust the test steps. | The updated settings may require changes to the test flow. |
-
 ## Version History
-***
 
-Each time you apply updated settings, KaneAI creates a new version of the test case, viewable from the **Version History** tab. The comparison view shows a diff of what changed, such as updated network configuration or timezone values, so you can track exactly what was modified in each version.
+Every time you apply updated settings, a new version of the test case is created. You can view and compare changes between versions from the **Version History** tab.
+
+The version comparison view shows a diff of what changed, for example, updated network configuration or timezone values, so you can track exactly what was modified in each version.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/edit-advanced-settings/advanced-settings-version-history.png').default} alt="Advanced Settings Version History" className="doc_img"/>
 
 ## Limitations
-***
 
-Keep these limitations in mind:
-
-- **Advanced Settings only:** From the Test Summary page you can edit only Advanced Settings (network configuration, timezone, Chrome options, custom headers, and mobile session settings). To change test steps, OS, browser, or device configuration, open the playground.
-- **New version on every apply:** Applying updated settings always creates a new version with regenerated code. You cannot update settings in place.
-- **Pre-rollout versions:** Comparing a version created after this feature rolled out with one created before it shows no Advanced Settings changes, because the older version never tracked them. Opening a pre-rollout version shows only the latest settings, because the original settings were not recorded.
-
-## Next Steps
-***
-
-Continue with these guides:
-
-- [KaneAI Chrome Options](/support/docs/kaneai-chrome-options/)
-- [KaneAI Custom Headers](/support/docs/kaneai-custom-headers/)
-- [KaneAI Geolocation Tunnel Proxy](/support/docs/kane-ai-geolocation-tunnel-proxy/)
+- **Advanced settings only**: Only advanced settings (network configuration, timezone, Chrome options, custom headers, and mobile session settings) can be edited from the test summary page. To change test steps, OS, browser, or device configurations, you need to open the playground.
+- **New version generated on every apply**: Applying updated settings always creates a new version of the test case with regenerated code. There is no way to update settings in-place without generating a new version.
+- **Version history diff for pre-rollout versions**: If you compare a version created after this feature was rolled out with a version created before it, the diff will have no advanced settings changes to display since the older version never tracked them. Similarly, if you open a pre-rollout version and click on advanced settings, only the latest settings are shown as the original settings were not recorded for that version.
