@@ -82,14 +82,12 @@ Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mob
               Agent Mode
               CLI Reference
 
-             Web Scanner &nbsp;
+        Agent Assurance Platform &nbsp;
 
-              Overview
-              Getting Started
-              Visual UI Scans
-              Accessibility Scans
-              Adding URLs
-              Scheduling Options
+        Conversational Agent Testing
+        Autonomous Agent Testing
+        Rook Architecture
+        FAQs
 
              Agent Testing Platform
 

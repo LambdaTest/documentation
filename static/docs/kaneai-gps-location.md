@@ -1,4 +1,4 @@
-# GPS Location Mocking for Mobile App and Browser Authoring
+# GPS Location Mocking for Mobile App and Mobile Browser Authoring
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
