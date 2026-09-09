@@ -1,10 +1,8 @@
 ---
 id: run-selenium-test-behind-the-proxy
-title: How to Run Selenium Tests Behind a Proxy on TestMu AI
-toc_max_heading_level: 2
-hide_title: true
-sidebar_label: "Run Tests Behind a Proxy"
-description: Run Selenium tests behind a proxy or firewall on TestMu AI, including proxy configuration and domain whitelisting.
+title: Run Selenium Tests Behind the Proxy
+sidebar_label: Run Tests Behind a Proxy
+description: Define proxy settings in your Selenium C# scripts to run tests on the cloud grid behind a proxy server.
 keywords:
   - run selenium tests through proxy
   - selenium c# proxy configuration
@@ -44,8 +42,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Run Selenium Tests Behind a Proxy on TestMu AI
----
+# Run Selenium Tests Behind the Proxy
+* * *
 
 If your system is behind a proxy or protected by a firewall, you cannot run Selenium test scripts directly on the TestMu AI Selenium grid. You need to define your proxy settings so the connection goes through as usual.
 
@@ -128,29 +126,9 @@ namespace TestSelenium3
 }
 ```
 
-Execute the above NUnit test scripts, and you can run your Selenium tests directly on the TestMu AI Selenium grid behind the proxy server. Proxy configuration is one of several network-level options; explore the full range of [Selenium automation capabilities](/support/docs/selenium-automation-capabilities/) to tune the rest of your session.
-
-## Whitelist the Proxy
----
-
-Beyond configuring proxy settings, a firewall-protected network may still block the connection to TestMu AI, and you may encounter error messages. In such scenarios, you need to whitelist the TestMu AI domain. Whitelisting tells your firewall-protected network to allow access for a set of IP addresses, IP range, or an entire domain that you trust. It is a security procedure to help users access a website or web-app that their network security team considers non-malicious.
-
-Relay the below domain to your network security team and ask them to whitelist it so you can connect with TestMu AI from your firewall-protected network. If your setup also needs to route traffic to internal hosts, you can configure custom DNS mapping alongside your proxy. To inject authentication or routing values into every request, you can also set custom HTTP headers for the session.
-
-| PROTOCOL | PORTS       | SOURCE                 | DESTINATION      |
-|----------|-------------|------------------------|------------------|
-| TCP      | 80, 443, 22 | All TestMu AI Clients | *.lambdatest.com |
+Execute the above NUnit test scripts, and you can run your Selenium tests directly on the TestMu AI Selenium grid behind the proxy server.
 
 If you have any questions or require an additional information, you can contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@testmuai.com.
-
-## Next Steps
----
-
-Continue with these related guides:
-
-- [Custom DNS Map](/support/docs/custom-dns-map/)
-- [Custom Headers](/support/docs/custom-headers/)
-- [Selenium Automation Capabilities](/support/docs/selenium-automation-capabilities/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

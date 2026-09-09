@@ -196,7 +196,7 @@ To setup your own environment for the test you can leverage our Capability Gener
       <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/testmu-running-your-first-selenium-test/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-testmu-automation/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Guide To Run PHP Tests on Selenium Grid</span>
