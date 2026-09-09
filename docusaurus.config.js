@@ -144,24 +144,6 @@ module.exports = {
         sitemap: {
           lastmod: 'date',
           priority: 0.9,
-          createSitemapItems: async ({ routes, frontMatter }) => {
-            try {
-              console.log('routes:', routes);
-              console.log('frontMatter:', frontMatter);
-              const allowedPath = '/support/api-doc/selenium-automation-api/build/fetch-all-builds-of-an-account/';
-              return routes.filter(route => {
-                const pageMeta = frontMatter?.[route.id] ?? {}; // use optional chaining
-                console.log('route:', route, 'pageMeta:', pageMeta);
-                if (pageMeta && (pageMeta.redirect || pageMeta.robots === 'noindex')) {
-                  return false;
-                }
-                return route.path === allowedPath;
-              });
-            } catch (error) {
-              console.error('Error in createSitemapItems:', error);
-              return routes; // fallback to include everything
-            }
-          },
           ignorePatterns: [
             '/support/',
             '/support/api-doc/',
