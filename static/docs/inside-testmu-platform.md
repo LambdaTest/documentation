@@ -37,6 +37,8 @@ Use the action buttons next to the test ID to copy the ID, create an issue, rena
 
 Use the **Re-Run** button to execute the test again from the dashboard. See [Re-Run Automation Tests](/support/docs/rerun-automation-tests/).
 
+Use **Mute Test...** in the test's options menu to keep a known-broken or known-flaky test out of the build's pass/fail verdict and counts. The test still runs and still reports its real result. See [Mute Test Scenarios](/support/docs/mute-test-scenarios/).
+
 ### Command Logs and Network
 
 View every command executed during the test and all associated logs.

@@ -106,6 +106,23 @@ Any command logs executed between `lambda-testCase-start` and `lambda-testCase-e
 
 You can also filter the command logs based on these labels.A screenshot has been provided below, demonstrating the use of labels and how to filter command logs based on them.
 
+### Viewing Test Cases and Their Trends
+
+Every test case you mark with the start and end hooks is also listed on the automation session details page. Click the test case selector above the command logs to open the **Select Test Case** panel, which lists all the test cases recorded in the session along with the trend of their last five runs.
+
+The panel shows the following details:
+
+| Detail | Description |
+|--------|-------------|
+| **All Test Cases** | The list of every test case captured between the `lambda-testCase-start` and `lambda-testCase-end` hooks, along with the total count of test cases in the session. |
+| **Search test case** | Search for a test case using the name you passed to the hook. This is helpful when a single session runs a large number of test cases. |
+| **Status** | A green tick indicates that the test case passed in the current session and a red cross indicates that it failed. |
+| **Last 5 runs** | The strip of squares next to each test case shows the result of its last five runs, with the latest run on the right. Green denotes a passed run and red denotes a failed run. |
+
+Selecting a test case from the panel filters the command logs to the commands executed between that test case's start and end hooks, so you can jump straight to the section of the session you want to debug.
+
+The **Last 5 runs** trend lets you tell a genuinely broken test case from a flaky one without opening older sessions. A test case that is red across all five runs points to a consistent failure, whereas a mix of red and green points to flakiness that is worth investigating separately.
+
 ## Command Annotations
 
 Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **TestMu AI Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.

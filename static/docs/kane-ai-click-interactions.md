@@ -1,15 +1,15 @@
-# How to Author Clicks and Drag With KaneAI
+# Advanced Click Interactions in KaneAI
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 KaneAI supports advanced click variants beyond a standard single click: **press and hold (long press)**, **multi-click (double / triple / N-click)**, and **right click (context click)**, across Desktop Web, Android apps, iOS apps, and Mobile Web. Each can be authored with natural language or captured via Manual Interaction, and renders as a distinct step with its own icon and pill label.
 
-## Authoring Modes
+## Overview
 
 You can author any of the three click variants in two ways:
 
 - **Natural Language (NL)**: describe the click in plain English (e.g. `long press the menu icon for 5 seconds`).
-- **Manual Interaction**: perform the gesture on the device or browser viewport and have it captured as a step. See the [KaneAI Manual Interaction](/support/docs/kaneai-manual-interaction/) guide for the full recording workflow.
+- **Manual Interaction**: perform the gesture on the device or browser viewport and have it captured as a step.
 
 | Click Type | Pill Label | Typical Use |
 |------------|------------|-------------|
@@ -18,8 +18,6 @@ You can author any of the three click variants in two ways:
 | **Right Click** | RIGHT CLICK | Context menus on web: duplicate, rename, delete, custom actions |
 
 ## Supported Platforms
-
-This table shows which click types and Manual Interaction are available on each platform:
 
 | Platform | Press and Hold | Multi-Click | Right Click | Manual Interaction |
 |----------|:--------------:|:-----------:|:-----------:|:------------------:|
@@ -32,9 +30,7 @@ This table shows which click types and Manual Interaction are available on each 
 
 ## Press and Hold (Long Press)
 
-Author a long press with natural language or capture it through Manual Interaction:
-
-### Author With Natural Language
+### Author with Natural Language
 
 ```
 long press the menu icon
@@ -93,9 +89,7 @@ In Recording mode, the capture layer classifies touch gestures by duration and m
 
 ## Multi-Click (Double / N-Click)
 
-Author a multi-click with natural language or capture it through Manual Interaction:
-
-### Author With Natural Language
+### Author with Natural Language
 
 ```
 double click on the submit button
@@ -131,11 +125,9 @@ The capture layer detects multi-click via a **debounce window**:
 
 ## Right Click (Context Click)
 
-Author a right click with natural language or capture it through Manual Interaction:
-
 Right click is supported on **Desktop Web only**. On mobile, use long press instead.
 
-### Author With Natural Language
+### Author with Natural Language
 
 ```
 right click on the file item
@@ -197,20 +189,16 @@ Each click type displays a distinct icon and pill label in the **Sidebar**, **Te
 
 ## Best Practices
 
-Follow these practices for reliable tests:
-
 - **Use NL for most interactions**: fastest authoring path; produces element-first steps.
 - **Use Manual Interaction for precise timing**: when exact hold duration matters (e.g. 10 s developer mode).
 - **On mobile, use `long press` instead of `right click`** to open context menus.
 - **Don't combine modifiers** in a single instruction, they are mutually exclusive.
 - For `click N times`, ensure the target element stays **stable** (doesn't move, disappear, or change) between clicks.
 - Allow **1–2 seconds after navigation** before performing a click, gives the page time to stabilize.
-- Use [KaneAI Using Variables](/support/docs/kane-ai-using-variables/) to parameterize: `long press the button for ${hold_duration} seconds`.
-- Use [KaneAI Conditional Logic](/support/docs/kaneai-conditional-logic/) to apply click types contextually: `if popup is visible then right click on it`.
+- Use **variables** to parameterize: `long press the button for ${hold_duration} seconds`.
+- Use **conditionals** to apply click types contextually: `if popup is visible then right click on it`.
 
 ## FAQs
-
-Answers to common questions:
 
 **What is the default long press duration?**
 1 second. For example, `long press the menu icon` holds for 1 second.
@@ -243,14 +231,12 @@ Two clicks within 200 ms at the same location (within 10 px).
 Yes. `long press the button for ${hold_duration} seconds` and `click the button ${click_count} times` both work.
 
 **Do click modifiers survive autoheal?**
-Yes. [KaneAI Auto-Heal](/support/docs/kaneai-auto-heal/) re-locates the element on a modified page; the click modifier (duration, frequency, right-click flag) is preserved.
+Yes. Autoheal re-locates the element on a modified page; the click modifier (duration, frequency, right-click flag) is preserved.
 
 **Can I use these click types inside a Module?**
-Yes. All three work inside [KaneAI Modules](/support/docs/kane-ai-modules/): create, import, edit, and version-bump as usual.
+Yes. All three work inside Modules: create, import, edit, and version-bump as usual.
 
 ## Limitations
-
-Keep these limitations in mind:
 
 1. **Right click is web-only.** Returns `UNSUPPORTED_OPERATION` on mobile.
 2. **Mutual exclusivity.** Long press, multi-click, and right click cannot be combined in a single instruction.
@@ -263,211 +249,3 @@ Keep these limitations in mind:
 9. **Nested if-else not supported.** Single-level if-else with click modifiers works (e.g. `if popup is visible then right click on it`), but nested if-else inside another conditional is not supported.
 10. **Secrets as duration values.** `long press for {{secrets.user.DURATION}} seconds` is not supported. Secret values cannot be parsed as numeric durations.
 11. **No silent conversion.** Right click is not auto-converted to long press on mobile, and long press is not auto-converted to right click on web. Each gesture must be authored explicitly.
-
-## Drag and Drop
-
-Drag extends the same press-then-move model as long press: KaneAI picks the element up, then moves it to a target. Use it for Kanban boards and any other drag-driven UI flow. As with the click variants above, you author a drag step either with natural language (e.g. `drag "Card A" to "Column B"`) or by performing the gesture yourself in Manual Interaction.
-
-### Drag-and-Drop vs Click-and-Drag
-
-KaneAI supports two distinct drag interactions. They look similar but behave differently, and they are **not interchangeable**:
-
-- **Drag and Drop**: the element is first **long-pressed** to pick it up, and only then moved to the target. This is the standard gesture for moving items between containers and works on **all platforms**.
-- **Click and Drag**: the element is pressed and moved **immediately, without any long press**. This is how interactions such as sliders, canvas drawing, and element resizing work, and it is available on **Desktop Web only**.
-
-| | Drag and Drop | Click and Drag |
-| --- | --- | --- |
-| **Gesture** | Long press on the element first, then move it to the target | Press and move in one continuous motion, no long press |
-| **Platforms** | Desktop Web, Android App, iOS App, Mobile Web | Desktop Web only |
-| **Typical scenarios** | Kanban cards, list reordering, container-to-container transfer | Sliders, canvas drawing, element resizing, range selection |
-
-If a drag step fails on an element that doesn't respond to a long press (for example a slider thumb or a canvas), the element likely expects **Click and Drag** rather than Drag and Drop. Click and Drag has its own constraints, see [Drag Limitations](#drag-limitations).
-
-### Drag Supported Platforms
-
-| Platform        | Natural Language | Manual Interaction |
-| --------------- | :--------------: | :----------------: |
-| **Desktop Web** | ✅                | ✅                  |
-| **Android App** | ✅                | ✅                  |
-| **iOS App**     | ✅                | ✅                  |
-| **Mobile Web**  | ✅                | ❌                  |
-
-### Choosing a Drag Mode
-
-| Use Case                                                                   | Recommended Mode       |
-| -------------------------------------------------------------------------- | ---------------------- |
-| Kanban / multi-container drag                                              | NL or Manual           |
-| Sortable grid                                                              | NL or Manual           |
-| Container-to-container transfer                                            | NL (recommended)       |
-| **Sliders** (volume, range, vertical, payment)                             | **Manual only**        |
-| **Confirmation gestures** (slide-to-confirm, drag-to-pay, swipe-to-unlock) | **Manual only**        |
-| Dynamic / moving drop targets                                              | **Manual only**        |
-| Element resizing / canvas operations / flow charts                         | **Manual (recommended)** |
-| Drag with no stable element identifier                                     | Manual (recommended)   |
-
-**Sliders and confirmation gestures cannot be authored with NL.** Use Manual Interaction to capture the gesture directly. KaneAI records source, target, and drag vector in a coordinate-safe form.
-
-### Author Drag With Natural Language
-
-Type the instruction into the KaneAI authoring panel.
-
-#### Supported Drag NL Patterns
-
-| Pattern          | Example                            |
-| ---------------- | ---------------------------------- |
-| Name-based       | `drag "Card A" to "Column B"`      |
-| Index-based      | `drag the 3rd item to the top`     |
-| Positional       | `drag the top card to the bottom`  |
-| Anchor reference | `drag X to the bottom of the list` |
-| Drop-on phrasing | `drop "Cart" on "Checkout button"` |
-
-**More examples:**
-
-```
-drag "Task Card" to "Done column"
-move the 3rd item to the top
-drop "iPhone 15" on the comparison table
-drag the top card to the bottom of the list
-move task card from "To Do" column to "In Progress" column
-```
-
-Natural language drag and drop works best when:
-- Drop zones are **explicitly defined and visible**.
-- You're moving items between containers.
-- The target location is **static** (not dynamically generated).
-
-### Author Drag With Manual Interaction
-
-Switch to **Manual Interaction** mode in the KaneAI authoring panel and perform the drag directly on the device viewport.
-
-#### Drag Gesture Classification
-
-| Input                                  | Captured As |
-| -------------------------------------- | ----------- |
-| Touch &lt; 1 second, no movement       | Tap         |
-| Touch ≥ 1 second, no movement (&lt; 10 px drift) | Long press  |
-| Movement ≥ 10 px                       | Swipe       |
-| **Hold ≥ 1 second + Movement ≥ 10 px** | **Drag**    |
-
-For tap, long-press, multi-click, and right-click authoring, see the click sections above on this page.
-
-#### When Manual Interaction is Required
-
-- **Sliders**: volume, range, vertical, payment-style (e.g., slide-to-pay).
-- **Confirmation gestures**: slide-to-confirm, drag-to-pay, swipe-to-unlock.
-- **Custom drag handles** without a stable accessibility ID or selector.
-- **Canvas-based interactions**, drawing tools, and flow chart manipulation.
-- **Element resizing** and precise positioning.
-
-Manual recording is recommended for any scenario where the **drop location isn't explicitly defined** or the target **changes during the drag**.
-
-### Drag Replay Behavior
-
-- Elements are **re-resolved at runtime**. KaneAI does **not** use cached coordinates when an element is resolvable.
-- **Stale element on replay** → 1 automatic retry, then hard fail.
-- **Minor coordinate drift** → auto-corrected on Desktop Web.
-
-**Mobile drag steps do not auto-heal.** Manual Interaction drags on Android and iOS rely on the captured drag vector and coordinates from the recording device. Replays on a device with a **different screen resolution or aspect ratio** may fail. To maximize cross-device reliability:
-
-- Prefer NL drags wherever possible.
-- Replay Manual Interaction drags on devices with the **same resolution / form factor** as the recording device.
-- Capture the gesture once and reuse it in a Module scoped to a specific device profile.
-
-### Drag Best Practices
-
-- **Use NL for static layouts**: Kanban boards, sortable grids, multi-container drags. Fastest authoring path.
-- **Use Manual for sliders, confirmation gestures, and dynamic targets.** These require touch-driven capture.
-- Prefer elements with stable **accessibility IDs / resource IDs** to maximize cross-device replay success.
-- For long lists, **scroll the source element into view** before recording the drag.
-- Allow **1–2 seconds after a navigation step** before recording the next drag, gives the page time to stabilize.
-- For payment / KYC slider flows, capture the gesture once via Manual and **reuse the step inside a Module**.
-- Use `{{variable_name}}` syntax to **parameterize** source / target references for data-driven runs.
-
-### Drag Example Use Cases
-
-#### E-commerce Product Sorting
-
-```
-drag product "iPhone 15" from available items to comparison table
-```
-
-#### Project Management Board
-
-```
-move task card from "To Do" column to "In Progress" column
-```
-
-#### Mobile Slider (Manual Interaction)
-
-Use Manual Interaction to capture brightness, volume, or price-range sliders on Android and iOS. NL cannot resolve a moving slider thumb.
-
-#### Payment Confirmation Gesture (Manual Interaction)
-
-Capture a `slide-to-pay` or `swipe-to-unlock` gesture once via Manual Interaction, then reuse the step inside a Module across test cases.
-
-#### Form Builder (Desktop Web)
-
-Use Manual Interaction to drag form fields from a palette to a canvas, resize input fields, and reorder form sections.
-
-#### Data Visualization Dashboard
-
-Use Manual Interaction to adjust date-range sliders, resize chart panels, and rearrange dashboard widgets.
-
-### Drag Limitations
-
-- **Multi-touch gestures** (two-finger drag, pinch-drag): not supported.
-- **Drag path waypoints**: only start and end coordinates are captured; intermediate path points are not preserved.
-- **Mobile Browser manual recording**: not supported. Use NL only.
-- **Cross-context dragging**: drags between iframes or shadow DOMs are not supported.
-- **Multi-element dragging**: cannot drag multiple elements simultaneously.
-- **Advanced NL** (e.g., `drag X up by 50px`, offset-based reorder): on the roadmap; currently rejected with a graceful error.
-- **Click and Drag via NL**: not supported as a natural language test step; supported only via Manual Interaction. Desktop Web only.
-- **Click and Drag speed**: executes slowly by design so the dragged element stays in focus during the movement; faster execution could cause the element to lose focus mid-drag.
-- **NL slider authoring**: not supported. Use Manual Interaction.
-- **NL confirmation gestures** (slide-to-confirm): not supported. Use Manual Interaction.
-- **Drag and drop on canvas-based elements via NL**: canvas elements rely on custom rendering; use Manual Interaction.
-- **Editing manual drag steps**: source/target locators and step-level config can be edited; the drag vector and gesture timing are immutable to preserve replay fidelity.
-
-### Drag FAQs
-
-**What is the difference between Drag and Drop and Click and Drag?**
-Drag and Drop long-presses the element to pick it up before moving it, and works on all platforms. Click and Drag presses and moves the element immediately without a long press, and is available on Desktop Web only. See [Drag and Drop vs Click and Drag](#drag-and-drop-vs-click-and-drag).
-
-**Why is my Click and Drag step slow?**
-This is expected. Click and Drag executes deliberately slowly to keep the dragged element in focus throughout the movement. A faster gesture could cause the element to lose focus mid-drag and fail the step.
-
-**Can I author a slider drag with natural language?**
-No. Sliders have moving targets that NL cannot resolve reliably. Use Manual Interaction to capture the slider gesture directly. The captured step replays at ≥ 95% success rate across devices.
-
-**Can I author a slide-to-confirm or drag-to-pay step with NL?**
-No. Confirmation gestures depend on dynamic UI state and must be captured via Manual Interaction.
-
-**My drag step passes on the recording device but fails on another device. What's wrong?**
-KaneAI replays use element resolution by default. Cross-device failures usually indicate that the source or target element identifier changed across builds. Inspect the step logs to see the resolution path used (element vs. coordinate) and ensure the elements expose stable accessibility IDs.
-
-**Why isn't manual recording available on Mobile Web?**
-The KaneAI agent does not enter Recording state for mobile browser sessions. Use natural language instructions or slash commands instead.
-
-**Can I edit a captured Manual Interaction drag step?**
-You can edit the source / target locators and step-level configuration. The drag vector and gesture timing are immutable for Manual steps to preserve replay fidelity.
-
-**Does drag work inside a KaneAI Module?**
-Yes, drag steps can be saved into Modules and reused across test cases. Module versioning applies as usual.
-
-**Can I parameterize a drag step?**
-Yes. Use `{{variable_name}}` in the source or target reference. Local variables, global variables, smart variables, parameters, and dataset rows are all supported.
-
-**Does drag work inside if/else and while constructs?**
-Yes. Drag steps can be placed inside conditional blocks (`if X is visible then drag Y to Z`) and while loops. Each iteration re-resolves elements at runtime.
-
-**Is drag and drop supported on real devices?**
-Yes, drag works on both real devices and the device cloud for App testing. Real Device Web also supports manual drag.
-
-## Next Steps
-
-Continue with these guides:
-
-- [KaneAI Finding and Interacting With Elements](/support/docs/kaneai-kb-finding-and-interacting-with-elements/)
-- [KaneAI Scroll in Feature](/support/docs/kane-ai-scroll-in-feature/)
-- [KaneAI Forms Inputs and Data Entry](/support/docs/kaneai-kb-forms-inputs-and-data-entry/)
-- [KaneAI Command Guide](/support/docs/kane-ai-command-guide/)

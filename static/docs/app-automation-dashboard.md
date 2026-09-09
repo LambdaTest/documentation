@@ -54,4 +54,12 @@ Use the `video` capability to enable the Video logs.
 capabilities.setCapability("video", "true")
 ```
 
+## Muting Known-Broken Tests
+
+If an Appium test is known to be broken or flaky, you can **mute** it instead of letting it fail the whole build. A muted test still runs on the device and still records its real result, but it is left out of the build's pass/fail verdict and summary counts.
+
+Open the test's options menu on the dashboard and select **Mute Test...**. You can mute that single run, or mute the **combination** (test name, OS, OS version, device, and real vs. virtual device) so the mute is reapplied automatically on every future build until you unmute it. Muting works for both app and web flows on real and virtual devices, and needs no capability in your test script.
+
+For the full workflow, matching rules, and limitations, see [Mute Test Scenarios](/support/docs/mute-test-scenarios/).
+
 >In case you have any questions or need any additional information, drop them at our **24X7 Chat Support** or mail us directly at support@testmuai.com.
