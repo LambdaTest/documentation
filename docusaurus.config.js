@@ -144,16 +144,6 @@ module.exports = {
         sitemap: {
           lastmod: 'date',
           priority: 0.9,
-          createSitemapItems: async ({ routes, frontMatter }) => {
-            const allowedPath = '/support/api-doc/selenium-automation-api/build/fetch-all-builds-of-an-account/';
-            return routes.filter(route => {
-              const pageMeta = frontMatter?.[route.id] ?? {}; // Use optional chaining or default to empty object
-              if (pageMeta && (pageMeta.redirect || pageMeta.robots === 'noindex')) {
-                return false;
-              }
-              return route.path === allowedPath;
-            });
-          },
           ignorePatterns: [
             '/support/',
             '/support/api-doc/',
