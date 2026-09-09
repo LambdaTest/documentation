@@ -70,7 +70,7 @@ Once the integration is complete, follow these steps to link issues with your te
 
 ### What a linked Linear issue shows
 
-A linked issue lists its title, identifier, issue type, status, priority, creation date, and creator, and can be opened in Linear.
+A linked issue lists its title, identifier, issue type, status, priority, creation date, and creator. Click the linked issue to open it directly in Linear.
 
 Linked issues are grouped by tracker, so Linear issues are listed under Linear alongside any Jira or Azure DevOps issues on the same test artifact. Use the search box and the **Status** and **Issue Type** filters to narrow a long list.
 
