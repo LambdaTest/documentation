@@ -1,0 +1,59 @@
+  name: 'Deployment (restructure-docs preview)'
+
+  on:
+    push:
+      branches:
+        - restructure-docs
+    workflow_dispatch:
+
+  jobs:
+    Docusaurus:
+      name: 'Deployment'
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v4
+          with:
+            ref: restructure-docs
+            fetch-depth: 0
+
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v4
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_MKT }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_MKT }}
+            aws-region: us-east-1
+
+        - name: Create env file
+          run: |
+            touch .env
+            echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
+            echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
+            echo "TYPESENSE_COLLECTION_NAME=lambdatest-internal" >> .env
+
+        - name: Use Node.js 20.10.x
+          uses: actions/setup-node@v3
+          with:
+            node-version: 20.10.x
+
+        - name: Install and build
+          run: npm install --legacy-peer-deps && npm run build
+          env:
+            CI: false
+
+        - name: Sync to S3
+          run: |
+            cp -R assets/ build/
+            cd build/
+            aws s3 sync . s3://lambdatest-restructure-docs/support/ \
+              --exclude 'robots.txt' \
+              --exclude 'assets/js/*' --exclude 'assets/css/*' \
+              --delete
+            aws s3 sync . s3://lambdatest-restructure-docs/support/ \
+              --exclude '*' --include 'assets/js/*' --include 'assets/css/*'
+
+        - name: Invalidate CloudFront
+          run: |
+            aws cloudfront create-invalidation \
+              --distribution-id E2QJ4SJKKX6UWF \
+              --paths "/support/*"x
