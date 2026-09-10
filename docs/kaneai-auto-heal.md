@@ -55,7 +55,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 KaneAI, the GenAI Native testing assistant from <BrandName />, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, <BrandName />’s high-performance test orchestration platform, they come with an added layer of reliability: the **Auto-Heal** feature.
 
 :::note Auto-Heal is not Adaptive Heal
-Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) re-authors the whole **objective** that contains the failing step, and every objective after it. It runs only when a step fails, at most three times, and records the change as a version you can approve or decline. The two are separate features.
+Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) re-authors the whole **objective** that contains the failing step, and every objective after it. It runs only when an objective fails to replay, and records the change as a version you can approve or decline. The two are separate features.
 :::
 
 :::note Auto-Heal is not Adaptive Heal

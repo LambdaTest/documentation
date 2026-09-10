@@ -8,37 +8,34 @@ A recorded test replays the steps it was authored with. When the application cha
 
 | Strategy | Replays the recorded steps | When a step fails to replay | Credits |
 |---|---|---|---|
-| **Off** (default) | Yes | Nothing is re-authored. Auto-Heal still runs, and a step it cannot recover ends the run | Auto-Heal only |
-| **Adaptive Heal** | Yes | The failing objective and every objective after it are re-authored, at most 3 times | Auto-Heal, plus each re-authoring |
-| **Dynamic Test** | No | Not applicable, nothing is replayed | Auto-Heal, plus authoring on every run |
-| **Retry on Failure** | Yes | The test fails, then runs again from the start | Auto-Heal only |
+| **Off** (default) | Yes | Nothing is re-authored. Auto-Heal still runs, and a step it cannot recover ends the run | Yes |
+| **Adaptive Heal** | Yes | The failing objective and every objective after it are re-authored | Yes |
+| **Dynamic Test** | No | Not applicable, nothing is replayed | Yes |
+| **Retry on Failure** | Yes | The test fails, then runs again from the start | - |
 
 **Available on New Experience test cases running on Chrome**
 Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experience and its browser configuration is Chrome. Every other test case replays its recorded steps, whatever is set here.
 
-## Only one strategy at a time
-
+**Only one strategy at a time**
 Adaptive Heal, Dynamic Test and Retry on Failure answer the same question in different ways, so only one can be active. Selecting one clears the others.
 
 Leaving Self-maintenance off is a valid choice and is the default. The recorded steps stay as they are. Auto-Heal still runs, and a step it cannot recover ends the run and is reported.
 
 ## Adaptive Heal {#adaptive-heal}
 
-Adaptive Heal re-authors the test when a step fails to replay, so the run continues instead of stopping at the failure.
+Adaptive Heal re-authors the test when an objective fails to replay, so the run continues instead of stopping at the failure.
 
 It re-authors the **objective that contains the failing step, and every objective after it**. Objectives that already ran keep the result they replayed. In a test case with five objectives, a step that fails in the third one leaves the first two as they replayed, and the third, fourth and fifth are re-authored.
-
-Adaptive Heal triggers only on a failure, and at most 3 times in a run.
 
 The re-authored content is saved as a **new version of the test case**, and by default that version waits for your approval before it becomes current. The run itself finishes on the re-authored content either way.
 
 Use it when your application changes often enough that a recorded step goes stale, but the test is still describing the right thing.
 
 **Adaptive Heal consumes credits when it re-authors**
-Re-authoring is authoring work, so it consumes authoring credits. One trigger re-authors a whole objective and every objective after it, not a single step, so the cost of a trigger grows with how much of the test sits after the failure. Adaptive Heal triggers at most 3 times in a run. A run in which nothing fails to replay does not trigger it at all.
+Re-authoring is authoring work, so it consumes authoring credits. One trigger re-authors a whole objective and every objective after it, not a single step, so the cost of a trigger grows with how much of the test sits after the failure. A run in which nothing fails to replay does not trigger it at all.
 
 **Adaptive Heal is not Auto-Heal**
-[Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a broken **element locator** at runtime. It tries the other locators captured for that same element, then rebuilds the locator from the step's original natural language instruction, then identifies the element visually when the DOM cannot resolve it. It changes nothing in your test, creates no version and needs no approval. It runs whatever you select here.
+[Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a broken **element locator** at runtime. It tries the other locators captured for that same element, then rebuilds the locator from the step's original natural language instruction. It changes nothing in your test, creates no version and needs no approval. It runs whatever you select here.
 
 Adaptive Heal re-authors the failing **objective** and every objective after it, and records the result as a version you can review, approve or decline. The two are separate features.
 
@@ -46,13 +43,13 @@ Adaptive Heal re-authors the failing **objective** and every objective after it,
 
 Dynamic Test authors the test from its objectives instead of replaying the recorded steps. It re-authors every objective on every run, whether or not anything fails. It does not wait for a failure, because the recorded steps are never used.
 
-Use it for pages that change so much that a recorded script is a liability. The trade is cost.
+Use it for pages that change so much that a recorded script is a liability.
 
 **Dynamic Test consumes credits on every run**
-Every run authors the test again, so every run consumes authoring credits. Replaying a recorded test consumes credits only when Auto-Heal recovers a locator. Turning this on at the organization level commits every eligible run in scope to that cost.
+Every run authors the test again, so every run consumes authoring credits. Replaying a recorded test consumes credits only when Auto-Heal triggers. Turning this on at the organization level commits every eligible run in scope to that cost.
 
 **Adaptive Heal and Dynamic Test are the same act**
-Both re-author the test. They differ in trigger and scope. Adaptive Heal re-authors only on a failure, only from the failing objective onward, and at most 3 times in a run. Dynamic Test re-authors every objective on every run.
+Both re-author the test. They differ in trigger and scope. Adaptive Heal re-authors only on a failure, and only from the failing objective onward. Dynamic Test re-authors every objective on every run.
 
 ## Retry on Failure {#retry-on-failure}
 
