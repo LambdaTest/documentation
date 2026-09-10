@@ -82,9 +82,12 @@ The re-authored content is saved as a **new version of the test case**, and by d
 
 Use it when your application changes often enough that a recorded step goes stale, but the test is still describing the right thing.
 
-:::warning Adaptive Heal consumes credits when it re-authors
-Re-authoring is authoring work, so it consumes authoring credits. One trigger re-authors a whole objective and every objective after it, not a single step, so the cost of a trigger grows with how much of the test sits after the failure. A run in which nothing fails to replay does not trigger it at all.
+:::warning Adaptive Heal consumes credits when it repairs
+A repair is authoring work, so it consumes authoring credits. A run in which nothing fails to replay consumes none. Cost therefore follows how often your application drifts, not how often you run the test.
 :::
+
+:::note Adaptive Heal is not Auto-Heal
+[Auto-Heal](/support/docs/kaneai-auto-heal/) repairs a broken **element locator** at runtime by falling back to other locators for the same element. It creates no version and needs no approval.
 
 :::note Adaptive Heal is not Auto-Heal
 [Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a broken **element locator** at runtime. It tries the other locators captured for that same element, then rebuilds the locator from the step's original natural language instruction. It changes nothing in your test, creates no version and needs no approval. It runs whatever you select here.
@@ -151,17 +154,17 @@ Self-maintenance is set at three levels. Each one is a starting position for the
 
 Set the organization default under **Organization Settings → Org Product Preferences → Kane AI → Healing and Dynamic Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/organization-settings.webp').default} alt="Healing and Dynamic Test in Organization Settings, with the strategy toggle, Adaptive Heal, Dynamic Test and Auto-approve changes" width="1600" height="827" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/organization-settings.webp').default} alt="Healing and Dynamic Test in Organization Settings, with Failure handling, Adaptive Heal, Dynamic Test and Auto-approve changes" width="1600" height="827" className="doc_img"/>
 
 Set the project default under **Test Manager → Project Settings → Healing and Dynamic Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/project-settings.webp').default} alt="Healing and Dynamic Test in Project Settings, showing Self-maintenance with Adaptive Heal and Dynamic Test, and the Auto-approve changes toggle" width="1600" height="825" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/project-settings.webp').default} alt="Healing and Dynamic Test in Project Settings, with the same controls scoped to one project" width="1600" height="825" className="doc_img"/>
 
 A project follows the organization until someone changes it there. Once changed, the project keeps its own value and later organization changes no longer overwrite it.
 
 A test run starts from the project's value and can override it for that run. Changing it in a run never writes back to the project or the organization.
 
-Turning Self-maintenance on at the organization or project level applies from that point forward. Test runs that already exist are not eligible, and only runs created while the toggle is on use Adaptive Heal or Dynamic Test.
+Turning Failure handling on at the organization or project level applies from that point forward. Test runs that already exist are not eligible, and only runs created while the toggle is on use Adaptive Heal or Dynamic Test.
 
 Retry on Failure exists only at the run level, so it is chosen per run.
 
@@ -174,14 +177,14 @@ Retry on Failure exists only at the run level, so it is chosen per run.
 4. For Adaptive Heal or Dynamic Test, set **Auto-approve changes**. For Retry on Failure, set **Maximum Retries**.
 5. Click **Execute**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/advanced-configurations.webp').default} alt="Test Configurations under Advanced Configurations, showing Self-maintenance with Adaptive Heal, Dynamic Test and Retry on Failure, and the Auto-approve changes toggle" width="1600" height="826" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/advanced-configurations.webp').default} alt="Test Configurations under Advanced Configurations, showing Failure handling with Adaptive Heal, Dynamic Test and Retry on Failure, and the Auto-approve changes toggle" width="1600" height="826" className="doc_img"/>
 
 ### Check the strategy before you execute
 ***
 
-The **Run with HyperExecute** panel carries a strategy tile in its Overview, beside the number of test instances, unique configurations and concurrency. Confirm the strategy in **Advanced Configurations** before you click **Execute**, because that is where the organization, project and run-level values resolve for this run.
+The **Run with HyperExecute** panel states the strategy in its Overview, beside the number of test instances, unique configurations and concurrency. Read it before you click **Execute**, because it reflects what this run will actually do after the organization, project and run-level values have resolved.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/run-with-hyperexecute.webp').default} alt="The Run with HyperExecute panel, with the strategy tile in the Overview alongside test instances, configurations and concurrency" width="1600" height="827" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/run-with-hyperexecute.webp').default} alt="The Run with HyperExecute panel, with Adaptive Heal shown in the Overview alongside test instances, configurations and concurrency" width="1600" height="827" className="doc_img"/>
 
 See [KaneAI Test Runs](/support/docs/kaneai-hyperexecute-test-run-execution/#advanced-configurations) for the rest of the Advanced Configurations panel.
 
@@ -204,12 +207,21 @@ A draft cannot be edited while it is waiting for a verdict. Approve or decline i
 ## When these strategies do not apply
 ***
 
-A run can be configured in ways that put it outside the scope of Adaptive Heal and Dynamic Test. In those cases the run behaves as it would with Self-maintenance off, whatever is selected.
+A run can be configured in ways that put it outside the scope of Adaptive Heal and Dynamic Test. In those cases the run behaves as it would with Failure handling off, whatever is selected.
 
 ### Test cases outside New Experience or Chrome
 ***
 
-Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experience **and** its browser configuration is Chrome. A test case on any other browser, or one not using New Experience, replays its recorded steps and nothing is re-authored.
+Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experience **and** its browser configuration is Chrome. A test case on any other browser, or one not using New Experience, replays its recorded steps and stops at the first step that fails.
+
+### Runs that span several versions
+***
+
+A test run can be configured across several browser or operating system versions, which produces one test instance per combination.
+
+**Only the first test instance picked up for execution is eligible.** The remaining instances in that run replay their recorded steps and are not repaired or re-authored. Running a single test case across several Chrome versions or several operating system versions is not supported for these strategies.
+
+If you need every combination covered, run each version as its own test run.
 
 ### Other boundaries
 ***
