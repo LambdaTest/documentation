@@ -122,7 +122,7 @@ Settings that have been modified will display an **Edited** badge next to them.
 Choose one of the two actions at the bottom of the dialog:
 
 - **Apply Settings**: Saves the settings and generates a new version with updated code. The test case remains on the Test Summary page.
-- **Edit Test Steps**: Saves the settings and opens the playground so you can adjust the test steps to reflect the new configuration.
+- **Edit Test Steps**: Saves the settings and opens the playground so you can adjust the test steps to reflect the new configuration. The session opens in the **Paused** state with the cursor at the bottom-most step, so step editing is available right away. See [Authoring Session](/support/docs/kaneai-authoring-session/).
 
 ## Version History
 

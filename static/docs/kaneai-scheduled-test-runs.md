@@ -14,10 +14,15 @@ In this documentation, you will learn how to create a scheduled test run using p
 
 **Step 4:** After making your selections, click **Next** to review a summary of the schedule, including the scheduled date and time.
 
-**Step 5:** In the **Build Parameters** box, you can define your desired concurrency for the tests. Click on the **Advanced Configurations** button to configure additional settings such as [Failure handling](/support/docs/kaneai-healing-and-dynamic-test/), network throttling, URL replacement, visual regression, accessibility testing, and [report generation](/support/docs/kaneai-hyperexecute-test-run-execution/#reports). Finally, click **Schedule Test Run** to create a recurring schedule.
+**Step 5:** In the **Build Parameters** box, you can define your desired concurrency for the tests. Click on the **Advanced Configurations** button to configure additional settings such as network throttling, URL replacement, visual regression, accessibility testing, and [report generation](/support/docs/kaneai-hyperexecute-test-run-execution/#reports). Finally, click **Schedule Test Run** to create a recurring schedule.
 
-**Which settings a schedule shows**
-A schedule made of **Classic** test cases shows the full Advanced Configurations panel. A schedule whose test cases are all **New Experience** on **Chrome** can use Evidence Reporting, which shows a shorter **Test Configurations** panel with [Failure handling](/support/docs/kaneai-healing-and-dynamic-test/) instead. Retry on Failure is available in both.
+**Step 6:** Click on any existing schedule to view detailed information, including a summary of test outcomes, passed and failed cases, and their respective instances. This helps in easily reviewing and proceeding with the tests.
+
+### Step 1: Open the Test Runs Section
+
+Navigate to **Test Manager**, select your project, and open the **Test Runs** section.
+
+**Result:** The Test Runs section lists your existing test runs.
 
 ### Step 2: Create a Schedule
 

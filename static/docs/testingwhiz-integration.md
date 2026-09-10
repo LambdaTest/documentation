@@ -37,6 +37,6 @@ In TestingWhiz, record your test scenario. Once done, click on the Execute butto
 
 As soon as you do, an automation test will start instantly, and you can view its build running directly on your TestMu AI automation dashboard. Once the test is complete, you can view the result of the test on TestMu AI, with all its details, as shown in the image below:
 
-You can view logs, [mark bugs](/support/docs/filter-your-selenium-tests/#mark-as-bug), and do much more for each executed test from your TestMu AI platform.
+You can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more for each executed test from your TestMu AI platform.
 
 > That's it folks! Now you can run your codefree automation testing super easily with this TestingWhiz and TestMu AI integration. If you have any doubt or questions, feel free to contact our experts at **24/7 chat support** or mail us at [support@testmuai.com](mailto:support@testmuai.com). Happy testing! 🙂
