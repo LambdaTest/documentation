@@ -1,10 +1,28 @@
 require('dotenv').config();
 import { themes as prismThemes } from 'prism-react-renderer';
+const { createSitemapItemsFilter } = require('./scripts/sitemap-exclusions');
+
+// Fail closed: a typo like DOCS_NOINDEX=TRUE must not silently publish a staging
+// build to search engines.
+function docsNoIndex() {
+  const raw = (process.env.DOCS_NOINDEX || '').trim().toLowerCase();
+  if (raw === '') return false;
+  if (raw === 'true') return true;
+  if (raw === 'false') return false;
+  throw new Error(`DOCS_NOINDEX must be "true" or "false" (got "${process.env.DOCS_NOINDEX}").`);
+}
+
 module.exports = {
   title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
   url: 'https://www.lambdatest.com',
-  noIndex: true,
+  // DOCS_NOINDEX marks every page noindex. testmucom-prod-deployment.yml is the
+  // only deploy that leaves it unset; prod-deployment.yml (lambdatest.com) and
+  // testmucom-stage-deployment.yml both set it to true. It is also a sitemap
+  // kill switch: @docusaurus/plugin-sitemap returns from postBuild before
+  // writing anything when noIndex is set, so those builds ship no sitemap.xml.
+  // Unrecognised values throw rather than quietly indexing the site.
+  noIndex: docsNoIndex(),
   baseUrl: '/support/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
@@ -145,17 +163,25 @@ module.exports = {
          sitemap: {
           lastmod: 'date',
           priority: 0.9,
+          // Structural routes only. Patterns here are exact — micromatch anchors
+          // them — so '/support/api-doc/' excludes just the API index (which
+          // redirects), not the real endpoint pages beneath it. That is intended.
+          //
+          // Redirecting docs are NOT listed here any more: createSitemapItems
+          // finds them automatically, so the list cannot drift out of date the
+          // way it had (kane-cli-mobile-emulator, kane-cli-mobile-simulator and
+          // testmu-a2a-cli were all shipping in the live sitemap, and
+          // accessibility-getting-started-quick-setup no longer exists).
           ignorePatterns: [
-          '/support/',           // Exclude /support/ URL
-          '/support/api-doc/',    // Exclude /support/api-docs
-          '/support/docs/accessibility-rules-checklist/',
-          '/support/docs/kane-cli-getting-started/',
-          '/support/docs/accessibility-android-what-we-do-not-cover/',
-          '/support/docs/accessibility-getting-started-quick-setup/',
-          '/support/docs/kane-cli-agent-output/',
-          '/support/docs/accessibility-web-what-we-do-not-cover/',
-          '/support/docs/accessibility-ios-what-we-do-not-cover/'
-        ],
+            '/support/',         // site root — redirects to /support/docs/
+            '/support/api-doc/', // API index — redirects to the first endpoint
+            '/support/search/',  // search UI, no content of its own
+          ],
+          // Drops pages that redirect: in-repo client-side <Redirect> pages, plus
+          // any CDN-level redirect recorded in sitemap-live-exclusions.json by
+          // `npm run sitemap-live-check -- --fix`. Noindexed pages are already
+          // dropped by the plugin itself, which reads each route's rendered head.
+          createSitemapItems: createSitemapItemsFilter(),
         },
       },
     ],
