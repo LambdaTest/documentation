@@ -80,6 +80,10 @@ The repair is saved as a **new version of the test case**, and by default that v
 
 Use it when your application changes often enough that a recorded step goes stale, but the test is still describing the right thing.
 
+:::warning Adaptive Heal consumes credits when it repairs
+A repair is authoring work, so it consumes authoring credits. A run in which nothing fails to replay consumes none. Cost therefore follows how often your application drifts, not how often you run the test.
+:::
+
 :::note Adaptive Heal is not Auto-Heal
 [Auto-Heal](/support/docs/kaneai-auto-heal/) repairs a broken **element locator** at runtime by falling back to other locators for the same element. It creates no version and needs no approval.
 
@@ -120,7 +124,7 @@ Adaptive Heal and Dynamic Test both produce a new version of the test case. **Au
 | Off (default) | Held in Version History and becomes current only after your approval |
 | On | Becomes current immediately, without review |
 
-Auto-approve appears only when Adaptive Heal or Dynamic Test is selected, because those are the only strategies that produce a version. Retry on Failure never offers it.
+Auto-approve applies only to Adaptive Heal and Dynamic Test, because those are the only strategies that produce a version. With Retry on Failure selected, the control is disabled: nothing about the test changes, so there is nothing to approve.
 
 A version approved automatically is marked as such in Version History, so the record always shows whether a person reviewed it.
 
@@ -139,9 +143,19 @@ Failure handling is set at three levels. Each one is a starting position for the
 | **Project** | Test Manager → Project Settings → Healing and Dynamic Test | Every run in the project | Adaptive Heal, Dynamic Test |
 | **Test run** | Advanced Configurations → Test Configurations | That run only | Adaptive Heal, Dynamic Test, Retry on Failure |
 
+Set the organization default under **Organization Settings → Org Product Preferences → Kane AI → Healing and Dynamic Test**.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/organization-settings.webp').default} alt="Healing and Dynamic Test in Organization Settings, with Failure handling, Adaptive Heal, Dynamic Test and Auto-approve changes" width="1600" height="827" className="doc_img"/>
+
+Set the project default under **Test Manager → Project Settings → Healing and Dynamic Test**.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/project-settings.webp').default} alt="Healing and Dynamic Test in Project Settings, with the same controls scoped to one project" width="1600" height="825" className="doc_img"/>
+
 A project follows the organization until someone changes it there. Once changed, the project keeps its own value and later organization changes no longer overwrite it.
 
 A test run starts from the project's value and can override it for that run. Changing it in a run never writes back to the project or the organization.
+
+Turning Failure handling on at the organization or project level applies from that point forward. Test runs that already exist are not eligible, and only runs created while the toggle is on use Adaptive Heal or Dynamic Test.
 
 Retry on Failure exists only at the run level, so it is chosen per run.
 
@@ -153,6 +167,15 @@ Retry on Failure exists only at the run level, so it is chosen per run.
 3. Select **Adaptive Heal**, **Dynamic Test** or **Retry on Failure**.
 4. For Adaptive Heal or Dynamic Test, set **Auto-approve changes**. For Retry on Failure, set **Maximum Retries**.
 5. Click **Execute**.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/advanced-configurations.webp').default} alt="Test Configurations under Advanced Configurations, showing Failure handling with Adaptive Heal, Dynamic Test and Retry on Failure, and the Auto-approve changes toggle" width="1600" height="826" className="doc_img"/>
+
+### Check the strategy before you execute
+***
+
+The **Run with HyperExecute** panel states the strategy in its Overview, beside the number of test instances, unique configurations and concurrency. Read it before you click **Execute**, because it reflects what this run will actually do after the organization, project and run-level values have resolved.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/run-with-hyperexecute.webp').default} alt="The Run with HyperExecute panel, with Adaptive Heal shown in the Overview alongside test instances, configurations and concurrency" width="1600" height="827" className="doc_img"/>
 
 See [KaneAI Test Runs](/support/docs/kaneai-hyperexecute-test-run-execution/#advanced-configurations) for the rest of the Advanced Configurations panel.
 
@@ -168,13 +191,34 @@ From there you can read the proposed steps in full, compare them against the cur
 
 A draft cannot be edited while it is waiting for a verdict. Approve or decline it first, then edit the result like any other version.
 
-## Limitations
+## When these strategies do not apply
 ***
 
-- Adaptive Heal and Dynamic Test apply only to New Experience test cases whose browser configuration is Chrome.
-- Only one strategy can be active at a time.
+A run can be configured in ways that put it outside the scope of Adaptive Heal and Dynamic Test. In those cases the run behaves as it would with Failure handling off, whatever is selected.
+
+### Test cases outside New Experience or Chrome
+***
+
+Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experience **and** its browser configuration is Chrome. A test case on any other browser, or one not using New Experience, replays its recorded steps and stops at the first step that fails.
+
+### Runs that span several versions
+***
+
+A test run can be configured across several browser or operating system versions, which produces one test instance per combination.
+
+**Only the first test instance picked up for execution is eligible.** The remaining instances in that run replay their recorded steps and are not repaired or re-authored. Running a single test case across several Chrome versions or several operating system versions is not supported for these strategies.
+
+If you need every combination covered, run each version as its own test run.
+
+### Other boundaries
+***
+
+- Only one strategy can be active at a time. Selecting one clears the others.
 - Retry on Failure is a run-level setting and has no organization or project equivalent.
-- Maximum Retries accepts a value up to 5.
+
+:::note Evidence
+Only a test case whose browser configuration is Chrome is eligible for an evidence pack.
+:::
 
 ## Next Steps
 ***
