@@ -52,7 +52,7 @@ Playwright automation scripts on <BrandName />. Here are a few capabilities that
 Android tests.
 
 :::tip
-You can use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+You can use the [Playwright Android Capability Generator](https://www.testmuai.com/playwright-android-capability-generator/) to generate capabilities for your tests.
 :::
 
 | Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |

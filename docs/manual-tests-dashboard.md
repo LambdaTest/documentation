@@ -52,7 +52,7 @@ The Manual Tests Sessions Dashboard provides a unified view of all your manual t
 All your **Real Devices App Testing** (App Live) and **Real Devices Browser Testing** (Browser Live) sessions are automatically stored on this dashboard.
 
 :::note New Dashboard
-The Manual Tests Sessions Dashboard is a newly launched feature. To get it enabled for your organization, please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mail us at [support@testmuai.com](https://support.lambdatest.com/).
+The Manual Tests Sessions Dashboard is a newly launched feature. To get it enabled for your organization, please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or mail us at [support@testmuai.com](mailto:support@testmuai.com).
 :::
 
 
@@ -289,7 +289,7 @@ All manual testing sessions from Real Devices App Testing and Browser Testing ar
 
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 
 <nav aria-label="breadcrumbs">

@@ -47,7 +47,7 @@ const capabilities = {
 },
 ```
 
-Use our [Capability Generator](https://www.lambdatest.com/capabilities-generator/) to select from a wide range of options for customizing your tests.
+Use our [Capability Generator](https://www.testmuai.com/capabilities-generator/) to select from a wide range of options for customizing your tests.
 
 ### Step 4: Setup your TestMu AI credentials
 

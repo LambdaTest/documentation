@@ -3,7 +3,7 @@
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
 ## What is the AI Test Case Generator?
-The **AI Test Case Generator** is an intelligent feature within TestMu AI Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, Jira tickets and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
+The **AI Test Case Generator** is an intelligent feature within TestMu AI Test Manager and KaneAI that allows users to convert various requirement formats (like text, PDFs, audio, videos, images, issues from Jira, Azure DevOps, and Linear, and more) into structured, contextual software test cases. It significantly accelerates the test case creation process while improving coverage and quality.
 
 This feature is designed to save time, improve test coverage, and streamline the test design process for both manual and automated testing workflows.
 
@@ -122,7 +122,7 @@ Start by entering your product or feature requirements in the input box.
 
 We support multiple input formats, including:
 - **Textual requirements**
-- **Jira/Azure DevOps links** (e.g., epics, stories, tasks)
+- **Jira/Azure DevOps/Linear links** (e.g., epics, stories, tasks)
 - **PDFs**
 - **Images**
 - **Audio** (recordings or uploads)
@@ -203,18 +203,18 @@ Keywords used are `Scenario:`, `Given`, `When`, `Then`, `And` and `But`. The fol
 - Uploaded files will appear within the input box.
 
 ##### Add Issue Links
-- Integrate your TestMu AI account with Jira/Azure DevOps. Follow the steps described in the following link to integrate Jira/Azure DevOps:
-[TestMu AI Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [TestMu AI Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/)
+- Integrate your TestMu AI account with Jira/Azure DevOps/Linear. Follow the steps described in the following link to integrate Jira/Azure DevOps/Linear:
+[TestMu AI Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [TestMu AI Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/) / [TestMu AI Linear Integration](/support/docs/linear-app-integration/)
 
-- After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues`.
+- After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues` / `Link Linear Issues`.
 
-- Enter your Jira/Azure DevOps issue ID or link and press Enter.
+- Enter your Jira/Azure DevOps/Linear issue ID or link and press Enter.
 
- Only issues from the connected Jira/Azure DevOps project can be linked here.
+ Only issues from the connected Jira/Azure DevOps/Linear project can be linked here.
 
 - The linked issue will then appear inside the input box.
 
-For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps integration fetches textual content only.
+For linked Jira issues, attachments such as images and other files are also fetched and used as context for test case generation, in addition to the textual content. The same limits that apply to direct file uploads apply here: a maximum of 10 files with a file size limit of 50 MB per file. Azure DevOps and Linear integrations fetch textual content only. For a linked Linear issue, that context is the issue's summary, description, and comments.
 
 ##### Configure Generation Settings
 Before triggering a generation session, you can configure the following settings to control the AI's output:
@@ -288,7 +288,7 @@ To review the context used for your current generation session, click the **penc
 - **Attached Files**: All files uploaded during the session.
 - **Organization Instructions**: Organization-level custom instructions applied to the session.
 - **Project Instructions**: Project-level custom instructions applied to the session.
-- **Linked Issues**: Jira or Azure DevOps issues linked to the session.
+- **Linked Issues**: Jira, Azure DevOps, or Linear issues linked to the session.
 
 Use the context drawer to verify that the AI is working with the correct inputs. You can review linked issues, attached files, and the custom instructions being applied before sending refinement messages.
 
@@ -401,7 +401,7 @@ Precisely modify specific scenarios or test cases using `@` references.
 **Pro Tips for Effective Refinement**
 - **Use `@` references for precision**: Target specific scenarios (`@S1`) or test cases (`@S2.C3`) to ensure the AI modifies exactly what you intend
 - **Combine multiple actions**: Request several changes in one message: "Remove all Low priority test cases from @S1, add 2 boundary tests for the email field, and rename remaining test cases to include the module name"
-- **Provide updated context mid-session**: Upload revised specifications or link Jira/Azure DevOps tickets at any point to help the AI identify coverage gaps and generate test cases aligned with the latest requirements
+- **Provide updated context mid-session**: Upload revised specifications or link Jira/Azure DevOps/Linear issues at any point to help the AI identify coverage gaps and generate test cases aligned with the latest requirements
 - **Start broad, then refine**: First organize scenarios at a high level, then drill down to individual test cases
 
 #### Re-Generation Settings
