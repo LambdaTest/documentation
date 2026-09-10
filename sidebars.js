@@ -3387,6 +3387,7 @@ module.exports = {
             items: ["testing-apps-locally"],
           },
           "migrate-appium-tests-from-browserstack-and-saucelabs",
+          "appium-troubleshooting",
         ],
       },
     ],
