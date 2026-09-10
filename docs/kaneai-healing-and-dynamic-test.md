@@ -184,6 +184,10 @@ See [KaneAI Test Runs](/support/docs/kaneai-hyperexecute-test-run-execution/#adv
 
 When Adaptive Heal or Dynamic Test produces a new version and auto-approve is off, the version appears in the test case's **Version History** marked as a draft, attributed to the strategy that produced it rather than to the person who started the run.
 
+:::note One test case, one draft
+A test run can include the same test case under several configurations, such as more than one Chrome version or more than one operating system. It still produces a single draft, because it is one test case.
+:::
+
 From there you can read the proposed steps in full, compare them against the current version, and then **Approve** or **Decline**.
 
 - **Approve** makes it the current version and regenerates the exported code for it.
@@ -200,15 +204,6 @@ A run can be configured in ways that put it outside the scope of Adaptive Heal a
 ***
 
 Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experience **and** its browser configuration is Chrome. A test case on any other browser, or one not using New Experience, replays its recorded steps and stops at the first step that fails.
-
-### Runs that span several versions
-***
-
-A test run can be configured across several browser or operating system versions, which produces one test instance per combination.
-
-**Only the first test instance picked up for execution is eligible.** The remaining instances in that run replay their recorded steps and are not repaired or re-authored. Running a single test case across several Chrome versions or several operating system versions is not supported for these strategies.
-
-If you need every combination covered, run each version as its own test run.
 
 ### Other boundaries
 ***
