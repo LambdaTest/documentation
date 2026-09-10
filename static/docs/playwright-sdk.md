@@ -131,7 +131,7 @@ In the `lambdatest.yml` file, replace the placeholder values for `user` and `acc
 
 ### 3. Platform Configuration
 
-The `platforms` array defines the target environments (OS/browser combinations) for your test execution. You can specify multiple platform objects. For a complete list of valid platform configurations, consult the [TestMu AI Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+The `platforms` array defines the target environments (OS/browser combinations) for your test execution. You can specify multiple platform objects. For a complete list of valid platform configurations, consult the [TestMu AI Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
 
 ### 4. Run Settings
 

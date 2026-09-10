@@ -74,4 +74,4 @@ Once you have selected a session, click on Attach to Session.
 We have now successfully attached to the session and can see & perform operations as well.
 
 > Got any questions?
-> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).

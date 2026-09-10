@@ -91,4 +91,4 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 | blockDomains | TYPE: Array of Strings  `"blockDomains": ["www.facebook.com", "www.amazon.com"]  ` | It is used to block the mentioned domains on the device.|   |
 
 > Got any questions?
-> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).

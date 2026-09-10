@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Playwright is a Node.js library that uses a single API to automate Chromium, Firefox, and WebKit. It is designed to enable powerful, reliable, and efficient [automated browser testing](https://www.lambdatest.com/automated-browser-testing). Playwright can also automate Microsoft Edge since it is built on the open-source Chromium web framework.
+Playwright is a Node.js library that uses a single API to automate Chromium, Firefox, and WebKit. It is designed to enable powerful, reliable, and efficient automated browser testing. Playwright can also automate Microsoft Edge since it is built on the open-source Chromium web framework.
 
 TestMu AI allows you to run Playwright tests across real browsers and operating system combinations. This guide will cover the basics of getting started with Playwright testing on the TestMu AI platform.
 
@@ -71,7 +71,7 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 
 Once you are done with the above-mentioned steps, you can initiate your first Playwright test on TestMu AI.
 
-The below test script searches the term 'TestMu AI' on Bing.
+The below test script searches the term 'TestMu AI' on DuckDuckGo.
 
 ```js
 const { chromium } = require('playwright')
@@ -99,16 +99,16 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 
 const page = await browser.newPage()
 
-await page.goto('https://www.bing.com')
+await page.goto('https://duckduckgo.com')
 
-const element = await page.$('[aria-label="Enter your search term"]')
+const element = await page.$('[name="q"]')
 await element.click()
-await element.type('LambdaTest')
+await element.type('TestMu AI')
 await element.press('Enter')
 const title = await page.title()
 
 try {
-expect(title).toEqual('LambdaTest - Search')
+expect(title).toEqual('TestMu AI at DuckDuckGo')
 // Mark the test as completed or failed
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
 } catch {
@@ -130,7 +130,7 @@ node playwright-single.js
 
 Once your first test runs, you can execute the same test across multiple browser and OS configurations at once. Define a `capabilities` array (one entry per configuration) and run each through a shared function.
 
-The example below runs the Bing search test on three configurations: Chrome on Windows 10, Microsoft Edge on Windows 8, and Chrome on macOS Big Sur.
+The example below runs the DuckDuckGo search test on three configurations: Chrome on Windows 10, Microsoft Edge on Windows 11, and Chrome on macOS Sonoma.
 
 ```js title="playwright-parallel.js"
 const { chromium } = require('playwright')
@@ -145,16 +145,16 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 
 const page = await browser.newPage()
 
-await page.goto('https://www.bing.com')
+await page.goto('https://duckduckgo.com')
 
-const element = await page.$('[aria-label="Enter your search term"]')
+const element = await page.$('[name="q"]')
 await element.click()
-await element.type('LambdaTest')
+await element.type('TestMu AI')
 await element.press('Enter')
 const title = await page.title()
 
 try {
-expect(title).toEqual('LambdaTest - Search')
+expect(title).toEqual('TestMu AI at DuckDuckGo')
 // Mark the test as completed or failed
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
 } catch {
@@ -184,9 +184,9 @@ const capabilities = [
 'browserName': 'MicrosoftEdge',
 'browserVersion': 'latest',
 'LT:Options': {
-'platform': 'Windows 8',
+'platform': 'Windows 11',
 'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test on Windows 8 - MicrosoftEdge',
+'name': 'Playwright Sample Test on Windows 11 - MicrosoftEdge',
 'user': process.env.LT_USERNAME,
 'accessKey': process.env.LT_ACCESS_KEY,
 'network': true,
@@ -198,9 +198,9 @@ const capabilities = [
 'browserName': 'Chrome',
 'browserVersion': 'latest',
 'LT:Options': {
-'platform': 'MacOS Big sur',
+'platform': 'MacOS Sonoma',
 'build': 'Playwright Sample Build',
-'name': 'Playwright Sample Test on MacOS Big sur - Chrome',
+'name': 'Playwright Sample Test on MacOS Sonoma - Chrome',
 'user': process.env.LT_USERNAME,
 'accessKey': process.env.LT_ACCESS_KEY,
 'network': true,
@@ -224,11 +224,11 @@ node playwright-parallel.js
 
 The TestMu AI Automation Dashboard is where you can see the results of your Playwright tests after running them on the TestMu AI platform.
 
-The below screenshot of TestMu AI Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
+You can view the details of Playwright test session that you just executed.
 
-On clicking the session name of the respective test, you can view the details of Playwright test session that you just executed. For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
+For example, the below screenshot shows a test execution details of Playwright test like Test Name, Test ID, selected configurations, test logs, basic info, input config, and test session video.
 
 ## Related Playwright guides
 
-- [Playwright WebView Testing](/support/docs/playwright-webview-test/) — automate WebView components using Playwright on TestMu AI.
-- [Migrate Existing Playwright Tests](/support/docs/migrate-existing-playwright-tests/) — move your existing Playwright suite to the TestMu AI cloud.
+- [Playwright WebView Testing](/support/docs/playwright-webview-test/) - automate WebView components using Playwright on TestMu AI.
+- [Migrate Existing Playwright Tests](/support/docs/migrate-existing-playwright-tests/) - move your existing Playwright suite to the TestMu AI cloud.

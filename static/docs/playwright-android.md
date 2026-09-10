@@ -416,7 +416,7 @@ The below screenshot of TestMu AI Automation Dashboard shows the Playwright buil
 
 Configure these capabilities to control your Playwright Android tests.
 
-Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+Use the [Playwright Android Capability Generator](https://www.testmuai.com/playwright-android-capability-generator/) to generate capabilities for your tests.
 
 | Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
 |-----------------|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
