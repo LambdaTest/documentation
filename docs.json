@@ -13,7 +13,6 @@
   },
   "seo": {
     "metatags": {
-      "robots": "noindex, nofollow",
       "canonical": "https://www.testmuai.com"
     }
   },
