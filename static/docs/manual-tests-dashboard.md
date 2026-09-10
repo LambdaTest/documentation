@@ -7,7 +7,7 @@ The Manual Tests Sessions Dashboard provides a unified view of all your manual t
 All your **Real Devices App Testing** (App Live) and **Real Devices Browser Testing** (Browser Live) sessions are automatically stored on this dashboard.
 
 **New Dashboard**
-The Manual Tests Sessions Dashboard is a newly launched feature. To get it enabled for your organization, please reach out to our **24x7 Chat Support** or mail us at [support@testmuai.com](https://support.lambdatest.com/).
+The Manual Tests Sessions Dashboard is a newly launched feature. To get it enabled for your organization, please reach out to our **24x7 Chat Support** or mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 ## Supported Session Types
 
@@ -223,4 +223,4 @@ All manual testing sessions from Real Devices App Testing and Browser Testing ar
 - [Manual App Profiling](/support/docs/manual-app-profiling/): Enable and use real-time performance profiling during App Live sessions
 
 > Got any questions?
-> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).

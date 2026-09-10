@@ -96,4 +96,4 @@ Slack notifications never block or impact your test execution. If a notification
 - [Getting Started with App Automation](/support/docs/getting-started-with-appium-testing/)
 
 > Got any questions?
-> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).

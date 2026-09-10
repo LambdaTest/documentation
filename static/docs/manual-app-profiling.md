@@ -9,7 +9,7 @@ You can enable App Profiling from the App Live session toolbar before starting y
 > This feature is available for **App Live** sessions on **iOS and Android** real devices. It must be enabled **before** starting the session and cannot be toggled mid-session.
 
 **Beta Feature**
-Manual App Profiling is currently in **Beta**. To use this feature, get it enabled for your organization by reaching out to our **24x7 Chat Support** or mailing us at [support@testmuai.com](https://support.lambdatest.com/).
+Manual App Profiling is currently in **Beta**. To use this feature, get it enabled for your organization by reaching out to our **24x7 Chat Support** or mailing us at [support@testmuai.com](mailto:support@testmuai.com).
 
 ## Getting Started
 
@@ -163,4 +163,4 @@ For more details on navigating the dashboard, see the [Manual Tests Sessions Das
 | ANR Monitoring | Android 9+ | Not supported |
 
 > Got any questions?
-> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).

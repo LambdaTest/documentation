@@ -46,7 +46,7 @@ This will result in improved availability and a decrease in preemptions. Further
 
 #### 11. **Can I integrate my reporting tool with HyperExecute?**
 
-  Yes. It’s very easy to integrate HyperExecute with your reporting tool by hitting their APIs in the post-steps using the YAML. HyperExecute is also bringing more integrations with popular reporting tools. You can request new integrations by emailing us at hyperexecute@lambdatest.com.
+  Yes. It’s very easy to integrate HyperExecute with your reporting tool by hitting their APIs in the post-steps using the YAML. HyperExecute is also bringing more integrations with popular reporting tools. You can request new integrations by emailing us at hyperexecute@testmuai.com.
 
 #### 12. **Do HyperExecute VMs have basic command line tools installed?**
 

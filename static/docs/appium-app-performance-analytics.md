@@ -117,4 +117,4 @@ To retrieve profiling details, simply make a request to the TestMu AI API using 
 **Step 4:** Now go to any API testing platform, and pass the above URL (GET Method) to fetch the relevant results.
 
 > Got any questions?
-> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).

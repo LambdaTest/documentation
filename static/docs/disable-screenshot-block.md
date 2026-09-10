@@ -11,7 +11,7 @@ TestMu AI now supports disable screenshot block for Android real devices. This n
 
 **OS Version:** Android Disable Screenshot Unblock is supported for all os versions.
 
-This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+This feature is in the **beta phase**. To enable it, please reach out to our 24x7 Chat Support by clicking on  **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).
 
 ## Disable Screenshot Block in Real Time App Testing
 
@@ -49,4 +49,4 @@ capabilities.setCapability("enableScreenshotUnblock",true); // for screenshot un
 **Disable Screenshot Block** will only work for applications that were uploaded after 28th June 2023.
 
 > Got any questions?
-> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](https://support.lambdatest.com/).
+> Please reach out at our **24x7 Chat Support** or you could also mail us at [support@testmuai.com](mailto:support@testmuai.com).

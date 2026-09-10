@@ -16,11 +16,7 @@ In this documentation, you will learn how to create a scheduled test run using p
 
 **Step 5:** In the **Build Parameters** box, you can define your desired concurrency for the tests. Click on the **Advanced Configurations** button to configure additional settings such as network throttling, URL replacement, visual regression, accessibility testing, and [report generation](/support/docs/kaneai-hyperexecute-test-run-execution/#reports). Finally, click **Schedule Test Run** to create a recurring schedule.
 
-**Result:** The Test Runs section lists your existing test runs.
-
-### Step 2: Create a Schedule
-
-Click the three dots next to a test run and select **Create Schedule**. Alternatively, open the **Scheduled runs** section to view all existing schedules, then click **Create a Scheduled Run**.
+**Step 6:** Click on any existing schedule to view detailed information, including a summary of test outcomes, passed and failed cases, and their respective instances. This helps in easily reviewing and proceeding with the tests.
 
 **Result:** The schedule creation form opens.
 
