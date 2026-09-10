@@ -219,8 +219,8 @@ A run using **Evidence Reporting** shows a different Advanced Configurations pan
 
 | Setting | Description |
 |---|---|
-| **Failure handling** | Turn on to keep the run going when a step fails, then pick one strategy. Off by default, and with it off the run stops at the first failed step. |
-| **Adaptive Heal** | Repair a step that fails to replay, so the run continues instead of stopping at the failure. The repair is saved as a new version of the test case. |
+| **Self-maintenance** | Turn on to have KaneAI re-author the test when a step fails, then pick one strategy. Off by default. With it off nothing is re-authored, Auto-Heal still runs, and only a step Auto-Heal cannot recover ends the run. |
+| **Adaptive Heal** | Re-author the objective that contains the failing step, and every objective after it, so the run continues instead of stopping at the failure. Triggers only on a failure, and at most 3 times in a run. The re-authored content is saved as a new version of the test case. |
 | **Dynamic Test** | Author the test from its objective instead of replaying the recorded steps. Every run consumes authoring credits. |
 | **Retry on Failure** | Run the whole test again from the start after it fails. Nothing about the test is changed. |
 | **Maximum Retries** | Appears under Retry on Failure. Sets how many further attempts to make, up to 5. |
@@ -232,7 +232,7 @@ Only one of Adaptive Heal, Dynamic Test and Retry on Failure can be active at a 
 A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience** on **Chrome** can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Test Configurations panel instead.
 :::
 
-See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how repaired versions are reviewed.
+See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how re-authored versions are reviewed.
 
 ### Reports
 ***
@@ -241,8 +241,8 @@ A run using **Evidence Reporting** shows a different Advanced Configurations pan
 
 | Setting | Description |
 |---|---|
-| **Failure handling** | Turn on to keep the run going when a step fails, then pick one strategy. Off by default, and with it off the run stops at the first failed step. |
-| **Adaptive Heal** | Repair a step that fails to replay, so the run continues instead of stopping at the failure. The repair is saved as a new version of the test case. |
+| **Self-maintenance** | Turn on to have KaneAI re-author the test when a step fails, then pick one strategy. Off by default. With it off nothing is re-authored, Auto-Heal still runs, and only a step Auto-Heal cannot recover ends the run. |
+| **Adaptive Heal** | Re-author the objective that contains the failing step, and every objective after it, so the run continues instead of stopping at the failure. Triggers only on a failure, and at most 3 times in a run. The re-authored content is saved as a new version of the test case. |
 | **Dynamic Test** | Author the test from its objective instead of replaying the recorded steps. Every run consumes authoring credits. |
 | **Retry on Failure** | Run the whole test again from the start after it fails. Nothing about the test is changed. |
 | **Maximum Retries** | Appears under Retry on Failure. Sets how many further attempts to make, up to 5. |
@@ -254,7 +254,7 @@ Only one of Adaptive Heal, Dynamic Test and Retry on Failure can be active at a 
 A run made of **Classic** test cases shows the full panel described above. A run whose test cases are all **New Experience** on **Chrome** can choose between the Classic report and Evidence Reporting, and choosing Evidence Reporting shows the Test Configurations panel instead.
 :::
 
-See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how repaired versions are reviewed.
+See [Adaptive Heal and Dynamic Test](/support/docs/kaneai-healing-and-dynamic-test/) for what each strategy does, how it is set at the organization and project level, and how re-authored versions are reviewed.
 
 ### Reports
 
