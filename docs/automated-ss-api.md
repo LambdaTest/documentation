@@ -20,6 +20,7 @@ slug: automated-screenshot-api-for-cross-browser-testing/
 canonical: https://www.testmuai.com/support/docs/automated-screenshot-api-for-cross-browser-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -91,11 +92,15 @@ The below **GET** request will help you extract a list of all the combinations f
 
 **Requested URL:**
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 https://api.lambdatest.com/screenshots/v1/os-browsers
 ```
 
 Client URL would be as followed:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 curl -X GET "https://api.lambdatest.com/screenshots/v1/os-browsers"
@@ -103,6 +108,8 @@ curl -X GET "https://api.lambdatest.com/screenshots/v1/os-browsers"
 ```
 
 As you execute, you will find the Server response presented below.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -143,16 +150,22 @@ To get a list of all the available **screen  resolutions** provided by <BrandNam
 
 **Requested URL:**
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 https://api.lambdatest.com/screenshots/v1/resolutions
 ```
 Client URL would be as followed:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 curl -X GET "https://api.lambdatest.com/screenshots/v1/resolutions"
 -H "accept: application/json" -H "Authorization: Basic 123456789abcdefghijklmno="
 ```
 As you execute, you will find the Server response presented below.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -189,6 +202,8 @@ In case you wish to fetch all the details from an already executed screenshot te
 
 **Requested URL:**
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 https://api.lambdatest.com/screenshots/v1/Test ID
 ```
@@ -197,12 +212,16 @@ https://api.lambdatest.com/screenshots/v1/Test ID
 
 Client URL would be:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 curl -X GET "https://api.lambdatest.com/screenshots/v1/TES11111111111111111111111111"
 -H "accept: application/json" -H "Authorization: Basic 123456789abcdefghijklmno="
 ```
 
 Example Value:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
   {
@@ -231,11 +250,15 @@ Example Value:
 
 To start a screenshot test using the API, you would need to trigger the below **POST** request.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 https://api.lambdatest.com/screenshots/v1
 ```
 
 Client URL would be as followed:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 curl -X POST "https://api.lambdatest.com/screenshots/v1" -H "accept: application/json" 
@@ -245,6 +268,8 @@ curl -X POST "https://api.lambdatest.com/screenshots/v1" -H "accept: application
 \"opera\":[\"58\"],\"ie\":[\"11\"]},\"macos mojave\":{\"chrome\":[\"74\"]}}}"
 ```
 Example value:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -285,6 +310,8 @@ To perform a screenshot test on your locally hosted web applications, you would 
 
 Example Value:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 {
   "url": "https://www.testmuai.com",
@@ -307,6 +334,8 @@ Example Value:
 ***
 Similarly, to perform a screenshot test on a web application with basic authentication, you would need to declare the below parameter in your request before specifying the configurations.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 "url": "https://www.basic-auth.com",
 "username": "username",
@@ -314,6 +343,8 @@ Similarly, to perform a screenshot test on a web application with basic authenti
 ```
 
 Example:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -341,11 +372,15 @@ Example:
 ***
 By specifying a Callback URL, you can route your test details to a specific IP or a specific URL. This would help you to share your test results with your colleagues or to keep them on a specific URL, so you could come back and assess these results when you have time. To invoke a Callback URL, you would need to declare the below parameter in your request before specifying the configurations.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 "callbackurl": "https://www.example.com",
 ```
 
 Example Value:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -371,9 +406,13 @@ In case you wish to stop a screenshot test, you can do so with the help of a PUT
 
 **Requested URL:**
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 https://api.lambdatest.com/screenshots/v1/stop/TES11111111111111111111
 ```
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 Client URL: curl -X PUT "https://api.lambdatest.com/screenshots/v1/stop/TES100962431563281759448763"

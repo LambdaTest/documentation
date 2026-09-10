@@ -16,6 +16,7 @@ slug: mobile-web-automation-on-real-devices/
 canonical: https://www.testmuai.com/support/docs/mobile-web-automation-on-real-devices/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -74,6 +75,8 @@ To test on a real mobile device, pass the below capability in your test scripts.
 You can also add the capability using the [Desired Capabilities Generator](https://www.testmuai.com/capabilities-generator/). 
 
 In the below Python test script, we take an example of our sample ToDo app. We check two checkboxes of the list and add another item to the list. The test runs on iPhone 11 with platform version iOS 13.
+
+<VerifiedTag value="Verified" />
 
 ```python
 //todo.py

@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-hooks-element-screensho
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -73,6 +74,8 @@ This helps ensure the correct region is ready for capture. Use your framework's 
 
 Call the SmartUI hook through your driver's script executor, passing `"smartui.takeScreenshot"` as the command and a config object with your screenshot options:
 
+<VerifiedTag value="Verified" />
+
 ```js
 const config = {
   screenshotName: "Checkout_Summary_Block",
@@ -112,6 +115,8 @@ When `elementType` is `webElement`, you pass a real element object, not a string
 :::
 
 First resolve the element in your test, then pass it to the hook:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const el = await driver.findElement(By.className('hero-heading'));
@@ -159,6 +164,8 @@ This is useful when you want to build a component inventory for a page without m
 
 The following example collects visible elements, builds XPath locators, and returns metadata for the first `N` matches:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const elements = await driver.executeScript(`
   function getPath(el) {
@@ -205,6 +212,8 @@ const elements = await driver.executeScript(`
 ```
 
 Then loop through the collected elements and upload one SmartUI element screenshot for each:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 for (const item of elements) {

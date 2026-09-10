@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-comparison-capabilities
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -82,6 +83,8 @@ Set the same comparison capabilities on both the baseline and the comparison run
 
 Set `smartUI.ignoreType` to `["layout"]` in `LT:Options`. Every screenshot in the session is then compared in layout mode, the same as passing `ignoreType: ["layout"]` on each individual screenshot.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
@@ -142,6 +145,8 @@ capabilities.SetCapability("smartUI.ignoreType", new[] { "layout" }); // applies
 
 With this set, your screenshot calls stay clean, no comparison option is needed on each one:
 
+<VerifiedTag value="Verified" />
+
 ```java
 Map<String, Object> options = new HashMap<>();
 options.put("screenshotName", "home-page");
@@ -152,6 +157,8 @@ options.put("screenshotName", "home-page");
 ## 2. Smart Ignore for the whole session
 
 Set `smartUI.smartIgnore` to `true` in `LT:Options` to apply [Smart Ignore](/support/docs/smartui-smartignore/) across the session.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
@@ -196,6 +203,8 @@ capabilities.SetCapability("smartUI.smartIgnore", true); // applies to every scr
 
 There is no session-level ignore-regions capability. Ignore regions are configured **per screenshot** through the `ignoreDOM` (and `selectDOM`) argument on each `smartui.takeScreenshot` call, where you can pass DOM selectors or pixel coordinates:
 
+<VerifiedTag value="Verified" />
+
 ```java
 HashMap<String, String[]> ignoreByCoord = new HashMap<>();
 ignoreByCoord.put("coordinates", new String[]{"847,185,1571,734"});
@@ -211,6 +220,8 @@ For the full set of coordinate and selector options on the Web Hooks path, see [
 ## 4. Override the session default for one screenshot
 
 Because the screenshot-level option always wins, you can keep a session default and still change the mode for a specific screenshot. For example, with a layout default set in `LT:Options`, you can compare one screenshot in the standard pixel mode by passing a different `ignoreType` on that call:
+
+<VerifiedTag value="Verified" />
 
 ```java
 Map<String, Object> options = new HashMap<>();

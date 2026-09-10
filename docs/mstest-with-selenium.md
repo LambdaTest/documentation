@@ -21,6 +21,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -115,6 +116,8 @@ Define browser, version, and OS settings for your test run.
 
 In the test script, update your test capabilities. This code passes browser, browser version, and operating system information, along with TestMu AI Selenium grid capabilities via the capabilities object.
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
@@ -153,6 +156,9 @@ Execute the MSTest test from Visual Studio or the command line.
 </p>
 
 **In Linux/macOS:**
+
+<VerifiedTag value="Verified" />
+
 ```csharp
 dotnet test MS-Test-Cross-Browser.csproj
 ```

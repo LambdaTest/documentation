@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <BrandName />’s SmartUI allows you to organize your visual regression screenshots logically by linking them to the automation test cases they were captured in. Grouping screenshots by test cases reduces triage fatigue and allows you to review visual differences with full automation execution context.
 
@@ -78,6 +79,8 @@ export PROJECT_TOKEN='<your-token>#sample'
 
 Paste **Java** capabilities from the dashboard **Capability Generator** into your test class under `src/test/com/lambdatest/` (this repo uses **`src/test/com/...`**, not `src/test/java/...`). The important SmartUI line is:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ltOptions.put("smartUI.project", "<Smart UI Project Name>");
 ```
@@ -85,6 +88,8 @@ ltOptions.put("smartUI.project", "<Smart UI Project Name>");
 Use the same string as **Smart UI Project Name** in the UI (e.g. `new`, `sample`, or `Java-Selenium` as in the sample).
 
 After navigation, call the **SmartUI hook** (use a **different `screenshotName`** per step or per logical test so screenshots do not overwrite each other):
+
+<VerifiedTag value="Verified" />
 
 ```java
 Map<String, Object> config = new HashMap<>();

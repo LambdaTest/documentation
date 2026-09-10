@@ -14,6 +14,7 @@ slug: queuing-appium-tests/
 canonical: https://www.testmuai.com/support/docs/queuing-appium-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -44,6 +45,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 
 To avoid over-exploitation of <BrandName />, we have imposed a capacity constraint on the number of tests queued on our platform. The maximum number of queued items for your <BrandName /> account is determined by the number of concurrent sessions you are registered for. Using the formula below, you can calculate the maximum number of Appium test cases you are entitled queue.
+
+<VerifiedTag value="Verified" />
 
 ```js
 Maximum number of Appium test cases that can be queued = n + 150

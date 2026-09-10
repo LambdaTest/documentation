@@ -21,6 +21,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -258,6 +259,8 @@ The response contains an `app_url` field, already in `lt://APP...` form, which i
 
 This is the half that produces the app screenshots. Use the same device here as in `designs.json` so both sides are captured at the same viewport.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="NodeJS example"
 let capabilities = {
   deviceName: "Pixel 8",          // must match mobile[].name in designs.json
@@ -331,6 +334,8 @@ await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"})
 ```
 
 :::
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='appium' label='Appium NodeJS' default>

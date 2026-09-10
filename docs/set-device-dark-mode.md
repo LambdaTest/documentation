@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -138,6 +139,8 @@ You can enable the dark mode setting through `darkMode` capability before the se
 ### Enabling Dark Mode via Hooks
 
 To change dark mode settings during test execution, use the hook with the `updateDeviceSettings` action. The example below demonstrates this using **Python**.
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
 <TabItem value="real-devices" label="Real Devices" default>

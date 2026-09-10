@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-testng-use-cases/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -167,6 +168,8 @@ To avoid duplicate executions:
 ```
 
 **Example: @CucumberOptions**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 @CucumberOptions(
@@ -369,6 +372,8 @@ args:
 
 **Sample Connection Code :**
 
+<VerifiedTag value="Verified" />
+
 ```python title="test.py
 import os
 import mysql.connector
@@ -531,6 +536,8 @@ pytest -k "login"
 **Solution :** Use the `--log-cli-level=DEBUG` flag to capture debug-level logs.
 
 **Example Python Test :**
+
+<VerifiedTag value="Verified" />
 
 ```python title="test.py
 import logging
@@ -967,6 +974,8 @@ Test statuses may not be reported to HyperExecute properly, leading to incomplet
 
 #### Solution
 Custom function reports statuses for tracking and dashboards.
+
+<VerifiedTag value="Verified" />
 
 ```java title="test.java"
 public void CleanUp(string[] tagName, ScenarioExecutionStatus scenarioStatus, string scenarioName)

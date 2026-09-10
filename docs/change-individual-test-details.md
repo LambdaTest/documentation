@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/change-individual-test-details/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -58,6 +59,8 @@ When you run Selenium tests on the TestMu AI grid, a test that your local assert
 You can set these status values: `passed`, `failed`, `skipped`, `ignored`, `unknown`, `error`.
 
 ### Code Samples
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -144,6 +147,8 @@ Place the `lambda-status` call inside your test's teardown or `@AfterMethod` blo
 Use the `lambda-name` hook to update the test name after execution has started.
 
 You can rename a running test to reflect dynamic data such as iteration count or data-driven parameters. Pass the new name through JavascriptExecutor:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

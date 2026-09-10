@@ -13,6 +13,7 @@ site_name: TestMu AI
 slug: custom-headers/
 canonical: https://www.testmuai.com/support/docs/custom-headers/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Bypass Firewalls with customHeaders and customUrlFilters
 ---
@@ -38,6 +39,8 @@ Add custom headers using the Desired Capabilities class.
 
 2. Use the customHeaders capability to add your custom headers.
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("customHeaders", new HashMap<String, String>() {{
@@ -57,6 +60,8 @@ Custom headers serve different purposes for web development and network communic
 
 **Example**: The Custom header `X-Session-ID` tracks user sessions.
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 
 ```
@@ -65,6 +70,8 @@ X-Session-ID: 1234567890
 
 **Example**: `Accept` header specifies the client-preferred format of the response data.
 
+<VerifiedTag value="Verified" />
+
 ```java
 Accept: application/json 
 ```
@@ -72,6 +79,8 @@ Accept: application/json
 3. **Rate Limiting**: APIs use custom headers to provide information about rate limits, including how many requests a client can make in a given time period and when they can make new requests.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-RateLimit-Limit: 60
@@ -83,6 +92,8 @@ X-RateLimit-Reset: 1372700873
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -90,6 +101,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 5. **CORS (Cross-Origin Resource Sharing)**: The CORS standard uses custom headers to allow browsers and servers to interact securely with resources from different origins, including headers like "Access-Control-Allow-Origin" and "Access-Control-Allow-Methods".
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -99,6 +112,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -106,6 +121,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 7. **Bypassing Firewalls or Proxies**: In some cases, use custom headers to bypass certain network restrictions, such as firewalls or proxy servers. Always do this responsibly and in accordance with security policies.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -115,6 +132,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -123,6 +142,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -130,6 +151,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 10. **A/B Testing**: Use custom headers to control or track A/B testing, where different versions of a service are tested against each other.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -154,6 +177,8 @@ The customUrlFilters capability, used together with customHeaders, lets you spec
 - Filters can be exact URLs or regular expressions, providing flexible targeting.
 
 ### Implementation Example
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -194,6 +219,8 @@ The following examples show common use cases for custom headers.
 
 Send tokens or session IDs with headers like:
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890
 ```
@@ -201,6 +228,8 @@ X-Session-ID: 1234567890
 **Content Negotiation**
 
 Specify expected response formats:
+
+<VerifiedTag value="Verified" />
 
 ```java
 Accept: application/json
@@ -210,6 +239,8 @@ Accept: application/json
 
 Get limits and usage from APIs:
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-RateLimit-Remaining: 10
 ```
@@ -217,6 +248,8 @@ X-RateLimit-Remaining: 10
 **Debugging and Performance Tracking**
 
 Include trace info or timing metrics:
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Execution-Time: 150ms
@@ -226,6 +259,8 @@ X-Execution-Time: 150ms
 
 Enable cross-origin requests:
 
+<VerifiedTag value="Verified" />
+
 ```java
 Access-Control-Allow-Origin: *
 ```
@@ -233,6 +268,8 @@ Access-Control-Allow-Origin: *
 **Custom Application Logic**
 
 Pass app-level config:
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-App-Version: v2.3.1
@@ -242,6 +279,8 @@ X-App-Version: v2.3.1
 
 Mask the request with common headers:
 
+<VerifiedTag value="Verified" />
+
 ```java
 User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 ```
@@ -249,6 +288,8 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0...)
 **Server Health**
 
 Return backend state:
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Server-Status: All systems operational
@@ -258,6 +299,8 @@ X-Server-Status: All systems operational
 
 Guide search engines:
 
+<VerifiedTag value="Verified" />
+
 ```java
 Link: <https://example.com/page>; rel="canonical"
 ```
@@ -265,6 +308,8 @@ Link: <https://example.com/page>; rel="canonical"
 **A/B Testing**
 
 Track experimental groups:
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Experiment-ID: variant_b

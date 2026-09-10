@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -99,6 +100,8 @@ Get your username and access key from the <BrandName /> [dashboard](https://www.
 ---
 
 ## Platform Guides
+
+<VerifiedTag value="Verified" />
 
 <Tabs groupId="ci-platform">
 

@@ -21,6 +21,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +69,8 @@ To enable Slack notifications for your App Automation tests, add the `slackChann
 | **Example** | `mobile-test-results` |
 
 ### Configuration Examples
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="java" label="Java" default>

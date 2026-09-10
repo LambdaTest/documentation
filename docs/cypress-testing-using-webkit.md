@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/cypress-testing-using-webkit/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Cypress Testing Using WebKit
 ---
@@ -50,12 +51,16 @@ cd Cypress-Cloud
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -143,6 +148,8 @@ lambdatest-cypress init
 ```
 
 Once you run the above command, below is the project structure for the `lambdatest-config.json` file.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -244,6 +251,8 @@ You can provide the name of the **<BrandName /> tunnel** as per your requirement
 * WebKit only supports the latest version.
 
 * The following dependencies must be in `lambdatest-config.json` file. 
+
+<VerifiedTag value="Verified" />
 
 ```js
 "npm_dependencies": {

@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/launch-first-session/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -96,6 +97,8 @@ npm i @testmuai/browser-cloud
 
 Let's create a simple script that launches a cloud browser, navigates to a page,
 and cleans up:
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
   <TabItem value="puppeteer" label="Puppeteer" default>

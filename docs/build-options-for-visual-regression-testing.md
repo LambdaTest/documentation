@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/smart-ui-build-options/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -56,6 +57,8 @@ Using the <BrandName /> platform, perform regression testing in just one click a
 ## Enabling build mapping for multiple screenshots
 
 If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite. We have to enable the mapping with the `smartUI.build` to be added your capabilities.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="selenium" label="Selenium" default>
@@ -121,6 +124,8 @@ const capabilities = {
 ## Enabling build as a baseline
 
 If you want to mark your build as a baseline from your test suite while executing tests then you have to enable the below mentioned capability configuration needs to be enabled.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="selenium" label="Selenium" default>

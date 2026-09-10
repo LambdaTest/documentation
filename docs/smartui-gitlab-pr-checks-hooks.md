@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 This guide shows you how to integrate SmartUI visual regression testing with GitLab merge requests using the **SmartUI Hooks** approach. This works for both **web testing** (Selenium, Playwright, Cypress, Puppeteer) and **mobile app testing** (Appium, WebdriverIO) across all supported languages.
 
@@ -84,6 +85,8 @@ Configure your test suite with SmartUI capabilities. Since you're using the **Ho
 
 <Tabs className='docs__val' groupId='test-type'>
 <TabItem value='web' label='Web Testing (Selenium/Playwright)' default>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='web-language'>
 <TabItem value='typescript-web' label='TypeScript/JavaScript' default>
@@ -240,6 +243,8 @@ driver = webdriver.Remote(
 
 </TabItem>
 <TabItem value='mobile' label='Mobile Testing (Appium/WebdriverIO)'>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='mobile-language'>
 <TabItem value='typescript-mobile' label='TypeScript/JavaScript' default>
@@ -412,6 +417,8 @@ The capability is named `github` (legacy name) but works with GitLab's API endpo
 ### Taking Screenshots with SmartUI Hooks
 
 In your test code, use the SmartUI execute command to capture screenshots:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='screenshot-language'>
 <TabItem value='typescript' label='TypeScript/JavaScript' default>
@@ -818,6 +825,8 @@ When visual differences are detected:
 <Tabs className='docs__val' groupId='complete-example'>
 <TabItem value='web-example' label='Web Testing Example' default>
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='web-example-lang'>
 <TabItem value='typescript-web-ex' label='TypeScript/JavaScript' default>
 
@@ -977,6 +986,8 @@ public class BaseClassWebhook {
 
 </TabItem>
 <TabItem value='mobile-example' label='Mobile Testing Example'>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='mobile-example-lang'>
 <TabItem value='typescript-mobile-ex' label='TypeScript/JavaScript' default>

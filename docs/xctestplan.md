@@ -28,6 +28,7 @@ import TabItem from '@theme/TabItem';
 
 import RealDeviceTag from '../src/component/realDevice';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -136,6 +137,8 @@ Upload your iOS test suite (.ipa) file to <BrandName /> servers using our REST A
 :::
 
 > This is a sample xctestplan file which is compatible with our sample application provided above.
+
+<VerifiedTag value="Verified" />
 
 ```js title="testLaunch.xctestplan"
 {

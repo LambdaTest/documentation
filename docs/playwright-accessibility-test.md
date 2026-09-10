@@ -20,6 +20,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -75,6 +76,8 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
 Configure the desired capabilities based on your test requirements. For example:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
   const capabilities = {
@@ -135,11 +138,15 @@ For precise control over which pages are scanned, you can trigger scans manually
 
 To use this, simply enable accessibility in your capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 capabilities['accessibility'] = true; // Enable accessibility testing
 ```
 
 Then, trigger the scan directly within your test script when the desired page is fully loaded:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // Execute the LambdaTest accessibility scan hook
@@ -150,6 +157,8 @@ await page.evaluate('lambda-accessibility-scan');
 
 #### 2. Continuous Auto-Scanning
 If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you can pass the `accessibility.autoScan` capability:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 capabilities['accessibility'] = true; // Enable accessibility testing
@@ -162,6 +171,8 @@ The capability name is case sensitive here. In Playwright it is `accessibility.a
 
 #### Advanced Capabilities
 You can also define other settings capabilities to refine your scan rules as described below:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -180,6 +191,8 @@ This is the safest workaround when reports are not being generated for `pw-chrom
 
 ### Step 4: Add the following add-on Script
 <BrandName /> uses a Chrome extension for accessibility scans and report generation. In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // Load the extension for report generation of the accessibility tests

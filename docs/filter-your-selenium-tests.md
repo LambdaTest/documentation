@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/filter-your-selenium-tests/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -212,6 +213,8 @@ You can create a custom tag while writing your Selenium automation tests. When y
 
 1. Create a String array that contains the names of your custom tags, separated by a comma.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 // In case for just 1 tag, just add 1 element in the array
 String[] customTags = {"Custom Tag"};
@@ -221,6 +224,8 @@ String[] customTags = {"Tag 1", "Tag 2", "Tag 3", ...};
 ```
 
 2. Now add this custom tag in your Desired Capabilities instance:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 DesiredCapabilities caps = new DesiredCapabilities();
@@ -275,6 +280,8 @@ While writing your automation tests, add another capability when you create the 
 
 1. Create an array of Strings that contains your Build tags, each separated by a comma.
 
+<VerifiedTag value="Verified" />
+
 ```java
 // For example, when you have only 1 tag
 String[] buildTagList = {"Build Tag"};
@@ -284,6 +291,8 @@ String[] buildTagList = {"Tag 1", "Tag 2", "Tag 3", ...};
 ```
 
 2. Now add this Build tag array in your Desired Capabilities instance. For example, while creating a sample Desired Capabilities instance in Java, the code will be:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Creating the Build Tags
@@ -372,6 +381,8 @@ When you run Selenium tests on the TestMu AI grid, a test that your local assert
 
 You can set these status values: `passed`, `failed`, `skipped`, `ignored`, `unknown`, `error`.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
@@ -456,6 +467,8 @@ Place the `lambda-status` call inside your test's teardown or `@AfterMethod` blo
 
 You can rename a running test to reflect dynamic data such as iteration count or data-driven parameters. Pass the new name through JavascriptExecutor:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
@@ -517,6 +530,8 @@ TestMu AI lets you share individual test results with team members. Retrieve the
 ### Get the Session ID
 
 Every test session on TestMu AI has a unique Session ID. Use the code below to retrieve it in your preferred language:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -611,6 +626,8 @@ https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&au
 #### Generate the AUTH_TOKEN
 
 Create the AUTH_TOKEN by computing an MD5 hash of your `username:access_key` string.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

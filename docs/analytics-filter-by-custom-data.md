@@ -11,6 +11,7 @@ slug: analytics-filter-by-custom-data/
 canonical: https://www.testmuai.com/support/docs/analytics-filter-by-custom-data/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -52,6 +53,8 @@ Ability to sent any custom `key` and `value` pair to <BrandName /> platform and 
 ### Update your existing test capabilities
 
 You can use the `customData` capability to send custom data to the <BrandName /> platform. The custom data will be displayed in the `Builds Comparison Insights` module. The custom data will be displayed in the `Custom Data` Filter. You can filter the test cases based on the custom data.
+
+<VerifiedTag value="Verified" />
 
 ```js
 {

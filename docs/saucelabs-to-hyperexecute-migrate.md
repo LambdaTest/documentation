@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/saucelabs-to-hyperexecute-migra
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -171,6 +172,8 @@ jobLabel: [selenium-testng, mac, autosplit, migration]
 
 **Sauce Labs** 
 
+<VerifiedTag value="Verified" />
+
 ```java
 MutableCapabilities sauceOptions = new MutableCapabilities();
 sauceOptions.setCapability("username", System.getenv("SAUCE_USERNAME"));
@@ -180,6 +183,8 @@ sauceOptions.setCapability("browserVersion", "latest");
 ```
 
 **HyperExecute**
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -201,6 +206,9 @@ capabilities.setCapability("visual",true);
 For a Java-based implementation, here are the changes in the script as far as the authentication stage is concerned:
 
 **Sauce Labs** 
+
+<VerifiedTag value="Verified" />
+
 ``` js
 // test.java
 public static final String user_name = "SauceLabs_UserName";
@@ -208,6 +216,9 @@ public static final String access_key = "SauceLabs_AccessKey";
 ```
 
 **HyperExecute**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 // test.java
 public static final String user_name = "LambdaTest_UserName";
@@ -217,11 +228,17 @@ public static final String access_key = "LambdaTest_AccessKey";
 For a Java-based implementation, here are the changes in the script as far as the Hub URL is concerned:
 
 **Sauce Labs**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 // test.java
 public static final String Hub_URL = "https://" + user_name + ":" + access_key + "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
 ```
 **<BrandName />**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 // test.java
 public static final String Hub_URL = "https://" + user_name + ":" + access_key + "@hub.lambdatest.com/wd/hub";

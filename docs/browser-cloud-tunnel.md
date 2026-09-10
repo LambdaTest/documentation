@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-tunnel/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -75,6 +76,8 @@ Cloud Browser --(encrypted tunnel)--> Your Machine --> localhost:3000
 The easiest approach. Set `tunnel: true` in your session config and the
 TestMu AI Browser SDK handles starting and routing the tunnel automatically:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const session = await client.sessions.create({
     adapter: 'puppeteer',
@@ -97,6 +100,8 @@ and starts the tunnel for you.
 
 For more control - for example, starting the tunnel once and reusing it across
 multiple sessions:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // Start the tunnel
@@ -125,6 +130,8 @@ await client.tunnel.stop();
 
 ## Tunnel Config
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 interface TunnelConfig {
     user: string;           // TestMu AI username
@@ -140,6 +147,8 @@ interface TunnelConfig {
 
 
 ## API
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 await client.tunnel.start(config);   // Start tunnel

@@ -15,6 +15,7 @@ slug: testing-locally-hosted-apps/
 canonical: https://www.testmuai.com/support/docs/testing-locally-hosted-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -69,6 +70,8 @@ Shown below are the steps to configure the connection with <BrandName /> tunnel.
 3. Navigate to the Command Prompt and point to the directory/folder where you extracted the binary file.
 
 4. Run the below command in the terminal.
+
+<VerifiedTag value="Verified" />
 
 ```js
 ./LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}

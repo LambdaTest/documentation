@@ -30,6 +30,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -141,6 +142,8 @@ Save the returned `media_url`. You will use it in subsequent steps.
 
 Set the `enableAudioInjection` capability when creating your driver session.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="java" label="Java" default>
@@ -194,6 +197,8 @@ Use the following hooks via `driver.executeScript`:
 | `lambda-audio-injection=<media_url>` | Set the audio file to be injected |
 | `lambda-audio-start` | Start playing the injected audio into the device microphone |
 | `lambda-audio-stop` | Stop audio playback |
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

@@ -19,6 +19,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -114,6 +115,8 @@ Set the environment variables in the `nemo.config.js` file with your TestMu AI U
 ---
 Update the capabilities in `nemo.config.js` to define the browser and platform settings.
 
+<VerifiedTag value="Verified" />
+
 ``` js
 "withCapabilities": [{
     "build": "LT Nemo Sample Tests",
@@ -135,11 +138,17 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 npx nemo -P chrome
 ```
 
 **Parallel tests:**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 npx nemo -P chrome,chrome_2,firefox
 ```

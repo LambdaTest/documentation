@@ -26,6 +26,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -97,6 +98,8 @@ npm i
 
 3. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 4. Edit the required capabilities in your test file `navigation.js`.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="Add the following code snippet to run SmartUI with Puppeteer in ./navigation.js"
 "use strict";

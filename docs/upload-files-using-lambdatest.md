@@ -14,6 +14,7 @@ slug: upload-files-using-testmu/
 canonical: https://www.testmuai.com/support/docs/upload-files-using-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -78,6 +79,8 @@ For example: If you uploaded 3 files named "804402.png", "file_example_JPG_2500k
 
 **Java**
 
+<VerifiedTag value="Verified" />
+
 ```java
 HashSet<String> ab = new HashSet<>();
 ab.add("Sample-Spreadsheet-10-rows.csv");
@@ -92,6 +95,8 @@ capabilities.setCapability("lambda:userFiles",ab);
 
 **C#**
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 //HashMap
 string testName = callStack[0].ToString();
@@ -103,6 +108,8 @@ capabilities.AddAdditionalOption("lambda:userFiles", ltFile);
 ```
 
 **PHP**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 $capabilities = array(
@@ -117,6 +124,8 @@ $capabilities = array(
 
 **Python**
 
+<VerifiedTag value="Verified" />
+
 ```py
 capabilities = {
       .
@@ -130,6 +139,8 @@ capabilities = {
 ```
 
 **JavaScript**
+
+<VerifiedTag value="Verified" />
 
 ```js
 var capabilities = {
@@ -156,6 +167,8 @@ The following table shows the file path for uploaded files on both desktop and m
 | iOS | /Users/ltuser/Downloads/ios/media |
 
 For example, to upload a file on a web page via test script, use the following Java code (on Windows and macOS):
+
+<VerifiedTag value="Verified" />
 
 ```java
    // If the file is 804402.png, and testing environment is Windows OS

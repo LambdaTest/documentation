@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-perform-gro
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,6 +46,8 @@ TestNG provides group-based test discovery functionality. You can specify groups
 To perform group-based test discovery, you can use the ***@BeforeGroups*** and ***@AfterGroups*** annotations in your TestNG tests. These annotations allow you to specify setup and cleanup methods that run before and after specific groups of tests.
 
 For example:
+
+<VerifiedTag value="Verified" />
 
 ```java
 public class GroupIntegrationTest {

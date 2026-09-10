@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/bypass-proxy-domains/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -60,6 +61,8 @@ With `bypassProxyDomains`, you can configure specific domains (like localhost) t
 > `dedicatedProxy: true` is mandatory for bypassProxyDomains to take effect.
 
 ## Example Usage
+
+<VerifiedTag value="Verified" />
 
 ```java title="test1.java"
 DesiredCapabilities capabilities = new DesiredCapabilities();

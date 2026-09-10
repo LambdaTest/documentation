@@ -23,6 +23,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 Layout testing is a specialized approach to visual testing that focuses on verifying the structural integrity and arrangement of UI elements rather than their specific content or styling. It ensures that your application's visual hierarchy and element positioning remain consistent across different environments and updates.
 
@@ -93,6 +94,8 @@ For **`LT:Options`**, you still set **`smartUI.project`** (and `visual`, credent
 
 ### 2. Using SmartUI SDK (smartUISnapshot command)
 If you are using the SmartUI SDK (`smartui exec`), you need to set the `ignoreType` option to `"layout"` when taking a specific screenshot within your code:
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
   <TabItem value='javascript' label='JavaScript' default>
@@ -185,6 +188,8 @@ The layout comparison feature is particularly valuable in the following scenario
 ## Example Implementation
 
 Here's a complete example showing how to implement layout comparison in a test:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 describe('Layout Structure Test', () => {

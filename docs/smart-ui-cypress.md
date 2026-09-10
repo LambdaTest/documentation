@@ -26,6 +26,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -141,6 +142,8 @@ lambdatest-cypress init
 ```
 
 **Step 4:** Add **cy.screenshot()** method in your test script to capture the screenshots with the desired screenshot name.
+
+<VerifiedTag value="Verified" />
 
 ```js
 describe("Cypress test with Visual Regression", () => {

@@ -20,6 +20,7 @@ slug: parallel-testing-with-playwright/
 canonical: https://www.testmuai.com/support/docs/parallel-testing-with-playwright/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -55,6 +56,8 @@ Shown below are the steps on running parallel tests with Playwright on the <Bran
 
 1. Clone the [<BrandName />-Playwright GitHub repository](https://github.com/LambdaTest/playwright-sample) and switch to the cloned directory.
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample-main
@@ -67,6 +70,8 @@ cd playwright-sample-main
 Once you are done with the above-mentioned steps, you can run your parallel tests with Playwright on <BrandName />. 
 
 The below test script searches the term '<BrandName />' on Bing.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright')

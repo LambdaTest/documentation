@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/allure-reports/
 
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -50,6 +51,8 @@ If your testing framework already generates Allure reports, you can seamlessly i
 ## Allure Report Configuration
 
 **Step 1:** To configure the Allure reporter in the **WDIO framework**, update your `wdio.conf.js` file as follows:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="wdio.conf.js"
 export const config = {

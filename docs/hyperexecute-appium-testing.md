@@ -22,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -171,6 +172,8 @@ Write Your Automation Script in the client language of your choice from the ones
 
 Here is a sample automation script in Java for the sample app downloaded above. Ensure to update the `app_url`, `username` and `accesskey` in the below code.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>
 
@@ -256,6 +259,9 @@ To configure SmartUI with HyperExecute, you need to simply add a capability in y
 
 ## More About Desired Capabilities
 Sample Capabilities for both android and iOS are mentioned below -
+
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="androidCaps" label="Android" default>
 

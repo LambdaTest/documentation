@@ -29,6 +29,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -134,6 +135,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 An automation script for the sample application given above has been provided here.
 
+<VerifiedTag value="Verified" />
+
 ```python title="get_started.py"
 from sqlite3 import Time
 from appium.webdriver.common.mobileby import MobileBy
@@ -184,6 +187,8 @@ def home():
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
+
+<VerifiedTag value="Verified" />
 
 ```python title="driver.py"
 caps['name'] = 'Gauge Sample Test'

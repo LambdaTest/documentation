@@ -33,6 +33,9 @@
    --ifm-tabs-color:#333333;
    --realDevice-tag-color: #28A745;
    --virtualDevice-tag-color: #007BFF;
+   --verified-tag-color: #1A7F37;
+   --verified-tag-bg-color: #DAFBE1;
+   --verified-tag-border-color: #4AC26B66;
 
    /* TE-11137: UI Revamp Variables */
    --right-rail-width: 220px;
@@ -64,6 +67,9 @@
    --new-tag-color: #DB61A2;
    --docsearch-highlight-color: #767676;
    --ifm-tabs-color:#fff;
+   --verified-tag-color: #3FB950;
+   --verified-tag-bg-color: #2EA04326;
+   --verified-tag-border-color: #2EA04366;
 
    /* TE-11137: UI Revamp Dark Mode */
    --brand-amber-light: #3D2200;
@@ -87,6 +93,9 @@
 .virtualDeviceColor{color: #ffffff; background-color: var(--virtualDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--virtualDevice-tag-color);width: 100px;text-align: center;display: block;}
 .androidDeviceColor{color: #ffffff; background-color: var(--androidDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--androidDevice-tag-color)}
 .iosDeviceColor{color: #ffffff; background-color: var(--iosDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--iosDevice-tag-color)}
+.verifiedTagColor{color: var(--verified-tag-color); background-color: var(--verified-tag-bg-color); font-weight:600; font-size: 12px; padding: 2px 8px; border-radius: 20px; border:1px solid var(--verified-tag-border-color); display: inline-flex; align-items: center; gap: 4px; line-height: 1.5;}
+.verifiedTagColor + div[class*='codeBlockContainer'], .verifiedTagColor + div[class*='language-']{margin-top: 6px;}
+.verifiedTagIcon{flex-shrink: 0;}
 .virtualDeviceColor + span.realDeviceColor{margin-top: 10px;}
 .virtualDeviceColor + span.virtualDeviceColor{margin-top: 10px;}
 .realDeviceColor + span.virtualDeviceColor{margin-top: 10px;}

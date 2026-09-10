@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
@@ -127,6 +128,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application available above has been provided here.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -256,6 +259,8 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="android-config" label="Android" default>
@@ -332,6 +337,8 @@ npm i appium-base-driver
 npm install --save
 ```
 - The tests can be executed in the terminal using the following command:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="android-exec" label="Android" default>

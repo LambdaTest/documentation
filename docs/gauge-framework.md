@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -121,6 +122,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 Define the browser, version, and OS for your test run.
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
         browserOptions.setPlatformName("Windows 10");
@@ -142,6 +145,8 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 :::
 
 Below is the sample Gauge test used in this project:
+
+<VerifiedTag value="Verified" />
 
 ```java title="StepImplementation_ToDo.java"
 package driver.driver;

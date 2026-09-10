@@ -19,6 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Apple Pay Automation on Real Devices
 <RealDeviceTag value="Real Device" /> 
@@ -233,6 +234,8 @@ All parameters are optional. You can provide only the details you need to update
 - This can be done using <BrandName /> hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:
 
 
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script(
     'lambda_executor: {"action": "lambda-applepay", "arguments": {"confirmPayment": "true"}}'
@@ -245,6 +248,8 @@ driver.execute_script(
 
 - After confirming the Apple Pay payment, the device will prompt for the passcode to securely authorize the transaction. Your automation script must handle this prompt by entering the passcode using Appium's keyboard input methods to simulate the user securely confirming the payment.
   
+
+<VerifiedTag value="Verified" />
 
 ```Python
 driver.find_element(By.XPATH,"//*[@name=\"Passcode field\"]").send_keys("123456")

@@ -16,6 +16,7 @@ site_name: TestMu AI
 slug: kane-cli-evidence-format/
 canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-format/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -95,6 +96,8 @@ evidence finalize my-run.evidence/
 The standalone CLI ships `validate`, `finalize`, and `merge`. Exit codes differ by command: `validate` returns `0` valid, `1` invalid, `2` usage error, and `merge` returns `0` merged, `1` policy abort, `2` usage error. It reads its config from `~/.testmuai/evidence/config.json` by default, overridable with `--config` or the `EVIDENCE_CONFIG` environment variable, and the active profile resolves from the `--profile` flag, then the config, then the built-in default of `L0`.
 
 It is also a library, so `validate` and `finalize` can be called in process:
+
+<VerifiedTag value="Verified" />
 
 ```ts
 import { validate, finalize } from "@testmuai/evidence-cli";

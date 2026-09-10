@@ -28,6 +28,7 @@ canonical: https://www.testmuai.com/support/docs/testng-on-hyperexecute-grid/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -122,6 +123,8 @@ Download the HyperExecute CLI and copy it into the root folder  .
 
 ### Step 2: Setup Hub Endpoints and Capabilities
 Update your TestNG test configuration to point to the <BrandName /> hub and set capabilities as needed:
+
+<VerifiedTag value="Verified" />
 
 ```java title="test.java"
 DesiredCapabilities capabilities = new DesiredCapabilities();

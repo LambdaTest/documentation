@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-extensions/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -66,6 +67,8 @@ Your extension must be hosted at a cloud URL (such as an S3 bucket) before you c
 
 First, register an extension. Then pass its ID when creating a session:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 // Step 1: Register (one time)
 const ext = await client.extensions.register({
@@ -88,6 +91,8 @@ and adds them to <BrandName /> capabilities as `lambda:loadExtension`.
 
 ## Managing Extensions
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const extensions = await client.extensions.list();
 
@@ -98,6 +103,8 @@ await client.extensions.delete('ext_abc123');
 
 
 ## Extension Object
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 interface Extension {

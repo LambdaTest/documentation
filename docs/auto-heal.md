@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Auto Healing for Selenium Web Automation
 ---
@@ -37,6 +38,8 @@ The TestMu AI Auto Healing feature for Selenium testing automatically recovers f
 ---
 
 Pass the `autoHeal: true` capability in your WebDriver configuration to enable this feature.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capability = {
@@ -59,6 +62,8 @@ No prerequisites are required. Enable auto-healing directly via desired capabili
 
 ### Language Preferences
 ---
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -200,6 +205,8 @@ Web elements might change their locators due to updates in the web application. 
 Here is an example test case demonstrating this:
 
 
+<VerifiedTag value="Verified" />
+
 ```js
 import assert from 'assert';
 import { Builder, By, until, Capabilities } from 'selenium-webdriver';
@@ -261,6 +268,8 @@ You can start or stop Auto Heal at any point in your test script using hooks. Th
 
 Use the following hook to **start** Auto Heal at any point in your test script.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 ```
@@ -271,6 +280,8 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 
 Use the following hook to **stop** Auto Heal at any point in your test script.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 ```
@@ -278,6 +289,8 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 **Usage:** Place this hook immediately after the actions requiring Auto Heal are completed. This ensures subsequent test steps execute with normal Selenium behavior.
 
 ### Sample Script
+
+<VerifiedTag value="Verified" />
 
 ```python title="Test.py"
 import os

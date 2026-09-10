@@ -16,6 +16,7 @@ slug: alm-octane-integration/
 canonical: https://www.testmuai.com/support/docs/alm-octane-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -96,6 +97,8 @@ Here's an example of how to configure your test framework to report results to A
 
 **Java (TestNG) Example:**
 
+<VerifiedTag value="Verified" />
+
 ```java
 import com.hp.octane.integrations.OctaneSDK;
 
@@ -119,6 +122,8 @@ public class ALMOctaneReporter {
 Once your test scripts are configured with ALM Octane reporting, run them on <BrandName />:
 
 **Using Selenium Grid:**
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();

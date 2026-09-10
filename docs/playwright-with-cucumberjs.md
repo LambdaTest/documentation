@@ -19,6 +19,7 @@ slug: playwright-with-cucumberjs/
 canonical: https://www.testmuai.com/support/docs/playwright-with-cucumberjs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -72,12 +73,16 @@ npm install
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -88,6 +93,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 *** 
 
 In your `setup.js` file, specify your <BrandName /> Username and <BrandName /> Access Key, add the browserName, browserVersion, and platform.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { setWorldConstructor, World, Before, After} = require("@cucumber/cucumber");
@@ -146,6 +153,8 @@ Visit the <BrandName /> Automation dashboard to view the results of your execute
 
 1. In your `setup.js` file, add before and after code block for setting up and closing the remote browsers.
 
+<VerifiedTag value="Verified" />
+
 ```js
 Before(async (scenario) => {
   const capabilities = {
@@ -184,6 +193,8 @@ setWorldConstructor(CustomWorld);
 
 2. In the class CustomWorld, create a function `setTestStatus` that will mark your test passed or failed on the <BrandName /> platform.
 
+<VerifiedTag value="Verified" />
+
 ```js
 class CustomWorld extends World{
   async setTestStatus(status, remark) {
@@ -193,6 +204,8 @@ class CustomWorld extends World{
 ```
 
 3. After any assertions in your script mark the test status as passed as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```js
 try {

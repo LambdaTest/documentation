@@ -23,6 +23,7 @@ import CodeBlock from '@theme/CodeBlock';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> 
@@ -145,6 +146,8 @@ The upload time of your application can range from a few seconds to a minute, de
 
 Shown below is the response to the above cURL request.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 {
   "metaData": {
@@ -222,6 +225,8 @@ Shown below is the response to the above cURL request.
 
 Shown below is the response to the above cURL request.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 {
   "message": "Deleted successfully."
@@ -267,6 +272,8 @@ Shown below is the response to the above cURL request.
 </Tabs>
 
 The payload allows you to check the processing status for specific features. If the **patched_url** is empty, the processing is still in progress. To check if the processing for image injection or screenshot unblock is complete, pass either **imageInjectionEnabled** or **screenshotUnblockEnabled** as `true` based on the feature you are testing.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {

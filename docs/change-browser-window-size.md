@@ -19,6 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -52,6 +53,8 @@ When running Selenium tests on TestMu AI, you can control the browser window res
 Pass a resolution string in `LT:Options` to launch the browser at a specific screen size.
 
 Add the `resolution` capability to your `LT:Options` configuration. The value is a string in the format `widthxheight`. If you do not specify a resolution, TestMu AI defaults to **1024x768**.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

@@ -19,6 +19,7 @@ slug: puppeteer-test-execution-setup/
 canonical: https://www.testmuai.com/support/docs/puppeteer-test-execution-setup/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -78,6 +79,8 @@ You can name your test cases and categorize your builds by build, and name for e
 
 Shown below is the script that configure the `build` and `name` capabilities. 
 
+<VerifiedTag value="Verified" />
+
 ```js
 # add test code after initializing your browser
 'use strict';
@@ -132,12 +135,16 @@ const expect = require('chai').expect;
 
 Each Puppeteer test generates a different log on <BrandName />. To get the information relevant to your test session, use the snippet provided below in your Puppeteer test scripts. 
 
+<VerifiedTag value="Verified" />
+
 ```js
 let response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`)
 console.log("Test details: ", JSON.parse(response).data);
 ```
 
 Upon executing the script, you will get the details for the particular test session as a JSON response as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```js
 {
@@ -181,6 +188,8 @@ Puppeteer tests run with a `1920x1080` resolution by default for desktop browser
 ***
 
 If you wish to modify the browser window size during your Puppeteer test, you can do it as shown in the code below.
+
+<VerifiedTag value="Verified" />
 
 ```js
 

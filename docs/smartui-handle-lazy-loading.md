@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -104,6 +105,8 @@ For pages with extensive lazy loading or infinite scroll, programmatically scrol
 
 #### JavaScript (Selenium) Example
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const { Builder, By, until } = require('selenium-webdriver');
 const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
@@ -162,6 +165,8 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 
 #### Java (Selenium) Example
 
+<VerifiedTag value="Verified" />
+
 ```java
 
 public void handleLazyLoading(WebDriver driver) throws InterruptedException {
@@ -200,6 +205,8 @@ public void handleLazyLoading(WebDriver driver) throws InterruptedException {
 ```
 
 #### Python (Selenium) Example
+
+<VerifiedTag value="Verified" />
 
 ```python
 from selenium import webdriver
@@ -246,6 +253,8 @@ smartui_snapshot(driver, "Lazy Loaded Page")
 For pages where you know which elements are lazy-loaded, wait for those specific elements before taking the snapshot.
 
 #### JavaScript Example
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const { Builder, By, until } = require('selenium-webdriver');

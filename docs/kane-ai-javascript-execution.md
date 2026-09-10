@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-javascript-execution/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -62,6 +63,8 @@ To switch to JavaScript execution mode, type the forward slash `/` or click on t
 ### Step 3: Write or Paste Your JavaScript Code
 Now, you can write or paste your custom JavaScript code snippet directly into the text field. A sample JavaScript code:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 function simulateTyping(element, text) {
     element.value = '';  // Clear any existing value
@@ -102,6 +105,8 @@ Once your code is ready, simply press Enter. KaneAI will run your custom JavaScr
 If your JavaScript snippet contains return values, KaneAI will automatically save these values in a variable that can be used later in the test. The output from your JavaScript code will be captured and assigned to a variable. This variable will be available for use throughout your test execution.
 
 For example, in the code snippet provided:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 return {"First name": "Aman", "Last name": "Chopra", "email": "amanc@lambdatest.com"};

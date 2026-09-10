@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -69,6 +70,8 @@ Download or Clone the code sample for the Playwright Real Device from the <Brand
 ### Configure Desired Capabilities
 Update your test configuration with the required capabilities.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>
     ```javascript title="playwright-android-real-device.js" reference
@@ -87,6 +90,8 @@ Update your test configuration with the required capabilities.
 
 ### Configure the CDP URL
 You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a protocol used for communication between the browser and the developer tools.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="playwright-ios-real-device.js"
 const browser = await chromium.connect({

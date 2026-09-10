@@ -8,6 +8,7 @@ url: https://www.testmuai.com/support/docs/accessibility-native-app-automation-t
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-native-app-automation-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Native App Automation Appium (Overview)
 
@@ -33,6 +34,8 @@ Use this page when your team **already runs Appium** for functional tests and wa
 1. **Reuse a green Appium suite** without accessibility first: confirm install, locators, and hub connectivity.
 2. **Add accessibility capability** on the session (exact key names align with your Appium server version; mirror the examples in [Appium TestNG](/support/docs/accessibility-appium-testng/) or [Appium WebdriverIO](/support/docs/accessibility-appium-webdriverio/)).
 3. After each **stable screen** (post-navigation waits), call:
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.executeScript("lambda-accessibility-scan");

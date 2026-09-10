@@ -27,6 +27,7 @@ import NewTag from '../src/component/newTag';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -77,6 +78,9 @@ To configure the Appium version for your tests on <BrandName />, use the `appium
 | tvos | 1.22.3, 2.2.1 | 1.22.3 | 1.22.3 |
 
 **Java Example:** 
+
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code for configuring Appium version in tests on LambdaTest
 DesiredCapabilities capabilities = new DesiredCapabilities();

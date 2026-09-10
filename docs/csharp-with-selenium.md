@@ -21,6 +21,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -95,6 +96,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 Every framework below connects to the grid and passes your browser and OS choices through an `LT:Options` object:
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 var browserOptions = new ChromeOptions();
 browserOptions.PlatformName = "Windows 10";
@@ -120,6 +123,8 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 ---
 
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then build and run.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="csharp-framework" queryString="framework">
 

@@ -24,6 +24,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -91,6 +92,8 @@ Download or Clone the code sample for the Maestro framework from the <BrandName 
 
 ### Adding SmartUI function to take screenshot
 You can incorporate SmartUI into your custom `Cypress` test script, as shown below: 
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 /// <reference types="cypress" />

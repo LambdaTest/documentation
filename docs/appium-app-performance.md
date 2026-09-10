@@ -18,6 +18,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -47,6 +48,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 App performance is critical factor for user satisfaction and adoption. Identifying and resolving bottlenecks early is essential for delivering a high-quality experience but it requires constant monitoring and optimization across various device metrics. <BrandName />’s App Profiling feature helps you to detect and optimize performance issues before release by providing real-time insights into key metrics like CPU usage, memory consumption, and network activity on real devices.
 
 You can enable performance tracking in your existing automation tests with the following capability:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 "appProfiling" : true;

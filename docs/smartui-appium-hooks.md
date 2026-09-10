@@ -27,6 +27,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -191,6 +192,8 @@ To view and generate more capabilities for your appium application test suite, p
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Edit the required capabilities for your test suite as shown in the below sample code snippet:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Please replace your capabilities in your Remote Webdriver DesiredCapabilities configuration. This sample is for NodeJS"
 let capabilities = {
   deviceName: "iPhone 12", // Configure your Device for appium test (Mandatory)
@@ -232,6 +235,8 @@ It is important that the `visual:true` is set your capabilities configuration fo
 :::
 
 - Webhook for taking the screenshot - This part of the code needs to be attached below the required segment of appium script of which we would like to take the screenshot to test on.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="For Example if your are using with NodeJS"
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
@@ -277,6 +282,8 @@ This is especially useful for enterprise applications where certain UI elements 
 
 ### Usage in Node.js (Primary Example)
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Example: Ignoring Dynamic Elements in Node.js"
 let config = {
   screenshotName: 'Home Screen',
@@ -293,6 +300,8 @@ let config = {
 await driver.execute("smartui.takeScreenshot", config);
 ```
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Example: Selecting Only Critical Regions in Node.js"
 let config = {
   screenshotName: 'Checkout Form',
@@ -308,6 +317,8 @@ await driver.execute("smartui.takeScreenshot", config);
 ```
 
 ### Cross-Framework Examples
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='nodejs' label='Node.js' default>
@@ -405,6 +416,8 @@ In a similar way, we can run visual tests for other languages and frameworks usi
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='nodejs-1' label='NodeJS' default>
 
@@ -447,6 +460,8 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 You can capture the full page screenshot for apps which have a scrolling functionality on their application user interface for your **Appium** functional testing.
 
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='nodejs-2' label='NodeJS' default>
@@ -515,6 +530,8 @@ Please note that this webhook is only applicable to <b>native app screenshots</b
 
 ## Best Practices
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
@@ -578,6 +595,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>

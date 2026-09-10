@@ -14,6 +14,7 @@ site_name: TestMu AI
 slug: accessibility-nunit-csharp-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-nunit-csharp-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # NUnit (C#)
 
@@ -33,6 +34,8 @@ Use this guide for **Selenium C#** tests executed with **NUnit**. Accessibility 
 
 Typical pattern in `[SetUp]` or a one-time fixture:
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 var options = new ChromeOptions();
 options.BrowserVersion = "latest";
@@ -47,6 +50,8 @@ Exact hub URL and capability names should match your existing grid configuration
 ### 2. Invoke the scan hook (if not using auto-scan)
 
 After navigation and waits:
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 ((IJavaScriptExecutor)driver).ExecuteScript("lambda-accessibility-scan");

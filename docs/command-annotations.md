@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/command-annotations/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -56,6 +57,8 @@ Use the JavaScriptExecutor to send annotations directly from your test script to
 You can send annotations to TestMu AI directly from your test script using the annotate action through the JavaScriptExecutor.
 
 Here is an example written in Java:
+
+<VerifiedTag value="Verified" />
 
 ```java
 JavascriptExecutor jse = (JavascriptExecutor)driver;

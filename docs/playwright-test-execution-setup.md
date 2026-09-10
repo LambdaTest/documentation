@@ -18,6 +18,7 @@ slug: playwright-test-execution-setup/
 canonical: https://www.testmuai.com/support/docs/playwright-test-execution-setup/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -154,6 +155,8 @@ You can name your test cases and categorize your Playwright builds by build numb
 
 <!-- Shown below is the script that configure the `build` and `name` capabilities. 
 
+<VerifiedTag value="Verified" />
+
 ```js
 const { chromium } = require('playwright');
 
@@ -201,6 +204,8 @@ The above Playwright test runs on a default viewport of 1280x1024. However, you 
 
 If you resize viewport for individual page then run the below command.
 
+<VerifiedTag value="Verified" />
+
 ```js
 await page.setViewportSize({ width: 1600, height: 1200 });
 ```
@@ -211,6 +216,8 @@ await page.setViewportSize({ width: 1600, height: 1200 });
 Playwright lets you set browser arguments for Chromium based browsers. When selecting Chrome and Edge, you can set browser options  using `'goog:chromeOptions'` and `'ms:edgeOptions'` capability as shown below.
 
 **For Chrome**
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright');
@@ -237,6 +244,8 @@ const capabilities = {
   ```
 
   **For Edge**
+
+  <VerifiedTag value="Verified" />
 
   ```js
   const { chromium } = require('playwright');
@@ -269,12 +278,16 @@ const capabilities = {
 
 When you run a Playwright test on <BrandName />, it generates different logs for each test session. To get relevant information for the specific session, use the snippet provided below in your Playwright test scripts. 
 
+<VerifiedTag value="Verified" />
+
 ```js
 let response = JSON.parse(await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`))
 console.log(response); 
 ```
 
 Upon executing the script, you will get the details for the particular test session as a JSON response as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```js
 {

@@ -14,6 +14,7 @@ slug: trello-integration/
 canonical: https://www.testmuai.com/support/docs/trello-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -80,6 +81,9 @@ Another way through which a client access can authorize is by using basic [OAuth
 Once the user allows a third-party application to fetch user owned resources from the server to which the third-party application was making requests, then a token gets generated. This token allows third-party application to exchange information with the server API on behalf of the user.
 
 If you are logging into Trello for the first time, then you can generate a token for yourself with the help of API key & the URL:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 https://trello.com/1/authorize?expiration=1day&name=MyPersonalToken&scope=read&response_type=token&key={YourAPIKey}
 ```

@@ -23,6 +23,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -96,6 +97,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 Every framework below connects to the grid at `hub.lambdatest.com/wd/hub` and passes your browser and OS choices through a capabilities object. A minimal one looks like this:
 
+<VerifiedTag value="Verified" />
+
 ```js
 const capabilities = {
   build: 'NodeJS build',
@@ -120,6 +123,8 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 ---
 
 Each tab lists the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), set your browser and OS in its config, then run.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="js-framework" queryString="framework">
 

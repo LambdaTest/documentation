@@ -21,6 +21,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -63,6 +64,8 @@ Download or clone the code sample for the Playwright Jest from the <BrandName />
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-jest-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
@@ -86,6 +89,8 @@ npm install
 ---
 
 Navigate to the `jest-playwright.config.js` file in the `playwright-jest-js` directory and provide your <BrandName /> Username and Access key.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const cp = require('child_process');
@@ -163,6 +168,8 @@ module.exports = {
 ```
 
 Pass the below command in the terminal to run the test.
+
+<VerifiedTag value="Verified" />
 
 ```js
 npm run test

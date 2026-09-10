@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -67,6 +68,8 @@ You can use the `cypress_config_file` key in `run_settings` option to specify th
 
 > **NOTE :** Cypress 10 and above versions automatically identify the `cypress.config.js` file in the project. Therefore, you don't need to specify the `cypress_config.js` capability.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="android" label="Cypress v9" default>
 
@@ -99,6 +102,8 @@ You can specify the Cypress configuration file using the below CLI flag with `ru
 ## Specifying Spec Files
 #### Using `lambdatest-config.json`
 You can use the *specs* key in *run_settings* option to specify the Spec files.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
@@ -135,6 +140,8 @@ You can specify the Spec files using the below CLI flag with `run` command.
 ## Exclude Specs Files
 You can use the *exclude_specs* key in *run_settings* option to specify the spec files that you want to exclude from the test execution.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
 
@@ -162,6 +169,8 @@ You can use the *exclude_specs* key in *run_settings* option to specify the spec
 ## Geolocation
 #### Using `lambdatest-config.json`
 You can use the *geo_location* key in *run_settings* option to specify the Spec files.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
@@ -197,6 +206,8 @@ You can specify the geolocation files using the below CLI flag with `run` comman
 ## Resolution
 #### Using `lambdatest-config.json`
 Use the *resolution* key in *run_settings* option to specify the resolution.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
@@ -238,6 +249,8 @@ The `resolution` capability above sets the VM's screen resolution. To control th
 #### Test on viewports
 When you define a viewport, Cypress uses the browser's scaling to size the app: a large viewport scales the app down, a small one scales it up. Set the viewport globally with `viewportWidth` and `viewportHeight` in the Cypress config, or per test:
 
+<VerifiedTag value="Verified" />
+
 ```js
 cy.viewport(550, 750) // Set viewport to 550px x 750px
 cy.viewport('iphone-6') // Set viewport to 375px x 667px
@@ -253,6 +266,8 @@ Full-screen mode together with viewports gives the best results for screen-resol
 Use the `before:browser:launch` event to change the browser options.
 
 For **Cypress v9 and below**, use the following script in the `plugin/index.js` file:
+
+<VerifiedTag value="Verified" />
 
 ```js
 module.exports = (on, config) => {
@@ -273,6 +288,8 @@ module.exports = (on, config) => {
 ```
 
 For **Cypress v10 and above**, add the below code in the `cypress.config.js` file:
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { defineConfig } = require('cypress')
@@ -302,6 +319,8 @@ module.exports = defineConfig({
 ## Excluding Files From Test Uploads
 #### Using `lambdatest-config.json`
 You can use the *ignore_files* key in *run_settings* option to ignore or exclude any particular files while uploading your tests.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
@@ -340,6 +359,8 @@ When running tests, if you encounter a situation where a particular test is runn
 The valid input for `max_duration` must be an integer, and it can only be within the range of 2 to 240 minutes.
 #### Using `lambdatest-config.json`
 You can use the `max_duration` key in *run_settings* option to specify the session timeout.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="ios" label="Cypress v10" default>
@@ -383,6 +404,8 @@ You can name your test cases and categorize your Cypress builds by build number,
 
 **Example**:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="lambdatest-config.json"
 {
   "run_settings": {
@@ -402,6 +425,8 @@ You can run Headless tests with Cypress by the `headless` key to `true`.
 
 **Example**:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="lambdatest-config.json"
 {
   "run_settings": {
@@ -419,6 +444,8 @@ You can generate Network logs with Cypress by setting the `network` key to `true
 
 **Example**:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="lambdatest-config.json"
 {
   "run_settings": {
@@ -435,6 +462,8 @@ Below are the ways through which <BrandName /> detects the dependencies which ha
 #### Using `npm_dependencies`
 Inside `run_settings` of `lambdatest-config.json`, you can provide the list of NPM dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="lambdatest-config.json"
 "run_settings": {
   "npm_dependencies": {
@@ -445,6 +474,8 @@ Inside `run_settings` of `lambdatest-config.json`, you can provide the list of N
 
 #### Using `package.json`
 <BrandName /> will automatically detects the dependencies that has to be installed from `package.json`.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="package.json"
 "devDependencies": {
@@ -472,6 +503,8 @@ You must already have a tunnel configured and running. To download private depen
 <BrandName /> allows you to specify the Node.js version for running your tests using the ``useNodeVersion`` capability in the `run_settings` section of the `lambdatest-config.json` file. This capability provides greater flexibility and ensures compatibility with your project's dependencies and environment.
 
 > Supported Versions are 18, 20 and 22. The exact version will be used are `18.17.1`, `20.18.0`, and `22.11.0` respectively
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {

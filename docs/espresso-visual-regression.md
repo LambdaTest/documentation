@@ -27,6 +27,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -222,6 +223,8 @@ Take note of the base64 encoded authentication which needs to be added in the 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
  
 > Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the fourth step) and **TEST_SUITE_ID** (generated in the fifth step) in the below command.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 curl --location 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \

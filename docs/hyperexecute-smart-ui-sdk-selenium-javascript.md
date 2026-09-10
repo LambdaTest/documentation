@@ -25,6 +25,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -89,6 +90,8 @@ Download or Clone the code sample for the Selenium - JavaScript framework from t
 ### Configure Your Test Suite
 
 In the `sdkCloud.js` file, update the following capabilities
+
+<VerifiedTag value="Verified" />
 
 ```java
 let capabilities = {

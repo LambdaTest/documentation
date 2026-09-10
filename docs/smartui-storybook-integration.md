@@ -24,6 +24,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -104,6 +105,8 @@ npm install @lambdatest/smartui-storybook -g
 
 Add the following to your .storybook/main.js. You can read more about this here Storybook [Feature flags](https://storybook.js.org/docs/react/configure/overview#feature-flags)
 
+<VerifiedTag value="Verified" />
+
 ```js
 module.exports = {
   features: {
@@ -120,6 +123,8 @@ module.exports = {
 SmartUI supports Storybook's `play` function (available in Storybook v9+) for interactive component testing. The `play` function allows you to interact with components before capturing screenshots.
 
 **Example with Play Function:**
+
+<VerifiedTag value="Verified" />
 
 ```js title="Button.stories.js"
 
@@ -172,6 +177,8 @@ SmartUI supports Storybook's global decorators and parameters, including theme s
 - `"both"`: Capture stories in both light and dark themes (creates separate screenshots)
 
 **Example Story with Theme Globals:**
+
+<VerifiedTag value="Verified" />
 
 ```js title="Card.stories.js"
 export default {

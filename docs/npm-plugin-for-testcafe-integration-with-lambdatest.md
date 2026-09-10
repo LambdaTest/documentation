@@ -20,6 +20,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -63,6 +64,8 @@ Complete these steps before integrating TestCafe with TestMu AI.
 ## Step 1: Clone the Sample Project
 ---
 Install the TestMu AI npm plugin for TestCafe.
+
+<VerifiedTag value="Verified" />
 
 ``` js
 npm install testcafe-browser-provider-lambdatest
@@ -133,16 +136,25 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 $ testcafe "lambdatest:Chrome@74.0:Windows 8" 'path/to/test/file.js'
 ```
 
 **Parallel tests:**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 $ testcafe "lambdatest:Chrome@74.0:Windows 8","lambdatest:Chrome@75.0:Windows 10" "path/to/test/file.js"
 ```
 
 **Using the API:**
+
+<VerifiedTag value="Verified" />
+
 ``` js
 testCafe
     .createRunner()
@@ -152,6 +164,9 @@ testCafe
 ```
 
 To list all available browser aliases:
+
+<VerifiedTag value="Verified" />
+
 ``` js
 testcafe -b lambdatest
 ```

@@ -25,6 +25,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -108,6 +109,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 Each option builds a `capabilities` object (browser, version, platform, and your `LT:Options`) and connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`:
 
+<VerifiedTag value="Verified" />
+
 ```js
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
@@ -116,6 +119,8 @@ What changes between them is only the setup file that holds this connection. Pic
 
 ## Set Up and Run Your Tests
 ***
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="js-framework" queryString="framework">
 

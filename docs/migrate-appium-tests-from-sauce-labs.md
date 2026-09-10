@@ -14,6 +14,7 @@ slug: migrate-appium-tests-from-sauce-labs/
 canonical: https://www.testmuai.com/support/docs/migrate-appium-tests-from-sauce-labs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -88,11 +89,15 @@ For a Python-based implementation, here are the changes in the script for the au
 
 **Sauce Labs**
 
+<VerifiedTag value="Verified" />
+
 ```python
 userName = "SAUCE_USERNAME"
 accessKey = "SAUCE_ACCESS_KEY"
 ```
 **<BrandName />**
+
+<VerifiedTag value="Verified" />
 
 ```python
 userName = "LambdaTest_UserName"
@@ -148,6 +153,8 @@ The following is an overview of the comparison of Desired Capabilities for the J
 
 **Sauce Labs**
 
+<VerifiedTag value="Verified" />
+
 ```py
 # demo.py
 caps = {
@@ -161,6 +168,8 @@ caps = {
 ```
 
 **<BrandName />**
+
+<VerifiedTag value="Verified" />
 
 ```py
 # demo.py
@@ -184,6 +193,8 @@ Let's look an example that shows the entire migration process. The test scenario
 
 **Sauce Labs**
  
+<VerifiedTag value="Verified" />
+
 ```python
 #samplewikipedia.py
 import ssl
@@ -255,6 +266,8 @@ for cap in caps:
 ```
 
 **<BrandName />**
+
+<VerifiedTag value="Verified" />
 
 ```python
 #samplewikipedia.py
@@ -334,6 +347,8 @@ Let's analyze what has changed from the implementation point of view.
 
 **Sauce Labs**
 
+<VerifiedTag value="Verified" />
+
 ```python
 
 from threading import Thread
@@ -372,6 +387,8 @@ def run_session(desired_cap):
 ```
 
 **<BrandName />**
+
+<VerifiedTag value="Verified" />
 
 ```python
 from threading import Thread

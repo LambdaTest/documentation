@@ -21,6 +21,7 @@ canonical: https://www.testmuai.com/support/docs/deque-integration/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -57,6 +58,8 @@ Learn how to automate your Web Accessibility tests with <BrandName /> and Deque 
 
 1. Ensure you have the below dependency for running accessibility tests.
 
+<VerifiedTag value="Verified" />
+
 ```js
 "@axe-core/webdriverio": "4.1.2-alpha.106"
 //**or the latest version
@@ -64,11 +67,15 @@ Learn how to automate your Web Accessibility tests with <BrandName /> and Deque 
 
 2. The <BrandName /> Service, which you probably have in your project.
 
+<VerifiedTag value="Verified" />
+
 ```js
 "@wdio/lambdatest-service"
 ```
 
 3. The next step will be to ensure that our <BrandName /> configuration file contains the desired browser configurations and <BrandName /> Username and Access Key.
+
+<VerifiedTag value="Verified" />
 
 ```js
 // Specify LambdaTest Username and Access Key.
@@ -77,6 +84,8 @@ key: process.env.LT_ACCESS_KEY,
 ```
 
 4. In the `wdio.conf` file below, we build an axeWdio object, which then creates a new AxeWebdriverIO instance that uses the current browser (or client) object from WDIO. This injects axe-core into the current page, and when analyze() is invoked, axe-core scans the current page content.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const AxeWebdriverIO = require('@axe-core/webdriverio').default;
@@ -103,6 +112,8 @@ before: function (capabilities, specs, browser) {
  ```
 
  5. Now call the below method in your tests
+
+<VerifiedTag value="Verified" />
 
 ```js
  browser.getAxeResults()

@@ -16,6 +16,7 @@ slug: testing-flutter-apps/
 canonical: https://www.testmuai.com/support/docs/testing-flutter-apps/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -85,6 +86,8 @@ void main() {
 
 Shown below is the test script for automating Flutter apps on <BrandName /> platform.
 
+<VerifiedTag value="Verified" />
+
 ```py
 import os
 
@@ -138,6 +141,8 @@ Check out this [Flutter Appium Java GitHub](https://github.com/LambdaTest/flutte
 
 To run Appium tests using the Flutter Integration Driver on TestMu AI, set the *automationName* capability to *FlutterIntegration*.
 
+<VerifiedTag value="Verified" />
+
 ```java
 desired_caps = {
   "deviceName": "Galaxy S20",
@@ -152,6 +157,8 @@ desired_caps = {
 ```
 
 The example below shows a basic login flow for an Android Flutter app using the Appium Flutter Integration Driver. It covers driver setup, Flutter-specific capabilities, and widget interaction using *ValueKey*.
+
+<VerifiedTag value="Verified" />
 
 ```java
 import org.openqa.selenium.remote.DesiredCapabilities;

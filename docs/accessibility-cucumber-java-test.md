@@ -14,6 +14,7 @@ site_name: TestMu AI
 slug: accessibility-cucumber-java-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-cucumber-java-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Cucumber (Java)
 
@@ -31,6 +32,8 @@ Cucumber scenarios still execute **ordinary Selenium** code under the hood. Enab
 
 ### 1. Create the driver with Accessibility in `@Before`
 
+<VerifiedTag value="Verified" />
+
 ```java
 @Before(order = 0)
 public void setUp() {
@@ -46,6 +49,8 @@ public void setUp() {
 ### 2. Scan after key navigations
 
 In a step that represents “user is on dashboard” (or after `Given/When` that loads a URL):
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.executeScript("lambda-accessibility-scan");

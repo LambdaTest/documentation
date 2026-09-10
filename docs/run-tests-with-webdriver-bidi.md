@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/run-tests-with-webdriver-bidi/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -119,6 +120,8 @@ set LT_ACCESS_KEY=your_access_key
 
 **3. Create `bidi-test.ts`.** It connects to the hub with BiDi enabled, opens the listing, captures a screenshot, validates the products, and marks the test **passed** or **failed** on the dashboard.
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 // bidi-test.ts
 import { remote } from 'webdriverio';
@@ -201,6 +204,8 @@ BiDi's event stream is what makes it useful for agents: the agent subscribes to 
 Here the agent watches network responses to confirm the page loaded its resources.
 
 **1. Create `agent-bidi.ts`.** It subscribes to BiDi network events, opens the listing, validates the browser's real activity, and marks the test **passed** or **failed** on the dashboard.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // agent-bidi.ts

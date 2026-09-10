@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -113,11 +114,15 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 - If you are passing npm dependencies through **package.json**, then add the below mentioned line there:
 
+<VerifiedTag value="Verified" />
+
 ```javascript reference title="package.json"
 https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/package.json
 ```
 
 - If you are using **lambdatest-config.json** to pass the dependency, then pass the given line there:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
@@ -140,6 +145,8 @@ npm i lambdatest-cypress-cli
 
 Add this import statement in your `e2e.js` file to import the acceessibility scanner dependency
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 import 'lambdatest-cypress-cli/accessibility/scanner'
 ```
@@ -148,6 +155,8 @@ import 'lambdatest-cypress-cli/accessibility/scanner'
 
 Add this template in your config file.
 
+<VerifiedTag value="Verified" />
+
 ```javascript reference title="cypress.config.js"
 https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/cypress.config.js
 ```
@@ -155,6 +164,8 @@ https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/cyp
 #### 4. Add the capabilities in the `lambdatest-config.json` file
 
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="lambdatest-config.json"
 "accessibility" : true,                 // Enable accessibility testing

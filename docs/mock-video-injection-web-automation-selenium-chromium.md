@@ -24,6 +24,7 @@ canonical: https://www.testmuai.com/support/docs/mock-video-injection-web-automa
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -115,6 +116,8 @@ Add the video file and Chrome flags to your Selenium capabilities configuration.
 
 ### Java (Selenium 4, W3C)
 
+<VerifiedTag value="Verified" />
+
 ```java
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -150,6 +153,8 @@ RemoteWebDriver driver = new RemoteWebDriver(
 
 ### Python
 
+<VerifiedTag value="Verified" />
+
 ```python
 from selenium import webdriver
 
@@ -176,6 +181,8 @@ driver = webdriver.Remote(
 ```
 
 ### JavaScript (WebDriverIO or raw WebDriver)
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {
@@ -208,6 +215,8 @@ const capabilities = {
 Navigate to a page that requests camera access and confirm the fake stream is active.
 
 After the session starts, navigate to a page that requests camera access and confirm the fake stream is being used.
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.get("https://www.lambdatest.com/selenium-playground/webrtc-video");

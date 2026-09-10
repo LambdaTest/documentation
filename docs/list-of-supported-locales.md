@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/list-of-supported-locales/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -254,6 +255,8 @@ Locale to be passed in the capability - locale: 'fr_FR' where fr is language cod
 
 ### Enabling Locales and Language via Hook
 To **dynamically change** the language and locale of a device during test execution use the `updateLanguageLocale` action inside `lambda_executor`.The example below demonstrates how to use the following.
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script('lambda_executor: { 

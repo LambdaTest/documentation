@@ -24,6 +24,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -92,6 +93,8 @@ Download or Clone the code sample for the Selenium - JavaScript framework from t
 
 - Add the following dependencies in your `.csproj` file
 
+<VerifiedTag value="Verified" />
+
 ```cs
 <ItemGroup>
     <PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.1" />
@@ -104,6 +107,8 @@ You can check the latest version of [<BrandName />.Selenium.Driver]( https://www
 
 ### Configuring your Project
 You can configure your project meta information from here, like build name, project name, defining the platform, browser, browser version, your credentials etc.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="LTCloudTest.cs"
 var capabilities = new JObject {
@@ -126,6 +131,8 @@ var capabilities = new JObject {
 
 You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
   
+<VerifiedTag value="Verified" />
+
 ```java title="LTCloudTest.cs"
 using System;
 using System.Threading.Tasks;

@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/accessibility-automation-scan-c
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -100,6 +101,8 @@ The rule set for a test is derived from the WCAG version and the group toggles, 
 
 Enable accessibility, target WCAG 2.1 AA, keep Best Practice and Beta rules on, and leave AI rules off.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="hidden">
 <TabItem value="json" label="Capabilities (JSON)" default>
 
@@ -155,6 +158,8 @@ const capabilities = {
 </Tabs>
 
 With these capabilities in place, the scan is triggered at each stable screen:
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.executeScript("lambda-accessibility-scan");

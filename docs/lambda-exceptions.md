@@ -16,6 +16,7 @@ slug: lambda-exceptions/
 canonical: https://www.testmuai.com/support/docs/lambda-exceptions/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -63,6 +64,8 @@ Catch assertion errors in GET requests and push them to the dashboard using Java
 
 While performing assertions on GET requests, if the assertion fails, an AssertionError exception is thrown. Refer to the below Java syntax to catch this error and push it to TestMu AI using Lambda Exceptions.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 try {
     // some GET request
@@ -89,6 +92,8 @@ For demo purposes, this script will:
 ### View Exception on the Dashboard Using Lambda Exception
 ---
 Below is the full code for this script, using TestNG framework in Java.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 package com.lambdatest;
@@ -183,6 +188,8 @@ You can also view the full StackTrace on the dashboard using Lambda Exceptions.
 
 You can view the full StackTrace on the TestMu AI platform using the Lambda Exceptions feature. Convert the StackTrace to String and print it as an array of Strings. Below is the full script to print the StackTrace using TestNG framework in Java:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 package com.lambdatest;
 
@@ -276,6 +283,8 @@ When you execute the above test as a TestNG script, it produces the same result 
 <img loading="lazy" src={require('../assets/images/lambda-exceptions/lambda-StackTrace.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
 
 Below is the full StackTrace printed on the TestMu AI platform from the above script.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 java.lang.AssertionError: expected [Most Powerful Cross Browser Testing Tool Online | LambdaT] but found [Most Powerful Cross Browser Testing Tool Online | Lambdatest] at

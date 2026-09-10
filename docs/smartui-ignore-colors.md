@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-ignore-colors/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -67,6 +68,8 @@ Outside the region, everything is compared as usual. It composes with `ignoreDOM
 
 Pass `ignoreColors` in the snapshot options. All selector types are supported, along with coordinate rectangles and a whole-image switch.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 await smartuiSnapshot(driver, "Home Page", {
   ignoreColors: {
@@ -86,6 +89,8 @@ await smartuiSnapshot(driver, "Home Page", {
 
 The hooks path additionally accepts a located `webElement` (or an array of them).
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const el = await driver.findElement(By.id("price-banner"));
 
@@ -104,6 +109,8 @@ await driver.executeScript("smartui.takeScreenshot", {
 ```
 
 ### Playwright / Puppeteer
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 await page.evaluate(`lambdatest_action: ${JSON.stringify({

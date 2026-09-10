@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/connect-to-session/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -86,6 +87,8 @@ browser. With the TestMu AI Browser SDK, you replace that with
 `client.puppeteer.connect()` to connect to a cloud browser instead. Your
 subsequent Puppeteer calls work exactly the same as before.
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 import { Browser } from '@testmuai/browser-cloud';
 
@@ -131,6 +134,8 @@ Playwright requires **Node.js 18+**. If you see a version error,
 upgrade with `nvm install 18 && nvm use 18`.
 :::
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 import { Browser } from '@testmuai/browser-cloud';
 
@@ -168,6 +173,8 @@ Playwright.
 Selenium connects to <BrandName /> differently from Puppeteer and Playwright.
 Instead of WebSocket, it uses the standard **WebDriver protocol over HTTP**,
 connecting to <BrandName />'s Selenium Hub.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 import { Browser } from '@testmuai/browser-cloud';
@@ -257,6 +264,8 @@ The Selenium adapter **ignores** `session.websocketUrl` and builds its own conne
 
 ## Adding Session Features
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const session = await client.sessions.create({
     adapter: 'puppeteer',   // or 'playwright' or 'selenium'
@@ -274,6 +283,8 @@ const session = await client.sessions.create({
 ---
 
 ## Full Working Example
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
   <TabItem value="puppeteer" label="Puppeteer" default>

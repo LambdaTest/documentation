@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -89,6 +90,8 @@ Download or Clone the code sample for the Maestro framework from the <BrandName 
 ### Configure Your Test Suite
 
 In the `playwrightCloud.js` file, update the following capabilities
+
+<VerifiedTag value="Verified" />
 
 ```javascript
   const capabilities = {

@@ -13,6 +13,7 @@ canonical: https://www.testmuai.com/support/docs/scim/azure/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -103,6 +104,8 @@ For example we can set Constant association “Guest” for `urn:ietf:params:sci
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/dynamic_3.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 Or, can create association using the Expression like this ,
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 IIF(SingleAppRoleAssignment([appRoleAssignments])="Admin", "Admin",

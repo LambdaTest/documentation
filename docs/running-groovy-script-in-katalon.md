@@ -25,6 +25,7 @@ slug: running-groovy-script-in-katalon-with-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -59,6 +60,8 @@ As you perform testing with Katalon Studio, you can write or edit test automatio
 **Step 2:** Right-click on the **Test Listener** folder & click on the new listener.
 
 **Step 3:** Name the new listener & paste the below code in the new listener.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint

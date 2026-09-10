@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-hooks-layout-fullpage-s
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +69,8 @@ Layout and full page are enabled per screenshot through the hook options, not th
 ## 1. Session capabilities (`LT:Options`)
 
 Every Hooks session needs `username`, `accessKey`, `visual: true`, and `smartUI.project`. For Smart Ignore, also set `smartUI.smartIgnore: true` on both the baseline and comparison sessions.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
@@ -130,6 +133,8 @@ capabilities.SetCapability("smartUI.smartIgnore", true);
 
 Pass a single options map to `smartui.takeScreenshot` with a `screenshotName` and `ignoreType: ["layout"]`. Add `fullPage: true` to the same map for a full-page layout shot.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>
 
@@ -184,6 +189,8 @@ var options = new Dictionary<string, object>
 ## 3. Full-page screenshot
 
 Pass `fullPage: true` to `smartui.takeScreenshot` along with a `screenshotName`. For a full-page layout shot in the same call, add `ignoreType: ["layout"]` to the map.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="java" label="Java" default>

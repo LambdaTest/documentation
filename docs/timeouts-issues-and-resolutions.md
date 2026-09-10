@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/timeouts-issues-and-resolutions
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -90,6 +91,8 @@ The maximum number of tests allowed to be queued for your TestMu AI account depe
 
 **Maximum Queuing Capacity**
 Here is an example: if your TestMu AI account is eligible for 10 concurrent sessions, then your queue can have a maximum of (10 + 150) queued test cases, i.e. 160 queued test cases. TestMu AI handles the scheduling and execution of test cases in your queue.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 Maximum number of test cases that can be queued = n + 150 

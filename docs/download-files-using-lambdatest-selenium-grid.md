@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/download-files-using-testmu-sel
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -56,18 +57,29 @@ TestMu AI Selenium Grid provides an encoded string of base64 that you can use to
 
 - Check whether the downloaded file exists in the test machine.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-exists=file-name.file_format");
 ```
 - Retrieve file metadata such as md5 code, modified time, name, and size.
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-stats=file-name.file_format");
 ```
 - Download file content using base64 encoding.
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 ((JavascriptExecutor) driver).executeScript("lambda-file-content=file-name.file_format");
 ```
 - Lambda File List Custom Executor
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 print driver.execute_script("lambda-file-list={match string with filename}");
 ie:. 
@@ -79,6 +91,8 @@ Response: List of files in downloads dir starting with sample
 ## Downloading File Using Selenium with Java
 ---
 Use the lambda-file hooks in Java to verify, inspect, and download files from the test VM.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="android" label="Selenium 4" default>
@@ -301,6 +315,8 @@ public class DownloadCheck {
 ---
 Use the lambda-file hooks in Python to verify and download files from the test VM.
 
+<VerifiedTag value="Verified" />
+
 ```python
 import unittest
 import time
@@ -391,6 +407,8 @@ if __name__ == "__main__":
 ---
 Use the lambda-file hooks in Node.js to verify and download files from the test VM.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const webdriver = require('selenium-webdriver');
 
@@ -467,6 +485,8 @@ downloadFeature();
 ## Downloading File Using Selenium with C#
 ---
 Use the lambda-file hooks in C# to verify and download files from the test VM.
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 using System;
@@ -587,6 +607,8 @@ namespace NUnitSelenium
 ## Downloading File Using Selenium with Ruby
 ---
 Use the lambda-file hooks in Ruby to verify and download files from the test VM.
+
+<VerifiedTag value="Verified" />
 
 ```ruby
 require 'selenium-webdriver'

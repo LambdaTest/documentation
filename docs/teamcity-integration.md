@@ -18,6 +18,7 @@ slug: teamcity-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/teamcity-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -125,6 +126,8 @@ npm run parallel
 ```
 
 The above command will trigger the execution of below code for performing parallel testing at <BrandName /> Selenium Grid.
+
+<VerifiedTag value="Verified" />
 
 ```js
 //parallel.conf.js file

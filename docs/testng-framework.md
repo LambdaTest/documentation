@@ -20,6 +20,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -115,6 +116,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 Define the browser, version, and OS for your test run.
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
         browserOptions.setPlatformName("Windows 10");
@@ -154,6 +157,8 @@ mvn test -D suite=parallel.xml
 </Tabs>
 
 Below is the sample TestNG test used in this project:
+
+<VerifiedTag value="Verified" />
 
 ```java title="TestNG To Do"
 import org.openqa.selenium.By;

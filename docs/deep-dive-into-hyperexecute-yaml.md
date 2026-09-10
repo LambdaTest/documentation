@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/deep-dive-into-hyperexecute-yam
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -493,6 +494,8 @@ This feature helps avoid re-running the entire job to determine if a test failur
 :::tip
 If you are using Maven, ensure that the `testFailureIgnore` flag in your `pom.xml` is set to `false`. When `testFailureIgnore` is set to `true`, Maven treats test failures as ignored, causing HyperExecute’s retry mechanism to not trigger, even if `retryOnFailure` is enabled.
 
+<VerifiedTag value="Verified" />
+
 ```java
 <testFailureIgnore>false</testFailureIgnore>
 ```
@@ -577,6 +580,8 @@ partialReports:
 ```
 
 Ensure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:
+
+<VerifiedTag value="Verified" />
 
 ```java title="Testrunner.java"
 plugin = {
@@ -1269,6 +1274,9 @@ dataJsonBuilder:
 #### Working of `dataJsonBuilder`
 
 - The **input JSON data** should follow this format:
+
+  <VerifiedTag value="Verified" />
+
   ```javascript title="sample.json"
   [
     {
@@ -1308,6 +1316,9 @@ dataJsonBuilder:
   ```
 
 - The **filtered JSON data** will be:
+
+  <VerifiedTag value="Verified" />
+
   ```javascript title="sample.json"
   [
     {
@@ -1337,6 +1348,9 @@ After filtering, the JSON data is indexed to distribute test cases. Here’s how
 So as per the above filtered JSON data:
 
 - **VM1** will receive all test cases related to `username: "abc"`
+
+  <VerifiedTag value="Verified" />
+
   ```javascript
   {
     "accesskey": "jhscuystc7ewgucu79as8yc9",
@@ -1346,6 +1360,9 @@ So as per the above filtered JSON data:
   ```
 
 - **VM2** will receive all test cases related to `username: "bcd"`.
+
+  <VerifiedTag value="Verified" />
+
   ```javascript
   {
     "accesskey": "cjdy87328yeiqhd93urd28hh",
@@ -1355,6 +1372,9 @@ So as per the above filtered JSON data:
   ```
 
 - **VM3** will handle the JSON object:
+
+  <VerifiedTag value="Verified" />
+
   ```javascript
   {
     "accesskey": "jhscuystc7ewgucu79as8yc9",

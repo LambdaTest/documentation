@@ -17,6 +17,7 @@ slug: app-automation-using-app-center/
 canonical: https://www.testmuai.com/support/docs/app-automation-using-app-center/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -85,6 +86,8 @@ Below are the steps to generate the API Token on App Center -
 ***
 
 You can get all the Apps (specific to the API token) by using the API call below with the API token you generated in the previous step. 
+
+<VerifiedTag value="Verified" />
 
 ```js
 curl -sX GET "https://api.appcenter.ms/v0.1/apps" \ 
@@ -159,12 +162,16 @@ Shown below is the response of the above API call.
 
 If you have the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (as received in Step 2), you can use the API call below to retrieve all the Release information for a particular app.
 
+<VerifiedTag value="Verified" />
+
 ```js
 curl -X GET "https://api.appcenter.ms/v0.1/apps/{owner.name}/{name}/releases" \ -H "Content-Type: application/json" \ 
 -H "X-Api-Token: {your_api_token}"
 ```
 
 Shown below is the response of the above API call.
+
+<VerifiedTag value="Verified" />
 
 ```js
 [
@@ -222,12 +229,16 @@ Shown below is the response of the above API call.
 
 Using the API call below, use the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (received from Step 2), and the id (received from Step 3) to fetch Release information for a specific App: 
 
+<VerifiedTag value="Verified" />
+
 ```js
 curl -X GET "https://api.appcenter.ms/v0.1/apps/{owner.name}/{name}/releases/{id}" \ -H "Content-Type: application/json" \ 
 -H "X-Api-Token: {your_api_token}" 
 ```
 
 Shown below is the response of the above API call.
+
+<VerifiedTag value="Verified" />
 
 ```js
 {
@@ -279,6 +290,8 @@ The download_url (For e.g. `https://appcenter-filemanagement-distrib3ede6f06e.az
 
 You can upload the release version of your app on <BrandName /> by using the following API call -
 
+<VerifiedTag value="Verified" />
+
 ```js
 curl -u "<username>:<access_key>" \ 
 -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" \ -F "url=<download_url>" \ 
@@ -286,6 +299,8 @@ curl -u "<username>:<access_key>" \
 ```
 
 Below is the response of the above cURL request.
+
+<VerifiedTag value="Verified" />
 
 ```js
 { 

@@ -24,6 +24,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -132,6 +133,8 @@ For languages other than Java, SmartUI uses Hooks integration, which leverages A
 
 Add the following code snippet in your test where you want to capture a screenshot:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='hooks-language'>
 <TabItem value='javascript' label='JavaScript' default>
 
@@ -166,6 +169,8 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 **Taking Full Page Screenshots (Native Apps):**
 
 For apps with scrolling functionality, you can capture full-page screenshots:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='hooks-fullpage'>
 <TabItem value='javascript-full' label='JavaScript' default>

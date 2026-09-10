@@ -14,6 +14,7 @@ slug: screen-resolution-testing-with-cypress/
 canonical: https://www.testmuai.com/support/docs/screen-resolution-testing-with-cypress/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -62,6 +63,8 @@ To set the viewport's width and height globally, you need to define `viewportWid
 
 **Syntax**
 
+<VerifiedTag value="Verified" />
+
 ```js
 cy.viewport(550, 750) // Set viewport to 550px x 750px
 cy.viewport('iphone-6') // Set viewport to 375px x 667px
@@ -76,11 +79,15 @@ The use of full-screen mode in conjunction with viewports can help you achieve g
 
 To test your web applications in full screen mode, use the following event to change the browser options.
 
+<VerifiedTag value="Verified" />
+
 ```js
 before:browser:launch
 ```
 
 For **Cypress v9 and below**, use the following script in the `plugin/index.js` file.
+
+<VerifiedTag value="Verified" />
 
 ```js
 module.exports = (on, config) => {
@@ -101,6 +108,8 @@ module.exports = (on, config) => {
 ```
 
 For **Cypress v10 and above**, you can add the below code in `cypress.config.js` file.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { defineConfig } = require('cypress')

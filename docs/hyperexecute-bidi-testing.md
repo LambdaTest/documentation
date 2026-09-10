@@ -22,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -85,6 +86,8 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 ### Step 3: Add the required Capabilities
 
 > The `webSocketUrl` capability is set to `true` to enable BiDi support.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="wdio.lambdatest.config.js"
 

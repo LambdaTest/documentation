@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-debugging/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -83,6 +84,8 @@ From the dashboard you can:
 Use `build` and `name` in `lambdatestOptions` to organize sessions on the
 dashboard. This is especially helpful when running multiple agents or scenarios:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const session = await client.sessions.create({
     lambdatestOptions: {
@@ -102,6 +105,8 @@ const session = await client.sessions.create({
 ## Debug URLs
 
 Every session provides URLs for viewing:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 console.log(session.debugUrl);          // Dashboard URL for this session

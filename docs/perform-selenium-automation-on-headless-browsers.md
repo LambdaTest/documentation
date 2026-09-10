@@ -17,6 +17,7 @@ slug: perform-selenium-automation-on-headless-browsers/
 canonical: https://www.testmuai.com/support/docs/perform-selenium-automation-on-headless-browsers/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -72,6 +73,8 @@ Below is the complete code for sample desired capabilities in various languages:
 
 **Java**
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browser", "Chrome");
@@ -85,6 +88,8 @@ caps.setCapability("headless",true);
 ```
 
 **C#**
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -102,6 +107,8 @@ capabilities.setCapability("headless",true);
 
 **PHP**
 
+<VerifiedTag value="Verified" />
+
 ```php
 $capabilities = array(
 		"build" => "your build name",
@@ -116,6 +123,8 @@ $capabilities = array(
 
 **Ruby**
 
+<VerifiedTag value="Verified" />
+
 ```ruby
 capabilities = Selenium::WebDriver::Remote::Capabilities.new
 capabilities["build"] = "your build name"
@@ -128,6 +137,8 @@ capabilities["headless"] = true
 ```
 
 **JavaScript**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 var capabilities = {
@@ -142,6 +153,8 @@ var capabilities = {
 ```
 
 **Python**
+
+<VerifiedTag value="Verified" />
 
 ```py
 capabilities = {
@@ -160,6 +173,8 @@ capabilities = {
 Run a headless browser test using the TestNG framework in Java.
 
 Below is an example to perform headless browser testing. For demo purposes, this uses the TestNG framework with Java.
+
+<VerifiedTag value="Verified" />
 
 ```java
 package com.lambdatest;

@@ -27,6 +27,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -180,6 +181,8 @@ npx smartui config:create .smartui.json
 ```
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="/smartui-sdk-project/.smartui.json"
 {
   "web": {
@@ -223,6 +226,8 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ## Step 5: Adding SmartUI function to take screenshot
 You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```java
  //Importing the lambdatest-java SDK

@@ -14,6 +14,7 @@ slug: network-throttling/
 canonical: https://www.testmuai.com/support/docs/network-throttling/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -79,6 +80,8 @@ The following table lists all available preset network profiles with their speed
 
 Use the Selenium JavaScript Executor to apply custom network throttling during tests.
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Using executeScript to apply custom network throttling
 Map<String, Object> throttleParams = Map.of(
@@ -104,6 +107,9 @@ Define network throttle capabilities in your automation scripts to configure net
 To configure network throttling in automation, use the [TestMu AI TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run automation tests.
 
 ### Configuring Capabilities for Pre-defined Network Settings
+
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("browserName", "Chrome");
@@ -115,6 +121,9 @@ caps.setCapability("networkThrottling", "Regular 4G");  //Set Network Speed to R
 The following TestNG code validates your TestMu AI credentials for authentication. The code selects basic capabilities such as OS, browser, browser version, and network.
 
 ### Configuring Custom Network Settings
+
+<VerifiedTag value="Verified" />
+
 ```java
 package com.lambdatest;
 

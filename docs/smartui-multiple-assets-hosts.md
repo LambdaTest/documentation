@@ -25,6 +25,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,6 +58,8 @@ The primary purpose of the `allowedHostnames` is to allow users to specify which
 
 ## Configuration File Structure
 The `allowedHostnames` configuration option can be defined in your config file for SmartUI. You need to explicitly list each hostname from which assets should be captured. The SmartUI configuration file follows a JSON structure. Below is a sample configuration file:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title=".smartui.json"
 {

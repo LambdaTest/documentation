@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Ignoring Displacement Differences using Smart Ignore
 ---
@@ -84,6 +85,8 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
 #### 3. Using Smart Ignore in Hooks Flow (Automation Capabilities)
 
 If you are using SmartUI Hooks (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using `ignoreType` in capabilities.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {

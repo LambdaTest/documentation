@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/migrate-existing-appium-test-su
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -70,6 +71,8 @@ Appium's Desired Capabilities are a collection of key-value pairs wrapped inside
 
 Let’s say you want to run an app test in Python on SAMSUNG GALAXY TAB S4 running ANDROID 10. You can define the same in the form of capability as given below.
 
+<VerifiedTag value="Verified" />
+
 ```python
 caps = [
 
@@ -88,6 +91,8 @@ caps = [
 To begin, change the authentication in your test suite's configuration settings. To run the tests on <BrandName /> Appium Grid, you need a valid user name and access key. If you were already performing tests on your local grid, you will need to modify your test script to initialize an Appium driver along with your desired capabilities.
 
 Pass the capabilities to `@hub.lambdatest.com/wd/hub` with your <BrandName /> authentication details, and you are done. Here is the sample Python test script.
+
+<VerifiedTag value="Verified" />
 
 ```python
 #samplewikipedia.py

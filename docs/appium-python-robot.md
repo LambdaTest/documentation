@@ -27,6 +27,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -67,11 +68,15 @@ In this documentation, you will learn how to trigger a automation script of **Ro
 
 ### Create your Virtual Environment
 
+<VerifiedTag value="Verified" />
+
 ```python
 python3 -m virtualenv venv
 ```
 
 ### Activate your Virtual Environment
+
+<VerifiedTag value="Verified" />
 
 ```python
 source venv/bin/activate
@@ -81,6 +86,8 @@ These commands will create a new virtual environment name `venv` and activate it
 ## Setup Your Authentication
 
 Replace <BrandName /> `username` and `accesskey` in the `common.robot` file as mentioned below:
+
+<VerifiedTag value="Verified" />
 
 ```js title="common.robot"
 *** Settings ***
@@ -206,6 +213,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 An automation script file `*StepDef.py` for the sample application given above has been provided here.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios-script" label="iOS" default>
@@ -276,6 +285,8 @@ Example of connecting to Lambdatest via Robot Framework
 ### Step 5: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts `Makefile` file. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
+
+<VerifiedTag value="Verified" />
 
 ```python title="Makefile"
 test_Web_ios:

@@ -16,6 +16,7 @@ slug: appium-install-uninstall-testmu-hooks/
 canonical: https://www.testmuai.com/support/docs/appium-install-uninstall-testmu-hooks/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -68,12 +69,18 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 You can install apps uploaded to the <BrandName /> platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the <BrandName />-generated ID or a custom ID assigned during upload.
 
 **Python example:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-install-app=myApp")
 driver.execute_script("lambda-install-app=lt://APP100000000123456789123456789")
 ```
 
 **JavaScript example:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 await browser.execute("lambda-install-app", {
   /* Change the App URL */
@@ -88,12 +95,18 @@ await browser.execute("lambda-install-app", {
 You can uninstall apps during the execution of an automation test using the command `lambda-uninstall-app` followed by the app's package name (for Android apps) or bundle ID (for iOS apps).
 
 **Python example:**
+
+<VerifiedTag value="Verified" />
+
 ```python
 driver.execute_script("lambda-uninstall-app=com.myApp.beta")
 driver.execute_script("lambda-uninstall-app=com.apple.myApp")
 ```
 
 **JavaScript example:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 /* Change the App ID */
 const APP_ID = "com.lambdatest.proverbial";
@@ -105,6 +118,8 @@ await browser.execute(`lambda-uninstall-app=${APP_ID}`);
 Testing app upgrades is important because users often update to the latest version instead of reinstalling the app. To ensure existing user data is preserved and the app continues to function properly after an upgrade, you can use the following hooks:
 
 **Python example:**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="macos-file" label="Android" default>

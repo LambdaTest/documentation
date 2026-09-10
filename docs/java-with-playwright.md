@@ -24,6 +24,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -106,6 +107,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 ***
 
 Both frameworks build a `capabilities` object (browser, version, platform, and your `LT:Options`) and connect Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. What differs is how the test is structured. Pick your framework:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="java-framework" queryString="framework">
 

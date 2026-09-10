@@ -20,6 +20,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # SIM Support On Public Real Devices
 <RealDeviceTag value="Real Device" /> 
@@ -87,6 +88,8 @@ Region and carrier values are case-sensitive. Make sure to enter them exactly as
 
 To enable SIM & eSIM support, include the following capability in your automation session as highlighted in the Capabilities:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios-config" label="iOS" default>
@@ -129,6 +132,8 @@ desired_caps = {
 
 
 ### Step 2: Retrieve SIM Properties at Runtime
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script(

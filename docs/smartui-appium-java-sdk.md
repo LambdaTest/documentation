@@ -28,6 +28,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 ---
@@ -125,6 +126,8 @@ You can pass the project token directly in your test configuration as shown in S
 
 Import the required SmartUI class and add the screenshot capture code where needed:
 
+<VerifiedTag value="Verified" />
+
 ```java
 
 public class YourTestClass {
@@ -196,6 +199,8 @@ mvn test
 
 The `deviceName` and `platform` parameters in SmartUI App SDK are used as metadata to ensure consistent screenshot comparison across builds. You can use any device name and platform that matches your cloud provider's capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ssConfig.put("deviceName", "iPhone 15");
 ssConfig.put("platform", "iOS");
@@ -206,6 +211,8 @@ ssConfig.put("platform", "iOS");
 - These parameters are metadata tags and don't affect the actual device selection on your cloud provider
 
 Example configurations for different cloud providers:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // For an iOS test on LambdaTest
@@ -247,6 +254,8 @@ This feature requires the `Gson` library for JSON serialization. Add it to your 
 
 #### 1. Ignoring Regions (Recommended for Dynamic Content)
 
+<VerifiedTag value="Verified" />
+
 ```java
 SmartUIAppSnapshot smartUI = new SmartUIAppSnapshot();
 
@@ -275,6 +284,8 @@ smartUI.stop();
 ```
 
 #### 2. Selecting Specific Regions for Comparison
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Replace "ignoreBoxes" with "selectBoxes" to compare only specified regions
@@ -311,6 +322,8 @@ After test execution, visit your SmartUI project dashboard to:
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="SmartUI Results" width="768" height="373" className='doc_img'/>
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -372,6 +385,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Run tests on consistent device configurations
 
 **Troubleshooting**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>

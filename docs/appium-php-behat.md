@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -96,6 +97,8 @@ copy C:\ProgramData\ComposerSetup\bin\composer.phar
 :::
 
 - Install the composer dependencies in the current project directory using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```php
 composer update
@@ -176,6 +179,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 An automation script for the sample application given above has been provided here.
 
+<VerifiedTag value="Verified" />
+
 ```php title="FeatureContext.php"
 <?php
 
@@ -235,6 +240,8 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="ios-config" label="iOS" default>
 
@@ -285,6 +292,8 @@ key: "YOUR ACCESS KEY HERE"      #Add LambdaTest accessKey here
 ### Step 6: Execute and Monitor your Tests
 
 - Execute the following command to run your test on <BrandName /> platform:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

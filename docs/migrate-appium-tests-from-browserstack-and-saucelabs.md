@@ -15,6 +15,7 @@ slug: migrate-appium-tests-from-browserstack-and-saucelabs/
 canonical: https://www.testmuai.com/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -98,6 +99,8 @@ For a Python-based implementation, here are the changes in the script for the au
 
 **BrowserStack**
 
+<VerifiedTag value="Verified" />
+
 ```python
 userName = "BrowserStack_UserName"
 accessKey = "BrowserStack_AccessKey"
@@ -105,12 +108,16 @@ accessKey = "BrowserStack_AccessKey"
 
 **Sauce Labs**
 
+<VerifiedTag value="Verified" />
+
 ```python
 userName = "SAUCE_USERNAME"
 accessKey = "SAUCE_ACCESS_KEY"
 ```
 
 **<BrandName />**
+
+<VerifiedTag value="Verified" />
 
 ```python
 userName = "LambdaTest_UserName"
@@ -185,6 +192,8 @@ The following is an overview of the comparison of Desired Capabilities for the J
 
 **BrowserStack**
 
+<VerifiedTag value="Verified" />
+
 ```js
 //demo.java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -194,6 +203,8 @@ capabilities.setCapability("browserstack.appium_version", "1.21.0");
 ```
 
 **Sauce Labs**
+
+<VerifiedTag value="Verified" />
 
 ```java
 //demo.java
@@ -208,6 +219,8 @@ caps.setCapability("sauce:options", sauceOptions);
 ```
 
 **<BrandName />**
+
+<VerifiedTag value="Verified" />
 
 ```js
 //demo.java
@@ -229,6 +242,8 @@ Let's look an example that shows the entire migration process. The test scenario
 #### **BrowserStack**
 
 ---
+
+<VerifiedTag value="Verified" />
 
 ```python
 
@@ -269,6 +284,8 @@ driver.quit()
 #### **SauceLabs**
 
 ---
+
+<VerifiedTag value="Verified" />
 
 ```python
 #samplewikipedia.py
@@ -343,6 +360,8 @@ for cap in caps:
 #### **<BrandName />**
 
 ---
+
+<VerifiedTag value="Verified" />
 
 ```python
 #samplewikipedia.py
@@ -428,6 +447,8 @@ Let's analyze what has changed from the implementation point of view.
 
 ---
 
+<VerifiedTag value="Verified" />
+
 ```python
 
 from appium import webdriver
@@ -451,6 +472,8 @@ driver = webdriver.Remote("https://" + userName + ":" + accessKey + "@hub-cloud.
 **Sauce Labs**
 
 ---
+
+<VerifiedTag value="Verified" />
 
 ```python
 
@@ -493,6 +516,8 @@ def run_session(desired_cap):
 
 ---
 
+<VerifiedTag value="Verified" />
+
 ```python
 from threading import Thread
 import time
@@ -533,6 +558,8 @@ Appium's Desired Capabilities are a collection of key-value pairs wrapped inside
 
 Let’s say you want to run an app test in Python on SAMSUNG GALAXY TAB S4 running ANDROID 10. You can define the same in the form of capability as given below.
 
+<VerifiedTag value="Verified" />
+
 ```python
 caps = [
 
@@ -552,6 +579,8 @@ caps = [
 To begin, change the authentication in your test suite's configuration settings. To run the tests on <BrandName /> Appium Grid, you need a valid user name and access key. If you were already performing tests on your local grid, you will need to modify your test script to initialize an Appium driver along with your desired capabilities.
 
 Pass the capabilities to `@hub.lambdatest.com/wd/hub` with your <BrandName /> authentication details, and you are done. Here is the sample Python test script.
+
+<VerifiedTag value="Verified" />
 
 ```python
 #samplewikipedia.py

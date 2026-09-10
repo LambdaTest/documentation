@@ -23,6 +23,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -96,6 +97,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 All the framework repos below run the **same** sample test, so you only need to understand it once. The test opens the [to-do app](https://lambdatest.github.io/sample-todo-app/), marks the first two items done, adds a new item, and verifies it appears:
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.get("https://lambdatest.github.io/sample-todo-app/");
 driver.findElement(By.name("li1")).click();
@@ -105,6 +108,8 @@ driver.findElement(By.id("addbutton")).click();
 ```
 
 The driver is a `RemoteWebDriver` pointed at the grid, with your browser/OS choices passed through `LT:Options`:
+
+<VerifiedTag value="Verified" />
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
@@ -132,6 +137,8 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 ---
 
 Each tab lists just the framework-specific pieces. Clone the matching repo (it contains the full, ready-to-run project), then run the command shown.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="java-framework" queryString="framework">
 

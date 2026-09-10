@@ -13,6 +13,7 @@ site_name: TestMu AI
 slug: accessibility-robot-framework-test/
 canonical: https://www.testmuai.com/support/docs/accessibility-robot-framework-test/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Robot Framework
 
@@ -32,6 +33,8 @@ Robot Framework sits **above** Selenium: Accessibility is still configured on th
 
 Define suite or global variables so every test uses the same grid options:
 
+<VerifiedTag value="Verified" />
+
 ```robot
 *** Variables ***
 ${LT_OPTIONS}    {"accessibility": true, "accessibility.wcagVersion": "wcag21aa"}
@@ -47,6 +50,8 @@ Pass the merged capabilities into `Open Browser` (or your wrapper) so the remote
 
 After the page is ready:
 
+<VerifiedTag value="Verified" />
+
 ```robot
 Execute Javascript    return document.readyState
 Execute Javascript    lambda-accessibility-scan
@@ -57,6 +62,8 @@ Use the second line only when you are **not** using `accessibility.autoscan`.
 ### 4. Auto-scan alternative
 
 If you prefer scans on every navigation without Robot keywords:
+
+<VerifiedTag value="Verified" />
 
 ```robot
 # In capabilities JSON / dict

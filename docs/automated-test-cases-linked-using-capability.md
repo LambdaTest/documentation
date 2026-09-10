@@ -16,6 +16,7 @@ slug: automated-test-cases-linked-using-capability/
 canonical: https://www.testmuai.com/support/docs/automated-test-cases-linked-using-capability/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -49,6 +50,8 @@ Test Manager supports linking automated test runs directly to specific test case
 
 To link an automated test run with a specific test case, add the `tms.tc_id` key in the `lt:Options` section of your test capabilities. Here is a sample configuration demonstrating how to include the `tms.tc_id` key in your script:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const capabilities = {
   "lt:Options": {
@@ -67,6 +70,8 @@ const capabilities = {
 When you link a test case using `tms.tc_id`, a test run is automatically created with your build name. By default, this test run is created under **LambdaTest Default Project**.
 
 To ensure the test run is created in the correct project, use the `project` capability along with `tms.tc_id`:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {

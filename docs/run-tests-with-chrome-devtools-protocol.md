@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/run-tests-with-chrome-devtools-
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -117,6 +118,8 @@ set LT_ACCESS_KEY=your_access_key
 </Tabs>
 
 **3. Create `cdp-test.ts`.** It builds the CDP endpoint from your credentials, connects Puppeteer to the cloud browser, pages through the listing, marks the test **passed** or **failed** on the dashboard, and disconnects.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // cdp-test.ts
@@ -244,6 +247,8 @@ npm install @testmuai/browser-cloud
 
 **2. Create `agent-scrape.ts`.** This is the same product-listing scan from the section above, ported to the Browser SDK: it creates a stealth session, connects over CDP, runs the scan, marks the test **passed** or **failed**, and releases the session.
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 // agent-scrape.ts
 import { Browser } from '@testmuai/browser-cloud';
@@ -349,6 +354,8 @@ Open the TestMu AI Web Automation dashboard to watch the run and confirm it is m
 Because the SDK hands you a full Puppeteer `page`, an agent can do more than read text. This example scrapes the primary product image from each card on the [E-Commerce Playground](https://ecommerce-playground.lambdatest.io/) listing and downloads the first five to disk.
 
 **Create `agent-image-scrape.ts`:**
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // agent-image-scrape.ts

@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -114,6 +115,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 Define the browser, version, and OS for your test run.
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
         browserOptions.setPlatformName("Windows 10");
@@ -157,6 +160,8 @@ mvn test -P parallel
 </Tabs>
 
 Below is the sample JUnit test that marks items as done, adds a new item to the list, and validates the result:
+
+<VerifiedTag value="Verified" />
 
 ```java title="JUnit To Do"
 import org.junit.After;
@@ -234,6 +239,8 @@ public class JUnitTodo {
 
 For parallel execution, the sample project uses a `Parallelized` helper class and parameterized tests:
 
+<VerifiedTag value="Verified" />
+
 ```java title="Parallelized Class"
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -275,6 +282,8 @@ public class Parallelized extends Parameterized {
     }
 }
 ```
+
+<VerifiedTag value="Verified" />
 
 ```java title="Concurrent Todo App"
 import org.openqa.selenium.By;

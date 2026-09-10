@@ -18,6 +18,7 @@ slug: katalon-integration/
 canonical: https://www.testmuai.com/support/docs/katalon-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -147,6 +148,9 @@ For the rest of the details, quickly head over to [Capabilities Generator](https
 Add in all the [Desired Capabilities](https://www.testmuai.com/capabilities-generator/) as shown below, then click Apply and Close.
 
 **Mandatory Capabilities:**
+
+<VerifiedTag value="Verified" />
+
 ```java
 "platformName", "android";
 "deviceName", "Pixel 6";

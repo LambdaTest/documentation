@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/siesta-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -62,12 +63,16 @@ Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. 
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -78,6 +83,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ***
 
 Configure your local web server "localhost" on port 80 and then run the below command in the CMD terminal -
+
+<VerifiedTag value="Verified" />
 
 ```js
 C:\xampp\htdocs\siesta\bin\webdriver http://localhost/siesta/examples/browser/index.html --filter basic --lambdatest LT_USERNAME, LT_ACCESS_KEY --cap browserName=firefox --cap platform=windows
@@ -95,6 +102,8 @@ To generate desired capabilities for your test script, head over to our [Desired
 
 
 To run your tests in parallel, pass the below command in the CMD terminal-
+
+<VerifiedTag value="Verified" />
 
 ```js
 C:\xampp\htdocs\siesta\bin\webdriver http://localhost/siesta/examples/browser/index.html --filter basic --lambdatest LT_USERNAME, LT_ACCESS_KEY --cap browserName=firefox --cap platform=windows --max-workers

@@ -16,6 +16,7 @@ slug: group-tests-using-custom-tags/
 canonical: https://www.testmuai.com/support/docs/group-tests-using-custom-tags/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -55,6 +56,9 @@ Add a tags capability with a String array to your desired capabilities.
 You can create a custom tag while writing your Selenium automation tests. When you create the [Desired Capabilities](/docs/selenium-automation-capabilities/) via code, add the below lines of code.
 
 *   Create a String array that contains the names of your custom tags, separated by a comma.
+
+<VerifiedTag value="Verified" />
+
 ```javascript
         // In case for just 1 tag, just add 1 element in the array
         String[] customTags = {"Custom Tag"};
@@ -64,6 +68,9 @@ You can create a custom tag while writing your Selenium automation tests. When y
 ```       
 
 *   Now add this custom tag in your Desired Capabilities instance:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
         DesiredCapabilities caps = new DesiredCapabilities();
         .

@@ -14,6 +14,7 @@ slug: login-to-google-account-on-android/
 canonical: https://www.testmuai.com/support/docs/login-to-google-account-on-android/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -62,6 +63,8 @@ To log in to Google Account on Real Devices [Android], and perform testing using
 
 Add the following HashMap structure to store the credentials:
 
+<VerifiedTag value="Verified" />
+
 ```java
   HashMap<String, String> playstorelogin = new HashMap<>();
         playstorelogin.put("email", "EMAIL_ID@gmail.com"); //Add in your Google account ID 
@@ -69,6 +72,8 @@ Add the following HashMap structure to store the credentials:
 ```
 
 Once we have added this HashMap, we can now add the capability linking this HashMap to the capability.
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("playStoreLogin", playstorelogin);
@@ -81,6 +86,8 @@ Once you have done that, run the App Automation test and the test will start wit
 Once the test has started, you can also verify the same by opening Google Play Store.
 
 A sample code showing the addition of Google Account is shown below:
+
+<VerifiedTag value="Verified" />
 
 ```java
 import io.appium.java_client.AppiumDriver;

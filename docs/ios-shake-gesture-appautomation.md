@@ -27,6 +27,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -96,6 +97,8 @@ To trigger a shake gesture, use the `lambda_executor` Appium hook with the `gest
 ---
 
 ### Appium Hook Example
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="python" label="Python" default>

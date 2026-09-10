@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 With the newer versions of Cypress releasing, to gain the most from recent improvements and bug fixes, it is recommended that your test scripts use the latest version. 
 
@@ -39,6 +40,8 @@ With the newer versions of Cypress releasing, to gain the most from recent impro
 
 In *lambdatest-config.json* file, you can set the Cypress version as shown in the below code snippet.
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

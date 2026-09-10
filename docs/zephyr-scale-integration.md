@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/zephyr-scale-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -66,6 +67,8 @@ Zephyr Scale is a test management platform that helps you plan, manage, and meas
 
 1. Clone the [<BrandName /> Zephyr Scale GitHub repository](https://github.com/LambdaTest/junit-selenium-zephyr-scale-sample) and navigate to the cloned directory.
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/junit-selenium-zephyr-scale-sample
 cd junit-selenium-zephyr-scale-sample
@@ -77,6 +80,8 @@ cd junit-selenium-zephyr-scale-sample
 * File path of the test result file.
 * Jira Project key.
 * Zephyr Scale Access token.
+
+<VerifiedTag value="Verified" />
 
 ```js 
 public class PostTestResults {
@@ -91,6 +96,8 @@ public class PostTestResults {
 3. In the test script, you need to update test capabilities and add your <BrandName /> Username and Access Key. You can get your <BrandName /> Username and Access Key by navigating to your <BrandName /> Profile section.
 
 >**Test Scenario**: The below JUnit Selenium script tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
+
+<VerifiedTag value="Verified" />
 
 ```js title="JUnitTodo.java"
 package com.lambdatest;
@@ -174,6 +181,8 @@ You need to invoke `method.callApi()` from the PostTestResults class in the `@Af
 ---
 
 To run the test, pass the below command in the terminal.
+
+<VerifiedTag value="Verified" />
 
 ```js
 mvn test -P single

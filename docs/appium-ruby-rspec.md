@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -160,6 +161,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="Single" label="Single Test" default>
 
@@ -230,6 +233,8 @@ app_caps:
 You can update your custom capabilities in test scripts `lambdatest.rb`. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
 The capabilities object in the sample code are defined as:
+
+<VerifiedTag value="Verified" />
 
 ```ruby
     caps={

@@ -19,6 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageRepos from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageRepos';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -58,6 +59,9 @@ Configuring the capabilities is the first step to define the environment for you
 - **`version` :** Defines the specific version or sets it as latest to always use the most recent version.
 
 Below is a Java example using the TestNG framework:
+
+<VerifiedTag value="Verified" />
+
 ```java title="Test.java"
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("platform", "Windows");
