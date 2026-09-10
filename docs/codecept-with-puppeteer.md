@@ -20,6 +20,7 @@ slug: puppeteer-testing-with-codecept/
 canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-codecept/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -61,6 +62,8 @@ Download or clone the code sample for the Puppeteer Codecept from the <BrandName
 <a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/puppeteer-sample.git
 cd puppeteer-sample
@@ -87,12 +90,16 @@ npm install codeceptjs puppeteer --save
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -106,6 +113,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 1. Navigate to the `codecept.conf.js` file in the `puppeteer-codecept` directory.
 
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { setHeadlessWhen } = require('@codeceptjs/configure');

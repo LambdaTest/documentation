@@ -18,6 +18,7 @@ slug: kaneai-kb-finding-and-interacting-with-elements/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -262,6 +263,8 @@ For complex or highly dynamic pages where natural language targeting is unreliab
 - Custom web components with non-standard rendering
 
 Use the `/` command and select **"Add JS Snippet"** to execute JavaScript directly. For example, to click a deeply nested shadow DOM element:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 document.querySelector('my-component').shadowRoot.querySelector('.hidden-btn').click();

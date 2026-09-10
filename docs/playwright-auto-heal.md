@@ -27,6 +27,7 @@ canonical: https://www.testmuai.com/support/docs/playwright-auto-healing/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Auto Healing for Playwright Web Automation
 
@@ -39,6 +40,8 @@ The <BrandName /> Auto Healing feature for Playwright testing automatically reco
 ---
 
 To enable the Auto Healing feature, you need to pass the `autoHeal: true` as a capability in your Playwright configuration. For example:
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capabilities = {
@@ -63,6 +66,8 @@ const capabilities = {
 ### Language Preferences:
 
 ---
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -200,6 +205,8 @@ When an element is successfully located using Playwright's locator methods (`pag
 In some scenarios, web elements might change their locators due to updates in the web application. However, the Auto Healing feature can automatically detect the new locator and continue the test execution.
 
 Here is an example test case demonstrating this:
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { test } = require('../lambdatest-setup');

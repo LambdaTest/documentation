@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -69,6 +70,9 @@ To specify the timezone for automated tests in Appium on <BrandName />, the **ti
 Here's an example of how to set the timezone in your Appium test script:
 
 **Java Example:** 
+
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code example for configuring timezone in Appium tests on LambdaTest
 

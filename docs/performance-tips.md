@@ -16,6 +16,7 @@ slug: performance-tips/
 canonical: https://www.testmuai.com/support/docs/performance-tips/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -52,6 +53,8 @@ Turn off visual, network, and console logging to reduce per-command overhead.
 
 TestMu AI runs complementary services that capture screenshots after every command, record video, and collect network and console logs. Each service adds processing time. If you do not need these logs, disable them through capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
 browserOptions.setPlatformName("Windows 10");
@@ -81,6 +84,8 @@ Set `browserVersion` to `latest` instead of pinning a specific version number.
 
 Pinning old browser versions can cause delays if TestMu AI needs to spin up a less common environment. Using `latest` ensures your tests run on the most readily available browser instances:
 
+<VerifiedTag value="Verified" />
+
 ```java
 browserOptions.setBrowserVersion("latest");
 ```
@@ -90,6 +95,8 @@ browserOptions.setBrowserVersion("latest");
 Configure `idleTimeout` to balance between premature timeouts and wasted session time.
 
 The `idleTimeout` capability controls how long TestMu AI waits before closing an idle session. Setting it too high wastes concurrency slots. Setting it too low causes premature session termination during long page loads or waits.
+
+<VerifiedTag value="Verified" />
 
 ```java
 ltOptions.put("idleTimeout", 120); // seconds - adjust based on your longest expected wait
@@ -102,6 +109,8 @@ A value between 60 and 150 seconds works well for most test suites.
 Set a lower screen resolution if your tests do not require visual validation.
 
 Higher resolutions increase rendering time. If you are not running visual or screenshot-based tests, use a standard resolution:
+
+<VerifiedTag value="Verified" />
 
 ```java
 ltOptions.put("resolution", "1024x768");
@@ -119,6 +128,8 @@ Replace fixed sleep calls with explicit waits to proceed as soon as the conditio
 
 `Thread.sleep()` always waits the full duration, even if the element is ready in milliseconds. Explicit waits poll for the expected condition and continue immediately:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Avoid this
 Thread.sleep(5000);
@@ -133,6 +144,8 @@ wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("element-id")));
 Always call `driver.quit()` to release the session and free up concurrency slots.
 
 If a test exits without calling `driver.quit()`, the session stays open until the idle timeout expires. This wastes concurrency and slows down queued tests.
+
+<VerifiedTag value="Verified" />
 
 ```java
 @AfterMethod

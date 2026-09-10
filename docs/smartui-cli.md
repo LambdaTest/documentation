@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -267,6 +268,8 @@ SmartUI CLI provides the flexibility to execute custom JavaScript code on target
 These capabilities ensure that your visual tests accurately capture the true representation of your web pages.
 
 You can execute any valid JavaScript code that you would typically run inside a browser. For example, to simulate a button click, you might use:
+
+<VerifiedTag value="Verified" />
 
 ```js
 document.querySelector('.my-button-example').click();

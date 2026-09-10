@@ -26,6 +26,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
@@ -108,6 +109,8 @@ set LT_ACCESS_KEY=LT_ACCESS_KEY
 
 1. Edit the required capabilities in your test file `playwright-smartui.js`.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="Add the following code snippet to run SmartUI with Playwright in playwright-smartui.js file"
 const { chromium } = require('playwright')
 const { expect } = require('@playwright/test');
@@ -171,6 +174,8 @@ node playwright-smartui.js
 
 
 To retrieve the status and results of a captured screenshot, you can utilize the provided webhook. Follow the steps below to fetch this information:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
  // Add this code snippet within your script to fetch the screenshot status during runtime
@@ -255,6 +260,8 @@ For additional information about Playwright framework please explore the documen
 
 ## Best Practices
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="best-practices">
 <TabItem value="capability-configuration" label="Capability Configuration" default>
 
@@ -338,6 +345,8 @@ await page.waitForLoadState('networkidle');
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="troubleshooting">
 <TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>

@@ -18,6 +18,7 @@ slug: puppeteer-testing/
 canonical: https://www.testmuai.com/support/docs/puppeteer-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -65,6 +66,8 @@ npm install
 
 3. Add browserWSEndpoint (browser end point URL) in your test script.
 
+<VerifiedTag value="Verified" />
+
 ```js
 `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
@@ -76,12 +79,16 @@ npm install
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -95,6 +102,8 @@ Shown below are the steps on running Puppeteer tests on the <BrandName /> platfo
 
 1. Clone the [<BrandName />-Puppeteer GitHub repository](https://github.com/LambdaTest/puppeteer-sample) and switch to the cloned directory.
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/puppeteer-sample.git
 cd puppeteer-sample
@@ -107,6 +116,8 @@ cd puppeteer-sample
 Once you are done with the above-mentioned steps, you can initiate your first Puppeteer test on <BrandName />. 
 
 >**Test Scenario**: The below test script runs on Chrome browser running Windows 10. It visits the <BrandName /> platform, clicks on the Pricing page, and navigates to the Automation Testing page.
+
+<VerifiedTag value="Verified" />
 
 ```js
 'use strict';

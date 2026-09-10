@@ -22,6 +22,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -71,6 +72,8 @@ For testing, you need to build a Flutter app and test suite. You can create Flut
 
 - Create an instrumentation test file in your application's directory `android/app/src/androidTest/java/com/example/lambdatestSampleApp/`. Replace **com**, **example**, and **lambdatestSampleApp** values with those from your app's package name. 
 
+  <VerifiedTag value="Verified" />
+
   ```java title="SampleTest.java"
   package com.example.lambdatestSampleApp;
       import androidx.test.rule.SampleTestRule;
@@ -86,6 +89,8 @@ For testing, you need to build a Flutter app and test suite. You can create Flut
   ```
 
 - Update your application's `lambdatestSampleApp/android/app/build.gradle` file to use androidx's version of `AndroidJUnitRunner` and include the `androidx` libraries as dependencies.
+
+  <VerifiedTag value="Verified" />
 
   ```java title="build.gradle"
   android {
@@ -103,6 +108,8 @@ For testing, you need to build a Flutter app and test suite. You can create Flut
    ```
 
 - Use the following `Gradle` commands to build an instrumentation `test.apk` file(test suite) using the `Sample.java` created in the `androidTest` directory as mentioned in step 1.
+
+  <VerifiedTag value="Verified" />
 
   ```java title="Terminal"
   //Go to the android folder which contains the "gradlew" script used for building Android apps from the terminal

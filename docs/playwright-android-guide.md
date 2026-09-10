@@ -23,6 +23,7 @@ canonical: https://www.testmuai.com/support/docs/playwright-android/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -129,6 +130,8 @@ dotnet add package Microsoft.Playwright
 
 ## Run Your First Test
 ---
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -545,6 +548,8 @@ When you run a test on a specific device, the exact device you selected may not 
 ***
 
 To test embedded WebViews on a real Android device, add the mandatory `isPwMobileWebviewTest` capability to your options ([sample script](https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js)):
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="playwrightwebview.js"
 const capabilities = {

@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -468,6 +469,8 @@ You can refer to this example and screenshot below:
 ## Filters in Sharding
 
 You can filter the Classes / Tests that you'd like to execute using filters. Here's an example of the same.
+
+<VerifiedTag value="Verified" />
 
 ```java
 filters:

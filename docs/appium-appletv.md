@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -173,6 +174,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 An automation script for the sample application available above has been provided below. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
 
+<VerifiedTag value="Verified" />
+
 ```python title="appletv.py"
 from appium import webdriver
 import os
@@ -279,6 +282,8 @@ Same as iOS
 **Platform:**
 `"tvOS"`
 
+<VerifiedTag value="Verified" />
+
 ```python title="appletv.py"
 def getCaps():
     ltOPtions = {
@@ -313,6 +318,8 @@ pip install -r requirements.txt
 ```
 
 2. Run the following command in the directory where your project has been saved to execute your build.
+
+<VerifiedTag value="Verified" />
 
 ```python
 python appletv.py

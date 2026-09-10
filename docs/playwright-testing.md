@@ -18,6 +18,7 @@ slug: playwright-testing/
 canonical: https://www.testmuai.com/support/docs/playwright-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +69,8 @@ npm install
 
 3. Add browserWSEndpoint (browser end point URL) in your test script.
 
+<VerifiedTag value="Verified" />
+
 ```js
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
@@ -77,12 +80,16 @@ wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURICompone
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -93,6 +100,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ---
 
 1. Add the below code snippet in your test scripts.
+
+<VerifiedTag value="Verified" />
 
 ```js
 (async () => {
@@ -119,6 +128,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 Once you are done with the above-mentioned steps, you can initiate your first Playwright test on <BrandName />. 
 
 The below test script searches the term '<BrandName />' on DuckDuckGo.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright')
@@ -179,6 +190,8 @@ node playwright-single.js
 Once your first test runs, you can execute the same test across multiple browser and OS configurations at once. Define a `capabilities` array (one entry per configuration) and run each through a shared function.
 
 The example below runs the DuckDuckGo search test on three configurations: Chrome on Windows 10, Microsoft Edge on Windows 11, and Chrome on macOS Sonoma.
+
+<VerifiedTag value="Verified" />
 
 ```js title="playwright-parallel.js"
 const { chromium } = require('playwright')

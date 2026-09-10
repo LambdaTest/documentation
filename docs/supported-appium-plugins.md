@@ -27,6 +27,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <RealDeviceTag value="Real Device" /> 
 
@@ -71,6 +72,8 @@ Below is a list of the supported Appium plugins on <BrandName />:
 | `gestures`        | Adds support for gesture-based interactions, enabling tests to perform complex gestures like swipe, pinch, and zoom. For further details, please check [this documentation](https://github.com/AppiumTestDistribution/appium-gestures-plugin). | "appiumPlugins": ["gestures"]
 
 **Python Example:**
+
+<VerifiedTag value="Verified" />
 
 ```python
 capabilities = {

@@ -20,6 +20,7 @@ site_name: TestMu AI
 slug: supported-browsers-and-os/
 canonical: https://www.testmuai.com/support/docs/supported-browsers-and-os/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <BrandName /> supports the below listed browsers, browser versions and Operating Systems for Cypress testing:
 
@@ -73,6 +74,8 @@ To run Cypress tests on multiple browser and OS configurations, add the *browser
 
 Below is the syntax for configuring the browser and platform keys in the `lambdatest-config.json` file.
 
+<VerifiedTag value="Verified" />
+
 ```js
    "browsers": [
       {
@@ -95,6 +98,8 @@ You can also run Cypress tests on multiple configurations by specifying the brow
 | **--brs, --browsers**  | Test will be run on the specified browsers<br/> in the format: `platform:browser:version` |String |
 
 Below is the command for specifying the browser and platform using **--brs, --browsers** flag.
+
+<VerifiedTag value="Verified" />
 
 ```js
 lambdatest-cypress run --browsers "platform:browser:version"

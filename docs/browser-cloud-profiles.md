@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-profiles/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -82,6 +83,8 @@ and preferences.
 
 ## Getting Started
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 // Run 1: Your agent logs in. Profile is saved automatically on close.
 const session = await client.sessions.create({
@@ -99,6 +102,8 @@ await page.goto('https://app.example.com/login');
 await browser.close();  // ← Profile auto-saved here
 await client.sessions.release(session.id);
 ```
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // Run 2 (days later): Agent loads saved state. No login needed.
@@ -146,6 +151,8 @@ Profiles are stored as JSON files at `.profiles/{profileId}.json`:
 ## Manual Profile Management
 
 Beyond the automatic `profileId` flow, you can manage profiles directly:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // Save a profile manually

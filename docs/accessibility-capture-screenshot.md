@@ -21,6 +21,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -67,6 +68,8 @@ Automatically capture visual evidence of accessibility issues during automated t
 ---
 
 Add the `accessibility.captureScreenshot: true` capability to your test configuration:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 'LT:Options': {

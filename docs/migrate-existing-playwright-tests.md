@@ -19,6 +19,7 @@ slug: migrate-existing-playwright-tests/
 canonical: https://www.testmuai.com/support/docs/migrate-existing-playwright-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -56,6 +57,8 @@ In this documentation, we look at how to migrate your existing Playwright test s
 
 With just a few lines of code tweaks in your test script, you can migrate your Playwright tests running on a local grid to <BrandName />. A sample Playwright script below launches a browser on your local machine and runs the script.
 
+<VerifiedTag value="Verified" />
+
 ```js
 const { chromium } = require('playwright')
 const { expect } = require('@playwright/test');
@@ -83,6 +86,8 @@ const { expect } = require('@playwright/test');
 ***
 
 The above script shows that `playwright['chromium'].launch` runs in a Chromium browser window. To run the test scripts on <BrandName /> platform, you will need to add the following instead of `playwright['chromium'].launch`.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { chromium } = require('playwright')

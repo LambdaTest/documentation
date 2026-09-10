@@ -23,6 +23,7 @@ canonical: https://www.testmuai.com/support/docs/playwright-ios-device/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -137,6 +138,8 @@ dotnet add package Microsoft.Playwright
 
 ## Run Your First Test
 ---
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -446,6 +449,8 @@ Automate the Apple Pay checkout flow on a real iOS device using Playwright over 
 
 Add the Apple Pay keys to the **same `LT:Options` object** you already use to start your Playwright session (see [Run Your First Test](#run-your-first-test)):
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const capabilities = {
   "LT:Options": {
@@ -464,6 +469,8 @@ Adding a card to Wallet requires a device passcode:
 
 - **Public cloud** — no extra capability is needed. The confirm hook handles the passcode automatically.
 - **Private cloud** — use the `passcode` capability to set a custom passcode value directly on the device. Add it inside `LT:Options` alongside `applePay`:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // Private cloud only — set a custom passcode
@@ -487,6 +494,8 @@ If either check fails, the hook is not executed and an error is returned to the 
 
 Apple Pay hooks are invoked through the <BrandName /> server-side action channel — the native Apple Pay sheet is not reachable by Playwright directly. A small reusable wrapper keeps the calls readable:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 async function ltAction(page, action, args = {}) {
   return page.evaluate(
@@ -499,6 +508,8 @@ async function ltAction(page, action, args = {}) {
 #### Hook 1 — `lambda-applepay-details` (pre-fill the sheet)
 
 Sets shipping, billing, and contact details on the Apple Pay sheet. Call it **before** launching the sheet. Optional — use it when your merchant requires shipping/contact info.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 await ltAction(page, "lambda-applepay-details", {
@@ -524,6 +535,8 @@ await ltAction(page, "lambda-applepay-details", {
 
 Confirms the native Apple Pay sheet to authorize the transaction.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 await ltAction(page, "lambda-applepay", { confirm: true });
 ```
@@ -533,6 +546,8 @@ On **iOS 26**, the confirm hook automatically enters the device passcode — one
 :::
 
 ### End-to-End Example
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="apple-pay.spec.js"
 const { webkit } = require("playwright");

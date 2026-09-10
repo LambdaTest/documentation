@@ -21,6 +21,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -107,6 +108,8 @@ Here is a sample automation script in Java. Ensure to update the `username` and 
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Android Web App" default>
@@ -363,6 +366,8 @@ framework:
 
 ## More About Desired Capabilities
 Sample Capabilities for both android and iOS web app mentioned below -
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="androidCaps" label="Android" default>

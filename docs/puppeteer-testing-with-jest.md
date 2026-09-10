@@ -19,6 +19,7 @@ slug: puppeteer-testing-with-jest/
 canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-jest/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -74,12 +75,16 @@ npm install
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -92,6 +97,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 >**Test Scenario**: The below test script searches <BrandName /> on DuckDuckGo and verifies the website title.
 
 1. To run the Puppeteer tests using Jest on <BrandName />, you need make some tweaks to the `jest-puppeteer.config.js` file.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const caps_chrome = {

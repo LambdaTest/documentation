@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -130,6 +131,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define browser, version, and OS settings for your test run.
 
 In the test script, update your test capabilities. Notice the declaration of class name **"AcceptanceTester"**. This class specifies test configuration, port number, browser name, browser version, and other desired capabilities.
+
+<VerifiedTag value="Verified" />
 
 ```php
 # Codeception Test Suite Configuration

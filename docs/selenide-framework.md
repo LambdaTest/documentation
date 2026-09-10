@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -120,6 +121,8 @@ You can also mention your TestMu AI credentials in each of the config files loca
 
 Define the browser, version, and OS for your test run.
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
         browserOptions.setPlatformName("Windows 10");
@@ -141,6 +144,8 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 :::
 
 Below is the sample Selenide test used in this project:
+
+<VerifiedTag value="Verified" />
 
 ```java title="Selenide To Do"
 package com.lambdatest;

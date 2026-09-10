@@ -26,6 +26,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import DocCard from '@site/src/component/DocCard';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -67,6 +68,8 @@ Before you start, make sure you have:
 ## How the REST Assured sample works
 
 The sample is a Java + Maven project that uses REST Assured with TestNG. REST Assured sends HTTP requests (GET, POST, PUT, DELETE) and asserts on the responses using a readable `given().when().then()` syntax. For example, this call fetches a resource and asserts that the API returns a `200` status code:
+
+<VerifiedTag value="Verified" />
 
 ```java
 given().when().get(url).then().assertThat().statusCode(200);

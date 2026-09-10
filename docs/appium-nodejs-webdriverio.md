@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -128,6 +129,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application available above has been provided here. Ensure to update the `APP_URL`, `username` and `accesKey` in your scripts inside `specs` directory the  before running the tests.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -258,6 +261,8 @@ describe("Proverbial APK", () => {
 You need to update your capabilities in `*.conf.js` files. In this sample project, we have provided the examples for running tests on both **Android** and **iOS** apps. You can find the configs for both iOS and Android in the `ios-sample` and `android-sample` directories correspondingly. 
 
 We are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. You need to pass the path of your test script in `specs` object to run your own automation script. The capabilities object in the sample code for a single test are defined as:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

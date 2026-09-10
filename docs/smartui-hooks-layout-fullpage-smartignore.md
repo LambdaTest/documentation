@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-hooks-layout-fullpage-s
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -72,6 +73,8 @@ With **Smart Ignore**, use either **Ignore DOM** or **Select DOM** in the dashbo
 
 Set on **`LT:Options`** for the whole session (baseline **and** comparison):
 
+<VerifiedTag value="Verified" />
+
 ```java
 import java.util.HashMap;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -89,6 +92,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 **JavaScript / Node**
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 'LT:Options': {
   user: process.env.LT_USERNAME,
@@ -100,6 +105,8 @@ browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
 **C#**
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 capabilities.SetCapability("visual", true);
@@ -128,6 +135,8 @@ Pass a **single map** to `executeScript("smartui.takeScreenshot", options)` incl
 
 ### Java (validated pattern)
 
+<VerifiedTag value="Verified" />
+
 ```java
 import java.util.Arrays;
 import java.util.HashMap;
@@ -145,6 +154,8 @@ Session **`LT:Options`** for this flow typically needs at least **`smartUI.proje
 
 ### JavaScript
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 await driver.executeScript('smartui.takeScreenshot', {
   screenshotName: 'my-layout-screenshot-01',
@@ -153,6 +164,8 @@ await driver.executeScript('smartui.takeScreenshot', {
 ```
 
 ### C#
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 var options = new Dictionary<string, object>
@@ -169,9 +182,13 @@ Add **`fullPage: true`** in the same map when you need a full-page capture for t
 
 ## 3. Full-page screenshot (name-only hook)
 
+<VerifiedTag value="Verified" />
+
 ```java
 ((JavascriptExecutor) driver).executeScript("smartui.takeFullPageScreenshot=Home_Page_Desktop");
 ```
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 ((IJavaScriptExecutor)driver).ExecuteScript("smartui.takeFullPageScreenshot=Home_Page_Desktop");

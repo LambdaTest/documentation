@@ -19,6 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -66,6 +67,8 @@ IE Mode is available only on Windows. The Edge browser version must support IE M
 Configure `InternetExplorerOptions` with Edge attachment to run tests in IE Mode on TestMu AI.
 
 To run tests in IE Mode, use the `InternetExplorerOptions` class with `platformName` set to `Windows 11` and `browserVersion` set to `11.0`. TestMu AI handles the Edge attachment server-side. Pass your credentials in `LT:Options` as usual.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

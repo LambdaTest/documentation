@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -72,6 +73,8 @@ Navigate to **Dependencies** in module settings, click **+**, and add the downlo
 ---
 
 Create a new Java file and add the following sample test. It opens a to-do app, marks two items as done, adds a new item, and verifies it.
+
+<VerifiedTag value="Verified" />
 
 ```java title="JavaToDo.java"
 import java.net.MalformedURLException;
@@ -154,6 +157,8 @@ String accesskey= "${ YOUR_LAMBDATEST_ACCESS_KEY()}";`}
 ---
 
 Define the browser, version, and OS for your test run.
+
+<VerifiedTag value="Verified" />
 
 ```java
 ChromeOptions browserOptions = new ChromeOptions();

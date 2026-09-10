@@ -22,6 +22,7 @@ slug: integrate-testmu-extension-with-azure-pipelines/
 canonical: https://www.testmuai.com/support/docs/integrate-testmu-extension-with-azure-pipelines/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -169,6 +170,8 @@ Follow the below steps to install TestMu AI Extension from Azure DevOps marketpl
 Select your script to execute either from your repository using the "File Path" option, or you can also write the script inline using the "Inline" option. Once the script is ready, click on "OK"
 
 **Note**: In order to run the tests, you will need to get your build name from the environment variables. Shown below is the syntax of getting the build name from the environment variables for Python test scripts.
+
+<VerifiedTag value="Verified" />
 
 ```py
 build_name = os.getenv("LT_BUILD_NAME")

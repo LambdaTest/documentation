@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Ignoring Displacement Differences using Smart Ignore
 ---
@@ -85,6 +86,8 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
 
 If you are using SmartUI Hooks for web automation (for example Selenium `executeScript("smartui.takeScreenshot=...")` style), enable Smart Ignore using the `smartUI.smartIgnore` capability.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const capabilities = {
   browserName: 'Chrome',
@@ -99,6 +102,8 @@ const capabilities = {
 ```
 
 For Selenium with Java, set the same capability inside your `LT:Options`:
+
+<VerifiedTag value="Verified" />
 
 ```java
 ltOptions.put("smartUI.smartIgnore", true);

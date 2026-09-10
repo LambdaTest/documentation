@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-quick-actions/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -63,12 +64,16 @@ Extract content from any webpage in your choice of format.
 
 **Simplest form - just pass a URL:**
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const result = await client.scrape('https://example.com');
 console.log(result.content);
 ```
 
 **With options - control format, timing, and selectors:**
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const result = await client.scrape({
@@ -80,6 +85,8 @@ const result = await client.scrape({
 ```
 
 **Response:**
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 interface ScrapeResponse {
@@ -106,6 +113,8 @@ interface ScrapeResponse {
 
 Capture a visual snapshot of any webpage.
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 // Simple
 const result = await client.screenshot('https://example.com');
@@ -127,6 +136,8 @@ const result = await client.screenshot({
 ## PDF
 
 Generate a PDF document from any webpage.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // Simple
@@ -157,6 +168,8 @@ the browser. Fully automatic. No session management needed.
 **Session mode.** If your agent already has a session running and you want the
 Quick Action to use that session's browser (with its cookies, tunnel, or
 extensions), register the page first:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const session = await client.sessions.create({ ... });

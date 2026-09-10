@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -170,6 +171,8 @@ An automation script for the sample application available above has been provide
 **Info:**
 Before running the script, please make sure that the file webDriver.py from Step 2, is in the same directory as this file.
 
+<VerifiedTag value="Verified" />
+
 ```python title="main.py"
 from appium import webdriver
 import os
@@ -252,6 +255,8 @@ Please check at the end of the doc.
 **Platform:**
 `"roku"`
 
+<VerifiedTag value="Verified" />
+
 ```python title="main.py"
     caps = {
        "automationName": "Roku",
@@ -283,6 +288,8 @@ pip install -r requirements.txt
 ```
 
 2. Run the following command in the directory where your project has been saved to execute your build.
+
+<VerifiedTag value="Verified" />
 
 ```python
 python main.py

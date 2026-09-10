@@ -19,6 +19,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -71,6 +72,9 @@ Generating lighthouse report within the test might increase the test duration. I
 :::
 
 You can easily add the Lighthouse Performance Metrics of the website you want to test by using the `lighthouseReport` action via the test. Following is the code snippet for generating Lighthouse report from the Playwright if you are using JavaScript:
+
+<VerifiedTag value="Verified" />
+
 ```js title="playwright-lighthouse-report.js"
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({
   action: 'lighthouseReport',
@@ -82,6 +86,8 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({
 > This feature is only supported on **Windows** and **macOS** platforms.
 
 The feature allows you to generate Lighthouse reports for authenticated web pages using Playwright. This is particularly useful for testing performance, accessibility, SEO, and other quality metrics for pages that require authentication. By leveraging authentication tokens, you can analyze restricted pages in your Playwright tests on both **Windows** and **macOS** environments.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="win" label="Windows" default>
@@ -112,6 +118,8 @@ await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({
 ### Sample Test Script
 
 This following script performs web automation testing using the Playwright and Lighthouse libraries on the <BrandName /> platform. The script navigates to the DuckDuckGo search engine and searches for the term "Playwright". After that, the script runs a Lighthouse audit on the specified URL (https://duckduckgo.com) with defined performance thresholds and report formats.
+
+<VerifiedTag value="Verified" />
 
 ```javascript reference title="playwright-lighthouse-report.js"
 https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js

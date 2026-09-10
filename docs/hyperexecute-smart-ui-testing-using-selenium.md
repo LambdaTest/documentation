@@ -28,6 +28,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -247,6 +248,8 @@ Here you can see the difference.
 | `ignoreDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or Xpath` used by your webpage that should be excluded from the comparison. |
 | `selectDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or XPath` used by your webpage that should be included in the comparison. |
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
@@ -306,6 +309,8 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>

@@ -25,6 +25,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -102,6 +103,9 @@ You can run your script locally by executing it directly on your machine with yo
 
 
 <!-- 
+
+<VerifiedTag value="Verified" />
+
 ```Java
 // TextValidationTest.java
 import org.openqa.selenium.By;
@@ -173,6 +177,8 @@ Add your capabilities using the [<BrandName /> Capabilities Generator](https://w
 
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="android" label="Selenium 4 TestMu AI Capabilities" default>
@@ -220,6 +226,8 @@ You can execute the same test that previously ran on a local environment by conn
 
 This test script performs a basic text validation on the website [<BrandName /> eCommerce Playground](https://ecommerce-playground.lambdatest.io/) and shows the expected execution results when running the test in the <BrandName /> cloud.
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

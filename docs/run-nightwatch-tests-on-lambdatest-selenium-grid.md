@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -109,6 +110,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Step 3: Configure Your Test Capabilities
 ---
 Update the capabilities in `nightwatch.conf.js` to define the browser and platform settings.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="nightwatch.conf.js" reference
 https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/nightwatch.conf.js

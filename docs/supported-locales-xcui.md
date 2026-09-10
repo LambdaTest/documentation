@@ -14,6 +14,7 @@ slug: supported-locales-xcui/
 canonical: https://www.testmuai.com/support/docs/supported-locales-xcui/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -183,6 +184,9 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 :::note
 - When setting language or locale parameters, make sure your tests use the `ProcessInfo` object to pass these arguments correctly. This ensures the app launches with the specified language and locale settings.
+
+ <VerifiedTag value="Verified" />
+
  ```swift
     let app = XCUIApplication()
     app.launchArguments += ProcessInfo().arguments

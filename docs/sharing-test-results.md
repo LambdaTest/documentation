@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/sharing-test-results/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -55,6 +56,8 @@ TestMu AI lets you share individual test results with team members. Retrieve the
 Retrieve the Selenium Session ID programmatically so you can build shareable result URLs.
 
 Every test session on TestMu AI has a unique Session ID. Use the code below to retrieve it in your preferred language:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -151,6 +154,8 @@ https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&au
 ### Step 2 - Generate the AUTH_TOKEN
 
 Create the AUTH_TOKEN by computing an MD5 hash of your `username:access_key` string.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

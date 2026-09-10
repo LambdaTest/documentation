@@ -17,6 +17,7 @@ slug: rerun-automation-tests/
 canonical: https://www.testmuai.com/support/docs/rerun-automation-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -93,6 +94,8 @@ A test is eligible for Reproduce only if both of the following are true:
 ---
 
 Reproduce requires HAR logging on the original run. Pass the following capability in your test:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 "network.full.har" : true

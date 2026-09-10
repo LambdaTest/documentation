@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/codeceptjs-with-selenium/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -102,6 +103,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 The `codecept.conf.js` file connects your tests to the <BrandName /> Selenium Grid using the `WebDriver` helper. Set `host` to `hub.lambdatest.com` and pass your credentials via environment variables.
 
+<VerifiedTag value="Verified" />
+
 ```js title="codecept.conf.js"
 exports.config = {
   tests: './*_test.js',
@@ -165,6 +168,8 @@ npm install codeceptjs-lambdatest-service --save-dev
 
 Add the `LTHelper` block inside the `helpers` section of `codecept.conf.js`:
 
+<VerifiedTag value="Verified" />
+
 ```js
 helpers: {
   // ... your WebDriver helper config
@@ -183,6 +188,8 @@ helpers: {
 When `updateTestName: true` is set, the service reads the CodeceptJS scenario title and updates the test name on <BrandName /> dynamically. This means each test in the <BrandName /> Automation Dashboard reflects the exact scenario name from your test file instead of the default session name.
 
 For example, if your test is:
+
+<VerifiedTag value="Verified" />
 
 ```js title="googleTest_test.js"
 Feature('GoogleTest');

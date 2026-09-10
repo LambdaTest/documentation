@@ -16,6 +16,7 @@ slug: generate-multiple-lighthouse-reports/
 canonical: https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -54,6 +55,8 @@ Use the JavaScriptExecutor hook to trigger a Lighthouse report for any URL durin
 
 To generate a Lighthouse report, use the following *JavaScriptExecutor* hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 JavascriptExecutor jse = (JavascriptExecutor)driver;
 jse.executeScript("lambdatest_executor: {\"action\": \"generateLighthouseReport\", \"arguments\": {\"url\": \"<any url>\"}}");
@@ -69,6 +72,8 @@ Execute the hook multiple times with different URLs to generate reports for each
 - For browsers other than Chrome, a 4XX error is thrown stating *Lighthouse report is supported only for Chrome browser.*
 - If you generate Lighthouse reports using Lambda hook, turn off the `performance:true` capability.
 - Successful generation of the report returns a *200* status and a response body containing:
+
+<VerifiedTag value="Verified" />
 
 ``` java
   {

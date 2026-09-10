@@ -27,6 +27,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Getting Started With Cypress Testing
 ---
@@ -66,12 +67,16 @@ cd Cypress-Cloud
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -191,6 +196,8 @@ lambdatest-cypress init
 
 
 Once you run the above command, below is the project structure for the `lambdatest-config.json` file.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

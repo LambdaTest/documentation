@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -184,6 +185,8 @@ Once, the configuration file will be created, you will be seeing the default con
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```js
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
@@ -235,6 +238,8 @@ The following are the different options which are currently supported:
 ## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
@@ -291,6 +296,8 @@ let options = {
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
@@ -352,6 +359,8 @@ let options = {
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
@@ -412,6 +421,8 @@ let options = {
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
 
+<VerifiedTag value="Verified" />
+
 ```js Example for scrolling to bottom for lazy elements
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
@@ -456,6 +467,8 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 ```
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -525,6 +538,8 @@ await smartuiSnapshot(driver, Page Loaded");
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>

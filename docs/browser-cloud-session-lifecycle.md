@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-session-lifecycle
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -82,6 +83,8 @@ released whether your agent is still using it or not.
 
 You can adjust the timeout when creating a session:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const session = await client.sessions.create({
     adapter: 'puppeteer',
@@ -100,6 +103,8 @@ workflows where your agent navigates through several pages, you may want
 When your agent is done, release the session explicitly. This frees resources
 immediately and ensures a clean recording on the dashboard:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 // Release a single session
 await client.sessions.release(session.id);
@@ -107,6 +112,8 @@ await client.sessions.release(session.id);
 
 If your agent manages multiple sessions in parallel, you can release all of
 them at once:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // Release all active sessions
@@ -118,6 +125,8 @@ await client.sessions.releaseAll();
 
 You can check which sessions are currently active and retrieve details about any
 specific session:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // List all active sessions
@@ -131,6 +140,8 @@ const session = client.sessions.retrieve('session_12345_abc');
 ## Live Session Details
 
 While a session is running, you can get real-time information about it:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const details = await client.sessions.liveDetails(session.id);
@@ -146,6 +157,8 @@ console.log(details.sessionViewerUrl); // Live viewer URL
 **Always release sessions when done.** Don't rely on timeouts alone - they
 exist as a safety net, not as your primary cleanup mechanism:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const session = await client.sessions.create({ ... });
 try {
@@ -159,6 +172,8 @@ try {
 
 **Use `releaseAll()` in your shutdown handler.** If your agent process crashes,
 you want to make sure no sessions are left running:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 process.on('SIGINT', async () => {

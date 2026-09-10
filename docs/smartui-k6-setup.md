@@ -26,6 +26,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -155,6 +156,8 @@ npx smartui config:create smartui-web.json
 
 6. Add the SmartUI snapshot function to your test file. Create or edit `test.js`:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="test.js"
 import http from 'k6/http';
 import { smartuiSnapshot } from '@lambdatest/k6-driver';
@@ -179,6 +182,8 @@ npx smartui exec k6 run test.js
   - You can check the executed builds over at [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -253,6 +258,8 @@ smartuiSnapshot(response, "Page-Loaded");
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>

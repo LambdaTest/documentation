@@ -16,6 +16,7 @@ slug: hyperexecute-yaml-creation-for-playwright/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-yaml-creation-for-playwright/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -55,12 +56,16 @@ pre:
 ## Q: How can a specific Playwright project be executed?
 When a project has multiple Playwright projects defined, it may be necessary to run a specific one. Using the `--project` flag ensures that only the intended project executes without affecting others. Check that your execution command includes `--project="PROJECTNAME"`and append it to the `testRunnerCommand`.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 npx playwright test --project=chromium
 ```
 
 ## Q: How can tests be executed with a specific configuration file?
 For setups with multiple configuration files, specifying the correct config file during execution ensures that the intended environment and settings are applied, avoiding conflicts or unexpected behavior.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 npx playwright test --config=playwright.config.staging.ts
@@ -182,6 +187,8 @@ To generate and access Playwright HTML reports in HyperExecute, the reports must
 
 - Update `playwright.config` to specify the report output location:
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="playwright.config"
 reporter: [["html", { outputFolder: "playwright-report", open: "never" }]]
 ```
@@ -249,6 +256,8 @@ Playwright tests may hang if the HTML report is configured to automatically open
 
 To prevent this, update your `playwright.config.ts` file to prevent the report from opening automatically by setting the open option to `'never'`.
 
+<VerifiedTag value="Verified" />
+
 ```javascript title=playwright.config.ts"
 reporter: [['html', { open: 'never' }]]
 ```
@@ -277,12 +286,16 @@ pre:
 ## Q: Why do tests time out on HyperExecute but pass locally?
 Tests can time out due to differences in resource availability, execution speed, or default timeouts between local and HyperExecute environments. Increasing the timeout in the Playwright config or test file mitigates this issue.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 test.setTimeout(60000); // 60 seconds
 ```
 
 ## Q: Why do configuration files fail when using hardcoded absolute paths?
 Absolute paths specific to a local environment may not exist in HyperExecute. Using relative paths from the project root ensures that scripts and configuration files remain portable across environments.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // Instead of require("C:/user/folder/test.js")
@@ -293,6 +306,9 @@ require("./tests/test.js")
 If Playwright is not configured to capture screenshots, videos, or traces, or if these artifacts are not uploaded correctly from HyperExecute, they will not appear in the report. Correct configuration in both `playwright.config.ts` and YAML ensures artifacts are captured and visible.
 
 - Update the `playwright.config.ts` file:
+
+<VerifiedTag value="Verified" />
+
 ```javascript title="playwright.config.ts"
 use: {
   screenshot: 'on',

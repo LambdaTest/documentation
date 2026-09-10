@@ -17,6 +17,7 @@ slug: qmetry-integration/
 canonical: https://www.testmuai.com/support/docs/qmetry-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -81,6 +82,8 @@ That's it. Your QMetry app has been integrated successfully with your <BrandName
 * * *
 For demo purpose, we have recorded a test scenario, which includes:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 - Opening [LambdaTest ToDo App](https://lambdatest.github.io/sample-todo-app/)
 - Check the first item in the list
@@ -93,6 +96,8 @@ For demo purpose, we have recorded a test scenario, which includes:
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-5b.webp').default} alt="qmetry Sample to do list" width="2881" height="1801" className="doc_img"/>
 
 For the desired capabilities, we have chosen the following details:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 platform: macOS High Sierra

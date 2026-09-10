@@ -16,6 +16,7 @@ slug: group-and-filter-your-test-builds-using-build-tags/
 canonical: https://www.testmuai.com/support/docs/group-and-filter-your-test-builds-using-build-tags/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -53,6 +54,8 @@ While writing your automation tests, add another capability when you create the 
 
 *   Create an array of Strings that contains your Build tags, each separated by a comma.
 
+    <VerifiedTag value="Verified" />
+
     ```java
     // For example, when you have only 1 tag
     String[] buildTagList = {"Build Tag"};
@@ -63,6 +66,8 @@ While writing your automation tests, add another capability when you create the 
     
 
 *   Now add this Build tag array in your Desired Capabilities instance: **For example:** While creating a sample Desired Capabilities instance in Java, the code will be:
+
+    <VerifiedTag value="Verified" />
 
     ```java
     // Creating the Build Tags

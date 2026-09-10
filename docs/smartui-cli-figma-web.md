@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -381,6 +382,8 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='selenium' label='Selenium' default>
 
@@ -443,6 +446,8 @@ smartuiSnapshot(driver, "homepage.png");
 ```
 
 **Example for different frameworks:**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='selenium-1' label='Selenium' default>

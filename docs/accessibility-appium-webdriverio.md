@@ -8,6 +8,7 @@ url: https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Appium WebdriverIO
 
@@ -22,6 +23,8 @@ Use this guide when **WebdriverIO** orchestrates **Appium** tests for Android or
 ## Onboarding path
 
 ### 1. Set capabilities in `wdio.conf.ts` (or `.js`)
+
+<VerifiedTag value="Verified" />
 
 ```ts
 export const config = {
@@ -39,6 +42,8 @@ export const config = {
 Match keys to your Appium server version (`appium:` prefix for W3C caps).
 
 ### 2. Call the hook after screens load
+
+<VerifiedTag value="Verified" />
 
 ```ts
 await browser.execute('lambda-accessibility-scan');

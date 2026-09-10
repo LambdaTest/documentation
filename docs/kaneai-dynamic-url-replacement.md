@@ -15,6 +15,7 @@ slug: kaneai-dynamic-url-replacement/
 canonical: https://www.testmuai.com/support/docs/kaneai-dynamic-url-replacement/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -79,6 +80,9 @@ https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 ```
 
 ### Request Headers
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 Content-Type: application/json
 Authorization: Basic <Base64Auth>
@@ -86,6 +90,8 @@ Authorization: Basic <Base64Auth>
 
 ### Request Body
 The following JSON payload demonstrates how to use the API to configure Dynamic URL Replacement:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -123,6 +129,8 @@ The following JSON payload demonstrates how to use the API to configure Dynamic 
 
 ### Example cURL Command
 Here’s an example cURL command to trigger a test run with Dynamic URL Replacement:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \

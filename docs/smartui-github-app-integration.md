@@ -27,6 +27,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -98,6 +99,8 @@ Please check out GitHub sample here: https://github.com/LambdaTest/smartui-node-
 ## Step 3: Configure your test suite
 
  Add the `GitHub` capability to your current test configuration:
+
+<VerifiedTag value="Verified" />
 
 ```js
 const capabilities: {

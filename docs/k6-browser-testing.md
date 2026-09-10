@@ -19,6 +19,7 @@ slug: k6-browser-testing/
 canonical: https://www.testmuai.com/support/docs/k6-browser-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -81,12 +82,16 @@ height="703"  className="doc_img"/>
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME = "YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY = "YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME = "YOUR_LAMBDATEST_USERNAME"
@@ -114,6 +119,8 @@ cd k6-browser-tests-sample
 Once you are done with the above-mentioned steps, you can initiate your first k6 test on <BrandName />.
 
 > **Test Scenario**: The below test script runs on Chrome browser on macOS Ventura. It visits the DuckDuckGo search engine and searches for Playwright.
+
+<VerifiedTag value="Verified" />
 
 ```js
 import {chromium} from 'k6/experimental/browser';

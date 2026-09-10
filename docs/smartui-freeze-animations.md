@@ -22,6 +22,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -51,6 +52,8 @@ Animations, while visually appealing, can pose challenges during visual testing 
 
 ## Freezing SVG Animations
 Consider an SVG element on your page with a loading animation that spins using the transform attribute. To freeze this animation, you can add the following custom JavaScript to your page before taking a screenshot:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const freezeAnimations = () =>  {

@@ -26,6 +26,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -55,6 +56,8 @@ Specify `delayedUpload` to true in your configuration file.
 ### Step-2
 
 Resize your viewport according to your framework and take the screenshot. For example in **Selenium NodeJs**, you can do it as follows:
+
+<VerifiedTag value="Verified" />
 
 ```js
 

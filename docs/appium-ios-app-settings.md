@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/appium-ios-app-settings/
 ---
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -173,6 +174,8 @@ You can use both in the same session. The hook applies over the capability value
 ### Usage
 
 Pass `updateAppSettings` inside `lt:options` (W3C). Below shown is an example written in python3.
+
+<VerifiedTag value="Verified" />
 
 ```python
 options = {

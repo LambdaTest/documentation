@@ -14,6 +14,7 @@ slug: app-automation-dashboard/
 canonical: https://www.testmuai.com/support/docs/app-automation-dashboard/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -54,6 +55,8 @@ Device logs allows you to capture system logs for Android and iOS apps. It allow
 
 Use the `devicelog` capability to enable the Device logs.
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("devicelog", "true")
 ```
@@ -63,6 +66,8 @@ capabilities.setCapability("devicelog", "true")
 Network logs enables you to take screenshots of multiple network requests during testing and to monitor the performance of network requests and responses.
 
 Use the `network` capability to enable the Network logs.
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("network", "true")
@@ -80,6 +85,8 @@ With Visual logs, you can capture the screenshots of the entire test session.
 
 Use the `visual` capability to enable the Visual logs.
 
+<VerifiedTag value="Verified" />
+
 ```java
 capabilities.setCapability("visual", "true")
 ```
@@ -89,6 +96,8 @@ capabilities.setCapability("visual", "true")
 Visual logs enables you to record the video of the complete test session.
 
 Use the `video` capability to enable the Video logs.
+
+<VerifiedTag value="Verified" />
 
 ```java
 capabilities.setCapability("video", "true")

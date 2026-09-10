@@ -21,6 +21,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -63,6 +64,8 @@ Download or clone the code sample for the Playwright Java from the <BrandName />
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-java" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
+<VerifiedTag value="Verified" />
+
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
@@ -86,6 +89,8 @@ npm install
 ---
 
 Navigate to the `PlaywrightTestSingle.java` file.
+
+<VerifiedTag value="Verified" />
 
 ```java
 package com.lambdatest;
@@ -151,6 +156,8 @@ public class PlaywrightTestSingle {
 ```
 
 Pass the below command in the terminal to run the test.
+
+<VerifiedTag value="Verified" />
 
 ```java
 mvn -Dexec.mainClass="com.lambdatest.PlaywrightTestSingle" -Dexec.classpathScope=test test-compile exec:java

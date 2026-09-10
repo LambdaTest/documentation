@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -130,6 +131,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 ### Step 4: Update your Automation Script
 
 An automation script for the sample application given above has been provided here. You can write or add your own Appium automation scripts in `*StepDef.py` directory to run different tests on your app.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -290,6 +293,8 @@ You need to update your capabilities in `appConfig.py` files. In this sample pro
 
 
 The capabilities for running tests on both **Android** and **iOS** apps are:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

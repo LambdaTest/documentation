@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-context/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -66,6 +67,8 @@ shopping cart data in sessionStorage - and lets you inject that state into a
 new session. Your agent logs in once, saves the context, and skips login
 entirely in every future session.
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 interface SessionContext {
     cookies?: Cookie[];
@@ -92,6 +95,8 @@ need to specify which adapter you're using.
 
 Get all browser state from a page:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const context = await client.context.getContext(page);
 
@@ -101,6 +106,8 @@ context.sessionStorage; // { "origin": { "key": "value" } }
 ```
 
 Or extract individual parts:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const cookies = await client.context.getCookies(page);
@@ -112,6 +119,8 @@ const sessionStorage = await client.context.getSessionStorage(page);
 ## Injecting Context
 
 Set browser state on a new page:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 await client.context.setContext(page, {
@@ -126,6 +135,8 @@ await client.context.setContext(page, {
 
 Or set individual parts:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 await client.context.setCookies(page, cookies);
 await client.context.setLocalStorage(page, localStorageData);
@@ -134,6 +145,8 @@ await client.context.setSessionStorage(page, sessionStorageData);
 
 
 ## Clearing Context
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 await client.context.clearContext(page);    // Clear everything
@@ -145,6 +158,8 @@ await client.context.clearStorage(page);    // localStorage + sessionStorage
 ## Example: Transfer Login Between Sessions
 
 The most common use case - log in once, reuse the auth state:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 // Session 1: Log in and capture

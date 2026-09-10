@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/cypress-detailed-command-logs/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -56,11 +57,15 @@ In your `package.json` or `lambdatest-config.json` file, add the appropriate ver
 
 ### For Cypress < 10:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 "cypress-terminal-report": "4.1.3"
 ```
 
 ### For Cypress >= 10:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 "cypress-terminal-report": "^5.3.2"
@@ -68,6 +73,8 @@ In your `package.json` or `lambdatest-config.json` file, add the appropriate ver
 
 - In the `lambdatest-config.json`, enable detailed command logs by adding the following setting:
 > **NOTE:-** You will be able to see this tab only when you use this capability **detailed_command_logs** in run_settings in lambdatest-config.json
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 "run_settings": {
@@ -81,6 +88,8 @@ In your `package.json` or `lambdatest-config.json` file, add the appropriate ver
 ### Step 1: Configure the Plugin
 - Open the `cypress/plugins/index.js` file in your project.
 - Add the following code to install and configure the cypress-terminal-report plugin:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const installLogsPrinter = require('cypress-terminal-report/src/installLogsPrinter')
@@ -102,6 +111,8 @@ module.exports = (on, config) => {
 ### Step 2: Enable Logs in the Console (Optional)
 To display detailed logs in the terminal, update the `installLogsPrinter` with the `printLogsToConsole: 'always'` code:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 module.exports = (on, config) => {
   installLogsPrinter(on, {
@@ -119,6 +130,8 @@ module.exports = (on, config) => {
 - Navigate to `cypress/support/index.js`.
 - Add the following code to install the log collector:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const installLogsCollector = require('cypress-terminal-report/src/installLogsCollector')
 
@@ -130,6 +143,8 @@ installLogsCollector()
 ### Step 1: Configure the Plugin
 - Open `cypress.config.js` in your project.
 - Add the following code to configure the plugin:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const { defineConfig } = require("cypress");
@@ -152,6 +167,8 @@ module.exports = defineConfig({
 
 ### Step 2: Enable Logs in the Console (Optional)
 If you need logs in the terminal, update the code like this:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const { defineConfig } = require("cypress");
@@ -176,6 +193,8 @@ module.exports = defineConfig({
 ### Step 3: Install Logs Collector
 - Open `cypress/support/e2e.js`.
 - Add the following code to install the log collector:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 import installLogsCollector from 'cypress-terminal-report/src/installLogsCollector'

@@ -15,6 +15,7 @@ slug: quick-guide-to-run-php-tests-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 # Quick Guide To Run PHP Tests on <BrandName /> Selenium Grid
 ***
@@ -54,6 +55,8 @@ Running PHP scripts require your local system to have both PHP and Composer. Her
 
 - Next step is to install Composer. Open up terminal and navigate to the folder that have PHP installed. Run the following command.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -65,6 +68,8 @@ php -r "unlink('composer-setup.php');"
 <img loading="lazy" src={require('../assets/images/guide-to-php/guide-to-php-1.webp').default} alt="Xampp control pannelto start selenium php tests" width="682" height="440" className="doc_img"/>
 
 Once you have composer installed, you can leverage Composer to download and install Selenium dependencies. For that, first create a composer.json file in your directory and add the following JSON code:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 {
@@ -92,6 +97,8 @@ Once you have installed and setup PHP and Selenium, you are now ready to run PHP
 
 ### PHP Sample Test
 ***
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 <?php

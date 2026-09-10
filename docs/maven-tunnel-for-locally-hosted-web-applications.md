@@ -17,6 +17,7 @@ slug: maven-tunnel-for-locally-hosted-web-applications/
 canonical: https://www.testmuai.com/support/docs/maven-tunnel-for-locally-hosted-web-applications/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -56,12 +57,17 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 
 **For Linux/Mac:**
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
 $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 ```
 
 **For Windows:**
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
 $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
@@ -80,6 +86,8 @@ Navigate to the cloned directory & compile maven dependencies using the command:
 
 Ensure that you have the Maven Tunnel dependency configured in your `pom.xml`.
 
+<VerifiedTag value="Verified" />
+
 ```js
 <dependency>
 	<groupId>com.github.lambdatest</groupId>
@@ -92,6 +100,8 @@ Ensure that you have the Maven Tunnel dependency configured in your `pom.xml`.
 * * *
 
 Here is the code that is present in the cloned [GitHub repository for Maven Tunnel](https://github.com/LambdaTest/maven-tunnel-sample).
+
+<VerifiedTag value="Verified" />
 
 ```js
 package com.lambdatest.tunnel;
@@ -165,6 +175,8 @@ public class MavenSingle {
 * * *
 In order to trigger parallel test execution you will need to specify the parameters inside an XML file, in our GitHub repository you will find the XML file named as `MavenParallel.xml` file.
 
+<VerifiedTag value="Verified" />
+
 ```js
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
@@ -217,6 +229,8 @@ In order to trigger parallel test execution you will need to specify the paramet
 ```
 
 Here is the final code to execute parallel testing with Maven tunnel.
+
+<VerifiedTag value="Verified" />
 
 ```js
 package com.lambdatest.tunnel;
@@ -308,6 +322,8 @@ public class MavenParallel implements IExecutionListener{
 ## Enable Parallel Testing With Maven Tunnel using Serentiy BDD
 * * *
 In order to trigger parallel test execution with Maven Tunnel using Serenity BDD, you will need to specify the dependency of `lambdatest-tunnel-binary` with the exclusion of TestNG dependency in `MavenParallel.xml` file.
+
+<VerifiedTag value="Verified" />
 
 ```js
 <dependency>

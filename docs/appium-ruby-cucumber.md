@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
@@ -161,6 +162,8 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 An automation script file `first_steps.rb` for the sample application given above has been provided here.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
@@ -242,6 +245,8 @@ You can update your custom capabilities in test scripts. In this sample project,
 
 Ensure to update the `APP_URL`, `username` and `accesKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios-config" label="iOS" default>
@@ -307,6 +312,8 @@ browser_caps:
 - Go to `config/first.config.yml` and edit the `username`, `accessKey` and add your `app url`.
 
 - Run the following commands to run your tests
+
+<VerifiedTag value="Verified" />
 
 ```ruby
 bundle install

@@ -29,6 +29,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -103,6 +104,8 @@ set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 1. Go to your project **YAML** file.
 
 2. Your test files must have this code snippet in order for them to take screenshots.
+
+<VerifiedTag value="Verified" />
 
 ```java
 cy.screenshot('my-image')

@@ -17,6 +17,7 @@ slug: vividus-integration/
 canonical: https://www.testmuai.com/support/docs/vividus-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -57,17 +58,23 @@ Once you have your project set up using the Vividus tool, here's a step by step 
 
 1. Once you have your test scenario ready, you need to add the <BrandName /> plugin in the build.gradle -> dependencies, using the below command.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 implementation(group: 'org.vividus', name: 'vividus-plugin-lambdatest', version: vividusVersion)
 ```
 
 2. Next you need to add the <BrandName /> cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 Next you need to add the TestMu AI cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:
 ```
 
 3. Now you need to specify you <BrandName /> username and access key in the same configuration.properties file, using below syntax:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 selenium.grid.username=<LT_USERNAME>
@@ -90,6 +97,8 @@ That's it. Vividus tool has been integrated successfully with your <BrandName />
 
 For demo purpose, we have recorded a test scenario, which includes:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 - Opening <a href="https://lambdatest.github.io/sample-todo-app/" rel="noopener" target="_blank">LambdaTest ToDo App</a>
 - Check the first item in the list
@@ -99,11 +108,15 @@ For demo purpose, we have recorded a test scenario, which includes:
 
 * Use the below syntax to pass the desired capabilities:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 selenium.grid.capabilities.<capability>=<value>
 ```
 
 For example, we have used the below desired capabilities for demo purpose:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 selenium.grid.capabilities.build=VividusDemo
@@ -120,11 +133,15 @@ selenium.grid.capabilities.platform=MacOS Big Sur
 
 Syntax:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 configuration.profiles=lambdatest/web,web/desktop/<browser name>
 ```
 
 For example, let’s change the browser to Safari:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 configuration.profiles=lambdatest/web,web/desktop/safari
@@ -133,6 +150,8 @@ configuration.profiles=lambdatest/web,web/desktop/safari
 ```
 
 * To run your test, using the below command:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 ./gradlew runStories

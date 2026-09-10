@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -114,6 +115,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 Define the browser, version, and OS for your test run.
 
+<VerifiedTag value="Verified" />
+
 ```java
 ChromeOptions browserOptions = new ChromeOptions();
             browserOptions.setPlatformName(platform);
@@ -144,6 +147,8 @@ Then verify added item
 ```
 
 Here is the `TestRunner` file to automate the feature file through Selenium using TestNG:
+
+<VerifiedTag value="Verified" />
 
 ```java title="TestRunner"
 package MyRunner;
@@ -227,6 +232,8 @@ public class TestRunner {
 ```
 
 Below are the step definitions:
+
+<VerifiedTag value="Verified" />
 
 ```java title="ToDoStepDefinition.java"
 package stepDefinitions;

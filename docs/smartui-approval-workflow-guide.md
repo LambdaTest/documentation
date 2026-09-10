@@ -21,6 +21,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -197,6 +198,9 @@ Each variant row lists its browser and resolution, and merged variants carry the
 - Best for continuous integration scenarios
 
 **Baseline Update Mechanism**:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // SDK capability to auto-mark baseline
 capabilities.setCapability("smartUI.baseline", true);
@@ -245,6 +249,9 @@ npx smartui move-to-baseline --build current-build
 ```
 
 **SDK with Capabilities**:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // Explicit capability setting required
 capabilities.setCapability("smartUI.baseline", true); // User must set this
@@ -290,6 +297,9 @@ npx smartui move-to-baseline --build B1
 **Root Cause**: The capability must be set correctly and the build must complete successfully for baseline marking to occur.
 
 **Solution**:
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // Ensure correct capability syntax
 capabilities.setCapability("smartUI.baseline", true);
@@ -319,6 +329,9 @@ npx smartui exec -- npm test
 ```
 
 ### For SDK Integration
+
+<VerifiedTag value="Verified" />
+
 ```javascript
 // Set capability explicitly for baseline marking
 DesiredCapabilities capabilities = new DesiredCapabilities();

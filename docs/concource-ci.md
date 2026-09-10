@@ -24,6 +24,7 @@ canonical: https://www.testmuai.com/support/docs/selenium-testing-with-concourse
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -105,6 +106,8 @@ $ fly -t ci login -c http://127.0.0.1:8080 -u test -p test
 ```
 
 Next, we need to update the environment variables in the `YAML` file. To access your YAML file, you need to go to the project-folder/concourse-ci. Here you will find the YAML file i.e. `pipeline-config.yml`.
+
+<VerifiedTag value="Verified" />
 
 ```js
 resources:

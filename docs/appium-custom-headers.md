@@ -13,6 +13,7 @@ site_name: TestMu AI
 slug: appium-custom-headers/
 canonical: https://www.testmuai.com/support/docs/appium-custom-headers/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 #  CustomHeaders support for automation 
@@ -31,6 +32,8 @@ To add custom headers using <BrandName />'s CustomHeader capability, you need to
 1. Create an instance of the Desired Capabilities class.
 
 2. Use the customHeaders capability to add your custom headers.
+
+<VerifiedTag value="Verified" />
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -54,6 +57,8 @@ Custom headers serves different purposes for development and network communicati
 
 **Example**: The Custom header `X-Session-ID`is used to track user sessions.
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 
 ```
@@ -62,6 +67,8 @@ X-Session-ID: 1234567890
 
 **Example**: `Accept` header specifies the client-preferred format of the response data.
 
+<VerifiedTag value="Verified" />
+
 ```java
 Accept: application/json 
 ```
@@ -69,6 +76,8 @@ Accept: application/json
 3. **Rate Limiting**: Custom headers are often used by APIs to provide information about rate limits. They might send headers indicating how many requests a client can make in a given time period, how many requests they have left, or when they can make new requests.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-RateLimit-Limit: 60
@@ -80,6 +89,8 @@ X-RateLimit-Reset: 1372700873
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -87,6 +98,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 5. **CORS (Cross-Origin Resource Sharing)**: The CORS standard uses custom headers to allow browsers and servers to interact securely with resources from different origins. This includes headers like "Access-Control-Allow-Origin" and "Access-Control-Allow-Methods".
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -96,6 +109,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -103,6 +118,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 7. **Bypassing Firewalls or Proxies**: In some cases, custom headers can be used to bypass certain network restrictions, such as firewalls or proxy servers. This should, however, be done responsibly and in accordance with security policies.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
@@ -112,6 +129,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -120,6 +139,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 
 **Example**
 
+<VerifiedTag value="Verified" />
+
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 ```
@@ -127,6 +148,8 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 10. **A/B Testing**: Custom headers can be used to control or track A/B testing, where different versions of a service are tested against each other to determine which performs better.
 
 **Example**
+
+<VerifiedTag value="Verified" />
 
 ```java
 X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.

@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/extent-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -58,6 +59,8 @@ If using Maven, add the following dependency to your `pom.xml` file:
 ### Step 2: Create an Extent Report Listener
 Create a class, e.g., `ExtentReportListenerV2.java`, to initialize and flush Extent Reports during test execution. This listener will log each test case’s status to the report.
 
+<VerifiedTag value="Verified" />
+
 ```java title="ExtentReportListenerV2.java"
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -92,6 +95,8 @@ If using Maven, add the latest extentreports dependency to `pom.xml` file:
 
 ### Step 2: Create an Extent Report Listener
 For Extent Reports > 2, use `ExtentHtmlReporter` to generate and customize the HTML report. Create `ExtentReportListener.java`:
+
+<VerifiedTag value="Verified" />
 
 ```java title="ExtentReportListener.java"
 import com.aventstack.extentreports.ExtentReports;

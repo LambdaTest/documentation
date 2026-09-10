@@ -15,6 +15,7 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools-localstorage/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-localstorage/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -61,6 +62,8 @@ Because localStorage is captured at assertion time:
 ### JSON Values
 
 Applications often store structured data in localStorage as JSON strings:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 // Application code

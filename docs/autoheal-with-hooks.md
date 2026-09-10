@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/autoheal-with-hooks/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -66,6 +67,8 @@ This gives you fine-grained control over Autoheal, improving test stability with
 
 Use the following hook to **start** Autoheal at any point in your Selenium test script.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 ```
@@ -77,6 +80,8 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
 
 Use the following hook to **stop** Autoheal at any point in your Selenium test script.
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 ```
@@ -87,6 +92,8 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 ---
 
 Review the following sample script to see how Autoheal hooks work in practice.
+
+<VerifiedTag value="Verified" />
 
 ```python title="Test.py"
 import os

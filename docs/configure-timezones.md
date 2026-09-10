@@ -19,6 +19,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -52,6 +53,8 @@ Many applications display dates, schedule events, or trigger time-sensitive logi
 Pass a UTC offset string in `LT:Options` to configure the test VM's system timezone.
 
 Add the `timezone` capability to your `LT:Options` configuration. The value is a UTC offset string in the format `UTC+HH:MM` or `UTC-HH:MM` (e.g., `UTC+05:30`). The default is `UTC+00:00`.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

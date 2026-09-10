@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/run-parallel-tests-with-seleniu
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -68,6 +69,8 @@ The number of sessions you can run simultaneously depends on your TestMu AI plan
 ---
 
 Each framework handles parallelism differently. Below are the commands and configurations for the most common frameworks.
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
 

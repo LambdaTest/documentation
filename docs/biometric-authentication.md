@@ -29,6 +29,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -109,6 +110,8 @@ The OS versions and APIs mentioned above are subject to change as per the latest
 
 To enable biometric authentication feature in your automation script, set the capability `enableBiometricsAuthentication` to `true`.
 
+<VerifiedTag value="Verified" />
+
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setcapability("enableBiometricsAuthentication",true)
@@ -117,6 +120,8 @@ capabilities.setcapability("enableBiometricsAuthentication",true)
 ### Using Lambda-Hook
 
 To implement `pass` or `fail` conditions for biometric authentication in your automation script, you have to use our Lambda-hook mentioned below:
+
+<VerifiedTag value="Verified" />
 
 ```python
 driver.execute_script("lambda-biometric-injection=fail")

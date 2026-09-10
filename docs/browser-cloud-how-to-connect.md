@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-sdk-setup/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -70,6 +71,8 @@ npm install @testmuai/testmu-cloud
 From here, you can create sessions, configure stealth mode, manage profiles,
 upload files, load extensions, and open tunnels - all through a single client
 instance.
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 import { Browser } from '@testmuai/testmu-cloud';

@@ -28,6 +28,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -76,6 +77,8 @@ When migrating your Selenium 4 tests from BrowserStack to <BrandName />, the fol
 2. <b>Create .env file</b>: Securely store your <BrandName /> credentials, create a .env file in the root of your project and add the following values:
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="Sauce Labs Selenium Grid Credentials" default>
@@ -99,6 +102,8 @@ Once the .env file is set up, ensure your test framework correctly reads these v
 
 ## Changes in Hub URL
 You need to now change the hub URL in the configuration settings of your test suite. Hub URL is of type String and it defines the Hub location to which the Selenium tests would be submitted for execution.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -135,6 +140,8 @@ To generate capabilities use [<BrandName /> Capabilities Generator](https://www.
 
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and <BrandName />:
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -191,6 +198,8 @@ To generate capabilities use [<BrandName /> Capabilities Generator](https://www.
 
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and <BrandName />:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="Sauce Labs Capabilities" default>
@@ -240,6 +249,8 @@ This test script performs a basic text validation on the website [<BrandName /> 
 
 
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

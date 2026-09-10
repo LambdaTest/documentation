@@ -19,6 +19,7 @@ slug: playwright-test-runner/
 canonical: https://www.testmuai.com/support/docs/playwright-test-runner/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -72,12 +73,16 @@ npm install
 
 **Windows**
 
+<VerifiedTag value="Verified" />
+
 ```js
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
+
+<VerifiedTag value="Verified" />
 
 ```js
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -88,6 +93,8 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 *** 
 
 In your `playwright.config.js` file, add the browserName, browserVersion, and platform in the below projects configuration.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { devices } = require('@playwright/test')
@@ -135,6 +142,8 @@ If you are migrating test suites to <BrandName />, then follow the below steps.
 1. Add the `lambdatest-setup.js` to your project route.
 
 2. Include the `playwright.config.js` in your project in the below format.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { devices } = require('@playwright/test')
@@ -191,6 +200,8 @@ const config = {
 3. Add your test script path in `playwright.config.js`.
 
 4. Import the test object from `lambdatest-setup.js` and run your tests.
+
+<VerifiedTag value="Verified" />
 
 ```js
 const { test } = require('../lambdatest-setup')

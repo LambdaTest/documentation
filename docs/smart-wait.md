@@ -14,6 +14,7 @@ slug: smart-wait/
 canonical: https://www.testmuai.com/support/docs/smart-wait/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -61,6 +62,8 @@ SmartWait improves your test automation workflow in multiple ways.
 Follow the below steps to configure SmartWait for your tests.
 
 1. **Set SmartWait Time Limit:** Specify the maximum amount of time you want your test script to wait until an element becomes actionable.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 LT:Options {

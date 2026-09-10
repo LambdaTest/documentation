@@ -21,6 +21,7 @@ import BugFixTag from '../src/component/bugFixTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -414,6 +415,8 @@ HyperExecute now supports `network logs` and `tunnel` capabilities for Maestro t
 ## Version 2.9.1
 ### Support for `customHeaders` in HyperExecute
 You can now inject custom HTTP headers into your test sessions using the `customHeaders` capability. This gives you more control over outbound requests made during test execution, especially when working around network security controls like firewalls or header-based access restrictions.
+
+<VerifiedTag value="Verified" />
 
 ```java
 caps.setCapability("customHeaders", new HashMap<String, String>() {{

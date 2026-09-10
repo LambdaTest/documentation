@@ -22,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -63,11 +64,15 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
 - If you are using your own project, configure the `browserWSEndpoint` (browser end point URL) in your test script to run the test on <BrandName />
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
 
 - Here is the sample test script for your reference:
+
+<VerifiedTag value="Verified" />
 
 ```javascript reference title="playwrightwebview.js"
 https://github.com/LambdaTest/playwright-sample/blob/main/playwrightwebview.js
@@ -82,6 +87,8 @@ npm install
 
 ### Step 3: Update your test Capabilities
 Include the following field in the capabilities object to enable WebView testing:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="playwrightwebview.js"
 const capabilities = {

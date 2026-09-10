@@ -22,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -170,6 +171,8 @@ Upload your <b>_android_</b> application (.apk file) to the <BrandName /> server
 Write Your Automation Script in the client language of your choice from the ones supported by Appium. An automation script for the sample applications have been provided below.
 
 Here is a sample automation script in Java for the sample app downloaded above. Ensure to update the `app_url`, `username` and `accesskey` in the below code.
+
+<VerifiedTag value="Verified" />
 
 ```java reference title="AndroidEmulator.java"
 https://github.com/LambdaTest/hyperexecute-appium-testng/blob/android-emulator/src/main/java/AndroidEmulator.java

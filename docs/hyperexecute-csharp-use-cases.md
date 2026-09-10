@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-csharp-use-cases/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -374,6 +375,8 @@ Test statuses may not be reported to HyperExecute properly, leading to incomplet
 
 ### Solution
 Custom function reports statuses for tracking and dashboards.
+
+<VerifiedTag value="Verified" />
 
 ```java title="test.java"
 public void CleanUp(string[] tagName, ScenarioExecutionStatus scenarioStatus, string scenarioName)

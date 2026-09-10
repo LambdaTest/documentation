@@ -18,6 +18,7 @@ slug: appium-testmu-hooks/
 canonical: https://www.testmuai.com/support/docs/appium-testmu-hooks/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -75,6 +76,8 @@ Arguments | Example
 ```
 
 Here is a sample automation script in Java for the sample status & remark. Ensure to update the ```app_url```, ```username``` & ```accesskey``` in the below code.
+
+<VerifiedTag value="Verified" />
 
 ```java title="android.java"
 import io.appium.java_client.AppiumDriver;
@@ -146,6 +149,8 @@ You can use LambdaHooks to start and end a test case within a single Appium sess
 
 To start a test case, use the `lambda-testCase-start` hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // To start a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-start=find Name");
@@ -154,6 +159,8 @@ To start a test case, use the `lambda-testCase-start` hook:
 #### Test Case End
 
 To end a test case, use the `lambda-testCase-end` hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // To end a test case
@@ -221,6 +228,9 @@ Command Annotations allow you to add metadata and debugging information to your 
 ### Using Command Annotations
 
 #### Annotation Start
+
+<VerifiedTag value="Verified" />
+
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"youtube\", \"level\": \"debug\"}}");
 ```
@@ -234,6 +244,8 @@ driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"argu
 
 #### Annotation End
 To close the executor at the end of your script, pass `data` as an empty string:
+
+<VerifiedTag value="Verified" />
 
 ```java
 driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"\"}}");

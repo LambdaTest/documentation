@@ -22,6 +22,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-skills/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -150,6 +151,8 @@ The agent reads the skill, picks the right pattern, and writes complete, runnabl
 
 Scrape a single URL or batch-scrape multiple URLs with concurrency control:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 import { scrapeWithAgent, batchScrape } from './browser-cloud/examples/scrape-agent';
 
@@ -167,6 +170,8 @@ const results = await batchScrape(
 
 Log in once, save the session, and reuse it on every future run. Zero re-logins for scheduled agents:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 import { fetchDashboard } from './browser-cloud/examples/auth-persist-agent';
 
@@ -178,6 +183,8 @@ const data = await fetchDashboard('https://app.example.com/dashboard');
 ### LangChain Agent with Browser Access
 
 Build a LangChain agent that can browse the web as one of its tools:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 import { buildBrowserAgent } from './browser-cloud/examples/langchain-browser-tool';
@@ -191,6 +198,8 @@ const result = await agent.invoke({
 ### Parallel Research Across URLs
 
 Run multiple isolated browser sessions concurrently with progress tracking:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 import { parallelResearch } from './browser-cloud/examples/parallel-research';

@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/accessibility-automation-settin
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,6 +47,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 This document details the configuration options available for your automated accessibility tests, ensuring comprehensive and efficient assessments.
 
 To enable the accessibility testing within your automated test suite, set the accessibility: true in your configuration file. You can also define other settings capabilities as described below.
+
+<VerifiedTag value="Verified" />
 
 ```java
 "accessibility" : true,                 // Enable accessibility testing

@@ -22,6 +22,7 @@ slug: quick-guide-to-run-ruby-tests-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/quick-guide-to-run-ruby-tests-on-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -79,6 +80,8 @@ Once you have Ruby and Gem setup, you would now have to install Selenium depende
 ***
 
 Once you have installed necessary dependencies, you are all set to run your Ruby automation scripts on <BrandName /> Selenium grid. To get started you can try out the code below. It’s a simple Ruby scripts that opens up [Google.com](https://www.google.com/), searches <BrandName /> in Google search bar, and then displays the title of the search result page. You can also fork it from our [Ruby GitHub repository](https://github.com/LambdaTest/ruby-selenium-sample).
+
+<VerifiedTag value="Verified" />
 
 ```ruby
 //Sample Ruby and Selenium Automation Script

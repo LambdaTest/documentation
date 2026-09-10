@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-scenario-steps-err
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -211,6 +212,8 @@ After identifying the issue, follow these steps to resolve the situation:
 **Step 4:** Consider optimizing the API call itself to improve its performance and reduce the likelihood of **timeouts**. This may involve caching mechanisms, load balancing, or alternative API endpoints.
 
 Here's an example of how you can set connection and **socket timeouts**:
+
+<VerifiedTag value="Verified" />
 
 ```java
 public static void main(String[] args) {

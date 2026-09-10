@@ -22,6 +22,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -109,6 +110,8 @@ Then reference it in your capabilities with `"tunnelName": "my-staging-tunnel"`.
 ---
 
 Set `tunnel: true` in your test capabilities. Here is how to do it in each language.
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
   <TabItem value="java" label="Java" default>
@@ -212,6 +215,8 @@ If you are using a named tunnel, add `"tunnelName": "my-staging-tunnel"` to the 
 ---
 
 Use `localhost` or your internal URL in `driver.get()`. The tunnel routes the request from the cloud browser to your local machine.
+
+<VerifiedTag value="Verified" />
 
 ```java
 // This works because the tunnel is active

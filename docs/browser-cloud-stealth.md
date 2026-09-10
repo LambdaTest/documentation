@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-stealth/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -74,6 +75,8 @@ session.
 
 Add a `stealthConfig` to your session. That's it - the adapter handles
 everything else automatically:
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const session = await client.sessions.create({
@@ -172,6 +175,8 @@ behavior.
 
 To explicitly disable stealth (useful for comparison testing or sites that
 don't use bot detection):
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const session = await client.sessions.create({

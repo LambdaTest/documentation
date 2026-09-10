@@ -23,6 +23,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -143,6 +144,8 @@ cypressOps:
 
 Add this import statement in your `e2e.js` file to import the acceessibility scanner dependency
 
+<VerifiedTag value="Verified" />
+
 ```javascript title="cypress/support/e2e.js"
 import 'lambdatest-cypress-cli/accessibility/scanner'
 ```
@@ -150,6 +153,8 @@ import 'lambdatest-cypress-cli/accessibility/scanner'
 #### 4. In the `cypress.config.js` file
 
 Add this code snippet in your `cypress.config.js` file.
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="cypress.config.js"
 const { defineConfig } = require("cypress");

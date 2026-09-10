@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/playwright-html-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -52,6 +53,8 @@ Follow these steps to generate a consolidated Playwright HTML report:
 ### Step 1: Update Your Playwright Configuration
 
 In your Playwright configuration file `playwright.config.js`, add the following code to enable the reporter:
+
+<VerifiedTag value="Verified" />
 
 ```javascript title="playwright.config.js"
 import { devices } from '@playwright/test';

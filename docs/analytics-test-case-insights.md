@@ -11,6 +11,7 @@ slug: analytics-test-case-insights/
 canonical: https://www.testmuai.com/support/docs/analytics-test-case-insights/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -64,6 +65,8 @@ You can use LambdaHooks to start and end a test case within a single Selenium se
 
 To start a test case, use the `lambda-testCase-start` hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // To start a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-start={Your Test Case Name}");
@@ -72,6 +75,8 @@ To start a test case, use the `lambda-testCase-start` hook:
 #### Test Case End
 
 To end a test case, use the `lambda-testCase-end` hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // To end a test case
@@ -88,6 +93,8 @@ You can use LambdaHooks to start and end a test case within a single Appium sess
 
 To start a test case, use the `lambda-testCase-start` hook:
 
+<VerifiedTag value="Verified" />
+
 ```java
 // To start a test case
 ((JavascriptExecutor) driver).executeScript("lambda-testCase-start={Your Test Case Name}");
@@ -96,6 +103,8 @@ To start a test case, use the `lambda-testCase-start` hook:
 #### Test Case End
 
 To end a test case, use the `lambda-testCase-end` hook:
+
+<VerifiedTag value="Verified" />
 
 ```java
 // To end a test case
@@ -131,6 +140,8 @@ Here is a link to documentation for setting up the reporter for `PlaywrightJS`: 
 #### Step 2 - Add the code to lambdatest-setup file
 
 Once, you have setup the `reporter` then the following code snippet should be added to your `lambdatest-setup.js` config. 
+
+<VerifiedTag value="Verified" />
 
 ```js title=lambdatest-
 try {
@@ -170,6 +181,8 @@ npm i wdio-lambdatest-test-case-analytics-service
 ```
 
 Now, once the package has been installed, you need to add the following code in your `wdio.conf.js` file.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 exports.config = {

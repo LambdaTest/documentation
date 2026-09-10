@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/native-extent-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -69,6 +70,8 @@ Update the `pom.xml` file to include the latest version of the Extent Reporting 
 ### 2. Modify Import Statements
 
 Update import statements in your codebase to reflect the new package structure in Extent Reporting version 5. Replace `com.relevantcodes` with `com.aventstack`.
+
+<VerifiedTag value="Verified" />
 
 ```java
 // Before

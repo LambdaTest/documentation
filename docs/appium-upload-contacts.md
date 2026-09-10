@@ -26,6 +26,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -110,6 +111,8 @@ Use the `media_url` from the response in the next step.
 ## Step 2: Set the Capability in Your Test Script
 
 Once the contacts are uploaded to <BrandName />'s cloud, set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
+
+<VerifiedTag value="Verified" />
 
 ```python
 desired_capabilities = {

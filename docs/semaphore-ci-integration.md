@@ -18,6 +18,7 @@ slug: semaphore-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/semaphore-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -79,6 +80,8 @@ We will be performing a demonstration by using the Protractor framework
 A few changes in the .semaphore/semaphore.yml are all you need to integrate <BrandName /> With Semaphore CI. According to your test configurations, these changes would include replacing the environment variables such as access key, username, grid config, and so on.
 
 Here is a sample config file for integrating your <BrandName /> account with your Semaphore CI instance. You can also find the below code at our [GitHub repository of Semaphore](https://github.com/LambdaTest/protractor-selenium-semaphore-sample).
+
+<VerifiedTag value="Verified" />
 
 ```js
 version: v1.0
@@ -156,6 +159,8 @@ To help you perform cross browser testing of your locally stored web pages, <Bra
 >- [Lambda Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 Now, let us take an example of Semaphore.yml for Lambda Tunnel.
+
+<VerifiedTag value="Verified" />
 
 ```js
 //Example of .semaphore/semaphore.yml for Lambda Tunnel

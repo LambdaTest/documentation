@@ -24,6 +24,7 @@ canonical: https://www.testmuai.com/support/docs/test-settings-options/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -49,6 +50,8 @@ The sections **[Bounding Boxes](#bounding-boxes---compare-only-specific-area)**,
 The image threshold settings helps you in analyzing the granularity of the pixel resolution for each block which shall be created by the algorithm for the comparison.
 
 You can specify the following `capability` in the following format:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="frameworks">
 
@@ -98,6 +101,8 @@ The following are the supported options for the pixel comparison feature:
 - `flat` - specifies the pixel value changes
 
 You can specify the following `capability` in the following format:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="frameworks">
 
@@ -151,6 +156,8 @@ The following are the supported options for the pixel comparison feature:
 
 You can specify the following `capability` in the following format:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="frameworks">
 
 <TabItem value="selenium" label="Selenium" default>
@@ -195,6 +202,8 @@ let capabilities = {
 An advanced configuration to set the comparison view image to be displayed as a `opquae` or `transparent` for easy identification for the approver.
 
 You can specify the following `capability` in the following format:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="frameworks">
 
@@ -246,6 +255,8 @@ The bounding boxes are the areas created on the screenshot which needs to be com
 This specific case is used to compare only a specific area of the screenshot from the **baseline**.
 
 You can specify the following `capability` in the following format:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="frameworks">
 
@@ -324,6 +335,8 @@ This specific case is used to ignore only a specific area of the screenshot from
 
 You can specify the following `capability` in the following format:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="frameworks">
 
 <TabItem value="selenium" label="Selenium" default>
@@ -398,6 +411,8 @@ let capabilities = {
 You can exclude the pixels that match the specified color on a **baseline** image from the comparison view. This feature will ignore that specific regions with the color pixels and shows the comparison view.
 
 You can specify the following `capability` in the following format:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="frameworks">
 

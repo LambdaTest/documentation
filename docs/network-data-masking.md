@@ -15,6 +15,7 @@ canonical: https://www.testmuai.com/support/docs/network-data-masking/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -80,6 +81,8 @@ Set the `network.mask` capability to `true` to enable network data masking.
 
 ### Java Implementation
 
+<VerifiedTag value="Verified" />
+
 ```java
 // Java code for configuring Network Masking in tests on LambdaTest
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -91,6 +94,8 @@ capabilities.setCapability("network.mask", "true");
 
 **Python:**
 
+<VerifiedTag value="Verified" />
+
 ```python
 capabilities = {
     "network.mask": "true"
@@ -99,6 +104,8 @@ capabilities = {
 ```
 
 **Node.js:**
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const capabilities = {

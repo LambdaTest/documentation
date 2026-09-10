@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -126,6 +127,8 @@ Feature: Google's Search Functionality
 
 Below is the `GooglePage.java` file for the above test case scenario:
 
+<VerifiedTag value="Verified" />
+
 ```java title="GooglePage.java"
 package com.lambdatest.cucumber.pages;
 
@@ -161,6 +164,8 @@ public class GooglePage extends PageObject {
 ```
 
 Below is the `LambdaTestSerenityDriver.java` file that shows the integration of Serenity with TestMu AI:
+
+<VerifiedTag value="Verified" />
 
 ```java title="LambdaTestSerenityDriver.java"
 package com.lambdatest;
@@ -258,6 +263,8 @@ mvn verify -P parallel
 </Tabs>
 
 For parallel execution, the sample project runs **single.feature** test case in four different environments: Chrome, Firefox, IE, and Safari.
+
+<VerifiedTag value="Verified" />
 
 ```java title="ParallelChromeTest.java"
 //Running Parallel Test On Chrome

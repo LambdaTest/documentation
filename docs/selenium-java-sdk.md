@@ -19,6 +19,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -267,6 +268,8 @@ The SDK fully supports parallel test execution with TestNG:
 ---
 
 See how your existing tests work without any modifications.
+
+<VerifiedTag value="Verified" />
 
 ```java
 import org.openqa.selenium.By;

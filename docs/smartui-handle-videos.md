@@ -23,6 +23,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -145,6 +146,8 @@ You can combine video handling with other SmartUI features:
 
 **Example: Ignoring video controls while keeping the first frame**
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 let options = {
     ignoreDOM: {
@@ -226,6 +229,8 @@ Occasionally review captured first frames to ensure they represent the intended 
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='videos-not-captured-correctly' label='Videos Not Captured Correctly' default>

@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -202,6 +203,8 @@ Here is a sample automation script in Java for the sample app downloaded above. 
 :::info Set the Capability
 To run the test on Emulator/Simulator, set the `isRealMobile` capability to `false`.
 :::
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>

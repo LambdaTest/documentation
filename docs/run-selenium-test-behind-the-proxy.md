@@ -16,6 +16,7 @@ slug: selenium-tests-behind-proxy/
 canonical: https://www.testmuai.com/support/docs/selenium-tests-behind-proxy/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -55,6 +56,8 @@ Add the proxy host and port to the HttpCommandExecutor in your test code.
 
 You can define proxy programmatically by adding the below snippet in your code.
 
+<VerifiedTag value="Verified" />
+
 ```csharp
 HttpCommandExecutor commandExecutor = new HttpCommandExecutor(new Uri("https://username:accesskey@hub.lambdatest.com/"), TimeSpan.FromSeconds(60));
 WebProxy myproxy = new WebProxy("proxy_host:proxy_port", false);
@@ -62,6 +65,8 @@ IWebDriver driver;
 ```
 
 Below is the NUnit code that shows the insertion of the above code snippet to define proxy settings.
+
+<VerifiedTag value="Verified" />
 
 ```csharp
 using System;

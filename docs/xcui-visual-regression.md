@@ -27,6 +27,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -114,6 +115,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 > It should be in your app configurations then only you can perform the XCUI integration.
 - Update this [dependency](https://swiftpackageindex.com/LambdaTest/lambdatest-xcui) in your test classes. You can do it as follows:
+
+<VerifiedTag value="Verified" />
 
 ```java
 import XCTest
@@ -216,6 +219,8 @@ Take note of the base64 encoded authentication which needs to be added in the 
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
  
 > Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the fourth step) and **TEST_SUITE_ID** (generated in the fifth step) in the below command.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
@@ -324,6 +329,8 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 ## Filters in Sharding
 You can filter the Classes / Tests that you'd like to execute using filters.
 Here's an example of the same.
+
+<VerifiedTag value="Verified" />
 
 ```java
 filters:

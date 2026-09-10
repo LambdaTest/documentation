@@ -18,6 +18,7 @@ slug: kaneai-kb-forms-inputs-and-data-entry/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -169,6 +170,8 @@ type {{smart.end_of_month}} in the "End Date" field
 :::tip JS Workaround
 If the date picker uses a read-only input that doesn't accept typed values, use a JS snippet to set the value directly:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 document.querySelector('input[name="startDate"]').value = '2026-03-15';
 document.querySelector('input[name="startDate"]').dispatchEvent(new Event('change', { bubbles: true }));
@@ -261,6 +264,8 @@ drag the volume slider to 75 percent
 
 If the slider is not responsive to natural language, use a **JS snippet**:
 
+<VerifiedTag value="Verified" />
+
 ```javascript
 const slider = document.querySelector('input[type="range"]');
 slider.value = 75;
@@ -292,6 +297,8 @@ type "This is a test paragraph for the blog post."
 ### If the Editor is Inside an iFrame
 
 KaneAI handles iFrames automatically in most cases. If not, use a JS snippet:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 document.querySelector('iframe.editor').contentDocument.body.innerHTML = '<p>Test content</p>';

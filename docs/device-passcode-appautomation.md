@@ -26,6 +26,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -94,6 +95,8 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 | Capability        | Type    | Default | Description |
 |-------------------|---------|---------|-------------|
 | **enablePasscode** | Boolean | `false` | Enable passcode devices for running tests. Use `true` to start the session with a system passcode configured. |
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
   <TabItem value="ios" label="iOS">

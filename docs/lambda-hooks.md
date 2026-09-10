@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/lambda-hooks/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -64,17 +65,23 @@ The invocation syntax differs by framework.
 
 **Selenium** — pass the hook as a string to the JavascriptExecutor:
 
+<VerifiedTag value="Verified" />
+
 ```java
 ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
 ```
 
 Some Selenium hooks (AutoHeal, Lighthouse, accessibility scan) instead take a JSON payload via the `lambdatest_executor` form:
 
+<VerifiedTag value="Verified" />
+
 ```java
 driver.executeScript("lambdatest_executor:{\"action\":\"lambda-heal-start\"}");
 ```
 
 **Playwright** — pass a `lambdatest_action` JSON payload as the argument of an (empty) `page.evaluate` call:
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`);

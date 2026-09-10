@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-files/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -67,6 +68,8 @@ browser's page context using Base64 encoding.
 
 ## Upload a File to the Cloud Browser
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 const fileBuffer = fs.readFileSync('document.pdf');
 await client.files.uploadToSession(session.id, fileBuffer, 'document.pdf');
@@ -79,6 +82,8 @@ await client.files.uploadToSession(session.id, fileBuffer, 'document.pdf');
 ## Download a File from the Cloud Browser
 
 **By URL:**
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 const result = await client.files.downloadFromSession(
@@ -99,6 +104,8 @@ For files triggered by button clicks (not direct URLs), the service uses CDP's
 
 All file operations are also available under `client.sessions.files`:
 
+<VerifiedTag value="Verified" />
+
 ```typescript
 await client.sessions.files.upload(session.id, buffer, 'file.txt');
 
@@ -115,6 +122,8 @@ await client.sessions.files.deleteAll(session.id);
 
 
 ## File Info
+
+<VerifiedTag value="Verified" />
 
 ```typescript
 interface FileInfo {

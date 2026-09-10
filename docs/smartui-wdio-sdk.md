@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
@@ -187,6 +188,8 @@ Once, the configuration file will be created, you will be seeing the default con
 
 - You can incorporate SmartUI into your custom `WebdriverIO` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of WebdriverIO script of which we would like to take the screenshot, as shown below:
 
+<VerifiedTag value="Verified" />
+
 ```js
 const { expect, browser, $ } = require('@wdio/globals')
 const { smartuiSnapshot } = require('@lambdatest/wdio-driver');
@@ -234,6 +237,8 @@ The following are the different options which are currently supported:
 ## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
@@ -290,6 +295,8 @@ let options = {
 </TabItem>
 
 </Tabs>
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
@@ -351,6 +358,8 @@ let options = {
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
@@ -408,6 +417,8 @@ let options = {
 </Tabs>
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
@@ -469,6 +480,8 @@ await smartuiSnapshot(driver, 'Page Loaded');
 - Run tests in consistent environments
 
 **Troubleshooting**
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>

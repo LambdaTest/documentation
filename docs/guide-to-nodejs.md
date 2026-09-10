@@ -21,6 +21,7 @@ slug: quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/
 canonical: https://www.testmuai.com/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -80,6 +81,8 @@ Once you have installed the necessary dependencies, you are all set to run your 
 ***
 
 Do make sure to add the **Username** and **Key** in the code below. You can find your username and access key using the key icon on the [Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) or in your [Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) section.
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 /*

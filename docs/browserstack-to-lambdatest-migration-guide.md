@@ -24,6 +24,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 
@@ -86,6 +87,8 @@ Once the .env file is set up, ensure your test framework correctly reads these v
 ## Changes in Hub URL
 You need to now change the hub URL in the configuration settings of your test suite. Hub URL is of type String and it defines the Hub location to which the Selenium tests would be submitted for execution.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="BrowserStack Selenium Grid URL" default>
@@ -126,6 +129,8 @@ To generate capabilities use [<BrandName /> Capabilities Generator](https://www.
 
 
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of BrowserStack and <BrandName />:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -187,6 +192,8 @@ To generate capabilities for Selenium 3, you can use the [<BrandName /> Capabili
 Below are example capability representations from BrowserStack and <BrandName /> to help you understand how to adapt your existing configuration during migration.
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="BrowserStack Capabilities" default>
@@ -232,6 +239,8 @@ Let’s walk through a practical example demonstrating how to migrate a Selenium
 
 This test script performs a basic text validation on the website [<BrandName /> eCommerce Playground](https://ecommerce-playground.lambdatest.io/) and shows the expected execution results when running the test in the <BrandName /> cloud.
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

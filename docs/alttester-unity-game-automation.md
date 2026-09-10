@@ -15,6 +15,7 @@ slug: alttester-unity-game-automation/
 canonical: https://www.testmuai.com/support/docs/alttester-unity-game-automation/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -154,6 +155,8 @@ Never commit `.env` or hard-code your Access Key in test files. The Access Key g
 
 The capabilities live in the `lt_options` dictionary in `tests/conftest.py`. This object tells TestMu AI which device to allocate and how to route the session through the tunnel. The sample sets it up for a real Android device and routes AltDriver traffic through a named tunnel.
 
+<VerifiedTag value="Verified" />
+
 ```python
 lt_options = {
     "user": username,
@@ -204,6 +207,8 @@ Every key in `lt_options` is required for this session to start and connect thro
 The `tunnel` and `tunnelName` keys are the non-obvious part. AltDriver does not connect to TestMu AI directly. It connects to the AltTester Server running inside the app on the cloud device, and the only path to that in-app server is through the tunnel. If `tunnel` is false or `tunnelName` does not match the running tunnel, the Appium session still starts but AltDriver cannot connect.
 
 The tunnel itself is launched by `conftest.py` with the binary at `tunnel/LT`. The session starts it with these flags before any test runs.
+
+<VerifiedTag value="Verified" />
 
 ```python
 [
@@ -271,6 +276,8 @@ Open a session to see its annotated steps, status, and logs.
 ***
 
 The suite runs on **Pixel 8 (Android 14)** by default. To target a different device or switch to iOS, edit the `lt_options` block in `tests/conftest.py`. The commented iOS lines show the keys to change.
+
+<VerifiedTag value="Verified" />
 
 ```python
 # Android

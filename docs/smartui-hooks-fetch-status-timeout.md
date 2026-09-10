@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-hooks-fetch-status-time
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -70,6 +71,8 @@ Pass a config object with the `screenshotName` and the `timeout` in seconds.
 
 ### Selenium
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -113,6 +116,8 @@ System.out.println(result);
 </Tabs>
 
 ### Playwright / Puppeteer
+
+<VerifiedTag value="Verified" />
 
 ```javascript
 const result = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({

@@ -22,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -126,6 +127,8 @@ In the `PostTestResults.java` script, add the following String parameters.
 * File path of the test result file.
 * Jira Project key.
 * Zephyr Scale Access token.
+
+<VerifiedTag value="Verified" />
 
 ```js 
 public class PostTestResults {

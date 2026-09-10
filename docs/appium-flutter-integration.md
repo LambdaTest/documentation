@@ -24,6 +24,7 @@ import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 <BrandName /> supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
@@ -73,6 +74,8 @@ dev_dependencies:
 
 Create an `integration_test` folder at the root of your Flutter project. Inside it, create `appium_test.dart` with:
 
+<VerifiedTag value="Verified" />
+
 ```dart
 import 'package:appium_flutter_server/appium_flutter_server.dart';
 import 'package:your_app_package/main.dart'; // Replace with your app's main.dart import
@@ -83,6 +86,8 @@ void main() {
 ```
 
 Or with setup callback:
+
+<VerifiedTag value="Verified" />
 
 ```dart
 import 'package:your_app_package/main.dart' as app;

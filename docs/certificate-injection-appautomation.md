@@ -31,6 +31,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -180,6 +181,8 @@ Pass `customCertificates` inside `LT:Options` as an **array of objects**. Each e
 | `customCertificates` | Array of objects | Yes | The certificates to install for this session. Maximum 3 entries. |
 | `certificateId` | String | Yes | The `media_id` returned by the upload API. |
 | `password` | String | No | Overrides the password stored with a `.pfx` certificate at upload time. |
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="json" label="JSON" default>

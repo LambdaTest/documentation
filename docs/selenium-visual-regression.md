@@ -24,6 +24,7 @@ canonical: https://www.testmuai.com/support/docs/selenium-visual-regression/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -89,6 +90,8 @@ git clone https://github.com/LambdaTest/smartui-node-sample
 
 2. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 3. Edit the required capabilities for your test suite.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
@@ -276,6 +279,9 @@ Here you can explore multiple features and execute more such builds.
 ### For taking viewport screenshot
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
+
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -334,6 +340,8 @@ You can capture the full page screenshot for all different websites which have a
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -382,6 +390,8 @@ The following feature is applicable for `Selenium >= 4.0.0 with Chrome` versions
 For browsers other than chrome (Mozilla, Safari etc.) and for websites `Full Page Screenshot` fails, you can use smartscroll to take a full page screenshot of your web page by adding this hook in your test script.
 
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -424,6 +434,8 @@ driver.ExecuteScript("smartui.takeFullPageScreenshot,{\"screenshotName\":\"<scre
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application.
 
 Add the following **Webhook** to your test cases where you need to capture the screenshot of a particular element on your UI.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
@@ -495,6 +507,9 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 
 
 You can fetch the status of the screenshot captured and the results of the screenshot captured using the following webhook.
+
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
@@ -536,6 +551,8 @@ driver.ExecuteScript("smartui.fetchScreenshotStatus");
 
 For fetching results specific to a screenshot, you can use the following webhook by adding the `Screenshot Name` to the WebHook.
 
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
@@ -633,6 +650,8 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
 
 ## Best Practices
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="best-practices">
 <TabItem value="capability-configuration" label="Capability Configuration" default>
 
@@ -702,6 +721,8 @@ let capabilities = {
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="troubleshooting">
 <TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>

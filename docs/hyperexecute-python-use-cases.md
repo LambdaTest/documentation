@@ -17,6 +17,7 @@ slug: hyperexecute-python-use-cases/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-python-use-cases/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -187,6 +188,8 @@ args:
 
 **Sample Connection Code :**
 
+<VerifiedTag value="Verified" />
+
 ```python title="test.py
 import os
 import mysql.connector
@@ -349,6 +352,8 @@ pytest -k "login"
 **Solution :** Use the `--log-cli-level=DEBUG` flag to capture debug-level logs.
 
 **Example Python Test :**
+
+<VerifiedTag value="Verified" />
 
 ```python title="test.py
 import logging

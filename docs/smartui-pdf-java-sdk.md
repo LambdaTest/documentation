@@ -21,6 +21,7 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -138,6 +139,8 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 You can upload PDFs in two modes:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val'>
 
 <TabItem value='local' label='Local Mode' default>
@@ -227,6 +230,8 @@ mvn test
 
 ### Batch Upload Example
 
+<VerifiedTag value="Verified" />
+
 ```java
 public class SmartuiPdfBatchTest {
     public void uploadMultiplePdfs() throws Exception {
@@ -254,6 +259,8 @@ public class SmartuiPdfBatchTest {
 ```
 
 ### Error Handling
+
+<VerifiedTag value="Verified" />
 
 ```java
 public class SmartuiPdfErrorHandling {
@@ -286,6 +293,8 @@ public class SmartuiPdfErrorHandling {
 - **Custom Tools**: Develop specialized tools for PDF comparison and validation
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='pdf-file-management' label='PDF File Management' default>
@@ -363,6 +372,8 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>

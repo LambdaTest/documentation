@@ -25,6 +25,7 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -144,6 +145,8 @@ Upload your **Android TV** application (.ipa file) to the <BrandName /> servers 
 ### 3. Configure Desired Capabilities
 
 In your automation script, set up the **platform capability** to specify that you are testing on an Android TV device.
+
+<VerifiedTag value="Verified" />
 
 <Tabs>
 <TabItem value="Java" label="Java" default>
