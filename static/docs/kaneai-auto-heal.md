@@ -7,10 +7,7 @@
 KaneAI, the GenAI Native testing assistant from TestMu AI, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, TestMu AI’s high-performance test orchestration platform, they come with an added layer of reliability: the **Auto-Heal** feature.
 
 **Auto-Heal is not Adaptive Heal**
-Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) re-authors the whole **objective** that contains the failing step, and every objective after it. It runs only when an objective fails to replay, and records the change as a version you can approve or decline. The two are separate features.
-
-**Auto-Heal is not Adaptive Heal**
-Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) repairs the **step** and records the change as a version you can approve or decline. The two are separate features.
+Auto-Heal repairs a broken **element locator** at runtime and creates no version. [Adaptive Heal](/support/docs/kaneai-healing-and-dynamic-test/#adaptive-heal) re-authors the whole **objective** that contains the failing step, and every objective after it. It runs only when a step fails, at most three times, and records the change as a version you can approve or decline. The two are separate features.
 
 Instead of failing the test the moment a locator breaks, KaneAI finds a new locator at runtime by re-using the original natural language instruction that generated the step. KaneAI generates these scripts across multiple languages and frameworks from natural language instructions, and Auto-Heal adds a runtime reliability layer on top.
 

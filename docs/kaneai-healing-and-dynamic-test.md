@@ -55,10 +55,10 @@ A recorded test replays the steps it was authored with. When the application cha
 
 | Strategy | Replays the recorded steps | When a step fails to replay | Credits |
 |---|---|---|---|
-| **Off** (default) | Yes | Nothing is re-authored. Auto-Heal still runs, and a step it cannot recover ends the run | Yes |
-| **Adaptive Heal** | Yes | The failing objective and every objective after it are re-authored | Yes |
-| **Dynamic Test** | No | Not applicable, nothing is replayed | Yes |
-| **Retry on Failure** | Yes | The test fails, then runs again from the start | - |
+| **Off** (default) | Yes | Nothing is re-authored. Auto-Heal still runs, and a step it cannot recover ends the run | Auto-Heal only |
+| **Adaptive Heal** | Yes | The failing objective and every objective after it are re-authored, at most 3 times | Auto-Heal, plus each re-authoring |
+| **Dynamic Test** | No | Not applicable, nothing is replayed | Auto-Heal, plus authoring on every run |
+| **Retry on Failure** | Yes | The test fails, then runs again from the start | Auto-Heal only |
 
 :::info Available on New Experience test cases running on Chrome
 Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experience and its browser configuration is Chrome. Every other test case replays its recorded steps, whatever is set here.
@@ -68,29 +68,26 @@ Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experi
 Adaptive Heal, Dynamic Test and Retry on Failure answer the same question in different ways, so only one can be active. Selecting one clears the others.
 
 Leaving Self-maintenance off is a valid choice and is the default. The recorded steps stay as they are. Auto-Heal still runs, and a step it cannot recover ends the run and is reported.
-:::
 
 ## Adaptive Heal {#adaptive-heal}
 ***
 
-Adaptive Heal re-authors the test when an objective fails to replay, so the run continues instead of stopping at the failure.
+Adaptive Heal re-authors the test when a step fails to replay, so the run continues instead of stopping at the failure.
 
 It re-authors the **objective that contains the failing step, and every objective after it**. Objectives that already ran keep the result they replayed. In a test case with five objectives, a step that fails in the third one leaves the first two as they replayed, and the third, fourth and fifth are re-authored.
 
+Adaptive Heal triggers only on a failure, and at most 3 times in a run.
 
 The re-authored content is saved as a **new version of the test case**, and by default that version waits for your approval before it becomes current. The run itself finishes on the re-authored content either way.
 
 Use it when your application changes often enough that a recorded step goes stale, but the test is still describing the right thing.
 
-:::warning Adaptive Heal consumes credits when it repairs
-A repair is authoring work, so it consumes authoring credits. A run in which nothing fails to replay consumes none. Cost therefore follows how often your application drifts, not how often you run the test.
+:::warning Adaptive Heal consumes credits when it re-authors
+Re-authoring is authoring work, so it consumes authoring credits. One trigger re-authors a whole objective and every objective after it, not a single step, so the cost of a trigger grows with how much of the test sits after the failure. Adaptive Heal triggers at most 3 times in a run. A run in which nothing fails to replay does not trigger it at all.
 :::
 
 :::note Adaptive Heal is not Auto-Heal
-[Auto-Heal](/support/docs/kaneai-auto-heal/) repairs a broken **element locator** at runtime by falling back to other locators for the same element. It creates no version and needs no approval.
-
-:::note Adaptive Heal is not Auto-Heal
-[Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a broken **element locator** at runtime. It tries the other locators captured for that same element, then rebuilds the locator from the step's original natural language instruction. It changes nothing in your test, creates no version and needs no approval. It runs whatever you select here.
+[Auto-Heal](/support/docs/kaneai-auto-heal/) recovers a broken **element locator** at runtime. It tries the other locators captured for that same element, then rebuilds the locator from the step's original natural language instruction, then identifies the element visually when the DOM cannot resolve it. It changes nothing in your test, creates no version and needs no approval. It runs whatever you select here.
 
 Adaptive Heal re-authors the failing **objective** and every objective after it, and records the result as a version you can review, approve or decline. The two are separate features.
 :::
@@ -103,11 +100,11 @@ Dynamic Test authors the test from its objectives instead of replaying the recor
 Use it for pages that change so much that a recorded script is a liability.
 
 :::warning Dynamic Test consumes credits on every run
-Every run authors the test again, so every run consumes authoring credits. Replaying a recorded test consumes credits only when Auto-Heal triggers. Turning this on at the organization level commits every eligible run in scope to that cost.
+Every run authors the test again, so every run consumes authoring credits. Replaying a recorded test consumes credits only when Auto-Heal recovers a locator. Turning this on at the organization level commits every eligible run in scope to that cost.
 :::
 
 :::note Adaptive Heal and Dynamic Test are the same act
-Both re-author the test. They differ in trigger and scope. Adaptive Heal re-authors only on a failure, and only from the failing objective onward. Dynamic Test re-authors every objective on every run.
+Both re-author the test. They differ in trigger and scope. Adaptive Heal re-authors only on a failure, only from the failing objective onward, and at most 3 times in a run. Dynamic Test re-authors every objective on every run.
 :::
 
 ## Retry on Failure {#retry-on-failure}
@@ -154,17 +151,17 @@ Self-maintenance is set at three levels. Each one is a starting position for the
 
 Set the organization default under **Organization Settings → Org Product Preferences → Kane AI → Healing and Dynamic Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/organization-settings.webp').default} alt="Healing and Dynamic Test in Organization Settings, with Failure handling, Adaptive Heal, Dynamic Test and Auto-approve changes" width="1600" height="827" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/organization-settings.webp').default} alt="Healing and Dynamic Test in Organization Settings, with the strategy toggle, Adaptive Heal, Dynamic Test and Auto-approve changes" width="1600" height="827" className="doc_img"/>
 
 Set the project default under **Test Manager → Project Settings → Healing and Dynamic Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/project-settings.webp').default} alt="Healing and Dynamic Test in Project Settings, with the same controls scoped to one project" width="1600" height="825" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/project-settings.webp').default} alt="Healing and Dynamic Test in Project Settings, showing Self-maintenance with Adaptive Heal and Dynamic Test, and the Auto-approve changes toggle" width="1600" height="825" className="doc_img"/>
 
 A project follows the organization until someone changes it there. Once changed, the project keeps its own value and later organization changes no longer overwrite it.
 
 A test run starts from the project's value and can override it for that run. Changing it in a run never writes back to the project or the organization.
 
-Turning Failure handling on at the organization or project level applies from that point forward. Test runs that already exist are not eligible, and only runs created while the toggle is on use Adaptive Heal or Dynamic Test.
+Turning Self-maintenance on at the organization or project level applies from that point forward. Test runs that already exist are not eligible, and only runs created while the toggle is on use Adaptive Heal or Dynamic Test.
 
 Retry on Failure exists only at the run level, so it is chosen per run.
 
@@ -177,14 +174,14 @@ Retry on Failure exists only at the run level, so it is chosen per run.
 4. For Adaptive Heal or Dynamic Test, set **Auto-approve changes**. For Retry on Failure, set **Maximum Retries**.
 5. Click **Execute**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/advanced-configurations.webp').default} alt="Test Configurations under Advanced Configurations, showing Failure handling with Adaptive Heal, Dynamic Test and Retry on Failure, and the Auto-approve changes toggle" width="1600" height="826" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/advanced-configurations.webp').default} alt="Test Configurations under Advanced Configurations, showing Self-maintenance with Adaptive Heal, Dynamic Test and Retry on Failure, and the Auto-approve changes toggle" width="1600" height="826" className="doc_img"/>
 
 ### Check the strategy before you execute
 ***
 
-The **Run with HyperExecute** panel states the strategy in its Overview, beside the number of test instances, unique configurations and concurrency. Read it before you click **Execute**, because it reflects what this run will actually do after the organization, project and run-level values have resolved.
+The **Run with HyperExecute** panel carries a strategy tile in its Overview, beside the number of test instances, unique configurations and concurrency. Confirm the strategy in **Advanced Configurations** before you click **Execute**, because that is where the organization, project and run-level values resolve for this run.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/run-with-hyperexecute.webp').default} alt="The Run with HyperExecute panel, with Adaptive Heal shown in the Overview alongside test instances, configurations and concurrency" width="1600" height="827" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/healing-dynamic-test/run-with-hyperexecute.webp').default} alt="The Run with HyperExecute panel, with the strategy tile in the Overview alongside test instances, configurations and concurrency" width="1600" height="827" className="doc_img"/>
 
 See [KaneAI Test Runs](/support/docs/kaneai-hyperexecute-test-run-execution/#advanced-configurations) for the rest of the Advanced Configurations panel.
 
@@ -207,21 +204,12 @@ A draft cannot be edited while it is waiting for a verdict. Approve or decline i
 ## When these strategies do not apply
 ***
 
-A run can be configured in ways that put it outside the scope of Adaptive Heal and Dynamic Test. In those cases the run behaves as it would with Failure handling off, whatever is selected.
+A run can be configured in ways that put it outside the scope of Adaptive Heal and Dynamic Test. In those cases the run behaves as it would with Self-maintenance off, whatever is selected.
 
 ### Test cases outside New Experience or Chrome
 ***
 
-Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experience **and** its browser configuration is Chrome. A test case on any other browser, or one not using New Experience, replays its recorded steps and stops at the first step that fails.
-
-### Runs that span several versions
-***
-
-A test run can be configured across several browser or operating system versions, which produces one test instance per combination.
-
-**Only the first test instance picked up for execution is eligible.** The remaining instances in that run replay their recorded steps and are not repaired or re-authored. Running a single test case across several Chrome versions or several operating system versions is not supported for these strategies.
-
-If you need every combination covered, run each version as its own test run.
+Adaptive Heal and Dynamic Test apply to a test case only when it uses New Experience **and** its browser configuration is Chrome. A test case on any other browser, or one not using New Experience, replays its recorded steps and nothing is re-authored.
 
 ### Other boundaries
 ***
