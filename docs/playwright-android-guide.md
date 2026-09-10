@@ -518,7 +518,7 @@ The below screenshot of <BrandName /> Automation Dashboard shows the Playwright 
 Configure these capabilities to control your Playwright Android tests.
 
 :::tip
-Use the [Playwright Android Capability Generator](https://www.lambdatest.com/playwright-android-capability-generator/) to generate capabilities for your tests.
+Use the [Playwright Android Capability Generator](https://www.testmuai.com/playwright-android-capability-generator/) to generate capabilities for your tests.
 :::
 
 | Key             | Expected Values                | Description                                                                                                                                                                                        | Capability                                                                           |
