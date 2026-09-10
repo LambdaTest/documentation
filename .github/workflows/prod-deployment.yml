@@ -45,11 +45,7 @@ jobs:
           touch .env
           echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
           echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
-          # Preserves this branch's previous hardcoded `noIndex: true`. The
-          # lambdatest.com docs stay noindexed (and ship no sitemap); the
-          # testmuCom deploy is the one that publishes /support/sitemap.xml.
-          echo "DOCS_NOINDEX=true" >> .env
-
+          
       - name: Use Node.js 20.10.x
         uses: actions/setup-node@v3
         with:
