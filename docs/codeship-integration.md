@@ -16,6 +16,7 @@ slug: codeship-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/codeship-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -167,6 +168,8 @@ Codeship is a scalable, cloud-based platform for continuous integration that off
 
     * **For Linux/Mac:**
 
+    <VerifiedTag value="Verified" />
+
     ```
     $ export LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
     
@@ -174,6 +177,8 @@ Codeship is a scalable, cloud-based platform for continuous integration that off
     ```
 
     * **For Windows:**
+
+    <VerifiedTag value="Verified" />
 
     ```
     $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`
@@ -204,6 +209,8 @@ Codeship is a scalable, cloud-based platform for continuous integration that off
 **Step 5:** You will be redirected to a screen of **Project Settings.** Select the technology to prepopulate basic commands with respect to your tests.
 For the below demonstration, we will be using Protractor, so you can select Node.js. Now, enter the commands below in setup.
 
+<VerifiedTag value="Verified" />
+
 ```
 #nvm install 0.10
 npm install
@@ -211,6 +218,8 @@ npm install -g protractor
 ```
 
 **Step 6:** Create a new pipeline in the section **"Configure Test Pipelines."** Use the below command to connect it with your **GitHub repository** by replacing the **GitHubOrganization & reponame** with the input's values.
+
+<VerifiedTag value="Verified" />
 
 ```
 cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf 
@@ -244,6 +253,8 @@ Create two pipelines with the following commands:
 
 **Pipeline 1**
 
+<VerifiedTag value="Verified" />
+
 ```
 #Downloading tunnel binary
 <!--For Linux-->
@@ -261,6 +272,8 @@ unzip LT_Linux.zip
 
 **Pipeline 2**
 
+<VerifiedTag value="Verified" />
+
 ```
 sleep 90
 cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf
@@ -272,6 +285,8 @@ The setup command will be the same as mentioned earlier under the "Integration W
 ## Parallel Testing
 ***
 Go to the **Project Settings** screen. Change your pipeline command with the following one & save settings.
+
+<VerifiedTag value="Verified" />
 
 ```
 cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf

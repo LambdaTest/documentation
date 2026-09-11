@@ -6,6 +6,33 @@ sidebar_label: /login
 description: Sign in to Rook through the TestMu AI browser authentication flow.
 slug: rook-command-login/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /login Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-login/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -70,11 +97,15 @@ Use <code>/login</code> when Rook has no stored credential or the existing token
 
 Interactive:
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /login
 ~~~
 
 Headless launcher:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook login

@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-mcp/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -190,12 +191,16 @@ Exploration also records MCP servers declared by the target agent. These declara
 
 Interactive:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /mcp
 /mcp list
 ```
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp list
@@ -221,11 +226,15 @@ The repository-root `.mcp.json` belongs to the agent under test. Rook reads it a
 
 Local scope is the default:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp add github -- npx -y @modelcontextprotocol/server-github
 ```
 
 Add a project or user definition:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp add github --scope project \
@@ -243,6 +252,8 @@ Keep secret references in configuration. Rook expands `${VAR}` only when resolvi
 
 ## Record a Remote Server
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp add notion \
   --transport http \
@@ -255,6 +266,8 @@ HTTP, SSE, and WebSocket definitions are accepted, stored, and listed for forwar
 :::
 
 ## Inspect a Definition
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp get github
@@ -269,17 +282,23 @@ A project or discovered stdio definition can execute a command from a cloned rep
 
 Interactive:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /mcp approve <name>
 ```
 
 Headless:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook mcp approve <name>
 ```
 
 When a project and discovered definition share the name, specify which one:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp approve <name> --origin project
@@ -298,12 +317,16 @@ Approval is pinned to the raw definition, not only the server name. If the comma
 
 ## Enable, Disable, or Remove
 
+<VerifiedTag value="Verified" />
+
 ```text
 /mcp enable <name>
 /mcp disable <name>
 ```
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook mcp enable <name>
@@ -328,6 +351,8 @@ Approval never guesses between two same-named definitions.
 
 A scenario can require a verifier:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 verification_requires:
   - type: mcp
@@ -345,6 +370,8 @@ Observing the tested agent's own MCP calls is a separate concern that you config
 ## Permission Prompts Still Apply
 
 An enabled registry entry does not grant every use. Starting a server, listing its tools, and calling a tool each still pass through Rook's permission gate with specific subjects such as:
+
+<VerifiedTag value="Verified" />
 
 ```text
 mcp_call(billing.get_refund_status)

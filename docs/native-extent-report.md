@@ -140,6 +140,8 @@ Follow these steps to enable Extent Native Reports for your HyperExecute job:
 
 Update the `pom.xml` file to include the latest version of the Extent Reporting library (version 5). Ensure that the necessary dependencies are correctly configured.
 
+<VerifiedTag value="Verified" />
+
 ```xml
 <dependency>
     <groupId>com.aventstack</groupId>
@@ -171,6 +173,8 @@ Make changes in your codebase to generate individual JSON reports. These reports
 ### 4. Update HyperExecute YAML Configuration
 
 In the HyperExecute YAML configuration, add the following section to instruct the HyperExecute systems to generate Extent Native Reports:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

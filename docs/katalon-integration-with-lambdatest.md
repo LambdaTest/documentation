@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/katalon-integration-with-testmu
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -139,6 +140,8 @@ For integrating <BrandName /> with Katalon, make sure to run your test scripts t
 <img loading="lazy" src={require('../assets/images/katalon/Katalon-1.webp').default} alt="katalon integration"  className="doc_img" width="1365" height="652"/>
 
 **Step 3:** You would require these values for generating a secure remote connection with Katalon through <BrandName /> remote URL.
+
+<VerifiedTag value="Verified" />
 
 ```json
 Remote URL = "http://username:accessKey@hub.lambdatest.com/wd/hub" 

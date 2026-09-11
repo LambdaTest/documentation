@@ -15,6 +15,7 @@ slug: hyperexecute-mcp-server-release-notes-1-0-0/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -161,6 +162,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 The previous SSE-based connection method has been **removed**:
 
+<VerifiedTag value="Verified" />
+
 ```
 ❌ OLD (No longer supported):
 http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[your-lt-access-key]
@@ -169,6 +172,8 @@ http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[y
 #### ✅ Connection Methods
 
 **Option 1: Remote MCP Server (StreamableHTTP)**
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -192,6 +197,8 @@ http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[y
 ```
 
 **Option 2: Local STDIO Server (NPM Package)**
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

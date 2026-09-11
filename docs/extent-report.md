@@ -177,6 +177,8 @@ Follow these steps to enable Extent Reports for your HyperExecute job:
 ### Step 1: Add Dependency
 If using Maven, add the following dependency to your `pom.xml` file:
 
+<VerifiedTag value="Verified" />
+
 ```xml title="pom.xml"
 <dependency>
   <groupId>com.relevantcodes</groupId>
@@ -213,6 +215,8 @@ Follow these steps to enable Extent Reports for your HyperExecute job:
 
 ### Step 1: Add Dependency
 If using Maven, add the latest extentreports dependency to `pom.xml` file:
+
+<VerifiedTag value="Verified" />
 
 ```xml title="pom.xml"
 <dependency>
@@ -251,6 +255,8 @@ public class ExtentReportListener implements ITestListener {
 
 ## Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

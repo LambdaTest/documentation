@@ -25,6 +25,31 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Drag and Drop in KaneAI",
+          "item": `${BRAND_URL}/support/docs/kane-ai-drag-drop/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -178,6 +203,8 @@ Type the instruction into the KaneAI authoring panel.
 
 **More examples:**
 
+<VerifiedTag value="Verified" />
+
 ```
 drag "Task Card" to "Done column"
 move the 3rd item to the top
@@ -254,11 +281,15 @@ Manual recording is recommended for any scenario where the **drop location isn't
 
 ### E-commerce Product Sorting
 
+<VerifiedTag value="Verified" />
+
 ```
 drag product "iPhone 15" from available items to comparison table
 ```
 
 ### Project Management Board
+
+<VerifiedTag value="Verified" />
 
 ```
 move task card from "To Do" column to "In Progress" column

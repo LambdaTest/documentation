@@ -17,6 +17,7 @@ slug: leapwork-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/leapwork-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -161,6 +162,8 @@ Fill in the agent settings as follows. TestMu AI supports both manual and automa
   * **Description**: optional free text to help you identify the agent later.
 
 **Step 6:** Enter your **Hostname**, **Username**, and **Access Key** in the highlighted fields. These three values are what authenticate the agent, so confirm them carefully. In the **Hostname** field, enter the TestMu AI web hub:
+
+<VerifiedTag value="Verified" />
 
 ```text
 hub.lambdatest.com

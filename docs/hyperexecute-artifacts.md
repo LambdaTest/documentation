@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-artifacts/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -125,6 +126,8 @@ Follow the below mentioned steps to generate the Artifacts for your desired fram
 
 **Step 2:** Add the below mentioned parameters in the YAML file to generate the Artifacts
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 uploadArtifacts:
     - name: Executed-Job-Artifacts #user defined name of the artifact
@@ -138,6 +141,8 @@ uploadArtifacts:
 - If you are generating multiple artifacts, then it is recommended to use this parameter, [`mergeArtifacts`](/support/docs/deep-dive-into-hyperexecute-yaml/#mergeartifacts) in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.
 
 - You can replace the Artifacts folder name value with any of the Matrix parameters value.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 matrix:

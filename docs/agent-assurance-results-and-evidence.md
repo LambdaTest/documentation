@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-results-and-evi
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -159,6 +160,8 @@ The browser may present a partial-looking scenario summary when some criteria pa
 
 Example:
 
+<VerifiedTag value="Verified" />
+
 ```text
 8 graded scenarios: 8 passed, 0 failed
 20 criteria: 8 verified, 12 unable to verify
@@ -172,11 +175,15 @@ A 100% pass rate at 40% coverage is not full assurance. Improve observation unti
 
 From the TUI:
 
+<VerifiedTag value="Verified" />
+
 ```text
 /ui
 ```
 
 Print the URL without opening a browser:
+
+<VerifiedTag value="Verified" />
 
 ```text
 /ui --no-open
@@ -227,6 +234,8 @@ Do not treat a fluent narrative as evidence by itself. Look for one of the follo
 
 ## Files Written for a Run
 
+<VerifiedTag value="Verified" />
+
 ```text
 .testmuai/rook/agents/<agent-id>/
   history.jsonl
@@ -259,17 +268,23 @@ Completed runs read their scenario snapshot, not the current scenario directory.
 
 Print the most recent run:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook report
 ```
 
 Print a specific run:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook report <run-id> --entity <agent-id>
 ```
 
 Machine-readable output:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook report <run-id> --entity <agent-id> --json

@@ -174,6 +174,8 @@ public class GroupIntegrationTest {
 
 In the HyperExecute YAML Version 0.2 configuration, you can use the ```discoveryFlags``` parameter to specify the groups to discover during test discovery.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   name: "maven/testng"
@@ -183,6 +185,8 @@ framework:
 Here it will only discover tests belonging to the group database. Use comma-separated values if you want to specify multiple groups.
 
 Similarly, you can use the ```excludedGroups``` parameter that can be used to run all test groups except for the defined set of groups.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -194,6 +198,8 @@ This discovers all test of groups except database.
 
 
 Alternatively, you can also specify the groups or excluded groups directly in the pom.xml file using the Maven Surefire Plugin
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 <plugins>

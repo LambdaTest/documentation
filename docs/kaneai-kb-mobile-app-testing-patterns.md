@@ -19,6 +19,7 @@ slug: kaneai-kb-mobile-app-testing-patterns/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -290,6 +291,8 @@ The keyboard is one of the biggest differences between web and mobile testing. O
 
 The keyboard typically auto-dismisses on most interactions, but you can explicitly dismiss it:
 
+<VerifiedTag value="Verified" />
+
 ```
 hide keyboard
 ```
@@ -298,11 +301,15 @@ hide keyboard
 
 iOS keyboards are more persistent. The best approach is to use `press Enter` after typing, which both submits the current field and dismisses the keyboard:
 
+<VerifiedTag value="Verified" />
+
 ```
 type "john@example.com" in the email field and press Enter
 ```
 
 Alternatively, if the keyboard has a "Done" or "Cancel" button:
+
+<VerifiedTag value="Verified" />
 
 ```
 click on "Done" button on the keyboard
@@ -314,6 +321,8 @@ If you skip keyboard dismissal on iOS, the keyboard may cover the next element y
 :::
 
 ### Scenario: Login Form on iOS
+
+<VerifiedTag value="Verified" />
 
 ```
 type "admin@example.com" in the email field and press Enter
@@ -327,6 +336,8 @@ assert "Welcome" is visible
 
 Mobile apps frequently use individual digit boxes for OTP entry. Use the `OTP` keyword. KaneAI automatically distributes digits across the boxes.
 
+<VerifiedTag value="Verified" />
+
 ```
 enter OTP "123456"
 enter OTP "7890"
@@ -337,6 +348,8 @@ Do **not** type into each box individually. The `OTP` keyword handles multi-box 
 :::
 
 ### Scenario: SMS OTP Verification
+
+<VerifiedTag value="Verified" />
 
 ```
 type "+1-555-0123" in the phone number field and press Enter
@@ -351,6 +364,8 @@ assert "Phone verified" is visible
 
 Mobile scrolling works differently from web. There's no pixel-based scroll. Use count-based or directional scrolling.
 
+<VerifiedTag value="Verified" />
+
 ```
 scroll down 3 times
 scroll up 2 times
@@ -361,6 +376,8 @@ scroll down 1 time
 
 Always add a wait after scrolling on mobile. Content may need time to load, and the scroll animation needs to complete.
 
+<VerifiedTag value="Verified" />
+
 ```
 scroll down 2 times
 wait for 2 seconds
@@ -368,6 +385,8 @@ assert "Contact Us" section is visible
 ```
 
 ### Scenario: Scrolling Through a Long Settings Page
+
+<VerifiedTag value="Verified" />
 
 ```
 scroll down 3 times
@@ -401,6 +420,8 @@ Mobile apps use native picker wheels for dates, numbers, and selections. KaneAI 
 
 ### Interacting with Picker Wheels
 
+<VerifiedTag value="Verified" />
+
 ```
 enter "5" in the first column
 enter "March" in the second column
@@ -408,6 +429,8 @@ enter "2026" in the third column
 ```
 
 ### Slider Interactions
+
+<VerifiedTag value="Verified" />
 
 ```
 drag the slider to 80 percent
@@ -429,6 +452,8 @@ In mobile apps, text labels often contain partially clickable links, for example
 
 Use the `spannable text` keyword:
 
+<VerifiedTag value="Verified" />
+
 ```
 click on spannable text: "Terms and Conditions" in the bottom info section
 click on spannable text: "Privacy Policy" in the sign-up footer
@@ -440,11 +465,15 @@ Mobile apps frequently show permission dialogs, promotional popups, or system al
 
 ### Generic Dialog Dismissal
 
+<VerifiedTag value="Verified" />
+
 ```
 dismiss dialog
 ```
 
 ### Permission Dialogs
+
+<VerifiedTag value="Verified" />
 
 ```
 if "Allow" button is visible then click on "Allow"
@@ -453,11 +482,15 @@ if "Don't Allow" button is visible then click on "Don't Allow"
 
 ### App Rating Dialogs
 
+<VerifiedTag value="Verified" />
+
 ```
 if "Rate this app" dialog is visible then dismiss dialog
 ```
 
 ### Scenario: Handling Permission Prompts on App Launch
+
+<VerifiedTag value="Verified" />
 
 ```
 -- App launches and asks for location permission --
@@ -476,6 +509,8 @@ assert the home screen is visible
 
 ### Deleting Characters
 
+<VerifiedTag value="Verified" />
+
 ```
 press Del
 press Del
@@ -484,12 +519,16 @@ press Del
 
 This deletes one character at a time. To clear an entire field, it's more efficient to:
 
+<VerifiedTag value="Verified" />
+
 ```
 clear the "Username" field
 type "new_username" in the "Username" field
 ```
 
 ### Pressing Enter/Return
+
+<VerifiedTag value="Verified" />
 
 ```
 press Enter
@@ -500,6 +539,8 @@ This can trigger form submission, keyboard dismissal, or moving to the next fiel
 ## Using Explicit Element Identifiers
 
 On mobile, adding element type keywords improves accuracy because there may be multiple elements with similar text.
+
+<VerifiedTag value="Verified" />
 
 ```
 click on "Continue" button
@@ -530,6 +571,8 @@ Deep links are excellent for test setup. Jump directly to the screen you want to
 
 ### Scenario: E-Commerce App - Browse and Purchase
 
+<VerifiedTag value="Verified" />
+
 ```
 -- Handle initial permissions --
 if "Allow Notifications" is visible then click on "Allow Notifications"
@@ -559,6 +602,8 @@ click on "Checkout" button
 
 ### Scenario: Banking App - Check Balance with Biometric
 
+<VerifiedTag value="Verified" />
+
 ```
 -- App launches with biometric authentication enabled from advanced settings --
 wait for 5 seconds
@@ -578,6 +623,8 @@ assert "Recent Transactions" section is visible
 ```
 
 ### Scenario: Social Media App - Post with Image
+
+<VerifiedTag value="Verified" />
 
 ```
 click on the "New Post" button
@@ -608,6 +655,8 @@ See [Network Throttling](/support/docs/kaneai-network-throttling) for configurat
 ### GPS Mocking (Mobile)
 
 Test location-dependent features by mocking GPS coordinates:
+
+<VerifiedTag value="Verified" />
 
 ```
 -- Set location to New York --

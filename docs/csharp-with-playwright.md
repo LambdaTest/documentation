@@ -171,6 +171,8 @@ cd playwright-csharp
 
 2. Restore the .NET dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 dotnet restore
 ```

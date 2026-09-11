@@ -23,6 +23,7 @@ slug: kaneai-kb-assertions-and-validation/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -254,6 +255,8 @@ All assertions have an option for failure behavior. By default, a failure in ass
 
 Check whether specific text content is present (or absent) on the page.
 
+<VerifiedTag value="Verified" />
+
 ```
 assert "Welcome Back, John!" is visible
 assert "Your order has been placed" is displayed
@@ -262,6 +265,9 @@ assert "Out of Stock" is not visible on the page
 ```
 
 **With variables:**
+
+<VerifiedTag value="Verified" />
+
 ```
 assert {{username}} is visible on the page
 assert {{api_response.message}} contains "success"
@@ -270,6 +276,8 @@ assert {{api_response.message}} contains "success"
 ### Visual Assertions
 
 Verify that images, logos, icons, or visual elements appear correctly.
+
+<VerifiedTag value="Verified" />
 
 ```
 assert the TestMu logo is visible in the header
@@ -285,6 +293,8 @@ Visual assertions rely on screenshots. Elements smaller than 12×12 pixels may n
 
 Validate the browser state such as the current URL or page title.
 
+<VerifiedTag value="Verified" />
+
 ```
 assert the current URL is "https://example.com/dashboard"
 assert the current URL contains "/dashboard"
@@ -295,6 +305,8 @@ assert the page title contains "Dashboard"
 
 Check the spatial relationship between elements.
 
+<VerifiedTag value="Verified" />
+
 ```
 assert the "Login" button is in the same row as the "Register" link
 assert the "Submit" button is below the form fields
@@ -303,6 +315,8 @@ assert the "Submit" button is below the form fields
 ### Mathematical Assertions
 
 Validate calculations and numeric values.
+
+<VerifiedTag value="Verified" />
 
 ```
 assert 3 + 4 = 7
@@ -355,6 +369,8 @@ Assert the value of any HTML, ARIA, or data attribute on an element.
 | **Form attributes** | `Assert the method of the form equals "POST"` |
 
 **Attribute existence checks:**
+
+<VerifiedTag value="Verified" />
 
 ```
 Assert the Sample video has a controls attribute
@@ -438,6 +454,9 @@ Negation is supported across all assertion types using "NOT", "is not", "isn't",
 The assertion must have a clear true/false answer given the page state.
 
 :::note Bad
+
+<VerifiedTag value="Verified" />
+
 ```
 assert the page is user-friendly
 assert the layout is correct
@@ -445,6 +464,9 @@ assert the layout is correct
 :::
 
 :::tip Good
+
+<VerifiedTag value="Verified" />
+
 ```
 assert the navigation menu has 5 items
 assert the "Search" input field is visible at the top of the page
@@ -462,6 +484,9 @@ KaneAI uses a screenshot + DOM combination. Very small visual details may not be
 - Font sizes or font families
 
 **Safer alternatives:**
+
+<VerifiedTag value="Verified" />
+
 ```
 assert the button appears red          (instead of assert color is #ff0000)
 assert the error border is visible   (instead of assert border is 2px solid red)
@@ -470,6 +495,8 @@ assert the error border is visible   (instead of assert border is 2px solid red)
 ## Real-World Assertion Scenarios
 
 ### Scenario: Login Flow Validation
+
+<VerifiedTag value="Verified" />
 
 ```
 type "admin@example.com" in the email field
@@ -486,6 +513,8 @@ assert "Welcome, Admin" is visible
 
 ### Scenario: E-Commerce Cart Validation
 
+<VerifiedTag value="Verified" />
+
 ```
 click "Add to Cart" for the "Wireless Mouse" product
 click on the cart icon
@@ -497,6 +526,8 @@ assert "Your cart is empty" is visible
 ```
 
 ### Scenario: Form Validation Messages
+
+<VerifiedTag value="Verified" />
 
 ```
 click the "Submit" button without filling any fields
@@ -510,6 +541,8 @@ assert "First name must be at least 2 characters" is visible
 
 ### Scenario: Search Results Verification
 
+<VerifiedTag value="Verified" />
+
 ```
 type "laptop" in the search field and press Enter
 wait for 3 seconds
@@ -519,6 +552,8 @@ assert the results count is greater than 0
 ```
 
 ### Scenario: Data Table Content Validation
+
+<VerifiedTag value="Verified" />
 
 ```
 assert the "Users" table header is visible
@@ -532,6 +567,8 @@ Variables make assertions dynamic and reusable, especially when combined with AP
 
 ### String Variable Assertions
 
+<VerifiedTag value="Verified" />
+
 ```
 set expectedTitle as "Dashboard"
 assert {{expectedTitle}} is visible on the page
@@ -540,6 +577,8 @@ assert {{expectedTitle}} is visible on the page
 ### JSON Variable Assertions (from API)
 
 After making an API call via the `/` command, the response is stored as a JSON variable:
+
+<VerifiedTag value="Verified" />
 
 ```
 assert {{api_response.status}} is "200"
@@ -551,6 +590,8 @@ assert {{api_response.data.items}} contains "Laptop"
 
 Store a value from the UI, make an API call, and compare:
 
+<VerifiedTag value="Verified" />
+
 ```
 Fetch the order ID displayed on the confirmation page
 -- (stored as a variable such as {{orderID}}) --
@@ -561,6 +602,8 @@ assert {{api_response.orderId}} equals {{orderID}}
 ## Conditional Assertions
 
 KaneAI supports basic if-else logic for assertions that depend on page state.
+
+<VerifiedTag value="Verified" />
 
 ```
 if "Login" button is visible then click on it

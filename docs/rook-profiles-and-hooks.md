@@ -15,6 +15,33 @@ site_name: TestMu AI
 slug: rook-profiles-and-hooks/
 canonical: https://www.testmuai.com/support/docs/rook-profiles-and-hooks/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Profiles and Hook Contract",
+          "item": `${BRAND_URL}/support/docs/rook-profiles-and-hooks/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -131,6 +158,8 @@ A profile is a name, the scripts Rook runs to reach an agent, and references to 
 
 ## Let Rook Write the Profile
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook profile add
 rook profile add staging --from call.txt
@@ -148,6 +177,8 @@ rook profile use staging
 ## Lifecycle
 
 Rook passes the phase name as the only script argument. A script implements the phases it needs and exits successfully for the rest. Only `execute` is required.
+
+<VerifiedTag value="Verified" />
 
 ```text
 once per run        once per scenario                     per run
@@ -171,6 +202,8 @@ Authentication, transport, session management, and evidence collection are separ
 ## Hook Inputs
 
 Rook invokes:
+
+<VerifiedTag value="Verified" />
 
 ```text
 your-script.mjs <phase>
@@ -197,6 +230,8 @@ On `execute`, the arbitrary scenario goal arrives on standard input. No other ph
 
 Write one JSON object to standard output for `execute` and `collect`. Write diagnostics to standard error.
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "output": "Your order ships Tuesday.",
@@ -222,6 +257,8 @@ If the first turn of a multi-turn scenario returns no conversation handle, Rook 
 A non-zero exit is a failed hook and standard error is its diagnosis. An `execute` or `collect` failure fails the affected scenario. Failures in the other optional phases are reported while the run preserves completed work.
 
 ## Profile File
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 name: staging
@@ -285,6 +322,8 @@ Default phase timeouts are:
 
 For longer evidence delays, split the run:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 rook run --phases prepare,open,execute,close
 rook run --run <run-id> --phases collect,judge
@@ -293,6 +332,8 @@ rook run --run <run-id> --phases collect,judge
 A phase selection may be a prefix or suffix, never a sequence with a hole.
 
 ## Script Location
+
+<VerifiedTag value="Verified" />
 
 ```text
 .testmuai/rook/projects/<project>/agents/order-desk/

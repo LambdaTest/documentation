@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-vnet-peering-for-p
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -141,6 +142,8 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
 - Clear all the text present in the editor and paste the contents of the ARM script provided below.  
   
     **ARM Template**
+
+<VerifiedTag value="Verified" />
 
 ```bash
   // ####################################################################################

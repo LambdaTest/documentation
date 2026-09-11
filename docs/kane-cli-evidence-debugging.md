@@ -15,6 +15,8 @@ site_name: TestMu AI
 slug: kane-cli-evidence-debugging/
 canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-debugging/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -144,6 +146,8 @@ Treating these as one bucket is how a flaky environment gets filed as a product 
 
 A sealed pack is a zip, so you do not need the viewer to answer a quick question:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 # list everything in the pack
 unzip -l <execution_id>.evidence
@@ -158,6 +162,8 @@ unzip -p <execution_id>.evidence tests/<test-id>/result.yaml
 ## When the pack itself looks wrong
 
 If a pack will not open, run [`kane-cli evidence validate`](/support/docs/kane-cli-evidence-validate/). An unsealed pack, for example from a run that was killed hard, is checked for structure only and can still report valid. A truncated pack cannot be read at all. Either way the session directory still holds that run's pack:
+
+<VerifiedTag value="Verified" />
 
 ```text
 ~/.testmuai/kaneai/sessions/<session-id>/evidence/

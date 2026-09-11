@@ -237,6 +237,8 @@ To test a localized version of your app on <BrandName />, use the `locale` param
 
 **For Example:** 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 --header 'Authorization: Basic <Enter_Basic_Auth>' \

@@ -169,10 +169,16 @@ We will be performing a demonstration by using the Protractor framework
     * A [Git or GitHub](https://github.com/) repository
     * Download and install node.js and node package manager or npm.
     To install node.js with homebrew, use the below command.
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ brew install node
     ```
     * If you have npm already installed, you may want to upgrade it to the latest version. Here the code you can run in your terminal to upgrade npm.
+
+    <VerifiedTag value="Verified" />
+
     ```
     npm install npm@latest -g
     ```
@@ -180,6 +186,9 @@ We will be performing a demonstration by using the Protractor framework
 * <BrandName /> Authentication Credentials
 
     * Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your <BrandName /> automation dashboard by clicking on the key icon near the help button.
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME>
     $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
@@ -235,6 +244,8 @@ For Instance, if you select the below configurations:
 | Selenium Version | 3.11.0 |
 
 Then Capabilities Generator at <BrandName /> will provide you with the below program:
+
+<VerifiedTag value="Verified" />
 
 ```
 var capabilities = {
@@ -323,6 +334,8 @@ blocks:
 Parallel Testing is one of the most demanding features of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. You perform a single test scenario across different browsers or run different test scenarios across the same browser but with different browser versions.
 
 To perform automation testing in parallel on Windows, use the below command.
+
+<VerifiedTag value="Verified" />
 
 ```
 node ./node_modules/protractor/bin/protractor parallel.conf.js

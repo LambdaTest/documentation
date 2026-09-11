@@ -245,6 +245,8 @@ import TabItem from '@theme/TabItem';
 <Tabs className="docs__val">
 <TabItem value="macos-file" label="Linux/macOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "<USERNAME>:<KEY>" \
@@ -258,6 +260,9 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="windows-file" label="Windows" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "<USERNAME>:<KEY>" \
@@ -276,6 +281,8 @@ import TabItem from '@theme/TabItem';
 <Tabs className="docs__val">
 <TabItem value="macos-url" label="Linux macOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -288,6 +295,9 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 
 <TabItem value="windows-url" label="Windows" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
@@ -523,6 +533,8 @@ simulatorTest()
 </Tabs>
 
 2. Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="androidXML" label="Android" default>

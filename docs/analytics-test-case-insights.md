@@ -261,6 +261,8 @@ To know more about the hooks and how to use them, you can refer to the [LambdaHo
 
 You can capture the test case insights by using the WebHook. You need to add the following `WebHook` in your test script.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 // For Stage of test case `START`
 driver.executeScript(`lambda-testCase-start=${Name of the test case}`)
@@ -316,6 +318,8 @@ You can capture the test case insights by using the NPM Package. You need to add
 :::caution
 The package currently only supports for `WebdriverIO` framework. We will be adding support for other frameworks soon.
 :::
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i wdio-lambdatest-test-case-analytics-service

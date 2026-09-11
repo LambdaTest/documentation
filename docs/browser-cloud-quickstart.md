@@ -169,6 +169,8 @@ controlling a cloud browser.
 1. Create a `.env` file in your project root (if you don't have one)
 2. Add your credentials:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT_USERNAME=your_username
 LT_ACCESS_KEY=your_access_key
@@ -179,6 +181,8 @@ LT_ACCESS_KEY=your_access_key
 
 ## Installing the TestMu AI Browser SDK
 ***
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npm i @testmuai/browser-cloud

@@ -168,6 +168,8 @@ The above configuration ensures that your tests run on Windows OS using the late
 ## Step 2: Configure your HyperExecute YAML file
 The HyperExecute YAML configuration file is the blueprint for running your tests in the HyperExecute cloud environment. It defines the testing environment, execution strategy, and resource allocation. Properly configuring this file ensures that your tests are executed efficiently across the desired platforms and browsers.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" queryString="test-method">
   <TabItem value="autosplit" label="AutoSplit" default>
     [AutoSplit mode](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) automatically splits your scenarios among the concurrent number of tasks and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.

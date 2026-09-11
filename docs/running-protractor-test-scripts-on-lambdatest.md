@@ -229,12 +229,17 @@ Complete these steps before running Protractor Selenium tests on TestMu AI.
 ---
 Clone the TestMu AI Protractor Selenium sample repository to your local machine.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/protractor-selenium-sample
 cd protractor-selenium-sample
 ```
 
 Install the required dependencies:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install
 ```
@@ -247,6 +252,8 @@ Set your TestMu AI username and access key as environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -257,6 +264,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -292,11 +301,17 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm run single
 ```
 
 **Parallel tests:**
+
+<VerifiedTag value="Verified" />
+
 ```bash
 npm run parallel
 ```
@@ -320,6 +335,8 @@ Use AI coding assistants to generate and run Protractor tests with the TestMu AI
 The [protractor-skill](https://github.com/LambdaTest/agent-skills/tree/main/protractor-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

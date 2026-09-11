@@ -24,6 +24,7 @@ canonical: https://www.testmuai.com/support/docs/localstack-integration-with-tes
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -229,12 +230,16 @@ To ensure LocalStack functions properly, your API key must be available in the e
 
 ### **For macOS/Linux:**
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LOCALSTACK_API_KEY=<YOUR_API_KEY>
 localstack start -d
 ```
 
 ### **For Windows:**
+
+<VerifiedTag value="Verified" />
 
 ```bash
 $env:LOCALSTACK_API_KEY=<YOUR_API_KEY> localstack start -d
@@ -245,6 +250,8 @@ $env:LOCALSTACK_API_KEY=<YOUR_API_KEY> localstack start -d
 To showcase how you can run LocalStack on your local machine and execute your tests, we will showcase a sample solution to resize images uploaded to a local S3 through a serverless application. The solution will feature a simple web user interface that uses local Lambda functions to generate S3 pre-signed URLs allowing the S3 bucket notifications to trigger a Python Lambda that runs image resizing. 
 
 > **Note:** The code for the solution in this post is located in this [repository on GitHub](https://github.com/localstack-samples/sample-serverless-image-resizer-s3-lambda). You can clone this repository and install its local dependencies by executing the following commands in your terminal:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 git clone 
@@ -259,11 +266,15 @@ The above commands will create a Python virtual environment inside the project d
 
 **Step 1:** Install it using `pip`.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 pip install awscli-local
 ```
 
 **Step 2:** After the installation of `awslocal`, you can create the AWS infrastructure on LocalStack by running the following command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 bin/deploy.sh
@@ -277,6 +288,8 @@ The above command will create the **S3 buckets**, put the bucket names into the 
 
 **Step 3:** You can fetch the function URL by running the following commands:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 awslocal lambda list-function-url-configs --function-name presign 
 awslocal lambda list-function-url-configs --function-name list
@@ -286,6 +299,8 @@ awslocal lambda list-function-url-configs --function-name list
 **Step 4:** You can now upload an image file and download the resized file from the `localstack-thumbnails-app-resized` bucket.
 
 **Step 5:** To run the automated integration tests, use `pytest`. Run the following command to execute the tests for your application:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 pytest tests/
@@ -302,6 +317,8 @@ One way to run LocalStack test cases on HyperExecute is by leveraging GitHub Act
 * A HyperExecute file located at he.yml declares the workflow of the pipeline execution via a YAML configuration.
 
 **Step 1:** Navigate to the root directory and click on **Add File** button. Name the file `he.yml` and add the following configuration:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 version: "0.1"
@@ -341,6 +358,8 @@ sourcePayload:
 **Step 4:** To create the GitHub Actions pipeline `YAML` file, navigate to the repository where your code is available. In this example, you can assume that we are adding this to the previous code sample that we demonstrated. 
 
 **Step 5:** Under your repository name, click **Actions**. In the left sidebar, click the **New Workflow** button. Add the following `YAML` configuration to the workflow:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 name: HyperExecute

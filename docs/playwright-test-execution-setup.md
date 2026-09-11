@@ -228,6 +228,8 @@ Following is a list of compatible Playwright bundled browsers that you can use t
 ### Bundled Browser Versions
 When you set the `useSpecificBundleVersion: true` capability, <BrandName /> selects the browser (Chromium, Firefox, WebKit) version that matches your local machine's Playwright version:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}
 ```
@@ -475,11 +477,15 @@ Shown below is syntax how to mark Playwright tests as **Passed** or **Failed**.
 
 1. To mark test status as **passed**.
 
+<VerifiedTag value="Verified" />
+
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)
 ```
 
 2. To mark test status as **failed**.
+
+<VerifiedTag value="Verified" />
 
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)

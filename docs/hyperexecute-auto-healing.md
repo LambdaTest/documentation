@@ -141,6 +141,8 @@ const capability = {
 ```
 **Step 2:** Now, trigger your test on HyperExecute using the mentioned command. Please replace the placeholder values with your details.
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}

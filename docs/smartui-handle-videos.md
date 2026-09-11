@@ -160,6 +160,8 @@ This approach ensures that:
 
 ### Process Flow
 
+<VerifiedTag value="Verified" />
+
 ```
 Page Load → Video Detection → First Frame Extraction → Static Image Comparison → Results
 ```
@@ -217,6 +219,8 @@ SmartUI handles videos automatically with no additional configuration required. 
 ### Using waitForTimeout
 
 If videos take time to load, you can add a wait timeout to ensure the first frame is captured correctly:
+
+<VerifiedTag value="Verified" />
 
 ```json
 {
