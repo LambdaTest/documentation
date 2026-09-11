@@ -267,6 +267,8 @@ You can download the CLI for your desired platform from the below mentioned link
 ## Step 3: Configure YAML in your Test Suite
 Use the sample YAML below to configure your execution:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>
     ```yaml title="hyperexecute_android.yaml" reference
@@ -283,6 +285,8 @@ Use the sample YAML below to configure your execution:
 
 :::info
 To Run test on Mobile Containers in a Particular Region
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 dynamicAllocation: true
@@ -302,6 +306,8 @@ framework:
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -329,6 +335,8 @@ The [playwright-skill](https://github.com/LambdaTest/agent-skills/tree/main/play
 
 The playwright-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 playwright-skill/
 ├── SKILL.md
@@ -351,6 +359,8 @@ It provides structured guidance for:
 ***
 
 Install a Playwright Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

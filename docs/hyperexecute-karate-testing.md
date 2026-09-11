@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import DocCard from '@site/src/component/DocCard';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -247,6 +248,8 @@ The CLI triggers your tests on HyperExecute. Download the binary for your platfo
 
 Set the OS, Java runtime, and how many sessions run in parallel:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 version: 0.1
 runson: linux    # OS the tests run on (e.g. linux, win)
@@ -262,6 +265,8 @@ runtime:
 
 The `pre` step pulls all Maven dependencies into a local `.m2` directory once, so each runner reuses them for a reproducible build:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 pre:
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
@@ -270,6 +275,8 @@ pre:
 #### Test runner command
 
 `testRunnerCommand` runs one feature file per runner. With `autosplit: true`, HyperExecute passes each discovered `.feature` path in through the `$test` placeholder:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath="$test" -Dhub=https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com/wd/hub -Dmaven.repo.local=./.m2
@@ -284,6 +291,8 @@ testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath="$test" -Dhub=https
 
 By default this runs one feature file per runner. To run a subset instead (for example, only scenarios tagged `@smoke`, a specific runner class, or a folder of features), pass Karate options:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 mvn test -Dkarate.options="--tags @smoke"
 ```
@@ -293,6 +302,8 @@ mvn test -Dkarate.options="--tags @smoke"
 #### Test discovery
 
 `testDiscovery` lists the `.feature` files to run and hands them to the runner. HyperExecute splits this list across the parallel nodes:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testDiscovery:
@@ -311,6 +322,8 @@ testDiscovery:
 
 The discovery command runs first and lists paths to every `.feature` file. HyperExecute saves each path as a test case and passes one at a time to a runner through the `$test` placeholder. Each runner executes its feature in parallel, up to `concurrency`:
 
+<VerifiedTag value="Verified" />
+
 ```
 src/test/java/app/login.feature
 src/test/java/app/signup.feature
@@ -318,6 +331,8 @@ src/test/java/app/payments.feature
 ```
 
 The full configuration also defines a `background` step that starts the Karate mock server (`mvn clean test -Dtest=LocalRunner`), `report`/`partialReports` for the Cucumber reports, and a `post` step that stops the mock server (`curl http://localhost:8080/__admin/stop`):
+
+<VerifiedTag value="Verified" />
 
 ```yaml reference title="HyperExecute.yaml"
 https://github.com/LambdaTest/hyperexecute-karate-sample/blob/main/HyperExecute.yaml
@@ -328,6 +343,8 @@ For every YAML key and project-specific option, see the [YAML parameters referen
 ### Step 4: Trigger the run from the CLI
 
 From the project root directory, run the CLI command in your terminal:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

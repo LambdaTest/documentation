@@ -160,6 +160,8 @@ Concourse CI can be integrated with <BrandName /> to perform automation testing 
 
 2. Install NPM(Node Package Manager). If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install npm@latest -g
 ```
@@ -188,6 +190,8 @@ npm install npm@latest -g
 
 5. Install fly CLI tool for Concourse CI/CD. We recommend using the latest fly version, you can check the fly version using:
 
+<VerifiedTag value="Verified" />
+
 ```
 $ fly -v
 ```
@@ -197,6 +201,8 @@ $ fly -v
 > Note: Clone this [GitHub repository for Selenium and Concourse CI](https://github.com/LambdaTest/concourse-nodejs-selenium-sample).
 
 Open your terminal or command prompt. Login to your Concourse server and save the target.
+
+<VerifiedTag value="Verified" />
 
 ```
 $ fly -t ci login -c http://127.0.0.1:8080 -u test -p test
@@ -241,6 +247,8 @@ jobs:
 ```
 
 After you specify the right configuration in the `pipeline-config.yml`, you now need to create your concourse pipeline with the help of fly CLI.
+
+<VerifiedTag value="Verified" />
 
 ```
 $ fly -t ci set-pipeline -p nodejs-lambda-sample -c pipeline-config.yml

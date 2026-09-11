@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-winapp-integration
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -142,6 +143,8 @@ Setting up the WinAppDriver is an important step in the process to run Microsoft
 2. Place a Java test file `LtWinDriver.java` that contains the two functions in the `src/main` folder. 
 A sample `LtWinDriver.java` file: 
 
+<VerifiedTag value="Verified" />
+
 ```bash
 import java.io.File;
 import java.io.IOException;
@@ -185,6 +188,8 @@ You can use the sum formula to add these two numbers, but if you want to run it 
     
 
 Here is a sample java test file `Test.java` that accomplishes the function mentioned above. All of your test files should be placed in the `src/test` folder.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 import java.util.concurrent.TimeUnit;
@@ -259,6 +264,8 @@ public class Test1 {
 ## HyperExecute YAML file
 
 A sample YAML file that can run the test scenario mentioned above is shown below. You can learn more about configuring your YAML file by going through [this page](/support/docs/deep-dive-into-hyperexecute-yaml/).
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---

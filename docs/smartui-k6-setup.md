@@ -29,6 +29,30 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Getting started with SmartUI using K6",
+          "item": `${BRAND_URL}/support/docs/smartui-k6-setup/`
+        }]
+      })
+    }}
+></script>
+
+<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -298,6 +322,8 @@ This documentation will act as your step-by-step guide in to perform K6 test wit
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -343,6 +369,8 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Clone the sample GitHub repository:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-k6-sample
 cd smartui-k6-sample
@@ -350,11 +378,15 @@ cd smartui-k6-sample
 
 2. Install the required dependencies:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/k6-driver
 ```
 
 3. Install k6 by referring to the installation guide `https://k6.io/docs/get-started/installation/`:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS' label='MacOS' default>
@@ -374,6 +406,8 @@ winget install k6
 </Tabs>
 
 4. Set up the <BrandName /> credentials by using the commands below in the terminal. The account details are available on your [<BrandName /> Profile](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) page.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -407,6 +441,8 @@ $env:PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 
 5. Create and configure SmartUI config file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npx smartui config:create smartui-web.json
 ```
@@ -431,6 +467,8 @@ export default function () {
 ### **Step 3:** Executing the SmartUI Test Suite
 
 Execute the test using the following command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec k6 run test.js

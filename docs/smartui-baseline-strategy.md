@@ -22,6 +22,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -150,6 +151,8 @@ Single Baseline does not discard git metadata. Branch, commit and author are sti
 
 ## Setting the strategy
 
+<VerifiedTag value="Verified" />
+
 <Tabs className='docs__val' groupId='baseline-strategy-setup'>
 <TabItem value='dashboard' label='Dashboard' default>
 
@@ -194,6 +197,8 @@ Project Settings shows the strategy the project was created with as a read only 
 <img loading="lazy" className='doc_img' width="1180" height="151" src={require('../assets/images/smart-visual-testing/baseline-strategy/project-settings-baseline-strategy.png').default} alt="Baseline Strategy row in SmartUI Project Settings reading The baseline model this project was created with. It cannot be changed, above a Git Strategy chip" />
 
 The strategy is accepted only when the project is created. A later attempt to change it through Project Settings or through the API is rejected:
+
+<VerifiedTag value="Verified" />
 
 ```json
 { "error": "baseline strategy is set at project creation and cannot be changed" }

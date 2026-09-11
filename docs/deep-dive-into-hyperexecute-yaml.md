@@ -858,6 +858,9 @@ This document contains detailed explanations for all YAML flags, providing an in
 
 ### `version`
 The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/hyperexecute-yaml-version0.2/). 
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 version: 0.1
 ```
@@ -868,11 +871,15 @@ version: 0.1
 In this flag, you will define your required Operating System on which you want to run your tests.
 > Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11). 
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runson: linux # mac, mac13, win, win11
 ```
 
 If you want to run a multi OS job, you can use [matrix method](/support/docs/hyperexecute-matrix-multiplexing-strategy/) as shown below
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 runson: ${matrix.os}
@@ -884,6 +891,8 @@ matrix:
 
 ### `pre`
 All actions you need to perform before each test execution, such as installing dependencies. You’ll ideally want to use this parameter to "pre" run simple commands like `npm install`, `yarn install`, `mvn install` etc
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 pre:
@@ -905,6 +914,8 @@ For instance, if you have a concurrency of 10 and you want to run 50 tests in to
 
 > **Note:** In [`local mode`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode), these commands will be smartly distributed among the VMs using history data, such that each VM (`task`) gets to run for almost the same amount of time to reduce your total [`job`](/support/docs/hyperexecute-guided-walkthrough/#jobs-page) time.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 autosplit: true   
 ```
@@ -918,6 +929,8 @@ This indicates the total number of concurrent sessions that can run in parallel 
 
 > if you are using the [AutoSplit strategy](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) then it is mandatory for you to define the concurrency.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 concurrency: 10   
 ```
@@ -930,6 +943,9 @@ concurrency: 10
 
 ### `testDiscovery`
 This is used to locate or discover relevant tests via class names, filters, file names, etc. 
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 testDiscovery:
   type: raw
@@ -939,6 +955,9 @@ testDiscovery:
 
 It contains the following attributes: 
 #### `type` 
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 #(Recommended). When we are passing a command to discover tests. 
 type: raw   #or
@@ -967,6 +986,8 @@ In summary, `type:raw` is a basic and straightforward approach for discovering t
 This attribute defines where the test discovery occurs and how it is executed. HyperExecute supports two discovery modes: `local` and `remote`.
 
 > **NOTE:** The earlier `dynamic` discovery mode has been deprecated. Use `remote` instead for all new and existing YAML configurations.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 #test discovery happens on machine where CLI is running
@@ -1003,6 +1024,9 @@ This setup helps to ease the discovery process and makes it more efficient, espe
 
 #### `command`
 The command that fetches the list of test scenario that would be further executed using the value passed in `testRunnerCommand`
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
@@ -1014,6 +1038,8 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 
 ### `testRunnerCommand`
 The `testRunnerCommand` used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
@@ -1027,6 +1053,8 @@ testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="
 
 ### `matrix`
 The [matrix mode](/support/docs/hyperexecute-matrix-multiplexing-strategy/) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 runson: ${matrix.os}
@@ -1042,6 +1070,8 @@ matrix:
 
 ### `exclusionMatrix`
 The [exclusion matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/#exclusion-in-matrix-strategy) allows you to omit specific combinations of parameters from being tested. For instance, if Safari on Windows is not a valid combination, you can exclude it using the exclusionMatrix parameter, ensuring that invalid or irrelevant test combinations are skipped.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 #runson defines the OS of your test execution node.
@@ -1073,6 +1103,8 @@ For example, the below-mentioned YAML snippet will generate a total of 8 scenari
 
 > **Total Scenarios =** *[Entries in os List] x [Entries in browser List] x [Entries in Files List]*
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 concurrency: 2
 combineTasksInMatrixMode: true
@@ -1086,6 +1118,8 @@ matrix:
 ### `testSuites`
 A command to run the tests that were mentioned in the scenario key for [matrix](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) based test execution.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testSuites: - mvn test -Dtest=$files
 ```
@@ -1098,6 +1132,8 @@ testSuites: - mvn test -Dtest=$files
 
 ### `parallelism`
 `parallelism` defines the number of virtual machines [('tasks')](/support/docs/hyperexecute-status/#2-task-level-status) to be spawned in the case of hybrid mode. If you are not defining the parallelism, then you must define operating system-specific parallelism (win, mac, and  Linux). If both are defined, then preference will be given to OS-based parallelism.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 runson: ${matrix.os}
@@ -1125,6 +1161,8 @@ So each combination will run on a parallelism provided in the yaml. Here all com
 
 If you want to provide different parallelism for macOS, linux and windows. If any of the specific operating system parallelism is not present it will consider the `parallelism` as the default value.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 parallelism: 2
 linuxParallelism: 2
@@ -1141,6 +1179,8 @@ In the above example linux combinations will run on a parallelism on 2, `windows
 ### `testRunnerCommand`
 The `testRunnerCommand` used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
 
@@ -1152,6 +1192,8 @@ testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="
 In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple operating system using the same yaml. You can provide different `testRunnerCommand` for macOS, linux and windows.
 
 If any of the specific operating system `testRunnerCommand` is not present it will consider the `testRunnerCommand` as the default value.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
@@ -1169,12 +1211,16 @@ It is a unique identifier that enables HyperExecute to store and retrieve cached
 
 If an entry exists and the dependencies haven't changed, HyperExecute reuses the cached directives. If no entry exists, a new one is created. Upon successful job completion, the directives are cached for future use. This process avoids redundant downloads of dependencies, ensuring faster test execution.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 cacheKey: '{{ checksum "pom.xml" }}'
 ```
 
 :::tip
 If you also use Windows, you can use **forward slashes** to specify the cache file's path if your file is inside one of the directories, as demonstrated below:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 cacheKey: {{ checksum "dir1/dir2/package-lock.json" }}
@@ -1183,6 +1229,8 @@ cacheKey: {{ checksum "dir1/dir2/package-lock.json" }}
 
 ### `cacheDirectories`
 It is used to cache files that do not change frequently, such as dependency files for your tests (e.g., node_modules, .m2). By caching these files, HyperExecute can significantly speed up your test execution time in subsequent runs.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 cacheDirectories:
@@ -1194,6 +1242,9 @@ In [version 0.2 YAML](/support/docs/hyperexecute-yaml-version0.2/), the support 
 
 If you add the `cacheDirectories` and `cacheKey` keys in your YAML file, then the default caching gets disabled and preference is given your specified cache.
 :::
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
@@ -1205,6 +1256,8 @@ cacheDirectories:
 ### `env`
 This is helpful to set environment variables on the machine and use it in your code or install dependencies to run your test cases.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 env:
   USERNAME: abc
@@ -1214,6 +1267,8 @@ env:
 #### Special Character Encoding
 
 HyperExecute VMs support special character encoding, ensuring tests with multilingual content and special characters (e.g., ñ, á, é, í, ó, ú, ü, ¿, ¡) execute correctly. You can configure this using the `env` and `pre` flags in your YAML file.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 env:
@@ -1227,6 +1282,9 @@ pre:
 
 :::tip
 If you are using Java-based frameworks, you can also set the encoding via `JAVA_TOOL_OPTIONS`:
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 env:
   JAVA_TOOL_OPTIONS: "-Dfile.encoding=UTF-8"
@@ -1248,6 +1306,8 @@ Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-
 > 📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
 
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 runtime:
   - language: java
@@ -1255,6 +1315,8 @@ runtime:
 ```
 
 - You can also install **gauge** and **gradle** only as an additional frameworks or tools independent of the language defined.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 runtime:
@@ -1268,6 +1330,8 @@ runtime:
 ```
 
 - You can also provide **multiple languages** and their **specified versions** that you want installed on your machine.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 runtime:
@@ -1288,6 +1352,8 @@ runtime:
 
 ### `retryOnFailure`
 The `retryOnFailure` enables automatic retries for failed test scenarios only when the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) itself fails. When set to `true`, the system will retry failed commands based on the [`maxRetries`](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) value defined. The default setting is `false`.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 retryOnFailure: true
@@ -1319,6 +1385,8 @@ With `maxRetries` and `retryOnFailure`, you don't need to rerun the entire job t
 
 > You can set a value between 1 and 5 for `maxRetries`, indicating the maximum number of retries for your tests.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 retryOnFailure: true
 maxRetries: 2
@@ -1328,6 +1396,8 @@ maxRetries: 2
 
 ### `post`
 This parameter is used for executing actions after every test execution, such as printing an output file or uploading a report via a curl API request. It's ideal for performing post-run tasks.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 post:
@@ -1342,6 +1412,8 @@ post:
 ### `report`
 This allows you to generate a consolidated report across the VMs. To use this feature, provide `report: true`, and the relative path of the data where it is expected to store and generate the reports after your test execution. You can also define the type and frameworkName of the report inside `partialReports` as shown in below example.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 report: true
 partialReports:
@@ -1354,6 +1426,8 @@ It helps you to view the report on the dashboard itself. You can download the re
 
 :::info
 If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/):
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 partialReports:
@@ -1369,6 +1443,9 @@ partialReports:
 
 :::note
 Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 framework:
   name: maven/testng
@@ -1380,6 +1457,9 @@ framework:
 You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
 
 Example:
+
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 partialReports:
   location: reports/**/cucumber/
@@ -1413,6 +1493,8 @@ The `errorCategorizedOnFailureOnly` flag allows you to control the behavior of e
 
 When you enable this flag as mentioned below, the error categorization will only be generated for stages that are not passed.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 errorCategorizedOnFailureOnly: true
 ```
@@ -1422,6 +1504,8 @@ errorCategorizedOnFailureOnly: true
 ### `errorCategorizedReport`
 
 The `errorCategorizedReport` flag is used to export a RCA report that has been generated by the failed tests.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 errorCategorizedReport:
@@ -1441,6 +1525,8 @@ To prioritize your jobs, you need to add the required priority to the jobLabel k
 
 You can also use it along with your existing job labels like this: 
     
+<VerifiedTag value="Verified" />
+
 ```yaml
 jobLabel: ['chrome', 'linux', 'low']
 ```
@@ -1451,6 +1537,9 @@ jobLabel: ['chrome', 'linux', 'low']
 
 ### `mergeArtifacts`
 It is used to combine the artifacts created under each task to one. 
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 mergeArtifacts: true
 ```
@@ -1459,6 +1548,8 @@ mergeArtifacts: true
 
 ### `uploadArtefacts`
 It uploads the artifacts generated from running the tests, these artifacts are uploaded, preserved and can be downloaded once the job ends. 
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 uploadArtefacts:
@@ -1494,6 +1585,8 @@ The `globalPre` flag allows you to define a pre-execution step that runs once be
 - This feature is supported in YAML version 0.1 and 0.2 only.
 - `remote` mode is not supported for **XCUI** and **Espresso** framework jobs. Default mode for these frameworks is `local`.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 globalPre:
   mode: remote #local or remote
@@ -1507,6 +1600,8 @@ globalPre:
 <!-- 
 :::info
 You can also use `beforeAll` as an alias for the `globalPre` command:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 beforeAll:
@@ -1548,6 +1643,8 @@ The `globalPost` flag defines a post-execution step that runs once after all tas
 - This feature is supported in YAML version 0.1 and 0.2 only.
 - `remote` mode is not supported for **XCUI** and **Espresso** framework jobs. Default mode for these frameworks is `local`.
 
+<VerifiedTag value="Verified" />
+
 ```yaml title="hyperexecute.yaml"
 globalPost:
   mode: remote #local or remote
@@ -1562,6 +1659,8 @@ globalPost:
 
 <!-- :::info
 You can also use `afterAll` as an alias for the `globalPost` command:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 afterAll:
@@ -1592,6 +1691,9 @@ afterAll:
 ### `captureScreenRecordingForScenarios`
 If this key is set to true, it will record whole scenario execution, and then video is accessible from your HyperExecute dashboard.
 This can be majorly used for non selenium based tests to have the recorded video of the whole scenario.
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 captureScreenRecordingForScenarios: true
 ```
@@ -1605,6 +1707,8 @@ To avoid test failures, ensure the `video` capability is `false` before enabling
 ### `skipArtifactStageIfNoTest`
 It is used to gracefully handle the scenario stage inside the tasks in which there are no selenium/cdp tests executed. Instead of marking the artifact stage as failed (if artifacts are not found at the defined location, HyperExecute marks it as failed) and hence the task and job as failed, the stage would be marked as skipped and hence task and job as skipped. 
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 skipArtifactStageIfNoTest: true
 ```
@@ -1617,6 +1721,8 @@ The `globalTimeout` value determines the maximum duration (in minutes) of a Task
 
 For example, if you set the `globalTimeout` to 120 minutes, a Task(VM) that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 globalTimeout: 90   
 ```
@@ -1626,6 +1732,8 @@ globalTimeout: 90
 ### `failFast`
 FailFast feature allows you to stop running your tests in case there is a series of tests failure. failFast flag can be used to abort your job if the number of consecutive test failures for that job(jobID) across multiple tasks equals or exceeds the **maxNumberOfTests** value. 
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 failFast:
   maxNumberOfTests: 2
@@ -1634,6 +1742,8 @@ In case retryOnFailure flag is enabled in yaml, then there will be multiple retr
 
 :::info
 To apply `failFast` at the **scenario** level instead of the default test level, set the `level: scenario` in the YAML configuration.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 failFast:
@@ -1649,6 +1759,8 @@ failFast:
 ### `base`
 This feature allows you to use one YAML as a base for another YAML file. By inheriting the configurations of the base (or parent) YAML file, you don't need to specify those fields in the inheriting (child) file again. [Learn more](/support/docs/hyperexecute-inherit-config/).
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 base:
   yamls:
@@ -1660,6 +1772,8 @@ base:
 
 ### `sourcePayload`
 You can use this flag to use to define the source of your test scripts so that the scripts can directly be fetched from your git directly for execution on HyperExecute. Your test code is directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and uploaded through the HyperExecute CLI. To learn more about how this feature works, go through [this page](/support/docs/hyperexecute-how-to-configure-sourcePayload/).
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 sourcePayload:
@@ -1674,6 +1788,8 @@ sourcePayload:
 
 ### `hostsOverride`
 This field allows you to add domain mappings which are required to be added in the local DNS entry represented by the /etc/hosts file. This is required if you want to map a custom domain name to an ip (local or otherwise) so that any requests on this domain name resolves to the provided ip on HyperExecute machines where your tests are running. For instance, suppose for a domain "example.com", global DNS is having the entry which resolves the network call to the public IP address. With hostsOverride flag you can explicitly route the network call to a local IP address, instead of allowing the call to go through a public IP address.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 hostsOverride:
@@ -1692,6 +1808,9 @@ Set status of scenario based on framework tests status. For instance, if you run
 
 ### `testSuiteTimeout`
 It is used to set the timeout on all scenario  stages in a task. If defined, your complete test suite should get executed within this time. Its max value is 150 minutes.  If you want to increase this time beyond the default maximum limit of 150 minutes, you need to contact the support team.
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 testSuiteTimeout: 30   
 ```
@@ -1701,6 +1820,8 @@ In the above example, your scenario  stage should finish within 30 mins otherwis
 
 ### `testSuiteStep`
 It is used to timeout individual scenario stages in a task. Each scenario in separate tasks should get completed before this time.  If you want to increase this time beyond the default maximum limit of 150 minutes, you need to contact the support team.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testSuiteStep: 15   
@@ -1723,6 +1844,8 @@ Regular Expressions provides more granular control over when test retries are tr
 - Indicate the maximum number of retry attempts with `maxRetries: <number>`.
 - Within the `retryOptions` section, create an `errorRegexps` array to list the regular expressions that represent the errors you want to trigger retries.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 retryOnFailure: true
 maxRetries: 3
@@ -1739,6 +1862,8 @@ preDirectives currently has the ability to take the following additional inputs:
 - `commands`: The actual commands that needs to run like `npm install` or `mvn install`
 - `shell`: shell to execute the commands under. This is typically helpful if you want to run your pre commands in a specific shell. For example, `powershell` for Windows or `bash` for Linux and MacOS.
 - `workingDirectory`: This specifies the location of the directory in which all test discovery and execution commands will run, as well as the location of any files or directories that are created as a result of the command execution.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 preDirectives:
@@ -1759,6 +1884,8 @@ postDirectives currently has the ability to take the following additional inputs
 - `shell`: shell to execute the commands under. This is typically helpful if you want to run your post commands in a specific shell. For example, `powershell` for Windows or `bash` for Linux and MacOS. (Coming Soon)
 - `workingDirectory`: This specifies the location of the directory in which all test discovery and execution commands will run, as well as the location of any files or directories that are created as a result of the command execution.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 postDirectives:
     commands: [cat yaml/linux/v1/testng_hyperexecute_autosplit_sample.yaml]
@@ -1774,6 +1901,8 @@ postDirectives:
 
 **Solution :** The `alwaysRunPostSteps` flag ensures that post-steps execute even if the scenario stage fails.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 alwaysRunPostSteps: true
 ```
@@ -1788,6 +1917,9 @@ This flag is used to set the Name of your Projects which would later allow you t
 - Once you have created a project, you can pass in your project ID and project name to trigger your job on the same project.
 - If you are using   [**Project Level Secrets**](/support/docs/hyperexecute-how-to-manage-project-level-secrets/), you must include the id field in your project configuration.                                              
 :::
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 # 'id' is mandatory; 'name' is optional. You can pass both or just the 'id'.
 project:
@@ -1816,6 +1948,8 @@ When you pass the `differentialUpload` flag, it ensures that whenever you upload
 
 > **NOTE:** The default value for **ttlHours** is 60 hours
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 project:
   name: XYZ Name
@@ -1836,6 +1970,8 @@ The **`linkValidity`** flag is used to customize the duration of validity for re
 
 > **Note:** If `linkValidity` is not defined or 0, then the default link validity to access the artifacts and reports is 2 days. The maximum validity is 60 days.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 report: true
 
@@ -1848,6 +1984,8 @@ partialReports:
       - johndoe@example.com
     linkValidity: 5
 ```
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 uploadArtefacts:
@@ -1864,6 +2002,9 @@ uploadArtefacts:
 
 ### `stripParentDirectory`
 When mergeArtifacts is true, providing this flag will strip the parent directory from all the downloaded artifacts and place the artifacts in the base path.
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 stripParentDirectory: true
 ```
@@ -1872,6 +2013,9 @@ stripParentDirectory: true
 
 ### `generateArtifactAfterEveryStage`
 With this flag artifacts will be generated after every stage,without this flag artifacts are generated after every task and avoid any overrides for artifacts of the same name. 
+
+<VerifiedTag value="Verified" />
+
 ``` bash
 generateArtifactAfterEveryStage: true
 ```
@@ -1885,6 +2029,8 @@ This flag when set to **true** specifies that the task ID should be included in 
 
 - For example, if you have a task that creates a file called index.html, and the `taskIdentifierInNonConflictingArtifacts` flag is set to **true**, the file will be renamed to **index.html.task-id**. This ensures that the file can be uniquely identified, even if it is merged with other files called index.html from other tasks.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 mergeArtifacts: true
 taskIdentifierInNonConflictingArtifacts: true
@@ -1893,6 +2039,8 @@ taskIdentifierInNonConflictingArtifacts: true
 - If the `taskIdentifierInNonConflictingArtifacts` flag is set to **false** and the `mergeArtifacts` flag is set to **true**, the task ID will only be appended to the filename if the filename already exists. This is done to avoid appending the task ID to the filename of an artifact that already exists.
 
 - For example, if you have a task that creates a file called index.html, and the `taskIdentifierInNonConflictingArtifacts` flag is set to **false**, the file will not be renamed. However, if you have another task that also creates a file called index.html, the second task will rename its file to **index.html.task-id**
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 mergeArtifacts: true
@@ -1903,6 +2051,8 @@ taskIdentifierInNonConflictingArtifacts: false
 
 ### `smartGrid`
 If enabled, it will try to reduce the browser setup time [currently only for windows]. Default value is false.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 smartGrid: true
@@ -1954,6 +2104,8 @@ As seen in the screenshot, when one of the tests is marked as failed while the o
 ### `cypress`
 This option signifies that the test suite is a cypress test suite and should be pass as true in case of cypress suite.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 cypress: true
 ```
@@ -1971,6 +2123,8 @@ Additional options include:
 - **reporterConfigFile**: If your Cypress project does not have a custom reporter configured, `reporterConfigFile` will automatically enable command logs using the mochawesome reporter by default.
 - **ProjectName**: You can define your project name to autocreate your project in the HyperExecute dashboard.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 cypressOps:
   Build: "Hyperexecute Cypress Sample Build"
@@ -1987,6 +2141,9 @@ cypressOps:
 
 ### `shell`
 Shell defines the shell/terminal type on which all of the commands defined under pre, post, testRunnerCommand mentioned in yaml should run. If shell is also defined under PreDirectives then for PreDirectives command that shell would be used.
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 shell: bash
 ```
@@ -1995,6 +2152,8 @@ shell: bash
 
 ### `dataJsonPath`
 DataJsonPaths helps to distribute data/configs over the VMs. In this you can create a json files and put configurations/data required for your suite as json array inside the file. For example:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 [
@@ -2015,6 +2174,8 @@ To access the data from the JSON files, there are primarily 2 methods:
 
 In the JSON file, we have a data object and not an array of objects, hence you can directly read the data from the file.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 {
   "Username": "user1",
@@ -2026,17 +2187,25 @@ In the JSON file, we have a data object and not an array of objects, hence you c
 
 You can use the env variables to access the defined parameters as:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 STATIC_DATA_1_<ParameterName>
 ```
 > **NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
 
 For instance, to access data from **file1.json**, the syntax would be:
+
+<VerifiedTag value="Verified" />
+
 ```
 STATIC_DATA_1_Username
 ```
 
 Similarly, to access the data from the second file i.e **file2.json**:
+
+<VerifiedTag value="Verified" />
+
 ```
 STATIC_DATA_2_Username
 ```
@@ -2045,6 +2214,8 @@ STATIC_DATA_2_Username
 
 ### `dataJsonBuilder`
 The `dataJsonBuilder` flag in the HyperExecute YAML file is used to facilitate efficient and distributed test execution by processing JSON data. It reads JSON data from a specified file, applies optional filters, and indexes the JSON objects based on a defined key. This ensures that the data is prepared and distributed according to the testing requirements, optimizing test execution across multiple environments.
+
+<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 dataJsonBuilder:
@@ -2059,19 +2230,31 @@ dataJsonBuilder:
 
 #### Configuration
 - **path (required) :** Specifies the path to the JSON file containing the data. Example:
+
+  <VerifiedTag value="Verified" />
+
   ```yaml
   path: data/file/abc.json
   ```
 - **index (optional) :** Specifies the JSON key on which the indexing is required. Example:
+
+  <VerifiedTag value="Verified" />
+
   ```yaml
   index: username
   ```
 - **filters (optional) :** Applies filtering on the JSON objects before indexing. Either `query` or `attributes` can be used, if both are mentioned then the `attributes` will have higher precedence.
   - **query:** These are used for more complex filtering operations. If both attributes and queries are provided, attributes take precedence. This means that if there’s a conflict, the filter based on attributes will be used. Example:
+
+    <VerifiedTag value="Verified" />
+
     ```yaml
     query: (username == "abc" or username == "bcd")
     ```
   - **attributes:** These are key-value pairs used for filtering. You can provide a list of attributes with their corresponding values, and the filtering will include only those JSON objects where each specified attribute matches one of the provided values. Attributes are applied with an "AND" logic between different keys and an "OR" logic within the same key. Example:
+
+    <VerifiedTag value="Verified" />
+
     ```yaml
     attributes:
       - key: username
@@ -2112,6 +2295,8 @@ dataJsonBuilder:
   ```
 
 - **`dataJsonBuilder`** flag passed in the HyperExecute YAML file:
+
+  <VerifiedTag value="Verified" />
 
   ```yaml title="hyperexecute.yaml"
   dataJsonBuilder:
@@ -2196,6 +2381,9 @@ Test cases related to `username: "abc"` will be split between **VM1** and **VM3*
 
 #### Use Cases
 - **Filtering and Indexing :** When both filtering and indexing are required, filters are applied first, followed by indexing of the filtered results.
+
+  <VerifiedTag value="Verified" />
+
   ```yaml
   dataJsonBuilder:
     path: data/file/abc.json
@@ -2209,6 +2397,9 @@ Test cases related to `username: "abc"` will be split between **VM1** and **VM3*
   ```
 
 - **Only Filtering :** If only filtering is required without indexing, omit the index key. In this case, no indexing will occur, and each JSON object will be distributed in a round-robin manner among parallel executions.
+
+  <VerifiedTag value="Verified" />
+
   ```yaml
   dataJsonBuilder:
     path: data/file/abc.json
@@ -2217,6 +2408,9 @@ Test cases related to `username: "abc"` will be split between **VM1** and **VM3*
   ```
 
 - **Only Indexing :** If only indexing is required without filtering, omit the filters section.
+
+  <VerifiedTag value="Verified" />
+
   ```yaml
   dataJsonBuilder:
     path: data/file/abc.json
@@ -2236,6 +2430,9 @@ If strict is set to true in yaml then the variables used in yaml must be present
 
 ### `cacheTestURL`
 It enables you to cache static test files in the browser.
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 cacheTestURL: true
 ```
@@ -2253,6 +2450,9 @@ if your test loads jquery static library multiple times and for some reason it i
 > This flag is deprecated, instead use [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost)
 
 It is used to run commands after the job has finished. Currently only local directive is allowed, means that all the commands would be run on the same host on which HyperExecute CLI was run. Running commands in `afterAll` on HyperExecute VMs(remote commands) is not yet supported. Users will have access to all the artifacts when these commands would be run.
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 afterAll:
  local:
@@ -2270,6 +2470,9 @@ For instance you want to further process the artifacts and create a custom PDF. 
 > This flag is deprecated, instead use [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre)
 
 BeforeAll is used for running pre operations like discovery and payload_update. It can be executed either on local system or on hyperexecute beforeAll VM. 
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 beforeAll:
   location: local/remote 
@@ -2284,6 +2487,8 @@ We can choose to run on local/remote(on HYP Vms) from the location command. Type
 
 ### `afterEachScenario`
 The `afterEachScenario` flag is used to define tasks that should be executed after each test scenario. This can be particularly useful for cleanup activities, such as clearing cookies, resetting databases, or capturing logs, ensuring that each test scenario starts with a clean state. This flag allows you to specify a list of commands or scripts that will run sequentially after the completion of each scenario. This ensures that any necessary teardown steps are consistently applied, maintaining the integrity and isolation of your test scenarios.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 afterEachScenario:
@@ -2301,6 +2506,8 @@ This is used to manage hyperlink behavior based on test status. Here's a breakdo
 
   - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, $&lbrace;name&rbrace; acts as a placeholder for a custom value.
 
+  <VerifiedTag value="Verified" />
+
   ```yaml
   buildConfig:
     buildPrefix: myCustomBuildPrefix-${name}
@@ -2317,11 +2524,16 @@ This is used to manage hyperlink behavior based on test status. Here's a breakdo
 If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
 
 To set `buildPrefix`:
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 --labels buildPrefix --vars "name=xyz"
 ```
 
 To set `buildName`:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 --labels buildName --vars "name=xyz"
@@ -2360,6 +2572,9 @@ These commands utilize `--labels` to specify the parameter being configured and 
 
 ### `captureCSVResult`
 By enabling the boolean yaml directive `​​captureCSVResult`,  you can get the statistics of the time taken by Selenium Commands run across the job. It will gather the time taken by the Selenium commands, calculate the aggregated info for the statistics like Average, 95, 99 percentiles etc and publish it in the form of a separate artifact.
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 captureCSVResult: true
 ```
@@ -2380,6 +2595,9 @@ Here is a brief information about these headers:
 7. **P99**: 99th percentile of the time taken by the Selenium command across the whole job
 
 Here is the sample code showing how we can use the above mentioned Lambda hooks:
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 ((JavascriptExecutor) driver).executeScript("lambda-start-timer=t1");
 
@@ -2409,6 +2627,8 @@ When we run a job in matrix mode, we set the keys with their resolved value as e
 When we set dynamicAllocation true, the test cases are distributed among parallels at the runtime. This is valid in case of local test discovery. In this case, the parallels are utilised in the most optimised manner. 
 <!-- **(Currently in BETA)** -->
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 dynamicAllocation: true
 ```
@@ -2417,6 +2637,8 @@ dynamicAllocation: true
 
 ### `collectLocalGitData`
 It is a default flag which captures the git information of your repository that you have used to trigger the job in HyperExecute which are later utilized in AI-based Root Cause Analysis (RCA) generation. In order to turn off the collection of any git information after executing your HyperExecute jobs, you can define the value `false`.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 collectLocalGitData: false,
@@ -2430,6 +2652,8 @@ This feature allows you to run long-running **Application Server** tasks like *"
 To enable this feature from the YAML file you can use either of the below mentioned methods:
 
 #### 1. Using `backgroundDirectives`
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 backgroundDirectives:
@@ -2451,6 +2675,8 @@ It contains the following attributes:
 
 #### 2. Using `background`
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 background:
   - npx static-server
@@ -2464,6 +2690,8 @@ background:
 ###  `vars`
 This method allows you to name your variables. This will make the process of modifying the YAML file easier. You can use these variables in the YAML file as &#36;&lbrace;your_variable_name&rbrace;.
 Below example shows how to use vars keyword and how to use the variables define under it at other places in yaml.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 vars:
@@ -2482,6 +2710,9 @@ preDirectives:
 
 ### `tunnel`
 Indicates whether to enable a tunnel for accessing your applications which are  locally hosted or behind a firewall. The cli will launch a tunnel as sub process if tunnel is set to true
+
+<VerifiedTag value="Verified" />
+
 ```yaml
 tunnel: true
 ```
@@ -2501,12 +2732,16 @@ The options to use when running the [tunnel](/support/docs/deep-dive-into-hypere
 |`checkTunnelOnFailure`| Boolean | Check tunnel on failure adds a check on our system to check the tunnel connection if a test fails and the tunnel is set to true. This option will retry the test 2 times if tunnel connection is flaky. |
 |`--expose`| | This flag takes arguments in the form of `service_name:host_name_host_port`. <br /> When you trigger a test, there are environment variables exposed in the machine with the variable name :- <br /> 1. `service_name_PROXY_HOST` <br /> 2. `service_name_PROXY_PORT` |
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 tunnel: true
 tunnelOpts: 
 	args:
 	 - "--verbose"
 ```
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 tunnel: true
@@ -2519,6 +2754,8 @@ tunnelOpts:
   #------OR------
 	systemProxy: true
 ```
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 pre:
@@ -2538,6 +2775,8 @@ tunnelOpts:
 ### `tunnelNames`
 Specify the list of  already running tunnel names which you want to use for  accessing your applications which are locally hosted or behind a firewall.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 tunnelNames: ["lambdatest_tunnel"]
 ```
@@ -2551,6 +2790,8 @@ When utilizing the `testRunnerCommand` to execute a job on a Windows Virtual Mac
 
 To address this, it is necessary to include this specific flag to switch the test execution from powershell to the command line as intended.
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 testRunnerExecutor: bat
 ```
@@ -2561,6 +2802,8 @@ testRunnerExecutor: bat
 <!-- Specifies the working directory where all discovery and execution commands will be executed. -->
 
 The `working directory` specifies the location of the directory in which all test discovery and execution commands will run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -2575,6 +2818,8 @@ framework:
 By default, parallel tasks in autosplit or matrix mode begin execution as soon as the VM is allocated. However, in certain situations (e.g., benchmarking or comparative analysis), you may want all VMs to start tasks at the same time.
 
 To support this, HyperExecute provides the `syncStart` directive in the job YAML.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 execution:

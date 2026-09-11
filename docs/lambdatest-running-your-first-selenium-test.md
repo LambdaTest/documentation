@@ -200,6 +200,8 @@ Make sure you have the following set up before you start.
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/java-testng-selenium
 cd java-testng-selenium
@@ -216,6 +218,8 @@ Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https
 
 <TabItem value="bash" label="macOS / Linux" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -226,6 +230,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -276,6 +282,8 @@ Execute a single test or run multiple tests in parallel:
 
 <TabItem value="single" label="Single Test" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`mvn test -D suite=single.xml`}
@@ -285,6 +293,8 @@ Execute a single test or run multiple tests in parallel:
 </TabItem>
 
 <TabItem value="parallel" label="Parallel Test" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">

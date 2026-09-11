@@ -14,6 +14,8 @@ site_name: TestMu AI
 slug: kane-cli-evidence-merge/
 canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-merge/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -115,6 +117,8 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-merge/
 
 `kane-cli evidence merge` combines several packs into one, for example the packs from a set of related runs you want to hand over as a single file:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli evidence merge <targets...> --run-id nightly-2026-07-11
 ```
@@ -146,6 +150,8 @@ Out of the box, merge is strict:
 - a test-id collision is an **error**, unless you choose another action with `--on-collision`.
 
 ## A nightly roll-up
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli evidence merge \

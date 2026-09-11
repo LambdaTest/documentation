@@ -6,6 +6,33 @@ sidebar_label: /guide
 description: Show Rook's first-run sequence, cost boundaries, storage model, and explicit synchronization behavior.
 slug: rook-command-guide/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /guide Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-guide/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +95,8 @@ Use <code>/guide</code> when you know you want to test an agent but do not yet k
 
 ## Syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /guide
 ~~~
@@ -75,6 +104,8 @@ Use <code>/guide</code> when you know you want to test an agent but do not yet k
 The shell form is <code>rook guide</code>.
 
 The guide covers this sequence:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 login → project → explore → agent → generate → profile → run → sync

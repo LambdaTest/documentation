@@ -15,6 +15,8 @@ site_name: TestMu AI
 slug: kane-cli-evidence-validate/
 canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-validate/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -116,6 +118,8 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-validate/
 
 `kane-cli evidence validate` checks a pack's integrity and completeness:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 kane-cli evidence validate <execution-id-or-path>
 ```
@@ -130,6 +134,8 @@ The target can be an execution id, resolved against the project store, a live pa
 Exit codes: `0` valid, `1` invalid, `2` not found. `--json` plus the exit code makes this easy to gate in CI or scripts.
 
 ## Gating a pipeline
+
+<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli evidence validate .testmuai/evidence/<execution_id>.evidence --json > report.json || exit 1

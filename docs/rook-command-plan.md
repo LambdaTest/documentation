@@ -6,6 +6,33 @@ sidebar_label: /plan
 description: View the signed-in TestMu AI account plan and available Rook credits.
 slug: rook-command-plan/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /plan Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-plan/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,11 +95,15 @@ Use <code>/plan</code> to check the TestMu AI account plan and credit balance be
 
 ## Syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /plan
 ~~~
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook plan
@@ -81,6 +112,8 @@ rook plan
 ## Real-world use
 
 Before generating 50 refund scenarios:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /plan

@@ -14,6 +14,7 @@ slug: hyperexecute-private-cloud-setup-with-aws/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup-with-aws/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -217,6 +218,8 @@ Once the CloudFormation template is successfully deployed, you can access HyperE
 
 **Step 2:** Log in to the AWS environment and access the Kubernetes cluster by running the following command on AWS CLI:
 
+   <VerifiedTag value="Verified" />
+
    ```bash
    aws eks --region <region_name> update-kubeconfig --name <cluster_name>
    ```
@@ -224,6 +227,8 @@ Once the CloudFormation template is successfully deployed, you can access HyperE
    Replace `<region_name>` with the appropriate region and `<cluster_name>` with the name of your cluster.
 
 **Step 3:** Execute the command:
+
+   <VerifiedTag value="Verified" />
 
    ```bash
    kubectl get namespaces
@@ -234,6 +239,8 @@ Once the CloudFormation template is successfully deployed, you can access HyperE
 <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/aws/namespace_output.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
 
 **Step 4:** Execute the command:
+
+   <VerifiedTag value="Verified" />
 
    ```bash
    kubectl get po -n hyperexecute

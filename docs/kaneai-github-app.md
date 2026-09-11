@@ -21,6 +21,7 @@ canonical: https://www.testmuai.com/support/docs/github-app-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -341,6 +342,8 @@ After installing the GitHub App, each repository requires a configuration file t
 
 Create a `.lambdatest/config.yaml` file in the root directory of your repository with the following structure:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 # LambdaTest AI Cloud Configuration
 project_id: "your_project_id"
@@ -406,6 +409,8 @@ KaneAI uses your `README.md` and `agent.md` to improve test quality. Keep your R
 #### Repository Structure
 
 Your final repository structure should look like this:
+
+<VerifiedTag value="Verified" />
 
 ```
 your-repo/
@@ -485,9 +490,13 @@ You can extend any trigger command with optional parameters to customize test ex
 
 **Example:**
 
+<VerifiedTag value="Verified" />
+
 ```
 @TestMuAI Validate this PR --url https://preview-123.your-app.com --tunnel my-tunnel-name
 ```
+
+<VerifiedTag value="Verified" />
 
 ```
 @TestMuAI Validate this PR --config "Chrome on Windows" --max-scenarios 3 --max-test-cases 5

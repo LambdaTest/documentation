@@ -17,6 +17,7 @@ slug: azure-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/azure-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -155,6 +156,8 @@ Next, you need to create a new pipeline. To create a new pipeline, click the **P
 ### 4. Configure the Azure Pipeline YAML to Execute HyperExecute CLI Binary:
 
 To configure the Azure DevOps pipeline YAML to execute the HyperExecute CLI Binary, run the following command: 
+
+<VerifiedTag value="Verified" />
 
 ```bash
 trigger:

@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-generate-sample-ya
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -125,6 +126,8 @@ You can also generate the HyperExecute YAML directly from the HyperExecute Porta
 
 ## Sample HyperExecute YAML
 A sample HyperExecute YAML file looks like this:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 ---

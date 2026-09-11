@@ -165,9 +165,13 @@ The recorded definition hash is an integrity check on the thing that was tested:
 
 If you want to produce or read packs outside kane-cli, the tooling is on npm:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 npm install -g @testmuai/evidence-cli
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash
 evidence validate my-run.evidence --profile L0

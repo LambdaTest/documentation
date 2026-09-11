@@ -203,6 +203,8 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_iOS_APP>"' --form 'type="xcuit-ios"'`}
@@ -212,6 +214,8 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -235,6 +239,8 @@ Upload your iOS test suite (.ipa) file to <BrandName /> servers using our REST A
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="xcuit-ios"'`}
@@ -244,6 +250,8 @@ Upload your iOS test suite (.ipa) file to <BrandName /> servers using our REST A
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -297,6 +305,8 @@ Upload your iOS test suite (.ipa) file to <BrandName /> servers using our REST A
 This will only be used for filtering tests using xctestplan. You can use the following capability in xcui/build api:
 `"xctestplan" : "lt://APP1234567891234567890"` and use the following curl to upload xctestplan file.
 
+<VerifiedTag value="Verified" />
+
 ```bash 
 curl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan' \
 --header 'Cookie: cf_use_ob=0' \
@@ -311,6 +321,8 @@ curl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan
 
 Take note of the�base64�encoded authentication which needs to be added in the next step.
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
 {`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -320,6 +332,8 @@ Take note of the�base64�encoded authentication which needs to be added in th
 - Once you have uploaded your app and test suite, you can execute your test by running the following command:
  
 > Enter your **BASIC_AUTH_TOKEN**, **APP_ID** (generated in the first step) and **TEST_SUITE_ID** (generated in the second step) in the below command.
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 

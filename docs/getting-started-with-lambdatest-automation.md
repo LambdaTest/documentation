@@ -23,6 +23,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import DocCard from '@site/src/component/DocCard';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -141,6 +142,8 @@ Run your Selenium tests on TestMu AI's cloud grid of 10,000+ browser/device comb
 2. Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard) and navigate to the left sidebar and select **Credentials**. Your **Username** and **Access Key** will be visible there, along with options to copy them for use.
 3. Set them as environment variables:
 
+<VerifiedTag value="Verified" />
+
 <Tabs>
   <TabItem value="maclinux" label="macOS / Linux" default>
   ```bash
@@ -157,6 +160,8 @@ Run your Selenium tests on TestMu AI's cloud grid of 10,000+ browser/device comb
 </Tabs>
 
 Your tests connect to the grid at:
+
+<VerifiedTag value="Verified" />
 
 ```
 https://{username}:{accessKey}@hub.lambdatest.com/wd/hub

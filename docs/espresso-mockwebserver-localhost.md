@@ -19,6 +19,7 @@ canonical: https://www.testmuai.com/support/docs/espresso-mockwebserver-localhos
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -130,6 +131,8 @@ Platform provides two solutions: **Localhost Bypass** and **Port Forwarding**.
 
 Works when network is set to `true` and application uses standard HTTP libraries.Localhost network calls will not be captured.
 
+<VerifiedTag value="Verified" />
+
 ```json
 {
   "app": "lt://APP_ID",
@@ -162,6 +165,8 @@ Works when network is set to `true` and application uses standard HTTP libraries
 ## Option 2: Port Forwarding
 
 Best when localhost network logs need to be captured and there are no port conflicts.
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

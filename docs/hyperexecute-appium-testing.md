@@ -254,6 +254,8 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -264,6 +266,8 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -286,6 +290,8 @@ Upload your <b>_iOS_</b> application (.ipa file) or <b>_android_</b> application
 <Tabs className="docs__val">
 <TabItem value="macos-file" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --form 'name="Android_App"' --form 'appFile=@"<RELATIVE_PATH_OF_YOUR_APP>"' 
@@ -296,6 +302,9 @@ Upload your <b>_iOS_</b> application (.ipa file) or <b>_android_</b> application
 </TabItem>
 
 <TabItem value="windows-file" label="Windows" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<RELATIVE_PATH_OF_YOUR_APP>""
@@ -311,6 +320,8 @@ Upload your <b>_iOS_</b> application (.ipa file) or <b>_android_</b> application
 <Tabs className="docs__val">
 <TabItem value="macos-url" label="Linux / MacOS" default>
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -323,6 +334,9 @@ Upload your <b>_iOS_</b> application (.ipa file) or <b>_android_</b> application
 </TabItem>
 
 <TabItem value="windows-url" label="Windows" default>
+
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/realDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
@@ -363,6 +377,8 @@ https://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/s
 ### Step 3: Update your XML file
 Create `.XML` file in order to run your test and define device capabilities. Please find sample code below for the same.
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="androidXML" label="Android" default>
 ```xml reference title="android-parallel.xml"
@@ -378,6 +394,9 @@ https://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/s
 </Tabs>
 
 ### Step 4: Configure YAML and Execute your Script
+
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val">
 <TabItem value="androidYAML" label="Android" default>
 ```yaml reference title="android-parallel.yaml"
@@ -402,11 +421,15 @@ https://github.com/LambdaTest/hyperexecute-real-device-appium-testng/blob/main/y
 
 Run the below command in your terminal at the root folder of the project:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -417,6 +440,8 @@ OR use this command if you have not exported your username and access key in the
 ## Configure Smart UI
 
 To configure SmartUI with HyperExecute, you need to simply add a capability in your test file:
+
+<VerifiedTag value="Verified" />
 
 ```bash java
 "smartUI.project": "<YOUR_SMARTUI_PROJECT_NAME>"
@@ -487,6 +512,8 @@ The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-s
 
 The appium-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 appium-skill/
 ├── SKILL.md
@@ -509,6 +536,8 @@ It provides structured guidance for:
 ***
 
 Install a Appium Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

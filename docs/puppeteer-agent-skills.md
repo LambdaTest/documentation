@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/puppeteer-agent-skills/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -172,6 +173,8 @@ Agent Skills are self-contained packages of instructions, code patterns, debuggi
 
 Clone the repository and copy the Puppeteer skill into your AI tool's skills directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -196,6 +199,8 @@ If you prefer installing **all available framework skills**, clone the repositor
 
 Configure your <BrandName /> credentials as environment variables:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -205,13 +210,19 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 Once installed, simply ask your AI assistant to write tests in natural language:
 
+<VerifiedTag value="Verified" />
+
 ```
 "Write Puppeteer tests to scrape product data and run them on TestMu AI cloud"
 ```
 
+<VerifiedTag value="Verified" />
+
 ```
 "Set up Puppeteer with Jest for E2E testing and generate PDF reports"
 ```
+
+<VerifiedTag value="Verified" />
 
 ```
 "Run headless Chrome tests on TestMu AI with network interception"
@@ -225,6 +236,8 @@ The Agent Skill automatically handles:
 4. **Best practices** - Uses `waitForSelector`, proper navigation handling, and network interception patterns
 
 ## What's Included in the Puppeteer Skill
+
+<VerifiedTag value="Verified" />
 
 ```
 puppeteer-skill/

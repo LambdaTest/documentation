@@ -15,6 +15,33 @@ site_name: TestMu AI
 slug: rook-architecture/
 canonical: https://www.testmuai.com/support/docs/rook-architecture/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook Architecture and Data Flow",
+          "item": `${BRAND_URL}/support/docs/rook-architecture/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -229,6 +256,8 @@ This keeps model credentials and centrally managed prompts out of the distribute
 
 ## Local Invocation Path
 
+<VerifiedTag value="Verified" />
+
 ```text
 scenario goal
     ↓ standard input
@@ -261,6 +290,8 @@ Commands that only inspect existing state—such as `status`, `scenarios`, `env`
 ## Local State Is the Record
 
 `.testmuai/rook/` is authoritative for the workspace. `rook sync` copies the current project tree to the Rook API. Run results are also recorded locally as they happen and can be reconciled upstream later.
+
+<VerifiedTag value="Verified" />
 
 ```text
 local project tree ── rook sync ──▶ Rook API ──▶ cloud UI

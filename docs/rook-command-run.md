@@ -6,6 +6,33 @@ sidebar_label: /run
 description: Plan and run scenarios through prepare, open, execute, close, collect, and judge phases against a live agent.
 slug: rook-command-run/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /run Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-run/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +95,8 @@ Use <code>/run</code> to plan a selection, execute the active profile's lifecycl
 
 ## Syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /run [selection options] [-- free-text instruction]
 ~~~
@@ -95,6 +124,8 @@ The shell form is <code>rook run</code> with the same options.
 
 ## Examples
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /run --only SC-001,SC-004 --concurrency 1
 /run --class adversarial --profile staging --name security-gate
@@ -111,6 +142,8 @@ A normal timeline run requires an agent that has been synchronized at least once
 ## Lifecycle Phase Selection
 
 The fixed order is:
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 prepare → open → execute → close → collect → judge

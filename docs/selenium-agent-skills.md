@@ -18,6 +18,7 @@ canonical: https://www.testmuai.com/support/docs/selenium-agent-skills/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -211,6 +212,8 @@ Make sure you have the following set up before you start.
 
 Clone the repository and copy the Selenium skill into your AI tool's skills directory.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -238,6 +241,8 @@ Add your TestMu AI credentials as environment variables so the generated tests c
 
 Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard), navigate to the left sidebar, and select **Credentials**. Copy your **Username** and **Access Key**, then run:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -248,13 +253,19 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 Ask your AI assistant to write tests in natural language.
 
+<VerifiedTag value="Verified" />
+
 ```
 "Write Selenium tests for the login page and run them on TestMu AI cloud using Chrome and Firefox"
 ```
 
+<VerifiedTag value="Verified" />
+
 ```
 "Set up a Selenium Java project with TestNG, Page Object Model, and run tests on TestMu AI"
 ```
+
+<VerifiedTag value="Verified" />
 
 ```
 "Execute Selenium tests across 5 browsers in parallel on TestMu AI, tag the build as 'release-v1.0'"
@@ -271,6 +282,8 @@ The Agent Skill automatically handles:
 ---
 
 A breakdown of everything the skill package contains.
+
+<VerifiedTag value="Verified" />
 
 ```
 selenium-skill/

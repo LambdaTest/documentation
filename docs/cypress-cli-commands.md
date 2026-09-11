@@ -15,6 +15,7 @@ slug: cypress-cli-commands/
 canonical: https://www.testmuai.com/support/docs/cypress-cli-commands/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -139,6 +140,9 @@ The <BrandName />-Cypress CLI provides a set of commands to streamline and enhan
 
 ## General Syntax
 To use any command in the <BrandName />-Cypress CLI, follow this basic syntax:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress <command> [options]
 ```
@@ -157,6 +161,8 @@ lambdatest-cypress <command> [options]
 
 ## `init` command
 The `init` command to generate a initial lambdatest configuration file.
+
+<VerifiedTag value="Verified" />
 
 ```
 lambdatest-cypress init
@@ -179,6 +185,8 @@ For detailed examples of each Cypress flag, please visit our guide [Configuring 
 :::
 
 To start running the test build, you can use the given-below command.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run
@@ -241,6 +249,8 @@ Given below are the additional flags available with the `run` command.
 ## `build-info` command
 You can use the `build-info` command to get information on the build.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 lambdatest-cypress build-info
 ```
@@ -257,6 +267,8 @@ Given below are the additional arguments available with the `build-info` command
 
 ## `build-stop` command
 You can use the `build-stop` command to stop all the test in the build.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress build-stop

@@ -17,6 +17,7 @@ slug: github-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/github-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -156,6 +157,8 @@ To perform your WebdriverIO tests with HyperExecute, you would need the followin
 * Download and install node.js and node package manager or npm.
 * To install node.js with homebrew use the command below.
 
+<VerifiedTag value="Verified" />
+
 ```
 $ brew install node
 ```
@@ -163,11 +166,15 @@ $ brew install node
 * If you already have npm set up, you might want to update to the most recent version. To upgrade npm, run the following code in your terminal.
 
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install npm@latest –g
 ```
 
 * Install WebdriverIO with the npm command below.
+
+<VerifiedTag value="Verified" />
 
 ```
 npm install webdriverio
@@ -179,12 +186,16 @@ Keep your <BrandName /> login, access key, and HubURL handy for authentication p
 
 * **For Linux/Mac**
 
+<VerifiedTag value="Verified" />
+
 ```
 $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME> 
 $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
 ```
 
 * **For Windows**
+
+<VerifiedTag value="Verified" />
 
 ```
 $ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>

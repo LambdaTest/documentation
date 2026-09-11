@@ -164,6 +164,8 @@ cd playwright-python
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```

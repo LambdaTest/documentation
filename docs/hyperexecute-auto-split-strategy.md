@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-auto-split-strateg
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -139,6 +140,8 @@ The Smart **Auto Split Strategy** enables you to distribute tests across multipl
 
 For enabling auto-test splitting, set the `autosplit` key to *true*  in the HyperExecute YAML file.
 
+<VerifiedTag value="Verified" />
+
 ``` yaml
 autosplit: true
 ```
@@ -152,6 +155,8 @@ The `concurrency`  key indicates the total number of concurrent sessions that ca
 
 For example, assume that the total number of test scenarios [discovered via `testDiscovery`] are 27 and `concurrency` is set to 7. In this case, HyperExecute would allocate 7 nodes for running the 27 tests in parallel.
 
+<VerifiedTag value="Verified" />
+
 ``` yaml
 concurrency: 7
 ```
@@ -163,6 +168,8 @@ concurrency: 7
 
 A few samples are given below:
 
+<VerifiedTag value="Verified" />
+
 ```yaml
 # The following command (or value) when assigned to testDiscoverer key searches for the scenarios by matching the string Scenario [or Scenario Outline] in the .feature  files located in the *src* directory of the project.
 testDiscovery:
@@ -170,6 +177,8 @@ testDiscovery:
   mode: remote
   command: grep -nri 'Scenario:\^|Scenario Outline:' src -ir --include=\*.feature |  awk '{print $1}' | sed 's/\.\///g' | sed 's/\(.*\):/\1 /'
 ```
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 testDiscovery:
