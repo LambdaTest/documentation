@@ -146,7 +146,7 @@ Rook owns a fixed lifecycle while each profile supplies the scripts that reach t
 | <code>collect</code> | After <code>close</code> | Fetch traces, calls, logs, usage, or delayed evidence. |
 | <code>judge</code> | After evidence is available | Rook evaluates the recorded response and evidence. |
 
-Use <code>--phases</code> or <code>--skip</code> to run a contiguous part of the lifecycle. Use <code>--run &lt;id&gt;</code> to continue the same run later—for example, call the agent now and collect a trace after the logging pipeline catches up. See [Lifecycle Phases and Hooks](/support/docs/rook-hooks-and-phases/) for the complete script contract and state model.
+Use <code>--phases</code> or <code>--skip</code> to run a contiguous part of the lifecycle. Use <code>--run &lt;id&gt;</code> to continue the same run later—for example, call the agent now and collect a trace after the logging pipeline catches up. See [Lifecycle Phases and Hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for the complete script contract and state model.
 
 ## Incremental by Default
 
@@ -199,6 +199,8 @@ Start <code>rook</code> for the TUI. Slash commands, completion, <code>/help</co
 Long-running commands emit structured progress. In the TUI, Rook renders active subagents and parallel scenario lanes; in automation, <code>--json</code> returns a command-specific JSON document and <code>--verbose</code> exposes tool activity and credit use.
 
 
-## Hosted Web UI
+## Local and Hosted UIs {#hosted-web-ui}
 
-The [Web UI](/support/docs/rook-web-ui/) is live on stage. Review synchronized projects, versions, profiles and hook phases, features, scenarios, runs, and evidence. Create and execute tests in the CLI; use the hosted UI for team review or <code>rook ui --local</code> for on-disk results.
+Use `rook ui --local` for the current workspace's agents, profiles, features, scenarios, runs, and evidence, including unsynchronized work and `--test` runs. Its agent page groups the lists together; it has no separate hosted Versions or Insights tabs.
+
+Use `rook ui` for synchronized projects, versions, profile specifications, scenario filters, shared runs, and Insights in the hosted Web UI. Browser sign-in and project access are required. Create and execute tests in the CLI in both cases; see the [local and hosted screenshot walkthrough](/support/docs/rook-web-ui/#choose-your-ui).

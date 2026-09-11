@@ -2,7 +2,7 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
-Rook has four application components: the CLI, controller, API, and hosted Web UI. The agent under test is your connected target. The most important architectural fact is the boundary between code and evidence on your machine, model orchestration in the controller, and synchronized records in the API.
+Rook has four application components: the CLI (including its local UI), controller, API, and hosted Web UI. The agent under test is your connected target. The local UI reads workspace files; the hosted Web UI reads synchronized API records. Neither review interface executes tests. Model orchestration happens through the controller.
 
     Execution happens from your machine; evidence is recorded locally first. Model context and synchronized evidence cross separate cloud boundaries.
 
@@ -30,6 +30,14 @@ Rook has four application components: the CLI, controller, API, and hosted Web U
 
       Agents, features, scenarios, profiles, hooks, runs, and verdict evidence under .testmuai/rook/.
 
+      ↓
+      Read from disk; no upload
+
+        Local UI
+        Read-only
+
+      rook ui --local serves workspace evidence on loopback, including unsynchronized and test-mode runs. Built into the CLI; no hosted login.
+
     Explicit Boundary Crossings
 
       Model work
@@ -55,9 +63,9 @@ Rook has four application components: the CLI, controller, API, and hosted Web U
       ↓
       Rook API supplies synchronized records
 
-        Cloud Results UI
+        Hosted Web UI
 
-      Presents synchronized evidence and comparisons. It is not authoritative over the local workspace.
+      rook ui opens shared, synchronized evidence and comparisons. Browser sign-in and project access are required. It does not read your current local files.
 
 ## Components
 
@@ -65,6 +73,7 @@ Rook has four application components: the CLI, controller, API, and hosted Web U
     Location: Your machine
     Reads the workspace, writes scenarios and profiles, runs hooks, records evidence, and coordinates synchronization.
     State: Local files under .testmuai/rook/
+    Local UI: Built-in loopback viewer over these files, opened with rook ui --local.
 
     Agent Under Test
     Location: Your environment
@@ -81,7 +90,7 @@ Rook has four application components: the CLI, controller, API, and hosted Web U
     Stores synchronized versions, runs, verdicts, and artifacts.
     State: PostgreSQL and object storage
 
-    Cloud Results UI
+    Hosted Web UI
     Location: TestMu AI
     Presents synchronized projects and run evidence through records supplied by the Rook API.
 
@@ -128,6 +137,7 @@ Commands that only inspect existing state—such as `status`, `scenarios`, `env`
 ```text
 local project tree ── rook sync ──▶ Rook API ──▶ cloud UI
 local run evidence ── runs sync ───▶ Rook API ──▶ reports and comparison
+local workspace ── rook ui --local ──▶ loopback viewer (no upload)
 ```
 
 Cloud state does not silently overwrite the local workspace. Ahead, behind, and diverged states are reported for deliberate reconciliation.
@@ -165,8 +175,10 @@ If the required observation is unavailable, the result is **Unable to Verify**. 
 - [Environment and secrets](/support/docs/rook-environment-and-secrets/)
 - [What lands on disk](/support/docs/rook-workspace-files/)
 
-## Open the Hosted Web UI
+## Open the Local or Hosted UI {#open-the-hosted-web-ui}
+
+For local evidence, run `rook ui --local` from the intended workspace and project. Open agent → runs → run → scenario. Keep the process running; its loopback URL is not a team-sharing link. It can display local `--test` runs that never appear in the hosted timeline.
 
 For stage, use [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). Set ROOK_ENV=stage before CLI authentication and synchronization so the records reach the same environment. Public packages default to production at [rook.testmuai.com](https://rook.testmuai.com).
 
-The browser reads records and artifacts through the API. It does not execute your local hook scripts or start the target agent. See the [Web UI guide](/support/docs/rook-web-ui/) for the project-to-result journey.
+The hosted browser app reads records and artifacts through the API. Neither UI executes your hook scripts or starts the target agent. See the [combined UI guide](/support/docs/rook-web-ui/#choose-your-ui) for both review paths and screenshots.

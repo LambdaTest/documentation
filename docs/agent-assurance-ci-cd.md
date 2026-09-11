@@ -229,6 +229,10 @@ rook ui --no-open
 
 Share the run URL with authorized teammates. The stage UI is at [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). See [Web UI troubleshooting](/support/docs/rook-web-ui/#troubleshooting) if counts or results differ from the local report.
 
+For local investigation, restore the approved workspace evidence with its project/agent directory structure intact, select that project, and run `rook ui --local` on your workstation. Open agent → runs → run → scenario to inspect criteria and files. A loopback URL printed on a CI runner is not a report your teammates can open; do not expose that server publicly. Keep the serving process running only during review.
+
+The [local and hosted UI guide](/support/docs/rook-web-ui/#choose-your-ui) explains both paths. Neither interface replaces the JSON completion and verdict checks used by the CI gate.
+
 ## Separate Generation From the Gate
 
 Run generation in a separately approved workflow:

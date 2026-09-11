@@ -391,3 +391,9 @@ Only approve a state-changing MCP call when the test explicitly requires that re
 | `malformed` | Required command data is absent or invalid | Fix the source configuration |
 
 Malformed scope files and duplicate discovered names are reported with their source rather than silently dropped.
+
+## Review MCP Evidence in Either UI
+
+Use `rook ui --local` for the current workspace's run → scenario → **criteria**, response, and **files**. Use `rook ui` for the hosted Web UI's uploaded run → scenario → **Response**, **Verdict**, and **Artefacts**. Both can show MCP-related evidence only when it was actually recorded; declaring a tool or verifier does not prove it was called.
+
+Neither UI starts, approves, or edits an MCP server. Resolve missing verification access with the CLI commands above, then inspect the resulting evidence. The [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both review layouts.

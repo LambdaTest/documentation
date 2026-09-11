@@ -108,7 +108,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 
 TestMu AI Agent Assurance helps teams gather evidence about whether an AI agent they own is ready to ship. This page covers its **Autonomous Agent** category, for agents that *act*: they call tools, write files, hit APIs, and change external state.
 
-Agent Assurance uses the <code>rook</code> CLI for authoring and execution, with a hosted [Web UI](/support/docs/rook-web-ui/) for reviewing shared results. Give it the materials that describe the agent and connect a live test target. It can then:
+Agent Assurance uses the <code>rook</code> CLI for authoring and execution, with a [local UI and hosted Web UI](/support/docs/rook-web-ui/#choose-your-ui) for reviewing evidence on your machine or with your team. Give it the materials that describe the agent and connect a live test target. It can then:
 
 - Discover capabilities.
 - Generate scenarios.
@@ -503,19 +503,23 @@ Pin the CLI version, use an isolated Rook home for CI, and provide explicit perm
 
 A successful process exit does not establish agent quality. Inspect completion and verdict totals using the [CI gate](/support/docs/agent-assurance-ci-cd/). Keep generation in a separately reviewed workflow.
 
-## Hosted Web UI
+## Local and Hosted UIs {#hosted-web-ui}
+
+Use **`rook ui --local`** to review the current workspace's agents, definitions, runs, and evidence without a hosted login. Open agent → runs → run → scenario. This includes local `--test` results and evidence awaiting upload; keep the serving process running.
 
 The [stage Web UI](https://stage-rook.lambdatestinternal.com/) is live. Set <code>ROOK_ENV=stage</code> before CLI login, project selection, and sync to use that environment. Public packages default to production at [rook.testmuai.com](https://rook.testmuai.com).
 
-Use the [Web UI walkthrough](/support/docs/rook-web-ui/) to inspect versions, profile phases, named runs, and criterion evidence. Creating, editing, or executing tests still happens in the CLI.
+Use **`rook ui`** to open the hosted app for uploaded project history, versions, and team review. Open project → agent → Runs → run → scenario. Teammates need access to the same environment and project.
+
+The [combined UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both layouts and their evidence views. Neither UI creates or executes tests; those operations stay in the CLI.
 
 ## Next Steps
 
 - [Get started with Agent Assurance](/support/docs/agent-assurance-quickstart/)
-- [Follow the complete Rook sequence](/support/docs/rook-sequence/)
+- [Follow the complete Rook sequence](/support/docs/agent-assurance-quickstart/#continue-after-your-first-test)
 - [Understand the local and cloud architecture](/support/docs/rook-architecture/)
 - [Connect and explore agents](/support/docs/agent-assurance-connect-and-explore-agents/)
-- [Configure invocation profiles](/support/docs/agent-assurance-profiles/)
+- [Configure invocation profiles](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively)
 - [Generate profiles and configure lifecycle hooks](/support/docs/rook-profiles-and-hooks/)
 - [Generate and curate scenarios](/support/docs/agent-assurance-scenarios/)
 - [Run tests safely](/support/docs/agent-assurance-run-tests/)

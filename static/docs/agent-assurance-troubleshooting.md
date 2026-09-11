@@ -221,7 +221,12 @@ Current runs snapshot scenario definitions. If an older pre-alpha run lacks a sn
 
 ### Browser viewer does not open
 
-Use:
+First identify which UI you meant to open:
+
+- **Local UI:** `rook ui --local` starts a loopback viewer over workspace files. No hosted sign-in is needed, but the server must still be running.
+- **Hosted Web UI:** `rook ui` opens the selected environment's website. Browser sign-in, project access, and uploaded records are required. It does not start a local server.
+
+If the local browser launch failed, use:
 
 ```text
 /ui --local --no-open
@@ -232,6 +237,12 @@ Open the printed `http://127.0.0.1:` URL manually. Rook tries a range of loopbac
 The local viewer runs only while its serving command or TUI remains running. Bare /ui opens the hosted app instead.
 
 For missing hosted projects, runs, or inconsistent stage percentages, use the [Web UI troubleshooting table](/support/docs/rook-web-ui/#troubleshooting). Confirm account/environment alignment, project sync, and outstanding run uploads before rerunning the target.
+
+### A run appears in one UI but not the other
+
+The local UI reads the workspace and selected project on this machine; the hosted UI reads uploaded records. For a missing local run, confirm the original workspace and that its run directory is present. Opening a hosted record does not download it locally.
+
+For a missing hosted run, check `ROOK_ENV`, browser identity, and outstanding normal-run uploads with `rook runs sync`. A `--test` run deliberately stays local. Neither UI can recover evidence that was never written. See [how to navigate each UI](/support/docs/rook-web-ui/#choose-your-ui) before rerunning a target that may already have changed state.
 
 ## MCP Problems
 

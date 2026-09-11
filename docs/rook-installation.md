@@ -274,6 +274,10 @@ If a public install path still fails, [open a Rook issue](https://github.com/Lam
 Continue with [How to Get Started With Agent Assurance](/support/docs/agent-assurance-quickstart/).
 
 
-## Select the Web UI Environment
+## Open the Local or Hosted UI {#select-the-web-ui-environment}
+
+The public CLI includes the local viewer: from an agent workspace, run `rook ui --local`. No separate frontend installation or browser login is needed. Open the printed loopback URL and keep the serving process running. It reads existing workspace files; follow the quickstart first if you have not created any test data.
 
 The same public CLI works with production and stage. Its default is production; <code>rook ui</code> opens [rook.testmuai.com](https://rook.testmuai.com). To use the [stage Web UI](https://stage-rook.lambdatestinternal.com/), set <code>export ROOK_ENV=stage</code> before login and project operations. You do not need a private package or a source-repository installation.
+
+See [local versus hosted review](/support/docs/rook-web-ui/#choose-your-ui) for the data, sign-in, and sharing differences.

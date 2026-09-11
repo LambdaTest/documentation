@@ -134,6 +134,8 @@ Rook represents autonomous agent testing with seven visible, file-backed concept
 
 ## Relationships
 
+The same concepts appear in two review surfaces. **`rook ui --local`** shows files in the current workspace and selected project, with features, scenarios, profiles, and runs grouped on the agent page. **`rook ui`** opens the hosted Web UI's synchronized projects, versions, and shared results. A local record need not exist upstream, and a hosted record need not be present on this machine. See [the UI comparison](/support/docs/rook-web-ui/#choose-your-ui).
+
 <VerifiedTag value="Verified" />
 
 ```text

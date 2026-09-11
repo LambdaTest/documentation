@@ -86,8 +86,14 @@ Variables such as `ROOK_HOOK`, `ROOK_RUN_ID`, `ROOK_SCENARIO_ID`, `ROOK_SESSION`
 - Review MCP commands and headers before approval.
 - Use a dedicated `ROOK_HOME` for unattended automation.
 
+## UI Access and Evidence Privacy
+
+The **local UI** (`rook ui --local`) reads workspace evidence on loopback without a hosted browser login. The **hosted Web UI** (`rook ui`) requires browser access to the chosen environment and project; its sign-in is separate from CLI credentials. `ROOK_ENV` selects the hosted environment, not a different target-agent endpoint or a remote data source for the local viewer.
+
+Requests, responses, and artifacts in either UI can contain sensitive target data even when profile YAML contains only variable references. Review evidence before upload or sharing; never expose the local server as a public report. See [both UI access paths](/support/docs/rook-web-ui/#choose-your-ui).
+
 ## Related Documentation
 
 - [Profiles and hooks](/support/docs/rook-profiles-and-hooks/)
 - [Workspace files](/support/docs/rook-workspace-files/)
-- [CLI variables and defaults](/support/docs/rook-cli-reference/)
+- [CLI variables and defaults](/support/docs/agent-assurance-command-reference/#structured-output-and-progress)

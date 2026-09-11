@@ -94,18 +94,24 @@ A result answers two different questions: **what did the agent do, and how much 
 
 ## Open Hosted or Local Results
 
-```bash
-rook ui
-```
+Choose where the evidence lives before interpreting a missing run:
 
-This opens the hosted Web UI for the selected environment. Use it for synchronized project history and team review. For stage:
+| | Local UI | Hosted Web UI |
+|---|---|---|
+| Command | `rook ui --local` | `rook ui` |
+| Data | Current workspace's on-disk records, including `--test` runs | Synchronized project history in the selected environment |
+| Open a result | Agents → agent → runs → run → scenario | Projects → project → agent → Runs → run → scenario |
+| Access | No browser login; local server must stay running | Browser login and access to the project |
+| Share | Review and sanitize the evidence files; loopback URLs are not team links | Copy the hosted run/result URL for authorized teammates |
+
+For the hosted stage environment:
 
 ```bash
 export ROOK_ENV=stage
 rook ui
 ```
 
-Open project → agent → **Runs** → run → scenario result. The [Web UI walkthrough](/support/docs/rook-web-ui/) explains each screen and current stage display limitations.
+Use the same environment for CLI authentication, project selection, synchronization, and browser review. A normal run needs its definitions synchronized first; `rook runs sync` retries outstanding normal-run uploads. `--test` runs deliberately stay off the shared timeline.
 
 For on-disk evidence, including unsynchronized test runs:
 
@@ -115,6 +121,8 @@ rook ui --local --no-open
 ```
 
 The local viewer binds to loopback, reads the current workspace, and needs no authentication or network access for its data. Keep the serving process running while reviewing it. It is a different interface from the hosted app.
+
+The [combined UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) covers both interfaces on one page.
 
 ## Scenario Verdicts
 
@@ -153,6 +161,22 @@ For a result, compare:
 An agent's claim that it sent a message or created a refund is not independent proof of that write. Look for observed calls, trace data, a read-only status check, or another authoritative observation.
 
 Hooks must return actual observations. Invented usage or calls turn missing evidence into misleading scores.
+
+### In the Local UI
+
+On a run's scenario result, **criteria** shows the expected and achieved outcomes and supporting evidence. Scroll to **sent to the agent**, **what came back**, and **files** for the request, response, and raw records. These are sections of one page, not tabs. Click a file to inspect it and use Back to return.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local Rook scenario result with passing status and criterion-by-criterion evidence" className="doc_img"/>
+
+This view can show evidence before upload, including a local `--test` run. Refresh after files change. An absent verdict or file means it was not recorded or is unavailable; do not turn that absence into a pass. See [local navigation and files](/support/docs/rook-web-ui/#local-results).
+
+### In the Hosted Web UI
+
+Open the scenario **from its run**, then use **Request**, **Response**, **Verdict**, and **Artefacts**. The criterion cards show expected, achieved, evidence, and confidence where available. The scenario catalog instead shows the current definition and history.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Hosted Rook Verdict tab with verdict.yaml and acceptance-criterion evidence" className="doc_img"/>
+
+Only uploaded evidence is available here. Check the recorded run version and profile, not just today's agent summary. If aggregate percentages disagree with the run's counts, inspect the criterion records and local report; see the documented [stage display caveats](/support/docs/rook-web-ui/#stage-display-caveats).
 
 ## Fix Verification Gaps
 

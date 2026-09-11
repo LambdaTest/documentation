@@ -6,7 +6,7 @@ Run one small test before connecting a business-critical agent. This walkthrough
 
 The workflow was tested with **Rook 0.1.3** on September 11, 2026. Discovery, profile generation, scenario generation, and judging use TestMu AI credits; even a small suite can involve several model calls. Review the proposed work and credit balance before approving it.
 
-Already have a live agent? Follow the same sequence with your own [source or requirements](/support/docs/agent-assurance-connect-and-explore-agents/) and [invocation profile](/support/docs/agent-assurance-profiles/).
+Already have a live agent? Follow the same sequence with your own [source or requirements](/support/docs/agent-assurance-connect-and-explore-agents/) and [invocation profile](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
 ## Install and Authenticate the CLI
 
@@ -132,7 +132,7 @@ Then run:
 
 Approve only the intended local HTTP call and script work. Review the generated profiles/local-triage.yaml and scripts/ files below the active agent directory. A successful probe should return the real answer and four tool calls.
 
-The sample needs only an execute hook. Use [additional lifecycle hooks](/support/docs/rook-hooks-and-phases/) for login, session setup, teardown, or delayed trace collection.
+The sample needs only an execute hook. Use [additional lifecycle hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for login, session setup, teardown, or delayed trace collection.
 
 ### 4. Generate a small suite and review it
 
@@ -158,18 +158,20 @@ A normal run needs a synchronized agent version. --test is for an intentionally 
 
 ### 6. Open the results
 
+First read the report, then choose either UI:
+
 ```text
 /report
-/ui
 ```
 
-In the stage Web UI, open your project → triage agent → **Runs** → **first-triage-run** → scenario result. Inspect the request, response, and acceptance-criterion evidence. See the [Web UI walkthrough](/support/docs/rook-web-ui/) for screenshots and current stage limitations.
+| Review on this machine | Review with your team |
+|---|---|
+| Run `/ui --local`. | Run `/ui`. |
+| Open **triage-service → runs → your run → scenario**. | Open **project → triage agent → Runs → first-triage-run → scenario** in the stage Web UI. |
+| Read **criteria**, then scroll to **sent to the agent**, **what came back**, and **files**. | Read **Request**, **Response**, **Verdict**, and **Artefacts**. |
+| Works with on-disk evidence, including `--test` runs; keep the TUI open while reviewing. | Requires browser sign-in and uploaded results; teammates need project access. |
 
-For unsynchronized or offline evidence:
-
-```text
-/ui --local
-```
+Both routes inspect the recorded evidence without running the agent again. The [local and hosted UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows the different screens and explains missing results.
 
 In the verified smoke test, the selected scenario passed with four observed tool calls and no unverifiable criteria. That proves this one fixture path worked—not that the whole agent is reliable. Review the four other discovered features before expanding the suite.
 
@@ -181,8 +183,39 @@ Enter /exit to leave Rook. Stop the sample server with Ctrl+C in its terminal. R
 .testmuai/rook/projects/<project-id>/agents/<agent-id>/runs/<run-id>/
 ```
 
+## Continue After Your First Test {#continue-after-your-first-test}
+
+Use `rook status` at any point to check the selected project, active agent, and local/upstream state. In the TUI, bare `/project`, `/agent`, and `/profile` open pickers; select with the arrow keys and Enter. In a shell, their bare forms list the available records.
+
+### Ask in Plain Language
+
+Use `rook ask` when you know the outcome but not the command:
+
+```bash
+rook ask "generate adversarial tests for refund-policy bypasses"
+```
+
+Rook resolves the request to the appropriate operation. Any operation that spends credits or needs permission still shows its plan and asks first.
+
+### Local Changes and Sync
+
+Exploration, generation, profile authoring, and curation write plain files under `.testmuai/rook/`. They do not silently publish workspace state.
+
+`rook sync` records the current project tree upstream. Profile files contain environment-variable references, never their secret values. Run results are saved locally as they happen and can be reconciled upstream after connectivity returns.
+
+### When to Repeat a Step
+
+| Change | Repeat |
+|---|---|
+| Agent source, prompt, tools, or policy changed | `explore`, then regenerate affected scenarios |
+| Test intent changed without an implementation change | `generate` with an instruction, then curate |
+| Endpoint, authentication, or response shape changed | `profile test`, then `profile fix` if needed |
+| Only the deployed target changed | `run` against the intended profile |
+| Evidence arrives asynchronously | Continue the same run with `--run  --phases collect,judge` |
+| Local project metadata needs publishing | `sync` |
+
 ## Connect Your Own Agent Next
 
 Use staging credentials and disposable data. Tell the profile author the real request, answer field, authentication, session semantics, and evidence sources. Do not claim multi-turn state, observable calls, or measured usage unless the target actually supplies them.
 
-[Prompt-based profiles](/support/docs/agent-assurance-profiles/) · [Phases and hooks](/support/docs/rook-hooks-and-phases/) · [Review results](/support/docs/agent-assurance-results-and-evidence/) · [CI/CD](/support/docs/agent-assurance-ci-cd/)
+[Prompt-based profiles](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively) · [Phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) · [Review results](/support/docs/agent-assurance-results-and-evidence/) · [CI/CD](/support/docs/agent-assurance-ci-cd/)
