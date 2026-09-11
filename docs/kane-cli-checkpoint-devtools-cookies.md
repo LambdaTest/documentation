@@ -16,8 +16,6 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools-cookies/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-cookies/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -157,8 +155,6 @@ Because cookies are captured at assertion time:
 
 ## Example Assertions
 
-<VerifiedTag value="Verified" />
-
 ```
 Assert: a cookie named "session_id" exists
 Assert: the session cookie is httpOnly
@@ -169,8 +165,6 @@ Assert: the auth cookie has sameSite set to "Strict"
 
 ## Example Extractions
 
-<VerifiedTag value="Verified" />
-
 ```
 Store all cookies
 Extract the value of the "session_id" cookie
@@ -179,8 +173,6 @@ Get all cookies for the example.com domain
 ```
 
 ## Example If/Else
-
-<VerifiedTag value="Verified" />
 
 ```
 If a cookie named "auth_token" exists then go to dashboard, else go to login

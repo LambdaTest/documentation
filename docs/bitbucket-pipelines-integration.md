@@ -16,7 +16,6 @@ slug: bitbucket-pipelines-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/bitbucket-pipelines-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,7 +33,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
           "item": `${BRAND_URL}/support/docs/bitbucket-pipelines-integration-with-testmu/`
         },{
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "name": "Bitbucket Integration",
           "item": `${BRAND_URL}/support/docs/bitbucket-integration/`
         }]
@@ -155,16 +154,12 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 
   - For Linux/Mac:
     
-    <VerifiedTag value="Verified" />
-
     ``` 
      $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
      $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
      ```
 
   - For Windows:
-
-    <VerifiedTag value="Verified" />
 
     ```
     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
@@ -179,8 +174,6 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 <img loading="lazy" src={require('../assets/images/bigbucket-pipeline/1.webp').default} alt="Bitbucket Pipelines" width="1267" height="500" className="doc_img"/>
 
 **Step 2:** After importing the Git repository, fetch the [yml file](https://github.com/qa-repo/protractor-selenium-bitbucket-sample/blob/master/bitbucket-pipelines.yml) to run your automation tests using the Protractor framework on <BrandName /> Selenium Grid.
-
-<VerifiedTag value="Verified" />
 
 ```
 # This is a sample build configuration for JavaScript.
@@ -212,8 +205,6 @@ pipelines:
 `npm run single`
 
 You will find the below log generated:
-
-<VerifiedTag value="Verified" />
 
 ```
 > protractor-lambdatest@0.1.0 single /opt/atlassian/pipelines/agent/build

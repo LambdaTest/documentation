@@ -17,7 +17,6 @@ slug: bitbucket-pipeline-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/bitbucket-pipeline-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -193,8 +192,6 @@ After configuring your environment variables, select **Commit file** at the bott
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
 
 ## Sample Bitbucket Workflow File
-
-<VerifiedTag value="Verified" />
 
 ```bash
 image: ubuntu:latest  # Adjust for macOS if needed

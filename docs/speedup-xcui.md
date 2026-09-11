@@ -28,7 +28,6 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -127,8 +126,6 @@ Usually, all the test cases of your XCUI test suite are executed, but there is a
 To filter the test cases, you just need to pass the suitable parameters in <BrandName />’s REST API request. Refer to the table below to understand how to use various filters provided by <BrandName />.
 
 Given below is the REST API endpoint:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \

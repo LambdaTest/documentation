@@ -579,17 +579,6 @@ Inside `run_settings` of `lambdatest-config.json`, you can provide the list of N
 It's recommended to use `npm_dependencies` instead of `package.json` because `package.json` may contain the dependencies which are not actually used while running the Cypress tests and also, installing these unwanted dependencies will increase the build time.
 :::
 
-#### Install npm packages via a tunnel
-Use the `npm_via_tunnel` flag to route npm install traffic through a tunnel. This is useful when installing packages from a private registry, or in a restricted environment where the public npm registry isn't directly reachable. Add it to `run_settings`:
-
-<VerifiedTag value="Verified" />
-
-```bash
-"npm_via_tunnel": true
-```
-
-You must already have a tunnel configured and running. To download private dependencies, see [Include Private Dependencies](/support/docs/private-dependencies-cypress/).
-
 ## Specific Node Version
 <BrandName /> allows you to specify the Node.js version for running your tests using the ``useNodeVersion`` capability in the `run_settings` section of the `lambdatest-config.json` file. This capability provides greater flexibility and ensures compatibility with your project's dependencies and environment.
 
@@ -599,75 +588,4 @@ You must already have a tunnel configured and running. To download private depen
 "run_settings": {
   "useNodeVersion":"20"
 }
-```
-
-## Environment Variables
-You can set environment variables for your Cypress tests in three ways: via the Cypress config file, via `cypress.env.json`, or via the <BrandName /> Cypress CLI. If you set variables via both the CLI and `cypress.env.json`, the `cypress.env.json` file is ignored and only the CLI values are used.
-
-#### Via the config file
-**Cypress 9.** A sample `cypress.json`:
-
-<VerifiedTag value="Verified" />
-
-```bash
-{
-......
-	"env":{
-		"CYPRESS_BASE_URL":"https://example.cypress.io/",
-		"ACTIONS_URL": "commands/actions",
-		"WINDOW_URL": "commands/window"
-	},
-......
-}
-```
-
-**Cypress 10.** A sample `cypress.config.js`:
-
-<VerifiedTag value="Verified" />
-
-```bash
-module.exports = defineConfig({
-  env: {
-    'CYPRESS_BASE_URL':'https://example.cypress.io/',
-    'ACTIONS_URL' : 'commands/actions',
-    'WINDOW_URL': 'commands/window'
-  },
-```
-
-Use them in your test spec:
-
-<VerifiedTag value="Verified" />
-
-```bash
-describe('Sample test', () => {
-    it('test case - actions', () => {
-      cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('ACTIONS_URL'))
-      cy.wait(3000)
-    })
-    it('test case - window', () => {
-        cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('WINDOW_URL'))
-        cy.wait(3000)
-    })
-})
-```
-
-#### Via `cypress.env.json`
-
-<VerifiedTag value="Verified" />
-
-```bash
-{
-    "CYPRESS_BASE_URL":"https://example.cypress.io/",
-    "ACTIONS_URL" : "commands/actions",
-    "WINDOW_URL": "commands/window"
-}
-```
-
-#### Via the Cypress CLI
-Add variables with the `--envs` parameter:
-
-<VerifiedTag value="Verified" />
-
-```bash
-lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"
 ```

@@ -15,7 +15,6 @@ slug: hyperexecute-general-faqs/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-general-faqs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -207,8 +206,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
   You can access your Microsoft Excel files with HyperExecute by modifying the files that contain your tests. In order to automate the opening of your Excel file, set the `ms:waitForAppLaunch` and `appArguments` capabilities to:
   
-  <VerifiedTag value="Verified" />
-
   ```bash
    cap.setCapability("ms:waitForAppLaunch", 15);
    cap.setCapability("appArguments", " /e ");

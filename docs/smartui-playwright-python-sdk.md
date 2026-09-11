@@ -374,8 +374,6 @@ Integrating seamlessly into your existing Playwright testing suite, SmartUI SDK 
 - Login to [<BrandName /> SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) with your credentials.
 - Install **virtualenv** which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 pip install virtualenv
 ```
@@ -400,8 +398,6 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 - You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-playwright-python-sdk-sample
 cd smartui-playwright-python-sdk-sample
@@ -409,15 +405,11 @@ cd smartui-playwright-python-sdk-sample
 
 - Create a virtual environment in your project folder (the environment name is arbitrary).
 
-<VerifiedTag value="Verified" />
-
 ```bash
 virtualenv venv
 ```
 
 - Activate the environment.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 source venv/bin/activate
@@ -427,8 +419,6 @@ source venv/bin/activate
 
 Install required NPM modules for `TestMu AI SmartUI Playwright Python SDK` in your **Frontend** project.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -436,9 +426,6 @@ npm install @lambdatest/smartui-cli
 :::note
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
-
-<VerifiedTag value="Verified" />
-
 ```bash
 pip install lambdatest-playwright-driver
 ```
@@ -446,8 +433,6 @@ pip install lambdatest-playwright-driver
 ### Step 3: Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -479,15 +464,11 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
-
-<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -563,8 +544,6 @@ with sync_playwright() as playwright:
 ### Step 6: Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --config .smartui.json exec -- python SmartUI_SDK_LT_hub.py

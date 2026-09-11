@@ -219,17 +219,12 @@ Complete these steps before running WD Selenium tests on TestMu AI.
 ---
 Clone the TestMu AI WD Selenium sample repository to your local machine.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/wd-selenium-sample
 cd wd-selenium-sample
 ```
 
 Install the required dependencies:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm i
 ```
@@ -242,8 +237,6 @@ Set your TestMu AI username and access key as environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -254,8 +247,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -291,17 +282,11 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm run single
 ```
 
 **Parallel tests:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm run parallel
 ```

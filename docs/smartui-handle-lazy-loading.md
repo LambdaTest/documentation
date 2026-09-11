@@ -168,8 +168,6 @@ The `waitForTimeout` option in your SmartUI configuration file adds a delay befo
 
 Add `waitForTimeout` to your `.smartui.json` file:
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "web": {

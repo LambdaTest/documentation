@@ -273,8 +273,6 @@ SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real
 
 ### 2. Install SmartUI CLI
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli
 ````
@@ -285,15 +283,11 @@ npm install @lambdatest/smartui-cli
 
 Run the following to create your initial design file:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create-figma-app designs.json
 ```
 
 #### Sample `designs.json`
-
-<VerifiedTag value="Verified" />
 
 ```json title="designs.json"
 {
@@ -320,13 +314,6 @@ npx smartui config:create-figma-app designs.json
 
 ### 4. Set Environment Variables
 
-Set all four values before running the upload.
-
-<VerifiedTag value="Verified" />
-
-<Tabs className='docs__val' groupId='language'>
-<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
-
 ```bash
 export PROJECT_TOKEN="your_smartui_project_token"
 export FIGMA_TOKEN="your_figma_personal_token"
@@ -335,8 +322,6 @@ export FIGMA_TOKEN="your_figma_personal_token"
 ---
 
 ### 5. Run the Comparison
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui upload-figma-app designs.json
@@ -351,165 +336,19 @@ npx smartui upload-figma-app designs.json
 
 #### Example
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline
 ```
 
 ---
 
-### 6. Upload your app
-
-Your Appium test needs an app that lives on the real device cloud. Upload your `.apk` or `.ipa` and note the `app_url` that is returned.
-
-<VerifiedTag value="Verified" />
-
-```bash
-curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
--X POST "https://manual-api.lambdatest.com/app/upload/realDevice" \
--F "appFile=@/path/to/your/app.apk" \
--F "name=YourAppName"
-```
-
-The response contains an `app_url` field, already in `lt://APP...` form, which is the value you pass as the `app` capability in the next step. For other upload options see [Upload your app](/support/docs/upload-apps-on-real-device-cloud/).
-
----
-
-### 7. Configure your Appium capabilities
-
-This is the half that produces the app screenshots. Use the same device here as in `designs.json` so both sides are captured at the same viewport.
-
-<VerifiedTag value="Verified" />
-
-```javascript title="NodeJS example"
-let capabilities = {
-  deviceName: "Pixel 8",          // must match mobile[].name in designs.json
-  platformName: "android",
-  platformVersion: "14",          // must match mobile[].platform
-  isRealMobile: true,             // Mandatory
-  app: "lt://APP_ID",             // Mandatory
-  //highlight-next-line
-  visual: true,                   // Mandatory
-  name: "Figma app comparison",
-  build: "Real Device App Build",
-  //highlight-start
-  "smartUI.project": "<Your Project Name>", // Mandatory, the project NAME not the project token
-  "smartUI.build": "<Your Build Name>",     // Optional
-  "smartUI.baseline": false,                // Leave false, your Figma build is the baseline
-  //highlight-end
-};
-
-let gridUrl =
-  "https://" +
-  "<Your Username>" +
-  ":" +
-  "<Your Access Key>" +
-  `@mobile-hub.lambdatest.com/wd/hub`;
-
-let driver = await new webdriver.Builder()
-  .usingServer(gridUrl)
-  .withCapabilities(capabilities)
-  .build();
-```
-
-:::warning
-
-The app side is identified by `smartUI.project`, which takes the project **name**. The `PROJECT_TOKEN` you exported in Step 4 authenticates the CLI upload only. It is not used by the Appium capabilities.
-
-:::
-
-:::warning
-
-`visual: true` is mandatory. Without it no screenshots are sent to SmartUI and the build is reported with an `Error` status.
-
-:::
-
----
-
-### 8. Capture screenshots with matching names
-
-Add the screenshot hook after the point in your script where the screen you care about is rendered.
-
-**Critical**: Figma frames are stored with `.png` appended, so your app screenshot names must include the extension to line up with them.
-
-<VerifiedTag value="Verified" />
-
-```javascript
-// ❌ Wrong, will not match the Figma frame
-await driver.execute("smartui.takeScreenshot=homepage");
-
-// ✅ Correct, matches the Figma frame homepage.png
-await driver.execute("smartui.takeScreenshot=homepage.png");
-```
-
-:::warning
-
-When you pass a config object, the screenshot name key is `screenshotName`. Passing `name` throws
-`Error response status: 1` and the test fails.
-
-<VerifiedTag value="Verified" />
-
-```javascript
-// ❌ Wrong, throws
-await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
-
-// ✅ Correct
-await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"});
-```
-
-:::
-
-<VerifiedTag value="Verified" />
-
-<Tabs className='docs__val' groupId='framework'>
-<TabItem value='appium' label='Appium NodeJS' default>
-
-```javascript
-// simple form
-await driver.execute("smartui.takeScreenshot=homepage.png");
-
-// config form
-await driver.execute("smartui.takeScreenshot", {screenshotName: "homepage.png"});
-```
-
-</TabItem>
-<TabItem value='appium-java' label='Appium Java'>
-
-```java
-// the Selenium interface is JavascriptExecutor, with a lower case s in script
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot=homepage.png");
-```
-
-</TabItem>
-<TabItem value='appium-python' label='Appium Python'>
-
-```python
-driver.execute_script("smartui.takeScreenshot=homepage.png")
-```
-
-</TabItem>
-</Tabs>
-
-Run your test suite as you normally would.
-
-<VerifiedTag value="Verified" />
-
-```bash
-npm i && node your_test_script.js
-```
-
----
-
-### 9. View SmartUI Results
+### View SmartUI Results
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Best Practices
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='build-names' label='Build Names' default>
@@ -623,12 +462,7 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match app screenshots
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='verify-figma-token' label='Verify Figma Token' default>
 
-<VerifiedTag value="Verified" />
-
-<Tabs className='docs__val' groupId='troubleshooting-auth'>
-<TabItem value='verify-env-vars' label='Verify Environment Variables' default>
-
-Check that all four values are set in the shell you are running from.
+Verify Figma Token
 
 ```bash
    echo $FIGMA_TOKEN
@@ -660,60 +494,9 @@ Validate Node IDs
 
 Check Screenshot Names
 
-</TabItem>
-<TabItem value='unknown-keys' label='Unknown Properties' >
-
-An unrecognised key does not stop the upload, it only logs `Additional property "<name>" is not allowed` and is then ignored. If a setting seems to have no effect, look for that warning and check it against the Configuration Options table above.
-
-</TabItem>
-</Tabs>
-
-### The upload fails while fetching from Figma
-
-<VerifiedTag value="Verified" />
-
-<Tabs className='docs__val' groupId='troubleshooting-figma-api'>
-<TabItem value='rate-limit' label='Figma rate limit' default>
-
-The upload authenticates and then fails during **Processing App Figma** with a message like:
-
-```
-Failed to retrieve figma files, Figma API rate limit reached for your token.
-Your file is on the 'starter' plan tier, and your token's rate-limit bucket is 'low'.
-```
-
-Figma applies the lowest rate-limit bucket to tokens that act as a Viewer or Collab seat on a file, which includes free Starter workspaces. A handful of uploads in quick succession is enough to exhaust it.
-
-What helps:
-
-- Wait before retrying. Short backoff often is not enough, so leave a longer gap between attempts
-- Reduce how many `figma_ids` you fetch per run, and avoid re-running the upload while iterating on unrelated config
-- Use a token belonging to an Editor seat on a paid Figma tier, which is placed in a higher bucket
-
-A direct call to the Figma REST API can still succeed while the upload fails, because the upload makes several calls per run.
-
-</TabItem>
-<TabItem value='figma-access' label='Token cannot see the file' >
-
-If the message is `Invalid token` rather than a rate limit, the token itself is being rejected. Regenerate it from [Figma Settings](https://www.figma.com/settings) and make sure it carries the `file_content:read` scope, which is what allows reading file contents and rendering images.
-
-</TabItem>
-</Tabs>
-
-### Figma frames and app screenshots are not being compared
-
-<Tabs className='docs__val' groupId='troubleshooting-compare'>
-<TabItem value='check-screenshot-names' label='Check Screenshot Names' default>
-
-- Ensure app screenshots include the `.png` extension, for example `homepage.png`
-- Verify names match exactly between the Figma config and your Appium code, including case
-- Ensure `screenshot_names` matches the order of `figma_ids`
-
-</TabItem>
-<TabItem value='check-project-match' label='Check Project Match' >
-
-- Verify `smartUI.project` in your capabilities is the project **name** for the same project whose token you used for the CLI upload
-- Confirm the Figma build was marked as the baseline, either with `--markBaseline` or by approving it on the dashboard
+- Ensure SDK screenshots include `.png` extension (e.g., `homepage.png`)
+   - Verify screenshot names match exactly between Figma config and SDK code
+   - Ensure `screenshot_names` array matches the order of `figma_ids`
 
 </TabItem>
 <TabItem value='verify-device-sizes' label='Verify Device Sizes' >

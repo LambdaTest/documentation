@@ -21,30 +21,6 @@ import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Apple Pay Automation on Real Devices",
-          "item": `${BRAND_URL}/support/docs/apple-pay-auto/`
-        }]
-      })
-    }}
-></script>
-
-<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -233,9 +209,6 @@ To enable Apple Pay automation, include the following capability in your automat
 <Tabs>
 
   <TabItem value="ios" label="iOS">
-
-    <VerifiedTag value="Verified" />
-
     <CodeBlock className="language-java">
 {`desired_caps = {
     "deviceName": "iPhone 16",
@@ -269,9 +242,6 @@ Before confirming the Apple Pay payment, you can optionally update the shipping 
 
 <Tabs>
   <TabItem value="python" label="Python">
-
-    <VerifiedTag value="Verified" />
-
     <CodeBlock className="language-python">
 {`driver.execute_script("lambda-applepay-details", {
     "shippingDetails": {
@@ -300,9 +270,6 @@ Before confirming the Apple Pay payment, you can optionally update the shipping 
     </CodeBlock>
   </TabItem>
   <TabItem value="java" label="Java">
-
-    <VerifiedTag value="Verified" />
-
     <CodeBlock className="language-java">
 {`Map<String, Object> shippingDetails = new HashMap<>();
 shippingDetails.put("firstName", "John");
@@ -335,9 +302,6 @@ driver.executeScript("lambda-applepay-details", applePayDetails);`}
     </CodeBlock>
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
-
-    <VerifiedTag value="Verified" />
-
     <CodeBlock className="language-javascript">
 {`await driver.executeScript("lambda-applepay-details", {
     shippingDetails: {

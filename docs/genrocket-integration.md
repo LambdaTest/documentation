@@ -15,7 +15,6 @@ canonical: https://www.testmuai.com/support/docs/genrocket-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/CookieTracking';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -227,15 +226,11 @@ Following two commands have been already added in the "[pre](/support/docs/deep-
 
 * To configure Genrocket on HyperExecute we need to create a directory in the HyperExecute Machine with the name **.genrocket** which is done by the following command. 
 
-<VerifiedTag value="Verified" />
-
 ```bash
 mkdir /home/ltuser/.genrocket
 ```
 
 * After creating the directory, we also need to copy the Genrocket profile **.grp** file to the .genrocket folder which is done by the following command.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 cp ******Profile.grp /home/ltuser/.genrocket
@@ -251,8 +246,6 @@ cp ******Profile.grp /home/ltuser/.genrocket
 
 * Open the terminal and navigate to the project root directory.
 * Run the following command with your **<BrandName /> Username** and **AccessKey**. (as noted in step 4.1 above)
-
-<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --user USERNAME --key ACCESS_KEY --config hyperexecute.yaml

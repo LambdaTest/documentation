@@ -25,30 +25,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "GitLab PR Checks with SmartUI Hooks",
-          "item": `${BRAND_URL}/support/docs/smartui-gitlab-pr-checks-hooks/`
-        }]
-      })
-    }}
-></script>
-
-<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -718,8 +694,6 @@ The `visual: true` capability is **mandatory** for SmartUI visual regression tes
 Create or update your `.gitlab-ci.yml` file. Since you're using **Hooks**, you just need to run your tests normally - no SmartUI CLI exec command required.
 
 ### Complete GitLab CI/CD Configuration
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='ci-language'>
 <TabItem value='typescript' label='TypeScript/JavaScript' default>

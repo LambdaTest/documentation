@@ -321,14 +321,8 @@ public class JavaTodo {
             driver.findElement(By.name("li1")).click();
             driver.findElement(By.name("li2")).click();
 
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
+            driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+            driver.findElement(By.id("addbutton")).click();
 
             String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
             if (enteredText.equals("Yey, Let's add it to list")) {
@@ -345,34 +339,26 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
         browserOptions.setPlatformName("Windows 10");
         browserOptions.setBrowserVersion("latest");
 
-<TabItem value="win-cmd" label="Windows (CMD)">
-
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-batch">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-</Tabs>
-
-## How the sample test works
----
-
-All the framework repos below run the **same** sample test, so you only need to understand it once. The test opens the [to-do app](https://lambdatest.github.io/sample-todo-app/), marks the first two items done, adds a new item, and verifies it appears:
-
-<VerifiedTag value="Verified" />
-
-```java
-driver.get("https://lambdatest.github.io/sample-todo-app/");
-driver.findElement(By.name("li1")).click();
-driver.findElement(By.name("li2")).click();
-driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
-driver.findElement(By.id("addbutton")).click();
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("build", "LambdaTestSampleApp");
+        ltOptions.put("name", "LambdaTestJavaSample");
+        ltOptions.put("w3c", true);
+        browserOptions.setCapability("LT:Options", ltOptions);
+        try {
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), browserOptions);
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    private void tearDown() {
+        if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
+}
 ```
 
 ## Step 2: Set Your Credentials

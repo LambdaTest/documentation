@@ -216,16 +216,12 @@ Run the below mentioned commands in the terminal to setup the CLI and the enviro
 
 For macOS / Linux:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export LT_USERNAME=YOUR_LT_USERNAME
 export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 For Windows:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 set LT_USERNAME=YOUR_LT_USERNAME
@@ -246,8 +242,6 @@ Here **'my-image'** is the name of the image which will be rendered on the Dashb
 > Refer to the [Cypress Documentation](https://docs.cypress.io/api/commands/screenshot) to understand the different methods for taking screenshots.
 
 3. Paste the below mentioned code in your YAML file.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 cypressOps:
@@ -276,8 +270,6 @@ cypressOps:
 ## Step 3: Execute your Project and Compare the Results
 
 To execute the project run the below command in your terminal at the root folder.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 ./hyperexecute --config <yaml-file-path> --download-artifacts --force-clean-artifacts

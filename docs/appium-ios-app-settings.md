@@ -142,8 +142,6 @@ To make it easier for the user to access the iOS app settings, we have created a
 
 The hook `"lambda-ios-settings"` takes a JSON parameter which tells which settings we need to manipulate. Below shown is an example of the lambda hook written in python3.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 params = {"Permission Settings":{"Camera":"Off", "Location":"While using the app"},"Reset App":"On","Next Page":{"Child Toggle":"On"},"Others":"White","Slider-1":"0.1", "TextField-2":"ABCD", "TextField-1":"XYZ"}
 driver.execute_script("lambda-ios-settings", params)
@@ -182,8 +180,6 @@ Let's say we pass Camera: "On" in the lambda hook’s preferences even before ha
 :::info
 
 Note that we have separate key for Precise Location. We do not pass it inside Location object as shown:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 params = {"Permission Settings":{"Location":"While using the app", "Precise Location": "On"}}

@@ -175,8 +175,6 @@ This guide will cover the basics of getting started with Puppeteer testing with 
 
 2. Install the npm dependencies.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm install
 ```
@@ -289,8 +287,6 @@ describe('Search Text', () => {
 
 2. Now pass the below command to run your test.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm run test
 ```
@@ -307,8 +303,6 @@ npm run test
 The [mocha-skill](https://github.com/LambdaTest/agent-skills/tree/main/mocha-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
 The mocha-skill package includes:
-
-<VerifiedTag value="Verified" />
 
 ```
 mocha-skill/
@@ -332,8 +326,6 @@ It provides structured guidance for:
 ***
 
 Install a Mocha Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

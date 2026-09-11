@@ -246,8 +246,6 @@ In this documentation, you will learn how to trigger a automation script of **PH
 - Your <BrandName /> [Username and Access key](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security).
 - Download and install the latest version of PHP in your system.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="phpmac" label="MacOS" default>
@@ -281,8 +279,6 @@ Please add PHP to Windows System Variables Path.
 
 To use the **composer** command directly, it should have been downloaded in the project directory. In windows the composer gets installed in different directory. So, copy the 'composer.phar' to the project directory using copy command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 copy C:\ProgramData\ComposerSetup\bin\composer.phar
 ```
@@ -315,9 +311,6 @@ You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* 
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -326,9 +319,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -346,9 +336,6 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="App File" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
@@ -357,9 +344,6 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </TabItem>
 
 <TabItem value="powershell" label="App URL" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
       {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
@@ -577,8 +561,6 @@ The capabilities object in the sample code are defined as:
 
 - Execute the following command to run your test on <BrandName /> platform:
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="iOS" default>
@@ -607,8 +589,6 @@ The [appium-skill](https://github.com/LambdaTest/agent-skills/tree/main/appium-s
 
 The appium-skill package includes:
 
-<VerifiedTag value="Verified" />
-
 ```
 appium-skill/
 ├── SKILL.md
@@ -631,8 +611,6 @@ It provides structured guidance for:
 ***
 
 Install a Appium Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

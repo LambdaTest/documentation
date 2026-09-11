@@ -16,8 +16,6 @@ site_name: TestMu AI
 slug: kane-cli-generate/
 canonical: https://www.testmuai.com/support/docs/kane-cli-generate/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -132,8 +130,6 @@ For the full picture of AI test-case generation, including richer inputs (files,
 
 ## Quick start
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # 1. Generate from a description
 kane-cli generate "checkout flow on a shopping site"
@@ -181,8 +177,6 @@ The request id (`23271` above) is printed at the end of each generation and is h
 ## Attaching files for context
 
 Give the generator more to work from by attaching local files with `--files` (a comma-separated list of paths) on a **new** generation or a **refine**:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli generate "test the login flow described in the attached spec" --files ./login-spec.pdf,./wireframe.png

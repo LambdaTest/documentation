@@ -19,31 +19,6 @@ canonical: https://www.testmu.ai/support/docs/configure-yaml-for-integrating-goc
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Configure YAML For Integrating GoCD Pipelines With TestMu AI",
-          "item": `${BRAND_URL}/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -132,8 +107,6 @@ Through our previous document, you were able to integrate GoCD pipelines with <B
 <img loading="lazy" src={require('../assets/images/yaml-integration/YAML-2.webp').default} alt="Image"  className="doc_img"/>
 
 **Step 4:** In Part 4 i.e. Job & Tasks, you need to specify a Job name as per your choice and enter the below commands.
-
-<VerifiedTag value="Verified" />
 
 ```
 npm install

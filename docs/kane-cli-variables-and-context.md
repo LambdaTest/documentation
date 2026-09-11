@@ -19,7 +19,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-variables-and-context/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -185,8 +184,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 Variables are JSON objects keyed by name. Each entry describes a single variable:
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "username": { "value": "alice", "secret": false },
@@ -202,8 +199,6 @@ Variables are JSON objects keyed by name. Each entry describes a single variable
 ### Usage in Objectives
 
 Reference variables with `{{key}}` syntax:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run \
@@ -232,8 +227,6 @@ Within a directory, files are read in alphabetical order; later files override e
 
 Pass a JSON object directly on the command line:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli run "Log in as {{username}}" \
   --variables '{"username": {"value": "alice"}}'
@@ -243,8 +236,6 @@ kane-cli run "Log in as {{username}}" \
 
 Point at a single JSON file:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli run "Log in as {{username}}" \
   --variables-file ./vars.json
@@ -253,8 +244,6 @@ kane-cli run "Log in as {{username}}" \
 ### Project-Local Variables
 
 Drop one or more `*.json` files into `.testmuai/variables/` inside your project's working directory. They load automatically whenever you run `kane-cli` from that directory.
-
-<VerifiedTag value="Verified" />
 
 ```text
 my-project/
@@ -271,8 +260,6 @@ Project-local variables override global variables but are overridden by file and
 
 For values you want available across every project on your machine, place `*.json` files in `~/.testmuai/kaneai/variables/`.
 
-<VerifiedTag value="Verified" />
-
 ```text
 ~/.testmuai/kaneai/variables/
 ├── personal.json
@@ -282,8 +269,6 @@ For values you want available across every project on your machine, place `*.jso
 Global variables have the lowest precedence, anything else with the same key wins.
 
 ### Example Variable File
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -299,8 +284,6 @@ Global variables have the lowest precedence, anything else with the same key win
 ### Secrets
 
 Mark a variable as secret by setting `"secret": true`:
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -328,8 +311,6 @@ Context files are plain Markdown files whose contents are passed to the agent al
 | **Local** | `.testmuai/context.md` (in project directory) | App-specific navigation, known UI quirks, test environment details |
 
 ### Example Local Context File
-
-<VerifiedTag value="Verified" />
 
 ```markdown
 # MyApp Staging Context
@@ -365,8 +346,6 @@ MyApp is a SaaS project management tool. Users create projects, invite members, 
 ### Override Per Run
 
 Override either context file for a single run:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "your objective" \

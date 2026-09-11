@@ -244,8 +244,6 @@ If you are using your own project, make sure you update the **Hub endpoint** in 
 By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config hyperexecute.yaml`}
@@ -318,8 +316,6 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -330,8 +326,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -357,8 +351,6 @@ In this sample YAML file, we have mentioned:
 - and other necessary YAML Parameters
 
 
-<VerifiedTag value="Verified" />
-
 ```yaml reference title="HyperExecute AutoSplit YAML"
 https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v2/testng_hyperexecute_autosplit_sample.yaml
 ```
@@ -369,15 +361,11 @@ https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml
 
 Run the below command in your terminal at the root folder of the project:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -454,8 +442,6 @@ The [testng-skill](https://github.com/LambdaTest/agent-skills/tree/main/testng-s
 
 The testng-skill package includes:
 
-<VerifiedTag value="Verified" />
-
 ```
 testng-skill/
 ├── SKILL.md
@@ -478,8 +464,6 @@ It provides structured guidance for:
 ***
 
 Install a TestNG Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

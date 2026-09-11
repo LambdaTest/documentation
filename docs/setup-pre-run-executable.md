@@ -14,7 +14,6 @@ slug: setup-pre-run-executable/
 canonical: https://www.testmu.ai/support/docs/setup-pre-run-executable/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -189,29 +188,21 @@ Upload your certificate file, installation, and uninstallation script using the 
 
 1. Upload your certificate using the below command.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 curl --location --request POST '<https://api.lambdatest.com/automation/api/v1/user-files>'
 ```
 2. Install the certificate on macOS using the following command.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}
 ```
 3. Install the certificate on Windows using the below command.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 Import-Certificate -FilePath "C:\Users\ltuser\Downloads\{NAME-OF-THE-CERTIFICATE}" -CertStoreLocation 'Cert:\LocalMachine\Root' -Verbose
 ```
 
 4. Use the following cURL request to upload pre and post run files altogether.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 curl --request POST \
@@ -226,8 +217,6 @@ curl --request POST \
   ```
 
 5. Run the below capabilities to use the certificate, pre, and post run files in a test.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 "lambda:userFiles": ["certificate.p12"],
@@ -250,8 +239,6 @@ curl --request POST \
 6. After uploading your pre-run script, reach out to us via chat support or email to get the scripts approved.
 
 7. Once your script is approved, pass the `prerun` key in the capability as follows:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 "prerun": {
@@ -284,17 +271,11 @@ Replace the placeholder values in each script file before use.
 Following are the contents of the sample file:
 
 **For Installing:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/ltuser/Downloads/{CERTIFICATE-FILE-NAME}
 ```
 
 **For Deleting:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 sudo security delete-certificate -c "Local Certificate"
 ```
@@ -310,16 +291,10 @@ Replace the placeholder values in each script file before use.
 Following are the contents of the sample file:
 
 **For Installing:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 Import-Certificate -FilePath "C:\Users\ltuser\Downloads\{NAME-OF-THE-CERTIFICATE}" -CertStoreLocation 'Cert:\LocalMachine\Root' -Verbose
 ```
 **For Deleting:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 Get-ChildItem Cert:\CurrentUser\Root\{THUMBPRINT-OF-THE-CERTIFICATE} | Remove-Item
 ```

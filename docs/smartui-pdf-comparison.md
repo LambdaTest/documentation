@@ -26,7 +26,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -159,8 +158,6 @@ To initiate a SmartUI PDF Comparison Project, adhere to the following instructio
 5. Confirm your entry by clicking on **Submit**.
 
 Once your project is active, retrieve your `Project Token` from the application. Here's an example of a project token:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"

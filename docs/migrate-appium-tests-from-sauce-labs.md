@@ -237,15 +237,11 @@ For a Python-based implementation, here are the changes in the script for Hub UR
 
 **Sauce Labs**
 
-<VerifiedTag value="Verified" />
-
 ```
 @ondemand.us-west-1.saucelabs.com/wd/hub
 ```
 
 **<BrandName />**
-
-<VerifiedTag value="Verified" />
 
 ```
 @mobile-hub.lambdatest.com/wd/hub

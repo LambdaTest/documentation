@@ -16,7 +16,6 @@ slug: buildkite-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -159,8 +158,6 @@ You can select the GitHub account where your repository is and add the repositor
 
 You need to set your <BrandName /> username and accesskey as your environment variables. You can retrieve them from your <BrandName /> automation dashboard by clicking on the key icon near the help button or the key icon in the side navbar. The format should be as following:
 
-<VerifiedTag value="Verified" />
-
 ```
 LT_USERNAME=YOUR_LAMBDATEST_USERNAME
 LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
@@ -171,8 +168,6 @@ LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 **Step 4:** Add steps to add lambdatest-buildkite plugin
 
 To add a plugin to a `command` step, use the `plugins` attribute. The `plugins` attribute accepts an array, so you can add multiple plugins to the same step.
-
-<VerifiedTag value="Verified" />
 
 ```
 steps:
@@ -186,8 +181,6 @@ steps:
 The commands to run for test execution are to be mentioned as steps here. For example, the steps can be prerequisite package installs,  executing the testing code etc.
 
 In the example repository, there is only a single step - executing the `lambdatest.py` file. That can be done with the following code:
-
-<VerifiedTag value="Verified" />
 
 ```
 python3 lambdatest.py
@@ -229,8 +222,6 @@ Monitor and analyze your test result on the **[<BrandName /> automation dashboar
 **Step 3:** Go to your desired GitHub repository for which you want to build the pipeline.
 
 **Step 4:** In the root of your repository, create a file named `pipeline.yml` in a `.buildkite` directory. In `pipeline.yml`, define your pipeline steps.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 steps:

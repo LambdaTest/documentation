@@ -19,30 +19,6 @@ canonical: https://www.testmuai.com/support/docs/extended-debugging-options/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Extended Debugging Options for Selenium Testing",
-          "item": `${BRAND_URL}/support/docs/extended-debugging-options/`
-        }]
-      })
-    }}
-></script>
-
-<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -312,9 +288,6 @@ await driver.get("https://www.google.com");
 ```
 
 **Response:**
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
     "status": "success",
@@ -376,9 +349,6 @@ await driver.get("https://jsonplaceholder.typicode.com/todos/1");
 ```
 
 **Response:**
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
     "status": "success",
@@ -420,9 +390,6 @@ await driver.get("https://example.com/images/photo.jpg");
 ```
 
 **Response:**
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
     "status": "success",
@@ -476,9 +443,6 @@ await driver.get("https://www.wikipedia.org");
 ```
 
 **Response:**
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
     "status": "success",
@@ -534,9 +498,6 @@ await driver.get("https://www.cnn.com");
 ```
 
 **Response:**
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
     "status": "success",
@@ -609,9 +570,6 @@ await driver.executeScript("lt:downloadHAR", {
 ```
 
 **Response:**
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
     "status": "success",

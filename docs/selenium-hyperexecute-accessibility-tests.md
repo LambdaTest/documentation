@@ -22,7 +22,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -154,8 +153,6 @@ HyperExecute does **not** replace Selenium capabilities. It **orchestrates** the
 - **Discovery** in `hyperexecute.yaml` points at the same `mvn`/`gradle`/`npm` command you use locally for Accessibility runs.
 
 Example pattern (illustrative only, adapt to your repo’s actual `runson`, `pre`, and `testRunnerCommand`):
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 version: 0.1

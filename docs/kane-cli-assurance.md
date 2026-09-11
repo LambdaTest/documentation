@@ -16,8 +16,6 @@ site_name: TestMu AI
 slug: kane-cli-assurance/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -117,8 +115,6 @@ Requires kane-cli **0.6.1 or later** (`kane-cli --version`). On 0.6.0 these comm
 :::
 
 ## The loop
-
-<VerifiedTag value="Verified" />
 
 ```
   requirement docs                          product changes

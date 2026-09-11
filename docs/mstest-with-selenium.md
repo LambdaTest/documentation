@@ -211,8 +211,6 @@ Complete the following steps before running MSTest Selenium tests.
 ---
 Clone the repository and navigate to the project directory.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/MSTest-Selenium-Sample
 cd MSTest-Selenium-Sample
@@ -228,8 +226,6 @@ Set TestMu AI Username and Access Key in environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -240,8 +236,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -319,8 +313,6 @@ Use AI coding assistants to generate and run MSTest tests with the TestMu AI Age
 The [mstest-skill](https://github.com/LambdaTest/agent-skills/tree/main/mstest-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

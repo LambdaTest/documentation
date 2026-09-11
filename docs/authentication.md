@@ -26,31 +26,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Authentication",
-          "item": `${BRAND_URL}/support/docs/authentication/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -135,8 +110,6 @@ The following args can be used while running tests using the run command.
 
 For example -
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
   {`lambdatest-cypress run --username=${ YOUR_LAMBDATEST_USERNAME()} --ak=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
@@ -160,8 +133,6 @@ The options supported in the auth are as follows:
 | **access_key** | Your <BrandName /> access key |
 
 For example -
-
-<VerifiedTag value="Verified" />
 
 ```json title="lambdatest-config.json"
 "lambdatest_auth": {
@@ -188,8 +159,6 @@ Or you can also set environment variables using following commands:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}" \\
@@ -201,8 +170,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">

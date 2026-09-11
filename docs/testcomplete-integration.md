@@ -23,7 +23,6 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import CookieTrackingLogin from '@site/src/component/CookieTracking';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -168,8 +167,6 @@ Make sure to add the path of the **appFile** in the cURL request. Here is an exa
 <Tabs className="docs__val" groupId="os">
 <TabItem value="macos" label="Linux / MacOS" default>
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --form 'name="Android_App"' --form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
@@ -180,9 +177,6 @@ Make sure to add the path of the **appFile** in the cURL request. Here is an exa
 </TabItem>
 
 <TabItem value="windows" label="Windows" default>
-
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk""`}
@@ -208,8 +202,6 @@ Make sure to add the path of the **appFile** in the cURL request. Here is an exa
 :::info
 Update your **APP_ID**, **YOUR_LAMBDATEST_USERNAME**, and **YOUR_LAMBDATEST_ACCESS_KEY** while passing the capabilities.
 :::
-
-<VerifiedTag value="Verified" />
 
 ```bash title="Sample code for capabilities"
 {

@@ -26,7 +26,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 ---
 
@@ -162,16 +161,12 @@ This guide is designed to provide you with comprehensive information about the v
 
 To generate the SmartUI SDK configuration file, please execute the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create .smartui.json
 ```
 
 :::note
 For the latest features including advanced configurations, ensure you are using the latest version of SmartUI CLI. Install or update using:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm install -g @lambdatest/smartui-cli@latest
@@ -181,8 +176,6 @@ npm install -g @lambdatest/smartui-cli@latest
 ## Configuration File Structure
 
 The SmartUI configuration file follows a JSON structure. Below is a sample configuration file with detailed explanations of each option:
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -215,8 +208,6 @@ The SmartUI configuration file follows a JSON structure. Below is a sample confi
 ```
 
 ## Configuration Options
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='config-options'>
 <TabItem value='web' label='Web Configuration' default>

@@ -158,8 +158,6 @@ By configuring these options effectively, you can tailor your accessibility test
 - **Purpose:** Activate accessibility testing within your automated test suite. This allows you to identify and address accessibility violations that might hinder usability for users with disabilities.
 - **Implementation:** Set the `accessibility` property to `true` within your configuration file.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 accessibility : true
 ```
@@ -169,8 +167,6 @@ accessibility : true
 - **Purpose:** Define the specific Web Content Accessibility Guidelines (WCAG) version your tests should evaluate against. WCAG defines internationally recognized standards for web accessibility.
 - **Options:** Common options include WCAG 2.0, WCAG 2.1 Level A, or WCAG 2.1 Level AAA. Each level represents increasing accessibility requirements.
 - **Implementation:** Specify the desired WCAG version using the wcagVersion property within your configuration file.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 accessibility.wcagVersion: 'wcag21a'
@@ -182,8 +178,6 @@ accessibility.wcagVersion: 'wcag21a'
 - **Default Value:** The default setting is false, focusing strictly on WCAG violations.
 - **Implementation:** Enable best practice checks by setting bestPractice to true in your configuration file.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 accessibility.bestPractice: false
 ```
@@ -192,8 +186,6 @@ accessibility.bestPractice: false
 
 - **Purpose:** Flag potential accessibility issues that might require human evaluation for definitive assessment.
 - **Implementation:** Enable needs review checks by setting needsReview to true in your configuration file. This ensures potentially ambiguous issues get flagged for manual review.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 accessibility.needsReview: true

@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/kane-ai-secrets/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -146,9 +145,6 @@ Once created, you can now reference any secret variables in your test steps usin
 > To use a previously created variable in any subsequent step or test case, reference the variable using the same `{{` syntax. This will list down all existing variables for this test.
 
 Format:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 use the value of {{secrets.user.email}} in the email text field
 ```

@@ -20,7 +20,6 @@ canonical: https://www.testmuai.com/support/docs/chat-agent-api-integration/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -123,8 +122,6 @@ It works with any chatbot provider or framework. You provide the endpoint URL, t
 
 The platform sends each message as an HTTP POST request with a JSON body. The example below shows the shape, followed by a breakdown of each component.
 
-<VerifiedTag value="Verified" />
-
 ```bash title="Example Request"
 curl -X POST https://api.examplechatbot.com/chat \
   -H "Authorization: Bearer sk-example-a1b2c3d4e5f6" \
@@ -223,8 +220,6 @@ Whatever the connection method, the platform sends the exact authentication and 
 ---
 
 The platform reads the reply from each response, uses it to continue the conversation, and scores the result. Response shapes vary by provider, and the platform adapts to yours.
-
-<VerifiedTag value="Verified" />
 
 ```json title="Example Response"
 {

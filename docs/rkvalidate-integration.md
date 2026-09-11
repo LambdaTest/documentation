@@ -15,7 +15,6 @@ slug: rktracer-integration/
 canonical: https://www.testmu.ai/support/docs/rktracer-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -144,8 +143,6 @@ With <BrandName /> and RKTracer, you can generate Code coverage for your web and
 
 2. To run the single test using TestNG, pass the build command by prefixing it with `"rktracer"`
 
-<VerifiedTag value="Verified" />
-
 ```
 rktracer mvn test -D suite=single.xml
 ```
@@ -153,8 +150,6 @@ rktracer mvn test -D suite=single.xml
 <img loading="lazy" src={require('../assets/images/rktracer-integration/1.png').default} alt="rktracer" width="1345" height="627" className="doc_img"/>
 
 3. Pass the below command to get the test results.
-
-<VerifiedTag value="Verified" />
 
 ```
 rkresults
@@ -180,8 +175,6 @@ rkresults
 
 7. Pass the below command to get the test results.
 
-<VerifiedTag value="Verified" />
-
 ```
 rkresults
 ```
@@ -201,8 +194,6 @@ rkresults
 4. Open the terminal from that folder and run the command `node har2rk.js <name of device log har file>`. It will convert the harfile into `rkcoverage.txt`.
 
 5. Run the below command to get the results.
-
-<VerifiedTag value="Verified" />
 
 ```
 "rkresults"

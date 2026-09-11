@@ -18,7 +18,6 @@ slug: hyperexecute-accelq-integration/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-accelq-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -163,8 +162,6 @@ ACCELQ is the most powerful software testing tool to achieve Codeless test autom
 
 **Step 3:** Execute HyperExecute job using the command:
 
-<VerifiedTag value="Verified" />
-
 ```
 ./hyperexecute --config hyperdemo.yaml -u <lambdausername> -k <lambda accesskey>
 ```
@@ -195,9 +192,6 @@ Agent.property file is a type of file that gets generated when you configures th
 - You can also find the same at the location `(ACCELQAgent/AgentInstances/<agent folder>/agent.properties)` in your local system.
 
 #### Sample File
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # name of the agent, which will appear in your Run modal
 # must be a unique name across all projects in the tenant
@@ -326,8 +320,6 @@ provider_username = <LambdaTest Username>
 
 #### Single YAML File
 
-<VerifiedTag value="Verified" />
-
 ```bash
 version: 0.1
 user: <Lambdatest Username>
@@ -353,8 +345,6 @@ testRunnerCommand: node $env:ACCELQ --url "https://poc.accelq.io" --userID "<Acc
 ```
 
 #### Parallel YAML File
-
-<VerifiedTag value="Verified" />
 
 ```bash
 version: 0.1

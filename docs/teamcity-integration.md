@@ -195,8 +195,6 @@ Parallel Testing is one of the most demanding features of <BrandName /> Selenium
 
 After you clone our GitHub repository, execute the below command in cmd/terminal.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm run parallel
 ```

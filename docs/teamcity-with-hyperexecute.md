@@ -19,7 +19,6 @@ slug: teamcity-with-hyperexecute/
 canonical: https://www.testmu.ai/support/docs/teamcity-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,7 +36,7 @@ import VerifiedTag from '@site/src/component/verifiedTag';
           "item": "https://www.testmuai.com/support/"
         },{
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "name": "AWS CodePipeline Integration with HyperExecute",
           "item": `${BRAND_URL}/support/docs/teamcity-with-hyperexecute/`
         }]
@@ -217,8 +216,6 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - Enter the **Step name** (optional).
 - Select the **Custom Script** in the **Run** field.
 - Enter the below mentioned script in the space provided.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute

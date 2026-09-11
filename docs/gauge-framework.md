@@ -232,8 +232,6 @@ Make sure you have the following set up before you start.
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/gauge-selenium-sample
 cd gauge-selenium-sample
@@ -241,15 +239,11 @@ cd gauge-selenium-sample
 
 You may also want to run the command below to check for outdated dependencies.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 mvn versions:display-dependency-updates
 ```
 
 Install the mandatory Selenium dependencies for Maven:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 mvn compile
@@ -264,9 +258,6 @@ Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="macOS / Linux" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -275,9 +266,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -374,15 +362,11 @@ public class StepImplementation_ToDo {
 
 Trigger the test from your terminal.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 mvn test
 ```
 
 or
-
-<VerifiedTag value="Verified" />
 
 ```bash
 mvn clean install
@@ -417,8 +401,6 @@ Use AI coding assistants to generate and run Gauge tests with the TestMu AI Agen
 The [gauge-skill](https://github.com/LambdaTest/agent-skills/tree/main/gauge-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

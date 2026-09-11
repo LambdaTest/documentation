@@ -14,7 +14,6 @@ slug: debugging-espresso-tests/
 canonical: https://www.testmuai.com/support/docs/debugging-espresso-tests/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -152,8 +151,6 @@ In-depth insights into your test runs are crucial for effective debugging and op
 
 To access consolidated instrumentation logs for a non-sharded build:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
 --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<YOUR_BUILD_ID>/logs/instrumentation'
@@ -161,9 +158,6 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
 Replace `<YOUR_BUILD_ID>` with your actual build ID.
 #### Sharded Builds
 For sharded builds, use the following curl command:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
 --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<YOUR_JOB_ID>/logs/instrumentation'

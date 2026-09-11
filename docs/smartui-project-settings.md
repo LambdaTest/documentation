@@ -27,7 +27,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -160,8 +159,6 @@ To access the Project Settings, follow these simple steps:
 2. Click on the "Project Settings" section within the SmartUI dashboard to access the settings related to your project.
 
 ## Project Settings
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='project-settings'>
 <TabItem value='token' label='Project Token' default>

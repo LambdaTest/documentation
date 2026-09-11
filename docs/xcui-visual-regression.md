@@ -254,8 +254,6 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
@@ -266,8 +264,6 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -312,8 +308,6 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_IOS_APP>"' --form 'type="xcuit-ios"'`}
@@ -323,8 +317,6 @@ To begin testing, upload your iOS application (.ipa file) to <BrandName />'s ser
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -350,8 +342,6 @@ The following sample cURL command shows how to upload a test suite:
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="xcuit-ios"'`}
@@ -361,8 +351,6 @@ The following sample cURL command shows how to upload a test suite:
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -383,8 +371,6 @@ The following sample cURL command shows how to upload a test suite:
 - You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -433,8 +419,6 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 - [LambdaUiKitIOS.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/LambdaUiKitIOS.ipa) 
 
 Refer to the sample `.yaml` file here
-
-<VerifiedTag value="Verified" />
 
 ```bash title="SampleYamlFile.yaml"
 version: "0.2"
@@ -519,8 +503,6 @@ This example will run only the 2 classes & one test as mentioned from the TestSu
 ## XCTestPlan in Sharding
 To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   name: "ios/xcui"
@@ -543,8 +525,6 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 | <img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/> | <img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/> |
 
 ## Best Practices
-
-<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="best-practices">
 <TabItem value="project-and-build-naming" label="Project and Build Naming" default>
@@ -613,8 +593,6 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 </Tabs>
 
 ## Troubleshooting
-
-<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="troubleshooting">
 <TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>

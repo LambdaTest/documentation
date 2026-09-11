@@ -18,7 +18,6 @@ canonical: https://www.testmu.ai/support/docs/web-scanner-adding-urls/
 
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -141,9 +140,6 @@ Use this method when you already maintain URL lists in a spreadsheet or text fil
 
 **CSV Format:**
 One URL per line (no header).
-
-<VerifiedTag value="Verified" />
-
 ```csv
 [https://example.com](https://example.com)
 [https://example.com/pricing](https://example.com/pricing)

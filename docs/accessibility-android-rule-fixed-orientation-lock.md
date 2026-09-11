@@ -5,31 +5,6 @@ sidebar_label: Fixed Orientation Lock
 description: Rule-level Accessibility guidance for Fixed Orientation Lock on Android.
 slug: accessibility-android-rule-fixed-orientation-lock/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Fixed Orientation Lock (Android)",
-          "item": `${BRAND_URL}/support/docs/accessibility-android-rule-fixed-orientation-lock/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

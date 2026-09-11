@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/google-cloud-ci-integration/
 
 --- 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -149,18 +148,12 @@ Before integrating Google Cloud CI with <BrandName />, make sure you have the fo
 2. To integrate test suites with Google Cloud CI, you would need to set your <BrandName /> username and access key in environment variables. You can get them from [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the Key button from the top-right.
 
 *   **For Windows:**
-
-    <VerifiedTag value="Verified" />
-
     ```
     set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
     set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
     ```
 
 *   **For Mac/Linux:**
-
-    <VerifiedTag value="Verified" />
-
     ```
      export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
      export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -231,8 +224,6 @@ You can also view the detailed insights of your test execution on [<BrandName />
 
 To run parallel tests on <BrandName /> cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
 
-<VerifiedTag value="Verified" />
-
 ```
 steps:
 - name: gcr.io/cloud-builders/docker
@@ -264,8 +255,6 @@ Below is the screenshot of the above-executed parallel tests.
 * * *
 
 To run local tests on <BrandName /> cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
-
-<VerifiedTag value="Verified" />
 
 ```
 steps:

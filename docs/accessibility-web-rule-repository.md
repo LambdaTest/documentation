@@ -5,31 +5,6 @@ sidebar_label: Web Rule Repository
 description: Browse rule-level web accessibility guidance, WCAG mappings, and remediation references.
 slug: accessibility-web-rule-repository/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Web Rule Repository",
-          "item": `${BRAND_URL}/support/docs/accessibility-web-rule-repository/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

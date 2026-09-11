@@ -23,7 +23,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -273,8 +272,6 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -285,8 +282,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -305,8 +300,6 @@ Upload your <b>_android_</b> application (.apk file) to the <BrandName /> server
 :::info
 Enter your local path of your android app instead of `<YOUR_LOCAL_APP_PATH>` in the below cURL command.
 :::
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -331,8 +324,6 @@ Enter your local path of your test suite app instead of `<YOUR_LOCAL_APP_PATH>` 
 ## Step 5: Configure YAML in your Test Suite
 
 Enter your `<APP_ID>` and `<TEST_SUITE_ID>` in the YAML file that you have fetched in the above step.
-
-<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -449,8 +440,6 @@ jobLabel: ['HYP', 'Espresso', 'Manual Sharding']
 - The **uploadArtefact** flag is currently not available for Espresso framework tests.
 - To run **adb commands** in the **pre** and **post-steps**, include the following two flags in your YAML file: To execute it, you must have purchased an equivalent number of parallels for both HyperExecute and Real Device.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 privateCloud: true 
 preservedDevice: true
@@ -459,8 +448,6 @@ preservedDevice: true
 
 ## Step 6: Generate Reports and Artifacts
 To generate artifacts for your Espresso tests, add the `artifacts: true`, and `report: true` flag in your YAML file:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -480,15 +467,11 @@ To download these artifacts in your local machine, you can pass the `--download-
 
 Run the below command in your terminal at the root folder of the project:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -543,8 +526,6 @@ The [espresso-skill](https://github.com/LambdaTest/agent-skills/tree/main/espres
 
 The espresso-skill package includes:
 
-<VerifiedTag value="Verified" />
-
 ```
 espresso-skill/
 ├── SKILL.md
@@ -567,8 +548,6 @@ It provides structured guidance for:
 ***
 
 Install a Espresso Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

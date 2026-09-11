@@ -359,8 +359,6 @@ driver.Execute("smartui.takeScreenshot", config);
 
 Set your Project Token as an environment variable before running tests:
 
-<VerifiedTag value="Verified" />
-
 <Tabs className='docs__val' groupId='hooks-config'>
 <TabItem value='macos-linux' label='MacOS/Linux' default>
 

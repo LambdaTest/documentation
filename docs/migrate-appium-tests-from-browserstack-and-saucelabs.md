@@ -306,23 +306,17 @@ For a Python-based implementation, here are the changes in the script for Hub UR
 
 **BrowserStack**
 
-<VerifiedTag value="Verified" />
-
 ```
 @hub-cloud.browserstack.com/wd/hub
 ```
 
 **Sauce Labs**
 
-<VerifiedTag value="Verified" />
-
 ```
 @ondemand.us-west-1.saucelabs.com/wd/hub
 ```
 
 **<BrandName />**
-
-<VerifiedTag value="Verified" />
 
 ```
 @mobile-hub.lambdatest.com/wd/hub

@@ -172,8 +172,6 @@ Arguments | Example
 ```status``` | ```failed``` OR ```passed```
 ```remark``` | Any remark can be added here limited to 255 characters.
 
-<VerifiedTag value="Verified" />
-
 ```java
 ((JavascriptExecutor) driver).executeScript("lambda-hook: {\"action\": \"setTestStatus\",\"arguments\": {\"status\":\"failed\", \"remark\":\"This is a sample remark for failed test \"}} ");
 ```
@@ -232,8 +230,6 @@ To update the name of the test, just add the code snippet using the ```Javascrip
 Arguments | Example
 ------------- | -----------------------------------------------------------------------------------------
 ```lambda-name``` | For changing the Test Name.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 ((JavascriptExecutor) driver).executeScript("lambda-name=TestName");

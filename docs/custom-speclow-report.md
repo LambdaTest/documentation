@@ -13,7 +13,6 @@ slug: custom-speclow-report/
 canonical: https://www.testmuai.com/support/docs/custom-speclow-report/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -153,8 +152,6 @@ To enable custom SpecFlow reporting, make the following changes to your YAML con
 
 ### Step 1: Modify the YAML Configuration File
 Add the following settings in your YAML file to enable reporting and configure partial reports:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

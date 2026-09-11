@@ -215,23 +215,17 @@ These examples are written in TypeScript. You're free to use plain JavaScript in
 
 **1. Install WebdriverIO.** The package is published on the npm registry as [`webdriverio`](https://www.npmjs.com/package/webdriverio).
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install webdriverio
 ```
 
 A successful install adds the package to your project:
 
-<VerifiedTag value="Verified" />
-
 ```text
 added 247 packages, and audited 248 packages in 20s
 ```
 
 **2. Set your credentials.** Copy your **Username** and **Access Key** from **Settings → Account Settings**, then set them as environment variables.
-
-<VerifiedTag value="Verified" />
 
 <Tabs groupId="os">
   <TabItem value="unix" label="macOS / Linux" default>
@@ -321,15 +315,11 @@ run().catch((e) => {
 
 **4. Run it** with a TypeScript runner:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx tsx bidi-test.ts
 ```
 
 WebdriverIO connects over BiDi, runs the checks, and marks the session **Passed**:
-
-<VerifiedTag value="Verified" />
 
 ```text
 Passed: "Components" loaded 15 products, screenshot saved
@@ -409,15 +399,11 @@ run().catch((e) => {
 
 **2. Run it:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx tsx agent-bidi.ts
 ```
 
 The agent subscribes to the event stream and reports what the browser actually did:
-
-<VerifiedTag value="Verified" />
 
 ```text
 Validated: the page issued 56 network responses over BiDi

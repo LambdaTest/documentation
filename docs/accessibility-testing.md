@@ -5,31 +5,6 @@ sidebar_label: Getting Started
 description: Overview of TestMu AI Accessibility Testing across web, mobile apps, reports, checklists, and integrated product surfaces. Includes quick setup to get your first report.
 slug: accessibility-testing/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Getting Started with Accessibility Testing",
-          "item": `${BRAND_URL}/support/docs/accessibility-testing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

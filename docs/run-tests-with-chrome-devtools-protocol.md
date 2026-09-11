@@ -234,15 +234,11 @@ These examples are written in TypeScript. You're free to use plain JavaScript in
 
 **1. Install the Puppeteer client.** `puppeteer-core` connects to a remote browser without downloading a local one.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install puppeteer-core
 ```
 
 A successful install adds the package to your project:
-
-<VerifiedTag value="Verified" />
 
 ```text
 added 25 packages, and audited 26 packages in 5s
@@ -250,8 +246,6 @@ found 0 vulnerabilities
 ```
 
 **2. Set your credentials.** Copy your **Username** and **Access Key** from **Settings → Account Settings**, then set them as environment variables.
-
-<VerifiedTag value="Verified" />
 
 <Tabs groupId="os">
   <TabItem value="unix" label="macOS / Linux" default>
@@ -366,15 +360,11 @@ run().catch((e) => {
 
 **4. Run it** with a TypeScript runner:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx tsx cdp-test.ts
 ```
 
 The scan runs on the cloud browser and prints the products it collected:
-
-<VerifiedTag value="Verified" />
 
 ```text
 Page 1: 15 products
@@ -405,8 +395,6 @@ AI agent workloads need more than a raw connection: stealth so a site does not f
 The TestMu AI Browser SDK wraps the same CDP connection and adds these, so it is the path to use for agents.
 
 **1. Install the TestMu AI Browser SDK.** It includes the Puppeteer client and manages the CDP session for you. The package is published on the npm registry as [`@testmuai/browser-cloud`](https://www.npmjs.com/package/@testmuai/browser-cloud).
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm install @testmuai/browser-cloud
@@ -493,15 +481,11 @@ run().catch((e) => {
 
 **3. Run it:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx tsx agent-scrape.ts
 ```
 
 The SDK creates a stealth session, prints a live-session link, and runs the same scan through Browser Cloud:
-
-<VerifiedTag value="Verified" />
 
 ```text
 Session created: session_1786903262009_f0ruuv
@@ -598,8 +582,6 @@ run().catch((e) => {
 ```
 
 Run it with `npx tsx agent-image-scrape.ts`. It reads the images from the cloud browser and saves them locally:
-
-<VerifiedTag value="Verified" />
 
 ```text
 Found 15 product images

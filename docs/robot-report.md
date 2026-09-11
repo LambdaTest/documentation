@@ -14,7 +14,6 @@ canonical: https://www.testmu.ai/support/docs/robot-report/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -116,8 +115,6 @@ Robot Framework is a generic, open-source automation framework designed for acce
 **Step 2:** Configure the report parameters in the HyperExecute YAML file
 
 Add the following configurations in your YAML file:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports 

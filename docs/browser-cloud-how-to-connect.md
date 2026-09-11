@@ -134,8 +134,6 @@ profiles, files, extensions, and tunnels directly from your Node.js application.
 - **Node.js 16+** installed on your machine
 - Install the SDK:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @testmuai/testmu-cloud
 ```

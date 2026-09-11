@@ -18,7 +18,6 @@ slug: integrate-azure-pipelines-with-testmu/
 canonical: https://www.testmuai.com/support/docs/integrate-azure-pipelines-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -167,8 +166,6 @@ Azure Pipelines is a service presented by Azure DevOps to help projects ship fas
 
 **Step 3:** After you choose an option for your code repository, you will be asked to login. Post login, you need to choose the particular repository. The repository will pick the azure-pipelines.yml file.
 
-<VerifiedTag value="Verified" />
-
 ```
 # Node.js
 # Build a general Node.js project with npm.
@@ -206,8 +203,6 @@ steps:
 ## Parallel Testing
 * * *
 For running the test in parallel, replace protractor single.conf.js with protractor parallel.conf.js in same YML file.
-
-<VerifiedTag value="Verified" />
 
 ```
 # Node.js

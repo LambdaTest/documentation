@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-profiles/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -184,8 +183,6 @@ An agent can have several profiles. Runs pin the profile ID, so renaming a profi
 
 Start with:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /profile add
 ```
@@ -206,8 +203,6 @@ You can save an unverified profile for later, but it cannot become active, and a
 ## HTTP Profile Example
 
 A synchronous JSON agent can be represented as:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 id: staging
@@ -244,8 +239,6 @@ Supported bindings include the scenario goal and run-specific identifiers. Rook 
 
 Use a command profile for a local CLI agent:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 id: local-cli
 name: local CLI
@@ -275,8 +268,6 @@ Command profiles can put `{{goal}}` in an argument, stdin, or both. A non-zero e
 ## Asynchronous Agent Example
 
 Use `mode: async` when the initial request returns a handle and a later request retrieves the result:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 id: report-staging
@@ -330,8 +321,6 @@ Without a usable conversation declaration, multi-turn scenarios are skipped. Roo
 
 The forward-compatible profile shapes are a field in the main request:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 attachments:
   via: field
@@ -339,8 +328,6 @@ attachments:
 ```
 
 Or a separate upload endpoint whose response supplies a link:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 attachments:
@@ -384,16 +371,12 @@ Paste a representative response during profile setup. Rook proposes the answer p
 
 Profiles are safe to commit only when they contain references rather than values:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 headers:
   Authorization: "Bearer ${AGENT_TOKEN}"
 ```
 
 Manage values interactively:
-
-<VerifiedTag value="Verified" />
 
 ```text
 /env list
@@ -408,8 +391,6 @@ Manage values interactively:
 
 The default is Node.js certificate verification. For an internal endpoint trusted by your machine, configure system trust. For a specific private CA, configure a PEM file:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 invoke:
   tls:
@@ -422,8 +403,6 @@ Rook also preserves cURL's `-k` choice as `insecure: true`, but never invents it
 ## Observation and Reset
 
 Add observation only for state Rook is allowed to read:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 observe:
@@ -446,8 +425,6 @@ A reset command runs between scenarios to prevent state leakage. It is a real co
 
 Interactive commands:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /profile list
 /profile use <name>
@@ -459,8 +436,6 @@ Interactive commands:
 ```
 
 Headless profile management supports listing, showing, switching, and removing:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook profile list --entity <agent-id> --json

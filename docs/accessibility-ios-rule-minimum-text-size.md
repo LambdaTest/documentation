@@ -5,33 +5,6 @@ sidebar_label: Minimum Text Size
 description: Rule-level Accessibility guidance for Minimum Text Size on iOS.
 slug: accessibility-ios-rule-minimum-text-size/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Minimum Text Size",
-          "item": `${BRAND_URL}/support/docs/accessibility-ios-rule-minimum-text-size/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -107,8 +80,6 @@ Text should render at or above a readable minimum size so it isn't difficult to 
 ## What this rule checks
 
 The scanner estimates the font size of text elements from their accessibility frame height using the San Francisco font's line-height ratio:
-
-<VerifiedTag value="Verified" />
 
 ```
 estimatedFontSize = frameHeight / 1.1777

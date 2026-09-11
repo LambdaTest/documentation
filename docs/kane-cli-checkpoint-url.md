@@ -13,8 +13,6 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-url/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-url/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -133,8 +131,6 @@ URL assertions check values in the browser's address bar: the current URL path, 
 
 ### Assertions
 
-<VerifiedTag value="Verified" />
-
 ```
 Assert: URL contains /checkout
 Assert: the page redirected to /dashboard
@@ -143,16 +139,12 @@ Assert: URL path is /products/42
 
 ### Extractions
 
-<VerifiedTag value="Verified" />
-
 ```
 Store the current URL
 Extract the URL path
 ```
 
 ### If/Else
-
-<VerifiedTag value="Verified" />
 
 ```
 If URL contains /login then enter credentials, else go to profile

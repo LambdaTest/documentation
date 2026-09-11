@@ -29,30 +29,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "How to Use Auto Healing for Selenium Test Suites",
-          "item": `${BRAND_URL}/support/docs/auto-healing/`
-        }]
-      })
-    }}
-></script>
-
-<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -409,8 +385,6 @@ describe('Amazon Search Box Test', function () {
 In the above test case, the script changes the *id* of the search box on Amazon's homepage and then tries to find the element using the old *id*. The Auto Healing feature automatically detects the new *id* and finds the element.
 
 To run the test, execute the below command:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 ./node_modules/.bin/mocha autohealingTest.js 

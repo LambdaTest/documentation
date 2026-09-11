@@ -24,30 +24,6 @@ canonical: https://www.testmuai.com/support/docs/smartui-group-by-test-cases/
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Grouping SmartUI Screenshots by Test Cases",
-          "item": `${BRAND_URL}/support/docs/smartui-group-by-test-cases/`
-        }]
-      })
-    }}
-></script>
-
-<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -183,8 +159,6 @@ Use this when your SmartUI project is **Hooks**-oriented (dashboard **Capability
 
 Clone the official sample:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/java-selenium-sample
 cd java-selenium-sample
@@ -192,16 +166,12 @@ cd java-selenium-sample
 
 Set credentials (macOS/Linux):
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export LT_USERNAME='<your-lambdatest-username>'
 export LT_ACCESS_KEY='<your-lambdatest-access-key>'
 ```
 
 For **SmartUI CLI** jobs (capture/exec/upload), also set **`PROJECT_TOKEN`** from the SmartUI project (suffix after the last `#` usually matches the project slug, e.g. **`#sample`**):
-
-<VerifiedTag value="Verified" />
 
 ```bash
 export PROJECT_TOKEN='<your-token>#sample'
@@ -230,8 +200,6 @@ The runnable reference for **Hooks + SmartUI** (no DevTools) is:
 `src/test/com/lambdatest/SmartUI.java`
 
 Run it:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 mvn clean install exec:java -Dexec.mainClass="com.lambdatest.SmartUI" -Dexec.classpathScope=test -e

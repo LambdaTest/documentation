@@ -16,7 +16,6 @@ slug: local-testing-macos/
 canonical: https://www.testmuai.com/support/docs/local-testing-macos/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -159,16 +158,10 @@ This zip file contains the tunnel binary which will help in establishing a secur
 <img loading="lazy" src={require('../assets/images/local-testing-macos/local-mac-2.webp').default} alt="extracting the binary zip file" width="1080" height="170" className="doc_img"/>
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
-
-<VerifiedTag value="Verified" />
-
 ```
 LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
 So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is <BrandName />, the command would be:
-
-<VerifiedTag value="Verified" />
-
 ```
 LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest
 ```

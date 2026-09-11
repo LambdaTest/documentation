@@ -18,7 +18,6 @@ slug: charles-proxy/
 canonical: https://www.testmuai.com/support/docs/charles-proxy/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -206,8 +205,6 @@ To configure the tunnel, you need to download the **<BrandName />'s Tunnel Binar
 ---
 
 But here we need to add the Charles proxy server through which we want to route the traffic of the tunnel. We can do that by appending the `--proxy-host` (localhost) and `--proxy-port` (`8888` in this case) options to the above command. The format of the command would be:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 ./LT -user {user’s login email} -key {user’s access key} \

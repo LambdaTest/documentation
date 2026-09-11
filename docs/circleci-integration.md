@@ -15,7 +15,6 @@ slug: circleci-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/circleci-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -180,15 +179,10 @@ To perform your karma tests with <BrandName />, you would need the following thi
    - A Git or GitHub repository
    - Download and install node.js and node package manager or npm.
     To install node.js with homebrew, use the below command.
-
-    <VerifiedTag value="Verified" />
-
     ```
     $ brew install node
     ```
    - If you have npm already installed, you may want to upgrade it to the latest version. Here the code you can run in your terminal to upgrade npm.
-
-     <VerifiedTag value="Verified" />
 
      ```
      npm install npm@latest -g
@@ -197,8 +191,6 @@ To perform your karma tests with <BrandName />, you would need the following thi
 * <BrandName /> Authentication Credentials
    - Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.  
    
-    <VerifiedTag value="Verified" />
-
     ```
     $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME>
     $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
@@ -209,8 +201,6 @@ To perform your karma tests with <BrandName />, you would need the following thi
 To integrate CircleCI with <BrandName />, you need to make minor tweaks in the `.circleci/config.yml` file, which is the configuration file for your CircleCI instance. The changes you need to make will revolve around the environment variables such as access key, username, grid config and so on. Refer to the official CircleCI documentation on environment variables for more information regarding their set up.
 
 Below is a sample config file for integrating CircleCI with <BrandName />. You can use the sample file to test your own automation test suite by replacing the environment variables according to your need. All the code used for the demonstration of this topic can be found in our GitHub repository.
-
-<VerifiedTag value="Verified" />
 
 ```
 
@@ -299,8 +289,6 @@ For Instance, if you select the below configurations:
 
 Then Capabilities Generator at <BrandName /> will provide you with the below program:
 
-<VerifiedTag value="Verified" />
-
 ```
 var capabilities = {
     "build" : "your build name", //You can edit this and assign a build name
@@ -333,8 +321,6 @@ To help you perform cross browser testing of your locally stored web pages, <Bra
 >- [Lambda Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 The below example of *config.yml* file would demonstrate to you how to leverage <BrandName />’s Selenium grid by performing a browser test through your testing server contained in your CircleCI build.
-
-<VerifiedTag value="Verified" />
 
 ```
 # Javascript Node CircleCI 2.0 configuration file
@@ -403,8 +389,6 @@ jobs:
 
 Once the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
-<VerifiedTag value="Verified" />
-
 ```
 "desiredCapabilities": {
        "tunnel":true
@@ -417,15 +401,11 @@ Parallel Testing is one of the most demanding features of <BrandName /> Selenium
 
 To perform automation testing in parallel on Windows, use the below command.
 
-<VerifiedTag value="Verified" />
-
 ```
 $ node_modules\.bin\nightwatch -e chrome,edge,firefox tests
 ```
 
 To perform automation testing in parallel on macOS/Linux use the below command.
-
-<VerifiedTag value="Verified" />
 
 ```
 $ ./node_modules/.bin/nightwatch -e chrome,edge,firefox tests

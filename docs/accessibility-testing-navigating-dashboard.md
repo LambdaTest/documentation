@@ -8,31 +8,6 @@ url: https://www.testmuai.com/support/docs/accessibility-testing-navigating-dash
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-testing-navigating-dashboard/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Navigating the Dashboard",
-          "item": `${BRAND_URL}/support/docs/accessibility-testing-navigating-dashboard/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

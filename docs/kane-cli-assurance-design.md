@@ -16,8 +16,6 @@ site_name: TestMu AI
 slug: kane-cli-assurance-design/
 canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-design/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -140,8 +138,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 `kane-cli design tests` turns **one committed use-case** into everything that proves it: acceptance criteria (ACs), scenarios, and exactly one runnable test per scenario — conversationally, on the same chat surface [`kane-cli context extract`](/support/docs/kane-cli-assurance-context/#extract) uses. Everything the engine emits is **derived** knowledge you review; approvals promote it, nothing is silently trusted.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli design tests --use-case uc-manage-the-cart      # design one use-case (chat)
 kane-cli design explain t-add-first-item                 # replay WHY — zero fresh AI
@@ -180,8 +176,6 @@ Headless modes run all phases without parking and emit one combined result; a hi
 
 A design run commits to the graph **and writes files**. Each kept test lands as a normal, runnable `*_test.md` under `<cwd>/.testmuai/tests/`:
 
-<VerifiedTag value="Verified" />
-
 ```markdown
 ---
 assurance:
@@ -215,8 +209,6 @@ Design output is derived like everything else — review it with [`kane-cli cont
 
 A designed test is a normal test file — but it is still `derived`, and it has never been *run*. First review the design output like anything else the engine emits (approve, edit, or reject the generated ACs, scenarios, and tests with [`kane-cli context review`](/support/docs/kane-cli-assurance-context/#review) — the commit-time warnings resurface there). Then author each kept test once, and it batches like any other test:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli testmd run .testmuai/tests/t-add-one-…_test.md   # author it (first run, agent works it out)
 kane-cli testrun run --match 't-'                          # from then on: batch replay
@@ -228,8 +220,6 @@ Until a test has been authored, `kane-cli testrun` preflight reports it as `miss
 
 A use-case with a live design refuses a re-run, staleness-aware:
 
-<VerifiedTag value="Verified" />
-
 ```
 'uc-manage-the-cart' is already designed @ v1 — current; use --force to redesign
 'uc-manage-the-cart' was designed @ v1 — the use-case is now @ v2 (STALE); use --force to redesign
@@ -238,8 +228,6 @@ A use-case with a live design refuses a re-run, staleness-aware:
 `--force` regenerates the scenario+test pairs (superseding the old ones); ACs are dedup-first — an equivalent AC re-emitted by the engine reuses the existing node instead of piling up copies. When the staleness comes from a source document you just changed, [`kane-cli maintain reconcile`](/support/docs/kane-cli-assurance-maintain/) surfaces the same re-design as part of its changed-source triage; for staleness from older changes, [`kane-cli maintain evolve`](/support/docs/kane-cli-assurance-maintain/#evolve) re-designs the use-case with the blast radius stated first.
 
 ## `design explain` — replay the why
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli design explain <ref>

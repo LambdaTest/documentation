@@ -382,8 +382,6 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `SmartUISDKCloud.java` file located in the `src/test/java/com/lambdatest/sdk` directory.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-java-testng-sample
 ```
@@ -391,8 +389,6 @@ git clone https://github.com/LambdaTest/smartui-java-testng-sample
 ### **Step 2**: Update the Dependencies
 
 - Add the following dependencies in your `pom.xml` file
-
-<VerifiedTag value="Verified" />
 
 ```xml
 <dependency>
@@ -409,8 +405,6 @@ You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository
 
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -419,8 +413,6 @@ npm install @lambdatest/smartui-cli
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
 
-<VerifiedTag value="Verified" />
-
 ```bash
 mvn clean compile
 ```
@@ -428,8 +420,6 @@ mvn clean compile
 ### **Step 4:** Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -461,15 +451,11 @@ $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
-
-<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -541,8 +527,6 @@ Once, the configuration file will be created, you will be seeing the default con
 ### **Step 7:** Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml"

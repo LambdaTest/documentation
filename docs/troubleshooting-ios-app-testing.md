@@ -14,7 +14,6 @@ slug: troubleshooting-ios-app-testing/
 canonical: https://www.testmu.ai/support/docs/troubleshooting-ios-app-testing/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -132,8 +131,6 @@ For a complete step-by-step guide on building your iOS app for Simulator testing
 
 **Solution:** Rebuild your app targeting the iOS Simulator SDK. In Xcode, select a **Simulator destination** (e.g., *iPhone 15 Pro*) instead of *Any iOS Device*, then build. For command line builds, use the `-sdk iphonesimulator` flag:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 xcodebuild -project YourProject.xcodeproj \
            -scheme YourScheme \
@@ -144,8 +141,6 @@ xcodebuild -project YourProject.xcodeproj \
 ```
 
 You can verify the platform using:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 vtool -show-build YourApp.app/YourApp

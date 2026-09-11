@@ -143,8 +143,6 @@ Install Python and the Appium client library before running mobile web tests.
 1. Download the latest version of [Python](https://www.python.org/downloads/).
 2. Install the Appium dependency by running the following command from the CMD terminal.
 
-<VerifiedTag value="Verified" />
-
 ```
 pip install Appium-Python-Client
 ```
@@ -225,15 +223,11 @@ driver.quit()
 
 In the below test snippet, add your TestMu AI Username and TestMu AI Access Key. Get them from the [TestMu AI dashboard](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/dashboard). In the Hub URL, we added a beta prefix (`mobile-hub.lambdatest.com/wd/hub`).
 
-<VerifiedTag value="Verified" />
-
 ```
 url = "https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub"
 ```
 
 Execute the below command in the terminal to run the test.
-
-<VerifiedTag value="Verified" />
 
 ```
 python todo.py

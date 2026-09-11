@@ -19,7 +19,6 @@ slug: kaneai-kb-authentication-and-session-management/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -195,8 +194,6 @@ Authentication testing is one of the most critical areas for any QA team. This g
 
 ### Standard Username/Password Login
 
-<VerifiedTag value="Verified" />
-
 ```
 go to https://app.example.com/login
 type "admin@example.com" in the email input field
@@ -208,8 +205,6 @@ assert "Welcome, Admin" is visible
 ```
 
 ### Login with "Remember Me"
-
-<VerifiedTag value="Verified" />
 
 ```
 type "admin@example.com" in the email field
@@ -230,8 +225,6 @@ If most of your tests start with a login, create a **Module** to avoid repeating
 4. Click **Create Module** → Name it "Login Flow"
 5. In future tests, use `/` → Select your "Login Flow" module
 
-<VerifiedTag value="Verified" />
-
 ```
 -- In any new test: --
 -- Use / command → Add Module → "Login Flow" --
@@ -249,8 +242,6 @@ Use **environment variables** for credentials so the same login module works acr
 ### Environment Variables (Recommended)
 
 Create environment-specific variables to test login across different environments:
-
-<VerifiedTag value="Verified" />
 
 ```
 type {{env.login_email}} in the email field
@@ -302,8 +293,6 @@ KaneAI has native TOTP support, which means you can test applications protected 
 
 **Step 2: Use the TOTP in Your Test**
 
-<VerifiedTag value="Verified" />
-
 ```
 -- Login with username/password first --
 type "admin@example.com" in the email field
@@ -328,8 +317,6 @@ The `{{totp}}` smart variable generates a time-based 6-digit code based on the r
 ### TOTP on Mobile
 
 TOTP smart variables work identically on mobile tests:
-
-<VerifiedTag value="Verified" />
 
 ```
 type {{env.login_email}} in the email field
@@ -363,8 +350,6 @@ KaneAI does not currently support testing SSO flows. SSO involves cross-domain r
 
 ### Invalid Credentials
 
-<VerifiedTag value="Verified" />
-
 ```
 type "admin@example.com" in the email field
 type "wrong_password" in the password field
@@ -376,8 +361,6 @@ assert the current URL still contains "/login"
 
 ### Empty Field Validation
 
-<VerifiedTag value="Verified" />
-
 ```
 click "Sign In" without entering any credentials
 assert "Email is required" error is visible
@@ -385,8 +368,6 @@ assert "Password is required" error is visible
 ```
 
 ### Account Lockout After Failed Attempts
-
-<VerifiedTag value="Verified" />
 
 ```
 -- Attempt 1 --
@@ -412,8 +393,6 @@ assert "Account locked" message is visible
 
 ### Session Persistence After Page Refresh
 
-<VerifiedTag value="Verified" />
-
 ```
 -- Login first --
 type "admin@example.com" in the email field
@@ -433,8 +412,6 @@ assert "Welcome, Admin" is visible
 
 ### Logout Flow
 
-<VerifiedTag value="Verified" />
-
 ```
 click on the user avatar in the top right corner
 click on "Sign Out"
@@ -450,8 +427,6 @@ assert the current URL contains "/login"
 ### Testing Session Timeout
 
 For applications with session timeouts, combine explicit waits with assertions:
-
-<VerifiedTag value="Verified" />
 
 ```
 -- Login --

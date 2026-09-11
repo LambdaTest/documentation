@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-run-tests/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -204,8 +203,6 @@ Before running a suite, confirm:
 
 ## Run the Runnable Suite
 
-<VerifiedTag value="Verified" />
-
 ```text
 /run
 ```
@@ -220,15 +217,11 @@ The default concurrency is `3`.
 
 Run by ID:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /run --only SC-004,SC-011
 ```
 
 Run by class:
-
-<VerifiedTag value="Verified" />
 
 ```text
 /run --class adversarial
@@ -236,15 +229,11 @@ Run by class:
 
 Run by category:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /run --category happy_path,prompt_injection
 ```
 
 Run by tag:
-
-<VerifiedTag value="Verified" />
 
 ```text
 /run --tag billing,refund
@@ -252,15 +241,11 @@ Run by tag:
 
 Selectors combine by narrowing. This command first keeps adversarial scenarios, then keeps those tagged `refund`:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /run --class adversarial --tag refund
 ```
 
 You can also describe the desired subset after `--`:
-
-<VerifiedTag value="Verified" />
 
 ```text
 /run --class adversarial -- the scenarios about refund approval
@@ -271,8 +256,6 @@ Natural-language selection uses a model to choose from the already filtered list
 If no scenario matches, Rook prints the classes, categories, and tags that actually exist instead of running the full suite.
 
 ## Choose Concurrency
-
-<VerifiedTag value="Verified" />
 
 ```text
 /run --concurrency 1
@@ -310,15 +293,11 @@ Deny rules override allow rules, and more specific rules win. Permission state i
 
 The run-level narrative summarizes patterns after all scenario verdicts are available. Skip that model call when CI needs only the structured evidence and deterministic totals:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /run --no-narrative
 ```
 
 The headless equivalent is:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook run --no-narrative
@@ -326,15 +305,11 @@ rook run --no-narrative
 
 ## Request Root-Cause Analysis
 
-<VerifiedTag value="Verified" />
-
 ```text
 /run --rca
 ```
 
 Rook clusters related failures first, then investigates each cause using the verdicts, scenario definition, feature, and read-only access to source. It writes remedies under:
-
-<VerifiedTag value="Verified" />
 
 ```text
 .testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/
@@ -425,8 +400,6 @@ Otherwise, keep these cases documented but exclude them from release-gating runs
 ## Headless Run Limitations
 
 Current headless syntax is:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]

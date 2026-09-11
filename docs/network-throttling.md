@@ -139,8 +139,6 @@ To validate your website on such network profiles, simulate these network condit
 |-----|--------|-----------|
 | networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability starts the test suite with the specified default network. For example, if the user selects **Regular 4G**, the capability looks like this: <br/> ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 capabilities.setCapability("networkThrottling", "Regular 4G");
 ```

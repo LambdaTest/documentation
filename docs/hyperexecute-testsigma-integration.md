@@ -220,8 +220,6 @@ When creating the YAML, consider the following points:
 
 Here is the sample YAML file for your reference:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 ---
 version: 0.1
@@ -284,8 +282,6 @@ jobLabel: [testsigma]
 
 - Create a **start-agent.bat** file. This particular **.bat** file will start the agent in [background services](/support/docs/hyperexecute-background-services/). 
 
-<VerifiedTag value="Verified" />
-
 ```bash
 @echo off
 
@@ -304,8 +300,6 @@ start.bat "TS_ACTIVATION_KEY=%1"
 
 - Create a **stop-agent.bat** file. This **.bat** file will stop the agent after the completion of execution.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 @echo off
 
@@ -321,8 +315,6 @@ stop.bat
 - The script is created to start the agent, then execute the test plan and then stop the agent after the whole Job is executed.
 
 > **NOTE:** You can use any language to create your execution script file. We have used **javascript** for the reference below.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 const axios = require('axios');
@@ -371,13 +363,10 @@ Trigger your test plan on HyperExecute.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -389,8 +378,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -406,15 +393,11 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 - Run the below command in your terminal at the root folder of the project
 
-<VerifiedTag value="Verified" />
-
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

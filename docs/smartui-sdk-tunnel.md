@@ -20,31 +20,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Using TestMu AI Tunnel with SmartUI SDK",
-          "item": `${BRAND_URL}/support/docs/smartui-sdk-tunnel/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -168,8 +143,6 @@ documentation](/support/docs/smartui-cli-exec/).
 
 For automatic tunnel setup, add the following configuration to your `.smartui.json` file:
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "tunnel": {
@@ -191,8 +164,6 @@ For automatic tunnel setup, add the following configuration to your `.smartui.js
 ### 2. Manual Tunnel Configuration
 
 For manual tunnel setup, add the following configuration:
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -218,9 +189,6 @@ The tunnel configuration automatically uses the following environment variables 
 ## Example Configurations
 
 ### Basic Automatic Setup
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "web": {
@@ -236,9 +204,6 @@ The tunnel configuration automatically uses the following environment variables 
 ```
 
 ### Advanced Automatic Setup with Proxy
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "web": {
@@ -258,9 +223,6 @@ The tunnel configuration automatically uses the following environment variables 
 ```
 
 ### Manual Tunnel Setup
-
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "web": {

@@ -216,8 +216,6 @@ Upload your `.mjpeg` file using the web automation user-files API.
 
 ### cURL
 
-<VerifiedTag value="Verified" />
-
 ```bash
 curl -X POST \
   "https://api.lambdatest.com/automation/api/v1/user-files" \
@@ -226,8 +224,6 @@ curl -X POST \
 ```
 
 ### Response
-
-<VerifiedTag value="Verified" />
 
 ```json
 {

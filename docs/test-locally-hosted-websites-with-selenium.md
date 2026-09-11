@@ -228,8 +228,6 @@ TestMu AI Tunnel creates a secure, encrypted connection between your local machi
 
 The tunnel binary runs on your machine and establishes an encrypted connection to the TestMu AI cloud. When you set `tunnel: true` in your test capabilities, the cloud browser routes traffic through this connection to reach your local app.
 
-<VerifiedTag value="Verified" />
-
 ```
 Your Machine (localhost:3000) <-- Encrypted Tunnel --> TestMu AI Grid <--> Cloud Browser
 ```
@@ -251,8 +249,6 @@ For the full list of platform binaries, see the [TestMu AI Tunnel documentation]
 
 After downloading, make the binary executable (macOS/Linux):
 
-<VerifiedTag value="Verified" />
-
 ```bash
 chmod +x LT
 ```
@@ -261,8 +257,6 @@ chmod +x LT
 ---
 
 Open a terminal, navigate to the folder with the binary, and start the tunnel with your credentials.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -274,8 +268,6 @@ You should see a message confirming the tunnel is active. Keep this terminal ope
 
 :::tip Named tunnels
 Run multiple tunnels by giving each a name:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 LT --user YOUR_USERNAME --key YOUR_ACCESS_KEY --tunnelName my-staging-tunnel

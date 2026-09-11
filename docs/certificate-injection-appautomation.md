@@ -262,8 +262,6 @@ Upload the file to the media upload endpoint with `type=cert`, using your <Brand
 
 Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \\
@@ -277,8 +275,6 @@ Upload a `.crt`, `.cer`, or `.mobileconfig` file. No password is involved.
   <TabItem value="pfx" label="PKCS#12 Identity (.pfx)">
 
 For a PKCS#12 bundle, send the password along with the upload. The password is stored securely against the certificate and applied automatically in every session that uses it.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -302,8 +298,6 @@ For a PKCS#12 bundle, send the password along with the upload. The password is s
 | `password` | Only for `.pfx` | The password for the PKCS#12 bundle. Stored securely and reused automatically. |
 
 The response returns the ID that you reference in your capabilities:
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -458,8 +452,6 @@ If a certificate fails to install, your session **does not fail**. The session s
 ---
 
 ## What Happens on the Device
-
-<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
   <TabItem value="android" label="Android" default>

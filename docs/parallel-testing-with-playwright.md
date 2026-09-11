@@ -235,8 +235,6 @@ capabilities.forEach(async (capability) => {
 
 4. Pass the below command to run the test.
 
-<VerifiedTag value="Verified" />
-
 ```
 node playwright-parallel.js
 ```

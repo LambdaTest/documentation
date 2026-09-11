@@ -171,23 +171,17 @@ The first step is to create a project with the application in which we will comb
 
 **Step 1**: Install the required NPM module for `LambdaTest Cypress CLI` in your project.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
 **Step 2:** Use `init` command to generate the sample configuration files.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 lambdatest-cypress init
 ```
 
 **Step 3:** Define SmartUI configuration in the `lambdatest-config.json` file of your Cypress project as shown in the below code snippet.
-
-<VerifiedTag value="Verified" />
 
 ```json title="/cypress-project/lambdatest-config.json"
 {
@@ -248,8 +242,6 @@ describe("Cypress test with Visual Regression", () => {
 ```
 
 **Step 5:** Run the test on the <BrandName /> platform by executing the below-run command:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run

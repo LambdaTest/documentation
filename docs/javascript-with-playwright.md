@@ -180,73 +180,9 @@ Download or clone the code sample for the Playwright JavaScript from the <BrandN
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-test-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-<VerifiedTag value="Verified" />
-
-```bash
+```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
-```
-
-## Set your credentials
-***
-
-Set your Username and Access Key as environment variables. Pick your operating system:
-
-<Tabs className="docs__val" groupId="os">
-
-<TabItem value="macos" label="macOS / Linux" default>
-
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-<TabItem value="win-cmd" label="Windows (CMD)">
-
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-batch">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-</Tabs>
-
-## How the test connects
-***
-
-Each option builds a `capabilities` object (browser, version, platform, and your `LT:Options`) and connects Playwright to the grid at `wss://cdp.lambdatest.com/playwright`:
-
-<VerifiedTag value="Verified" />
-
-```js
-wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-```
-
-What changes between them is only the setup file that holds this connection. Pick yours below.
-
-## Set Up and Run Your Tests
-***
-
-<VerifiedTag value="Verified" />
-
-<Tabs className="docs__val" groupId="js-framework" queryString="framework">
-
-<TabItem value="javascript" label="JavaScript" default>
-
-1. Go to the sample directory and install dependencies:
-
-```bash
 cd playwright-test-js
 ```
 

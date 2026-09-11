@@ -20,7 +20,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-installation/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -173,8 +172,6 @@ Kane CLI is published to the public npm registry as `@testmuai/kane-cli` and to 
 
 ## Install
 
-<VerifiedTag value="Verified" />
-
 <Tabs>
 <TabItem value="npm" label="npm" default>
 
@@ -206,18 +203,8 @@ Kane CLI requires **Google Chrome** installed on your system. Chrome is used as 
 
 ## Verify
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli --version
-```
-
-Expected output:
-
-<VerifiedTag value="Verified" />
-
-```text
-0.1.0
 ```
 
 If the command is not found, your shell is not seeing the npm global `bin` directory. Open a new terminal or update `PATH`, then try again.
@@ -241,8 +228,6 @@ Kane CLI checks the npm registry once every 24 hours when you launch it. When a 
 
 Upgrade with:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install -g @testmuai/kane-cli@latest
 ```
@@ -251,15 +236,11 @@ After upgrading, run `kane-cli --version` to confirm the new version is active.
 
 ## Uninstall
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm uninstall -g @testmuai/kane-cli
 ```
 
 This removes the `kane-cli` binary but leaves your local data in place. Kane CLI stores credentials, configuration, sessions, and Chrome profile data under `~/.testmuai/kaneai/`. To wipe that state as well:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rm -rf ~/.testmuai/kaneai
@@ -273,8 +254,6 @@ Only do this if you want a clean reset, it logs you out of all profiles and dele
 
 Your npm global bin directory is not in your PATH. Find it and add it:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # Find your npm global bin directory
 npm config get prefix
@@ -287,8 +266,6 @@ export PATH="$(npm config get prefix)/bin:$PATH"
 **Installation fails on Node 16**
 
 Kane CLI requires Node.js 18+. Check your version and upgrade if needed:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 node --version

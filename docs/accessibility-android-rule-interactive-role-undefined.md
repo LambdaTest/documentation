@@ -5,31 +5,6 @@ sidebar_label: Interactive Role Undefined
 description: Rule-level Accessibility guidance for Interactive Role Undefined on Android.
 slug: accessibility-android-rule-interactive-role-undefined/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Interactive Role Undefined (Android)",
-          "item": `${BRAND_URL}/support/docs/accessibility-android-rule-interactive-role-undefined/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

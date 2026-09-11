@@ -31,7 +31,6 @@ toc_min_heading_level: 2
 toc_max_heading_level: 2
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -250,9 +249,6 @@ Project-level instructions are specific to a single project and are applied when
 
 
 **Example project-level instructions:**
-
-<VerifiedTag value="Verified" />
-
 ```
 - All test cases must include preconditions for user authentication state.
 - Use the naming convention: [Module]_[Feature]_[Scenario]_[Positive/Negative].
@@ -274,9 +270,6 @@ Organization-level instructions apply globally across all projects within your o
 
 
 **Example organization-level instructions:**
-
-<VerifiedTag value="Verified" />
-
 ```
 - Include accessibility testing considerations where applicable.
 - Severity and priority must be assigned to every test case.
@@ -370,8 +363,6 @@ The format you choose is remembered for the rest of the session. Follow-up messa
 ##### BDD Scenario Output
 
 With the toggle on, each test case carries one or more Gherkin scenarios instead of manual steps:
-
-<VerifiedTag value="Verified" />
 
 ```gherkin
 Scenario: Complete a motorcycle purchase successfully

@@ -14,7 +14,6 @@ slug: hyperexecute-snooper/
 canonical: https://www.testmuai.com/support/docs/hyperexecute-snooper/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -177,8 +176,6 @@ A `snooper` is a command that can be used to discover the list of Feature file s
 
 For example, the following command will discover the list of Feature file scenarios in the features folder that are using the Java framework:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 snooper --featureFilePaths=features/ --frameWork=java
 ```
@@ -202,8 +199,6 @@ This command helps to discover all the test scenarios within the project. It off
 - `frameWork`: Framework of Testing
 - `specificTags`: (optional) Tags that need to be tested
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 testDiscovery:
   type: automatic
@@ -217,8 +212,6 @@ testDiscovery:
 #### Method 2: Discovering test cases on Local machines
 
 - `command`: It is a mandatory parameter in the yaml file and would throw an error if not found by the compiler.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 testDiscovery: 
@@ -235,8 +228,6 @@ There are two methods to execute the runner command for cucumber:
 
 #### Method 1: Using `options` flag
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.options="$test"
 ```
@@ -246,8 +237,6 @@ testRunnerCommand: mvn test -Dcucumber.options="$test"
 #### Method 2: Using `features` flag
 
 > **Note:** This flag is applicable for cucumber version 7 and above only.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 testRunnerCommand: mvn test -Dcucumber.features="$test"
@@ -261,8 +250,6 @@ We can also debug `testDiscovery` using `snooper` to check whether all the desir
 
 To debug the discovery of the snooper, configure the following command as per the desired parameters:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 .hyperexecute/snooper --targetOs=win --ignoredTags=@ignore @skipDaily --featureFilePaths=src/test/java/Features --frameWork=java | sed 's/:.*//' | uniq
 ```
@@ -273,15 +260,11 @@ To debug the discovery of the snooper, configure the following command as per th
 
 - Snooper discovery can be customized where you can use set of tags that you want to discover the tests.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 specificTags: ["@tag1","@tag2"]
 ```
 
 - Discovery can also be customized by passing logical query in the snooper using `query` tag:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 query: "((@tag1 or @tag2) and not @tag3)"
@@ -289,16 +272,12 @@ query: "((@tag1 or @tag2) and not @tag3)"
 
 - You can also skip the tests that have some specific tags using `ignoredTags`:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 ignoredTags : ["@tag3","@tag2"]
 ```
 
 ## Sample YAML File
 Here is a sample HyperExecute file with cucumber 7 and above to discover all the feature files without any tags.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 ---

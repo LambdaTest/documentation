@@ -375,8 +375,6 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 You can clone the sample repository to run `Cyoress` tests with `SmartUI` and use the `cypress/e2e/smartuiSDKLocal.cy.js` file.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-cypress-sdk-sample
 cd smartui-cypress-sdk-sample
@@ -384,8 +382,6 @@ cd smartui-cypress-sdk-sample
 ### **Step 2**: Install the Dependencies
 
 1. Install required NPM modules for `TestMu AI SmartUI Cypress SDK` in your **Frontend** project.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
@@ -420,8 +416,6 @@ SmartUI SDK only supports Cypress versions >= 10.0.0
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -452,15 +446,11 @@ $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
-
-<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -526,8 +516,6 @@ describe('Test Case name', () => {
 ### **Step 6:** Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --config .smartui.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed

@@ -246,36 +246,24 @@ Wrap element text in quotes when you need an exact match. This prevents KaneAI f
 When multiple elements look the same (e.g., a table with "Edit" buttons on every row, or a page with multiple "Submit" buttons), use position or context to narrow down the target.
 
 **Absolute positions:**
-
-<VerifiedTag value="Verified" />
-
 ```
 click on the "Submit" button at the bottom of the page
 click on the search icon in the top right corner
 ```
 
 **Relative positions (near another element):**
-
-<VerifiedTag value="Verified" />
-
 ```
 click the "Edit" button next to "john@example.com"
 click the "Delete" icon beside the "Quarterly Report" row
 ```
 
 **Ordering (nth element):**
-
-<VerifiedTag value="Verified" />
-
 ```
 click on the second "Add to Cart" button
 select the third item in the dropdown
 ```
 
 **Inside a container:**
-
-<VerifiedTag value="Verified" />
-
 ```
 click "Submit" inside the payment form
 click "Save" inside the modal dialog
@@ -292,9 +280,6 @@ Your page shows a grid of products, each with an "Add to Cart" button.
 :::
 
 :::tip Good approaches
-
-<VerifiedTag value="Verified" />
-
 ```
 click the "Add to Cart" button below the "Running Shoes" product
 click the "Add to Cart" button for the first product in the list
@@ -306,9 +291,6 @@ click the "Add to Cart" button for the first product in the list
 A user management table has Edit, Delete, and View buttons for each row.
 
 :::tip
-
-<VerifiedTag value="Verified" />
-
 ```
 click the "Edit" button in the row containing "jane.doe@company.com"
 click "Delete" next to user "John Smith"
@@ -321,9 +303,6 @@ click the "View" link in the third row of the users table
 A multi-level navigation has "Settings" under both "Account" and "Admin" sections.
 
 :::tip
-
-<VerifiedTag value="Verified" />
-
 ```
 hover on the "Account" menu, then click on "Settings"
 click on "Settings" inside the "Admin" dropdown
@@ -335,9 +314,6 @@ click on "Settings" inside the "Admin" dropdown
 A page has a confirmation modal with "Cancel" and "Confirm" buttons, but the background page also has buttons.
 
 :::tip
-
-<VerifiedTag value="Verified" />
-
 ```
 click "Confirm" inside the confirmation dialog
 click the "Cancel" button in the modal
@@ -385,8 +361,6 @@ Window management is currently not supported on KaneAI.
 
 ### Scenario: Checkout Flow That Opens Payment in New Tab
 
-<VerifiedTag value="Verified" />
-
 ```
 click on "Proceed to Payment"
 switch to the 2nd tab
@@ -404,14 +378,10 @@ Always add a `switch to tab` instruction after any action that opens a new tab. 
 
 Some UI elements only appear after hovering (e.g., dropdown menus, tooltips, action icons on table rows).
 
-<VerifiedTag value="Verified" />
-
 ```
 hover on the "Products" menu item
 click on "Electronics" in the dropdown
 ```
-
-<VerifiedTag value="Verified" />
 
 ```
 hover on the user avatar in the top right corner
@@ -419,8 +389,6 @@ click on "Sign Out"
 ```
 
 ### Scenario: Tooltip Verification
-
-<VerifiedTag value="Verified" />
 
 ```
 hover on the info icon next to "Annual Revenue"
@@ -430,8 +398,6 @@ assert tooltip text "Total revenue for the fiscal year" is visible
 ## Drag and Drop
 
 KaneAI supports drag-and-drop interactions on **Desktop Web, Android apps, iOS apps, and Mobile Web**, for sortable lists, kanban boards, sliders, payment confirmation gestures, and similar UI patterns.
-
-<VerifiedTag value="Verified" />
 
 ```
 drag "Task: Fix Bug" and drop it on the "In Progress" column

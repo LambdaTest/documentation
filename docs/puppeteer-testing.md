@@ -169,8 +169,6 @@ Puppeteer is a Node package that automates the Chrome browser for web testing. O
 
 2. Install the npm dependencies.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm install
 ```
@@ -269,8 +267,6 @@ const expect = require('chai').expect;
 ```
 
 4. Pass the below command to run the test.
-
-<VerifiedTag value="Verified" />
 
 ```
 node navigation.js

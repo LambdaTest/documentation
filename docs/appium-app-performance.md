@@ -229,8 +229,6 @@ Application start-up time significantly impacts the first impression and overall
 
 To retrieve profiling details, simply make a request to the <BrandName /> API using your **authentication token (username and access key)** and the relevant **session ID**. The response will include comprehensive metrics in JSON format, allowing easy integration with other tools or reporting systems for further insights.
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/SESSION_ID/log/appmetrics`}
@@ -243,8 +241,6 @@ To retrieve profiling details, simply make a request to the <BrandName /> API us
 <img loading="lazy" src={require('../assets/images/appium-app/meta-data.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 **Step 3:** Replace the `YOUR_SESSION_ID` parameter in the given API with your actual session id.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

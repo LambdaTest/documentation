@@ -14,7 +14,6 @@ slug: junit-xml-report/
 canonical: https://www.testmuai.com/support/docs/junit-xml-report/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -149,8 +148,6 @@ Configure all the necessary dependencies and configurations to your project.
 
 ### Step 2: Configure the HyperExecute YAML File
 In your HyperExecute YAML configuration, define the [report](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

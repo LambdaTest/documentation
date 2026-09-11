@@ -13,31 +13,6 @@ slug: xcode-plugin-testmu/
 canonical: https://www.testmu.ai/support/docs/xcode-plugin-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "LambdaMax XCode Plugin",
-          "item": `${BRAND_URL}/support/docs/xcode-plugin-testmu/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -140,8 +115,6 @@ With this new plugin, testers and developers never have to leave XCode to execut
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-build-code.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
 Here is the sample code for the Xcode plugin:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 Xcode plugin:

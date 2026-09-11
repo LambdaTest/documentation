@@ -279,8 +279,6 @@ OFF shows red failures.
 
 ## How Stealth Works
 
-<VerifiedTag value="Verified" />
-
 ```
 Session Creation
     │

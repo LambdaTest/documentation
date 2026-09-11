@@ -276,8 +276,6 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -288,8 +286,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -304,8 +300,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Step 4: Configure YAML in your Test Suite
 
 You need to edit the `PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"` flag and enter your project token that show in the SmartUI app after, creating your project.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -355,8 +349,6 @@ jobLabel: ["smart-ui-sdk", "hyperexecute", "cypress"]
 :::info
 It is mandatory to mention these commands in the pre flag to download all the necessary dependencies
 
-<VerifiedTag value="Verified" />
-
 ```bash
 pre:
   - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
@@ -370,15 +362,11 @@ pre:
 
 Run the below command in your terminal at the root folder of the project:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 3.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

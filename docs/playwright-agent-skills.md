@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/playwright-agent-skills/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -173,8 +172,6 @@ Agent Skills are self-contained packages of instructions, code patterns, debuggi
 
 Clone the repository and copy the Playwright skill into your AI tool's skills directory:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -199,8 +196,6 @@ If you prefer installing **all available framework skills**, clone the repositor
 
 Configure your <BrandName /> credentials as environment variables:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -210,19 +205,13 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 Once installed, simply ask your AI assistant to write tests in natural language:
 
-<VerifiedTag value="Verified" />
-
 ```
 "Write Playwright tests for the login page and run them on TestMu AI cloud using Chrome and Firefox"
 ```
 
-<VerifiedTag value="Verified" />
-
 ```
 "Set up a Playwright TypeScript project with Page Object Model and run tests on TestMu AI"
 ```
-
-<VerifiedTag value="Verified" />
 
 ```
 "Run Playwright tests on real mobile devices on TestMu AI cloud"
@@ -236,8 +225,6 @@ The Agent Skill automatically handles:
 4. **Best practices** - Uses web-first assertions, accessible selectors (`getByRole`, `getByLabel`), and Page Object Model
 
 ## What's Included in the Playwright Skill
-
-<VerifiedTag value="Verified" />
 
 ```
 playwright-skill/

@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-ci-cd/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -174,8 +173,6 @@ Before enabling a pipeline:
 
 Set `ROOK_HOME` to a protected runner directory:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export ROOK_HOME="$RUNNER_TEMP/rook-home"
 ```
@@ -184,15 +181,11 @@ For a persistent self-hosted runner, choose a stable protected path so token ren
 
 Project evidence continues to be written under:
 
-<VerifiedTag value="Verified" />
-
 ```text
 $GITHUB_WORKSPACE/.testmuai/rook/
 ```
 
 ## Verify the Environment
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook --version
@@ -206,8 +199,6 @@ An unreachable controller does not mean a token is invalid. When `rook auth stat
 ## Run a Deterministic Suite
 
 Use explicit agent and scenario IDs in CI:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook agent list --json
@@ -225,8 +216,6 @@ Headless `rook run` currently does not expose class, category, tag, concurrency,
 
 An unattended command cannot answer a permission prompt. Pass exact, temporary allowances that were reviewed with the workflow:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 rook run \
   --entity refund-desk \
@@ -243,15 +232,11 @@ Avoid broad shell or MCP allowances. `--allow` adds authority; it does not remov
 
 `--json` emits newline-delimited JSON events. Process one object per line rather than parsing human prose:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 rook run --entity refund-desk --only SC-001 --json > rook-events.ndjson
 ```
 
 Use `--verbose` when diagnostic tool activity and cost events are needed:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook run --entity refund-desk --only SC-001 --verbose --json
@@ -276,8 +261,6 @@ An observed agent failure outranks an invocation error if both occur in one run.
 ## Example GitHub Actions Job
 
 This example assumes a protected self-hosted runner already has an authenticated Rook home and can reach the staging agent and controller.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 name: Rook agent assurance
@@ -339,8 +322,6 @@ jobs:
 ## Separate Generation From the Gate
 
 Scenario generation uses models and can change the suite. A stable release gate should run reviewed, committed scenario IDs. Move generation into a separate scheduled or manually approved workflow:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook explore . --force --all --json

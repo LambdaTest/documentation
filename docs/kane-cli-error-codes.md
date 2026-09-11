@@ -19,7 +19,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-error-codes/
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -143,8 +142,6 @@ Result codes follow HTTP-style groupings:
 | **7xx** | Assertion Error | The objective's assertions or checkpoints failed. |
 
 The `run_end` event includes both `result_code` (numeric) and `reason_code` (descriptive string):
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -308,8 +305,6 @@ Platform or infrastructure failures. These are independent of the objective itse
 | **What happened** | The <BrandName /> controller returned a `401 Unauthorized` response. Your authentication token has expired or is invalid. |
 | **Action** | Refresh your authentication token: |
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`kane-cli login
@@ -379,8 +374,6 @@ An external obstacle on the target website prevented the agent from completing t
 | **Status** | `ERROR` |
 | **What happened** | The agent encountered a login page but no credentials were provided in the objective or variables. |
 | **Action** | Provide login credentials using [variables](/support/docs/kane-cli-variables-and-context/): |
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Log in and navigate to dashboard" \
@@ -457,8 +450,6 @@ The agent completed its actions but one or more assertions or checkpoints did no
 ## Handling Errors in Agent Mode
 
 When consuming Kane CLI output programmatically, use `result_code` ranges to determine your next action:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Run and capture the result

@@ -27,7 +27,6 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -184,8 +183,6 @@ Currently in the **Beta**. Please reach out to our <span className="doc__lt" onC
 
 ### Step 3: Generate Test Cases Using KaneAI
 To trigger KaneAI, add the comment to your Jira ticket calling <BrandName /> application, for example:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 @TestMu AI Cloud create test case based on the details of this Jira
