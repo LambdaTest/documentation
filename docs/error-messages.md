@@ -2,7 +2,7 @@
 id: error-messages
 title: Error Messages During Test Execution
 sidebar_label: Fix Error Messages
-description: Identify and resolve common error messages that occur during Selenium test execution on the cloud grid.
+description: Identify and resolve common error messages that occur during Selenium test execution on the cloud grid, with a quick lookup of W3C WebDriver error codes and Selenium exceptions.
 keywords:
   - selenium test execution errors
   - authentication error fix
@@ -10,6 +10,9 @@ keywords:
   - element click intercepted
   - stale element reference fix
   - session not created error
+  - webdriver error codes
+  - w3c webdriver errors
+  - selenium exception reference
 image: /assets/images/og-images/automation-testing-og.png
 url: https://www.testmuai.com/support/docs/error-messages/
 site_name: TestMu AI
@@ -106,6 +109,70 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ***
 Below is a list of error messages that may occur during test execution, along with their causes and solutions.
+
+## Quick Lookup {#quick-lookup}
+
+Find your error by what your test printed. The **W3C error code** is the string the WebDriver protocol returns, and the **Selenium exception** is what your test code raises.
+
+### WebDriver Errors {#webdriver-errors}
+
+<!-- Verified 2026-09-11: W3C error codes and HTTP statuses from the W3C WebDriver spec; exception names from Selenium source (ErrorCodec.java, errorhandler.py). -->
+
+| Error | W3C error code | HTTP status | Selenium exception |
+|---|---|---|---|
+| [Element Click Intercepted](#element-click-intercepted---400) | `element click intercepted` | 400 | `ElementClickInterceptedException` |
+| [Element Not Interactable](#element-not-interactable---400) | `element not interactable` | 400 | `ElementNotInteractableException` |
+| [Insecure Certificate](#insecure-certificate---400) | `insecure certificate` | 400 | `InsecureCertificateException` |
+| [Invalid Argument](#invalid-argument---400) | `invalid argument` | 400 | `InvalidArgumentException` |
+| [Invalid Cookie Domain](#invalid-cookie-domain---400) | `invalid cookie domain` | 400 | `InvalidCookieDomainException` |
+| [Invalid Element State](#invalid-element-state---400) | `invalid element state` | 400 | `InvalidElementStateException` |
+| [Invalid Selector](#invalid-selector---400) | `invalid selector` | 400 | `InvalidSelectorException` |
+| [Invalid Session ID](#session-not-generated---invalid-session-id-404--session-not-created-500) | `invalid session id` | 404 | `NoSuchSessionException` (Java) · `InvalidSessionIdException` (Python) |
+| [Session Not Created](#session-not-generated---invalid-session-id-404--session-not-created-500) | `session not created` | 500 | `SessionNotCreatedException` |
+| [JavaScript Error](#javascript-error---500) | `javascript error` | 500 | `JavascriptException` |
+| [Move Target Out of Bounds](#move-target-out-of-bounds---500) | `move target out of bounds` | 500 | `MoveTargetOutOfBoundsException` |
+| [No Such Alert](#no-such-alert---404) | `no such alert` | 404 | `NoAlertPresentException` |
+| [No Such Cookie](#no-such-cookie---404) | `no such cookie` | 404 | `NoSuchCookieException` |
+| [No Such Element](#no-such-element---404) | `no such element` | 404 | `NoSuchElementException` |
+| [No Such Frame](#no-such-frame---404) | `no such frame` | 404 | `NoSuchFrameException` |
+| [No Such Window](#no-such-window---404) | `no such window` | 404 | `NoSuchWindowException` |
+| [No Such Shadow Root](#no-such-shadow-root---404) | `no such shadow root` | 404 | `NoSuchShadowRootException` |
+| [Stale Element Reference](#stale-element-reference---404) | `stale element reference` | 404 | `StaleElementReferenceException` |
+| [Unsupported Operation](#unsupported-operation---500) | `unsupported operation` | 500 | `UnsupportedCommandException` (Java) |
+| [Unknown Method](#unknown-method---405) | `unknown method` | 405 | `UnsupportedCommandException` (Java) |
+| [Unknown Error](#unknown-error---500) | `unknown error` | 500 | `WebDriverException` |
+| [Unknown Command](#unknown-command---404) | `unknown command` | 404 | `UnsupportedCommandException` (Java) |
+| [Script Timeout](#script-timeout---500) | `script timeout error` | 500 | `ScriptTimeoutException` (Java) · `TimeoutException` (Python) |
+| [Unable to Set Cookie](#unable-to-set-cookies---500) | `unable to set cookie` | 500 | `UnableToSetCookieException` |
+| [Unable to Capture Screen](#unable-to-capture-screen---500) | `unable to capture screen` | 500 | `ScreenshotException` |
+| [Unexpected Alert Open](#unexpected-alert-open---500) | `unexpected alert open` | 500 | `UnhandledAlertException` (Java) · `UnexpectedAlertPresentException` (Python) |
+
+### TestMu AI Platform Errors {#platform-errors}
+
+[Authentication Error](#authentication-error-at-the-time-of-test-execution) · [Max Duration Exceeded](#max-duration-exceeded-error) · [Test Cancellation](#test-cancellation---status-error) · [Exceeded Queue Limit](#exceeded-queue-limit-error) · [Lambda Error](#lambda-error)
+
+### Timeouts {#timeouts}
+
+| Timeout | Explained in |
+|---|---|
+| Idle timeout | [Idle Timeout](/support/docs/timeouts-issues-and-resolutions/#1-idle-timeout) |
+| Queuing timeout | [Queuing Timeout](/support/docs/timeouts-issues-and-resolutions/#4-queuing-timeout) |
+| Script timeout | [Script Timeout](#script-timeout---500) |
+| Maximum session duration | [Max Duration Exceeded](#max-duration-exceeded-error) |
+| Network latency | [Network Latency](/support/docs/timeouts-issues-and-resolutions/#3-network-latency) |
+| Firewall-protected network | [Firewall Protected Network](/support/docs/timeouts-issues-and-resolutions/#5-firewall-protected-network) |
+
+### Errors From a Specific Product {#product-errors}
+
+| Product | Reference |
+|---|---|
+| HyperExecute CLI | [HyperExecute CLI Errors](/support/docs/hyperexecute-cli-error/#error-codes) |
+| Kane CLI | [Kane CLI Error Codes](/support/docs/kane-cli-error-codes/) |
+| KaneAI | [KaneAI Errors](/support/docs/error-handling-kaneai/) |
+| Tunnel | [Tunnel Error Messages](/support/docs/troubleshooting-lambda-tunnel/#error-messages) |
+| SmartUI CLI | [SmartUI Error Message Reference](/support/docs/smartui-troubleshooting-guide/#error-message-reference) |
+| Espresso and iOS app tests | [Troubleshoot Espresso Tests](/support/docs/troubleshoot-espresso-tests/) · [Troubleshooting iOS App Testing](/support/docs/troubleshooting-ios-app-testing/) |
+
 
 ## Authentication Error at the Time of Test Execution
 ---

@@ -3,12 +3,15 @@ id: troubleshooting-lambda-tunnel
 title: How to troubleshoot TestMu AI Tunnel
 hide_title: true
 sidebar_label: Troubleshooting TestMu AI Tunnel
-description: This document will help you troubleshoot the most common challenges faced during local app testing using TestMu AI Tunnel.
+description: Troubleshoot common TestMu AI Tunnel problems, and look up the exact error messages the Tunnel prints, with what each one means and how to fix it.
 keywords:
   - troubleshooting testmu ai Tunnel
   - tunnel not connecting
   - localhost not reachable
   - connection refused
+  - tunnel error messages
+  - error while creating ssh connection
+  - tunnel invalid credentials
 url: https://www.testmuai.com/support/docs/troubleshooting-lambda-tunnel/
 site_name: TestMu AI
 slug: troubleshooting-lambda-tunnel/
@@ -114,11 +117,12 @@ Before proceeding, here are some of the common issues:
 - [Invalid Host Header](/docs/troubleshooting-lambda-tunnel/#2-invalid-host-header)
 - [WordPress - CSS not loading](/docs/troubleshooting-lambda-tunnel/#3-wordpress---css-not-loading)
 - [IP whitelisting](/docs/troubleshooting-lambda-tunnel/#4-ip-whitelisting)
-- [No available PORT found](/docs/troubleshooting-lambda-tunnel/#5-no-available-port-found)
-- [Custom Host name](/docs/troubleshooting-lambda-tunnel/#6-custom-host-name)
-- [CUI – Console UI](/docs/troubleshooting-lambda-tunnel/#7-still-got-issues-let-us-help-through-cuiconsole-ui)
-- [Unable to establish a secure shell tunnel connection through Port 443](/docs/troubleshooting-lambda-tunnel/#8-unable-to-establish-a-secure-shell-tunnel-connection-through-port-443)
-- [LT can’t be opened because Apple cannot check it for malicious software](/docs/troubleshooting-lambda-tunnel/#9-lt-cant-be-opened-because-apple-cannot-check-it-for-malicious-software)
+- [Custom Host name](/docs/troubleshooting-lambda-tunnel/#5-custom-host-name)
+- [Enable verbose logging](/docs/troubleshooting-lambda-tunnel/#6-enable-verbose-logging)
+- [LT can’t be opened because Apple cannot check it for malicious software](/docs/troubleshooting-lambda-tunnel/#7-lt-cant-be-opened-because-apple-cannot-check-it-for-malicious-software)
+- [Unable to establish a secure shell tunnel connection through Port 443](/docs/troubleshooting-lambda-tunnel/#ssh-port-443)
+
+Looking up a specific message the tunnel printed? See [Error Messages](/docs/troubleshooting-lambda-tunnel/#error-messages) below.
 
 ## 1. Localhost Refused To Connect
 
@@ -228,6 +232,313 @@ This error occurs due to the increased restrictions on third-party software, dow
 While we are at it, here is a one-time setup workaround. All you need to do is run the below command before you start configuring your <BrandName /> Tunnel:
 
 `xattr -d com.apple.quarantine ./LT`
+
+## Error Messages {#error-messages}
+* * *
+
+<!-- Verified 2026-09-11. Messages found verbatim in the LT tunnel binary v3.2.34. Test-session messages from community.testmuai.com topics 31352 and 29262. ERR::LUNCH::TUNN from github.com/LambdaTest/CSharp-Selenium-Sample/issues/1. Plugin messages from wdio-lambdatest-service 4.0.1. Fixes use the flag descriptions in lambda-tunnel-modifiers. -->
+
+When the <BrandName /> Tunnel fails, it prints a plain-text message. This section lists those messages exactly as the tunnel prints them, what each one means, and what to do.
+
+Many messages are followed by details from your run, such as a host, a port, or the underlying network error. Match on the beginning of your message.
+
+Documented for tunnel binary **v3.2.34**. For every flag mentioned below, see [Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/). To see more detail for any message, turn on [verbose logging](#6-enable-verbose-logging).
+
+### Authentication {#tunnel-authentication}
+
+#### Invalid Credentials, Please try again! {#invalid-credentials}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid Credentials, Please try again!` |
+| **What happened** | The tunnel could not authenticate with the username and access key it was given. |
+| **What to do** | Check the values passed to `--user` and `--key`. See [how to find your username and access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/). |
+| **Also seen as** | `Invalid Credentials` |
+
+#### Username not specified {#username-not-specified}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Username not specified` |
+| **What happened** | The tunnel was started without a username. |
+| **What to do** | Pass your username with `--user`. |
+
+#### Access Key not specified {#access-key-not-specified}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Access Key not specified` |
+| **What happened** | The tunnel was started without an access key. |
+| **What to do** | Pass your access key with `--key`. |
+
+#### Request failed(401) {#request-failed-401}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Request failed(401)` |
+| **What happened** | The server rejected the tunnel's credentials with HTTP 401. |
+| **What to do** | Check the values passed to `--user` and `--key`, as for [Invalid Credentials](#invalid-credentials). |
+| **Also seen as** | `ERR::LUNCH::TUNN : Launch tunnel failed Request failed(401)` |
+
+### SSH, Websocket, and TCP Connections {#tunnel-connections}
+
+#### Error while creating ssh connection, over port 22 {#ssh-port-22}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Error while creating ssh connection, over port 22` |
+| **What happened** | The tunnel could not open an SSH connection over port 22. |
+| **What to do** | Try another connection type with `--sshConnType over_443` or `--sshConnType over_ws` (these need `--mode ssh`), or use `--mode ws`. |
+| **Also seen as** | `Failed to create session on port 22:` |
+
+#### Error while creating ssh connection, over port 443 {#ssh-port-443}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Error while creating ssh connection, over port 443` |
+| **What happened** | The tunnel could not open an SSH connection over port 443. |
+| **What to do** | If you connect through a proxy, pass it with `--proxy-host` and `--proxy-port`. You can also try `--sshConnType over_ws` or `--mode ws`. If your network restricts outbound traffic, see [IP whitelisting](#4-ip-whitelisting). |
+| **Also seen as** | `Failed to create session on port 443:` |
+
+#### Error while creating ssh connection, over ws {#ssh-over-ws}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Error while creating ssh connection, over ws` |
+| **What happened** | The tunnel could not open an SSH connection over a websocket. |
+| **What to do** | Try `--sshConnType over_22` or `--sshConnType over_443`. |
+
+#### Error while creating websocket connection {#websocket-connection}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Error while creating websocket connection` |
+| **What happened** | The tunnel could not connect in websocket mode. |
+| **What to do** | Try `--mode ssh`, which is the default, or `--mode tcp`. |
+
+#### Error while creating tcp connection {#tcp-connection}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Error while creating tcp connection` |
+| **What happened** | The tunnel could not connect in TCP mode. |
+| **What to do** | Try `--mode ssh`, which is the default, or `--mode ws`. |
+
+#### Invalid field: mode, allowed values [ssh, ws, tcp] {#invalid-mode}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid field: mode, allowed values [ssh, ws, tcp]` |
+| **What happened** | The value passed to `--mode` is not one of the allowed values. |
+| **What to do** | Use `ssh`, `ws`, or `tcp`. If you leave out `--mode`, the tunnel uses `ssh`. |
+
+#### Cannot expose tcp services in websocket mode use ssh mode {#tcp-in-websocket-mode}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Cannot expose tcp services in websocket mode use ssh mode` |
+| **What happened** | TCP services cannot be exposed while the tunnel runs in websocket mode. |
+| **What to do** | Run the tunnel with `--mode ssh`. |
+
+### Proxies and PAC Files {#tunnel-proxies}
+
+#### Error while connecting to proxy server {#proxy-server}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Error while connecting to proxy server` |
+| **What happened** | The tunnel could not connect to the proxy server. |
+| **What to do** | Check `--proxy-host` and `--proxy-port`, and `--proxy-user` and `--proxy-pass` if your proxy needs a login. |
+
+#### Unable to parse proxy URL {#proxy-url}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Unable to parse proxy URL` |
+| **What happened** | The proxy address could not be read. |
+| **What to do** | Check the proxy settings you passed, such as `--proxy-host` and `--proxy-port`. |
+
+#### Unable to read PAC File at Location {#pac-file-read}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Unable to read PAC File at Location :` |
+| **What happened** | The PAC file could not be read. |
+| **What to do** | Check the path passed to `--pacfile`. |
+| **Also seen as** | `Failed to read PAC file at` |
+
+#### Unable to fetch remote PAC File at Location {#pac-file-remote}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Unable to fetch remote PAC File at Location :` |
+| **What happened** | The PAC file could not be downloaded from the location given. |
+| **What to do** | Check that the location is reachable from this machine. |
+
+### Certificates {#tunnel-certificates}
+
+#### Failed to generate client certificate for mTLS. {#mtls-client-certificate}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Failed to generate client certificate for mTLS.` |
+| **What happened** | The tunnel could not create the client certificate for mTLS. |
+| **What to do** | Check the files passed with `--clientCert` and `--clientKey`. `--clientCert` supports only `pfx` files. |
+
+#### Invalid client certificate and client key. {#invalid-client-certificate}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid client certificate and client key.` |
+| **What happened** | The certificate and key could not be used. |
+| **What to do** | Check the files passed with `--clientCert` and `--clientKey`. |
+
+#### Failed to read PFX File. {#pfx-file}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Failed to read PFX File.` |
+| **What happened** | The PFX certificate file could not be read. |
+| **What to do** | Check the file passed with `--clientCert`. Only `pfx` files are supported. |
+| **Also seen as** | `Failed to decode PFX data.` · `PCKS12 file should be pfx extention.` |
+
+#### Unable to load cert for mitm {#mitm-certificate}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Unable to load cert for mitm` |
+| **What happened** | The tunnel could not load the certificate it needs for `--mitm` mode. |
+| **What to do** | Turn on [verbose logging](#6-enable-verbose-logging) and share the log with support. |
+| **Also seen as** | `Unable to generate mitm config` |
+
+### Configuration and Flags {#tunnel-configuration}
+
+#### Please provide either AllowHosts or BypassHosts. {#allowhosts-or-bypasshosts}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Please provide either AllowHosts or BypassHosts.` |
+| **What happened** | `--allowHosts` and `--bypassHosts` were both set. |
+| **What to do** | Use only one of them. |
+| **Also seen as** | `Please provide either AllowHosts or ForceLocal.` · `Please provide either BypassHosts or ForceLocal.` |
+
+#### Tunnel Name too long {#tunnel-name-too-long}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Tunnel Name too long` |
+| **What happened** | The name passed to `--tunnelName` is too long. |
+| **What to do** | Use a shorter tunnel name. |
+
+#### Invalid environment specified {#invalid-environment}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Invalid environment specified` |
+| **What happened** | The value passed to `--env` is not a valid environment. |
+| **What to do** | Check the value you passed to `--env`. |
+
+#### Error while parsing flags from args {#parsing-flags}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Error while parsing flags from args` |
+| **What happened** | One of the flags passed to the tunnel could not be read. |
+| **What to do** | Check each flag against [Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/), or run the tunnel with `--help`. |
+
+### Local Ports {#tunnel-local-ports}
+
+#### Failed to start api server on port {#api-server-port}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Failed to start api server on port` |
+| **What happened** | The Tunnel Info API could not start on its port. |
+| **What to do** | Set a free port with `--infoAPIPort`. |
+| **Also seen as** | `Unable to start api server :` |
+
+#### Failed to start local file server on port {#file-server-port}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Failed to start local file server on port` |
+| **What happened** | The tunnel could not start its local file server on the port it tried. |
+| **What to do** | Make sure the port in the message is free. When you use `--dir`, the file server runs on port 33000. |
+| **Also seen as** | `Unable to start file server :` |
+
+### Tunnel Lifecycle {#tunnel-lifecycle}
+
+#### There was an error while starting tunnel {#error-starting-tunnel}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `There was an error while starting tunnel:` |
+| **What happened** | The tunnel failed while starting. The text after the colon gives the cause. |
+| **What to do** | Look up the rest of the message on this page. For example, `Request failed(401)` is a [credentials problem](#request-failed-401). |
+
+#### Tunnel retries exceeded, aborting. {#retries-exceeded}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Tunnel retries exceeded, aborting.` |
+| **What happened** | The tunnel used up its connection retries and stopped. |
+| **What to do** | Start it again with [verbose logging](#6-enable-verbose-logging) on to see why the connection failed. |
+
+#### Tunnel aborted, starting new tunnel. {#tunnel-aborted}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Tunnel aborted, starting new tunnel.` |
+| **What happened** | The tunnel dropped and started a new tunnel. |
+| **What to do** | If it keeps happening, turn on [verbose logging](#6-enable-verbose-logging) to see why. |
+
+#### Tunnel closure requested from server. Exiting {#closure-requested}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Tunnel closure requested from server. Exiting` |
+| **What happened** | The server asked the tunnel to stop, and the tunnel exited. |
+| **What to do** | Start the tunnel again. If it keeps happening, share the [verbose logging](#6-enable-verbose-logging) output with support. |
+
+#### Unable to stop the tunnel {#unable-to-stop}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Unable to stop the tunnel:` |
+| **What happened** | The tunnel could not shut down cleanly. |
+| **What to do** | End the tunnel process before you start a new one. |
+| **Also seen as** | `Stop tunnel failed` |
+
+### Messages in Your Test Session {#tunnel-test-session}
+
+These messages do not come from the tunnel program. They appear in your test results or in the browser when a test cannot use the tunnel.
+
+#### Either tunnel is not running or disconnected {#tunnel-not-running}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `Either tunnel is not running or disconnected` |
+| **What happened** | The test asked to run through a tunnel, but no connected tunnel was found for it. |
+| **What to do** | Start the tunnel before your tests, and set up your test to use it as described in [Test Locally Hosted Web Pages](/support/docs/testing-locally-hosted-pages/). |
+
+#### ERR_TUNNEL_CONNECTION_FAILED {#err-tunnel-connection-failed}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `ERR_TUNNEL_CONNECTION_FAILED` |
+| **What happened** | The browser could not reach your local site through the tunnel. |
+| **What to do** | Confirm the tunnel is running and your test uses it. If your site runs on `localhost`, see [Localhost refused to connect](#1-localhost-refused-to-connect). |
+
+### Plugins {#tunnel-plugins}
+
+#### LambdaTest Tunnel failed to start within 60 seconds! {#wdio-tunnel-timeout}
+
+| Field | Value |
+|-------|-------|
+| **Message** | `LambdaTest Tunnel failed to start within 60 seconds!` |
+| **Where it comes from** | The WebdriverIO service (`wdio-lambdatest-service`), which waits 60 seconds for the tunnel to start. |
+| **What to do** | Look above it for the tunnel's own message, and find that message on this page. |
+| **Also seen as** | `LambdaTest Tunnel failed to stop within 60 seconds!` |
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
