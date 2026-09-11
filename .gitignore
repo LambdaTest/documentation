@@ -16,6 +16,9 @@
 # (regenerated on every build by scripts/generate-static-md.js,
 
 /static/docs/*.md
+/static/docs/llms.txt
+/static/docs/llms-full.txt
+/static/docs/llms/
 /static/.well-known/
 
 # Claude
