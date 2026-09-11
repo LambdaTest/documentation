@@ -230,6 +230,8 @@ A failing `elif` is reported rather than skipped, so a broken middle branch does
 ### While loops
 ***
 
+Each while loop error, with its code and fix, is listed on the [While Loops](/support/docs/kaneai-while-loops/#error-messages-and-troubleshooting) page.
+
 A `while` loop is rejected when both sides of its condition are parameters. Parameter values do not change during a run, so the loop could never end. You are told this when you create the loop, not after it runs.
 
 A loop whose condition is vague or errored fails rather than running with an empty condition. A loop that can never end, and a loop that runs past its iteration limit, each say so.
