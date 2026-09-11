@@ -19,7 +19,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-introduction/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -118,8 +117,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 - **Test the web and native mobile apps**: the default target is the desktop browser, and on macOS Apple Silicon you can point the same objective at an Android Emulator or iOS Simulator. See [Mobile Testing](/support/docs/kane-cli-mobile/)
 - **Integrate into CI/CD pipelines**: headless mode with structured JSON output and standard exit codes
 - **Use as a skill in AI coding agents**: Claude Code, Codex CLI, and Gemini CLI can invoke Kane CLI directly to test and verify UIs on your behalf
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Install

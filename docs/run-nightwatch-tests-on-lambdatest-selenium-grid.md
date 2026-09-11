@@ -218,17 +218,12 @@ Complete these steps before running Nightwatch Selenium tests on TestMu AI.
 ---
 Clone the TestMu AI Nightwatch Selenium sample repository to your local machine.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/nightwatch-selenium-sample
 cd nightwatch-selenium-sample
 ```
 
 Install the required dependencies:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm i
 ```
@@ -239,9 +234,6 @@ Set your TestMu AI username and access key as environment variables.
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -251,9 +243,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -282,17 +271,11 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 Execute the test using the following command.
 
 **Single test:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm run single
 ```
 
 **Parallel tests:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm run parallel
 ```
@@ -320,8 +303,6 @@ Use AI coding assistants to generate and run Nightwatch.js tests with the TestMu
 The [nightwatchjs-skill](https://github.com/LambdaTest/agent-skills/tree/main/nightwatchjs-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

@@ -19,7 +19,6 @@ slug: appium-firebase-app-upload/
 canonical: https://www.testmuai.com/support/docs/appium-firebase-app-upload/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -176,8 +175,6 @@ After you have uploaded your application to your Firebase account, you can use t
 
 3. You can use this downloadable URI while uploading apps using App URL on the <BrandName /> cloud.
 
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

@@ -6,33 +6,6 @@ sidebar_label: /status
 description: Compare local Rook agent state with upstream versions and inspect pending run synchronization.
 slug: rook-command-status/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook /status Command",
-          "item": `${BRAND_URL}/support/docs/rook-command-status/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -94,8 +67,6 @@ Use <code>/status</code> to understand where the current machine stands before s
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-status.png').default} alt="Rook status command help showing agent and JSON options" className="doc_img"/>
 
 ## Syntax
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /status

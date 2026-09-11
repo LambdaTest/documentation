@@ -14,7 +14,6 @@ slug: custom-dns-map/
 canonical: https://www.testmuai.com/support/docs/custom-dns-map/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -123,8 +122,6 @@ This is useful when you need to redirect domain requests to different IP address
 
 The customDnsMap capability uses the following format:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 "customDnsMap": {
     "google.com": "<IP>",
@@ -153,8 +150,6 @@ The customDnsMap capability serves a variety of testing purposes.
 - **Load Balancer Testing:** Redirect traffic to a specific server to evaluate its performance and functionality in isolation.
 
 The following example shows how to redirect traffic to a staging server for the domain `example.com`:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 "customDnsMap": {

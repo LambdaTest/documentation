@@ -5,31 +5,6 @@ sidebar_label: Overlapping Interactive Elements
 description: Rule-level Accessibility guidance for Overlapping Interactive Elements on iOS.
 slug: accessibility-ios-rule-overlapping-interactive-elements/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Overlapping Interactive Elements",
-          "item": `${BRAND_URL}/support/docs/accessibility-ios-rule-overlapping-interactive-elements/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

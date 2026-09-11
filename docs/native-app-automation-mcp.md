@@ -19,7 +19,6 @@ canonical: https://www.testmuai.com/support/docs/native-app-automation-mcp/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -204,8 +203,6 @@ Web and mobile tests live behind different data endpoints on TestMu AI. To route
 
 Most clients handle this for you: your AI client will either ask you to confirm whether the test is desktop or mobile, or infer it from the TestID and set `platform` on the tool call. When the tool runs, you will see arguments like this:
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "testId": "RMAA-IOS-585984-1767376885020815122FLT",
@@ -266,8 +263,6 @@ After the server is configured, you can ask your AI assistant to set up the rema
 
 The standard configuration works in most MCP clients. Add the following to your client's MCP configuration, updating `ANDROID_HOME` to match your Android SDK path:
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "mcpServers": {
@@ -288,15 +283,11 @@ The standard configuration works in most MCP clients. Add the following to your 
 
 **Claude Code CLI:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 claude mcp add appium-mcp -- npx -y appium-mcp@latest
 ```
 
 **Gemini CLI:**
-
-<VerifiedTag value="Verified" />
 
 ```bash
 gemini mcp add appium-mcp npx -y appium-mcp@latest
@@ -307,8 +298,6 @@ Remember to set `ANDROID_HOME` in the resulting configuration for Android testin
 ### Capabilities file
 
 Create a `capabilities.json` file to define per-platform device capabilities, and point the `CAPABILITIES_CONFIG` environment variable at it:
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -362,8 +351,6 @@ For security, you can restrict which remote servers are allowed with the `REMOTE
 
 ### Example prompt
 
-<VerifiedTag value="Verified" />
-
 ```
 Open the Amazon app, search for "iPhone 15 Pro", select the first result,
 add it to the cart, and take a screenshot of the cart screen.
@@ -396,8 +383,6 @@ Also confirm that the authenticated MCP user actually has access to that TestID.
 **Causes and fixes:**
 
 - **Cline client issue.** Some Cline updates broke direct connections. Use the `mcp-remote` transport and raise the timeout in your Cline configuration:
-
-  <VerifiedTag value="Verified" />
 
   ```json
   {

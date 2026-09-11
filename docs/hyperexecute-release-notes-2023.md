@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-release-notes-2023
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -125,8 +124,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 You can now download and install **multiple languages** and and frameworks of a **specified versions** in your machine that is needed to execute your tests.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 runtime:
   - language: java
@@ -153,8 +150,6 @@ runtime:
 You can now clone the private repositories from your Git provider that are hosted on a private network or behind a firewall via tunnel.
 
 After specifying the details of your repository, you need to set the useInCodeSetUp flag to true as shown below.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 tunnelOpts:

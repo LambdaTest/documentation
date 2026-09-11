@@ -17,7 +17,6 @@ slug: circle-ci-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/circle-ci-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -159,8 +158,6 @@ Once you have set up your project, you will be prompted to provide a config.yml 
   If you choose the starter CI pipeline, a sample config.yml file is created and committed to a circleci-project-setup branch in your repo.
 
 Below is a sample of CircleCI YAML created for your reference:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 version: 2.1

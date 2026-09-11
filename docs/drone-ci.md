@@ -26,7 +26,6 @@ slug: drone-ci-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/drone-ci-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -194,8 +193,6 @@ In order to perform your tests with <BrandName />, you would need the below thin
 
     * You need to [download and install node.js](https://nodejs.org/en/) and node package manager or npm. Use the below command to install node.js with homebrew.
 
-    <VerifiedTag value="Verified" />
-
     ```
     $ brew install node
     ```
@@ -262,8 +259,6 @@ Congratulations!! Now you have successfully activated your repository for CI/CD.
 
 Now we will see an example in which we will be creating a <BrandName /> Tunnel and install node in it. For this, make a YAML configuration file as see shown below:
 
-<VerifiedTag value="Verified" />
-
 ```
 kind: pipeline
 name: Build
@@ -309,8 +304,6 @@ Let’s try to understand what’s written in this YAML file by deconstructing i
 
 * First of all, we are defining what type of pipeline is this.
 
-<VerifiedTag value="Verified" />
-
 ```
 kind: pipeline
 name: Build
@@ -319,8 +312,6 @@ name: Build
 We are making a docker pipeline so here the type defined will be docker. (Note: To make another type of pipeline you may check drone [official documentation](https://docs.drone.io/) and steps will be almost similar.) We will also give a name to our pipeline. Here, we have given the name "Build".
 
 * Now we are defining when this pipeline should be executed.
-
-<VerifiedTag value="Verified" />
 
 ```
 trigger:
@@ -333,8 +324,6 @@ Here the pipeline will be triggered when the event will be a push event received
 * Now we will be defining the pipeline steps by using the steps key in the YAML file. steps: Under this, our steps will be listed
 
 **Step I:**
-
-<VerifiedTag value="Verified" />
 
 ```
 - name: Tunnel
@@ -361,8 +350,6 @@ Here we are giving a name to our step, i.e. "Tunnel". Image is used for builder 
 
 **Step II:**
 
-<VerifiedTag value="Verified" />
-
 ```
 - name: SampleTest
   image: node
@@ -381,8 +368,6 @@ In this step, we are just installing node on our <BrandName /> Tunnel.
 
 ---
 Similarly, we can also write a Test to deploy our executable formed in the build step to s3 using the s3 plugin. (To see the full list of supported plugins and their documentation refer to this [link](https://docs.aws.amazon.com/s3/index.html).)
-
-<VerifiedTag value="Verified" />
 
 ```
 - name: upload
@@ -435,8 +420,6 @@ Below is the step-by-step execution of the Drone CI pipeline.
 Drone provides functionality of default clone in its workspace, and we are using the same.
 If you want to restrict the default clone in the pipeline and want to use your custom clone then you can add below-mentioned YAML snippet to restrict the clone.
 
-<VerifiedTag value="Verified" />
-
 ```
 clone:
     disable:  true
@@ -459,8 +442,6 @@ clone:
 ## Parallel Testing
 
 Parallel Testing is one of the most demanding features of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions. This would significantly trim down the time taken on your cross-browser testing activities. For running test in parallel, add the below command when you update the pipeline’s yaml file, i.e. `.drone.yml file`.
-
-<VerifiedTag value="Verified" />
 
 ```
 npm test

@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-sessions-overview
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -145,8 +144,6 @@ If you have not set up your account and installed the SDK yet, [launch your firs
 
 
 ## How It Works
-
-<VerifiedTag value="Verified" />
 
 ```
 Your Agent                          TestMu AI Cloud

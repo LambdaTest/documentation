@@ -343,8 +343,6 @@ To initiate a SmartUI PDF Comparison Project, adhere to the following instructio
 
 Once your project is active, retrieve your `Project Token` from the application. Here's an example of a project token:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 projectToken = "123456#1234abcd-****-****-****-************"
 ```
@@ -352,8 +350,6 @@ projectToken = "123456#1234abcd-****-****-****-************"
 ## Step 1: Clone the Sample Project
 
 First, clone the sample project to get started:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/junit-selenium-sample.git
@@ -363,8 +359,6 @@ cd junit-selenium-sample
 ## Step 2: Install the SmartUI Java SDK
 
 Add the SmartUI Java SDK to your `pom.xml`:
-
-<VerifiedTag value="Verified" />
 
 ```xml
 <dependency>
@@ -376,15 +370,11 @@ Add the SmartUI Java SDK to your `pom.xml`:
 
 Then compile your project:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 mvn clean compile
 ```
 
 ## Step 3: Set up your credentials
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -502,8 +492,6 @@ public class SmartuiPdfCloudTest {
 | `.withBuildName("v2.1")` | Optional. Assign a custom build name. |
 
 ## Step 6: Run your tests
-
-<VerifiedTag value="Verified" />
 
 ```bash
 mvn test

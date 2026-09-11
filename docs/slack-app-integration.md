@@ -34,7 +34,7 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
           "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "name": "Slack App Integration",
           "item": `${BRAND_URL}/support/docs/slack-app/`
         }]

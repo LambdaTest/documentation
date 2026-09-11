@@ -15,31 +15,6 @@ slug: selenified-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/selenified-integration-with-testmu/
 --- 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "How to integrate selenified with TestMu AI",
-          "item": `${BRAND_URL}/support/docs/selenified-integration-with-testmu/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -144,17 +119,12 @@ You will need your <BrandName /> authentication credentials i.e., your <BrandNam
 
    * For Linux/Mac:  
 
-        <VerifiedTag value="Verified" />
-
         ```
         $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
         $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
         ```
 
     * For Windows: 
-
-        <VerifiedTag value="Verified" />
-
         ```
         $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
         $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
@@ -170,8 +140,6 @@ You can run your Selenified test cases on a cloud-based Selenium Grid, such as <
 -----------------------------------------------------------------------------------------------------------------------------
 By default, your Selenified tests would be executed over a standalone server. To run your tests using a remote server for <BrandName /> Selenium Grid, you will need to provide your <BrandName /> HubURL.
 
-<VerifiedTag value="Verified" />
-
 ```
 -Dhub=https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com
 ```
@@ -184,8 +152,6 @@ You can also run your Selenified test automation scripts on <BrandName /> Seleni
 
 
 >**Note:** <BrandName /> clubs your test cases under a group and assigns them under a build. If you wish to override the build name, then you can do so by invoking the `buildName` parameter in your Selenified script.
-
-<VerifiedTag value="Verified" />
 
 ```
 -Dhub=https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com

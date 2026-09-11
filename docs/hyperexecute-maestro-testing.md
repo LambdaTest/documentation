@@ -24,7 +24,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -287,8 +286,6 @@ Upload your <b>_android_</b> application (.apk file) or <b>iOS</b> application (
 Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` in the below cURL command.
 :::
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<YOUR_LOCAL_APP_PATH>"" -F "name="sampleApp""
@@ -300,8 +297,6 @@ Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` 
 
 ## Step 4: Configure YAML in your Test Suite
 Enter your `APP_ID` in the YAML file that you have fetched in the above step.
-
-<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="android-emu" label="Android-Emulator" default>
@@ -339,8 +334,6 @@ To run tests on iOS Virtual Devices, make the following changes in your `hyperex
 - Set the `devices` array to `["iPhone 17"]`.
 
 Here is the complete `hyperexecute.yaml` for running Maestro tests on iOS Virtual Devices:
-
-<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 # Define the version of the configuration file
@@ -431,30 +424,22 @@ Ensure that the app is built for ARM or Universal (Dual-Architecture) and not as
 ## Step 5: Generate JUnit XML Report
 1. Update the `runTest.sh` file to include the `--format junit` flag in the maestro test command:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 /home/ltuser/.maestro/bin/maestro test $1 --debug-output ./MaestroLogs --format junit
 ```
 
 The above command will generate a `report.xml` file in the root directory after each test execution. Here is the complete reference of the `runTest.sh` file:
 
-<VerifiedTag value="Verified" />
-
 ```yaml reference
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest.sh
 ```
 When running on iOS real devices, you need to use a dedicated script since the execution flow differs slightly from iOS simulators and Android.
-
-<VerifiedTag value="Verified" />
 
 ```yaml reference
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest_ios_realdevice.sh
 ```
 
 2. Update your HyperExecute YAML file to enable the native reporting in HyperExecute using the generated JUnit XML files.
-
-<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 report: true
@@ -471,8 +456,6 @@ If you're executing one test per task, a single `report.xml` will be generated p
 #### Use Case 2: Multiple Tests on the same Task
 In this case, the `report.xml` file gets overwritten after each test execution. This results in only the last test's results being preserved. To prevent overwriting, update your `testRunnerCommand` in the `hyperexecute.yaml` file to rename the report after each test:
 
-<VerifiedTag value="Verified" />
-
 ```yaml title="hyperexecute.yaml"
 testRunnerCommand: ./maestro-test/runTest.sh $test && mv report.xml $test.xml 
 ```
@@ -481,8 +464,6 @@ This ensures that each test result is saved with a unique name like test1.xml, t
 
 ## Step 6: Execute your Test Suite
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -513,8 +494,6 @@ In some cases, you may want to test against a pre-installed application on the d
 ### Step 2: Update Your HyperExecute Configuration
 You can configure your YAML files to launch the pre-installed app instead of uploading a new one.
 
-<VerifiedTag value="Verified" />
-
 ```yaml title="hyperexecute.yaml"
 ...//
 framework:
@@ -526,16 +505,12 @@ framework:
 
 and the launcher yaml file to tells maestro to use the pre-installed Wikipedia app.
 
-<VerifiedTag value="Verified" />
-
 ```yaml reference title="android-launch.yaml"
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/android/android-launch.yaml
 ```
 
 ### Step 3: Execute your Test Suite
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -546,8 +521,6 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/an
 The Wikipedia app will open directly on the device, and your Maestro test steps will execute against it.
 
 **Example: Wikipedia Search Flow**
-
-<VerifiedTag value="Verified" />
 
 ```yaml title="android-launch.yaml"
 appId: org.wikipedia

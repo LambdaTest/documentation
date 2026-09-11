@@ -174,8 +174,6 @@ This guide will cover the basics of getting started with Puppeteer testing with 
 
 2. Install the npm dependencies.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm install
 ```
@@ -253,8 +251,6 @@ module.exports = {
 
 2. Pass the below command to run the test.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm run test
 ```
@@ -271,8 +267,6 @@ npm run test
 The [jest-skill](https://github.com/LambdaTest/agent-skills/tree/main/jest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
 The jest-skill package includes:
-
-<VerifiedTag value="Verified" />
 
 ```
 jest-skill/
@@ -296,8 +290,6 @@ It provides structured guidance for:
 ***
 
 Install a Jest Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

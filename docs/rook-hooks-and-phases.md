@@ -12,33 +12,6 @@ keywords:
   - deferred evidence collection
 slug: rook-hooks-and-phases/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook Lifecycle Phases and Hooks",
-          "item": `${BRAND_URL}/support/docs/rook-hooks-and-phases/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -103,8 +76,6 @@ Rook reaches an agent through **hooks**: scripts assigned to named points in a f
 
 A profile must define an <code>execute</code> hook. The other hooks are optional. Rook owns their order; your scripts own how each phase talks to the target.
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 prepare                         once per run
   open                          once per scenario
@@ -132,8 +103,6 @@ prepare                         once per run
 ## Define Hooks in a Profile
 
 Hook paths are relative to the active agent's directory unless you provide an absolute path.
-
-<VerifiedTag value="Verified" />
 
 ~~~yaml
 id: refund-staging
@@ -165,8 +134,6 @@ Use <code>/profile add</code> to have Rook generate and verify this profile and 
 
 Rook invokes a hook as:
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 node <script> <phase>
 ~~~
@@ -189,8 +156,6 @@ The scenario goal is sent on standard input during <code>execute</code> only. Th
 ## Hook Output Contract
 
 Write progress and diagnostics to standard error. Standard output must contain one JSON object when a phase returns data.
-
-<VerifiedTag value="Verified" />
 
 ~~~json
 {
@@ -221,8 +186,6 @@ Rook also writes each completed hook result to the run directory as it happens. 
 
 Use phase selection when evidence becomes available after the agent responds:
 
-<VerifiedTag value="Verified" />
-
 ~~~bash
 rook run --phases prepare,open,execute,close
 # Wait for the trace or log pipeline.
@@ -232,8 +195,6 @@ rook run --run <run-id> --phases collect,judge
 <code>--run</code> continues the same run in place. <code>--resume</code> creates a new run and carries compatible completed work forward.
 
 You can also omit a suffix:
-
-<VerifiedTag value="Verified" />
 
 ~~~bash
 rook run --skip collect,judge

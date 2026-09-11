@@ -174,8 +174,6 @@ Understanding the session lifecycle helps you avoid leaked sessions, reduce wast
 
 Every session passes through a simple set of states during its lifetime:
 
-<VerifiedTag value="Verified" />
-
 ```
 create() ──→ live ──→ released
                  └──→ failed

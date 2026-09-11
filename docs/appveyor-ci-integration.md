@@ -18,7 +18,6 @@ slug: appveyor-ci-integration/
 canonical: https://www.testmuai.com/support/docs/appveyor-ci-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -143,8 +142,6 @@ Here are the steps to activate and integrate your Github repository with AppVeyo
 Login to your [AppVeyor CI](https://ci.appveyor.com/) platform and click on **New Project** to enable CI/CD on your selected repository. For demo purposes, we have used the GitHub repository mentioned in the Prerequisites above. <img loading="lazy" src={require('../assets/images/uploads/appveyorCi-1-1024x460.webp').default} alt="appveyor ci integration" width="768" height="345" className="doc_img"/>]
 
 Once your repository is added, go to the **Settings -> Build**, and select the trigger choice for build purpose. For this demo, we have used **Script** trigger and passed the below code in command line (**Cmd**). Save the build settings when done.
-
-<VerifiedTag value="Verified" />
 
 ```
 mvn test

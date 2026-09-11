@@ -17,7 +17,6 @@ slug: github-actions-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/github-actions-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -144,8 +143,6 @@ In the left sidebar, click the **New workflow** button.
 ### 3. Create the GitHub Actions work-flow YAML file:
 
 To create the GitHub Actions pipeline YAML file, follow the sample command below:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 name: HyperExecute

@@ -15,7 +15,6 @@ slug: kane-ai-smart-variables/
 canonical: https://www.testmuai.com/support/docs/kane-ai-smart-variables/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -178,9 +177,6 @@ In the "Write a Step" field type `{{` to trigger the variable overlay. This will
 For example, to use the current date in a test step:
 
 Use `{{` syntax to get the list of smart variables listed and type to search and filter them out then select the desired one.
-
-<VerifiedTag value="Verified" />
-
 ```
 Enter the value of {{smart.current_date}} in the date field
 ```

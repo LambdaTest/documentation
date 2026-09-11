@@ -5,31 +5,6 @@ sidebar_label: Missing Switch Element Label
 description: Rule-level Accessibility guidance for Missing Switch Element Label on iOS.
 slug: accessibility-ios-rule-missing-switch-element-label/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Missing Switch Element Label",
-          "item": `${BRAND_URL}/support/docs/accessibility-ios-rule-missing-switch-element-label/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -19,7 +19,6 @@ slug: travis-ci-with-testmu/
 canonical: https://www.testmuai.com/support/docs/travis-ci-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -192,17 +191,11 @@ In order to perform your karma tests with <BrandName />, you would need the belo
 * A [Git or GitHub repository](https://github.com/)
 * Download and [install node.js](https://nodejs.org/en/) and node package manager or npm.
 To install node.js with homebrew use the below command.
-
-<VerifiedTag value="Verified" />
-
 ```
 $ brew install node
 ```
 
 * If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
-
-<VerifiedTag value="Verified" />
-
 ```
 npm install npm@latest -g
 ```
@@ -212,17 +205,12 @@ npm install npm@latest -g
 Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
 * For Linux/Mac:
-
-    <VerifiedTag value="Verified" />
-
     ```
     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
     ```
 
 * For Windows:
-
-    <VerifiedTag value="Verified" />
 
     ```
     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
@@ -234,8 +222,6 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 To integrate Travis CI with <BrandName /> you need to make minor tweaks in the ***.travisci/travis.yml***  which is the configuration file for your Travis CI instance. The changes you need to make will revolve around the environment variables such as access key, username, grid config and so on.
 
 Below is a sample config file for integrating [Travis CI](https://github.com/LambdaTest/Nightwatch-travis-ci-selenium) with <BrandName />. You can use the sample file to test your own automation test suite by replacing the environment variables according to your need. All the code used for the demonstration of this topic can be find in our GitHub repository.
-
-<VerifiedTag value="Verified" />
 
 ```
 # Choose language and version
@@ -275,9 +261,6 @@ For Instance, if you select the below configurations:
 |Selenium Version|3.11.0|
 
 Then Capabilities Generator at <BrandName /> will provide you with the below program:
-
-<VerifiedTag value="Verified" />
-
 ```
 var capabilities = {
     "build" : "your build name", //You can edit this and assign a build name
@@ -312,8 +295,6 @@ To help you perform cross browser testing of your locally stored web pages, <Bra
 >* [Lambda Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 The below example of ***travis.yml***  file would demonstrate you on how to leverage <BrandName />’s Selenium grid by performing a browser test through your testing server contained in your Travis CI build.
-
-<VerifiedTag value="Verified" />
 
 ```
 # Choose language and version
@@ -350,8 +331,6 @@ script:
 
 Once, the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
-<VerifiedTag value="Verified" />
-
 ```
 "desiredCapabilities": {
        "tunnel":true
@@ -363,17 +342,11 @@ Once, the tunnel is successfully set up. You can add the below code to your capa
 Parallel Testing is one of the most demanding feature of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that, Parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions.
 
 To perform automation testing in parallel on Windows use the below command.
-
-<VerifiedTag value="Verified" />
-
 ```
 $ node_modules\.bin\nightwatch -e chrome,edge,firefox tests
 ```
 
 To perform automation testing in parallel on macOS/Linux use the below command.
-
-<VerifiedTag value="Verified" />
-
 ```
 $ ./node_modules/.bin/nightwatch -e chrome,edge,firefox tests
 ```

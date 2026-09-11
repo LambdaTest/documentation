@@ -15,8 +15,6 @@ site_name: TestMu AI
 slug: kane-cli-testrun/
 canonical: https://www.testmuai.com/support/docs/kane-cli-testrun/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -137,8 +135,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 `kane-cli testrun run` executes many authored `_test.md` files as **one execution** — one summary, one exit code, and one sealed [evidence pack](/support/docs/kane-cli-evidence/) for the whole suite.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli testrun run                                              # every *_test.md under the cwd
 kane-cli testrun run tests/checkout_test.md tests/login_test.md   # explicit paths
@@ -155,8 +151,6 @@ Members come either from explicit paths (each must end in `_test.md`) or, when n
 - **`--tags <list>`** — keep tests whose [`tags:` frontmatter](/support/docs/kane-cli-testmd/#yaml-frontmatter) matches **any** of the given tags (case-insensitive). Repeat the flag or pass a comma-separated list; `--tags smoke,checkout` and `--tags smoke --tags checkout` are equivalent.
 
 Duplicates are removed and the final list runs in a stable order.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli testrun run --match 'tests/e2e/.*' --tags smoke
@@ -177,8 +171,6 @@ A member can fail preflight for these reasons:
 | `project_mismatch` | Belongs to a different project than the rest | Check with `kane-cli testmd status <path>`; run project-by-project |
 
 If any member fails preflight, the plan is invalid and **nothing runs** (exit `2`). The offenders print to stderr:
-
-<VerifiedTag value="Verified" />
 
 ```
 error: plan invalid — 2 offending test(s):
@@ -218,8 +210,6 @@ Each worker gets its **own isolated Chrome** with a fresh temporary profile, so 
 
 `--dry-run` prints exactly the plan the real run would execute — the selected members, any preflight failures, and the parallelism — then exits without launching anything:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli testrun run --tags smoke --parallel 4 --dry-run
 ```
@@ -244,8 +234,6 @@ In a terminal, kane-cli offers to open the pack in the [evidence viewer](/suppor
 | `3` | Cancelled (Ctrl-C). |
 
 ## Using testrun in CI
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli testrun run --tags smoke --parallel 4 --headless --on-failure fail-fast

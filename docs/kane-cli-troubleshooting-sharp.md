@@ -14,8 +14,6 @@ site_name: TestMu AI
 slug: kane-cli-troubleshooting-sharp/
 canonical: https://www.testmuai.com/support/docs/kane-cli-troubleshooting-sharp/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -152,8 +150,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 `npm install -g @testmuai/kane-cli` fails with:
 
-<VerifiedTag value="Verified" />
-
 ```
 npm error sharp: Attempting to build from source via node-gyp
 npm error sharp: Please add node-addon-api to your dependencies
@@ -181,8 +177,6 @@ sharp's `install/check.js` runs `pkg-config --modversion vips-cpp`. If it finds 
 
 **Diagnosis:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # Is libvips installed?
 pkg-config --modversion vips-cpp
@@ -196,8 +190,6 @@ ls -la /opt/homebrew/Cellar/vips/
 ```
 
 **Fix:**
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Option A: bypass libvips detection (recommended)
@@ -221,8 +213,6 @@ sharp's platform-specific packages (`@img/sharp-darwin-arm64`, etc.) are in its 
 
 **Diagnosis:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm config get omit          # should NOT contain "optional"
 cat ~/.npmrc | grep -i omit  # should be empty
@@ -230,8 +220,6 @@ env | grep -i NPM_CONFIG_OMIT
 ```
 
 **Fix:**
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Force optionals for this install
@@ -248,8 +236,6 @@ sharp's prebuilt packages live under the `@img` npm scope on the public registry
 
 **Diagnosis:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # Check if proxy is set
 env | grep -iE "proxy|PROXY"
@@ -264,8 +250,6 @@ npm view @img/sharp-darwin-arm64 version
 **Fix:**
 
 Ensure your proxy or registry mirror forwards the `@img` scope. If using a private registry (Artifactory, Verdaccio, GitHub Packages), add a pass-through in your `.npmrc`:
-
-<VerifiedTag value="Verified" />
 
 ```ini
 @img:registry=https://registry.npmjs.org/

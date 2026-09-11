@@ -21,30 +21,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Running your Cypress tests in WebKit",
-          "item": `${BRAND_URL}/support/docs/cypress-testing-using-webkit/`
-        }]
-      })
-    }}
-></script>
-
-<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -218,8 +194,6 @@ You can run Cypress test in WebKit on the <BrandName /> platform in a few simple
 
 1. Clone the `LambdaTest-Cypress-Cloud` GitHub repo and navigate to the cloned directory.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/Cypress-Cloud.git
 cd Cypress-Cloud
@@ -256,15 +230,11 @@ Following are the steps to run your first Cypress test in WebKit on the <BrandNa
 
 1. Install the <BrandName />-Cypress CLI using the below command.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install -g lambdatest-cypress-cli
 ```
 
 2. Clone the Cypress kitchen sink repo using the following command.
-
-<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 
@@ -296,8 +266,6 @@ cd cypress-example-kitchensink
 
 Once you clone the kitchen sink repo, below will be the structure of your Cypress project.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 
 <TabItem value="ios" label="Cypress v10" default>
@@ -321,8 +289,6 @@ cypress.config.js
 
 3. Install the npm dependencies by passing the below command.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install
 ```
@@ -330,8 +296,6 @@ npm install
 4. Create `lambdatest-config.json` file that contains configurations like auth, capabilities, test settings, etc. which need to be successfully executed at LambdaTest.
 
 Use `init` command to generate the sample configuration files.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress init
@@ -412,8 +376,6 @@ Once you run the above command, below is the project structure for the `lambdate
 
 5. Pass the below command to run the test.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 lambdatest-cypress run
 ```
@@ -427,8 +389,6 @@ lambdatest-cypress run
 To tests locally hosted websites on the <BrandName /> platform, you need to setup [<BrandName /> tunnel](/docs/testing-locally-hosted-pages/), and execute commands using the CLI, or [Download UnderPass](/docs/underpass-tunnel-application/), our GUI based desktop app. Once you have the <BrandName /> tunnel or Underpass set up and started, you can use Cypress to test locally hosted websites.
 
 Now you need to activate the tunnel capability in the `lambdatest-config.json` file under the section "tunnel_settings" as shown below:
-
-<VerifiedTag value="Verified" />
 
 ```json 
   "tunnel_settings": {

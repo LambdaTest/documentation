@@ -14,8 +14,6 @@ site_name: TestMu AI
 slug: kane-cli-testmd-composition/
 canonical: https://www.testmuai.com/support/docs/kane-cli-testmd-composition/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -244,8 +242,6 @@ A few common cases where splitting pays off:
 
 A helper file is any `.md` file whose name does **not** end in `_test.md`. There is no `kane-cli new-helper` command — just write the file:
 
-<VerifiedTag value="Verified" />
-
 ```markdown
 ---
 mode: testing
@@ -262,8 +258,6 @@ Type {{tester_email}} in the email field and {{tester_password}} in the password
 
 Save this as `helpers/login.md`. It can be referenced from any test:
 
-<VerifiedTag value="Verified" />
-
 ```markdown
 ## Sign in
 @import ./helpers/login.md
@@ -274,8 +268,6 @@ Helpers cannot be run directly — `kane-cli testmd run ./helpers/login.md` is r
 ## `@import` syntax
 
 `@import` is a step body. It replaces a prose objective in a step.
-
-<VerifiedTag value="Verified" />
 
 ```markdown
 ## Step heading
@@ -289,8 +281,6 @@ Rules:
 - The imported file must exist; missing paths are a parse error.
 - The `yaml` block of an `@import` step may only contain `optional`. Any other key is rejected.
 
-<VerifiedTag value="Verified" />
-
 ```markdown
 ## OK
 @import ./helpers/login.md
@@ -302,9 +292,6 @@ optional: true
 @import ./helpers/skip-tour.md
 
 ## NOT OK — extra config
-
-<VerifiedTag value="Verified" />
-
 ```yaml
 timeout: 60
 ```
@@ -313,9 +300,6 @@ timeout: 60
 ## NOT OK — body mixes prose and import
 Click somewhere first.
 @import ./helpers/login.md
-
-<VerifiedTag value="Verified" />
-
 ```
 
 ## How paths resolve
@@ -329,9 +313,6 @@ tests/
   helpers/
     login.md               # contains: @import ./submit-button.md
     submit-button.md
-
-<VerifiedTag value="Verified" />
-
 ```
 
 When `checkout_test.md` imports `../../helpers/login.md`, the path is relative to `tests/e2e/`, so it resolves to `helpers/login.md`. When `login.md` imports `./submit-button.md`, the path is relative to `helpers/`, so it resolves to `helpers/submit-button.md`.
@@ -349,8 +330,6 @@ You can also use absolute paths:
 When the resolver hits an `@import` step, it inlines every step from the imported file into the run, in order, at that position. The imported file's frontmatter — except for variables and context — is **not** merged into the run. The result is a flat list of steps from the root file's perspective.
 
 A test like this:
-
-<VerifiedTag value="Verified" />
 
 ```markdown
 ## Sign in
@@ -380,17 +359,12 @@ There is no built-in depth limit — helpers can import helpers can import helpe
 
 A root-level `@import` step can be marked optional in the same way a prose step can:
 
-<VerifiedTag value="Verified" />
-
 ```markdown
 ## Skip the tour if it shows up
 ```yaml
 optional: true
 ```
 @import ./helpers/dismiss-product-tour.md
-
-<VerifiedTag value="Verified" />
-
 ```
 
 If the helper fails, the run continues to the next step. The `Result.md` entry is suffixed with `(optional)`.
@@ -439,8 +413,6 @@ variables:
 Open https://app.example.com/products and add the first item to cart.
 ```
 
-<VerifiedTag value="Verified" />
-
 ```markdown
 ---
 # helpers/login.md (variables block here is optional)
@@ -462,8 +434,6 @@ Variables set on an individual **step** in the root test are visible **only on t
 A helper imported at multiple call sites in the same root test records each call site independently. The same helper imported by step 2 and step 4 produces two separate recordings — one per call site — because the browser state on entry is different.
 
 The recording for each call site lives next to the helper file:
-
-<VerifiedTag value="Verified" />
 
 ```
 checkout_test.md
@@ -503,8 +473,6 @@ In practice: a one-line edit to a heavily-imported helper triggers a lot of re-a
 
 There is no built-in command to share a helper across two checkouts. Sharing is a filesystem operation:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 cp /projA/common/login.md /projB/common/login.md
 # Optional — copy the cached recordings too, so projB doesn't have to re-author:
@@ -517,8 +485,6 @@ Because `@import` paths resolve relative to the importing file, the same helper 
 
 A small suite with a shared login helper and two tests that use it:
 
-<VerifiedTag value="Verified" />
-
 ```
 tests/
   checkout_test.md
@@ -528,8 +494,6 @@ helpers/
 ```
 
 ### `helpers/login.md`
-
-<VerifiedTag value="Verified" />
 
 ```markdown
 ---
@@ -546,8 +510,6 @@ Type "{{tester_email}}" in the email field and "{{tester_password}}" in the pass
 ```
 
 ### `tests/checkout_test.md`
-
-<VerifiedTag value="Verified" />
 
 ```markdown
 ---
@@ -573,8 +535,6 @@ Verify the cart icon in the header shows a count of 1 or higher.
 
 ### `tests/dashboard_test.md`
 
-<VerifiedTag value="Verified" />
-
 ```markdown
 ---
 mode: testing
@@ -595,8 +555,6 @@ Click "Recent activity" in the left sidebar. Verify a list of activity rows is r
 ```
 
 After running both tests once, the layout on disk is:
-
-<VerifiedTag value="Verified" />
 
 ```
 tests/

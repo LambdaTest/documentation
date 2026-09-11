@@ -213,17 +213,12 @@ Complete these steps before running WebDriverIO 5.6.2 Selenium tests on TestMu A
 ---
 Clone the TestMu AI WebDriverIO Selenium sample repository to your local machine.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/webdriverio-selenium
 cd webdriverio-selenium
 ```
 
 Install the required dependencies:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm i selenium-webdriver
 npm install
@@ -237,8 +232,6 @@ Set your TestMu AI username and access key as environment variables.
 
 <TabItem value="bash" label="macOS / Linux" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -249,8 +242,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -315,8 +306,6 @@ Generate capabilities for your test requirements with the [Capabilities Generato
 ---
 Execute the test using the following command.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm run single
 ```
@@ -340,8 +329,6 @@ Use AI coding assistants to generate and run WebDriverIO 5.6.2 tests with the Te
 The [webdriverio-skill](https://github.com/LambdaTest/agent-skills/tree/main/webdriverio-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

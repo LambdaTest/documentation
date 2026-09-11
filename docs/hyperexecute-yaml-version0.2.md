@@ -16,7 +16,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-yaml-version0.2/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -250,16 +249,12 @@ The ```framework``` field in HyperExecute YAML Version 0.2 allows you to configu
 ### `name`
 Specifies the testing framework used in your repository.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   name: "maven/testng"
 ``` 
 
 To enable maven runner with Appium, you have to pass `appium: true` before the `framework` field
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 appium: true
@@ -280,8 +275,6 @@ Both **Maven** and **Gradle** build tools are supported for the Java runners:
 | `gradle/junit5` | Gradle | JUnit 5 |
 | `gradle/spock` | Gradle | Spock |
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   name: gradle/testng
@@ -296,8 +289,6 @@ framework:
 ### `flags`
 Specifies the command line flags to pass to the custom runner for both test discovery and execution.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   name: "maven/testng"
@@ -306,8 +297,6 @@ framework:
 
 ### `discoveryFlags`
 Specifies the command line flags to pass to the custom runner for test discovery only.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -318,8 +307,6 @@ framework:
 ### `runnerFlags`
 Specifies the command line flags to pass to the custom runner for test execution only.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   name: "maven/testng"
@@ -328,8 +315,6 @@ framework:
 
 ### `discoveryType`
 Specifies the level at which user wants to discover the tests. Supported values are "method" and "class". The default is "method".
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -352,8 +337,6 @@ Specifies where the test discovery runs. Supported values are `local` and `remot
 - **`local`**: Test discovery runs on the same machine as the HyperExecute CLI and needs the framework dependencies available locally.
 - **`remote`**: Test discovery runs on a dedicated remote Virtual Machine instead of your local machine. This centralizes discovery, shares the cache across execution tasks, and removes the need to install the framework dependencies locally. See [discovery modes](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) for more details.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   name: gradle/testng
@@ -370,8 +353,6 @@ Remote discovery is supported for all Java runners: **maven/testng**, **maven/ju
 
 The `working directory` specifies the location of the directory in which all test discovery and execution commands will be run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   name: maven/testng
@@ -383,8 +364,6 @@ framework:
 
 ### `defaultReports`
 Specifies whether to create default reports for the specified framework.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -404,8 +383,6 @@ The region parameter specifies the region or location where the Appium tests wil
 
 > The region parameter should always be defined under the `args` parameter, as shown in the below sample code.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   args:
@@ -415,8 +392,6 @@ framework:
 ### `artifacts`
 
 To generate artifacts for your Espresso tests, add the `artifacts: true` flag in your YAML file:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -431,8 +406,6 @@ framework:
 
 Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   args:
@@ -442,8 +415,6 @@ framework:
 ### `locale`
 
 Defines the regional format settings such as date, time, currency, and number conventions.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 framework:
@@ -456,8 +427,6 @@ framework:
 
 You can now capture network logs directly from emulator sessions using MITM. This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 framework:
   args:
@@ -466,8 +435,6 @@ framework:
 
 
 ## Sample Yaml Version 0.2
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 ---

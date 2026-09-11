@@ -14,8 +14,6 @@ site_name: TestMu AI
 slug: kane-cli-api-calls/
 canonical: https://www.testmuai.com/support/docs/kane-cli-api-calls/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -141,8 +139,6 @@ Objectives can have the agent **make an API call directly**, not just observe th
 
 Phrase an explicit HTTP request and name its response with "save the response as …":
 
-<VerifiedTag value="Verified" />
-
 ```
 Call POST https://api.example.com/orders with body {"item": "sku_42", "qty": 1}, save the response as order
 Hit GET https://api.example.com/orders/123, save the response as fetched
@@ -150,8 +146,6 @@ Call DELETE https://api.example.com/orders/123
 ```
 
 A pasted `curl` works too and is kept exactly as written: method, headers, body, and auth:
-
-<VerifiedTag value="Verified" />
 
 ```
 curl -X POST https://api.example.com/login -H 'Content-Type: application/json' -d '{"u":"a","p":"b"}', save the response as login
@@ -169,15 +163,11 @@ Once you've saved a response under a name, reference it elsewhere in the objecti
 
 Assert on it, or feed it into later actions. API calls and browser actions mix freely in one objective:
 
-<VerifiedTag value="Verified" />
-
 ```
 Call POST https://api.example.com/login with body {"u": "{{user}}", "p": "{{password}}"}, save the response as login,
 assert {{login.status}} is 200,
 then open https://app.example.com and verify the dashboard loads
 ```
-
-<VerifiedTag value="Verified" />
 
 ```
 Call POST https://api.example.com/orders with body {"item": "sku_42", "qty": 1}, save the response as order,
@@ -188,8 +178,6 @@ then open https://app.example.com/orders and verify an order for "sku_42" is vis
 ## Tokens and secrets
 
 Put any API token or credential in a variable marked `secret: true` (see [Variables and Context](/support/docs/kane-cli-variables-and-context/)) so it is masked in logs and never stored in plain text:
-
-<VerifiedTag value="Verified" />
 
 ```
 curl -X DELETE https://api.example.com/records/42 -H "Authorization: Bearer {{api_token}}"

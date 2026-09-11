@@ -33,7 +33,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "item": "https://www.testmuai.com/support/"
         },{
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "name": "Microsoft Teams App Integration",
           "item": `${BRAND_URL}/support/docs/microsoft-teams-app/`
         }]

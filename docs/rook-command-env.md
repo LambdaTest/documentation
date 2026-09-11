@@ -6,33 +6,6 @@ sidebar_label: /env
 description: Store and manage secret values referenced by Rook invocation profiles.
 slug: rook-command-env/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook /env Command",
-          "item": `${BRAND_URL}/support/docs/rook-command-env/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -95,8 +68,6 @@ Use <code>/env</code> to manage tokens, endpoint values, and other variables ref
 
 ## Syntax
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 /env
 /env list
@@ -117,8 +88,6 @@ The same commands work from a shell by replacing the leading slash with <code>ro
 | <code>/env rm KEY</code> | Remove the stored value. |
 
 ## Recommended secret flow
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /env set {"REFUND_API_TOKEN":"paste-value-here","AGENT_BASE_URL":"https://staging.example.com"}

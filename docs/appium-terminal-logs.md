@@ -22,7 +22,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -137,8 +136,6 @@ This keeps your own diagnostic logs next to the session they belong to, so you c
 
 Use the **upload** endpoint to attach a log file to a session. The file is sent as a multipart form field named `file`. Uploading again replaces the previous file.
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<YOUR_SESSION_ID>/log/terminallog" --form "file=@/path/to/appium.log"
@@ -149,8 +146,6 @@ Use the **upload** endpoint to attach a log file to a session. The file is sent 
 Replace `<YOUR_SESSION_ID>` with your actual session ID and `/path/to/appium.log` with the path to your log file.
 
 On success, the API returns:
-
-<VerifiedTag value="Verified" />
 
 ```json
 { "status": "success", "message": "File has been uploaded successfully!" }
@@ -172,8 +167,6 @@ The **Terminal** tab is always present. It stays empty until a terminal log is u
 
 To download the uploaded log, add the `download=true` query parameter to the view endpoint:
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X GET "https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<YOUR_SESSION_ID>/log/terminallog?download=true" --output terminal-logs.log
@@ -189,8 +182,6 @@ The downloaded file is always named `terminal-logs.<ext>`, where `<ext>` is your
 ---
 
 To remove the attached log from a session, use the **delete** endpoint:
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

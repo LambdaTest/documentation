@@ -221,8 +221,6 @@ Clone the sample, create an isolated Python environment, and install the four de
 
 Clone the project and change into it.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/hjsblogger/testmuai-alttester-unity-game-automation.git
 cd testmuai-alttester-unity-game-automation
@@ -233,8 +231,6 @@ cd testmuai-alttester-unity-game-automation
 ***
 
 Create and activate a virtual environment, then install the requirements.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 python -m venv venv
@@ -259,15 +255,11 @@ The suite depends on four packages. AltDriver drives the Unity objects, Appium p
 
 The suite reads your credentials and app URL from a `.env` file in the project root. The file is gitignored, so create it yourself.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 touch .env
 ```
 
 Add your TestMu AI credentials and the `lt://` URL of the app you uploaded.
-
-<VerifiedTag value="Verified" />
 
 ```ini
 LT_USERNAME=your_testmu_ai_username
@@ -373,15 +365,11 @@ With the environment configured and the tunnel binary in place, run the suite wi
 
 Run the full suite.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 pytest
 ```
 
 Run a single test file with verbose output.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 pytest tests/test_start_page.py -v
@@ -392,8 +380,6 @@ pytest tests/test_user_journey.py -v
 ```
 
 Run one test by name.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 pytest tests/test_main_menu.py::TestMainMenu::test_main_menu_page_loaded_correctly -v

@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/agent-assurance-scenarios/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -203,15 +202,11 @@ Rook generates scenarios from the active agent's discovered features, tools, pol
 
 In the TUI:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /generate
 ```
 
 In headless mode:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook generate
@@ -241,15 +236,11 @@ Performance and reliability scenarios normally repeat because one sample does no
 
 Generate a fixed total:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /generate --total 30
 ```
 
 Generate one or more classes:
-
-<VerifiedTag value="Verified" />
 
 ```text
 /generate --class functional,adversarial --total 24
@@ -257,15 +248,11 @@ Generate one or more classes:
 
 Generate named categories:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /generate --category happy_path,prompt_injection,policy_violation --total 18
 ```
 
 Flags are comma-separated and repeatable in headless mode:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook generate \
@@ -278,8 +265,6 @@ Every selected category receives at least one scenario when the total permits it
 
 Add domain guidance after `--` in the TUI:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /generate --class adversarial -- focus on refund approval and PII exposure
 ```
@@ -287,8 +272,6 @@ Add domain guidance after `--` in the TUI:
 The headless equivalent uses `--instruction` only on `rook explore`; headless `rook generate` currently exposes class, category, and total selectors but not a free-form instruction flag.
 
 Use `--force` in the TUI to regenerate even when the active agent appears current:
-
-<VerifiedTag value="Verified" />
 
 ```text
 /generate --force --total 20
@@ -300,15 +283,11 @@ Use `--no-validate` only when you want to skip the model runnability pass. Deter
 
 List scenarios:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /scenarios list
 ```
 
 Or:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook scenarios list --entity <agent-id>
@@ -332,8 +311,6 @@ Missing usage reporting, tool-call observation, or filesystem observation is dif
 ## Scenario YAML Anatomy
 
 A simplified scenario looks like:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 id: SC-014
@@ -407,15 +384,11 @@ Rook may prove the first two while marking the third **Unable to Verify**. This 
 
 Exclude a scenario without deleting it:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /scenarios exclude SC-014 SC-021
 ```
 
 Re-include it:
-
-<VerifiedTag value="Verified" />
 
 ```text
 /scenarios include SC-014
@@ -423,15 +396,11 @@ Re-include it:
 
 Delete permanently:
 
-<VerifiedTag value="Verified" />
-
 ```text
 /scenarios delete SC-021
 ```
 
 Headless equivalents:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rook scenarios exclude SC-014 SC-021 --entity <agent-id>

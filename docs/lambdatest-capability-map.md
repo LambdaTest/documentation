@@ -178,8 +178,6 @@ When migrating your test from BrowserStack or Sauce Labs to <BrandName />, the f
 
 2. <b>Create .env file</b>: Securely store your <BrandName /> credentials, create a .env file in the root of your project and add the following values:
 
-<VerifiedTag value="Verified" />
-
 ```
 LT_USERNAME="<your_username>"
 LT_ACCESS_KEY="<your_access_key>"

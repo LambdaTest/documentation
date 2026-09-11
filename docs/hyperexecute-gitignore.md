@@ -16,7 +16,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-gitignore/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -124,8 +123,6 @@ data needs to be transferred and uploaded to the testing environment.
 ## How to write `.hyperexecuteignore`  file?
 
 The HyperExecuteIgnore file follows a format similar to the .gitignore file used with Git. It allows the use of wildcards to exclude patterns of files based on specific naming conventions.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 examplename

@@ -15,8 +15,6 @@ site_name: TestMu AI
 slug: kane-cli-evidence/
 canonical: https://www.testmuai.com/support/docs/kane-cli-evidence/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -141,15 +139,11 @@ The pack is the **only** place run artifacts live. There is no separate per-run 
 
 Every run except `testrun run` seals a pack in its session directory:
 
-<VerifiedTag value="Verified" />
-
 ```text
 ~/.testmuai/kaneai/sessions/<session-id>/evidence/<execution_id>.evidence
 ```
 
 Runs you keep are additionally copied into the **project store** in your working directory:
-
-<VerifiedTag value="Verified" />
 
 ```text
 <cwd>/.testmuai/evidence/<execution_id>.evidence

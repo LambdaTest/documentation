@@ -17,7 +17,6 @@ slug: testim-integration/
 canonical: https://www.testmuai.com/support/docs/testim-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -166,8 +165,6 @@ Shown below are the steps to record your tests on Testim.
 ## Configuring the Capabilities
 Include the capabilities you wish to use in a `.json` file and ensure this file is located in the same directory as your Testim runner.
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "resolution": "1280x800",
@@ -182,9 +179,6 @@ To execute the tests, check:
 * If the Testim CLI is not already installed on your system, use the entire command provided by the Testim CLI or dashboard. 
 
 **For example:**
-
-<VerifiedTag value="Verified" />
-
 ```json
 npm i -g @testim/testim-cli && testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid "LAMBDA-TEST" --test-id "2u8QnIm454" --selenium-caps-file "local.json"
 ```
@@ -192,8 +186,6 @@ npm i -g @testim/testim-cli && testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd"
 * If the Testim CLI is already installed, you can run a simpler command that includes your Testim token, project ID, grid, test ID, and the name of your Selenium capabilities file.
 
 **For example:**
-
-<VerifiedTag value="Verified" />
 
 ```json
 testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid "LAMBDA-TEST" --test-id "2u8QnIm454" --selenium-caps-file "local.json"

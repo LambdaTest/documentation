@@ -26,7 +26,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 ---
@@ -325,17 +324,11 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 If you haven't already installed SmartUI CLI, install it using npm:
 
 **Global Installation (Recommended):**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
 
 **Local Installation:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -343,8 +336,6 @@ npm install @lambdatest/smartui-cli
 ### **Step 2:** Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -377,8 +368,6 @@ You can fetch build results by adding the `--fetch-results` flag to your test ex
 #### Default Usage
 If no filename is specified, results are written to `<build-id>.json` in the current directory:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui --config .smartui.json exec --fetch-results -- <execution-command>
 ```
@@ -391,8 +380,6 @@ npx smartui --config .smartui.json exec --fetch-results -- <execution-command>
 #### Custom Filename
 Specify a custom filename for your results:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui --config .smartui.json exec --fetch-results custom-results.json -- node test.js
 ```
@@ -400,8 +387,6 @@ npx smartui --config .smartui.json exec --fetch-results custom-results.json -- n
 ### **Step 4:** Understanding the Results
 
 The fetched results JSON file contains detailed information about your build and screenshots. Here's what you'll find in the results file:
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -526,41 +511,26 @@ You can get the `results.json` file using one of the following methods:
 Use the `--fetch-results` flag when executing your SmartUI tests:
 
 **For Capture Command:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui capture urls.json --config config.json --fetch-results results.json
 ```
 
 **For Exec Command:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui --config .smartui.json exec --fetch-results results.json -- <execution-command>
 ```
 
 **Example with Capture:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui capture urlTest.json --config config.json --fetch-results results.json
 ```
 
 **Example with Exec:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui --config .smartui.json exec --fetch-results results.json -- npm test
 ```
 
 If no filename is specified, results will be saved as `results.json` by default:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui capture urls.json --config config.json --fetch-results
 ```
@@ -570,9 +540,6 @@ npx smartui capture urls.json --config config.json --fetch-results
 You can also fetch the results JSON file directly from the SmartUI API using the [Fetch Build Screenshots endpoint](https://swagger-api-support.lambdatest.com/smartui/index.html#/Fetch%20Build%20Screenshots).
 
 **API Endpoint:**
-
-<VerifiedTag value="Verified" />
-
 ```
 GET /build/screenshots
 ```
@@ -583,9 +550,6 @@ GET /build/screenshots
 - `build_name` (optional): Build name (if both build_id and build_name are provided, build_id takes priority)
 
 **Example API Request:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 curl -X GET "https://api.lambdatest.com/smartui/build/screenshots?project_id=YOUR_PROJECT_ID&build_id=YOUR_BUILD_ID" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
@@ -644,8 +608,6 @@ The SmartUI Reporter provides two export options:
 - **Documentation**: Create PDF reports for project documentation
 
 ### Example Workflow
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # 1. Run SmartUI tests and fetch results

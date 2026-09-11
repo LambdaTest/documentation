@@ -20,7 +20,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 ---
@@ -163,8 +162,6 @@ Without proper authentication configuration:
 
 Add the following configuration to your `.smartui.json` file to enable basic authentication:
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "basicAuthorization": {
@@ -182,8 +179,6 @@ Add the following configuration to your `.smartui.json` file to enable basic aut
 ## Example Usage
 
 Here's a complete example of a SmartUI configuration file with basic authentication:
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -206,8 +201,6 @@ Here's a complete example of a SmartUI configuration file with basic authenticat
 
 For better security, you can use environment variables for your authentication credentials:
 
-<VerifiedTag value="Verified" />
-
 ```json
 {
   "basicAuthorization": {
@@ -218,8 +211,6 @@ For better security, you can use environment variables for your authentication c
 ```
 
 Then set your environment variables:
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>

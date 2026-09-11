@@ -229,15 +229,11 @@ uploadApkToLambdaTest {
 ### Step 4: Execute the Plugin
 To run the plugin configured in build.gradle, execute the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 ./gradlew runLambdaTest
 ```
 
 If you only want to upload your APK files to <BrandName />, use the following command:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 ./gradlew uploadApkToLambdaTest

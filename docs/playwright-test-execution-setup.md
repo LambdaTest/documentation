@@ -225,45 +225,6 @@ Following is a list of compatible Playwright bundled browsers that you can use t
 | v1.16               | **Chromium** 97.0 <br/> **Firefox** 93.0 <br/> **WebKit** 15.4   |
 | v1.15               | **Chromium** 96.0 <br/> **Firefox** 92.0 <br/> **WebKit** 15.0   |
 
-### Bundled Browser Versions
-When you set the `useSpecificBundleVersion: true` capability, <BrandName /> selects the browser (Chromium, Firefox, WebKit) version that matches your local machine's Playwright version:
-
-<VerifiedTag value="Verified" />
-
-```yaml
-const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}
-```
-
-| Playwright Versions | Chromium | Firefox | Webkit |
-|---------------------|----------|---------|--------|
-|1.50| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
-|1.49| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
-|1.48| 130-133 except - 132, 126, 122 | 130-134, except - 131,133,126,122,120 | 18.0, 18.2 |
-|1.47| 129 except - 132, 126, 122 | 130, except - 131,133,126,122,120 | 18.0 |
-|1.46| 119-133, except - 132, 126, 122 | 118-134, except - 131,133, 126,122,120 | 17.4, 18.2 |
-|1.45| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.44| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.43| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.42| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.41| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.40| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.39| 119-127, except - 126,122 | 119-127, except - 126,122,120 | 17.4 |
-|1.38| 114-117 | 113-117 | 17 |
-|1.37| 114-117 | 113-117 | 17 |
-|1.36| 114-117 | 113-117 | 17 |
-|1.35| 114-117 | 113-117 | 16.4 |
-|1.34| 114-117 | 113-117 | 16.4 |
-|1.33| 104-113 | 103-112 | 16.4 |
-|1.32| 104-113 | 103-112 | 16.4 |
-|1.31| 104-113 | 103-112 | 16.4 |
-|1.30| 104-113 | 103-112 | 16.4 |
-|1.29| 104-113 | 103-112 | 16.4 |
-|1.28| 104-113 | 103-112 | 16.4 |
-|1.27| 104-113 | 103-112 | 16.4 |
-|1.26| 104-113 | 103-112 | 16 |
-|1.25| 104-113 | 103-112 | 16 |
-|1.24| 103-104 | 100-102 | 16 |
-
 ## Organizing Tests
 ***
 
@@ -477,15 +438,11 @@ Shown below is syntax how to mark Playwright tests as **Passed** or **Failed**.
 
 1. To mark test status as **passed**.
 
-<VerifiedTag value="Verified" />
-
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'passed', remark: 'Title matched' } })}`)
 ```
 
 2. To mark test status as **failed**.
-
-<VerifiedTag value="Verified" />
 
 ```
 await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status:'failed', remark: 'Title not matched' } })}`)

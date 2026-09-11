@@ -16,7 +16,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-s
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -135,8 +134,6 @@ Once you set `sourcePayload`, your test scripts are directly sourced from your G
 
 You can start by configuring the `sourcePayload` key in the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file. The format is explained below.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 sourcePayload:
   platform: git
@@ -160,8 +157,6 @@ sourcePayload:
 
 > As a best practice, you should not use your PAT directly in the YAML file. Instead of that, you can make use of our [vault](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) feature and add the PAT to your secrets. To use the vault feature in the HyperExecute YAML file, you can refer the example given below.
 
-<VerifiedTag value="Verified" />
-
 ```yaml title="hyperexecute.yaml"
 sourcePayload:
   platform: git
@@ -177,8 +172,6 @@ sourcePayload:
 ### Sample YAML file
 
 A sample HyperExecute YAML file is added below for your reference.
-
-<VerifiedTag value="Verified" />
 
 ```yaml title="hyperexecute.yaml"
 ---
@@ -293,8 +286,6 @@ https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-to
 </details>
 
 In order for HyperExecute to be able to fetch tests from **bitbucket**, **bitbucket-server**, or **github**, the token has to be added in the Job Trigger API. Example given below: 
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 ---

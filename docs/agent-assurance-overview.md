@@ -19,33 +19,6 @@ site_name: TestMu AI
 slug: agent-assurance-overview/
 canonical: https://www.testmuai.com/support/docs/agent-assurance-overview/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "What is TestMu AI Agent Assurance",
-          "item": `${BRAND_URL}/support/docs/agent-assurance-overview/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -163,8 +136,6 @@ Documentation is specification evidence, not proof of implementation. A PRD tell
 
 Rook stores project results as plain files below:
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 <your-workspace>/.testmuai/rook/
 ~~~
@@ -227,8 +198,6 @@ Use the following journeys to choose the setup that matches the access you have.
 
 **Goal:** Verify eligibility rules, missing-input questions, duplicate refund protection, and receipt creation.
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 refund-validation/
 └── refund-agent-prd.md
@@ -236,14 +205,10 @@ refund-validation/
 
 Start from the file:
 
-<VerifiedTag value="Verified" />
-
 ~~~bash
 cd refund-validation
 rook
 ~~~
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /explore refund-agent-prd.md
@@ -254,8 +219,6 @@ rook
 ~~~
 
 Use an HTTP profile such as:
-
-<VerifiedTag value="Verified" />
 
 ~~~bash
 curl https://refund-agent.staging.example.com/v1/chat \
@@ -270,8 +233,6 @@ curl https://refund-agent.staging.example.com/v1/chat \
 
 **Situation:** A support agent answers from product policies, warranty tables, and escalation instructions. The workspace contains documents but no executable agent.
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 support-agent-test/
 ├── PRD.md
@@ -282,8 +243,6 @@ support-agent-test/
 ~~~
 
 Explore the folder with focus:
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /explore . -- treat PRD.md as requirements and knowledge/ as the approved answer source
@@ -307,15 +266,11 @@ Connect the remote support endpoint with <code>/profile add</code>. Add read-onl
 
 Keep the specification in a small local test workspace:
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 travel-agent-contract/
 ├── PRD.md
 └── api-contract.md
 ~~~
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /explore .
@@ -324,8 +279,6 @@ travel-agent-contract/
 ~~~
 
 The profile might invoke:
-
-<VerifiedTag value="Verified" />
 
 ~~~bash
 curl https://travel-agent.staging.example.com/v2/trips \
@@ -346,15 +299,11 @@ Rook cannot explore the remote URL itself. It explores local material and invoke
 
 Check out your own repository and run Rook at the narrowest useful root:
 
-<VerifiedTag value="Verified" />
-
 ~~~bash
 git clone https://github.com/your-org/coding-agent.git
 cd coding-agent
 rook
 ~~~
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /explore .
@@ -368,8 +317,6 @@ Source access lets Rook derive scenarios from implemented tools and policies. Th
 
 If the repository is a monorepo, prefer:
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 /explore services/code-review-agent
 ~~~
@@ -379,8 +326,6 @@ This narrows discovery and makes the proposed agent boundary easier to review. I
 ### Use Case 5: A GitHub URL Is All You Were Given
 
 Rook does not clone or explore a GitHub URL directly. Clone the repository yourself so you control the branch, credentials, submodules, and files Rook may read:
-
-<VerifiedTag value="Verified" />
 
 ~~~bash
 git clone --branch feature/refund-v2 https://github.com/your-org/refund-agent.git
@@ -395,8 +340,6 @@ Then use <code>/explore .</code>. For a private repository, authenticate Git usi
 **Situation:** A research or coding agent runs as a command and may write files.
 
 Create a command profile through <code>/profile add</code>. Example invocation:
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 research-agent --prompt "{{goal}}" --format json
@@ -426,8 +369,6 @@ Use an asynchronous HTTP profile with:
 
 Example test intent:
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 /generate -- create an executive risk summary, a PDF report, and a chart; verify required sections and artifact metadata
 /run --only SC-004 --concurrency 1
@@ -442,8 +383,6 @@ Rook can collect the result text and common files such as PDF, image, CSV, JSON,
 ### Use Case 8: Several Agents in One Workspace
 
 **Situation:** A customer-service system contains a router, refund agent, order agent, and escalation agent.
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /explore .
@@ -470,8 +409,6 @@ Profiles represent ways to invoke the same discovered behavior:
 | <code>careful-model</code> | Higher-quality model configuration |
 | <code>regional-eu</code> | Region-specific policy and endpoint |
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 /profile list
 /profile test refund-staging
@@ -486,8 +423,6 @@ Do not use a production profile for scenarios that can write. Rook does not prov
 ### Use Case 10: Continuous Regression Testing
 
 After the interactive journey is verified, use headless commands:
-
-<VerifiedTag value="Verified" />
 
 ~~~bash
 rook explore . --all --json

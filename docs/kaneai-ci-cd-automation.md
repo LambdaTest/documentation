@@ -23,7 +23,6 @@ slug: kaneai-ci-cd-automation/
 canonical: https://www.testmuai.com/support/docs/kaneai-ci-cd-automation/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -233,8 +232,6 @@ Test case failure retries are supported only for code exported from **May 10, 20
 
 #### Example API Call:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
 --header 'Content-Type: application/json' \
@@ -288,8 +285,6 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 
 The API response contains the job ID for both jobs created for desktop web tests as well as mobile tests on real devices. Here is a sample response for a test run which contains both app and web test cases:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 {
     "job_id": "abcd1234-abcd-1234-abcd-1234abcd1234",
@@ -322,8 +317,6 @@ In your Git repository, navigate to .github/workflows/ and create a file named s
 
 **Step 2: Sample for yml file**
 In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs [here](https://www.testmuai.com/support/api-doc/?key=hyperexecute) and update the API in the .yml file based on your needs.
-
-<VerifiedTag value="Verified" />
 
 ```yml
 name: Run Sanity Tests on LambdaTest

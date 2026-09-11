@@ -23,7 +23,6 @@ slug: puppeteer-testing-with-pytest-pyppeteer/
 canonical: https://www.testmuai.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -206,22 +205,15 @@ Learn how to run your Puppeteer tests with CodeceptJS across real browsers and o
 <a href="https://github.com/LambdaTest/puppeteer-sample/tree/main/pytest-pyppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
 
 1. Clone the puppeteer-sample repository on your system and navigate to the `pytest-pyppeteer` directory.
-
-<VerifiedTag value="Verified" />
-
 ```
 cd pytest-pyppeteer
 ```
 
 2. Create a virtual environment using the following commands:
 
-<VerifiedTag value="Verified" />
-
 ```
 virtualenv venv
 ```
-
-<VerifiedTag value="Verified" />
 
 ```
 source venv/bin/activate
@@ -229,15 +221,11 @@ source venv/bin/activate
 
 3. Install the necessary configurations.
 
-<VerifiedTag value="Verified" />
-
 ```
 poetry install
 ```
 
 4. Install the necessary dependencies
-
-<VerifiedTag value="Verified" />
 
 ```
 pip install - r requirements.txt
@@ -250,16 +238,12 @@ pip install - r requirements.txt
 
 ##### Windows
 
-<VerifiedTag value="Verified" />
-
 ```sh
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 ##### macOS/Linux
-
-<VerifiedTag value="Verified" />
 
 ```sh
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -273,8 +257,6 @@ The first test script navigates to DuckduckGo and searches for <BrandName />. Th
 Once you are done with the steps 1 thru' 5, you can initiate your first Pyppeteer test on <BrandName />. 
 
 Run the following command on the terminal to run the Pyppeteer tests in parallel.
-
-<VerifiedTag value="Verified" />
 
 ```
 pytest --verbose --capture=no -s -n 2 tests/test_pytest_pyppeteer_1.py \
@@ -301,17 +283,12 @@ Select the button below to try this demo in [Gitpod](https://www.gitpod.io/)
 
 * After the Gitpod session launches, navigate to the terminal and run the following commands to save your [<BrandName /> Credentials](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/details/profile) to Gitpod as environment variables:
 
-<VerifiedTag value="Verified" />
-
 ```
 eval $(gp env -e LT_USERNAME=******)
 eval $(gp env -e LT_ACCESS_KEY=******)
   ```
 
 * Click the following link if you're unsure how to [access your <BrandName /> credentials.](/support/docs/using-environment-variables-for-authentication-credentials/). Also, if you start a new terminal in Gitpod, you have to run the following command to reset environment variables:
-
-<VerifiedTag value="Verified" />
-
 ```
  eval $(gp env -e)
 ```
@@ -323,8 +300,6 @@ eval $(gp env -e LT_ACCESS_KEY=******)
 The [pytest-skill](https://github.com/LambdaTest/agent-skills/tree/main/pytest-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.
 
 The pytest-skill package includes:
-
-<VerifiedTag value="Verified" />
 
 ```
 pytest-skill/
@@ -348,8 +323,6 @@ It provides structured guidance for:
 ***
 
 Install a Pytest Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

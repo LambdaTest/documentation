@@ -18,7 +18,6 @@ canonical: https://www.testmuai.com/support/docs/advanced-tunnel-features/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -182,8 +181,6 @@ You can download the **<BrandName /> Tunnel binary** that will help you establis
 ## Executing <BrandName /> Tunnel for Client Connection
 After you download the zip file for your operating system, extract it in a folder and open you command line there. Once you have your terminal routed to the correct directory where the <BrandName /> Tunnel binary file is placed, you need to execute the below command.
 
-<VerifiedTag value="Verified" />
-
 ```bash title="Format"
 LT --user {Your Registered Email ID} --key {Your LambdaTest Access Key} --tunnelName {any random string}
 ```
@@ -197,8 +194,6 @@ So for example, if your details are as below:
 | **Tunnel Name**           | SampleTunnel           |
 
 Then your command would be:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 LT --user example@lambdatest.com --key 123asd123 --tunnelName SampleTunnel
@@ -226,8 +221,6 @@ With this new <BrandName /> Tunnel binary, you can declare your <BrandName /> au
 
 Here is an example of the `.lt.yaml` file.
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 User: salmank
 Key: 123456789abcdefghijklmnopqrstuv
@@ -237,8 +230,6 @@ TunnelName: LambdaTest
 > **Note:** You will need to replace this file with your credentials and it has to be named exactly "`.lt.yaml`". Once you specify the proxy information as environment variable, it gets auto detected.
 
 Similarly, you can go ahead and pass any other variables by just specifying them in the YAML file. For example, if you wish to have verbose variable passed on for detailed logs while the binary is being configured. You will add the verbose flag in your YAML file:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 User: salmank
@@ -267,8 +258,6 @@ Here is a screenshot of the same website that was throwing an error earlier but 
 ### Using The Tunnel InfoAPIs
 By using the tunnel **Info APIs**, you can fetch the current status of the tunnel and can use it to stop the tunnel. You can fetch the current tunnel status using the Info API on the tunnel. Suppose the **InfoAPI** is available on the host over port **8000**, then use the below command to infuse the **InfoAPI** in the tunnel.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 LT --user salmank@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest --infoAPIPort 8000
 ```
@@ -276,8 +265,6 @@ LT --user salmank@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelN
 <img loading="lazy" src={require('../assets/images/lambda-tunnel-for-corporate-firewalls/Using-Tunnel-InfoAPIs.webp').default} alt="Advanced <BrandName /> Tunnel" width="1356" height="683" className="doc_img"/>
 
 In order to fetch the current tunnel status, execute the below command:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 curl http://127.0.0.1:8000/api/v1.0/info
@@ -287,8 +274,6 @@ curl http://127.0.0.1:8000/api/v1.0/info
 
 To stop the current tunnel, execute the below command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 curl -X DELETE http://127.0.0.1:8000/api/v1.0/stop
 ```
@@ -297,8 +282,6 @@ curl -X DELETE http://127.0.0.1:8000/api/v1.0/stop
 
 ### Tunnel Logs
 The --log-level flag in the <BrandName /> CLI is used to specify the desired log level for tunnel logs. This feature enables users to control the verbosity of logs generated during tunnel operations, making it easier to debug or monitor activities as needed.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 --log-level YOUR_LOG_LEVEL
@@ -317,13 +300,9 @@ With the latest tunnel binary release we have introduced the capability to provi
 
 **Usage:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 –allowHosts <comma_separated_domains>
 ```
-
-<VerifiedTag value="Verified" />
 
 ```bash title="Example"
 LT  --user <username> --key <accessKey> –allowHosts google.com,apple.com,amazon.com
@@ -334,8 +313,6 @@ When this flag is used only requests for provided domains will be routed via tun
 
 ## Tunnel Arguments
 You can find all the arguments for <BrandName /> Tunnel by running the below command in your command line:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 LT --help

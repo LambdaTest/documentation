@@ -19,7 +19,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-modes/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -161,8 +160,6 @@ Kane CLI has three modes. Choose based on who (or what) is running the test.
 
 Launch the TUI:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli --tui
 ```
@@ -237,8 +234,6 @@ A two-row status bar sits at the bottom of the TUI:
 
 Every run launched from the same TUI invocation shares one Chrome instance and one session directory. Cookies, login state, and tabs persist across runs, so an early run can log in and a later run can land mid-application without re-authenticating. Starting a fresh session from inside the TUI is done with `/new`, which uploads the current session and then resets state.
 
-<VerifiedTag value="Verified" />
-
 ```
 > go to https://myapp.com and log in as admin
   ✓ PASSED (5 steps, 8.2s)
@@ -279,8 +274,6 @@ A graceful `/exit` runs the upload pipeline (if applicable) and prints any final
 ---
 
 ## Non-Interactive CLI Mode
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Search for 'automation testing' on Google" \
@@ -325,8 +318,6 @@ For variables and context file behavior, see [Variables and context](/support/do
 
 By default a run targets the **desktop** browser (Chrome), so every example above is unchanged. On macOS Apple Silicon you can instead point a run at a virtual mobile device: an `emulator` (a virtual Android device) or a `simulator` (a virtual iOS device). Every mobile run needs an app under test.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # desktop (default): nothing changes for web runs
 kane-cli run "Search for 'noise-cancelling headphones' on amazon.com"
@@ -356,8 +347,6 @@ For setup (Xcode or Android Studio, `kane-cli login`, and `kane-cli doctor --ins
 | stdout | The final JSON `run_end` payload, including the share URL when an upload succeeds |
 
 This separation lets you capture each independently:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "..." > result.json 2> progress.log
@@ -412,8 +401,6 @@ After the result and links print, Kane CLI prompts you to rate the session with 
 ## Agent Mode
 
 Add `--agent` to get structured NDJSON output designed for AI coding agents:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Verify login page loads" --url https://myapp.com --agent --headless

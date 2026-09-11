@@ -203,8 +203,6 @@ Shown below are the steps on running k6 tests on the <BrandName /> platform.
 1. Clone the [k6-browser-tests-sample GitHub repository](https://github.com/LambdaTest/k6-browser-tests-sample) and
    switch to the cloned directory.
 
-<VerifiedTag value="Verified" />
-
 ```sh
 git clone https://github.com/LambdaTest/k6-browser-tests-sample.git
 cd k6-browser-tests-sample
@@ -276,8 +274,6 @@ export default async function() {
 ```
 
 4. Pass the below command to run the test.
-
-<VerifiedTag value="Verified" />
 
 ```
 K6_BROWSER_ENABLED=true k6 run k6_sample.js

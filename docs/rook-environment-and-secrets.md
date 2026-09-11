@@ -14,33 +14,6 @@ site_name: TestMu AI
 slug: rook-environment-and-secrets/
 canonical: https://www.testmuai.com/support/docs/rook-environment-and-secrets/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook Environment and Secrets",
-          "item": `${BRAND_URL}/support/docs/rook-environment-and-secrets/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -129,8 +102,6 @@ Profiles contain references and operational descriptions. Secret values remain o
 
 ## Manage Local Values
 
-<VerifiedTag value="Verified" />
-
 ```bash
 rook env list
 rook env set '{"API_KEY":"sk-...","BASE_URL":"https://staging.example.com"}'
@@ -148,8 +119,6 @@ rook env rm API_KEY
 Values are stored in `~/.testmuai/rook/env.json`, outside the repository. A profile refers to a value as `${API_KEY}` and `rook profile show` displays the reference instead of expanding the secret.
 
 ## Profile Declaration
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 env:
@@ -185,8 +154,6 @@ Rook never signs in silently.
 ## Isolate Rook State
 
 Set `ROOK_HOME` when a process should not share credentials or local values:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 export ROOK_HOME="$RUNNER_TEMP/rook"

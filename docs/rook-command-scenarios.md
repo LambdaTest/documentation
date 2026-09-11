@@ -6,33 +6,6 @@ sidebar_label: /scenarios
 description: List scenario runnability or include, exclude, and permanently delete scenarios for the active agent.
 slug: rook-command-scenarios/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook /scenarios Command",
-          "item": `${BRAND_URL}/support/docs/rook-command-scenarios/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -94,8 +67,6 @@ Use <code>/scenarios</code> to inspect the active agent's suite and curate what 
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-scenarios.png').default} alt="Current Rook scenarios command help showing list, exclude, include, and delete" className="doc_img"/>
 
 ## Syntax
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /scenarios

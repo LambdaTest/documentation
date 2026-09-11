@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-failfast/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -132,8 +131,6 @@ This allows you to speed up your test execution process and provide you with fas
 
 To leverage the **FailFast** feature, simply incorporate the following command in your HyperExecute YAML file:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 failFast: 
     maxNumberOfTests: 2
@@ -142,8 +139,6 @@ failFast:
 
 :::info
 To apply `failFast` at the **scenario** level instead of the default test level, set the `level: scenario` in the YAML configuration.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 failFast:

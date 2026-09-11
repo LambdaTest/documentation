@@ -23,7 +23,6 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -221,8 +220,6 @@ Make sure you have the following set up before you start.
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/LamdaTest_Tesbo_Demo
 cd LamdaTest_Tesbo_Demo
@@ -239,8 +236,6 @@ Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https
 
 <TabItem value="bash" label="macOS / Linux" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -251,8 +246,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -270,8 +263,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define the browser, version, and OS for your test run.
 
 Update `config.json` to point to the TestMu AI Selenium Grid. Set the Selenium address, enable the grid, and define your desired capabilities:
-
-<VerifiedTag value="Verified" />
 
 ```json
 {
@@ -329,8 +320,6 @@ Run multiple Tesbo tests simultaneously across different browsers to reduce exec
 
 Set the parallel status to `true` and specify the count in `config.json`:
 
-<VerifiedTag value="Verified" />
-
 ```json
 "parallel": {
   "status": true,
@@ -339,8 +328,6 @@ Set the parallel status to `true` and specify the count in `config.json`:
 ```
 
 To run across multiple browsers, add more capabilities:
-
-<VerifiedTag value="Verified" />
 
 ```json
 "capabilities": {

@@ -16,7 +16,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-katalon-report/
 
 import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -124,8 +123,6 @@ HyperExecute provides seamless integration with Katalon Studio, enabling you to 
 **Step 2:** Configure the report parameters in the HyperExecute YAML file
 
 Add the following configurations in your YAML file:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

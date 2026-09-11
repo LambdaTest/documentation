@@ -17,31 +17,6 @@ canonical: https://www.testmuai.com/support/docs//playwright-sdk/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Playwright SDK",
-          "item": `${BRAND_URL}/support/docs//playwright-sdk/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -187,8 +162,6 @@ Before proceeding, ensure the following requirements are met:
 
 To get started, install the SDK as a development dependency within your project's root directory.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/playwright-node-sdk
 ```
@@ -201,15 +174,11 @@ The SDK is configured via a `lambdatest.yml` file located in your project root. 
 
 You can generate a template `lambdatest.yml` file by running the following command. You may also provide an optional filename.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx playwright-node-sdk --init [(optional: filename)]
 ```
 
 Below is the structure and explanation of the configuration options available in the `lambdatest.yml` file.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 # Access your LambdaTest credentials from https://accounts.lambdatest.com/security/username-accesskey
@@ -307,16 +276,12 @@ The `playwrightConfigOptions` section provides a powerful mechanism to override 
 
 *   **testDir**: Specifies the location of your test files.
 
-    <VerifiedTag value="Verified" />
-
     ```yaml
     playwrightConfigOptions:
       testDir: './tests'
     ```
 
 *   **testMatch** and **testIgnore**: Defines glob patterns to include or exclude specific test files from the run.
-
-    <VerifiedTag value="Verified" />
 
     ```yaml
     playwrightConfigOptions:
@@ -325,8 +290,6 @@ The `playwrightConfigOptions` section provides a powerful mechanism to override 
     ```
 
 *   **setup** and **teardown**: Specifies scripts to be executed before and after your test suite.
-
-    <VerifiedTag value="Verified" />
 
     ```yaml
     playwrightConfigOptions:
@@ -340,8 +303,6 @@ The `playwrightConfigOptions` section provides a powerful mechanism to override 
     ```
 
 *   **use**: Sets global options that are applied to all tests within the run.
-
-    <VerifiedTag value="Verified" />
 
     ```yaml
     playwrightConfigOptions:
@@ -360,8 +321,6 @@ The `tunnel_settings` section is used for testing applications that are not publ
 
 To execute your tests on the <BrandName /> platform, you will use the `playwright-node-sdk` CLI wrapper followed by the standard `playwright test` command.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx playwright-node-sdk playwright test --config Optional path-of-config.yml
 ```
@@ -377,8 +336,6 @@ When this command is run, the SDK performs the following steps:
 5.  Upon test completion, it terminates the <BrandName /> Tunnel (if started) and cleans up any temporary artifacts.
 
 You can pass any standard Playwright CLI options directly to this command. For instance, to run a specific test file:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx playwright-node-sdk playwright test tests/my-test.spec.js

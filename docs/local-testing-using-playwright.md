@@ -154,8 +154,6 @@ You can run Playwright testing of locally hosted websites and web apps via <Bran
 
 2. Install the npm dependencies.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm install
 ```

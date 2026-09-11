@@ -5,31 +5,6 @@ sidebar_label: Keyboard (2.1.1)
 description: Rule-level Accessibility guidance for Keyboard (WCAG 2.1.1 Level A).
 slug: accessibility-web-rule-2-1-1-keyboard/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Keyboard (2.1.1)",
-          "item": `${BRAND_URL}/support/docs/accessibility-web-rule-2-1-1-keyboard/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

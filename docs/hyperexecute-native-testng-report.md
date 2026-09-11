@@ -15,7 +15,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-native-testng-repo
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -121,8 +120,6 @@ You need to ensure that the `emailable-report.html` file should be generated wit
 ### 2. Update HyperExecute YAML Configuration
 
 In the HyperExecute YAML configuration, add the following section to instruct the HyperExecute systems to generate Extent Native Reports:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 report: true

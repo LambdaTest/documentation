@@ -16,33 +16,6 @@ site_name: TestMu AI
 slug: rook-installation/
 canonical: https://www.testmuai.com/support/docs/rook-installation/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Install Rook",
-          "item": `${BRAND_URL}/support/docs/rook-installation/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -193,8 +166,6 @@ The Homebrew and shell packages carry a matching Node.js runtime. You do not nee
 
 The public formula is maintained in the [Rook Homebrew tap](https://github.com/LambdaTest/rook/blob/main/Formula/rook.rb).
 
-<VerifiedTag value="Verified" />
-
 ```bash
 brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git
 brew install lambdatest/rook/rook
@@ -204,8 +175,6 @@ Use the fully qualified `lambdatest/rook/rook` formula name. Homebrew requires a
 
 To upgrade a Homebrew installation:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 brew update
 brew upgrade lambdatest/rook/rook
@@ -214,8 +183,6 @@ brew upgrade lambdatest/rook/rook
 ## Install With the Shell Installer
 
 The [public `install.sh` script](https://github.com/LambdaTest/rook/blob/main/install.sh) downloads and verifies the correct release for the current platform.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash
@@ -236,8 +203,6 @@ If `~/.local/bin` is not on `PATH`, the installer prints the exact export comman
 
 Pass installer options after `bash -s --`:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 # Install the current production release explicitly.
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
@@ -250,8 +215,6 @@ curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
 
 Run the installer with `--help` to list its supported options:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \
   | bash -s -- --help
@@ -263,15 +226,11 @@ The public installer uses `--version` and `--dir` flags and does not require Git
 
 The [`@testmuai/rook` package](https://www.npmjs.com/package/@testmuai/rook) is public on npm.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install -g @testmuai/rook
 ```
 
 To upgrade an npm installation:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm update -g @testmuai/rook
@@ -281,8 +240,6 @@ The npm package installs the `rook` executable and publishes platform runtime pa
 
 ## Verify the Installation
 
-<VerifiedTag value="Verified" />
-
 ```bash
 command -v rook
 rook --version
@@ -290,8 +247,6 @@ rook doctor
 ```
 
 Then enter an agent repository and start the TUI:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 cd your-project
@@ -303,8 +258,6 @@ rook
 ## Public Releases and Checksums
 
 Published versions and platform archives are available on the [Rook releases page](https://github.com/LambdaTest/rook/releases). Release assets follow this pattern:
-
-<VerifiedTag value="Verified" />
 
 ```text
 rook-<version>-darwin-arm64.tar.gz

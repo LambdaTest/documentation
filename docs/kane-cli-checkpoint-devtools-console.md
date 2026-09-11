@@ -15,8 +15,6 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools-console/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-console/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -174,8 +172,6 @@ Console message levels are normalized to 5 values:
 
 ## Example Assertions
 
-<VerifiedTag value="Verified" />
-
 ```
 Assert: no console errors on the page
 Assert: no uncaught JavaScript exceptions
@@ -186,8 +182,6 @@ Assert: no JS errors after clicking Submit
 
 ## Example Extractions
 
-<VerifiedTag value="Verified" />
-
 ```
 Store all console error messages
 Extract the first console error text
@@ -195,8 +189,6 @@ Store all console log output
 ```
 
 ## Example If/Else
-
-<VerifiedTag value="Verified" />
 
 ```
 If console contains "feature_flag_enabled" then use new flow, else use legacy flow

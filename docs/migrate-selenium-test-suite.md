@@ -276,8 +276,6 @@ Add your TestMu AI credentials as environment variables so your tests can authen
 
 <TabItem value="bash" label="macOS / Linux" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -288,8 +286,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -307,8 +303,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Point your tests to the TestMu AI hub instead of launching a local browser.
 
 Find where your test creates the WebDriver instance and replace it with a `RemoteWebDriver` pointing to the TestMu AI hub URL:
-
-<VerifiedTag value="Verified" />
 
 ```
 https://{YOUR_USERNAME}:{YOUR_ACCESS_KEY}@hub.lambdatest.com/wd/hub
@@ -508,8 +502,6 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 ---
 
 Execute your tests the same way you normally would. The only difference is they now run on the cloud.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # Java (Maven)

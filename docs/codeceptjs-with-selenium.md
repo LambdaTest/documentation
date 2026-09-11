@@ -184,16 +184,12 @@ Download or clone the CodeceptJS Selenium sample from the <BrandName /> GitHub r
 <a href="https://github.com/LambdaTest/lambdatest-codeceptjs-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample.git
 cd lambdatest-codeceptjs-sample
 ```
 
 2. Install the dependencies.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm install
@@ -207,16 +203,12 @@ npm install
 
 **Windows**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
 **macOS/Linux**
-
-<VerifiedTag value="Verified" />
 
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
@@ -286,8 +278,6 @@ The [codeceptjs-lambdatest-service](https://github.com/LambdaTest/codeceptjs-lam
 
 The package is included as a dev dependency in the sample repo. To add it to your own project:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install codeceptjs-lambdatest-service --save-dev
 ```
@@ -342,8 +332,6 @@ No additional configuration is needed beyond adding `LTHelper` to your helpers.
 
 **Run desktop tests:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm test
 # or
@@ -351,8 +339,6 @@ npm run test:desktop
 ```
 
 **Run a specific test file:**
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx codeceptjs run --steps googleTest_test.js

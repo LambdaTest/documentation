@@ -139,8 +139,6 @@ Follow the below mentioned steps to generate the Reports for your desired framew
 - You must set the `report` flag to **true**.
 - You will have to specify the **location**, **type** and **framework** associated with your report in the `partialReports` field to generate it. 
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 report: true
 partialReports:
@@ -163,8 +161,6 @@ Here is the sample report generated.
 ## Generate Multiple Reports
 If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/), simply add the required specifications in the `partialReports` field as shown below:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 partialReports:
   - location: reports/json
@@ -180,9 +176,6 @@ partialReports:
 You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
 
 Example:
-
-<VerifiedTag value="Verified" />
-
 ```yaml title="hyperexecute.yaml"
 partialReports:
   location: reports/**/cucumber/

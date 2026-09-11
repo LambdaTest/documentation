@@ -6,33 +6,6 @@ sidebar_label: /agent
 description: List or select autonomous agents discovered in the active Rook project.
 slug: rook-command-agent/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook /agent Command",
-          "item": `${BRAND_URL}/support/docs/rook-command-agent/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -95,16 +68,12 @@ Use <code>/agent</code> when the selected project contains several discovered ag
 
 ## Syntax
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 /agent
 /agent use <id>
 ~~~
 
 From a shell:
-
-<VerifiedTag value="Verified" />
 
 ~~~bash
 rook agent
@@ -118,8 +87,6 @@ Selecting an agent changes the active-agent pointer inside the selected project;
 Agent removal is intentionally not a command. Rook's project data is stored as readable files; remove or edit it through the reviewed repository workflow when that is genuinely required.
 
 ## Example
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /agent

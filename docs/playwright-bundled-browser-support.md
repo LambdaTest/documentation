@@ -21,7 +21,6 @@ canonical: https://www.testmuai.com/support/docs/playwright-bundled-browser-supp
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -116,8 +115,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 />
 
 When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then <BrandName /> will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version. 
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}

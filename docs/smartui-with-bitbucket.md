@@ -23,7 +23,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -240,8 +239,6 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 - Now, write your workflow YAML file. Here is the sample file for your reference.
 - Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline.
 
-<VerifiedTag value="Verified" />
-
 ```yaml reference title="bitbucket-pipelines.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/bitbucket/bitbucket-pipelines.yml
 ```
@@ -257,8 +254,6 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>
 
 ## Best Practices
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='secret-management' label='Secret Management' default>
@@ -337,8 +332,6 @@ variables:
 </Tabs>
 
 ## Troubleshooting
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pipeline-fails-with-variable-not-found' label='Pipeline Fails with Variable Not Found' default>

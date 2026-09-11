@@ -17,7 +17,6 @@ slug: gitlab-ci-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/gitlab-ci-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -193,8 +192,6 @@ In order to perform your protractor tests with <BrandName />, you would need the
 * Download and install node.js and node package manager or npm.
 * To install node.js with homebrew use the command below.
 
-<VerifiedTag value="Verified" />
-
 ```
 $ brew install node
 ```
@@ -202,15 +199,11 @@ $ brew install node
 * If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.
 * Upgrade npm to latest version using the below command.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm install npm@latest –g
 ```
 
 * Install protractor using npm with the below command.
-
-<VerifiedTag value="Verified" />
 
 ```
 npm install –g protractor
@@ -222,16 +215,12 @@ Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /
 
 * **For Linux/Mac**
 
-<VerifiedTag value="Verified" />
-
 ```
 $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME> 
 $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
 ```
 
 * **For Windows**
-
-<VerifiedTag value="Verified" />
 
 ```
 $ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
@@ -243,8 +232,6 @@ $ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
 To integrate GitLab CI with <BrandName /> you need to make minor tweaks in the .gitlab-ci.yml which is the configuration file for your GitLab CI instance. The changes you need to make will revolve around the environment variables such as access key, username, grid config and so on.
 
 Below is a sample config file for integrating GitLab CI with <BrandName />. You can use the sample file to test your own automation test suite by replacing the environment variables according to your need. All the code used for the demonstration of this topic can be find in our [GitHub repository](https://github.com/LambdaTest/protractor-selenium-sample-gitlab).
-
-<VerifiedTag value="Verified" />
 
 ```
 //Sample Configuration For GitLab CI
@@ -278,8 +265,6 @@ job:
 | Selenium Version | 3.11.0 |
 
 Then Capabilities Generator at <BrandName /> will provide you with the below program:
-
-<VerifiedTag value="Verified" />
 
 ```
 // Basic Test Configurations For JavaScript
@@ -318,8 +303,6 @@ Curious to know more about Lambda Tunnel?
 
 The below example of **.gitlab-ci.yml** file would demonstrate you on how to leverage <BrandName />’s Selenium grid by performing a browser test through your testing server contained in your GitLab CI build.
 
-<VerifiedTag value="Verified" />
-
 ```
 // Example of .gitlab-ci.yml for Lambda Tunnel
 
@@ -349,8 +332,6 @@ job:
 
 Once, the tunnel is successfully set up. You can add the below code to your capabilities for testing internal servers on your network.
 
-<VerifiedTag value="Verified" />
-
 ```
 "desiredCapabilities": {
         "tunnel":true
@@ -360,8 +341,6 @@ Once, the tunnel is successfully set up. You can add the below code to your capa
 ## Parallel Testing
 * * *
 Parallel Testing is one of the most demanding features of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions.
-
-<VerifiedTag value="Verified" />
 
 ```
 protractor parallel.conf.js

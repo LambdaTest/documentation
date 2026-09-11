@@ -29,7 +29,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-mobile/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -253,8 +252,6 @@ Both targets require macOS on Apple Silicon and a one-time `kane-cli doctor --in
 
 Follow the tab for the platform you intend to test. Set up both if you test on both.
 
-<VerifiedTag value="Verified" />
-
 <Tabs>
 <TabItem value="simulator" label="iOS Simulator" default>
 
@@ -330,8 +327,6 @@ If your SDK is at the default path, skip this step.
 
 Sign in and let Kane CLI install the tooling it manages. This is the same for both platforms:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli login
 kane-cli doctor --install
@@ -343,8 +338,6 @@ You do not need to boot a simulator, boot an emulator, or run `adb` yourself. Ka
 
 Confirm Kane CLI sees a ready toolchain and, optionally, the devices on your machine:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli doctor              # required checks, each with a fix if it fails
 kane-cli doctor --targets    # also list the simulators and emulators Kane CLI can run against
@@ -355,8 +348,6 @@ When the checks for your platform pass, setup is complete. On Android, confirm y
 ## Running a Mobile Test
 
 Once a target is set up, point a run at it:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # one-off, from the command line

@@ -146,8 +146,6 @@ This document will help you debug your failed job if you are facing any errors i
 
 If you're encountering an error message as shown below, it means you have entered an invalid  **Username** and **Access Key** in your test file capabilities.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 OpenQA.Selenium.WebDriverException : The newSession command returned an unexpected error. 
 401 Unauthorized !! Please include  `user` & `accessKey` in desired capabilities.
@@ -189,16 +187,12 @@ To rectify this issue, you need to cross-check your HUB URL. You can also visit 
 
 If you are trying to access an internal website or any other private endpoint which is behind any firewall using tunnel and you are getting the below mentioned error:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 System.AggregateException: One or more errors occurred. --->
 OpenQA.Selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
 ```
 
 To resolve this, you have to pass this flag in your YAML file:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 tunnel: true
@@ -340,8 +334,6 @@ public static void main(String[] args) {
 ```
 
 Make sure to include the necessary dependencies in your project. If you are using Maven, you can add the following dependencies to your pom.xml file:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 <dependencies>

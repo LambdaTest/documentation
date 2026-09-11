@@ -258,9 +258,6 @@ In CLI-based workflows, approval alone may not be sufficient for baseline persis
 - Creating unified baselines from distributed testing
 
 **CLI Usage**:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # Merge branches
 npx smartui merge branch --source feature-branch --target main
@@ -384,9 +381,6 @@ SmartUI maintains baseline references at multiple levels:
 Every baseline modification requires deliberate user intervention:
 
 **CLI Workflows**:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # 1. Run tests (no baseline change)
 npx smartui exec -- npm test
@@ -408,9 +402,6 @@ capabilities.setCapability("smartUI.baseline", true); // User must set this
 ```
 
 **Git Projects**:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # Explicit baseline branch configuration required
 export BASELINE_BRANCH="main" # User must configure
@@ -425,9 +416,6 @@ export BASELINE_BRANCH="main" # User must configure
 **Root Cause**: In CLI workflows, approval updates baseline within that build's context, but doesn't necessarily persist as the global baseline for future builds unless explicitly moved.
 
 **Solution**:
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # After approving in B1
 npx smartui move-to-baseline --build B1
@@ -467,9 +455,6 @@ capabilities.setCapability("smartUI.baseline", true);
 ## Ideal Usage Guidelines
 
 ### For CLI Workflows
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # 1. Run initial build to establish baseline
 npx smartui exec -- npm test
@@ -502,9 +487,6 @@ SmartUI.takeScreenshot("screenshot-name");
 ```
 
 ### Branch-Based Development
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # Feature branch development
 npx smartui --baselineBranch main exec -- npm test
@@ -515,9 +497,6 @@ npx smartui merge branch --source feature-branch --target main
 ## Advanced Baseline Management
 
 ### Multi-Level Baseline Strategy
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # Different baselines for different environments
 npx smartui --baselineBranch staging exec -- npm test  # Staging baseline
@@ -528,9 +507,6 @@ npx smartui --baselineBuild "v2.1.0" exec -- npm test
 ```
 
 ### Baseline Rollback
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # Rollback to previous baseline
 npx smartui --baselineBuild "previous-stable-build" exec -- npm test

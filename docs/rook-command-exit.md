@@ -6,33 +6,6 @@ sidebar_label: /exit
 description: Close the current Rook TUI after in-flight local bookkeeping is settled.
 slug: rook-command-exit/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook /exit Control",
-          "item": `${BRAND_URL}/support/docs/rook-command-exit/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -90,8 +63,6 @@ import { BRAND_URL } from '@site/src/component/BrandName';
 # <code>/exit</code> Control
 
 Enter <code>/exit</code> or <code>/quit</code> at an idle TUI prompt to close Rook.
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /exit

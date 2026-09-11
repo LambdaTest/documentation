@@ -178,8 +178,6 @@ Cucumber.js is a JavaScript-based open-source framework for web automation testi
 
 2. Install the npm dependencies.
 
-<VerifiedTag value="Verified" />
-
 ```
 npm install
 ```
@@ -259,8 +257,6 @@ After(async () => {
 setWorldConstructor(CustomWorld);
 ```
 Pass the below command to run the test.
-
-<VerifiedTag value="Verified" />
 
 ```
 npm run test

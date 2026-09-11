@@ -24,7 +24,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -240,8 +239,6 @@ Once the project is created, you will get a unique `PROJECT_TOKEN`. Copy this to
 
 You can configure your own existing Maestro project or get started quickly by cloning our sample repository.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-maestro-sample
 cd smartui-maestro-sample
@@ -261,8 +258,6 @@ To run your tests on <BrandName /> real devices or emulators, you need to upload
 Run the following `cURL` command in your terminal. Ensure you have set your `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables.
 
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<YOUR_LOCAL_APP_PATH>"" -F "name="sampleApp""
@@ -280,8 +275,6 @@ Now, let's set up the test suite to integrate with SmartUI.
 
 The SmartUI CLI is required to capture and upload screenshots. Install it in your project directory:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli
 ```
@@ -293,8 +286,6 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 #### 4.2. Add SmartUI Screenshots to Your Maestro Flow
 
 In your Maestro test YAML files (e.g., `maestro-test/test.yaml`), add the `takeScreenshot` command wherever you want to capture a visual checkpoint. The `path` specified will be used to name the screenshot in the SmartUI dashboard.
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 - launchApp
@@ -314,8 +305,6 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -326,8 +315,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -345,8 +332,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 The HyperExecute YAML file is the blueprint for your test execution. It tells HyperExecute how to set up the environment and run your tests.
 
 You need to add your `PROJECT_TOKEN` (from Step 1) and your `appId` (from Step 3) to the YAML file. Below are example configurations for running Maestro tests on Emulators and Real Devices.
-
-<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="android-rd" label="Android-Real Device" default>
@@ -376,15 +361,11 @@ In the real device configuration, the `testDiscovery` and `testRunnerCommand` ar
 
 Run the below command in your terminal at the root folder of the project:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">

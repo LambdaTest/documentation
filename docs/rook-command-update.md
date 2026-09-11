@@ -6,33 +6,6 @@ sidebar_label: /update
 description: Check for a newer public Rook release and show the upgrade command for the detected installation channel.
 slug: rook-command-update/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook /update Command",
-          "item": `${BRAND_URL}/support/docs/rook-command-update/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -94,8 +67,6 @@ Use <code>/update</code> to check for a newer public Rook release and show the a
 <img loading="lazy" src={require('../assets/images/rook/commands/rook-command-update.png').default} alt="Rook update command help showing auto and JSON forms" className="doc_img"/>
 
 ## Syntax
-
-<VerifiedTag value="Verified" />
 
 ~~~text
 /update

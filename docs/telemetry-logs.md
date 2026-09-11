@@ -17,31 +17,6 @@ slug: selenium-telemetry-logs/
 canonical: https://www.testmuai.com/support/docs/selenium-telemetry-logs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Getting Started With Selenium Debugging Using Telemetry Logs",
-          "item": `${BRAND_URL}/support/docs/selenium-telemetry-logs/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -162,15 +137,11 @@ By default, Telemetry logs are disabled for Selenium automation on TestMu AI. To
 
 1. Pass the `seTelemetryLogs` capability in your test scripts and set it to true.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 caps.setCapability("seTelemetryLogs", true);
 ```
 
 2. Pass the `selenium_version` capability in your test scripts and set it to `4.2.0`.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 caps.setCapability("selenium_version", "4.2.0");
@@ -194,8 +165,6 @@ Here are the steps to integrate Jaeger with your test suites:
 
 
 4. Start the Jaeger UI to visualize the Telemetry logs by running the below command.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 jaeger-all-in-one

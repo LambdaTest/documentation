@@ -5,31 +5,6 @@ sidebar_label: Text Spacing (1.4.12)
 description: Rule-level Accessibility guidance for Text Spacing (WCAG 1.4.12 Level AA).
 slug: accessibility-web-rule-1-4-12-text-spacing/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Text Spacing (1.4.12)",
-          "item": `${BRAND_URL}/support/docs/accessibility-web-rule-1-4-12-text-spacing/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

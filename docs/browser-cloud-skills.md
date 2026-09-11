@@ -198,15 +198,11 @@ The skill is **agent-agnostic** - it works with any LLM or agent framework, not 
 - **<BrandName /> account** - [Sign up at testmuai.com](https://www.testmuai.com) (free tier available)
 - **SDK installed:**
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm i @testmuai/browser-cloud
 ```
 
 - **Credentials configured:**
-
-<VerifiedTag value="Verified" />
 
 ```bash
 # .env
@@ -221,8 +217,6 @@ Get credentials at **testmuai.com → Settings → Account Settings**.
 ## Install the Skill
 
 Install `browser-cloud` from the LambdaTest browser-cloud-skills repo with the Skills CLI:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx skills add https://github.com/LambdaTest/browser-cloud-skills --skill browser-cloud
@@ -367,8 +361,6 @@ const results = await parallelResearch([
 ---
 
 ## Skill Repo Structure
-
-<VerifiedTag value="Verified" />
 
 ```
 ├── package.json                        ← npm scripts and SDK dependency

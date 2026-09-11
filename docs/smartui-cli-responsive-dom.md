@@ -49,8 +49,6 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 ### Step-1
 Specify `delayedUpload` to true in your configuration file.
 
-<VerifiedTag value="Verified" />
-
 ```json
 "delayedUpload" : true
 ```

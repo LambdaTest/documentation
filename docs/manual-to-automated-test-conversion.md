@@ -32,7 +32,6 @@ canonical: https://www.testmuai.com/support/docs/manual-to-automated-test-conver
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -312,8 +311,6 @@ For the full guide, see [Manual Interaction in KaneAI](/support/docs/kaneai-manu
 ---
 
 ## End-to-End Flow Summary
-
-<VerifiedTag value="Verified" />
 
 ```
 Requirements (text, docs, images, audio, Jira, ADO)

@@ -202,8 +202,6 @@ Download or Clone the code sample from the <BrandName /> GitHub repository to ru
 
 Configure the desired capabilities based on your test requirements. For example:
 
-<VerifiedTag value="Verified" />
-
 ```yaml reference title="lambdatest-config.json"
   https://github.com/LambdaTest/lambdatest-accessibility-cypress-v9/blob/main/lambdatest-config.json
 ```
@@ -218,8 +216,6 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -230,8 +226,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -276,8 +270,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ```
 
 - if you are not passing npm dependency in **<BrandName />-config.json** you can run
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm i lambdatest-cypress-cli   

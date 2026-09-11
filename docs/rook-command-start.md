@@ -6,33 +6,6 @@ sidebar_label: rook
 description: Start the interactive Rook terminal and continue an autonomous agent testing workflow.
 slug: rook-command-start/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "rook Command",
-          "item": `${BRAND_URL}/support/docs/rook-command-start/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -94,8 +67,6 @@ Use <code>rook</code> to start the interactive terminal in the workspace whose a
 <img loading="lazy" src={require('../assets/images/rook/rook-terminal-home.png').default} alt="Current Rook terminal home and workflow" className="doc_img"/>
 
 ## Syntax
-
-<VerifiedTag value="Verified" />
 
 ~~~bash
 rook

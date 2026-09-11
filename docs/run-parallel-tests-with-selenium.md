@@ -220,8 +220,6 @@ Running tests sequentially multiplies wait time across every test. Parallel exec
 
 Each parallel test opens its own session on the grid. Your framework splits the test suite into threads or processes, and each one connects to a separate browser instance on TestMu AI.
 
-<VerifiedTag value="Verified" />
-
 ```
 Your Machine
   ├── Thread 1 → Chrome / Windows 11

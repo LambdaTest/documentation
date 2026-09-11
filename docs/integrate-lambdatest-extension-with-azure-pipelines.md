@@ -319,8 +319,6 @@ You must keep this task at the end of your all tests, to let your tests execute 
 
 To setup your azure pipeline using <BrandName /> Azure Pipeline Extension, you can refer to the below example:
 
-<VerifiedTag value="Verified" />
-
 ```
 resources:
   repositories:

@@ -362,8 +362,6 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `sdk.js` file present in the `sdk` folder.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/smartui-node-sample
 cd smartui-node-sample/sdk
@@ -371,8 +369,6 @@ cd smartui-node-sample/sdk
 ### **Step 2**: Install the Dependencies
 
 Install required NPM modules for `TestMu AI SmartUI Selenium SDK` in your **Frontend** project.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
@@ -385,8 +381,6 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 ### **Step 3:** Configure your Project Token
 
 Setup your project token shown in the **SmartUI** app after creating your project.
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -418,15 +412,11 @@ $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
-
-<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -496,8 +486,6 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 ### **Step 6:** Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec node sdkCloud.js --config .smartui.json

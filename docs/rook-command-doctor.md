@@ -6,33 +6,6 @@ sidebar_label: /doctor
 description: Probe Rook services and report the runtime, authentication, project, workspace, mode, and connectivity state.
 slug: rook-command-doctor/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook /doctor Command",
-          "item": `${BRAND_URL}/support/docs/rook-command-doctor/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -95,15 +68,11 @@ Use <code>/doctor</code> as the first diagnostic when Rook cannot authenticate, 
 
 ## Syntax
 
-<VerifiedTag value="Verified" />
-
 ~~~text
 /doctor
 ~~~
 
 From a shell:
-
-<VerifiedTag value="Verified" />
 
 ~~~bash
 rook doctor

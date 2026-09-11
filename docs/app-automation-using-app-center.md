@@ -261,8 +261,6 @@ curl -sX GET "https://api.appcenter.ms/v0.1/apps" \
 
 Shown below is the response of the above API call.
 
-<VerifiedTag value="Verified" />
-
 ```json
 [
    {

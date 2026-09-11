@@ -17,31 +17,6 @@ canonical: https://www.testmuai.com/support/docs/socks5-proxy-support/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SOCKS5 Proxy Support in TestMu AI Tunnel",
-          "item": `${BRAND_URL}/support/docs/socks5-proxy-support/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -128,8 +103,6 @@ To use <BrandName /> Tunnel with a SOCKS5 proxy, follow the steps outlined below
 
 1. **Start <BrandName /> Tunnel:** Open your command-line interface (CLI) and navigate to the directory where the <BrandName /> Tunnel is installed.
 2. **Activate SOCKS5 Proxy:** Use the `--proxy-type` flag with the value `socks5` to specify the SOCKS5 proxy type for tunneling. Here is an example command:
-
-   <VerifiedTag value="Verified" />
 
    ```sh
    ./LambdaTestTunnel --user YourLambdaTestUsername --key YourLambdaTestAccessKey --proxy-type socks5

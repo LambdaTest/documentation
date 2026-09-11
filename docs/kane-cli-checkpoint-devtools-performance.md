@@ -17,8 +17,6 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-devtools-performance/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-performance/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -154,8 +152,6 @@ Performance data is **navigation-based**. Metrics are measured for the most rece
 
 ## Example Assertions
 
-<VerifiedTag value="Verified" />
-
 ```
 Assert: page LCP is under 2500ms
 Assert: CLS is below 0.1
@@ -166,8 +162,6 @@ Assert: page performance meets Core Web Vitals thresholds
 
 ## Example Extractions
 
-<VerifiedTag value="Verified" />
-
 ```
 Store the page LCP value
 Extract all web vitals metrics
@@ -175,8 +169,6 @@ Store the TTFB for this page
 ```
 
 ## Example If/Else
-
-<VerifiedTag value="Verified" />
 
 ```
 If LCP is under 2500ms then continue, else report performance issue

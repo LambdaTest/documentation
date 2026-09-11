@@ -5,31 +5,6 @@ sidebar_label: Error Identification (3.3.1)
 description: Rule-level Accessibility guidance for Error Identification (WCAG 3.3.1 Level A).
 slug: accessibility-web-rule-3-3-1-error-identification/
 ---
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Error Identification (3.3.1)",
-          "item": `${BRAND_URL}/support/docs/accessibility-web-rule-3-3-1-error-identification/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

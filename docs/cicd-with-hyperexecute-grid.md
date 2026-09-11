@@ -19,7 +19,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-integration-with-c
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -165,8 +164,6 @@ For triggering tests using HyperExecute CLI, you have to download the HyperExecu
 
 - If the Pipeline VM Image agent has the OS flavor of Linux or Mac, then the HyperExecute CLI binary would need additional permission. Run the command below to get the required permission: 
 
-<VerifiedTag value="Verified" />
-
 ```
 chmod u+x hyperexecute
 ```
@@ -176,16 +173,11 @@ chmod u+x hyperexecute
 To execute the HyperExecute CLI binary, run the following command:
 
 - **For Windows**
-
-<VerifiedTag value="Verified" />
-
 ```
 hyperexecute.exe –user LT_USERNAME –key LT_ACCESS_KEY –config path of the Hyperexecute YAML file 
 ```
 
 - **For Mac/Linux**
-
-<VerifiedTag value="Verified" />
 
 ```
 ./hyperexecute –user LT_USERNAME –key LT_ACCESS_KEY –config path of the Hyperexecute YAML file 
@@ -256,8 +248,6 @@ The [cicd-pipeline-skill](https://github.com/LambdaTest/agent-skills/tree/main/c
 
 The cicd-pipeline-skill package includes:
 
-<VerifiedTag value="Verified" />
-
 ```
 cicd-pipeline-skill/
 ├── SKILL.md
@@ -280,8 +270,6 @@ It provides structured guidance for:
 ***
 
 Install a CI/CD Pipeline Agent Skill using the command below:
-
-<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

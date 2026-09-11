@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/cypress-agent-skills/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -173,8 +172,6 @@ Agent Skills are self-contained packages of instructions, code patterns, debuggi
 
 Clone the repository and copy the Cypress skill into your AI tool's skills directory:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -199,8 +196,6 @@ If you prefer installing **all available framework skills**, clone the repositor
 
 Configure your <BrandName /> credentials as environment variables:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
@@ -210,19 +205,13 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 
 Once installed, simply ask your AI assistant to write tests in natural language:
 
-<VerifiedTag value="Verified" />
-
 ```
 "Write Cypress E2E tests for the login page and run them on TestMu AI cloud using Chrome and Firefox"
 ```
 
-<VerifiedTag value="Verified" />
-
 ```
 "Set up Cypress component tests for the React dashboard and upload screenshots on failure"
 ```
-
-<VerifiedTag value="Verified" />
 
 ```
 "Run Cypress tests across multiple browsers in parallel on TestMu AI"
@@ -236,8 +225,6 @@ The Agent Skill automatically handles:
 4. **Best practices** - Uses `data-cy` selectors, `cy.intercept()` for network, `cy.session()` for auth
 
 ## What's Included in the Cypress Skill
-
-<VerifiedTag value="Verified" />
 
 ```
 cypress-skill/

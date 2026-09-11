@@ -219,9 +219,11 @@ Configure your credentials to connect to the TestMu AI Selenium Grid.
 
 Set TestMu AI Username and Access Key in environment variables.
 
-<VerifiedTag value="Verified" />
+<Tabs className="docs__val">
 
-<div className="lambdatest__codeblock">
+<TabItem value="bash" label="macOS / Linux" default>
+
+  <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
@@ -232,12 +234,10 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 <TabItem value="powershell" label="Windows" default>
 
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-batch">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 

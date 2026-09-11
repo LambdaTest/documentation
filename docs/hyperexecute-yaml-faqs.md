@@ -17,7 +17,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-yaml-faqs/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -195,8 +194,6 @@ import VerifiedTag from '@site/src/component/verifiedTag';
 
 HyperExecute offers you the option to use our AutoSplit mode. You can learn more about the AutoSplit mode by going through [this page](/support/docs/hyperexecute-auto-split-strategy/). A sample YAML file that supports AutoSplit looks like this:
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 ---
 version: 0.1
@@ -233,8 +230,6 @@ Pre and post steps open doors to large amounts of flexibility. You can add certi
 
 You can use a tunnel to connect with your organization's private network with the HyperExecute machines. You can do this by setting the tunnel flag to true in HyperExecute’s YAML file. 
 
-<VerifiedTag value="Verified" />
-
 ```bash
 tunnel: true
 ```
@@ -251,8 +246,6 @@ Moreover, add one of the following parameters in the `preDirectives` field depen
     
 
 Therefore, if you want to use a tunnel for connecting HyperExecute with your organization (that is working with a maven project), you should configure your YAML file like this:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 ---
@@ -276,8 +269,6 @@ preDirectives:
 
 You can do this by adding the following command in the preDirectives section of the HyperExecute YAML file.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 preDirectives:
   commands: 
@@ -292,8 +283,6 @@ preDirectives:
 
 Yes, you can. Use the following parameters in the testRunnerCommand of the HyperExecute YAML file:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 testRunnerCommand: $env:GLOBAL_AGENT_NO_PROXY="hub.lambdatest.com";$env:GLOBAL_AGENT_HTTP_PROXY=$env:LT_PROXY
 ```
@@ -302,8 +291,6 @@ testRunnerCommand: $env:GLOBAL_AGENT_NO_PROXY="hub.lambdatest.com";$env:GLOBAL_A
 #### 6. I want to use a specific version of gradle for my project. How can I set that up on HyperExecute machines?
 
 You can set up your Gradle project with HyperExecute by configuring the runtime flag in the YAML file. If you are using the 7.0 version of Gradle, use the following configurations.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 runtime:
@@ -319,8 +306,6 @@ runtime:
 
 You can accomplish this by running the following command in the preDirectives section of the YAML file:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 preDirectives:
   commands:
@@ -334,16 +319,12 @@ This command will install a package called **my_package.json** from the path tha
 You can do this by directly calling the parameter keys in the HyperExecute YAML file and use the Jenkins choice parameters.  
 A sample testRunnerCommand to accomplish this is:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 dependency:resolve `-Dbrowser=${browser} `-Dversion=${version}
 ```
 In this example, **browser** and **version** are the two choice parameters from Jenkins, as shown in the image below. You can call them in the YAML file as &#36;&lbrace;browser&rbrace; and &#36;&lbrace;version&rbrace; in the testRunnerCommand or testDiscovery command.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/faq/hyperexecute-yaml-faqs.png').default} alt="Image" style={{width: '1000px',}} className="doc_img"/>
-
-<VerifiedTag value="Verified" />
 
 ```bash
 testDiscovery: 
@@ -360,8 +341,6 @@ testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 d
 
 You can solve this problem by using HyperExecute's inheritance feature. This feature allows you to inherit the configurations of a base YAML file and saves you the time of configuring the YAML file multiple times. 
 
-<VerifiedTag value="Verified" />
-
 ```bash
 base:
   yamls:
@@ -377,8 +356,6 @@ To learn more about how to use this feature, go through [this page](/support/doc
 #### 10. I want to test the code in my Git repository. Is there a way where I can accomplish that with HyperExecute?
 
 You can use the `sourcePayload` parameter for the same. Your test scripts are directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and uploaded through the HyperExecute CLI. To learn more about how this feature works, go through [this page](/support/docs/hyperexecute-how-to-configure-sourcePayload/).
-
-<VerifiedTag value="Verified" />
 
 ```bash
 sourcePayload:
@@ -415,8 +392,6 @@ We can detect any private dependency in testng YAML using `analyze` flag in CLI.
 #### 13. How to handle Maven SSL Cert Error while executing the test?
 
 Pass this maven arguments which require to handle mvn ssl cert errors
-
-<VerifiedTag value="Verified" />
 
 ```bash
 -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true

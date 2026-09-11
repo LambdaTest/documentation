@@ -15,33 +15,6 @@ url: https://www.testmuai.com/support/docs/accessibility-web-score/
 site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-web-score/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Accessibility Score",
-          "item": `${BRAND_URL}/support/docs/accessibility-web-score/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -244,8 +217,6 @@ Issues are weighted by severity: **Critical** issues have the largest impact, fo
 
 This is what makes the score **page-size aware**. The same 2 critical issues have very different impact on a 12-element login form versus a 2000-element dashboard. Using the [scored element count](#scored-element-count) as the denominator:
 
-<VerifiedTag value="Verified" />
-
 ```text
 Density = Total issue instances / Scored elements on the page
 ```
@@ -255,8 +226,6 @@ Higher density means issues are more concentrated, and deductions are multiplied
 ### Final score
 
 The deductions are combined into the final score:
-
-<VerifiedTag value="Verified" />
 
 ```text
 Score = max(1, floor(100 × e^(−AdjustedDeductions / 133)))
@@ -387,75 +356,9 @@ For fix order and rule context, use the **[Accessibility Issue Remediation Guide
 
 ## How to use the score in reviews (short checklist)
 
-1. Open the report from **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)** and note the score **vs** the previous comparable build.
-2. Open **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** to see **which severities and rules** moved.
-3. Only then decide if the score alone is enough for a stakeholder update—or if you need **[Passed Test Cases](/support/docs/accessibility-passed-test-cases/)** and manual notes.
-
-## API response
-
-When the score is enabled, these fields appear in accessibility test API responses for **every product**:
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `accessibility_score` | integer | The score from 0 to 100. 0 means a keyboard-only scan; 1–100 is the density-adjusted score. |
-| `score_label` | string | `Excellent`, `Good`, `Needs Work`, `Poor`, or `Keyboard scan`. |
-| `scored_element_count` | integer | Meaningful elements evaluated after excluding decorative/structural elements. |
-
-The fields appear at **two levels**: the **test level** (aggregate across all pages/screens) and the **per-scan level** (each URL on web, each screen on mobile).
-
-<VerifiedTag value="Verified" />
-
-```json
-{
-  "test_info": { "test_id": "AUT_abc123", "status": "completed" },
-  "accessibility_score": 72,
-  "score_label": "Good",
-  "scored_element_count": 1627,
-  "scan_info": [
-    {
-      "page_url": "https://example.com/login",
-      "issue_count": 5,
-      "accessibility_score": 43,
-      "score_label": "Poor",
-      "scan_id": "AUT_abc123_1"
-    },
-    {
-      "page_url": "https://example.com/dashboard",
-      "issue_count": 8,
-      "accessibility_score": 88,
-      "score_label": "Good",
-      "scan_id": "AUT_abc123_2"
-    }
-  ]
-}
-```
-
-:::note
-If a test ran before the score was enabled, or `scored_element_count` is unavailable, these fields are omitted. The existing `accessibility_level` (Critical / Serious / Moderate / Minor) is still returned and can be used as a fallback.
-:::
-
-## FAQ
-
-**What does a score of 100 mean?**
-No automated issues were detected by the scanning engine. It does **not** mean full WCAG conformance—automated tools catch roughly 30–40% of WCAG issues. A manual audit is still recommended.
-
-**Why is my score different from before?**
-The old ratio-based score counted decorative and structural elements as "passing," which inflated results. The density-adjusted model only weighs meaningful, functional elements—so scores are generally lower but more honest.
-
-**Why don't I see a score on my test?**
-The score requires `scored_element_count`, collected by newer versions of the scanning extensions and SDKs. Tests run before the feature was enabled show the existing accessibility level instead.
-
-**Does hiding issues change the score?**
-Yes. Hiding an issue recomputes the score from the remaining visible issues, and the dashboard updates in real time. Restoring a hidden issue recomputes again.
-
-**Is the score the same across web and mobile?**
-Yes. The formula is identical everywhere; only the exclusion rules that decide which elements count differ (web uses DOM rules, Android uses `AccessibilityNodeInfo`, iOS uses `XCUIElement`).
-
-**Does toggling "Needs Review" change the score?**
-No. Needs-review items are excluded from scoring because they require manual verification. Toggling updates issue counts but not the score.
-
-**What is the minimum score?**
-1. A score of 0 is reserved exclusively for keyboard-only scans.
+1. Open the report from **[Navigating the Dashboard](/support/docs/accessibility-testing-navigating-dashboard/)** and note the score **vs** the previous comparable build.  
+2. Open **[Issue Summary](/support/docs/accessibility-testing-dashboard-issue-summary/)** to see **which severities and rules** moved.  
+3. Only then decide if the score alone is enough for a stakeholder update, or if you need **[Passed Test Cases](/support/docs/accessibility-passed-test-cases/)** and manual notes.  
 
 ## Remember
 

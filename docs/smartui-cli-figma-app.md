@@ -296,8 +296,6 @@ Note down both the **project name** and the **project token**. You need the toke
 
 ### 2. Install SmartUI CLI
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install -g @lambdatest/smartui-cli
 ```
@@ -308,8 +306,6 @@ npm install -g @lambdatest/smartui-cli
 
 Run the following to create your initial design file:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create-figma-app designs.json
 ```
@@ -317,8 +313,6 @@ npx smartui config:create-figma-app designs.json
 The file must have a `.json` extension, and the command refuses to overwrite a file that already exists.
 
 #### Sample `designs.json`
-
-<VerifiedTag value="Verified" />
 
 ```json title="designs.json"
 {
@@ -367,8 +361,6 @@ If you add a property that is not listed above, the CLI logs `Additional propert
 
 Set all four values before running the upload.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -406,8 +398,6 @@ $env:LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 
 ### 5. Upload your Figma designs as the baseline
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui upload-figma-app designs.json --buildName "figma-baseline" --markBaseline
 ```
@@ -424,8 +414,6 @@ Uploaded frames are stored with a `.png` suffix. A frame named `homepage` in `sc
 
 #### Example
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline --fetch-results results.json
 ```
@@ -435,8 +423,6 @@ npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline --
 ### 6. Upload your app
 
 Your Appium test needs an app that lives on the real device cloud. Upload your `.apk` or `.ipa` and note the `app_url` that is returned.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
@@ -506,8 +492,6 @@ Add the screenshot hook after the point in your script where the screen you care
 
 **Critical**: Figma frames are stored with `.png` appended, so your app screenshot names must include the extension to line up with them.
 
-<VerifiedTag value="Verified" />
-
 ```javascript
 // ❌ Wrong, will not match the Figma frame
 await driver.execute("smartui.takeScreenshot=homepage");
@@ -520,8 +504,6 @@ await driver.execute("smartui.takeScreenshot=homepage.png");
 
 When you pass a config object, the screenshot name key is `screenshotName`. Passing `name` throws
 `Error response status: 1` and the test fails.
-
-<VerifiedTag value="Verified" />
 
 ```javascript
 // ❌ Wrong, throws
@@ -566,8 +548,6 @@ driver.execute_script("smartui.takeScreenshot=homepage.png")
 
 Run your test suite as you normally would.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm i && node your_test_script.js
 ```
@@ -595,8 +575,6 @@ The device in `designs.json` and the device in your capabilities should also mat
 ---
 
 ## Best Practices
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='build-names' label='Build Names' default>
@@ -645,8 +623,6 @@ npx smartui upload-figma-app designs.json --buildName "v1.0.0"
 ## Troubleshooting
 
 ### Uploads fail with an authentication error
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting-auth'>
 <TabItem value='verify-env-vars' label='Verify Environment Variables' default>
@@ -706,8 +682,6 @@ An unrecognised key does not stop the upload, it only logs `Additional property 
 </Tabs>
 
 ### The upload fails while fetching from Figma
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting-figma-api'>
 <TabItem value='rate-limit' label='Figma rate limit' default>

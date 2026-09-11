@@ -320,8 +320,6 @@ puts "Session ID: #{session_id}"
 
 Once you have the Session ID, share the automation logs URL with your colleague:
 
-<VerifiedTag value="Verified" />
-
 ```
 https://automation.lambdatest.com/logs/?sessionID=YOUR_SESSION_ID
 ```
@@ -331,8 +329,6 @@ https://automation.lambdatest.com/logs/?sessionID=YOUR_SESSION_ID
 Build a shareable URL using the TestID/SessionID and an MD5-generated auth token.
 
 You can share a video recording of any test execution. Build the URL in the following format:
-
-<VerifiedTag value="Verified" />
 
 ```
 https://automation.lambdatest.com/public/video?testID={testid/sessionid}&auth=AUTH_TOKEN
@@ -349,8 +345,6 @@ After clicking the **"i"** button, you will see the test metadata including the 
 <img loading="lazy" src={require('../assets/images/uploads/sharing-test-results-1.webp').default} alt="Test metadata with SessionID" width="768" height="373" className="doc_img"/>
 
 For example, if your SessionID is `HJKXM-RHZL1-SVPWY-AB8X6`, the URL becomes:
-
-<VerifiedTag value="Verified" />
 
 ```
 https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=AUTH_TOKEN
@@ -432,8 +426,6 @@ puts "AUTH_TOKEN: #{token}"
 </Tabs>
 
 For example, if the generated AUTH_TOKEN is `331k534uf3toef`, the final URL becomes:
-
-<VerifiedTag value="Verified" />
 
 ```
 https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=331k534uf3toef

@@ -141,8 +141,6 @@ Before automating Flutter apps using Appium, make sure you have the following th
 - Your Flutter App must be compiled in `debug` or `profile` mode, as  Appium Flutter Driver does not support Flutter App running in release mode. 
 - Add the below dependencies in Flutter app's `pubspec.yaml`
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 dev_dependencies:
   test: Demo

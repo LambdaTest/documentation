@@ -151,16 +151,12 @@ export const config = {
 :::tip
 Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory. 
 
-<VerifiedTag value="Verified" />
-
 ```yaml title="allure.properties"
 allure.results.directory=reports/allure-results
 ```
 :::
 
 **Step 2:** Add the following report parameters in your HyperExecute YAML file
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 report: true
@@ -176,8 +172,6 @@ partialReports:
 To enrich Allure reports with more specific details, we can use custom plugins. These plugins require configurations to function properly.
 
 To achieve this, you can use `configPath` flag within HyperExecute YAML. This specifies the location of the configuration file containing the custom plugin settings, allowing Allure to generate reports with the desired level of detail and this will be passed as `allure --config <CONFIG_PATH>`
-
-<VerifiedTag value="Verified" />
 
 ```bash
 report: true

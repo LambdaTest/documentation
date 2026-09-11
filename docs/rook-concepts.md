@@ -14,33 +14,6 @@ site_name: TestMu AI
 slug: rook-concepts/
 canonical: https://www.testmuai.com/support/docs/rook-concepts/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-import { BRAND_URL } from '@site/src/component/BrandName';
-
-
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Rook Concepts and Data Model",
-          "item": `${BRAND_URL}/support/docs/rook-concepts/`
-        }]
-      })
-    }}
-></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -134,8 +107,6 @@ Rook represents autonomous agent testing with seven visible, file-backed concept
 
 ## Relationships
 
-<VerifiedTag value="Verified" />
-
 ```text
 Project
 └── Agent
@@ -158,8 +129,6 @@ A run pins all three, so an old verdict remains explainable after the working tr
 ## A Complete Scenario
 
 Rook writes editable YAML. A generated scenario resembles:
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 title: Process eligible physical item refund under threshold

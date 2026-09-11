@@ -16,7 +16,6 @@ canonical: https://www.testmuai.com/support/docs/browser-cloud-api-reference/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -122,8 +121,6 @@ The REST API will expose all TestMu AI Browser SDK capabilities over HTTP, makin
 Here's a preview of the planned endpoint structure:
 
 ## Planned Endpoints
-
-<VerifiedTag value="Verified" />
 
 ```
 Sessions

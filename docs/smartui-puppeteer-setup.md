@@ -29,30 +29,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": BRAND_URL
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": `${BRAND_URL}/support/docs/`
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Getting started with SmartUI using Puppeteer",
-          "item": `${BRAND_URL}/support/docs/puppeteer-visual-regression/`
-        }]
-      })
-    }}
-></script>
-
-<script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
     "@type": [
@@ -203,8 +179,6 @@ This documentation will act as your step-by-step guide in to perform Puppteer te
 - Go to [SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
@@ -250,15 +224,11 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Please clone the following sample GitHub repo (`https://github.com/LambdaTest/puppeteer-sample`).
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/puppeteer-sample.git
 ```
 
 2. Install the node modules using the command:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npm i
@@ -330,8 +300,6 @@ const expect = require("chai").expect;
 ### **Step 3:** Executing the SmartUI Test Suite on Cloud
 
 Execute the test using the following command to run the test suite using `puppeteer`
-
-<VerifiedTag value="Verified" />
 
 ```bash
 node navigation.js

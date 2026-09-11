@@ -260,8 +260,6 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 
 - For Android and iOS devices, you can use the offline/online mode API within the running test session:
 
-    <VerifiedTag value="Verified" />
-
     ```bash
     curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \
     --header 'Authorization: Basic <username:access_key>' \

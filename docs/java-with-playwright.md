@@ -162,53 +162,6 @@ Download or clone the code sample for the Playwright Java from the <BrandName />
 
 <VerifiedTag value="Verified" />
 
-```bash
-git clone https://github.com/LambdaTest/playwright-sample.git
-cd playwright-sample
-```
-
-## Set your credentials
-***
-
-Set your Username and Access Key as environment variables. Pick your operating system:
-
-<Tabs className="docs__val" groupId="os">
-
-<TabItem value="macos" label="macOS / Linux" default>
-
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-<TabItem value="win-cmd" label="Windows (CMD)">
-
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-batch">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-</Tabs>
-
-## Set Up and Run in Your Framework
-***
-
-Both frameworks build a `capabilities` object (browser, version, platform, and your `LT:Options`) and connect Playwright to the grid at `wss://cdp.lambdatest.com/playwright`. What differs is how the test is structured. Pick your framework:
-
-<VerifiedTag value="Verified" />
-
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample

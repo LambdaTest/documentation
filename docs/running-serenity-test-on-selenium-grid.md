@@ -232,16 +232,12 @@ Make sure you have the following set up before you start.
 
 Pull the sample repo to your local machine and navigate into the project directory.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git clone https://github.com/LambdaTest/Serenity-Selenium-Sample
 cd Serenity-Selenium-Sample
 ```
 
 You may also want to run the command below to check for outdated dependencies.
-
-<VerifiedTag value="Verified" />
 
 ```bash
 mvn versions:display-dependency-updates
@@ -256,9 +252,6 @@ Visit the [TestMu AI Dashboard](https://www.testmuai.com/login/?redirectTo=https
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="macOS / Linux" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
   {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -267,9 +260,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </div>
 </TabItem>
 <TabItem value="powershell" label="Windows" default>
-
-  <VerifiedTag value="Verified" />
-
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
   {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
@@ -285,8 +275,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 Define the browser, version, and OS for your test run.
 
 The sample feature file checks for the word "LambdaTest" on Google and validates the title of the resultant page:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 Feature: Google's Search Functionality
@@ -416,8 +404,6 @@ Use the [Capabilities Generator](https://www.testmuai.com/capabilities-generator
 
 Trigger the test from your terminal.
 
-<VerifiedTag value="Verified" />
-
 <Tabs className="docs__val">
 <TabItem value="single" label="Single Test" default>
 
@@ -471,8 +457,6 @@ Use AI coding assistants to generate and run Serenity BDD tests with the TestMu 
 The [serenity-bdd-skill](https://github.com/LambdaTest/agent-skills/tree/main/serenity-bdd-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI coding assistants how to write production-grade test automation.
 
 Install the skill:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git

@@ -17,7 +17,6 @@ slug: cerberus-integration/
 canonical: https://www.testmuai.com/support/docs/cerberus-integration/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -129,8 +128,6 @@ Inside your Cerberus Testing tool, you need to set up <BrandName /> as your Test
 3.  You can also add optional desired capabilities of your choice, in the Capabilities tab. To know more about Desired Capabilities, you can refer to our [Selenium Autiomation Capabilities guide](/docs/selenium-automation-capabilities/) on our [Capabilities Generator](https://www.testmuai.com/capabilities-generator/).
 4.  Then switch to Executors tab, and click on "Add Executor". <img loading="lazy" src={require('../assets/images/uploads/cerbeus-2.webp').default} alt="Add Automation Test Executor" width="1281" height="582" className="doc_img"/>
 5.  In this Add Executor window, you need to pass following values to their corresponding options, as stated below:
-
-    <VerifiedTag value="Verified" />
 
     ```
     Host: hub.lambdatest.com

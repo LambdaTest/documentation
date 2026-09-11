@@ -28,7 +28,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -251,8 +250,6 @@ The following are the steps to execute your SmartUI CLI with Git commits on Stor
 
 1. Go to your current **StoryBook** repository and run the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git init --y
 ```
@@ -263,15 +260,11 @@ You can ignore the above step if you already have a repository with `Git` initia
 
 2. Now, make your changes in your `.stories` files and then commit the changes to your `Git`:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 git commit -m "Your commit message"
 ```
 
 3. Execute your **SmartUI StoryBook CLI** command to execute the Visual Regression tests for your `.stories` files:
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='execution_type'>
 <TabItem value='locally-hosted' label='For Locally Hosted Server' default>
@@ -337,8 +330,6 @@ In this workflow, if you are working on the same branch name and want to execute
 
 And, if you have created a project and set your **Baseline** branch name to `master` then executed the following commands:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 // Your current branch name
 $ git branch
@@ -357,8 +348,6 @@ Then, a new build will be created with your `Current Active Branch` on the Smart
 If the current Baseline build branch is set to `Current Active Branch` in the SmartUI project settings, then SmartUI will compare the screenshots captured to the latest `APPROVED` status build of the `Current Active Branch` branch available in the same project.
 
 Here is an example of the above workflow:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 $ git branch
@@ -410,8 +399,6 @@ On approval of the all the screenshots then the new build will be updated as Bas
 
 Here is an example of the above workflow:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 // Step 1 - Commit changes to Git
 $ git commit -am "Changes in login stories"
@@ -430,8 +417,6 @@ Step 1: Checkout to a non-baseline branch in your `Git` repository.
 Step 2: Then run the SmartUI CLI command to execute the tests should compare the screenshots captured of **Non-Baseline** branch build with the **Baseline branch** latest **APPROVED** build in the SmartUI project.
 
 Here is an example of the above workflow:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 // Baseline Branch
@@ -462,8 +447,6 @@ In case if the **Baseline** branch does not have an existing build then by defau
 ### Running Force Builds
 
 In this workflow, If you have not added any commit to your current `Git` in the repository after making the changes then SmartUI will consider that no changes are made to your `.stories` files, then you will need to use the following command to execute the build:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 $ smartui storybook <Your localhost URL or Static Build folder path> --config .smartui.json --force-rebuild

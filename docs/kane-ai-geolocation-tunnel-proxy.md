@@ -21,7 +21,6 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -128,8 +127,6 @@ KaneAI also supports tunneling to allow you to test websites hosted locally or b
 ### Steps to Use Tunnel
 
 **Step 1 :** Configure the tunnel using the [LT tunnel binary](/support/docs/testing-locally-hosted-pages/#lambdatest-tunnel-guide) with `--env ht-prod` mode enabled. You can use the following command to trigger your tunnel:
-
-<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

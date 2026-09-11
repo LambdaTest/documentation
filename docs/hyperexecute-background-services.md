@@ -14,7 +14,6 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-background-service
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -126,8 +125,6 @@ There are two methods to enable the **Background Service** from the HyperExecute
 
 ### 1. Using `backgroundDirectives`
 
-<VerifiedTag value="Verified" />
-
 ```yaml
 backgroundDirectives:
   shell: bash
@@ -142,8 +139,6 @@ backgroundDirectives:
 - `name`: specifies the name of your Background Service.
 
 ### 2. Using `background`
-
-<VerifiedTag value="Verified" />
 
 ```yaml
 background:

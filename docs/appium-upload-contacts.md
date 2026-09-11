@@ -181,8 +181,6 @@ Upload your `.vcf` file using the Upload Media API.
 
 ### Request
 
-<VerifiedTag value="Verified" />
-
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --user "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/path/to/contacts.vcf"" -F "type=contact" -F "custom_id=SampleContacts"`
@@ -196,8 +194,6 @@ Upload your `.vcf` file using the Upload Media API.
 - `custom_id`: A custom identifier for the uploaded file.
 
 ### Response
-
-<VerifiedTag value="Verified" />
 
 ```json
 {

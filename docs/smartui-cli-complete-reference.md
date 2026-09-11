@@ -23,7 +23,6 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -448,8 +447,6 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 
 ## Installation
 
-<VerifiedTag value="Verified" />
-
 <Tabs className='docs__val' groupId='cli-install'>
 <TabItem value='smartui' label='SmartUI CLI' default>
 ```bash
@@ -527,8 +524,6 @@ npm install -g @lambdatest/smartui-storybook@latest
 ---
 
 ## Command Details
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='command-details'>
 <TabItem value='exec' label='exec' default>
@@ -930,8 +925,6 @@ These options can be used with most commands:
 
 ## Storybook CLI Commands
 
-<VerifiedTag value="Verified" />
-
 <Tabs className='docs__val' groupId='storybook-cli'>
 <TabItem value='storybook-1' label='storybook Command' default>
 **Main Command**
@@ -1017,9 +1010,6 @@ These options are available but may not be prominently documented:
 | `--force-rebuild` | `storybook` | Force rebuild of an already existing Storybook build | `smartui storybook ./storybook-static --force-rebuild` |
 
 **Usage Examples:**
-
-<VerifiedTag value="Verified" />
-
 ```bash
 # Scheduled test runs
 smartui capture urls.json --scheduled "schedule-123"
@@ -1091,8 +1081,6 @@ smartui storybook ./storybook-static --force-rebuild
 
 **Setting Environment Variables:**
 
-<VerifiedTag value="Verified" />
-
 <Tabs className='docs__val' groupId='platform'>
 <TabItem value='macos-linux' label='MacOS/Linux' default>
 ```bash
@@ -1126,8 +1114,6 @@ $env:LT_SDK_DEBUG="true"
 ---
 
 ## End-to-End Workflows
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='workflows'>
 <TabItem value='static-capture' label='Static URL Capture' default>
@@ -1250,8 +1236,6 @@ test:
 ---
 
 ## Best Practices
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='naming' label='Build Naming' default>
@@ -1380,8 +1364,6 @@ For detailed guidance, see [SmartUI Capture Onboarding with HyperExecute](/suppo
 ---
 
 ## Troubleshooting
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='server-3' label='Server Not Running' default>

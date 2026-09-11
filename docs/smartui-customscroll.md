@@ -204,15 +204,11 @@ CustomScroll is opt-in. Existing snapshots continue to behave the same unless yo
 
 Install or update the SmartUI CLI in the repository where your tests run:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli@latest
 ```
 
 You can verify the installed version with:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui --version

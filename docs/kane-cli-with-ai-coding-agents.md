@@ -21,7 +21,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-with-ai-coding-agents/
 ---
 
 import VideoEmbed from '@site/src/component/videoEmbed';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -162,8 +161,6 @@ The architecture is the same no matter which builder you use, and it has only th
 
 Install globally for Claude Code, Codex CLI, and Gemini CLI in one command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx @testmuai/kane-cli-skill
 ```
@@ -173,8 +170,6 @@ A global install applies to every project. A project-level install ships with th
 ### Authenticate Without a Browser Window
 
 OAuth opens a browser window that an agent cannot complete on its own. Use Basic Auth instead:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli login --username "<your-username>" --access-key "<your-access-key>"
@@ -227,8 +222,6 @@ Lovable builds the app and Kane CLI proves it works, without you opening the pag
 The one-time passcode is usually where browser automation stops. In Cursor it is just another clause in the sentence.
 
 The project is a Next.js app with Supabase email-OTP sign-in, and the whole test is typed straight into Cursor's integrated terminal:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "go to http://localhost:3000, log in with email 'you@example.com' using the OTP sent to my inbox, assert the page contains 'Welcome'"

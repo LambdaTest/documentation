@@ -363,8 +363,6 @@ Download or Clone the code sample for the Java from the <BrandName /> GitHub rep
 
 Update your dependencies in `pom.xml` file Install required modules for <BrandName /> SmartUI SDK in your frontend project.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
 mvn clean compile
@@ -375,8 +373,6 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 :::
 
 ### Step 4: Setup your credentials
-
-<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -408,15 +404,11 @@ $env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 npx smartui config:create smartui-web.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
-
-<VerifiedTag value="Verified" />
 
 ```json title="/smartui-sdk-project/.smartui.json"
 {
@@ -471,8 +463,6 @@ https://github.com/LambdaTest/smartui-java-playwright-sample/blob/main/src/test/
 ### Step 6: Execute the Tests on SmartUI Cloud
 
 Execute visual regression tests on SmartUI using the following commands
-
-<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec -- mvn test -D suite="sdk-playwright-local-java.xml

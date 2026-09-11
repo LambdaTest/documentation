@@ -18,7 +18,6 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-configuration/
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -224,15 +223,11 @@ Authentication credentials are managed separately under `~/.testmuai/kaneai/prof
 
 Print the current configuration:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli config show
 ```
 
 The output groups settings under three headings:
-
-<VerifiedTag value="Verified" />
 
 ```text
 Configuration
@@ -288,8 +283,6 @@ Empty fields are shown as `(none)`. The `chrome` path is empty by default, in wh
 
 The Chrome window is launched at the configured resolution:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli config set-window 1280x800
 ```
@@ -306,8 +299,6 @@ kane-cli needs a start URL for the first navigation of a run. It resolves one in
 2. (test.md only) the `url:` key in the file's frontmatter.
 3. The configured `default_url` — set with `config set-url`.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli config set-url https://app.example.com
 ```
@@ -320,8 +311,6 @@ If none of the three sources supplies a URL, kane-cli falls back to a site named
 
 ### Test Manager Project
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli config project
 ```
@@ -329,8 +318,6 @@ kane-cli config project
 In a TTY, this opens an interactive project picker. The picker fetches the projects available to your active profile, lets you search and arrow-key through them, and saves the chosen `project_id` and `project_name`. Login is required before the picker can fetch projects. Either OAuth or basic-auth credentials are sufficient — you no longer have to also store a username/access-key pair to use the picker.
 
 You can also set a project ID directly without the picker:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config project <project-id>
@@ -344,8 +331,6 @@ See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how 
 
 ### Test Manager Folder
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli config folder
 ```
@@ -353,8 +338,6 @@ kane-cli config folder
 Opens an interactive folder picker for the currently selected project. Folders are searchable and shown with their hierarchy. The picker writes both `folder_id` and `folder_name`. You must have a project selected first. OAuth and basic-auth profiles are both supported.
 
 To set a folder ID without the picker:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config folder <folder-id>
@@ -369,8 +352,6 @@ See [Test Manager Integration](/support/docs/kane-cli-tms-integration/) for how 
 If a previously-configured project or folder later becomes unusable (deleted, renamed, you lost access, or you typed an invalid ID by accident), kane-cli detects the bad ID on the next run, clears it, and auto-resolves a new default instead of letting the run proceed with a dead value and silently failing the upload. To rebind explicitly, run `kane-cli config project` again (or `kane-cli projects list` followed by `kane-cli config project <id>`).
 
 ### Mode
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config set-mode action
@@ -388,8 +369,6 @@ You can override the saved mode for a single run with `--mode <action|testing>` 
 
 On macOS Apple Silicon, Kane CLI can run against a virtual mobile device instead of the desktop browser. Three settings persist the default target and how to reach it. They are a **separate axis** from `mode` above: `mode` tunes agent behaviour, while these choose *what device* a run drives.
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli config set-target emulator          # desktop | emulator | simulator
 kane-cli config set-device pixel-7           # name, serial, ip:port, or udid
@@ -403,8 +382,6 @@ kane-cli config set-app ./builds/app-debug.apk
 A run reads these as its defaults. Override any of them for a single run with `--target`, `--device`, and `--app`. Setup and the full list of accepted app formats are in [Mobile Testing](/support/docs/kane-cli-mobile/).
 
 ### Bug detection
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli config set-bug-detection continue
@@ -444,8 +421,6 @@ When you select a named Chrome profile, Kane CLI stores it under `~/.testmuai/ka
 
 ### Choosing a Different Profile
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli config chrome-profile
 ```
@@ -454,8 +429,6 @@ In a TTY, this opens an interactive Chrome-profile picker. The picker lists ever
 
 To set a path directly without the picker:
 
-<VerifiedTag value="Verified" />
-
 ```bash
 kane-cli config chrome-profile /absolute/path/to/profile
 ```
@@ -463,8 +436,6 @@ kane-cli config chrome-profile /absolute/path/to/profile
 ### Headless Mode
 
 To run Chrome without a visible window, pass `--headless` on `kane-cli run`:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 kane-cli run "Verify the home page loads" --headless
@@ -494,8 +465,6 @@ The CDP timeout and retry settings only affect transient launch failures (Chrome
 ## Resetting Settings
 
 There is no `kane-cli config reset` subcommand. To reset persistent settings to defaults, delete the config file:
-
-<VerifiedTag value="Verified" />
 
 ```bash
 rm ~/.testmuai/kaneai/tui-config.json

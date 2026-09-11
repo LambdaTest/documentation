@@ -14,8 +14,6 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-textual/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-textual/
 ---
-import VerifiedTag from '@site/src/component/verifiedTag';
-
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -128,8 +126,6 @@ Textual assertions extract data from the page's DOM: element states, attributes,
 
 ### Assertions
 
-<VerifiedTag value="Verified" />
-
 ```
 Assert: the submit button is disabled
 Assert: the checkbox is checked
@@ -139,8 +135,6 @@ Assert: the font-size of the heading is 24px
 ```
 
 ### Extractions
-
-<VerifiedTag value="Verified" />
 
 ```
 Extract the href of the first link

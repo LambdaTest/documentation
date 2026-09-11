@@ -295,42 +295,7 @@ Navigate to **Dependencies** in module settings, click **+**, and add the downlo
 ## Step 1: Create the Test File
 ---
 
-Every framework authenticates the same way: your Username and Access Key are passed in the grid URL. Set them as environment variables so you don't hard-code them. Pick your operating system:
-
-<Tabs className="docs__val" groupId="os">
-
-<TabItem value="macos" label="macOS / Linux" default>
-
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-<TabItem value="win-cmd" label="Windows (CMD)">
-
-<VerifiedTag value="Verified" />
-
-<div className="lambdatest__codeblock">
-    <CodeBlock className="language-batch">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-</Tabs>
-
-## How the sample test works
----
-
-All the framework repos below run the **same** sample test, so you only need to understand it once. The test opens the [to-do app](https://lambdatest.github.io/sample-todo-app/), marks the first two items done, adds a new item, and verifies it appears:
+Create a new Java file and add the following sample test. It opens a to-do app, marks two items as done, adds a new item, and verifies it.
 
 <VerifiedTag value="Verified" />
 
