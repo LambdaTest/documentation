@@ -102,6 +102,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Accessibility Crawler",
+      "description": "Learn how to use TestMu AI\u2019s Crawler to automate URL extraction for accessibility testing. Configure crawl settings, include/exclude URL patterns, and analyze scan results.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Access the URL Crawler Feature",
+          "text": "Open the TestMu AI Accessibility Testing Dashboard. Select the \u201cCrawler\u201d option from the \u201cAdd URLs\u201d section.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-test-crawler/#step-1-access-the-url-crawler-feature"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Crawler Settings",
+          "text": "Base URL: Enter the domain from which you want to start crawling. This is the root URL for the crawler. Crawl Depth: Define how deep the crawler should go to fetch additional pages. For example, a depth of 2 will crawl the base URL and its immediate sub-pages. Max Pages: Set a limit on the maximum number of pages the crawler should scan. This is useful to prevent unnecessary resource consumption.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-test-crawler/#step-2-configure-crawler-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Define URL Patterns (Optional)",
+          "text": "You can fine-tune your URL crawling by including or excluding certain URLs based on patterns. Enter regular expressions (regex) to include only certain URLs. For example, you can filter by page types, such as .*\\.html to include only .html pages. Multiple patterns can be entered, separated by commas. Similarly, enter regex patterns to exclude specific URLs. For instance, you can use .*\\.pdf to exclude PDF files from being crawled. Multiple exclude patterns can be entered, separated by commas.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-test-crawler/#step-3-define-url-patterns-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Analyze the Scan Report",
+          "text": "Once the scan is complete, you can analyze the scan report, which includes: Total Issues: A graph summarizing the detected accessibility issues. Severity Trends: Categorized by severity (Critical, Serious, Moderate, Minor). Pages Scanned: View details of each URL crawled, along with a breakdown of issues per URL. You can drill down into individual URLs for a more detailed analysis of accessibility issues. Note: The crawler functionality is available only when creating a new scheduled scan, not for scans that have already been scheduled.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-test-crawler/#step-4-analyze-the-scan-report"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 
 ## Why <BrandName /> Crawler is Helpful for Accessibility Testing
 

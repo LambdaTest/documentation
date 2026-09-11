@@ -99,6 +99,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate Test Plan with HyperExecute",
+      "description": "Integrate the Azure Test Plan with HyperExecute in just 3 simple steps \ud83d\ude80",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup the Azure Test Plan",
+          "text": "You will have to setup your test plan in the Azure Test Plan Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-azure-test-plan/#step-1-setup-the-azure-test-plan"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Associate the Test Cases with Azure Test Plan",
+          "text": "Now, associate your test cases in order to integrate it.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-azure-test-plan/#step-2-associate-the-test-cases-with-azure-test-plan"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Integrate the Test Plan with HyperExecute",
+          "text": "Now, integrate your associated test plan with HyperExecute",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-azure-test-plan/#step-3-integrate-the-test-plan-with-hyperexecute"
+        }
+      ]
+    }
+  ]) }}
+/>
 > It is a **Premium** feature of Azure. You will have to buy access to [Azure Test Plans](https://learn.microsoft.com/en-us/azure/devops/organizations/billing/buy-access-tfs-test-hub?view=azure-devops-2022#buy-monthly-access-to-azure-test-plans)
 
 In this fast-paced world of software development, ensuring fast and quality testing cycle in not an option anymore, but a necessity. Imagine a scenario where your team is diligently working on a project, but managing test plans, suites, spreadsheets, and cases becomes a maze of complexity. This is where Azure Test Plan comes in as your bestfriend.

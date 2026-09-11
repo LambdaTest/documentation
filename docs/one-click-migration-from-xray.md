@@ -100,6 +100,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Migration Guide",
+      "description": "Migrate your test cases, attachments, and custom fields from X-Ray (Jira Cloud) to TestMu AI Test Manager in a single click.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the Migration Tool",
+          "text": "Log in to your TestMu AI account. Navigate to Test Manager Projects from the left sidebar. Click the Import data option on the Project Listing page. Select X-Ray Cloud as the migration source from the Import from dropdown.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-xray/#step-1-open-the-migration-tool"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enter Your Credentials",
+          "text": "Fill in the following fields: Click Continue. The system validates both your Jira and X-Ray credentials in parallel. If either set is invalid, an error message indicates which credentials need to be corrected.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-xray/#step-2-enter-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Select the Jira Project",
+          "text": "After successful validation, a list of your Jira projects containing X-Ray test cases is displayed. Select the project you want to migrate from. You can select multiple projects at once. Click Start Migration.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-xray/#step-3-select-the-jira-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Monitor Progress",
+          "text": "A progress bar shows real-time migration status. The migration processes test cases in batches. Depending on the size of your test library, the complete process may take some time. You can navigate away from the page and continue other work. The migration continues in the background. Once the migration is complete, you will receive an email notification.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-xray/#step-4-monitor-progress"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Review the Results",
+          "text": "Once migration completes: The migrated X-Ray projects will appear on the Projects listing page in Test Manager. Navigate to the Test Cases section in any of your migrated projects. Verify that your test cases, folder structure, and attachments have been imported correctly. Check a few test cases to confirm that steps, custom fields, and linked requirements are intact.",
+          "url": "https://www.testmuai.com/support/docs/one-click-migration-from-xray/#step-5-review-the-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # One Click Migration from X-Ray
 
 <BrandName /> Test Manager supports one-click migration from **X-Ray (Jira Cloud)**, allowing you to import your entire test library (including projects, test cases, folder structures, attachments, custom fields, and linked requirements) directly into Test Manager without manual data entry.

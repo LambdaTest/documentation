@@ -160,6 +160,54 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "App Test Automation Using App Center",
+      "description": "*** Visual Studio App Center is an integrated solution for mobile app development on iOS, Android, Windows, and macOS. It combines a number of mobile development services, such as build, test, distribute, monitoring, diagnostics, etc., into a single integrated cloud platform. By automating the upload process, Visual Studio App Center can ease the manual effort of uploading an app. In this documentation, learn how to install apps from App Center for automated app testing. *** Getting started with the setup requires access to the following: Access to TestMu AI Real Devices. Access to App Center and permissions to generate API tokens on App Center.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1 - Generating API Token On App Center",
+          "text": "*** Below are the steps to generate the API Token on App Center - Launch App Center. Navigate to your Profile avatar and click Account Settings. Click on User API tokens to generate a token. Click on Add new API token to add the new token. Important: It\u2019s recommended to provide Read Only access. Once you get the API token, click on the Copy icon to copy the generated token. This token will be used in Step 2.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-1---generating-api-token-on-app-center"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Listing All The Apps For The API Token",
+          "text": "*** You can get all the Apps (specific to the API token) by using the API call below with the API token you generated in the previous step. Shown below is the response of the above API call.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-2-listing-all-the-apps-for-the-api-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Fetch All The Releases For An App",
+          "text": "*** If you have the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (as received in Step 2), you can use the API call below to retrieve all the Release information for a particular app. Shown below is the response of the above API call.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-3-fetch-all-the-releases-for-an-app"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Fetch The Required App Release Information For An App",
+          "text": "*** Using the API call below, use the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (received from Step 2), and the id (received from Step 3) to fetch Release information for a specific App: Shown below is the response of the above API call. The downloadurl (For e.g. https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/de-25205f705e63/Wikipediav2.7.5393-r-2022-02-10_am.apk?sv=2019-&s ig=i170%2FkTlpX%3D&se=202Z&sp=r) from the above API response will be used to upload your App Release on TestMu AI.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-4-fetch-the-required-app-release-information-for-an-app"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Upload the Release Version Of An App On TestMu AI",
+          "text": "*** You can upload the release version of your app on TestMu AI by using the following API call - Below is the response of the above cURL request. Using the app_url obtained in the response, you can execute your Appium tests on TestMu AI.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-using-app-center/#step-5-upload-the-release-version-of-an-app-on-testmu-ai"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # App Test Automation Using App Center
 ***
 

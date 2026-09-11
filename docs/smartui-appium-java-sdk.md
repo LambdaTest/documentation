@@ -251,6 +251,47 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Run Your First Test",
+      "description": "Learn how to integrate SmartUI App SDK with your existing mobile app testing framework to perform visual regression testing on any cloud provider.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add the SmartUI SDK Dependency",
+          "text": "Add the following dependency to your pom.xml file:",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/#step-1-add-the-smartui-sdk-dependency"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Your Project Token",
+          "text": "You can configure your project token in one of two ways: Using Environment Variables: Directly in the Configuration: You can pass the project token directly in your test configuration as shown in Step 3.",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/#step-2-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Integrate SmartUI in Your Test Script",
+          "text": "Import the required SmartUI class and add the screenshot capture code where needed:",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/#step-3-integrate-smartui-in-your-test-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute the Tests",
+          "text": "Run your tests as you normally would with your cloud provider. SmartUI will automatically capture and process the screenshots for visual regression testing.",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-java-sdk/#step-4-execute-the-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 SmartUI App SDK enables you to perform visual regression testing on your mobile applications using any cloud testing provider. This guide will help you integrate SmartUI App SDK with your existing mobile app testing framework.
 
 ## Prerequisites

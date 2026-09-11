@@ -227,6 +227,83 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Use",
+      "description": "In this documentation, learn how to fetch live results for SmartUI tests",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install SmartUI CLI",
+          "text": "If you haven't already installed SmartUI CLI, install it using npm: Global Installation (Recommended): Local Installation:",
+          "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/#step-1-install-smartui-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/#step-2-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute Tests with Results Fetching",
+          "text": "You can fetch build results by adding the --fetch-results flag to your test execution command. Here are different ways to use this feature: If no filename is specified, results are written to .json in the current directory: Example: For a Node.js test script : ```bash npx smartui --config .smartui.json exec --fetch-results -- node test.js ``` Specify a custom filename for your results:",
+          "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/#step-3-execute-tests-with-results-fetching"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Understanding the Results",
+          "text": "The fetched results JSON file contains detailed information about your build and screenshots. Here's what you'll find in the results file:",
+          "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/#step-4-understanding-the-results"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Using SmartUI Reporter Tool",
+      "description": "The SmartUI Reporter is a web-based tool that allows you to visualize and analyze your SmartUI test results in a tabular format with comprehensive statistics and export capabilities.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Obtain Results JSON File",
+          "text": "You can get the results.json file using one of the following methods: Use the --fetch-results flag when executing your SmartUI tests: For Capture Command: For Exec Command: Example with Capture: Example with Exec: If no filename is specified, results will be saved as results.json by default: You can also fetch the results JSON file directly from the SmartUI API using the Fetch Build Screenshots endpoint. API Endpoint: Parameters: project_id (required): Your SmartUI project ID build_id (optional): Specific build ID buildname (optional): Build name (if both buildid and buildname are provided, buildid takes priority) Example API Request: For detailed API documentation, visit the SmartUI API Swagger Documentation.",
+          "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/#step-1-obtain-results-json-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Upload to SmartUI Reporter",
+          "text": "Navigate to SmartUI Reporter Click on the upload area or drag and drop your results.json file Wait for the file to be processed and parsed",
+          "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/#step-2-upload-to-smartui-reporter"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: View Results",
+          "text": "After uploading, you'll see: Tabular View: All screenshots organized in a comprehensive table Statistics: Key metrics including: Total screenshots Mismatch percentage Status breakdown (Approved, Changes Found, etc.) Browser and viewport distribution Screenshot Links: Direct links to: Baseline images Captured images Comparison/diff images Build Information: Project details, build ID, branch, commit information",
+          "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/#step-3-view-results"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Export Options",
+          "text": "The SmartUI Reporter provides two export options: Click the Export to PDF button Generates a comprehensive PDF report with all screenshots and statistics Perfect for sharing with stakeholders or archiving results Click the Export to CSV button Exports all data in CSV format including: Page Name Browser Resolution/Viewport Mismatch Percentage Status Screenshot URLs (Baseline, Captured, Diff) Ideal for data analysis in spreadsheet applications",
+          "url": "https://www.testmuai.com/support/docs/smartui-sdk-fetch-results/#step-4-export-options"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 SmartUI CLI allows you to fetch detailed build results after executing your visual tests. This feature enables you to access comprehensive information about your build and screenshots in a JSON file, making it easier to integrate with your CI/CD pipelines and automation workflows.
 
 ## Prerequisites

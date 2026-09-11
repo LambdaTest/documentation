@@ -99,6 +99,33 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-04-07T12:50:21+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Allocate Devices to Teams",
+      "description": "Only the organization's Admins have the authority to allocate or deallocate devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create or Select a Team",
+          "text": "Go to the Teams section under the Organization Settings Create your Organization Then, create your Team and assign members by selecting users from your organization.",
+          "url": "https://www.testmuai.com/support/docs/private-device-allocation-to-teams/#step-1-create-or-select-a-team"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Allocate Devices to the Team",
+          "text": "In the Private Cloud Devices tab section, distribute your devices amongst your teams for restricted access via: Click on the Bulk Distribute button and select all the devices that you want to allocate to the teams. Click on the Distribute button. In the popup, choose the teams from the dropdown list. Click on the Allocate button. The devices will now appear in the selected team's device pool, accessible only to its members. Click on the Allocate button from the right side of your desired device. In the popup, choose the teams from the dropdown list. Click on the Allocate button. The selected device will now appear in the team's device pool, accessible only to its members. You can also see tags of all those teams to which those devices are allocated.",
+          "url": "https://www.testmuai.com/support/docs/private-device-allocation-to-teams/#step-2-allocate-devices-to-the-team"
+        }
+      ]
+    }
+  ]) }}
+/>
 The Teams feature for Private Cloud Devices enables organization admins to divide and allocate private cloud devices among teams within their organization which ensures effective resource management. Team members then gain exclusive access to the allocated devices, ensuring efficient and secure testing workflows.
 
 > To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@testmuai.com**.<br />

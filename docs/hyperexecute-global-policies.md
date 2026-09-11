@@ -153,6 +153,33 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Create a policy",
+      "description": "You can manage policies two ways: API (recommended for automation) \u2014 create, update, enable/disable, and delete policies straight from your pipeline or Git. See Manage policies with the API. UI dashboard \u2014 a form to create and view policies. The Global Policies dashboard lives at Org Settings \u2192 Org Product Preferences \u2192 HyperExecute \u2192 Global Policies. The landing page lists every policy with its Name, Parameter, Mode, Severity, and an Enabled/Disabled toggle, along with a name search and per-row edit and delete actions. Click + Add Policy to open the create drawer. It has two steps.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Parameter Settings",
+          "text": "Give the policy a name, decide whether it starts Enabled or Disabled, and choose the Parameter. The Mode fills in automatically and is read-only \u2014 Global Post is always Append, Max Retries is always Constrain, and so on. The rest of the form changes to match the parameter you picked. Global Post (Append) \u2014 you are writing commands that run at the end of every job in scope. Because a command written for bash won't run on a Windows agent, commands are organised into per-OS tabs, Linux (default), Win, Mac etc. Add commands with + Add command, drag to reorder them, and use the Default toggle to mark the OS block to use for any runner you haven't written a block for. A single OS list applies everywhere: If you fill in commands for just one OS, they're treated as universal and run on every job in scope. Max Retries (Constrain) \u2014 set a Min and Max value. The range is capped at 0\u20135, which is the executor's own ceiling. Then choose a Severity: Warn or Error. Report (Set) \u2014 a simple on/off. Fail Fast (Set) \u2014 a maximum failure count and a failure level (scenario or test). Cache Key & Directories (Require) \u2014 a presence check with a severity.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-global-policies/#step-1-parameter-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Project Scope",
+          "text": "The Project Scope tab decides where the rule applies. Set the scope to All Projects, or pick a specific list. If a few projects need to be left out, switch on Exclude Specific Projects. The exclude list is your exception mechanism. If a team has a legitimate reason to deviate, exempt that project here rather than weakening the policy for everyone. Two enabled policies can't govern the same parameter for the same project. If a new policy's scope overlaps an existing one on the same parameter, the policy is rejected and the conflicting policy is named in the response. Narrow the scope of one of them, or disable the other.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-global-policies/#step-2-project-scope"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Every HyperExecute job is configured by a [YAML file](/support/docs/deep-dive-into-hyperexecute-yaml/), and that file belongs to the team that owns it. So enforcing an organization-wide rule has traditionally meant asking every team to edit their own YAML, one team at a time.
 
 **Global Policies** let an organization admin define a rule once and have it govern every HyperExecute job across the projects they choose. The rule is applied when a job is submitted, so no developer has to touch their YAML.

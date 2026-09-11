@@ -98,6 +98,90 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Integrating SCIM User Provisioning with PingOne",
+      "description": "Integrating TestMu AI SCIM with PingOne (PingIdentity)",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Copy SCIM Credentials from TestMu AI",
+          "text": "Sign in to your TestMu AI account. Don't have an account, register for free. Head to Settings > Organization Settings > Security > SCIM Provisioning tab. Copy the SCIM Base URL and Bearer Token.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-1-copy-scim-credentials-from-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a SAML Application in PingOne (if not already done)",
+          "text": "If you already have a PingOne SAML application configured for TestMu AI SSO, skip to Step 3. Log in to the PingOne Admin Console. Go to Applications > Applications > click + (Add Application). Enter a name (e.g., your org name), select SAML Application, and click Save.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-2-create-a-saml-application-in-pingone-if-not-already-done"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Create SCIM Provisioning Connection",
+          "text": "In PingOne, go to Integrations > Provisioning > Connections tab. Click + (New Connection). Select Identity Store (SCIM) and click Next. Search for SCIM and select SCIM (Outbound). Click Next. Enter a Name for the connection (e.g., your org name) and click Next.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure Authentication",
+          "text": "Click Test Connection to verify, then click Next.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-4-configure-authentication"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure Preferences",
+          "text": "Enable the following user actions: Create Users: checked Update Users: checked Disable Users: checked Click Save. Add urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User to the Custom Attribute Schema URNs field to enable sending OrganizationRole and LambdatestGroup from PingOne.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-5-configure-preferences"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Create a User Provisioning Rule",
+          "text": "Go to the Rules tab in your provisioning connection and click Add Rule. Enter a Rule Name (e.g., \"User Sync Rule\") and click Next. Configure the Directory settings: Set a User Filter (e.g., enabled Equals true to only sync active users) Review the Attribute Mapping. PingOne maps the following attributes by default: Make sure Email Address is mapped to userName. This is required. TestMu AI uses userName as the unique identifier for SCIM users, and it must be a valid email address. Click Save to create the rule. Ensure the rule is enabled (toggle ON). Users assigned to the provisioning rule will now be automatically synced to TestMu AI.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-6-create-a-user-provisioning-rule"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Provisioning Groups from PingOne",
+      "description": "Group provisioning is not enabled by default. Before proceeding, reach out to our window.openLTChatWidget()}>24/7 chat support or email support@testmuai.com to get it activated for your organization. Once group provisioning is enabled and user provisioning is working, follow these steps to push PingOne groups to TestMu AI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add Groups to Your Provisioning Rule in PingOne",
+          "text": "Go back to your SCIM provisioning connection in PingOne > Rules tab > edit your provisioning rule. Under Directory settings, click Add Groups to select which PingOne groups to provision to TestMu AI. Select the groups you want to push and click Save.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-1-add-groups-to-your-provisioning-rule-in-pingone"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Mapping Rules in TestMu AI",
+          "text": "In TestMu AI, go to Settings > Organization Settings > SCIM Group Provisioning > Mapping Rules tab. Click Add Mapping Rule to create a rule that determines how incoming groups are mapped. Configure the rule: Pattern: match group names by prefix, regex, or match all Target Entity Type: Team, Concurrency Group, or Sub-Organization Auto Approve: toggle ON to automatically approve matching groups Set a Match All \u2192 Team rule with auto-approve enabled to automatically map all incoming groups to teams without manual intervention.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-2-configure-mapping-rules-in-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Verify Groups in TestMu AI",
+          "text": "Once PingOne pushes the groups, go to SCIM Group Provisioning > SCIM Groups tab to see the synced groups. If you configured an auto-approve mapping rule, the groups will be automatically approved and members synced. Verify that the teams (or concurrency groups / sub-orgs) were created: Once the provisioning rule runs, group members will appear in the mapped entities.",
+          "url": "https://www.testmuai.com/support/docs/pingone-scim/#step-3-verify-groups-in-testmu-ai"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 PingOne (by PingIdentity) is a cloud-based identity platform that provides SSO, MFA, and directory services. It supports SCIM 2.0 Outbound provisioning to automatically sync users and groups to external applications.
 
 In this guide, we will walk through integrating PingOne SCIM provisioning with <BrandName />.

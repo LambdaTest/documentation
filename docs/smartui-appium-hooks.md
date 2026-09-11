@@ -326,6 +326,54 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting Started With Visual Regression Testing Using Appium On SmartUI Real Devices (NodeJS)",
+      "description": "Explore our Appium Visual Regression support documentation for step-by-step guidance! Conduct visual testing, manage apps, and ensure your mobile apps are flawless before launch.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Real Device for executing your Appium tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. -->",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-hooks/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Upload your application",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbialandroid.apk\"\" -F \"name=\"proverbial_app\"\" `} {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" -F \"name=Proverbial_App\" `} If you do not have any .apk or .ipa file, you can run your sample tests on TestMu AI by using our sample :link: Android app or sample :link: iOS app. Response of above cURL will be a JSON object containing the APP_URL of the format - ``lt://APP123456789123456789`` and will be used in the next step.",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-hooks/#step-2-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Clone the sample project",
+          "text": "Clone the TestMu AI\u2019s :link: LT-appium-nodejs repository and navigate to the code directory as shown below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-hooks/#step-3-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Set up your authentication",
+          "text": "Make sure you have your TestMu AI credentials with you to run test automation scripts on TestMu AI. To obtain your access credentials, purchase a plan or access the Automation Dashboard. Then, set TestMu AI Username and Access Key in environment variables with following commands. {`export LTUSERNAME=${ YOURLAMBDATEST_USERNAME()} \\\\ export LTACCESSKEY=${ YOURLAMBDATESTACCESS_KEY()}`} {set LTUSERNAME=${ YOURLAMBDATEST_USERNAME()} \\ set LTACCESSKEY=${ YOURLAMBDATESTACCESS_KEY()}`}",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-hooks/#step-4-set-up-your-authentication"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure your test with Appium Desired Capabilities",
+          "text": "To view and generate more capabilities for your appium application test suite, please see the capability generator here: https://www.testmuai.com/capabilities-generator/ Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Edit the required capabilities for your test suite as shown in the below sample code snippet: It is important that the visual:true is set your capabilities configuration for capturing the screenshots to SmartUI - Visual Regression tests and add into the build for comparison. If this capability is not added then the build status will be shown as Error. Webhook for taking the screenshot - This part of the code needs to be attached below the required segment of appium script of which we would like to take the screenshot to test on. Appium with SmartUI is currently only supports the viewport based screenshot comparisons. Execute your test suite as per the execution command depending on your framework or language. You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-appium-hooks/#step-5-configure-your-test-with-appium-desired-capabilities"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 <div className='storylane-iframe'>

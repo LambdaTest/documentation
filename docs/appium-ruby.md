@@ -215,6 +215,61 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Try our Sample Repository",
+      "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Get a Sample Project",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. All the code samples in this documentation can be found on TestMu AI's Github Repository. You can either download or clone the repository to quickly run your tests. View on GitHub",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-1-get-a-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the Environment Variables",
+          "text": "You need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in your TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-2-setup-the-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application",
+          "text": "Upload your iOS application (.ipa file) or android application (.apk or .aab file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Below is an example cURL request to upload your app using our REST API: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbialandroid.apk\"\" -F \"name=\"proverbial_app\"\"} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" -F \"name=Proverbial_App\"} If you do not have any .apk or .ipa file, you can run your sample tests on TestMu AI by using our sample apps, :link: Android app or :link: iOS app. Response of above cURL will be a JSON object containing the APP_URL of the format - lt://APP123456789123456789 and will be used in the next step",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-3-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Update your Automation Script",
+          "text": "An automation script for the sample application given above has been provided here. Ensure to update the APP_URL, username and accessKey in the code scripts before running the tests. You must set isRealMobile capability to False in the config file to run on Virtual Devices",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-4-update-your-automation-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure the Test Capabilities",
+          "text": "You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as: In case you're using capabilities generated using the JSON Wire Protocol, then it's recommended to use ``appiumlib` version `10.6.0`. Run `gem install appiumlib -v 10.6.0`` command to install it. You must add the generated APPURL** to the app capability in the config file. You must set isRealMobile capability to False in the config file to run on Virtual Devices You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool.For more details, please refer to our guide on Desired Capabilities in Appium.",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-5-configure-the-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute and Monitor your Tests",
+          "text": "If you are using an iOS app, the cURL command will generate an app URL for the corresponding iOS app and install the same for running the tests. You can either use our sample :link: iOS app or upload your own app as discussed earlier. Navigate to the corresponding directory based on your app. Execute the following command to run your test on TestMu AI platform: If you are using an android app, the cURL command will generate an app URL for the corresponding Android app and install the same for running the tests. You can either use our sample :link: Android app or upload your own app as discussed earlier. Navigate to the corresponding directory based on your app. Execute the following command to run your test on TestMu AI platform: In case of Windows, if you get any error message. Please try this method: Navigate to the corresponding directory based on your app. Refresh the gem bundles through given command Re-install the gems required Now try running the corresponding automation script for your app. Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the TestMu AI App Automation Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/appium-ruby/#step-6-execute-and-monitor-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Ruby** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

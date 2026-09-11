@@ -106,6 +106,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Write Your First Query",
+      "description": "Navigate to your configuration details screen Click on the \"Test List\" tab Toggle to \"Query Selection\" mode You'll see a query input box with helpful dropdowns Let's build a query to find all the Suite (XML) Tests which have login in their name.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Choose What to Look At",
+          "text": "Start typing in the query box. You'll immediately see a dropdown with options: suite : XML test suites suiteTest : Tests within suites suiteClass : Test classes within suites suiteMethod : Individual test methods within suites fileClass : Independent test classes (which are not part of any suite) fileMethod : Methods in independent classes Let's choose suiteTest because we want to find tests within suites",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-gui-query/#step-1-choose-what-to-look-at"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select a Property to Check",
+          "text": "After selecting suiteTest, another dropdown appears: name : Name of the suite, class, or method path : File path of the test in your project annotation_name : Annotations like @Smoke, @Regression Select name or type it because we want to check test names. Your query now looks like suiteTest.name.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-gui-query/#step-2-select-a-property-to-check"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Pick a Comparison Operator",
+          "text": "Once you\u2019ve typed or selected the property, a dropdown shows comparison options: = : Equals (matches exactly) ~ : Contains (matches part of the text in value) !~: Not Contains (shouldn't contain part of the text in value) != : Not Equals (excludes exact matches) Choose ~ because we want names that contain \"login\". Your query now looks like: suiteTest.name ~",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-gui-query/#step-3-pick-a-comparison-operator"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Enter the Value",
+          "text": "Type the value you\u2019re looking for in quotes, like \"login\". The app suggests values based on your project. With this, our query is complete and now looks like: suiteTest.name ~ \"login\" Press Enter and all the Suite Tests which contain the word \"login\" in their name will be listed down in a tree-like format. This tree-like format shows you the complete structure with the lowest entity showing the runnable test (methods, in case of TestNG).",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-gui-query/#step-4-enter-the-value"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ## What is a Query?
 
 Think of a query as a smart search filter that automatically finds and selects the exact tests you want to run. Instead of manually clicking through hundreds of test checkboxes, you simply describe what you're looking for using simple English-like instructions.

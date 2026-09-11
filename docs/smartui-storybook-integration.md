@@ -256,6 +256,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to run your first test",
+      "description": "Please try our StoryBook SmartUI GitHub sample repository for trying an example.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install the Dependencies",
+          "text": "Install required NPM modules for LambdaTest SmartUI StoryBook CLI in your Frontend project.",
+          "url": "https://www.testmuai.com/support/docs/smart-ui-storybook/#step-1-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup with StoryBook",
+          "text": "Add the following to your .storybook/main.js. You can read more about this here Storybook Feature flags Note: buildStoriesJson is available for Storybook versions below v9. SmartUI supports Storybook's play function (available in Storybook v9+) for interactive component testing. The play function allows you to interact with components before capturing screenshots. Example with Play Function: Best Practices for Play Functions: Use play functions to set up component states before screenshots Wait for async operations to complete using waitFor or findBy queries Avoid animations or transitions that might cause timing issues Use waitForTimeout in SmartUI config if components need additional render time after play functions SmartUI supports Storybook's global decorators and parameters, including theme switching. You can configure themes in your .smartui.json file. Configuration Example: Theme Options: \"light\": Capture stories in light theme only \"dark\": Capture stories in dark theme only \"both\": Capture stories in both light and dark themes (creates separate screenshots) Example Story with Theme Globals: Using Multiple Themes: If you set \"backgroundTheme\": \"both\" in your SmartUI config, each story will be captured twice - once in light theme and once in dark theme. The screenshot names will be automatically suffixed (e.g., Card-Default-light.png and Card-Default-dark.png). Note: When using \"backgroundTheme\": \"both\", ensure your Storybook stories properly handle theme switching via...",
+          "url": "https://www.testmuai.com/support/docs/smart-ui-storybook/#step-2-setup-with-storybook"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smart-ui-storybook/#step-3-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 3.1: Configure Proxy (Optional)",
+          "text": "If you are behind a proxy, you can configure the SMARTUIAPIPROXY environment variable. Note: Replace the IP address and port with the appropriate values for your environment.",
+          "url": "https://www.testmuai.com/support/docs/smart-ui-storybook/#step-31-configure-proxy-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 4: Create and Configure SmartUI Config",
+          "text": "You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: Please read the following table for more information about the configuration file: SmartUI Storybook testing now supports Edge browser. The waitForTimeout is an optional configuration. This is available for the versions above 1.1.7 of the NPM CLI. If you are using any async components in your StoryBook, then you can add the wait time for the page to load the DOM of your StoryBook components. This will help you to avoid any false-positive results for your tests. You can add the wait time in milliseconds. This might increase the execution time of your tests. For capturing the stories in full page without limiting the height to the viewport then in the viewports array, you can change the following configuration: To facilitate the visualization of your UI components on various device screens, you can now setup custom viewport configurations. This feature is an extension of Storybook's existing Viewport toolbar item, enabling you to capture and view stories in different dimensions, such as mobile or tablet, with specific orientations like portrait or landscape. To configure custom viewports for your stories, you can update the .smartui.json file within...",
+          "url": "https://www.testmuai.com/support/docs/smart-ui-storybook/#step-4-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 5: Execute the Tests on SmartUI Cloud using CLI",
+          "text": "You can now execute your StoryBook components for Visual Regression Testing using the following options:. If you are using the Continuous Integration (CI) pipeline for your application and want to integrate SmartUI StoryBook execution then the following are the steps needs to be added to your .yaml file: The following are supported CLI (Command Line Interface) options for Visual Regression Testing with SmartUI:",
+          "url": "https://www.testmuai.com/support/docs/smart-ui-storybook/#step-5-execute-the-tests-on-smartui-cloud-using-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 6: View SmartUI Results",
+          "text": "You can now see the SmartUI dashboard to view the results. Can also identify the mis-matches from the existing Baseline build.",
+          "url": "https://www.testmuai.com/support/docs/smart-ui-storybook/#step-6-view-smartui-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 ## Prerequisites for running SmartUI with StoryBook

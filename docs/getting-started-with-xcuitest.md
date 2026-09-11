@@ -180,6 +180,47 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Running Your First Test: A Step-by-Step Guide",
+      "description": "Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Application",
+          "text": "To begin testing, upload your iOS application (.ipa file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"\"\" -F \"type=\"xcuit-ios\"\"} Provide the path of your iOS application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Upload Your Test Suite",
+          "text": "Upload your iOS test suite (.ipa) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"xcuit-ios\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"xcuit-ios\\\"\"} Provide the path of your iOS test suite in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/#step-2-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your XCUITest automation test suite. Enter your username:accesskey in Basic Authentication Header Generator to generate your auth token. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your app and test suite, you can execute your test by running the following command: On Windows, run the following curl command from Command Prompt (cmd.exe). The command is formatted for the Windows CMD terminal and may require different syntax if executed from PowerShell or another shell. Before running the command, replace BASICAUTHTOKEN, APPID, and TESTSUITE_ID with your actual LambdaTest credentials and resource IDs obtained from the above curl commands.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/#step-3-executing-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: View Test Execution",
+          "text": "Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI Automation.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/#step-4-view-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 5000+ real devices and OS combinations.
 

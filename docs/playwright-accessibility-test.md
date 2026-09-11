@@ -155,6 +155,54 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide to Trigger Your Test",
+      "description": "Use TestMu AI Accessibility Automation with Playwright to detect and report accessibility issues during automated test execution.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run your tests. If you are using your own project, make sure you update the Hub endpoint in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution. Configure the desired capabilities based on your test requirements. For example: You can generate capabilities for your test requirements with the help of our inbuilt \ud83d\udd17 Capabilities Generator.",
+          "url": "https://www.testmuai.com/support/docs/playwright-accessibility-test/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Establish User Authentication",
+          "text": "Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/playwright-accessibility-test/#step-2-establish-user-authentication"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure the Necessary Capabilities",
+          "text": "To enable the accessibility testing within your automated test suite, set accessibility: true in your configuration file. There are two primary ways to run accessibility tests: For precise control over which pages are scanned, you can trigger scans manually at specific points in your test execution. This is the recommended approach to reduce test execution time and focus only on relevant pages. To use this, simply enable accessibility in your capabilities: Then, trigger the scan directly within your test script when the desired page is fully loaded: Note: If you do not execute the hook in your script when using this method, no accessibility reports will be generated. If you want the accessibility scanner to run automatically on every single page navigation throughout the entire test session without writing manual hooks, you can pass the accessibility.autoScan capability: The capability name is case sensitive here. In Playwright it is accessibility.autoScan, with a capital S. You can also define other settings capabilities to refine your scan rules as described below: If your Playwright project is not browser-specific, use Chrome for accessibility automation until pw-chromium extension loading is supported reliably. This is the safest workaround when reports are not being generated for pw-chromium.",
+          "url": "https://www.testmuai.com/support/docs/playwright-accessibility-test/#step-3-configure-the-necessary-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Add the following add-on Script",
+          "text": "If you run the same setup on Playwright bundled Chromium (pw-chromium), the required accessibility extension may not stay loaded, which prevents accessibility report generation. At the moment, there is no confirmed public workaround for this behavior. Use Chrome for accessibility automation on Playwright.",
+          "url": "https://www.testmuai.com/support/docs/playwright-accessibility-test/#step-4-add-the-following-add-on-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute and Monitor your Test",
+          "text": "Now execute your tests and visit the Automation Dashboard. Click on the Accessibility tab and check the report generated. You can access the detailed accessibility report from the Accessibility Automation Reports Dashboard",
+          "url": "https://www.testmuai.com/support/docs/playwright-accessibility-test/#step-5-execute-and-monitor-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using <BrandName />'s Accessibility Tool.
 
 > **Note:** Accessibility Testing for Playwright is currently supported on the **Chrome browser**. It is **not supported on `pw-chromium`**.

@@ -185,6 +185,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate Azure Pipeline with SmartUI",
+      "description": "To integrate Azure Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Set Up Your Repository",
+          "text": "Ensure your project is hosted in Azure Repos, GitHub, or any supported repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-azure/#step-1-set-up-your-repository"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Pipeline:",
+          "text": "Navigate to Pipelines in your Azure DevOps project. Select New Pipeline and connect your repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-azure/#step-2-create-a-new-pipeline"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add Environment Variables",
+          "text": "Go to Pipeline Settings > Variables. Add the following variables: LT_USERNAME: Your TestMu AI username. LTACCESSKEY: Your TestMu AI access key.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-azure/#step-3-add-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setup your Workflow",
+          "text": "Step 4: Setup your Workflow",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-azure/#step-4-setup-your-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-azure/#step-5-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 Azure Pipelines is a cloud-based CI/CD service offered by Microsoft, part of the Azure DevOps suite. It helps automate the process of building, testing, and deploying applications to various platforms.
 
 This guide explains how to integrate your project with the Azure CI/CD pipeline to trigger visual regression testing with <BrandName /> SmartUI whenever changes are made to your repository.

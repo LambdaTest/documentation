@@ -150,6 +150,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "1. Testing Using Local System",
+      "description": "Follow the step-by-step guide to execute your test on HyperExecute. To run the Tests on HyperExecute from your Local System, you are required: Your TestMu AI Username and Access key HyperExecute YAML file which contains all the necessary instructions. HyperExecute CLI in order to initiate a test execution Job . Setup the Environmental Variable",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample for the JUnit from the TestMu AI GitHub repository to run the tests on the HyperExecute. If you are using your own project, make sure you update the Hub endpoint in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution. Configure the desired capabilities based on your test requirements. For example: You can generate capabilities for your test requirements with the help of our inbuilt \ud83d\udd17 Capabilities Generator.",
+          "url": "https://www.testmuai.com/support/docs/cucumber-on-hyperexecute-grid/#step-1-configure-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the CLI in your Test Suite",
+          "text": "After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/cucumber-on-hyperexecute-grid/#step-2-setup-the-cli-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure YAML in your Test Suite",
+          "text": "Configure your YAML file as per your use cases using key value pairs. In this sample YAML file, we have mentioned: version of the YAML file Timeouts for executing your project Mode of execution is Autosplit. You can also opt for Matrix or Hybrid mode. Pre and Post commands Reports and Artefacts that will be generated after the completion of tests and other necessary YAML Parameters",
+          "url": "https://www.testmuai.com/support/docs/cucumber-on-hyperexecute-grid/#step-3-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute your Test Suite",
+          "text": "NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/cucumber-on-hyperexecute-grid/#step-4-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Monitor the Test Execution",
+          "text": "Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/cucumber-on-hyperexecute-grid/#step-5-monitor-the-test-execution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Download Artifacts and Reports",
+          "text": "HyperExecute also facilitates the provision to download the Artifacts and Reports on your local machine. Click on the corresponding button to download your generated artifacts and reports.",
+          "url": "https://www.testmuai.com/support/docs/cucumber-on-hyperexecute-grid/#step-6-download-artifacts-and-reports"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Running Cucumber Framework Tests on HyperExecute
 Cucumber is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications
 

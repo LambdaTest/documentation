@@ -148,6 +148,40 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Quick Start",
+      "description": "Get running on the cloud grid in three steps.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add Maven Dependency",
+          "text": "Add the TestMu AI Selenium Java SDK dependency to your pom.xml. Configure the agent to start automatically during your build process: Check the latest version of testmuai-selenium-java-sdk and update the version accordingly.",
+          "url": "https://www.testmuai.com/support/docs/selenium-java-sdk/#step-1-add-maven-dependency"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create Configuration File",
+          "text": "Create a lambdatest.yml file in your project root directory with your TestMu AI credentials and desired capabilities: You can also use environment variables in your YAML file: Set these environment variables before running your tests: LT_USERNAME - Your TestMu AI username LTACCESSKEY - Your TestMu AI access key",
+          "url": "https://www.testmuai.com/support/docs/selenium-java-sdk/#step-2-create-configuration-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add TestNG Listener",
+          "text": "Add the TestMu AI status listener to your TestNG configuration: Using testng.xml That's it! Your tests are now configured to run on TestMu AI. No code changes required in your existing test methods.",
+          "url": "https://www.testmuai.com/support/docs/selenium-java-sdk/#step-3-add-testng-listener"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # TestMu AI Selenium Java SDK
 
 ---

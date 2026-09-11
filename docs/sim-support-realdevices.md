@@ -77,6 +77,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configuring SIM Support for Manual Testing",
+      "description": "Learn how to manually test SIM and eSIM scenarios on real mobile devices using TestMu AI, including configurations, SMS validation, and supported devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Enable SIM Support",
+          "text": "On the App Testing Dashboard, click Advanced Settings and enable the SIM Enabled toggle. This will unlock additional options for configuring SIM and eSIM.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-1-enable-sim-support"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select SIM Configurations",
+          "text": "Choose your Country, Carrier, and SIM Type. The availability of SIM types may vary by region and device. For customers with the region filter enabled, the country option will not be available for selection. In such cases, the country is automatically determined by the chosen region. Currently, eSIM support is limited to selected iPhone models only. Android devices support physical SIM at this time.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-2-select-sim-configurations"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Start a Manual Session",
+          "text": "Launch a real device session from the dashboard.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-3-start-a-manual-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Verify Device Details",
+          "text": "From the session toolbar, open Switch to view details such as Phone Number, Region, Carrier, and SIM Type. Verify that the device matches your intended test configuration.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-4-verify-device-details"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Begin Testing",
+          "text": "With the device configured and details verified, you can now proceed to test your application under real SIM conditions. Use the session to validate how your app interacts with SMS messages, confirm that authentication flows work as expected, and observe the overall user experience in a live environment.",
+          "url": "https://www.testmuai.com/support/docs/sim-support-realdevices/#step-5-begin-testing"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # SIM Support On Public Real Devices
 
 SIM & eSIM support allows testers to validate **SMS-driven workflows** on real mobile devices, including **OTP verification** and **two-factor authentication**. By using SIM-enabled devices manually, you can test SMS handling, **verify phone numbers**, and confirm secure onboarding processes without needing physical test phones in hand.  

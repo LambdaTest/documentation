@@ -160,6 +160,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Espresso Testing On HyperExecute",
+      "description": "Follow the instructions in this documentation, so that you can seamlessly execute Espresso tests on HyperExecute via TestMu AI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample for the Espresso framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the CLI in your Test Suite",
+          "text": "After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/#step-2-setup-the-cli-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application",
+          "text": "Upload your android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Enter your local path of your android app instead of `` in the below cURL command. {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"\"\" -F \"name=\"sampleApp\"\" `} Response of above cURL will be a JSON object containing the App ID of the format - `` and will be used in the next step.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/#step-3-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Upload your Test Suite",
+          "text": "Upload your test suite (.apk file) to the TestMu AI servers using our REST API by providing your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Here is an example cURL request to upload your app using our REST API: Enter your local path of your test suite app instead of `` in the below cURL command.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/#step-4-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure YAML in your Test Suite",
+          "text": "Enter your ` and ` in the YAML file that you have fetched in the above step. You can use either the appId and testSuiteAppId or provide the path of the application using appPath and testSuitePath. Both examples are given below. The uploadArtefact flag is currently not available for Espresso framework tests. To run adb commands in the pre and post-steps, include the following two flags in your YAML file: To execute it, you must have purchased an equivalent number of parallels for both HyperExecute and Real Device.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/#step-5-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Generate Reports and Artifacts",
+          "text": "To generate artifacts for your Espresso tests, add the artifacts: true, and report: true flag in your YAML file: To download these artifacts in your local machine, you can pass the --download-artifacts and --download-report flag with the CLI command to execute the tests as shown in the next step.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/#step-6-generate-reports-and-artifacts"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 7: Execute your Test Suite",
+          "text": "NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE --download-artifacts --download-report} Visit the HyperExecute Dashboard and check your Job status. If you are stumbling upon errors during Espresso test execution, then refer to the Espresso Troubleshoot guide for detailed explanations to your common errors.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/#step-7-execute-your-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This page outlines how to execute your Espresso tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
 ## Prerequisites

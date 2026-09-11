@@ -177,6 +177,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate Semaphore Pipeline with SmartUI",
+      "description": "To integrate Semaphore Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create your Project",
+          "text": "Click on the Create New >> Choose Repository. Select your desired repository from your VCS (GitHub or Bitbucket)",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-semaphore/#step-1-create-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup your Workflow",
+          "text": "Select your desired build tool and edit your workflow as per your requirement. A sample workflow is given for your reference: Click on Run the Workflow button to trigger your tests You can also store your LTUSERNAME, LTACCESSKEY and PROJECTTOKEN as secrets in your Semaphore project repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-semaphore/#step-2-setup-your-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-semaphore/#step-3-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 Semaphore is a modern CI/CD (Continuous Integration and Continuous Delivery) platform designed for developers to automate the process of building, testing, and deploying software.
 
 This guide explains how to integrate your project with the Semaphore CI/CD pipeline to trigger visual regression testing with <BrandName /> SmartUI whenever changes are made to your repository.

@@ -132,6 +132,61 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Option 1: Add Tags from the Dashboard",
+      "description": "Use this flow when the scan is already available in the dashboard and you want to label it afterward.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the tag action for a view",
+          "text": "In the issue view, open the scan or view you want to label and click the tag icon.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-1-open-the-tag-action-for-a-view"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Assign one or more tags",
+          "text": "In the Assign Tags modal, search for an existing tag or create a new one, then save your selection. You can assign multiple tags to the same scan from the dashboard.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-2-assign-one-or-more-tags"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Review tagged issues",
+          "text": "Once saved, the selected tags appear with the affected issue details.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-3-review-tagged-issues"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Filter the dashboard by tag",
+          "text": "Use the Tags filter to show only the issues or views that match the selected tags.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-4-filter-the-dashboard-by-tag"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Use tags in Mobile View",
+          "text": "The same tags are also available when you review the test in Mobile View.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-5-use-tags-in-mobile-view"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Switch how issues are grouped",
+          "text": "In the All Issues tab, you can group the results in two ways: Group by: Views to review issues screen by screen. Group by: Issue Types to review issues by accessibility problem type. Group by: Views Group by: Issue Types",
+          "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/#step-6-switch-how-issues-are-grouped"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Tag Support for Accessibility Scans
 
 Use tags to organize accessibility scans on mobile devices by screen, flow, or activity. This helps you label scans with names like `Login Screen`, `Cart Screen`, or `Profile Screen` so your team can quickly understand what each scan represents.

@@ -101,6 +101,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step\u2011by\u2011step Guide",
+      "description": "Learn how to use While Loops in KaneAI to repeat test steps based on dynamic conditions, iterate over collections with JavaScript, and use the built-in {{loop_counter}} variable in natural-language steps and element selectors.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Insert a While Loop Block",
+          "text": "A While Loop can only be added through the / slash command menu. In your authoring session, press / to open the slash command menu. Select Add While Loop. KaneAI inserts an empty While Loop block at the current position in your test flow. The block contains a header, an empty condition editor, and an End While control. A newly inserted block starts in an empty state with no condition and no body steps.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-1-insert-a-while-loop-block"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Define the Loop Condition",
+          "text": "The condition editor opens in natural language mode by default, matching KaneAI's NL\u2011first authoring philosophy. You can switch to operand & operator mode at any time. Type your condition as a plain\u2011English sentence. KaneAI interprets the intent and re\u2011evaluates it at runtime. Examples: while the loading spinner is visible while the Next button is present while {{count}} is greater than 0 while {{job_status}} is not \"complete\" Build the condition explicitly using a left operand, a comparison operator, and a right operand: Enter a left operand: this can be a variable (e.g., {{activecount}}), a dataset parameter (e.g., ${maxattempts}), extracted text, or a literal value. Choose a comparison operator from the dropdown: Enter the right operand: a literal, variable, dataset parameter, or extracted value. Both operands support variables ({{varname}}), dataset parameters (${paramname}), extracted text, and literal values. Confirm the condition to open the loop body. Once confirmed, the condition remains editable until the loop begins executing. You can reopen it to adjust operators, operands, or the natural\u2011language expression.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-2-define-the-loop-condition"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add Steps Inside the Loop Body",
+          "text": "The loop body becomes available only after the condition is confirmed. Inside the body you get the standard KaneAI step input, the same one used in the main authoring flow, where you can type a natural\u2011language step or press / to open the slash command menu. You can add any of the following inside a loop body: Natural language steps: type your instruction in plain English. Modules: reuse existing modules by adding them via the slash command menu. JavaScript steps: execute custom JS for data extraction, array handling, or index management. API steps: make API calls as part of the iteration. DB steps: run database queries inside each iteration. If / Else blocks: insert a conditional block inside the loop body via the slash command menu to add branching logic within iterations. The cursor decides whether a new step joins the loop body or sits outside it: For the full set of cursor rules, see Cursor in While loops.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-3-add-steps-inside-the-loop-body"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Finalize the Loop with \"End While\"",
+          "text": "When your loop body is ready, click End While at the bottom of the block to finalize it. Unlike If / Else blocks (which evaluate the moment you confirm a condition), a While Loop accumulates steps first and is only executed once you finalize it with End While. Until finalization it exists as an authoring\u2011only placeholder so you can keep adding body steps. The End While button is active only after the condition is confirmed and at least one step has been added to the body. Clicking End While starts execution immediately. KaneAI re\u2011evaluates the condition before every iteration and stops when the condition becomes false or when the max iteration safety limit is reached.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-while-loops/#step-4-finalize-the-loop-with-end-while"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ## Introduction
 
 KaneAI supports repeating a block of steps using **While Loops**. A While Loop executes the steps inside its body for as long as a user‑defined condition evaluates to **true**, and re‑checks the condition before every iteration.

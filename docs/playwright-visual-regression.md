@@ -236,6 +236,33 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting started with SmartUI using Playwright",
+      "description": "Master Playwright Visual Regression with our step-by-step guide. Seamlessly integrate SmartUI, enhance your testing skills, and unlock a world of possibilities.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Web for executing your PlayWright tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. -->",
+          "url": "https://www.testmuai.com/support/docs/playwright-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with Playwright Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Please clone the following sample Github repo Install the node modules using the command Set up the TestMu AI credentials by using the commands below in the terminal.The account details are available on your TestMu AI Profile page. For macOS: For Linux: For Windows: Edit the required capabilities in your test file playwright-smartui.js. Execute the test using the following command You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/playwright-visual-regression/#step-2-configure-your-test-with-playwright-desired-capabilities"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
 - Basic understanding of Playwright is required.

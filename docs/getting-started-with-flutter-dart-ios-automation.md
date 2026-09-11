@@ -144,6 +144,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Your First Test",
+      "description": "This guide details running your first Flutter Dart test on real iPhones using TestMu AI's Real Device Cloud.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Test Suite",
+          "text": "Upload your iOS test suite (.zip file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form 'appFile=@\"/Users/macuser/Downloads/flutter-ios.zip\"' \\ --form 'type=\"flutter-ios\"' --form 'name=\"Sample App\"' --form 'custom_id=\"Sample\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"C:/Users/winuser/Downloads/flutter-ios.zip\"\" --form \"type=\\\"flutter-ios\\\"\" --form \"name=\\\"Sample App\\\"\" --form \"customid=\\\"Sample\\\"\"} Response of above cURL will be a JSON object containing the App id of the format - `lt://APP123456789123456789123456789` and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/#step-1-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. You need to enter your username:accesskey here in order and click on encode to generate the base64 authentication. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your test suite, you can execute your test by running the following command: Make sure to enter your basic authentication and app id (generated in the first step) in the below command.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/#step-2-executing-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: View Test Execution",
+          "text": "Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI Automation.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/#step-3-view-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <RealDeviceTag value="Real Device" /> 
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 

@@ -126,6 +126,33 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Upload Contacts (.vcf) on Real Devices",
+      "description": "Preload contacts on real devices before your test session begins. Upload .vcf (vCard) contact files using the Upload Media API, and they are automatically injected into the device's native Contacts app when your session starts. This is useful for testing: Messaging and dialer apps CRM and contact management apps Social apps with contact picker flows Any app that reads from the device's contact list",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload a VCF File",
+          "text": "Upload your .vcf file using the Upload Media API. {curl --user \"${YOURLAMBDATESTUSERNAME()}:${YOURLAMBDATESTACCESSKEY()}\" -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\" -F \"mediafile=@\"/path/to/contacts.vcf\"\" -F \"type=contact\" -F \"custom_id=SampleContacts\" } Request Parameters media_file: The .vcf contact file to upload from your local system. type: Set to contact for vCard files (Optional) custom_id: A custom identifier for the uploaded file. Use the media_url from the response in the next step.",
+          "url": "https://www.testmuai.com/support/docs/upload-contacts/#step-1-upload-a-vcf-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set the Capability in Your Test Script",
+          "text": "Once the contacts are uploaded to TestMu AI's cloud, set the uploadMedia capability to the mediaurl** parameter returned in the API response. Each automation session permits a maximum of five file uploads. The contact file must be in vCard (.vcf) format. Maximum file size is 5 MB with up to 100 contacts per file. Home Support Upload Contacts on Real Devices",
+          "url": "https://www.testmuai.com/support/docs/upload-contacts/#step-2-set-the-capability-in-your-test-script"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Upload Contacts (.vcf) on Real Devices
 <RealDeviceTag value="Real Device" />
 

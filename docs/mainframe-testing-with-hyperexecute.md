@@ -145,6 +145,61 @@ import TabItem from '@theme/TabItem';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Mainframe Testing with HyperExecute",
+      "description": "*** Run a Robot Framework suite that drives a mainframe 3270 terminal on TestMu AI HyperExecute. This guide uses the FNB mainframe sample repo, which exercises a mocked bank host over the 3270 protocol. Mainframe suites depend on the s3270 and x3270 3270 emulator binaries. Those do not install cleanly on Windows or macOS. HyperExecute provisions Ubuntu VMs where they do, installs them from one YAML file, starts the mock hosts, autosplits the suites across parallel machines, and merges the Robot Framework report. The sample suite runs on two tracks. The ASCII suites (tests/01-05) talk to the mock host through a custom socket client (libs/fnb_client.py), because Python removed the built-in telnetlib in 3.13 under PEP 594. The TN3270 suites (tests/06-10) use the standard robotframework-mainframe3270 library driving s3270, and the final suite drives the x3270 GUI. Three things a standard cloud run does not, all handled in the HyperExecute YAML: The native emulator binaries (s3270, x3270) and X core fonts, installed on the VM by the pre steps. The mock hosts, kept alive for the whole job as background services. A rendered display for the GUI terminal, provided by captureScreenRecordingForScenarios, which x3270 draws to. Do not add your own DISPLAY or Xvfb. *** Everything the tests need at runtime (s3270, x3270, X fonts, Python packages, the mock hosts) is installed on the VM by the YAML, not on your machine. Your TestMu AI Username and Access Key, with HyperExecute enabled on...",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the Sample Repo",
+          "text": "*** Clone the FNB mainframe suite. It ships the hyperexecute.yaml, the Robot suites under tests/, and the mock hosts under mock_server/.",
+          "url": "https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/#step-1-clone-the-sample-repo"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Your Credentials",
+          "text": "*** The CLI reads your Username and Access Key from environment variables or from --user / --key flags. Environment variables keep the key out of your shell history. Get them from your Account Settings page, then export them in the terminal you will run from. {`$env:LTUSERNAME = \"${ YOURLAMBDATEST_USERNAME()}\" $env:LTACCESSKEY = \"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} Environment variables are session-scoped. Set them again in each new terminal, or add them to your PowerShell $PROFILE or shell rc file to persist them.",
+          "url": "https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/#step-2-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Download the HyperExecute CLI",
+          "text": "*** The CLI triggers the job. Keep the binary in the root directory of your suite. The sample repo already bundles hyperexecute.exe for Windows. For macOS or Linux, download the matching build. On macOS, if you get a permission-denied warning, run chmod u+x ./hyperexecute. If a security popup blocks it, allow it under System Settings &rarr; Privacy & Security. On Windows, if the download is quarantined, run Unblock-File .\\hyperexecute.exe.",
+          "url": "https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/#step-3-download-the-hyperexecute-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Understand the HyperExecute YAML",
+          "text": "*** The hyperexecute.yaml in the repo root is where the mainframe setup lives. This is the full file. The runson, background, pre, testDiscovery, and testRunnerCommand keys are required for this suite; the timeouts, retries, and caching are optional tuning. Two lines are easy to get wrong: captureScreenRecordingForScenarios is not only for the video. It provides the display x3270 renders to. Do not add your own DISPLAY or Xvfb, which would send x3270 to an unrecorded display and blank the video. sleep 3 in testRunnerCommand gives the background mocks time to bind their ports before tests connect. Raise it if your mocks start slowly.",
+          "url": "https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/#step-4-understand-the-hyperexecute-yaml"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Run the Suite",
+          "text": "*** Run the CLI from the repo root, pointing at the YAML. The .\\ prefix is required in PowerShell. If you did not set the environment variables, pass the credentials inline: If you did not set the environment variables, pass the credentials inline: That single command uploads the repo (respecting .gitignore), provisions the VMs, runs the pre steps, starts the background mocks, autosplits the .robot suites, records a video per scenario, and merges the Robot Framework report. The terminal prints live progress and ends with a job link to the dashboard. The exit code is 0 when all suites pass and non-zero otherwise, so it drops straight into CI. ***",
+          "url": "https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/#step-5-run-the-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Read the Results",
+          "text": "*** Open the job link printed at the end of the run, or go to the HyperExecute Dashboard. Job summary shows pass and fail counts, per-VM timing, and the autosplit distribution. Reports tab holds the merged Robot Framework report.html and log.html. Artifacts lets you download the FNBReports archive with everything under results/. See HyperExecute Job Artifacts and HyperExecute Job Reports. Scenario video plays the per-scenario recording. For tests/10 this shows the real x3270 green screen being driven. Locally, the CLI also writes hyperexecute-cli.log (the full job log, the first place to look on a failure) and a .hyperexecute/ run directory.",
+          "url": "https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/#step-6-read-the-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Mainframe Testing with HyperExecute
 ***
 

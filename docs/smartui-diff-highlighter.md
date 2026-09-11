@@ -100,6 +100,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use Diff Navigation",
+      "description": "Quickly discover and review visual differences with SmartUI's diff navigation and highlight. Use Previous, Next, and Highlight to find every change without manual scanning.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the comparison view",
+          "text": "In your SmartUI dashboard, open the build that contains the screenshot you want to review. Open the screenshot/comparison view (e.g. by clicking the screenshot or \u201cView issues\u201d).",
+          "url": "https://www.testmuai.com/support/docs/smartui-diff-highlighter/#step-1-open-the-comparison-view"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Open the actions menu",
+          "text": "On the comparison view, open the actions menu (e.g. the 3-dot or actions dropdown).",
+          "url": "https://www.testmuai.com/support/docs/smartui-diff-highlighter/#step-2-open-the-actions-menu"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Use Previous, Highlight, and Next",
+          "text": "In the actions menu you\u2019ll see: Previous: moves focus to the previous diff (above the current one). Highlight: runs the highlight animation: popping circles traverse each diff from top to bottom, so you can see every change location in sequence. Next: moves focus to the next diff (below the current one). Use Highlight when you want to quickly see all diffs without clicking through. Use Previous and Next when you want to step through differences one by one.",
+          "url": "https://www.testmuai.com/support/docs/smartui-diff-highlighter/#step-3-use-previous-highlight-and-next"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Review each difference",
+          "text": "On clicking the Previous or Next buttons, the view will zoom into that specific diff and highlight it with a bounded box. You can continue to use overlay toggles, zoom, slider/side-by-side, and Mark as bug or approval actions as usual. Diff navigation and highlight do not replace existing comparison tools, they only make it easier to find where the changes are.",
+          "url": "https://www.testmuai.com/support/docs/smartui-diff-highlighter/#step-4-review-each-difference"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Diff Highlighter & Navigation
 
 When reviewing SmartUI visual comparisons, small differences can be easy to miss on dense or zoomed-out screens. The **Diff Highlighter** feature helps you **discover every change** quickly using in-view navigation and an optional highlight animation—so you spend less time scanning and more time deciding what to accept or reject.

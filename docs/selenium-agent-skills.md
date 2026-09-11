@@ -146,6 +146,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Selenium Tests Using Agent Skills",
+      "description": "Use TestMu AI Agent Skills to generate production-ready Selenium test automation with AI coding assistants like Claude Code, GitHub Copilot, and Cursor.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install the Selenium Agent Skill",
+          "text": "Clone the repository and copy the Selenium skill into your AI tool's skills directory. Install all available framework skills at once by cloning the repository directly into your tool's skills directory (e.g., .claude/skills/, .cursor/skills/).",
+          "url": "https://www.testmuai.com/support/docs/selenium-agent-skills/#step-1-install-the-selenium-agent-skill"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Your Credentials",
+          "text": "Add your TestMu AI credentials as environment variables so the generated tests can authenticate with the grid. Visit the TestMu AI Dashboard, navigate to the left sidebar, and select Credentials. Copy your Username and Access Key, then run:",
+          "url": "https://www.testmuai.com/support/docs/selenium-agent-skills/#step-2-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Run Your First Test",
+          "text": "Ask your AI assistant to write tests in natural language. The Agent Skill automatically handles: Project setup - Creates the right folder structure, dependencies, and config files Language detection - Maps your request to the correct language (Java, Python, JavaScript, C#, Ruby, or PHP) Execution target - Configures local or TestMu AI cloud execution based on your request Best practices - Uses explicit waits, proper locator strategies, and Page Object Model patterns",
+          "url": "https://www.testmuai.com/support/docs/selenium-agent-skills/#step-3-run-your-first-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 Instead of manually setting up your Selenium project, use **Agent Skills** to let your AI coding assistant generate production-ready test automation for you. The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI assistants how to write production-grade test code.

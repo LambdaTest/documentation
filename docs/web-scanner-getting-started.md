@@ -100,6 +100,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Create a New Scan",
+      "description": "Click the Schedule Scan button to launch the 4-step wizard. This process applies to both Visual and Accessibility scans. Platform-specific configuration steps appear based on your selection.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Scan Overview",
+          "text": "Scan Name: Add an identifiable title Platform: Choose between: Visual UI Accessibility",
+          "url": "https://www.testmuai.com/support/docs/web-scanner-getting-started/#step-1-scan-overview"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Scan Type Configuration (Dynamic)",
+          "text": "Depending on the selected platform, you\u2019ll either see Visual UI configuration or Accessibility configuration. You may use \u201cDefault\u201c settings or for more information follow the details provided: Starting a Visual Scan Starting an Accessibility Scan",
+          "url": "https://www.testmuai.com/support/docs/web-scanner-getting-started/#step-2-scan-type-configuration-dynamic"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add URLs",
+          "text": "You can populate the scan target using three options: Manual Input: Paste multiple URLs CSV Upload: Upload a file with 1 URL per line Sitemap Import: Paste sitemap XML URL and select from extracted URLs The maximum limit is 1,000 URLs per scan. For more details you may refer to our guide on Adding URLs for Web Scanner.",
+          "url": "https://www.testmuai.com/support/docs/web-scanner-getting-started/#step-3-add-urls"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Schedule the Scan",
+          "text": "Choose the frequency and timing for this scan: Quick Scan: One-time run Recurring Scan: Select days (e.g., Mon, Wed, Fri) Select time (e.g., 08:30 PM) Select timezone (e.g., UTC+5:30 Asia/Calcutta) Enable/disable Run Initial Scan (Visual UI only)",
+          "url": "https://www.testmuai.com/support/docs/web-scanner-getting-started/#step-4-schedule-the-scan"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ## Accessing the Dashboard
 
 Navigate to: `https://webscanner.lambdatest.com/webscan/builds`

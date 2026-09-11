@@ -157,6 +157,61 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting Started With Visual Regression Testing Using Espresso On SmartUI Real Devices",
+      "description": "Dive into our detailed Appium Visual Regression support documentation for step-by-step guidance! Efficiently perform visual testing, manage applications, and ensure your mobile apps are visually perfect before launch.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Real Device for executing your Espresso tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. -->",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set up your Authentication",
+          "text": "Now, you need to export your environment variables LTUSERNAME and LTACCESS_KEY that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${YOURLAMBDATEST_USERNAME}\" export LTACCESSKEY=\"${YOURLAMBDATESTACCESS_KEY}\"`} {`set LTUSERNAME=\"${YOURLAMBDATEST_USERNAME}\" set LTACCESSKEY=\"${YOURLAMBDATESTACCESS_KEY}\"`}",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-2-set-up-your-authentication"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update your App Configurations",
+          "text": "It should be in your app configurations then only you can perform the Espresso integration. In your build.gradle file, add the lambdatest-espresso dependency: Initialize this dependency in your test classes. You can do it as follows: Now build your application.",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-3-update-your-app-configurations"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Upload your Application",
+          "text": "To begin testing, upload your Android application (.apk file) to TestMu AI's servers. You'll use our REST API for this process. Authentication : You'll need your TestMu AI Username and AccessKey. Combine them in the format Username:AccessKey. Uploading the App : Use cURL command to send a request to our API. The request should include the path to your application file (appFile). {curl -u \"${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'} {curl -u \"${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-4-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Upload Your Test Suite",
+          "text": "Upload your Espresso test suite (.apk) file to TestMu AI servers using our REST API. The following sample cURL command shows how to upload a test suite: {curl -u \"${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}\" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@\"\"' --form 'type=\"espresso-android\"'} {curl -u \"${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"\"\" --form \"type=\\\"espresso-android\\\"\"} Provide the path of your android application in the above URL in place of `` Response of above cURL will be a JSON object containing the App URL of the format - lt://APP123456789123456789 and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-5-upload-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. Enter your username:accesskey in Basic Authentication Header Generator to generate your auth token. Take note of the base64 encoded authentication which needs to be added in the next step. {${YOURLAMBDATESTUSERNAME}:${YOURLAMBDATESTACCESS_KEY}} Once you have uploaded your app and test suite, you can execute your test by running the following command: Enter your BASICAUTHTOKEN, APPID (generated in the fourth step) and TESTSUITEID** (generated in the fifth step) in the below command. You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/espresso-visual-regression/#step-6-executing-the-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected.
 
 In this documentation, you will learn step-by-step how to perform regression testing and find Visual UI Regression bugs easily with the help of Smart Testing.

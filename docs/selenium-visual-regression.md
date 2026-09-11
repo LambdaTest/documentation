@@ -444,6 +444,55 @@ import VerifiedTag from '@site/src/component/verifiedTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting Started With Visual Regression Testing Using Selenium On SmartUI",
+      "description": "Master Selenium Visual Regression testing with TestMu AI. Detect visual deviations early in your web applications to ensure a seamless user experience.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Web for executing your Selenium tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. -->",
+          "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with Selenium Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Please clone the following sample Github repo (https://github.com/LambdaTest/smartui-node-sample). Set up the TestMu AI credentials by following the instructions mentioned in the README.md file. Edit the required capabilities for your test suite. Installing dependency and for executing the test. --> Here you can explore multiple features and execute more such builds.",
+          "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/#step-2-configure-your-test-with-selenium-desired-capabilities"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting Started With Visual Regression Testing Using Selenium On SmartUI",
+      "description": "Master Selenium Visual Regression testing with TestMu AI. Detect visual deviations early in your web applications to ensure a seamless user experience.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 3: Configure your Screenshot Capturing Options",
+          "text": "This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on. You can capture the full page screenshot for all different websites which have a scrolling functionality on their application user interface for your Selenium functional testing. Add the following Webhook to your test cases where we need to capture the screenshot of your application. The following feature is applicable for Selenium >= 4.0.0 with Chrome versions only. Please ensure that the Lambdatest Capabilities are updated in your project for executing full page screenshot(s). For browsers other than chrome (Mozilla, Safari etc.) and for websites Full Page Screenshot fails, you can use smartscroll to take a full page screenshot of your web page by adding this hook in your test script. You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application. Add the following Webhook to your test cases where you need to capture the screenshot of a particular element on your UI.",
+          "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/#step-3-configure-your-screenshot-capturing-options"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 4: View SmartUI Results",
+          "text": "You have successfully integrated SmartUI with your Selenium tests. Visit your SmartUI project to view builds and compare snapshots between different test runs. You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing Baseline build and do the required visual testing.",
+          "url": "https://www.testmuai.com/support/docs/selenium-visual-regression/#step-4-view-smartui-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 

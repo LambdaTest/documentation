@@ -140,6 +140,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Integrate Testsigma with HyperExecute",
+      "description": "Explore seamless integrations with popular tools at TestMu AI. Enhance your testing workflow for faster, efficient cross-browser testing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Creation of Agent",
+          "text": "Navigate to your Testsigma Dashboard to Create an agent. Note: This agent has an activation key. You must ensure that it is secure and accessible. This activation key will allow you to start your agent from any other machine. This key is associated with a single agent and can be used on only one machine at a time.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-testsigma-integration/#step-1-creation-of-agent"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create your HyperExecute YAML file",
+          "text": "When creating the YAML, consider the following points: One-to-One Mapping: Each test plan ID can only be linked to a single agent at a time. This means two separate agents will be required to execute two test plans parallelly. Agent Activation Wait: Since the agents are activated before test execution, it's crucial to include a waiting period of 90-100 seconds. This ensures the agents are fully operational and ready to handle the upcoming workload. Dynamic Activation Key Handling: The $activationKeys variable defined in the matrix section allows you to dynamically pass the appropriate activation key to each agent during execution. This simplifies configuration and avoids manual key assignment. Here is the sample YAML file for your reference:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-testsigma-integration/#step-2-create-your-hyperexecute-yaml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Setup the Test Execution Files",
+          "text": "Create a start-agent.bat file. This particular .bat file will start the agent in background services. Create a stop-agent.bat file. This .bat file will stop the agent after the completion of execution. Now, map your tests (from the testsigma dashboard) via the agent to execute on HyperExecute platform. The main goal of the script file is to make the API call for test execution. The script is created to start the agent, then execute the test plan and then stop the agent after the whole Job is executed. NOTE: You can use any language to create your execution script file. We have used javascript for the reference below.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-testsigma-integration/#step-3-setup-the-test-execution-files"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute the Test",
+          "text": "Trigger your test plan on HyperExecute. Download the HyperExecute CLI Binary based on the OS you use. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} In case of MAC, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project OR use this command if you have not exported your username and access key. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-testsigma-integration/#step-4-execute-the-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Testsigma is an AI Native, cloud-based test automation platform that helps testers create, run, and maintain automated tests for web, mobile, and API applications.
 
 Testsigma can help you with:

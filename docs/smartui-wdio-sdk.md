@@ -277,6 +277,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to run your first test",
+      "description": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create/Update your test",
+          "text": "You can clone the sample repository to run LambdaTest automation tests with SmartUI and use the cloud.e2e.js file present in the test/specs folder.",
+          "url": "https://www.testmuai.com/support/docs/smartui-wdio-sdk/#step-1-createupdate-your-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Install the Dependencies",
+          "text": "Install required NPM modules for LambdaTest SmartUI WebdriverIO SDK in your Frontend project. If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above. If you are using TestMu AI automation grid to run webdriverio, please update the required configuration in the capability configuration (wdio.conf.js) file.",
+          "url": "https://www.testmuai.com/support/docs/smartui-wdio-sdk/#step-2-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-wdio-sdk/#step-3-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Create and Configure SmartUI Config",
+          "text": "You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: For capturing fullpage or viewport screenshots, please refer to this documentation For the list of available mobile viewports, please refer to this documentation For more information about SmartUI config global options, please refer to this documentation.",
+          "url": "https://www.testmuai.com/support/docs/smartui-wdio-sdk/#step-4-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Adding SmartUI function to take screenshot",
+          "text": "You can incorporate SmartUI into your custom WebdriverIO automation test (any platform) script by adding the smartuiSnapshot function in the required segment of WebdriverIO script of which we would like to take the screenshot, as shown below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-wdio-sdk/#step-5-adding-smartui-function-to-take-screenshot"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute the Tests on SmartUI Cloud",
+          "text": "Execute visual regression tests on SmartUI using the following commands You can use your custom runner command in place of wdio run ./wdio.conf.js You may use the npx smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-wdio-sdk/#step-6-execute-the-tests-on-smartui-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing WebdriverIO testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.

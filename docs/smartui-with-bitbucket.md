@@ -178,6 +178,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate Bitbucket Pipeline with SmartUI",
+      "description": "To integrate Bitbucket Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your Projects and Repository in Bitbucket",
+          "text": "Click on the Create >> Project. Enter your Project details and click on Create Project. Now click on the Create Repository button. You can either create a new repository or import your existing repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-1-setup-your-projects-and-repository-in-bitbucket"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the Deployment section. Select your required template for CI/CD workflow file. For the demo we are using the Test template. Now, write your workflow YAML file. Here is the sample file for your reference. Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline. You can also store your LTUSERNAME, LTACCESSKEY and PROJECTTOKEN as secrets in your Bitbucket project repository.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Check the output",
+          "text": "After triggering the workflow, check your results in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-bitbucket/#step-3-check-the-output"
+        }
+      ]
+    }
+  ]) }}
+/>
 Bitbucket is a web-based version control repository hosting service owned by Atlassian. It is primarily designed for development teams to manage their code, collaborate on projects, and streamline their workflows.
 
 This document will show you how to integrate Bitbucket Pipeline with SmartUI to shorten your test cycles.

@@ -95,6 +95,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T20:26:38+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Scheduled Test Runs",
+      "description": "This documentation will help you to understand how to create a scheduled test runs via KaneAI",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the Test Runs Section",
+          "text": "*** Navigate to Test Manager, select your project, and open the Test Runs section. Result: The Test Runs section lists your existing test runs.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/#step-1-open-the-test-runs-section"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a Schedule",
+          "text": "*** Click the three dots next to a test run and select Create Schedule. Alternatively, open the Scheduled runs section to view all existing schedules, then click Create a Scheduled Run. Result: The schedule creation form opens.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/#step-2-create-a-schedule"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Enter Schedule Details",
+          "text": "*** Enter the Schedule Name, select the existing test run you want to schedule, and set the date and time. Result: The schedule is defined with your selected test run and timing.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/#step-3-enter-schedule-details"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Review the Summary",
+          "text": "*** Click Next to review a summary of the schedule, including the scheduled date and time. Result: The summary confirms the schedule details before you save.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/#step-4-review-the-summary"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Set Build Parameters and Schedule",
+          "text": "*** In the Build Parameters box, define the concurrency for the tests. Click Advanced Configurations to configure settings such as Self-maintenance, network throttling, URL replacement, visual regression, accessibility testing, and Reports. Click Schedule Test Run to create the recurring schedule. A schedule made of Classic test cases shows the full Advanced Configurations panel. A schedule whose test cases are all New Experience on Chrome can use Evidence Reporting, which shows a shorter Test Configurations panel with Self-maintenance instead. Retry on Failure is available in both. Result: The recurring schedule is created and runs automatically at the set times.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/#step-5-set-build-parameters-and-schedule"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Review a Schedule",
+          "text": "*** Click any existing schedule to view its details, including a summary of test outcomes, passed and failed cases, and their instances. Result: The schedule detail view shows the outcomes of each scheduled run.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-scheduled-test-runs/#step-6-review-a-schedule"
+        }
+      ]
+    }
+  ]) }}
+/>
 In this documentation, you will learn how to create a scheduled test run using pre-existing test runs. This involves navigating through your project, selecting test configurations, and setting up recurring schedules to automate test executions at specified times.
 
 **Step 1:** Navigate to **Test Manager** >> select your desired project >> **Test Runs** section.

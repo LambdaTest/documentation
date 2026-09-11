@@ -105,6 +105,40 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Generate Cucumber Reports on HyperExecute",
+      "description": "Learn how to generate Cucumber Report on TestMu AI and download the reports from the dashboard",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure the TestRunner File",
+          "text": "In your TestRunner file, configure @CucumberOptions to specify report formats and output paths. Here\u2019s an example configuration: Explanation of plugin Options: pretty : Outputs readable format in console. html:target/cucumber-reports/cucumber-pretty : Generates HTML report in the target directory. json:target/cucumber-reports/CucumberTestReport.json : Generates JSON report, often required for CI/CD and advanced reporting. rerun:target/cucumber-reports/rerun.txt : Logs any failed scenarios for rerun.",
+          "url": "https://www.testmuai.com/support/docs/cucumber-report/#step-1-configure-the-testrunner-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the HyperExecute YAML File",
+          "text": "In your HyperExecute YAML configuration, define the report parameters like this:",
+          "url": "https://www.testmuai.com/support/docs/cucumber-report/#step-2-configure-the-hyperexecute-yaml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute Your Tests",
+          "text": "Run your tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the Cucumber report.",
+          "url": "https://www.testmuai.com/support/docs/cucumber-report/#step-3-execute-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
 Cucumber reporting is a way to visualize and analyze test results when using the Cucumber testing framework. Cucumber is widely used for Behavior-Driven Development (BDD), allowing tests to be written in plain language using Gherkin syntax. The reports generated from Cucumber tests provide a readable format for stakeholders to understand the results, which helps in understanding the behavior of the system being tested without requiring technical expertise.
 
 Cucumber itself provides basic reporting in the command line, but additional plugins and tools can enhance the reporting experience, generating rich HTML or JSON reports.

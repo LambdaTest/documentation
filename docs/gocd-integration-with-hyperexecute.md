@@ -132,6 +132,33 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Integrate with HyperExecute",
+      "description": "Download the GoCD Server and Agent and unzip the folder. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the HyperExecute.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Start the GoCD Server",
+          "text": "Go to the gocd/bin folder and run the following commands: To start the Server To start the Agent Now type `http://localhost:8153/` go in your browser to open the GoCD GUI. Click on the New Pipeline Button.",
+          "url": "https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/#step-1-start-the-gocd-server"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the GoCD Pipeline",
+          "text": "Select the Material Type. For the demo purposes, we will be using the Git. Enter the Repository URL from which you want to set up the project. Enter your Repository branch name. Enter the Username and Password of your GitHub. (It is required in case the access to the repo needed authentication). Enter your Pipeline Name. A Stage is a group of Jobs and a Job is a work which needs to be executed. Enter your Stage Details. Enter the Job Name. Enter the below mentioned script in the space provided. Since my default agent is mac I am using darwin CLI in the cURL command. Kindly change it according to your system default agent. Mac -> darwin Linux -> linux Windows-> windows Click on Save + Run This Pipeline button.",
+          "url": "https://www.testmuai.com/support/docs/gocd-integration-with-hyperexecute/#step-2-configure-the-gocd-pipeline"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # GoCD Integration With HyperExecute
 ***
 

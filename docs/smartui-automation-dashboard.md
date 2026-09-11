@@ -47,6 +47,52 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     >
 </script>
 
+# SmartUI in the Automation Dashboard
+
+---
+
+## What this feature is
+
+Users can now view, group, and review their SmartUI visual regression results directly inside the Automation Dashboard, without switching products.
+
+Every automation test run that captures SmartUI screenshots now has a dedicated **SmartUI tab** alongside the existing All Commands, Logs, Networks, and Meta Data tabs. From that tab users can see the build's screenshots, their comparison status, group them by test, and jump straight into SmartUI for a full review when they need to.
+
+This works across **Web Automation** and **App Automation**.
+
+---
+
+## The problem it solves
+
+Until now, understanding why a visual test failed meant working across two separate places:
+
+1. Users would see a test fail in the Automation Dashboard, then
+2. Open SmartUI separately, find the matching build, and triage the screenshots there.
+
+For teams running large suites, that context-switching added up to significant manual triage overhead: repetitive, slow, and disconnected from the automation run that produced the results.
+
+This feature closes that gap. The visual results live next to the test that generated them, so triage happens in one flow.
+
+---
+
+## What users gain
+
+| Before | Now |
+|---|---|
+| Switch between Automation and SmartUI to investigate a failure | Review screenshots in the SmartUI tab on the test page |
+| Screenshots listed flat, hard to scan in big runs | Group screenshots by test name / suite |
+| Approve or reject one screenshot at a time | Review and approve at the test-case level |
+| No direct path between the two products | One-click deep link from a build into full SmartUI |
+
+---
+
+## Key capabilities
+
+### 1. SmartUI tab in the test view
+
+Open any test in the Automation Dashboard and select the **SmartUI tab**. Users will see the associated Project and Build, a total screenshot count, and a status roll-up showing how many screenshots are new, changed, approved, or rejected.
+
+<img loading="lazy" src={require('../assets/images/smartui-automation-dashboard/smartui-tab-overview.jpeg').default} alt="SmartUI tab in the Automation Dashboard test view showing the build summary, screenshot count, status counts, and a screenshot grid alongside the test video" className="doc_img" style={{ width: "auto", height: "auto"}}/>
+
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
     "@context": "https://schema.org",
@@ -103,52 +149,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
-
-# SmartUI in the Automation Dashboard
-
----
-
-## What this feature is
-
-Users can now view, group, and review their SmartUI visual regression results directly inside the Automation Dashboard, without switching products.
-
-Every automation test run that captures SmartUI screenshots now has a dedicated **SmartUI tab** alongside the existing All Commands, Logs, Networks, and Meta Data tabs. From that tab users can see the build's screenshots, their comparison status, group them by test, and jump straight into SmartUI for a full review when they need to.
-
-This works across **Web Automation** and **App Automation**.
-
----
-
-## The problem it solves
-
-Until now, understanding why a visual test failed meant working across two separate places:
-
-1. Users would see a test fail in the Automation Dashboard, then
-2. Open SmartUI separately, find the matching build, and triage the screenshots there.
-
-For teams running large suites, that context-switching added up to significant manual triage overhead: repetitive, slow, and disconnected from the automation run that produced the results.
-
-This feature closes that gap. The visual results live next to the test that generated them, so triage happens in one flow.
-
----
-
-## What users gain
-
-| Before | Now |
-|---|---|
-| Switch between Automation and SmartUI to investigate a failure | Review screenshots in the SmartUI tab on the test page |
-| Screenshots listed flat, hard to scan in big runs | Group screenshots by test name / suite |
-| Approve or reject one screenshot at a time | Review and approve at the test-case level |
-| No direct path between the two products | One-click deep link from a build into full SmartUI |
-
----
-
-## Key capabilities
-
-### 1. SmartUI tab in the test view
-
-Open any test in the Automation Dashboard and select the **SmartUI tab**. Users will see the associated Project and Build, a total screenshot count, and a status roll-up showing how many screenshots are new, changed, approved, or rejected.
-
-<img loading="lazy" src={require('../assets/images/smartui-automation-dashboard/smartui-tab-overview.jpeg').default} alt="SmartUI tab in the Automation Dashboard test view showing the build summary, screenshot count, status counts, and a screenshot grid alongside the test video" className="doc_img" style={{ width: "auto", height: "auto"}}/>
 
 ### 2. Grid and List views
 

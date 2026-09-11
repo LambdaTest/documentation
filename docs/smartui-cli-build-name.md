@@ -163,6 +163,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Grouping Screenshots through Build Names",
+      "description": "In this documentation, learn how to group screenshots in a single build across multiple executions.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install SmartUI CLI",
+          "text": "If you haven't already installed SmartUI CLI, install it using npm: Global Installation (Recommended): Local Installation:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/#step-1-install-smartui-cli"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/#step-2-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute Tests with custom Build Names",
+          "text": "You can add a custom build name by adding the --buildName flag to your test execution command. Here are different ways to use this feature: Specify a custom build name to group your screenshots in the following way: Example: For a Node.js test script : ```bash npx smartui --config .smartui.json exec --buildName \"Sample Build Name\" -- node test.js ``` If no buildname is specified, a random build name is added to the builds:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/#step-3-execute-tests-with-custom-build-names"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Advanced Use Case",
+          "text": "If you are running multiple test cases in a single job (e.g., using HyperExecute) and want to club all screenshots under a single build while maintaining consistent Git baseline management, you can do the following: This can be done as follows:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-build-name/#step-4-advanced-use-case"
+        }
+      ]
+    }
+  ]) }}
+/>
 SmartUI CLI allows you to group screenshots in a build name and append new screenshots to an existing build. This feature enables you to assign build names, add screenshots to existing builds and manage your visual tests efficiently.
 
 ## Prerequisites
