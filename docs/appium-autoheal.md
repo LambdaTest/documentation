@@ -36,6 +36,87 @@ import RealDeviceTag from '../src/component/realDevice';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smart-heal-appium/"
+    },
+    "headline": "Smart Heal in Automation",
+    "description": "Learn how to enable Smart Heal, TestMu AI\u2019s Auto-Heal capability, for real device automation tests to reduce flakiness by automatically recovering from locator failures during execution.",
+    "url": "https://www.testmuai.com/support/docs/smart-heal-appium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium smart-heal",
+      "self-healing tests",
+      "smart heal"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Enable Smart Heal with Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "desired_caps = {\n    \"deviceName\": \"iPhone 16\",\n    \"platformName\": \"iOS\",\n    \"platformVersion\": \"18\",\n    \"isRealMobile\": True,\n    \"app\": \"YOUR_APP_URL\",\n    \"build\": \"Smart Heal iOS\",\n    \"name\": \"Sample Smart Heal Test\",\n    # highlight-next-line\n    \"smartHeal\": True\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-next-line (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "desired_caps = {\n    \"deviceName\": \"Galaxy S25\",\n    \"platformName\": \"Android\",\n    \"platformVersion\": \"16\",\n    \"isRealMobile\": True,\n    \"app\": \"YOUR_APP_URL\",\n    \"build\": \"Smart Heal Android\",\n    \"name\": \"Sample Smart Heal Test\",\n    # highlight-next-line\n    \"smartHeal\": True\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Enable Smart Heal with Runtime Hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Stop Smart Heal\ndriver.executeScript(\"lambda-heal-stop\");\n\n// Start Smart Heal\ndriver.executeScript(\"lambda-heal-start\");\n"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # AI-Powered Smart Heal for Automation Tests
 <RealDeviceTag value="Real Device" /> 
 

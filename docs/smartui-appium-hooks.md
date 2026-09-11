@@ -54,6 +54,278 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-appium-hooks/"
+    },
+    "headline": "Getting Started With Visual Regression Testing Using Appium On SmartUI Real Devices (NodeJS)",
+    "description": "Explore our Appium Visual Regression support documentation for step-by-step guidance! Conduct visual testing, manage apps, and ensure your mobile apps are flawless before launch.",
+    "url": "https://www.testmuai.com/support/docs/smartui-appium-hooks/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of appium and remote WebDriver is required.; Go to TestMu AI SmartUI and login along with your credentials.; Access your Hub for your appium remote connection instance at @mobile-hub.lambdatest.com/wd/hub.; Copy LT_USERNAME and LT_ACCESS_KEY credentials from Access Key button on the top right of the dashboard..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for SmartUI with App Automation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for SmartUI with App Automation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites for SmartUI with App Automation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the TestMu AI\u2019s :link: LT-appium-nodejs repository and navigate to the code directory as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/LT-appium-nodejs",
+        "text": "git clone https://github.com/LambdaTest/LT-appium-nodejs\ncd LT-appium-nodejs"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::caution Important\n\nIt is important that the `visual:true` is set your capabilities configuration for capturing the screenshots to SmartUI - Visual Regression tests and add into the build for comparison. If this capability is not added then the build status will be shown as `Error`.\n\n:::\n\n- Webhook for taking the screenshot - This part of the code needs to be attached below the required segment of appium script of which we would like to take the screenshot to test on.\n\n```javascript title=\"For Example if your are using with NodeJS\"\ndriver.execute(\"smartui.takeScreenshot=<Name of your screenshot>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- You can check the executed builds over at [TestMu AI SmartUI](https://www.testmuai.com/login/?redirectTo=https://smartui.lambdatest.com/).\n\n## Smart Crop With SmartUI\n\nThe all-new **Real Device mobile notification status bar and navigation bar crop** feature in SmartUI allows you to take your visual regression testing workflows to the next level. With Smart Crop, you can crop the status bar and navigation bar or footer from screenshots, enabling them to focus solely on the core UI elements during visual comparisons.\n\nBy leveraging machine learning algorithms, it accurately detects and crops the status bar and navigation bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements.\n\n### Original Screenshot:\n\n<img loading=\"lazy\" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt=\"Profile\" width=\"1360\" height=\"603\" className='doc_img'/>\n\n### Cropped Screenshot\n\n<img loading=\"lazy\" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt=\"Profile\" width=\"1360\" height=\"603\" className='doc_img'/>\n\n## Region-Based Ignore/Select for Dynamic Content (Advanced)\n\nTo handle dynamic content like timestamps, user names, ads, or banners that cause false positives in visual comparisons, SmartUI supports region-based ignore and select functionality using **XPath locators**.\n\nYou can either:\n- **Ignore specific regions** during comparison using `ignoreBoxes`\n- **Compare only specific regions** using `selectBoxes`\n\nThis is especially useful for enterprise applications where certain UI elements change dynamically between test runs.\n\n### Usage in Node.js (Primary Example)\n\n```javascript title=\"Example: Ignoring Dynamic Elements in Node.js\"\nlet config = {\n  screenshotName: 'Home Screen',\n  ignoreBoxes: JSON.stringify({\n    xpath: [\n      \"//*[@text='Backpack']\",\n      \"//*[@text='Onesie']\",\n      \"//*[@text='PRODUCTS']\",\n      \"//*[@text='Terms of Service | Privacy Policy']\"\n    ]\n  })\n};\n\nawait driver.execute(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Usage in Node.js (Primary Example)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Cross-Framework Examples\n\n<Tabs className='docs__val' groupId='language'>\n<TabItem value='nodejs' label='Node.js' default>\n\n```javascript\nlet config = {\n  screenshotName: '<Your Screenshot Name>',\n  ignoreBoxes: JSON.stringify({\n    xpath: [\"//*[@text='Dynamic Ad']\", \"//*[@id='timestamp']\"]\n  })\n};\nawait driver.execute(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cross-Framework Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "config = {\n    'screenshotName': '<Your Screenshot Name>',\n    'ignoreBoxes': '{\"xpath\": [\"//*[@text=\\'Dynamic Ad\\']\", \"//*[@id=\\'timestamp\\']\"]}'\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> configIgnore = new HashMap<>();\nconfigIgnore.put(\"screenshotName\", \"Screenshot\");\n\nMap<String, Object> ignoreBoxes = new HashMap<>();\nignoreBoxes.put(\"xpath\", new String[]{\n    \"//*[@name='Toast']\"\n});\n\nconfigIgnore.put(\"ignoreBoxes\", ignoreBoxes);\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot\", configIgnore);\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var config = new Dictionary<string, object> {\n  {\"screenshotName\", \"<Your Screenshot Name>\"},\n  {\"ignoreBoxes\", \"{\\\"xpath\\\": [\\\"//*[@text='Dynamic Ad']\\\", \\\"//*[@id='timestamp']\\\"]}\"}\n};\ndriver.ExecuteScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "config = {\n  'screenshotName' => '<Your Screenshot Name>',\n  'ignoreBoxes' => '{\"xpath\": [\"//*[@text=\\'Dynamic Ad\\']\", \"//*[@id=\\'timestamp\\']\"]}'\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For taking viewport screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute(\"smartui.takeScreenshot=<Name of your screenshot>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For taking viewport screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot=<Your Screenshot Name>\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For taking viewport screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver.execute(\"smartui.takeScreenshot=<Your Screenshot Name>\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For taking viewport screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "driver.Execute(\"smartui.takeScreenshot=<Your Screenshot Name>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 16",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot=<Your Screenshot Name>\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing full page screenshot in Native Apps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let config = {\n  screenshotName: '<Name of your screenshot>',\n  fullPage: true,\n  pageCount: 15   // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)\n};\nawait driver.execute(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing full page screenshot in Native Apps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "config = {\n  'screenshotName': '<Your Screenshot Name>',\n  'fullPage': True,\n  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)\n}\ndriver.execute_script(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 19",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "config = {\n  'screenshotName' => '<Your Screenshot Name>',\n  'fullPage': true,\n  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)\n}\ndriver.execute(\"smartui.takeScreenshot\", config)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 20",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "var config = new Dictionary<string, string> {\n  {\"screenshotName\", \"<Your Screenshot Name>\"},\n  {\"fullPage\", true},\n  {\"pageCount\", 15} // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)\n};\ndriver.Execute(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 21",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Map<String, Object> config = new HashMap<>();\nconfig.put(\"screenshotName\", \"<Your Screenshot Name>\");\nconfig.put(\"fullPage\", true);\nconfig.put(\"pageCount\", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)\n((JavascriptExecutor)driver).executeScript(\"smartui.takeScreenshot\", config);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.execute(\"smartui.takeScreenshot=HomeScreen-Header\");\nawait driver.execute(\"smartui.takeScreenshot=CheckoutScreen-PaymentForm\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { until, By } = require('selenium-webdriver');\nawait driver.wait(until.elementLocated(By.id('main-content')), 10000);\nawait driver.execute(\"smartui.takeScreenshot=Screen Loaded\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify visual: true is set in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   let capabilities = {\n     visual: true, // Must be set\n     // ... other capabilities\n   };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check project name matches exactly (case-sensitive)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   \"smartUI.project\": \"ExactProjectName\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify credentials are set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await driver.wait(until.elementLocated(By.id('content')), 10000);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Wait for specific elements to be visible",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await driver.wait(until.elementIsVisible(By.id('main-content')), 10000);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase pageCount value (between 1-20)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   let config = {\n     screenshotName: 'Full Page',\n     fullPage: true,\n     pageCount: 15  // Increase if needed\n   };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check JSON string formatting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   ignoreBoxes: JSON.stringify({\n     xpath: [\"//*[@text='Dynamic Ad']\"]\n   })"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 <div className='storylane-iframe'>

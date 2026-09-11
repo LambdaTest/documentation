@@ -53,6 +53,131 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-ruby-rspec/"
+    },
+    "headline": "Appium with Rspec",
+    "description": "Now you can run your Appium automation scripts using Rspec on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-ruby-rspec/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "Rspec",
+      "testmu ai Rspec"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install Ruby on your local system.; Ensure you have Dependency manager bundler installed. If not installed, you can install with the following command:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For macOS, you can run a Homebrew command like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "brew install ruby"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Linux or Ubuntu, you can run a simple apt command like below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo apt-get install ruby-full"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gem install bundler"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "browser_caps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"ios\" label=\"Parallel test\" default>\n\n```ruby title=\"parallel.config.yml\"\nserver: \"mobile-hub.lambdatest.com\"\nuser: \"LT_USERNAME\"  #Add your LambdaTest username here\nkey: \"LT_ACCESS_KEY\"  #Add your LambdaTest accessKey here\n\ncommon_caps:\n  \"build\": \"RSpec Parallel\"\n  \"visual\": false\n  \"network\": false\n  \"console\": false\n\napp_caps:\n  -\n    \"isRealMobile\": \"true\"\n    \"platform\": \"Android\"\n    \"deviceName\": \"Galaxy A31\"\n    \"platformVersion\": \"10\"\n    \"app\": \"APP_URL\"   #Add the app url here\n  -\n    \"isRealMobile\": \"true\"\n    \"platform\": \"Android\"\n    \"deviceName\": \"Galaxy A32\"\n    \"platformVersion\": \"11\"\n    \"app\": \"APP_URL\"   #Add the app url here\n  -\n    \"isRealMobile\": \"true\"\n    \"platform\": \"iOS\"\n    \"deviceName\": \"iPhone 13 Pro\"\n    \"platformVersion\": \"15.0\"\n    \"app\": \"APP_URL\"   #Add the app url here"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "    caps={\n      \"LT:Options\" => {\n        \"build\" => \"Ruby RSpec\",\n        \"name\" => \"Sample Test\",\n        \"platformName\" => platform,\n        \"isRealMobile\" => isRealMobile,\n        \"deviceName\" => deviceName,\n        \"platformVersion\" => platformVersion,\n        \"app\" => app,\n        \"w3c\" => true\n      }},"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bundle install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Execute the following command to run single test on TestMu AI platform",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bundle exec rake single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The rspec-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "rspec-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a RSpec Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/rspec-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/rspec-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Rspec** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

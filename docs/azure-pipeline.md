@@ -44,6 +44,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/integrate-azure-pipelines-with-testmu/"
+    },
+    "headline": "Integrate Azure Pipelines With TestMu AI",
+    "description": "TestMu AI now integrates with Azure to boost your go-to-market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/integrate-azure-pipelines-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating TestMu AI with Azure Pipelines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "# Node.js\n# Build a general Node.js project with npm.\n# Add steps that analyze code, save build artifacts, deploy, and more:\n# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript\n\ntrigger:\n- master\n\npool:\n  vmImage: 'Ubuntu-16.04'\n\nvariables:\n  LT_USERNAME: 'Your_LambdaTest_Username'\n  LT_ACCESS_KEY: 'Your_LambdaTest_Access_Key'\n\nsteps:\n- task: NodeTool@0\n  inputs:\n    versionSpec: '10.x'\n  displayName: 'Install Node.js'\n\n- script: |\n    npm install\n    npm install -g protractor\n    cd conf\n    protractor single.conf.js\n  displayName: 'npm install and build'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "# Node.js\n# Build a general Node.js project with npm.\n# Add steps that analyze code, save build artifacts, deploy, and more:\n# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript\n\ntrigger:\n- master\n\npool:\n  vmImage: 'Ubuntu-16.04'\n\nvariables:\n  LT_USERNAME: 'Your_LambdaTest_Username'\n  LT_ACCESS_KEY: 'Your_LambdaTest_Access_Key'\n\nsteps:\n- task: NodeTool@0\n  inputs:\n    versionSpec: '10.x'\n  displayName: 'Install Node.js'\n\n- script: |\n    npm install\n    npm install -g protractor\n    cd conf\n    protractor parallel.conf.js  //for executing parallel testing\n  displayName: 'npm install and build'"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Integrate Azure Pipelines With <BrandName />
 * * *
 Azure Pipelines is a service presented by Azure DevOps to help projects ship faster with the help of a robust pipeline. With Azure Pipelines you can easily generate a build, test it before deploying the changes live in any language you are comfortable with i.e. Node.js, Python, Java, PHP, Ruby, C/C++, .NET etc. The platform offers unlimited CI/CD minutes for open-source projects, along with 10 free parallel jobs. Azure pipelines offers great cross-platform support using which you can run jobs in parallel across Windows, macOS, Linux.

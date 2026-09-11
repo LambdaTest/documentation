@@ -41,8 +41,65 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/how-to-use-in-session-testing-tools/"
+    },
+    "headline": "How to use in-session testing tools?",
+    "description": "With TestMu AI, perform live interactive testing of websites and web applications on real Android and iOS devices to ensure seamless user experience.",
+    "url": "https://www.testmuai.com/support/docs/how-to-use-in-session-testing-tools/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "real device app testing",
+      "real device browser testing",
+      "mobile app testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 # How to Use In-Session Testing Tools ?
-With <BrandName />’s Real Device browser testing, you get access to a plethora of features that helps QA ease their real device browser testing process, without the need of leaving the instance window. From features such as mark as bug and changing IP geolocation, to in-depth Chrome DevTools and Safari Web Inspector, <BrandName />'s Real Device browser testing offers it all.
+With <BrandName />ï¿½s Real Device browser testing, you get access to a plethora of features that helps QA ease their real device browser testing process, without the need of leaving the instance window. From features such as mark as bug and changing IP geolocation, to in-depth Chrome DevTools and Safari Web Inspector, <BrandName />'s Real Device browser testing offers it all.
 
 Let us get an overview of all the features in our real device instance:
 
@@ -102,7 +159,7 @@ However, if your preferred location is not showing, you can specify the exact lo
 
 ### Network Throttling
 
-With <BrandName />’s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
+With <BrandName />ï¿½s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
 
 You can simulate these network environments using either pre-defined profiles or by creating custom network profiles to suit your needs.
 
@@ -170,7 +227,7 @@ With the zoom in-out slider, you can zoom in and out in your real device as per 
 
 ### Chrome DevTools
 
-<BrandName />’s real device browser testing offers in-built developer tools to help QA debug their websites and web applications. 
+<BrandName />ï¿½s real device browser testing offers in-built developer tools to help QA debug their websites and web applications. 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/chrome-devtools-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -178,7 +235,7 @@ With the zoom in-out slider, you can zoom in and out in your real device as per 
 
 ### Safari Web Inspector
 
-<BrandName />’s real device browser testing offers in-built **Safari Web Inspector**, an open-source web development tool to simplify optimizing, prototyping, and debugging web applications for iOS and OS X.
+<BrandName />ï¿½s real device browser testing offers in-built **Safari Web Inspector**, an open-source web development tool to simplify optimizing, prototyping, and debugging web applications for iOS and OS X.
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/safari-web-inspector.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 

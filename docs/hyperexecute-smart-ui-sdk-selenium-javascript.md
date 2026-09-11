@@ -51,6 +51,95 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/"
+    },
+    "headline": "UI Testing with Node.js using HyperExecute and SmartUI SDK",
+    "description": "Effortlessly automate Hyperexecute UIs with SmartUI SDK & Selenium JavaScript. Write modular, cross-browser tests.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "smart ui testing in hyperexecute",
+      "visual  ui testing,image to image comparison",
+      "regression testing tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable; HyperExecute YAML file which contains all the necessary instructions.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure Your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "let capabilities = {\n  \"LT:Options\": {\n    project: \"PROJECT_NAME\", // Enter your Project Name\n    name: \"TEST_NAME\", // Provide the name of your test\n    build: \"BUILD_NAME\", // Mention your desired build name\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: win\n\nautosplit: true\n\nretryOnFailure: true\nmaxRetries: 1\n\nconcurrency: 1\n\nenv:\n  CACHE_DIR: m2_cache_dir\n  PROJECT_TOKEN: \"YOUR_PROJECT_TOKEN\" #Enter your project token here\n\ncacheKey: '{{ checksum \"package.json\" }}'\ncacheDirectories:\n  - node_modules\n\npre:\n  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver\n  - npx smartui config:create smartui-web.json\n\npost:\n  - cat hyp-smartui-sdk.yaml\n\ntestDiscovery:\n  type: raw\n  mode: static\n  command: ls sdk/sdkCloud.js\n\ntestRunnerCommand: npx smartui exec node sdk/sdkCloud.js --config smartui-web.json\n\njobLabel: [\"smart-ui-sdk\", \"hyperexecute\", \"selenium\", \"javascript\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pre:\n  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver\n  - npx smartui config:create smartui-web.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This documentation will guide you step-by-step to execute the SmartUI SDK tests on the HyperExecute platform using **Selenium - JavaScript**
 
 ## Prerequisites

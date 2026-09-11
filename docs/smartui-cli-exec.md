@@ -27,6 +27,186 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-exec/"
+    },
+    "headline": "SmartUI CLI Exec Command",
+    "description": "Learn how to use SmartUI CLI exec commands to manage snapshot servers and execute tests",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-exec/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface; SmartUI CLI version 4.1.43 or higher installed for the start, stop and ping commands; A properly configured SmartUI CLI project.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's the basic syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec [options] -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running with a custom port",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec -P 5000 -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching results with custom filename",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec --fetch-results custom-results.json -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specifying a build name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec --buildName \"Release-1.0\" -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using a configuration file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec --config smartui-config.json -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Combining multiple options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec -P 5000 --buildName \"Release-1.0\" --config smartui-config.json --fetch-results -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running scheduled tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec --scheduled \"schedule-123\" -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Showing render errors",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec --show-render-errors -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Overriding credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec --userName \"user\" --accessKey \"key\" -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To start the SmartUI snapshot server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec:start"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To properly stop the SmartUI snapshot server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec:stop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To verify if the SmartUI server is running, you can use either of these commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec:ping"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Checking Server Status",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec:pingTest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For most test frameworks (except Selenium Java and JavaScript), you'll need to set the server address",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export SMARTUI_SERVER_ADDRESS='http://localhost:49152'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Configure Server Address",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set SMARTUI_SERVER_ADDRESS='http://localhost:49152'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Configure Server Address",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:SMARTUI_SERVER_ADDRESS=\"http://localhost:49152\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can run your tests using your preferred test runner",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Using npm\nnpm test\n\n# Using Maven\nmvn test\n\n# Using other test runners\nyour-test-command"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 SmartUI CLI exec command offers you various options to manage snapshot server and execute your visual testing scripts. This guide will walk you through the available commands and their usage.
 
 ## Prerequisites

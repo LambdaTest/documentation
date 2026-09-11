@@ -49,6 +49,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/mantis-integration/"
+    },
+    "headline": "Mantis Integration",
+    "description": "TestMu AI helps you manage your bugs in Mantis by moving them to project in a single click. All the details you provide in TestMu AI like projects, severity, priority, summary and description would automatically be presented in the project on Mantis.",
+    "url": "https://www.testmuai.com/support/docs/mantis-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "push issues to clubhouse",
+      "free cross browser testing tool"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 # Mantis Integration
 
 Mantis is a free and an open source bug tracker. Mantis supports multiple OS such as Windows, Linux, and macOS, from the server side. Along with platform compatibility, It also offers cross browser compatibility on Google Chrome, Mozilla Firefox, Opera, Safari and IE10+. Mantis is highly customizable, you can customize your issue fields, workflows and notifications. You can also declare access as per role based in your organization. All these features along with email notifications to keep you updated on everything regarding the project makes Mantis a great choice as a project management tool.

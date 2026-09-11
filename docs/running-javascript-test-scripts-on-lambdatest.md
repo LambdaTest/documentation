@@ -48,6 +48,229 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With JavaScript",
+    "description": "Run JavaScript Selenium test scripts on TestMu AI cloud grid with 3000+ real browsers and operating systems. Covers Mocha, Nightwatch, WebdriverIO, Jest, CucumberJS, Jasmine, Karma, TestCafe, NemoJS, and CodeceptJS.",
+    "url": "https://www.testmuai.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "javascript selenium grid testing",
+      "run javascript selenium tests cloud",
+      "selenium webdriver javascript setup"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A minimal one looks like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  build: 'NodeJS build',\n  name: 'Test 1',\n  platformName: 'Windows 10',\n  browserName: 'chrome',\n  browserVersion: 'latest',\n  network: true,\n  visual: true,\n  console: true,\n  video: true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/mocha-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/mocha-selenium-sample\ncd mocha-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Mocha",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/nightwatch-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/nightwatch-selenium-sample\ncd nightwatch-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/webdriverio-selenium",
+        "text": "git clone https://github.com/LambdaTest/webdriverio-selenium\ncd webdriverio-selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/jest-selenium-webdriver-sample",
+        "text": "git clone https://github.com/LambdaTest/jest-selenium-webdriver-sample\ncd jest-selenium-webdriver-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the capabilities object",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  build: 'jest-LambdaTest-Single',\n  browserName: 'chrome',\n  browserVersion: 'latest',\n  platformName: 'Windows 10',\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm test single.test.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/NodeJs-Cucumber-Selenium",
+        "text": "git clone https://github.com/LambdaTest/NodeJs-Cucumber-Selenium\ncd NodeJs-Cucumber-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CucumberJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/karma-jasmine-sample",
+        "text": "git clone https://github.com/LambdaTest/karma-jasmine-sample\ncd karma-jasmine-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Jasmine",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nkarma start karma.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/angular-karma-sample",
+        "text": "git clone https://github.com/LambdaTest/angular-karma-sample\ncd angular-karma-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Karma",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nkarma start karma.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the plugin in your TestCafe project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install testcafe-browser-provider-lambdatest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run your test against the grid, naming the browser and OS in the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "testcafe \"lambdatest:Chrome@74.0:Windows 8\" 'path/to/test/file.js'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Nemo-Lambdatest-sample",
+        "text": "git clone https://github.com/LambdaTest/Nemo-Lambdatest-sample\ncd Nemo-Lambdatest-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NemoJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpx nemo -P chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/lambdatest-codeceptjs-sample",
+        "text": "git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample\ncd lambdatest-codeceptjs-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 22",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\nnpm test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run your JavaScript Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.

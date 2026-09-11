@@ -42,6 +42,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/mark-as-bug-in-screenshot-testing/"
+    },
+    "headline": "Mark As Bug In Screenshot Testing",
+    "description": "Don't forget to mark your bugs while performing Screenshot testing at TestMu AI. Just a single click and you can share bugs to your favourite project management tools such as Asana, Trello, Jira etc.",
+    "url": "https://www.testmuai.com/support/docs/mark-as-bug-in-screenshot-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Other Docs",
+    "keywords": [
+      "testmu ai mark as a bug",
+      "push bug while performing testing",
+      "mark as a bug in testmu ai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 # Mark As Bug In Screenshot Testing
 ***
 > You can now avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. <BrandName /> does it all for you. **Mark as Bug** is a feature that would help you highlight any UI observation from your test sessions on <BrandName />. And you can share the same with your colleagues on their favorite project management/ bug tracking tools such as Jira and Trello, Hive, Paymo, etc. You can choose the assignee who handles your reported task, or Bug. You can even mention the description to help them understand your point better. You can do all that while testing on <BrandName />, without having to hop on to any other platform or tool.

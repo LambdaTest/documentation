@@ -48,6 +48,124 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With Robot Framework",
+    "description": "Run Robot Framework Selenium tests on TestMu AI cloud grid with 10,000+ browser/device combinations. Setup, config, and parallel execution included.",
+    "url": "https://www.testmuai.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "robot framework selenium testing",
+      "run robot tests on cloud grid",
+      "robot framework automation cloud"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install virtualenv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Robot-Selenium-Sample",
+        "text": "git clone https://github.com/LambdaTest/Robot-Selenium-Sample\ncd Robot-Selenium-Sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a virtual environment and activate it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "virtualenv venv\nsource venv/bin/activate"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the required packages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "*** Settings ***\nLibrary  Selenium2Library\n \n*** Variables ***\n \n@{_tmp}\n    ...  browserName: %{browserName},\n    ...  platformName: %{platform},\n    ...  browserVersion: %{version},\n    ...  name: RobotFramework Lambda Test\n \n${BROWSER}          %{ROBOT_BROWSER}\n${CAPABILITIES}     ${EMPTY.join(${_tmp})}\n${KEY}              <YOUR_LAMBDATEST_USERNAME>:<YOUR LAMBDATEST ACCESS KEY>\n${REMOTE_URL}       https://${KEY}@hub.lambdatest.com/wd/hub\n \n \n*** Keywords ***\n \nOpen test browser\n    Open browser  https://lambdatest.github.io/sample-todo-app/  browser=${BROWSER}\n    ...  remote_url=${REMOTE_URL}\n    ...  desired_capabilities=${CAPABILITIES}\n \nClose test browser\n    Close all browsers"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "make test_Windows_10_chrome_latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run parallel tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "make run_all_in_parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/robot-framework-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/robot-framework-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run Robot Framework tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

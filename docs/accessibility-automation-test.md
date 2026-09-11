@@ -46,6 +46,109 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-automation-test/"
+    },
+    "headline": "Automating Accessibility Testing with Selenium",
+    "description": "Identify and log accessibility issues with TestMu AI Accessibility Automation, ensuring automated compliance with WCAG accessibility standards.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-automation-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; Setup your local machine as per your testing framework..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browserName\", \"chrome\");\ncapabilities.setCapability(\"version\", \"70.0\");\ncapabilities.setCapability(\"platform\", \"win10\"); # If this cap isn't specified, it will just get the any available one\ncapabilities.setCapability(\"build\", \"LambdaTestSampleApp\");\ncapabilities.setCapability(\"name\", \"LambdaTestJavaSample\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To use this, simply enable accessibility in your capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capability.setCapability(\"accessibility\", true); // Enable accessibility testing"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then, trigger the scan directly within your test script when the desired page is fully loaded",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Execute the LambdaTest accessibility scan hook\ndriver.executeScript(\"lambda-accessibility-scan\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Continuous Auto-Scanning",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capability.setCapability(\"accessibility\", true); // Enable accessibility testing\ncapability.setCapability(\"accessibility.autoscan\", true); // Scan automatically as the test interacts with the app"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also define other settings capabilities to refine your scan rules as described below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capability.setCapability(\"accessibility.wcagVersion\", \"wcag21aa\"); // Specify WCAG version (e.g., WCAG 2.1 Level AA)\ncapability.setCapability(\"accessibility.bestPractice\", false); // Exclude best practice issues from results\ncapability.setCapability(\"accessibility.needsReview\", true); // Include issues that need review"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Execute and Monitor your Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using <BrandName />'s Accessibility Tool.
 
 > Compatible only with Chrome and Edge browser versions >= 90.

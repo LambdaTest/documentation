@@ -38,6 +38,80 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-textual/
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-textual/"
+    },
+    "headline": "Textual (DOM) Assertions",
+    "description": "Extract data from the DOM (element states, attributes, and computed styles) and assert on values that may not be visible in a screenshot.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-textual/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "dom assertion",
+      "textual assertion",
+      "element state"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: the submit button is disabled\nAssert: the checkbox is checked\nAssert: the input field has placeholder \"Enter email\"\nAssert: the element has aria-label \"Close dialog\"\nAssert: the font-size of the heading is 24px"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Extract the href of the first link\nStore the value attribute of the email input\nGet the class of the error message element"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Textual assertions extract data from the page's DOM: element states, attributes, and computed styles that aren't always visible in a screenshot.
 
 ## When It's Used

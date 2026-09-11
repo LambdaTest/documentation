@@ -51,6 +51,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/set-date-time-hour-format-real-devices-browser/"
+    },
+    "headline": "Set Custom Date, Time & Hour Format on Real Devices (Browser)",
+    "description": "Change the date, time, and hour format on real iOS and Android devices while running real-time browser tests on TestMu AI, across manual and automated runs.",
+    "url": "https://www.testmuai.com/support/docs/set-date-time-hour-format-real-devices-browser/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "set device time iOS",
+      "change date mobile automation",
+      "iOS 12-hour format testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-14T19:55:23+05:30"
+  }) }}
+/>
+
 
 Testing applications often requires validation across different date, time, and format scenarios. <BrandName /> now supports dynamic configuration of **date, time, 12/24-hour format**, and **automatic time toggle** on real **iOS (14+)** and **Android (10+)** devices, both in **manual** sessions and via **Appium automation hooks**.
 

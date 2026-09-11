@@ -49,6 +49,102 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-automation-scan-configurations/"
+    },
+    "headline": "Scan Configurations via Capabilities (Automation)",
+    "description": "Configure mobile app accessibility scans in automation through Appium capabilities: master toggle, WCAG version, and Best Practice, Beta, and AI rule groups.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-automation-scan-configurations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "mobile accessibility automation",
+      "accessibility capabilities",
+      "wcagVersion capability"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "An Appium test project targeting TestMu AI real devices (Android or iOS).; LT_USERNAME / LT_ACCESS_KEY available to the process.; Accessibility enabled on the session via the accessibility master capability..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: setting capabilities (Capabilities (JSON))",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"accessibility\": true,\n  \"accessibility.wcagVersion\": \"wcag21aa\",\n  \"accessibility.bestPractice\": true,\n  \"accessibility.betaRules\": true,\n  \"accessibility.aiEnabled\": false\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: setting capabilities (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "MutableCapabilities caps = new MutableCapabilities();\ncaps.setCapability(\"accessibility\", true);\ncaps.setCapability(\"accessibility.wcagVersion\", \"wcag21aa\");\ncaps.setCapability(\"accessibility.bestPractice\", true);\ncaps.setCapability(\"accessibility.betaRules\", true);\ncaps.setCapability(\"accessibility.aiEnabled\", false);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "caps = {\n    \"accessibility\": True,\n    \"accessibility.wcagVersion\": \"wcag21aa\",\n    \"accessibility.bestPractice\": True,\n    \"accessibility.betaRules\": True,\n    \"accessibility.aiEnabled\": False,\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  \"accessibility\": true,\n  \"accessibility.wcagVersion\": \"wcag21aa\",\n  \"accessibility.bestPractice\": true,\n  \"accessibility.betaRules\": true,\n  \"accessibility.aiEnabled\": false,\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With these capabilities in place, the scan is triggered at each stable screen",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.executeScript(\"lambda-accessibility-scan\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Scan Configurations via Capabilities (Automation)
 
 In automation there is no scan-configuration panel. The scan scope is supplied through each test's **capabilities**, so every test carries its own configuration and the effective rule set is derived from these values. This is the automation counterpart to the manual [Scan Configurations](/support/docs/accessibility-app-scanner-scan-configurations/) panel.

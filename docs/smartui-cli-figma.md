@@ -55,6 +55,270 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-figma/"
+    },
+    "headline": "Getting started with TestMu AI's SmartUI Figma CLI",
+    "description": "In this documentation, learn how to perform Visual Testing of your Figma files using command line interface using SmartUI CLI.",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-figma/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface is required.; Basic understanding of Figma file structuring is required.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install required NPM modules for TestMu AI SmartUI CLI globally or in your project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create the design info file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "smartui config:create-figma designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Create the design info file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### **Step 3:** Configure your Project Token and Figma Token\n\n1. Setup your project token shown in the **SmartUI** app after creating your project.\n\n<Tabs className='docs__val' groupId='language'>\n<TabItem value='MacOS/Linux' label='MacOS/Linux' default>\n\n```bash\nexport PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token and Figma Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token and Figma Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:FIGMA_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_USERNAME\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Uploading the Figma files on SmartUI Cloud using CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Advanced options for baseline management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma designs.json --markBaseline"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Advanced options for baseline management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma designs.json --buildName \"<Build_Name>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Advanced options for baseline management",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma designs.json --buildName \"<Build_Name>\" --markBaseline"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui upload-figma designs.json --buildName \"v1.0.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Figma-uploaded screenshots automatically have .png appended (e.g., homepage.png), so your SDK screenshots must match",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// \u274c Wrong - will not match Figma screenshot\nsmartuiSnapshot(driver, \"homepage\");\n\n// \u2705 Correct - matches Figma screenshot name\nsmartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 19",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java\nSmartUISnapshot.smartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 20",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\nawait smartuiSnapshot(page, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 21",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\ncy.smartuiSnapshot(\"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setup with Continuous Integration (CI)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "steps:\n  - name: Running SmartUI Figma CLI Tests\n    run: |\n      npm install @lambdatest/smartui-cli\n      npx playwright install-deps\n      npx smartui upload-figma designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Figma-uploaded screenshots automatically have .png appended (e.g., homepage.png), so your SDK screenshots must match",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// \u274c Wrong - will not match Figma screenshot\nsmartuiSnapshot(driver, \"homepage\");\n\n// \u2705 Correct - matches Figma screenshot name\nsmartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 24",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java\nSmartUISnapshot.smartuiSnapshot(driver, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 25",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\nawait smartuiSnapshot(page, \"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 26",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// JavaScript\ncy.smartuiSnapshot(\"homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setup with Continuous Integration (CI)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "steps:\n  - name: Running SmartUI Figma CLI Tests\n    run: |\n      npm install @lambdatest/smartui-cli\n      npx playwright install-deps\n      npx smartui upload-figma designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Troubleshooting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $FIGMA_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Welcome to the <BrandName /> SmartUI Figma CLI documentation!
 
 With SmartUI Figma CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Figma Visual tests using SmartUI CLI.

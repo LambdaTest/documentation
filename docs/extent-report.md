@@ -40,6 +40,86 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/extent-report/"
+    },
+    "headline": "Extent Report",
+    "description": "Learn how to generate Extent Report on TestMu AI and download the reports from the dashboard",
+    "url": "https://www.testmuai.com/support/docs/extent-report/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "extent testing reports",
+      "extent testing testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Add Dependency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 2: Create an Extent Report Listener\nCreate a class, e.g., `ExtentReportListenerV2.java`, to initialize and flush Extent Reports during test execution. This listener will log each test case\u2019s status to the report.\n\n```java title=\"ExtentReportListenerV2.java\"\nimport com.relevantcodes.extentreports.ExtentReports;\nimport com.relevantcodes.extentreports.ExtentTest;\nimport com.relevantcodes.extentreports.LogStatus;\nimport org.testng.ITestContext;\nimport org.testng.ITestListener;\nimport org.testng.ITestResult\npublic class ExtentReportListenerV2 implements ITestListener {\n    private static ExtentReports extent;\n    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()\n    @Override\n    public void onStart(ITestContext context) {\n        // Initialize ExtentReports with the report path\n        extent = new ExtentReports(\"extent-report.html\", true); \n        extent.addSystemInfo(\"Environment\", \"QA\").addSystemInfo(\"User\", \"Tester\");\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Add Dependency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 2: Create an Extent Report Listener\nFor Extent Reports > 2, use `ExtentHtmlReporter` to generate and customize the HTML report. Create `ExtentReportListener.java`:\n\n```java title=\"ExtentReportListener.java\"\nimport com.aventstack.extentreports.ExtentReports;\nimport com.aventstack.extentreports.ExtentTest;\nimport com.aventstack.extentreports.reporter.ExtentHtmlReporter;\nimport com.aventstack.extentreports.reporter.configuration.Theme;\nimport org.testng.ITestContext;\nimport org.testng.ITestListener;\nimport org.testng.ITestResult\npublic class ExtentReportListener implements ITestListener {\n    private static ExtentReports extent;\n    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()\n    @Override\n    public void onStart(ITestContext context) {\n        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(\"extent-report.html\");\n        htmlReporter.config().setTheme(Theme.STANDARD);\n        htmlReporter.config().setDocumentTitle(\"Test Report\");\n        htmlReporter.config().setReportName(\"Automation Test Results\")\n        extent = new ExtentReports();\n        extent.attachReporter(htmlReporter);\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In your HyperExecute YAML configuration, define the report parameters like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n    type: json\n    location: reports/json\n    frameworkName: extent"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Extent Reports is a powerful reporting library used in test automation frameworks to generate visually appealing and detailed test reports. It provides insights into the status of each test case, including whether they passed, failed, or were skipped, along with additional information such as logs, screenshots, and system/environment details. This makes it especially popular in Selenium, Appium, and API testing frameworks.
 
 ## Steps to Generate Extent Reports `(Version <= 2)` on HyperExecute 

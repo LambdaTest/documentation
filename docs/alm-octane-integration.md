@@ -42,6 +42,88 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/alm-octane-integration/"
+    },
+    "headline": "ALM Octane Integration with TestMu AI",
+    "description": "Learn how to integrate ALM Octane with TestMu AI for seamless test management and reporting while running your automated tests on the cloud.",
+    "url": "https://www.testmuai.com/support/docs/alm-octane-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integration",
+      "ALM Octane integration",
+      "Micro Focus ALM Octane"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "An active TestMu AI account; An ALM Octane instance with API access; ALM Octane credentials (Client ID and Client Secret); Your test automation framework configured with ALM Octane SDK/API.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Java-based projects using Maven, add the ALM Octane SDK dependency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<dependency>\n    <groupId>com.microfocus.adm.almoctane.sdk<\/groupId>\n    <artifactId>sdk-src<\/artifactId>\n    <version>16.1.100<\/version>\n<\/dependency>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's an example of how to configure your test framework to report results to ALM Octane",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import com.hp.octane.integrations.OctaneSDK;\n\npublic class ALMOctaneReporter {\n\n    private static final String OCTANE_URL = \"https://your-octane-instance.com\";\n    private static final String SHARED_SPACE_ID = \"your-shared-space-id\";\n    private static final String WORKSPACE_ID = \"your-workspace-id\";\n    private static final String CLIENT_ID = \"your-client-id\";\n    private static final String CLIENT_SECRET = \"your-client-secret\";\n\n    public void reportTestResult(String testName, String status) {\n        // Initialize Octane SDK and report results\n        // Refer to ALM Octane SDK documentation for detailed implementation\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once your test scripts are configured with ALM Octane reporting, run them on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browserName\", \"Chrome\");\ncapabilities.setCapability(\"version\", \"latest\");\ncapabilities.setCapability(\"platform\", \"Windows 10\");\ncapabilities.setCapability(\"build\", \"ALM Octane Integration Build\");\ncapabilities.setCapability(\"name\", \"ALM Octane Test\");\n\nWebDriver driver = new RemoteWebDriver(\n    new URL(\"https://\" + username + \":\" + accessKey + \"@hub.lambdatest.com/wd/hub\"),\n    capabilities\n);\n\n// Your test code here\n// ALM Octane reporting happens automatically based on your script configuration"
+      }
+    ],
+    "dateModified": "2026-07-17T17:17:54+05:30"
+  }) }}
+/>
+
 # ALM Octane Integration with <BrandName />
 
 ***

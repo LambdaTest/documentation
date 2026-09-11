@@ -53,6 +53,103 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/nightwatch-on-hyperexecute-grid/"
+    },
+    "headline": "Run automation tests on HyperExecute using Nightwatch",
+    "description": "Learn how to run Selenium automation tests on HyperExecute using the Nightwatch framework",
+    "url": "https://www.testmuai.com/support/docs/nightwatch-on-hyperexecute-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Nightwatch",
+      "Nightwatch selenium",
+      "Nightwatch JavaScript Selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# nightwatch.conf.js\n\nmodule.exports = (function(settings) {\n  console.log(settings[\"test_settings\"][\"default\"][\"username\"])\n  if (process.env.LT_USERNAME) {\n    settings[\"test_settings\"][\"default\"][\"username\"] = process.env.LT_USERNAME;\n  }\n  if (process.env.LT_ACCESS_KEY) {\n    settings[\"test_settings\"][\"default\"][\"access_key\"] = process.env.LT_ACCESS_KEY;\n  }\n  if (process.env.SELENIUM_HOST) {\n    settings.selenium.host = process.env.SELENIUM_HOST;\n  }\n  if (process.env.SELENIUM_PORT) {\n    settings.selenium.host = process.env.SELENIUM_PORT;\n  }\n  return settings;\n})(require('./nightwatch.json'));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: linux\nautosplit: true\nretryOnFailure: true\n\nmaxRetries: 1\nconcurrency: 3\nparallelism: 1\n  \ncacheKey: '{{ checksum \"package-lock.json\" }}'\ncacheDirectories:\n  - node_modules\n\npre:\n  - npm install\n\nmergeArtifacts: true\nuploadArtifacts:\n  - name: Reports\n    path:\n      - reports/\n\nreport: true\npartialReports:\n    type: json\n    location: reports/\n    frameworkName: extent\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -B1 'desiredCapabilities' nightwatch.json | sed 's/-//g' | grep -vE 'desiredCapabilities' | grep -vE 'skip_testcases_on_fail' | awk '{print$1}' | sed 's/://g' | sed 's/\"//g'\n\ntestRunnerCommand: ./node_modules/.bin/nightwatch -e $test\n\njobLabel: [selenium-Nightwatch, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The nightwatchjs-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "nightwatchjs-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a NightwatchJS Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/nightwatchjs-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/nightwatchjs-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Running Nightwatch Framework Tests on HyperExecute
 Nightwatch.js is an automated testing framework built on top of Selenium and Node.js. It simplifies end-to-end testing, offering a simple syntax and a powerful set of built-in commands. Nightwatch.js supports the Selenium WebDriver protocol and allows efficient browser automation, making it a popular choice for web application testing.
 

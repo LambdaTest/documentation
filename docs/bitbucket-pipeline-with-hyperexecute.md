@@ -43,6 +43,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/bitbucket-pipeline-with-hyperexecute/"
+    },
+    "headline": "Bitbucket Pipeline Integration",
+    "description": "HyperExecute now integrates with Bitbucket CI to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/bitbucket-pipeline-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You need to have a Bitbucket Cloud account.; Your workspace must have at least one repository..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Bitbucket Workflow File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "image: ubuntu:latest  # Adjust for macOS if needed\n\npipelines:\n  default:\n    branches:\n      - master  # Adjust as needed\n    steps:\n      ## Download Hyperexecute CLI (descriptive name)\n      - name: Download Hyperexecute CLI\n        script: |\n          wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute\n          chmod u+x hyperexecute\n\n      ## Run Hyperexecute tests (descriptive name)\n      - name: Run Hyperexecute Tests\n        script: |\n          ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Bitbucket Pipeline Integration
 * * *
 Bitbucket Pipelines is a CI/CD service that is built into Bitbucket. It enables you to build, test, and even deploy your code automatically based on a configuration file in your repository.

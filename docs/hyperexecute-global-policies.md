@@ -44,6 +44,115 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-global-policies/"
+    },
+    "headline": "Global Policies in HyperExecute",
+    "description": "Define a HyperExecute YAML rule once at the organization level and apply it automatically to every job across selected projects, without developers editing their YAML.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-global-policies/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The response tells the developer which policy blocked it, the offending value, and the fix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Your job was rejected by org policy \"cap-retries\":\nmaxRetries is 6 \u2014 the allowed maximum is 3. Fix: set maxRetries to 3 or lower.\n(error code: POLICY_REJECTED)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Policy routes sit under a /logistics path prefix on the HyperExecute API host",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://api.hyperexecute.cloud/logistics"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Authentication",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"<YOUR_USERNAME>:<YOUR_ACCESS_KEY>\" \\\n  -H \"Content-Type: application/json\" \\\n  \"https://api.hyperexecute.cloud/logistics/v1.0/policies?limit=5\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This example appends a result-logging command to every job in the organization, with a per-OS command list",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"name\": \"post-job-result-logging\",\n  \"parameter\": \"globalPost\",\n  \"mode\": \"append\",\n  \"value\": {\n    \"commands\": {\n      \"linux\": [\"curl -X POST https://internal.example.com/hyperexecute/results\"],\n      \"win\": [\"curl.exe -X POST https://internal.example.com/hyperexecute/results\"]\n    },\n    \"default\": \"linux\"\n  },\n  \"scope\": {\n    \"projects\": [\"*\"],\n    \"exclude\": []\n  },\n  \"enabled\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The response returns the created policy's generated id, which you use for every subsequent call",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"data\": {\n    \"id\": \"01KXE0W6EYAV3A9NYNNXPRHP8X\"\n  },\n  \"status\": \"success\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A checking policy adds a severity and drops the per-OS structure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"name\": \"cap-retries\",\n  \"parameter\": \"maxRetries\",\n  \"mode\": \"constrain\",\n  \"value\": { \"min\": 0, \"max\": 3 },\n  \"severity\": \"error\",\n  \"scope\": { \"projects\": [\"<project-id>\"] },\n  \"enabled\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "updatedBy is optional and records who made the change for the audit trail",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"enabled\": false,\n  \"updatedBy\": \"<your-name-or-service-account>\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Every HyperExecute job is configured by a [YAML file](/support/docs/deep-dive-into-hyperexecute-yaml/), and that file belongs to the team that owns it. So enforcing an organization-wide rule has traditionally meant asking every team to edit their own YAML, one team at a time.
 
 **Global Policies** let an organization admin define a rule once and have it govern every HyperExecute job across the projects they choose. The rule is applied when a job is submitted, so no developer has to touch their YAML.

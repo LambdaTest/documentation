@@ -49,6 +49,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-build-merging/"
+    },
+    "headline": "Build-Level Merging in SmartUI",
+    "description": "Learn how to effectively merge builds in SmartUI for granular control over your visual regression testing workflow.",
+    "url": "https://www.testmuai.com/support/docs/smartui-build-merging/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Build Merging",
+      "SmartUI Git",
+      "Visual Regression Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Merge Command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui merge build --source <source-build> --target <target-build>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Merge specific builds\nnpx smartui merge build --source build-123 --target build-456\n\n# Merge with status update\nnpx smartui merge build --source build-123 --target build-456"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Build Promotion Strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Merge staging build to production\nnpx smartui merge build --source staging-build-123 --target prod-build-456\n\n### 2. Feature Build Strategy\n\n**Scenario**: Managing feature-specific builds\n\n```bash\n# 1. Merge feature build into main build\nnpx smartui merge build --source feature-build-789 --target main-build-101\n\n### 3. Hotfix Build Strategy\n\n**Scenario**: Managing hotfix builds\n\n```bash\n# 1. Create hotfix build\nnpx smartui capture --name hotfix-build-202\n\n# 2. Merge into production build\nnpx smartui merge build --source hotfix-build-202 --target prod-build-456"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 :::info
 This guide explains how to effectively merge builds in SmartUI for granular control over your visual regression testing workflow.
 :::

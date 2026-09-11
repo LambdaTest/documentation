@@ -54,6 +54,271 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-selenium-python-sdk/"
+    },
+    "headline": "Integrate SmartUI SDK with Selenium-Python",
+    "description": "In this documentation, learn how integrate your Selenium Python automated tests with TestMu AI's SmartUI.",
+    "url": "https://www.testmuai.com/support/docs/smartui-selenium-python-sdk/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface and Selenium is required.; Login to TestMu AI SmartUI with your credentials.; Install virtualenv which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install virtualenv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Create/Update your test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/smartui-python-sample",
+        "text": "git clone https://github.com/LambdaTest/smartui-python-sample\ncd smartui-python-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Create/Update your test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "virtualenv venv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Create/Update your test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "source venv/bin/activate"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install lambdatest-selenium-driver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate the configuration file, please execute the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::info Advanced options in SmartUI configuration\n- For capturing fullpage or viewport screenshots, please refer to this [documentation](/docs/smartui-sdk-config-options/#12-viewports)\n- For the list of available mobile viewports, please refer to this [documentation](/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)\n- For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).\n:::\n\n### **Step 5:** Adding SmartUI function to take screenshot\n\n- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: \n\n```python\nfrom lambdatest_selenium_driver import smartui_snapshot\nfrom selenium import webdriver\n\ndriver = webdriver.Chrome()\ntry:\n    driver.get('<Required URL>')\n    smartui_snapshot(driver,\"<Screenshot Name>\")\nexcept Exception as err:\n    print(err)\nfinally: \n    driver.close()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute the Tests on SmartUI Cloud",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui exec python SmartUI_SDK_LT_hub.py --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Handling Dynamic Data in SmartUI SDK ****",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='IgoreClass' label='Ignore Class'>\n\n```python title=\"This is a sample for your configuration for Python to ignore by Class\"\noptions = {\n    \"ignoreDOM\": {\n        \"class\": [\"Class-1\", \"Class-2\"],\n    }\n}\ndriver.get('<Required URL>')\nsmartui_snapshot(driver,\"<Screenshot Name>\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value='IgnoreSelector' label='Ignore CSS Selector'>\n\n```python title=\"This is a sample for your configuration for Python to ignore by CSS Selector\"\noptions = {\n            \"ignoreDOM\": {\n                \"cssSelector\": [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\ndriver.get('<Required URL>')\nsmartui_snapshot(driver,\"<Screenshot Name>\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 15",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='SelectClass' label='Select Class'>\n\n```python title=\"This is a sample for your configuration for Python to select by Class\"\noptions = {\n    \"selectDOM\": {\n        \"class\": [\"Class-1\", \"Class-2\"],\n    }\n}\ndriver.get('<Required URL>')\nsmartui_snapshot(driver,\"<Screenshot Name>\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 16",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value='SelectSelector' label='Select CSS Selector'>\n\n```python title=\"This is a sample for your webhook configuration for Python to select by CSS Selector\"\noptions = {\n            \"selectDOM\": {\n                \"cssSelector\": [\"CSS-Selector-1\", \"CSS-Selector-2\"],\n            }\n        }\ndriver.get('<Required URL>')\nsmartui_snapshot(driver,\"<Screenshot Name>\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For capturing the screenshot of a specific element",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value='ElementClass' label='Capture Element by Class'>\n\n```python title=\"This is a sample for your configuration for Python to capture an element by Class\"\noptions = {\n    \"element\": {\n        \"class\": \"Required Class\",\n    }\n}\ndriver.get('<Required URL>')\nsmartui_snapshot(driver,\"<Screenshot Name>\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 18",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value='ElementSelector' label='Capture Element by Selector'>\n\n```python title=\"This is a sample for your webhook configuration for Python to capture an element by CSS Selector\"\noptions = {\n      \"element\": {\n          \"cssSelector\": \"Required CSS Selector\",\n      }\n  }\ndriver.get('<Required URL>')\nsmartui_snapshot(driver,\"<Screenshot Name>\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "finally",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Best Practices\n\n<Tabs className='docs__val' groupId='best-practices'>\n<TabItem value='screenshot-naming' label='Screenshot Naming' default>\n\n**Screenshot Naming**\n\n- Use descriptive, consistent names for screenshots\n- Include page/component name in screenshot names\n- Avoid special characters that might cause issues\n- Use consistent naming conventions across your test suite\n\n**Example:**\n```python\nsmartui_snapshot(driver, \"HomePage-Header\")\nsmartui_snapshot(driver, \"ProductPage-MainContent\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "from selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nfrom selenium.webdriver.common.by import By\n\ndriver.get('https://example.com')\nwait = WebDriverWait(driver, 10)\nwait.until(EC.presence_of_element_located((By.ID, 'main-content')))\nsmartui_snapshot(driver, \"Page Loaded\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SmartUI CLI is installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshots",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "   from selenium.webdriver.support.ui import WebDriverWait\n   from selenium.webdriver.support import expected_conditions as EC\n   from selenium.webdriver.common.by import By\n\n   wait = WebDriverWait(driver, 10)\n   wait.until(EC.presence_of_element_located((By.ID, 'content')))\n   wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '.main-content')))"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable JavaScript in configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"enableJavaScript\": true\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Try different port if default is in use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec -P 5000 -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check latest version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   pip index versions lambdatest-selenium-driver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear pip cache",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   pip cache purge"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Python version compatibility",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   python --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use virtual environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   python -m venv venv\n   source venv/bin/activate  # On Windows: venv\\Scripts\\activate\n   pip install lambdatest-selenium-driver"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Welcome to the world of simplified visual testing with the SmartUI SDK. 
 
 Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.

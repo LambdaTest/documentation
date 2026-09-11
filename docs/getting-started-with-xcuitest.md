@@ -48,6 +48,138 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/"
+    },
+    "headline": "XCUI Testing on TestMu AI",
+    "description": "Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-xcuitest/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "xcuitest",
+      "app test automation",
+      "testmu ai xcuitest"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Access to an iOS app (.ipa) and an XCUI Test app (.ipa file)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Executing The Test (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\": \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\":  [\"iPhone 11-14\"],\n  \"video\": true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\": \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"iPhone 15-17\\\"],\\\"video\\\":true,\\\"queueTimeout\\\":10800,\\\"idleTimeout\\\":150,\\\"devicelog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-XCUITest\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux / MacOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\": \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\":  [\"iPhone 11-14.0\"],\n  \"isVirtualDevice\": true,\n  \"video\": true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\": \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"iPhone 15-17.0\\\"],\\\"isVirtualDevice\\\":true,\\\"video\\\":true,\\\"queueTimeout\\\":10800,\\\"idleTimeout\\\":150,\\\"devicelog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-XCUITest\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests in Parallel (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\": \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\": [\"iPhone 11-14\",\"iPhone 12 Pro-15\",\"iPhone X-13\"],\n  \"video\": true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\": \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"iPhone 11-14\\\",\\\"iPhone 12 Pro-15\\\",\\\"iPhone X-13\\\"],\\\"video\\\":true,\\\"queueTimeout\\\":10800,\\\"idleTimeout\\\":150,\\\"devicelog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-XCUITest\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Linux / MacOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\": \"APP_ID\",\n  \"testSuite\": \"TEST_SUITE_ID\",\n  \"device\":  [\"iPhone 11-14.0\",\"iPhone 12 Pro-15.0\",\"iPhone X-13.0\"],\n  \"isVirtualDevice\": true,\n  \"video\": true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\": \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" ^\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" ^\n--header \"Content-Type: application/json\" ^\n--data \"{\\\"app\\\":\\\"APP_ID\\\",\\\"testSuite\\\":\\\"TEST_SUITE_ID\\\",\\\"device\\\":[\\\"iPhone 11-14.0\\\",\\\"iPhone 12 Pro-15.0\\\",\\\"iPhone X-13.0\\\"],\\\"video\\\":true,\\\"queueTimeout\\\":10800,\\\"isVirtualDevice\\\":true,\\\"idleTimeout\\\":150,\\\"devicelog\\\":true,\\\"network\\\":false,\\\"build\\\":\\\"Proverbial-XCUITest\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The xcuitest-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "xcuitest-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a XCUITest Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/xcuitest-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/xcuitest-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 5000+ real devices and OS combinations.
 

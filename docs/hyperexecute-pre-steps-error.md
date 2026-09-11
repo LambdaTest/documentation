@@ -42,6 +42,136 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-pre-steps-error/"
+    },
+    "headline": "Pre Steps Errors",
+    "description": "This document will help you debug your failed job if you are facing any errors in the pre-command stage.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-pre-steps-error/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Lambda Error",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pre:\n  - npx install playwright"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": ".Net Build Issue in C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "error : MSB4803: The task \"ResolveComReference\" is not supported on the .NET Core version of MSBuild"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Error in Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "There was a problem confirming the ssl certificate:\nHTTPSConnectionPool(host='http://pypi.org ', port=443):\nMax retries exceeded with url: /simple/selenium/\n(Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED]\ncertificate verify failed: self signed certificate in certificate chain\n(_ssl.c:1131)'))) - skipping"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Error in Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt --cache-dir\npip_cache --trusted-host http://pypi.org  --trusted-host http://pypi.python.org  --trusted-host files.pythonhosted.org\npip setuptools "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Error in Maven",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Registry Error",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pre:\n  - npm config set registry <artifactory_URL>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Incompatible Node Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "SyntaxError: Unexpected token '||='"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Incompatible Node Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "runtime:\n  language: node\n  version: \"15\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java version Conflict",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project My-Project: Fatal error compiling: invalid target release: 1.10 -> [Help 1]\norg.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project My-Project: Fatal error compiling"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java version Conflict",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "runtime:\n  language: java\n  version: \"11\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # How to Debug your Pre Steps Errors
 
 This document will help you debug your failed job if you are facing any errors in the pre-command stage.

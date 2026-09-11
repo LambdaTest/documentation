@@ -46,6 +46,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/network-whitelisting-and-tunnel-guide/"
+    },
+    "headline": "Network Whitelisting Guide",
+    "description": "Follow the instructions in this documentation, to understand the difference between the network and the ip whitelisting.",
+    "url": "https://www.testmuai.com/support/docs/network-whitelisting-and-tunnel-guide/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "Tunnel",
+      "Network",
+      "Whitelisting"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Allow TLS traffic on ports 80 and 443 for the following servers",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "stun-us-1.lambdatest.com  \nstun-us-2.lambdatest.com  \nstun-eu-1.lambdatest.com  \nstun-eu-2.lambdatest.com  \nstun-as-1.lambdatest.com  \nstun-ap-2.lambdatest.com  "
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 When testing private or restricted environments on <BrandName />, your team may need to configure network access controls. Depending on how your applications are hosted and secured, <BrandName /> supports multiple approaches **Inbound Whitelisting, Dedicated Proxy, Outbound Whitelisting, STUN/TURN Whitelisting, and Tunnel configurations (including Site-to-Site tunnels)**.
 
 > These are Inbound and Outbound with respect to user's network.

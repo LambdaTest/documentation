@@ -48,6 +48,110 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/jest-with-playwright/"
+    },
+    "headline": "Run your Jest test scripts with Playwright on TestMu AI",
+    "description": "Run your Jest scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/jest-with-playwright/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "jest playwright",
+      "jest automation testing",
+      "playwrightjest"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "codeRepository": "https://github.com/LambdaTest/playwright-sample",
+        "text": "git clone https://github.com/LambdaTest/playwright-sample.git\ncd playwright-sample\ncd playwright-jest-js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run your Playwright tests with Jest",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const cp = require('child_process');\nconst playwrightClientVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];\n\nconst caps_chromium = {\n  'browserName': 'pw-chromium', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n  'browserVersion': 'latest',\n  'LT:Options': {\n    'platform': 'Windows 10',\n    'build': 'Playwright-Jest Build',\n    'name': 'Playwright-Jest Test on Chromium',\n    'user': process.env.LT_USERNAME,\n    'accessKey': process.env.LT_ACCESS_KEY,\n    'network': true,\n    'video': true,\n    'console': true,\n    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n    'tunnelName': '', // Optional\n    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/\n    'playwrightClientVersion': playwrightClientVersion\n  }\n};\n\nconst caps_firefox = {\n  'browserName': 'pw-firefox', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n  'browserVersion': 'latest',\n  'LT:Options': {\n    'platform': 'Windows 10',\n    'build': 'Playwright-Jest Build ',\n    'name': 'Playwright-Jest Test on Firefox',\n    'user': process.env.LT_USERNAME,\n    'accessKey': process.env.LT_ACCESS_KEY,\n    'network': true,\n    'video': true,\n    'console': true,\n    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n    'tunnelName': '', // Optional\n    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/\n  }\n};\n\nconst caps_webkit = {\n  'browserName': 'pw-webkit', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n  'browserVersion': 'latest',\n  'LT:Options': {\n    'platform': 'Windows 10',\n    'build': 'Playwright-Jest Build',\n    'name': 'Playwright-Jest Test on WebKit',\n    'user': process.env.LT_USERNAME,\n    'accessKey': process.env.LT_ACCESS_KEY,\n    'network': true,\n    'video': true,\n    'console': true,\n    'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n    'tunnelName': '', // Optional\n    'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/\n  }\n};\n\nmodule.exports = {\n    connectOptions: {\n        chromium: {\n          wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_chromium))}`\n        },\n        firefox: {\n          wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_firefox))}`\n        },\n        webkit: {\n            wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(caps_webkit))}`\n        }\n      },\n      browsers: ['chromium', 'firefox', 'webkit'],\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "npm run test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The jest-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "jest-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Jest Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/jest-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/jest-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Jest with Playwright: Running Your First Test
 * * *
 

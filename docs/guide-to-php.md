@@ -44,7 +44,89 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
-<BrandName />'s cloud-based Selenium grid can be leveraged to run your automation test scripts on 3000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.testmuai.com/selenium-automation) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on <BrandName /> Selenium grid.
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid/"
+    },
+    "headline": "Running PHP Tests on Online Selenium Grid",
+    "description": "Guide to running PHP and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and PHP on 3000+ browsers on cloud",
+    "url": "https://www.testmuai.com/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI automation using php",
+      "php and Selenium automation",
+      "php documentation TestMu AI"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "First step is to install the latest PHP build. Latest MacOS systems come with PHP pre-installed, however for windows users and linux users, you can download PHP from here.; Next step is to install Composer. Open up terminal and navigate to the folder that have PHP installed. Run the following command.; If you are using XAMPP or MAMP, you may have to open up PHP shell by pressing the button shown in picture below:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\"\nphp -r \"if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;\"\nphp composer-setup.php\nphp -r \"unlink('composer-setup.php');\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For that, first create a composer.json file in your directory and add the following JSON code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"require\": {\n    \"phpunit/phpunit-selenium\": \"*\",\n    \"facebook/webdriver\": \"dev-master\"\n  } \n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP Sample Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "<?php\n \n/*\n    LambdaTest selenium automation sample example\n    Configuration\n    ----------\n    username: Username can be found at automation dashboard\n    accessToken:  AccessToken can be generated from automation dashboard or profile section\n \n    Result\n    -------\n    Execute PHP Automation Tests on LambdaTest Distributed Selenium Grid\n*/\n \nrequire 'vendor/autoload.php';\n \nclass LambdaTest{\n \n  /*\n      Setup remote driver\n      Params\n      ----------\n      platform : Supported platform - (Windows 10, Windows 8.1, Windows 8, Windows 7, macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)\n      browserName : Supported platform - (chrome, firefox, Internet Explorer, MicrosoftEdge, Safari)\n      version :  Supported list of version can be found at https://www.testmuai.com/capabilities-generator/\n  */\n  protected static $driver;\n \n  public function searchTextOnGoogle() {\n    # username: Username can be found at automation dashboard      \n    $LT_USERNAME = \"{YOUR_LAMBDATEST_USERNAME}\";\n     \n    # accessKey:  AccessKey can be generated from automation dashboard or profile section\n    $LT_APPKEY = \"{YOUR_LAMBDATEST_ACCESS_KEY}\";\n \n    $LT_BROWSER = \"chrome\";\n    $LT_BROWSER_VERSION =\"63.0\";\n    $LT_PLATFORM = \"windows 10\";\n     \n    # URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub\n    $url = \"https://\". $LT_USERNAME .\":\" . $LT_APPKEY .\"@hub.lambdatest.com/wd/hub\";       \n     \n    # setting desired capabilities for the test\n    $desired_capabilities = new DesiredCapabilities();\n        $desired_capabilities->setCapability('browserName',$LT_BROWSER);\n        $desired_capabilities->setCapability('version', $LT_BROWSER_VERSION);\n        $desired_capabilities->setCapability('platform', $LT_PLATFORM);\n        $desired_capabilities->setCapability('name', \"Php\");\n        $desired_capabilities->setCapability('build', \"Php Build\");\n        $desired_capabilities->setCapability('network', true);\n        $desired_capabilities->setCapability('visual', true);\n        $desired_capabilities->setCapability('video ', true);\n        $desired_capabilities->setCapability('console', true);\n     \n    /*\n        Setup remote driver\n        Params\n        ----------\n        Execute test:  navigate google.com search LambdaTest\n        Result\n        -------\n        print title\n    */\n        self::$driver = RemoteWebDriver::create($url, $desired_capabilities);      \n                 \n    self::$driver->get(\"https://www.google.com/ncr\");\n \n        $element = self::$driver->findElement(WebDriverBy::name(\"q\"));\n    if($element) {\n      $element->sendKeys(\"LambdaTest\");\n      $element->submit();\n    }\n     \n    print self::$driver->getTitle();\n    self::$driver->quit();\n  }    \n}\n \n$lambdaTest = new LambdaTest();\n$lambdaTest->searchTextOnGoogle(); \n \n?>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
+<BrandName />'s cloud-based Selenium grid can be leveraged to run your automation test scripts on 3000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.testmuai.com/selenium-automation/) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on <BrandName /> Selenium grid.
 
 ## Prerequisites
 ***

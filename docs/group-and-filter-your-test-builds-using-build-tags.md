@@ -42,6 +42,80 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/group-and-filter-your-test-builds-using-build-tags/"
+    },
+    "headline": "Group and Filter Your Test Builds Using Build Tags",
+    "description": "Create build tags in desired capabilities to group and filter test builds on the automation dashboard.",
+    "url": "https://www.testmuai.com/support/docs/group-and-filter-your-test-builds-using-build-tags/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "create build tags selenium",
+      "filter test builds by tag",
+      "group automation builds"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Follow the below steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "    // For example, when you have only 1 tag\n    String[] buildTagList = {\"Build Tag\"};\n\n    // For example, when you have multiple tags\n    String[] buildTagList = {\"Tag 1\", \"Tag 2\", \"Tag 3\", ...};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Create Build Tags",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "    // Creating the Build Tags\n    String[] buildTagList = {\"Tag1\", \"Tag2\", \"Tag3\", \"BuildTagRishabh\"};\n\n    DesiredCapabilities caps = new DesiredCapabilities();\n    caps.setCapability(\"browser\", \"Safari\");\n    caps.setCapability(\"version\", \"13\");\n    caps.setCapability(\"platform\", \"macos Catalina\");\n    caps.setCapability(\"build\", \"Build Tags Demo\");\n    caps.setCapability(\"name\", \"Sample Test\");\n\n    // To create custom tags\n    caps.setCapability(\"buildTags\", buildTagList); \n\n    System.out.println(\"Desired Caps: \" + caps);\n    driver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 * * *
 
 With TestMu AI, you can group your test builds with Build tags. This document shows how to create Build tags and use them to group or filter your test builds on the TestMu AI Automation Dashboard.

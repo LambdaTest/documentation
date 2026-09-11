@@ -46,6 +46,108 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-java-sdk/"
+    },
+    "headline": "TestMu AI Selenium Java SDK - Zero Code Changes",
+    "description": "Run Selenium TestNG tests on TestMu AI cloud grid with zero code changes using YAML config and Maven.",
+    "url": "https://www.testmuai.com/support/docs/selenium-java-sdk/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "selenium java sdk zero code changes",
+      "testmu ai java sdk setup",
+      "selenium cloud grid java maven"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure the agent to start automatically during your build process",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<dependencies>\n  ....\n    <dependency>\n        <groupId>io.github.lambdatest<\/groupId>\n        <artifactId>lambdatest-selenium-java-sdk<\/artifactId>\n        <version>1.0.1<\/version>\n    <\/dependency>\n<\/dependencies>\n\n<build>\n   ....\n    <plugins>\n        <plugin>\n            <artifactId>maven-compiler-plugin<\/artifactId>\n            <version>3.7.0<\/version>\n            <configuration>\n                <release>10<\/release>\n            <\/configuration>\n        <\/plugin>\n\n        <plugin>\n            <artifactId>maven-dependency-plugin<\/artifactId>\n            <executions>\n                <execution>\n                    <id>getClasspathFilenames<\/id>\n                    <goals>\n                        <goal>properties<\/goal>\n                    <\/goals>\n                <\/execution>\n                <execution>\n                    <id>copy-lambdatest-agent<\/id>\n                    <phase>generate-test-resources<\/phase>\n                    <goals>\n                        <goal>copy<\/goal>\n                    <\/goals>\n                    <configuration>\n                        <artifactItems>\n                            <artifactItem>\n                                <groupId>io.github.lambdatest<\/groupId>\n                                <artifactId>lambdatest-selenium-java-sdk<\/artifactId>\n                                <version>1.0.1<\/version>\n                                <destFileName>lambdatest-agent.jar<\/destFileName>\n                                <outputDirectory>${project.build.directory}/agents<\/outputDirectory>\n                            <\/artifactItem>\n                        <\/artifactItems>\n                    <\/configuration>\n                <\/execution>\n            <\/executions>\n        <\/plugin>\n\n        <plugin>\n            <groupId>org.apache.maven.plugins<\/groupId>\n            <artifactId>maven-surefire-plugin<\/artifactId>\n            <version>2.19.1<\/version>\n            <executions>\n                <execution>\n                    <goals>\n                        <goal>test<\/goal>\n                    <\/goals>\n                <\/execution>\n            <\/executions>\n            <configuration>\n                <suiteXmlFiles>\n                    <suiteXmlFile>${suite}<\/suiteXmlFile>\n                <\/suiteXmlFiles>\n                <argLine>\n                    -javaagent:${project.build.directory}/agents/lambdatest-agent.jar\n                <\/argLine>\n            <\/configuration>\n        <\/plugin>\n    <\/plugins>   \n<\/build>\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a lambdatest.yml file in your project root directory with your TestMu AI credentials and desired capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "# TestMu AI Configuration File for Tests\n# This file is loaded automatically by the TestMu AI SDK\n\nusername: YOUR_LAMBDATEST_USERNAME\naccesskey: YOUR_LAMBDATEST_ACCESS_KEY\n\nplatforms:\n  - browserName: Chrome\n    browserVersion: latest\n    platformName: Windows 10\n\n# Test metadata\nbuild: SDK Build Classes Methods v1\nproject: SDK Project\nname: SDK Test\n\n# TestMu AI features\nvideo: true\nnetwork: false\nconsole: true\nvisual: false\n\n# Advanced capabilities (optional)\nresolution: 1920x1080\ntunnel: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also use environment variables in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "username: ${LT_USERNAME}\naccesskey: ${LT_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the TestMu AI status listener to your TestNG configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<suite name=\"LambdaTest Suite\">\n    <listeners>\n         <listener class-name=\"com.lambdatest.selenium.testng.TestNgTestListener\"/>\n    <\/listeners>\n\n    <test name=\"My Tests\">\n        <classes>\n            <class name=\"com.example.MyTest\"/>\n        <\/classes>\n    <\/test>\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The SDK fully supports parallel test execution with TestNG",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "XML",
+        "text": "<suite name=\"Parallel Suite\" parallel=\"tests\" thread-count=\"5\">\n    <test name=\"Chrome Test\">\n        <parameter name=\"browser\" value=\"chrome\"/>\n        <classes>\n            <class name=\"com.example.Test1\"/>\n        <\/classes>\n    <\/test>\n    <test name=\"Firefox Test\">\n        <parameter name=\"browser\" value=\"firefox\"/>\n        <classes>\n            <class name=\"com.example.Test1\"/>\n        <\/classes>\n    <\/test>\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import org.openqa.selenium.By;\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.chrome.ChromeOptions;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.annotations.AfterMethod;\nimport org.testng.annotations.BeforeMethod;\nimport org.testng.annotations.Test;\nimport java.net.URL;\n\npublic class BasicTest {\n    WebDriver driver;\n\n    @BeforeMethod\n    public void setup() throws Exception {\n        ChromeOptions options = new ChromeOptions();\n        options.setCapability(\"platformName\", \"Windows 10\");\n        options.setCapability(\"browserVersion\", \"latest\");\n\n        // SDK automatically injects TestMu AI capabilities from lambdatest.yml\n        driver = new RemoteWebDriver(\n            new URL(\"https://hub.lambdatest.com/wd/hub\"),\n            options\n        );\n    }\n\n    @Test\n    public void testExample() {\n        driver.get(\"https://www.lambdatest.com\");\n        String title = driver.getTitle();\n        System.out.println(\"Page title: \" + title);\n        assert title.contains(\"LambdaTest\");\n    }\n\n    @AfterMethod\n    public void teardown() {\n        if (driver != null) {\n            driver.quit();\n        }\n    }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # TestMu AI Selenium Java SDK
 
 ---

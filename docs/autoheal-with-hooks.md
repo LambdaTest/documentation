@@ -45,6 +45,80 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/autoheal-with-hooks/"
+    },
+    "headline": "How to Use AutoHeal Using Hooks",
+    "description": "Enable and disable AutoHeal at any point in your Selenium test script using hooks for precise control.",
+    "url": "https://www.testmuai.com/support/docs/autoheal-with-hooks/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "autoheal selenium hooks enable disable",
+      "auto healing dynamic element changes",
+      "selenium self-healing hooks control"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable AutoHeal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute_script('lambdatest_executor:{\"action\":\"lambda-heal-start\"}')"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Disable AutoHeal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute_script('lambdatest_executor:{\"action\":\"lambda-heal-stop\"}')"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Autoheal automatically handles dynamic element changes during Selenium test execution. This is especially useful for tests where elements' IDs, XPaths, or attributes may change between runs. Autoheal ensures your tests are more resilient and reduces flakiness.
 
 Autoheal can be started or stopped at any point in your test script using hooks. This allows for precise control over when your tests should attempt element healing. This guide explains how to enable and disable Autoheal in your Selenium scripts using the TestMu AI hooks.

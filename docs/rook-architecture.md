@@ -1,5 +1,6 @@
 ---
 id: rook-architecture
+toc_max_heading_level: 2
 title: Rook Architecture and Data Flow
 hide_title: false
 sidebar_label: Architecture
@@ -14,6 +15,80 @@ site_name: TestMu AI
 slug: rook-architecture/
 canonical: https://www.testmuai.com/support/docs/rook-architecture/
 ---
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-architecture/"
+    },
+    "headline": "Rook Architecture and Data Flow",
+    "description": "Understand the boundary between the local Rook CLI, the stateless controller, the stateful Rook API, and the cloud results UI.",
+    "url": "https://www.testmuai.com/support/docs/rook-architecture/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook architecture",
+      "rook controller",
+      "rook api"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local Invocation Path",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "scenario goal\n    \u2193 standard input\nprofile execute hook\n    \u2193 real invocation\nagent under test\n    \u2193 JSON on standard output\nreply \u00b7 conversation \u00b7 usage \u00b7 calls \u00b7 custom evidence\n    \u2193\nlocal run directory"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local State Is the Record",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "local project tree \u2500\u2500 rook sync \u2500\u2500\u25b6 Rook API \u2500\u2500\u25b6 cloud UI\nlocal run evidence \u2500\u2500 run sync \u2500\u2500\u2500\u25b6 Rook API \u2500\u2500\u25b6 reports and comparison"
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 
 # Rook Architecture and Data Flow
 

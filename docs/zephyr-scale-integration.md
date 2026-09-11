@@ -44,6 +44,88 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/zephyr-scale-integration/"
+    },
+    "headline": "Zephyr Scale Integration",
+    "description": "Integrate Zephyr Scale with TestMu AI to perform automated browser testing, and view test results directly from the TestMu AI platform to your Zephyr Scale instance.",
+    "url": "https://www.testmuai.com/support/docs/zephyr-scale-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai zephyr scale integration",
+      "integrate testmu ai zephyr scale",
+      "testmu ai integration with zephyr scale"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating TestMu AI with Zephyr Scale",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "codeRepository": "https://github.com/LambdaTest/junit-selenium-zephyr-scale-sample",
+        "text": "git clone https://github.com/LambdaTest/junit-selenium-zephyr-scale-sample\ncd junit-selenium-zephyr-scale-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating TestMu AI with Zephyr Scale",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "public class PostTestResults {\n\n    public void callApi() {\n\n        String fileName = \"TEST-com.lambdatest.JUnitTodo.xml\" ; //provide the file name of the test results\n        String filePath = \"target/surefire-reports/TEST-com.lambdatest.JUnitTodo.xml\"; //provide the file path of the test result file\n        String projectKey = \"ZD\"; //provide the Jira project key \n        String token = \"abcdefghijklmnop123456\"; // provide Zephyr Scale access token"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::info Important\nYou need to invoke `method.callApi()` from the PostTestResults class in the `@After` hook of `JUnitTodo.java` file.\n:::\n\n## Running your Automation tests with <BrandName /> and Zephyr Scale\n---\n\nTo run the test, pass the below command in the terminal.\n\n```js\nmvn test -P single"
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 # Zephyr Scale Integration
 ---
 

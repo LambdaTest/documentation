@@ -51,6 +51,130 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/drone-ci-integration-with-testmu/"
+    },
+    "headline": "How to integrate Drone CI with TestMu AI",
+    "description": "This document will help you understand how you can integrate your Drone CI pipeline with cloud Selenium Grid for continuous testing.",
+    "url": "https://www.testmuai.com/support/docs/drone-ci-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "lamdatest",
+      "drone ci",
+      "drone testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A Git or GitHub repository on which you want to activate the CI pipeline; You need to download and install node.js and node package manager or npm. Use the below command to install node.js with homebrew.; If already installed, update it to the latest version, using the below command..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Some Global Dependencies, such as",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ brew install node"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For this, make a YAML configuration file as see shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "kind: pipeline\nname: Build\n\ntrigger:\n  event:\n  - push\n\nsteps: \n- name: Tunnel\n  image: lambdatest/tunnel\n  environment:\n    PASSWORD:\n      from_secret: LT_ACCESS_KEY\n    USERNAME:\n      from_secret: LT_USERNAME\n  commands:\n  - ls\n  - apt-get update && \\\n  - apt-get upgrade -y && \\\n  - apt-get install -y wget unzip\n  - wget https://downloads.lambdatest.com/tunnel/alpha/linux/64bit/LT_Linux.zip && \\ \n  - unzip LT_Linux.zip && \\\n  - rm LT_Linux.zip && \\\n  - chmod +x /LT\n  - ls\n  - /LT -user $USERNAME -key $PASSWORD &\n  \n- name: Test\n  image: node\n  environment:\n    PASSWORD:\n      from_secret: LT_ACCESS_KEY\n    USERNAME:\n      from_secret: LT_USERNAME\n  commands:\n  - export LT_USERNAME=$USERNAME\n  - export LT_ACCESS_KEY=$PASSWORD\n  - npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "kind: pipeline\nname: Build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "trigger:\n  event:\n  - push"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "- name: Tunnel\n  image: lambdatest/tunnel\n  environment:\n    PASSWORD:\n      from_secret: LT_ACCESS_KEY\n    USERNAME:\n      from_secret: LT_USERNAME\n  commands:\n  - ls\n  - apt-get update && \\\n  - apt-get upgrade -y && \\\n  - apt-get install -y wget unzip\n  - wget https://downloads.lambdatest.com/tunnel/alpha/linux/64bit/LT_Linux.zip && \\ \n  - unzip LT_Linux.zip && \\\n  - rm LT_Linux.zip && \\\n  - chmod +x /LT\n  - ls\n  - /LT -user $USERNAME -key $PASSWORD &"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "- name: SampleTest\n  image: node\n  environment:\n    PASSWORD:\n      from_secret: LT_ACCESS_KEY\n    USERNAME:\n      from_secret: LT_USERNAME\n  commands:\n  - export LT_USERNAME=$USERNAME\n  - export LT_ACCESS_KEY=$PASSWORD\n  - npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "- name: upload\n  image: plugins/s3\n  settings:\n    bucket: lambda-devops-use-only\n    region: us-east-1\n    access_key:\n      from_secret: aws_access_key_id\n    secret_key:\n      from_secret: aws_secret_access_key\n    source: mobile-node-remote-client\n    target: /magicleap/LMRC/latest/\n    acl: public-read"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Hence the series of steps to be executed will be",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "clone:\n    disable:  true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm test"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Drone CI Integration with <BrandName />
 
 Drone CI is one of the most popular modern open-source CI/CD tools. It not only provides a continuous integration with your projects but also provides a distributed CI/CD pipeline, which is not possible with some other tools like Jenkins. So Drone is the first choice for many teams as it is a purely distributed, cloud-native, DevOps friendly, team-oriented, and highly scalable open-source CI/CD tool.

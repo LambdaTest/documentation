@@ -46,6 +46,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/zipboard-integration/"
+    },
+    "headline": "zipBoard Integration",
+    "description": "This document will help you integrate TestMu AI with zipBoard. That way, you can log bugs to your zipBoard project in a single click as you perform cross browser testing with TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/zipboard-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "push issues to zipboard",
+      "check browser compatibility online"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 ZipBoard is a visual feedback and bug tracking tool designed to streamline collaboration across teams during the web development process. By integrating <BrandName /> with ZipBoard, teams can enhance their testing workflows, enabling seamless communication between developers, testers, and stakeholders.
 
 This integration allows you to capture real-time feedback and track issues directly within your test environments on <BrandName />'s cloud platform, ensuring faster bug resolution and better product quality. In this documentation, we'll guide you through the steps to integrate ZipBoard with <BrandName /> and optimize your test management workflow.

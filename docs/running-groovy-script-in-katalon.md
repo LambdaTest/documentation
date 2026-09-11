@@ -51,6 +51,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/"
+    },
+    "headline": "How to Run Groovy Script In Katalon With TestMu AI Selenium Grid?",
+    "description": "Run your Groovy script in Katalon with TestMu AI Selenium Grid. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "Katalon Groovy Script",
+      "Running Groovy Script",
+      "Groovy Script In Katalon"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Groovy Script In Katalon With TestMu AI Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint\nimport static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase\nimport static com.kms.katalon.core.testdata.TestDataFactory.findTestData\nimport static com.kms.katalon.core.testobject.ObjectRepository.findTestObject\n\nimport com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint\nimport com.kms.katalon.core.model.FailureHandling as FailureHandling\nimport com.kms.katalon.core.testcase.TestCase as TestCase\nimport com.kms.katalon.core.testdata.TestData as TestData\nimport com.kms.katalon.core.testobject.TestObject as TestObject\n\nimport com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS\nimport com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI\nimport com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile\n\nimport com.kms.katalon.core.annotation.BeforeTestCase\nimport com.kms.katalon.core.annotation.BeforeTestSuite\nimport com.kms.katalon.core.annotation.TearDown\nimport com.kms.katalon.core.annotation.AfterTestCase\nimport com.kms.katalon.core.annotation.AfterTestSuite\nimport com.kms.katalon.core.context.TestCaseContext\nimport com.kms.katalon.core.context.TestSuiteContext\n\nimport com.kms.katalon.core.webui.driver.ExistingRemoteWebDriver\n\nimport com.kms.katalon.core.configuration.RunConfiguration\n\nclass LambdaListener {\n\n\tTestSuiteContext suiteContext;\n\n\t/**\n\t * Executes before every test case starts.\n\t * @param testCaseContext related information of the executed test case.\n\t */\n\t@BeforeTestCase\n\tdef sampleBeforeTestCase(TestCaseContext testCaseContext) {\n\t\t\n\t\t\n\t\t//To set the test name at LambdaTest.\n\t\tRunConfiguration.setDriverPreferencesProperty(\"Remote\", \"name\", testCaseContext.getTestCaseId());\n\t\tif (suiteContext != null){\n\t\t\tRunConfiguration.setDriverPreferencesProperty(\"Remote\",\"build\", suiteContext.getTestSuiteId());\n\t\t}\n\t\tprintln testCaseContext.getTestCaseId();\n\t\tprintln RunConfiguration.getDriverPreferencesProperties();\n\t}\n\t/**\n\t * Executes after every test case ends.\n\t * @param testCaseContext related information of the executed test case.\n\t */\n\t@com.kms.katalon.core.annotation.TearDown\n\t@AfterTestCase\n\tdef sampleAfterTestCase(TestCaseContext testCaseContext) {\n\t\t//To set the status of test at LambdaTest.\n\t\tString result=\"failed\";\n\t\tif(testCaseContext.getTestCaseStatus().equalsIgnoreCase(\"PASSED\")){\n\t\t\tresult=\"passed\"\n\t\t}\n\t\ttry{\n\t\t\tWebUI.executeJavaScript(\"lambda-status=\"+result,null)\n\t\t}catch (Exception e)\n\t\t{\n\t\t\tprintln e.toString()\n\t\t}\n\t\tfinally {\n\t\t\tWebUI.closeBrowser()\n\t\t}\n\t\tprintln testCaseContext.getTestCaseId()\n\t\tprintln testCaseContext.getTestCaseStatus()\n\t}\n\n\t/**\n\t * Executes before every test suite starts.\n\t * @param testSuiteContext: related information of the executed test suite.\n\t */\n\t@BeforeTestSuite\n\tdef sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {\n\t\tsuiteContext=testSuiteContext\n\t\t//To Set the build Name at LambdaTest.\n\t\tRunConfiguration.setDriverPreferencesProperty(\"Remote\",\"build\", suiteContext.getTestSuiteId());\n\t\tprintln testSuiteContext.getTestSuiteId()\n\t}\n\n\t/**\n\t * Executes after every test suite ends.\n\t * @param testSuiteContext: related information of the executed test suite.\n\t */\n\t@AfterTestSuite\n\tdef sampleAfterTestSuite(TestSuiteContext testSuiteContext) {\n\t\tprintln testSuiteContext.getTestSuiteId()\n\t}\n}"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 # Running Groovy Script In Katalon With <BrandName /> Selenium Grid
 * * *
 As you perform testing with Katalon Studio, you can write or edit test automation scripts in the **Script mode** using Groovy programming language. This tutorial will help you run your Groovy script in Katalon with <BrandName /> Selenium Grid.

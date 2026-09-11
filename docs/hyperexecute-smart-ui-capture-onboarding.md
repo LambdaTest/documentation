@@ -49,6 +49,397 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/"
+    },
+    "headline": "SmartUI Capture Onboarding with HyperExecute",
+    "description": "Complete step-by-step guide to get started with SmartUI Capture on HyperExecute for visual regression testing. Learn setup, configuration, best practices, and troubleshooting.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-capture-onboarding/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "smart ui capture hyperexecute",
+      "smartui capture onboarding",
+      "visual regression testing hyperexecute"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Node.js v20.3 or higher (required for SmartUI CLI v4.x.x); npm or yarn package manager; TestMu AI account with active subscription; HyperExecute CLI installed (Download Guide); Basic understanding of:; Command Line Interface (CLI); YAML configuration files; JSON file structure; Visual regression testing concepts.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's the recommended structure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "smartui-capture-project/\n\u251c\u2500\u2500 config.json              # SmartUI configuration\n\u251c\u2500\u2500 urlTest.json             # Test environment URLs\n\u251c\u2500\u2500 urlProd.json             # Production environment URLs\n\u251c\u2500\u2500 test/                    # Optional: Split test URLs\n\u2502   \u251c\u2500\u2500 urls_test_1.json\n\u2502   \u251c\u2500\u2500 urls_test_2.json\n\u2502   \u2514\u2500\u2500 ...\n\u251c\u2500\u2500 prod/                    # Optional: Split production URLs\n\u2502   \u251c\u2500\u2500 urls_prod_1.json\n\u2502   \u251c\u2500\u2500 urls_prod_2.json\n\u2502   \u2514\u2500\u2500 ...\n\u251c\u2500\u2500 hyperexecute.yaml        # HyperExecute configuration\n\u2514\u2500\u2500 package.json             # Node.js dependencies"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you're starting fresh, initialize a new Node.js project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mkdir smartui-capture-project\ncd smartui-capture-project\nnpm init -y"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Global Installation (Recommended)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli@4.1.54-beta.0"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local Installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli@4.1.54-beta.0"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also clone the sample repository to get started quickly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/smartui-playwright-sample",
+        "text": "git clone https://github.com/LambdaTest/smartui-playwright-sample\ncd smartui-playwright-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set HyperExecute Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nexport LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set HyperExecute Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nset LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set HyperExecute Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\n$env:LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can generate a sample URL file using the SmartUI CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create-web-static urls.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Manual URL File Creation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### URL File Structure\n\nEach URL object supports the following properties:\n\n| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `name` | string | Yes | Unique identifier for the screenshot (used in SmartUI dashboard) |\n| `url` | string | Yes | The URL to capture |\n| `waitForTimeout` | number | No | Wait time in milliseconds before capturing (useful for lazy-loaded content) |\n\n:::caution Wait Timeout Best Practices\n- Use `waitForTimeout` only when necessary (e.g., for lazy-loaded components or async content)\n- Higher timeout values increase test execution time\n- Start with lower values (1000-3000ms) and increase if needed\n- Consider using `execute` options for more complex interactions\n:::\n\n### Splitting URLs for Parallel Execution\n\nFor large test suites, you can split URLs into multiple files for better parallel execution:\n\n```json title=\"test/urls_test_1.json\"\n[\n    {\n        \"name\": \"product_category_feature_a\",\n        \"url\": \"https://test.example.com/product-category/feature-a/\",\n        \"waitForTimeout\": 5000\n    },\n    {\n        \"name\": \"product_category_feature_b\",\n        \"url\": \"https://test.example.com/product-category/feature-b/\",\n        \"waitForTimeout\": 5000\n    }\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Generate Configuration File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create config.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 15",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Configuration Options Explained\n\n#### Web Configuration\n\n- **browsers**: Array of browser names (`\"chrome\"`, `\"firefox\"`, `\"safari\"`, `\"edge\"`)\n- **viewports**: Array of viewport sizes\n  - `[1367]` - Full page screenshot at 1367px width\n  - `[1920, 1080]` - Viewport screenshot at 1920x1080\n\n#### Mobile Configuration\n\n- **devices**: Array of device names (e.g., `\"iPhone 14\"`, `\"Galaxy S24\"`, `\"Pixel 8\"`)\n- **orientation**: `\"portrait\"` or `\"landscape\"`\n- **fullPage**: `true` by default for mobile\n\n#### Lazy Loading Configuration\n\n- **enabled**: Enable lazy loading detection\n- **jumpBackToTop**: Scroll back to top after capturing\n- **scrollDelay**: Delay between scroll steps (milliseconds)\n- **scrollStep**: Pixels to scroll per step\n\n:::info Advanced Configuration\nFor more configuration options, refer to the [SmartUI SDK Config Options](/support/docs/smartui-sdk-config-options/) documentation.\n:::\n\n## Step 7: Create HyperExecute YAML Configuration\n\nCreate a `hyperexecute.yaml` file to configure HyperExecute execution settings.\n\n### Basic HyperExecute YAML\n\n```yaml title=\"hyperexecute.yaml\"\n---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: win\n\nretryOnFailure: true\nmaxRetries: 1\n\nconcurrency: 1\n\nenv:\n  CACHE_DIR: node_modules_cache\n  PROJECT_TOKEN: ${PROJECT_TOKEN}\n\n# Dependency caching\ncacheKey: '{{ checksum \"package.json\" }}'\ncacheDirectories:\n  - ${CACHE_DIR}\n\npre:\n  # Install SmartUI CLI and dependencies\n  - npm install @lambdatest/smartui-cli@4.1.54-beta.0\n  - npm install playwright@1.57.0\n  - npx playwright install\n\ntestSuites:\n  - npx smartui capture urlTest.json --config config.json --buildName \"Test-Release-v1.0\"\n\njobLabel: ['HYP', 'SmartUI', 'Capture']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testSuites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### HyperExecute YAML Parameters\n\n| Parameter | Description | Example |\n|-----------|-------------|---------|\n| `version` | YAML schema version | `0.1` |\n| `globalTimeout` | Maximum time for entire job (minutes) | `150` |\n| `testSuiteTimeout` | Maximum time per test suite (minutes) | `150` |\n| `runson` | Operating system (`win`, `mac`, `linux`) | `win` |\n| `concurrency` | Number of parallel test executions | `3` |\n| `retryOnFailure` | Retry failed tests | `true` |\n| `maxRetries` | Maximum retry attempts | `1` |\n| `pre` | Commands to run before test execution | Installation commands |\n| `testSuites` | Test commands to execute | SmartUI capture commands |\n| `matrix` | Matrix for parallel execution | Multiple URL files |\n\n:::info HyperExecute YAML Documentation\nFor detailed YAML configuration options, refer to the [HyperExecute YAML Documentation](/support/docs/hyperexecute-yaml-version0.2/).\n:::\n\n## Step 8: Execute Tests on HyperExecute\n\n### Download HyperExecute CLI\n\nDownload the HyperExecute CLI for your operating system:\n\n| Platform | Download Link |\n|----------|--------------|\n| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |\n| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |\n| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |\n\n### Set Execute Permissions (MacOS/Linux)\n\n```bash\nchmod u+x ./hyperexecute"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Execute your tests using the HyperExecute CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config hyperexecute.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or with explicit credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME} --key ${YOUR_LAMBDATEST_ACCESS_KEY} --config hyperexecute.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can enhance your capture commands with additional options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# With custom build name\nnpx smartui capture urlTest.json --config config.json --buildName \"Release-v1.0\"\n\n# With results export\nnpx smartui capture urlTest.json --config config.json --fetch-results results.json\n\n# With parallel execution\nnpx smartui capture urlTest.json --config config.json --parallel 3\n\n# Combined options\nnpx smartui capture urlTest.json --config config.json --buildName \"Release-v1.0\" --fetch-results results.json --parallel 3"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Export Results JSON",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui capture urlTest.json --config config.json --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Export Results JSON",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config config.json exec --fetch-results results.json -- <execution-command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also fetch results using the Fetch Build Screenshots API endpoint",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "GET /build/screenshots?project_id=YOUR_PROJECT_ID&build_id=YOUR_BUILD_ID"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For projects with many URLs, split them into multiple files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "test/\n  \u251c\u2500\u2500 urls_test_1.json  (10 URLs)\n  \u251c\u2500\u2500 urls_test_2.json  (10 URLs)\n  \u2514\u2500\u2500 urls_test_3.json  (10 URLs)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use clear, descriptive names for your URLs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"name\": \"product_category_feature_a\",\n  \"url\": \"https://example.com/product-category/feature-a/\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Organize your URLs into logical groups",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "project/\n\u251c\u2500\u2500 sections/\n\u2502   \u251c\u2500\u2500 section1_category_a.json    (200 URLs)\n\u2502   \u251c\u2500\u2500 section2_category_b.json    (200 URLs)\n\u2502   \u251c\u2500\u2500 section3_category_c.json     (200 URLs)\n\u2502   \u251c\u2500\u2500 section4_category_d.json     (200 URLs)\n\u2502   \u2514\u2500\u2500 section5_category_e.json    (200 URLs)\n\u251c\u2500\u2500 config.json\n\u2514\u2500\u2500 hyperexecute.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testSuites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Step 3: Use Branching for Organization**\n\nEach section can run in its own branch or use build names to group:\n\n```bash\n# Option A: Use Smart Git with branches\nexport SMART_GIT=true\ngit checkout -b section1-category-a\nnpx smartui capture sections/section1_category_a.json --config config.json --buildName \"Section1-CategoryA\"\n\n# Option B: Use build names for grouping (single branch)\nnpx smartui capture sections/section1_category_a.json --config config.json --buildName \"Section1-CategoryA-Build\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a SmartUI project for each section",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "project/\n\u251c\u2500\u2500 category_a/\n\u2502   \u251c\u2500\u2500 urls_category_a.json\n\u2502   \u251c\u2500\u2500 config.json\n\u2502   \u2514\u2500\u2500 hyperexecute_category_a.yaml\n\u251c\u2500\u2500 category_b/\n\u2502   \u251c\u2500\u2500 urls_category_b.json\n\u2502   \u251c\u2500\u2500 config.json\n\u2502   \u2514\u2500\u2500 hyperexecute_category_b.yaml\n\u2514\u2500\u2500 category_c/\n    \u251c\u2500\u2500 urls_category_c.json\n    \u251c\u2500\u2500 config.json\n    \u2514\u2500\u2500 hyperexecute_category_c.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testSuites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Step 4: Execute Projects Independently**\n\nRun each project separately or in parallel:\n\n```bash\n# Execute category A project\ncd category_a\nexport PROJECT_TOKEN=\"${PROJECT_TOKEN_CATEGORY_A}\"\n./hyperexecute --config hyperexecute_category_a.yaml\n\n# Execute category B project\ncd ../category_b\nexport PROJECT_TOKEN=\"${PROJECT_TOKEN_CATEGORY_B}\"\n./hyperexecute --config hyperexecute_category_b.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also combine both strategies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Production Project - Category A Section\nexport PROJECT_TOKEN=\"${PROJECT_TOKEN_PROD}\"\nexport SMART_GIT=true\ngit checkout -b production-category-a\nnpx smartui capture sections/category_a_prod.json --config config.json\n\n# Staging Project - Category A Section  \nexport PROJECT_TOKEN=\"${PROJECT_TOKEN_STAGING}\"\nexport SMART_GIT=true\ngit checkout -b staging-category-a\nnpx smartui capture sections/category_a_staging.json --config config.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Only test browsers that your users actually use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"web\": {\n    \"browsers\": [\"chrome\", \"safari\", \"firefox\"]\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test realistic viewport sizes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"viewports\": [\n    [1920],    // Desktop\n    [1366],    // Laptop\n    [768]      // Tablet\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start with minimal timeouts and increase only when needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"waitForTimeout\": 2000  // Start low, increase if needed\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set appropriate concurrency based on your test suite size",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "concurrency: 3  # For 20-30 URLs"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure timeouts based on your test duration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "globalTimeout: 300      # 5 hours for large suites\ntestSuiteTimeout: 150    # 2.5 hours per suite"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cache node_modules to speed up subsequent runs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: '{{ checksum \"package.json\" }}'\ncacheDirectories:\n  - node_modules_cache"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use descriptive build names that include",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--buildName \"Test-Release-v1.0-2024-01-15\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN  # MacOS/Linux\n   echo %PROJECT_TOKEN%  # Windows CMD"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check token format (should include #)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "   123456#1234abcd-****-****-****-************"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Node.js version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   node --version  # Should be v20.3 or higher"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upgrade Node.js if needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Using nvm\n   nvm install 20.3\n   nvm use 20.3"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase waitForTimeout in URL files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"name\": \"slow-page\",\n     \"url\": \"https://example.com/\",\n     \"waitForTimeout\": 10000\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase HyperExecute timeouts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   globalTimeout: 300\n   testSuiteTimeout: 300"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Reduce concurrency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   concurrency: 1  # Start with 1, increase gradually"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Locally First: Run SmartUI capture locally before HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui capture urlTest.json --config config.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Scheduled Test Runs\n\nUse the `--scheduled` flag for scheduled test executions:\n\n```bash\nnpx smartui capture urlProd.json --config config.json --scheduled \"schedule-123\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use environment variables in build names",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testSuites:\n  - npx smartui capture urlTest.json --config config.json --buildName \"Build-${BUILD_NUMBER}\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This comprehensive guide will walk you through setting up and running SmartUI Capture tests on HyperExecute. SmartUI Capture allows you to perform visual regression testing by capturing screenshots of static URLs across multiple browsers and devices, all orchestrated through HyperExecute's powerful test execution platform.
 
 ## Prerequisites

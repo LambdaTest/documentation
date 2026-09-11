@@ -46,6 +46,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/ie-mode-on-edge/"
+    },
+    "headline": "Test in IE Mode on Microsoft Edge",
+    "description": "Run Selenium tests in Internet Explorer compatibility mode on Microsoft Edge for legacy app testing on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/ie-mode-on-edge/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "ie mode microsoft edge",
+      "internet explorer mode selenium",
+      "ie11 edge compatibility"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"C#\" label=\"C#\" default>\n\n```csharp title=\"IEModeTest.cs\"\nusing OpenQA.Selenium;\nusing OpenQA.Selenium.IE;\nusing OpenQA.Selenium.Remote;\n\nInternetExplorerOptions browserOptions = new InternetExplorerOptions();\nbrowserOptions.PlatformName = \"Windows 11\";\nbrowserOptions.BrowserVersion = \"11.0\";\n\nDictionary<string, object> ltOptions = new Dictionary<string, object>();\nltOptions.Add(\"username\", Environment.GetEnvironmentVariable(\"LT_USERNAME\"));\nltOptions.Add(\"accessKey\", Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\"));\nltOptions.Add(\"project\", \"IE Mode Test\");\nltOptions.Add(\"w3c\", true);\nbrowserOptions.AddAdditionalOption(\"LT:Options\", ltOptions);\n\nIWebDriver driver = new RemoteWebDriver(\n    new Uri(\"https://hub.lambdatest.com/wd/hub\"), browserOptions);\ndriver.Navigate().GoToUrl(\"https://example.com\");\n\nConsole.WriteLine(\"Page title: \" + driver.Title);\ndriver.Quit();"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 Microsoft retired Internet Explorer 11 in June 2022, but many enterprise applications still require IE rendering for specific workflows. Microsoft Edge includes an IE Mode that loads pages using the IE11 Trident engine inside an Edge tab. TestMu AI supports IE Mode automation on Windows 11, so you can validate legacy apps without maintaining a standalone IE browser.
 
 ## When to Use IE Mode

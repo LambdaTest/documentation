@@ -46,6 +46,117 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With TestNG",
+    "description": "Run TestNG Selenium tests on TestMu AI cloud grid with parallel execution across 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testng selenium cloud testing",
+      "run testng tests on selenium grid",
+      "testng parallel test execution"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Java-TestNG-Selenium",
+        "text": "git clone https://github.com/LambdaTest/Java-TestNG-Selenium\ncd Java-TestNG-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn versions:display-dependency-updates"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\n        browserOptions.setPlatformName(\"Windows 10\");\n        browserOptions.setBrowserVersion(\"latest\");\n\n        HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n        ltOptions.put(\"build\", \"TestMu AISampleApp\");\n        ltOptions.put(\"name\", \"TestMu AIJavaSample\");\n        ltOptions.put(\"w3c\", true);\n        browserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test (Single Test)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test -D suite=single.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test (Parallel Tests)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test -D suite=parallel.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nFor parallel execution, the sample project includes a `testng.xml` that runs the test across multiple browsers simultaneously:\n\n```xml title=\"testng.xml\"\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite thread-count=\"3\" name=\"LambaTestSuite\" parallel=\"tests\">\n\n  <test name=\"WIN8TEST\">\n  <parameter name=\"browser\" value=\"firefox\"/>\n  <parameter name=\"version\" value=\"latest\"/>\n  <parameter name=\"platform\" value=\"WIN8\"/>\n    <classes>\n      <class name=\"LambdaTest.TestNGToDo\"/>\n    <\/classes>\n  <\/test> <!-- Test -->\n\n  <test name=\"WIN10TEST\">\n  <parameter name=\"browser\" value=\"chrome\"/>\n  <parameter name=\"version\" value=\"latest\"/>\n  <parameter name=\"platform\" value=\"WIN10\"/>\n    <classes>\n      <class name=\"LambdaTest.TestNGToDo\"/>\n    <\/classes>\n  <\/test> <!-- Test -->\n  <test name=\"MACTEST\">\n  <parameter name=\"browser\" value=\"safari\"/>\n  <parameter name=\"version\" value=\"latest\"/>\n  <parameter name=\"platform\" value=\"macos 10.13\"/>\n    <classes>\n      <class name=\"LambdaTest.TestNGToDo\"/>\n    <\/classes>\n  <\/test> <!-- Test -->\n\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/testng-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/testng-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

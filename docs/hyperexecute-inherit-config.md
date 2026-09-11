@@ -41,6 +41,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-inherit-config/"
+    },
+    "headline": "Inherit Your YAML Configurations",
+    "description": "Discover the Power of HyperExecute Inherit Config | Learn how to optimize your testing workflow with HyperExecute and inherit configurations seamlessly.!",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-inherit-config/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You must inherit a YAML file of the same version as your original file.; The mode of execution, i.e. Matrix, AutoSplit, or Hybrid, must remain the same in both of the YAML files.; The files that you want to inherit cannot be cyclically dependent. If you want to inherit A.yaml in B.yaml, then A.yaml cannot inherit B.yaml..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can use the inheritance feature by entering the following flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "base:\n  yamls:\n    - ./<baseConfiguration1.yaml>\n    - ./<baseConfiguration2.yaml>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parent YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\n# highlight-next-line\nrunson: linux\n\nautosplit: true\n# highlight-next-line\nconcurrency: 4\n\nbase:\n  yamls:\n    - ./base.yaml\n\npre:\n  - mvn dependency:resolve\n\n# highlight-start\ntestDiscovery:\n  mode: remote\n  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'\n# highlight-end\n\ntestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test\n\nretryOnFailure: true\nmaxRetries: 1\n\n# highlight-next-line\njobLabel: [selenium-testng, linux, v1, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Base YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\n# highlight-next-line\nrunson: win\n\nautosplit: true\n# highlight-next-line\nconcurrency: 2\n\npre:\n  - mvn dependency:resolve\n\n# highlight-start\ntestDiscovery:\n  type: raw\n  mode: static\n  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'\n# highlight-end\n\ntestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test\n\nretryOnFailure: true\nmaxRetries: 1\n\n# highlight-next-line\njobLabel: [selenium-testng, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Resultant YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "version: 0.1\n# highlight-next-line\nrunson: linux\n\nautosplit: true\n# highlight-next-line\nconcurrency: 4\n\nbase:\n    yamls:\n        - ./base.yaml\n\npre:\n    - mvn dependency:resolve\n\n# highlight-start\ntestDiscovery:\n    command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'\n    mode: remote\n# highlight-end\n\ntestRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test\n\nmaxRetries: 1\nretryOnFailure: true\n\n# highlight-next-line\njobLabel: [selenium-testng, linux, v1, autosplit]"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 YAML inheritance in HyperExecute allows you to reuse common configuration settings across multiple [YAML](/support/docs/deep-dive-into-hyperexecute-yaml) files, improving efficiency, consistency, and flexibility.
 
 For example, you can create a base YAML file with common settings like **browsers**, **OS versions**, and **devices**, and then inherit from it in other YAML files for different environments or test types. This **reduces boilerplate code and errors** while making it easy to switch between environments and manage complex test execution configurations.

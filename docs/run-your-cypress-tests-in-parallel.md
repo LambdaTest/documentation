@@ -21,6 +21,109 @@ site_name: TestMu AI
 slug: run-your-cypress-tests-in-parallel/
 canonical: https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/
 ---
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/"
+    },
+    "headline": "Run Your Cypress Tests In Parallel On TestMu AI Platform",
+    "description": "Run multiple Cypress tests simultaneously on the TestMu AI cloud across multiple browser versions. Learn how to run Cypress tests in parallel.",
+    "url": "https://www.testmuai.com/support/docs/run-your-cypress-tests-in-parallel/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Run your Cypress tests Parallelly using the CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--parallels <number of parallel sessions>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, if you want to run your Cypress tests on 5 parallel sessions, you can use the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run --parallels 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Run your Cypress tests Parallelly using the lambdatest-configuration.json file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"run_settings\": {\n    ...\n    \"parallels\": <number of parallel sessions>,\n    ...\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, if you want to run your Cypress tests on 5 parallel sessions, use the below settings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"run_settings\": {\n    ...\n    \"parallels\": 5,\n    ...\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The cypress-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cypress-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Cypress Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cypress-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/cypress-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Run Your Cypress Tests In Parallel
 ---
 

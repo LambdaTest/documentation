@@ -48,6 +48,74 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/"
+    },
+    "headline": "Guide:Running NodeJS Tests On Cloud Selenium Grid",
+    "description": "Guide to running Node.js and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and Node.js on 3000+ browsers on cloud.",
+    "url": "https://www.testmuai.com/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testmu ai automation using Node.js",
+      "Node.js and Selenium automation",
+      "Node.js documentation testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "The first step is to download and install Node.js and node package manager or npm. We recommend using the latest version of node.js.; You can download it from official NodeJS website.; If you have npm already installed, you may want to upgrade it to the latest version. Here the code you can run in your terminal to upgrade npm..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Node.js & Selenium Automation Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "/*\n    LambdaTest selenium automation sample example\n    Configuration\n    ----------\n    username: Username can be found at automation dashboard\n    accessKey:  AccessKey can be generated from automation dashboard or profile section\n \n    Result\n    -------\n    Execute NodeJS Automation Tests on LambdaTest Distributed Selenium Grid\n*/\nconst webdriver = require('selenium-webdriver');\n \n/*\n    Setup remote driver\n    Params\n    ----------\n    platform : Supported platform - (Windows 10, Windows 8.1, Windows 8, Windows 7,  macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)\n    browserName : Supported platform - (chrome, firefox, Internet Explorer, MicrosoftEdge, Safari)\n    version :  Supported list of version can be found at https://www.testmuai.com/capabilities-generator/\n*/\n \n// username: Username can be found at automation dashboard\nconst USERNAME = '{YOUR_LAMBDATEST_USERNAME}';\n \n// AccessKey:  AccessKey can be generated from automation dashboard or profile section\nconst KEY = '{YOUR_LAMBDATEST_ACCESS_KEY}';\n \n// gridUrl: gridUrl can be found at automation dashboard\nconst GRID_HOST = 'hub.lambdatest.com/wd/hub';\n \nfunction searchTextOnGoogle() {\n    // Setup Input capabilities\n    const capabilities = {\n        platform: 'windows 10',\n        browserName: 'chrome',\n        version: '67.0',\n        resolution: '1280x800',\n        network: true,\n        visual: true,\n        console: true,\n        video: true,\n        name: 'Test 1', // name of the test\n        build: 'NodeJS build' // name of the build\n    }\n \n    // URL: https://{username}:{accessKey}@hub.lambdatest.com/wd/hub\n    const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;\n \n    // setup and build selenium driver object\n    const driver = new webdriver.Builder()\n        .usingServer(gridUrl)\n        .withCapabilities(capabilities)\n        .build();\n \n    // navigate to a url, search for a text and get title of page\n    driver.get('https://www.google.com/ncr').then(function() {\n        driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\\n').then(function() {\n            driver.getTitle().then(function(title) {\n                setTimeout(function() {\n                    console.log(title);\n                    driver.quit();\n                }, 5000);\n            });\n        });\n    });\n}\nsearchTextOnGoogle();"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Quick Guide To Run Node.js Tests On Cloud Selenium Grid
 ***
 

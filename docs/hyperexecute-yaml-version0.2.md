@@ -40,6 +40,178 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-yaml-version0.2/"
+    },
+    "headline": "HyperExecute YAML v0.2: framework, flags and discovery config",
+    "description": "Learn more about HyperExecute YAML 0.2",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-yaml-version0.2/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: \"maven/testng\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "appium: true\nframework:\u00a0\n\u00a0\u00a0name: \"maven/testng\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Both Maven and Gradle build tools are supported for the Java runners",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: gradle/testng"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "flags",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: \"maven/testng\"\n  flags: [\"-Dplatname=win\", \"-Dgroups=selenium-test\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "discoveryFlags",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: \"maven/testng\"\n  discoveryFlags: [\"-Dgroups=selenium-test\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "runnerFlags",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: \"maven/testng\"\n  runnerFlags: [\"-Dgroups=database\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "discoveryType",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: maven/testng\n  #highlight-next-line\n  discoveryType: method\n  # instead of method you can also use xmltest or class as a discovery type\n  flags:\n    - \"-Dplatname=win\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "discoveryMode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: gradle/testng\n  #highlight-next-line\n  discoveryMode: remote"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "workingDirectory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: maven/testng\n  discoveryType: method\n  workingDirectory: src/main\n  flags:\n    - \"-Dplatname=win\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "defaultReports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: maven/testng\n  defaultReports: false\n  flags:\n    - \"-Dplatname=win\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Our platform supports the following three regions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  args:\n    region: us"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate artifacts for your Espresso tests, add the artifacts: true flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  args:\n    artifacts: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  args:\n    language: es"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "locale",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  args:\n    locale: ES"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "mitmProxy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  args:\n    mitmProxy: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Yaml Version 0.2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.2\nrunson: win\n\nautosplit: true\nconcurrency: 2\n\npre:\n  # Skip execution of the tests in the pre step\n  - mvn dependency:resolve\n\nframework:\n  name: maven/testng\n  flags:\n    - \"-Dplatname=win\"\n  discoveryFlags: [\"-Dgroups=selenium-test\"]\n  runnerFlags: [\"-Dgroups=database\"]\n  discoveryType: method\n  discoveryMode: remote\n  workingDirectory: src/main\n  defaultReports: false\n  args:\n    region: ap\n    language: es\n    locale: es\n    mitmProxy: true\n\nretryOnFailure: true\nmaxRetries: 1\n\npost:\n  - ls target/surefire-reports/\n\nmergeArtifacts: true\nuploadArtefacts:\n - name: ExecutionSnapshots\n   path:\n    - target/surefire-reports/html/**"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
 
 :::info

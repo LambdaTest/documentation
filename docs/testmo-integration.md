@@ -39,6 +39,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testmo-integration/"
+    },
+    "headline": "How to integrate TestMo With TestMu AI",
+    "description": "TestMu AI integration to TestMo will help you run your automation scripts from TestMo instance to our cloud-based Grid.",
+    "url": "https://www.testmuai.com/support/docs/testmo-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integration",
+      "testmu ai integration with testmo",
+      "testmu ai selenium grid integration to testmo"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Generate your Testing Result XML Files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "java org.testng.TestNG testng1.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure TestMo in your Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install -g @testmo/testmo-cli\n\ntestmo -h"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure TestMo in your Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "export TESTMO_TOKEN=<YOUR_API_TOKEN>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure TestMo in your Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "testmo automation:run:submit --instance <https://<your_testmo_address>.testmo.net\n --project-id 1 --name \"lambdatest\" --source \"frontend\" --results \n <your_test_result_file_path>.xml"
+      }
+    ],
+    "dateModified": "2026-08-26T14:02:45+05:30"
+  }) }}
+/>
+
 # TestMo Integration With <BrandName /> Grid
 ***
 

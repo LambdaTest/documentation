@@ -45,6 +45,112 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-add-test-meta-data/"
+    },
+    "headline": "Add Test Metadata Using the customData Capability",
+    "description": "Attach metadata like Jira tickets, GitHub PRs, and build info to your test runs using the customData capability.",
+    "url": "https://www.testmuai.com/support/docs/selenium-add-test-meta-data/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "selenium custom data capability",
+      "add test metadata selenium",
+      "link jira ticket to selenium test"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Add Custom Metadata for Running Automation Tests on TestMu AI (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/organization/repo",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"Node.js\" label=\"Node.js\" default>\n\n```javascript title=\"Test.js\"\n\"LT:Options\": {\n  \"customData\": {\n    \"jiraTicket\": \"JIRA-12345\",\n    \"githubPR\": \"https://github.com/organization/repo/pull/678\",\n    \"testDescription\": \"This test validates login functionality under high load.\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TypeScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/organization/repo",
+        "text": "<\/TabItem>\n\n<TabItem value=\"PHP\" label=\"PHP\" default>\n\n```php title=\"Test.php\"\n\"LT:Options\" => [\n  \"customData\" => [\n    \"jiraTicket\" => \"JIRA-12345\",\n    \"githubPR\" => \"https://github.com/organization/repo/pull/678\",\n    \"testDescription\" => \"This test validates login functionality under high load.\"\n  ]\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/organization/repo",
+        "text": "<\/TabItem>\n\n<TabItem value=\"C#\" label=\"C#\" default>\n\n```csharp title=\"Test.cs\"\nltOptions.Add(\"customData\", new Dictionary<string, object>{\n  { \"jiraTicket\", \"JIRA-12345\" },\n  { \"githubPR\", \"https://github.com/organization/repo/pull/678\" },\n  { \"testDescription\", \"This test validates login functionality under high load.\" }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/organization/repo",
+        "text": "<\/TabItem>\n\n<\/Tabs>\n\n## Use Cases for `customData`\n---\nSee how teams use the customData capability in different testing workflows.\n\n### 1. Enhanced Reporting With GitHub and Jira Links\n**Scenario:** A QA team wants to include direct links to GitHub pull requests or Jira issues related to a test. This helps developers and testers quickly access related code changes or tasks when a test fails.\n\n```javascript title=\"Test.js\"\n'customData': { \t\n  \"jiraTicket\": \"JIRA-12345\",\n  \"githubPR\": \"https://github.com/organization/repo/pull/678\",\n  \"testDescription\": \"This test validates login functionality under high load.\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Linking Test Management Systems",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- **`testCaseID`:** Maps the execution to a specific test case in the test management system.\n- **`testSuite`:** Specifies the test suite or category the test belongs to.\n- **`priority`:** Indicates the importance or severity of the test.\n- **`owner`:** Identifies the owner or responsible party for the test.\n\n### 3. Debugging With Environment Metadata\n**Scenario:** When debugging test failures, include information about the environment or build being tested.\n\n```javascript title=\"Test.js\"\n'customData': { \t\n  \"buildNumber\": \"1234\",\n  \"environment\": \"Staging\",\n  \"apiVersion\": \"v1.2.3\",\n  \"releaseTag\": \"v1.2.3-rc1\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Capturing User Story or Feature Metadata",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- **`featureID`:** Links the test to a specific feature ID in the product backlog.\n- **`userStory`:** Describes the user story being validated.\n- **`sprint`:** Indicates the sprint or iteration in which the feature is being developed.\n\n### 5. Tracking Third-Party Dependencies\n**Scenario:** A test depends on third-party APIs or integrations, and tracking the versions or configurations of these dependencies is critical.\n\n```javascript title=\"Test.js\"\n'customData': { \t\n  \"thirdPartyAPI\": \"Stripe\",\n  \"apiVersion\": \"2023-01-15\",\n  \"status\": \"Active\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 The `customData` capability allows you to associate additional metadata with test runs, enabling better traceability, debugging, and reporting. This metadata can include information like issue tracker links, test case IDs, and other critical test context. By embedding this metadata in test configurations, your team can integrate with existing tools and workflows, such as GitHub, Jira, or any test management system.
 
 ## How to Add Custom Metadata for Running Automation Tests on TestMu AI

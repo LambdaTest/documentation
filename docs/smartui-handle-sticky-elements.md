@@ -49,6 +49,94 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-handle-sticky-elements/"
+    },
+    "headline": "Handle Pages with Sticky Elements",
+    "description": "Ensure accurate visual testing with TestMu AI SmartUI by effectively handling sticky elements. Prevent false positives and maintain consistency across visual snapshots.",
+    "url": "https://www.testmuai.com/support/docs/smartui-handle-sticky-elements/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "testmu ai",
+      "smart ui",
+      "sticky-elements"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you want to exclude sticky elements from comparison entirely",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    ignoreDOM: {\n        cssSelector: [\".sticky-header\", \".sticky-footer\", \".floating-button\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Page with Sticky Elements', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you only want to compare non-sticky content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    selectDOM: {\n        cssSelector: [\".main-content\", \".article-body\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Content Only', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Ignore sticky element with dynamic content\nlet options = {\n    ignoreDOM: {\n        cssSelector: [\".sticky-header .notification-badge\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Wait for sticky element to load\nawait driver.wait(until.elementLocated(By.css('.sticky-header')), 10000);\nawait smartuiSnapshot(driver, 'Page');"
+      }
+    ],
+    "dateModified": "2026-03-02T15:19:46+05:30"
+  }) }}
+/>
+
 ## What are Sticky Elements?
 
 Sticky elements are CSS-positioned elements that remain fixed in the viewport while the user scrolls through a page. Common examples include:

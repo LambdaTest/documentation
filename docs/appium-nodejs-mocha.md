@@ -53,6 +53,117 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-nodejs-mocha/"
+    },
+    "headline": "Appium With Mocha",
+    "description": "Now you can run your automation scripts using JavaScript Mocha on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+    "url": "https://www.testmuai.com/support/docs/appium-nodejs-mocha/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "javascript",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install npm from the official npm website.; Download and install NodeJS from official NodeJS website. You should be having NodeJS v6 or newer.; Make sure you are using the latest version of JavaScript..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"android\" label=\"Android\" default>\n\n```javascript title=\"android_test.js\"\nconst { default: driver } = require(\"appium-android-driver/build/lib/driver\");\nconst { By } = require(\"selenium-webdriver\");\nconst { capabilities } = require(\"../conf/android.conf\");\n\nrequire(\"appium-android-driver\")\nvar assert= require(\"assert\"),\n  webdriver = require(\"selenium-webdriver\"),\n   conf_file= process.argv[3] || \"conf/Appp.conf.js\";\n \n\nvar caps = require(\"../\" + conf_file).capabilities;\n\nvar buildDriver = function(caps) {\n  return new webdriver.Builder()\n    .usingServer(\n      \"http://\" +\n      LT_USERNAME +\n      \":\" +\n      LT_ACCESS_KEY +\n      \"@mobile-hub.lambdatest.com/wd/hub\"\n    )\n    .withCapabilities(caps)\n    .build();\n};\n\n\ndescribe(\"Mocha Appium Test \" + caps.browserName, function() {\n  var driver;\n  this.timeout(0);\n\n\n    it ('Application is launched', function name(done) { \n        driver=buildDriver(caps);\n      \n        driver.findElement(By.id('com.lambdatest.proverbial:id/color')).click().then(function(){\n        console.log(\"Successfully clicked Color\");\n    });\n     driver.findElement(By.id('com.lambdatest.proverbial:id/Text')).click().then(function(){\n        console.log(\"Successfully clicked Text\");\n    });\n    driver.findElement(By.id('com.lambdatest.proverbial:id/notification')).click().then(function(){\n        console.log(\"Successfully clicked Notification\");\n    })\n    driver.findElement(By.id('com.lambdatest.proverbial:id/toast')).click().then(function(){\n        console.log(\"Successfully clicked Toast\");\n        driver.quit()\n    })\n});\n\n\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n\n:::tip\n- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**\n:::\n\n<\/TabItem>\n<TabItem value=\"ios-config\" label=\"iOS\" default>\n\n```javascript title=\"ios.conf.js\"\nLT_USERNAME = process.env.LT_USERNAME || \"<your username>\";        //Enter your LambdaTest username here\nLT_ACCESS_KEY = process.env.LT_ACCESS_KEY || \"<your accessKey>\";    //Enter your LambdaTest accessKey here\n\nexports.capabilities = {\n  'build': 'Mocha-iOS-Sample', //Build name\n  'name': 'Mocha-iOS', // Test name\n  'platformName':'ios', // OS name\n  'deviceName': 'iPhone 12 Pro', // Device name\n  'platformVersion': '15', // OS version\n  'app' : 'lt://proverbial-ios',     // Add app (.ipa) url here\n  'isRealMobile' : true,\n  'visual': false,  // To take step by step screenshot\n  'network':false,  // To capture network Logs\n  'console':false, // To capture console logs.\n  'tunnel': false // If you want to run the localhost than change it to true\n  };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i\nnpm install\nnpm install selenium-webdriver\nnpm i appium-android-driver\nnpm i appium-base-driver\nnpm install --save"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "npm run android    //to run single test\nnpm run parallel_android    //to run parallel tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "npm run ios    //to run single test\nnpm run parallel_ios    //to run parallel tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The mocha-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "mocha-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Mocha Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/mocha-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/mocha-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to configure and run your **Mocha** automation testing scripts with **Appium** on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

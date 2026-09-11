@@ -44,6 +44,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/"
+    },
+    "headline": "How to integrate AWS CodePipeline with HyperExecute",
+    "description": "Optimize AWS CodePipeline with HyperExecute for seamless, efficient testing. Streamline your CI/CD workflow with TestMu AI's comprehensive guide.",
+    "url": "https://www.testmuai.com/support/docs/aws-codepipeline-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "hyperexecute integrations"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Create a buildspec.yml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "version: 0.2\n\nphases:\n  install:\n    commands:\n      # Download Hyperexecute CLI for macOS (adjust for other OS)\n      - name: Download Hyperexecute CLI\n        command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute\n      # Grant execute permission to the downloaded binary\n      - name: Make HyperExecute executable\n        command: chmod u+x hyperexecute\n  build:\n    commands:\n      # Run Hyperexecute with user credentials and configuration file\n      - name: Trigger HyperExecute tests\n        command: ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # AWS CodePipeline Integration With HyperExecute
 
 AWS CodePipeline is a cloud-based continuous delivery platform for fully automating your release pipelines. Provides an intuitive interface for configuring & modeling different stages of release cycles, so you can envision how your code changes would look when pushed across these different changes. You can also track your pipeline in real-time, and look into the pipeline history to understand the timestamps involved in the execution of various pipelines.

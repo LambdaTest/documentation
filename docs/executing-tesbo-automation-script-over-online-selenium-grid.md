@@ -49,6 +49,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/"
+    },
+    "headline": "Selenium With Tesbo",
+    "description": "Run Tesbo keyword-driven automation scripts on the TestMu AI cloud Selenium grid across 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "tesbo selenium grid setup",
+      "tesbo keyword driven testing",
+      "run tesbo tests on cloud"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/LamdaTest_Tesbo_Demo",
+        "text": "git clone https://github.com/LambdaTest/LamdaTest_Tesbo_Demo\ncd LamdaTest_Tesbo_Demo"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the Selenium address, enable the grid, and define your desired capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"run\": {\n    \"baseUrl\": \"https://www.seleniumeasy.com/test/\",\n    \"seleniumAddress\": \"https://{userName}:{ApiKey}@hub.lambdatest.com/wd/hub\",\n    \"by\": {\n      \"tag\": [\"FO1\"]\n    },\n    \"browser\": {\n      \"name\": [\"chrome\"]\n    },\n    \"capabilities\": {\n      \"chrome\": {\n        \"build\": \"Tesbo_With_TestMuAI\",\n        \"name\": \"Tesbo\",\n        \"platformName\": \"Windows 10\",\n        \"browserName\": \"Chrome\",\n        \"browserVersion\": \"latest\"\n      }\n    },\n    \"parallel\": {\n      \"status\": false,\n      \"count\": \"3\"\n    },\n    \"retryAnalyser\": {\n      \"count\": \"0\"\n    },\n    \"highlightElement\": true,\n    \"IsGrid\": true\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the parallel status to true and specify the count in config.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"parallel\": {\n  \"status\": true,\n  \"count\": \"3\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run across multiple browsers, add more capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"capabilities\": {\n  \"chrome\": {\n    \"build\": \"Tesbo_With_TestMuAI\",\n    \"name\": \"Tesbo\",\n    \"platformName\": \"Windows 10\",\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"latest\"\n  },\n  \"firefox\": {\n    \"build\": \"Tesbo_With_TestMuAI\",\n    \"name\": \"Tesbo\",\n    \"platformName\": \"Windows 10\",\n    \"browserName\": \"Firefox\",\n    \"browserVersion\": \"latest\"\n  },\n  \"safari\": {\n    \"build\": \"Tesbo_With_TestMuAI\",\n    \"name\": \"Tesbo\",\n    \"platformName\": \"MacOS Catalina\",\n    \"browserName\": \"Safari\",\n    \"browserVersion\": \"latest\"\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run [Tesbo](https://tesbo.io/) keyword-driven automation scripts on the TestMu AI cloud grid. Tesbo is a hybrid framework built on Selenium that lets you write automation scripts in plain English using a keyword-driven approach.

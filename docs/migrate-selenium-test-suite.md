@@ -50,6 +50,164 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/migrate-selenium-test-suite/"
+    },
+    "headline": "Migrate Your Selenium Test Suite",
+    "description": "Migrate your local Selenium tests to TestMu AI's cloud grid. Change the hub URL, add capabilities, and run your existing suite on 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/migrate-selenium-test-suite/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "migrate selenium tests",
+      "connect existing tests",
+      "selenium cloud migration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Find where your test creates the WebDriver instance and replace it with a RemoteWebDriver pointing to the TestMu AI hub URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://{YOUR_USERNAME}:{YOUR_ACCESS_KEY}@hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is what the change looks like in each language (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "WebDriver driver = new ChromeDriver();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Replace Your Local Driver With RemoteWebDriver (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "String username = System.getenv(\"LT_USERNAME\");\nString accessKey = System.getenv(\"LT_ACCESS_KEY\");\nString hubURL = \"https://\" + username + \":\" + accessKey + \"@hub.lambdatest.com/wd/hub\";\n\nChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\n\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"My First Cloud Build\");\nltOptions.put(\"name\", \"Sample Test\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);\n\nWebDriver driver = new RemoteWebDriver(new URL(hubURL), browserOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const driver = new Builder().forBrowser('chrome').build();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const username = process.env.LT_USERNAME;\nconst accessKey = process.env.LT_ACCESS_KEY;\nconst hubURL = `https://${username}:${accessKey}@hub.lambdatest.com/wd/hub`;\n\nconst capabilities = {\n  browserName: 'Chrome',\n  browserVersion: 'latest',\n  'LT:Options': {\n    platformName: 'Windows 10',\n    build: 'My First Cloud Build',\n    name: 'Sample Test',\n    w3c: true,\n  }\n};\n\nconst driver = new Builder()\n  .usingServer(hubURL)\n  .withCapabilities(capabilities)\n  .build();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver = webdriver.Chrome()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "import os\nfrom selenium import webdriver\n\nusername = os.getenv(\"LT_USERNAME\")\naccess_key = os.getenv(\"LT_ACCESS_KEY\")\nhub_url = f\"https://{username}:{access_key}@hub.lambdatest.com/wd/hub\"\n\noptions = webdriver.ChromeOptions()\noptions.platform_name = \"Windows 10\"\noptions.browser_version = \"latest\"\n\nlt_options = {\n    \"build\": \"My First Cloud Build\",\n    \"name\": \"Sample Test\",\n    \"w3c\": True,\n}\noptions.set_capability(\"LT:Options\", lt_options)\n\ndriver = webdriver.Remote(command_executor=hub_url, options=options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "IWebDriver driver = new ChromeDriver();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "string username = Environment.GetEnvironmentVariable(\"LT_USERNAME\");\nstring accessKey = Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\");\nstring hubURL = $\"https://{username}:{accessKey}@hub.lambdatest.com/wd/hub\";\n\nvar options = new ChromeOptions();\noptions.PlatformName = \"Windows 10\";\noptions.BrowserVersion = \"latest\";\n\nvar ltOptions = new Dictionary<string, object>\n{\n    { \"build\", \"My First Cloud Build\" },\n    { \"name\", \"Sample Test\" },\n    { \"w3c\", true }\n};\noptions.AddAdditionalOption(\"LT:Options\", ltOptions);\n\nIWebDriver driver = new RemoteWebDriver(new Uri(hubURL), options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$driver = ChromeDriver::start();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$username = getenv(\"LT_USERNAME\");\n$accessKey = getenv(\"LT_ACCESS_KEY\");\n$hubURL = \"https://{$username}:{$accessKey}@hub.lambdatest.com/wd/hub\";\n\n$capabilities = [\n    \"browserName\" => \"Chrome\",\n    \"browserVersion\" => \"latest\",\n    \"LT:Options\" => [\n        \"platformName\" => \"Windows 10\",\n        \"build\" => \"My First Cloud Build\",\n        \"name\" => \"Sample Test\",\n        \"w3c\" => true,\n    ]\n];\n\n$driver = RemoteWebDriver::create($hubURL, $capabilities);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "driver = Selenium::WebDriver.for :chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "username = ENV[\"LT_USERNAME\"]\naccess_key = ENV[\"LT_ACCESS_KEY\"]\nhub_url = \"https://#{username}:#{access_key}@hub.lambdatest.com/wd/hub\"\n\noptions = Selenium::WebDriver::Options.chrome(\n  platform_name: \"Windows 10\",\n  browser_version: \"latest\",\n  \"LT:Options\": {\n    build: \"My First Cloud Build\",\n    name: \"Sample Test\",\n    w3c: true,\n  }\n)\n\ndriver = Selenium::WebDriver.for :remote, url: hub_url, capabilities: options"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Run Your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Java (Maven)\nmvn test\n\n# JavaScript (npm)\nnpm test\n\n# Python (pytest)\npytest\n\n# C# (dotnet)\ndotnet test\n\n# PHP (PHPUnit)\nvendor/bin/phpunit\n\n# Ruby (RSpec)\nbundle exec rspec"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Already have Selenium tests running locally? You can run them on the TestMu AI cloud grid with three changes: swap the driver URL, add your credentials, and set the desired capabilities. Your test logic stays the same.

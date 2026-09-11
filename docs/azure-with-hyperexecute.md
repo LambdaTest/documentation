@@ -43,6 +43,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/azure-with-hyperexecute/"
+    },
+    "headline": "Azure DevOps Integration",
+    "description": "TestMu AI now integrates with Azure DevOps Pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/azure-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To configure the Azure DevOps pipeline YAML to execute the HyperExecute CLI Binary, run the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "trigger:\n- main\n\npool:\n  vmImage: 'ubuntu-latest'  # Adjust for macOS if needed\n\nsteps:\n  - task: Bash@3\n    inputs:\n      targetType: 'inline'\n      script: |\n        # Download Hyperexecute CLI for macOS (adjust for other OS)\n        name: Download HyperExecute CLI\n        script: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute\n        \n        # Grant execute permission to the downloaded binary\n        name: Make HyperExecute executable\n        script: chmod +x hyperexecute\n        \n        # Run Hyperexecute with user credentials and configuration file\n        name: Run Hyperexecute Tests\n        script: ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Azure DevOps Pipeline Integration with HyperExecute
 * * *
 

@@ -43,6 +43,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/github-with-hyperexecute/"
+    },
+    "headline": "GitHub CI Integration",
+    "description": "TestMu AI now integrates with GitLab CI to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/github-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A Git or GitHub repository.; Download and install node.js and node package manager or npm.; To install node.js with homebrew use the command below.; If you already have npm set up, you might want to update to the most recent version. To upgrade npm, run the following code in your terminal.; Install WebdriverIO with the npm command below.; For Linux/Mac; For Windows.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating GitHub CI With HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ brew install node"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating GitHub CI With HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install npm@latest \u2013g"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating GitHub CI With HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install webdriverio"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME> \n$ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>\n$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # GitHub CI Integration
 * * *
 GitHub is one of the best solutions for supporting continuous integration for Git projects for clients of all sizes. Now, quickly deploy your code and extensively test it to ensure a reliable delivery for your easy release.

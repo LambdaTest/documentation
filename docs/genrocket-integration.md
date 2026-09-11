@@ -41,6 +41,87 @@ import CookieTrackingLogin, { CookieTrackingSignup } from '@site/src/component/C
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/genrocket-integration/"
+    },
+    "headline": "GenRocket Integration",
+    "description": "Integrate TestMu AI with GenRocket to perform desktop web, mobile web and native app testing across 5000+ real devices and 10,000+ browser/device combinations.",
+    "url": "https://www.testmuai.com/support/docs/genrocket-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integration with GenRocket",
+      "testmu ai and genrocket integration",
+      "testmu ai genrocket"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test With Data From GenRocket on HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mkdir /home/ltuser/.genrocket"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test With Data From GenRocket on HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cp ******Profile.grp /home/ltuser/.genrocket"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --user USERNAME --key ACCESS_KEY --config hyperexecute.yaml"
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 # GenRocket Integrates With <BrandName />
 ***
 

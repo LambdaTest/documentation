@@ -39,6 +39,72 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/scim/azure/"
+    },
+    "headline": "Azure AD Scim User Provisioning",
+    "description": "Integrating TestMu AI SCIM with Azure AD",
+    "url": "https://www.testmuai.com/support/docs/scim/azure/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "TestMu AI SCIM"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You will need an Enterprise plan with TestMu AI.; SSO must be already integrated. Please complete TestMu AI SSO & Azure AD Integration.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "IIF(SingleAppRoleAssignment([appRoleAssignments])=\"Admin\", \"Admin\",\nIIF(SingleAppRoleAssignment([appRoleAssignments])=\"Guest\", \"Guest\",\nIIF(SingleAppRoleAssignment([appRoleAssignments])=\"User\", \"User\", \"User\")))"
+      }
+    ],
+    "dateModified": "2026-05-29T18:18:43+05:30"
+  }) }}
+/>
 ## Prerequisites
 Integrate SCIM With <BrandName />:
 

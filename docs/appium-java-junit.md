@@ -54,6 +54,131 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-java-junit/"
+    },
+    "headline": "Appium With JUnit",
+    "description": "Automate Mobile App using Java Appium Testing with JUnit Framework",
+    "url": "https://www.testmuai.com/support/docs/appium-java-junit/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "java",
+      "junit"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; You should have Java client library installed for Appium.; Download and install Maven from the official website. For Linux/macOS you can use Homebrew package manager..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Update your Automation Script (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "package com.lambdatest;\n\nimport io.appium.java_client.MobileBy;\nimport org.junit.After;\nimport org.junit.Before;\nimport org.junit.Test;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.support.ui.ExpectedConditions;\nimport org.openqa.selenium.support.ui.WebDriverWait;\nimport java.net.MalformedURLException;\nimport java.net.URL;\n\npublic class android {\n    String username = System.getenv(\"LT_USERNAME\") == null ? \"LT_USERNAME\" //Enter the Username here\n            : System.getenv(\"LT_USERNAME\");\n    String accessKey = System.getenv(\"LT_ACCESS_KEY\") == null ? \"LT_ACCESS_KEY\"  //Enter the accessKey here\n            : System.getenv(\"LT_ACCESS_KEY\");\n    public static RemoteWebDriver driver = null;\n    public String gridURL = \"@mobile-hub.lambdatest.com/wd/hub\";\n    public String status = \"passed\";\n    @Before\n    public void setUp() throws Exception {\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n\n        capabilities.setCapability(\"build\", \"JUNIT Native App automation\");\n        capabilities.setCapability(\"name\", \"Java JUnit Android Pixel 6\");\n        capabilities.setCapability(\"platformName\", \"android\");\n        capabilities.setCapability(\"deviceName\", \"Pixel 6\"); \n        capabilities.setCapability(\"isRealMobile\", true);\n        capabilities.setCapability(\"platformVersion\",\"12\");\n        // highlight-next-line\n        capabilities.setCapability(\"app\",\"APP_URL\"); //Enter your app (.apk) url\n        capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n        capabilities.setCapability(\"console\",true);\n        capabilities.setCapability(\"network\",false);\n        capabilities.setCapability(\"visual\",true);\n        try\n        {\n            driver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + accessKey + gridURL), capabilities);\n        }\n        catch (MalformedURLException e)\n        {\n            System.out.println(\"Invalid grid URL\");\n        } catch (Exception e)\n        {\n            System.out.println(e.getMessage());\n        }\n    }\n\n    @Test\n    public void testSimple() throws Exception\n    {\n        try\n        {\n            WebDriverWait wait = new WebDriverWait(driver, 30);\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"color\"))).click();\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"geoLocation\"))).click();;\n            Thread.sleep(5000);\n            driver.navigate().back();\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"Text\"))).click();\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"notification\"))).click();;\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"toast\"))).click();\n\n            wait.until(ExpectedConditions.elementToBeClickable(By.id(\"Browser\"))).click();;\n            Thread.sleep(10000);\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"url\"))).sendKeys(\"https://www.testmuai.com/\");\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"find\"))).click();\n            Thread.sleep(5000);\n            driver.navigate().back();\n\n            status=\"passed\";\n        }\n            catch (Exception e)\n             {\n                System.out.println(e.getMessage());\n                status=\"failed\";\n             }\n    }\n    @After\n    public void tearDown() throws Exception\n    {\n        if (driver != null)\n        {\n            driver.executeScript(\"lambda-status=\" + status);\n            driver.quit();\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "iOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "package com.lambdatest;\n\nimport io.appium.java_client.MobileBy;\nimport org.junit.After;\nimport org.junit.Before;\nimport org.junit.Test;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.support.ui.ExpectedConditions;\nimport org.openqa.selenium.support.ui.WebDriverWait;\nimport java.net.MalformedURLException;\nimport java.net.URL;\n\npublic class ios {\n    String username = System.getenv(\"LT_USERNAME\") == null ? \"LT_USERNAME\"   //Add username here\n            : System.getenv(\"LT_USERNAME\");\n    String accessKey = System.getenv(\"LT_ACCESS_KEY\") == null ? \"LT_ACCESS_KEY\"   //Add accessKey here\n            : System.getenv(\"LT_ACCESS_KEY\");\n    public static RemoteWebDriver driver = null;\n    public String gridURL = \"@mobile-hub.lambdatest.com/wd/hub\";\n    public String status = \"passed\";\n    @Before\n    public void setUp() throws Exception {\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n\n        capabilities.setCapability(\"build\", \"JUNIT Native App automation\");\n        capabilities.setCapability(\"name\", \"Java JUnit iOS iPhone 12\");\n        capabilities.setCapability(\"platformName\", \"ios\");\n        capabilities.setCapability(\"deviceName\", \"iPhone 12\");\n        capabilities.setCapability(\"isRealMobile\", true);\n        capabilities.setCapability(\"platformVersion\",\"15\");\n        // highlight-next-line\n        capabilities.setCapability(\"app\",\"APP_URL\"); //Enter your app (.ipa) url\n        capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n        capabilities.setCapability(\"console\",true);\n        capabilities.setCapability(\"network\",false);\n        capabilities.setCapability(\"visual\",true);\n        try\n        {\n            driver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + accessKey + gridURL), capabilities);\n        }\n        catch (MalformedURLException e)\n        {\n            System.out.println(\"Invalid grid URL\");\n        } catch (Exception e)\n        {\n            System.out.println(e.getMessage());\n        }\n    }\n\n    @Test\n    public void testSimple() throws Exception\n    {\n        try\n        {\n            WebDriverWait wait = new WebDriverWait(driver, 30);\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"color\"))).click();\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"geoLocation\"))).click();\n            Thread.sleep(5000);\n            driver.navigate().back();\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"Text\"))).click();\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"notification\"))).click();\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"toast\"))).click();\n\n            wait.until(ExpectedConditions.elementToBeClickable(By.id(\"Browser\"))).click();\n            Thread.sleep(10000);\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"url\"))).sendKeys(\"https://www.testmuai.com/\");;\n\n            wait.until(ExpectedConditions.elementToBeClickable(MobileBy.id(\"find\"))).click();\n            Thread.sleep(5000);\n            driver.navigate().back();\n\n            status=\"passed\";\n        }\n            catch (Exception e)\n             {\n                System.out.println(e.getMessage());\n                status=\"failed\";\n             }\n    }\n    @After\n    public void tearDown() throws Exception\n    {\n        if (driver != null)\n        {\n            driver.executeScript(\"lambda-status=\" + status);\n            driver.quit();\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"build\", \"JUNIT Native App automation\");\n        capabilities.setCapability(\"name\", \"Java JUnit Android Pixel 6\");\n        capabilities.setCapability(\"platformName\", \"android\");\n        capabilities.setCapability(\"deviceName\", \"Pixel 6\");\n        capabilities.setCapability(\"isRealMobile\", true);\n        capabilities.setCapability(\"platformVersion\",\"12\");\n        // highlight-next-line\n        capabilities.setCapability(\"app\",\"YOUR_APP_URL\");  //Enter your app (.apk) url\n        capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n        capabilities.setCapability(\"console\",true);\n        capabilities.setCapability(\"network\",false);\n        capabilities.setCapability(\"visual\",true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"build\", \"JUNIT Native App automation\");\n        capabilities.setCapability(\"name\", \"Java JUnit iOS iPhone 12\");\n        capabilities.setCapability(\"platformName\", \"ios\");\n        capabilities.setCapability(\"deviceName\", \"iPhone 12\");\n        capabilities.setCapability(\"isRealMobile\", true);\n        capabilities.setCapability(\"platformVersion\",\"15\");\n        // highlight-next-line\n        capabilities.setCapability(\"app\",\"YOUR_APP_URL\");  //Enter your app (.ipa) url\n        capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n        capabilities.setCapability(\"console\",true);\n        capabilities.setCapability(\"network\",false);\n        capabilities.setCapability(\"visual\",true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn clean"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P android"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -P ios"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The junit-5-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "junit-5-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a JUnit 5 Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/junit-5-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/junit-5-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **JUnit** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

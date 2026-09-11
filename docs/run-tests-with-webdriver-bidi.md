@@ -45,6 +45,143 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/run-tests-with-webdriver-bidi/"
+    },
+    "headline": "Run Web Automation Tests With WebDriver BiDi on TestMu AI",
+    "description": "Run web automation over the WebDriver BiDi protocol on TestMu AI with WebdriverIO. Capture screenshots, validate the page, and subscribe to browser events.",
+    "url": "https://www.testmuai.com/support/docs/run-tests-with-webdriver-bidi/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "run web automation tests with webdriver bidi",
+      "webdriver bidi testmu ai",
+      "webdriverio bidi cloud"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Web Automation Tests With WebDriver BiDi",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install webdriverio"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A successful install adds the package to your project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "added 247 packages, and audited 248 packages in 20s"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "macOS / Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"your_username\"\nexport LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows (PowerShell)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"your_username\"\n$env:LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows (CMD)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Batch",
+        "text": "set LT_USERNAME=your_username\nset LT_ACCESS_KEY=your_access_key"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows (CMD)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// bidi-test.ts\nimport { remote } from 'webdriverio';\n\nasync function run() {\n  const browser = await remote({\n    hostname: 'hub.lambdatest.com',\n    port: 443,\n    protocol: 'https',\n    path: '/wd/hub',\n    capabilities: {\n      browserName: 'Chrome',\n      browserVersion: 'latest',\n      webSocketUrl: true, // enable WebDriver BiDi\n      'LT:Options': {\n        platformName: 'Windows 10',\n        build: 'BiDi Web Automation',\n        name: 'Product Listing',\n        username: process.env.LT_USERNAME,\n        accessKey: process.env.LT_ACCESS_KEY,\n        w3c: true,\n      },\n    },\n  });\n\n  try {\n    await browser.url(\n      'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25'\n    );\n\n    // Action: capture a screenshot of the listing\n    await browser.saveScreenshot('./components.png');\n\n    // Validation: the category rendered its products\n    const products = await browser.$$('.product-thumb');\n    const title = await browser.getTitle();\n    if (products.length === 0) throw new Error('No products found on the page');\n\n    console.log(`Passed: \"${title}\" loaded ${products.length} products, screenshot saved`);\n\n    // Mark the test as passed on the TestMu AI dashboard\n    await browser.executeScript('lambda-status=passed', []);\n  } catch (e) {\n    // Mark the test as failed so the dashboard reflects the real outcome\n    await browser.executeScript('lambda-status=failed', []);\n    throw e;\n  } finally {\n    await browser.deleteSession();\n  }\n}\n\nrun().catch((e) => {\n  console.error('Run failed:', e.message);\n  process.exit(1);\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run it** with a TypeScript runner",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx tsx bidi-test.ts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "WebdriverIO connects over BiDi, runs the checks, and marks the session Passed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Passed: \"Components\" loaded 15 products, screenshot saved"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Web Automation With WebDriver BiDi From an AI Agent",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// agent-bidi.ts\nimport { remote } from 'webdriverio';\n\nasync function run() {\n  const browser = await remote({\n    hostname: 'hub.lambdatest.com',\n    port: 443,\n    protocol: 'https',\n    path: '/wd/hub',\n    capabilities: {\n      browserName: 'Chrome',\n      browserVersion: 'latest',\n      webSocketUrl: true,\n      'LT:Options': {\n        platformName: 'Windows 10',\n        build: 'BiDi Web Automation',\n        name: 'Agent Event Monitor',\n        username: process.env.LT_USERNAME,\n        accessKey: process.env.LT_ACCESS_KEY,\n        w3c: true,\n      },\n    },\n  });\n\n  let responses = 0;\n  try {\n    // Subscribe to BiDi network events so the agent sees the browser's real activity\n    await browser.sessionSubscribe({ events: ['network.responseCompleted'] });\n    browser.on('network.responseCompleted', () => {\n      responses += 1;\n    });\n\n    await browser.url(\n      'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25'\n    );\n    await browser.pause(3000);\n\n    if (responses === 0) throw new Error('No network responses observed');\n    console.log(`Validated: the page issued ${responses} network responses over BiDi`);\n\n    // Mark the test as passed on the TestMu AI dashboard\n    await browser.executeScript('lambda-status=passed', []);\n  } catch (e) {\n    // Mark the test as failed so the dashboard reflects the real outcome\n    await browser.executeScript('lambda-status=failed', []);\n    throw e;\n  } finally {\n    await browser.deleteSession();\n  }\n}\n\nrun().catch((e) => {\n  console.error('Run failed:', e.message);\n  process.exit(1);\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx tsx agent-bidi.ts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The agent subscribes to the event stream and reports what the browser actually did",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Validated: the page issued 56 network responses over BiDi"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # How to Run Web Automation Tests With WebDriver BiDi
 ***
 

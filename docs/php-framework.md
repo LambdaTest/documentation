@@ -50,6 +50,147 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With PHP",
+    "description": "Run PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. Covers Behat, Laravel Dusk, Codeception, and PHPUnit.",
+    "url": "https://www.testmuai.com/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "php selenium grid setup",
+      "run php tests on cloud",
+      "php selenium webdriver tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Every framework below connects to the grid and passes your browser and OS choices through a capabilities array",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$capabilities = array(\n    \"build\" => \"your build name\",\n    \"name\" => \"your test name\",\n    \"platform\" => \"Windows 10\",\n    \"browserName\" => \"Chrome\",\n    \"version\" => \"latest\"\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/behat-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/behat-selenium-sample\ncd behat-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "environments",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run a single test, or in parallel:\n\n```bash\ncomposer single\ncomposer parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/php-laravel-dusk-todo",
+        "text": "git clone https://github.com/LambdaTest/php-laravel-dusk-todo\ncd php-laravel-dusk-todo"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the $capabilities array",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$capabilities = array(\n    \"build\" => \"LaravelDusk Build\",\n    \"name\" => \"LaravelDusk Build\",\n    \"platform\" => \"Windows 10\",\n    \"browserName\" => \"Chrome\",\n    \"version\" => \"latest\"\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "php artisan dusk"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/codeception-selenium-sample",
+        "text": "git clone https://github.com/LambdaTest/codeception-selenium-sample\ncd codeception-selenium-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n3. Run the test:\n\n```bash\n./vendor/bin/codecept run --steps"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the sample GitHub project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Php-PhpUnit-Selenium",
+        "text": "git clone https://github.com/LambdaTest/Php-PhpUnit-Selenium\ncd Php-PhpUnit-Selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set your browser and OS in the $capabilities array (LambdaTestSetup.php)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$capabilities = array(\n    \"build\" => \"Sample PHPUnit Build\",\n    \"name\" => \"Sample PHPUnit Test\",\n    \"platform\" => \"Windows 10\",\n    \"browserName\" => \"Chrome\",\n    \"version\" => \"latest\"\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run a single test, in parallel, or both",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer single\ncomposer parallel\ncomposer test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run your PHP Selenium tests on the TestMu AI cloud grid across 10,000+ browser/device combinations. The setup is the same for every framework: you connect to the grid and pass your capabilities. This guide covers that shared flow once, then gives you a per-framework quickstart in the tabs below.

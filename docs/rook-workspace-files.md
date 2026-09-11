@@ -1,5 +1,6 @@
 ---
 id: rook-workspace-files
+toc_max_heading_level: 2
 title: Rook Workspace Files
 hide_title: false
 sidebar_label: What Lands on Disk
@@ -13,6 +14,80 @@ site_name: TestMu AI
 slug: rook-workspace-files/
 canonical: https://www.testmuai.com/support/docs/rook-workspace-files/
 ---
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-workspace-files/"
+    },
+    "headline": "Rook Workspace Files",
+    "description": "Understand the Rook workspace tree, immutable run snapshots, local machine state, and generated gitignore rules.",
+    "url": "https://www.testmuai.com/support/docs/rook-workspace-files/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook workspace",
+      "testmuai rook files",
+      "rook run evidence"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Repository Tree",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ".testmuai/rook/\n\u251c\u2500\u2500 settings.json                         active project and permission rules\n\u251c\u2500\u2500 .gitignore                            machine-only and sensitive exclusions\n\u251c\u2500\u2500 cache/                                derived indexes; safe to rebuild\n\u2514\u2500\u2500 projects/\n    \u2514\u2500\u2500 <project-id>/\n        \u251c\u2500\u2500 project.yaml\n        \u251c\u2500\u2500 active                        selected agent\n        \u251c\u2500\u2500 jobs/                         in-flight upstream writes\n        \u2514\u2500\u2500 agents/\n            \u2514\u2500\u2500 <agent-id>/\n                \u251c\u2500\u2500 agent.yaml            derived agent definition\n                \u251c\u2500\u2500 state.json            machine-local server IDs\n                \u251c\u2500\u2500 features/\n                \u2502   \u251c\u2500\u2500 F-001.yaml\n                \u2502   \u2514\u2500\u2500 F-005.yaml\n                \u251c\u2500\u2500 scenarios/\n                \u2502   \u251c\u2500\u2500 SC-001.yaml\n                \u2502   \u2514\u2500\u2500 SC-011.yaml\n                \u251c\u2500\u2500 profiles/\n                \u2502   \u251c\u2500\u2500 active\n                \u2502   \u2514\u2500\u2500 staging.yaml\n                \u251c\u2500\u2500 scripts/\n                \u2502   \u2514\u2500\u2500 order-desk.mjs\n                \u2514\u2500\u2500 runs/\n                    \u2514\u2500\u2500 01M0VPKFSDC07CWWF51FGAVCCR/\n                        \u251c\u2500\u2500 run.yaml\n                        \u251c\u2500\u2500 agent.yaml\n                        \u251c\u2500\u2500 features.yaml\n                        \u251c\u2500\u2500 profile.yaml\n                        \u251c\u2500\u2500 scenarios/\n                        \u2514\u2500\u2500 report.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "On first use, Rook adds a .gitignore below .testmuai/rook/ for data that should not travel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Gitignore",
+        "text": "*.log\n.env\ncache/\nprojects/*/jobs/\nprojects/*/agents/*/state.json"
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 
 # Rook Workspace Files
 

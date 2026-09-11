@@ -47,6 +47,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/defect-analysis-prediction/"
+    },
+    "headline": "Defect Analysis and Prediction",
+    "description": "Leverage AI-powered defect analysis and prediction capabilities on TestMu AI to detect flaky tests, classify failures, identify root causes, and proactively improve test suite reliability.",
+    "url": "https://www.testmuai.com/support/docs/defect-analysis-prediction/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "defect prediction",
+      "defect analysis",
+      "flaky test detection"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Each stage feeds into the next",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Test Execution\n    \u2193\nSmart Tags (early warning: flaky, always failing, new failure)\n    \u2193\nFlaky Test Detection (deep analysis of inconsistent tests)\n    \u2193\nFailure Categorization AI (classify: app bug vs script vs environment)\n    \u2193\nAI Root Cause Analysis (diagnose root cause + recommended fix)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Defect Analysis and Prediction
 * * *
 

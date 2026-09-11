@@ -44,6 +44,178 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/"
+    },
+    "headline": "Dynamic Content, Waits & Page State",
+    "description": "Handle loading spinners, async content, toast notifications, modals, infinite scroll, and timing-sensitive scenarios in KaneAI",
+    "url": "https://www.testmuai.com/support/docs/kaneai-kb-dynamic-content-waits-and-page-state/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai waits"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Explicit Waits",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "wait for 5 seconds\nwait for 10 seconds"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Loading Spinner After Form Submit",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on the \"Submit\" button\nwait for 5 seconds\nassert \"Submission Successful\" is visible\nassert the loading spinner is not visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Toast Notification (Auto-Dismiss)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Wait briefly and capture the toast content\nreturn document.querySelector('.toast-message')?.textContent || 'NO TOAST FOUND';"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Modal/Dialog After Button Click",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on \"Delete Account\" button\nwait for 2 seconds\nassert the confirmation modal is visible\nassert \"Are you sure you want to delete your account?\" is visible in the modal\nclick \"Cancel\" inside the modal\nassert the modal is not visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Auto-Complete Search (Debounced Input)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"react testing\" in the search bar\nwait for 2 seconds\nassert search suggestions are visible\nclick on the first suggestion\nassert the search results page has loaded"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Page Redirect After Action",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"admin@example.com\" in the email field\ntype \"password123\" in the password field\nclick \"Sign In\"\nwait for 5 seconds\nassert the current URL contains \"/dashboard\"\nassert \"Welcome, Admin\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Lazy-Loaded Images",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "scroll down 3 times\nwait for 3 seconds\nassert the product image for \"Winter Jacket\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Tabs that load their content via AJAX when selected",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on the \"Reviews\" tab\nwait for 3 seconds\nassert customer reviews are visible\nassert \"5 out of 5 stars\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A dashboard that shows different content based on the user's subscription",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "go to https://app.example.com/dashboard\nwait for 5 seconds\nif \"Upgrade to Pro\" button is visible then click on it"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cookie Consent Banners",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "if \"Accept Cookies\" button is visible then click on it"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "On mobile apps, use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "dismiss dialog"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When your app fetches data from a slow API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on \"Generate Report\"\nwait for 15 seconds\nassert \"Report ready for download\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use KaneAI's Network Throttling to simulate slow connections",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- With 3G throttling enabled --\ngo to https://app.example.com\nwait for 10 seconds\nassert the page content has loaded\nassert no \"Network Error\" message is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The most reliable pattern for any action that triggers asynchronous behavior",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Action --\nclick on \"Submit\" button\n\n-- Wait --\nwait for 3 seconds\n\n-- Assert --\nassert \"Success\" message is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For content below the fold",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "scroll down until \"Contact Us\" section is visible\nwait for 2 seconds\ntype \"feedback@example.com\" in the email field"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When you're unsure if a popup or overlay will appear",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "if \"Close\" button is visible then click on \"Close\" button\nwait for 2 seconds\nclick on \"Continue\" button"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 Modern web applications are heavily asynchronous: data loads from APIs, pages render progressively, notifications pop up and disappear, and content appears based on user interaction. This guide teaches you how to handle these dynamic behaviors reliably in KaneAI tests.
 
 ## Understanding Waits in KaneAI

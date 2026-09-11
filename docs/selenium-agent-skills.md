@@ -43,6 +43,109 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-agent-skills/"
+    },
+    "headline": "Run Selenium Tests Using Agent Skills",
+    "description": "Use TestMu AI Agent Skills to generate production-ready Selenium test automation with AI coding assistants like Claude Code, GitHub Copilot, and Cursor.",
+    "url": "https://www.testmuai.com/support/docs/selenium-agent-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium agent skills",
+      "ai test automation",
+      "selenium ai coding"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install the Selenium Agent Skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\n\n# For Claude Code\ncp -r agent-skills/selenium-skill .claude/skills/\n\n# For Cursor\ncp -r agent-skills/selenium-skill .cursor/skills/\n\n# For GitHub Copilot\ncp -r agent-skills/selenium-skill .github/skills/\n\n# For Gemini CLI\ncp -r agent-skills/selenium-skill .gemini/skills/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Copy your Username and Access Key, then run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Run Your First Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Write Selenium tests for the login page and run them on TestMu AI cloud using Chrome and Firefox\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Run Your First Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Set up a Selenium Java project with TestNG, Page Object Model, and run tests on TestMu AI\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Run Your First Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Execute Selenium tests across 5 browsers in parallel on TestMu AI, tag the build as 'release-v1.0'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "What's Included in the Selenium Skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "selenium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Instead of manually setting up your Selenium project, use **Agent Skills** to let your AI coding assistant generate production-ready test automation for you. The [selenium-skill](https://github.com/LambdaTest/agent-skills/tree/main/selenium-skill) is part of [TestMu AI Agent Skills](https://github.com/LambdaTest/agent-skills/) - structured packages that teach AI assistants how to write production-grade test code.

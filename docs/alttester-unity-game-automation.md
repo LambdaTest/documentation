@@ -41,6 +41,138 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/alttester-unity-game-automation/"
+    },
+    "headline": "Automate Unity Games With AltTester on TestMu AI Real Device Cloud",
+    "description": "Run AltTester-instrumented Unity game tests on real Android and iOS devices with TestMu AI, using AltDriver, Appium, the LT tunnel, and pytest.",
+    "url": "https://www.testmuai.com/support/docs/alttester-unity-game-automation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "alttester unity game automation testmu ai",
+      "unity game testing on real devices",
+      "altdriver appium testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Python 3.9 or higher, with a virtual environment recommended.; A TestMu AI account. The free tier works for this sample. If you don't have one, register for free.; An AltTester-instrumented TrashCat build (.apk for Android or .ipa for iOS) uploaded to TestMu AI App Automation. Note the lt:// app URL returned after upload. The pre-instrumented TrashCat APK used by this sample is available from the sample's download link.; Your TestMu AI Username and Access Key, found under Profile in the dashboard.; The LT tunnel binary at tunnel/LT. The sample repo ships the macOS binary. Download the binary for your platform from the TestMu AI tunnel downloads if you are on Windows or Linux..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone the Repository",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/hjsblogger/testmuai-alttester-unity-game-automation",
+        "text": "git clone https://github.com/hjsblogger/testmuai-alttester-unity-game-automation.git\ncd testmuai-alttester-unity-game-automation"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a Virtual Environment and Install Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python -m venv venv\nsource venv/bin/activate        # Windows: venv\\Scripts\\activate\npip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure Your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "touch .env"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure Your TestMu AI Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "INI",
+        "text": "LT_USERNAME=your_testmu_ai_username\nLT_ACCESS_KEY=your_testmu_ai_access_key\nLT_APP_URL=lt://your_app_url"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Configure the TestMu AI Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "lt_options = {\n    \"user\": username,\n    \"accessKey\": access_key,\n    \"app\": app_url,\n    \"deviceName\": \"Pixel.*\",\n    \"platformVersion\": \"14\",\n    \"platformName\": \"android\",\n    # \"deviceName\": \"iPhone 14\",\n    # \"platformVersion\": \"16\",\n    # \"platformName\": \"ios\",\n    \"build\": \"AltTester TestMu AI demo with TrashCat\",\n    \"name\": f\"tests - {datetime.now().strftime('%B %d - %H:%M')}\",\n    \"isRealMobile\": True,\n    \"idleTimeout\": 300,\n    \"tunnel\": True,\n    \"tunnelName\": TUNNEL_NAME,\n}\n\noptions = AppiumOptions()\noptions.set_capability(\"lt:options\", lt_options)\noptions.set_capability(\"platformName\", \"android\")\n\nappium_driver = appium_webdriver.Remote(\n    command_executor=f\"https://{username}:{access_key}@mobile-hub.lambdatest.com/wd/hub\",\n    options=options,\n)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "[\n    \"./tunnel/LT\",\n    \"--user\", username,\n    \"--key\", access_key,\n    \"--tunnelName\", TUNNEL_NAME,\n    \"--verbose\",\n    \"--infoAPIPort\", str(TUNNEL_INFO_PORT),\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Run the Unity Game Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Run the Unity Game Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest tests/test_start_page.py -v\npytest tests/test_main_menu.py -v\npytest tests/test_game_play.py -v\npytest tests/test_store.py -v\npytest tests/test_user_journey.py -v"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Run the Unity Game Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest tests/test_main_menu.py::TestMainMenu::test_main_menu_page_loaded_correctly -v"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Change the Target Device",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "# Android\n\"deviceName\": \"Pixel.*\",\n\"platformVersion\": \"14\",\n\"platformName\": \"android\",\n\n# iOS: uncomment and adjust\n# \"deviceName\": \"iPhone 14\",\n# \"platformVersion\": \"16\",\n# \"platformName\": \"ios\","
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # How to Automate Unity Games With AltTester on TestMu AI
 
 ***

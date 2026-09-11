@@ -45,6 +45,116 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-accessibility-test/"
+    },
+    "headline": "Automation Tests with Accessibility Tool using Playwright",
+    "description": "Use TestMu AI Accessibility Automation with Playwright to detect and report accessibility issues during automated test execution.",
+    "url": "https://www.testmuai.com/support/docs/playwright-accessibility-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; Setup your local machine as per your testing framework..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "  const capabilities = {\n    'browserName': 'Chrome',\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Accessibility',\n      'name': 'Playwright Accessibility',\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      ..//\n    }\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To use this, simply enable accessibility in your capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "capabilities['accessibility'] = true; // Enable accessibility testing"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then, trigger the scan directly within your test script when the desired page is fully loaded",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Execute the LambdaTest accessibility scan hook\nawait page.evaluate('lambda-accessibility-scan');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Continuous Auto-Scanning",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "capabilities['accessibility'] = true; // Enable accessibility testing\ncapabilities['accessibility.autoScan'] = true; // Automatically scan all pages"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also define other settings capabilities to refine your scan rules as described below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  \"accessibility\": true,\n  \"accessibility.wcagVersion\": \"wcag21aa\", // Specify WCAG version (e.g., WCAG 2.1 Level AA)\n  \"accessibility.bestPractice\": false,     // Exclude best practice issues from results\n  \"accessibility.needsReview\": true        // Include issues that need review\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Add the following add-on Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Load the extension for report generation of the accessibility tests\nawait ltPage.goto(\"chrome://extensions/?id=johgkfjmgfeapgnbkmfkfkaholjbcnah\");\nconst secondToggleButton = ltPage.locator('#crToggle').nth(0); \nawait secondToggleButton.click();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Execute and Monitor your Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx playwright test --config=./playwright.config.js"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using <BrandName />'s Accessibility Tool.
 
 > **Note:** Accessibility Testing for Playwright is currently supported on the **Chrome browser**. It is **not supported on `pw-chromium`**.

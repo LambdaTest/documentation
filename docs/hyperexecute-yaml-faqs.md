@@ -42,6 +42,150 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-yaml-faqs/"
+    },
+    "headline": "HyperExecute YAML FAQs: troubleshooting common errors",
+    "description": "Get answers to your HyperExecute YAML FAQs. Learn about automation, configurations, integrations, and more for efficient test execution on TestMu AI..",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-yaml-faqs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sample YAML file that supports AutoSplit looks like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nrunson: linux\nconcurrency: 2\nautosplit: true\npre:\n  - npm install\n\ncacheKey: '{{ checksum \"package-lock.json\" }}'\ncacheDirectories:\n  - node_modules\ntestDiscovery:\n  type: automatic\n  mode: static\n  args:\n    featureFilePaths: <the_path_to_your_folder>\n    frameWork: javascript\n    specificTags: [\"@ToDoOne\", \"@ToDoTwo\", \"@ToDoThree\"]\n\ntestRunnerCommand: <your_test_execution_command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. How can I install private artifactory dependencies that can only be accessed on my organization\u2019s internal network on HyperExecute Machines?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tunnel: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. How can I install private artifactory dependencies that can only be accessed on my organization\u2019s internal network on HyperExecute Machines?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nrunson: linux\nconcurrency: 2\nautosplit: true\ntunnelOpts:\n  global: true\n\npreDirectives:\n  commands:\n  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install -DproxyHost=${LT_PROXY_HOST} -DproxyPort=${LT_PROXY_PORT}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. How can I install and set a private node registry on the HyperExecute Machine?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "preDirectives:\n  commands: \n    - npm config set registry <artifactory_URL>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the following parameters in the testRunnerCommand of the HyperExecute YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "testRunnerCommand: $env:GLOBAL_AGENT_NO_PROXY=\"hub.lambdatest.com\";$env:GLOBAL_AGENT_HTTP_PROXY=$env:LT_PROXY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "6. I want to use a specific version of gradle for my project. How can I set that up on HyperExecute machines?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "runtime:\n  language: java\n  version: 17\n  addons:\n    - name: \"gradle\"\n\t  version: \"7.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can accomplish this by running the following command in the preDirectives section of the YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "preDirectives:\n  commands:\n    - npm --prefix /path/to/project/my_package.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sample testRunnerCommand to accomplish this is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "testRunnerCommand: mvn test `-DselectedTests=\"$test\" `-Dmaven.repo.local=./.m2 dependency:resolve `-Dbrowser=${browser} `-Dversion=${version}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "8. How can I use the Jenkins job choice parameters in the YAML file?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "testDiscovery: \n    type: raw\n    mode: remote\n    command: grep 'test name' src/test/java/${xml} | awk '{print$2}' | sed 's/name=//g' | sed 's/\\x3e//g'\n\ntestRunnerCommand: mvn test `-DselectedTests=\"$test\" `-Dmaven.repo.local=./.m2 dependency:resolve `-Dbrowser=${browser} `-Dversion=${version}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "9. I run a lot of tests with the same YAML configurations. Is there any way where I can run my tests without specifying the same configurations over and over again?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "base:\n  yamls:\n    - ./<baseConfiguration1.yaml>\n    - ./<baseConfiguration2.yaml>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "10. I want to test the code in my Git repository. Is there a way where I can accomplish that with HyperExecute?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sourcePayload:\n  platform: git\n  link: https://--------\n  ref: master\n  accessToken: <your_personal_access_token>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "13. How to handle Maven SSL Cert Error while executing the test?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # HyperExecute YAML FAQs
 
 ***

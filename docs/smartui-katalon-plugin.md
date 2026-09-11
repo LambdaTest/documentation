@@ -56,6 +56,101 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/"
+    },
+    "headline": "SmartUI Plugin for Katalon Studio",
+    "description": "Integrate TestMu AI SmartUI with Katalon Studio to perform visual regression testing directly in your test automation workflows.",
+    "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Start your Katalon Instance from terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "/Applications/Katalon\\ Studio\\ Enterprise.app/Contents/MacOS/katalon"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Via Project Settings:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "PROJECT_TOKEN = \"project_token...\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Minimal Example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Groovy",
+        "text": "// Start SmartUI Server\n// Replace 'buildName' with your desired build name (optional)\nCustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('My Katalon Build', '', '')\n\n// Open Browser\nWebUI.openBrowser('')\nWebUI.navigateToUrl('https://lambdatest.com')\n\n// Capture Snapshot with SmartUI\n// The string parameter is the snapshot name (will appear in SmartUI Dashboard)\nCustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.takeSnapshot'('Homepage Snapshot')\n\n// Stop SmartUI Server\nCustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.stopServer'()\n\n// Close Browser\nWebUI.closeBrowser()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using a Config File (config.json):",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"deviceName\": \"Chrome Desktop\",\n  \"platform\": \"Windows\",\n  \"fullPage\": true,\n  \"ignoreBoxes\": {\n    \"xpath\": [\n      \"//*[@class='dynamic-ad']\",\n      \"//*[@id='timestamp']\"\n    ]\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then use it in your test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Groovy",
+        "text": "CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('Build v1.0', 'config.json', '')"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [<BrandName /> SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 
 With this plugin, you can:

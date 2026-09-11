@@ -57,6 +57,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/manual-to-automated-test-conversion/"
+    },
+    "headline": "AI Test Generation: Requirements to Code",
+    "description": "Convert manual test requirements into automated test scripts using AI. Generate test scenarios from text, documents, images, audio, Jira tickets, and more,then automate them with KaneAI and export code in Selenium, Playwright, Appium, and other frameworks.",
+    "url": "https://www.testmuai.com/support/docs/manual-to-automated-test-conversion/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "manual to automated test conversion",
+      "convert manual tests to automated",
+      "AI test case generation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "End-to-End Flow Summary",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Requirements (text, docs, images, audio, Jira, ADO)\n        \u2502\n        \u25bc\n   AI Test Case Generator (Test Manager / KaneAI)\n        \u2502\n        \u251c\u2500\u2500 Create \u2500\u2500\u25ba Test Case Repository (manual testing)\n        \u2502\n        \u2514\u2500\u2500 Create and Automate \u2500\u2500\u25ba KaneAI Automation\n                                        \u2502\n                                        \u25bc\n                                  Code Generation\n                              (Selenium, Playwright,\n                               Cypress, Appium, etc.)\n                                        \u2502\n                                        \u25bc\n                              Download / CI/CD / HyperExecute"
+      }
+    ],
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
 # AI Test Generation: Requirements to Code
 
 <BrandName /> provides a complete workflow to convert your manual test requirements into fully automated test scripts,from requirement input to executable code. This guide walks through the end-to-end flow using **Test Manager** and **KaneAI**.

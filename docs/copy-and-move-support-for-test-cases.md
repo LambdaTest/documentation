@@ -41,6 +41,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/copy-and-move-support-for-test-cases/"
+    },
+    "headline": "Copy and Move Support for Test Cases",
+    "description": "Learn how to efficiently copy and move test cases within TestMu AI, streamlining your testing process and enhancing organization across multiple projects.",
+    "url": "https://www.testmuai.com/support/docs/copy-and-move-support-for-test-cases/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "copy test cases",
+      "move test cases",
+      "copy and move test cases to different folders"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-02T15:36:03+05:30"
+  }) }}
+/>
+
 # Copy and Move Support for Test Cases
 
 The Copy and Move feature for test cases helps streamline the organization of test cases. It allows you to easily transfer test cases between different folders or projects, making it simple to keep everything organized. This feature enhances team collaboration and ensures that test cases are always accessible where needed.

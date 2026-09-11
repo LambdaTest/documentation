@@ -16,6 +16,143 @@ canonical: https://www.testmuai.com/support/docs/appium-custom-headers/
 import VerifiedTag from '@site/src/component/verifiedTag';
 
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-custom-headers/"
+    },
+    "headline": "How to Use CustomHeaders Capability",
+    "description": "Learn how to use TestMu AI CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions in app automation tests.",
+    "url": "https://www.testmuai.com/support/docs/appium-custom-headers/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "custom headers testmu ai",
+      "bypass firewalls restrictions",
+      "custom headers bypass firewalls"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to use CustomHeaders Capability on TestMu AI?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"customHeaders\", new HashMap<String, String>() {{\n    put(\"headerName\", \"headerValue\");\n}});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here are some of its key use cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CustomHeaders: Use Cases and Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "Accept: application/json "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CustomHeaders: Use Cases and Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-RateLimit-Limit: 60\nX-RateLimit-Remaining: 56\nX-RateLimit-Reset: 1372700873"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions."
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 #  CustomHeaders support for automation 
 
 Custom headers provide you the ability to keep crucial information about the request or response, such as the method, URL, and body content. You can modify the parameters of the HTTP requests delivered by your tests by manipulating with these headers, thereby around firewall restrictions.

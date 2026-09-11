@@ -40,6 +40,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup-with-aws/"
+    },
+    "headline": "How to setup HyperExecute Private Cloud with AWS",
+    "description": "This documentation will help you setup HyperExecute Private Cloud with AWS.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-private-cloud-setup-with-aws/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "hyperexecute aws",
+      "hyperexecute private cloud",
+      "hyperexecute private cloud aws"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Log in to the AWS environment and access the Kubernetes cluster by running the following command on AWS CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   aws eks --region <region_name> update-kubeconfig --name <cluster_name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Execute the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   kubectl get namespaces"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Execute the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   kubectl get po -n hyperexecute"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ## Prerequisites
 
 Before deploying the CloudFormation template for HyperExecute through the AWS Marketplace, ensure that the following prerequisites are met:

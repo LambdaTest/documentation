@@ -29,6 +29,143 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/auto-healing/"
+    },
+    "headline": "How to Use Auto Healing for Selenium Test Suites",
+    "description": "Use Auto Healing in Selenium tests to reduce test flakiness and improve test suite reliability automatically.",
+    "url": "https://www.testmuai.com/support/docs/auto-healing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "selenium auto heal capability",
+      "auto healing flaky tests selenium",
+      "self-healing test automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Auto Healing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capability = {\n    \"browserName\": \"Chrome\",\n    \"browserVersion\": \"114.0\",\n    \"LT:Options\": {\n        \"platformName\": \"Windows 10\",\n        \"project\": \"Untitled\",\n        \"w3c\": true,\n        \"plugin\": \"node_js-node_js\",\n        \"autoHeal\": true\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Java, use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setBrowserVersion(\"118.0\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"YOUR_LAMBDATEST_USERNAME\");\nltOptions.put(\"accessKey\", \"YOUR_LAMBDATEST_ACCESS_KEY\");\nltOptions.put(\"project\", \"Untitled\");\nltOptions.put(\"selenium_version\", \"4.0.0\");\nltOptions.put(\"w3c\", true);\n// highlight-next-line\nltOptions.put(\"autoHeal\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For NodeJS, use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capability = {\n\t\"browserName\": \"Chrome\",\n\t\"browserVersion\": \"118.0\",\n\t\"LT:Options\": {\n\t\t\"username\": \"YOUR_LAMBDATEST_USERNAME\",\n\t\t\"accessKey\": \"YOUR_LAMBDATEST_ACCESS_KEY\",\n\t\t\"project\": \"Untitled\",\n\t\t\"w3c\": true,\n\t\t\"plugin\": \"node_js-node_js\",\n\t\t// highlight-next-line\n\t\t\"autoHeal\": true\n\t}\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For C#, use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "ChromeOptions capabilities = new ChromeOptions();\ncapabilities.BrowserVersion = \"118.0\";\nDictionary<string, object> ltOptions = new Dictionary<string, object>();\nltOptions.Add(\"username\", \"YOUR_LAMBDATEST_USERNAME\");\nltOptions.Add(\"accessKey\", \"YOUR_LAMBDATEST_ACCESS_KEY\");\nltOptions.Add(\"project\", \"Untitled\");\nltOptions.Add(\"w3c\", true);\nltOptions.Add(\"plugin\", \"c#-c#\");\n// highlight-next-line\nltOptions.Add(\"autoHeal\", true);\ncapabilities.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For PHP, use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$capability = array(\n\t\"browserName\" => \"Chrome\",\n\t\"browserVersion\" => \"118.0\",\n\t\"LT:Options\" => array(\n\t\t\"username\" => \"YOUR_LAMBDATEST_USERNAME\",\n\t\t\"accessKey\" => \"YOUR_LAMBDATEST_ACCESS_KEY\",\n\t\t\"project\" => \"Untitled\",\n\t\t\"w3c\" => true,\n\t\t\"plugin\" => \"php-php\",\n\t\t// highlight-next-line\n\t\t\"autoHeal\" => true\n\t)\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Python, use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "options = ChromeOptions()\noptions.browser_version = \"118.0\"\nlt_options = {}\nlt_options[\"username\"] = \"YOUR_LAMBDATEST_USERNAME\"\nlt_options[\"accessKey\"] = \"YOUR_LAMBDATEST_ACCESS_KEY\"\nlt_options[\"project\"] = \"Untitled\"\nlt_options[\"w3c\"] = True\nlt_options[\"plugin\"] = \"python-python\"\n# highlight-next-line\nlt_options[\"autoHeal\"] = True\noptions.set_capability('LT:Options', lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Ruby, use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "options = Selenium::WebDriver::Options.chrome\noptions.browser_version = \"118.0\"\nlt_options = {}\nlt_options[:username] = \"YOUR_LAMBDATEST_USERNAME\"\nlt_options[:accessKey] = \"YOUR_LAMBDATEST_ACCESS_KEY\"\nlt_options[:project] = \"Untitled\"\nlt_options[:w3c] = true\nlt_options[:plugin] = \"ruby-ruby\"\n# highlight-next-line\nlt_options[:autoHeal] = true\noptions.set_capability('LT:Options', lt_options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example test case demonstrating this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "import assert from 'assert';\nimport { Builder, By, until, Capabilities } from 'selenium-webdriver';\n\ndescribe('Amazon Search Box Test', function () {\n    this.timeout(30000);\n    let driver;\n    let vars;\n\n    const capability = {\n        \"browserName\": \"Chrome\",\n        \"browserVersion\": \"114.0\",\n        \"LT:Options\": {\n            \"platformName\": \"Windows 10\",\n            \"project\": \"Untitled\",\n            \"w3c\": true,\n            \"plugin\": \"node_js-node_js\",\n            \"autoHeal\": true\n        }\n    }\n\n    beforeEach(async function () {\n        driver = await new Builder()\n            .usingServer('https://YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY@hub.lambdatest.com/wd/hub')\n            .withCapabilities(capability)\n            .build();\n        vars = {};\n    });\n\n    afterEach(async function () {\n        await driver.quit();\n    });\n\n    it('should change id of search box and find element', async function () {\n        await driver.get('https://www.amazon.com');\n        const searchBoxActual = await driver.findElement(By.id('nav-search-submit-button'));\n        await driver.executeScript(\"document.getElementById('nav-search-submit-button').id='amazonsearchbox'\");\n        // const searchBox = await driver.findElement(By.id('amazonsearchbox'));\n        const searchBoxHeal = await driver.findElement(By.id('nav-search-submit-button'));\n        assert(searchBoxHeal, 'Element not found');\n    });\n});\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run the test, execute the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./node_modules/.bin/mocha autohealingTest.js "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable Auto Heal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute_script('lambdatest_executor:{\"action\":\"lambda-heal-start\"}')"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Disable Auto Heal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "driver.execute_script('lambdatest_executor:{\"action\":\"lambda-heal-stop\"}')"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Auto Healing for Selenium Web Automation
 ---
 

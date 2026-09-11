@@ -41,6 +41,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/queuing-appium-tests/"
+    },
+    "headline": "Queuing Appium Automated Tests",
+    "description": "To avoid overuse of TestMu AI , we have put a capacity limit on the number of tests queued on our platform. Here's a brief guide on queuing your Appium automated tests.",
+    "url": "https://www.testmuai.com/support/docs/queuing-appium-tests/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "appium test session queuing",
+      "queuing",
+      "testmu ai queuing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Queuing Appium Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "Maximum number of Appium test cases that can be queued = n + 150\n\nHere, n = number of concurrent sessions."
+      }
+    ],
+    "dateModified": "2026-03-02T15:19:46+05:30"
+  }) }}
+/>
+
 # Queuing Appium Tests
 ***
 

@@ -39,6 +39,87 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-co
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-console/"
+    },
+    "headline": "Console Assertions",
+    "description": "Verify browser console output: errors, warnings, log messages, and JavaScript exceptions captured during test execution.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-console/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "console assertion",
+      "javascript errors",
+      "console log"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: no console errors on the page\nAssert: no uncaught JavaScript exceptions\nAssert: console contains \"Amplitude SDK triggered\"\nAssert: no console warnings\nAssert: no JS errors after clicking Submit"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Store all console error messages\nExtract the first console error text\nStore all console log output"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example If/Else",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "If console contains \"feature_flag_enabled\" then use new flow, else use legacy flow"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Console assertions let you verify browser console output: error messages, warnings, log messages, and uncaught JavaScript exceptions.
 
 ## How Capture Works

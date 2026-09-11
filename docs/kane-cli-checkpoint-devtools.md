@@ -41,6 +41,73 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools/
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools/"
+    },
+    "headline": "DevTools Assertions",
+    "description": "Verify data that is not visible on the page: HTTP network traffic, console output, performance metrics, cookies, localStorage, and clipboard.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "devtools assertion",
+      "network",
+      "console"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Examples",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: no API calls returned 5xx\nAssert: no console errors on the page\nAssert: page LCP is under 2500ms\nAssert: session cookie exists and is httpOnly\nAssert: auth_token is stored in localStorage"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 DevTools assertions let you verify data that isn't visible on the page: HTTP network traffic, browser console output, performance metrics, cookies, localStorage, and clipboard. KaneAI captures this data automatically in the background; you just write what to check.
 
 ## Available Domains

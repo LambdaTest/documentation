@@ -41,6 +41,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-auto-split-strategy/"
+    },
+    "headline": "AutoSplit Strategy",
+    "description": "Explore HyperExecute Auto Split Strategy | Optimize Testing Efficiency - Discover how HyperExecute revolutionizes testing with auto split strategy for enhanced efficiency.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-auto-split-strategy/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Auto-Test Splitting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nAlong with that, you need to provide [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) flags in your YAML file as well.\n\n### Configuration Parameters\n\n#### 1. `concurrency`\nThe `concurrency`  key indicates the total number of concurrent sessions that can run in parallel. With both of these commands (`testDiscovery` and `testRunnerCommand`), HyperExecute intelligently distributes tests over multiple virtual machines as specified by the `concurrency` directive in the YAML file.\n\nFor example, assume that the total number of test scenarios [discovered via `testDiscovery`] are 27 and `concurrency` is set to 7. In this case, HyperExecute would allocate 7 nodes for running the 27 tests in parallel.\n\n``` yaml\nconcurrency: 7"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A few samples are given below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "# The following command (or value) when assigned to testDiscoverer key searches for the scenarios by matching the string Scenario [or Scenario Outline] in the .feature  files located in the *src* directory of the project.\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -nri 'Scenario:\\^|Scenario Outline:' src -ir --include=\\*.feature |  awk '{print $1}' | sed 's/\\.\\///g' | sed 's/\\(.*\\):/\\1 /'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following command (or value) when assigned to testDiscoverer key searches for the scenarios by matching the string Scenario [or Scenario Outline] in the .feature files located in the src directory of the project.",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery:\n  type: raw\n  mode: remote\n  command: grep 'class name' testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\\x3e//g'"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 The Smart **Auto Split Strategy** enables you to distribute tests across multiple virtual machines efficiently. This strategy ensures optimal utilization of concurrency by allowing you to split tests based on various levels, such as files, modules, and scenarios.
 
 ## Key Benefits of Auto Split Strategy

@@ -41,6 +41,63 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/jira-integration/"
+    },
+    "headline": "Integrate TestMu AI with Jira",
+    "description": "TestMu AI provides integrations with JIRA to help you log bugs directly from the middle of your test session on TestMu AI to JIRA platform.",
+    "url": "https://www.testmuai.com/support/docs/jira-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "TestMu AI integrations",
+      "Push issues to Jira",
+      "TestMu AI Jira integration"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-13T14:13:06+05:30"
+  }) }}
+/>
+
 # Jira Integration
 
 <!-- > Developed by Atlassian, Jira is one of the most popular enterprise project management tool. Equipped with a highly usable dashboard, task management features, and project analytics. It is used by development as well as testing teams to track user stories & progress on every sprint. Along with project management, Jira also aids in effective bug tracking by providing a space where you can log bugs and prioritized them according to your release bandwidth. -->

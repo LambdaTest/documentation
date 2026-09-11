@@ -43,6 +43,150 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-kb-api-testing-and-network-assertions/"
+    },
+    "headline": "API Testing & Network Assertions",
+    "description": "Combine API testing with UI testing in KaneAI, make API calls, assert network responses, validate backend behavior alongside frontend interactions",
+    "url": "https://www.testmuai.com/support/docs/kaneai-kb-api-testing-and-network-assertions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai api testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: GET Request",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -X GET \"https://api.example.com/users/123\" \\\n  -H \"Authorization: Bearer {{secret.api_token}}\" \\\n  -H \"Content-Type: application/json\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: POST Request",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -X POST \"https://api.example.com/users\" \\\n  -H \"Authorization: Bearer {{secret.api_token}}\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"role\": \"admin\"\n  }'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Accessing Response Data",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- After making a GET /users/123 API call --\n-- Response stored as {{api_users}} --\n\nassert {{api_users.response.name}} is \"John Doe\"\nassert {{api_users.response.email}} is \"john@example.com\"\nassert {{api_users.response.status}} is \"active\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use dot notation to reach nested properties",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "assert {{api_users.response.address.city}} is \"New York\"\nassert {{api_users.response.orders[0].total}} is \"150.00\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Combine API data with UI interactions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Fetch user data from API --\n-- (stored as {{api_user}}) --\n\n-- Navigate to UI and verify data matches --\ngo to https://app.example.com/users/123\nwait for 3 seconds\nassert the name field shows {{api_user.response.name}}\nassert the email field shows {{api_user.response.email}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Create User via API, Verify in UI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Step 1: Create user via API --\n-- (Use / \u2192 API \u2192 Paste curl for POST /api/users) --\n-- Response stored as {{new_user}} --\n\n-- Step 2: Verify in UI --\ngo to https://app.example.com/admin/users\nwait for 3 seconds\ntype {{new_user.response.email}} in the search field\nwait for 2 seconds\nassert {{new_user.response.name}} is visible in the users table"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Verify UI Action Triggers Correct API Call",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Browse to product page --\ngo to https://shop.example.com/products/laptop\nclick \"Add to Cart\"\nwait for 3 seconds\n\n-- Assert the network call was correct --\n-- (Use / \u2192 Assert Network Logs \u2192 Find the POST /cart/items call) --\n-- Assert the request body contains the correct product ID --\n-- Assert the response status is 200 --\nassert \"Added to cart\" success message is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: E-Commerce Checkout with Backend Validation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Step 1: Add items to cart via UI --\ngo to https://shop.example.com\nclick \"Add to Cart\" on \"Wireless Mouse\"\nclick \"Add to Cart\" on \"USB Cable\"\n\n-- Step 2: Proceed to checkout --\nclick on \"Cart\" icon\nclick on \"Checkout\"\n\n-- Step 3: Verify order total via API --\n-- (Use / \u2192 Assert Network Logs \u2192 Find the POST /api/orders call) --\n-- Assert the response total matches what the UI shows --\nassert the order total on the page matches {{order_api.response.total}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Test API Error Handling in UI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Navigate to a page that fetches data --\ngo to https://app.example.com/reports/nonexistent\nwait for 5 seconds\n\n-- Assert Network Logs shows a 404 --\n-- (Use / \u2192 Assert Network Logs \u2192 Find the GET /api/reports/nonexistent call) --\n-- Assert status code is 404 --\n\n-- Verify UI handles the error --\nassert \"Report not found\" message is visible\nassert no unhandled error or stack trace is shown on the page"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: API-Driven Test Data Setup",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Create test product via API --\n-- POST /api/products with name \"Test Product\", price 29.99 --\n-- Response stored as {{test_product}} --\n\n-- Create test user via API --\n-- POST /api/users with name \"Test Buyer\" --\n-- Response stored as {{test_user}} --\n\n-- Now run the UI test --\ngo to https://shop.example.com/login\ntype {{test_user.response.email}} in the email field\ntype \"password123\" in the password field\nclick \"Sign In\"\nwait for 3 seconds\n\n-- Search for the product we created --\ntype {{test_product.response.name}} in the search field and press Enter\nwait for 3 seconds\nassert {{test_product.response.name}} is visible in the results\nclick \"Add to Cart\"\nassert cart count shows \"1\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Validate API Response Headers",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Make an API call --\n-- GET /api/users with Authorization header --\n\n-- Assert response headers --\nassert {{api_users.headers.content-type}} contains \"application/json\"\nassert {{api_users.headers.x-ratelimit-remaining}} is not \"0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can combine API calls, UI interactions, and database validation in a single test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Step 1: Create order via UI --\n-- ... add items and checkout ... --\n\n-- Step 2: Verify API response --\n-- Assert the POST /orders response contains order ID --\n\n-- Step 3: Verify in database --\n-- (Use / \u2192 Database Query) --\n-- Query: SELECT * FROM orders WHERE id = {{order_api.response.id}} --\n-- Assert the database record matches the API response --"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 KaneAI isn't just a UI testing tool. It also supports API testing and network-level assertions, allowing you to validate both frontend behavior and backend responses in a single test flow. This is critical for scenarios where the UI depends on API data, or where you need to verify that the correct API calls are being made behind the scenes.
 
 ## API Testing in KaneAI

@@ -43,6 +43,101 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-scenario-steps-error/"
+    },
+    "headline": "Debug your Scenario Steps Errors",
+    "description": "This document will help you debug your failed job if you are facing any errors in the Scenario stage.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-scenario-steps-error/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Invalid Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "OpenQA.Selenium.WebDriverException : The newSession command returned an unexpected error. \n401 Unauthorized !! Please include  `user` & `accessKey` in desired capabilities."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When you try to access a Private Endpoint",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "System.AggregateException: One or more errors occurred. --->\nOpenQA.Selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To resolve this, you have to pass this flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tunnel: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's an example of how you can set connection and socket timeouts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "public static void main(String[] args) {\n\n        // Set connection and socket timeouts\n        int connectionTimeout = 5000; // in milliseconds\n        int socketTimeout = 5000; // in milliseconds\n\n        RestAssured.config = RestAssuredConfig.config().socketConfig(\n                SocketConfig.socketConfig().setConnectTimeout(connectionTimeout)\n                        .setReadTimeout(socketTimeout));\n\n        // Your Rest Assured request code here\n        // For example:\n        RestAssured.given()\n                .baseUri(\"https://api.example.com\")\n                .basePath(\"/some/path\")\n                .get()\n                .then()\n                .statusCode(200);\n\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are using Maven, you can add the following dependencies to your pom.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "<dependencies>\n    <dependency>\n        <groupId>io.rest-assured<\/groupId>\n        <artifactId>rest-assured<\/artifactId>\n        <version>4.5.0<\/version> <!-- Use the latest version available -->\n        <scope>test<\/scope>\n    <\/dependency>\n<\/dependencies>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # How to Debug your Scenario Steps Errors
 
 This document will help you debug your failed job if you are facing any errors in the Scenario stage.

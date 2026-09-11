@@ -49,6 +49,117 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/"
+    },
+    "headline": "Espresso Testing On HyperExecute",
+    "description": "Follow the instructions in this documentation, so that you can seamlessly execute Espresso tests on HyperExecute via TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-espresso-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "espresso",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable; HyperExecute YAML file which contains all the necessary instructions.; An Android app (.apk or .aab file)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure YAML in your Test Suite (Auto Sharding)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.2\"\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nconcurrency: 2\n\nrunson: android\n\nautosplit: true\n\nreport: true #to generate reports\n\nframework:\n  name: \"android/espresso\"\n  args:\n    buildName: \"Espresso\"\n    video: true\n    deviceLog: true\n    artifacts: true #to generate artifacts\n\n    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.\n    appPath: proverbial_android.apk\n    testSuitePath: proverbial_android_expressotest.apk\n    # We have used the appPath and testSuitePath here. \n    \n    # highlight-next-line\n    appId: lt://<APP_ID>\n    # highlight-next-line\n    testSuiteAppId: lt://<TEST_SUITE_ID>\n    # We have used the appId and testSuiteAppID here.\n\n    deviceSelectionStrategy: all\n    devices: [\"Galaxy.*\", \"Pixel.*\"]\n\njobLabel: ['HYP', 'Espresso', 'Auto Sharding']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "We have used the appId and testSuiteAppID here. (Manual Sharding)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.2\"\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nconcurrency: 2\n\nrunson: android\n\nautosplit: false\n\nreport: true #to generate reports\n\nframework:\n  name: android/espresso\n  args:\n    buildName: Espresso\n    video: true\n    deviceLog: true\n    artifacts: true #to generate artifacts\n\n    # highlight-next-line\n    appPath: proverbial_android.apk\n    # highlight-next-line\n    testSuitePath: proverbial_android_expressotest.apk # We have used the appPath and testSuitePath here. \n    # highlight-next-line\n    appId: lt://APP123456789\n    # highlight-next-line\n    testSuiteAppId: lt://APP123456789 # We have used the appId and testSuiteAppID here.\n    deviceSelectionStrategy: all\n    devices:\n      - Galaxy.*\n      - Pixel.*\n    shards:\n      mappings:\n        - name: shard1\n          strategy: class\n          values:\n            - com.lambdatest.proverbial.BrowserTest\n    # The strategy for this shard is based on \"class\".\n    # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.\n        - name: shard2\n          strategy: package\n          values:\n            - com.lambdatest.proverbial\n    # The strategy for this shard is based on \"package\". \n    # This shard will run all tests that belong to the package com.lambdatest.proverbial.l.\n        - name: shard3\n          strategy: skipClass\n          values:\n            - com.lambdatest.proverbial.BrowserTest\n    # The strategy for this shard is to skip a specific class. \n    # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.\n\njobLabel: ['HYP', 'Espresso', 'Manual Sharding']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "privateCloud: true \npreservedDevice: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate artifacts for your Espresso tests, add the artifacts: true, and report: true flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\n\nframework:\n  name: \"android/espresso\"\n  args:\n    artifacts: true\n    ...//"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The espresso-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "espresso-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Espresso Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/espresso-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/espresso-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This page outlines how to execute your Espresso tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
 ## Prerequisites

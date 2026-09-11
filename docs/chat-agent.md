@@ -1,6 +1,7 @@
 ---
 id: chat-agent
-title: How to Test Chat Agents With TestMu AI Agent Testing Platform
+toc_max_heading_level: 2
+title: Chat Agent Testing With TestMu AI
 hide_title: false
 sidebar_label: Chat Agents
 description: Test chat agents on TestMu AI. How multi-turn conversations are simulated, which quality metrics are scored, and how to run an evaluation from UI, CLI, or API.
@@ -43,11 +44,64 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test Chat Agents With TestMu AI Agent Testing Platform
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/chat-agent/"
+    },
+    "headline": "Chat Agent Testing With TestMu AI",
+    "description": "Test chat agents on TestMu AI. How multi-turn conversations are simulated, which quality metrics are scored, and how to run an evaluation from UI, CLI, or API.",
+    "url": "https://www.testmuai.com/support/docs/chat-agent/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "chat agent testing",
+      "chatbot testing",
+      "chat agent evaluation"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 
----
-
-The Agent Assurance Platform tests a chat agent by holding multi-turn conversations with it through its API, following AI-generated scenarios, and scoring each conversation across quality metrics. It covers text chatbots, virtual assistants, IT helpdesks, and FAQ bots.
+The TestMu AI Agent Testing Platform tests a chat agent by holding multi-turn conversations with it through its API, following AI-generated scenarios, and scoring each conversation across quality metrics. It covers text chatbots, virtual assistants, IT helpdesks, and FAQ bots.
 
 You provide the endpoint, the agent's intended behavior, and any requirement documents. The platform generates the scenarios and runs the conversations. No code changes to your agent are required.
 
@@ -83,7 +137,7 @@ You can test a chat agent three ways. All three run the same evaluation and prod
 
 Each run produces per-metric scores with pass or fail badges, full transcripts for failing conversations annotated with the evidence that drove the score, and score deltas against previous runs. The scores roll up into a Green, Yellow, or Red go-live verdict.
 
-## Features
+## What the Chat Agent Workflow Includes
 
 ---
 

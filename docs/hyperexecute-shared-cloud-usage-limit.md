@@ -42,6 +42,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-shared-cloud-usage-limit/"
+    },
+    "headline": "Daily Usage Limit Per Organization | HyperExecute",
+    "description": "TestMu AI enforces a daily test execution time limit at the organization level, based on the number of concurrent sessions, to ensure fair usage and system stability.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-shared-cloud-usage-limit/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "over-exploitation",
+      "testmu ai best practices",
+      "automation testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 To ensure fair usage, maintain system stability, and promote optimal test practices across all our users, <BrandName /> enforces a daily usage limit on test execution time at the organization level. Each organization is allocated a maximum allowable test duration per day, calculated based on the number of concurrent (parallel) sessions provisioned to the account. This safeguard helps prevent overutilization and ensures equitable access to resources across the platform.
 
 ## Why This Matters

@@ -56,6 +56,102 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/"
+    },
+    "headline": "SmartUI Testing Using HyperExecute with Cypress",
+    "description": "Boost bug detection speed using HyperExecute smart UI testing with Cypress. Perform Visual UI Regression Testing for perfect app delivery.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "smart ui testing in testmu ai",
+      "smart ui testing in hyperexecute",
+      "visual  ui testing,image to image comparison"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your lambdatest Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environment Variable; HyperExecute YAML file which contains all the necessary instructions.; To run SmartUI tests, you need to have a Baseline Image and a Comparison image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For macOS / Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=YOUR_LT_USERNAME\nexport LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=YOUR_LT_USERNAME\nset LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Cypress Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "cy.screenshot('my-image')"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Cypress Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cypressOps:\n    Build: \"test_01\"\n    Tags: [\"smart-ui\", \"hyperexecute\", \"cypress\"]\n    BuildTags: [\"t1\"]\n    smartUICaps:\n    # highlight-next-line\n        smartUIProjectName: <Enter your Project Name>\n        smartUIOptions:\n            output:\n                errorColor:\n                    red: 0\n                    green: 200\n                    blue: 0\n                errorType: flat,\n                transparency: 1,\n                largeImageThreshold: 100,\n                useCrossOrigin: false,\n                outputDiff: true\n            scaleToSameSize: true,\n            ignore: antialiasing\n        SmartUIBaseline: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Execute your Project and Compare the Results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config <yaml-file-path> --download-artifacts --force-clean-artifacts"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # SmartUI Tests in HyperExecute using Cypress
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Cypress

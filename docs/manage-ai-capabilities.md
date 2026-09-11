@@ -47,6 +47,63 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/manage-ai-capabilities/"
+    },
+    "headline": "Manage AI Capabilities",
+    "description": "Learn how to manage, enable, or disable AI-powered features across your organization using the AI Capabilities toggle in TestMu AI Organization Settings.",
+    "url": "https://www.testmuai.com/support/docs/manage-ai-capabilities/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "ai capabilities",
+      "disable ai features",
+      "enable ai features"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 <BrandName /> provides AI-powered capabilities across multiple products, including Test Manager, HyperExecute, SmartUI, Analytics, Web Automation, App Automation, Accessibility, and KaneAI. The **AI Capabilities** setting allows Org Admins to enable or disable all AI features for their entire organization with a single toggle.
 
 This is useful for enterprise customers who need to comply with client or corporate policies that prohibit the use of AI in testing workflows.

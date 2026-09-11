@@ -56,6 +56,132 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-python-robot/"
+    },
+    "headline": "Appium with Robot",
+    "description": "Now you can run your Appium automation scripts using with Robot on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-python-robot/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "testmu ai python",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; You should have Python installed.; Download and install pip..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create your Virtual Environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "python3 -m virtualenv venv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Activate your Virtual Environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "source venv/bin/activate"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/LT-appium-python-robot",
+        "text": "\n:::note\n\n- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**\n- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).\n:::\n\n## Try our Sample Repository\n\n### Step 1: Get a Sample Project\nYou can use your own project to configure and test it. For demo purposes, we are using the sample repository.\n\n:::tip Sample repo\nAll the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href=\"https://github.com/LambdaTest/LT-appium-python-robot\" className=\"github__anchor\"><img loading=\"lazy\" src={require('../assets/images/icons/github.png').default} alt=\"Image\" className=\"doc_img\"/> View on GitHub<\/a>\n:::\n\n### Step 2: Setup the Environment Variables\n\nYou need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://www.testmuai.com/login/?redirectTo=https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.\n\n<Tabs className=\"docs__val\">\n<TabItem value=\"bash\" label=\"Linux / MacOS\" default>\n  <div className=\"lambdatest__codeblock\">\n    <CodeBlock className=\"language-bash\">\n  {`export LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nexport LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n<\/TabItem>\n<TabItem value=\"powershell\" label=\"Windows\" default>\n  <div className=\"lambdatest__codeblock\">\n    <CodeBlock className=\"language-powershell\">\n  {`set LT_USERNAME=\"${ YOUR_LAMBDATEST_USERNAME()}\"\nset LT_ACCESS_KEY=\"${ YOUR_LAMBDATEST_ACCESS_KEY()}\"`}\n  <\/CodeBlock>\n<\/div>\n<\/TabItem>\n<\/Tabs>\n\n### Step 3: Upload your Application\nUpload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.\n\nMake sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:\n\n<Tabs className=\"docs__val\">\n\n<TabItem value=\"bash\" label=\"App File\" default>\n  <div className=\"lambdatest__codeblock\">\n    <CodeBlock className=\"language-bash\">\n      {`curl -u \"${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"appFile=@\"/Users/macuser/Downloads/proverbial_android.apk\"\" -F \"name=\"proverbial_app\"\"`}\n    <\/CodeBlock>\n  <\/div>\n<\/TabItem>\n\n<TabItem value=\"powershell\" label=\"App URL\" default>\n  <div className=\"lambdatest__codeblock\">\n    <CodeBlock className=\"language-bash\">\n      {`curl -u \"${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" -F \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk\" -F \"name=Proverbial_App\"`}\n    <\/CodeBlock>\n  <\/div>\n<\/TabItem>\n\n<\/Tabs>\n\n:::tip\n\n- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).\n\n- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step\n\n:::\n\n### Step 4: Update your Automation Script\n\nAn automation script file `*StepDef.py` for the sample application given above has been provided here.\n\n<Tabs className=\"docs__val\">\n\n<TabItem value=\"ios-script\" label=\"iOS\" default>\n\n```python title=\"IOS.robot\"\n*** Settings ***\n\nResource  ../Resources/Common.robot\n\nTest Setup  Common.Open test app\nTest Teardown  Common.Close test app\n\n*** Variables ***\n${TIMEOUT}          3000\n\n*** Test Cases ***\n\nExample of connecting to Lambdatest via Robot Framework\n\t[Timeout]   ${TIMEOUT}\n\tClick element  id=color\n\tClick element  id=Text\n\tClick element  id=toast\n\tClick element  id=notification\n\tClick element  id=geoLocation"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<\/Tabs>\n\n### Step 5: Configure the Test Capabilities\n\nYou can update your custom capabilities in test scripts `Makefile` file. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.\n\n```python title=\"Makefile\"\ntest_Web_ios:\n\trobot --variable version:15 --variable platformName:ios --variable deviceName:\"iPhone.*\" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true Tests/AndroidIosWeb.robot\n\ntest_Web_Android:\n\trobot --variable version:11 --variable platformName:android --variable deviceName:\"Galaxy.*\" --variable isRealMobile:true --variable visual:true --variable network:true --variable console:true --variable devicelog:true  Tests/AndroidIosWeb.robot\t"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "make test_iOS1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "make test_Android1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The robot-framework-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "robot-framework-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Robot Framework Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/robot-framework-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/robot-framework-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Robot** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

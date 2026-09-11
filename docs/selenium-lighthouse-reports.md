@@ -43,6 +43,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/"
+    },
+    "headline": "How to Generate Multiple Lighthouse Reports in Selenium",
+    "description": "Generate multiple Lighthouse reports in a single Selenium session using Lambda Hooks.",
+    "url": "https://www.testmuai.com/support/docs/generate-multiple-lighthouse-reports/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "generate multiple lighthouse reports selenium",
+      "lighthouse lambda hooks selenium",
+      "lighthouse performance report automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate a Lighthouse report, use the following JavaScriptExecutor hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "JavascriptExecutor jse = (JavascriptExecutor)driver;\njse.executeScript(\"lambdatest_executor: {\\\"action\\\": \\\"generateLighthouseReport\\\", \\\"arguments\\\": {\\\"url\\\": \\\"<any url>\\\"}}\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 
 # Generating Multiple Lighthouse Reports Using Lambda Hooks
 ---

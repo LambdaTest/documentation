@@ -22,6 +22,101 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-mismatch-thresholds/"
+    },
+    "headline": "Mismatch Thresholds for SmartUI Visual Regression Testing",
+    "description": "Learn how to configure project-level, build-level, and screenshot-level mismatch thresholds for SmartUI Visual Regression testing to control comparison sensitivity.",
+    "url": "https://www.testmuai.com/support/docs/smartui-mismatch-thresholds/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "mismatch threshold",
+      "visual mismatch",
+      "smartui threshold"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Examples (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"java\" label=\"Java\">\n\n```java title=\"Add thresholds to your LT:Options capabilities\"\nHashMap<String, Object> ltOptions = new HashMap<>();\nltOptions.put(\"user\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\n// highlight-next-line\nltOptions.put(\"smartUI.approvalThreshold\", 2);\n// highlight-next-line\nltOptions.put(\"smartUI.rejectionThreshold\", 5);\n\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-next-line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"csharp\" label=\"C#\">\n\n```csharp title=\"Add thresholds to your LT:Options capabilities\"\nvar ltOptions = new Dictionary<string, object>\n{\n    { \"user\", Environment.GetEnvironmentVariable(\"LT_USERNAME\") },\n    { \"accessKey\", Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\") },\n    // highlight-next-line\n    { \"smartUI.approvalThreshold\", 2 },\n    // highlight-next-line\n    { \"smartUI.rejectionThreshold\", 5 }\n};\ncapabilities.AddAdditionalOption(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-next-line",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n---\n\n## Screenshot-Level Configuration\n\nOverride the build or project thresholds for individual screenshots. This is useful when specific pages contain dynamic content (e.g., live feeds, timestamps, ads) that naturally causes higher mismatch.\n\nThe `smartuiSnapshot` method accepts an optional options object with threshold parameters.\n\n### Options Parameters\n\n| Parameter | Type | Description |\n|---|---|---|\n| `approvalThreshold` | Number | Mismatch percentage at or below which this screenshot is auto-approved. |\n| `rejectionThreshold` | Number | Mismatch percentage at or above which this screenshot is auto-rejected. |\n\n### Examples\n\n<Tabs className=\"docs__val\" groupId=\"language\">\n<TabItem value=\"javascript\" label=\"JavaScript\" default>\n\n```javascript title=\"Pass thresholds as the third argument to smartuiSnapshot\"\n// Screenshot using build/project-level thresholds (no override)\nawait smartuiSnapshot(driver, \"Homepage\");\n\n// Screenshot with a custom threshold for a dynamic page\n// highlight-start\nawait smartuiSnapshot(driver, \"Live Dashboard\", {\n    approvalThreshold: 5,\n    rejectionThreshold: 10\n});\n// highlight-end"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"python\" label=\"Python\">\n\n```python title=\"Pass thresholds in the options dictionary\"\n# Screenshot using build/project-level thresholds (no override)\ndriver.execute_script(\"smartui.takeScreenshot\", {\"screenshotName\": \"Homepage\"})\n\n# Screenshot with a custom threshold for a dynamic page\n# highlight-start\noptions = {\n    \"screenshotName\": \"Live Dashboard\",\n    \"approvalThreshold\": 5,\n    \"rejectionThreshold\": 10\n}\ndriver.execute_script(\"smartui.takeScreenshot\", options)\n# highlight-end"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-end (C#)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"ruby\" label=\"Ruby\">\n\n```ruby title=\"Pass thresholds as a hash to smartui_snapshot\"\n# Screenshot using build/project-level thresholds (no override)\nsmartui_snapshot(driver, \"Homepage\")\n\n# Screenshot with a custom threshold for a dynamic page\n# highlight-start\nsmartui_snapshot(driver, \"Live Dashboard\", {\n  approvalThreshold: 5,\n  rejectionThreshold: 10\n})\n# highlight-end"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 ---
 
 # Mismatch Thresholds <NewTag value='New' color='#000' bgColor='#ffec02' />

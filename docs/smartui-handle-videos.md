@@ -49,6 +49,94 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-handle-videos/"
+    },
+    "headline": "Handle Pages with Videos",
+    "description": "Learn how SmartUI automatically handles video content in visual regression tests by capturing the first frame, preventing false positives from dynamic video playback.",
+    "url": "https://www.testmuai.com/support/docs/smartui-handle-videos/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "testmu ai",
+      "smart ui",
+      "videos"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Process Flow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Page Load \u2192 Video Detection \u2192 First Frame Extraction \u2192 Static Image Comparison \u2192 Results"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If videos take time to load, you can add a wait timeout to ensure the first frame is captured correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"web\": {\n    \"browsers\": [\"chrome\"],\n    \"viewports\": [[1920, 1080]]\n  },\n  \"waitForTimeout\": 3000\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can combine video handling with other SmartUI features",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "let options = {\n    ignoreDOM: {\n        cssSelector: [\".video-controls\", \".play-button\"]\n    }\n};\nawait smartuiSnapshot(driver, 'Video Page', options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Wait for video to load\nawait driver.wait(until.elementLocated(By.tagName('video')), 10000);\nawait driver.sleep(2000); // Additional wait for first frame\nawait smartuiSnapshot(driver, 'Video Page');"
+      }
+    ],
+    "dateModified": "2026-03-02T15:19:46+05:30"
+  }) }}
+/>
+
 ## Overview
 
 Web pages often contain video content that plays dynamically, changing frame by frame. In visual regression testing, this dynamic content can cause false positives because each frame of the video appears different, even when the actual page design and layout remain unchanged.

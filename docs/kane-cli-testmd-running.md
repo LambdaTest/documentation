@@ -37,6 +37,171 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-testmd-running/
         }]
       }) }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-testmd-running/"
+    },
+    "headline": "Running test.md files",
+    "description": "Run and replay test.md files with kane-cli testmd: the full flag reference, how a run works, replay versus author, the cascade rule, lock conflicts, output directory, exit codes and the testmd list, status, delete, export and sync commands.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-testmd-running/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli testmd run",
+      "replay",
+      "cascade"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run <path>          # run a test\nkane-cli testmd list                 # list *_test.md files in the current directory\nkane-cli testmd status <path>        # show recorded status for a test\nkane-cli testmd delete <path>        # delete a test and its output directory\nkane-cli testmd export <path>        # regenerate code export from existing recordings\nkane-cli testmd sync <path>          # push the test bundle (test + imports + outputs) to the cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Point it at a _test.md file and it runs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run amazon_test.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can run files anywhere on disk by giving an absolute path or a path relative to your shell's working directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run ./tests/e2e/checkout_test.md\nkane-cli testmd run /Users/me/project/tests/checkout_test.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The output directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "amazon_test.md\noutput-amazon/\n  Result.md\n  .internal/                     # cached recordings \u2014 do not edit by hand\n  playwright-python-code/        # only if code export is enabled"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The file begins with frontmatter",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\ntest: ../amazon_test.md\nstatus: passed\nstarted: 2026-05-13T06:22:43.641Z\nduration_s: 78\nsession_id: 1de66066-fc38-4ed4-9427-f28b2e081171\n---"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Followed by one entry per root-level step",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Markdown",
+        "text": "## Open Amazon \u2713 passed (3s)\nOpen https://www.amazon.com.\n\n## Search \u2713 passed (15s)\nType \"wireless headphones\" into the search box and submit.\n\n## Add to cart \u2717 failed (12s)\nClick \"Add to Cart\" on the product page."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable it via frontmatter",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "code_export: true\ncode_language: \"python\"   # or \"javascript\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\u2026or for a single run, with flags",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run amazon_test.md --code-export --code-language python"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A CI-friendly invocation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run ./tests/checkout_test.md \\\n  --agent \\\n  --headless \\\n  --on-lock-conflict wait \\\n  --retry"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capture exit code in a shell script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd run ./tests/checkout_test.md --agent --headless\nstatus=$?\nif [ \"$status\" -eq 0 ]; then\n  echo \"passed\"\nelif [ \"$status\" -eq 1 ]; then\n  echo \"failed; check Result.md\"\n  exit 1\nelse\n  echo \"error or cancellation (exit=$status)\"\n  exit 1\nfi"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Walks the current directory and prints every *_test.md file it finds",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd list"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli testmd status",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd status amazon_test.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Removes the test source and its output-/ directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd delete amazon_test.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Regenerates the code export from existing recordings without re-running the test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd export amazon_test.md --code-language python"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli testmd sync",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli testmd sync ./tests/checkout_test.md"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
 This page covers the `kane-cli testmd` command family: how to run a test, what the flags do, how replay works, what shows up in the output directory, and what the exit codes mean.
 
 To learn the `_test.md` file format, see [Writing test.md files](/support/docs/kane-cli-testmd/). To reuse flows across tests, see [Composing tests with @import](/support/docs/kane-cli-testmd-composition/).

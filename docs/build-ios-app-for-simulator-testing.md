@@ -45,6 +45,116 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/build-ios-app-for-simulator-testing/"
+    },
+    "headline": "Building Your iOS App for Simulator Testing",
+    "description": "Learn how to build your iOS app correctly for testing on iOS Simulators on TestMu AI Cloud. Covers Xcode UI, command line builds, and build verification.",
+    "url": "https://www.testmuai.com/support/docs/build-ios-app-for-simulator-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "ios simulator testing",
+      "build ios app for simulator",
+      "iphonesimulator sdk"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Xcode installed on a Mac (macOS 13 or later recommended); Your iOS project source code; A TestMu AI account with access to iOS Simulator testing.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Run the following build command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "xcodebuild -project YourProject.xcodeproj \\\n           -scheme YourScheme \\\n           -configuration Debug \\\n           -sdk iphonesimulator \\\n           -arch arm64 \\\n           build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can find the path in the build output, or use",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "xcodebuild -project YourProject.xcodeproj \\\n           -scheme YourScheme \\\n           -configuration Debug \\\n           -sdk iphonesimulator \\\n           -arch arm64 \\\n           -showBuildSettings | grep \"BUILT_PRODUCTS_DIR\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Compress the .app into a .zip file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd /path/to/build/output/\nzip -r YourApp.zip YourApp.app"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Run the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "vtool -show-build YourApp.app/YourApp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Check the output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  platform: IOSSIMULATOR"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verifying Your Build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  platform: IOS"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also use otool to check the architecture",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lipo -info YourApp.app/YourApp"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 To test your iOS application on <BrandName /> iOS Simulators, your app must be built specifically for the **iOS Simulator** platform. A build intended for a physical iPhone will not work on the Simulator, even if the CPU architecture matches. This guide walks you through creating a Simulator-compatible build and verifying it before uploading.
 
 ## Why Simulator Builds Are Different
