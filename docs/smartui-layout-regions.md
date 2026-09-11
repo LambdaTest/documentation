@@ -56,6 +56,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-layout-regions/"
+    },
+    "headline": "Layout Regions in SmartUI",
+    "description": "Learn how to draw a Layout Region in the SmartUI annotation tool so a single area of a web page or PDF is compared for structure only, while the rest of the capture keeps its normal comparison mode.",
+    "url": "https://www.testmuai.com/support/docs/smartui-layout-regions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Layout Region",
+      "Layout Regions",
+      "Visual Regression"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-30T20:15:01+05:30"
+  }) }}
+/>
+
 # Layout Regions <NewTag value="New" />
 
 A **Layout Region** is an annotation you draw on a capture to compare that one area for **structure only**. Inside the region SmartUI checks whether elements were added, removed, or moved. Changes to the content inside those elements, such as text, values, and colors, do not raise a difference. Everything outside the region continues to use the build's normal comparison mode.

@@ -54,6 +54,117 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-nodejs-webdriverio/"
+    },
+    "headline": "Appium With WebDriverIO",
+    "description": "Now you can run your Appium automation scripts using with WebDriverIO on TestMu AI Real Device Cloud Platform  of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-nodejs-webdriverio/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install npm from the official npm website.; Download and install NodeJS from official NodeJS website. You should be having NodeJS v6 or newer.; Make sure you are using the latest version of JavaScript..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"android\" label=\"Android\" default>\n\n```javascript title=\"specs/android-test.js\"\ndescribe(\"Proverbial APK\", () => {\n  it(\"Changes color\", async () => {\n    var color = await $(\"id=color\");\n    await color.waitForDisplayed({ timeout: 30000 });\n    await color.click();\n    await color.click();\n  });\n\n  it(\"Changes text\", async () => {\n    var text = await $(\"id=Text\");\n    await text.waitForDisplayed({ timeout: 30000 });\n    await text.click();\n  });\n\n  it(\"Toast\", async () => {\n    var toast = await $(\"id=toast\");\n    await toast.waitForDisplayed({ timeout: 30000 });\n    await toast.click();\n  });\n\n  it(\"Notification\", async () => {\n    var nf = await $(\"id=notification\");\n    await nf.waitForDisplayed({ timeout: 30000 });\n    await nf.click();\n  });\n\n  it(\"Geolocation\", async () => {\n    var geo = await $(\"id=geoLocation\");\n    await geo.waitForDisplayed({ timeout: 30000 });\n    await geo.click();\n\n    driver.back();\n  });\n\n  it(\"SpeedTest\", async () => {\n    var st = await $(\"id=speedTest\");\n    await st.waitForDisplayed({ timeout: 30000 });\n    await st.click();\n\n    await browser.pause(10000);\n    driver.back();\n  });\n\n  it(\"Browser\", async () => {\n    var browser = await $(\"id=Browser\");\n    await browser.waitForDisplayed({ timeout: 30000 });\n    await browser.click();\n\n    let el7 = await $(\"id=url\");\n    await el7.click();\n    await el7.setValue(\"https://www.testmuai.com/\");\n    driver.back();\n  });\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n\n:::tip\n- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**\n:::\n\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"android-single.conf.js\" default>\n\n```javascript title=\"android-sample/android-single.conf.js\"\nexports.config = {\n  //highlight-next-line\n  user: process.env.LT_USERNAME || \"YOUR_USERNAME\",\n  //highlight-next-line\n  key: process.env.LT_ACCESS_KEY || \"YOUR_ACCESS_KEY\",\n\n  updateJob: false,\n  //highlight-next-line\n  specs: [\"./../specs/android-test.js\"], //path of your test script\n  exclude: [],\n\n  capabilities: [\n    {\n      build: \"NodeJS WebDriverIO Android\",\n      name: \"Sample Test - WebDriverIO\",\n      isRealMobile: true,\n      platformName: \"Android\",\n      deviceName: \"Galaxy S9\",\n      platformVersion: \"10\",\n      app: \"YOUR_APP_URL\", //Enter your app (.apk) url\n    },\n  ],\n\n  logLevel: \"info\",\n  coloredLogs: true,\n  screenshotPath: \"./errorShots/\",\n  baseUrl: \"\",\n  waitforTimeout: 10000,\n  connectionRetryTimeout: 90000,\n  connectionRetryCount: 3,\n  path: \"/wd/hub\",\n  hostname: \"mobile-hub.lambdatest.com\",\n  port: 80,\n\n  framework: \"mocha\",\n  mochaOpts: {\n    ui: \"bdd\",\n    timeout: 20000,\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd ios"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The webdriverio-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "webdriverio-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a WebdriverIO Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/webdriverio-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/webdriverio-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to configure and run your **WebdriverIO** automation testing scripts with **Appium** on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

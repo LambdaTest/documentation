@@ -51,6 +51,89 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-detox-testing/"
+    },
+    "headline": "Detox Testing on HyperExecute",
+    "description": "Learn how to run Detox automation tests on HyperExecute for React Native apps",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-detox-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Detox",
+      "Detox automation",
+      "Detox testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account. You can get your Username and Access Key from your Account Settings.; Node.js and npm installed on your local system.; A React Native application with Detox tests configured, or use the sample repository referenced in this guide..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n> \ud83d\udcd8 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).\n\n### Step 3: Monitor the Test Execution\n\nVisit the [HyperExecute Dashboard](https://www.testmuai.com/login/?redirectTo=https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. \n\n<img loading=\"lazy\" src={require('../assets/images/hyperexecute/frameworks/Detox/Detox_dashboard.png').default} alt=\"TestNG HyperExecute Terminal Logs\"  width=\"1920\" height=\"868\" className=\"doc_img\"/>\n\nYou can click on **View Test** from the **HyperExecute logs**, which will take you to the [App Automation dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/build). There, you can access detailed **device logs**, **crash logs**, and **Metadata** for your test. You\u2019ll also be able to watch a **video recording** of the Test sessions for better **debugging** and **analysis**.\n\n## Advanced Configuration\n\nHyperExecute supports the following capabilities for your Detox test runs. Add the relevant keys to your `hyperexecute.yaml` file.\n\n### Tunnel\n\nTest applications hosted on your local or private network by routing traffic through a secure <BrandName /> Tunnel. Enable it by setting the top-level `tunnel` flag in your YAML:\n\n```yaml\ntunnel: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The detox-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "detox-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Detox Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/detox-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/detox-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Detox is a popular end-to-end testing framework for React Native applications. This documentation will help you run your Detox tests on <BrandName /> HyperExecute using your local system setup.
 
 :::note

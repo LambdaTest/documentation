@@ -47,6 +47,129 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-tms-integration/"
+    },
+    "headline": "Test Manager Integration",
+    "description": "Kane CLI uploads every session to TestMu AI Test Manager as a test case. Learn about the upload pipeline, project and folder selection, code export, share links, and session history.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-tms-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli tms",
+      "kane cli test manager",
+      "kane cli upload"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure your project once, and every subsequent session uploads under it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config project"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also set a project non-interactively by ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config project <project-id>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once a project is set, you can pick a folder the same way",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config folder"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Folder",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli config folder <folder-id>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For scripts, CI, and any non-interactive shell where the picker is not appropriate, kane-cli exposes the same data as commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli projects list [--search <q>] [--limit <n>] [--offset <n>]\nkane-cli projects create \"<name>\" [--description \"<text>\"]\n\nkane-cli folders list  [--search <q>] [--limit <n>] [--offset <n>]\nkane-cli folders create \"<name>\" [--description \"<text>\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In ~/.testmuai/kaneai/tui-config.json, set the code_export block",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"code_export\": {\n    \"enabled\": true,\n    \"language\": \"python\",\n    \"skip_validation\": true\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For one-off CLI runs, use flags",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Add an item to the cart\" \\\n  --code-export \\\n  --code-language python \\\n  --skip-code-validation"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also submit feedback after the fact for a known test case",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli feedback --test-id <test-id> --feedback-type positive\nkane-cli feedback --test-id <test-id> --feedback-type negative --details \"...\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Every session, regardless of upload outcome, leaves a directory on your machine",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "~/.testmuai/kaneai/sessions/<session-id>/\n\u251c\u2500\u2500 session.json         # Metadata: started_at, ended_at, model, profile,\n\u2502                        # test_id, testcase_id, upload_status, run summaries\n\u251c\u2500\u2500 tui.log              # Append-only event log for the TUI session\n\u251c\u2500\u2500 runs/<n>/            # One directory per run in the session\n\u2502   \u2514\u2500\u2500 run-test/\n\u2502       \u2514\u2500\u2500 actions.ndjson  # Step-by-step record of what the agent did\n\u2514\u2500\u2500 code-export/         # (when code export is enabled) Generated code files"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 By default, Kane CLI uploads each session to <BrandName /> Test Manager as a test case. This page covers what gets uploaded, where it ends up, and the related features: project and folder selection, code export, share links, the post-session feedback prompt, and the local session directory.
 
 This is the default behaviour for every session in both the TUI and the CLI. You do not need to opt in.

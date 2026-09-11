@@ -47,6 +47,200 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/automated-screenshot-api-for-cross-browser-testing/"
+    },
+    "headline": "Automated Screenshot API For Cross Browser Testing",
+    "description": "Automated Screenshot API will help you capture full-page screenshots of any URL by invoking an API call to TestMu AI cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing on a regular basis.",
+    "url": "https://www.testmuai.com/support/docs/automated-screenshot-api-for-cross-browser-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Other Docs",
+    "keywords": [
+      "automated screenshot api",
+      "automated screenshot generation",
+      "screenshot api"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI Authentication Credentials; For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetch All OS + Browser Combinations",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "https://api.lambdatest.com/screenshots/v1/os-browsers"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Client URL would be as followed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl -X GET \"https://api.lambdatest.com/screenshots/v1/os-browsers\"\n-H \"accept: application/json\" -H \"Authorization: Basic 123456789abcdefghijklmno=\" "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetch All OS + Browser Combinations",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"windows 10\": {\n    \"chrome\": [\n      \"74\",\n      \"73\"\n    ],\n    \"firefox\": [\n      \"66\",\n      \"65\"\n    ],\n    \"opera\": [\n      \"55\",\n      \"54\"\n    ]\n  },\n  \"macos mojave\": {\n    \"chrome\": [\n      \"74\",\n      \"73\"\n    ],\n    \"firefox\": [\n      \"66\",\n      \"65\"\n    ],\n    \"opera\": [\n      \"55\",\n      \"54\"\n    ]\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetch Every Screen Resolutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "https://api.lambdatest.com/screenshots/v1/resolutions"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Client URL would be as followed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl -X GET \"https://api.lambdatest.com/screenshots/v1/resolutions\"\n-H \"accept: application/json\" -H \"Authorization: Basic 123456789abcdefghijklmno=\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetch Every Screen Resolutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"mac_res\": [\n    \"1024x768\",\n    \"1280x1024\"\n  ],\n  \"win_res\": [\n    \"1024x768\",\n    \"1280x1024\"\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You would get the below details",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "https://api.lambdatest.com/screenshots/v1/Test ID"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Client URL would be",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl -X GET \"https://api.lambdatest.com/screenshots/v1/TES11111111111111111111111111\"\n-H \"accept: application/json\" -H \"Authorization: Basic 123456789abcdefghijklmno=\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Value",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "  {\n  \"test_id\": \"TES11111111111111111111111111\",\n  \"defer_time\": 5,\n  \"test_status\": \"completed\",\n  \"url\": \"https://www.testmuai.com\",\n  \"callback_url\": \"https://www.example.com\",\n  \"screenshots\": [\n    {\n      \"os\": \"windows 10\",\n      \"browser\": \"chrome\",\n      \"browser_version\": \"74\",\n      \"status\": \"completed\",\n      \"screenshot_url\": \"https://s3.amazonaws.com/s3-screenshots/prod/ACT100968331562237283340194/screenshot/win-cr-74.0.png\",\n      \"thumbnail_url\": \"https://s3.amazonaws.com/s3-screenshots/prod/ACT100968331562237283340194/screenshot/win-cr-74.0.png\",\n      \"activity_id\": \"ACT100968331562237283340194\",\n      \"resolution\": \"1024x768\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run A Screenshot Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "https://api.lambdatest.com/screenshots/v1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Client URL would be as followed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl -X POST \"https://api.lambdatest.com/screenshots/v1\" -H \"accept: application/json\" \n-H \"Authorization: Basic 123456789abcdefghijklmno=\" -H \"Content-Type: application/json\" -d \"\n{\\\"url\\\":\\\"https://www.testmuai.com\\\",\\\"defer_time\\\":5,\\\"email\\\":true,\\\"mac_res\\\":\\\"1024x768\\\",\n\\\"win_res\\\":\\\"1366X768\\\",\\\"configs\\\":{\\\"windows 10\\\":{\\\"chrome\\\":[\\\"74\\\"],\\\"firefox\\\":[\\\"66\\\"],\n\\\"opera\\\":[\\\"58\\\"],\\\"ie\\\":[\\\"11\\\"]},\\\"macos mojave\\\":{\\\"chrome\\\":[\\\"74\\\"]}}}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example value",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"url\": \"https://www.testmuai.com\",\n  \"defer_time\": 5,\n  \"email\": true,\n  \"mac_res\": \"1024x768\",\n  \"win_res\": \"1366X768\",\n  \"configs\": {\n    \"windows 10\": {\n      \"chrome\": [\n        \"74\"\n      ],\n      \"firefox\": [\n        \"66\"\n      ],\n      \"opera\": [\n        \"58\"\n      ],\n      \"ie\": [\n        \"11\"\n      ]\n    },\n    \"macos mojave\": {\n      \"chrome\": [\n        \"74\"\n      ]\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Value",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"url\": \"https://www.testmuai.com\",\n  \"defer_time\": 5,\n  \"email\": true,\n  \"tunnel\": true,\n  \"mac_res\": \"1024x768\",\n  \"win_res\": \"1366X768\",\n  \"configs\": {\n    \"windows 10\": {\n      \"chrome\": [\n        \"74\",\n        \"73\"\n      ]\n  }\n}\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Screenshot Test With Basic Authentication",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"url\": \"https://www.basic-auth.com\",\n\"username\": \"username\",\n  \"password\": \"password\","
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"url\": \"https://www.basic-auth.com\",\n  \"defer_time\": 5,\n  \"email\": true,\n  \"mac_res\": \"1024x768\",\n  \"win_res\": \"1366X768\",\n  \"username\": \"username\",\n  \"password\": \"password\",\n  \"configs\": {\n    \"windows 10\": {\n      \"chrome\": [\n        \"74\",\n        \"73\"\n      ]\n\n\n  }\n}\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Route Test Details To Your Colleagues Through A Callback URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"callbackurl\": \"https://www.example.com\","
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Value",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"url\": \"https://www.testmuai.com\",\n  \"defer_time\": 5,\n  \"email\": true,\n  \"mac_res\": \"1024x768\",\n  \"win_res\": \"1366X768\",\n\"callbackurl\": \"https://www.example.com\",\n  \"configs\": {\n    \"windows 10\": {\n      \"chrome\": [\n        \"74\",\n        \"73\"\n      ]\n  }\n}\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Stop A Screenshot Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "https://api.lambdatest.com/screenshots/v1/stop/TES11111111111111111111"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Stop A Screenshot Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "Client URL: curl -X PUT \"https://api.lambdatest.com/screenshots/v1/stop/TES100962431563281759448763\"\n-H \"accept: application/json\" -H \"Authorization: Basic 123456789abcdefghijklmno=\""
+      }
+    ],
+    "dateModified": "2026-08-12T15:40:32+05:30"
+  }) }}
+/>
+
 # Automated Screenshot API For Cross Browser Testing
 ***
 Automated Screenshot API will help you [capture full-page screenshots](https://www.testmuai.com/full-page-screen-capture/) of any URL by invoking an API call to <BrandName /> cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing regularly. You can do that without logging into <BrandName />, by executing a JSON file in your preferred API development environment such as Postman.

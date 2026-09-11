@@ -42,6 +42,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-iframes-and-embedded-content/"
+    },
+    "headline": "Iframes and Embedded Content in SmartUI",
+    "description": "How SmartUI treats same-origin and cross-origin iframes for screenshots and comparison, with practical tips for videos, widgets, and automation context.",
+    "url": "https://www.testmuai.com/support/docs/smartui-iframes-and-embedded-content/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "SmartUI iframe",
+      "embedded content",
+      "cross-origin iframe"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-01T16:04:57+05:30"
+  }) }}
+/>
+
 # Iframes and Embedded Content in SmartUI
 
 Pages often include **iframes**: embedded apps, chat widgets, consent managers, or **video players** (YouTube, Vimeo). SmartUI captures what the **browser paints** in your <BrandName /> session. How much you can **inspect or target in the DOM** depends on whether the iframe is **same-origin** or **cross-origin** with the top page.

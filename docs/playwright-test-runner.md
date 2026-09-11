@@ -45,6 +45,115 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-test-runner/"
+    },
+    "headline": "Running Playwright Tests With Playwright Test Runner",
+    "description": "Learn how to perform Playwright testing using Playwright test runner across multiple browser versions on the TestMu AI platform.",
+    "url": "https://www.testmuai.com/support/docs/playwright-test-runner/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "playwright testing with Playwright test runner",
+      "playwright e2e testing with Playwright test runner",
+      "playwright mobile testing with Playwright test runner"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Playwright Tests With Playwright Test Runner",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { devices } = require('@playwright/test')\n// Playwright config to run tests on LambdaTest platform and local\nconst config = {\ntestDir: 'tests',\ntestMatch: '**/*.spec.js',\ntimeout: 60000,\nprojects: [\n// -- LambdaTest Config --\n  // name in the format: browserName:browserVersion:platform@lambdatest\n  // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n  // Use additional configuration options provided by Playwright if required: https://playwright.dev/docs/api/class-testconfig\n    {\n      name: 'chrome:latest:MacOS Catalina@lambdatest',\n      use: {\n        viewport: { width: 1920, height: 1080 }\n      }\n    },\n    {\n      name: 'MicrosoftEdge:90:Windows 10@lambdatest',\n      use: {\n        ...devices['iPhone 12 Pro Max']\n      }\n    },\n  ]\n}\n\nmodule.exports = config"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm run test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing With Playwright Test When Migrating To TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { devices } = require('@playwright/test')\n\n// Playwright config to run tests on LambdaTest platform and local\nconst config = {\n  testDir: 'tests',\n  testMatch: '**/*.spec.js',\n  timeout: 60000,\n  use: {\n    viewport: null\n  },\n  projects: [\n    // -- LambdaTest Config --\n    // name in the format: browserName:browserVersion:platform@lambdatest\n    // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    // Use additional configuration options provided by Playwright if required: https://playwright.dev/docs/api/class-testconfig\n    {\n      name: 'chrome:latest:MacOS Catalina@lambdatest',\n      use: {\n        viewport: { width: 1920, height: 1080 }\n      }\n    },\n    {\n      name: 'chrome:latest:Windows 10@lambdatest',\n      use: {\n        viewport: { width: 1280, height: 720 }\n      }\n    },\n    {\n      name: 'MicrosoftEdge:90:Windows 10@lambdatest',\n      use: {\n        ...devices['iPhone 12 Pro Max']\n      }\n    },\n    {\n      name: 'pw-firefox:latest:Windows 10@lambdatest',\n      use: {\n        viewport: { width: 1280, height: 720 }\n      }\n    },\n    {\n      name: 'pw-webkit:latest:Windows 10@lambdatest',\n      use: {\n        viewport: { width: 1920, height: 1080 }\n      }\n    }\n\n  ]\n}\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { test } = require('../lambdatest-setup')\nconst { expect } = require('@playwright/test')\n\ntest.describe('Browse LambdaTest in different search engines', () => {\n  test('Search LambdaTest on Bing', async ({ page }) => {\n    await page.goto('https://www.bing.com')\n    const element = await page.$('[aria-label=\"Enter your search term\"]')\n    await element.click()\n    await element.type('LambdaTest')\n    await element.press('Enter')\n    const title = await page.title()\n\n    console.log('Page title:: ', title)\n    // Use the expect API for assertions provided by playwright\n    expect(title).toEqual(expect.stringContaining('LambdaTest'))\n  })\n})"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Playwright Testing With Playwright Test Runner
 * * *
 

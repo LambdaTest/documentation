@@ -54,6 +54,117 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-java-cucumber/"
+    },
+    "headline": "Appium With Cucumber for Java",
+    "description": "Test your Appium automation scripts using Java Cucumber on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-java-cucumber/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "java",
+      "cucumber"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; You should have Java client library installed for Selenium and Appium.; Install the latest Java development environment i.e. JDK 8 or higher. We recommend using the < JDK 11 version.; Download and install Maven from the official website. For Linux/macOS you can use Homebrew package manager..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip\n- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**\n:::\n\n### Step 5: Configure the Test Capabilities\n\nYou can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.\n\nThe capabilities object in the sample code are defined as:\n\n<Tabs className=\"docs__val\">\n<TabItem value=\"single-config\" label=\"Single\" default>\n\n```java\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite name=\"BDD Test Suite\" verbose=\"1\" parallel=\"tests\"\n\tthread-count=\"3\" >\n    <test name=\"ANDROIDTEST\" annotations=\"JDK\"\n\t\tpreserve-order=\"true\">\n        <parameter name=\"deviceName\" value=\".*\"/>\n        <parameter name=\"platformVersion\" value=\"12\"/>\n        <parameter name=\"platformName\" value=\"Android\"/>\n        <classes>\n            <class name=\"MyRunner.TestRunner\" />\n        <\/classes>\n    <\/test> <!-- Test -->\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (Parallel)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite name=\"BDD Test Suite\" verbose=\"1\" parallel=\"tests\"\n       thread-count=\"2\">\n    <test name=\"Galaxy\" annotations=\"JDK\"\n          preserve-order=\"true\">\n        <parameter name=\"deviceName\" value=\"Galaxy.*\"/>\n        <parameter name=\"platformVersion\" value=\"11\"/>\n        <parameter name=\"platformName\" value=\"Android\"/>\n        <classes>\n            <class name=\"MyRunner.TestRunner\"/>\n        <\/classes>\n    <\/test> <!-- Test -->\n    <test name=\"OnePlus\" annotations=\"JDK\"\n          preserve-order=\"true\">\n        <parameter name=\"deviceName\" value=\"Pixel.*\"/>\n        <parameter name=\"platformVersion\" value=\"12\"/>\n        <parameter name=\"platformName\" value=\"Android\"/>\n        <classes>\n            <class name=\"MyRunner.TestRunner\"/>\n        <\/classes>\n    <\/test> <!-- Test -->\n\n<\/suite>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn clean install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Single)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -D suite=single.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Parallel)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  mvn test -D suite=parallel.xml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The cucumber-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cucumber-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Cucumber Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cucumber-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/cucumber-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 
 

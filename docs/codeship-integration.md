@@ -42,6 +42,116 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/codeship-integration-with-testmu/"
+    },
+    "headline": "Codeship Integration With TestMu AI",
+    "description": "TestMu AI offers continuous integration with Codeship to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/codeship-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "continuous integration",
+      "codeship"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ export LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`\n    \n    $ export LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ set LT_USERNAME= `{YOUR_LAMBDATEST_USERNAME}`\n    \n    $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating Codeship With TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "#nvm install 0.10\nnpm install\nnpm install -g protractor"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating Codeship With TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf \nprotractor single.conf.js "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create two pipelines with the following commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "#Downloading tunnel binary\n<!--For Linux-->\nwget http://downloads.lambdatest.com/tunnel/linux/64bit/LT_Linux.zip \n<!--For MacOS-->\nwget http://downloads.lambdatest.com/tunnel/mac/64bit/LT_Mac.zip         \n<!--For Windows-->\nwget http://downloads.lambdatest.com/tunnel/windows/64bit/LT_Windows.zip\n#Extracting tunnel binary\nsudo apt-get install unzip\nunzip LT_Linux.zip\n#Executing tunnel binary\n./LT -user <username> -key <AccessKey>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "sleep 90\ncd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf\nprotractor local.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf\nprotractor parallel.conf.js"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Selenium Testing With Concourse CI And <BrandName />
 * * *
 Codeship is a scalable, cloud-based platform for continuous integration that offers GitHub, Bitbucket, and GitLab projects support. There are two versions of Codeship, Codeship Basic and Codeship Pro. Codeship Basic instantly provides robust VMs along with technology stacks being preinstalled to help run your CI/CD pipeline faster. Keep in mind, though, the primary purpose of Codeship Basic is to develop applications with general workflows by UI. It doesn’t offer support for dockers.

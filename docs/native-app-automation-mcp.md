@@ -44,6 +44,116 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/native-app-automation-mcp/"
+    },
+    "headline": "Native App Automation with MCP",
+    "description": "Automate and debug native mobile app tests through MCP, using the TestMu AI MCP Server for cloud test triage and the Appium MCP server for live device control.",
+    "url": "https://www.testmuai.com/support/docs/native-app-automation-mcp/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "TestMu AI MCP Server",
+    "keywords": [
+      "native app automation mcp",
+      "appium mcp server",
+      "mobile app test triaging"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Node.js v22 or higher, and npm or yarn.; Java Development Kit (JDK) 8 or higher.; Android SDK with ANDROID_HOME set (for Android testing).; Xcode and command line tools (for iOS testing, macOS only)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When the tool runs, you will see arguments like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"testId\": \"RMAA-IOS-585984-1767376885020815122FLT\",\n  \"platform\": \"app\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following to your client's MCP configuration, updating ANDROID_HOME to match your Android SDK path",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"mcpServers\": {\n    \"appium-mcp\": {\n      \"disabled\": false,\n      \"timeout\": 100,\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\"appium-mcp@latest\"],\n      \"env\": {\n        \"ANDROID_HOME\": \"/path/to/android/sdk\",\n        \"CAPABILITIES_CONFIG\": \"/path/to/your/capabilities.json\"\n      }\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "claude mcp add appium-mcp -- npx -y appium-mcp@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gemini mcp add appium-mcp npx -y appium-mcp@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capabilities file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"android\": {\n    \"appium:app\": \"/path/to/your/android/app.apk\",\n    \"appium:deviceName\": \"Android Device\",\n    \"appium:platformVersion\": \"11.0\",\n    \"appium:automationName\": \"UiAutomator2\",\n    \"appium:udid\": \"your-device-udid\"\n  },\n  \"ios\": {\n    \"appium:app\": \"/path/to/your/ios/app.ipa\",\n    \"appium:deviceName\": \"iPhone 15 Pro\",\n    \"appium:platformVersion\": \"17.0\",\n    \"appium:automationName\": \"XCUITest\",\n    \"appium:udid\": \"your-device-udid\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example prompt",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Open the Amazon app, search for \"iPhone 15 Pro\", select the first result,\nadd it to the cart, and take a screenshot of the cart screen."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The MCP tool times out",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "  {\n    \"mcp-lambdatest\": {\n      \"autoApprove\": [],\n      \"disabled\": false,\n      \"timeout\": 120,\n      \"command\": \"npx\",\n      \"args\": [\"mcp-remote@latest\", \"https://mcp.lambdatest.com/mcp\"],\n      \"alwaysAllow\": []\n    }\n  }"
+      }
+    ],
+    "dateModified": "2026-07-21T15:09:40+05:30"
+  }) }}
+/>
+
 # Native App Automation with MCP
 
 ---

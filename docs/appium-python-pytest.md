@@ -56,6 +56,124 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-python-pytest/"
+    },
+    "headline": "Appium with Pytest",
+    "description": "Complete guide to running your first Pytest Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-python-pytest/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "python appium",
+      "pytest",
+      "python appium tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; You should have Python installed.; Download and install pip.; Install pytest on your system with following pip command:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install pytest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "be \"setup\", \"call\", \"teardown\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"android\" label=\"Android\" default>\n\n```python title=\"conftest.py\"\nfrom os import environ\nimport pytest\nfrom appium import webdriver\n\n@pytest.fixture(scope='function')\ndef test_setup_android(request):\n    test_name = request.node.name\n    build = environ.get('BUILD', \"Pytest Android Sample\")\n    caps = {}\n    caps[\"deviceName\"] = \"Galaxy S21 5G\"\n    caps[\"platformName\"] = \"Android\"\n    caps[\"platformVersion\"] = \"11\"\n    caps[\"app\"] = \"lt://proverbial-android\"   #Enter the app (.apk) url here\n    caps[\"isRealMobile\"] = True\n    caps['build'] = build\n    caps['name'] = test_name\n    caps['project'] = project_name\n    driver = webdriver.Remote(\"https://<username>:<accessKey>@mobile-hub.lambdatest.com/wd/hub\", caps)  #Add LambdaTest username and accessKey here\n    request.cls.driver = driver\n    \n    yield driver\n    \n    def fin():\n        #browser.execute_script(\"lambda-status=\".format(str(not request.node.rep_call.failed if \"passed\" else \"failed\").lower()))\n        if request.node.rep_call.failed:\n            driver.execute_script('lambda-status=failed')\n        else:\n            driver.execute_script('lambda-status=passed')\n        driver.quit()\n    request.addfinalizer(fin)\n    \n@pytest.hookimpl(tryfirst=True, hookwrapper=True)\ndef pytest_runtest_makereport(item, call):\n    # this sets the result as a test attribute for LambdaTest reporting.\n    # execute all other hooks to obtain the report object\n    outcome = yield\n    rep = outcome.get_result()\n\n    # set an report attribute for each phase of a call, which can\n    # be \"setup\", \"call\", \"teardown\"\n    setattr(item, \"rep_\" + rep.when, rep)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```python title=\"Android(.apk)\"\n   caps = {\n      \"deviceName\": \"Galaxy S21 5G\",\n      \"platformName\": \"Android\",\n      \"platformVersion\": \"11\",\n      \"app\": \"lt://proverbial-android\"     # Enter the app (.apk) URL here,\n      \"isRealMobile\": True,\n      \"build\": build,\n      \"name\": test_name,\n      \"project\": project_name\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest test_ios.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest test.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The pytest-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "pytest-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Pytest Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/pytest-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/pytest-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 In this documentation, you will learn how to trigger a automation script of **Pytest** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 

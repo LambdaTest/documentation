@@ -45,6 +45,89 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/"
+    },
+    "headline": "Integrating Your Jenkins Pipeline With TestMu AI",
+    "description": "TestMu AI now integrates with Jenkins pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Configuring Jenkins Pipeline With TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n    $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Configuring Jenkins Pipeline With TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n    $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Up Jenkins Pipeline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "codeRepository": "https://github.com/LambdaTest/nightwatch-selenium-sample",
+        "text": "#!/usr/bin/env groovy\n\nnode {\n    withEnv([\"LT_USERNAME=Your LambdaTest UserName\",\n    \"LT_ACCESS_KEY=Your LambdaTest Access Key\",\n    \"LT_TUNNEL=true\"]){\n\n    echo env.LT_USERNAME\n    echo env.LT_ACCESS_KEY \n\n   stage('setup') { \n\n      // Get some code from a GitHub repository\n    try{\n      git 'https://github.com/LambdaTest/nightwatch-selenium-sample.git'\n\n      //Download Tunnel Binary\n      sh \"wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip\"\n\n      //Required if unzip is not installed\n      sh 'sudo apt-get install --no-act unzip'\n      sh 'unzip -o LT_Linux.zip'\n\n      //Starting Tunnel Process \n      sh \"./LT -user ${env.LT_USERNAME} -key ${env.LT_ACCESS_KEY} &\"\n      sh  \"rm -rf LT_Linux.zip\"\n    }\n    catch (err){\n      echo err\n   }\n\n   }\n   stage('build') {\n      // Installing Dependencies\n      sh 'npm install'\n    }\n\n   stage('test') {\n          try{\n          sh './node_modules/.bin/nightwatch -e chrome,edge tests'\n          }\n          catch (err){\n          echo err\n          }  \n   }\n   stage('end') {  \n     echo \"Success\" \n     }\n }\n}"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Integrating Your Jenkins Pipeline With <BrandName /> 
 
 * * *

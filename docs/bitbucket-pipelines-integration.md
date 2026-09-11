@@ -40,6 +40,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/bitbucket-pipelines-integration-with-testmu/"
+    },
+    "headline": "Bitbucket Pipelines Integration With TestMu AI",
+    "description": "TestMu AI integration with Bitbucket Pipelines will help you perform cross-browser testing on 3000+ real browsers &amp; browser versions, through a Selenium Grid hosted on TestMu AI cloud servers.",
+    "url": "https://www.testmuai.com/support/docs/bitbucket-pipelines-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "bitbucket pipelines",
+      "bitbucket integration with testmu ai",
+      "continuous delivery pipeline"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Make sure you have your Bitbucket Credentials.; TestMu AI Authentication Credentials; For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n     $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n    $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating TestMu AI With Bitbucket Pipelines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "# This is a sample build configuration for JavaScript.\n# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.\n# Only use spaces to indent your .yml configuration.\n# -----\n# You can specify a custom docker image from Docker Hub as your build environment.\nimage: node:10.15.3\n\npipelines:\n  default:\n    - step:\n        caches:\n          - node\n        script: # Modify the commands below to build your repository.\n          - npm install\n          - npm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You will find the below log generated",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "> protractor-lambdatest@0.1.0 single /opt/atlassian/pipelines/agent/build\n> protractor conf/single.conf.js\n[10:23:53] I/launcher - Running 1 instances of WebDriver\n[10:23:53] I/hosted - Using the selenium server at https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com/wd/hub\nStarted\n.\n1 spec, 0 failures\nFinished in 7.713 seconds\n[10:24:10] I/launcher - 0 instance(s) of WebDriver still running\n[10:24:10] I/launcher - chrome67.0 #01 passed"
+      }
+    ],
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
 # Bitbucket Pipelines Integration With <BrandName />
 ***
 

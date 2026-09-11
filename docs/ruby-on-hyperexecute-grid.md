@@ -52,6 +52,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/ruby-on-hyperexecute-grid/"
+    },
+    "headline": "Run automation tests on HyperExecute using Ruby",
+    "description": "Learn how to run Selenium automation tests on HyperExecute using Ruby",
+    "url": "https://www.testmuai.com/support/docs/ruby-on-hyperexecute-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Ruby",
+      "Ruby selenium",
+      "Ruby automation testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.1\"\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: linux\n\nautosplit: true\nretryOnFailure: true\nmaxRetries: 1\nconcurrency: 2\n\npre:\n  - bundle install --deployment\n\ncacheKey: '{{ checksum \"Gemfile.lock\" }}'\ncacheDirectories:\n  - /vendor\n\nenv:\n   CONFIG_NAME: \"linux\"\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -nri -E 'it \".*.\" do' spec/*.rb | awk '{print$1}' | sed 's/\\(.*\\):/\\1 /'\n\ntestRunnerCommand: bundle exec rspec \"$test\" --format html --out rspec_results.html\n\nmergeArtifacts: true\nuploadArtefacts:\n - name: report\n   path:\n     - rspec_results.html\n\nreport: true\npartialReports:\n location: rspec_results.html\n type: html\n\njobLabel: [selenium-Rspec, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Running Ruby Framework Tests on HyperExecute
 RSpec is a behavior-driven development (BDD) framework for Ruby commonly used in conjunction with Selenium for automated testing. It facilitates expressive and readable specifications, making it easier to define and manage Selenium test cases. RSpec supports a variety of assertions and provides powerful reporting tools, enhancing the efficiency and clarity of Selenium test scripts written in Ruby.
 

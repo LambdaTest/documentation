@@ -46,6 +46,129 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-cicd/"
+    },
+    "headline": "CI/CD Integration",
+    "description": "Integrate Kane CLI into GitHub Actions, GitLab CI, Jenkins, Bitbucket Pipelines, and Docker for automated browser testing.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-cicd/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli cicd",
+      "github actions browser testing",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Platform Guides (GitHub Actions)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "# .github/workflows/browser-tests.yml\nname: Browser Tests\non: [push, pull_request]\n\njobs:\n  kane-tests:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n\n      - uses: actions/setup-node@v4\n        with:\n          node-version: '20'\n\n      - name: Install Chrome\n        uses: browser-actions/setup-chrome@v1\n\n      - name: Install Kane CLI\n        run: npm install -g @testmuai/kane-cli\n\n      - name: Run browser tests\n        env:\n          LT_USERNAME: ${{ secrets.LT_USERNAME }}\n          LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}\n        run: |\n          kane-cli run \\\n            \"Search for 'wireless headphones' on Amazon and open the first result\" \\\n            --headless \\\n            --timeout 300 \\\n            --username \"$LT_USERNAME\" \\\n            --access-key \"$LT_ACCESS_KEY\" \\\n            --variables-file ./tests/variables.json\n\n      - name: Upload test logs\n        if: always()\n        uses: actions/upload-artifact@v4\n        with:\n          name: kane-test-logs\n          path: ~/.testmuai/kaneai/sessions/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "GitLab CI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "# .gitlab-ci.yml\nstages:\n  - test\n\nkane-cli:\n  stage: test\n  image: node:20\n  before_script:\n    - apt-get update && apt-get install -y wget gnupg\n    - wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -\n    - echo \"deb http://dl.google.com/linux/chrome/deb/ stable main\" > /etc/apt/sources.list.d/google-chrome.list\n    - apt-get update && apt-get install -y google-chrome-stable\n    - npm install -g @testmuai/kane-cli\n  script:\n    - |\n      kane-cli run \"Verify the homepage loads and the login button is visible\" \\\n        --headless \\\n        --timeout 300 \\\n        --username \"$LT_USERNAME\" \\\n        --access-key \"$LT_ACCESS_KEY\" \\\n        --variables-file ./tests/variables.json\n  variables:\n    LT_USERNAME: $LT_USERNAME\n    LT_ACCESS_KEY: $LT_ACCESS_KEY\n  artifacts:\n    paths:\n      - ~/.testmuai/kaneai/sessions/\n    when: always\n    expire_in: 7 days"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Jenkins",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Groovy",
+        "text": "// Jenkinsfile\npipeline {\n    agent any\n    environment {\n        LT_USERNAME   = credentials('lt-username')\n        LT_ACCESS_KEY = credentials('lt-access-key')\n    }\n    stages {\n        stage('Install') {\n            steps {\n                sh 'npm install -g @testmuai/kane-cli'\n            }\n        }\n        stage('Run kane-cli') {\n            steps {\n                sh '''\n                    kane-cli run \"Sign in and confirm the dashboard renders\" \\\n                        --headless \\\n                        --timeout 300 \\\n                        --username \"$LT_USERNAME\" \\\n                        --access-key \"$LT_ACCESS_KEY\" \\\n                        --variables-file ./tests/variables.json\n                '''\n            }\n        }\n    }\n    post {\n        always {\n            archiveArtifacts artifacts: '~/.testmuai/kaneai/sessions/**',\n                             allowEmptyArchive: true\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Bitbucket Pipelines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "# bitbucket-pipelines.yml\npipelines:\n  default:\n    - step:\n        name: Browser Tests\n        image: node:20\n        script:\n          - npm install -g @testmuai/kane-cli\n          - kane-cli run\n              --url https://staging.myapp.com\n              --username $LT_USERNAME\n              --access-key $LT_ACCESS_KEY\n              --headless\n              --agent\n              --timeout 300\n              --max-steps 50\n              \"Complete the checkout flow and verify order confirmation\"\n        artifacts:\n          - ~/.testmuai/kaneai/sessions/**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The shell command below works in any CI that can run a Linux container with Chrome installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Open the pricing page and verify the Pro plan is listed\" \\\n    --headless \\\n    --timeout 300 \\\n    --username \"$LT_USERNAME\" \\\n    --access-key \"$LT_ACCESS_KEY\" \\\n    --variables-file ./tests/variables.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If your CI image cannot install Chrome (for example, a minimal Node Alpine image), point Kane CLI at a remote browser instead",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Open the pricing page and verify the Pro plan is listed\" \\\n    --headless \\\n    --timeout 300 \\\n    --ws-endpoint \"$LT_BROWSER_WSS\" \\\n    --username \"$LT_USERNAME\" \\\n    --access-key \"$LT_ACCESS_KEY\" \\\n    --variables-file ./tests/variables.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run several tests and fail the pipeline if any fail",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "#!/bin/bash\nset -e\n\nPASS=0\nFAIL=0\nFAILED_TESTS=()\n\nrun_test() {\n  local name=\"$1\"\n  local objective=\"$2\"\n  echo \"Running: $name\"\n  if kane-cli run \"$objective\" \\\n      --url https://staging.myapp.com \\\n      --username $LT_USERNAME \\\n      --access-key $LT_ACCESS_KEY \\\n      --headless --agent --timeout 120; then\n    ((PASS++))\n  else\n    ((FAIL++))\n    FAILED_TESTS+=(\"$name\")\n  fi\n}\n\nrun_test \"Login\" \"Log in with valid credentials and verify dashboard appears\"\nrun_test \"Search\" \"Search for 'laptop' and verify at least one result appears\"\nrun_test \"Checkout\" \"Add first product to cart and complete checkout\"\nrun_test \"Settings\" \"Open account settings and verify profile page loads\"\n\necho \"\"\necho \"Results: $PASS passed, $FAIL failed\"\nif [[ $FAIL -gt 0 ]]; then\n  echo \"Failed tests: ${FAILED_TESTS[*]}\"\n  exit 1\nfi"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Commit a non-secret variables file to your repo, and inject secrets at runtime",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"app_url\": { \"value\": \"https://staging.myapp.com\" },\n  \"test_product_sku\": { \"value\": \"PROD-001\" }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Merge with secrets in your pipeline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Log in as {{email}} with {{password}} and verify dashboard\" \\\n  --variables-file ./test-variables.json \\\n  --variables \"{\\\"email\\\": {\\\"value\\\": \\\"$TEST_EMAIL\\\"}, \\\"password\\\": {\\\"value\\\": \\\"$TEST_PASSWORD\\\", \\\"secret\\\": true}}\" \\\n  --username $LT_USERNAME \\\n  --access-key $LT_ACCESS_KEY \\\n  --headless --agent"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Kane CLI runs headlessly in CI/CD pipelines using credentials passed as environment variables or inline flags. Tests fail fast on assertion errors and return standard exit codes for pipeline control flow.
 
 ## Common Patterns

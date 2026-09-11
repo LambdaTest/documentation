@@ -16,6 +16,102 @@ canonical: https://www.testmuai.com/support/docs/accessibility-testng-test/
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-testng-test/"
+    },
+    "headline": "TestNG",
+    "description": "Run Accessibility Automation with Selenium and TestNG: capabilities, hooks, TestNG suite layout, and how to review reports in the dashboard.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-testng-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "TestNG"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI username and access key (environment variables); A Selenium + TestNG project already hitting the TestMu AI grid (hub URL and capabilities); Accessibility entitlement for your organization; Access to the Automation dashboard and the Accessibility tab for the session build.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Add Accessibility capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Add Accessibility capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);\ncapabilities.setCapability(\"accessibility.wcagVersion\", \"wcag21aa\");\ncapabilities.setCapability(\"accessibility.bestPractice\", false);\ncapabilities.setCapability(\"accessibility.needsReview\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After navigation and when the page is stable, call",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.executeScript(\"lambda-accessibility-scan\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scan on every navigation without hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);\ncapabilities.setCapability(\"accessibility.autoscan\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Execute and open the report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # TestNG
 
 Use this guide when your **Selenium** web tests run with **TestNG** and you want **Accessibility Automation** in the same sessions. The runner does not change how Accessibility works on the grid: you still enable it with **capabilities**, then either use **on-demand hooks** or **auto-scan**. Details match the main [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/) doc; this page adds a **TestNG-shaped onboarding path**.

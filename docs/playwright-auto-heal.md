@@ -29,6 +29,115 @@ import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-auto-healing/"
+    },
+    "headline": "How to use Auto Healing for your Playwright test suites",
+    "description": "Learn how to use TestMu AI Auto Healing feature in your Playwright tests to avoid test flakiness and increase reliability of your test suites.",
+    "url": "https://www.testmuai.com/support/docs/playwright-auto-healing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "auto heal testmu ai",
+      "auto heal test flakiness restrictions",
+      "auto healing testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  browserName: \"Chrome\",\n  browserVersion: \"latest\",\n  \"LT:Options\": {\n    platform: \"Windows 10\",\n    build: \"Playwright Auto Heal Build\",\n    name: \"Playwright Auto Heal Test\",\n    user: process.env.LT_USERNAME,\n    accessKey: process.env.LT_ACCESS_KEY,\n    network: true,\n    video: true,\n    console: true,\n    autoHeal: true,\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For JavaScript/NodeJS, you can use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// playwright.config.js\nmodule.exports = {\n  use: {\n    connectOptions: {\n      wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify({\n        'browserName': 'Chrome',\n        'browserVersion': 'latest',\n        'LT:Options': {\n          'platform': 'Windows 10',\n          'build': 'Playwright Auto Heal Build',\n          'name': 'Playwright Auto Heal Test',\n          'autoHeal': true,\n          'user': process.env.LT_USERNAME,\n          'accessKey': process.env.LT_ACCESS_KEY,\n        }\n      }))}`\n    }\n  }\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Python, you can use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "import asyncio\nimport json\nimport urllib.parse\nfrom playwright.async_api import async_playwright\n\ncapabilities = {\n    'browserName': 'Chrome',\n    'browserVersion': 'latest',\n    'LT:Options': {\n        'platform': 'Windows 10',\n        'build': 'Playwright Auto Heal Build',\n        'name': 'Playwright Auto Heal Test',\n        'autoHeal': True,\n        'user': 'your_username',\n        'accessKey': 'your_access_key',\n    }\n}\n\nasync def run():\n    async with async_playwright() as playwright:\n        browser = await playwright.chromium.connect(\n            ws_endpoint=f\"wss://cdp.lambdatest.com/playwright?capabilities={urllib.parse.quote(json.dumps(capabilities))}\"\n        )"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For C#, you can use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "using Microsoft.Playwright;\n\nvar capabilities = new Dictionary<string, object>()\n{\n    [\"browserName\"] = \"Chrome\",\n    [\"browserVersion\"] = \"latest\",\n    [\"LT:Options\"] = new Dictionary<string, object>()\n    {\n        [\"platform\"] = \"Windows 10\",\n        [\"build\"] = \"Playwright Auto Heal Build\",\n        [\"name\"] = \"Playwright Auto Heal Test\",\n        [\"autoHeal\"] = true,\n        [\"user\"] = Environment.GetEnvironmentVariable(\"LT_USERNAME\"),\n        [\"accessKey\"] = Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\"),\n    }\n};\n\nvar browser = await Playwright.Chromium.ConnectAsync($\"wss://cdp.lambdatest.com/playwright?capabilities={Uri.EscapeDataString(JsonSerializer.Serialize(capabilities))}\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Java, you can use the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import com.microsoft.playwright.*;\nimport java.util.HashMap;\nimport java.util.Map;\n\nMap<String, Object> capabilities = new HashMap<>();\ncapabilities.put(\"browserName\", \"Chrome\");\ncapabilities.put(\"browserVersion\", \"latest\");\n\nMap<String, Object> ltOptions = new HashMap<>();\nltOptions.put(\"platform\", \"Windows 10\");\nltOptions.put(\"build\", \"Playwright Auto Heal Build\");\nltOptions.put(\"name\", \"Playwright Auto Heal Test\");\nltOptions.put(\"autoHeal\", true);\nltOptions.put(\"user\", System.getenv(\"LT_USERNAME\"));\nltOptions.put(\"accessKey\", System.getenv(\"LT_ACCESS_KEY\"));\n\ncapabilities.put(\"LT:Options\", ltOptions);\n\nBrowser browser = playwright.chromium().connect(\"wss://cdp.lambdatest.com/playwright?capabilities=\" + URLEncoder.encode(new Gson().toJson(capabilities), \"UTF-8\"));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example test case demonstrating this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { test } = require('../lambdatest-setup');\nconst { expect } = require('@playwright/test');\n\ntest.describe('Browse LambdaTest in different search engines', () => {\n    test('Test Auto Heal', async ({ page }) => {\n        await page.goto('https://www.lambdatest.com/selenium-playground/auto-healing');\n        await page.waitForTimeout(1000); // sleep 1s\n\n        // Locate element before DOM change\n        let buttonBeforeDOMChange = await page.locator('#username'); // equivalent to FindElement ByID\n        await buttonBeforeDOMChange.click();\n\n        // Trigger DOM change\n        await page.click('p.selenium_btn');\n        await page.waitForTimeout(1000); // sleep 1s\n\n        // Try to locate the same element after DOM change\n        // Auto healing will automatically detect the new locator\n        let buttonAfterDOMChange = await page.locator('#username'); // again check for element\n        await buttonAfterDOMChange.click();\n\n        await page.waitForTimeout(1000); // sleep 1s\n    });\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run the test, execute the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx playwright test auto-heal.spec.js"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Auto Healing for Playwright Web Automation
 
 ---

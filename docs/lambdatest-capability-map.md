@@ -45,6 +45,108 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testmu-capability-map/"
+    },
+    "headline": "TestMu AI Capability Map to Migrate from BrowserStack & Sauce Labs",
+    "description": "A quick guide on TestMu AI Capability Map to Migrate from BrowserStack & Sauce Labs.",
+    "url": "https://www.testmuai.com/support/docs/testmu-capability-map/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Other Docs",
+    "keywords": [
+      "migrate desired capabilities from sauce labs",
+      "migrate desired capabilities from browserstack",
+      "migrate desired capabilities from sauce labs to testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When migrating your test from BrowserStack or Sauce Labs to TestMu AI, the following updates are required in your existing code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT_USERNAME=\"<your_username>\"\nLT_ACCESS_KEY=\"<your_access_key>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add TestMu AI Hub URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "@hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Migrating from BrowserStack to TestMu AI (BrowserStack Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "MutableCapabilities capabilities = new MutableCapabilities();\nHashMap<String, Object> bstackOptions = new HashMap<String, Object>();\ncapabilities.setCapability(\"browserName\", \"Safari\");\nbstackOptions.put(\"os\", \"OS X\");\nbstackOptions.put(\"osVersion\", \"Tahoe\");\nbstackOptions.put(\"browserVersion\", \"26.0\");\nbstackOptions.put(\"userName\", \"YOUR_USERNAME\");\nbstackOptions.put(\"accessKey\", \"YOUR_ACCESS_KEY\");\ncapabilities.setCapability(\"bstack:options\", bstackOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"MacOS Tahoe\");\nbrowserOptions.setBrowserVersion(\"26\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"<your_username>\");\nltOptions.put(\"accessKey\", \"<your_access_key>\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Migrating from Sauce Labs to TestMu AI (Sauce Labs Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"macOS 15\");\nbrowserOptions.setBrowserVersion(\"latest\");\nMap<String, Object> sauceOptions = new HashMap<>();\nsauceOptions.put(\"username\", \"YOUR_USERNAME\");\nsauceOptions.put(\"accessKey\", \"YOUR_ACCESS_KEY\");\nsauceOptions.put(\"build\", \"<your build id>\");\nsauceOptions.put(\"name\", \"<your test name>\");\nsauceOptions.put(\"armRequired\", true);\nbrowserOptions.setCapability(\"sauce:options\", sauceOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"MacOS Tahoe\");\nbrowserOptions.setBrowserVersion(\"26\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"<your_username>\");\nltOptions.put(\"accessKey\", \"<your_access_key>\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      }
+    ],
+    "dateModified": "2026-07-31T21:18:17+05:30"
+  }) }}
+/>
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 

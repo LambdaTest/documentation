@@ -45,6 +45,115 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-agent-mode/"
+    },
+    "headline": "Agent Mode",
+    "description": "Use the --agent flag to get structured NDJSON output from Kane CLI: designed for AI coding agents like Claude Code, Codex CLI, and Gemini CLI.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-agent-mode/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli agent mode",
+      "ndjson",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add --agent to any run command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Verify the checkout flow completes successfully\" \\\n  --url https://myapp.com \\\n  --agent \\\n  --headless"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Kane CLI outputs one JSON object per line (NDJSON) to stdout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "{\"type\":\"run_start\",\"objective\":\"Verify checkout\",\"timestamp\":\"2026-04-14T10:30:45Z\"}\n{\"type\":\"step_start\",\"index\":0,\"objective\":\"Navigate to cart page\"}\n{\"type\":\"step_event\",\"index\":0,\"event\":\"action\",\"detail\":\"Navigated to /cart\",\"success\":true}\n{\"type\":\"step_event\",\"index\":0,\"event\":\"screenshot\",\"detail\":\"Screenshot captured\"}\n{\"type\":\"step_end\",\"index\":0,\"status\":\"passed\",\"duration\":2.3,\"summary\":\"Navigated to cart\"}\n{\"type\":\"step_start\",\"index\":1,\"objective\":\"Click checkout button\"}\n...\n{\"type\":\"run_end\",\"status\":\"passed\",\"summary\":\"...\",\"duration\":45.2,...}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "It contains the complete test result",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"type\": \"run_end\",\n  \"status\": \"passed\",\n  \"summary\": \"Searched for laptop and added first result to cart\",\n  \"one_liner\": \"Searched for laptop on Amazon and added to cart\",\n  \"reason\": \"Objective completed\",\n  \"duration\": 45.2,\n  \"final_state\": {\n    \"price\": \"$29.99\",\n    \"product_name\": \"Wireless Headphones\"\n  },\n  \"context\": {\n    \"memory\": {},\n    \"variables\": {},\n    \"pointer\": \"(passed) Searched for laptop on Amazon\"\n  },\n  \"token_usage\": {\n    \"reasoning_input\": 12000,\n    \"reasoning_output\": 800,\n    \"vision_input\": 5000,\n    \"vision_output\": 200\n  },\n  \"session_dir\": \"~/.testmuai/kaneai/sessions/2026-04-14_10-30-45_a1b2c3\",\n  \"run_dir\": \"~/.testmuai/kaneai/sessions/2026-04-14_10-30-45_a1b2c3/runs/0\",\n  \"test_url\": \"https://test-manager.lambdatest.com/projects/123/test-cases/456\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Get the run_end event",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Get just the final result\nkane-cli run \"...\" --agent 2>/dev/null | tail -1 | jq .\n\n# Extract status\nkane-cli run \"...\" --agent 2>/dev/null | tail -1 | jq -r '.status'\n\n# Extract a stored value\nkane-cli run \"go to example.com, store the price as 'price'\" --agent 2>/dev/null \\\n  | tail -1 | jq -r '.final_state.price'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If an objective requires user input mid-run, Kane CLI fires ask_user",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\"type\": \"ask_user\", \"question\": \"Which item should I select?\", \"options\": [\"Small\", \"Medium\", \"Large\"]}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If stdin IS a TTY, respond by writing JSON to stdin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\"type\": \"user_response\", \"answer\": \"Medium\"}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To cancel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\"type\": \"cancel\"}"
+      }
+    ],
+    "dateModified": "2026-07-23T20:51:45+05:30"
+  }) }}
+/>
+
 Agent Mode outputs structured NDJSON instead of the interactive terminal UI. It's how AI coding agents (Claude Code, Codex CLI, Gemini CLI) consume Kane CLI results: parse events programmatically, extract the final result, and present it to the user.
 
 ## Enable Agent Mode

@@ -37,6 +37,115 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-troubleshooting-sharp/
         }]
       }) }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-troubleshooting-sharp/"
+    },
+    "headline": "sharp fails to install",
+    "description": "Why the sharp image library can fail to install with Kane CLI, the three common causes, how to fix each one, and what still works when sharp is unavailable.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-troubleshooting-sharp/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "sharp install failure",
+      "libvips",
+      "kane cli troubleshooting"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "npm install -g @testmuai/kane-cli fails with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm error sharp: Attempting to build from source via node-gyp\nnpm error sharp: Please add node-addon-api to your dependencies"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The most common culprits",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Is libvips installed?\npkg-config --modversion vips-cpp\n# If this prints a version (e.g. 8.18.2), that's the cause.\n\n# What brew formula pulled it in?\nbrew uses --installed vips\n\n# When was it installed?\nls -la /opt/homebrew/Cellar/vips/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When was it installed?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Option A: bypass libvips detection (recommended)\n# You must uninstall first \u2014 reinstalling without uninstall won't re-resolve\n# sharp because npm considers kane-cli already installed.\nnpm uninstall -g @testmuai/kane-cli\nSHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install -g @testmuai/kane-cli\n\n# Make it permanent so future installs/upgrades just work:\necho 'export SHARP_IGNORE_GLOBAL_LIBVIPS=1' >> ~/.zshrc\nsource ~/.zshrc\n\n# Option B: remove libvips if nothing else needs it\nbrew uses --installed vips   # check first\nbrew uninstall vips && brew autoremove"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. npm skipped optional dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm config get omit          # should NOT contain \"optional\"\ncat ~/.npmrc | grep -i omit  # should be empty\nenv | grep -i NPM_CONFIG_OMIT"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. npm skipped optional dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Force optionals for this install\nnpm uninstall -g @testmuai/kane-cli\nnpm install -g @testmuai/kane-cli --include=optional\n\n# Or remove the config permanently\nnpm config delete omit"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Proxy or firewall blocking @img/* packages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Check if proxy is set\nenv | grep -iE \"proxy|PROXY\"\n\n# Try fetching sharp's platform package directly\nnpm view @img/sharp-darwin-arm64 version\n\n# If ECONNREFUSED on localhost \u2014 you have a local proxy that's either\n# down or only listening on IPv4 while npm resolves to IPv6 (::1)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If using a private registry (Artifactory, Verdaccio, GitHub Packages), add a pass-through in your .npmrc",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "INI",
+        "text": "@img:registry=https://registry.npmjs.org/"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
 ## Symptom
 
 `npm install -g @testmuai/kane-cli` fails with:

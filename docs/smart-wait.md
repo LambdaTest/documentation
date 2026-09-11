@@ -40,6 +40,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smart-wait/"
+    },
+    "headline": "SmartWait Functionality for Selenium Automation",
+    "description": "Use SmartWait to run actionability checks before each Selenium action, reducing explicit waits and flaky tests.",
+    "url": "https://www.testmuai.com/support/docs/smart-wait/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "smartwait selenium actionability checks",
+      "reduce explicit waits selenium",
+      "smart wait retry delay configuration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to Use SmartWait Functionality",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "LT:Options {\n...\n\"smartWait\": 10 // It accepts integer values as second\n\"smartWaitRetryDelay\": 1\n...\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 With TestMu AI's SmartWait feature, you can increase the efficiency and accuracy of automated test execution. Before performing any action on a webpage element, SmartWait conducts a series of actionability checks. It holds off on performing an action until all relevant checks pass. If the checks do not pass within a set timeframe, it returns the appropriate Selenium error message.
 
 You can use this feature to reduce the amount of code dedicated to explicit/implicit waits in your test suite, making it easier to read and maintain.

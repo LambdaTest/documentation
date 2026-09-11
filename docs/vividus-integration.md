@@ -44,6 +44,129 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/vividus-integration/"
+    },
+    "headline": "How to Perform Vividus Automation Tests Using TestMu AI?",
+    "description": "With this integration, run your tests from Vividus tool, directly on TestMu AI cloud-based Selenium Grid, on 10,000+ browser/device combinations",
+    "url": "https://www.testmuai.com/support/docs/vividus-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "vividus",
+      "test automation for gui testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How To Setup Your TestMu AI Account With Vividus?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "implementation(group: 'org.vividus', name: 'vividus-plugin-lambdatest', version: vividusVersion)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To do so, open the configuration.properties file and add the below profile in it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "Next you need to add the TestMu AI cloud as the executing platform. To do so, open the configuration.properties file and add the below profile in it:"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Now you need to specify you TestMu AI username and access key in the same configuration.properties file, using below syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium.grid.username=<LT_USERNAME>\nselenium.grid.password=<LT_ACCESS_KEY>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For demo purpose, we have recorded a test scenario, which includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "- Opening <a href=\"https://lambdatest.github.io/sample-todo-app/\" rel=\"noopener\" target=\"_blank\">LambdaTest ToDo App<\/a>\n- Check the first item in the list\n- Check the second item in the list\n- Add a new item in the list, with text \"Yey, Let's add it to list\"."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests From Your Vividus App On TestMu AI Platform",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium.grid.capabilities.<capability>=<value>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, we have used the below desired capabilities for demo purpose",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium.grid.capabilities.build=VividusDemo\nselenium.grid.capabilities.visual=true\nselenium.grid.capabilities.console=true\nselenium.grid.capabilities.network=true\nselenium.grid.capabilities.version=13.0\nselenium.grid.capabilities.platform=MacOS Big Sur"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "configuration.profiles=lambdatest/web,web/desktop/<browser name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, let\u2019s change the browser to Safari",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "configuration.profiles=lambdatest/web,web/desktop/safari\n\n// Previously it was configuration.profiles=lambdatest/web,web/desktop/chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "./gradlew runStories"
+      }
+    ],
+    "dateModified": "2026-08-26T14:02:45+05:30"
+  }) }}
+/>
+
 # Vividus Tests On <BrandName />
 * * *
 Vividus is a codeless test automation tool, developed with the aim to help testers perform automation testing for any application, test, or scenario, using a single tool and common language.

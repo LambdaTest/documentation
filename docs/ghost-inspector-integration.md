@@ -44,6 +44,122 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/ghost-inspector-integration-with-testmu/"
+    },
+    "headline": "Ghost Inspector Integration With TestMu AI\u2019s Cloud",
+    "description": "TestMu AI now integrates with Ghost Inspector to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/ghost-inspector-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setup Selenium IDE Side Runner:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g selenium-side-runner"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "capabilities = {\n                \"platform\" : \"Windows 10\",\n                \"browserName\" : \"Chrome\",\n                \"version\" : \"72.0\"\n        }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In the string format, it will be represented as",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": " **\"browserName='chrome' version='72.0' platform='Windows 10'\"**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "https://user-name:access-key@hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "selenium-side-runner --server <lambdatest grid=\"\" url=\"\"> --capabilities <\/lambdatest>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "selenium-side-runner --w <num of=\"\" parallel=\"\" processes=\"\">--server \nhttps://user-name:access-key@hub.lambdatest.com/wd/hub<\/num>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "selenium-side-runner --max-workers <num of=\"\" parallel=\"\" processes=\"\">--server \nhttps://user-name:access-key@hub.lambdatest.com/wd/hub<\/num>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "selenium-side-runner -w 4 \"LambdaTest-IDE.side\" --server \nhttps://user-name:acces-key@hub.lambdatest.com/wd/hub -c \"browserName='chrome' \nversion='72.0' platform='Windows 10'\""
+      }
+    ],
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+
 # Ghost Inspector Integration With <BrandName />’s Cloud
 ***
 

@@ -48,6 +48,102 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/csharp-with-playwright/"
+    },
+    "headline": "Run your C# automation scripts with Playwright on TestMu AI",
+    "description": "Run your C# automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/csharp-with-playwright/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "csharp playwright",
+      "csharp automation testing",
+      "playwright csharp"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "codeRepository": "https://github.com/LambdaTest/playwright-sample",
+        "text": "git clone https://github.com/LambdaTest/playwright-sample.git\ncd playwright-sample\ncd playwright-csharp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "dotnet restore"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run your Playwright tests with C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "using Microsoft.Playwright;\nusing System.Threading.Tasks;\nusing System;\nusing System.Collections.Generic;\nusing Newtonsoft.Json;\n\nclass PlaywrightTestSingle\n{\n    public static async Task main(string[] args)\n    {\n        using var playwright = await Playwright.CreateAsync();\n\n        string user, accessKey;\n        user = Environment.GetEnvironmentVariable(\"LT_USERNAME\");\n        accessKey = Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\");\n\n        Dictionary<string, object> capabilities = new Dictionary<string, object>();\n        Dictionary<string, string> ltOptions = new Dictionary<string, string>();\n\n        ltOptions.Add(\"name\", \"Playwright Test\");\n        ltOptions.Add(\"build\", \"Playwright C-Sharp tests\");\n        ltOptions.Add(\"platform\", \"Windows 10\");\n        ltOptions.Add(\"user\", user);\n        ltOptions.Add(\"accessKey\", accessKey);\n\n        capabilities.Add(\"browserName\", \"Chrome\");\n        capabilities.Add(\"browserVersion\", \"latest\");\n        capabilities.Add(\"LT:Options\", ltOptions);\n\n        string capabilitiesJson = JsonConvert.SerializeObject(capabilities);\n\n        string cdpUrl = \"wss://cdp.lambdatest.com/playwright?capabilities=\" + Uri.EscapeDataString(capabilitiesJson);\n\n        await using var browser = await playwright.Chromium.ConnectAsync(cdpUrl);\n        var page = await browser.NewPageAsync();\n        try {\n          await page.GotoAsync(\"https://www.bing.com\");\n          await page.Locator(\"[aria-label='Enter your search term']\").ClickAsync();\n          await page.FillAsync(\"[aria-label='Enter your search term']\", \"LambdaTest\");\n          await page.Keyboard.PressAsync(\"Enter\");\n          var title = await page.TitleAsync();\n\n          if (title.Contains(\"LambdaTest\"))\n          {\n            // Use the following code to mark the test status.\n            await SetTestStatus(\"passed\", \"Title matched\", page);\n          }\n          else {\n            await SetTestStatus(\"failed\", \"Title not matched\", page);\n          }\n        }\n        catch (Exception err) {\n          await SetTestStatus(\"failed\", err.Message, page);\n        }\n        await browser.CloseAsync();\n    }\n\n    public static async Task SetTestStatus(string status, string remark, IPage page) {\n        await page.EvaluateAsync(\"_ => {}\", \"lambdatest_action: {\\\"action\\\": \\\"setTestStatus\\\", \\\"arguments\\\": {\\\"status\\\":\\\"\" + status + \"\\\", \\\"remark\\\": \\\"\" + remark + \"\\\"}}\");\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass the below command in the terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "dotnet build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To run the test, pass the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "dotnet run single"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # C# with Playwright: Running Your First Test
 * * *
 

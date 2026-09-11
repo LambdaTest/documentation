@@ -43,6 +43,129 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-troubleshooting/"
+    },
+    "headline": "How To Troubleshoot Appium App Automation on TestMu AI",
+    "description": "Fix the most common Appium failures on the TestMu AI real device cloud, including session-not-created errors, authentication failures, app upload issues, the wrong hub endpoint, and unavailable device or OS versions.",
+    "url": "https://www.testmuai.com/support/docs/appium-troubleshooting/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium troubleshooting testmu ai",
+      "appium session not created",
+      "appium authentication failed"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A minimal working Android configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"LT:Options\": {\n    \"w3c\": true,\n    \"platformName\": \"android\",\n    \"deviceName\": \"Galaxy S20\",\n    \"platformVersion\": \"11\",\n    \"isRealMobile\": true,\n    \"app\": \"lt://APP123456789123456789\",\n    \"user\": \"<YOUR_LT_USERNAME>\",\n    \"accessKey\": \"<YOUR_LT_ACCESS_KEY>\",\n    \"build\": \"Appium Build\",\n    \"name\": \"Appium Test\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Authentication fails or the session returns 401 Unauthorized",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# macOS / Linux\nexport LT_USERNAME=\"<YOUR_LT_USERNAME>\"\nexport LT_ACCESS_KEY=\"<YOUR_LT_ACCESS_KEY>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "macOS / Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Windows\nset LT_USERNAME=\"<YOUR_LT_USERNAME>\"\nset LT_ACCESS_KEY=\"<YOUR_LT_ACCESS_KEY>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The real-device endpoint expects credentials inline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "http://<LT_USERNAME>:<LT_ACCESS_KEY>@mobile-hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Use the real-device app-automation endpoint for Appium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://mobile-hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upload a local binary",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"<YOUR_LT_USERNAME>:<YOUR_LT_ACCESS_KEY>\" \\\n  -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" \\\n  -F \"appFile=@/path/to/your/app.apk\" \\\n  -F \"name=ProverbialApp\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or register a hosted build by URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"<YOUR_LT_USERNAME>:<YOUR_LT_ACCESS_KEY>\" \\\n  -X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" \\\n  -F \"url=:https://example.com/path/to/your/app.apk\" \\\n  -F \"name=ProverbialApp\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Session times out or drops mid-run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"LT:Options\": {\n    \"idleTimeout\": 300\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fix: Start the tunnel, then enable it in your capabilities so the device routes local traffic through it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"LT:Options\": {\n    \"tunnel\": true,\n    \"tunnelName\": \"<YOUR_TUNNEL_NAME>\"\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
+
 # Troubleshooting Appium App Automation on TestMu AI
 ***
 

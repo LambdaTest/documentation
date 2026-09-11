@@ -58,6 +58,88 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/pyunit-on-hyperexecute-grid/"
+    },
+    "headline": "Run automation tests on HyperExecute using PyUnit",
+    "description": "Learn how to run Selenium automation tests on HyperExecute using the PyUnit (or unittest) framework",
+    "url": "https://www.testmuai.com/support/docs/pyunit-on-hyperexecute-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "unittest",
+      "unittest selenium",
+      "python selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "capabilities = {\n\"build\": \"UnitTest-Selenium-Sample\",\n\"name\": \"UnitTest-Selenium-Test\",\n\"platformName\": \"Windows 11\",\n\"browserName\": \"Chrome\",\n\"browserVersion\": \"latest\",\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: linux\n\nautosplit: true\nretryOnFailure: true\n\nmaxRetries: 1\nconcurrency: 2\n\nenv:\n#  PAT: ${{ .secrets.testKey }}\n TARGET_OS: LINUX\n\ncacheKey: '{{ checksum \"requirements.txt\" }}'\ncacheDirectories:\n  - CacheDir\npre:\n  - pip3 install -r requirements.txt --cache-dir CacheDir\npost:\n  - cat yaml/linux/pyunit_hyperexecute_autosplit_sample.yaml\n\nmergeArtifacts: true\n\nuploadArtefacts:\n  - name: TestReport\n    path:\n     - example_*/**\n\nreport: true\npartialReports:\n    type: json\n    location: /\n    frameworkName: extent\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -nri 'HyperTestPyUnit' tests -ir --include=\\*.py | sed 's/:.*//'\n\ntestRunnerCommand: python3 $test\n\njobLabel: [selenium-pyunit, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Running PyUnit Framework Tests on HyperExecute
 PyUnit, also known as unittest, is a testing framework in Python that is commonly used with Selenium for automated testing. It provides a structure for organizing and executing test cases, along with features like test fixtures, assertions, and test discovery.
 

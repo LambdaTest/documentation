@@ -54,6 +54,208 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smart-ui-storybook/"
+    },
+    "headline": "Getting started with SmartUI using Storybook On TestMu AI",
+    "description": "In this documentation, learn how to perform Visual UI Testing with Storybook on the TestMu AI Automation Cloud across 40+ browser versions.",
+    "url": "https://www.testmuai.com/support/docs/smart-ui-storybook/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of StoryBook is required.; Node.js v20.3+ installed (required for SmartUI CLI v4.x.x); StoryBook version installed should be higher than 6.4.0. Click here to know more; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Steps to run your first test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/smartui-storybook-sample",
+        "text": "git clone https://github.com/LambdaTest/smartui-storybook-sample.git"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-storybook -g"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Setup with StoryBook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "module.exports = {\n  features: {\n    // Required for Storybook < v9\n    buildStoriesJson: true,\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Storybook v9+ Play Function Support",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Best Practices for Play Functions:**\n\n- Use `play` functions to set up component states before screenshots\n- Wait for async operations to complete using `waitFor` or `findBy` queries\n- Avoid animations or transitions that might cause timing issues\n- Use `waitForTimeout` in SmartUI config if components need additional render time after play functions\n\n#### Storybook Globals (Themes) Configuration\n\nSmartUI supports Storybook's global decorators and parameters, including theme switching. You can configure themes in your `.smartui.json` file.\n\n**Configuration Example:**\n\n```json title=\".smartui.json\"\n{\n  \"storybook\": {\n    \"browsers\": [\"chrome\", \"firefox\", \"safari\", \"edge\"],\n    \"viewports\": [[1920, 1080]],\n    \"backgroundTheme\": \"light\",  // Options: \"light\", \"dark\", or \"both\"\n    \"useGlobals\": true,  // Enable global decorators and parameters\n    \"waitForTimeout\": 0\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Using Multiple Themes:**\n\nIf you set `\"backgroundTheme\": \"both\"` in your SmartUI config, each story will be captured twice - once in light theme and once in dark theme. The screenshot names will be automatically suffixed (e.g., `Card-Default-light.png` and `Card-Default-dark.png`).\n\n**Note**: When using `\"backgroundTheme\": \"both\"`, ensure your Storybook stories properly handle theme switching via globals or decorators.\n\n### **Step 3:** Configure your Project Token\n\nSetup your project token shown in the **SmartUI** app after creating your project.\n\n<Tabs className='docs__val' groupId='language'>\n<TabItem value='MacOS/Linux' label='MacOS/Linux' default>\n\n```bash\nexport PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3.1: Configure Proxy (Optional)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export SMARTUI_API_PROXY=http://172.17.0.1:3128"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3.1: Configure Proxy (Optional)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set SMARTUI_API_PROXY=http://172.17.0.1:3128"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate the configuration file, please execute the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui config create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Create and Configure SmartUI Config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n#### SmartUI StoryBook Config Options\n\nPlease read the following table for more information about the configuration file:\n\n| Config Key     | Description                                                                                                                        | Usage     |\n| -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |\n| browsers       | You can add all the supported browsers brands here to run your tests for SmartUI. <br/> Ex: `\"chrome\", \"firefox\", \"safari\", \"edge\", etc..` | Mandatory |\n| viewports    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br/> Ex: `[1920, 1080],[width, height] etc..` <br/> | Mandatory |\n| waitForTimeout | You can add wait time for the page to load DOM of your StoryBook components. This can be added globally to your configuration and to individual stories as well. <br/> Ex: `3000`                                      | Optional  |\n| include        | Add the stories which should only be included in SmartUI tests <br/> Ex: `\"/dashboard/\",\"/features/\"`                              | Optional  |\n| exclude        | Don't compare the stories which should be excluded in SmartUI tests <br/> Ex: `\"/login/\",\"/marketing/\"`                            | Optional  |\n| backgroundTheme | Theme for capturing stories. Options: `\"light\"`, `\"dark\"`, or `\"both\"` (captures both themes) <br/> Ex: `\"light\"` | Optional (default: `\"light\"`) |\n| useGlobals     | Enable Storybook global decorators and parameters (required for theme switching) <br/> Ex: `true` | Optional (default: `false`) |\n\n:::note\nSmartUI Storybook testing now supports `Edge` browser.\n:::\n\n:::caution Please Note\nThe `waitForTimeout` is an optional configuration. This is available for the versions above `1.1.7` of the NPM CLI.\n\nIf you are using any `async` components in your StoryBook, then you can add the wait time for the page to load the DOM of your StoryBook components.\n\nThis will help you to avoid any false-positive results for your tests. You can add the wait time in milliseconds. This might increase the execution time of your tests.\n\n:::\n\n:::info\n\nFor capturing the stories in **full page** without limiting the height to the viewport then in the `viewports` array, you can change the following configuration:\n\n```json\n\"viewports\": [\n  [1920],  // Only mention the width of the viewport\n  [1440]\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Custom Viewport Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n...\n...\n\"customViewports\": [\n      {\n        \"stories\": [\n          \"<name of the stories/components>\"\n        ],\n      {\n        \"styles\": {\n            \"width\": 322,\n            \"height\": 321\n          },\n        \"exclude\": [ // Example: Excluding stories for a specific viewport\n          \"/directory1\",\n          \"/directory2/subdirectory1\",\n          \"/directory2/subdirectory2\",\n          \"/directory3/subdirectory3/item1\",\n        ]\n      },\n      },\n      {\n        \"stories\": [\n          \"<name of the stories/components>\"\n        ],\n        \"styles\": {\n          \"width\": 834, //Tablet view\n          \"height\": 1112\n        },\n        \"waitForTimeout\": 4000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)\n      }\n      {\n        \"stories\": [\n          \"<name of the stories/components>\"\n        ],\n        \"waitForTimeout\": 3000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)\n        }\n      }\n      // Additional custom viewport configurations can be added here\n]\n...\n...\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Execute the Tests on SmartUI Cloud using CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run storybook                                                 // Starts your local StoryBook server\nsmartui storybook http://localhost:6006 --config .smartui.json    // Captures all the stories running on local server"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Execute the Tests on SmartUI Cloud using CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run build-storybook                                           // Creates a Static Build Folder of StoryBook Stories\nsmartui storybook ./storybook-static --config .smartui.json       // Captures all the stories added in the static build folder"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Execute the Tests on SmartUI Cloud using CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui storybook https://<your_public_hosted_url> --config .smartui.json    // Captures all the stories running on local server"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 16",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "steps:\n  - name: Running SmartUI StoryBook Tests\n    run: |\n      npm i\n      npm install @lambdatest/smartui-storybook -g\n      npm run build-storybook\n      smartui storybook ./storybook-static --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 17",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "steps:\n  - name: Running SmartUI StoryBook Tests\n    run: |\n      npm i\n      npm install @lambdatest/smartui-storybook -g\n      smartui storybook https://<replace_with_your_url> --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Troubleshooting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   cat .smartui.json | python -m json.tool"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"storybook\": {\n       \"waitForTimeout\": 3000  // Increase if play functions need more time\n     }\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solutions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"storybook\": {\n       \"useGlobals\": true  // Must be true to use globals\n     }\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 ## Prerequisites for running SmartUI with StoryBook

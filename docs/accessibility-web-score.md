@@ -16,6 +16,87 @@ site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-web-score/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-web-score/"
+    },
+    "headline": "Accessibility Score",
+    "description": "How the Accessibility Score works across web and mobile accessibility testing\u2014severity, issue density, scored elements, score bands, and how to use it without mistaking it for legal compliance.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-web-score/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Accessibility score"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using the scored element count as the denominator",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Density = Total issue instances / Scored elements on the page"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The deductions are combined into the final score",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Score = max(1, floor(100 \u00d7 e^(\u2212AdjustedDeductions / 133)))"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When the score is enabled, these fields appear in accessibility test API responses for every product",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"test_info\": { \"test_id\": \"AUT_abc123\", \"status\": \"completed\" },\n  \"accessibility_score\": 72,\n  \"score_label\": \"Good\",\n  \"scored_element_count\": 1627,\n  \"scan_info\": [\n    {\n      \"page_url\": \"https://example.com/login\",\n      \"issue_count\": 5,\n      \"accessibility_score\": 43,\n      \"score_label\": \"Poor\",\n      \"scan_id\": \"AUT_abc123_1\"\n    },\n    {\n      \"page_url\": \"https://example.com/dashboard\",\n      \"issue_count\": 8,\n      \"accessibility_score\": 88,\n      \"score_label\": \"Good\",\n      \"scan_id\": \"AUT_abc123_2\"\n    }\n  ]\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Accessibility Score
 
 The **Accessibility Score** is a single number from **0 to 100** that represents the accessibility health of a scanned page or screen. Instead of only reading long reports, the score gives you a **clear, actionable signal** for where the product stands relative to the issues found in that scan. Use it to **track progress over time**, **compare releases**, and **show improvement trends** to stakeholders—**together** with issue detail and any manual testing your program requires.

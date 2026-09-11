@@ -49,6 +49,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/low-power-mode-on-browser/"
+    },
+    "headline": "Low Power/Battery Saver Mode on Real Devices",
+    "description": "Toggle Low Power Mode (iOS) and Battery Saver Mode (Android) during manual browser testing sessions on real devices to validate site behavior under battery-saving conditions.",
+    "url": "https://www.testmuai.com/support/docs/low-power-mode-on-browser/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "low power mode",
+      "battery saver mode",
+      "battery saver testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-03T21:58:13+05:30"
+  }) }}
+/>
+
 <BrandName />'s **Low Power Mode** (iOS) / **Battery Saver Mode** (Android) toggle lets you test how your website behaves under battery-saving conditions during a manual browser testing session on a real device — background refresh stopping, display refresh rate capping at 60 Hz, automatic downloads pausing, and network behavior changes.
 
 :::note Plus Plan Feature

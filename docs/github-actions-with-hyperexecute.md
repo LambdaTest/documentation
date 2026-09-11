@@ -43,6 +43,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/github-actions-with-hyperexecute/"
+    },
+    "headline": "GitHub Actions Integration",
+    "description": "TestMu AI now integrates with GitHub Actions Pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.",
+    "url": "https://www.testmuai.com/support/docs/github-actions-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To create the GitHub Actions pipeline YAML file, follow the sample command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "name: HyperExecute\non:\n  workflow_dispatch:\n    inputs:\n      username:\n        required: true\n        description: LT Username\n      accessKey:\n        description: LT Access Key\n        required: true\n        \njobs:\n  HyperExecute:\n    runs-on: ubuntu-latest\n    timeout-minutes: 15\n    strategy:\n      fail-fast: false\n    steps:\n      - name: Checkout sources\n        uses: actions/checkout@v2\n\n      - name: Download CLI and Setting Environment Variables\n        shell: bash\n        run: |\n          curl https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute -o hyperexecute\n          chmod +x hyperexecute\n      \n      - name: Executing the Job\n        shell: bash\n        run: |\n          ./hyperexecute --user ${{ github.event.inputs.username }} --key ${{ github.event.inputs.accessKey }} --download-artifacts --config yaml/autosplit_linux.yaml\n          echo \"Test completion\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # GitHub Actions Pipeline Integration with HyperExecute
 * * *
 

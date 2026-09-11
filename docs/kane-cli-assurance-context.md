@@ -41,6 +41,185 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-context/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-assurance-context/"
+    },
+    "headline": "Building the Context Graph",
+    "description": "Snapshot requirement documents into a local, content-addressed store and extract use-cases with an AI agent using kane-cli context \u2014 ingest, extract, review, sessions, inspection, and housekeeping.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-assurance-context/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli context",
+      "context ingest",
+      "use-case extraction"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context ingest ./prd-online-store.md   # snapshot a source\nkane-cli context extract                        # extract use-cases (interactive chat)\nkane-cli context review                         # promote proposals to trusted\nkane-cli context list                           # see what you have"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context ingest \u2014 snapshot your sources {#ingest}",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context ingest <src...> [--as <id>]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Snapshots one or more files into .context/ (the store is created on first use) and then extracts them (0.7.1)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ kane-cli context ingest ./prd-online-store.md --mode ci\ncreated  prd-online-store  source sha256:0661\u2026  blob sha256:3db8\u2026"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ingest is deterministic about identity",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ kane-cli context ingest ./prd-online-store.md\ncreated  prd-online-store  source sha256:0661\u2026  blob sha256:3db8\u2026"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Remote sources, passed as a URL and requiring the matching connection on your account",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context ingest https://<your-site>/browse/PROJ-123              # Jira issue\nkane-cli context ingest https://<site>/wiki/spaces/<KEY>/pages/<id>/\u2026    # Confluence page\nkane-cli context ingest https://linear.app/<workspace>/issue/KEY-123     # Linear issue\nkane-cli context ingest https://linear.app/<workspace>/document/<slug>   # Linear document\nkane-cli context ingest https://docs.example.com/guide                   # public web page"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context extract \u2014 propose use-cases {#extract}",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context extract [--plan] [--force] [--source <id>] [--mode <mode>] [--resume <sid> [--message \"<text>\"]]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Resume it any time within 24 hours",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context sessions                       # list resumable sessions + their resume commands\nkane-cli context extract --resume <sid>         # re-presents the pending questions\nkane-cli context extract --resume <sid> --message \"Account required \u2014 the update supersedes the old section\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context review \u2014 review outside the extract session {#review}",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context review [--queue derived|skipped|archived|drift] [--verdicts <file>] [--json]\nkane-cli context review --approve <refs...> | --skip <refs...> | --defer <refs...>       # 0.7.1\nkane-cli context review --verdicts <file> --allow-archive --because \"<reason>\"           # 0.7.1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Walks existing nodes through the same review checklist, landing every verdict as one batched record",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "[{ \"ref\": \"uc-manage-the-cart\", \"resolution\": \"approved\" }]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context list",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context list [--type source|usecase] [--inferred] [--stale] [--all] [--json]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context view",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context view [--out <path>] [--open|--no-open] [--json]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context explain",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context explain <ref> [--json]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context sessions {#sessions}",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context sessions [list|show|clean] [<sid>] [--all] [--json]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context retire",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context retire <source_id> [--reason <text>] [--yes]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context name <ref> <slug>          # name one node\nkane-cli context name --backfill [--yes]    # assign ids to every unnamed node"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "context revert",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context revert <seq> [--reason <text>] [--yes]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The store on disk",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ".context/\n\u251c\u2500\u2500 meta.json            # store identity + format version\n\u251c\u2500\u2500 commits/             # append-only records \u2014 the truth\n\u251c\u2500\u2500 blobs/               # write-once source snapshots\n\u251c\u2500\u2500 derived/             # regenerable read caches (delete any time; rebuild restores)\n\u251c\u2500\u2500 proposals/<ts>/      # proposal + review artifacts per extract run\n\u251c\u2500\u2500 sessions/<sid>/      # resumable paused sessions (expire after 24h)\n\u251c\u2500\u2500 locks/               # advisory run locks (transient)\n\u251c\u2500\u2500 logs/                # per-run trace files\n\u251c\u2500\u2500 design/              # design rationale sidecars + technique overrides\n\u251c\u2500\u2500 reconcile/plans/     # stored reconcile plans\n\u2514\u2500\u2500 signals.ndjson       # internal review bookkeeping (appears once recorded)"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 `kane-cli context` builds a local, content-addressed knowledge store (`.context/` in your project directory) from your requirement documents, and extracts **use-cases** from them with an AI agent. It is the first stage of the [assurance lifecycle](/support/docs/kane-cli-assurance/): Source → Use-case → Scenario → AC → Test.
 
 ```bash

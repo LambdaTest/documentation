@@ -44,6 +44,164 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-kb-finding-and-interacting-with-elements/"
+    },
+    "headline": "Finding & Interacting with Elements",
+    "description": "Learn how to reliably target and interact with web and mobile elements using KaneAI's natural language instructions",
+    "url": "https://www.testmuai.com/support/docs/kaneai-kb-finding-and-interacting-with-elements/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai elements"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Positional Cues to Disambiguate",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on the \"Submit\" button at the bottom of the page\nclick on the search icon in the top right corner"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Positional Cues to Disambiguate",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click the \"Edit\" button next to \"john@example.com\"\nclick the \"Delete\" icon beside the \"Quarterly Report\" row"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Positional Cues to Disambiguate",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on the second \"Add to Cart\" button\nselect the third item in the dropdown"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Positional Cues to Disambiguate",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click \"Submit\" inside the payment form\nclick \"Save\" inside the modal dialog"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: E-Commerce Product Listing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click the \"Add to Cart\" button below the \"Running Shoes\" product\nclick the \"Add to Cart\" button for the first product in the list"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Data Table with Repeated Actions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click the \"Edit\" button in the row containing \"jane.doe@company.com\"\nclick \"Delete\" next to user \"John Smith\"\nclick the \"View\" link in the third row of the users table"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Navigation Menu with Nested Items",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "hover on the \"Account\" menu, then click on \"Settings\"\nclick on \"Settings\" inside the \"Admin\" dropdown"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Modal/Dialog Interactions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click \"Confirm\" inside the confirmation dialog\nclick the \"Cancel\" button in the modal"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Checkout Flow That Opens Payment in New Tab",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on \"Proceed to Payment\"\nswitch to the 2nd tab\ntype \"4111111111111111\" in the card number field\nclick \"Pay Now\"\nswitch to the 1st tab\nassert \"Payment Successful\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Hover & Multi-Step Interactions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "hover on the \"Products\" menu item\nclick on \"Electronics\" in the dropdown"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Hover & Multi-Step Interactions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "hover on the user avatar in the top right corner\nclick on \"Sign Out\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Tooltip Verification",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "hover on the info icon next to \"Annual Revenue\"\nassert tooltip text \"Total revenue for the fiscal year\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Drag and Drop",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "drag \"Task: Fix Bug\" and drop it on the \"In Progress\" column\ndrag the first item and drop it below the third item in the list\ndrag \"Card A\" to \"Column B\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example, to click a deeply nested shadow DOM element",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "document.querySelector('my-component').shadowRoot.querySelector('.hidden-btn').click();"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 KaneAI converts natural language instructions into automation actions by identifying the right element on the page. The more precisely you describe an element, the more reliably KaneAI will find and interact with it. This guide covers practical techniques for targeting elements in real-world applications.
 
 ## How KaneAI Finds Elements

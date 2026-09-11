@@ -43,6 +43,108 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-install-uninstall-testmu-hooks/"
+    },
+    "headline": "Ability to Install and Uninstall Apps in App Automation Scripts",
+    "description": "Now you can install or uninstall applications using hooks in your App Automation scripts that you run on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/appium-install-uninstall-testmu-hooks/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "testmu ai hooks",
+      "app automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-install-app=myApp\")\ndriver.execute_script(\"lambda-install-app=lt://APP100000000123456789123456789\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await browser.execute(\"lambda-install-app\", {\n  /* Change the App URL */\n  appUrl: \"lt://APP1234567890ABCDEF1234567890\",\n  /* Optional */\n  retainData: true\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Uninstall App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-uninstall-app=com.myApp.beta\")\ndriver.execute_script(\"lambda-uninstall-app=com.apple.myApp\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Uninstall App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "/* Change the App ID */\nconst APP_ID = \"com.lambdatest.proverbial\";\nawait browser.execute(`lambda-uninstall-app=${APP_ID}`);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test App Upgrades with Hooks (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "# Payload required to retain app data while uninstalling it\ndata = {\n  \"appPackage\": \"sampleapp.android.app\",\n  \"retainData\": True\n}\n\ndriver.execute_script(\"lambda-uninstall-app\", data)\n\n# Payload required to reuse data of the old app while installing the new one\ndata = {\n  \"appUrl\": \"lt://APPID\",\n  \"retainData\": True\n}\ndriver.execute_script(\"lambda-install-app\", data)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Payload required to reuse data of the old app while installing the new one (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "# Send the current app in background\ndriver.background_app(-1)\n\n\n# Payload required while installing the new upgrade \ndata = {\n  \"appUrl\": \"lt://APPID\",\n  \"retainData\": True\n}\ndriver.execute_script(\"lambda-install-app\", data)\n\n# Note : In case of enterprise app, user have to pass the below payload \ndata = {\n  \"appUrl\": \"lt://APPID\",\n  \"resignApp\": False,\n  \"retainData\": True\n}\n"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 

@@ -53,6 +53,130 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/"
+    },
+    "headline": "Guide to Run Selenium IDE Tests Using TestMu AI",
+    "description": "Guide on how to run Selenium IDE tests with TestMu AI online Selenium automation grid, for testing on 3000+ real browsers & browser versions hosted on TestMu AI cloud servers.",
+    "url": "https://www.testmuai.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "lamdatest",
+      "selenium ide",
+      "selenium ide testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Node.js programming language (version 8 or 10).; NPM or Node.js Package Manager.; Selenium IDE Plugin, for either Google Chrome and Mozilla Firefox.; Selenium IDE (SIDE) Runner. You can download SIDE runner using below code:; You also need your TestMu AI authentication credentials, which includes your TestMu AI username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your TestMu AI automation dashboard and click on the \"key\" icon left to the help button, on the top right corner..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    npm install -g selenium-side-runner"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "        capabilities = {\n                \"platform\" : \"Windows 10\",\n                \"browserName\" : \"Chrome\",\n                \"version\" : \"72.0\"\n        }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    In the string format, it will be represented as: **\"browserName='chrome' version='72.0' platform='Windows 10'\"**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    https://user-name:access-key@hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing Selenium IDE Tests on TestMu AI Selenium Cloud Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --server <lambdatest grid=\"\" url=\"\"> --capabilities <\/lambdatest>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": " selenium-side-runner --w <num of=\"\" parallel=\"\" processes=\"\">--server https://user-name:access-key@hub.lambdatest.com/wd/hub<\/num> "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --max-workers <num of=\"\" parallel=\"\" processes=\"\">--server https://user-name:access-key@hub.lambdatest.com/wd/hub<\/num>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner -w 4 \"LambdaTest-IDE.side\" --server https://user-name:acces-key@hub.lambdatest.com/wd/hub -c \"browserName='chrome' version='72.0' platform='Windows 10'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "selenium-side-runner --params \"a='example-value' a.b='another example-value' a.b.c=[1,2,3]\" "
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Run Selenium IDE Tests with <BrandName /> Selenium Grid
 * * *
 [Selenium IDE](https://www.testmuai.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is one of the most popular record and playback tool for testing which is widely used for automated browser testing. The Selenium IDE is a very easy-to-use solution for getting started with automation testing. It also provides instant feedback and has cross-browser and operating system compatibility, with the help of Selenium IDE (SIDE) Runner.

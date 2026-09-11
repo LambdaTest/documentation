@@ -44,6 +44,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-ci-cd-tools/"
+    },
+    "headline": "Integration With CI/CD Tools",
+    "description": "HyperExecute offers integrations with numerous CI/CD tools to help you fast-track your robust delivery pipeline for pacing up your go-to-market launch.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-ci-cd-tools/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "hyperexecute integrations",
+      "hyperexecute integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To integrate any CI pipeline with HyperExecute, follow these steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "chmod u+x hyperexecute"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To execute the HyperExecute CLI binary, run the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "hyperexecute.exe \u2013user LT_USERNAME \u2013key LT_ACCESS_KEY \u2013config path of the Hyperexecute YAML file "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "./hyperexecute \u2013user LT_USERNAME \u2013key LT_ACCESS_KEY \u2013config path of the Hyperexecute YAML file "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The cicd-pipeline-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cicd-pipeline-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a CI/CD Pipeline Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cicd-pipeline-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/cicd-pipeline-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # HyperExecute Integration With CI/CD Tools
 HyperExecute offers integrations with numerous CI/CD tools to assist you to:
 - Expend less manual effort

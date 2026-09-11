@@ -43,6 +43,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/jenkins-with-hyperexecute/"
+    },
+    "headline": "Jenkins Integration",
+    "description": "Streamline automation with Jenkins and HyperExecute by exploring TestMu AI's comprehensive support documentation.",
+    "url": "https://www.testmuai.com/support/docs/jenkins-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "      curl -O https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute\n      chmod u+x hyperexecute\n      ./hyperexecute --user <your_username> --key <your_access_key> --config hyperexecuteStatic.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "        curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe \n        hyperexecute.exe -u <your_username> -k <your_access_key> -i <path_of_RELATIVE_PATH_OF_YOUR_YAML_FILE>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Jenkins File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pipeline {\n    agent any\n\n    stages {\n        # Download and Run Hyperexecute stage (optional)\n        stage('Download & Run Hyperexecute') {\n            steps {\n                # Download Hyperexecute CLI for macOS (adjust for other OS)\n                sh name: 'Download Hyperexecute CLI', script: 'wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute'\n                # Grant execute permission to the downloaded binary\n                sh name: 'Make Hyperexecute executable', script: 'chmod +x hyperexecute'\n                # Run Hyperexecute with user credentials and configuration file\n                sh name: 'Run Hyperexecute Tests', script: './hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>\n            }\n        }\n    }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Jenkins Integration
 * * *
 Jenkins is an open-source automation server that is easy to install and configure. It can also be used as a simple CI server or turned into a continuous delivery hub for any project.

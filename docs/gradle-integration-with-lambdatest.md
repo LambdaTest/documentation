@@ -48,6 +48,87 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/gradle-integration-with-testmu/"
+    },
+    "headline": "Gradle Plugin Integration With TestMu AI",
+    "description": "Automate testing at scale! Integrate TestMu AI with Gradle for seamless CI/CD & lightning-fast execution.",
+    "url": "https://www.testmuai.com/support/docs/gradle-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "push issues to localstack",
+      "free cross browser testing tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Add TestMu AI Gradle Plugin to the build.gradle file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 2: Configure <BrandName /> Parameters in `build.gradle` file\n\n```java title=\"build.gradle\"\nrunLambdaTest {\n  username = 'YOUR_LAMBDATEST_USERNAME'\n  accessKey = 'YOUR_LAMBDATEST_ACCESS_KEY>'\n  appFilePath = 'PATH_TO_YOUR_APP_FILE'\n  testSuiteFilePath = 'PATH_TO_YOUR_TEST_SUITE'\n  device = 'YOUR_DESIRED_DEVICE_FOR_TESTING'\n  isFlutter = true //if you are running flutter dart tests\n  appId = \"lt://1234343\" //provide this only if you have already uploaded the app\n  testSuiteId = \"lt://1223444\" //provide this only if you have already uploaded the app\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Upload APK Parameters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "### Step 4: Execute the Plugin\nTo run the plugin configured in build.gradle, execute the following command:\n\n```bash\n./gradlew runLambdaTest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you only want to upload your APK files to TestMu AI, use the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./gradlew uploadApkToLambdaTest"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 Gradle is a build automation tool for multi-language software development. It controls the development process across various tasks, including compilation, packaging, testing, deployment, and publishing. Supported languages include Java, Kotlin, Groovy, Scala, C/C++, and JavaScript.
 
 <div className="ytframe"> 

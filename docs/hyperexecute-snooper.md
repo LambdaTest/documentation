@@ -39,6 +39,136 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-snooper/"
+    },
+    "headline": "Using Snooper Command on Hyperexecute",
+    "description": "Learn more about Using Snooper on Hyperexecute",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-snooper/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The snooper command takes two arguments",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "snooper --featureFilePaths=features/ --frameWork=java"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 1: Discovering test cases on HyperExecute machines:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery:\n  type: automatic\n  mode: static\n  args:\n    featureFilePaths: src/test/java/Features/\n    frameWork: java\n    specificTags: [\"\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 2: Discovering test cases on Local machines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery: \n  type: raw \n  mode: static\n  command: snooper  --targetOs=win --featureFilePaths=src/test/java/Features/ --frameWork=java --specificTags=@tag1,@tag2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 1: Using options flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 2: Using features flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.features=\"$test\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To debug the discovery of the snooper, configure the following command as per the desired parameters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": ".hyperexecute/snooper --targetOs=win --ignoredTags=@ignore @skipDaily --featureFilePaths=src/test/java/Features --frameWork=java | sed 's/:.*//' | uniq"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to effectively utilize tags incorporating various custom parameters for enhanced functionality?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "specificTags: [\"@tag1\",\"@tag2\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to effectively utilize tags incorporating various custom parameters for enhanced functionality?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "query: \"((@tag1 or @tag2) and not @tag3)\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How to effectively utilize tags incorporating various custom parameters for enhanced functionality?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "ignoredTags : [\"@tag3\",\"@tag2\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample YAML File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.1\"\nrunson: win\nautosplit: true\n\nconcurrency: 1\n\nretryOnFailure: true\nmaxRetries: 1\n\ncacheKey: '{{ checksum \"package-lock.json\" }}'\ncacheDirectories:\n  - node_modules\n\npre:\n  - npm install\n\ntestDiscovery:\n  type: automatic\n  mode: remote\n  args:\n    featureFilePaths: features/sample_website\n    frameWork: javascript\n    specificTags: [ \"@test\" ]\n#  command: .hyperexecute/snooper  --targetOs=win --featureFilePaths=features/onepass_website --frameWork=javascript --specificTags=@test | sed 's/:.*//' | uniq\n\ntestRunnerCommand: npm run execute-tests $test\n\njobLabel: [snooper, autosplit]"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 A `snooper` is a command that can be used to discover the list of Feature file scenarios that would be further executed using the value passed in the `testRunnerCommand`. The `snooper` command takes two arguments:
 
 - `featureFilePaths`: This argument specifies the path to the Feature files that you want to discover.

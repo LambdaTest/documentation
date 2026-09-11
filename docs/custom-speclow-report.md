@@ -38,6 +38,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/custom-speclow-report/"
+    },
+    "headline": "Custom Specflow Report",
+    "description": "Custom specflow report",
+    "url": "https://www.testmuai.com/support/docs/custom-speclow-report/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A valid TestMu AI account.; A configured HyperExecute environment.; A SpecFlow-based test suite..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following settings in your YAML file to enable reporting and configure partial reports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n  location: YOUR_REPORTS_LOCATION\n  type: xml\n  frameworkName: specflow-custom\n  email:\n    to: [YOUR_EMAIL_ID]\n    metaInfo: [ \"project-name:YOUR_CUSTOM_PROJECT_NAME\", \"project-env: YOUR_CUSTOM_PROJECT_ENV\" ]"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 This guide provides step-by-step instructions on how to generate a custom SpecFlow report in <BrandName /> HyperExecute. By following the specified changes in the YAML file and modifying the test script, users can receive detailed test reports via email.
 
 ## Prerequisites

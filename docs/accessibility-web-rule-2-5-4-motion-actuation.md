@@ -6,6 +6,59 @@ description: Rule-level Accessibility guidance for Motion Actuation (WCAG 2.5.4 
 slug: accessibility-web-rule-2-5-4-motion-actuation/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-web-rule-2-5-4-motion-actuation/"
+    },
+    "headline": "Motion Actuation (2.5.4)",
+    "description": "Rule-level Accessibility guidance for Motion Actuation (WCAG 2.5.4 Level A).",
+    "url": "https://www.testmuai.com/support/docs/accessibility-web-rule-2-5-4-motion-actuation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Motion Actuation (2.5.4)
 
 Functionality triggered by device motion (shaking, tilting) or user motion (gestures captured by a camera) must also be operable through a UI control, and the motion response can be disabled to prevent accidental activation.

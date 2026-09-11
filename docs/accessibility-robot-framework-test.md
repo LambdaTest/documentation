@@ -15,6 +15,95 @@ canonical: https://www.testmuai.com/support/docs/accessibility-robot-framework-t
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-robot-framework-test/"
+    },
+    "headline": "Robot Framework",
+    "description": "Run Accessibility Automation when Robot Framework drives Selenium: variables, Open Browser keywords, hooks, and reports.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-robot-framework-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Robot Framework"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Robot Framework + SeleniumLibrary (or compatible library) installed; Remote URL and credentials for TestMu AI; Accessibility enabled for your workspace.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Define suite or global variables so every test uses the same grid options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Robot",
+        "text": "*** Variables ***\n${LT_OPTIONS}    {\"accessibility\": true, \"accessibility.wcagVersion\": \"wcag21aa\"}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After the page is ready",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Robot",
+        "text": "Execute Javascript    return document.readyState\nExecute Javascript    lambda-accessibility-scan"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you prefer scans on every navigation without Robot keywords",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Robot",
+        "text": "# In capabilities JSON / dict\naccessibility.autoscan    ${True}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Run the suite and review reports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "robot --outputdir results tests/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Robot Framework
 
 Robot Framework sits **above** Selenium: Accessibility is still configured on the **underlying browser session** (desired capabilities passed into `Open Browser` or your library’s remote configuration). This page is the onboarding path for teams using **SeleniumLibrary** (or equivalent) against the TestMu AI grid.

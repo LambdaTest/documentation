@@ -41,6 +41,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-tunnel/"
+    },
+    "headline": "Tunnel Configuration in HyperExecute",
+    "description": "Learn to set up a Tunnel with HyperExecute effortlessly with our straightforward guide, simplifying the configuration process for you!",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-tunnel/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "HyperExecute YAML file -> HyperExecute supports multiple ways of setting up tunnels directly from your YAML configuration. You can use any version of YAML to pass the Tunnel parameters.; HyperExecute CLI to trigger your tests..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Simple tunnel Connection",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "> Recommended if you want to quickly enable tunnel access for locally hosted apps.\n\n### 2. Using Existing `tunnel`\nIf you already have a running tunnel, you can reuse it by specifying its name to access your applications which are locally hosted or behind a firewall.\n\n```yaml title=\"hyperexecute.yaml\"\ntunnelNames: [\"lambdatest_tunnel\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "tunnelOpts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<img loading=\"lazy\" src={require('../assets/images/hyperexecute/knowledge-base/secrets/12.png').default} alt=\"Image\"  style={{width: '500px',}} className=\"doc_img\"/>\n\n## Clone a Repository via Tunnel\n\nCloning a repository using a tunnel can help secure the transfer of data between the repository and your local machine.\n\nPrivate repositories are hosted on a private network or behind a firewall, and you need to access them from outside the network. By using a tunnel, you can create a secure connection to the private network and clone the repository as if you were within the network.\n\nYou can now clone all your **public** and **private** repositories from your Git provider via **tunnel**.\n\nAfter specifying the details of your repository, you need to set the `useInCodeSetUp` flag to `true` as shown below.\n\n```bash\nsourcePayload:\n  platform: git\n  link: https://--------\n  ref: <your_branch_name>\n  accessToken: <your_personal_access_token>\n  commit: <optional>\n\n# highlight-next-line\ntunnelOpts:\n# highlight-next-line\n  useInCodeSetUp: true\n## this flag is mandatory to pass to enable cloning via tunnel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Troubleshooting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "response=$(curl -o /dev/null -s -w \"%{http_code}\" https://www.testmuai.com)\n\n## You need to enter your website URL in place of LambdaTest URL"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Now you need to check the response of the website by passing the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "echo $response"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 You can configure a secure tunnel in HyperExecute to test applications that are:
 
 - Hosted locally on your system, or

@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-command-reference
+toc_max_heading_level: 2
 title: Rook Command Guide
 hide_title: false
 sidebar_label: All Commands
@@ -14,6 +15,63 @@ site_name: TestMu AI
 slug: agent-assurance-command-reference/
 canonical: https://www.testmuai.com/support/docs/agent-assurance-command-reference/
 ---
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-command-reference/"
+    },
+    "headline": "Rook Command Guide",
+    "description": "Complete reference for every Rook interactive and headless command: syntax, options, examples, and safety notes for all 24 command families.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-command-reference/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook commands",
+      "rook cli reference",
+      "rook slash commands"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-25T16:54:35+05:30"
+  }) }}
+/>
 
 # List of Rook Commands
 

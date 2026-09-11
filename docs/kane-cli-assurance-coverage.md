@@ -41,6 +41,94 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-coverage/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-assurance-coverage/"
+    },
+    "headline": "Coverage: Proven vs Owed",
+    "description": "Measure coverage on two axes with kane-cli cover \u2014 what a sealed evidence pack proved in execution, and what the design still owes \u2014 plus a ranked gaps worklist with ready-to-paste commands.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-assurance-coverage/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli cover",
+      "test coverage",
+      "coverage gaps"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli cover measures coverage on two independent axes over the same store",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli cover [--from <pack>] [--json]                     # the two-axis panel\nkane-cli cover gaps [--stage design|cover|all] [--top <n>] [--from <pack>]  # the ranked worklist"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The panel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "coverage \u2014 8f0e\u2026f2.evidence\n\ndepth (proven by the pack):\n  \u25d0 \u2588\u2588\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591  38%  uc-buy-as-a-guest \u2014 partial (1/4 ACs proven, 1 failed, 1 blocked)\n  \u2714 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 100%  uc-mobile-sign-in \u2014 covered (1/1 ACs proven)  \u00b7 1 stale\n\ncompleteness (live graph):\n  [high] create ac-payment-declined-message \u2014 no test verifies this AC\n         \u2192 kane-cli design tests --use-case uc-buy-as-a-guest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "One ranked list (risk first) of what to do next, each row with a ready-to-paste command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "gaps \u2014 stage design (5)\n   1. [high] create uc-checkout-while-signed-in \u2014 use-case has no scenarios\n      \u2192 kane-cli design tests --use-case uc-checkout-while-signed-in\n   2. [med] create ac-the-cart-displays-an-order-subtotal \u2014 no live test verifies this acceptance criterion\n      \u2192 kane-cli design tests --use-case uc-manage-the-cart"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cover gaps \u2014 the dossier (0.8.2)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\u2192 kane-cli evidence serve <pack>     (see why it failed)"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 `kane-cli cover` measures coverage on two independent axes over the same store:
 
 - **Depth** — what a real execution **proved**, read from an evidence pack's coverage records. Facts only: the pack was sealed with these verdicts inside it; `cover` never recomputes them.

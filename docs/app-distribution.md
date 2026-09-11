@@ -49,6 +49,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/app-distribution/"
+    },
+    "headline": "App Distribution on Real Devices",
+    "description": "Upload, organize, and distribute Android and iOS app builds to internal QA and external beta testers using TestMu AI App Distribution. Share via authenticated download links, auto-notify testers on every new build, and launch builds on real devices in one click.",
+    "url": "https://www.testmuai.com/support/docs/app-distribution/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "lambdaTest",
+      "testmu ai app distribution",
+      "beta testing distribution"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 <BrandName /> **App Distribution** lets your team upload Android and iOS app builds from a CI/CD pipeline or the dashboard, organize them by package, and distribute them to internal QA and external beta testers through secure, authenticated download links. Every new build can auto-notify the right testers, and any build can be launched on a real device in one click.
 
 App Distribution lives in the sidebar under **Real Device → App Management and Distribution** and includes two sections:

@@ -53,6 +53,255 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-env-variables/"
+    },
+    "headline": "SmartUI SDK Environment Variables",
+    "description": "In this documentation, learn about the various environment variables available in SmartUI",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-env-variables/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the Project Name you want to add the current build run to by exporting these enviroment variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR ACCESS KEY\"\nexport PROJECT_NAME=\"Required Project Name\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Setting the Project Name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR USERNAME\"\nset LT_ACCESS_KEY=\"YOUR ACCESS KEY\"\nset PROJECT_NAME=\"Required Project Name\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Setting the Project Name",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR USERNAME\"\n$env:LT_ACCESS_KEY=\"YOUR ACCESS KEY\"\n$env:PROJECT_NAME=\"Required Project Name\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2: Set your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2: Set your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2: Set your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the baseline branch for CLI projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export BASELINE_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Setting the Baseline Branch",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set BASELINE_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Setting the Baseline Branch",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:BASELINE_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the current branch for CLI projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Setting the current branch",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Setting the current branch",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HTTP_PROXY:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export HTTP_PROXY=\"http://<username>:<password>@<domain.com>:<port>/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HTTP_PROXY:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set HTTP_PROXY=\"http://<username>:<password>@<domain.com>:<port>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HTTP_PROXY:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:HTTP_PROXY=\"http://<username>:<password>@<domain.com>:<port>/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HTTPS_PROXY:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export HTTPS_PROXY=\"https://<username>:<password>@<domain.com>:<port>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HTTPS_PROXY:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set HTTPS_PROXY=\"https://<username>:<password>@<domain.com>:<port>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HTTPS_PROXY:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:HTTPS_PROXY=\"https://<username>:<password>@<domain.com>:<port>/\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "6. Enabling Debug mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_SDK_DEBUG=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "6. Enabling Debug mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_SDK_DEBUG=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "6. Enabling Debug mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_SDK_DEBUG=\"true\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "7. Ignoring captured cookies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "7. Ignoring captured cookies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "7. Ignoring captured cookies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=\"true\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For SDK integrations (non-Selenium), set the SmartUI server address",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export SMARTUI_SERVER_ADDRESS=\"http://localhost:8080\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "8. Setting Server Address",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set SMARTUI_SERVER_ADDRESS=\"http://localhost:8080\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "8. Setting Server Address",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:SMARTUI_SERVER_ADDRESS=\"http://localhost:49152\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 This guide is designed to provide you with comprehensive information about the various environment variables options available within the SmartUI SDK. SmartUI retrieves additional details from the environment it is running in, like the branch name, baseline branch,proxies etc. You can modify certain aspects of SmartUI behavior by configuring these environment variables within your CI environment:

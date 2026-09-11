@@ -48,6 +48,130 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/"
+    },
+    "headline": "Flutter Dart Testing On TestMu AI - Android",
+    "description": "This guide shows you how to run your first Flutter Dart test on 5000+ real Android devices using TestMu AI's Real Device Cloud.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "flutter",
+      "testmu ai",
+      "framework on testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Create your Android Flutter app and test suite for testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- Update your application's `lambdatestSampleApp/android/app/build.gradle` file to use androidx's version of `AndroidJUnitRunner` and include the `androidx` libraries as dependencies.\n\n  ```java title=\"build.gradle\"\n  android {\n        ...\n        defaultConfig {\n          ...\n          testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n        }\n      }\n      dependencies {\n          testImplementation 'junit:junit:4.12'\n          androidTestImplementation 'androidx.test:runner:1.2.0'\n          androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'\n      }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::info\nAvoiding this step might result in **No Tests Ran** issue on the dashboard\n:::\n\nTo create APKs with optional Flutter parameters, first run the Flutter tests in verbose mode with the flutter cli. This allows you to see the Gradle command used internally to build the APKs.\n\nFor example, to use `--no-sound-null-safety` in your tests, run the following command.\n\n```bash\nflutter run -v --no-sound-null-safety"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To build your apk files, replace the parameter YOUR_APP_PATH with your actual path of the application in the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gradlew --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm64 -Ptarget=YOUR_APP_PATH/lib/main.dart -Pbase-application-name=android.app.Application -Pdart-obfuscation=false -Pextra-front-end-options=--no-sound-null-safety -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug  "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once you have uploaded your app and test suite, you need to you can execute your test by running the following command (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\" : \"lt://APP_ID\",\n    \"testSuite\": \"lt://TestSuite_ID\",\n    \"device\" :  [\"Galaxy S21 5G-12\"],\n    \"deviceLog\": true,\n    \"network\": false,\n    \"build\" : \"Sample-Flutter\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/flutter/android/build\" --header \"Content-Type: application/json\" --header \"Authorization: Basic <Enter the Auth here>\" --data-raw \"{\\\"app\\\" : \\\"lt://APP_ID\\\",\\\"testSuite\\\": \\\"lt://APP_ID\\\",\\\"device\\\" :  [\\\"Pixel 6-12\\\"], \\\"deviceLog\\\": true,\\\"network\\\": false,\\\"build\\\" : \\\"Sample-Flutter\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests in Parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\" : \"app_id\",\n    \"testSuite\": \"testsuite_id\",\n    \"device\" :  [\"Galaxy S22 5G-12\",\"Galaxy S24-14\",\"Pixel 7-13\",\"Galaxy S10+-10\"],\n    \"queueTimeout\": 10800,\n    \"testTimeout\": 900,\n    \"deviceLog\": true,\n    \"build\" : \"Sample-Flutter\",\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Auto-Grant Permissions for Android Apps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"app\" : \"app_id\",\n    \"testSuite\": \"testsuite_id\",\n    \"device\" :  [\"Galaxy S22 5G-12\"]\n    \"queueTimeout\": 10800,\n    \"testTimeout\": 900,\n    \"deviceLog\": true,\n    \"build\" : \"Sample-Flutter\",\n    \"autoGrantPermissions\" : true\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The flutter-testing-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "flutter-testing-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Flutter Testing Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/flutter-testing-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/flutter-testing-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 <RealDeviceTag value="Real Device" /> 
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 

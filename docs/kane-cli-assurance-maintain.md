@@ -41,6 +41,94 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-maintain/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-assurance-maintain/"
+    },
+    "headline": "Maintaining the Suite as Sources Change",
+    "description": "Keep tests aligned with changing requirements \u2014 kane-cli maintain reconcile triages one changed source into an ADD/MODIFY/ARCHIVE plan you approve card by card, and maintain evolve re-designs stale use-cases.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-assurance-maintain/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli maintain",
+      "maintain reconcile",
+      "test suite maintenance"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli maintain reconcile --from <file> --source-id <id>          # the interactive session (TTY default)\nkane-cli maintain reconcile --from <file> --source-id <id> --plan   # preview: stage + store the plan\nkane-cli maintain reconcile --apply [path]                          # continue a stored plan\nkane-cli maintain reconcile --from <url>                              # a Jira, Confluence, Linear or web URL\nkane-cli maintain reconcile --from <file> --source-id <id> --mode agent   # headless \u2014 see Automation\nkane-cli maintain evolve <ref> [--because \"<reason>\"]               # re-design one stale use-case (interactive)\nkane-cli maintain evolve --from-stale                               # \u2026or every use-case with stale designs"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The changeset \u2014 what the change did",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "changeset: 3 item(s)\n  [MODIFY] uc-manage-the-cart \u2014 updated: title, criteria\n  [ADD] uc-save-cart-for-later\n  [ARCHIVE] uc-legacy-flow \u2014 evidence decayed: no quote from the source relocates into the new text, no other live source, no fresh evidence this run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Remote sources \u2014 --from {#remote-sources}",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli maintain reconcile --from https://<your-site>/browse/PROJ-123 --plan\nkane-cli maintain reconcile --from https://<site>/wiki/spaces/<KEY>/pages/<id>/\u2026\nkane-cli maintain reconcile --from https://linear.app/<workspace>/issue/ENG-42\nkane-cli maintain reconcile --from https://docs.example.com/guide"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "maintain evolve \u2014 re-design a stale use-case {#evolve}",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli maintain evolve <ref> [--because \"<reason>\"]   # any designed entity \u2192 its parent use-case\nkane-cli maintain evolve --from-stale                   # every use-case with stale designed entities"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 Products change; tests shouldn't rot. `kane-cli maintain` closes the [assurance loop](/support/docs/kane-cli-assurance/): when a requirement document changes, `maintain reconcile` turns that one changed source into an honest, row-by-row update plan for your suite, and `maintain evolve` re-designs a use-case whose design went stale. Everything works over the same `.context/` store — maintain adds no new knowledge kinds, it moves the existing ones.
 
 ```bash

@@ -49,6 +49,132 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With Laravel Dusk",
+    "description": "Run Laravel Dusk Selenium automation tests on the TestMu AI cloud grid across 10,000+ browser/device combinations.",
+    "url": "https://www.testmuai.com/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "laravel dusk selenium grid setup",
+      "run laravel dusk tests on cloud",
+      "php laravel automation tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "MacOS: Previous versions of MacOS have PHP installed by default. For the latest MacOS versions starting with Monterey, download and install PHP manually:; Windows: Download PHP from PHP for Windows and add it to your system PATH. Refer to the PHP Windows installation guide to ensure PHP is accessible through Command Prompt (cmd)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the following commands in the terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n   brew install php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   mv composer.phar /usr/local/bin/composer"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/php-laravel-dusk-todo",
+        "text": "git clone https://github.com/LambdaTest/php-laravel-dusk-todo\ncd php-laravel-dusk-todo"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the composer dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "composer install\ncomposer dump-autoload"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create .env from the example file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cp .env.example .env"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update your TestMu AI credentials in the newly created .env file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "LT_USERNAME=\"<Your_Username>\"\nLT_ACCESS_KEY=\"<Your_Access_Key>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$capabilities = array(\n\t\t\t\"build\" => \"LaravelDusk Build\",\n\t\t\t\"name\" => \"LaravelDusk Build\",\n\t\t\t\"platform\" => \"Windows 10\",\n\t\t\t\"browserName\" => \"Chrome\",\n\t\t\t\"version\" => \"latest\"\n     );"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "php artisan dusk"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/laravel-dusk-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/laravel-dusk-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run Laravel Dusk tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

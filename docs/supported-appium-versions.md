@@ -53,6 +53,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/supported-appium-versions/"
+    },
+    "headline": "Supported Appium Versions - Real Devices",
+    "description": "This document provides information about configuring Appium versions for tests on the TestMu AI platform and also provides list of supported versions.",
+    "url": "https://www.testmuai.com/support/docs/supported-appium-versions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "appium languages",
+      "appium framework"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Below is a table of supported Appium versions for different platforms",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Java code for configuring Appium version in tests on LambdaTest\nDesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"appiumVersion\", \"2.2.1\");\ncapabilities.setCapability(\"platformName\", \"ios\");\n// Add other capabilities as needed"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 # Supported Appium Versions
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />

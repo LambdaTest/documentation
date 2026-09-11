@@ -48,6 +48,87 @@ import DocCard from '@site/src/component/DocCard';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-testmu-automation/"
+    },
+    "headline": "Get Started With Selenium Testing",
+    "description": "Run Selenium tests on TestMu AI's cloud grid. 10,000+ browser/device combinations, parallel execution, video recordings, and built-in debugging.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-testmu-automation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "testmu ai automation",
+      "selenium automation grid",
+      "selenium grid online"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set them as environment variables (macOS / Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  export LT_USERNAME=\"YOUR_USERNAME\"\n  export LT_ACCESS_KEY=\"YOUR_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Before You Begin (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "  set LT_USERNAME=\"YOUR_USERNAME\"\n  set LT_ACCESS_KEY=\"YOUR_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Your tests connect to the grid at",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://{username}:{accessKey}@hub.lambdatest.com/wd/hub"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 ---
 
 Run your Selenium tests on TestMu AI's cloud grid of 10,000+ browser/device combinations. Point your tests at the hub URL, add capabilities, and get parallel execution, video recordings, logs, and screenshots for every session - no infrastructure to maintain.

@@ -42,6 +42,94 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/mobile-web-automation-on-real-devices/"
+    },
+    "headline": "Mobile Web Automation Testing on Real Devices",
+    "description": "Run mobile web automation tests via Appium on real Android and iOS devices from Samsung, Apple, and more.",
+    "url": "https://www.testmuai.com/support/docs/mobile-web-automation-on-real-devices/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "mobile web automation real device",
+      "appium test real android ios",
+      "isRealMobile capability appium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "pip install Appium-Python-Client"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Performing Mobile Web Automation on Real Devices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "//todo.py\n\n#!/usr/local/bin/python\n# -*- coding: utf-8 -*-\nimport time\nfrom appium import webdriver\n\ndesired_cap = {\n  'w3c': True,\n  'platformName': 'iOS',\n  'platformVersion': '13',\n  'deviceName':\"iPhone 11\",\n  'nativeWebScreenshot':True,\n  'build': 'Demo',\n  'isRealMobile' : True,// real mobile device capability\n  'console': True,     \n  'visual': True,\n  'network': True,\n  'tunnel' : False,\n  \"newCommandTimeout\": 300\n}\n    \nurl = \"https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub\"\ndriver = webdriver.Remote(desired_capabilities = desired_cap, command_executor = url)\n\ndriver.get(\"https://lambdatest.github.io/sample-todo-app/\")\ntime.sleep(2)\n\nlist1 = driver.find_element_by_xpath(\"//input[@name='li1']\")\nlist1.click()\ntime.sleep(1)\n\nlist2 = driver.find_element_by_xpath(\"//input[@name='li2']\")\nlist2.click()\ntime.sleep(1)\n\ninputfield = driver.find_element_by_id(\"sampletodotext\")\ninputfield.click()\ninputfield.send_keys(\"item 1\")\ndriver.hide_keyboard()\ntime.sleep(1)\n\ndriver.execute_script(\"document.getElementById('addbutton').click();\")\ntime.sleep(1)\n\ninputfield = driver.find_element_by_id(\"sampletodotext\")\ninputfield.click()\ninputfield.send_keys(\"item 2\")\ndriver.hide_keyboard()\ntime.sleep(1)\n\ndriver.execute_script(\"document.getElementById('addbutton').click();\")\ntime.sleep(5)\n\ndriver.quit() "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "url = \"https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "python todo.py"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Mobile Web Automation Testing on Real Devices
 ***
 

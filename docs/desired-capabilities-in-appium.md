@@ -56,6 +56,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/desired-capabilities-in-appium/"
+    },
+    "headline": "Desired Capabilities",
+    "description": "This document will teach you how to leverage TestMu AI Capability Generator to easily for declaring desired capabilities in Appium to run your App Automation leveraging Appium Desktop.",
+    "url": "https://www.testmuai.com/support/docs/desired-capabilities-in-appium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "cross browser testing",
+      "appium capabilities generator",
+      "appium desired capabilities"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
 Desired capabilities in [Appium](https://www.testmuai.com/appium/) are essential for guiding the Appium server to create the correct test automation environment. Represented as a set of key-value pairs within a JSON object, these capabilities allow [QA automation](https://www.testmuai.com/blog/qa-automation/) engineers to specify the desired mobile platform and configuration for their test sessions. 
 
 By setting these parameters, QAs can ensure that the Appium server accurately targets the intended test environment, facilitating effective and efficient [mobile app testing](https://www.testmuai.com/mobile-app-testing/). 

@@ -49,6 +49,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-click-interactions/"
+    },
+    "headline": "Advanced Click Interactions in KaneAI",
+    "description": "Author press and hold, multi-click, and right click interactions in KaneAI on Desktop Web, Android apps, iOS apps, and Mobile Web using natural language or manual recording. Covers supported patterns, replay behavior, and limitations.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-click-interactions/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai click interactions"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "long press the menu icon\npress and hold the build number for 10 seconds\ntap and hold the profile avatar\nhold down the record button for 5 seconds\nlong press the Submit button for 30 seconds"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "double click on the submit button\nclick the increment button 5 times\ntap twice on the like button\ntap thrice on the notification bell"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Author with Natural Language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "right click on the file item\nright-click the table row\ncontext click on the selected text\nsecondary click on the canvas element"
+      }
+    ],
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
 KaneAI supports advanced click variants beyond a standard single click: **press and hold (long press)**, **multi-click (double / triple / N-click)**, and **right click (context click)**, across Desktop Web, Android apps, iOS apps, and Mobile Web. Each can be authored with natural language or captured via Manual Interaction, and each renders as its own distinct step in the step list.
 
 ## Overview

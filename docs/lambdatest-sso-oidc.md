@@ -46,6 +46,88 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testmu-sso-oidc/"
+    },
+    "headline": "TestMu AI SSO Integration Using OIDC",
+    "description": "Integrate your identity provider with your TestMu AI organization through OIDC (OpenID Connect) for seamless single sign-on authentication.",
+    "url": "https://www.testmuai.com/support/docs/testmu-sso-oidc/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "sso",
+      "testmu ai sso",
+      "oidc"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Identity Provider Access: Administrative access to your identity provider; TestMu AI Enterprise Plan: An active TestMu AI organization subscription; Administrative Access: Admin-level access to your TestMu AI organization; SSO Request: Contact TestMu AI support to enable SSO for your organization.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Get Well-Known OIDC URL: The OpenID Connect well-known configuration URL follows this pattern",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "   https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Provide Configuration Details: Include the following information in your support request",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "   Identity Provider: Azure AD\n   Client ID: [Your Application (client) ID]\n   Client Secret: [Your Client Secret]\n   Well-Known OIDC URL: [Your OIDC Well-Known URL]\n   Connection Name: [Unique Connection Name]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Since OIDC doesn't support classic IDP-based SSO login, you can use this URL to simulate the login process",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://accounts.lambdatest.com/auth0/login?connection={connection-name}"
+      }
+    ],
+    "dateModified": "2026-05-26T08:58:31+05:30"
+  }) }}
+/>
+
 # <BrandName /> SSO Integration Using OIDC
 
 * * *

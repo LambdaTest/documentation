@@ -40,6 +40,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cypress-cli-commands/"
+    },
+    "headline": "List of TestMu AI Cypress CLI Commands",
+    "description": "List of all the commands and arguments supported by TestMu AI-Cypress CLI.",
+    "url": "https://www.testmuai.com/support/docs/cypress-cli-commands/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "cypress cli commands",
+      "testmu ai cypress cli commands",
+      "testmu ai cypress cli flags"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To use any command in the TestMu AI-Cypress CLI, follow this basic syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress <command> [options]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "init command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "lambdatest-cypress init"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "run command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "build-info command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress build-info"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "build-stop command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress build-stop"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 The <BrandName />-Cypress CLI provides a set of commands to streamline and enhance your testing workflows on the <BrandName /> platform. Below is a comprehensive list of supported commands and their usage.
 
 ## General Syntax

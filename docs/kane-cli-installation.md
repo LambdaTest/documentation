@@ -45,6 +45,129 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-installation/"
+    },
+    "headline": "Installing Kane CLI",
+    "description": "Install Kane CLI using npm or Homebrew. Supports macOS (Apple Silicon and Intel), Linux (x64 and arm64), and Windows (x64).",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-installation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli",
+      "install kane cli",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install (npm)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @testmuai/kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install (Homebrew)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "brew install LambdaTest/kane/kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Expected output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "0.1.0"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upgrade with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @testmuai/kane-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Uninstall",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm uninstall -g @testmuai/kane-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To wipe that state as well",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rm -rf ~/.testmuai/kaneai"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Find it and add it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Find your npm global bin directory\nnpm config get prefix\n\n# The kane-cli binary lives in <prefix>/bin on macOS/Linux, and <prefix> on Windows\n# Add it to your PATH in ~/.zshrc or ~/.bashrc\nexport PATH=\"$(npm config get prefix)/bin:$PATH\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check your version and upgrade if needed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "node --version"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 Kane CLI is published to the public npm registry as `@testmuai/kane-cli` and to a Homebrew tap. Install it with `npm` or `brew` to get the `kane-cli` command on your `PATH`.
 
 ## Install

@@ -43,6 +43,241 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-python-use-cases/"
+    },
+    "headline": "HyperExecute Python Use Cases",
+    "description": "Explore Python test automation use cases on HyperExecute with PyTest, Behave, and Robot Framework to streamline your daily testing pipelines.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-python-use-cases/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Traceback (most recent call last)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "In Python versions 3.3 to 3.9, MutableMapping was part of the collections module. From Python 3.10 onward, it was moved to collections.abc, causing import errors in older code.\n\n**Solution :** To ensure compatibility, match the Python runtime version with your local setup. Specify the version explicitly in your YAML configuration.\n\n**YAML Translation :**\n```yaml title=\"hyperexecute.yaml\"\nruntime:\n  - language: python\n    version: \"3.9\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "An outdated PIP version may cause the following error",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python -m pip install --upgrade pip"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are using Python 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python3 -m pip install --upgrade pip"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pre",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## 3. Fixing Missing requirements.txt Errors\nIf your pipeline fails with:\n> **ERROR:** Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'\n\nIt means that the `requirements.txt` file might be missing or ignored in .gitignore.\n\n**Solution :** Ensure the file exists in the project root. Remove or comment out any requirements.txt entry from .gitignore. For this issue, ther are no YAML change required. This is a file management fix. However, verify that the command below correctly references the existing file name.\n\n```bash\npip install -r requirements.txt --cache-dir CacheDir"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pre",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## 6. Building Projects with Public and Private Registries\n### Case 1: Public Registry Installation\nIf all dependencies are public, install them directly:\n\n```bash\npip3 install -r requirements.txt --cache-dir CacheDir"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pre",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Case 2: Private Registry Installation\nWhen using a private registry, authentication is required. Use proxy variables and authorization tokens to install packages securely.\n\n```bash\npip3 install --proxy http://$LT_PROXY_HOST:$LT_PROXY_PORT \\\n  --header \"Authorization: Bearer $PRIVATE_REGISTRY_TOKEN\" \\\n  -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pre",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Sample `requirements.txt` file :**\n\n```text\n--extra-index-url https://your-private-registry.com/simple\n--trusted-host your-private-registry.com\nyour-private-package==1.0.0\nanother-package==2.0.0"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "args",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Sample Connection Code :**\n\n```python title=\"test.py\nimport os\nimport mysql.connector\n\ndb_host = os.getenv(\"MYSQL1_PROXY_HOST\", \"localhost\")\ndb_port = os.getenv(\"MYSQL1_PROXY_PORT\", \"3309\")\n\nconnection = mysql.connector.connect(\n  host=db_host,\n  port=db_port,\n  user=\"your_user\",\n  password=\"your_password\",\n  database=\"your_database\"\n)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To execute tests based on substrings or tags",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest -k \"TestAdvanceBoy\"\nbehave -t @smoke"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "or",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nTo execute an entire feature file:\n\n```bash\nbehave -f feature_path/sample.feature"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "or",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## 9. Discovering Tests Dynamically\n\n- List all feature files containing a specific tag (e.g., @smoke):\n\n```bash\ngrep -rl \"@smoke\" features/*.feature"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- List all scenarios under that tag :\n\n```bash\ngrep -rH -A 3 \"@smoke\" features/*.feature | grep -i \"Scenario\" | cut -d \":\" -f 2-"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## 10. Generating JSON Reports with Behave\nTo generate JSON reports for your test execution:\n\n```bash\nbehave -f json.pretty -o reports/test_report.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "post",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## 11. Dynamically Assigning Artifact Names\nTo dynamically name artifacts using environment variables, define them in your YAML configuration.\n\n**YAML Translation :**\n\n```yaml title=\"hyperexecute.yaml\"\nuploadArtefacts:\n  - name: \"${abcd}\"\n    path:\n      - reports/**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass variable values through CLI during job execution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute -u <your_username> -k <your_access_key> -i <relative_path_of_config> --vars \"abcd=Folder\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To enable caching for faster dependency installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip3 install -r requirements.txt --cache-dir CacheDir"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "13. Monitoring Tunnel Health and Auto-Retry",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## 14. Different Ways to Execute Tests in Pytest via CLI\n### Case 1: Run Tests in a Specific Directory or File\n\n```bash\npytest path/to/test_directory/\npytest path/to/test_file.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Case 2: Run a Specific Test Function Within a File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest path/to/test_file.py::test_function_name"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Case 3: Run Tests Matching a Substring or Keyword",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest -k \"test_keyword\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Case 3: Run Tests Matching a Substring or Keyword",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest -k \"login\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "if value != 42",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Terminal Output Example :**\n\n```bash\nDEBUG:root:Value is 42, running debug checks\nDEBUG:root:This is a debug message\nINFO:root:Test info message\nWARNING:root:Test warning message\nERROR:root:Test error message"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "During native app automation, screenshots captured per session ID can be retrieved using",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -X GET \"https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/${session_id}/screenshots\" \\\n     -H \"accept: application/json\" \\\n     -H \"Authorization: Basic <auth>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "16. Automating Screenshot Download and PDF Generation from TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g lambdatest-screenshot-pdf"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "16. Automating Screenshot Download and PDF Generation from TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "AUTH_HEADER=\"Basic your_encoded_auth_string\" lambdatest-screenshot-pdf <session_id> --output <output_directory>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "16. Automating Screenshot Download and PDF Generation from TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "AUTH_HEADER=\"Basic cmF0aG9yZXYXYXYXYXXgybFlXTm5LclZPeVRRQ01RRGdyNTZjVg==\" \\\nlambdatest-screenshot-pdf 1a80510a-289a-46b7-9f60-da01d108de10 --output ~/Desktop/screenshots"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This guide covers the most common real-world scenarios and troubleshooting cases when running **Python**, **Pytest**, and **Behave** test frameworks on **<BrandName /> HyperExecute**. Each section describes a use case, its root cause, and the precise YAML translation required to configure or fix the issue within your `hyperexecute.yaml`.
 
 ## 1. Handling Python Version Compatibility Issues

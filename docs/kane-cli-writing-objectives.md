@@ -44,6 +44,150 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-writing-objectives/"
+    },
+    "headline": "Writing Objectives",
+    "description": "Learn the three objective patterns: actions, assertions, and extractions: and how to write natural language objectives that produce reliable test results.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-writing-objectives/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli objectives",
+      "natural language testing",
+      "kaneai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use imperative verbs to describe what the agent should do",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"go to https://example.com\"\n\"click the 'Add to Cart' button\"\n\"fill the email field with user@example.com\"\n\"scroll down to the pricing section\"\n\"select 'Premium' from the plan dropdown\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"assert the page contains 'Order Confirmed'\"\n\"verify the cart total shows '$29.99'\"\n\"confirm no error message is visible\"\n\"check that the Submit button is disabled\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\u274c Bad: agent may see it but won't persist it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"go to example.com and tell me the price\"\n\"read the page title\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\u2705 Good: value is captured in final_state",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"go to example.com, store the price of the first item as 'price'\"\n\"store the page title as 'page_title'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Chain all three patterns in one objective",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"go to {{app_url}}/dashboard,\n store the welcome message as 'welcome_text',\n store the user role in the sidebar as 'role',\n assert the role is 'Admin',\n click the Settings button,\n assert the page contains 'Account Settings'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Login flow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \\\n  --url https://app.example.com \\\n  --variables-file ./creds.json \\\n  \"fill the email field with '{{email}}',\n   fill the password field with '{{password}}',\n   click the Login button,\n   assert the page contains 'Dashboard',\n   store the logged-in username as 'username'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Search with filters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \\\n  --url https://shop.example.com/products \\\n  \"click the Category filter,\n   select 'Electronics',\n   click the Sort dropdown,\n   select 'Price: Low to High',\n   store the count of products as 'result_count',\n   assert the result_count is greater than 0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Settings change",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \\\n  --url https://app.example.com/account \\\n  \"click the Settings tab,\n   scroll down to the Notification section,\n   check the 'Email Notifications' checkbox,\n   click Save,\n   assert the page shows 'Settings saved successfully'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Checkout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \\\n  --url https://shop.example.com/cart \\\n  --variables-file ./payment.json \\\n  \"store the cart total as 'total',\n   assert the total is greater than 0,\n   click Checkout,\n   fill the card number field with '{{card_number}}',\n   fill the expiry field with '{{card_expiry}}',\n   fill the CVC field with '{{card_cvc}}',\n   click Place Order,\n   assert the page contains 'Order Confirmed',\n   store the order number as 'order_id'\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Objectives on Mobile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"Sign in and open the account tab\" --target simulator --app ./builds/MyApp.zip"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In Interactive TUI, the browser stays open between runs: state carries over automatically",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "> go to https://myapp.com and log in as admin\n  \u2713 PASSED\n\n> navigate to User Management and create a new user \"qa@example.com\"\n  \u2713 PASSED\n\n> verify the new user appears in the users table\n  \u2713 PASSED"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In Headless CLI, use --max-steps to cap each run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli run \"login flow\" --url https://myapp.com --max-steps 10\nkane-cli run \"dashboard check\" --url https://myapp.com --max-steps 10"
+      }
+    ],
+    "dateModified": "2026-08-12T13:15:00+05:30"
+  }) }}
+/>
+
 The objective string is the most important input to Kane CLI. How you phrase it determines what the agent does and whether it succeeds. Objectives follow three patterns that you can combine freely.
 
 ## Three Patterns

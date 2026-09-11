@@ -40,6 +40,94 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-viewing/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-evidence-viewing/"
+    },
+    "headline": "Viewing Evidence Packs",
+    "description": "Open a kane-cli evidence pack in the hosted viewer with kane-cli evidence serve, a localhost-only server that uploads nothing.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-evidence-viewing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli evidence serve",
+      "evidence viewer",
+      "view evidence pack"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After a run in an interactive terminal, kane-cli offers to open the pack",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "View evidence in browser? (y/N)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli prints a hint line to stderr instead",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "evidence: view locally with `kane-cli evidence serve <path-to-pack>`"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Serves one or more sealed packs to the hosted viewer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli evidence serve .testmuai/evidence/<execution_id>.evidence"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "kane-cli evidence serve",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "serving 1 pack on http://127.0.0.1:54321\n<execution_id>.evidence\n  pack    http://127.0.0.1:54321/<token>/<execution_id>.evidence\n  viewer  https://evidence.lambdatest.com/?pack=http%3A%2F%2F127.0.0.1%3A54321%2F...\npress Ctrl-C to stop"
+      }
+    ],
+    "dateModified": "2026-08-21T00:24:19+05:30"
+  }) }}
+/>
+
 A sealed pack opens in the hosted viewer. When you serve a pack with `kane-cli evidence serve`, the server is local only and nothing is uploaded, because the viewer page reads the pack bytes from your machine.
 
 ## After a run

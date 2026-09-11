@@ -57,6 +57,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/generate-test-cases-with-ai/"
+    },
+    "headline": "Generate Test Cases with AI",
+    "description": "Learn efficient test case generation with in TestMu AI's Test Manager using AI, in manual steps or BDD (Gherkin) format.",
+    "url": "https://www.testmuai.com/support/docs/generate-test-cases-with-ai/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Test Manager",
+    "keywords": [
+      "test case creation",
+      "test case",
+      "test cases"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project-Level Custom Instructions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "- All test cases must include preconditions for user authentication state.\n- Use the naming convention: [Module]_[Feature]_[Scenario]_[Positive/Negative].\n- Include API response codes in expected results for all API-related test cases."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Organization-Level Custom Instructions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "- Include accessibility testing considerations where applicable.\n- Severity and priority must be assigned to every test case.\n- Test data should use anonymized values, never production data."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With the toggle on, each test case carries one or more Gherkin scenarios instead of manual steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Gherkin",
+        "text": "Scenario: Complete a motorcycle purchase successfully\n  Given I am on the homepage \"https://www.example.com\"\n  When I type \"motorcycle\" into the **Search** bar and submit\n  And I click on the first product result in the list\n  Then the product detail page for the motorcycle is displayed\n  When I click the **Add to Cart** button\n  And I navigate to the cart and click **Proceed to Buy**\n  Then I see an order confirmation page with the message \"Order placed, thank you!\""
+      }
+    ],
+    "dateModified": "2026-09-09T21:31:00+05:30"
+  }) }}
+/>
+
 # AI Test Case Generator
 
 ## What is the AI Test Case Generator?

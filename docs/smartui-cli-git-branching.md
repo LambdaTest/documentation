@@ -54,6 +54,172 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-git-branching-strategy/"
+    },
+    "headline": "Branching Strategy in SmartUI SDK",
+    "description": "In this documentation, learn how the Git Branching Strategy is implemented for the SmartUI SDK",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-git-branching-strategy/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You have an account with TestMu AI.; You must have an active subscription plan with valid screenshots limit.; You must have created an Project on the SmartUI web app..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Go to your current project repository and run the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "git init --y"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Now, commit the changes (if any) to your Git",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "git commit -m \"Your commit message\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Execute your SmartUI CLI command to execute the Visual Regression tests for your files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui capture urls.json --config .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui --config .smartui.json exec -- <Your execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run build-storybook                                           // Creates a Static Build Folder of StoryBook Stories\nsmartui storybook ./storybook-static --config .smartui.json       // Captures all the stories added in the static build folder"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can follow the steps below to set your baseline branch",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export BASELINE_BRANCH=\"Required baseline branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ability to set the Baseline Branch",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set BASELINE_BRANCH=\"Required baseline branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ability to set the Baseline Branch",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:BASELINE_BRANCH=\"Required baseline branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "And, if you have created a project and set your Baseline branch name to master then executed the following commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "// Your current branch name\n$ git branch\n* <Your Current Active branch>\n  <--Other branches-->\n\n// Adds a new commit to your current active branch\n$ git commit -m \"Your commit message\"\n\n// Executing the SmartUI SDK/Static CLI/Storybook tests\n$ npx smartui --config .smartui.json exec -- <Execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$ git branch\n* master\n\n$ git commit -m \"Second Build Changes\"\n\n$ npx smartui --config .smartui.json exec -- <Execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 13",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:CURRENT_BRANCH=\"Required branch\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Step 1 - Commit changes to Git\n$ git commit -am \"Changes in login Flow\"\n(git) Changes added to your branch\n\n// Step 2 - Execute SmartUI CLI to trigger Build in the SmartUI project\n$ npx smartui --config .smartui.json exec -- <Execution command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of the above workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// Baseline Branch\n$ git branch\n* master\n\n// Non-Baseline branch\n$ git checkout -b develop\n* develop\n  master\n\n// Executing SmartUI Build with Non-Baseline Git branch\n$ npx smartui --config .smartui.json exec -- <Execution command>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 :::info
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
 :::

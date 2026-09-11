@@ -45,6 +45,164 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/run-tests-with-chrome-devtools-protocol/"
+    },
+    "headline": "Run Web Automation Tests With CDP on TestMu AI",
+    "description": "Run web automation over the Chrome DevTools Protocol on TestMu AI, and drive the same session from an AI agent with the Browser Cloud SDK.",
+    "url": "https://www.testmuai.com/support/docs/run-tests-with-chrome-devtools-protocol/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "run web automation tests with cdp",
+      "chrome devtools protocol testmu ai",
+      "puppeteer cdp testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Web Automation Tests With CDP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install puppeteer-core"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A successful install adds the package to your project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "added 25 packages, and audited 26 packages in 5s\nfound 0 vulnerabilities"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "macOS / Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"your_username\"\nexport LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows (PowerShell)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"your_username\"\n$env:LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows (CMD)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Batch",
+        "text": "set LT_USERNAME=your_username\nset LT_ACCESS_KEY=your_access_key"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows (CMD)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// cdp-test.ts\nimport puppeteer from 'puppeteer-core';\n\nconst capabilities = {\n  browserName: 'Chrome',\n  browserVersion: 'latest',\n  'LT:Options': {\n    platformName: 'Windows 10',\n    build: 'CDP Web Automation',\n    name: 'Product Listing',\n    username: process.env.LT_USERNAME,\n    accessKey: process.env.LT_ACCESS_KEY,\n  },\n};\n\nconst endpoint =\n  `wss://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}` +\n  `@cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`;\n\nconst BASE =\n  'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';\n\nasync function run() {\n  const browser = await puppeteer.connect({ browserWSEndpoint: endpoint });\n  const products: Array<Record<string, string | null>> = [];\n  const page = (await browser.pages())[0];\n  try {\n    for (let pageNo = 1; pageNo <= 5; pageNo++) {\n      await page.goto(`${BASE}&page=${pageNo}`, { waitUntil: 'domcontentloaded' });\n      await page.waitForSelector('.product-thumb');\n\n      const pageProducts = await page.evaluate(() =>\n        Array.from(document.querySelectorAll('.product-thumb')).map((card) => {\n          const link = card.querySelector<HTMLAnchorElement>('.caption .title a');\n          const priceEl =\n            card.querySelector<HTMLElement>('.price-new') ??\n            card.querySelector<HTMLElement>('.price');\n          return {\n            name: link?.textContent?.trim() ?? null,\n            price: priceEl?.textContent?.trim() ?? null,\n            url: link?.href ?? null,\n          };\n        })\n      );\n\n      console.log(`Page ${pageNo}: ${pageProducts.length} products`);\n      products.push(...pageProducts);\n    }\n\n    // Mark the test as passed on the TestMu AI dashboard\n    await page.evaluate(\n      (_) => {},\n      `lambdatest_action: ${JSON.stringify({\n        action: 'setTestStatus',\n        arguments: { status: 'passed', remark: `Collected ${products.length} products` },\n      })}`\n    );\n  } catch (e) {\n    // Mark the test as failed so the dashboard reflects the real outcome\n    await page.evaluate(\n      (_) => {},\n      `lambdatest_action: ${JSON.stringify({\n        action: 'setTestStatus',\n        arguments: { status: 'failed', remark: (e as Error).message },\n      })}`\n    );\n    throw e;\n  } finally {\n    await browser.close();\n  }\n\n  console.log(`Collected ${products.length} products total`);\n  console.table(products.slice(0, 5));\n}\n\nrun().catch((e) => {\n  console.error('Run failed:', e.message);\n  process.exit(1);\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run it** with a TypeScript runner",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx tsx cdp-test.ts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The scan runs on the cloud browser and prints the products it collected",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Page 1: 15 products\nPage 2: 15 products\nPage 3: 15 products\nPage 4: 15 products\nPage 5: 15 products\nCollected 75 products total\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 (index) \u2502 name            \u2502 price     \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 0       \u2502 'HTC Touch HD'  \u2502 '$146.00' \u2502\n\u2502 1       \u2502 'Palm Treo Pro' \u2502 '$337.99' \u2502\n\u2502 2       \u2502 'Canon EOS 5D'  \u2502 '$134.00' \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Web Automation With CDP From an AI Agent",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @testmuai/browser-cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Web Automation With CDP From an AI Agent",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// agent-scrape.ts\nimport { Browser } from '@testmuai/browser-cloud';\n\nconst BASE =\n  'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';\n\nconst client = new Browser();\n\nasync function run() {\n  let session;\n  const products: Array<Record<string, string | null>> = [];\n  try {\n    session = await client.sessions.create({\n      adapter: 'puppeteer',\n      stealthConfig: { humanizeInteractions: true, randomizeUserAgent: true },\n      lambdatestOptions: {\n        build: 'CDP Web Automation',\n        name: 'Agent Product Listing',\n        'LT:Options': {\n          username: process.env.LT_USERNAME,\n          accessKey: process.env.LT_ACCESS_KEY,\n        },\n      },\n    });\n\n    console.log('Session created:', session.id);\n    console.log('View live session at:', session.sessionViewerUrl);\n\n    const browser = await client.puppeteer.connect(session);\n    const page = (await browser.pages())[0];\n\n    for (let pageNo = 1; pageNo <= 5; pageNo++) {\n      await page.goto(`${BASE}&page=${pageNo}`, { waitUntil: 'domcontentloaded' });\n      await page.waitForSelector('.product-thumb');\n\n      const pageProducts = await page.evaluate(() =>\n        Array.from(document.querySelectorAll('.product-thumb')).map((card) => {\n          const link = card.querySelector<HTMLAnchorElement>('.caption .title a');\n          const priceEl =\n            card.querySelector<HTMLElement>('.price-new') ??\n            card.querySelector<HTMLElement>('.price');\n          return {\n            name: link?.textContent?.trim() ?? null,\n            price: priceEl?.textContent?.trim() ?? null,\n            url: link?.href ?? null,\n          };\n        })\n      );\n\n      console.log(`Page ${pageNo}: ${pageProducts.length} products`);\n      products.push(...pageProducts);\n    }\n\n    // Mark the test as passed on the TestMu AI dashboard\n    await page.evaluate(\n      (_) => {},\n      `lambdatest_action: ${JSON.stringify({\n        action: 'setTestStatus',\n        arguments: { status: 'passed', remark: `Collected ${products.length} products` },\n      })}`\n    );\n\n    await browser.close();\n  } finally {\n    if (session) await client.sessions.release(session.id);\n  }\n\n  console.log(`Collected ${products.length} products total`);\n}\n\nrun().catch((e) => {\n  console.error('Run failed:', e.message);\n  process.exit(1);\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx tsx agent-scrape.ts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The SDK creates a stealth session, prints a live-session link, and runs the same scan through Browser Cloud",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Session created: session_1786903262009_f0ruuv\nView live session at: https://automation.lambdatest.com/logs/\nAdapter: Set stealth user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...\nAdapter: Set stealth viewport: 1928x1065\nPage 1: 15 products\nPage 2: 15 products\nPage 3: 15 products\nPage 4: 15 products\nPage 5: 15 products\nCollected 75 products total"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scraping product images",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// agent-image-scrape.ts\nimport { Browser } from '@testmuai/browser-cloud';\nimport { mkdir, writeFile } from 'node:fs/promises';\n\nconst BASE =\n  'https://ecommerce-playground.lambdatest.io/index.php?route=product/category&path=25';\n\nconst client = new Browser();\n\nasync function run() {\n  let session;\n  try {\n    session = await client.sessions.create({\n      adapter: 'puppeteer',\n      stealthConfig: { humanizeInteractions: true, randomizeUserAgent: true },\n      lambdatestOptions: {\n        build: 'CDP Web Automation',\n        name: 'Agent Image Scrape',\n        'LT:Options': {\n          username: process.env.LT_USERNAME,\n          accessKey: process.env.LT_ACCESS_KEY,\n        },\n      },\n    });\n\n    const browser = await client.puppeteer.connect(session);\n    const page = (await browser.pages())[0];\n\n    await page.goto(BASE, { waitUntil: 'domcontentloaded' });\n    await page.waitForSelector('.product-thumb');\n\n    // Collect the primary product image from each card on the listing\n    const images = await page.evaluate(() =>\n      Array.from(document.querySelectorAll('.product-thumb')).map((card) => {\n        const img = card.querySelector<HTMLImageElement>('.image img');\n        return { alt: img?.alt?.trim() ?? null, src: img?.src ?? null };\n      })\n    );\n\n    console.log(`Found ${images.length} product images`);\n\n    // Download the first five images to ./images\n    await mkdir('./images', { recursive: true });\n    const toDownload = images.filter((i) => i.src).slice(0, 5);\n    for (const [i, img] of toDownload.entries()) {\n      const res = await fetch(img.src as string);\n      const buf = Buffer.from(await res.arrayBuffer());\n      await writeFile(`./images/product-${i + 1}.jpg`, buf);\n      console.log(`Saved product-${i + 1}.jpg (${img.alt ?? 'no alt'})`);\n    }\n\n    // Mark the test as passed on the TestMu AI dashboard\n    await page.evaluate(\n      (_) => {},\n      `lambdatest_action: ${JSON.stringify({\n        action: 'setTestStatus',\n        arguments: { status: 'passed', remark: `Scraped ${toDownload.length} images` },\n      })}`\n    );\n\n    await browser.close();\n  } finally {\n    if (session) await client.sessions.release(session.id);\n  }\n}\n\nrun().catch((e) => {\n  console.error('Run failed:', e.message);\n  process.exit(1);\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "It reads the images from the cloud browser and saves them locally",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Found 15 product images\nSaved product-1.jpg (HTC Touch HD)\nSaved product-2.jpg (Palm Treo Pro)\nSaved product-3.jpg (Canon EOS 5D)\nSaved product-4.jpg (Nikon D300)\nSaved product-5.jpg (iPod Touch)"
+      }
+    ],
+    "dateModified": "2026-08-17T11:11:51+05:30"
+  }) }}
+/>
+
 # How to Run Web Automation Tests With Chrome DevTools Protocol (CDP)
 ***
 

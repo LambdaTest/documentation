@@ -21,6 +21,102 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/applitools-integration-with-testmu/"
+    },
+    "headline": "Applitools Integration With TestMu AI",
+    "description": "TestMu AI integration with Applitools will allow you perform automated cross browser testing on more than 2000 real browsers running on real operating systems, hosted on a cloud-based Selenium Grid. You can execute your automation test script on TestMu AI Selenium Grid directly from your Applitools instance.",
+    "url": "https://www.testmuai.com/support/docs/applitools-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integration with applitools",
+      "applitools integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI Authentication Credentials; For Linux/Mac:; For Windows:; Applitools API Key; For Linux/Mac:; For Windows:; Global Dependencies; Make sure you have Java installed in your operating system.; Download and install Maven Apache.; Install Maven dependencies using the below command..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites To Integrate TestMu AI With Applitools",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "        $ export APPLITOOLS_API_KEY=<your applitool api key> "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "        $ set APPLITOOLS_API_KEY=<your applitool api key>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ mvn install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ mvn -Dtest=BasicDemo test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Your Locally Hosted Applications On TestMu AI From Applitools",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": " DesiredCapabilities capabilities = new DesiredCapabilities();\n         capability.setCapability(\"tunnel\", true);"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 -----------------------------------------------------------------------------------------------------------------------------
 Applitools offers a cloud-based platform to help you perform AI Native, end-to-end visual testing and monitoring. The platform is designed to make life easier for automation testers by delivering a flexible way to directly integrate their test scripts without worrying about learning a new language or creating a new automation script.
 

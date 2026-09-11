@@ -16,6 +16,95 @@ canonical: https://www.testmuai.com/support/docs/accessibility-junit5-test/
 ---
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-junit5-test/"
+    },
+    "headline": "JUnit 5",
+    "description": "Run Accessibility Automation with Selenium and JUnit 5: capabilities, lifecycle hooks, and dashboard reporting.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-junit5-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "JUnit 5"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI credentials as environment variables (guide); JUnit 5 on the classpath (junit-jupiter-api, etc.) driving Selenium; Accessibility enabled for your account.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Enable Accessibility on the session",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility\", true);\ncapabilities.setCapability(\"accessibility.wcagVersion\", \"wcag21aa\"); // optional"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Trigger scans",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.executeScript(\"lambda-accessibility-scan\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Trigger scans",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "capabilities.setCapability(\"accessibility.autoscan\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Run and verify",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # JUnit 5
 
 Use this guide when your **Selenium** tests use **JUnit 5 (Jupiter)**. Accessibility is still driven entirely by **grid capabilities** and the **`lambda-accessibility-scan`** hook (or **auto-scan**), identical to the [Selenium Accessibility Automation](/support/docs/accessibility-automation-test/) flow. Only the test lifecycle annotations differ.

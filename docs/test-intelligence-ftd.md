@@ -41,6 +41,71 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 >
 </script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-intelligence-flakiness-test-detection/"
+    },
+    "headline": "Test Intelligence - Flaky Test Detection",
+    "description": "Flaky Test Detection helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the insights over the flakiness of the test.",
+    "url": "https://www.testmuai.com/support/docs/test-intelligence-flakiness-test-detection/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Go to the Test Intelligence section in Org Product Preferences under Organization Settings to locate the following settings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    const capability = {\n      \"browserName\": \"Chrome\",\n      \"browserVersion\": \"118.0\",\n      \"LT:Options\": {\n        \"username\": \"<USERNAME>\",\n        \"accessKey\": \"<ACCESS_KEY>\",\n        \"platformName\": \"Windows 10\",\n        \"project\": \"Flaky Test Detection\",\n        \"name\": \"Login\",\n        \"w3c\": true,\n        \"plugin\": \"node_js-node_js\"\n      }\n    }"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 Flaky Test Detection helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the reason behind the flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> of the test. You can also view the history of the flaky tests and the number of times the test has failed in the past. This helps you to identify the flaky tests and fix them to improve the quality of your test suite. 
 
 Flaky Test Detection serves various use cases, including:

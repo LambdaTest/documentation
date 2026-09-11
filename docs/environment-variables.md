@@ -42,6 +42,115 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/using-environment-variables-for-authentication-credentials/"
+    },
+    "headline": "Using Environment Variables for Authentication Credentials",
+    "description": "Set up environment variables for your username and access key on Mac, Linux, and Windows systems.",
+    "url": "https://www.testmuai.com/support/docs/using-environment-variables-for-authentication-credentials/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "set LT_USERNAME environment variable",
+      "selenium authentication credentials setup",
+      "configure access key mac linux windows"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  lambdatestUserName = System.getenv(\"LT_USERNAME\");\n  lambdatestAccessKey = System.getenv(\"LT_ACCESS_KEY\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "lambdatest_username = os.environ[\"LT_USERNAME\"]\nlambdatest_access_key = os.environ[\"LT_ACCESS_KEY\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NodeJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "let username = process.env.LT_USERNAME,\naccessKey = process.env.LT_ACCESS_KEY,"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "NodeJS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "exports.config = {\n          lambdatestUser: process.env.LT_USERNAME,\n          lambdatestKey: process.env.LT_ACCESS_KEY\n        }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ruby",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "        username: ENV['LT_USERNAME'],\n        accessKey: ENV['LT_ACCESS_KEY']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "C#",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "var lambdatestUserName =\n    Environment.GetEnvironmentVariable(\"LT_USERNAME\", EnvironmentVariableTarget.User);     \nvar lambdatestAccessKey =\n    Environment.GetEnvironmentVariable(\"LT_ACCESS_KEY\", EnvironmentVariableTarget.User);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PHP",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$user = getenv('LT_USERNAME')\n$accesskey = getenv('LT_ACCESS_KEY')"
+      }
+    ],
+    "dateModified": "2026-06-02T12:20:54+05:30"
+  }) }}
+/>
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 

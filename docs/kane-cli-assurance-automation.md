@@ -40,6 +40,115 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-assurance-automation/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-assurance-automation/"
+    },
+    "headline": "Assurance in CI and from Agents",
+    "description": "The headless contract for kane-cli assurance \u2014 the --mode agent|ci|override ask policy, exit codes, the NDJSON event streams for extract, design, and reconcile, and the pause \u2192 answer \u2192 resume loop.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-assurance-automation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli assurance ci",
+      "headless test design",
+      "ndjson event stream"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless is an explicit opt-in \u2014 a bare non-TTY invocation exits 2 and mutates nothing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "extract: no TTY \u2014 pass an explicit --mode agent|ci|override to run headless"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A real exchange (events abridged, payloads shortened)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$ kane-cli context extract --mode agent\n{\"type\":\"run_start\",\"v\":1,\"verb\":\"extract\",\"mode\":\"agent\",\"trace\":\".context/logs/extract-\u2026.log\"}\n{\"type\":\"corpus\",\"v\":1,\"verb\":\"extract\",\"sources\":[{\"source_id\":\"prd-online-store\",\"cid\":\"sha256:0661\u2026\"}],\"skipped\":[]}\n{\"type\":\"agent_activity\",\"v\":1,\"verb\":\"extract\",\"kind\":\"decision\",\"label\":\"asking to resolve an ambiguity\"}\n{\"type\":\"session_paused\",\"v\":1,\"verb\":\"extract\",\"sid\":\"ext-20260716T140742-prd-online-store\",\n  \"resume\":\"kane-cli context extract --resume ext-20260716T140742-prd-online-store --mode agent\",\n  \"expires_at\":\"2026-07-17T14:07:53Z\",\n  \"pending_questions\":[{\"id\":\"q1\",\n    \"text\":\"The PRD conflicts on guest checkout; should I treat checkout as account-required or guest-allowed?\",\n    \"risk\":\"high\",\n    \"rationale\":\"Lines L20-L21 say all customers must create an account, but L35 says guest checkout is allowed.\",\n    \"options\":[{\"label\":\"Account required\",\"detail\":\"\u2026\"},{\"label\":\"Guest allowed\",\"detail\":\"\u2026\"}],\n    \"recommended_index\":0,\"allow_free_text\":true}]}\n{\"type\":\"done\",\"v\":1,\"verb\":\"extract\",\"status\":\"paused\",\"exit_code\":3}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After the resumed run's usual run_start, corpus, and source_start (with \"resumed\": true) events, the stream continues",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$ kane-cli context extract --resume ext-20260716T140742-prd-online-store --mode agent \\\n    --message \"Account required \u2014 treat the update section as superseding: no guest checkout\"\n{\"type\":\"message_sent\",\"v\":1,\"verb\":\"extract\",\"sid\":\"ext-\u2026\",\"chars\":115}\n{\"type\":\"usage\",\"v\":1,\"verb\":\"extract\",\"credits\":2.45,\"total_credits\":2.45}\n{\"type\":\"commit\",\"v\":1,\"verb\":\"extract\",\"derived\":5,\"minted\":[{\"cid\":\"sha256:6d68\u2026\",\"logical_id\":\"uc-create-an-account-to-order\"}, \u2026]}\n{\"type\":\"session_complete\",\"v\":1,\"verb\":\"extract\",\"sid\":\"ext-\u2026\"}\n{\"type\":\"done\",\"v\":1,\"verb\":\"extract\",\"status\":\"complete\",\"exit_code\":0}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Two structured alternatives to --message (0.7.1)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  kane-cli context extract --resume <sid> --mode agent --answer q1=1 --answer q2=\"use the staging URL\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Between the pause and the resume, everything is inspectable without contending the session",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli context sessions --json                 # one row per resumable session, with its resume command\nkane-cli context sessions show <sid> --json      # the pending questions in wire shape + any assumed defaults"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prepare verdicts as JSON and land them atomically",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cat > verdicts.json <<'EOF'\n[\n  {\"ref\": \"uc-create-an-account-to-order\", \"resolution\": \"approved\"},\n  {\"ref\": \"uc-manage-the-cart\",            \"resolution\": \"approved\"}\n]\nEOF\nkane-cli context review --verdicts verdicts.json --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A CI shape that works",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# fail the pipeline on unresolved high-risk ambiguity, never guess:\nkane-cli context extract --mode ci\n\n# or: let it pause, surface the questions as a build artifact, resume in a follow-up job:\nkane-cli context extract --mode agent > extract.ndjson; code=$?\nif [ \"$code\" -eq 3 ]; then\n  kane-cli context sessions --json > pending-sessions.ndjson   # hand to a human or an agent\nfi\n\n# design a specific use-case unattended, bounded:\nkane-cli design tests --use-case uc-checkout --max 8 --mode ci\n\n# keep the suite honest on requirement changes:\nkane-cli maintain reconcile --from ./docs/prd.md --source-id prd --plan"
+      }
+    ],
+    "dateModified": "2026-09-03T14:41:00+05:30"
+  }) }}
+/>
+
 The conversational assurance commands — `context extract`, `design tests`, and `maintain reconcile` — are interactive by default. This page is the contract for running them **headless**: from CI, from a script, or from an AI agent driving kane-cli.
 
 ## The ask policy: `--mode`

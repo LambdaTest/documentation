@@ -57,6 +57,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-dotnet-on-hyperexecute/"
+    },
+    "headline": "Run playwright automation tests on HyperExecute using .Net",
+    "description": "Learn how to run playwright automation tests on HyperExecute using .Net framework",
+    "url": "https://www.testmuai.com/support/docs/playwright-dotnet-on-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "unittest",
+      "unittest selenium",
+      "python selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: win\n\nconcurrency: 3\n\nautosplit: true\n\nretryOnFailure: true\n\nmaxRetries: 5\n\n\nenv:\n  NUGET_PACKAGES: 'C:\\nuget_global_cache'\n  NUGET_HTTP_CACHE_PATH: 'C:\\nuget_http_cache'\n  NUGET_PLUGINS_CACHE_PATH: 'C:\\nuget_plugins_cache'\n\npre:\n # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-list-package\n - npm install playwright@1.25.0 --save-exact\n - dotnet list PlaywrightDotnetTests.csproj package > packages.txt\n - nuget locals all -clear\n - dotnet build -c Release\n\nruntime:\n  language: dotnet\n  version: \"6.0.303\"\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -lr 'GotoAsync' -ir --include=*.cs\n  \npost:\n  - cat yaml/linux/dotnet_playwright_hyperexecute_autosplit_sample.yaml\n\ntestRunnerCommand: dotnet run $test\n\njobLabel: [playwright-Dotnet, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The playwright-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "playwright-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Playwright Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/playwright-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/playwright-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Running DotNet Framework Tests on HyperExecute
 Playwright for .NET is a framework that enables browser automation and end-to-end testing using the .NET programming language, such as C#. Developed by Microsoft, Playwright offers a comprehensive .NET API for automating interactions with web pages in Chromium, Firefox, and WebKit browsers
 

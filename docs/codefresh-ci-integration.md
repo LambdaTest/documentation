@@ -42,6 +42,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/codefresh-ci-integration-with-testmu/"
+    },
+    "headline": "Codefresh CI Integration With TestMu AI",
+    "description": "TestMu AI offers continuous integration with Codefresh to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/codefresh-ci-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "continuous integration",
+      "codefresh"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating Codefresh CI With TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "version: \"1.0\"\nstages:\n  - \"clone\"\n  - \"build\"\n  - \"test\"\n\nsteps:\n  clone:\n    title: \"Cloning repository\"\n    type: \"git-clone\"\n    repo: \"xyz/python-selenium-sample_2\"\n    revision: \"${{CF_BRANCH}}\"\n    git: \"github\"\n    stage: \"clone\"\n\n  test:\n    title: \"Running test\"\n    type: \"freestyle\"\n    image: \"python:3.9\"  # Using Python image\n    working_directory: \"${{clone}}\"\n    environment:\n      - LT_USERNAME=xyz\n      - LT_ACCESS_KEY=xyz\n    commands:\n      - \"pip3 install selenium\"\n      - \"python3 codefresh-sample.py\"\n    stage: \"test\"\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "import unittest\nimport os\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.chrome.options import Options as ChromeOptions\n\nusername = os.getenv(\"LT_USERNAME\")  # Replace the username\naccess_key = os.getenv(\"LT_ACCESS_KEY\")  # Replace the access key\n\n\n# paste your capability options below\noptions = ChromeOptions()\noptions.browser_version = \"latest\"\noptions.platform_name = \"win10\"\nlt_options = {}\nlt_options[\"username\"] = username\nlt_options[\"accessKey\"] = access_key\nlt_options[\"video\"] = True\nlt_options[\"resolution\"] = \"1920x1080\"\nlt_options[\"network\"] = True\nlt_options[\"build\"] = \"test_build\"\nlt_options[\"project\"] = \"unit_testing\"\nlt_options[\"name\"] = \"basic_unit_selinium\"\nlt_options[\"w3c\"] = True\nlt_options[\"plugin\"] = \"python-python\"\noptions.set_capability(\"LT:Options\", lt_options)\n\nclass FirstSampleTest(unittest.TestCase):\n    driver = None\n\n    def setUp(self):\n        self.driver = webdriver.Remote(\n            command_executor=\"http://{}:{}@hub.lambdatest.com/wd/hub\".format(\n                username, access_key\n            ),\n            options=options,\n        )\n\n    # \"\"\" You can write the test cases here \"\"\"\n    def test_demo_site(self):\n        # try:\n        driver = self.driver\n        driver.implicitly_wait(10)\n        driver.set_page_load_timeout(30)\n        driver.set_window_size(1920, 1080)\n\n        # Url\n        print(\"Loading URL\")\n        driver.get(\n            \"https://stage-lambda-devops-use-only.lambdatestinternal.com/To-do-app/index.html\"\n        )\n\n        # Let's click on a element\n        driver.find_element(By.NAME, \"li1\").click()\n        location = driver.find_element(By.NAME, \"li2\")\n        location.click()\n        print(\"Clicked on the second element\")\n\n        # Let's add a checkbox\n        driver.find_element(By.ID, \"sampletodotext\").send_keys(\"LambdaTest\")\n        add_button = driver.find_element(By.ID, \"addbutton\")\n        add_button.click()\n        print(\"Added LambdaTest checkbox\")\n\n        # print the heading\n        search = driver.find_element(By.CSS_SELECTOR, \".container h2\")\n        assert search.is_displayed(), \"heading is not displayed\"\n        print(search.text)\n        search.click()\n        driver.implicitly_wait(3)\n\n        # Let's download the invoice\n        heading = driver.find_element(By.CSS_SELECTOR, \".container h2\")\n        if heading.is_displayed():\n            heading.click()\n            driver.execute_script(\"lambda-status=passed\")\n            print(\"Tests are run successfully!\")\n        else:\n            driver.execute_script(\"lambda-status=failed\")\n\n    # tearDown runs after each test case\n    def tearDown(self):\n        self.driver.quit()\n\n\nif __name__ == \"__main__\":\n    unittest.main()"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Selenium Testing With Codefresh CI And <BrandName />
 * * *
 Codefresh is a cloud-native continuous integration and delivery platform that enables teams to quickly and efficiently develop, deploy, and manage cloud-native applications.

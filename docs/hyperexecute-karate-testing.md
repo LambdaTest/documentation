@@ -52,6 +52,109 @@ import DocCard from '@site/src/component/DocCard';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-karate-testing/"
+    },
+    "headline": "How to Perform API Testing With Karate on HyperExecute",
+    "description": "Run Karate API tests, with in-run mock servers, in parallel on HyperExecute. Set your credentials, configure HyperExecute.yaml, and trigger a cloud run.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-karate-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Karate",
+      "Karate API testing",
+      "Karate automation testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A TestMu AI account. Get your LT_USERNAME and LT_ACCESS_KEY from Username and Access Key.; Git, to clone the sample repository..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set the OS, Java runtime, and how many sessions run in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "version: 0.1\nrunson: linux    # OS the tests run on (e.g. linux, win)\nautosplit: true\nconcurrency: 10  # number of test sessions to run in parallel\n\nruntime:\n  language: java\n  version: 11"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The pre step pulls all Maven dependencies into a local .m2 directory once, so each runner reuses them for a reproducible build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "pre:\n  - mvn -Dmaven.repo.local=./.m2 dependency:resolve"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "With autosplit: true, HyperExecute passes each discovered .feature path in through the $test placeholder",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dtest=MyApiRunner -DFeaturePath=\"$test\" -Dhub=https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com/wd/hub -Dmaven.repo.local=./.m2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test runner command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test -Dkarate.options=\"--tags @smoke\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "HyperExecute splits this list across the parallel nodes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery:\n  type: raw\n  mode: static\n  command: snooper --targetOs=win --featureFilePaths=src/test/java/app --frameWork=java | sed 's/:.*//' | uniq"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Each runner executes its feature in parallel, up to concurrency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "src/test/java/app/login.feature\nsrc/test/java/app/signup.feature\nsrc/test/java/app/payments.feature"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 To run Karate API tests on HyperExecute, set your TestMu AI credentials, configure `HyperExecute.yaml`, and trigger the run with the HyperExecute CLI. Karate is an open-source framework for API test automation, mocks, performance testing, and UI automation that uses Gherkin syntax with Java. On HyperExecute, the TestMu AI test orchestration platform, it autosplits your `.feature` files across parallel nodes, retries only the scenarios that fail, can start Karate mock servers inside the same run, and collects logs and Cucumber reports in the dashboard.
 
 Run your own Karate (Java + Maven) project or the ready-made sample used in the steps below.

@@ -38,6 +38,87 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-cl
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-clipboard/"
+    },
+    "headline": "Clipboard Assertions",
+    "description": "Verify what a Copy button actually copied, extract copied values into variables, and confirm clipboard state, using an isolated test clipboard.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-clipboard/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "clipboard assertion",
+      "copy button",
+      "kane cli"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Click the \"Copy link\" button, then verify the clipboard contains \"/invoice/42\"\nVerify the clipboard text is \"INV-2026-042\"\nVerify an image was copied to the clipboard\nVerify the clipboard text is empty"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Click the Copy button, store the copied coupon code as 'coupon'\nStore the clipboard text as 'copied_link'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "See Browser State Actions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Write \"John Tester\" to the clipboard, click the message field, then paste from the clipboard"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Clipboard assertions let you verify what a "Copy" button actually copied, extract copied values into variables, and confirm clipboard state after your test writes or clears it.
 
 ## The Test Clipboard

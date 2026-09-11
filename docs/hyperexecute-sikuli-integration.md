@@ -54,6 +54,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-sikuli-integration/"
+    },
+    "headline": "Integrate Sikuli with HyperExecute",
+    "description": "Automate the visual testing of any software by integrating Sikuli with HyperExecute.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-sikuli-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "An active TestMu AI account with Admin or User-level access.; Refer to the Sikuli documentation to understand how to write a sikuli test..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your HyperExecute YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nrunson: win\ntestSuiteTimeout: 90\n\nautosplit: true\n\nretryOnFailure: true\nmaxRetries: 1\n\nconcurrency: 1\n\nenv:\n  CACHE_DIR: m2_cache_dir\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - $CACHE_DIR\n\nruntime:\n    language: java\n    version: 17\n\npre:\n  # Create the Cache directory\n  - mvn -Dmaven.repo.local=./.m2 -Dmaven.test.skip=true clean install\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  shell: bash\n  command: grep 'Test_1' testng.xml | awk '{print$4}' | sed 's/name=//g' | sed 's/\\x3e//g' | sed 's/\"//' | sed 's/\"//'\n\ntestRunnerCommand: mvn test `-Dtests=$test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Sikuli is an open-source tool that empowers you to automate tasks on your computer screen. It utilizes a unique approach called "visual image match" to interact with graphical user interfaces (GUIs).
 
 This documentation guides you on how to integrate Sikuli seamlessly with HyperExecute to leverage the power of image recognition.

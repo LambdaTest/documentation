@@ -55,6 +55,166 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-ruby/"
+    },
+    "headline": "Appium with Ruby",
+    "description": "Complete guide to running your first Ruby Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-ruby/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "ruby appium",
+      "ruby appium tutorial",
+      "real devices"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install Ruby on your local system. Follow these instructions to install on different operating systems..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For macOS, you can run a Homebrew command like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "brew install ruby"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Linux or Ubuntu, you can run a simple apt command like below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo apt-get install ruby-full"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n\n:::tip\n- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**\n:::\n\n<\/TabItem>\n\n<TabItem value=\"android\" label=\"Android\" default>\n\n```ruby title=\"android.py\"\nrequire 'rubygems'\nrequire 'appium_lib'\n\n        #highlight-next-line\n        username= \"username\" #Add username here\n        #highlight-next-line\n        accessToken= \"accesKey\" #Add accessKey here\n\n        caps = {\n           \"LT:Options\" => {      \n            :deviceName => \"OnePlus 7\",  \n            :platformName => \"Android\",\n            :platformVersion => \"9\",\n            :build => \"Ruby Vanilla - Android\",\n            :name => \"Ruby Android Test\",\n            :isRealMobile => true,\n            #highlight-next-line\n            :app => \"YOUR_APP_URL\", #Enter the App URL here\n            :w3c => true,\n        } }\n\n        appium_driver = Appium::Driver.new({\n            'caps' => caps,\n            'appium_lib' => {\n               :server_url => \"http://\"+username+\":\"+accessToken+\"@mobile-hub.lambdatest.com/wd/hub\"\n            }}, true)\n\n            driver = appium_driver.start_driver\n\n            wait = Selenium::WebDriver::Wait.new(:timeout => 30)\n            el1 = driver.find_element(:id, \"com.lambdatest.proverbial:id/color\")\n            el1.click\n            el2 = driver.find_element(:id, \"com.lambdatest.proverbial:id/geoLocation\")\n            el2.click\n            sleep(5)\n            driver.back\n            el3 = driver.find_element(:id, \"com.lambdatest.proverbial:id/Text\")\n            el3.click\n            el4 = driver.find_element(:id, \"com.lambdatest.proverbial:id/notification\")\n            el4.click\n            el5 = driver.find_element(:id, \"com.lambdatest.proverbial:id/toast\")\n            el5.click\n            el6 = driver.find_element(:id, \"com.lambdatest.proverbial:id/speedTest\")\n            el6.click\n            sleep(10)\n            driver.back\n            puts \"Found results - Test Passed\"\n\n            driver.quit"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```ruby title=\"Android(.apk)\"\ncaps = {\n            \"LT:Options\" => {\n            :deviceName => \"OnePlus 7\",  \n                :platformName => \"Android\",\n                :platformVersion => \"9\",\n                :build => \"Ruby Vanilla - Android\",\n                :name => \"Ruby Android Test\",\n                :isRealMobile => true,\n                #highlight-next-line\n                :app => \"YOUR_APP_URL\", #Enter the App (.apk) URL here\n                :w3c => true,\n        } }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd ios"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ruby ios-sample.rb"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd android"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Android",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ruby android-sample.rb"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Please try this method",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd android"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gem uninstall -aIx"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "gem install appium_lib -v 10.6.0\ngem install ffi\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "ruby android-sample.rb"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Ruby** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

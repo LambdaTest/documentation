@@ -20,6 +20,73 @@ canonical: https://www.testmuai.com/support/docs/configure-yaml-for-integrating-
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/"
+    },
+    "headline": "Configure YAML For Integrating GoCD Pipelines With TestMu AI",
+    "description": "This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with an online Selenium Grid.",
+    "url": "https://www.testmuai.com/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "gocd",
+      "testmu ai",
+      "gocd integrations"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuring YAML through GoCD",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install\n./node_modules/.bin/nightwatch -e chrome"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 Through our previous document, you were able to integrate GoCD pipelines with <BrandName />, and executed your first Selenium testing script through GoCD on <BrandName />. However, in our previous chapter we ran the test by copying the YAML from the cloned [repository for GoCD](https://github.com/LambdaTest/nightwatch-gocd-sample). This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with our online Selenium Grid.
 
 > **Note:** If you are just getting started with GoCD then make sure to visit our documentation to [integrate <BrandName /> with GoCD](/docs/gocd-integration-with-testmu/).

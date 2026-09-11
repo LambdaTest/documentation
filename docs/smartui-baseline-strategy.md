@@ -47,6 +47,80 @@ import { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-baseline-strategy/"
+    },
+    "headline": "Baseline Strategy for Omni Projects",
+    "description": "Choose between Single Baseline and Git Strategy when you create an Omni project in TestMu AI's SmartUI, and understand what each one changes in baseline resolution, the dashboard and the CLI.",
+    "url": "https://www.testmuai.com/support/docs/smartui-baseline-strategy/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "SmartUI Baseline Strategy"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting the strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -X POST \"https://api.testmuai.com/des-smartui/3.0/create/project\" \\\n  -H \"Authorization: Basic <base64 of username:accessKey>\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"name\": \"checkout-release\",\n        \"projectCategory\": \"omni\",\n        \"platform\": \"omni\",\n        \"baselineStrategy\": \"single_baseline\"\n      }'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A later attempt to change it through Project Settings or through the API is rejected",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{ \"error\": \"baseline strategy is set at project creation and cannot be changed\" }"
+      }
+    ],
+    "dateModified": "2026-08-31T15:43:25+05:30"
+  }) }}
+/>
+
 # Baseline Strategy for Omni Projects <NewTag value="New" />
 
 Every [Omni project](/support/docs/smartui-project-settings/#omni-projects) is created with a **baseline strategy**: the rule SmartUI uses to decide which build a new build is compared against. You pick it once, in the New Project drawer, and it cannot be changed afterwards.

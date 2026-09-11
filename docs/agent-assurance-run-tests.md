@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-run-tests
+toc_max_heading_level: 2
 title: Run Deep Functional Tests With Agent Assurance
 hide_title: false
 sidebar_label: Run Tests
@@ -25,6 +26,157 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
       { "@type": "ListItem", "position": 3, "name": "Run Tests", "item": `${BRAND_URL}/support/docs/agent-assurance-run-tests/` }
     ]
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-run-tests/"
+    },
+    "headline": "Run Deep Functional Tests With Agent Assurance",
+    "description": "Run complete or targeted AI agent test suites safely with Agent Assurance selectors, concurrency, permissions, budgets, and RCA.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-run-tests/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook run tests",
+      "functional ai agent testing",
+      "ai agent test automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the Runnable Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run by ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --only SC-004,SC-011"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run by class",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --class adversarial"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run by category",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --category happy_path,prompt_injection"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run by tag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --tag billing,refund"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This command first keeps adversarial scenarios, then keeps those tagged refund",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --class adversarial --tag refund"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also describe the desired subset after --",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --class adversarial -- the scenarios about refund approval"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Choose Concurrency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --concurrency 1\n/run --concurrency 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Skip that model call when CI needs only the structured evidence and deterministic totals",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --no-narrative"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The headless equivalent is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook run --no-narrative"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Request Root-Cause Analysis",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/run --rca"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "It writes remedies under",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ".testmuai/rook/agents/<agent-id>/runs/<run-id>/remedies/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Current headless syntax is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook run [--entity <id>] [--only <ids>] [--no-narrative] [--verbose] [--json]"
+      }
+    ],
+    "dateModified": "2026-08-25T16:54:35+05:30"
   }) }}
 />
 

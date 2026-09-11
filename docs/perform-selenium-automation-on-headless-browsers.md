@@ -44,6 +44,115 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/perform-selenium-automation-on-headless-browsers/"
+    },
+    "headline": "How To Perform Headless Browser Testing",
+    "description": "Run headless browser tests on the TestMu AI cloud Selenium Grid across 10,000+ browser/device combinations.",
+    "url": "https://www.testmuai.com/support/docs/perform-selenium-automation-on-headless-browsers/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "headless browser testing selenium",
+      "run headless chrome selenium",
+      "headless firefox selenium tests"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Below is the complete code for sample desired capabilities in various languages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browser\", \"Chrome\");\ncapabilities.setCapability(\"version\", \"86\");\ncapabilities.setCapability(\"platform\", \"MacOS Catalina\");\ncapabilities.setCapability(\"build\", \"your build name\");\ncapabilities.setCapability(\"name\", \"your test name\");\n\n// Capability setting to enable Headless browser testing\ncaps.setCapability(\"headless\",true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable Headless Browser Testing via Code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.SetCapability(\"user\",\"username\")\ncapabilities.SetCapability(\"accessKey\",\"access_key\")\ncapabilities.SetCapability(\"build\", \"your build name\");\ncapabilities.SetCapability(\"name\", \"your test name\");\ncapabilities.SetCapability(\"platform\", \"MacOS Catalina\");\ncapabilities.SetCapability(\"browserName\", \"Chrome\");\ncapabilities.SetCapability(\"version\",\"86.0\");\n\n// Capability setting to enable Headless browser testing\ncapabilities.setCapability(\"headless\",true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "$capabilities = array(\n\t\t\"build\" => \"your build name\",\n\t\t\"name\" => \"your test name\",\n\t\t\"platform\" => \"MacOS Catalina\",\n\t\t\"browserName\" => \"Chrome\",\n\t\t\"version\" => \"86.0\",\n\n\t\t\"headless\" => true\n\t\t)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "capabilities = Selenium::WebDriver::Remote::Capabilities.new\ncapabilities[\"build\"] = \"your build name\"\ncapabilities[\"name\"] = \"your test name\"\ncapabilities[\"platform\"] = \"MacOS Catalina\"\ncapabilities[\"browserName\"] = \"Chrome\"\ncapabilities[\"version\"] = \"86.0\",\n\ncapabilities[\"headless\"] = true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "var capabilities = {\n\t\t\"build\" : \"your build name\",\n\t\t\"name\" : \"your test name\",\n\t\t\"platform\" : \"MacOS Catalina\",\n\t\t\"browserName\" : \"Chrome\",\n\t\t\"version\" : \"86.0\",\n\n\t\t\"headless\" : true\n\t}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n\t\t\"build\" : \"your build name\",\n\t\t\"name\" : \"your test name\",\n\t\t\"platform\" : \"MacOS Catalina\",\n\t\t\"browserName\" : \"Chrome\",\n\t\t\"version\" : \"86.0\",\n\n\t\t\"headless\" : True\n\t}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Perform Headless Browser Testing on TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "package com.lambdatest;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.testng.Assert;\nimport org.testng.annotations.AfterSuite;\nimport org.testng.annotations.BeforeSuite;\nimport org.testng.annotations.Test;\n\npublic class HeadlessAutomation {\n\n\tprivate static RemoteWebDriver driver;\n\tprivate static String Status=\"failed\";\n\n\t@BeforeSuite\n\tpublic void setup() throws MalformedURLException {\n\n\t\ttry {\n\t\t\tString username = System.getenv(\"LT_USERNAME\");\n\t\t\tString authkey = System.getenv(\"LT_ACCESS_KEY\");\n\t\t\tString hub = \"@hub.lambdatest.com/wd/hub\";\n\n\t\t\tDesiredCapabilities caps = new DesiredCapabilities();\n\t\t\tcaps.setCapability(\"browser\", \"Chrome\");\n\t\t\tcaps.setCapability(\"version\", \"86\");\n\t\t\tcaps.setCapability(\"platform\", \"MacOS Catalina\");\n\t\t\tcaps.setCapability(\"build\", \"Headless Automation\");\n\t\t\tcaps.setCapability(\"name\", \"Headless Automation\");\n\t\t\tcaps.setCapability(\"network\", true);\n\t\t\tcaps.setCapability(\"visual\", true); \n\t\t\tcaps.setCapability(\"video\", true);\n\t\t\tcaps.setCapability(\"console\", true);\n\n\t\t\t// Capability setting to enable Headless browsing\n\t\t\tcaps.setCapability(\"headless\",true);\n\n\n\t\t\tSystem.out.println(\"Desired Caps: \" + caps);\n\t\t\tdriver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + authkey + hub), caps);\n\t\t}\n\t\tcatch(Exception e)\n\t\t{\n\t\t\tSystem.out.println(e);\n\t\t}\n\t}\n\n\n\t@Test\n\tpublic static void testAssertion() {\n\n\t\ttry {\n\t\t\tdriver.get(\"https://opensource-demo.orangehrmlive.com/\"); //define the url\n\n\t\t\tString pageTitle = driver.getTitle();\t\t//get the title of the webpage\n\t\t\tSystem.out.println(\"The title of this page is ===> \" +pageTitle);\n\t\t\tAssert.assertEquals(\"OrangeHRM\", pageTitle);\t//verify the title of the webpage\n\n\t\t\tdriver.findElement(By.id(\"txtUsername\")).clear();//clear the input field before entering any value\n\t\t\tdriver.findElement(By.id(\"txtUsername\")).sendKeys(\"Admin\");//enter the value of username\n\t\t\tdriver.findElement(By.id(\"txtPassword\")).clear();\n\t\t\tdriver.findElement(By.id(\"txtPassword\")).sendKeys(\"admin123\");//enter the value of password\n\t\t\tdriver.findElement(By.id(\"btnLogin\")).click();\t\t//click Login button\n\t\t\tSystem.out.println(\"Successfully logged in\");\n\t\t\tStatus = \"passed\";\n\t\t}\n\t\tcatch(Exception e)\n\t\t{\n\t\t\tStatus = \"failed\";\n\t\t}\n\t}\n\n\t@AfterSuite\n\tpublic void tearDown() {\n\t\tdriver.executeScript(\"lambda-status=\" + Status);\n\t\tdriver.quit();\n\t}\n\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Perform Headless Browser Testing on Cloud Selenium Grid
 
 ***

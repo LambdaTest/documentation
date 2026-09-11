@@ -50,6 +50,116 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/connect-to-session/"
+    },
+    "headline": "Connect to a Session - TestMu AI Browser Cloud",
+    "description": "Drive TestMu AI Browser Cloud sessions using Puppeteer, Playwright, or Selenium.",
+    "url": "https://www.testmuai.com/support/docs/connect-to-session/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud connect",
+      "puppeteer cloud browser",
+      "playwright cloud browser"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "TestMu AI Browser SDK installed - Run npm install @testmuai/browser-cloud if you have not already.; Session credentials configured - Set your LT_USERNAME and LT_ACCESS_KEY environment variables.; Quickstart completed - If this is your first time using TestMu AI Browser Cloud, launch your first session first..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Puppeteer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\n// 1. Create a cloud session\nconst session = await client.sessions.create({\n    adapter: 'puppeteer',\n    lambdatestOptions: {\n        build: 'My Agent',\n        name: 'Puppeteer Session',\n        'LT:Options': {\n            username: process.env.LT_USERNAME,\n            accessKey: process.env.LT_ACCESS_KEY,\n        }\n    }\n});\n\n// 2. Connect - returns a standard Puppeteer Browser object\nconst browser = await client.puppeteer.connect(session);\nconst page = (await browser.pages())[0];\n\n// 3. Use Puppeteer as normal\nawait page.goto('https://example.com');\nawait page.screenshot({ path: 'screenshot.png' });\n\n// 4. Clean up\nawait browser.close();\nawait client.sessions.release(session.id);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Playwright",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\nconst session = await client.sessions.create({\n    adapter: 'playwright',\n    lambdatestOptions: {\n        build: 'My Agent',\n        name: 'Playwright Session',\n        'LT:Options': {\n            username: process.env.LT_USERNAME,\n            accessKey: process.env.LT_ACCESS_KEY,\n        }\n    }\n});\n\n// Returns browser, context, AND page - all three ready to use\nconst { browser, context, page } = await client.playwright.connect(session);\n\nawait page.goto('https://example.com');\nawait page.screenshot({ path: 'screenshot.png' });\n\nawait browser.close();\nawait client.sessions.release(session.id);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\nconst session = await client.sessions.create({\n    adapter: 'selenium',\n    lambdatestOptions: {\n        build: 'My Agent',\n        name: 'Selenium Session',\n        'LT:Options': {\n            username: process.env.LT_USERNAME,\n            accessKey: process.env.LT_ACCESS_KEY,\n        }\n    }\n});\n\n// Returns a standard Selenium WebDriver\nconst driver = await client.selenium.connect(session);\n\nawait driver.get('https://example.com');\nconst title = await driver.getTitle();\nconsole.log('Title:', title);\n\nawait driver.quit();\nawait client.sessions.release(session.id);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Adding Session Features",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const session = await client.sessions.create({\n    adapter: 'puppeteer',   // or 'playwright' or 'selenium'\n    stealthConfig: {                   // Anti-bot detection\n        humanizeInteractions: true,\n        randomizeUserAgent: true,\n    },\n    profileId: 'my-app-login',         // Persist auth state\n    tunnel: true,                      // Access localhost\n    timeout: 600000,                   // 10-minute timeout\n    lambdatestOptions: { ... }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "with proper error handling",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\nasync function main() {\n    const session = await client.sessions.create({\n        adapter: 'puppeteer',\n        lambdatestOptions: {\n            build: 'Agent Scripts',\n            name: 'Scrape Example',\n            'LT:Options': {\n                username: process.env.LT_USERNAME,\n                accessKey: process.env.LT_ACCESS_KEY,\n            }\n        }\n    });\n\n    console.log(`View session: ${session.sessionViewerUrl}`);\n\n    try {\n        const browser = await client.puppeteer.connect(session);\n        const page = (await browser.pages())[0];\n\n        await page.goto('https://news.ycombinator.com');\n        const title = await page.title();\n        console.log('Page title:', title);\n\n        await browser.close();\n    } finally {\n        await client.sessions.release(session.id);\n    }\n}\n\nmain().catch(console.error);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "with proper error handling",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\nasync function main() {\n    const session = await client.sessions.create({\n        adapter: 'playwright',\n        lambdatestOptions: {\n            build: 'Agent Scripts',\n            name: 'Scrape Example',\n            'LT:Options': {\n                username: process.env.LT_USERNAME,\n                accessKey: process.env.LT_ACCESS_KEY,\n            }\n        }\n    });\n\n    console.log(`View session: ${session.sessionViewerUrl}`);\n\n    try {\n        const { browser, context, page } = await client.playwright.connect(session);\n\n        await page.goto('https://news.ycombinator.com');\n        const title = await page.title();\n        console.log('Page title:', title);\n\n        await browser.close();\n    } finally {\n        await client.sessions.release(session.id);\n    }\n}\n\nmain().catch(console.error);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "with proper error handling",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { Browser } from '@testmuai/browser-cloud';\n\nconst client = new Browser();\n\nasync function main() {\n    const session = await client.sessions.create({\n        adapter: 'selenium',\n        lambdatestOptions: {\n            build: 'Agent Scripts',\n            name: 'Scrape Example',\n            'LT:Options': {\n                username: process.env.LT_USERNAME,\n                accessKey: process.env.LT_ACCESS_KEY,\n            }\n        }\n    });\n\n    console.log(`View session: ${session.sessionViewerUrl}`);\n\n    try {\n        const driver = await client.selenium.connect(session);\n\n        await driver.get('https://news.ycombinator.com');\n        const title = await driver.getTitle();\n        console.log('Page title:', title);\n\n        await driver.quit();\n    } finally {\n        await client.sessions.release(session.id);\n    }\n}\n\nmain().catch(console.error);"
+      }
+    ],
+    "dateModified": "2026-08-17T11:15:18+05:30"
+  }) }}
+/>
+
 # Connect to a Session
 
 Connect to a cloud browser session and control it with Puppeteer, Playwright, or Selenium. All three adapters connect to the same <BrandName /> Browser Cloud infrastructure - pick the one that matches your existing test framework.

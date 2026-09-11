@@ -28,6 +28,214 @@ import NewTag from '../src/component/newTag';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import VerifiedTag from '@site/src/component/verifiedTag';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-visual-regression/"
+    },
+    "headline": "Getting started with SmartUI using Playwright",
+    "description": "Master Playwright Visual Regression with our step-by-step guide. Seamlessly integrate SmartUI, enhance your testing skills, and unlock a world of possibilities.",
+    "url": "https://www.testmuai.com/support/docs/playwright-visual-regression/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "MacOS/Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"YOUR_USERNAME\" \nexport LT_ACCESS_KEY=\"YOUR ACCESS KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"YOUR_USERNAME\" \nset LT_ACCESS_KEY=\"YOUR ACCESS KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PowerShell",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"YOUR_USERNAME\"\n$env:LT_ACCESS_KEY=\"YOUR ACCESS KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your test with Playwright Desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/playwright-sample",
+        "text": "git clone https://github.com/LambdaTest/playwright-sample"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your test with Playwright Desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For macOS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=LT_USERNAME\nexport LT_ACCESS_KEY=LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Linux",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=LT_USERNAME\nexport LT_ACCESS_KEY=LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=LT_USERNAME\nset LT_ACCESS_KEY=LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- Execute the test using the following command\n\n```bash\nnode playwright-smartui.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Follow the steps below to fetch this information",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": " // Add this code snippet within your script to fetch the screenshot status during runtime\n\n\nresponse = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({action: 'smartui.fetchScreenshotStatus', arguments: { screenshotName: \"\" }})}`)\n\nconsole.log(response)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetching Screenshot Status and Results using WebHook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "screenshotStatus response:  {\n  screenshotsData: [\n    {\n      screenshotName: '<Your Screenshot Name>',\n      screenshotURL: '<Link to the screenshot captured>',\n      screenshotStatus: 'Approved', // current status of the screenshot\n      approvedBy: 'system', // Approver details\n      misMatchPercentage: 31.8, // percentage mismatch of the screenshot\n      threshold: 5000, // Threshold set for the screenshot\n      browserName: 'chrome', // Browser used for capturing the screenshot\n      resolution: '1920x1080' // Resolution of the screenshot\n    },\n    \n  buildId: '<Your Build ID>',\n  projectName: '<Your Project Name>'\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To add this integration, you can add the following capability",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "const capabilities: {\n  ...\n   \"smartUIProjectName\": \"<projectName>\"\n   \"github\": {\n    \"url\": \"https://api.github.com/repos/OWNER/REPO/statuses/commitId\"\n   }\n  ...\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capability Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  browserName: 'Chrome',\n  browserVersion: 'latest',\n  platformName: 'Windows 10',\n  'LT:Options': {\n    username: process.env.LT_USERNAME,\n    accessKey: process.env.LT_ACCESS_KEY,\n    visual: true,\n    name: 'Homepage Visual Test',\n    build: 'Release 1.0',\n    'smartUI.project': 'MyProject',\n    'smartUI.build': 'Build-1.0'\n  }\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Screenshot Timing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.goto('https://example.com');\nawait page.waitForSelector('.main-content', { state: 'visible' });\nawait page.waitForLoadState('networkidle');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify visual: true is set in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   'LT:Options': {\n     visual: true, // Must be set\n     // ... other options\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check project name matches exactly (case-sensitive)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   'smartUI.project': 'ExactProjectName'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify credentials are set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add explicit waits before screenshot",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await page.waitForSelector('#content', { state: 'visible' });\n   await page.waitForLoadState('networkidle');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Wait for specific elements to be visible",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await page.waitForSelector('.main-content', { state: 'visible' });"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set build name in capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   'smartUI.build': 'ConsistentBuildName'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use ignoreDOM for dynamic content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   'smartUI.options': {\n     'ignoreDOM': {\n       'id': ['timestamp', 'user-id']\n     }\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ---
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
 - Basic understanding of Playwright is required.

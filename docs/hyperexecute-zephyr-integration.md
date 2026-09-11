@@ -48,6 +48,88 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-zephyr-scale-integration/"
+    },
+    "headline": "Integrate Zephyr Scale with HyperExecute",
+    "description": "Zephyr, a test case management tool, and HyperExecute, a cloud-based test execution platform streamline your testing process by efficiently managing test cases.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-zephyr-scale-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Install the Zephyr Scale - Test Management for Jira application from the Atlassian Marketplace.; TestMu AI account. You can sign up for free.; TestMu AI Username and Access Key; A Jira Project key.; A Zephyr Scale Access token. You can get this from the profiles and settings option of your Jira Board..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure the Test Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "public class PostTestResults {\n\n    public void callApi() {\n\n        String fileName = \"TEST-com.lambdatest.JUnitTodo.xml\" ; //provide the file name of the test results\n        String filePath = \"target/surefire-reports/TEST-com.lambdatest.JUnitTodo.xml\"; //provide the file path of the test result file\n        String projectKey = \"ZD\"; //provide the Jira project key \n        String token = \"abcdefghijklmnop123456\"; // provide Zephyr Scale access token"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: linux\n\nautosplit: true\nretryOnFailure: true\n\nmaxRetries: 1\nconcurrency: 3\n\nenv:\n  # PAT: ${{ .secrets.testKey }}\n  CACHE_DIR: m2_cache_dir\n  TARGET_OS: linux\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - ${CACHE_DIR}\n\nshell: bash\n\npre:\n  # Download and install packages in the CACHE_DIR.\n  # Skip execution of the tests in the pre step\n  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install\n\npost:\n  - cat hyperexecute-zephyr-scale.yaml\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep 'public class' src/test/java/com/lambdatest/*.java | awk '{print$3}'\n\ntestRunnerCommand: mvn -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -Dtest=$test -P single\n# test site\njobLabel: ['hyperexecute', 'zephyr']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Zephyr Scale is a test management platform that helps you plan, manage, and measure your tests inside Jira. It's designed from the ground up to support large test libraries and scaling teams
 
 This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by <BrandName />.

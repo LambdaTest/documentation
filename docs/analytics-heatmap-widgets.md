@@ -45,6 +45,63 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-heatmap-widgets/"
+    },
+    "headline": "Heatmap Widgets",
+    "description": "Learn how to create and configure Heatmap widgets to visualize test data patterns and generate meaningful insights across browsers, resolutions, and other dimensions.",
+    "url": "https://www.testmuai.com/support/docs/analytics-heatmap-widgets/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics",
+      "dashboards",
+      "heatmap widgets"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-05-14T14:47:09+05:30"
+  }) }}
+/>
+
 Heatmap widgets in LambdaTest Insights provide a powerful way to visualize complex data relationships and identify patterns across multiple dimensions. By representing data density and relationships through color intensity, heatmaps help you quickly spot trends, anomalies, and correlations in your test execution data.
 
 ## What is a Heatmap Widget?

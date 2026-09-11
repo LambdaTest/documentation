@@ -41,6 +41,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/"
+    },
+    "headline": "Version 1.0.0",
+    "description": "Check out the release notes for HyperExecute MCP Server 1.0.0, introducing new features, improvements, and bug fixes for streamlined testing.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-mcp-server-release-notes-1-0-0/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The previous SSE-based connection method has been removed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\u274c OLD (No longer supported):\nhttp://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[your-lt-access-key]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\u2705 Connection Methods",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"mcpServers\": {\n    \"mcp-lambdatest-remote\": {\n      \"disabled\": false,\n      \"timeout\": 60,\n      \"command\": \"npx\",\n      \"args\": [\n        \"mcp-remote@latest\",\n        \"https://mcp.lambdatest.com/mcp\",\n        \"--header\",\n        \"username:<LT_USERNAME>\",\n        \"--header\",\n        \"accessKey:<LT_ACCESSKEY>\"\n      ],\n      \"transportType\": \"streamableHTTP\"\n    }\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\u2705 Connection Methods",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"mcpServers\": {\n    \"mcp-lambdatest-stdio\": {\n      \"disabled\": false,\n      \"timeout\": 100,\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-lambdatest\", \"--transport=stdio\"],\n      \"env\": {\n        \"LT_USERNAME\": \"<LT_USERNAME>\",\n        \"LT_ACCESS_KEY\": \"<LT_ACCESSKEY>\"\n      },\n      \"transportType\": \"stdio\"\n    }\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 # MCP <BrandName /> Release Notes
 

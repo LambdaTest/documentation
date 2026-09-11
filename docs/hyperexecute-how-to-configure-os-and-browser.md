@@ -45,6 +45,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-os-and-browser/"
+    },
+    "headline": "How to configure Operating System and Browser in your Test Suite",
+    "description": "Discover the correct way to configure the operating system and the browser capabilities in your codebase to execute in the HyperExecute platform.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-configure-os-and-browser/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Key Attributes to Configure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nThe above configuration ensures that your tests run on Windows OS using the latest version of Google Chrome.\n\n## Step 2: Configure your HyperExecute YAML file\nThe HyperExecute YAML configuration file is the blueprint for running your tests in the HyperExecute cloud environment. It defines the testing environment, execution strategy, and resource allocation. Properly configuring this file ensures that your tests are executed efficiently across the desired platforms and browsers.\n\n<Tabs className=\"docs__val\" queryString=\"test-method\">\n  <TabItem value=\"autosplit\" label=\"AutoSplit\" default>\n    [AutoSplit mode](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) automatically splits your scenarios among the concurrent number of tasks and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.\n\n    In this method, you simply set the [`runson`](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag to specify the Operating System for running your tests.\n\n    ```yaml title=\"hyperexecute_autosplit.yaml\"\n    runson: linux #linux, win, win11, mac, mac13"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This documentation will guide you through configuring the Operating System and Browser for your test suite on HyperExecute. We will cover the step-by-step method to implement the configuration for various test frameworks supported by HyperExecute. Each section provides practical examples to help you integrate HyperExecute with your existing automation suite.
 
 For demonstration purposes, we use the TestNG sample repository. However, you can apply the same concepts to your preferred framework. You can access the sample repositories for your required frameworks:

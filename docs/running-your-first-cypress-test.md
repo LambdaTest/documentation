@@ -23,6 +23,117 @@ canonical: https://www.testmuai.com/support/docs/running-your-first-cypress-test
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/running-your-first-cypress-test/"
+    },
+    "headline": "Running Your First Cypress Test On TestMu AI Platform",
+    "description": "TestMu AI enables you to run Cypress automated tests across multiple browser versions. This documentation will help you get started with your first test.",
+    "url": "https://www.testmuai.com/support/docs/running-your-first-cypress-test/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Cypress-Cloud",
+        "text": "git clone https://github.com/LambdaTest/Cypress-Cloud.git\ncd Cypress-Cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A file named lambdatest-config.json is generated in your project using the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress init"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "lambdatest-config.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"lambdatest_auth\": {\n    \"username\": \"<YOUR_LAMBDATEST_USERNAME>\",\n    \"access_key\": \"<Your LambdaTest access key>\"\n  },\n  \"browsers\": [\n    {\n      \"browser\": \"Chrome\",\n      \"platform\": \"Windows 10\",\n      \"versions\": [\"86.0\"]\n    },\n    {\n      \"browser\": \"Firefox\",\n      \"platform\": \"Windows 10\",\n      \"versions\": [\"82.0\"]\n    }\n  ],\n  \"run_settings\": {\n    \"cypress_config_file\": \"cypress.json\",\n    \"build_name\": \"build-name\",\n    \"parallels\": 1,\n    \"specs\": \"./*.spec.js\",\n    \"ignore_files\": \"\",\n    \"npm_dependencies\": {\n      \"cypress\": \"6.1.0\"\n    },\n    \"feature_file_suppport\": false\n  },\n  \"tunnel_settings\": {\n    \"tunnel\": false,\n    \"tunnelName\": null\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"specs\": \"./cypress/integration/1-getting-started/todo.spec.js\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step-3: Execute your tests using the following command in the terminal",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your Cypress Tests Locally On TestMu AI Platform",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "\nYou can provide the name of the **<BrandName /> tunnel** as per your requirements.\n\n\n## Using the Cypress Agent Skill with TestMu AI\n***\n\nThe [cypress-skill](https://github.com/LambdaTest/agent-skills/tree/main/cypress-skill) is a part of [TestMu AI Skills](https://github.com/LambdaTest/agent-skills/) that guide AI coding assistants in generating production-ready test automation.\n\nThe cypress-skill package includes:\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using the Cypress Agent Skill with TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nIt provides structured guidance for:\n\n* Project structure and setup\n* Dependency configuration\n* Local execution\n* TestMu AI cloud execution\n* Debugging patterns\n* CI/CD integration\n\n\n### Installing Cypress Agent Skill\n***\n\nInstall a Cypress Agent Skill using the command below:\n"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 To demonstrate Cypress testing on the <BrandName /> platform, we will use the [Cypress Cloud repo](https://github.com/LambdaTest/Cypress-Cloud) in the demo below.

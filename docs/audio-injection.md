@@ -57,6 +57,122 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/audio-injection/"
+    },
+    "headline": "Audio Injection/Input on Real Devices",
+    "description": "Test audio-driven and microphone-dependent features on real Android and iOS devices by injecting pre-recorded audio files directly into the device microphone.",
+    "url": "https://www.testmuai.com/support/docs/audio-injection/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "audio injection",
+      "app test automation",
+      "microphone input"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1 - Upload Audio File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"LT_USERNAME:LT_ACCESS_KEY\"   -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\"   -F \"media_file=@/path/to/test.wav\"   -F \"type=audio\"   -F \"custom_id=SampleAudio\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1 - Upload Audio File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"media_url\": \"lt://MEDIAID\",\n  \"status\": \"success\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2 - Enable Audio Injection on Your Session (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "DesiredCapabilities caps = new DesiredCapabilities();\ncaps.setCapability(\"enableAudioInjection\", true);\ncaps.setCapability(\"media\", \"lt://MEDIA1234567890abcdef\"); // optional: pre-set audio"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2 - Enable Audio Injection on Your Session (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "desired_caps = {\n    \"enableAudioInjection\": True,\n    \"media\": \"lt://MEDIA1234567890abcdef\",  # optional\n    # ... other capabilities\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "... other capabilities (Node.js)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  enableAudioInjection: true,\n  media: \"lt://MEDIA1234567890abcdef\", // optional\n  // ... other capabilities\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the following hooks via driver.executeScript (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// 1. Set the audio file\ndriver.executeScript(\"lambda-audio-injection=lt://MEDIA1234567890abcdef\");\n\n// 2. Trigger the app's mic input (e.g., tap Record / Start Voice Search)\ndriver.findElement(AppiumBy.id(\"recordButton\")).click();\n\n// 3. Start audio playback, the app receives the file as live mic input\ndriver.executeScript(\"lambda-audio-start\");\n\n// ... wait for the app to finish capturing ...\n\n// 4. Stop audio playback\ndriver.executeScript(\"lambda-audio-stop\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"lambda-audio-injection=lt://MEDIA1234567890abcdef\")\ndriver.find_element(AppiumBy.ID, \"recordButton\").click()\ndriver.execute_script(\"lambda-audio-start\")\n# ...\ndriver.execute_script(\"lambda-audio-stop\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "... (Node.js)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.executeScript(\"lambda-audio-injection=lt://MEDIA1234567890abcdef\");\nawait driver.findElement(By.id(\"recordButton\")).click();\nawait driver.executeScript(\"lambda-audio-start\");\n// ...\nawait driver.executeScript(\"lambda-audio-stop\");"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Audio Injection on Real Devices
 <RealDeviceTag value="Real Device" />
 

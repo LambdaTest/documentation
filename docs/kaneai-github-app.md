@@ -47,6 +47,94 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/github-app-integration/"
+    },
+    "headline": "TestMu Cloud GitHub App Integration",
+    "description": "Transform every pull request into a validation surface with AI-powered test generation, execution on HyperExecute, and Root Cause Analysis, all without leaving GitHub.",
+    "url": "https://www.testmuai.com/support/docs/github-app-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "github app",
+      "testmu ai integration",
+      "AI test generation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a .lambdatest/config.yaml file in the root directory of your repository with the following structure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "# LambdaTest AI Cloud Configuration\nproject_id: \"your_project_id\"\nfolder_id: \"your_folder_id\"\nassignee: your_user_id\nconfiguration_name: \"Chrome on Windows\"   # Name of the KaneAI Web configuration\ntest_url: \"https://your-deployed-app-url.com/\"\ntunnel_name: \"your_tunnel_name\"  # Optional: set if using the same tunnel across PRs\nscenario_limit: 3                # Optional: how many scenarios to generate (1-20)\ntest_cases_per_scenario: 5       # Optional: test cases per scenario (1-20, defaults to 10)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Your final repository structure should look like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "your-repo/\n\u251c\u2500\u2500 .lambdatest/\n\u2502   \u2514\u2500\u2500 config.yaml          # LambdaTest configuration\n    \u2514\u2500\u2500 agent.md             # Optional file for custom instructions to enhance responses\n\u251c\u2500\u2500 src/                     # Your application source code\n\u251c\u2500\u2500 README.md                # Detailed project documentation (used by AI)\n\u2514\u2500\u2500 ... other project files"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can extend any trigger command with optional parameters to customize test execution for a specific PR",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "@TestMuAI Validate this PR --url https://preview-123.your-app.com --tunnel my-tunnel-name"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Optional Parameters",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "@TestMuAI Validate this PR --config \"Chrome on Windows\" --max-scenarios 3 --max-test-cases 5"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 # <BrandName /> GitHub App Integration
 
 **Your pull requests should deliver proof, not just code.**

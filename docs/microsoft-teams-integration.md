@@ -40,6 +40,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/microsoft-teams-integration/"
+    },
+    "headline": "Microsoft Teams Integration",
+    "description": "TestMu AI integration with Microsoft Teams allows you to push a bug directly to your specified Teams channel from TestMu AI platform. Share your UI observations and input with your teammates on any time, by capturing a screenshot in the middle of your test session through TestMu AI. You can annotate the screenshot & highlight your issue or input. The fields populated by you when marking as a bug through TestMu AI are displayed as information on the respective Teams channel for that testing instance.",
+    "url": "https://www.testmuai.com/support/docs/microsoft-teams-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "microsoft teams integration",
+      "testmu ai integration",
+      "bug reporting"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
 Microsoft Teams is a leading communication and collaboration platform that combines workplace chat, video conferencing, file storage, and app integration. Designed for teamwork, it enables seamless interaction and productivity within organizations, making it an ideal tool for managing projects and workflows.
 
 The Microsoft Teams integration with <BrandName /> enables seamless collaboration and real-time updates on your test automation workflows. With this integration, you can:

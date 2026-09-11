@@ -48,6 +48,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/manual-app-profiling/"
+    },
+    "headline": "Manual App Profiling",
+    "description": "Profile your app's performance during live manual testing sessions on real devices. Monitor CPU, Memory, Disk, FPS, Network, Battery, ANR, and Startup Time in real-time.",
+    "url": "https://www.testmuai.com/support/docs/manual-app-profiling/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "app profiling",
+      "manual testing",
+      "performance analytics"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
 <RealDeviceTag value="Real Device" /> 
 App performance is a critical factor for user satisfaction and adoption. While automated profiling through [Appium tests](/support/docs/appium-app-performance-analytics/) provides insights during CI/CD pipelines, there are times when you need to manually interact with your app and observe its performance in real-time. <BrandName />'s Manual App Profiling feature enables you to profile your app's performance during live manual testing sessions on real devices, giving you instant visibility into CPU, memory, disk, network, and more as you interact with the app.
 

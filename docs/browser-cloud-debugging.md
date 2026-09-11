@@ -48,6 +48,115 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-debugging/"
+    },
+    "headline": "Debugging & Observability - TestMu AI Browser Cloud",
+    "description": "Watch, replay, and debug your agent's browser sessions with video recordings, console logs, and network capture.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-debugging/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud debugging",
+      "session recording",
+      "browser cloud logs"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Every session appears on the TestMu AI Web Automation Dashboard",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://automation.lambdatest.com/logs/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This is especially helpful when running multiple agents or scenarios",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const session = await client.sessions.create({\n    lambdatestOptions: {\n        build: 'Price Monitor Agent - v2.1',\n        name: 'Extract Competitor Pricing - Amazon',\n        'LT:Options': {\n            username: process.env.LT_USERNAME,\n            accessKey: process.env.LT_ACCESS_KEY,\n            video: true,     // Record video\n            console: true,   // Capture console logs,\n        }\n    }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Every session provides URLs for viewing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "console.log(session.debugUrl);          // Dashboard URL for this session\nconsole.log(session.sessionViewerUrl);  // Live stream of the browser"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The SDK logs connection steps and actions to stdout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Adapter: Connecting to session session_123_abc via Puppeteer...\nAdapter: Set stealth user-agent: Mozilla/5.0 (Windows NT 10.0...\nAdapter: Set stealth viewport: 1907x1063\nAdapter: Humanized interactions enabled\nAdapter: Loading profile my-app-login"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Common Issues",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Error: Timed out after 30000ms while waiting for the WebSocket"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Common Issues",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Session session_xyz not found"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Playwright requires Node.js 18 or higher."
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # Replay and Debug Sessions
 
 Watch, replay, and troubleshoot your agent's browser sessions. Every session automatically records video, console logs, and network requests - accessible from the TestMu AI dashboard.

@@ -53,6 +53,110 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-kotlin/"
+    },
+    "headline": "Appium With Kotlin",
+    "description": "Now you can run your Appium automation scripts using Kotlin on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-kotlin/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "Kotlin",
+      "testmu ai kotlin"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install the latest version of IntelliJ IDEA. You can use any other IDE also.; Download and install Maven. You can use Homebrew package manager for Linux/macOS.; Make sure that Kotlin plugins are enabled/installed in the IntelliJ IDEA if you are using a previous version..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<\/TabItem>\n\n<TabItem value=\"ios\" label=\"iOS\" default>\n\n```java title=\"iOS.kt\"\nimport io.appium.java_client.MobileBy\nimport io.appium.java_client.MobileElement\nimport io.appium.java_client.remote.AppiumCommandExecutor\nimport io.appium.java_client.android.AndroidDriver\nimport io.appium.java_client.android.AndroidElement\nimport io.appium.java_client.ios.IOSDriver\nimport io.appium.java_client.ios.IOSElement\nimport org.junit.jupiter.api.Test\nimport org.openqa.selenium.remote.DesiredCapabilities\nimport java.net.URL\n\nclass iOS {\n\n    @Test\n    fun `sample test`() {\n        //highlight-next-line\n        val username = \"LT_USERNAME\"  //Add your LambdaTest username here\n        //highlight-next-line\n        val accessKey = \"LT_ACCESS_KEY\"  //Add your LambdaTest accessKey here\n\n        var driver: IOSDriver<IOSElement>? = null\n\n        val hub = URL(\"https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub\")\n\n        val caps = DesiredCapabilities()\n        caps.setCapability(\"platformName\", \"ios\")\n        caps.setCapability(\"deviceName\", \"iPhone 12\")\n        caps.setCapability(\"platformVersion\", \"14\")\n        caps.setCapability(\"isRealMobile\", true)\n        //highlight-next-line\n        caps.setCapability(\"app\", \"APP_URL\") //Add the app (.ipa) url here\n        caps.setCapability(\"deviceOrientation\", \"PORTRAIT\")\n        caps.setCapability(\"build\", \"Kotlin Vanilla - iOS\")\n        caps.setCapability(\"name\", \"Sample Test Kotlin\")\n        caps.setCapability(\"console\", true)\n        caps.setCapability(\"network\", false)\n        caps.setCapability(\"visual\", true)\n        caps.setCapability(\"device log\", true)\n\n\n        val app = IOSDriver<IOSElement>(hub, caps)\n\n        Thread.sleep(4000)\n\n        val color: MobileElement =\n            app.findElementById(\"color\")\n            color.click()\n\n        val text: MobileElement =\n            app.findElementById(\"Text\")\n            text.click()\n\n        val toast: MobileElement =\n            app.findElementById(\"toast\")\n            toast.click()\n\n        val notification: MobileElement =\n            app.findElementById(\"notification\")\n            notification.click()\n\n        val geo: MobileElement =\n            app.findElementById(\"geoLocation\")\n            geo.click()\n\n        Thread.sleep(5000)\n\n        app.navigate().back()\n\n\n        if (app != null) {\n            app.quit()\n        };\n\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The capabilities object in the sample code are defined as (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "val caps = DesiredCapabilities()\ncaps.setCapability(\"platformName\", \"ios\")\ncaps.setCapability(\"deviceName\", \"iPhone 12\")\ncaps.setCapability(\"platformVersion\", \"14\")\ncaps.setCapability(\"isRealMobile\", true)\n//highlight-next-line\ncaps.setCapability(\"app\", \"APP_URL\") //Add the app (.ipa) url here\ncaps.setCapability(\"deviceOrientation\", \"PORTRAIT\")\ncaps.setCapability(\"build\", \"Kotlin Vanilla - iOS\")\ncaps.setCapability(\"name\", \"Sample Test Kotlin\")\ncaps.setCapability(\"console\", true)\ncaps.setCapability(\"network\", false)\ncaps.setCapability(\"visual\", true)\ncaps.setCapability(\"device log\", true)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "val caps = DesiredCapabilities()\ncaps.setCapability(\"autoAcceptAlerts\", true)\ncaps.setCapability(\"platformName\", \"Android\")\ncaps.setCapability(\"deviceName\", \"Galaxy S20\")\ncaps.setCapability(\"platformVersion\", \"11\")\ncaps.setCapability(\"platformName\", \"Android\")\ncaps.setCapability(\"isRealMobile\", true)\n//highlight-next-line\ncaps.setCapability(\"app\", \"APP_URL\") //Add the app (.apk) url here\ncaps.setCapability(\"deviceOrientation\", \"PORTRAIT\")\ncaps.setCapability(\"build\", \"Kotlin Vanilla - Android\")\ncaps.setCapability(\"name\", \"Sample Test Kotlin\")\ncaps.setCapability(\"console\", true)\ncaps.setCapability(\"network\", false)\ncaps.setCapability(\"visual\", true)\ncaps.setCapability(\"device log\", true)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn clean install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to configure and run your **Kotlin** automation testing scripts with **Appium** on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

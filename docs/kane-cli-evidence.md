@@ -40,6 +40,80 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-evidence/"
+    },
+    "headline": "Evidence Packs",
+    "description": "Every kane-cli run seals an evidence pack: a portable .evidence file holding the test definition, per-step screenshots, console and network logs, and failure records for the run.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-evidence/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli evidence",
+      "evidence pack",
+      "kane cli evidence pack"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Every run except testrun run seals a pack in its session directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "~/.testmuai/kaneai/sessions/<session-id>/evidence/<execution_id>.evidence"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Runs you keep are additionally copied into the project store in your working directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<cwd>/.testmuai/evidence/<execution_id>.evidence"
+      }
+    ],
+    "dateModified": "2026-08-21T00:24:19+05:30"
+  }) }}
+/>
+
 Every kane-cli run produces an **evidence pack**: a single sealed `.evidence` file containing everything about the run — the test definition, a result summary, per-step screenshots (plus annotated copies highlighting what the agent acted on), browser console and network logs attributed to each step, run logs, and on failures a per-step failure record with the error, page state, and pointers into the logs.
 
 A pack is a self-contained zip. You can open it in the hosted viewer, share it with a teammate, archive it in CI, validate it, or merge several packs into one.

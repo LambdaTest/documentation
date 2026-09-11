@@ -43,6 +43,137 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/gitlab-ci-integration-with-testmu/"
+    },
+    "headline": "GitLab CI Integration",
+    "description": "Integrate GitLab CI seamlessly with TestMu AI for efficient and automated testing, supported by step-by-step guides and detailed support doc.",
+    "url": "https://www.testmuai.com/support/docs/gitlab-ci-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A Git or GitHub repository.; Download and install node.js and node package manager or npm.; To install node.js with homebrew use the command below.; If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.; Upgrade npm to latest version using the below command.; Install protractor using npm with the below command.; For Linux/Mac; For Windows.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating GitLab CI With Our Online Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ brew install node"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating GitLab CI With Our Online Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install npm@latest \u2013g"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating GitLab CI With Our Online Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install \u2013g protractor"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME> \n$ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>\n$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating TestMu AI With GitLab CI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "//Sample Configuration For GitLab CI\n\n# Choose language and version\nimage: node:7.10\n\n# setup required installers\nbefore_script:\n  - |\n    cd ~/protractor-selenium-sample-gitlab\n    echo 'export LT_USERNAME=\"{your_lambdatest_username}\"' >> ~/.bashrc\n    echo 'export LT_ACCESS_KEY=\"{your_lambda_access_key}\"' >> ~/.bashrc\n    npm install\n    npm install -g protractor\n  \njob:\n  script:\n    #Running test!\n    protractor single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then Capabilities Generator at TestMu AI will provide you with the below program",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "// Basic Test Configurations For JavaScript\n\nvar capabilities = {\n    \"build\" : \"your build name\", //You can edit this and assign a build name\n    \"name\" : \"your test name\", // Assign a name to your Test\n    \"platform\" : \"Windows 8.1\", // The operating system on which you want to test your website\n    \"browserName\" : \"Firefox\", // The browser on which you want to test\n    \"version\" : \"62.0\", // The browser version which you've selected to perform the test upon\n    \"resolution\" : \"1280x1024\", // The resolution in which you want to run the test as per your operating system\n    \"selenium_version\" : \"3.11.0\", //The version of Selenium on which the test will run\n    \"visual\" : true,\n    \"firefox.driver\" : v0.21.0\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing Locally Hosted or Privately Hosted Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "// Example of .gitlab-ci.yml for Lambda Tunnel\n\nimage: node:7.10\n\nbefore_script:\n  - |\n    cd /builds/qarachit/protractor-selenium-sample-gitlab\n    wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip\n    #Extracting tunnel binary\n    sudo apt-get install unzip\n    unzip LT_Linux.zip\n    #Executing tunnel library\n    ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} &\n    sleep 30\n    #Installing Dependencies\n    echo 'export LT_USERNAME=\"{your_lambdatest_username}\"' >> ~/.bashrc\n    echo 'export LT_ACCESS_KEY=\"{your_lambda_access_key}\"' >> ~/.bashrc\n    npm install\n    npm install -g protractor\n  \njob:\n  script:\n    #Running Test!\n    protractor single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"desiredCapabilities\": {\n        \"tunnel\":true\n      }\t\t"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "protractor parallel.conf.js"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # GitLab CI Integration
 * * *
 GitLab is one of the finest tools which facilitates continuous integration for Git projects from small to enterprise level clients. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to-market launch.

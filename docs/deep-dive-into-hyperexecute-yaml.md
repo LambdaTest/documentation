@@ -43,6 +43,815 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/deep-dive-into-hyperexecute-yaml/"
+    },
+    "headline": "Deep Dive into HyperExecute YAML",
+    "description": "This document delivers detailed elucidations for each and every YAML flags, offering an in-depth understanding of each configuration parameter",
+    "url": "https://www.testmuai.com/support/docs/deep-dive-into-hyperexecute-yaml/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "version: 0.1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "runson",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runson: linux # mac, mac13, win, win11"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "runson",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runson: ${matrix.os}\nmatrix:\n  os: [linux, mac, mac13, win, win11]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pre",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "pre:\n  - npm install\n  - mvn install "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "autosplit",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "autosplit: true   "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "concurrency",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "concurrency: 10   "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery:\n  type: raw\n  mode: local\n  command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "type",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "#(Recommended). When we are passing a command to discover tests. \ntype: raw   #or\n\n#(Advanced). For more advanced use cases.\ntype: automatic"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "mode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "#test discovery happens on machine where CLI is running\nmode: local  #or\n\n# test discovery happens in designated HyperExecute VMs\nmode: remote"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testRunnerCommand",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\n\n# This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "matrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runson: ${matrix.os}\n\nmatrix:\n  os: [\"win\", \"mac\", \"linux\"]\n  version: [\"latest, dev\"]\n  browser: [\"Chrome\", \"Firefox\"]\n  files: [\"@File1\",\"@File2\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "exclusionMatrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "#runson defines the OS of your test execution node.\nrunson: ${matrix.os}\n\nmatrix:\n  # Browser version(s) separated by Comma\n  version: [\"latest\"]\n  # OS name sepataed by Coma\n  os: [\"win\", \"mac\", \"linux\"]\n  # Browser name separated by Comma\n  browser: [\"Chrome\", \"Firefox\", \"Safari\"]\n  # Test Files separated by Comma\n  files: [\"@File1\",\"@File2\",\"@File3\",\"@File4\"]\n\nexclusionMatrix: \n  - os: [win]\n    browser: [\"Safari\"]\n    files: [\"@File2\",\"@File3\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "combineTasksInMatrixMode",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "concurrency: 2\ncombineTasksInMatrixMode: true\n\nmatrix:\n   os: [\"mac\", \"linux\"]\n   browser: [\"edge\", \"brave\"]\n   files: [\"Test1\", \"Test2\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testSuites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testSuites: - mvn test -Dtest=$files"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "parallelism",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runson: ${matrix.os}\nparallelism: 2\n\nmatrix:\n os: [win, mac]\n version: [1, 2, 3]\n browser: [chrome]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Platform specific parallelism -> macParallelism, winParallelism, and linuxParallelism",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "parallelism: 2\nlinuxParallelism: 2\nwinParallelism: 1\nmacParallelism: 3\n\nmatrix:\n os: [win, mac]\n version: [1, 2, 3]\n browser: [chrome]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testRunnerCommand",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\n\n# This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Platform specific testRunnerCommand",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"win 10\"\nlinuxTestRunnerCommand: mvn test `-Dcucumber.options=\"$test\"`  `-Dscenario=\"$test\"`   `-DOs=\"linux\"`\nwinTestRunnerCommand: mvn test `-Dcucumber.options=\"$test\"` `-Dscenario=\"$test\"`  `-DOs=\"win 10\"`\nmacTestRunnerCommand: mvn test -Dcucumber.options=\"$test\" -Dscenario=\"$test\" -DOs=\"mac\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheKey",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: '{{ checksum \"pom.xml\" }}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheKey",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: {{ checksum \"dir1/dir2/package-lock.json\" }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheDirectories",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheDirectories:\n  - .m2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheDirectories",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - .m2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "env",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  USERNAME: abc\n  PLATFORM: windows"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Special Character Encoding",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  LANG: es_ES.UTF-8\n  LC_ALL: es_ES.UTF-8\n\npre:\n  - sudo locale-gen es_ES.UTF-8\n  - sudo update-locale LANG=es_ES.UTF-8"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are using Java-based frameworks, you can also set the encoding via JAVA_TOOL_OPTIONS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  JAVA_TOOL_OPTIONS: \"-Dfile.encoding=UTF-8\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The runtime flag is used to",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: \"11\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "runtime",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: 11\n    addons:\n      - name: \"gauge\"\n        version: \"1.4.0\"\n      - name: \"gradle\"\n        version : \"7.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 29",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runtime:\n  - language: java\n    version: '17'\n    addons:\n      - name: gauge\n        version: '1.5.6'\n      - name: gradle\n        version: '7.6'\n  - language: python\n    version: '3.10'\n  - language: node\n    version: '16'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "retryOnFailure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "\u2705 Use Case:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "<testFailureIgnore>false<\/testFailureIgnore>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "maxRetries",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true\nmaxRetries: 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "post",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "post:\n  - echo <some-dir>/output/output.log\n  - curl https://www.example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n location: target/surefire-reports/html\n type: html\n frameworkName: extent"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you want to generate multiple reports of different types supported by HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "partialReports:\n  - location: reports/json\n    type: json\n    frameworkName: extent-native\n\n  - location: target/surefire-reports\n    type: html\n    frameworkName: testng"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "report",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: maven/testng\n  defaultReports: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "location: target/abc//pqr//cucumber-reports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nEnsure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:\n\n```java title=\"Testrunner.java\"\nplugin = {\n    \"json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json\",\n    \"json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "errorCategorizedOnFailureOnly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "errorCategorizedOnFailureOnly: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "errorCategorizedReport",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "errorCategorizedReport:\n  enabled: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can also use it along with your existing job labels like this",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "jobLabel: ['chrome', 'linux', 'low']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "mergeArtifacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "mergeArtifacts: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "uploadArtefacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "uploadArtefacts:\n\n# Will upload your reports from target/site/** to HyperExecute as FinalReport\n  - name: FinalReport \n    path:\n    - target/site/**\n  \n  # Will upload your Surefire reports from target/surefire-reports/**to HyperExecute as Surefire Report\n  - name: Surefire Report\n     path:\n     - target/surefire-reports/**"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<!-- \n:::info\nYou can also use `beforeAll` as an alias for the `globalPre` command:\n\n```yaml\nbeforeAll:\n  commands:\n    - \"apt-get update && apt-get install -y curl\"\n  mode: remote\n  runson: win\n  cache: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n>\ud83d\udcd8 `globalPost` can also download every task's artifacts onto a VM, run custom commands against them, upload the processed output to the dashboard, and email the result. See [Download and Process Job Artifacts in Global Post](/support/docs/hyperexecute-global-post-artifacts/).\n\n<!-- :::info\nYou can also use `afterAll` as an alias for the `globalPost` command:\n\n```yaml\nafterAll:\n  commands:\n    - \"curl -X POST https://api.example.com/cleanup\"\n  mode: local\n  runson: linux"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "captureScreenRecordingForScenarios",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "captureScreenRecordingForScenarios: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "skipArtifactStageIfNoTest",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "skipArtifactStageIfNoTest: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "globalTimeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "globalTimeout: 90   "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "failFast",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "failFast:\n  maxNumberOfTests: 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "failFast",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "failFast:\n  maxNumberOfTests: 2\n  level: scenario"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "base",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "base:\n  yamls:\n    - ./<baseConfiguration1.yaml>\n    - ./<baseConfiguration2.yaml>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "sourcePayload",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "sourcePayload:\n  platform: git\n  link: https://--------\n  ref: master\n  accessToken: <your_personal_access_token>\n  commit: <optional>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "hostsOverride",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "hostsOverride:\n  - host: example.com\n    ip: 127.0.0.1\n  - host: example1.com\n    ip: 127.0.0.1"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testSuiteTimeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testSuiteTimeout: 30   "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testSuiteStep",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testSuiteStep: 15   "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true\nmaxRetries: 3\nretryOptions:\n  errorRegexps: [\"org.openqa.selenium.NoSuchElementException\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "preDirectives currently has the ability to take the following additional inputs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "preDirectives:\n    commands: ['mvn -Dmaven.repo.local=./.m2 dependency:resolve', sleep 60]\n    maxRetries: 0\n    shell: \"\"\n    workingDirectory: \"\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "postDirectives currently has the ability to take the following additional inputs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "postDirectives:\n    commands: [cat yaml/linux/v1/testng_hyperexecute_autosplit_sample.yaml]\n    shell: \"\"\n    workingDirectory: \"\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "alwaysRunPostSteps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "alwaysRunPostSteps: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "# 'id' is mandatory; 'name' is optional. You can pass both or just the 'id'.\nproject:\n  name: 'demo-project' # Optional\n  id: '1abc2345-56de-7890-f1cg-h2ij34k56789' # Mandatory"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "differentialUpload",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "project:\n  name: XYZ Name\ndifferentialUpload:\n  enabled: #true/false\n  ttlHours: #int value, with possible range of values [1 hour to 360 hours]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "linkValidity",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\n\npartialReports:\n  location: target/surefire-reports/html\n  type: html\n  frameworkName: extent\n  email:\n    to:\n      - johndoe@example.com\n    linkValidity: 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "linkValidity",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "uploadArtefacts:\n  - name: ExecutionSnapshots\n    path:\n      - <path of artifact>\n    email:\n      to:\n        -\n      linkValidity: 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "stripParentDirectory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "stripParentDirectory: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "generateArtifactAfterEveryStage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n***\n\n### `taskIdentifierInNonConflictingArtifacts`\nThis flag when set to **true** specifies that the task ID should be included in the non-conflicting artifacts. The non-conflicting artifacts are those artifacts that can be safely shared between tasks. By default, the task ID is not included in the non-conflicting artifacts.\n\n- When the `taskIdentifierInNonConflictingArtifacts` flag is set to **true** and the `mergeArtifacts` flag is also set to **true**, the task ID will be appended to all the filenames of artifacts. This is done to ensure that the artifacts can be uniquely identified.\n\n- For example, if you have a task that creates a file called index.html, and the `taskIdentifierInNonConflictingArtifacts` flag is set to **true**, the file will be renamed to **index.html.task-id**. This ensures that the file can be uniquely identified, even if it is merged with other files called index.html from other tasks.\n\n```yaml\nmergeArtifacts: true\ntaskIdentifierInNonConflictingArtifacts: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "taskIdentifierInNonConflictingArtifacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "mergeArtifacts: true\ntaskIdentifierInNonConflictingArtifacts: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "smartGrid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "smartGrid: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cypress",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cypress: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Additional options include",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cypressOps:\n  Build: \"Hyperexecute Cypress Sample Build\"\n  Tags: [\"Hyperexecute\",\"Cypress\", \"Windows\", \"Matrix\"]\n  BuildTags: [\"Hyperexecute-Cypress\"]\n  Network: true\n  FullHar: true\n  geoLocation: IN\n  reporterConfigFile: \"reporter_config.json\",\n  ProjectName: \"Cypress_Project\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "shell",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "shell: bash"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "[\n { \n  \"Username\": \"user1\",\n  \"Password\": \"pass1\"\n },\n {\n  \"Username\": \"user2\", \n  \"Password\": \"pass2\"\n }\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. By reading the JSON file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "{\n  \"Username\": \"user1\",\n  \"Password\": \"pass1\" \n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can use the env variables to access the defined parameters as",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "STATIC_DATA_1_<ParameterName>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For instance, to access data from file1.json, the syntax would be",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "STATIC_DATA_1_Username"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Similarly, to access the data from the second file i.e file2.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "STATIC_DATA_2_Username"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "attributes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n#### Configuration\n- **path (required) :** Specifies the path to the JSON file containing the data. Example:\n  ```yaml\n  path: data/file/abc.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  index: username"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "    query: (username == \"abc\" or username == \"bcd\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "    attributes:\n      - key: username\n        value: [\"abc\", \"bcd\"]\n      - key: tags\n        values: [\"@x\", \"@y\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Working of dataJsonBuilder",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- **`dataJsonBuilder`** flag passed in the HyperExecute YAML file:\n\n  ```yaml title=\"hyperexecute.yaml\"\n  dataJsonBuilder:\n    path: sample.json\n    filters:\n      attributes:\n        - key: username\n          values: [\"abc\", \"bcd\"]\n        - key: tags\n          values: [\"@x\", \"@y\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 80",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "The objects with **usernames** `\"abc\"` and `\"bcd\"` and **tags** `\"@x\"` and `\"@y\"` are selected as they meet the criteria defined by the attributes filter.\n\n#### Indexing and Test Case Distribution:\nAfter filtering, the JSON data is indexed to distribute test cases. Here\u2019s how the distribution works:\n- **VM Allocation:** Each filtered JSON object corresponds to a separate VM. If the filtered JSON contains 3 objects, 3 VMs are allocated.\n- **Test Case Distribution:** Test cases are then distributed across these VMs. For each VM, test cases are distributed based on the `username` present in the filtered JSON objects. All test cases related to the same `username` are assigned to the VMs containing that `username`.\n\nSo as per the above filtered JSON data:\n\n- **VM1** will receive all test cases related to `username: \"abc\"`\n  ```javascript\n  {\n    \"accesskey\": \"jhscuystc7ewgucu79as8yc9\",\n    \"username\": \"abc\",\n    \"tags\": \"@x\"\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Indexing and Test Case Distribution:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "  {\n    \"accesskey\": \"cjdy87328yeiqhd93urd28hh\",\n    \"username\": \"bcd\",\n    \"tags\": \"@y\"\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Indexing and Test Case Distribution:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "  {\n    \"accesskey\": \"jhscuystc7ewgucu79as8yc9\",\n    \"username\": \"abc\",\n    \"tags\": \"@y\"\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  dataJsonBuilder:\n    path: data/file/abc.json\n    index: username\n    filters:\n      #either query or attributes can be used, if both are mentioned then the attributes will have higher precedence.\n      query: (username == \"abc\" or username == \"bcd\")\n      attributes:\n        - key: username\n          values: [\"abc\", \"bcd\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  dataJsonBuilder:\n    path: data/file/abc.json\n    filters:\n      query: (username == \"abc\" or username == \"bcd\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  dataJsonBuilder:\n    path: data/file/abc.json\n    index: username"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheTestURL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cacheTestURL: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "afterAll",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "afterAll:\n local:\n   commands:\n   - stitch-artifacts.sh artifacts-directory"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "beforeAll",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "beforeAll:\n  location: local/remote \n  type: discovery/update_payload\n  local: \n    commands:\npip install -r requirements.txt "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "afterEachScenario",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "afterEachScenario:\n  - echo \"Running a script\"\n  - pwsh run.test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's a breakdown of the parameters within buildConfig",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "  buildConfig:\n    buildPrefix: myCustomBuildPrefix-${name}\n    buildName : \"name=${name}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To set buildPrefix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "--labels buildPrefix --vars \"name=xyz\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To set buildName",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "--labels buildName --vars \"name=xyz\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "captureCSVResult",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "captureCSVResult: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is the sample code showing how we can use the above mentioned Lambda hooks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "((JavascriptExecutor) driver).executeScript(\"lambda-start-timer=t1\");\n\n  /* Add 5 items in the list */\n  Integer item_count = 15;\n  for (int count = 1; count <= item_count; count++)\n  {\n      /* Enter the text box for entering the new item */\n      elem_new_item.click();\n      elem_new_item.sendKeys(\"Adding a new item \" + count + Keys.ENTER);\n      Thread.sleep(2000);\n  }\n  Object t1 =  ((JavascriptExecutor) driver).executeScript(\"lambda-end-timer=t1\");\n  System.out.println(t1);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "dynamicAllocation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "dynamicAllocation: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "collectLocalGitData",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "collectLocalGitData: false,"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Using backgroundDirectives",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "backgroundDirectives:\n  shell: bash\n  commands:\n    - name: YOUR_SERVICE_NAME\n      command: npx static-server\n    - name: Database\n      command: mysql-server"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Using background",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "background:\n  - npx static-server\n  - mysql-server"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "vars",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "vars:\n test: e2e\n framework: net5.0\n runtime: win-x64\n testPath: ${test}\\bin\\build\\${framework}\\${runtime}\npreDirectives:\n Commands:\n  - echo ${framework}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "tunnel: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "tunnelOpts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "tunnel: true\ntunnelOpts: \n\targs:\n\t - \"--verbose\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "tunnelOpts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "tunnel: true\ntunnelOpts: \n\tpreOnly: true\n  #------OR------\n\tpostOnly: true\n  #------OR------\n\tglobal: true\n  #------OR------\n\tsystemProxy: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 103",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "pre:\n  - echo %LT_PROXY_PORT%\n  - echo %LT_PROXY_HOST%\n  - echo %MYSQL_PROXY_HOST%\n  - echo %MYSQL_PROXY_PORT%\n\ntunnel: true\ntunnelOpts:\n  args: \n    - \"--expose mysql:localhost:3306\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "tunnelNames",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "tunnelNames: [\"lambdatest_tunnel\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testRunnerExecutor",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerExecutor: bat"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "workingDirectory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: maven/testng\n  discoveryType: method\n  workingDirectory: src/main\n  flags:\n    - \"-Dplatname=win\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "syncStart",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "execution:\n  syncStart: true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
 
 ## Mandatory Parameters

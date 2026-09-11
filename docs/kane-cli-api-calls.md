@@ -38,6 +38,101 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-api-calls/
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-api-calls/"
+    },
+    "headline": "API Calls",
+    "description": "Have the Kane CLI agent make HTTP API calls directly inside an objective to seed data, hit a backend, then assert on or reuse the response.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-api-calls/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "api calls",
+      "kane cli",
+      "http request"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Phrase an explicit HTTP request and name its response with \"save the response as \u2026\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Call POST https://api.example.com/orders with body {\"item\": \"sku_42\", \"qty\": 1}, save the response as order\nHit GET https://api.example.com/orders/123, save the response as fetched\nCall DELETE https://api.example.com/orders/123"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A pasted curl works too and is kept exactly as written: method, headers, body, and auth",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "curl -X POST https://api.example.com/login -H 'Content-Type: application/json' -d '{\"u\":\"a\",\"p\":\"b\"}', save the response as login"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "API calls and browser actions mix freely in one objective",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Call POST https://api.example.com/login with body {\"u\": \"{{user}}\", \"p\": \"{{password}}\"}, save the response as login,\nassert {{login.status}} is 200,\nthen open https://app.example.com and verify the dashboard loads"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using the response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Call POST https://api.example.com/orders with body {\"item\": \"sku_42\", \"qty\": 1}, save the response as order,\nassert {{order.status}} is 201,\nthen open https://app.example.com/orders and verify an order for \"sku_42\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Tokens and secrets",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "curl -X DELETE https://api.example.com/records/42 -H \"Authorization: Bearer {{api_token}}\""
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Objectives can have the agent **make an API call directly**, not just observe the requests a page makes. This is useful for seeding data before a flow, hitting a backend to set up state, or checking a service, then asserting on or reusing the response.
 
 ## Making a call

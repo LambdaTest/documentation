@@ -53,6 +53,103 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/webdriverio-on-hyperexecute-grid/"
+    },
+    "headline": "Run automation tests on HyperExecute using WebdriverIO",
+    "description": "Learn how to run Selenium automation tests on HyperExecute using the WebdriverIO framework",
+    "url": "https://www.testmuai.com/support/docs/webdriverio-on-hyperexecute-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "WebdriverIO",
+      "WebdriverIO selenium",
+      "WebdriverIO JavaScript Selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "capabilities: [{\n  browserName: 'chrome',\n  platform: 'Windows 10',\n  version: 'latest',\n  name: \"single-test\",\n  build: \"wd-lambdatest-sample\",\n  geoLocation : \"US\"\n}]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: linux\n\nautosplit: true\nretryOnFailure: true\n\nmaxRetries: 1\nconcurrency: 2\n\npre:\n  - npm install\n\ncacheKey: '{{ checksum \"package-lock.json\" }}'\ncacheDirectories:\n  - node_modules\n\nmergeArtifacts: true\n\nuploadArtefacts:\n  [{\n    \"name\": \"Reports\",\n    \"path\": [\"Reports/*\"]\n  }]\n\nreport: true\npartialReports:\n    type: json\n    location: Reports/\n    frameworkName: extent\n  \ntestDiscovery:\n  type: automatic\n  args:\n    featureFilePaths: Features/\n    frameWork: java\n    specificTags: [\"@ToDoOne\", \"@ToDoTwo\", \"@ToDoThree\"]\n\ntestRunnerCommand: npx wdio wdio.conf.js --spec=$test\n\njobLabel: [selenium-webdriverIO, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The webdriverio-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "webdriverio-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a WebdriverIO Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/webdriverio-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/webdriverio-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Running WebdriverIO Framework Tests on HyperExecute
 WebdriverIO is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications
 

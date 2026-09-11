@@ -38,6 +38,63 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-use-cases/
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-use-cases/"
+    },
+    "headline": "Kane CLI Use Cases",
+    "description": "Browse Kane CLI use cases by category, from API testing to everything you can drive with a single natural-language command.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-use-cases/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "kane cli use cases",
+      "kane cli",
+      "kaneai"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-12T00:03:23+05:30"
+  }) }}
+/>
+
 Kane CLI is a natural-language command line tool for testing. Instead of writing test scripts, you describe what you want to test in plain English inside a `kane-cli run "..."` command. Kane CLI opens a real browser session, performs the described navigation and API calls, evaluates your assertions, and prints a live step-by-step log together with a plain-language pass or fail summary. Every successful run can be saved as a structured, shareable test case inside KaneAI Test Manager for future reuse.
 
 The categories below group the most common scenarios you can cover with Kane CLI, each with the exact steps to follow. Every use case is a single command you can copy, adapt to your own endpoints, and drop straight into a CI pipeline.

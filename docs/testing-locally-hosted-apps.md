@@ -42,6 +42,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/testing-locally-hosted-apps/"
+    },
+    "headline": "Testing Locally Hosted Apps For App Automation",
+    "description": "TestMu AI tunnel allows you to test locally and privately hosted apps across various real Android and iOS devices. In this documentation, learn how to configure TestMu AI tunnel to test locally or privately hosted apps while running app automation.",
+    "url": "https://www.testmuai.com/support/docs/testing-locally-hosted-apps/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "local testing",
+      "testmu ai tunnel features",
+      "local testing for app automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setting Up Connection With TestMu AI Tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "./LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 
 Using the <BrandName /> tunnel, you can test locally and privately hosted apps across various real Android and iOS devices on the <BrandName /> Appium test automation platform. <BrandName /> tunnel uses protocols like **Web Socket, HTTPS/TCP** and more to let you build a secure and unique tunnel connection between your local system and <BrandName /> cloud servers.
 

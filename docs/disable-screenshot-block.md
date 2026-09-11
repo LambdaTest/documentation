@@ -55,6 +55,73 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/disable-screenshot-block/"
+    },
+    "headline": "Disable Screenshot Block for Android",
+    "description": "Discover how to disable screenshot blocking on TestMu AI Real Device Cloud Platform. Test biometric authentication functionalities without limitations on 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/disable-screenshot-block/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "screenshot unblock",
+      "disable screenshot block",
+      "app test automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "    DesiredCapabilities capabilities = new DesiredCapabilities();\n    capabilities.setCapability(\"build\",\"Java TestNG Android\");\n    capabilities.setCapability(\"name\",platform+\" \"+device+\" \"+version);\n    capabilities.setCapability(\"deviceName\", device);\n    capabilities.setCapability(\"platformVersion\",version);\n    capabilities.setCapability(\"platformName\", platform);\n    capabilities.setCapability(\"isRealMobile\", true);\n    capabilities.setCapability(\"app\", \"APP_URL\"); //Enter your app (.apk) url\n    capabilities.setCapability(\"deviceOrientation\", \"PORTRAIT\");\n    capabilities.setCapability(\"console\", true);\n    capabilities.setCapability(\"network\", false);\n    capabilities.setCapability(\"visual\", true);\n    capabilities.setCapability(\"devicelog\", true);\n    capabilities.setCapability(\"enableScreenshotUnblock\",true); // for screenshot unblock"
+      }
+    ],
+    "dateModified": "2026-09-10T15:46:57+05:30"
+  }) }}
+/>
+
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 ## Introduction

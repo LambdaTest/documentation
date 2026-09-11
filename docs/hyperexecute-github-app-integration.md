@@ -47,6 +47,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-github-app-integration/"
+    },
+    "headline": "GitHub App Integration Support for HyperExecute",
+    "description": "GitHub App Integration Support for HyperExecute",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-github-app-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Navigate to the TestMu AI setup page",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "   https://{{accounts_base_url}}/org-settings/hyperexecute/git-integration"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create an org-level secret via the Logistics Secret API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "github_app_private_key_{{git_tenant}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Navigate to the private app installation URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "   https://github.com/apps/{private-app-name}/installations/new"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "GitHub will redirect you to the private setup URL configured for your environment",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "https://{{private_accounts_base_url}}/org-settings/hyperexecute/git-integration"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 > This is currently in the **Beta** version.
 
 HyperExecute supports integration with GitHub App, enabling secure, fine-grained, and scalable access to your GitHub repositories without relying on long-lived Personal Access Tokens (PATs).

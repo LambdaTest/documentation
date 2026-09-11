@@ -1,5 +1,6 @@
 ---
 id: rook-installation
+toc_max_heading_level: 2
 title: Install Rook
 hide_title: false
 sidebar_label: Install
@@ -15,6 +16,137 @@ site_name: TestMu AI
 slug: rook-installation/
 canonical: https://www.testmuai.com/support/docs/rook-installation/
 ---
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-installation/"
+    },
+    "headline": "Install Rook",
+    "description": "Install the public Rook CLI with Homebrew, npm, or the checksum-verifying shell installer on macOS and Linux.",
+    "url": "https://www.testmuai.com/support/docs/rook-installation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "install rook cli",
+      "rook homebrew",
+      "rook npm"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install With Homebrew",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/rook",
+        "text": "brew tap LambdaTest/rook https://github.com/LambdaTest/rook.git\nbrew install lambdatest/rook/rook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To upgrade a Homebrew installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "brew update\nbrew upgrade lambdatest/rook/rook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install With the Shell Installer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh | bash"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pass installer options after bash -s --",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Install the current production release explicitly.\ncurl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n  | bash -s -- --version 0.1.1\n\n# Link the executable into another writable directory.\ncurl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n  | bash -s -- --dir \"$HOME/bin\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the installer with --help to list its supported options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -fsSL https://raw.githubusercontent.com/LambdaTest/rook/main/install.sh \\\n  | bash -s -- --help"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install With npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @testmuai/rook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To upgrade an npm installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm update -g @testmuai/rook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify the Installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "command -v rook\nrook --version\nrook doctor"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then enter an agent repository and start the TUI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd your-project\nrook"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Release assets follow this pattern",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "rook-<version>-darwin-arm64.tar.gz\nrook-<version>-darwin-x64.tar.gz\nrook-<version>-linux-arm64.tar.gz\nrook-<version>-linux-x64.tar.gz"
+      }
+    ],
+    "dateModified": "2026-09-07T12:29:55+05:30"
+  }) }}
+/>
 
 # Install Rook
 

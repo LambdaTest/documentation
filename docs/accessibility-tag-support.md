@@ -44,6 +44,94 @@ import VerifiedTag from '@site/src/component/verifiedTag';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-tag-support/"
+    },
+    "headline": "Tag Support for Accessibility Scans",
+    "description": "Use tags to organize accessibility scans on mobile devices by screen, flow, or activity from the dashboard or during automation.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-tag-support/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "accessibility tags",
+      "mobile accessibility",
+      "lambda-accessibility-scan"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\n    \"lambda-accessibility-scan\",\n    new HashMap<String, Object>() {{\n        put(\"tags\", Arrays.asList(\"Login Screen\", \"Smoke\"));\n    }}\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\n    \"lambda-accessibility-scan\",\n    {\n        \"tags\": [\"Login Screen\", \"Smoke\"]\n    }\n)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Basic Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await driver.execute(\"lambda-accessibility-scan\", [{\n  tags: [\"Login Screen\", \"Smoke\"]\n}]);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: Tag scans for multiple screens",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\n    \"lambda-accessibility-scan\",\n    new HashMap<String, Object>() {{\n        put(\"tags\", Arrays.asList(\"Login Screen\", \"Smoke\"));\n    }}\n);\n\n((JavascriptExecutor) driver).executeScript(\n    \"lambda-accessibility-scan\",\n    new HashMap<String, Object>() {{\n        put(\"tags\", Arrays.asList(\"Cart Screen\", \"Checkout Flow\"));\n    }}\n);\n\n((JavascriptExecutor) driver).executeScript(\n    \"lambda-accessibility-scan\",\n    new HashMap<String, Object>() {{\n        put(\"tags\", Arrays.asList(\"Profile Screen\"));\n    }}\n);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Tag Support for Accessibility Scans
 
 Use tags to organize accessibility scans on mobile devices by screen, flow, or activity. This helps you label scans with names like `Login Screen`, `Cart Screen`, or `Profile Screen` so your team can quickly understand what each scan represents.
