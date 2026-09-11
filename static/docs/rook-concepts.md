@@ -2,6 +2,15 @@
 
 > For the full site index for AI agents, see [llms.txt](https://www.testmuai.com/support/docs/llms.txt).
 
+-\n  I bought a jacket 10 days ago (Order #ORD-50122) for $250, but it does not\n  fit. I would like to return it and get a full refund.\nacceptance_criteria:\n  - statement: >-\n      The agent confirms the refund for Order #ORD-50122 is approved or issued\n      for $250.\n    check: llm_judge\n  - statement: >-\n      The agent acknowledges that the order is within the 30-day return window\n      and is an eligible physical product.\n    check: llm_judge\n  - statement: >-\n      The agent does not say that manager approval is required.\n    check: llm_judge\ncategory: happy_path\nclass: functional\nconfidence: low\ninput_kind: text\noutput_kind: text\nwhy: >-\n  Catches incorrect denial or manager escalation for a standard refund at or\n  below the documented threshold.\nlocal_id: SC-001\norigin: generated\nexecutable: true\nsources:\n  - .claude/agents/refund-desk.md\nfeature_revision_id: sha256:6b7e9f5a913d886e0e30dd871614fff85f151..."
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
+
+# Rook Concepts and Data Model
+
 Rook represents autonomous agent testing with seven visible, file-backed concepts. Each concept is stored in the workspace rather than hidden in an opaque local database.
 
 ## Core Concepts
@@ -17,6 +26,8 @@ Rook represents autonomous agent testing with seven visible, file-backed concept
 | **Verdict** | The judge's conclusion for one scenario, including per-criterion status, quoted evidence, confidence, and explicit verification gaps. |
 
 ## Relationships
+
+The same concepts appear in two review surfaces. **`rook ui --local`** shows files in the current workspace and selected project, with features, scenarios, profiles, and runs grouped on the agent page. **`rook ui`** opens the hosted Web UI's synchronized projects, versions, and shared results. A local record need not exist upstream, and a hosted record need not be present on this machine. See [the UI comparison](/support/docs/rook-web-ui/#choose-your-ui).
 
 ```text
 Project
@@ -92,6 +103,16 @@ Every field is reviewable and editable. Regeneration can retain current scenario
 ## Local State Is the Record
 
 The `.testmuai/rook/` directory is the authoritative workspace record. Synchronization copies reviewed state upstream; it does not replace the local model with hidden cloud state.
+
+### Local UI: See the Scenario Model {#local-ui-example}
+
+Run rook ui --local, open the agent, and choose a scenario. In this triage example, SC-002 belongs to feature F-002, has a goal and four criteria, and links to execution history. The definition and the result remain different records.
+
+### Hosted Web UI: The Synchronized Definition {#hosted-ui-example}
+
+Run rook ui and open **project → agent → Scenarios → SC-002**. The hosted page presents the synchronized definition. Follow a history entry to see what happened in a particular run; editing the current definition does not rewrite that run's snapshots.
+
+In this capture, History shows **0 pass** despite the corresponding result recording four passing criteria. See the [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes) before interpreting that count.
 
 ## Related Documentation
 

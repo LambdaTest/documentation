@@ -63,7 +63,7 @@ rook login
 rook auth status
 ```
 
-If the token was revoked, log in again. Nothing signs in automatically.
+First check ROOK_ENV and exported LT_USERNAME/LT_ACCESS_KEY. The pair takes precedence over stored browser login. If those variables are unintended, unset both in this terminal before signing in again.
 
 ### Controller is unreachable
 
@@ -80,16 +80,9 @@ If the controller remains unreachable, confirm the network, VPN, or proxy requir
 
 ```text
 /plan
-/budget
 ```
 
-Rook enforces these budget thresholds:
-
-- **70%:** Rook warns you.
-- **90%:** Rook stops starting new work.
-- **100%:** Rook halts.
-
-In-flight work finishes, and completed scenarios remain on disk. Narrow the suite before increasing the budget.
+The current CLI has no /budget command. Read the account balance and operation cost output. Completed evidence remains on disk when work stops; narrow the suite before retrying.
 
 ## Discovery Problems
 
@@ -131,44 +124,44 @@ Create and verify a profile:
 
 ### The profile invokes successfully but extracts the wrong value
 
-Run `/profile show ` and `/profile test `. Paste a representative response, then set `result.path` to the actual answer, not a status, ID, or metadata field.
+Run /profile show &lt;name&gt; and inspect its script. The execute hook must return the answer as agent_reply. Use /profile fix &lt;name&gt; --what the answer field is wrong with representative response material, then test again. Do not return a status or request ID as the answer.
 
 ### A required environment variable is missing
 
 ```text
 /env list
-/env set <VARIABLE_NAME>
+/env set {"VARIABLE_NAME":"value"}
 ```
 
-The profile should keep `${VARIABLE_NAME}`, not the literal secret.
+The profile should record the variable name; its script reads process.env.VARIABLE_NAME. Prefer your shell or secret manager for sensitive values because command arguments can remain in history.
 
 ### HTTP agent returns 401 or 403
 
 - Confirm the profile header scheme and variable name.
 - Confirm the stored value is for the target agent, not the Rook controller.
 - Check whether the endpoint expects a different tenant, scope, audience, or environment.
-- Reproduce the request with `/profile curl ` after safely adding the secret outside shared logs.
+- Inspect the generated script and reproduce the request outside Rook without printing credentials. Use /profile fix to repair it; /profile curl is not a current command.
 
 ### TLS works in cURL but not Rook
 
-The machine may trust a private certificate that Node.js does not. Configure `tls.trust: system` or an explicit `ca_file`. Keep `-k` only when disabling verification is an intentional test-environment decision.
+The machine may trust a private certificate that Node.js does not. Configure the hook’s HTTP client or Node.js trust with your approved CA, then test the profile again. Prefer trusted certificates over disabling verification. The old invoke.tls profile recipe does not configure a script-based hook.
 
 ### Async agent never completes
 
 Check:
 
-- `poll.handle_path` points into the initial response.
-- The poll request includes required headers.
-- `ready_when.json_path` and terminal values match the actual response.
-- `max_attempts`, interval, and timeout allow the expected duration.
+- The hook extracts the correct job handle.
+- Polling includes required authentication.
+- Terminal success and failure states match the actual API.
+- Poll intervals and hook timeout allow the expected duration.
 
 ### Multi-turn scenarios are skipped
 
-Configure `conversation.kind`, the response ID path, and how the next request sends or resumes the session. Rook intentionally refuses to simulate multi-turn behavior as independent calls.
+Have the hook return the real conversation handle and use ROOK_CONVERSATION for subsequent turns. Rook intentionally refuses to simulate multi-turn behavior as independent calls.
 
 ### Streaming response is skipped
 
-SSE, NDJSON, and WebSocket response kinds are recorded but not executed in the current release. Use a non-streaming JSON or text endpoint when available.
+The hook must implement the stream or socket client, assemble a usable answer, and emit one JSON object on stdout. Do not forward raw streaming events as hook output. Use a non-streaming endpoint if it is easier to verify.
 
 ## Scenario and Run Problems
 
@@ -206,7 +199,7 @@ Concurrent scenarios can write the same observed path, so attribution would othe
 
 ### Run stopped midway
 
-Check `run.yaml` for the status and stop reason. Budget, authentication, interrupt, and controller failures halt at scenario boundaries. Completed evidence is preserved. Rook does not invent verdicts for scenarios that never ran.
+Inspect the CLI outcome, run.yaml plan and phases, report.yaml totals, and each scenario’s saved records. Do not assume a status field exists in the 0.1.3 plan file. An interrupt can cancel an in-flight call after the target already changed state. Check target state before retrying.
 
 ## Result and Evidence Problems
 
@@ -228,15 +221,36 @@ Current runs snapshot scenario definitions. If an older pre-alpha run lacks a sn
 
 ### Browser viewer does not open
 
-Use:
+First identify which UI you meant to open:
+
+- **Local UI:** `rook ui --local` starts a loopback viewer over workspace files. No hosted sign-in is needed, but the server must still be running.
+- **Hosted Web UI:** `rook ui` opens the selected environment's website. Browser sign-in, project access, and uploaded records are required. It does not start a local server.
+
+If the local browser launch failed, use:
 
 ```text
-/ui --no-open
+/ui --local --no-open
 ```
 
 Open the printed `http://127.0.0.1:` URL manually. Rook tries a range of loopback ports beginning at 7757. Check whether local security software blocks the process.
 
-The viewer runs only while the Rook TUI process is running.
+The local viewer runs only while its serving command or TUI remains running. Bare /ui opens the hosted app instead.
+
+For missing hosted projects, runs, or inconsistent summary percentages, use the [Web UI troubleshooting table](/support/docs/rook-web-ui/#troubleshooting). Confirm account/environment alignment, project sync, and outstanding run uploads before rerunning the target.
+
+### A run appears in one UI but not the other
+
+The local UI reads the workspace and selected project on this machine; the hosted UI reads uploaded records. For a missing local run, confirm the original workspace and that its run directory is present. Opening a hosted record does not download it locally.
+
+For a missing hosted run, check `ROOK_ENV`, browser identity, and outstanding normal-run uploads with `rook runs sync`. A `--test` run deliberately stays local. Neither UI can recover evidence that was never written. See [how to navigate each UI](/support/docs/rook-web-ui/#choose-your-ui) before rerunning a target that may already have changed state.
+
+#### Local UI: Check What Was Written {#local-ui-example}
+
+On a run's scenario result, scroll to **files**. The sample lists the request, response, hooks, snapshot, verdict, and judge artifact. Inspect these records before retrying; a missing upload does not mean the target was never invoked.
+
+#### Hosted Web UI: Check What Was Uploaded {#hosted-ui-example}
+
+Open **run → scenario → Artefacts** for additional uploaded files; use the other tabs for request, response, and verdict. This sample has judge-working.json. Local files and this tab are not one-to-one lists: the main records have their own hosted tabs.
 
 ## MCP Problems
 

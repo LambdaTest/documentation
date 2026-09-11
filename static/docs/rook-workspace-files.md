@@ -87,6 +87,20 @@ Credentials, actual environment values, history, logs, and installed versions ar
 
 `rook sync` copies a reviewed project tree upstream as one write. Run results are stored locally first; `rook runs sync` reconciles finished runs that still owe remote records. Neither operation changes the historical input snapshots inside an existing run.
 
+## Review Files in Either UI
+
+Use `rook ui --local` from this workspace to browse its agents and runs, then open a run's scenario and scroll to **files**. The local UI reads the directory tree above, including unsynchronized and test-mode evidence. Keep that tree intact when moving an approved evidence bundle.
+
+Use `rook ui` for the hosted Web UI's uploaded versions and run artifacts. Local edits are not visible there until synchronized, and `--test` runs stay local. Hosted IDs may differ from run-directory IDs; use the UI's links instead of constructing URLs. See the [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
+
+### Local UI: Browse the Scenario's Files {#local-ui-example}
+
+On a run's scenario result, scroll to **files**. The sample lists the request, response, hooks, snapshot, verdict, and additional judge evidence. Click a filename to inspect the corresponding on-disk record and use Back to return.
+
+### Hosted Web UI: Browse Uploaded Artifacts {#hosted-ui-example}
+
+Open **run → scenario → Artefacts** for additional uploaded files. Main records have separate **Request**, **Response**, and **Verdict** tabs, so this tab is not a mirror of the local file list. The sample lists judge-working.json here.
+
 ## Related Documentation
 
 - [Concepts and data model](/support/docs/rook-concepts/)

@@ -4,7 +4,7 @@ toc_max_heading_level: 2
 title: Rook Architecture and Data Flow
 hide_title: false
 sidebar_label: Architecture
-description: Understand the boundary between the local Rook CLI, the stateless controller, the stateful Rook API, and the cloud results UI.
+description: Understand local execution and evidence review, controller model work, API synchronization, and the hosted Rook Web UI.
 keywords:
   - rook architecture
   - rook controller
@@ -55,7 +55,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "@id": "https://www.testmuai.com/support/docs/rook-architecture/"
     },
     "headline": "Rook Architecture and Data Flow",
-    "description": "Understand the boundary between the local Rook CLI, the stateless controller, the stateful Rook API, and the cloud results UI.",
+    "description": "Understand local execution and evidence review, controller model work, API synchronization, and the hosted Rook Web UI.",
     "url": "https://www.testmuai.com/support/docs/rook-architecture/",
     "image": {
       "@type": "ImageObject",
@@ -64,7 +64,7 @@ import { BRAND_URL } from '@site/src/component/BrandName';
       "height": 630
     },
     "inLanguage": "en",
-    "articleSection": "Agent Testing",
+    "articleSection": "Agent Assurance Platform",
     "keywords": [
       "rook architecture",
       "rook controller",
@@ -97,33 +97,17 @@ import { BRAND_URL } from '@site/src/component/BrandName';
         "https://www.youtube.com/@TestMuAI"
       ]
     },
-    "hasPart": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Local Invocation Path",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "scenario goal\n    \u2193 standard input\nprofile execute hook\n    \u2193 real invocation\nagent under test\n    \u2193 JSON on standard output\nreply \u00b7 conversation \u00b7 usage \u00b7 calls \u00b7 custom evidence\n    \u2193\nlocal run directory"
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Local State Is the Record",
-        "codeSampleType": "code snippet",
-        "programmingLanguage": "text",
-        "text": "local project tree \u2500\u2500 rook sync \u2500\u2500\u25b6 Rook API \u2500\u2500\u25b6 cloud UI\nlocal run evidence \u2500\u2500 run sync \u2500\u2500\u2500\u25b6 Rook API \u2500\u2500\u25b6 reports and comparison"
-      }
-    ],
-    "dateModified": "2026-09-04T12:50:18+05:30"
+    "dateModified": "2026-09-11"
   }) }}
 />
 
 # Rook Architecture and Data Flow
 
-Rook has 3 deployables: the CLI, the controller, and the API. The agent under test and cloud results UI are connected systems shown for context. The most important architectural fact is the boundary between code and evidence on your machine, model orchestration in the controller, and synchronized records in the API.
+Rook has four application components: the CLI (including its local UI), controller, API, and hosted Web UI. The agent under test is your connected target. The local UI reads workspace files; the hosted Web UI reads synchronized API records. Neither review interface executes tests. Model orchestration happens through the controller.
 
 <figure className="rookArchitecture" aria-labelledby="rook-architecture-caption">
   <figcaption id="rook-architecture-caption" className="rookArchitecture__caption">
-    Execution and evidence stay local. Model orchestration and synchronization cross separate, explicit boundaries.
+    Execution happens from your machine; evidence is recorded locally first. Model context and synchronized evidence cross separate cloud boundaries.
   </figcaption>
 
   <section className="rookArchitecture__zone rookArchitecture__zone--local" aria-labelledby="rook-local-zone">
@@ -154,7 +138,7 @@ Rook has 3 deployables: the CLI, the controller, and the API. The agent under te
     <div className="rookArchitecture__connector">
       <span aria-hidden="true">↓</span>
       <strong>Hook result</strong>
-      <small>Output, conversation, usage, calls, and evidence</small>
+      <small>agent_reply, conversation, usage, calls, and evidence</small>
     </div>
 
     <div className="rookArchitecture__node">
@@ -162,6 +146,19 @@ Rook has 3 deployables: the CLI, the controller, and the API. The agent under te
         <strong>Authoritative Local Record</strong>
       </div>
       <p>Agents, features, scenarios, profiles, hooks, runs, and verdict evidence under <code>.testmuai/rook/</code>.</p>
+    </div>
+
+    <div className="rookArchitecture__connector">
+      <span aria-hidden="true">↓</span>
+      <strong>Read from disk; no upload</strong>
+    </div>
+
+    <div className="rookArchitecture__node">
+      <div className="rookArchitecture__nodeHeader">
+        <strong>Local UI</strong>
+        <span className="rookArchitecture__badge">Read-only</span>
+      </div>
+      <p><code>rook ui --local</code> serves workspace evidence on loopback, including unsynchronized and test-mode runs. Built into the CLI; no hosted login.</p>
     </div>
   </section>
 
@@ -207,9 +204,9 @@ Rook has 3 deployables: the CLI, the controller, and the API. The agent under te
 
     <div className="rookArchitecture__node">
       <div className="rookArchitecture__nodeHeader">
-        <strong>Cloud Results UI</strong>
+        <strong>Hosted Web UI</strong>
       </div>
-      <p>Presents synchronized evidence and comparisons. It is not authoritative over the local workspace.</p>
+      <p><code>rook ui</code> opens shared, synchronized evidence and comparisons. Browser sign-in and project access are required. It does not read your current local files.</p>
     </div>
   </section>
 </figure>
@@ -222,6 +219,7 @@ Rook has 3 deployables: the CLI, the controller, and the API. The agent under te
     <p><strong>Location:</strong> Your machine</p>
     <p>Reads the workspace, writes scenarios and profiles, runs hooks, records evidence, and coordinates synchronization.</p>
     <p><strong>State:</strong> Local files under <code>.testmuai/rook/</code></p>
+    <p><strong>Local UI:</strong> Built-in loopback viewer over these files, opened with <code>rook ui --local</code>.</p>
   </article>
   <article>
     <h3>Agent Under Test</h3>
@@ -242,7 +240,7 @@ Rook has 3 deployables: the CLI, the controller, and the API. The agent under te
     <p><strong>State:</strong> PostgreSQL and object storage</p>
   </article>
   <article>
-    <h3>Cloud Results UI</h3>
+    <h3>Hosted Web UI</h3>
     <p><strong>Location:</strong> TestMu AI</p>
     <p>Presents synchronized projects and run evidence through records supplied by the Rook API.</p>
   </article>
@@ -295,7 +293,8 @@ Commands that only inspect existing state—such as `status`, `scenarios`, `env`
 
 ```text
 local project tree ── rook sync ──▶ Rook API ──▶ cloud UI
-local run evidence ── run sync ───▶ Rook API ──▶ reports and comparison
+local run evidence ── runs sync ───▶ Rook API ──▶ reports and comparison
+local workspace ── rook ui --local ──▶ loopback viewer (no upload)
 ```
 
 Cloud state does not silently overwrite the local workspace. Ahead, behind, and diverged states are reported for deliberate reconciliation.
@@ -332,3 +331,24 @@ If the required observation is unavailable, the result is **Unable to Verify**. 
 - [Permissions and safety](/support/docs/rook-permissions-and-safety/)
 - [Environment and secrets](/support/docs/rook-environment-and-secrets/)
 - [What lands on disk](/support/docs/rook-workspace-files/)
+
+
+## Open the Local or Hosted UI {#open-the-hosted-web-ui}
+
+For local evidence, run `rook ui --local` from the intended workspace and project. Open agent → runs → run → scenario. Keep the process running; its loopback URL is not a team-sharing link. It can display local `--test` runs that never appear in the hosted timeline.
+
+For shared review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects). Public packages default to <code>ROOK_ENV=prod</code>; use the same service, account, and project when authenticating and synchronizing.
+
+The hosted browser app reads records and artifacts through the API. Neither UI executes your hook scripts or starts the target agent. See the [combined UI guide](/support/docs/rook-web-ui/#choose-your-ui) for both review paths and screenshots.
+
+### Local UI: The Workspace Read Path {#local-ui-example}
+
+The local agent page reads the description, profile, findings, and feature list from the selected workspace. Its **upstream** panel reports recorded synchronization context; displaying a local file does not publish it or prove today's files match the hosted version.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local agent page showing workspace records and its upstream synchronization context" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: The API Read Path {#hosted-ui-example}
+
+Open **project → agent → Versions** to inspect definitions already recorded upstream. The version row offers its specification and call graph. The local UI has no separate Versions tab; current local files and a pinned hosted version can legitimately differ.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-versions.png').default} alt="Hosted Versions page showing the recorded agent version, feature and scenario counts, and specification links" width="1440" height="900" className="doc_img"/>
