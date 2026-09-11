@@ -159,7 +159,7 @@ Stored OAuth authentication is shared by processes using the same Rook home, pro
 
 For unattended use, inject <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> through your secret manager. Rook uses this pair ahead of stored OAuth credentials. A different <code>ROOK_HOME</code> does not isolate credentials already exported in the shell.
 
-Set <code>ROOK_ENV=stage</code> before authentication and project operations for the [stage Web UI](/support/docs/rook-web-ui/). This does not change the endpoint your target-agent hook calls.
+Public packages use <code>ROOK_ENV=prod</code> for the service behind the [hosted Web UI](https://rook.lambdatest.com/projects). Set the service environment before authentication and project operations. This does not change the endpoint your target-agent hook calls.
 
 ## Isolate Rook State
 
@@ -197,6 +197,18 @@ Variables such as `ROOK_HOOK`, `ROOK_RUN_ID`, `ROOK_SCENARIO_ID`, `ROOK_SESSION`
 The **local UI** (`rook ui --local`) reads workspace evidence on loopback without a hosted browser login. The **hosted Web UI** (`rook ui`) requires browser access to the chosen environment and project; its sign-in is separate from CLI credentials. `ROOK_ENV` selects the hosted environment, not a different target-agent endpoint or a remote data source for the local viewer.
 
 Requests, responses, and artifacts in either UI can contain sensitive target data even when profile YAML contains only variable references. Review evidence before upload or sharing; never expose the local server as a public report. See [both UI access paths](/support/docs/rook-web-ui/#choose-your-ui).
+
+### Local UI: Identify the Hook to Inspect {#local-ui-example}
+
+Open the agent's **profiles** panel to identify its invocation script. Use the CLI to inspect the profile's required variable names and manage their values. There is no local UI secret editor; this screenshot identifies the profile, not its stored credentials.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local profile panel identifying the local-triage execute script without displaying credential values" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Review Environment Requirements {#hosted-ui-example}
+
+Open **Summary → Profiles → View Full Spec**. Profile YAML records environment requirements, not the secret store. This sample has <code>env: []</code> because its local test endpoint needs no token; it is not an example of configuring authenticated access.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-profile-spec.png').default} alt="Hosted profile YAML with an empty environment requirement list for the unauthenticated triage sample" width="1440" height="900" className="doc_img"/>
 
 ## Related Documentation
 

@@ -418,6 +418,18 @@ Use either interface to check the profile context without invoking it:
 
 Neither UI creates, repairs, or tests hooks. Continue authoring and phase execution in the CLI. The [combined walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both layouts.
 
+### Local UI: Check the Profile and Script {#local-ui-example}
+
+Open the agent and read **profiles**. The sample maps the local-triage profile's execute phase to scripts/local-triage.mjs. This panel is a summary; inspect the complete file with the CLI before changing phases or credentials.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local agent page showing local-triage with its execute phase and scripts/local-triage.mjs hook" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Inspect the Recorded Profile {#hosted-ui-example}
+
+On **Summary → Profiles**, choose **View Full Spec**. The dialog shows the synchronized YAML, including the execute mapping and observed calls capability. The example needs only execute; other hooks are optional, not missing setup.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-profile-spec.png').default} alt="Hosted profile specification dialog showing the execute hook, empty environment requirements, and calls capability" width="1440" height="900" className="doc_img"/>
+
 
 <span id="related-documentation" />
 

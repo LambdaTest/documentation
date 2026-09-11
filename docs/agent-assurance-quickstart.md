@@ -139,18 +139,20 @@ rook doctor
 
 See [Install Rook](/support/docs/rook-installation/) for PATH, upgrade, and checksum help. The packaged CLI includes its runtime. The sample below also needs a separate Node.js installation and Git.
 
-### Choose production or stage before signing in
+<span id="choose-production-or-stage-before-signing-in" />
 
-Public packages default to production. For the [stage Web UI](https://stage-rook.lambdatestinternal.com/), set this in every terminal where you run Rook:
+### Sign In to the Public Service
+
+Use the public Rook service and [hosted Web UI](https://rook.lambdatest.com/projects). Set the service environment before authentication in each terminal where you run Rook:
 
 ```bash
-export ROOK_ENV=stage
+export ROOK_ENV=prod
 rook login
 rook whoami
 rook plan
 ```
 
-For production, use <code>ROOK_ENV=prod</code>; <code>rook ui</code> opens [rook.testmuai.com](https://rook.testmuai.com). Stage and production are separate environments. Selecting stage for Rook does **not** change your target agent's endpoint.
+Public packages default to <code>ROOK_ENV=prod</code>. This setting selects Rook's service; it does **not** change your target agent's endpoint. Keep the target on a disposable or non-production environment while testing.
 
 :::note Existing credentials
 If <code>LT_USERNAME</code> and <code>LT_ACCESS_KEY</code> are exported, they take precedence over stored browser login. Use credentials for the selected environment, or unset both in this terminal before using browser login. Never paste credentials into documentation, prompts, or screenshots.
@@ -189,7 +191,7 @@ Open the sample folder in your Rook terminal:
 
 ```bash
 cd rook-samples/samples/triage-service
-export ROOK_ENV=stage
+export ROOK_ENV=prod
 rook
 ```
 
@@ -270,13 +272,25 @@ First read the report, then choose either UI:
 | Review on this machine | Review with your team |
 |---|---|
 | Run `/ui --local`. | Run `/ui`. |
-| Open **triage-service → runs → your run → scenario**. | Open **project → triage agent → Runs → first-triage-run → scenario** in the stage Web UI. |
+| Open **triage-service → runs → your run → scenario**. | Open **project → triage agent → Runs → first-triage-run → scenario** in the Web UI. |
 | Read **criteria**, then scroll to **sent to the agent**, **what came back**, and **files**. | Read **Request**, **Response**, **Verdict**, and **Artefacts**. |
 | Works with on-disk evidence, including `--test` runs; keep the TUI open while reviewing. | Requires browser sign-in and uploaded results; teammates need project access. |
 
 Both routes inspect the recorded evidence without running the agent again. The [local and hosted UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows the different screens and explains missing results.
 
 In the verified smoke test, the selected scenario passed with four observed tool calls and no unverifiable criteria. That proves this one fixture path worked—not that the whole agent is reliable. Review the four other discovered features before expanding the suite.
+
+#### Local UI: Your First Result {#local-ui-example}
+
+The local result shows **criteria** with expected outcomes, achieved results, and supporting evidence. Scroll down for the request, response, and files. This is SC-002 from the verified sample; your generated scenario ID can differ.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-result.png').default} alt="Local quickstart result showing SC-002 passing and the evidence supporting its acceptance criteria" width="1440" height="900" className="doc_img"/>
+
+#### Hosted Web UI: The Uploaded Result {#hosted-ui-example}
+
+The same sample result appears in the hosted UI after upload. Open **Verdict** to read the saved evaluation beside the criterion cards. These are two presentations of the recorded test, not two additional agent executions.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-verdict.png').default} alt="Hosted quickstart result with verdict.yaml and the four passing criterion cards" width="1440" height="900" className="doc_img"/>
 
 ### 7. Stop the sample when finished
 

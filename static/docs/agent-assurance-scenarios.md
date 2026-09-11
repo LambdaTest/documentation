@@ -243,3 +243,11 @@ You can review definitions in either UI:
 - **Hosted:** after `rook sync`, run `rook ui`, open the agent's **Scenarios** tab, and filter by feature, class, result, or category. This shows uploaded definitions, not unsaved local changes.
 
 In either interface, open a scenario from the specific **run** for historical evidence; the current catalog definition may have changed since that run. Follow the [local definitions](/support/docs/rook-web-ui/#local-definitions) or [hosted scenarios](/support/docs/rook-web-ui/#scenarios) section of the same UI guide.
+
+### Local UI: Review the Test Definition {#local-ui-example}
+
+From the agent's **scenarios** list, open a scenario ID. This local SC-002 definition shows the goal, class, category, four acceptance criteria, and execution history. Review the criteria themselves, not just the scenario title.
+
+### Hosted Web UI: Find the Scenario to Review {#hosted-ui-example}
+
+Open **project → agent → Scenarios**. Filter by feature, class, result, or category, then click the scenario ID for its definition. The sample has one passing scenario and one that never ran; generating a scenario does not establish a result.

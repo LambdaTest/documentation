@@ -215,6 +215,20 @@ Every field is reviewable and editable. Regeneration can retain current scenario
 
 The `.testmuai/rook/` directory is the authoritative workspace record. Synchronization copies reviewed state upstream; it does not replace the local model with hidden cloud state.
 
+### Local UI: See the Scenario Model {#local-ui-example}
+
+Run <code>rook ui --local</code>, open the agent, and choose a scenario. In this triage example, SC-002 belongs to feature F-002, has a goal and four criteria, and links to execution history. The definition and the result remain different records.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-scenario.png').default} alt="Local scenario page illustrating the relationship between scenario ID, feature ID, goal, criteria, and history" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: The Synchronized Definition {#hosted-ui-example}
+
+Run <code>rook ui</code> and open **project → agent → Scenarios → SC-002**. The hosted page presents the synchronized definition. Follow a history entry to see what happened in a particular run; editing the current definition does not rewrite that run's snapshots.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-scenario-details.png').default} alt="Hosted SC-002 definition showing its goal, acceptance criteria, metadata, and execution history" width="1440" height="900" className="doc_img"/>
+
+In this capture, History shows **0 pass** despite the corresponding result recording four passing criteria. See the [screenshot display notes](/support/docs/rook-web-ui/#screenshot-display-notes) before interpreting that count.
+
 ## Related Documentation
 
 - [Architecture](/support/docs/rook-architecture/)

@@ -352,13 +352,25 @@ Open the printed `http://127.0.0.1:<port>` URL manually. Rook tries a range of l
 
 The local viewer runs only while its serving command or TUI remains running. Bare <code>/ui</code> opens the hosted app instead.
 
-For missing hosted projects, runs, or inconsistent stage percentages, use the [Web UI troubleshooting table](/support/docs/rook-web-ui/#troubleshooting). Confirm account/environment alignment, project sync, and outstanding run uploads before rerunning the target.
+For missing hosted projects, runs, or inconsistent summary percentages, use the [Web UI troubleshooting table](/support/docs/rook-web-ui/#troubleshooting). Confirm account/environment alignment, project sync, and outstanding run uploads before rerunning the target.
 
 ### A run appears in one UI but not the other
 
 The local UI reads the workspace and selected project on this machine; the hosted UI reads uploaded records. For a missing local run, confirm the original workspace and that its run directory is present. Opening a hosted record does not download it locally.
 
 For a missing hosted run, check `ROOK_ENV`, browser identity, and outstanding normal-run uploads with `rook runs sync`. A `--test` run deliberately stays local. Neither UI can recover evidence that was never written. See [how to navigate each UI](/support/docs/rook-web-ui/#choose-your-ui) before rerunning a target that may already have changed state.
+
+#### Local UI: Check What Was Written {#local-ui-example}
+
+On a run's scenario result, scroll to **files**. The sample lists the request, response, hooks, snapshot, verdict, and judge artifact. Inspect these records before retrying; a missing upload does not mean the target was never invoked.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local evidence file list used to investigate what a run saved before retrying or uploading" width="1440" height="900" className="doc_img"/>
+
+#### Hosted Web UI: Check What Was Uploaded {#hosted-ui-example}
+
+Open **run → scenario → Artefacts** for additional uploaded files; use the other tabs for request, response, and verdict. This sample has judge-working.json. Local files and this tab are not one-to-one lists: the main records have their own hosted tabs.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-artefacts.png').default} alt="Hosted Artefacts tab listing judge-working.json beside the result's acceptance criteria" width="1440" height="900" className="doc_img"/>
 
 ## MCP Problems
 

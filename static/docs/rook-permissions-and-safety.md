@@ -100,6 +100,14 @@ Both the **local UI** (`rook ui --local`) and **hosted Web UI** (`rook ui`) are 
 
 Read-only viewing does not make captured data safe to share. Inspect requests, responses, and artifacts for secrets and customer data, and treat agent-produced files as untrusted. Use authorized hosted links or approved evidence bundles, never a publicly exposed loopback server. See the [combined UI guide](/support/docs/rook-web-ui/#choose-your-ui).
 
+### Local UI: Review Observed Effects {#local-ui-example}
+
+Open **agent → run → scenario** to inspect what the evidence says happened. The sample criterion quotes an observed set_severity call. This is evidence from a completed test, not a UI for granting permission or undoing the target's write.
+
+### Hosted Web UI: Identify Write-Capable Tools {#hosted-ui-example}
+
+Open **Versions → View call graph**. The graph marks declared read-only and write-capable tools. These relationships describe capability, not actual execution or permission grants. Neither UI edits permission rules; review and approve operations through the CLI.
+
 ## Related Documentation
 
 - [Architecture and trust boundaries](/support/docs/rook-architecture/)

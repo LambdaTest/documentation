@@ -55,7 +55,7 @@ Stored OAuth authentication is shared by processes using the same Rook home, pro
 
 For unattended use, inject LT_USERNAME and LT_ACCESS_KEY through your secret manager. Rook uses this pair ahead of stored OAuth credentials. A different ROOK_HOME does not isolate credentials already exported in the shell.
 
-Set ROOK_ENV=stage before authentication and project operations for the [stage Web UI](/support/docs/rook-web-ui/). This does not change the endpoint your target-agent hook calls.
+Public packages use ROOK_ENV=prod for the service behind the [hosted Web UI](https://rook.lambdatest.com/projects). Set the service environment before authentication and project operations. This does not change the endpoint your target-agent hook calls.
 
 ## Isolate Rook State
 
@@ -91,6 +91,14 @@ Variables such as `ROOK_HOOK`, `ROOK_RUN_ID`, `ROOK_SCENARIO_ID`, `ROOK_SESSION`
 The **local UI** (`rook ui --local`) reads workspace evidence on loopback without a hosted browser login. The **hosted Web UI** (`rook ui`) requires browser access to the chosen environment and project; its sign-in is separate from CLI credentials. `ROOK_ENV` selects the hosted environment, not a different target-agent endpoint or a remote data source for the local viewer.
 
 Requests, responses, and artifacts in either UI can contain sensitive target data even when profile YAML contains only variable references. Review evidence before upload or sharing; never expose the local server as a public report. See [both UI access paths](/support/docs/rook-web-ui/#choose-your-ui).
+
+### Local UI: Identify the Hook to Inspect {#local-ui-example}
+
+Open the agent's **profiles** panel to identify its invocation script. Use the CLI to inspect the profile's required variable names and manage their values. There is no local UI secret editor; this screenshot identifies the profile, not its stored credentials.
+
+### Hosted Web UI: Review Environment Requirements {#hosted-ui-example}
+
+Open **Summary → Profiles → View Full Spec**. Profile YAML records environment requirements, not the secret store. This sample has env: [] because its local test endpoint needs no token; it is not an example of configuring authenticated access.
 
 ## Related Documentation
 

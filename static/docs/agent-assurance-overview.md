@@ -361,11 +361,19 @@ A successful process exit does not establish agent quality. Inspect completion a
 
 Use **`rook ui --local`** to review the current workspace's agents, definitions, runs, and evidence without a hosted login. Open agent → runs → run → scenario. This includes local `--test` results and evidence awaiting upload; keep the serving process running.
 
-The [stage Web UI](https://stage-rook.lambdatestinternal.com/) is live. Set ROOK_ENV=stage before CLI login, project selection, and sync to use that environment. Public packages default to production at [rook.testmuai.com](https://rook.testmuai.com).
+Open the [hosted Web UI](https://rook.lambdatest.com/projects) for shared projects. Public packages default to ROOK_ENV=prod; use the same service, account, and project in the CLI and browser.
 
 Use **`rook ui`** to open the hosted app for uploaded project history, versions, and team review. Open project → agent → Runs → run → scenario. Teammates need access to the same environment and project.
 
 The [combined UI walkthrough](/support/docs/rook-web-ui/#choose-your-ui) shows both layouts and their evidence views. Neither UI creates or executes tests; those operations stay in the CLI.
+
+### Local UI: Start With Your Workspace {#local-ui-example}
+
+The local landing page lists agents from the selected project on this machine. Click an agent to review its definitions and results. This populated triage workspace has five features, two scenarios, and one run; a new workspace starts without these records.
+
+### Hosted Web UI: Start With Your Team's Project {#hosted-ui-example}
+
+The hosted landing page starts with shared **Projects**. Open a project, then an agent, to reach Summary, Versions, Features, Scenarios, Runs, and Insights. The screenshot shows the documentation test project, not a project created automatically at installation.
 
 ## Next Steps
 

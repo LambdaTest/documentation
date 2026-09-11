@@ -213,6 +213,18 @@ Use `rook ui --local` from this workspace to browse its agents and runs, then op
 
 Use `rook ui` for the hosted Web UI's uploaded versions and run artifacts. Local edits are not visible there until synchronized, and `--test` runs stay local. Hosted IDs may differ from run-directory IDs; use the UI's links instead of constructing URLs. See the [local and hosted walkthrough](/support/docs/rook-web-ui/#choose-your-ui).
 
+### Local UI: Browse the Scenario's Files {#local-ui-example}
+
+On a run's scenario result, scroll to **files**. The sample lists the request, response, hooks, snapshot, verdict, and additional judge evidence. Click a filename to inspect the corresponding on-disk record and use Back to return.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-evidence.png').default} alt="Local scenario evidence file list matching the run directory's request, response, hooks, snapshot, verdict, and judge artifact" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: Browse Uploaded Artifacts {#hosted-ui-example}
+
+Open **run → scenario → Artefacts** for additional uploaded files. Main records have separate **Request**, **Response**, and **Verdict** tabs, so this tab is not a mirror of the local file list. The sample lists judge-working.json here.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-result-artefacts.png').default} alt="Hosted Artefacts tab listing the uploaded judge-working.json file for the same scenario" width="1440" height="900" className="doc_img"/>
+
 ## Related Documentation
 
 - [Concepts and data model](/support/docs/rook-concepts/)

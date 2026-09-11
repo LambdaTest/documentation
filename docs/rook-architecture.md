@@ -337,6 +337,18 @@ If the required observation is unavailable, the result is **Unable to Verify**. 
 
 For local evidence, run `rook ui --local` from the intended workspace and project. Open agent → runs → run → scenario. Keep the process running; its loopback URL is not a team-sharing link. It can display local `--test` runs that never appear in the hosted timeline.
 
-For stage, use [stage-rook.lambdatestinternal.com](https://stage-rook.lambdatestinternal.com/). Set <code>ROOK_ENV=stage</code> before CLI authentication and synchronization so the records reach the same environment. Public packages default to production at [rook.testmuai.com](https://rook.testmuai.com).
+For shared review, open [rook.lambdatest.com/projects](https://rook.lambdatest.com/projects). Public packages default to <code>ROOK_ENV=prod</code>; use the same service, account, and project when authenticating and synchronizing.
 
 The hosted browser app reads records and artifacts through the API. Neither UI executes your hook scripts or starts the target agent. See the [combined UI guide](/support/docs/rook-web-ui/#choose-your-ui) for both review paths and screenshots.
+
+### Local UI: The Workspace Read Path {#local-ui-example}
+
+The local agent page reads the description, profile, findings, and feature list from the selected workspace. Its **upstream** panel reports recorded synchronization context; displaying a local file does not publish it or prove today's files match the hosted version.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-local-agent.png').default} alt="Local agent page showing workspace records and its upstream synchronization context" width="1440" height="900" className="doc_img"/>
+
+### Hosted Web UI: The API Read Path {#hosted-ui-example}
+
+Open **project → agent → Versions** to inspect definitions already recorded upstream. The version row offers its specification and call graph. The local UI has no separate Versions tab; current local files and a pinned hosted version can legitimately differ.
+
+<img loading="lazy" src={require('../assets/images/rook/rook-web-versions.png').default} alt="Hosted Versions page showing the recorded agent version, feature and scenario counts, and specification links" width="1440" height="900" className="doc_img"/>
