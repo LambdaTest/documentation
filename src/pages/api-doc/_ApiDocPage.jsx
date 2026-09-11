@@ -5,6 +5,7 @@
  */
 import React, { useState, useEffect, useRef } from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import SharedSidebar from '@site/src/component/SharedSidebar/SharedSidebar';
 import ApiSidebar from '@site/src/component/ApiReference/ApiSidebar';
 import EndpointDetail from '@site/src/component/ApiReference/EndpointDetail';
@@ -16,6 +17,48 @@ import styles from './styles.module.css';
 import allApisData from '@site/src/data/api/all-apis.json';
 import { slugify } from '@site/src/component/ApiReference/utils';
 export { slugify } from '@site/src/component/ApiReference/utils';
+
+/**
+ * API endpoint pages are noindex, with an explicit allow-list of exceptions.
+ * Keyed by `${apiSlug}/${groupSlug}/${endpointSlug}` — the three path segments
+ * under /support/api-doc/.
+ *
+ * The /support/api-doc/ index is NOT affected: it is a separate component
+ * (index.jsx) that redirects and never renders ApiDocPage.
+ *
+ * `follow` rather than `nofollow` so crawlers still traverse to the endpoints
+ * left indexable here; the docs' own noindex pages use `noindex, nofollow`.
+ *
+ * Noindexed routes are dropped from sitemap.xml automatically — the sitemap
+ * plugin reads each route's rendered head. See scripts/sitemap-exclusions.js.
+ */
+const INDEXABLE_ENDPOINTS = new Set([
+  'selenium-automation-api/build/fetch-all-builds-of-an-account',
+]);
+
+// Those keys are slugify() applied to each endpoint's `summary:` in
+// api-specs/*.yaml, so rewording a summary upstream would silently noindex the
+// page and drop it from the sitemap. Check them against the endpoints that
+// actually exist and say so during the build. Server-side only — this is a
+// build-time signal, not something to ship to browsers.
+if (typeof window === 'undefined') {
+  const known = new Set();
+  for (const api of allApisData.apis) {
+    const a = slugify(api.name);
+    for (const group of api.groups) {
+      const g = slugify(group.noHeading ? api.name : group.name);
+      for (const ep of group.endpoints || []) known.add(`${a}/${g}/${slugify(ep.name)}`);
+    }
+  }
+  for (const key of INDEXABLE_ENDPOINTS) {
+    if (!known.has(key)) {
+      console.warn(
+        `[api-doc] INDEXABLE_ENDPOINTS entry "${key}" matches no endpoint — that page ` +
+          'stays noindex and out of sitemap.xml. Was it renamed in api-specs/?'
+      );
+    }
+  }
+}
 
 function findEndpointBySlugs(apiSlug, groupSlug, endpointSlug) {
   for (const api of allApisData.apis) {
@@ -43,6 +86,34 @@ function findFirstEndpoint() {
     }
   }
   return null;
+}
+
+/**
+ * One unique meta description per endpoint page.
+ *
+ * The 43 URLs flagged by the SEO crawl all shared a single hardcoded string, so
+ * method + path is used as the lead to guarantee uniqueness, followed by the
+ * endpoint's own prose where the spec provides it.
+ */
+function buildMetaDescription(endpoint) {
+  if (!endpoint) {
+    return 'TestMu AI API reference: endpoints, parameters, responses and code examples.';
+  }
+  const plain = String(endpoint.description || '')
+    .replace(/`([^`]*)`/g, '$1')
+    .replace(/\*\*([^*]*)\*\*/g, '$1')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const name = String(endpoint.name || '').replace(/\s*\.\s*$/, '');
+  const lead = `${endpoint.method} ${endpoint.path} — ${name}.`;
+  const text = plain
+    ? `${lead} ${plain}`
+    : `${lead} TestMu AI ${endpoint.group} API reference: parameters, responses and code examples.`;
+  if (text.length <= 160) return text;
+  const cut = text.slice(0, 159);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trimEnd() + '…';
 }
 
 const API_YAML_FILE_MAP = {
@@ -343,15 +414,24 @@ export default function ApiDocPage({ apiSlug, groupSlug, endpointSlug }) {
     return `${base}${typeof window !== 'undefined' ? window.location.pathname : ''}.md`;
   }
 
+  const metaDescription = buildMetaDescription(endpoint);
   const pageContentValue = { getMarkdown: getEndpointMarkdown, getMdUrl: getEndpointMdUrl };
+  const noIndex = !INDEXABLE_ENDPOINTS.has(`${apiSlug}/${groupSlug}/${endpointSlug}`);
 
   return (
     <PageContentContext.Provider value={pageContentValue}>
       <Layout
         noFooter
         title={endpoint ? `${endpoint.name} — TestMu AI API` : 'TestMu AI API Documentation'}
-        description="Manage and organize your test builds, test sessions, tunnel status and more with TestMu AI APIs."
       >
+        {/* Exactly one description tag. Layout's `description` prop is deliberately
+            unused: it renders <meta name="description"> AND <meta property="og:description">
+            from the same string, which is the pair that shows up in the page head. */}
+        <Head>
+          <meta name="description" content={metaDescription ? metaDescription : "Manage and organize your test builds, test sessions, tunnel status and more with TestMu AI APIs."} />
+          {noIndex ? <meta name="robots" content="noindex, follow" /> : null}
+        </Head>
+
         {/* Mobile breadcrumb row — visible only on mobile */}
         <div className={styles.mobileBreadcrumb}>
           <button
