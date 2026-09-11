@@ -19,7 +19,7 @@ The Rook Web UI is live at [stage-rook.lambdatestinternal.com](https://stage-roo
 
 **Use the CLI to create and run tests; use the Web UI to investigate and share results.** Opening the browser does not run your target or publish local changes.
 
-This guide was checked against the live stage UI with a Rook 0.1.3 run on September 11, 2026. Screenshots use the public triage sample from the [quickstart](/support/docs/agent-assurance-quickstart/).
+These guides were checked against every Rook page in the signed-in stage UI with a Rook 0.1.3 run on September 11, 2026. Screenshots capture only the visible webpage using agent-browser, without browser chrome or the desktop. The walkthrough uses the public triage sample from the [quickstart](/support/docs/agent-assurance-quickstart/).
 
 ## Open the Right Environment
 
@@ -59,56 +59,38 @@ Replace the placeholders with your own IDs and approve only reviewed operations.
 
 Runs created with <code>--test</code> intentionally do not appear on the shared timeline. Review them with <code>rook ui --local</code> instead.
 
-## Find Your Agent
+## Page-by-Page Guide
 
-Open **Projects**, choose the project selected in the CLI, and then open its agent. The agent list shows available features, scenarios, tool counts, and recent-run information.
+The documentation sidebar places all these guides under **Agent Assurance Platform → Autonomous Agent Testing → Web UI**. Each guide explains how to reach the page, its fields and actions, a real example, and what to do when data is missing.
 
-The agent page has six tabs:
-
-| Tab | What to review |
+| Page | What you can do there |
 |---|---|
-| **Summary** | Agent description and source context, findings, profiles and their hook phases, and available tool information. |
-| **Versions** | Synchronized versions, the current version, **View call graph**, and **View Full Spec**. |
-| **Features** | The behaviors Rook discovered and their related scenarios. |
-| **Scenarios** | Scenario definitions and latest-result context; narrow the list by feature, class, result, or category. |
-| **Runs** | Recorded executions. Open a specific run before investigating a result. |
-| **Insights** | Aggregate trends where the server has recorded enough data. Missing data is not a zero measurement. |
+| [Projects and First Sign-In](/support/docs/rook-web-projects/) | Find a synchronized project; understand onboarding, account selection, and an empty project list. |
+| [Agents](/support/docs/rook-web-agents/) | Choose an agent and interpret its version, readiness labels, tools, and recent-run information. |
+| [Agent Summary](/support/docs/rook-web-agent-summary/) | Inspect source context, findings, profiles, hook phases, and recorded scripts. |
+| [Versions and Call Graph](/support/docs/rook-web-versions/) | Read a version's full specification and declared tool, subagent, and MCP relationships. |
+| [Features](/support/docs/rook-web-features/) | Review behavior definitions, validation rules, edge cases, and links to scenarios. |
+| [Scenarios and Filters](/support/docs/rook-web-scenarios/) | Filter the catalog by feature, class, latest result, or category; find tests that have never run. |
+| [Scenario Details](/support/docs/rook-web-scenario-details/) | Read the goal, acceptance criteria, execution settings, and history. |
+| [Runs](/support/docs/rook-web-runs/) | Find a named execution, its recorded agent version, outcome summary, and plan. |
+| [Run Details and Plan](/support/docs/rook-web-run-details/) | Check completion, scenario selection, the pinned profile, results, and skip reasons. |
+| [Results and Artefacts](/support/docs/rook-web-result-details/) | Investigate Request, Response, Verdict, and Artefacts alongside criterion evidence. |
+| [Insights](/support/docs/rook-web-insights/) | Read aggregate trends, tool failures, verification gaps, and adversarial results with their limitations. |
 
-### Review versions, profiles, and phases
+The six agent tabs are **Summary**, **Versions**, **Features**, **Scenarios**, **Runs**, and **Insights**. Scenario definitions, run details, and individual results open as separate pages. Use the breadcrumb to move back to the agent or project.
 
-Use **Versions → View Full Spec** to inspect a recorded agent definition. **View call graph** opens the relationships recorded for that version; it is not a live trace of every target invocation.
+## Review Your First Result
 
-<img loading="lazy" src={require('../assets/images/rook/rook-web-versions.png').default} alt="Rook hosted Versions tab showing version 1, current status, View call graph, and View Full Spec" className="doc_img"/>
+Follow **Projects → project → agent → Runs → run name → scenario ID**. This keeps the evidence tied to the execution you are investigating.
 
-On **Summary**, the **Profiles** section lists each recorded profile, its phases, and script paths. Use **View Full Spec** to inspect the profile declaration. Profiles can map <code>prepare</code>, <code>open</code>, <code>execute</code>, <code>close</code>, and <code>collect</code>; <code>judge</code> belongs to Rook.
+1. On **Run Details**, check the agent version, invocation profile, and **View plan**. Confirm the intended scenarios were included.
+2. On the result's **Request** tab, check the goal and invoked script.
+3. On **Response**, compare the actual answer and recorded observations with the expected behavior.
+4. Read every acceptance criterion's Expected, Achieved, and Evidence fields. Use **Verdict** and **Artefacts** for the supporting records.
 
-Only defined hooks appear. The quickstart's single-turn fixture has just <code>execute</code>, so absent login or collection hooks are expected. To change them, use [prompt-based profile authoring](/support/docs/agent-assurance-profiles/) in the CLI, review the scripts, test them, and sync again.
+The sample has five features, two generated scenarios, and one executed scenario. A passing smoke result does not establish complete feature coverage. Use **Features** for behaviors without scenarios and **Scenarios → Result → never run** for generated tests without results.
 
-## Open a Run
-
-Select **Runs**, then the named execution. Check its completion state, agent version, concurrency, scenario counts, profile, and any missing metrics. **View plan** shows the recorded selection; **Invoke profile → View Full Spec** shows the profile used for this run.
-
-<img loading="lazy" src={require('../assets/images/rook/rook-web-run.png').default} alt="Completed Rook smoke run with one passed scenario, local-triage execute profile, View plan, and the scenario result link" className="doc_img"/>
-
-The screenshot shows one scenario passed and no failures, but coverage is unavailable. It does not establish full feature coverage. A run stopped before <code>judge</code> also does not have a finished assurance verdict; complete its [remaining phases](/support/docs/rook-hooks-and-phases/#run-only-part-of-the-lifecycle) first.
-
-## Inspect a Scenario Result
-
-Open a scenario from the run, not just from the current scenario catalog. That preserves the context of the execution you are investigating.
-
-<img loading="lazy" src={require('../assets/images/rook/rook-web-result.png').default} alt="Rook scenario result with Request, Response, Verdict, and Artefacts tabs beside four passing acceptance criteria and their evidence" className="doc_img"/>
-
-The result page places evidence beside the acceptance criteria:
-
-1. **Request:** check the goal, selected profile, and invocation context.
-2. **Response:** inspect the actual answer, exchange, and recorded observations.
-3. **Verdict:** inspect the stored evaluation record.
-4. **Artefacts:** browse output and supporting evidence files when present.
-5. **Acceptance criteria:** read Expected, Achieved, Evidence, and confidence for each criterion—not just its badge.
-
-Use **Open full run** to return to the run. A scenario's latest catalog result and a result in an older run can differ because the definition, profile, or target changed.
-
-Treat an agent's claim that it changed external state separately from proof of that change. If evidence is unavailable, read the verification gap before deciding whether the problem is the agent, the hook, or an unreachable verifier.
+For profile creation, hook editing, and lifecycle control, use [Prompt-Based Profile Authoring](/support/docs/agent-assurance-profiles/) and [Lifecycle Phases](/support/docs/rook-hooks-and-phases/) in the CLI. The hosted pages review recorded configuration and results; they are not a browser-based profile generator or phase runner.
 
 ## Share a Result
 
@@ -128,7 +110,7 @@ Review artifacts for secrets and customer information before downloading or shar
 | You need offline or exact on-disk evidence | Run <code>rook ui --local</code> from the correct workspace. |
 
 :::caution Stage display discrepancies observed on September 11, 2026
-In the verified smoke test, the agent list and Summary displayed a 1% pass rate for a run that passed 1 of 1 scenarios. Summary also showed an empty tool section despite a five-tool summary count. The run and scenario pages correctly showed the passing result and its criterion evidence.
+In the verified smoke test, Agents, Summary, Runs, and Insights displayed a 1% pass rate for a run that passed 1 of 1 scenarios. Summary showed an empty tool section despite a five-tool count, and scenario History showed 0 pass despite four passing criteria. Insights also presented coverage and version labels that should not be treated as complete coverage or authoritative version mapping. The guides call out these discrepancies beside the relevant screenshots. The run detail counts and result's criterion evidence showed the passing result correctly.
 
 If aggregate values disagree, cross-check the run's counts, recorded specification, and <code>rook report &lt;run-id&gt; --json</code>. Do not use the aggregate percentage alone as a release gate. These are observed stage display discrepancies, not failures of the sample agent.
 :::
