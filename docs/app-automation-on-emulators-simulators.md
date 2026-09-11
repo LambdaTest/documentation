@@ -146,6 +146,47 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Your First Test",
+      "description": "Here are the following steps to run your first app automated test on Emulators and Simulators.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Application",
+          "text": "Upload your iOS application (.app file) or Android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; {`curl -u \":\" \\ --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \\ --form 'name=\"Android_App\"' \\ --form 'appFile=@\"/Users/macuser/Downloads/proverbial_android.apk\"' `} {`curl -u \":\" \\ --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \\ --form 'name=\"Android_App\"' \\ --form 'appFile=@\"/Users/macuser/Downloads/proverbial_android.apk\"' `} {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' \\\\ --form 'name=\"Android_App\"' \\\\ --form 'url=\"https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/upload/virtualDevice\" --header \"Content-Type: application/x-www-form-urlencoded\" --data-urlencode \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\" --data-urlencode...",
+          "url": "https://www.testmuai.com/support/docs/app-automation-on-emulators-simulators/#step-1-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Write Your Automation Script",
+          "text": "Write your automation script in your preferred language that Appium framework supports. In the below test script, ensure to update the app_url, username and accesskey. To run the test on Emulator/Simulator, set the isRealMobile capability to false. Create .XML file in order to run your test and define device capabilities. Please find sample code below for the same.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-on-emulators-simulators/#step-2-write-your-automation-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute Your Test Case",
+          "text": "Debug and run your code. Run iOSApp.java or AndroidApp.java in your editor.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-on-emulators-simulators/#step-3-execute-your-test-case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: View Test Execution",
+          "text": "Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI App Automation Dashboard.",
+          "url": "https://www.testmuai.com/support/docs/app-automation-on-emulators-simulators/#step-4-view-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <BrandName /> enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
 
 <div className="ytframe"> 

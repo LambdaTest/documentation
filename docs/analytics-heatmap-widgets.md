@@ -102,6 +102,54 @@ import NewTag from '../src/component/newTag';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide to Creating a Heatmap Widget",
+      "description": "For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the Common Steps for Creating Custom Widgets section in the main Custom Widgets documentation.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 6: Choose Heatmap Visualization",
+          "text": "In the Choose Visualisation section, select Heatmap from the available options (Line, Bar, Pie, Table, Billboard, Heatmap).",
+          "url": "https://www.testmuai.com/support/docs/analytics-heatmap-widgets/#step-6-choose-heatmap-visualization"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 7: Configure Grouping",
+          "text": "This is the most critical step for creating meaningful heatmaps: Group By (Mandatory): Select the primary dimension for grouping your data. Common options include: browser - Group by browser type (Web Automation, HyperExecute) resolution - Group by screen resolution (Web Automation, HyperExecute) os - Group by operating system (all products) os_version - Group by OS version (all products) device - Group by device type (App Automation, HyperExecute) build_name - Group by build name (all products) project_name - Group by project name (all products) Custom data keys you've defined For a complete list of available keys for each product, see the Available Keys for Custom Widgets section in the main Custom Widgets documentation. Then By (Optional): Select a secondary dimension for nested grouping. This creates a two-dimensional heatmap showing relationships between the two dimensions. Example: Group by browser first, then by resolution to see which browser-resolution combinations have the most test activity. The combination of Group By and Then By creates the axes of your heatmap.",
+          "url": "https://www.testmuai.com/support/docs/analytics-heatmap-widgets/#step-7-configure-grouping"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 8: Name Your Widget",
+          "text": "Enter a descriptive name in the Widget Name field (e.g., \"Browser \u00d7 Resolution Test Distribution\"). Use clear, descriptive names that indicate what the heatmap shows.",
+          "url": "https://www.testmuai.com/support/docs/analytics-heatmap-widgets/#step-8-name-your-widget"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 9: Preview Your Heatmap",
+          "text": "Click the Preview button to see how your heatmap will look with the current configuration. Review the visualization to ensure it displays the data as expected. Use the refresh icon to update the preview if you make changes.",
+          "url": "https://www.testmuai.com/support/docs/analytics-heatmap-widgets/#step-9-preview-your-heatmap"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 10: Create the Dashboard",
+          "text": "Enter a Dashboard Name in the bottom section. Click Create Dashboard to save your heatmap widget. Your heatmap will be added to the dashboard and ready for analysis.",
+          "url": "https://www.testmuai.com/support/docs/analytics-heatmap-widgets/#step-10-create-the-dashboard"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Heatmap widgets in LambdaTest Insights provide a powerful way to visualize complex data relationships and identify patterns across multiple dimensions. By representing data density and relationships through color intensity, heatmaps help you quickly spot trends, anomalies, and correlations in your test execution data.
 
 ## What is a Heatmap Widget?

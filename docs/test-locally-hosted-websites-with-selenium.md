@@ -178,6 +178,47 @@ import { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Test Locally Hosted Websites With Selenium",
+      "description": "Test locally hosted or staging web apps on the TestMu AI cloud grid using TestMu AI Tunnel with Selenium.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Download the Tunnel Binary",
+          "text": "Download the binary for your operating system and architecture. For the full list of platform binaries, see the TestMu AI Tunnel documentation. After downloading, make the binary executable (macOS/Linux):",
+          "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/#step-1-download-the-tunnel-binary"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Start the Tunnel",
+          "text": "Open a terminal, navigate to the folder with the binary, and start the tunnel with your credentials. {LT --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESS_KEY()}} You should see a message confirming the tunnel is active. Keep this terminal open while running your tests. Run multiple tunnels by giving each a name: Then reference it in your capabilities with \"tunnelName\": \"my-staging-tunnel\".",
+          "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/#step-2-start-the-tunnel"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Add the Tunnel Capability to Your Tests",
+          "text": "Set tunnel: true in your test capabilities. Here is how to do it in each language. If you are using a named tunnel, add \"tunnelName\": \"my-staging-tunnel\" to the LT:Options as well.",
+          "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/#step-3-add-the-tunnel-capability-to-your-tests"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Point Your Test to localhost",
+          "text": "Use localhost or your internal URL in driver.get(). The tunnel routes the request from the cloud browser to your local machine.",
+          "url": "https://www.testmuai.com/support/docs/test-locally-hosted-websites-with-selenium/#step-4-point-your-test-to-localhost"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 TestMu AI Tunnel creates a secure, encrypted connection between your local machine and the TestMu AI cloud grid. Use it to test web apps running on `localhost`, staging servers, or behind a firewall without exposing them to the internet. The tunnel uses TCP with TLS 1.2 over port 443 or WebSocket.

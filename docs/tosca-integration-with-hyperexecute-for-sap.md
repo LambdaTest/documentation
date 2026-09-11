@@ -101,6 +101,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Integrate Tosca with HyperExecute",
+      "description": "To Integrate Tosca with HyperExecute, follow the below mentioned steps:",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Initialize the Tosca Project",
+          "text": "Go to the HyperExecute Dashboard. Click on the Projects. Click on the Setup a New Project button. Enter your Project Name. Click on Continue.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-for-sap/#step-1-initialize-the-tosca-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Manage your License and Credentials",
+          "text": "Enter the License Details, i.e. Username and Password with which you want to execute your tests. Now select your Database Type. For the demo purpose, we are using Oracle. Choose how you want to establish the connection, i.e, via Connection Data or via Connection String, to access the common repository associated with your workspace. For demo purposes, we are selecting the Connection String. Enter the connection string for your database. Enter the Workspace Details, i.e., Username (mandatory) and Password (optional), that you want to use for this project. Click on the Save button.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-for-sap/#step-2-manage-your-license-and-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute Your Project",
+          "text": "Please wait for the discovered execution list to get populated. Now, select the desired tests that you want to execute, and then click on the Run button. Now set the total number of Concurrent Sessions that you want to run on HyperExecute and click on the Run button.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-for-sap/#step-3-execute-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Check the Logs Status in Dashboard",
+          "text": "Now go to the Jobs section and check the results. Results will get updated in the Common Repository once execution is completed on HyperExecute. The live video of running tests can be viewed from the HyperExecute job-detaildashboard.",
+          "url": "https://www.testmuai.com/support/docs/tosca-integration-with-hyperexecute-for-sap/#step-4-check-the-logs-status-in-dashboard"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Tosca Integration for SAP
 
 This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute.

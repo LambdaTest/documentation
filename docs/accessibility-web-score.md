@@ -97,6 +97,47 @@ canonical: https://www.testmuai.com/support/docs/accessibility-web-score/
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How the score is calculated",
+      "description": "The Accessibility Score reflects both how many issues were found and how severe they are, adjusted for the size of the page or screen. It is a density-adjusted deduction model: it starts at a perfect 100 and deducts points based on the number, severity, and concentration of confirmed issues. The methodology is a proprietary TestMu AI metric designed for trend and prioritization\u2014it is not a public WCAG scoring rubric. The same four steps run for every product.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1 \u2014 Filter",
+          "text": "Not all issues count toward the score. The following are excluded: Only issues with a confirmed severity\u2014Critical, Serious, Moderate, or Minor\u2014contribute.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-web-score/#step-1--filter"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2 \u2014 Deduplicate",
+          "text": "Issues are grouped by their signature: the rule that failed, the type of element it failed on, and the page or screen where it occurred. If 50 buttons on the same page fail the same contrast rule, they count as one signature with 50 instances, not 50 separate issues\u2014so a single CSS bug can't disproportionately tank the score.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-web-score/#step-2--deduplicate"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3 \u2014 Calculate deductions",
+          "text": "Issues are weighted by severity: Critical issues have the largest impact, followed by Serious, Moderate, and Minor. When the same issue appears on multiple elements, each additional occurrence adds to the penalty, but with diminishing returns so one repeated pattern can't dominate the score.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-web-score/#step-3--calculate-deductions"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4 \u2014 Apply density adjustment",
+          "text": "This is what makes the score page-size aware. The same 2 critical issues have very different impact on a 12-element login form versus a 2000-element dashboard. Using the scored element count as the denominator: Higher density means issues are more concentrated, and deductions are multiplied accordingly\u2014so small critical flows (login, checkout, payment) are correctly flagged as high priority while large pages with a few scattered issues are not over-penalized.",
+          "url": "https://www.testmuai.com/support/docs/accessibility-web-score/#step-4--apply-density-adjustment"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Accessibility Score
 
 The **Accessibility Web Score** is a unified metric that represents the accessibility health of your website or application workflow. Instead of only reading long reports, the score gives you a **clear, actionable number** for where the product stands relative to the issues found in that scan. Use it to **track progress over time**, **compare releases**, and **show improvement trends** to stakeholders, **together** with issue detail and any manual testing your program requires.

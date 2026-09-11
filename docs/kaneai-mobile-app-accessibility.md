@@ -99,6 +99,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How It Works",
+      "description": "Learn how to perform automated accessibility testing for native mobile applications using KaneAI's accessibility scan feature.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add Accessibility Scan Instruction",
+          "text": "During test authoring, add the accessibility scan instruction: Navigate to the screen you want to scan Type \"/\" in the input box and click on Accessibility scan The instruction is recorded as part of the test flow The current screen is marked for accessibility scanning",
+          "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/#step-1-add-accessibility-scan-instruction"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Instruction Recording",
+          "text": "When the accessibility scan instruction is added: The instruction is recorded in the test execution flow The current screen is marked to be scanned using the app scanner hook for accessibility The scan hook is triggered during test execution at the corresponding screen",
+          "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/#step-2-instruction-recording"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Test Case Creation",
+          "text": "Once the test is saved: A test case is automatically created with the accessibility-scan tag The accessibility scan instruction is visible in the test case summary Use this tag to filter and identify tests that include accessibility scanning To view the screenshot of the screen where the accessibility scan was performed, click the (\u2022\u2022\u2022) icon.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/#step-3-test-case-creation"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execution and Reporting",
+          "text": "During automated test execution: The accessibility scan is performed at the corresponding screen Accessibility issues are detected and categorized The accessibility report is available in the test execution results on Automation dashboard",
+          "url": "https://www.testmuai.com/support/docs/kaneai-mobile-app-accessibility/#step-4-execution-and-reporting"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Mobile App Accessibility Testing
 
 Mobile app accessibility testing enables automated accessibility scanning for native mobile applications in KaneAI. This feature performs accessibility checks during test execution, helping identify accessibility issues and ensure compliance with accessibility standards.

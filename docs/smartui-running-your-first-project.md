@@ -199,6 +199,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Running Your First Project on SmartUI",
+      "description": "Learn how to run your first project on smartui step by step guide for the first time users to help them understand how the platform works",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page and click on the New Project button. Select the platform as CLI for executing your SDK tests. Add name of the project, approver's name, and tags for any filter or easy navigation. Click on the Continue button. Now select your desired framework and click on the Configure button. For the demo purpose we will select the Java framework.",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Test Suite dependencies",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample code repository from the TestMu AI GitHub repository to run the project on the SmartUI. Add the following dependency in your pom.xml file You can check the latest version of lambdatest-java-sdk and update the latest version accordingly. Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the pom.xml file: If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-2-configure-your-test-suite-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Setup your Project Token and Environment Variables",
+          "text": "Setup your project token and credentials shown in the SmartUI app after creating your project. For CLI projects, use PROJECT_TOKEN (no username/access key needed) For Hooks (Selenium, Playwright, etc.), use LTUSERNAME and LTACCESS_KEY",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-3-setup-your-project-token-and-environment-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Create and Configure SmartUI Config",
+          "text": "You can now configure your project configurations on using various available options to run your project with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: For capturing fullpage or viewport screenshots, please refer to this documentation For the list of available mobile viewports, please refer to this documentation For more information about SmartUI config global options, please refer to this documentation.",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-4-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Adding SmartUI function to take screenshot",
+          "text": "You can incorporate SmartUI into your custom Selenium automation test (any platform) script by adding the smartuiSnapshot function in the required segment of selenium script of which we would like to take the screenshot, as shown below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-5-adding-smartui-function-to-take-screenshot"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute the Tests on SmartUI Cloud",
+          "text": "Execute visual regression tests on SmartUI using the following commands You may use the npx smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI. You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing Baseline build and do the required visual testing.",
+          "url": "https://www.testmuai.com/support/docs/smartui-running-your-first-project/#step-6-execute-the-tests-on-smartui-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of <BrandName /> that ensures your web applications look flawless across all browsers and devices.
 ## Prerequisites
 

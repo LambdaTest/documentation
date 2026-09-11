@@ -139,6 +139,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "UI Testing with Puppeteer using HyperExecute and SmartUI SDK",
+      "description": "Streamline Hyperexecute UI testing with SmartUI SDK and Puppeteer. Write robust, end-to-end tests effortlessly.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "With the application, create a project in which we will merge all of your builds that have been applied to the project. To initiate a SmartUI Project, take the following actions: Access the Projects page. Click the new project button now. Choose the CLI or Web platform to run your SDK tests on. Include the project name, the approvers of the changes that were discovered, and tags for any filters or simple navigation. Select Submit by clicking. After creating the project, you will get your PROJECT_TOKEN. You need to keep this project token safe as it will be used in the further steps below.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup Your Test Suite",
+          "text": "To configure and test it, you can use your own project. We are using the sample repository for demonstration purposes. Download or Clone the code sample for the Puppeteer framework from the TestMu AI GitHub repository to run the tests on the HyperExecute. In the sdkCloud.js file, update the following capabilities",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/#step-2-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Setup the CLI in your Test Suite",
+          "text": "Following the download or cloning of the sample repository, you must configure the environment variables and the CLI. The tests on HyperExecute are started using the Command Line Interface (CLI). To run the tests on HyperExecute, it is advised to download the CLI binary to the host system and store it in the suite's root directory. You can download the CLI for your desired platform from the below mentioned links: Now, you have to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/#step-3-setup-the-cli-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure YAML in your Test Suite",
+          "text": "Edit the PROJECTTOKEN: \"YOURPROJECT_TOKEN\" flag and enter your project token that show in the SmartUI app after, creating your project. It is mandatory to mention these commands in the pre flag to download all the necessary dependencies",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/#step-4-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute your Test Suite",
+          "text": "NOTE: On macOS, you can grant permission by running chmod u+x./hyperexecute if you receive a permission denied warning when using the CLI. If a security pop-up appears, click the Allow button on the System Preferences \u2192 .Security and Privacy \u2192 .General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 3. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/#step-5-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Monitor the Test Execution",
+          "text": "Go to the HyperExecute Dashboard to see the status of your job.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/#step-6-monitor-the-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using **Puppeteer**
 
 ## Prerequisites

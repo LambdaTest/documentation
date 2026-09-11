@@ -128,6 +128,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "GitHub App Integration with SmartUI",
+      "description": "Integrate GitHub with TestMu AI SmartUI for seamless CI and visual regression testing. Follow our guide to set up, configure, and run your first test suite.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Integrate the your TestMu AI Account with GitHub App",
+          "text": "The following are the steps to integrate your account with GitHub App: Go to Integrations page Search for GitHub App and select the integration. Click on the OAuth as your preferred authentication. Click on Install. You will be redirected to the GitHub Authentication page to confirm the permissions required for the application to be installed. Click on Confirm button to all the authentication requirements from your GitHub Account. After successful authentication, you can refresh the Integrations page to view the GitHub App installed. Now, after the successful installation of the GitHub Integration, please follow the below steps to configure to your project repo:",
+          "url": "https://www.testmuai.com/support/docs/smartui-github-app-integration/#step-1-integrate-the-your-testmu-ai-account-with-github-app"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select your GitHub repository",
+          "text": "Go to your GitHub repository where you want to configure your SmartUI project. Please check out GitHub sample here: https://github.com/LambdaTest/smartui-node-sample",
+          "url": "https://www.testmuai.com/support/docs/smartui-github-app-integration/#step-2-select-your-github-repository"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your test suite",
+          "text": "Add the GitHub capability to your current test configuration:",
+          "url": "https://www.testmuai.com/support/docs/smartui-github-app-integration/#step-3-configure-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setting up your CI configuration",
+          "text": "Setting up your CI workflow to execute on GitHub. Here is an example setup with GitHub Actions: Go to .github/workflows/.yml We also support other Continuous Integrations (CI) tools to execute the similar process as well.",
+          "url": "https://www.testmuai.com/support/docs/smartui-github-app-integration/#step-4-setting-up-your-ci-configuration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute your test suite with CI",
+          "text": "After the setup is completed, you can now execute your test suite with the Continuous Integration (CI) pipeline with any tool of your choice. If your current pipeline is set to GitHub Actions then you can configure your workflow to trigger the test suite by committing the changes to the GitHub Repo or on raising a Pull Request to merge any changes to the branch as per your branch rules.",
+          "url": "https://www.testmuai.com/support/docs/smartui-github-app-integration/#step-5-execute-your-test-suite-with-ci"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This is the guide to setup your GitHub Repos with SmartUI projects and run your CI along with visual regression testing.
 
 ## Prerequisites

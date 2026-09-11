@@ -207,6 +207,33 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Running Tests with the Server",
+      "description": "Learn how to use SmartUI CLI exec commands to manage snapshot servers and execute tests",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure Server Address",
+          "text": "For most test frameworks (except Selenium Java and JavaScript), you'll need to set the server address:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-exec/#step-1-configure-server-address"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Execute Your Tests",
+          "text": "You can run your tests using your preferred test runner:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-exec/#step-2-execute-your-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 SmartUI CLI exec command offers you various options to manage snapshot server and execute your visual testing scripts. This guide will walk you through the available commands and their usage.
 
 ## Prerequisites

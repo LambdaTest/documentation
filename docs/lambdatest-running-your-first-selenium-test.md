@@ -124,6 +124,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Your First Selenium Test",
+      "description": "Run your first Selenium test on TestMu AI's cloud grid. Clone a sample project, set credentials, configure capabilities, and execute.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the Sample Project",
+          "text": "Pull the sample repo to your local machine and navigate into the project directory.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-1-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Your Credentials",
+          "text": "Add your TestMu AI credentials as environment variables so the test can authenticate with the grid. Visit the TestMu AI Dashboard, navigate to the left sidebar, and select Credentials. Copy your Username and Access Key, then set them as environment variables: {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-2-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Your Test Capabilities",
+          "text": "Define which browser, version, and OS your test runs on. The sample project includes a preconfigured capabilities object that tells the grid which browser and OS to use. Here is an example: You can customize these values to test on any browser, version, or OS. Use the Capabilities Generator to auto-generate the capabilities code for your target configuration. For the full list of supported capabilities, see Desired Capabilities in Selenium.",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-3-configure-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Test",
+          "text": "Trigger the test from your terminal using Maven. Execute a single test or run multiple tests in parallel: {mvn test -D suite=single.xml} {mvn test -D suite=parallel.xml}",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-4-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Your Results",
+          "text": "Check the Automation Dashboard to see exactly what happened during your test. Visit the TestMu AI Automation Dashboard to see your test results. Each session includes: Video recording of the full test execution Screenshots captured at each step Console logs from the browser Network logs for every request and response Selenium command logs showing each driver action",
+          "url": "https://www.testmuai.com/support/docs/testmu-running-your-first-selenium-test/#step-5-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 This guide walks you through running a sample Selenium test on the TestMu AI cloud grid using Java and TestNG. Clone a sample project, set your credentials, and execute a test.

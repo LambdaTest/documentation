@@ -94,6 +94,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Apple Pay Workflow in Automation Test",
+      "description": "Learn how to automate Apple Pay flows on iOS public devices, including capabilities, payment injection, passcode entry, and limitations.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your App to TestMu AI",
+          "text": "Uploading Your App \u2013 Follow the detailed steps in our Upload Your Application guide. Once uploaded, note the App ID returned by the API or dashboard. Use this App ID in the \"app\" capability in your automation script.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-1-upload-your-app-to-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add Desired Capabilities",
+          "text": "To enable Apple Pay automation, include the following capability in your automation session as highlighted in the Capabilities: {`desired_caps = { \"deviceName\": \"iPhone 16\", \"platformName\": \"iOS\", \"platformVersion\": \"18\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", // highlight-next-line \"applePay\": true, // highlight-next-line \"applePayCardType\": [\"visa\", \"master\"] }`} You must add the generated APPURL** to the app capability in the config file. You can generate capabilities for your test requirements with the help of our inbuilt Capabilities Generator tool. For more details, please refer to our guide on Desired Capabilities in Appium.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-2-add-desired-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update Shipping, Billing, and Contact Details (Optional)",
+          "text": "Before confirming the Apple Pay payment, you can optionally update the shipping details, billing details, and contact information using the lambda-applepay-details hook. This allows you to customize the payment information dynamically during your automation test. {`driver.execute_script(\"lambda-applepay-details\", { \"shippingDetails\": { \"firstName\": \"John\", \"lastName\": \"Doe\", \"street\": \"221B Baker Street\", \"city\": \"London\", \"postalCode\": \"NW1 6XE\", \"state\": \"London\", \"country\": \"UK\" }, \"billingDetails\": { \"firstName\": \"John\", \"lastName\": \"Doe\", \"street\": \"221B Baker Street\", \"city\": \"London\", \"postalCode\": \"NW1 6XE\", \"state\": \"London\", \"country\": \"UK\" }, \"contact\": { \"email\": \"john.doe@example.com\", \"phone\": \"+441234567890\" } })`} {`Map shippingDetails = new HashMap<>(); shippingDetails.put(\"firstName\", \"John\"); shippingDetails.put(\"lastName\", \"Doe\"); shippingDetails.put(\"street\", \"221B Baker Street\"); shippingDetails.put(\"city\", \"London\"); shippingDetails.put(\"postalCode\", \"NW1 6XE\"); shippingDetails.put(\"state\", \"London\"); shippingDetails.put(\"country\", \"UK\"); Map billingDetails = new HashMap<>(); billingDetails.put(\"firstName\", \"John\"); billingDetails.put(\"lastName\", \"Doe\"); billingDetails.put(\"street\", \"221B Baker Street\"); billingDetails.put(\"city\", \"London\"); billingDetails.put(\"postalCode\", \"NW1 6XE\"); billingDetails.put(\"state\", \"London\"); billingDetails.put(\"country\", \"UK\"); Map contact = new HashMap<>(); contact.put(\"email\", \"john.doe@example.com\");...",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-3-update-shipping-billing-and-contact-details-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Confirm Apple Pay Payment",
+          "text": "To confirm Apple Pay payment at the payment step, add a hook to confirm and complete the payment. This can be done using TestMu AI hooks. A sample script is provided below to trigger confirmation of the Apple Pay payment step:",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-4-confirm-apple-pay-payment"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Enter Passcode to Complete Payment",
+          "text": "After confirming the Apple Pay payment, the device will prompt for the passcode to securely authorize the transaction. Your automation script must handle this prompt by entering the passcode using Appium's keyboard input methods to simulate the user securely confirming the payment. The default passcode is 123456 unless configured differently on the device. This step is essential to simulate secure confirmation and complete the Apple Pay transaction during automation.",
+          "url": "https://www.testmuai.com/support/docs/apple-pay-auto/#step-5-enter-passcode-to-complete-payment"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Apple Pay Automation on Real Devices
 <RealDeviceTag value="Real Device" /> 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables purchases, one-click checkouts, and adds an extra layer of protection for financial transactions. In real-world apps and websites, Apple Pay is widely used for simplifying checkout experiences, reducing friction, and improving user trust.

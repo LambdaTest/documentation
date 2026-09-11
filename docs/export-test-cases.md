@@ -96,6 +96,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Export",
+      "description": "Export multiple test cases with the export to csv option for easy download, tracking, and sharing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Select Test Cases",
+          "text": "Navigate to the Test Case Listing page, bulk select the test cases you want to export, and click the Bulk Action button.",
+          "url": "https://www.testmuai.com/support/docs/export-test-cases/#step-1-select-test-cases"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Choose Export to CSV",
+          "text": "Click Export to CSV from the dropdown menu.",
+          "url": "https://www.testmuai.com/support/docs/export-test-cases/#step-2-choose-export-to-csv"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Select Fields for Export",
+          "text": "Choose which test case fields to include in the exported CSV file. You can select or deselect individual fields, or use the Select All checkbox to include everything. Available fields include: Test Case ID, Test Case Title, Project Name, Folder Name, Description, Priority, Type, Status, Tags, Preconditions, Manual Steps, Expected Outcomes, BDD Scenarios, KaneAI Steps, and more. The ability to export KaneAI Steps is being rolled out gradually and may not be available on all accounts yet. Only the natural language instruction of each KaneAI step is exported. Steps such as Execute JavaScript, Execute API, etc. will not include the underlying code in the CSV. If you edit or modify KaneAI steps, it may take up to 1 minute for the changes to reflect in the exported CSV.",
+          "url": "https://www.testmuai.com/support/docs/export-test-cases/#step-3-select-fields-for-export"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Choose CSV Layout",
+          "text": "Select a CSV Layout to control how steps are structured in the exported file:",
+          "url": "https://www.testmuai.com/support/docs/export-test-cases/#step-4-choose-csv-layout"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Download the CSV",
+          "text": "Click Export to CSV to download the file. Here is an example of an exported CSV file with single row CSV layout: The exported file includes all the metadata fields that were selected during export. Home Support Export Test Cases",
+          "url": "https://www.testmuai.com/support/docs/export-test-cases/#step-5-download-the-csv"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Export Test Cases
 
 Export your test cases in bulk as a CSV file for tracking, analysis, and sharing with your team. You can select which fields to include, choose how steps are structured in the output, and download the file in a few clicks.

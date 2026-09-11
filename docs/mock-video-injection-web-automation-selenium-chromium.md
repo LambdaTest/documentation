@@ -151,6 +151,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Mock Video Injection on Web Automation (Selenium/Chromium)",
+      "description": "Inject a custom video file as a fake camera feed in Chromium-based Selenium tests on TestMu AI. This is useful for testing WebRTC, video conferencing, KYC or identity verification, and any flow that calls getUserMedia(). Upload a video file, pre-load it onto the test VM, and pass Chrome flags to use it as a fake camera device. Upload your .mjpeg or .y4m video file to TestMu AI using the web automation user-files API. Pre-load the file onto the test VM using the lambda:userFiles capability. Pass Chrome flags to use the uploaded file as a fake camera device. Chrome treats the file as a looping camera feed, so any getUserMedia({ video: true }) call receives frames from your file instead of a real camera. Verify the following before configuring mock video injection. Get a TestMu AI account with Web Automation access from your dashboard. Prepare a .mjpeg video file such as sample_640x360.mjpeg (recommended resolution: 640x360 or 1280x720; Chrome also supports .y4m format). Set TestMu AI credentials as LTUSERNAME and LTACCESS_KEY.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload the Video File",
+          "text": "Upload your .mjpeg file using the web automation user-files API. Limits: maximum 20 MB per upload and maximum 150 files per organization. The /mfs/v1.0/media/upload endpoint is for mobile and app automation. For web automation, use /automation/api/v1/user-files.",
+          "url": "https://www.testmuai.com/support/docs/mock-video-injection-web-automation-selenium-chromium/#step-1-upload-the-video-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Selenium Capabilities",
+          "text": "Add the video file and Chrome flags to your Selenium capabilities configuration.",
+          "url": "https://www.testmuai.com/support/docs/mock-video-injection-web-automation-selenium-chromium/#step-2-configure-selenium-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Verify the Video Feed in Your Test",
+          "text": "Navigate to a page that requests camera access and confirm the fake stream is active. After the session starts, navigate to a page that requests camera access and confirm the fake stream is being used.",
+          "url": "https://www.testmuai.com/support/docs/mock-video-injection-web-automation-selenium-chromium/#step-3-verify-the-video-feed-in-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Mock Video Injection on Web Automation (Selenium/Chromium)
 
 Inject a custom video file as a fake camera feed in Chromium-based Selenium tests on TestMu AI. This is useful for testing WebRTC, video conferencing, KYC or identity verification, and any flow that calls `getUserMedia()`.

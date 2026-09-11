@@ -155,6 +155,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Virtual Device Integration with HyperExecute",
+      "description": "This page outlines how to execute your Virtual Device tests on HyperExecute with YAML 0.2 Currently, App Automation is available for Emulators and Simulators in the Beta phase, with support for the Appium framework. To use this feature, Contact Sales. To run the Tests on HyperExecute from your Local System, you are required: Install Appium Java Client. Your TestMu AI Username and Access key HyperExecute CLI in order to initiate a test execution Job . Setup the Environmental Variable HyperExecute YAML file which contains all the necessary instructions. You have an access to an Android app (.apk or .aab file) or an iOS zip file (containing .app file). Run your sampl\u0435 t\u0435sts on HyperExecute using our sampl\u0435 Android and iOS applications: Sampl\u0435 Android App Sampl\u0435 iOS App",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. <!-- :::tip Sample repo Download or Clone the code sample for the Virtual Devices from the TestMu AI GitHub repository to run the tests on the HyperExecute.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the CLI in your Test Suite",
+          "text": "After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/#step-2-setup-the-cli-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application",
+          "text": "Upload your iOS application (.app file) or Android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name=\"AndroidApp\"' --form 'appFile=@\"/Users/macuser/Downloads/proverbial_android.apk\"' `} {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name=\"AndroidApp\"' --form 'appFile=@\"/Users/macuser/Downloads/proverbial_android.apk\"' `} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST 'https://manual-api.lambdatest.com/app/upload/virtualDevice' --form 'name=\"AndroidApp\"' --form 'url=\"https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk\"'} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/upload/virtualDevice\" --header \"Content-Type: application/x-www-form-urlencoded\" --data-urlencode \"url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbialandroid.apk\"...",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/#step-3-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Update Your Automation Script",
+          "text": "Here is a sample automation script in Java for the sample app downloaded above. In the below test script, ensure to update the appurl, or appid To run the test on Emulator/Simulator, set the isRealMobile capability to false. Create .XML file in order to run your test and define device capabilities. Please find sample code below for the same.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/#step-4-update-your-automation-script"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Configure YAML in your Test Suite",
+          "text": "Step 5: Configure YAML in your Test Suite",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/#step-5-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute your Test Suite",
+          "text": "NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE } Visit the HyperExecute Dashboard and check your Job status \ud83d\ude80",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-integration-with-virtual-devices/#step-6-execute-your-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Virtual Device Integration with HyperExecute
 
 This page outlines how to execute your Virtual Device tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)

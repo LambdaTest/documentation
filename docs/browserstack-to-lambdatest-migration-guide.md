@@ -45,6 +45,11 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
           "@type": "ListItem",
           "position": 3,
           "name": "BrowserStack to <BrandName /> migration",
+          "item": `${BRAND_URL}/support/docs/browserstack-to-testmu-migration-guide/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -168,11 +173,6 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     "dateModified": "2026-06-02T12:20:54+05:30"
   }) }}
 />
-          "item": `${BRAND_URL}/support/docs/browserstack-to-testmu-migration-guide/`
-        }]
-      })
-    }}
-></script>
 
 # Migration from BrowserStack to <BrandName />
 * * *

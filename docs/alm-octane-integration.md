@@ -123,6 +123,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configuring ALM Octane in Your Test Scripts",
+      "description": "Learn how to integrate ALM Octane with TestMu AI for seamless test management and reporting while running your automated tests on the cloud.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Set Up ALM Octane API Credentials",
+          "text": "In your ALM Octane instance, generate API credentials: Navigate to Settings > Spaces > API Access Create a new API client with appropriate permissions Note down the Client ID and Client Secret",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-1-set-up-alm-octane-api-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Install ALM Octane SDK",
+          "text": "For Java-based projects using Maven, add the ALM Octane SDK dependency: For other languages, refer to the ALM Octane API documentation in the Micro Focus online help.",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-2-install-alm-octane-sdk"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Test Result Reporting",
+          "text": "Here's an example of how to configure your test framework to report results to ALM Octane: Java (TestNG) Example:",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-3-configure-test-result-reporting"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run Tests on TestMu AI",
+          "text": "Once your test scripts are configured with ALM Octane reporting, run them on TestMu AI: Using Selenium Grid: Using HyperExecute: Create your hyperexecute.yaml configuration and run tests as usual. The ALM Octane reporting configured in your scripts will work seamlessly.",
+          "url": "https://www.testmuai.com/support/docs/alm-octane-integration/#step-4-run-tests-on-testmu-ai"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # ALM Octane Integration with <BrandName />
 
 ***

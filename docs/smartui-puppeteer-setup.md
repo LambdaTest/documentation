@@ -131,6 +131,40 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting started with SmartUI using Puppeteer",
+      "description": "Learn Puppeteer Visual Regression Set up SmartUI, run tests on TestMu AI Cloud across real browsers. Step-by-step guide for seamless testing.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Web for executing your Puppeteer tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. -->",
+          "url": "https://www.testmuai.com/support/docs/puppeteer-visual-regression/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with Puppeteer Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Please clone the following sample GitHub repo (https://github.com/LambdaTest/puppeteer-sample). Install the node modules using the command: Set up the TestMu AI credentials by following the instructions mentioned in the README.md file. Edit the required capabilities in your test file navigation.js.",
+          "url": "https://www.testmuai.com/support/docs/puppeteer-visual-regression/#step-2-configure-your-test-with-puppeteer-desired-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Executing the SmartUI Test Suite on Cloud",
+          "text": "Execute the test using the following command to run the test suite using puppeteer You can check the executed builds over at TestMu AI SmartUI. For additional information about Puppteer framework please explore the documentation here",
+          "url": "https://www.testmuai.com/support/docs/puppeteer-visual-regression/#step-3-executing-the-smartui-test-suite-on-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 

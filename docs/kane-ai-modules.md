@@ -99,6 +99,69 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Create a Module",
+      "description": "You create modules by extracting test steps from an active KaneAI session.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Author Test Steps",
+          "text": "Begin by authoring your test in KaneAI and executing the steps that you want to turn into a module.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-1-author-test-steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select Test Steps",
+          "text": "Pause the session. Multi-select is available only while the session is Paused. Tick the checkbox on each step you want to include in the module \u2014 for example, the steps that handle login. A select-all checkbox sits in the panel header if you want every step. A selection toolbar appears showing how many steps are selected, with Create Module and Delete actions. The selection must be contiguous \u2014 adjacent steps with no gaps \u2014 and must not already sit inside a conditional block, While loop, module, or generative instruction. If it does not qualify, an explanation tells you why. Checkboxes do not appear in Authoring Steps, Running, or Setting up, and any selection is cleared when you leave Paused. Selecting steps is independent of the cursor \u2014 ticking a checkbox does not move it.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-2-select-test-steps"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Define Module Properties",
+          "text": "Click Create Module. Enter the module details: Name: A descriptive name (e.g., [Web] Login Flow) Description: What the module does and when to use it Tags: Keywords for easier discovery Click Create Module to save. The selected steps are now saved as a reusable module with an initial version.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-3-define-module-properties"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Use a Module in a Test",
+      "description": "Once a module exists, you can import it into any KaneAI test.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open a Test",
+          "text": "Create a new test or open an existing one in the KaneAI web agent.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-1-open-a-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Import the Module",
+          "text": "Type a slash (/) to invoke the command menu and select Add Module. Browse the list of available modules and select the one you need. Modules that contain KaneAI instructions, such as variable steps, If-Else blocks, or While Loops, can be imported only into KaneAI test cases, not into manual test cases in Test Manager. This applies to the Classic experience. See Importing Modules into Test Cases.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-2-import-the-module"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute",
+          "text": "Click Add in Queue to execute the module's test steps. The steps run automatically as part of the test. Any step that has not run yet carries the Queued status until it does \u2014 see Step Statuses.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-modules/#step-3-execute"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Modules in KaneAI let you group a sequence of test steps into a single reusable unit. Instead of re-authoring the same steps in every test case, you create a module once and import it wherever it is needed. This reduces duplication, improves consistency, and makes maintenance easier. When a workflow changes, you update the module and propagate the change across test cases.
 
 Modules support **variables**, **parameters**, and **secrets**, so you can pass dynamic data into each module execution rather than hard-coding values.

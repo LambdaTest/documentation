@@ -158,6 +158,54 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Selenium With Gauge",
+      "description": "Run Gauge Selenium tests on TestMu AI cloud grid with parallel execution across 3000+ browsers.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the Sample Project",
+          "text": "Pull the sample repo to your local machine and navigate into the project directory. You may also want to run the command below to check for outdated dependencies. Install the mandatory Selenium dependencies for Maven:",
+          "url": "https://www.testmuai.com/support/docs/running-gauge-tests-on-testmu-selenium-grid/#step-1-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Your Credentials",
+          "text": "Add your TestMu AI credentials as environment variables so the test can authenticate with the grid. Visit the TestMu AI Dashboard, navigate to the left sidebar, and select Credentials. Copy your Username and Access Key, then set them as environment variables: {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/running-gauge-tests-on-testmu-selenium-grid/#step-2-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Your Test Capabilities",
+          "text": "Define the browser, version, and OS for your test run. Use the Capabilities Generator to auto-generate capabilities for any browser, version, and OS combination. Below is the sample Gauge test used in this project:",
+          "url": "https://www.testmuai.com/support/docs/running-gauge-tests-on-testmu-selenium-grid/#step-3-configure-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Test",
+          "text": "Trigger the test from your terminal. or Gauge framework supports parallel test execution on the TestMu AI grid. To run parallel tests, update more than one browser specification in the env folder of the project. Once the test executes, all parallel browser specifications hit the TestMu AI grid and run simultaneously. To remove a browser from parallel execution, delete its folder or comment out the code in it.",
+          "url": "https://www.testmuai.com/support/docs/running-gauge-tests-on-testmu-selenium-grid/#step-4-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Your Results",
+          "text": "Check the Automation Dashboard to see exactly what happened during your test. Visit the TestMu AI Automation Dashboard to see your test results. Each session includes: Video recording of the full test execution Screenshots captured at each step Console logs from the browser Network logs for every request and response Selenium command logs showing each driver action",
+          "url": "https://www.testmuai.com/support/docs/running-gauge-tests-on-testmu-selenium-grid/#step-5-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Run Gauge tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
 
 :::tip Sample repo

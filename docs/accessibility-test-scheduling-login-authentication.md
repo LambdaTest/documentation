@@ -100,6 +100,40 @@ import { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Multi-page authentication",
+      "description": "Use for sequential flows: enter the username, click Next (or equivalent), then enter the password, common with many enterprise identity providers.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Login or username page",
+          "text": "Step 1: Login or username page",
+          "url": "https://www.testmuai.com/support/docs/accessibility-test-scheduling-login-authentication/#step-1-login-or-username-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Password page",
+          "text": "Step 2: Password page",
+          "url": "https://www.testmuai.com/support/docs/accessibility-test-scheduling-login-authentication/#step-2-password-page"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: After login",
+          "text": "Step 3: After login",
+          "url": "https://www.testmuai.com/support/docs/accessibility-test-scheduling-login-authentication/#step-3-after-login"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Login & Authentication for Scheduled Scans
 
 **Login configurations** are saved profiles the scanner runs **before** a scheduled accessibility test. You define credentials and selectors once, then **select** a profile from the **login modal** whenever you create or edit a scan. The same modal opens from the **scheduler** (advanced options on the URL step) or from **Login configurations** on the dashboard, so you can manage profiles without starting a new scan.

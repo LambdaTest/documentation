@@ -131,6 +131,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Execute XCUI Framework Tests on HyperExecute",
+      "description": "Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via TestMu AI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample for the XCUI framework from the TestMu AI GitHub repository to run the tests on the HyperExecute.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Setup the CLI in your Test Suite",
+          "text": "After cloning / downloading the sample repo, you need to setup the CLI and the environment variables. The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links: Now, you need to export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-2-setup-the-cli-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload your Application and Test Suite",
+          "text": "Upload your iOS application (.ipa file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format ``Username:AccessKey`` in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\\\ --form 'appFile=@\"/Users/macuser/Downloads/proverbial.ipa\"' \\\\ --form 'type=\"xcuit-ios\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" -X POST \"https://manual-api.lambdatest.com/app/uploadFramework\" -F \"appFile=@\"/Users/macuser/Downloads/proverbial.ipa\"\" -F \"type=\"xcuit-ios\"\"} Response of above cURL will be a JSON object containing the App URL of the format - APP123456789123456789 and will be used in the last step as appId. Upload your test suite (.ipa file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form...",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-3-upload-your-application-and-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure YAML in your Test Suite",
+          "text": "Enter your ` and ` in the YAML file If you are using the deviceSelectionStrategy: all, then in that case all the mentioned shards will be executed on all the devices. For example: There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on 2 devices (2 Shards * 2 Devices). If you are using the deviceSelectionStrategy: any, then in that case all the mentioned shards will be executed on any one device from the list provided. For example: There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on any device (2 shards * any device mentioned). If you are using the deviceSelectionStrategy: all, then in that case all the tests will be executed on all the devices based on the concurrency. For example: There are 6 tests and 10 devices mentioned, then the 6 tests will be auto distributed on the devices based on the max concurrency. If you are using the deviceSelectionStrategy: any, then in that case all the mentioned tests will be executed on any one device from the list provided. For example: There are 6 tests and 10 devices mentioned, then the 6 tests will be executed on any one device.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-4-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Generate Reports and Artifacts",
+          "text": "To generate artifacts for your XCUI tests, add the artifacts: true and report: true flag in your YAML file: To download these artifacts in your local machine, you can pass the --download-artifacts and --download-report flag with the CLI command to execute the tests as shown in the next step.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-5-generate-reports-and-artifacts"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Execute your Test Suite",
+          "text": "NOTE : In case of macOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: OR use this command if you have not exported your username and access key in the step 2. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE --download-artifacts --download-report}",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-6-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 7: Monitor the Test Execution",
+          "text": "Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/#step-7-monitor-the-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This page outlines how to execute your XCUI tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
 ## Prerequisites

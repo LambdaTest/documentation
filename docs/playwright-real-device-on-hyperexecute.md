@@ -147,6 +147,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Running Playwright Real Device Tests on HyperExecute",
+      "description": "Learn how to run playwright automation tests using Real Devices on HyperExecute",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Set Up Your Test Project",
+          "text": "You can use your own Playwright project or try the sample repo:. For demo purposes, we are using the sample repository. Download or Clone the code sample for the Playwright Real Device from the TestMu AI GitHub repository to run the tests on the HyperExecute. Update your test configuration with the required capabilities. You can also use dev and beta browser versions. To generate capabilities for your test requirements, you can use our inbuilt \ud83d\udd17 Capabilities Generator. You will have to update the CDP (Chrome DevTools Protocol) URL which is a protocol used for communication between the browser and the developer tools.",
+          "url": "https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/#step-1-set-up-your-test-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Download the CLI in your Project",
+          "text": "The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the project to execute the tests on HyperExecute. You can download the CLI for your desired platform from the below mentioned links:",
+          "url": "https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/#step-2-download-the-cli-in-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure YAML in your Test Suite",
+          "text": "Use the sample YAML below to configure your execution: To Run test on Mobile Containers in a Particular Region If reservation : false, it means that it will allocate the device from any region. If you want to allocate the device of any specific region, keep the reservation : true.",
+          "url": "https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/#step-3-configure-yaml-in-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute your Test Suite",
+          "text": "NOTE : In case of MacOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. Run the below command in your terminal at the root folder of the project: {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE }",
+          "url": "https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/#step-4-execute-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Monitor the Test Execution",
+          "text": "Visit the HyperExecute Dashboard and check your Job status.",
+          "url": "https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/#step-5-monitor-the-test-execution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Download Artifacts and Reports",
+          "text": "HyperExecute also facilitates the provision to download the Artifacts and Reports on your local machine. Click on the corresponding button to download your generated artifacts and reports.",
+          "url": "https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/#step-6-download-artifacts-and-reports"
+        }
+      ]
+    }
+  ]) }}
+/>
 This guide explains how to run your **Playwright** tests on **Real devices (Android and iOS)**  using HyperExecute:
 
 ## Prerequisites

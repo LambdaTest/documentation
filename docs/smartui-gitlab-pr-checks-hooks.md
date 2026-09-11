@@ -148,6 +148,61 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "GitLab PR Checks with SmartUI Hooks",
+      "description": "Integrate SmartUI visual regression testing with GitLab merge requests using SmartUI Hooks for web and mobile testing with Selenium, Playwright, WebdriverIO, Appium, and more.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Integrate GitLab with TestMu AI",
+          "text": "Go to TestMu AI Integrations page Search for GitLab and select the integration Click on OAuth as your preferred authentication method Click Install and authorize the integration After successful authentication, refresh the Integrations page to verify GitLab is installed You can verify your GitLab integration is active by checking the Integrations page. The GitLab integration should show as \"Installed\" or \"Active\".",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/#step-1-integrate-gitlab-with-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure SmartUI Capabilities with GitLab Integration",
+          "text": "Configure your test suite with SmartUI capabilities. Since you're using the Hooks approach, you'll pass SmartUI capabilities directly in your test configuration, including the GitLab integration capability. The capability is named github (legacy name) but works with GitLab's API endpoint. Use the GIT_URL environment variable to pass the GitLab API URL. This is the same capability used for GitHub integration and supports both GitHub and GitLab status APIs. In your test code, use the SmartUI execute command to capture screenshots: The visual: true capability is mandatory for SmartUI visual regression testing. Without this capability, screenshots will not be captured and the build status will show as Error.",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/#step-2-configure-smartui-capabilities-with-gitlab-integration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure GitLab CI/CD Pipeline",
+          "text": "Create or update your .gitlab-ci.yml file. Since you're using Hooks, you just need to run your tests normally - no SmartUI CLI exec command required. No SmartUI CLI exec needed: With Hooks, you run your tests normally (e.g., npm test, mvn test, pytest) GitLab Project ID: Automatically available as CIPROJECTID in GitLab CI/CD Commit SHA: Use CICOMMITSHA for regular commits, or CIMERGEREQUEST_SHA for merge requests GitLab API URL: Export as GIT_URL environment variable, which your test capabilities will use GitLab API URL Format: https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId} With SmartUI Hooks: You pass SmartUI capabilities (including github.url with GIT_URL for GitLab) in your test configuration Run your tests normally (no npx smartui exec command) SmartUI integration happens automatically through the capabilities GitLab PR checks are updated automatically when tests complete",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/#step-3-configure-gitlab-cicd-pipeline"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Set Up GitLab CI/CD Variables",
+          "text": "Configure the following variables in your GitLab project: Go to your GitLab project \u2192 Settings \u2192 CI/CD \u2192 Variables Add the following variables:",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/#step-4-set-up-gitlab-cicd-variables"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Pipeline Results in GitLab",
+          "text": "After your pipeline runs, you can view the results in the GitLab Pipelines page: The pipeline will show: Pipeline status (Success/Failed) Job status for SmartUI tests Screenshot statistics (Total, Approved, Changes Found) in the job tooltip",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/#step-5-view-pipeline-results-in-gitlab"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: View PR Check Results in GitLab Merge Request",
+          "text": "After your pipeline runs, you'll see SmartUI status checks in your GitLab merge request: When all visual tests pass: \u2705 Status: Success Details: Click \"Details\" to view the SmartUI build in the dashboard Screenshot: All screenshots match baseline or are approved When visual differences are detected: \u274c Status: Failed Details: Click \"Details\" to review differences in SmartUI dashboard Action Required: Review and approve/reject changes in SmartUI dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-gitlab-pr-checks-hooks/#step-6-view-pr-check-results-in-gitlab-merge-request"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 This guide shows you how to integrate SmartUI visual regression testing with GitLab merge requests using the **SmartUI Hooks** approach. This works for both **web testing** (Selenium, Playwright, Cypress, Puppeteer) and **mobile app testing** (Appium, WebdriverIO) across all supported languages.
 
 :::info SmartUI Hooks vs SDK

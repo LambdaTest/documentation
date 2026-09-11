@@ -166,6 +166,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Certificate Injection in App Automation on Real Devices",
+      "description": "Install custom CA certificates and client identities on TestMu AI real devices during Appium app automation sessions to test certificate-based authentication, SSL pinning, and mutual TLS.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload the Certificate",
+          "text": "Upload the file to the media upload endpoint with type=cert, using your TestMu AI username and access key for authentication. Uploaded certificates are saved to your account, so you only need to upload each certificate once. Upload a .crt, .cer, or .mobileconfig file. No password is involved. {`curl -u \"${YOURLAMBDATESTUSERNAME()}:${YOURLAMBDATESTACCESS_KEY()}\" \\\\ -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\" \\\\ -F \"media_file=@/Users/macuser/Downloads/corp-root-ca.crt\" \\\\ -F \"type=cert\"`} For a PKCS#12 bundle, send the password along with the upload. The password is stored securely against the certificate and applied automatically in every session that uses it. {`curl -u \"${YOURLAMBDATESTUSERNAME()}:${YOURLAMBDATESTACCESS_KEY()}\" \\\\ -X POST \"https://api.lambdatest.com/mfs/v1.0/media/upload\" \\\\ -F \"media_file=@/Users/macuser/Downloads/client-identity.pfx\" \\\\ -F \"type=cert\" \\\\ -F \"password=$CERT_PASSWORD\"`} Request Parameters The response returns the media_url that you reference in your capabilities: Use this value as the certificateId in your capabilities. Both the full lt://MEDIA... form and the bare MEDIA... identifier are accepted. The file is validated before it is stored. If it cannot be parsed as a certificate, the upload is rejected immediately instead of failing later on a device. You can also upload and manage certificates from the Certificates section of the App Testing dashboard. Certificates uploaded there are also available to your automation...",
+          "url": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/#step-1-upload-the-certificate"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set the customCertificates Capability",
+          "text": "Pass customCertificates inside LT:Options as an array of objects. Each entry requires a certificateId. The password field is optional and overrides the password stored at upload time. These two capabilities are easy to confuse and do very different things. customCertificates changes the device trust store. Use it when the device itself must trust your certificate authority, or when your app must present a client identity. Real device app automation only. acceptInsecureCerts is a standard W3C WebDriver capability that tells the browser context to proceed past an untrusted certificate. It installs nothing and does not touch the device trust store. If you are testing a native app against a private certificate authority, customCertificates is the one you want. Capabilities are validated before a device is allocated. The session request fails with a 400 if an entry is malformed, a certificateId is missing, you specify more than three certificates, a format rule is broken, or an ID does not exist on your account. No session time or concurrency slot is used.",
+          "url": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/#step-2-set-the-customcertificates-capability"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Read the Installation Result",
+          "text": "Certificates are installed after the app is installed and before your test starts. Each certificate reports its own status in the session logs on the Automation dashboard, so you can see exactly which ones installed successfully. If a certificate fails to install, your session does not fail. The session starts and your test runs, so you can decide whether the missing certificate affects the scenario you are testing.",
+          "url": "https://www.testmuai.com/support/docs/certificate-injection-appautomation/#step-3-read-the-installation-result"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 <RealDeviceTag value="Real Device" />
 
 Many apps connect to servers that use certificates issued by a private or corporate certificate authority. Some apps also pin a **self-signed certificate**, or present a **client certificate** to authenticate themselves before a server will respond. On a standard device, these connections fail because the device does not trust your organization's certificates.

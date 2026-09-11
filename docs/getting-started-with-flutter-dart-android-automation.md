@@ -171,6 +171,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Run Your First Test",
+      "description": "This guide shows you how to run your first Flutter Dart test on 5000+ real Android devices using TestMu AI's Real Device Cloud.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create your Android Flutter app and test suite for testing",
+          "text": "For testing, you need to build a Flutter app and test suite. You can create Flutter applications and test suites using either Flutter cli or Gradlew. The steps below demonstrate how to create apks with Gradlew. Create an instrumentation test file in your application's directory android/app/src/androidTest/java/com/example/lambdatestSampleApp/. Replace com, example, and lambdatestSampleApp values with those from your app's package name. Update your application's lambdatestSampleApp/android/app/build.gradle file to use androidx's version of AndroidJUnitRunner and include the androidx libraries as dependencies. Use the following Gradle commands to build an instrumentation test.apk file(test suite) using the Sample.java created in the androidTest directory as mentioned in step 1. Avoiding this step might result in No Tests Ran issue on the dashboard To create APKs with optional Flutter parameters, first run the Flutter tests in verbose mode with the flutter cli. This allows you to see the Gradle command used internally to build the APKs. For example, to use --no-sound-null-safety in your tests, run the following command. Next, look for gradlew execution in the logs. The above command generates a gradlew command in the logs that looks something like the following. To build your apk files, replace the parameter YOURAPPPATH with your actual path of the application in the following command:",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/#step-1-create-your-android-flutter-app-and-test-suite-for-testing"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Upload Your Application",
+          "text": "Upload your android application (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form 'appFile=@\"/Users/macuser/Downloads/sample-flutter-app.apk\"' \\ --form 'type=\"flutter-android\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"C:/Users/winuser/Downloads/proverbialandroid.apk\"\" --form \"type=\\\"flutter-android\\\"\"} Response of above cURL will be a JSON object containing the App URL of the format - `lt://APP123456789123456789123456789` and will be used in the last step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/#step-2-upload-your-application"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Uploading Test Suite",
+          "text": "Upload your test suite (.apk file) to the TestMu AI servers using our REST API. You need to provide your Username and AccessKey in the format Username:AccessKey in the cURL command for authentication. Make sure to add the path of the appFile in the cURL request. Here is an example cURL request to upload your app using our REST API: Using App File: {`curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}\" \\\\ --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\ --form 'appFile=@\"/Users/macuser/Downloads/sample-flutter-testsuite.apk\"' \\ --form 'type=\"flutter-android\"'`} {curl -u \"${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESSKEY()}\" --location --request POST \"https://manual-api.lambdatest.com/app/uploadFramework\" --form \"appFile=@\"C:/Users/winuser/Downloads/proverbialandroid_expressotest.apk\"\" --form \"type=\\\"flutter-android\\\"\"} Response of above cURL will be a JSON object containing the App URL of the format - `lt://APP123456789123456789123456789` and will be used in the next step.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/#step-3-uploading-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Executing The Test",
+          "text": "You will need base64 encoded authentication in order to execute your Espresso automation test suite. You need to enter your username:accesskey here in order and click on encode to generate the base64 authentication. Take note of the base64 encoded authentication which needs to be added in the next step. {${ YOURLAMBDATESTUSERNAME()}:${ YOURLAMBDATESTACCESS_KEY()}} Once you have uploaded your app and test suite, you need to you can execute your test by running the following command: Make sure to enter your basic authentication, app url (generated in the first step) and testSuite url (generated in the second step) in the below command.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/#step-4-executing-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Test Execution",
+          "text": "Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at TestMu AI Automation.",
+          "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-android-automation/#step-5-view-test-execution"
+        }
+      ]
+    }
+  ]) }}
+/>
 <RealDeviceTag value="Real Device" /> 
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 

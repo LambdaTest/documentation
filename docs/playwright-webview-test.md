@@ -128,6 +128,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-10T15:46:57+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to perform Webview testing",
+      "description": "Learn how to perform webview testing on android using playwright framework on TestMu AI platform with real browsers cross platform.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your test suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run your tests. If you are using your own project, configure the browserWSEndpoint (browser end point URL) in your test script to run the test on TestMu AI Here is the sample test script for your reference:",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Update the dependencies",
+          "text": "Before proceeding forward, run the below command to update the outdated dependencies",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-2-update-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Update your test Capabilities",
+          "text": "Include the following field in the capabilities object to enable WebView testing: Use our Capability Generator to select from a wide range of options for customizing your tests.",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-3-update-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setup your TestMu AI credentials",
+          "text": "In your terminal (as per your respective Operating System), run these command to setup your TestMu AI credentials. You can see your credentials below if you have logged into our platform. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-4-setup-your-testmu-ai-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute your test",
+          "text": "Replace the TESTFILENAME in the below command with your desired test file to execute that particular test on TestMu AI: Visit the TestMu AI Web Automation page to check the status of your test execution.",
+          "url": "https://www.testmuai.com/support/docs/playwright-webview-test/#step-5-execute-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
 WebView testing is an essential process for ensuring the functionality and reliability of applications that rely on embedded web browsers. This guide provides detailed steps to perform WebView testing using Playwright. It is designed for developers, QA engineers, and anyone involved in software quality assurance.
 
 ## Steps to perform Webview testing

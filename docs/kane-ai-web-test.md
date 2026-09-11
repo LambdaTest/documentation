@@ -98,6 +98,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:16:50+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to generate the test cases",
+      "description": "Author your first test with KaneAI",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a Web Test",
+          "text": "Navigate to the KaneAI homepage and click on the Create a Web Test button to initiate the process of generating test cases for your web app. In the right side, a window will open with which you can navigate to your platform to perform the testing.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-web-agent/#step-1-create-a-web-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Write Your Test Cases in Plain English",
+          "text": "Let KaneAI do the coding! In this step, you'll describe your desired test outcomes using plain English. Don't worry about writing specific code or scripts \u2013 KaneAI will handle that for you. For example: Visit the website \"www.lambdatest.com\" Click on the Login button. Keep adding tests in plain English as you go; KaneAI will automatically queue them up for execution, so you don't have to wait for one test to finish before writing the next. Click on the Fininsh Test button. Remember: The more specific you are, the more accurate KaneAI's generated test cases will be.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-web-agent/#step-2-write-your-test-cases-in-plain-english"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Save your Test Case",
+          "text": "Now, save your test cases that you have generated till now. Select your Project, and the folder in which you want to store your test cases. The Test Name and the Description will be generated automatically, and you can also edit it. Select the Type of your test, and the status, and define the necessary tags which will help ypu to search your tests later.",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-web-agent/#step-3-save-your-test-case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute your test",
+          "text": "Step 4: Execute your test",
+          "url": "https://www.testmuai.com/support/docs/kane-ai-web-agent/#step-4-execute-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
 In this guide, we'll walk you through the process of generating, and executing automated tests for your web application using KaneAI.
 
 ## Steps to generate the test cases

@@ -97,6 +97,76 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Upload a File",
+      "description": "This documentation will help you to understand how to Upload and Download Files",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Initiate a Test Session",
+          "text": "Log in to your TestMu AI account. Click on Create a Web Test to start a new session within Kane AI.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/#step-1-initiate-a-test-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Navigate to the Upload Section",
+          "text": "Within the test session, navigate to the specific webpage where file uploads are required. Type a slash (/) to access the file selection menu.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/#step-2-navigate-to-the-upload-section"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Select Files for Upload",
+          "text": "Choose to either: Select from pre-uploaded files. Upload files from your local system. - Ensure the upload limit does not exceed 5 files per session. - Supported file formats: - Images : JPG, JPEG, PNG, GIF (Maximum size: 10 MB) - Videos : MP4 (Maximum size: 50 MB) - Files : XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, CRT, CER, GED, GPX, XML, PBIX, ZIP, JSON (Maximum size: 15 MB) Click Add File to confirm your selection.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/#step-3-select-files-for-upload"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: File Upload Process",
+          "text": "Upon clicking Add File, the selected files are uploaded successfully to the downloads folder within the session. These files are treated as variables and their paths are dynamically assigned. These variables are named with prefix FILE_ The FILE variable behavior described above applies to Web tests. In App tests** no file variable is created. See File Upload in App Tests below for more information.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/#step-4-file-upload-process"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Accessing Uploaded Files",
+          "text": "In the test environment, type upload in the command field. Select the required file from the available list using double-curly braces syntax (e.g.,upload {{FILEIMAGE1_PNG}} in upload section). Kane AI will detect the appropriate action for uploading and provide relevant options. On the right panel, all downloaded files in the session\u2019s downloads folder will be displayed.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/#step-5-accessing-uploaded-files"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Downloading Files from Kane AI",
+      "description": "This documentation will help you to understand how to Upload and Download Files",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Managing Downloaded Files",
+          "text": "Files added during the session will be visible in the downloads section. Users can either download all files at once or select specific files for download.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/#step-1-managing-downloaded-files"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Reviewing Uploaded Files Post-Test",
+          "text": "After test completion, all uploaded files are recorded as variables. These files are also available as attachments in the test summary page for easy reference and download. The file upload and download functionality in Kane AI enhances test automation by providing easy access to necessary files. By following these steps, testers can efficiently manage files during their test sessions.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-upload-and-download-files/#step-2-reviewing-uploaded-files-post-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ## Prerequisites
 
 - A valid <BrandName /> account with access to Kane AI.

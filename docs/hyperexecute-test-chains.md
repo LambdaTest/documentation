@@ -101,6 +101,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Set Up Connected Workflows in HyperExecute",
+      "description": "Follow these steps to configure connected workflows in HyperExecute: Setup your Project before setting up the Workflows. You must have created your required workflows that you want to trigger.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Workflow",
+          "text": "Click on the \"Setup Workflow\" button: Enter Workflow Details: Workflow Name: Give your workflow a descriptive name (e.g., \"Smoke Tests\" or \"Regression Tests\"). Branch Name: Specify the branch where your tests are stored. YAML File Path: Provide the path to your YAML configuration file that contains the test definitions for this workflow. Click \"Next\" to proceed to the scheduling configuration.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-test-chains/#step-1-setup-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure the Schedule",
+          "text": "Configure the schedule of your workflow. Select the days and time at which you want to trigger your tests. Click on Next.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-test-chains/#step-2-configure-the-schedule"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Workflow Linking",
+          "text": "You can link this workflow to other existing workflows within the same project or across other projects you own. Once this workflow completes successfully, it can automatically trigger the linked workflows, enabling seamless execution across stages. To set this up, simply select the projects and workflows you wish to trigger from the available list. This feature allows you to build automated, end-to-end workflow chains, ideal for orchestrating complex testing and deployment pipelines.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-test-chains/#step-3-workflow-linking"
+        }
+      ]
+    }
+  ]) }}
+/>
 Test Chains allow you to link multiple test workflows so that one workflow triggers another based on specific conditions, such as the success or failure of a previous workflow. This feature eliminates the need for manual intervention between different stages of testing, allowing for a seamless automated testing pipeline.
 
 In this guide, we will walk through the steps to create test chains using connected workflows in HyperExecute, providing real-world examples and step-by-step instructions on how to implement them.

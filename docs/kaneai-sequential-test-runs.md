@@ -100,6 +100,69 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Create a Sequential Test Run",
+      "description": "Learn how to set up and execute sequential test runs in KaneAI to run dependent test cases in a defined order across single and multi-platform configurations.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Enable Sequential Execution",
+          "text": "Create a test run and add your test cases following the standard test run setup. After adding the test cases, enable the Execute instances sequentially toggle. Once enabled, you can arrange the test cases in the order you want them to execute. The test cases listed will be executed in this sequence for each configuration assigned. Parameterized test cases must use the default dataset with single values when running sequentially.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-1-enable-sequential-execution"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure for a Single Platform",
+          "text": "For a single-platform sequential run (e.g., desktop web only), you can select multiple configurations at a global level. For example, you can run the same sequence on both Linux with Chrome 137 and Linux with Firefox. A separate sequential run is created for each configuration.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-2-configure-for-a-single-platform"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Preview and Save",
+          "text": "Click Show execution preview to review the test sequence before executing. The preview displays the exact order in which test cases will run for each configuration. Once verified, click Save test run and proceed to execution.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-3-preview-and-save"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Multi-Platform Sequential Runs",
+      "description": "You can also configure sequential runs that span multiple platforms, for example, running a web test followed by a mobile app test. When multiple platforms are combined (desktop web, mobile browser, mobile app), the global configuration option is replaced with per-test-case configuration.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Select Configurations Per Test Case",
+          "text": "Assign the appropriate configuration to each test case individually. Choose configurations that match the platform each test case was authored on.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-1-select-configurations-per-test-case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Arrange Execution Order and Preview",
+          "text": "Set the execution order based on your test dependencies. Use the execution preview to verify the sequence, for example, a web login test running first, followed by an iOS app verification test.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-2-arrange-execution-order-and-preview"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute the Sequential Run",
+          "text": "Save and execute the test run. The test instances will run one after another in the defined order.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-sequential-test-runs/#step-3-execute-the-sequential-run"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 Sequential test runs let you execute dependent test cases in a specific order. Unlike parallel execution, where test cases run independently and concurrently, sequential execution ensures each test case completes before the next one begins. This is useful when test cases share state or depend on the outcome of a previous test, for example, a login test that must run before an account settings test.
 
 ## Prerequisites

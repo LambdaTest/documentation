@@ -128,6 +128,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-02-12T19:51:34+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Setup the Gradle Plugin",
+      "description": "Automate testing at scale! Integrate TestMu AI with Gradle for seamless CI/CD & lightning-fast execution.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add TestMu AI Gradle Plugin to the build.gradle file",
+          "text": "Step 1: Add TestMu AI Gradle Plugin to the build.gradle file",
+          "url": "https://www.testmuai.com/support/docs/gradle-integration-with-testmu/#step-1-add-testmu-ai-gradle-plugin-to-the-buildgradle-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure TestMu AI Parameters in build.gradle file",
+          "text": "Step 2: Configure TestMu AI Parameters in build.gradle file",
+          "url": "https://www.testmuai.com/support/docs/gradle-integration-with-testmu/#step-2-configure-testmu-ai-parameters-in-buildgradle-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Upload APK Parameters",
+          "text": "With the release of version 1.0.7 of the lambdatest-gradle-plugin, users now have the option to upload their APK files directly to TestMu AI. Add the following configuration to build.gradle to enable APK upload:",
+          "url": "https://www.testmuai.com/support/docs/gradle-integration-with-testmu/#step-3-configure-upload-apk-parameters"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Execute the Plugin",
+          "text": "To run the plugin configured in build.gradle, execute the following command: If you only want to upload your APK files to TestMu AI, use the following command:",
+          "url": "https://www.testmuai.com/support/docs/gradle-integration-with-testmu/#step-4-execute-the-plugin"
+        }
+      ]
+    }
+  ]) }}
+/>
 Gradle is a build automation tool for multi-language software development. It controls the development process across various tasks, including compilation, packaging, testing, deployment, and publishing. Supported languages include Java, Kotlin, Groovy, Scala, C/C++, and JavaScript.
 
 <div className="ytframe"> 

@@ -95,6 +95,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "SIM support Workflow in Automation Test",
+      "description": "Learn how to automate SIM and eSIM scenarios on real mobile devices using Appium, including capabilities, SMS validation, and supported devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Add SIM Capabilities",
+          "text": "To enable SIM & eSIM support, include the following capability in your automation session as highlighted in the Capabilities:",
+          "url": "https://www.testmuai.com/support/docs/sim-support/#step-1-add-sim-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Retrieve SIM Properties at Runtime",
+          "text": "Sample Response:",
+          "url": "https://www.testmuai.com/support/docs/sim-support/#step-2-retrieve-sim-properties-at-runtime"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Validate SMS Workflows",
+          "text": "Trigger an SMS to the device using your backend/system. Poll and read incoming SMS messages via Appium script. Extract OTP codes or verification text to validate end-to-end flow",
+          "url": "https://www.testmuai.com/support/docs/sim-support/#step-3-validate-sms-workflows"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # SIM Support On Public Real Devices
 <RealDeviceTag value="Real Device" /> 
 SIM & eSIM support enables testing of SMS-driven use cases on real mobile devices, such as **OTP verification** and **two-factor authentication** workflows. By automating SIM interactions, teams can validate SMS handling, **verify phone numbers**, and confirm secure onboarding processes without relying on physical test phones.

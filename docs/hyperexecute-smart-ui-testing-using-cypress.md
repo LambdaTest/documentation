@@ -151,6 +151,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "SmartUI Tests in HyperExecute using Cypress",
+      "description": "This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Cypress Your lambdatest Username and Access key HyperExecute CLI in order to initiate a test execution Job . Setup the Environment Variable HyperExecute YAML file which contains all the necessary instructions. To run SmartUI tests, you need to have a Baseline Image and a Comparison image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup your Project",
+          "text": "The HyperExecute CLI is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below: Export the environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in the terminal to setup the CLI and the environment variables. For macOS / Linux: For Windows:",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/#step-1-setup-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Cypress Project",
+          "text": "Go to your project YAML file. Your test files must have this code snippet in order for them to take screenshots. Here 'my-image' is the name of the image which will be rendered on the Dashboard. Refer to the Cypress Documentation to understand the different methods for taking screenshots. Paste the below mentioned code in your YAML file.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/#step-2-configure-your-cypress-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute your Project and Compare the Results",
+          "text": "To execute the project run the below command in your terminal at the root folder. Now, visit to the HyperExecute Dashboard to check the status of your project. Click on the SmartUI Tests button. Click on Compare button to compare the changes made.",
+          "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/#step-3-execute-your-project-and-compare-the-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # SmartUI Tests in HyperExecute using Cypress
 
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Cypress

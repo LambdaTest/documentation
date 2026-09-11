@@ -100,6 +100,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configure Automatic RCA",
+      "description": "Set up Automatic RCA to continuously analyze test failures based on your targeting rules.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Access Organization Settings",
+          "text": "Navigate to Organization Settings in your TestMu AI dashboard In the left sidebar, expand the Insights section under Org Product Preferences Select Automatic AI RCA from the available options",
+          "url": "https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/#step-1-access-organization-settings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable AI RCA",
+          "text": "Toggle the Feature: Use the blue toggle switch to enable \"Automatic AI RCA\"",
+          "url": "https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/#step-2-enable-ai-rca"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Analysis Scope",
+          "text": "In the Analysis Scope section, choose which types of test failures to analyze: All failures: Analyze every failed test, regardless of previous status New failures: Analyze only tests that have failed recently after having passed at least 10 consecutive times previously. Consistent Failures: Analyze only tests that have failed in all of their previous 5 runs to identify persistent issues.",
+          "url": "https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/#step-3-configure-analysis-scope"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure Intelligent Targeting",
+          "text": "Configure intelligent targeting rules to precisely control which tests, builds, tags, projects, or jobs are included in AI-powered analysis: Add Targeting Rules: Enter regex patterns in the input field Click Include (+) or Exclude (-): Choose whether to include or exclude matching tests Configure Multiple Criteria: Set targeting rules for: Test Names: Target specific test suites or test patterns Build Names: Include or exclude builds with specific names (e.g., hourly, nightly) Test Tags: Include or exclude tests with specific tags (e.g., playwrighttest, atxHyperexecutetest) Build Tags: Include or exclude builds with specific tags (e.g., hourly, nightly) Project Names: Include or exclude tests from specific projects using regex patterns Job Labels: Include tests with specific job labels or tags The intelligent targeting system applies rules using the following logic: Rule Evaluation Process: Include Rules (AND Logic): All Include rules within the same category must match for a test to be considered Exclude Rules (OR Logic): Any Exclude rule that matches will immediately exclude the test from analysis Cross-Category Logic: Include rules across different categories (Test Names, Build Tags, Project Names, etc.) must ALL match Exclusion Precedence: Exclude rules take priority over Include rules - if any exclude rule matches, the test is excluded regardless of include matches Best Practices for Rule Configuration: Start Broad: Begin with general include rules, then add specific...",
+          "url": "https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/#step-4-configure-intelligent-targeting"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Manage Custom RCA Categories (Optional)",
+          "text": "Custom RCA Categories allow you to define intelligent classification categories that automatically categorize and organize test failure analysis results. This helps you group similar failures together, track trends, and prioritize fixes more effectively. In the Automatic AI RCA configuration page, locate the Custom RCA Categories section Click the Manage button to open the category management drawer Create: Click Add Category, enter a name and description, select Active or Inactive status, then click Create RCA Category Edit: Click the edit icon on any category card to modify its details Delete: Click the delete icon and confirm to remove a category Search: Use the search box to filter categories by name or description Category Status: Active: Used by AI for automatic classification and appears in RCA results Inactive: Saved but not used for classification; can be reactivated later Best Practices: Be Specific: Create distinct categories (e.g., \"Database Connection Timeouts\" vs \"Database Issues\") Use Clear Names: Choose names your team understands immediately Start Small: Begin with 5-10 active categories for your most common failure types Review Regularly: Periodically refine categories based on your failure patterns Example Custom RCA Categories:",
+          "url": "https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/#step-5-manage-custom-rca-categories-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Set Special Instructions (Optional)",
+          "text": "Provide context or specific guidance for the AI to consider during analysis: Click on the Special Instructions section Enter any special instructions or context that should be considered during AI root cause analysis Use the \"Show examples\" link for guidance on effective instruction writing Example Instructions: Environment-Specific Context: Running on Staging environment with test data Database may have lag issues during peak hours (9 AM - 5 PM EST) Test environment has limited resources compared to production (2GB RAM vs 8GB) Network latency is higher in test environment (average 150ms vs 50ms in production) Known Issues & Patterns: Payment gateway timeouts during high traffic periods (especially between 2-4 PM) Cache invalidation issues occur immediately after deployments Third-party API rate limits: Salesforce (1000 requests/hour), HubSpot (500 requests/hour) Database connection pool is limited to 20 connections - look for pool exhaustion patterns OAuth token expiration happens every 24 hours - failures around token refresh time are expected Analysis Preferences: Focus on recent failures over recurring issues when prioritizing Consider browser compatibility differences (Chrome vs Firefox behavior variations) Check for timing-related failures (elements loading asynchronously) Distinguish between environment-specific issues vs application bugs Prioritize failures affecting core user journeys: Login, Checkout, Dashboard, Profile Management Business Context: Critical user...",
+          "url": "https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/#step-6-set-special-instructions-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 7: Save Configuration",
+          "text": "Click Save Configuration to apply your settings The settings will be applied to all users in your organization and cannot be modified by individual users or need admin level privileges.",
+          "url": "https://www.testmuai.com/support/docs/analytics-ai-root-cause-analysis/#step-7-save-configuration"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 AI Root Cause Analysis (AI RCA) in <BrandName /> Analytics uses advanced AI-powered LLM technology to automatically analyze failed tests and identify their root causes. Instead of manually sifting through logs and error messages, AI RCA provides:
 
 - **Intelligent root cause identification** - distinguishes between primary causes and cascading symptoms

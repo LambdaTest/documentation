@@ -138,6 +138,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Generate Test Cases: Step-by-Step",
+      "description": "Learn efficient test case generation with in TestMu AI's Test Manager using AI, in manual steps or BDD (Gherkin) format.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the AI Test Case Generator",
+          "text": "You can access the AI Test Case Generator from two entry points: From Test Manager: Navigate to the Test Case Listing page within your project and click on Generate With AI. An input box will appear where you can provide your requirements. From KaneAI: Navigate to the Agent page in KaneAI and select Generate Scenarios. This opens the same AI Test Case Generator interface.",
+          "url": "https://www.testmuai.com/support/docs/generate-test-cases-with-ai/#step-1-open-the-ai-test-case-generator"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enter Your Requirements",
+          "text": "Start by entering your product or feature requirements in the input box. We support multiple input formats, including: Textual requirements Jira/Azure DevOps/Linear links (e.g., epics, stories, tasks) PDFs Images Audio (recordings or uploads) Videos Spreadsheets (CSV or XLSX) Documents Markdown files (.md) JSON or XML Currently, the AI Test Case Generator can only access publicly available URLs. Websites behind a VPN, corporate proxy, firewall, or those requiring authentication to reach the landing page cannot be analyzed. Support for private URLs is coming soon. Choosing an output format is optional. By default the AI writes Manual Test Steps, so you can generate without changing anything. To generate BDD Scenarios instead, open Advanced settings before you generate and turn on the Gherkin Format toggle. It sits with the other generation settings, below Memory Enhancement. A test case is written in one format or the other \u2014 never both. Switching the toggle changes the format for test cases generated from that point on; it does not rewrite test cases you have already generated. The format you choose is remembered for the rest of the session. Follow-up messages in the Conversation Layer and any regeneration continue in the same format, so you only need to set it once. With the toggle on, each test case carries one or more Gherkin scenarios instead of manual steps: What the AI generates: 1-3 scenarios per test case, each self-contained. 4-10 steps per scenario, each 40 words...",
+          "url": "https://www.testmuai.com/support/docs/generate-test-cases-with-ai/#step-2-enter-your-requirements"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Generate Test Cases",
+          "text": "Once all your input requirements are added (along with any custom instructions), press Enter to start generating test cases. The AI analyzes your input, retrieves relevant context from your existing test case repository via the Smart Context: Memory Layer, and generates test cases that are both comprehensive and non-duplicative. To end the test case generation while the Agent is thinking, click on the Stop Generating button.",
+          "url": "https://www.testmuai.com/support/docs/generate-test-cases-with-ai/#step-3-generate-test-cases"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Review Test Cases Across Scenarios",
+          "text": "Test cases are grouped into high-level, logical test scenarios. Each scenario represents a theme or functional area for easier navigation and categorization. Scenarios are labeled with tags such as Must have, Should have, and Could have, indicating their relative importance as determined by the Agent. Individual test cases are further categorized with tags: Positive: Valid test cases expected to pass. Negative: Invalid or failure cases designed to test robustness. Edge: Corner cases that may be overlooked in testing flows.",
+          "url": "https://www.testmuai.com/support/docs/generate-test-cases-with-ai/#step-4-review-test-cases-across-scenarios"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View and Edit Test Case Details",
+          "text": "Click on any test case to explore its full details, including: Test Case Title Description Pre-conditions Priority Test Steps and Expected Outcomes You can edit any part of the test case if you want to add more context or align it with your test strategy. The details panel matches the format the test case was generated in. Manual Test Steps show as Test Steps and Expected Outcomes; BDD Scenarios show as a BDD Scenarios section, where each scenario opens in a Gherkin editor with syntax highlighting and can be edited directly.",
+          "url": "https://www.testmuai.com/support/docs/generate-test-cases-with-ai/#step-5-view-and-edit-test-case-details"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # AI Test Case Generator
 
 ## What is the AI Test Case Generator?

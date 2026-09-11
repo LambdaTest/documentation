@@ -124,6 +124,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configure Custom Headers for Desktop Web",
+      "description": "Learn how to configure and use custom HTTP headers in KaneAI for Desktop Web and Mobile Browser test authoring, including support for secrets.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a Web Test",
+          "text": "Navigate to the KaneAI page and click the Desktop Browser option to create a new web test.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-custom-headers/#step-1-create-a-web-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable and Add Custom Headers",
+          "text": "In the Create a Web Test dialog, enable the Custom Headers toggle. Add your headers by entering a Header Name and Header Value for each row. Click the + button to add more rows. You can add up to 10 custom headers per session. If you provide a default header (e.g., Accept) in the Custom Headers section, it will override the browser's default value for that header.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-custom-headers/#step-2-enable-and-add-custom-headers"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Start the Test Session",
+          "text": "Click Start Testing to launch the session. The headers you configured will be applied to all HTTP requests made during the session, including navigation requests and API calls.",
+          "url": "https://www.testmuai.com/support/docs/kaneai-custom-headers/#step-3-start-the-test-session"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Custom Headers in KaneAI
 
 Custom headers allow you to inject additional HTTP header information into your test sessions. You can use them to send tokens, session IDs, content-type overrides, or any other custom metadata with requests made during your tests.

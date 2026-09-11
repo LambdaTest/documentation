@@ -260,6 +260,68 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to run your first test",
+      "description": "Follow these steps to successfully run your first visual regression test on the TestMu AI platform with the SmartUI Playwright SDK integration.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as CLI for executing your SDK tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Your Test Suite",
+          "text": "You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample for the Java from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/#step-2-configure-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Install the Dependencies",
+          "text": "Update your dependencies in pom.xml file Install required modules for TestMu AI SmartUI SDK in your frontend project. If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/#step-3-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Setup your credentials",
+          "text": "Step 4: Setup your credentials",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/#step-4-setup-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Create and Configure SmartUI Config",
+          "text": "You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: For capturing fullpage or viewport screenshots, please refer to this documentation For the list of available mobile viewports, please refer to this documentation For more information about SmartUI config global options, please refer to this documentation.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/#step-5-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Step 6: Adding SmartUI function to take screenshot",
+          "text": "You can incorporate SmartUI into your custom Playwright automation test (any platform) script by adding the smartuiSnapshot function in the required segment of Playwright script of which we would like to take the screenshot, as shown below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/#step-6-adding-smartui-function-to-take-screenshot"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Step 6: Execute the Tests on SmartUI Cloud",
+          "text": "Execute visual regression tests on SmartUI using the following commands You may use the npx smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-playwright-java-sdk/#step-6-execute-the-tests-on-smartui-cloud"
+        }
+      ]
+    }
+  ]) }}
+/>
 The SmartUI SDK is a powerful tool that simplifies the process of capturing, comparing, and analyzing screenshots across multiple browsers and resolutions. By combining the strengths of Playwright's automation capabilities with SmartUI's visual testing features, you can:
 
 - Ensure your application's UI is consistent across all supported environments.

@@ -129,6 +129,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)",
+      "description": "Use this guide when you run automated web tests on LambdaTest and want SmartUI to capture a visual baseline for a specific part of the page, such as a component, card, table, or section, instead of the full browser window. Make sure you have: A LambdaTest account with Web Automation access, such as Selenium on the LambdaTest Grid. SmartUI enabled for the session. Your SmartUI project and build must be configured on the test session. A locator for the target element, such as a CSS selector, XPath, or HTML id. You can also pass an already-resolved element handle, see Capture by Resolved Element Handle. Do not store usernames or access keys in your source repository. Use environment variables or your CI secret manager instead.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open the Page in Your Test",
+          "text": "In your test script, navigate to the target URL and wait until the UI is fully loaded. Use explicit waits where possible so the element is present and stable before capture.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-1-open-the-page-in-your-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Scroll the Element Into View",
+          "text": "Before taking the screenshot, scroll the target element into the visible area of the page. This helps ensure the correct region is ready for capture. Use your framework's normal scrolling method, such as JavaScript scrollIntoView() or your Selenium helper.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-2-scroll-the-element-into-view"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Call the SmartUI Element Screenshot Hook",
+          "text": "Call the SmartUI hook through your driver's script executor, passing \"smartui.takeScreenshot\" as the command and a config object with your screenshot options: The config object must include at least these fields: Update elementType and element to match the locator used in your test.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-3-call-the-smartui-element-screenshot-hook"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Repeat for Other Components",
+          "text": "If you want to capture more than one component, call the hook again with a different screenshotName for each one. Keep screenshot names stable across runs so SmartUI compares against the correct baseline.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-4-repeat-for-other-components"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Find the Screenshot in SmartUI",
+          "text": "Open SmartUI from your LambdaTest account. Select the project and build that match your test run. Locate the screenshot using the screenshotName.",
+          "url": "https://www.testmuai.com/support/docs/smartui-hooks-element-screenshot/#step-5-find-the-screenshot-in-smartui"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Take a Screenshot of a Specific Element on a Webpage (SmartUI Hooks)
 
 Use this guide when you run automated web tests on LambdaTest and want SmartUI to capture a visual baseline for a specific part of the page, such as a component, card, table, or section, instead of the full browser window.

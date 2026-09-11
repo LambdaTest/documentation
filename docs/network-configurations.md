@@ -80,6 +80,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Network Configurations in Automation Test",
+      "description": "Learn how to configure and capture HTTP/S traffic during automation testing on TestMu AI Real Devices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your App to TestMu AI",
+          "text": "Before enabling network configurations, ensure your app is uploaded to TestMu AI. Uploading Your App \u2013 Follow the detailed steps in our Upload Your Application guide. Once uploaded, note the App ID returned by the API or dashboard. Use this App ID in the \"app\" capability in your automation script.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations/#step-1-upload-your-app-to-testmu-ai"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add Desired Capabilities",
+          "text": "{`desired_caps = { \"deviceName\": \"Galaxy S20\", \"platformName\": \"Android\", \"platformVersion\": \"15\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", \"network\": True, #highlight-next-line \"networkLogsOptions\": { \"captureContent\": False, \"excludeHosts\": [\"lambdatest\"], \"includeHosts\": [\"youtube\", \"facebook\"] }, }`} {`desired_caps = { \"deviceName\": \"iPhone 16\", \"platformName\": \"ios\", \"platformVersion\": \"18\", \"isRealMobile\": True, \"app\": \"YOURAPPID\", \"build\": \"Sample Build\", \"name\": \"Sample Test\", \"network\": True, #highlight-next-line \"networkLogsOptions\": { \"captureContent\": False, \"excludeHosts\": [\"lambdatest\"], \"includeHosts\": [\"youtube\", \"facebook\"] }, }`}",
+          "url": "https://www.testmuai.com/support/docs/network-configurations/#step-2-add-desired-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Run Your Test",
+          "text": "Execute your test script using your preferred automation framework with the above capabilities.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations/#step-3-run-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Network Logs and Configurations
 <RealDeviceTag value="Real Device" />
 Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services, all without leaving your testing workflow.

@@ -124,6 +124,55 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "AI Test Generation: Requirements to Code",
+      "description": "The conversion flow has four stages: Set up your project in Test Manager Provide requirements,text, documents, images, audio, Jira/ADO tickets, or record user interactions Generate test scenarios,AI creates structured test cases from your input Automate and export code,convert generated test cases into automation scripts across frameworks",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a Project",
+          "text": "Start by creating a project in TestMu AI Test Manager. A project is the container for all your test cases, test runs, and configurations. Navigate to Test Manager. Click Create New Project. Enter the project name and description. Save the project. For detailed steps, see Create Projects.",
+          "url": "https://www.testmuai.com/support/docs/manual-to-automated-test-conversion/#step-1-create-a-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Generate Test Scenarios with AI",
+          "text": "Navigate to the Test Case Listing page within your project and click Generate With AI. You can also access this from KaneAI by clicking Generate Scenarios on the Agent page. Provide your requirements in any of the following formats: Before generating, configure Max Scenarios, Max Test Cases per Scenario, and toggle Memory Enhancement to leverage your existing test case repository and avoid duplicates. Press Enter to generate. The AI analyzes your input and produces structured test scenarios with test cases. Each scenario is tagged with priority (Must have, Should have, Could have) and each test case is categorized as Positive, Negative, or Edge. After generation, use the Conversation Layer to refine your test cases through natural language,add coverage, remove duplicates, reorganize scenarios, or update details without manual editing. For the full guide on conversational refinement, see AI Test Case Generator.",
+          "url": "https://www.testmuai.com/support/docs/manual-to-automated-test-conversion/#step-2-generate-test-scenarios-with-ai"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Telemetry- and trace-driven test generation",
+      "description": "TestMu AI can ingest production telemetry, application logs and runtime execution traces to generate and maintain tests. Real user interactions and session traces are converted into structured, editable test scenarios that reflect how the application is actually used, and telemetry signals feed Test Intelligence to prioritise coverage where failures are most likely.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 3: Save or Automate",
+          "text": "Once your test scenarios are ready, select the test cases you want to keep and choose one of two paths: Click Create to save the test cases to your Test Case Repository in Test Manager. These can be used for manual test planning, assigned to test runs, or shared with your team. Click Create and Automate to save the test cases and automatically send them to KaneAI for automation. KaneAI executes each test case using natural language understanding and generates automation scripts.",
+          "url": "https://www.testmuai.com/support/docs/manual-to-automated-test-conversion/#step-3-save-or-automate"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 4: Generate Automation Code",
+          "text": "Once KaneAI has automated your test cases, you can generate code in multiple frameworks and languages. Open the automated test case in KaneAI. Click Generate New Code. Select your desired framework and language. The generated code is fully accessible,download it, customize it, and integrate it into your CI/CD pipeline or execute it on TestMu AI HyperExecute. For the full code generation guide, see KaneAI Code Generation.",
+          "url": "https://www.testmuai.com/support/docs/manual-to-automated-test-conversion/#step-4-generate-automation-code"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # AI Test Generation: Requirements to Code
 
 <BrandName /> provides a complete workflow to convert your manual test requirements into fully automated test scripts,from requirement input to executable code. This guide walks through the end-to-end flow using **Test Manager** and **KaneAI**.

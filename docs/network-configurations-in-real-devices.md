@@ -75,6 +75,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Enabling Network Configuration",
+      "description": "Learn how to configure and capture HTTP/S traffic on real devices during manual testing in App Live & Browser Live, with options for content capture and domain filtering.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Access App Testing",
+          "text": "Log into your TestMu AI dashboard and navigate to Real Devices > App Testing.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations-in-real-devices/#step-1-access-app-testing"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Select your device or browser",
+          "text": "Choose a real Android or iOS device, upload your app (APK/IPA), or open a browser URL.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations-in-real-devices/#step-2-select-your-device-or-browser"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure network log options",
+          "text": "Run your app. In the network logs for your device, open the Configuration Options slider and select the options you want to apply for your current session.",
+          "url": "https://www.testmuai.com/support/docs/network-configurations-in-real-devices/#step-3-configure-network-log-options"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Network Logs and Configurations in real devices
 
 Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services, all without leaving your testing workflow.

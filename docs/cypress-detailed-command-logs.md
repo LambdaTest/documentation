@@ -167,6 +167,69 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "For Cypress v9 and previous versions.",
+      "description": "Learn how to generate detailed command logs for the test reports of cypress framework testing on TestMu AI and download the reports from the dashboard.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure the Plugin",
+          "text": "Open the cypress/plugins/index.js file in your project. Add the following code to install and configure the cypress-terminal-report plugin:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-1-configure-the-plugin"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable Logs in the Console (Optional)",
+          "text": "To display detailed logs in the terminal, update the installLogsPrinter with the printLogsToConsole: 'always' code:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-2-enable-logs-in-the-console-optional"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Install Logs Collector",
+          "text": "Navigate to cypress/support/index.js. Add the following code to install the log collector:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-3-install-logs-collector"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "For Cypress v10 and later versions.",
+      "description": "Learn how to generate detailed command logs for the test reports of cypress framework testing on TestMu AI and download the reports from the dashboard.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Configure the Plugin",
+          "text": "Open cypress.config.js in your project. Add the following code to configure the plugin:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-1-configure-the-plugin-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Enable Logs in the Console (Optional)",
+          "text": "If you need logs in the terminal, update the code like this:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-2-enable-logs-in-the-console-optional-1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Install Logs Collector",
+          "text": "Open cypress/support/e2e.js. Add the following code to install the log collector:",
+          "url": "https://www.testmuai.com/support/docs/cypress-detailed-command-logs/#step-3-install-logs-collector-1"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Detailed Command Logs for Cypress
 The **Detailed Command Logs** feature provides a comprehensive record of all Cypress commands and their results, both in the console and in a file. This functionality is ideal for debugging and troubleshooting, enabling you to pinpoint specific logs quickly and effectively.
 

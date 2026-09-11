@@ -73,6 +73,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Multi-Device Testing Workflow",
+      "description": "Learn how to test multiple devices simultaneously in a single session on TestMu AI App Live, including setup, workflow, and best practices.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Open a Real Device Session",
+          "text": "Log in to your App Live Dashboard, upload your app, and select a real device (Android or iOS).",
+          "url": "https://www.testmuai.com/support/docs/multi-device-testing/#step-1-open-a-real-device-session"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Add Devices Using Multi-Device Option",
+          "text": "Once the session is open, click on the add device option to add more devices. You can set up to 6 devices per session and select the device and application for each.",
+          "url": "https://www.testmuai.com/support/docs/multi-device-testing/#step-2-add-devices-using-multi-device-option"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Apply Multi Device Control Settings",
+          "text": "Once devices have been added to the session, you will see an option called Multi-Device Control. This feature allows you to apply common actions and settings across all connected devices simultaneously, reducing repetitive steps and ensuring consistent configurations. Supported Multi-Device Controls Currently, Record Session downloads are not compatible with QuickTime Player. If you are using macOS, you may need an alternative media player to view the recordings.",
+          "url": "https://www.testmuai.com/support/docs/multi-device-testing/#step-3-apply-multi-device-control-settings"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Multi-Device Testing on Real Devices
 
 **Multi-Device Testing** enables you to run multiple devices simultaneously in a single App Live session, allowing you to validate your application across different devices and OS versions faster and more efficiently. This approach simplifies **cross-device testing** by bringing multiple devices into a single session.

@@ -129,6 +129,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Run Tests",
+      "description": "Set up and run BiDi tests using WebdriverIO on the cloud grid. Follow these steps to run tests on TestMu AI using WebdriverIO with BiDi Protocol: Install Node.js >= 12. Get your TestMu AI Username and Access Key.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Set Up the Project",
+          "text": "You can use your own project to configure and test it. For demo purposes, we use the sample repository. Download or Clone the code sample for the Selenium WebdriverIO BiDi from the TestMu AI GitHub repository to run the tests. Install all the necessary dependencies of the project by running the following command:",
+          "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-1-set-up-the-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Up Your Credentials",
+          "text": "Create a .env file in the root folder of your project. Add your TestMu AI Username and Access Key in place of ` and `.",
+          "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-2-set-up-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Trigger the Tests",
+          "text": "Pass the webSocketUrl as true in the wdio.lambdatest.conf.js file to enable BiDi support. Run the following command in your terminal to trigger the tests on TestMu AI platform using the specified configuration. Home Support BiDi Testing with Selenium WebDriver on TestMu AI",
+          "url": "https://www.testmuai.com/support/docs/selenium-bidi-integration/#step-3-trigger-the-tests"
+        }
+      ]
+    }
+  ]) }}
+/>
 Selenium WebDriver BiDi is a W3C standard protocol used to establish communication between a test script and a remote WebDriver server. It introduces bi-directional communication, meaning both the script and the browser can send requests and responses, leading to a more dynamic and reactive testing experience.
 
 > BiDi is compatible with **Chrome**, **Firefox**, and **Edge** browsers. For more information, refer to the [documentation](https://wpt.fyi/results/webdriver/tests/bidi?label=stable&label=master&aligned).

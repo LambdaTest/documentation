@@ -111,6 +111,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Integrate TeamCity with HyperExecute",
+      "description": "*** To integrate TeamCity with HyperExecute, follow the below mentioned steps: Install Java 17 (recommend) in your device. Download the TeamCity in your device.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Start the TeamCity GUI",
+          "text": "Go to the teamcity/bin folder and run the command ./runAll.sh start to start the TeamCity Server in your system. Now type `http://localhost:8111/` in your browser to open the TeamCity GUI. Click on Create Project button.",
+          "url": "https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/#step-1-start-the-teamcity-gui"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create the Project",
+          "text": "For the demo purposes, we will be using the GitHub repository to create the project. Thus, select From a repository URL section. Enter the Repository URL from which you want to set up the project. Enter the Username and Password of your GitHub. (It is required in case the access to the repo needed authentication). Click on Proceed button.",
+          "url": "https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/#step-2-create-the-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Connect your Version Control System.",
+          "text": "Connect your GitHub / GitLab wherever you have stored your tests. Enter your Project name. Enter your Build config name. Mention your Default branch which needs to be monitored. If you want that besides your default branch, TeamCity should monitor other branches too, define it in the Branch specification section. Click on Proceed button.",
+          "url": "https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/#step-3-connect-your-version-control-system"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Start the build process",
+          "text": "Configure your build setup either automatically (fetched by your VCS) or manually. For the demo purpose, we will configure the build process manually. Select the Command Line for the build setup Enter the Step name (optional). Select the Custom Script in the Run field. Enter the below mentioned script in the space provided. Since my default agent is mac I am using darwin CLI in the cURL command. Kindly change it according to your system default agent. Mac -> darwin Linux -> linux Windows-> windows",
+          "url": "https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/#step-4-start-the-build-process"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Build process is complete",
+          "text": "Now your build process is completed. This will take a couple of minutes to completely execute all the stages. After the build is successful, go to your TestMu AI Dashboard and check the output of the triggered Job.",
+          "url": "https://www.testmuai.com/support/docs/teamcity-with-hyperexecute/#step-5-build-process-is-complete"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # TeamCity Integration With HyperExecute
 
 TeamCity is a build management and continuous integration server developed by JetBrains. It is used to automate the process of building, testing, and deploying software. It supports a wide range of programming languages and technologies, including Java, .NET, Ruby, and Python.

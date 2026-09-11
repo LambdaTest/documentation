@@ -192,6 +192,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Steps to Integrate GitHub Actions Pipeline with SmartUI",
+      "description": "To integrate GitHub Actions Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run the tests on the SmartUI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create your Secrets",
+          "text": "Click on the Settings of your repository. Go to the Security option > Secrets and Variables > Actions. Create your secrets with variable name LTUSERNAME and LTACCESSKEY**. You can fetch your credentials from the Accounts and Settings dashboard.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-1-create-your-secrets"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create a New Workflow",
+          "text": "Navigate to the main page of the repository. Under your repository name, click Actions. In the left sidebar, click the New workflow button.",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-2-create-a-new-workflow"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Create the GitHub Actions workflow YAML file",
+          "text": "To create the GitHub Actions pipeline YAML file, follow the sample command below:",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-3-create-the-github-actions-workflow-yaml-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Workflow",
+          "text": "To run the new pipeline that you just created, click the Run workflow button on the workflow page. A prompt will ask you to enter your PROJECTTOKEN**. You can get your project token from the dashboard after creating your SmartUI project. Check your output in the SmartUI Dashboard",
+          "url": "https://www.testmuai.com/support/docs/smartui-with-github-actions/#step-4-run-the-workflow"
+        }
+      ]
+    }
+  ]) }}
+/>
 GitHub Actions is a powerful automation and continuous integration/continuous delivery (CI/CD) platform built into GitHub. It allows you to create custom automated YAML workflows directly within your GitHub repositories. This helps you to build and test every pull request to your repository, or deploy merged pull requests to production.
 
 This document will show you how to integrate GitHub Actions Pipeline with SmartUI to greatly shorten your test cycles.

@@ -138,6 +138,47 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Flow for Adding XCUI Result Bundles",
+      "description": "Learn how to generate and download Xcode Result Bundles (.xcresult) for XCUI test executions on TestMu AI. Debug smarter with detailed reports directly in Xcode.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Upload Your Application and Test Suite",
+          "text": "To begin testing, you need to upload both your iOS application (.ipa) file and your XCUI test suite (.ipa) file to TestMu AI. These files are required before executing tests. Detailed upload steps are available here: Getting Started with XCUI Testing \u2013 Running Your First Test",
+          "url": "https://www.testmuai.com/support/docs/xcresult/#step-1-upload-your-application-and-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Execute Your Tests with Result Bundles",
+          "text": "To generate .xcresult bundles for your XCUI test executions, you must pass \"enableResultBundle\": true in your build request and use the new build endpoint: This endpoint initiates your test run and enables generation of the result bundle. Below is an example cURL command to execute your test with result bundles enabled:",
+          "url": "https://www.testmuai.com/support/docs/xcresult/#step-2-execute-your-tests-with-result-bundles"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Retrieve the Result Bundle",
+          "text": "Result bundles are generated at the Build level. To download the .xcresult bundle for a specific session, use the following GET endpoint: In case of sharding, each shard execution is treated as a separate shards and generates its own .xcresult bundle. You will need to retrieve each shard's bundle individually. For more information, see Sharding in HyperExecute. To view the .xcresult for a specific shard, you must pass the shard:shardId as a query parameter in your request. Replace {build-id} with the actual build ID. Example cURL command to download the result bundle: {`curl --location --request GET \\\\ 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/{build-id}/xcresult' \\\\ --header 'Authorization: Basic BASICAUTHTOKEN' \\\\ --output xcui-result-bundle.zip`} You will need your BASICAUTHTOKEN (Base64 encoded username:accesskey) in the request header. If you\u2019re unsure how to generate it, follow the instructions here: Executing the Test. The response is a binary ZIP file containing the .xcresult bundle, which you can unzip and open directly in Xcode for detailed analysis.",
+          "url": "https://www.testmuai.com/support/docs/xcresult/#step-3-retrieve-the-result-bundle"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Report Structure",
+          "text": "The .xcresult bundle contains a comprehensive report of your XCUI test execution, including: Summary View: Shows total tests executed, number passed, and number failed with a visual chart. Errors Section: Lists any critical errors or crashes encountered (e.g., test runner crashes with signal codes). Tests Section: Provides execution duration, device and OS version details, and per-device results. Device & Configuration Matrix: Displays which tests passed/failed on specific device configurations. Individual Test Details: Each test case shows its status (pass/fail), failure reason, logs, and any assertion errors. You can open the .xcresult bundle directly in Xcode to explore these details visually, enabling efficient debugging and analysis of your test runs.",
+          "url": "https://www.testmuai.com/support/docs/xcresult/#step-4-report-structure"
+        }
+      ]
+    }
+  ]) }}
+/>
 # XCResult on <BrandName />
 <RealDeviceTag value="Real Device" />
 Apple’s **Native XCResult Bundles (`.xcresult`)** are comprehensive test reports generated when you run XCUITest cases. These bundles include **test hierarchy, logs, stack traces, screenshots, and performance data**, which can be directly viewed in Xcode. They provide developers with rich debugging information, making it easier to analyze why a test passed or failed.  

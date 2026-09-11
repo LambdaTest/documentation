@@ -191,6 +191,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Upload your Screenshots via CLI",
+      "description": "In this documentation, learn how to upload and compare images (jpgs, jpegs, pngs) using the SmartUI CLI.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install the Dependencies",
+          "text": "Install required NPM modules for TestMu AI SmartUI CLI globally or in your project: Global Installation (Recommended): Local Installation: If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-upload/#step-1-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-upload/#step-2-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Upload the required directory of images",
+          "text": "The screenshots in the directory name will be uploaded to SmartUI. By default, SmartUI captures and considers image resolutions. If you prefer to ignore resolutions and compare images solely based on their names, use the following flag: Please read the following table for more information about the options available to upload a directory of static images to SmartUI. You may use the smartui upload --help command in case you are facing issues during the execution of SmartUI Upload options in the CLI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli-upload/#step-3-upload-the-required-directory-of-images"
+        }
+      ]
+    }
+  ]) }}
+/>
 With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 
 ## Prerequisites for running SmartUI CLI

@@ -222,6 +222,33 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Setup",
+      "description": "What you need: Enterprise plan, SSO configured, Admin access, and an IDP that supports SCIM 2.0 (Okta, Azure AD, JumpCloud, etc.).",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Copy SCIM Credentials",
+          "text": "Go to Settings > Organization Settings > Security tab. Copy the SCIM Base URL and Bearer Token.",
+          "url": "https://www.testmuai.com/support/docs/scim/#step-1-copy-scim-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure Your IDP",
+          "text": "Paste the SCIM Base URL and Bearer Token into your IDP's provisioning settings. Full walkthrough: Okta SCIM Guide Applications > your TestMu AI app > Provisioning tab > Configure API Integration Check Enable API Integration, paste credentials, click Test API Credentials > Save Under To App, enable: Create Users, Update User Attributes, Deactivate Users Assignments tab > assign users or groups (For groups) Push Groups tab > Push Groups > Find by name or rule Member changes in pushed Okta groups are automatically synced to TestMu AI. Full walkthrough: Azure AD SCIM Guide Enterprise Applications > your TestMu AI app > Provisioning > set to Automatic Under Admin Credentials, paste SCIM Base URL (Tenant URL) and Bearer Token (Secret Token) > Test Connection > Save Under Mappings, enable user and group provisioning Under Users and groups, assign what you want to provision Start a provisioning cycle (or wait for the 40-minute auto sync) Full walkthrough: JumpCloud SCIM Guide SSO Applications > your TestMu AI app > Identity Management tab Enable SCIM Provisioning, paste credentials Configure attribute mappings (userName, name, active) User Groups tab > select groups > Activate > Save Full walkthrough: PingOne SCIM Guide In PingOne, go to Integrations > Provisioning > create a new SCIM Outbound connection Enter the SCIM Base URL and Bearer Token from TestMu AI Configure preferences: set User Identifier to workEmail and enable Create, Update, Disable users Create a provisioning Rule...",
+          "url": "https://www.testmuai.com/support/docs/scim/#step-2-configure-your-idp"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 SCIM (System for Cross-domain Identity Management) lets your Identity Provider (IDP) automatically manage users and groups within your <BrandName /> organization, no manual account setup required.
 
 | Capability | What it does |

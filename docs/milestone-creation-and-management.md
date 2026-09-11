@@ -92,6 +92,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-02-12T19:51:34+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Creating a Milestone",
+      "description": "Check the milestones - datasets, test run and",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Access the Milestone Section",
+          "text": "Navigate to the Milestone section in the TestMu AI dashboard. Click \"Create Milestone\" and locate the Create Milestone button and click it to start the creation process.",
+          "url": "https://www.testmuai.com/support/docs/milestone-creation-and-management/#step-1-access-the-milestone-section"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Provide the required configurations",
+          "text": "Enter the following mandatory fields: Milestone Name : Provide a clear and descriptive name for the milestone. Associated Test Runs: Select or specify the test runs you want to include. Optional fields: Description : Add additional information about the milestone\u2019s purpose or scope. Tags : Assign relevant tags for categorization. Owner : Designate a team member responsible for the milestone. Duration : Set the expected duration for completing the milestone. Attachments : Upload any relevant files or documentation.",
+          "url": "https://www.testmuai.com/support/docs/milestone-creation-and-management/#step-2-provide-the-required-configurations"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Finalize the Milestone",
+          "text": "Review all entered details for accuracy. Click Create Milestone to finalize the creation.",
+          "url": "https://www.testmuai.com/support/docs/milestone-creation-and-management/#step-3-finalize-the-milestone"
+        }
+      ]
+    }
+  ]) }}
+/>
 Milestones in <BrandName /> serve as a central organizational tool for grouping test runs. They are particularly useful for tracking progress related to feature releases, ensuring comprehensive oversight of associated testing activities.
 
 This guide provides a comprehensive walkthrough for creating and managing milestones within <BrandName />, enabling efficient organization of test runs and tracking feature releases.

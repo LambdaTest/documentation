@@ -234,6 +234,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Capture Static URLs via CLI",
+      "description": "In this documentation, learn how to perform Visual UI Testing using command line interface on the TestMu AI Automation Cloud across 40+ browser versions.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Install the Dependencies",
+          "text": "Install required NPM modules for TestMu AI SmartUI CLI globally or in your project: Global Installation (Recommended): Local Installation: If you face any problems executing tests with SmartUI-CLI versions >= v4.x.x, upgrade your Node.js version to v20.3 or above.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli/#step-1-install-the-dependencies"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Create URL file",
+          "text": "Once, the URLs file will be created, you will be seeing the sample pre-filled URLs in the urls.json file: The waitForTimeout is an optional configuration. If you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli/#step-2-create-url-file"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure your Project Token",
+          "text": "Setup your project token shown in the SmartUI app after creating your project.",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli/#step-3-configure-your-project-token"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Create and Configure SmartUI Config",
+          "text": "You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command: Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file: To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area. You may use the smartui --help command in case you are facing issues during the execution of SmartUI commands in the CLI. Please read the following table for more information about the configuration file:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli/#step-4-create-and-configure-smartui-config"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Execute the Tests on SmartUI Cloud using CLI",
+          "text": "You can now execute tests for Visual Regression Testing using the following options:. You can also use the following options with the capture command: --scheduled - Specify schedule ID for scheduled test runs --userName - Override TestMu AI username --accessKey - Override TestMu AI access key --buildName - Specify a custom build name --fetch-results [filename] - Fetch and save results to JSON file Example with additional options:",
+          "url": "https://www.testmuai.com/support/docs/smartui-cli/#step-5-execute-the-tests-on-smartui-cloud-using-cli"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
 
 <div className='storylane-iframe'>

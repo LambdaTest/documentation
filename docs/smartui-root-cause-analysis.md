@@ -103,6 +103,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use Root Cause Analysis",
+      "description": "Before you begin, please ensure the build was generated using a TestMu AI CLI (exec) command.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Activate RCA Mode",
+          "text": "Open a visual build from your SmartUI dashboard. In the comparison toolbar, click the RCA icon. When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure, you're ready to investigate immediately.",
+          "url": "https://www.testmuai.com/support/docs/smartui-root-cause-analysis/#step-1-activate-rca-mode"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Investigate DOM Differences Visually",
+          "text": "As soon as RCA mode is on, you can interact with the highlighted differences to see the underlying code changes. The selection is visually precise, with overlays that follow the true element boundaries, not just approximate pixel areas.",
+          "url": "https://www.testmuai.com/support/docs/smartui-root-cause-analysis/#step-2-investigate-dom-differences-visually"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Understand Detailed Changes in the RCA Panel",
+          "text": "Once an element is selected, the RCA panel opens on the right sidebar. It displays structured diff breakdowns across several categories:",
+          "url": "https://www.testmuai.com/support/docs/smartui-root-cause-analysis/#step-3-understand-detailed-changes-in-the-rca-panel"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 # Smart Root Cause Analysis (RCA)
 
 <NewTag value="Beta" color="#000" bgColor="#ffec02" />

@@ -142,6 +142,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Selenium With Reqnroll",
+      "description": "Run Reqnroll Selenium and Appium tests on TestMu AI cloud grid with 5000+ real devices and 10,000+ browser/device combinations.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Clone the Sample Project",
+          "text": "Clone the repository and set up the virtual environment. Navigate to the newly created virtual environment:",
+          "url": "https://www.testmuai.com/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/#step-1-clone-the-sample-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Set Your Credentials",
+          "text": "Configure your credentials to connect to the TestMu AI grid. Fetch the TestMu AI Credentials from the TestMu AI Profile Section. You can export the environment variables by running the following commands in your terminal. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/#step-2-set-your-credentials"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Configure Your Test Capabilities",
+          "text": "Update the TestMu AI Credentials in the Makefile or export them as environment variables as shown above. Use the TestMu AI Capabilities Generator to auto-generate the capabilities class for your test requirements.",
+          "url": "https://www.testmuai.com/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/#step-3-configure-your-test-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Run the Test",
+          "text": "Build and execute the Reqnroll tests on the TestMu AI platform. Clean temporary files: Build the automation project: Run the Reqnroll tests:",
+          "url": "https://www.testmuai.com/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/#step-4-run-the-test"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: View Your Results",
+          "text": "Check the test output on the console and the TestMu AI dashboard. Navigate to the TestMu AI Automation Dashboard to check the status of the test execution. All the scenarios that are a part of respective .feature(s) files successfully executed on TestMu AI. Home Support",
+          "url": "https://www.testmuai.com/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/#step-5-view-your-results"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 Run Reqnroll tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

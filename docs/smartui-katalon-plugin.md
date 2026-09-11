@@ -150,6 +150,54 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Configuration & Usage",
+      "description": "Integrate TestMu AI SmartUI with Katalon Studio to perform visual regression testing directly in your test automation workflows.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "Go to SmartUI Projects Page. Click New Project. Select platform as CLI (for Katalon integration). Enter project name, approvers, and tags (optional). Click Submit and copy your Project Token from the dashboard. Your Project Token will be used to authenticate screenshot uploads to SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Start your Katalon Instance from terminal",
+          "text": "Run the following command in the terminal to start the Katalon instance.",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-2-start-your-katalon-instance-from-terminal"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Set Environment Variable",
+          "text": "In your Katalon project, set the PROJECT_TOKEN environment variable: Go to Project > Settings > Plugins > SmartUI Integration. Here you may set your project token",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-3-set-environment-variable"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Step 4: Configure SmartUI in Your Test Case",
+          "text": "Use the provided custom keywords to start, capture, and stop SmartUI sessions.",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-4-configure-smartui-in-your-test-case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Step 5: Advanced Configuration (Optional)",
+          "text": "You can pass additional configuration via a JSON file or inline parameters. Then use it in your test: Use ignoreBoxes to exclude dynamic elements (ads, timestamps) from comparison. Use selectBoxes to compare only specific regions (e.g., main content area).",
+          "url": "https://www.testmuai.com/support/docs/smartui-katalon-plugin/#step-5-advanced-configuration-optional"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [<BrandName /> SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 
 With this plugin, you can:

@@ -250,6 +250,40 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
   }) }}
 />
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Getting started with SmartUI using K6",
+      "description": "In this documentation, learn how to perform Visual Regression testing with K6 on the TestMu AI Automation Cloud across 40+ browser versions.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Create a SmartUI Project",
+          "text": "The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps: Go to Projects page Click on the new project button Select the platform as Web for executing your K6 tests. Add name of the project, approvers for the changes found, tags for any filter or easy navigation. Click on the Submit. -->",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-1-create-a-smartui-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Configure your test with K6 Desired Capabilities",
+          "text": "Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots - Clone the sample GitHub repository: Install the required dependencies: Install k6 by referring to the installation guide https://k6.io/docs/get-started/installation/: Set up the TestMu AI credentials by using the commands below in the terminal. The account details are available on your TestMu AI Profile page. Create and configure SmartUI config file: Add the SmartUI snapshot function to your test file. Create or edit test.js:",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-2-configure-your-test-with-k6-desired-capabilities"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Executing the SmartUI Test Suite",
+          "text": "Execute the test using the following command: You can check the executed builds over at TestMu AI SmartUI.",
+          "url": "https://www.testmuai.com/support/docs/smartui-k6-setup/#step-3-executing-the-smartui-test-suite"
+        }
+      ]
+    }
+  ]) }}
+/>
+
 ---
 
 

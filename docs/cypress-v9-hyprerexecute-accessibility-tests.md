@@ -130,6 +130,40 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     "dateModified": "2026-09-09T19:10:37+05:30"
   }) }}
 />
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Step-by-Step Guide to Trigger Your Test",
+      "description": "Run Accessibility Automation with Cypress v9 on HyperExecute to detect and report accessibility issues during automated execution.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Step 1: Setup Your Test Suite",
+          "text": "To configure and test the system, you may use your existing project. For demonstration purposes, this guide utilizes a sample repository. Download or Clone the code sample from the TestMu AI GitHub repository to run your tests. The HyperExecute CLI is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below: Export your environment variables LTUSERNAME and LTACCESSKEY* that are available in the TestMu AI Profile page. Run the below mentioned commands in your terminal to setup the CLI and the environment variables. {`export LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" export LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`} {`set LTUSERNAME=\"${ YOURLAMBDATEST_USERNAME()}\" set LTACCESSKEY=\"${ YOURLAMBDATESTACCESS_KEY()}\"`}",
+          "url": "https://www.testmuai.com/support/docs/cypress-v9-hyprerexecute-accessibility-tests/#step-1-setup-your-test-suite"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Step 2: Update the Necessary Capabilities and Configurations in your project",
+          "text": "You will have to pass the npm i lambdatest-cypress-cli command in your pre steps to install the TestMu AI Cypress CLI which will be used to execute your Cypress tests. To enable the accessibility testing within your automated test suite, set the accessibility: true in the cypressOps flag of your YAML file. You can also define other settings capabilities as described below. Add this import statement in your support/index.js file to import the acceessibility scanner dependency Add this code snippet in your cypress/plugins/index.jss file.",
+          "url": "https://www.testmuai.com/support/docs/cypress-v9-hyprerexecute-accessibility-tests/#step-2-update-the-necessary-capabilities-and-configurations-in-your-project"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Step 3: Execute and Monitor your Test",
+          "text": "Run the below command in your terminal at the root folder of the project: NOTE : In case of macOS, if you get a permission denied warning while executing CLI, simply run chmod u+x ./hyperexecute to allow permission. In case you get a security popup, allow it from your System Preferences \u2192 Security & Privacy \u2192 General tab. OR use this command if you have not exported your username and access key in the step 1. {./hyperexecute --user ${ YOURLAMBDATESTUSERNAME()} --key ${ YOURLAMBDATESTACCESSKEY()} --config RELATIVEPATHOFYOURYAMLFILE } Now visit the Automation Dashboard and click on the Accessibility tab to check the report generated.",
+          "url": "https://www.testmuai.com/support/docs/cypress-v9-hyprerexecute-accessibility-tests/#step-3-execute-and-monitor-your-test"
+        }
+      ]
+    }
+  ]) }}
+/>
 This document provides a detailed, step-by-step walkthrough for executing automated accessibility tests using <BrandName />'s Accessibility Tool on HyperExecute using Cypress v9 and below.
 :::note
 This documentation is applicable for **Cypress v9** and **previous versions**.
