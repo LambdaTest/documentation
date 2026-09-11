@@ -119,7 +119,7 @@ Deny rules override allow rules, and more specific rules win. Permission state i
 
 The second command continues the same run after delayed evidence is ready. --resume instead creates a new run and carries compatible completed work forward. Rook owns judging; the other phases run your profile hooks.
 
-See [phases and hooks](/support/docs/rook-hooks-and-phases/) for prerequisites and state. The old --no-narrative option is not available in 0.1.3.
+See [phases and hooks](/support/docs/rook-profiles-and-hooks/#lifecycle) for prerequisites and state. The old --no-narrative option is not available in 0.1.3.
 
 ## Request Root-Cause Analysis
 
@@ -225,4 +225,14 @@ rook run --only SC-001 --profile staging --concurrency 1 --name smoke --json
 
 Select the project and agent before running; there is no --entity flag. Supply reviewed permissions when running unattended. See [CI/CD](/support/docs/agent-assurance-ci-cd/) for authentication, JSON, and completion checks.
 
-Use rook ui for the [hosted Web UI](/support/docs/rook-web-ui/) or rook ui --local for on-disk evidence.
+### Review the Run Locally or Online
+
+| Local UI | Hosted Web UI |
+|---|---|
+| `rook ui --local` | `rook ui` |
+| Open agent → runs → run → scenario. | Open project → agent → Runs → run → scenario. |
+| Inspect on-disk results, including local `--test` runs and evidence awaiting upload. | Inspect uploaded normal runs and share links with authorized teammates. |
+
+Neither command completes unfinished phases or retries the target. Keep the local serving process running. For the hosted UI, check the same account and `ROOK_ENV`; use `rook runs sync` for outstanding normal-run uploads. Do not expect a `--test` run to appear there.
+
+See [both UI walkthroughs](/support/docs/rook-web-ui/#choose-your-ui) and [criterion evidence in each interface](/support/docs/agent-assurance-results-and-evidence/#inspect-criterion-evidence).

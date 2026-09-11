@@ -354,6 +354,11 @@ When editing manually:
 Run `rook scenarios list` after editing to surface schema and capability problems before spending on a suite.
 
 
-## Review Scenarios in the Web UI
+## Review Scenarios Locally or Online {#review-scenarios-in-the-web-ui}
 
-After <code>rook sync</code>, open the agent’s **Scenarios** tab in the [Web UI](/support/docs/rook-web-ui/). Filter by feature, class, result, or category. For historical evidence, open a scenario from the specific run; the current catalog definition may have changed since that run.
+You can review definitions in either UI:
+
+- **Local:** run `rook ui --local`, open the agent, scroll to **scenarios**, and click a scenario ID. Read its goal, criteria, and history directly from the workspace. The local list has no hosted filter bar.
+- **Hosted:** after `rook sync`, run `rook ui`, open the agent's **Scenarios** tab, and filter by feature, class, result, or category. This shows uploaded definitions, not unsaved local changes.
+
+In either interface, open a scenario from the specific **run** for historical evidence; the current catalog definition may have changed since that run. Follow the [local definitions](/support/docs/rook-web-ui/#local-definitions) or [hosted scenarios](/support/docs/rook-web-ui/#scenarios) section of the same UI guide.

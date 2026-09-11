@@ -207,7 +207,7 @@ Then run:
 
 If no structural agent signal is found, Rook can ask whether to register the directory anyway. A documentation-only exploration generates requirement-grounded scenarios, but it has less evidence about implementation details, tool behavior, and side effects than a source-backed exploration.
 
-You still need an invocation profile that reaches the deployed agent. See [Configure Rook Profiles](/support/docs/agent-assurance-profiles/).
+You still need an invocation profile that reaches the deployed agent. See [Configure Rook Profiles](/support/docs/rook-profiles-and-hooks/#add-a-profile-interactively).
 
 ## Explore a GitHub Repository
 
@@ -321,3 +321,9 @@ rook explore . --allow 'bash(npm test)'
 Run `/explore` again when prompts, tools, policies, skills, or agent source change. Rook compares the current files with the stored index and updates the existing record, so it keeps your scenario and run history.
 
 After exploration, run `/generate` to refresh scenarios. Rook shows a plan and names the stale prerequisite before it spends credits.
+
+## Review Discovered Agents Locally or Online
+
+Run `rook ui --local` to see the current workspace's **agents** list. Open an agent and scroll through its findings, features, profiles, scenarios, and runs. This does not require publishing the discovery result.
+
+For team review, sync the reviewed definitions and run `rook ui`. In the hosted Web UI, open project → agent → **Summary**, **Versions**, or **Features**. Those screens show uploaded records, not your latest unsynchronized exploration. Neither UI performs discovery or edits the definition. See [local agents](/support/docs/rook-web-ui/#local-agent) and [hosted agent configuration](/support/docs/rook-web-ui/#agent-configuration) in the same walkthrough.
