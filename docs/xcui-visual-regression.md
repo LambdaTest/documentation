@@ -53,6 +53,116 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/xcui-visual-regression/"
+    },
+    "headline": "Getting Started With Visual Regression Testing Using XCUI On SmartUI Real Devices",
+    "description": "Dive into our detailed XCUI Visual Regression support documentation for step-by-step guidance! Efficiently perform visual testing, manage applications, and ensure your mobile apps are visually perfect before launch.",
+    "url": "https://www.testmuai.com/support/docs/xcui-visual-regression/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Access to an iOS app (.ipa) and an iOS Test app (.ipa file).; Go to LambdaTest SmartUI and login along with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Update your App Configurations",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import XCTest\nimport SmartuiXcui // importing the package\nfinal class MyAppUITests: XCTestCase {\n  func testExample() throws {\n      // launch application\n      let app = XCUIApplication()\n      app.launch()\n      // take screenshot\n      let ltApp = LTApp()\n      try ltApp.screenshot(name: \"screenshotName\")\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Executing The Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data '{\n    \"app\" : \"APP_ID\", //enter your app-id\n    \"testSuite\": \"TEST_SUITE_ID\", //enter your test-suite id\n    \"device\" :  [\"iPhone 13-16\"], //enter your device names\n    \"smartUI.project\": \"XCUI-SmartUI-Project\",\n    \"build\" : \"Proverbial-XCUITest\",\n    \"video\" : true,\n    \"queueTimeout\": 10800,\n    \"idleTimeout\": 150,\n    \"devicelog\": true,\n    \"network\": false,\n    \"only-testing\" : [\"LambdaUiKitIOSUITestsLaunchTests\"],\n    \"smartUI.cropStatusBar\" : true,\n    \"smartUI.cropNavigationBar\" : true\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "mappings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::tip When shards are added\n\nIf you are using the `deviceSelectionStrategy: all`, then in that case all the mentioned shards will be executed on all the devices.<br/>\n**For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on 2 devices (2 Shards * 2 Devices).\n\nIf you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on any one device from the list provided.<br/>\n**For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on any device (2 shards * any device mentioned).\n\n:::\n\n:::caution When shards aren't added\n\nIf you are using the `deviceSelectionStrategy: all`, then in that case all the tests will be executed on all the devices based on the concurrency. <br/>\n**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be auto distributed on the devices based on the max concurrency.\n\n\nIf you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned tests will be executed on any one device from the list provided. <br/>\n**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be executed on any one device.\n\n:::\n\n## Filters in Sharding\nYou can filter the Classes / Tests that you'd like to execute using filters.\nHere's an example of the same.\n\n```java\nfilters:\n      attributes:\n      - type: className\n        values: [\"LambdaUiKitIOSUITests\",\"LambdaUiKitIOSUITestsLaunchTests\"]\n      - type: testName\n        values: [\"LambdaUiKitIOSUITests/testverifyAppLaunch\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To implement the XCTestPlan in Sharding, add the xctestplan flag along with app and testSuite in the framework flag as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "framework:\n  name: \"ios/xcui\"\n  args:\n    \"app\" : \"lt://APP_ID\",\n    \"testSuite\": \"lt://TEST_SUITE_ID\",\n    \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\" #only when you want to use XCTestPlan"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project and Build Naming",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"smartUI.project\": \"MyApp-iOS-VisualTests\",\n  \"smartUI.build\": \"Release-1.0.0\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check project name matches exactly (case-sensitive)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"smartUI.project\": \"ExactProjectName\"\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase queueTimeout and idleTimeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"queueTimeout\": 10800,\n     \"idleTimeout\": 150\n   }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 XCUI (XCTest UI) is Apple's native UI testing framework used for testing iOS applications. It is part of the XCTest framework and allows developers to write UI automation tests for iOS apps. In this documentation, you will learn step-by-step how to perform regression testing and find Visual UI Regression bugs easily with the help of Smart Testing.
 
 ## Prerequisites

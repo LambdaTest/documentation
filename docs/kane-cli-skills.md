@@ -47,6 +47,136 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-skills/"
+    },
+    "headline": "Kane CLI Skills for AI Agents",
+    "description": "Install the Kane CLI skill for Claude Code, Codex CLI, or Gemini CLI to enable browser automation directly from your AI coding agent.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli skill",
+      "claude code skill",
+      "codex cli"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx @testmuai/kane-cli-skill"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Global install (available in all projects)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mkdir -p ~/.claude/skills/kane-cli\ncurl -o ~/.claude/skills/kane-cli/SKILL.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project-level install (available only in this project)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mkdir -p .claude/skills/kane-cli\ncurl -o .claude/skills/kane-cli/SKILL.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Can you verify the checkout flow on staging.myapp.com works?\"\n\"Check if our login form shows the right error for wrong passwords\"\n\"Search for 'laptops' on Amazon and store the top 3 prices\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Global install (available in all projects)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -o /tmp/kane-cli-agents.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md\n\n# Append to global AGENTS.md (creates the file if it doesn't exist)\ncat /tmp/kane-cli-agents.md >> ~/.codex/AGENTS.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project-level install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -o /tmp/kane-cli-agents.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md\n\ncat /tmp/kane-cli-agents.md >> AGENTS.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Append to global AGENTS.md (creates the file if it doesn't exist)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Verify the staging site checkout flow works\"\n\"Run the login test and tell me what happened\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Global install (available in all projects)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mkdir -p ~/.gemini/skills/kane-cli\ncurl -o ~/.gemini/skills/kane-cli/SKILL.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project-level install",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mkdir -p .gemini/skills/kane-cli\ncurl -o .gemini/skills/kane-cli/SKILL.md \\\n  https://raw.githubusercontent.com/LambdaTest/kane-cli/main/skill-installer/skills/SKILL.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Gemini CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"Test that the homepage loads correctly on staging\"\n\"Verify the registration flow works end to end\""
+      }
+    ],
+    "dateModified": "2026-07-01T18:40:16+05:30"
+  }) }}
+/>
+
 A Kane CLI **skill** is a markdown instruction file that teaches an AI coding agent how to use `kane-cli`: when to invoke it, how to build commands, how to parse NDJSON output, how to present results, and how to handle failures. Install the skill once, and your agent handles browser automation tasks automatically whenever you ask.
 
 Skills work on top of [Agent Mode](/support/docs/kane-cli-agent-mode/) (`--agent` flag). The skill tells the agent to always use `--agent`, parse the NDJSON stream, and present structured results back to you.

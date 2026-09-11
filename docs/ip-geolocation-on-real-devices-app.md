@@ -53,6 +53,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/ip-geolocation-on-real-devices-app/"
+    },
+    "headline": "IP Geolocation on Real Devices App",
+    "description": "Test your app and website across real devices with TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/ip-geolocation-on-real-devices-app/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "change geolocation on real device",
+      "TestMu AI geolocation testing",
+      "simulate GPS location Android"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Location-specific behavior is crucial to ensure your mobile apps and websites deliver accurate and localized experiences to users worldwide. Whether it's testing region-based content, geo-restricted features, or local SEO implementations, manually simulating different geolocations is essential for a robust QA process.
 
 <BrandName />'s Geolocation Simulation feature allows you to manually set and update the GPS location on real Android devices during live app testing sessions. This empowers you to verify how your app behaves for users across various regions, without needing to physically move devices or use external GPS spoofing tools.

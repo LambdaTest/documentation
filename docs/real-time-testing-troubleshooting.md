@@ -48,6 +48,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/real-time-testing-troubleshooting/"
+    },
+    "headline": "Real Time Testing Troubleshooting",
+    "description": "Perform real time live interactive cross browser compatibility testing of your website or web application with TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/real-time-testing-troubleshooting/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Time",
+    "keywords": [
+      "real time testing in testmu ai",
+      "testmu ai real time testing feature",
+      "online real time testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 Real-Time Testing allows you to perform live-interactive cross browser testing of your website on more than 3000+ real browsers & browser versions running on various operating systems in the cloud. <BrandName /> provides you real-time testing experience by virtual machines hosted on our cloud servers.
 
 Click here to know more about [Real Time Testing at <BrandName />](/support/docs/getting-started-with-desktop-browser-real-time-testing/)

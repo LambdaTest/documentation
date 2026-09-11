@@ -53,6 +53,110 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-csharp-nunit/"
+    },
+    "headline": "Appium with NUnit",
+    "description": "Now you can run your Appium automation scripts using NUnit on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-csharp-nunit/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "csharp",
+      "c#"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Install the MS Visual Studio 2013 or later version for C#. We recommend using the latest version.; Install the framework NUnit3.0, and NuGet plugin for Visual Studio and add the NuGet CLI executable installed in your path.; Access to an Android app (.apk or .aab file) or an iOS app (.ipa file)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install and Setup the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "nuget.exe install ..\\NUnitSelenium\\packages.config"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install and Setup the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "nmake clean build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ":::tip\n- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**\n:::\n\n### Step 5: Configure the Test Capabilities\n\nYou can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.\n\nThe capabilities object in the sample code are defined as:\n\n```csharp\nAppiumOptions capabilities = new AppiumOptions();\ncapabilities.AddAdditionalCapability(\"user\", \"LT_USERNAME\");   //Add LambdaTest username here\ncapabilities.AddAdditionalCapability(\"accessKey\", \"LT_ACCESS_KEY\");   //Add LambdaTest accessKey here\ncapabilities.AddAdditionalCapability(\"app\",app);\ncapabilities.AddAdditionalCapability(\"deviceName\", deviceName);\ncapabilities.AddAdditionalCapability(\"platformVersion\", platformVersion);\ncapabilities.AddAdditionalCapability(\"platformName\", platformName);\ncapabilities.AddAdditionalCapability(\"build\", \"Csharp NUnit\");\ncapabilities.AddAdditionalCapability(\"name\", \"NUnit Test\");\ncapabilities.AddAdditionalCapability(\"isRealMobile\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "nmake all"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The nunit-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "nunit-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a NUnit Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/nunit-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/nunit-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **NUnit** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

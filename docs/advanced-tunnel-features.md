@@ -44,6 +44,129 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/advanced-tunnel-features/"
+    },
+    "headline": "Advanced TestMu AI Tunnel Features",
+    "description": "This provides you with all the Advanced features of the TestMu AI Tunnel.",
+    "url": "https://www.testmuai.com/support/docs/advanced-tunnel-features/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Testing Locally",
+    "keywords": [
+      "local app testing",
+      "testmu ai local testing",
+      "testmu ai local tunnel"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Executing TestMu AI Tunnel for Client Connection",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nSo for example, if your details are as below:\n\n| Parameters                | Values                 |\n| ------------------------- | ---------------------- |\n| **Email**                 | example@lambdatest.com |\n| **<BrandName /> Access Key** | 123asd123              |\n| **Tunnel Name**           | SampleTunnel           |\n\nThen your command would be:\n\n```bash\nLT --user example@lambdatest.com --key 123asd123 --tunnelName SampleTunnel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Leverage .lt.yaml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "User: salmank\nKey: 123456789abcdefghijklmnopqrstuv\nTunnelName: LambdaTest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You will add the verbose flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "User: salmank\nKey: 123456789abcdefghijklmnopqrstuv\nTunnelName: LambdaTest\nVerbose: True"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using The Tunnel InfoAPIs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "LT --user salmank@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest --infoAPIPort 8000"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In order to fetch the current tunnel status, execute the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl http://127.0.0.1:8000/api/v1.0/info"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To stop the current tunnel, execute the below command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -X DELETE http://127.0.0.1:8000/api/v1.0/stop"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Tunnel Logs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "--log-level YOUR_LOG_LEVEL"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "AllowHost In Tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "\u2013allowHosts <comma_separated_domains>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "AllowHost In Tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Explanation:**\nWhen this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from LambdaTest\u2019s network.\n\n## Tunnel Arguments\nYou can find all the arguments for <BrandName /> Tunnel by running the below command in your command line:\n\n```bash\nLT --help"
+      }
+    ],
+    "dateModified": "2026-07-31T21:18:17+05:30"
+  }) }}
+/>
+
 **<BrandName /> Tunnel** feature allows you to test your **private server URLs** or **locally hosted web-apps** or **websites** on **3000+** real browsers through <BrandName />. However, sometimes corporate firewalls and proxy settings may have restricted you to leverage the <BrandName /> Tunnel binary. Not anymore though, as we’ve come up with a new binary for <BrandName /> Tunnel. <BrandName /> Tunnel follows various protocols such as **Web Socket, TCP** etc. to help you establish a secure and unique tunnel connection between your system and <BrandName /> cloud servers.
 
 You can download the **<BrandName /> Tunnel binary** that will help you establish a secure connection through corporate firewalls between your computer and [LambdaTest](https://www.testmuai.com/) cloud servers for a testing locally hosted website or web-applications. You can test plain **HTML, CSS, PHP, Python** or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.

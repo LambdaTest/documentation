@@ -55,6 +55,136 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/saucelabs-to-testmu-migration-guide/"
+    },
+    "headline": "How to migrate from Sauce Labs to TestMu AI",
+    "description": "Using this guide, you can seamlessly migrate from Sauce Labs to TestMu AI. It showcases a hands-on implementation using which you can run tests on TestMu AI (within few minutes)",
+    "url": "https://www.testmuai.com/support/docs/saucelabs-to-testmu-migration-guide/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Other Docs",
+    "keywords": [
+      "saucelabs testmu ai migration",
+      "saucelabs testmu ai porting",
+      "saucelabs testmu ai selenium testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When migrating your Selenium 4 tests from BrowserStack to TestMu AI, the following updates are required in your existing code (Sauce Labs Selenium Grid Credentials)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "public static final String user_name = \"SauceLabs_UserName\";\npublic static final String access_key = \"SauceLabs_AccessKey\";"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Authentication (TestMu AI Selenium Grid Credentials)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT_USERNAME=\"<your_username>\"\nLT_ACCESS_KEY=\"<your_access_key>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changes in Hub URL (Sauce Labs Selenium Grid URL)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "@ondemand.us-west-1.saucelabs.com:443/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changes in Hub URL (TestMu AI Selenium Grid URL)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "@hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Shown below are the screenshots of capabilities generator of Sauce Labs and TestMu AI (Sauce Labs Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"macOS 15\");\nbrowserOptions.setBrowserVersion(\"latest\");\nMap<String, Object> sauceOptions = new HashMap<>();\nsauceOptions.put(\"username\", \"YOUR_USERNAME\");\nsauceOptions.put(\"accessKey\", \"YOUR_ACCESS_KEY\");\nsauceOptions.put(\"build\", \"<your build id>\");\nsauceOptions.put(\"name\", \"<your test name>\");\nsauceOptions.put(\"armRequired\", true);\nbrowserOptions.setCapability(\"sauce:options\", sauceOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setPlatformName(\"MacOS Tahoe\");\nbrowserOptions.setBrowserVersion(\"26\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"<your_username>\");\nltOptions.put(\"accessKey\", \"<your_access_key>\");\nltOptions.put(\"w3c\", true);\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Shown below are the screenshots of capabilities generator of Sauce Labs and TestMu AI (Sauce Labs Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "SafariOptions browserOptions = new SafariOptions();\nbrowserOptions.setCapability(\"platformName\", \"macOS 15\");\nbrowserOptions.setCapability(\"browserVersion\", \"latest\");\nMap<String, Object> sauceOptions = new HashMap<>();\nsauceOptions.put(\"build\", \"<your build id>\");\nsauceOptions.put(\"name\", \"<your test name>\");\nsauceOptions.put(\"username\", \"YOUR_USERNAME\");\nsauceOptions.put(\"accessKey\", \"YOUR_ACCESS_KEY\");\nsauceOptions.put(\"armRequired\", true);\nbrowserOptions.setCapability(\"sauce:options\", sauceOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "DesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"browserName\", \"Safari\");\ncapabilities.setCapability(\"browserVersion\", \"26\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"username\", \"<your_username>\");\nltOptions.put(\"accessKey\", \"<your_access_key>\");\nltOptions.put(\"platformName\", \"MacOS Tahoe\");\nltOptions.put(\"visual\", true);\nltOptions.put(\"video\", true);\ncapabilities.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Scenario (TestMu AI Execution With Selenium 4 Capabilities)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// TextValidationTest.java\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.JavascriptExecutor;\nimport org.openqa.selenium.safari.SafariOptions;\n\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class TextValidationTest {\n\n\n    public static void main(String[] args) throws Exception {\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \n        \"Your LT Username\" : System.getenv(\"LT_USERNAME\");\n\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null ? \n        \"Your LT AccessKey\\n\"  : System.getenv(\"LT_ACCESS_KEY\");\n\n        String GRID_URL = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n\n\n        SafariOptions browserOptions = new SafariOptions();\n        browserOptions.setPlatformName(\"MacOS Tahoe\");\n        browserOptions.setBrowserVersion(\"26\");\n        HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n        ltOptions.put(\"username\", \"<your_username>\");\n        ltOptions.put(\"accessKey\", \"<your_access_key>\");\n        ltOptions.put(\"project\", \"Text Validation Test\");\n        ltOptions.put(\"build\", \"Text Validation Test Build\");\n        ltOptions.put(\"w3c\", true);\n        browserOptions.setCapability(\"LT:Options\", ltOptions);\n\n        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), browserOptions);\n\n        try {\n\n            driver.get(\"https://ecommerce-playground.lambdatest.io/\");\n\n            String expectedText = \"This is a dummy website for Web Automation Testing\";\n            boolean isTextPresent = driver.getPageSource().contains(expectedText);\n\n            if (isTextPresent) {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n                System.out.println(\"\u2714 Text validation PASSED\");\n            } else {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n                System.out.println(\"\u2718 Text validation FAILED\");\n            }\n\n        } catch (Exception e) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=pass\");\n            e.printStackTrace();\n        } finally {\n            driver.quit();   // \ud83d\udd39 Correctly placed \u2013 runs even if test fails\n        }\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Execution With Selenium 3 Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// TextValidationTest.java \u2013 Selenium 3 Configuration\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.JavascriptExecutor;\n\nimport java.net.URL;\nimport java.util.HashMap;\n\npublic class TextValidationTest {\n\n\n    public static void main(String[] args) throws Exception {\n\n        String username = System.getenv(\"LT_USERNAME\") == null ? \n        \"Your LT Username\" : System.getenv(\"LT_USERNAME\");\n\n        String authkey = System.getenv(\"LT_ACCESS_KEY\") == null ? \n        \"Your LT AccessKey\" : System.getenv(\"LT_ACCESS_KEY\");\n\n        String GRID_URL = \"https://\" + username + \":\" + authkey + \"@hub.lambdatest.com/wd/hub\";\n        \n        DesiredCapabilities capabilities = new DesiredCapabilities();\n        capabilities.setCapability(\"browserName\", \"Safari\");\n        capabilities.setCapability(\"browserVersion\", \"26\");\n        HashMap<String, Object> ltOptions = new HashMap<String, Object>();\n        ltOptions.put(\"username\", \"<your_username>\");\n        ltOptions.put(\"accessKey\", \"<your_access_key>\");\n        ltOptions.put(\"platformName\", \"MacOS Tahoe\");\n        ltOptions.put(\"visual\", true);\n        ltOptions.put(\"video\", true);\n        capabilities.setCapability(\"LT:Options\", ltOptions);\n\n        WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), capabilities);\n\n        try {\n\n            driver.get(\"https://ecommerce-playground.lambdatest.io/\");\n\n            String expectedText = \"This is a dummy website for Web Automation Testing\";\n            boolean isTextPresent = driver.getPageSource().contains(expectedText);\n\n            if (isTextPresent) {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=passed\");\n                System.out.println(\"\u2714 Text validation PASSED\");\n            } else {\n                ((JavascriptExecutor) driver).executeScript(\"lambda-status=failed\");\n                System.out.println(\"\u2718 Text validation FAILED\");\n            }\n\n        } catch (Exception e) {\n            ((JavascriptExecutor) driver).executeScript(\"lambda-status=pass\");\n            e.printStackTrace();\n        } finally {\n            driver.quit();   // \ud83d\udd39 Correctly placed \u2013 runs even if test fails\n        }\n    }\n}\n"
+      }
+    ],
+    "dateModified": "2026-08-17T11:15:18+05:30"
+  }) }}
+/>
+
 # Migrating From Sauce Labs To <BrandName />
 * * *
 <BrandName /> and Sauce Labs both offer the cloud-based Selenium Grid. Hence, you can easily migrate your existing Selenium test automation scripts (or suites) from Sauce Labs to <BrandName />.

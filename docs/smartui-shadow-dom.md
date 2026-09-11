@@ -49,6 +49,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-shadow-dom/"
+    },
+    "headline": "Shadow DOM",
+    "description": "In this documentation, learn about about the shadow dom feature of smartui",
+    "url": "https://www.testmuai.com/support/docs/smartui-shadow-dom/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-03-02T15:19:46+05:30"
+  }) }}
+/>
 The Shadow DOM feature in SmartUI allows for testing and capturing assets from content encapsulated within web components. Web components often use Shadow DOM to encapsulate their internal structure and styling, isolating it from the main document. As a result, traditional DOM queries and asset capturing methods might not access or interact with content inside the shadow tree.
 
 SmartUI's Shadow DOM support ensures that assets and UI components rendered within shadow roots are correctly captured and tested, making it easier to handle and test web applications built using web components that leverage the Shadow DOM.

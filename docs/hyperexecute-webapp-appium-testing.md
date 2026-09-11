@@ -46,6 +46,102 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-webapp-appium-testing/"
+    },
+    "headline": "Appium Testing On HyperExecute - WebApp",
+    "description": "Now you can run your automation scripts using Selenium with Behave on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-webapp-appium-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "appium",
+      "java",
+      "testmu ai java"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable; Ensure you have Appium\u2019s Java client library installed.; HyperExecute YAML file which contains all the necessary instructions..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Steps to Run Your Test (Android Web App)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "package com.lambdatest;\n\nimport io.appium.java_client.MobileBy;\nimport org.junit.After;\nimport org.junit.Before;\nimport org.junit.Test;\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.support.ui.ExpectedConditions;\nimport org.openqa.selenium.support.ui.WebDriverWait;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.concurrent.TimeUnit;\n\npublic class androidWeb {\n\n    String username = System.getenv(\"LT_USERNAME\") == null ? \"LT_USERNAME\" //Enter the Username here\n            : System.getenv(\"LT_USERNAME\");\n    String accessKey = System.getenv(\"LT_ACCESS_KEY\") == null ? \"LT_ACCESS_KEY\"  //Enter the Access key here\n            : System.getenv(\"LT_ACCESS_KEY\");\n    public static RemoteWebDriver driver = null;\n    public String gridURL = \"@mobile-hub.lambdatest.com/wd/hub\";\n    public String status = \"passed\";\n    @Before\n    public void setUp() throws Exception {\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n\n        capabilities.setCapability(\"build\", \"HYP Web RD Demo\");\n        capabilities.setCapability(\"name\", \"Java Android Web Test\");\n        capabilities.setCapability(\"platformName\", \"android\");\n        capabilities.setCapability(\"deviceName\", \"Galaxy. *,OnePlus. *,Pixel. *\"); //Enter the name of the device here\n        capabilities.setCapability(\"isRealMobile\", true);\n        capabilities.setCapability(\"region\", \"eu\");\n        // capabilities.setCapability(\"platformVersion\",\"9\");\n        capabilities.setCapability(\"deviceOrientation\", \"portrait\");\n        capabilities.setCapability(\"console\",true);\n        capabilities.setCapability(\"network\",true);\n        capabilities.setCapability(\"visual\",true);\n        try\n        {\n            driver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + accessKey + gridURL), capabilities);\n        }\n        catch (MalformedURLException e)\n        {\n            System.out.println(\"Invalid grid URL\");\n        } catch (Exception e)\n        {\n            System.out.println(e.getMessage());\n        }\n    }\n\n    @Test\n    public void testSimple() throws Exception\n    {\n        try\n        {\n            driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n            driver.findElement(By.name(\"li1\")).click();\n\n        System.out.println(\"Checking Another Box\");\n        driver.findElement(By.name(\"li2\")).click();\n\n        System.out.println(\"Checking Box\");\n        driver.findElement(By.name(\"li3\")).click();\n\n        System.out.println(\"Checking Another Box\");\n        driver.findElement(By.name(\"li4\")).click();\n\n        driver.findElement(By.id(\"sampletodotext\")).sendKeys(\" List Item 6\");\n        driver.findElement(By.id(\"addbutton\")).click();\n\n        driver.findElement(By.id(\"sampletodotext\")).sendKeys(\" List Item 7\");\n        driver.findElement(By.id(\"addbutton\")).click();\n\n        driver.findElement(By.id(\"sampletodotext\")).sendKeys(\" List Item 8\");\n        driver.findElement(By.id(\"addbutton\")).click();\n\n        System.out.println(\"Checking Another Box\");\n        driver.findElement(By.name(\"li1\")).click();\n\n        System.out.println(\"Checking Another Box\");\n        driver.findElement(By.name(\"li3\")).click();\n\n            status=\"passed\";\n        }\n        catch (Exception e)\n        {\n            System.out.println(e.getMessage());\n            status=\"failed\";\n        }\n    }\n    @After\n    public void tearDown() throws Exception\n    {\n        if (driver != null)\n        {\n            driver.executeScript(\"lambda-status=\" + status);\n            driver.quit();\n        }\n    }\n\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "iOS Web App",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "package com.lambdatest;\n\nimport io.appium.java_client.MobileBy;\nimport org.junit.After;\nimport org.junit.Before;\nimport org.junit.Test;\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.remote.DesiredCapabilities;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport org.openqa.selenium.support.ui.ExpectedConditions;\nimport org.openqa.selenium.support.ui.WebDriverWait;\n\nimport java.net.MalformedURLException;\nimport java.net.URL;\nimport java.util.concurrent.TimeUnit;\n\npublic class iosWeb {\n\n    String username = System.getenv(\"LT_USERNAME\") == null ? \"LT_USERNAME\"   //Enter the Username here\n            : System.getenv(\"LT_USERNAME\");\n    String accessKey = System.getenv(\"LT_ACCESS_KEY\") == null ? \"LT_ACCESS_KEY\"   //Enter the Access key here\n            : System.getenv(\"LT_ACCESS_KEY\");\n    public static RemoteWebDriver driver = null;\n    public String gridURL = \"@hub.lambdatest.com/wd/hub\";\n    public String status = \"passed\";\n    @Before\n    public void setUp() throws Exception {\n        DesiredCapabilities capabilities = new DesiredCapabilities();\n\n        capabilities.setCapability(\"build\", \"HYP Web RD Demo\");\n        capabilities.setCapability(\"name\", \"Java JUnit iOS Web Test\");\n        capabilities.setCapability(\"platformName\", \"ios\");\n        capabilities.setCapability(\"deviceName\", \"iPhone.*\");\n        capabilities.setCapability(\"isRealMobile\", true);\n        // capabilities.setCapability(\"platformVersion\",\"14\");\n        capabilities.setCapability(\"deviceOrientation\", \"portrait\");\n        capabilities.setCapability(\"console\",true);\n        capabilities.setCapability(\"network\",true);\n        capabilities.setCapability(\"visual\",true);\n        \n        try\n        {\n            driver = new RemoteWebDriver(new URL(\"https://\" + username + \":\" + accessKey + gridURL), capabilities);\n        }\n        catch (MalformedURLException e)\n        {\n            System.out.println(\"Invalid grid URL\");\n        } catch (Exception e)\n        {\n            System.out.println(e.getMessage());\n        }\n    }\n\n    @Test\n    public void testSimple() throws Exception\n    {\n        try\n        {\n            driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);\n           driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n            driver.findElement(By.name(\"li1\")).click();\n\n        System.out.println(\"Checking Another Box\");\n        driver.findElement(By.name(\"li2\")).click();\n\n        System.out.println(\"Checking Box\");\n        driver.findElement(By.name(\"li3\")).click();\n\n        System.out.println(\"Checking Another Box\");\n        driver.findElement(By.name(\"li4\")).click();\n\n        driver.findElement(By.id(\"sampletodotext\")).sendKeys(\" List Item 6\");\n        driver.findElement(By.id(\"addbutton\")).click();\n\n        driver.findElement(By.id(\"sampletodotext\")).sendKeys(\" List Item 7\");\n        driver.findElement(By.id(\"addbutton\")).click();\n\n        driver.findElement(By.id(\"sampletodotext\")).sendKeys(\" List Item 8\");\n        driver.findElement(By.id(\"addbutton\")).click();\n\n        System.out.println(\"Checking Another Box\");\n        driver.findElement(By.name(\"li1\")).click();\n\n        System.out.println(\"Checking Another Box\");\n        driver.findElement(By.name(\"li3\")).click();\n            status=\"passed\";\n        }\n        catch (Exception e)\n        {\n            System.out.println(e.getMessage());\n            status=\"failed\";\n        }\n    }\n    @After\n    public void tearDown() throws Exception\n    {\n        if (driver != null)\n        {\n            driver.executeScript(\"lambda-status=\" + status);\n            driver.quit();\n        }\n    }\n\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample YAML 0.2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "version: \"0.1\"\nrunson: win\n\nautosplit: true\n\nconcurrency: 2\n\ntestDiscovery:\n    command: cat tests.txt\n    mode: static\n    type: raw\n\ntestRunnerCommand: mvn test -P $test\n\nframework:\n    name: appium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "More About Desired Capabilities (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "{\n    \"deviceName\": \"Galaxy Tab S4\",\n    \"platformName\": \"android\",\n    \"platformVersion\": \"10\",\n    \"visual\": True,\n    \"console\": True,\n    \"deviceOrientation\": \"PORTRAIT\",\n    \"build\": \"new-12\",\n    \"isRealMobile\": True,\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "More About Desired Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "{\n    \"deviceName\": \"iPhone 12 Mini\",\n    \"platformName\": \"ios\",\n    \"platformVersion\": \"14\",\n    \"isRealMobile\": True,\n    \"visual\": True,\n    \"console\": True,\n    \"build\": \"lt-web-4\",\n    \"network\": True,\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This page outlines how to execute your Appium tests on HyperExecute for WebApps using TestNG with YAML 0.2
 > HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
 

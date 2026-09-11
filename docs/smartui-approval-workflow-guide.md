@@ -46,6 +46,150 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-approval-workflow-guide/"
+    },
+    "headline": "SmartUI Approval, Reject, Move, and Merge Functions Guide",
+    "description": "Comprehensive guide to understanding and using SmartUI approval, reject, move, and merge functions. Learn how baseline changes require explicit user updates across different workflows.",
+    "url": "https://www.testmuai.com/support/docs/smartui-approval-workflow-guide/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "SmartUI Approval",
+      "Baseline Management",
+      "Visual Regression Workflow"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CLI Usage",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Merge branches\nnpx smartui merge branch --source feature-branch --target main\n\n# Merge builds\nnpx smartui merge build --source build-name --target baseline-build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Baseline Update Mechanism",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// SDK capability to auto-mark baseline\ncapabilities.setCapability(\"smartUI.baseline\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "CLI Workflows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Run tests (no baseline change)\nnpx smartui exec -- npm test\n\n# 2. Approve screenshots (marks as accepted, no baseline change)\n# Manual dashboard action required\n\n# 3. EXPLICIT: Move to baseline (updates global baseline)\nnpx smartui move-to-baseline --build current-build"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SDK with Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Explicit capability setting required\ncapabilities.setCapability(\"smartUI.baseline\", true); // User must set this"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Git Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Explicit baseline branch configuration required\nexport BASELINE_BRANCH=\"main\" # User must configure"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# After approving in B1\nnpx smartui move-to-baseline --build B1\n\n# Or use the dashboard \"Move to Baseline\" function"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Solution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Ensure correct capability syntax\ncapabilities.setCapability(\"smartUI.baseline\", true);\n\n// Verify build completion\n// Check SmartUI dashboard for baseline status"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For CLI Workflows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Run initial build to establish baseline\nnpx smartui exec -- npm test\n\n# 2. Make necessary UI changes\n\n# 3. Run comparison build\nnpx smartui exec -- npm test\n\n# 4. Review and approve valid changes in dashboard\n\n# 5. CRITICAL: Move approved changes to baseline\n# Use dashboard \"Move to Baseline\" or CLI equivalent\n\n# 6. Future builds will now use updated baseline"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For SDK Integration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Set capability explicitly for baseline marking\nDesiredCapabilities capabilities = new DesiredCapabilities();\ncapabilities.setCapability(\"smartUI.baseline\", true);\n\n// Or use individual screenshot approval\nSmartUI.takeScreenshot(\"screenshot-name\");\n// Then manually move to baseline via dashboard"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Branch-Based Development",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Feature branch development\nnpx smartui --baselineBranch main exec -- npm test\n\n# After approval, merge to main\nnpx smartui merge branch --source feature-branch --target main"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Multi-Level Baseline Strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Different baselines for different environments\nnpx smartui --baselineBranch staging exec -- npm test  # Staging baseline\nnpx smartui --baselineBranch production exec -- npm test  # Production baseline\n\n# Build-specific comparisons\nnpx smartui --baselineBuild \"v2.1.0\" exec -- npm test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Baseline Rollback",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Rollback to previous baseline\nnpx smartui --baselineBuild \"previous-stable-build\" exec -- npm test\n\n# Mark old build as baseline again\nnpx smartui --markBaseline --baselineBuild \"rollback-target\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 SmartUI provides powerful baseline management functions that allow you to control how visual regression tests are handled. Understanding these functions is crucial for maintaining accurate baselines and avoiding confusion about which screenshots serve as reference points for future comparisons.
 
 :::warning **Critical Concept**

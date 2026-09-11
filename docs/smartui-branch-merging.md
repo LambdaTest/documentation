@@ -49,6 +49,115 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-branch-merging/"
+    },
+    "headline": "Branch-Level Merging in SmartUI",
+    "description": "Learn how to effectively merge branches in SmartUI for visual regression testing workflow management.",
+    "url": "https://www.testmuai.com/support/docs/smartui-branch-merging/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Branch Merging",
+      "SmartUI Git",
+      "Visual Regression Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Merge Command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui merge branch --source <source-branch> --target <target-branch>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Merge feature branch into main\nnpx smartui merge branch --source feature/new-login --target main\n# Creates: merged-branch/feature-new-login-main\n\n# Merge hotfix into staging\nnpx smartui merge branch --source hotfix/security-patch --target staging\n# Creates: merged-branch/hotfix-security-patch-staging"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Feature Branch Strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Ensure feature branch is approved\nnpx smartui merge branch --source feature/new-login --target main"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Hotfix Strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Merge to staging\nnpx smartui merge branch --source hotfix/security-patch --target staging\n\n# 2. Merge to production\nnpx smartui merge branch --source hotfix/security-patch --target production"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Release Branch Strategy",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Create release branch\ngit checkout -b release/v1.0.0\n\n# 2. Merge development into release\nnpx smartui merge branch --source development --target release/v1.0.0\n\n# 3. After testing, merge to main\nnpx smartui merge branch --source release/v1.0.0 --target main"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scenario: Feature Development with Multiple Iterations",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Initial feature development\ngit checkout -b feature/new-dashboard\n\n# First iteration of changes\nnpx smartui --config .smartui.json exec -- <Your execution command> --buildName \"dashboard-v1-tests\"\n\n# Create first PR\ngit push origin feature/new-dashboard\n# Create PR on GitHub/GitLab/etc.\n\n# After review feedback, make changes\ngit commit -m \"Address review comments\"\nnpx smartui exec -- <Your execution command> --buildName \"dashboard-v2-capture\"\n\n# PR is approved and ready to merge\n# First, merge the visual changes\nnpx smartui merge branch --source feature/new-dashboard --target main\n\n# Then merge the code\ngit checkout main\ngit merge feature/new-dashboard\n\n# Run final tests on main\nnpx smartui --config .smartui.json exec -- <Your execution command> --buildName \"main-dashboard-merge\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's a GitHub Actions workflow that automates the branch merging process in your CI/CD pipeline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "name: Visual Regression Tests with Branch Merging\n\non:\n  pull_request:\n    types: [opened, synchronize, reopened]\n    branches: [ main, develop ]\n\njobs:\n  visual-tests:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n\n      - name: Setup Node.js\n        uses: actions/setup-node@v2\n        with:\n          node-version: '16'\n\n      - name: Install dependencies\n        run: npm install\n\n      - name: Run SmartUI tests\n        env:\n          PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}\n        run: |\n          # Run different types of tests\n          npx smartui --config .smartui.json exec -- <Your execution command> --buildName \"pr-${{ github.event.pull_request.number }}-tests\"\n\n  merge-visual-changes:\n    needs: visual-tests\n    if: github.event.pull_request.merged == true\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n\n      - name: Setup Node.js\n        uses: actions/setup-node@v2\n        with:\n          node-version: '16'\n\n      - name: Install dependencies\n        run: npm install\n\n      - name: Merge visual changes\n        env:\n          PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}\n        run: |\n          # Merge visual changes from PR branch to target branch\n          # Creates: merged-branch/<pr-branch>-<target-branch>\n          npx smartui merge branch --source ${{ github.event.pull_request.head.ref }} --target ${{ github.event.pull_request.base.ref }}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 :::info
 This guide explains how to effectively merge branches in SmartUI for managing your visual regression testing workflow.
 :::

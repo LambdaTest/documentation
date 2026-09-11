@@ -6,6 +6,59 @@ description: Rule-level Accessibility guidance for Redundant Entry (WCAG 3.3.7 L
 slug: accessibility-web-rule-3-3-7-redundant-entry/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-web-rule-3-3-7-redundant-entry/"
+    },
+    "headline": "Redundant Entry (3.3.7)",
+    "description": "Rule-level Accessibility guidance for Redundant Entry (WCAG 3.3.7 Level A).",
+    "url": "https://www.testmuai.com/support/docs/accessibility-web-rule-3-3-7-redundant-entry/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Redundant Entry (3.3.7)
 
 Information previously entered by or provided to the user in the same process must be auto-populated or available for selection, unless re-entering is essential for security or the data is no longer valid.

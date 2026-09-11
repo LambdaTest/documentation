@@ -51,6 +51,130 @@ import { CookieTrackingSignup } from '@site/src/component/CookieTracking';
 >
 </script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/localstack-integration-with-testmu/"
+    },
+    "headline": "LocalStack Integration With TestMu AI",
+    "description": "LocalStack is a tool that acts as a drop-in replacement for AWS on your local machine, understand the how LocalStack integration with TestMu AI will help you.",
+    "url": "https://www.testmuai.com/support/docs/localstack-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "push issues to localstack",
+      "free cross browser testing tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For macOS/Linux:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LOCALSTACK_API_KEY=<YOUR_API_KEY>\nlocalstack start -d"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Windows:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "$env:LOCALSTACK_API_KEY=<YOUR_API_KEY> localstack start -d"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running LocalStack Test Cases on Your Local Machine",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "git clone \ngit@github.com:localstack-samples/sample-serverless-image-resizer-s3-lambda.git\ncd sample-serverless-image-resizer-s3-lambda\npython -m venv .venv\nsource .venv/bin/activate\npip install -r requirements-dev.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running LocalStack Test Cases on Your Local Machine",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install awscli-local"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: After the installation of awslocal, you can create the AWS infrastructure on LocalStack by running the following command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "bin/deploy.sh"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: You can fetch the function URL by running the following commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "awslocal lambda list-function-url-configs --function-name presign \nawslocal lambda list-function-url-configs --function-name list"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the following command to execute the tests for your application",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pytest tests/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Name the file he.yml and add the following configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/macnev2013/sample-serverless-image-resizer-s3-lambda",
+        "text": "version: \"0.1\"\nrunson: linux\nautosplit: true\nparallelism: 2\nconcurrency: 2\nscenarioCommandStatusOnly: true\nruntime:\n  language: python\n  version: 3.9.16\npre:\n  - pip install -r requirements-dev.txt\n  - LOCALSTACK_API_KEY=${{ .secrets.LOCALSTACK_API_KEY }} localstack start -d\n  - localstack wait -t 60\n  - bin/deploy.sh\ntestDiscovery:\ntype: raw\nmode: remote\ncommand: pytest --co -q tests | sed '$d'\ntestRunnerCommand: pytest $test\nsourcePayload:\n  platform: git\n  link: https://github.com/macnev2013/sample-serverless-image-resizer-s3-lambda\n  ref: main\n  accessToken: ${{ .secrets.PAT }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the following YAML configuration to the workflow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "name: HyperExecute\non:\n  push:\n    branches:\n      - main\njobs:\n  HE:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - run: |\n\nwget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute\n          chmod +x hyperexecute\n          ./hyperexecute --user nevil.macwan --key ${{ secrets.HE }} \n--config he.yaml        "
+      }
+    ],
+    "dateModified": "2026-05-29T18:18:43+05:30"
+  }) }}
+/>
+
 # LocalStack Integrates With <BrandName />
 ***
 

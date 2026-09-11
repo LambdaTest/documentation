@@ -57,6 +57,96 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-jest-on-hyperexecute/"
+    },
+    "headline": "Run playwright automation tests on HyperExecute using Jest",
+    "description": "Learn how to run playwright automation tests on HyperExecute using Jest framework",
+    "url": "https://www.testmuai.com/support/docs/playwright-jest-on-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "unittest",
+      "unittest selenium",
+      "python selenium"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In this sample YAML file, we have mentioned",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.1\"\n\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: linux\n\nautosplit: true\n\nretryOnFailure: false\nmaxRetries: 1\n\nconcurrency: 2\n\npre:\n  - npm install\n  - npx playwright install\n\ncacheKey: '{{ checksum \"package-lock.json\" }}'\ncacheDirectories:\n  - node_modules\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -lr 'describe' *.test.js\n\ntestRunnerCommand: npm test -- $test\n\njobLabel: [playwright-JestJS, linux, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The jest-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "jest-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Jest Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/jest-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/jest-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Running Jest Framework Tests on HyperExecute
 Jest is a popular JavaScript testing framework primarily used for testing React applications, although it can be employed for any JavaScript project. Developed by Facebook, Jest is known for its simplicity and speed. It provides a testing environment, assertion utilities, and features like snapshot testing, parallel test execution, and mocking to ensure efficient and reliable testing of JavaScript codebases.
 

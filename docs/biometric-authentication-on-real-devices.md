@@ -53,6 +53,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/biometric-authentication-on-real-devices/"
+    },
+    "headline": "Biometric Authentication on Real Devices",
+    "description": "Learn how to test biometric authentication in iOS and Android apps using TestMu AI's real device testing platform. Enhance app security and user experience.",
+    "url": "https://www.testmuai.com/support/docs/biometric-authentication-on-real-devices/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "biometric authentication",
+      "Fingerprint authentication",
+      "app test automation"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-31T21:18:17+05:30"
+  }) }}
+/>
 Biometric Authentication is a security mechanism that utilizes unique biological traits to verify user identities. This feature is commonly implemented in native applications to enhance security while providing a frictionless user experience.
 
 <BrandName /> has extended its testing capabilities to include Biometric Authentication support for both iOS and Android real devices. This enhancement enables developers and QA teams to thoroughly evaluate their application's biometric authentication functionality across diverse device ecosystems.

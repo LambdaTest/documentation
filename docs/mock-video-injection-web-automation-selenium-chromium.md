@@ -49,6 +49,108 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/mock-video-injection-web-automation-selenium-chromium/"
+    },
+    "headline": "Mock Video Injection on Web Automation (Selenium/Chromium)",
+    "description": "Inject a custom video file as a fake camera feed in Chromium-based Selenium tests for WebRTC and KYC workflows.",
+    "url": "https://www.testmuai.com/support/docs/mock-video-injection-web-automation-selenium-chromium/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "mock video injection selenium",
+      "fake camera feed chromium webrtc",
+      "getUserMedia selenium automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cURL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -X POST \\\n  \"https://api.lambdatest.com/automation/api/v1/user-files\" \\\n  -u \"$LT_USERNAME:$LT_ACCESS_KEY\" \\\n  -F \"files=@/path/to/sample_640x360.mjpeg\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"status\": \"success\",\n  \"data\": [\n    {\n      \"error\": \"\",\n      \"message\": \"File have been uploaded successfully to our lambda storage\",\n      \"key\": \"sample_640x360.mjpeg\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Java (Selenium 4, W3C)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import org.openqa.selenium.chrome.ChromeOptions;\nimport org.openqa.selenium.remote.RemoteWebDriver;\nimport java.net.URL;\nimport java.util.*;\n\nChromeOptions options = new ChromeOptions();\n\noptions.addArguments(\n    \"--use-fake-ui-for-media-stream\",\n    \"--use-fake-device-for-media-stream\",\n    \"--use-file-for-fake-video-capture=/home/ltuser/Downloads/sample_640x360.mjpeg\"\n);\n\nHashSet<String> userFiles = new HashSet<>();\nuserFiles.add(\"sample_640x360.mjpeg\");\n\nHashMap<String, Object> ltOptions = new HashMap<>();\nltOptions.put(\"platform\", \"Linux\");\nltOptions.put(\"build\", \"Mock Video Injection Test\");\nltOptions.put(\"name\", \"Fake Camera Feed Test\");\nltOptions.put(\"video\", true);\nltOptions.put(\"w3c\", true);\n\noptions.setCapability(\"LT:Options\", ltOptions);\noptions.setCapability(\"lambda:userFiles\", userFiles);\n\nRemoteWebDriver driver = new RemoteWebDriver(\n    new URL(\"https://\" + LT_USERNAME + \":\" + LT_ACCESS_KEY + \"@hub.lambdatest.com/wd/hub\"),\n    options\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "from selenium import webdriver\n\noptions = webdriver.ChromeOptions()\noptions.add_argument(\"--use-fake-ui-for-media-stream\")\noptions.add_argument(\"--use-fake-device-for-media-stream\")\noptions.add_argument(\"--use-file-for-fake-video-capture=/home/ltuser/Downloads/sample_640x360.mjpeg\")\n\nlt_options = {\n    \"platform\": \"Linux\",\n    \"build\": \"Mock Video Injection Test\",\n    \"name\": \"Fake Camera Feed Test\",\n    \"video\": True,\n    \"w3c\": True,\n}\n\noptions.set_capability(\"LT:Options\", lt_options)\noptions.set_capability(\"lambda:userFiles\", [\"sample_640x360.mjpeg\"])\n\ndriver = webdriver.Remote(\n    command_executor=f\"https://{LT_USERNAME}:{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub\",\n    options=options,\n)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JavaScript (WebDriverIO or raw WebDriver)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const capabilities = {\n  browserName: \"Chrome\",\n  browserVersion: \"latest\",\n  platformName: \"Linux\",\n  \"LT:Options\": {\n    platform: \"Linux\",\n    build: \"Mock Video Injection Test\",\n    name: \"Fake Camera Feed Test\",\n    video: true,\n    w3c: true,\n  },\n  \"lambda:userFiles\": [\"sample_640x360.mjpeg\"],\n  \"goog:chromeOptions\": {\n    args: [\n      \"--use-fake-ui-for-media-stream\",\n      \"--use-fake-device-for-media-stream\",\n      \"--use-file-for-fake-video-capture=/home/ltuser/Downloads/sample_640x360.mjpeg\",\n      \"--no-sandbox\",\n      \"--disable-gpu\",\n    ],\n  },\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Verify the Video Feed in Your Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "driver.get(\"https://www.lambdatest.com/selenium-playground/webrtc-video\");\n\n// Or open your application's camera page\ndriver.get(\"https://your-app.com/video-call\");\n\nBoolean isPlaying = (Boolean) driver.executeScript(\n    \"const video = document.querySelector('video');\" +\n    \"return video && !video.paused && video.readyState >= 2;\"\n);"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Mock Video Injection on Web Automation (Selenium/Chromium)
 
 Inject a custom video file as a fake camera feed in Chromium-based Selenium tests on TestMu AI. This is useful for testing WebRTC, video conferencing, KYC or identity verification, and any flow that calls `getUserMedia()`.

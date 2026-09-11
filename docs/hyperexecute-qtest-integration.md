@@ -49,6 +49,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/"
+    },
+    "headline": "Integrate qTest with HyperExecute",
+    "description": "Unleash the power of QTest & TestMu AI HyperExecute! Streamline test management & experience blazing-fast execution.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-qtest-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You must have Python 3.6, Apache Maven, and Git installed on your local machine.; Download and extract the agentctl-[version]-mac-x64-full.tgz file to a desired installation directory.; Login to qTest Manager as an administrator and access the Resources page.; Expand the APIs and SDK sections.; Navigate to the agentctl directory and start the host by running the following command:; Visit `http://localhost:6789`, add your details and click on the Register button.; Host Name : You have to enter any name that will be assigned as the host name.; qTest URL : Enter the URL of your qTest Manager page. For e.g. https://aman.qtestnet.com; qTest Token : Enter the Token you have copied in the above step.; Full Name : Mention your name here..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./agentctl start"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Update the Configuration Files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{\n  \"git_url\": \"<YOUR_PROJECT_GItHUB_URL>\",\n  \"local_repository\": \"<RELATIVE_PATH_OF_THE_PROJECT>\",\n  \"qtest_api_token\": \"<TOKEN_ACQUIRED_IN_PREREQUISITES>\",\n  \"qtest_url\": \"<YOUR_QTEST_URL>\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 qTest is a comprehensive test management tool designed for Project Management, Bug Tracking, and Test Management. It embraces a centralized test management approach, facilitating seamless communication and accelerating task development across QA teams and stakeholders.
 
 This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by <BrandName />.

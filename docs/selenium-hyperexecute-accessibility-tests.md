@@ -47,6 +47,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-hyperexecute-accessibility-tests/"
+    },
+    "headline": "HyperExecute integration: Selenium accessibility automation",
+    "description": "HyperExecute integration guide: run Selenium-based Accessibility Automation on the HyperExecute grid, align YAML with accessibility capabilities, and open reports after the job completes.",
+    "url": "https://www.testmuai.com/support/docs/selenium-hyperexecute-accessibility-tests/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A valid HyperExecute YAML file; HyperExecute CLI installed locally; Your TestMu AI Username and Access key; A Selenium project that already runs on HyperExecute.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example pattern (illustrative only, adapt to your repo\u2019s actual runson, pre, and testRunnerCommand)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "version: 0.1\nrunson: linux\ntestSuiteStep: 90\npre:\n  - npm install   # or mvn dependency:go-offline\ntestRunnerCommand: npm run test:a11y   # must invoke tests that set accessibility caps"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # HyperExecute integration: Selenium accessibility automation
 
 This page is the **HyperExecute** integration guide for **Accessibility Automation** when your tests use **Selenium**. It assumes you already run Selenium jobs on HyperExecute (YAML + CLI) and need the same **accessibility** session capabilities and reporting behavior on the grid, not a generic Selenium-only tutorial. For framework setup on local or other grids, start with **[Accessibility Automation](/support/docs/accessibility-automation/)** and the **[Selenium](/support/docs/accessibility-automation-test/)** setup doc.

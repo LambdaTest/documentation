@@ -40,6 +40,80 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-debugging/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-evidence-debugging/"
+    },
+    "headline": "Debugging a Failed Run from its Pack",
+    "description": "Use a kane-cli evidence pack to find the cause of a failed run: the failed step, its per-step console and network logs, the annotated screenshot, and the failed versus broken split.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-evidence-debugging/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "debug failed test kane cli",
+      "evidence pack debugging",
+      "failure.yaml"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sealed pack is a zip, so you do not need the viewer to answer a quick question",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# list everything in the pack\nunzip -l <execution_id>.evidence\n\n# print the run manifest\nunzip -p <execution_id>.evidence run.yaml\n\n# print one test's result\nunzip -p <execution_id>.evidence tests/<test-id>/result.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Either way the session directory still holds that run's pack",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "~/.testmuai/kaneai/sessions/<session-id>/evidence/"
+      }
+    ],
+    "dateModified": "2026-08-21T00:24:19+05:30"
+  }) }}
+/>
+
 The pack is the fastest way to understand a failure, because everything is in one place and attributed per step.
 
 ## The four steps

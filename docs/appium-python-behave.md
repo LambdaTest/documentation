@@ -54,6 +54,117 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-python-behave/"
+    },
+    "headline": "Appium with Behave",
+    "description": "Now you can run your Appium automation scripts using with Behave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-python-behave/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "testmu ai python",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; You should have Python installed.; Download and install pip..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "except",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"ios-stepdef\" label=\"iOS\" default>\n\n```python title=\"iOSStepDef.py\"\nimport sys\nimport os\npath = os.getcwd()\nsys.path.append(os.path.abspath(os.path.join(path, os.pardir)))\nimport appConfig as appConf\nfrom behave import given\nfrom appium import webdriver\nimport time\nfrom appium.webdriver.common.mobileby import MobileBy\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\n@given(\"Start the ios app automation test\")\ndef startIOSAppAutomationTest(self):\n    if os.environ.get(\"LT_USERNAME\") is None:\n        #highlight-next-line\n        username = \"username\" #Enter username here\n    else:\n        username = os.environ.get(\"LT_USERNAME\")\n    if os.environ.get(\"LT_ACCESS_KEY\") is None:\n      #highlight-next-line\n        accesskey = \"accesskey\" #Enter accesskey herE\n    else:\n        accesskey = os.environ.get(\"LT_ACCESS_KEY\")\n\n    driver = webdriver.Remote(\n        command_executor=\"https://\"+username+\":\"+accesskey+\"@mobile-hub.lambdatest.com/wd/hub\",\n        desired_capabilities=appConf.app_ios_desired_caps\n    )\n    try:\n        colorElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"color\")))\n        colorElement.click()\n\n        textElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"Text\")))\n        textElement.click()\n\n        toastElement = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"toast\")))\n        toastElement.click()\n\n        notification = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"notification\")))\n        notification.click()\n        time.sleep(3)\n\n        geolocation = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"geoLocation\")))\n        geolocation.click()\n        time.sleep(3)\n\n        home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"Back\")))\n        home.click()\n\n        speedTest = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"speedTest\")))\n        speedTest.click()\n        time.sleep(3)\n\n        home = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"Back\")))\n        home.click()\n\n        browser = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"Browser\")))\n        browser.click()\n\n        url = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"url\")))\n        url.send_keys(\"https://www.testmuai.com\")\n\n        find = WebDriverWait(driver,20).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID,\"find\")))\n        find.click()\n\n        driver.quit()\n    except:\n        driver.quit()\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n\n:::tip\n- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**\n:::\n\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```python title=\"appConfig.py\"\napp_android_desired_caps = {\n \t\"lt:options\": {\n\t\t\"platformName\": \"android\",\n\t\t\"deviceName\": \"OnePlus 6\",\n\t\t\"platformVersion\": \"8\",\n    \"build\": \"Python Behave - Android\",\n\t\t\"name\": \"Sample Test Android\",\n    #highlight-next-line\n\t\t\"app\": \"APP_URL\", #Enter app (.apk) url here\n\t\t\"visual\": True,\n\t\t\"video\": True,\n    \"w3c\": True,\n\t\t\"isRealMobile\": True\n\t}\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "behave --tags @iosApp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "behave --tags @androidApp"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The behave-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "behave-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Behave Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/behave-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/behave-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Behave** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

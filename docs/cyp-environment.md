@@ -27,6 +27,101 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cyp-environment/"
+    },
+    "headline": "Environment Variables Support for Cypress Tests",
+    "description": "Learn how to specify Environment variables.",
+    "url": "https://www.testmuai.com/support/docs/cyp-environment/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sample cypress.json file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{\n......\n\t\"env\":{\n\t\t\"CYPRESS_BASE_URL\":\"https://example.cypress.io/\",\n\t\t\"ACTIONS_URL\": \"commands/actions\",\n\t\t\"WINDOW_URL\": \"commands/window\"\n\t},\n......\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A sample cypress.config.js file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "module.exports = defineConfig({\n  env: {\n    'CYPRESS_BASE_URL':'https://example.cypress.io/',\n    'ACTIONS_URL' : 'commands/actions',\n    'WINDOW_URL': 'commands/window'\n  },"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "An example of a test specifications file is",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "describe('Sample test', () => {\n    it('test case - actions', () => {\n      cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('ACTIONS_URL'))\n      cy.wait(3000)\n    })\n    it('test case - window', () => {\n        cy.visit(Cypress.env('CYPRESS_BASE_URL') + Cypress.env('WINDOW_URL'))\n        cy.wait(3000)\n    })\n})"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Via the cypress.env.json File",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{\n    \"CYPRESS_BASE_URL\":\"https://example.cypress.io/\",\n    \"ACTIONS_URL\" : \"commands/actions\",\n    \"WINDOW_URL\": \"commands/window\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Via the TestMu AI Cypress CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run --envs \"CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 You can specify the environment variables that you want to use for your Cypress tests via the configuration file, via the `cypress.env.json` file, or via the <BrandName /> Cypress CLI. However, if we set environment variables via both <BrandName /> CLI and `cypress.env.json`, the `cypress.env.json` file will be ignored and only the variables set via CLI will be set into environment variables. If you want to understand these methods, go through the document below. 

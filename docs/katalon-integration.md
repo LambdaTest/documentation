@@ -44,6 +44,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/katalon-integration/"
+    },
+    "headline": "Katalon Integration with TestMu AI",
+    "description": "Leverage TestMu AI's cloud mobile devices to run automation testing using Katalon Studio.",
+    "url": "https://www.testmuai.com/support/docs/katalon-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "katalon studio",
+      "integraion",
+      "test recording"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "You will need a TestMu AI username and access key. To obtain your access credentials, purchase a plan or access the automation dashboard.; Katalon Studio; Access to an Android app (.apk) or an iOS app (.ipa).; If you do not have any .apk or .ipa file, you can run your sample tests on TestMu AI by using our sample :link: Android app or sample :link: iOS app.; Response of above cURL will be a JSON object containing the APP_URL of the format - `lt://APP123456789123456789` and will be used in the next steps..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "b. Desired Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\"platformName\", \"android\";\n\"deviceName\", \"Pixel 6\";\n\"platformVersion\", \"12\";\n\"isRealMobile\", true;"
+      }
+    ],
+    "dateModified": "2026-08-14T19:24:28+05:30"
+  }) }}
+/>
+
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 

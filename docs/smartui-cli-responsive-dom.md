@@ -125,6 +125,80 @@ Resize your viewport according to your framework and take the screenshot. For ex
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-responsive-dom/"
+    },
+    "headline": "Capturing Responsive DOM with SmartUI SDK",
+    "description": "In this documentation, learn how to capture responsive DOM by capturing multiple screenshots of the same DOM",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-responsive-dom/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step-1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "\"delayedUpload\" : true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example in Selenium NodeJs, you can do it as follows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\n        let options =\n        {\n            \"web\": {\n                \"browsers\": [\n                    \"chrome\",\n                    \"firefox\",\n                    \"safari\"\n                ],\n                \"viewports\": [[768]], //required resized dom viewport\n            },\n            ignoreDOM: {\n                class: [\"required-class\"],\n              }\n        };\n  await driver.manage().window().setSize(768, 1024);\n  await smartuiSnapshot(driver, 'Screenshot Name', options);\n\n  let mobileOptions=\n        {\n            \"mobile\": {\n                \"devices\": [\n                    \"iPhone 14\",\n                    \"Galaxy S23\"\n                ],\n                \"fullPage\": true,\n                \"orientation\": \"portrait\"\n            },\n            ignoreDOM: {\n                class: [\"nextAvailDate\"],\n              }\n        };\n    await driver.manage().window().setSize(360, 1024);\n    await smartuiSnapshot(driver, 'Screenshot Name', mobileOptions);"
+      }
+    ],
+    "dateModified": "2026-02-03T20:41:06+05:30"
+  }) }}
+/>
+
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>

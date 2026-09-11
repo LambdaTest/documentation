@@ -47,6 +47,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-sessions-overview/"
+    },
+    "headline": "Sessions Overview - TestMu AI Browser Cloud",
+    "description": "The Sessions API lets you create and control cloud-based browser sessions through simple SDK calls in TestMu AI Browser Cloud.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-sessions-overview/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud sessions",
+      "browser sessions api",
+      "cloud browser instance"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How It Works",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Your Agent                          TestMu AI Cloud\n    \u2502                                      \u2502\n    \u251c\u2500\u2500 client.sessions.create() \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2192 \u2502  Spins up a real Chrome browser\n    \u2502                                      \u2502  Returns session ID + WebSocket URL\n    \u2502                                      \u2502\n    \u251c\u2500\u2500 client.puppeteer.connect() \u2500\u2500\u2500\u2500\u2500\u2500\u2192 \u2502  Your agent drives the browser\n    \u2502   page.goto(...)                     \u2502  via WebSocket (CDP)\n    \u2502   page.click(...)                    \u2502\n    \u2502   page.type(...)                     \u2502\n    \u2502                                      \u2502\n    \u251c\u2500\u2500 browser.close() \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2192 \u2502  Browser disconnects\n    \u2502                                      \u2502\n    \u2514\u2500\u2500 client.sessions.release() \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2192 \u2502  Session cleaned up\n                                           \u2502  Resources freed"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # Understanding the Sessions API
 
 The Sessions API lets you create and control cloud-based browser sessions

@@ -45,6 +45,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-using-variables/"
+    },
+    "headline": "Variables in KaneAI",
+    "description": "Learn how to use variables in KaneAI test cases",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-using-variables/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai scroll elements"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For instance, you can write",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Set username as John"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "String variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Enter {{username}} in user input field"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "String variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "assert {{username}} contains 'John'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "JSON variables example:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "assert {{api_variable.response.email}} is 'john.doe@example.com'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Leveraging API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \\\n--header 'Content-Type: application/json' \\\n--header 'Authorization: Basic <Base64Auth>' \\\n--data '{\n    \"test_run_id\": \"<YOUR_TEST_RUN_ID>\",\n    \"concurrency\": 1,\n    \"environment_id\": <Environment_ID> #Optional"
+      }
+    ],
+    "dateModified": "2026-09-09T20:21:05+05:30"
+  }) }}
+/>
+
 Variables are placeholders that store values, which can be reused across different parts of a test case. In automation, using variables helps make the tests more flexible, reusable, and maintainable. Instead of hardcoding values in test steps, you can define variables, assign them values, and reference them throughout your tests. This reduces redundancy and makes the tests easier to modify, especially when dealing with frequently changing parameters like URLs, credentials, or device configurations. Variables can be accessed directly from https://kaneai.lambdatest.com/variables.
 
 Using variables enables you to:

@@ -47,6 +47,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-ab-testing-variations/"
+    },
+    "headline": "A/B Testing and Baseline Variations in SmartUI",
+    "description": "Use SmartUI A/B testing on web screenshots and PDF pages to compare captures against multiple baseline variations (up to 20), see Matched with status, manage variations, and end an experiment by picking a winner.",
+    "url": "https://www.testmuai.com/support/docs/smartui-ab-testing-variations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui",
+      "smartui ab testing",
+      "baseline variations"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # A/B Testing and Baseline Variations
 
 In <BrandName /> **SmartUI**, **A/B testing** lets one **screenshot or PDF page** keep **multiple approved reference images** (called **variations**). Each new capture is compared against **every active variation**; the UI shows which one **matched** (closest visual agreement). That cuts false failures when the same page can look different but still be correct (A/B tests, feature flags, themes, locales, or PDF layout variants) without splitting into separate names in automation or upload flows.

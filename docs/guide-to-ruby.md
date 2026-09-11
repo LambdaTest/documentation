@@ -48,6 +48,74 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/quick-guide-to-run-ruby-tests-on-testmu-selenium-grid/"
+    },
+    "headline": "How To Run Ruby Tests On Online Selenium Grid",
+    "description": "Guide to running Ruby and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and Ruby on 3000+ browsers on cloud.",
+    "url": "https://www.testmuai.com/support/docs/quick-guide-to-run-ruby-tests-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testmu ai automation using ruby",
+      "ruby and selenium automation",
+      "ruby documentation testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "For windows, you can download the latest installed the official website.; If you are using Linux or Ubuntu OS, you can run a simple apt command like below. You can also refer to this doc to know more about which command suits your OS better.; If you are using MacOS you can run a homebrew command like this-.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Ruby & Selenium Test To Get You started",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "//Sample Ruby and Selenium Automation Script\n\nrequire 'selenium-webdriver'\nrequire 'test/unit'\n \nclass LtTest < Test::Unit::TestCase\n    \"\"\"\n    LambdaTest selenium automation sample example\n    Configuration\n    ----------\n    username: Username can be found at automation dashboard\n    accessToken:  AccessToken can be generated from automation dashboard or profile section\n \n    Result\n    -------\n    Execute Ruby Automation Tests on LambdaTest Distributed Selenium Grid\n    \"\"\"\n     \n    def setup\n        \"\"\"\n        Setup remote driver\n        Params\n        ----------\n        platform : Supported platform - (Windows 10, Windows 8.1, Windows 8, Windows 7,  macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)\n        browserName : Supported platform - (chrome, firefox, Internet Explorer, MicrosoftEdge)\n        version :  Supported list of version can be found at https://www.testmuai.com/capabilities-generator/\n \n        Result\n        -------\n        \"\"\"\n        username= \"{YOUR_LAMBDATEST_USERNAME}\"\n        accessToken= \"{YOUR_LAMBDATEST_ACCESS_KEY}\"\n        gridUrl = \"hub.lambdatest.com/wd/hub\"\n  \n        caps = {                      \n            :browserName => \"chrome\",        \n            :version =>   \"67.0\",        \n            :platform =>  \"win10\",\n            :name =>  \"LambdaTest ruby google search name\",\n            :build =>  \"LambdaTest ruby google search build\",     \n            :network =>  true,\n            :visual =>  true,\n            :video =>  true,\n            :console =>  true\n        } \n  \n        puts (caps)\n        # URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub\n        @driver = Selenium::WebDriver.for(:remote,\n            :url => \"https://\"+username+\":\"+accessToken+\"@\"+gridUrl,\n            :desired_capabilities => caps)\n    end\n  \n    def test_Login\n        \"\"\"\n        Setup remote driver\n        Params\n        ----------\n        Execute test:  navigate google.com search LambdaTest\n        Result\n        -------\n        print title\n        \"\"\"\n        puts(\"Searching LambdaTest on google.com \")\n        sleep(15)\n        @driver.get(\"https://www.google.com/ncr\")\n        elem = @driver.find_element(:name, 'q')\n        elem.send_keys(\"LambdaTest.com\")\n        elem.submit()\n \n        puts(\"Printing title of current page :\"+@driver.title)\n    end\n    def teardown\n        \"\"\"\n        Quit selenium driver\n        \"\"\"\n        @driver.quit\n    end\nend"
+      }
+    ],
+    "dateModified": "2026-05-26T08:58:31+05:30"
+  }) }}
+/>
+
 # Quick Guide To Run Ruby Tests On <BrandName /> Selenium Grid
 ***
 

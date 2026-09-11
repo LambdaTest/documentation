@@ -49,6 +49,158 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-custom-css/"
+    },
+    "headline": "Custom CSS Injection in SmartUI",
+    "description": "Learn how to use SmartUI's customCSS feature to inject test-only CSS styles during snapshots without modifying your application code",
+    "url": "https://www.testmuai.com/support/docs/smartui-custom-css/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "custom css",
+      "visual regression testing",
+      "css injection"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Node.js v20.3+ (recommended); SmartUI CLI v4.1.40+ (supports both exec and capture commands); Valid PROJECT_TOKEN configured in your environment.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add your CSS rules to the file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "CSS",
+        "text": "/* General samples: pick what suits your use case */\n\n/* 1) Normalize fonts for consistent rendering */\nbody { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }\n\n/* 2) Hide flaky, time-based banners or rotating promos */\n.promo-banner, [data-testid=\"rotating-banner\"] { display: none !important; }\n\n/* 3) Freeze dynamic badges/counters that change every run */\n[data-badge], .cart-count { visibility: hidden; }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Reference the file path in your SmartUI configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"web\": {\n    \"browsers\": [\"chrome\"],\n    \"viewports\": [[1440, 900]]\n  },\n  \"enableJavaScript\": true,\n  \"customCSS\": \"./visual-test-styles.css\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Method 2: Embedded String",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"web\": {\n    \"browsers\": [\"chrome\"],\n    \"viewports\": [[1440, 900]]\n  },\n  \"enableJavaScript\": true,\n  \"customCSS\": \"body{font-family:'Inter',sans-serif!important;} .banner,.ad{display:none!important;}\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configuration Guidelines",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "  {\n    \"waitForTimeout\": 2000,\n    \"waitForPageRender\": 5000,\n    \"customCSS\": \"./visual-test-styles.css\"\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The custom CSS feature is particularly valuable in the following scenarios",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "CSS",
+        "text": "/* Hide elements that change between runs */\n.ad, .banner, #cookie-consent { display: none !important; }\n\n/* Replace volatile text with a constant */\n[data-testid=\"rotating-copy\"] { font-size: 0 !important; }\n[data-testid=\"rotating-copy\"]::after { content: \"Stable text for snapshots\"; }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Cases for Custom CSS",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "CSS",
+        "text": "/* Force consistent light theme */\n:root { color-scheme: light; }\nbody { font-family: \"Inter\", system-ui, sans-serif !important; color: #111827; background: #ffffff; }\n\n/* Optional: Dark mode */\n/* :root { color-scheme: dark; }\nbody { background: #0f172a !important; color: #e5e7eb !important; } */"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "CSS",
+        "text": "/* Center content and unify spacing (use carefully) */\n#root, main, section { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 12px !important; }\n* { text-align: center !important; }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 8",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "CSS",
+        "text": "/* Hide IPs, locations, or IDs */\n#ip-value, #location-value { font-size: 0 !important; }\n#ip-value::after { content: \"0.0.0.0\" !important; }\n#location-value::after { content: \"Unknown\" !important; }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "CSS",
+        "text": "/* Deliberately apply a very different theme */\nbody {\n  font-family: \"Century Gothic\",\"URW Gothic\",\"Apple Gothic\",system-ui,Helvetica,Arial,sans-serif !important;\n  background-image: linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.75)),\n                    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop');\n  background-size: cover; background-attachment: fixed; background-position: center;\n  color: #e6e6e6 !important;\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "CSS",
+        "text": "/* Disable transitions/animations */\n*, *::before, *::after { transition: none !important; animation: none !important; }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "CSS",
+        "text": "/* Override brand cues (colors, shadows, shapes) */\nheader, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !important; }\n.btn, a { border-radius: 10px !important; border: 1px solid rgba(255,255,255,.25) !important; }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "File Path Template",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"web\": {\n    \"browsers\": [\"chrome\"],\n    \"viewports\": [[1440, 900]]\n  },\n  \"customCSS\": \"./path/to/visual-test-styles.css\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Embedded String Template",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"web\": {\n    \"browsers\": [\"chrome\"],\n    \"viewports\": [[1440, 900]]\n  },\n  \"customCSS\": \"body{font-family:'Inter',sans-serif!important;} .ad,.banner{display:none!important;}\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ---
 
 Custom CSS injection is a specialized feature in SmartUI that allows you to apply test-only styles during snapshot capture without modifying your application code. This feature enables you to stabilize visual tests by normalizing dynamic content, enforcing consistent styling across environments, and masking sensitive information, all while keeping your visual testing logic centralized and maintainable.

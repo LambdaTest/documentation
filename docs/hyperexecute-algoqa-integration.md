@@ -52,6 +52,81 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-algoqa-integration/"
+    },
+    "headline": "Integrate algoQA with HyperExecute",
+    "description": "Unleash the power of algoQA & TestMu AI HyperExecute! Streamline test management & experience fast execution.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-algoqa-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environment Variable; HyperExecute YAML file which contains all the necessary instructions..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: win\n\nautosplit: true\n\nretryOnFailure: true\nmaxRetries: 1\n\nconcurrency: 2\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - .m2\n\npre:\n  - mvn -Dmaven.repo.local=./.m2 dependency:resolve\n\nreport: true\npartialReports:\n    type: json\n    location: target/\n    frameworkName: extent-native\n  \nuploadArtifacts:\n  - name: FinalReport \n    path:\n    - ExtentReports/**\n\ntestDiscovery:\n  type: automatic\n  mode: static\n  args:\n    featureFilePaths: src/test/java/features/\n    frameWork: java\n\ntestRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=./.m2 `-Dcucumber.features=\"$test\"\n\njobLabel: ['HYP', 'algoQA']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 algoQA is an AI Native software testing platform that automates end-to-end tests across web, mobile, desktop, and API applications. It generates optimal test cases, datasets, and executable scripts, reducing manual effort and improving test coverage.
 
 This document will guide you how to integrate your algoQA project with HyperExecute

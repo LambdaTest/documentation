@@ -46,6 +46,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-app-scanner-scan-configurations/"
+    },
+    "headline": "Scan Configurations for Mobile App Accessibility (Manual)",
+    "description": "Configure which accessibility rules run on a manual mobile app scan: pick a WCAG level, toggle rule groups, enable individual rules, and reuse last-used settings.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-app-scanner-scan-configurations/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "mobile accessibility scan configuration",
+      "wcag conformance level",
+      "accessibility rule groups"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Scan Configurations for Mobile App Accessibility (Manual)
 
 Scan Configurations let users decide exactly which accessibility rules run on a **manual** mobile app scan before it starts. Instead of always running the full built-in rule set, users choose a WCAG conformance target, turn rule groups on or off, and hand-pick individual rules. <BrandName /> remembers each user's choices and pre-fills them on the next scan.

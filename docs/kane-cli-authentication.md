@@ -52,6 +52,122 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-authentication/"
+    },
+    "headline": "Kane CLI Authentication",
+    "description": "Authenticate Kane CLI with OAuth or basic auth, manage multiple profiles, and securely store credentials.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-authentication/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli authentication",
+      "kane cli login",
+      "kane cli profiles"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "OAuth Login",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli login --oauth"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a Profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli login --oauth --profile work\nkane-cli login --oauth --profile personal"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List Profiles",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli profiles list"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Switch the Active Profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli profiles switch work"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Delete a Profile",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli profiles delete personal"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Who You Are Logged In As",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli whoami"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Log Out",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli logout"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Credentials live under your home directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "~/.testmuai/kaneai/profiles/<profile>/<env>/credentials"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Kane CLI authenticates against your <BrandName /> account before it can run tests, upload sessions, or interact with Test Manager. There are two authentication methods:
 
 - **OAuth**: recommended for everyday local use. Opens a browser, you approve once, and tokens are stored on your machine.

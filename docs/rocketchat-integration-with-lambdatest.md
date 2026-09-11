@@ -42,6 +42,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rocketchat-integration-with-testmu/"
+    },
+    "headline": "Rocket.Chat Integration With TestMu AI",
+    "description": "The TestMu AI Rocket.Chat Integration allows you to share or push a bug to your specified Rocket.Chat channel from the TestMu AI platform in a single click. You can share any UI observations and input with your team on Rocket.Chat anytime, by just capturing a screenshot in the middle of your test session through TestMu AI. You can also annotate the screenshot or highlight your issue or input. The fields populated by you while marking as bug through TestMu AI gets displayed as information on Rocket.Chat for that testing instance.",
+    "url": "https://www.testmuai.com/support/docs/rocketchat-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "rocket.chat integration",
+      "testmu ai integration",
+      "bug reporting"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 Rocket.Chat is a free, open-source communication platform that allows collaboration, file sharing, and real-time chat sharing. It's cross-platform and open source, allowing users to customize and extend its functionality to meet their team's or business needs.
 
 The <BrandName /> Rocket.Chat Integration enables users to share or push bugs to their specified channel, capture screenshots, annotations, and issue information, with the fields marked as bugs displayed on Rocket.Chat for that testing instance.

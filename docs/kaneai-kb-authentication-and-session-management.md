@@ -44,6 +44,150 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management/"
+    },
+    "headline": "Authentication & Session Management",
+    "description": "Test login flows, TOTP/MFA, SSO, session persistence, and secure authentication patterns in KaneAI",
+    "url": "https://www.testmuai.com/support/docs/kaneai-kb-authentication-and-session-management/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai authentication"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Standard Username/Password Login",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "go to https://app.example.com/login\ntype \"admin@example.com\" in the email input field\ntype \"SecurePassword123!\" in the password field\nclick on the \"Sign In\" button\nwait for 5 seconds\nassert the current URL contains \"/dashboard\"\nassert \"Welcome, Admin\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Login with \"Remember Me\"",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"admin@example.com\" in the email field\ntype \"SecurePassword123!\" in the password field\ncheck the \"Remember me\" checkbox\nclick on the \"Sign In\" button\nwait for 5 seconds\nassert the current URL contains \"/dashboard\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If most of your tests start with a login, create a Module to avoid repeating the login steps in every test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- In any new test: --\n-- Use / command \u2192 Add Module \u2192 \"Login Flow\" --\n-- The module executes all login steps automatically --\nassert \"Welcome\" is visible\n-- Continue with your test-specific steps --"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create environment-specific variables to test login across different environments",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type {{env.login_email}} in the email field\ntype {{env.login_password}} in the password field\nclick \"Sign In\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step-by-Step: Testing a TOTP Login Flow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Login with username/password first --\ntype \"admin@example.com\" in the email field\ntype {{secret.admin_password}} in the password field\nclick \"Sign In\"\n\n-- MFA screen appears --\nwait for 3 seconds\nenter {{totp}} in the verification code field\nclick \"Verify\"\n\n-- Authenticated --\nwait for 5 seconds\nassert the current URL contains \"/dashboard\"\nassert \"Welcome, Admin\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TOTP smart variables work identically on mobile tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type {{env.login_email}} in the email field\ntype {{secret.login_password}} in the password field\nclick \"Login\"\nwait for 3 seconds\nenter {{totp}} in the OTP field\nclick \"Verify\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Invalid Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "type \"admin@example.com\" in the email field\ntype \"wrong_password\" in the password field\nclick \"Sign In\"\nwait for 2 seconds\nassert \"Invalid email or password\" error message is visible\nassert the current URL still contains \"/login\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Empty Field Validation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click \"Sign In\" without entering any credentials\nassert \"Email is required\" error is visible\nassert \"Password is required\" error is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Account Lockout After Failed Attempts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Attempt 1 --\ntype \"admin@example.com\" in the email field\ntype \"wrong1\" in the password field\nclick \"Sign In\"\nwait for 2 seconds\n\n-- Attempt 2 --\ntype \"wrong2\" in the password field\nclick \"Sign In\"\nwait for 2 seconds\n\n-- Attempt 3 --\ntype \"wrong3\" in the password field\nclick \"Sign In\"\nwait for 2 seconds\n\nassert \"Account locked\" message is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Session Persistence After Page Refresh",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Login first --\ntype \"admin@example.com\" in the email field\ntype \"password123\" in the password field\nclick \"Sign In\"\nwait for 5 seconds\nassert \"Dashboard\" is visible\n\n-- Refresh the page --\nrefresh the page\nwait for 3 seconds\n\n-- Should still be logged in --\nassert \"Dashboard\" is visible\nassert \"Welcome, Admin\" is visible"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Logout Flow",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "click on the user avatar in the top right corner\nclick on \"Sign Out\"\nwait for 3 seconds\nassert the current URL contains \"/login\"\n\n-- Verify session is cleared --\ngo to https://app.example.com/dashboard\nwait for 3 seconds\nassert the current URL contains \"/login\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For applications with session timeouts, combine explicit waits with assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-- Login --\n-- ... login steps ... --\nassert \"Dashboard\" is visible\n\n-- Wait for session timeout (if timeout is 60 seconds in test env) --\nwait for 65 seconds\n\n-- Try to navigate --\nclick on \"Reports\" in the sidebar\nwait for 3 seconds\nassert \"Session expired\" is visible"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 Authentication testing is one of the most critical areas for any QA team. This guide covers how to test login flows, multi-factor authentication (MFA/2FA), TOTP, session handling, and authentication-related edge cases in KaneAI.
 
 ## Basic Login Flows

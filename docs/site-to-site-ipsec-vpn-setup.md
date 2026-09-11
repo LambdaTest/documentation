@@ -43,6 +43,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/site-to-site-ipsec-vpn-setup/"
+    },
+    "headline": "IPsec Site-to-Site VPN Setup Guide",
+    "description": "A comprehensive guide to setting up IPsec Site-to-Site VPN for testing privately hosted applications on TestMu AI cloud infrastructure.",
+    "url": "https://www.testmuai.com/support/docs/site-to-site-ipsec-vpn-setup/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Testing Locally",
+    "keywords": [
+      "Site-to-Site VPN",
+      "IPsec VPN",
+      "S2S Tunnel"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 <BrandName /> supports connectivity via IPsec Site-to-Site VPN (S2S VPN) for clients who need to test web applications hosted on internal/private networks that are not publicly accessible. This allows <BrandName /> cloud infrastructure to reach your privately hosted test environments directly over an encrypted, authenticated tunnel, just as if both networks are on the same LAN.
 
 :::info Executive Summary

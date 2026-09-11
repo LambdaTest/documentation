@@ -58,6 +58,271 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cypressv9-on-hyperexecute/"
+    },
+    "headline": "Run automation tests on HyperExecute using Cypress v9",
+    "description": "Learn how to run playwright automation tests on HyperExecute using Cypress v9 framework",
+    "url": "https://www.testmuai.com/support/docs/cypressv9-on-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "end to end test",
+      "unit testing",
+      "unit testing tutorial"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "HyperExecute YAML file which contains all the necessary instructions.; HyperExecute CLI in order to initiate a test execution Job .; Your TestMu AI Username and Access key; Setup the Environmental Variable.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Auto-split YAML file (yaml/.hyperexecute_autosplit.yaml) in the repo contains the following configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "globalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Core",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runson: win"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Core",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": " autosplit: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Core",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "retryOnFailure: true\nmaxRetries: 1\nconcurrency: 2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cypress: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 6",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cypressOps:\n Build: \"Hyperexecute Cypress Sample Build\"\n Tags: [\"Hyperexecute\",\"Cypress\", \"Windows\", \"Autosplit\", \"V9\"]\n BuildTags: [\"Hyperexecute-Cypress\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pre Steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "pre:\n  - npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Post Steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "post:\n  - cat yaml/.hyperexecute_autosplit.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Post Steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testDiscovery:\n  type: raw\n  mode: static\n  command: ls cypress/integration | sed -n 1,'10p'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running the above command on the terminal will give a list of scenarios present in the feature files",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testRunnerCommand: npx cypress run  --spec ./cypress/integration/$test --browser=chrome-95.0 --headed --config video=false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Execution (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config yaml/win/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Execution (Mac)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config yaml/mac/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Execution (Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config yaml/linux/.hyperexecute_autosplit.yaml --force-clean-artifacts --download-artifacts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample YAML File for Auto-Split",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\nretryOnFailure: true\nrunson: win\ncypress: true\nmaxRetries: 1\nconcurrency: 2\nautosplit: true\n# cacheKey: '{{ checksum \"package.json\" }}'\n# cacheDirectories:\n#   - node_modules\n#   - cypressCache\nenv:\n  CYPRESS_CACHE_FOLDER: cypressCache\ntestDiscovery:\n  mode: static\n  type: raw\n  command: ls cypress/integration\ntestRunnerCommand: npx cypress run  --spec ./cypress/integration/$test --browser=chrome-95.0 --headed --config video=false\ncypressOps:\n Build: \"Hyperexecute Cypress Sample Build\"\n Tags: [\"Hyperexecute\",\"Cypress\", \"Windows\", \"Autosplit\", \"V9\"]\n BuildTags: [\"Hyperexecute-Cypress\"]\npost:\n  - cat ./yaml/win/.hyperexecute_matrix.yaml\npre:\n  - npm install\n\njobLabel: [cypress-v9, win, autosplit]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In the current example, matrix YAML file in the repo contains the following configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "globalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Core",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "runson: win"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Core",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "matrix:\n   os: [win]\n   browser: [\"chrome-95.0\",\"chrome-96.0\",\"chrome-97.0\",\"chrome-98.0\",\"chrome-99.0\",\"chrome-100.0\",\"chrome-101.0\",\"chrome-102.0\",\"chrome-103.0\",\"chrome-104.0\",\"chrome-105.0\"]\n   files: [\"actions.spec.js\", \"aliasing.spec.js\", \"assertions.spec.js\", \"connectors.spec.js\", \"cookies.spec.js\", \"local_storage.spec.js\", \"navigation.spec.js\", \"querying.spec.js\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Core",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "testSuites:\n  - npx cypress run  --spec ./cypress/integration/$files --browser=$browser --headed --config video=false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Pre Steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "pre:\n  - npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Post Steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "post:\n  - cat yaml/.hyperexecute_matrix.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Execution (Windows)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config yaml/win/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Execution (Mac)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config yaml/mac/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Test Execution (Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config yaml/linux/.hyperexecute_matrix.yaml --force-clean-artifacts --download-artifacts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample YAML File for Matrix",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\nretryOnFailure: false\nrunson: ${matrix.os}\ncypress: true\nmaxRetries: 2\nparallelism: 1\nconcurrency: 2\ncacheKey: '{{ checksum \"package.json\" }}'\ncacheDirectories:\n  - node_modules\npre:\n  - npm install\nmatrix:\n   os: [win]\n   browser: [\"chrome-104.0\",\"chrome-105.0\"]\n   files: [\"actions.spec.js\", \"aliasing.spec.js\"]\ntestSuites: \n  - npx cypress run  --spec ./cypress/integration/$files --browser=$browser --headed --config video=false\ncypressOps:\n Build: \"Hyperexecute Cypress Sample Build\"\n Tags: [\"Hyperexecute\",\"Cypress\", \"Windows\", \"Matrix\", \"V9\"]\n BuildTags: [\"Hyperexecute-Cypress\"]\npost:\n  - cat ./yaml/win/.hyperexecute_autosplit.yaml\n\n\njobLabel: [cypress-v9, win, matrix]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "All you need to do is create an environment variable that uses the secret key",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "env:\n  PAT: ${{ .secrets.testKey }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "This can be helpful for",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "cypressOps:\n  Network: true\n  FullHar: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisite to get the detailed logs in HyperExecute",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "pre:\n  - npm install cypress-terminal-report --save-dev"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The cypress-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "cypress-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Cypress Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/cypress-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/cypress-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Run Automation Tests Using Cypress v9
 * * *
 

@@ -9,6 +9,84 @@ site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-appium-testng/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-appium-testng/"
+    },
+    "headline": "Appium TestNG",
+    "description": "Appium TestNG with Accessibility: session capabilities, lambda-accessibility-scan checkpoints, and dashboard review.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-appium-testng/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Appium Java client (or matching stack) + TestNG; App build reachable by the grid; Accessibility entitlement.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Illustrative Java pattern (adapt platform names, device, and app paths to your suite)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "UiAutomator2Options options = new UiAutomator2Options();\noptions.setDeviceName(\"Pixel.*\");\noptions.setApp(\"lt://APP_ID\"); // or storage URL per your setup\noptions.setCapability(\"accessibility\", true);\nAppiumDriver driver = new AndroidDriver(new URL(\"https://mobile-hub.lambdatest.com/wd/hub\"), options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Call the scan hook after navigation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "((JavascriptExecutor) driver).executeScript(\"lambda-accessibility-scan\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Run TestNG",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "mvn test"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Appium TestNG
 
 Use this guide when **Appium** drives Android or iOS tests and **TestNG** is your runner. Accessibility still depends on **session capabilities** plus **`lambda-accessibility-scan`** at stable UI states.

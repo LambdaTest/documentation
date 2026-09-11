@@ -51,6 +51,131 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-php-behat/"
+    },
+    "headline": "Appium with Behat",
+    "description": "Now you can run your automation scripts using Appium with PHP Behat on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.",
+    "url": "https://www.testmuai.com/support/docs/appium-php-behat/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "php",
+      "testmu ai php"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Download and install the latest version of PHP in your system.; Download composer in the project directory from here (Linux/MacOS, Windows).; Install the composer dependencies in the current project directory using the command below:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "But for the latest MacOS versions starting with Monterey, PHP has to be downloaded and installed manually by using below commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\nbrew install php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites (Linux)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "sudo apt-get install curl libcurl3 libcurl3-dev php"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "So, copy the 'composer.phar' to the project directory using copy command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "copy C:\\ProgramData\\ComposerSetup\\bin\\composer.phar"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "composer update\nphp composer.phar require phpwhois/phpwhois\nphp composer.phar install\nphp composer.phar require php-webdriver/webdriver\nphp composer.phar require behat/behat"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### Step 5: Configure the Test Capabilities\n\nYou can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.\n\nEnsure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests. The capabilities object in the sample code are defined as:\n\n<Tabs className=\"docs__val\">\n<TabItem value=\"ios-config\" label=\"iOS\" default>\n\n```php title=\"iossingle.conf.yml\"\nuser: \"YOUR USERNAME HERE\"       #Add LambdaTest username here \nkey: \"YOUR ACCESS KEY HERE\"      #Add LambdaTest accessKey here\n    capabilities:\n        build: \"behat-appium-ios\"\n        name: \"single-behat-test\"\n        isRealMobile: true\n        app: \"lt://proverbial-ios\"    #Add app url here\n    environments:\n        -\n        deviceName: iPhone 11\n        platform: ios\n        platformVersion: 14"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "environments",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<\/Tabs>\n\n:::info\n\n- You must add the generated **APP_URL** to the `app` capability in the config file.\n- You must set **isRealMobile** capability to `false` in the config file to run on **Virtual Devices**\n- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.testmuai.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).\n\n:::\n\n### Step 6: Execute and Monitor your Tests\n\n- Execute the following command to run your test on <BrandName /> platform:\n\n<Tabs className=\"docs__val\">\n\n<TabItem value=\"ios\" label=\"iOS\" default>\n\n```php\ncomposer iossingle   #for single tests\ncomposer iosparallel  #for parallel tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PHP",
+        "text": "composer androidsingle   #for single tests\ncomposer androidparallel  #for parallel tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The behat-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "behat-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Behat Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/behat-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/behat-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Behat** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

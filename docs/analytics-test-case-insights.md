@@ -37,6 +37,113 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/analytics-test-case-insights/"
+    },
+    "headline": "Test Case Insights",
+    "description": "Gain insights into test case execution and performance with TestMu AI's analytics to optimize your testing strategy and enhance software quality.",
+    "url": "https://www.testmuai.com/support/docs/analytics-test-case-insights/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Insights",
+    "keywords": [
+      "analytics"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To start a test case, use the lambda-testCase-start hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To start a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-start={Your Test Case Name}\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To end a test case, use the lambda-testCase-end hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To end a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-end={Your Test Case Name}\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To start a test case, use the lambda-testCase-start hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To start a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-start={Your Test Case Name}\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To end a test case, use the lambda-testCase-end hook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// To end a test case\n((JavascriptExecutor) driver).executeScript(\"lambda-testCase-end={Your Test Case Name}\");\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capture by WebHook",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "// For Stage of test case `START`\ndriver.executeScript(`lambda-testCase-start=${Name of the test case}`)\n\n// For Stage of test case `END`\ndriver.executeScript(`lambda-testCase-end=${Name of test case}`)\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2 - Add the code to lambdatest-setup file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n#### Step 3 - Execute the tests using HyperExecute\n\nYou can now, execute the tests on our `HyperExecute` platform and you can see the results captured in the `Test Case Widgets` on the dashboards.\n\n## Capture by NPM Package for WebdriverIO\n\nYou can capture the test case insights by using the NPM Package. You need to add the following `NPM Package` in your test script. Here is the link to the NPM package: [wdio-lambdatest-test-case-analytics-service](https://www.npmjs.com/package/wdio-lambdatest-test-case-analytics-service)\n\n:::caution\nThe package currently only supports for `WebdriverIO` framework. We will be adding support for other frameworks soon.\n:::\n\n```bash\nnpm i wdio-lambdatest-test-case-analytics-service"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Capture by NPM Package for WebdriverIO",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "exports.config = {\n  // ...\n  services: [\n    [\"lambdatest-test-case-analytics\", {}], // Add the service\n    // ... other services\n  ],\n  // ...\n};"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Analyzing the test case level insights of your test automation execution on <BrandName /> is now easier than ever with the `Test Case Insights` module. The user can easily find information about the count, and type of the test cases through the highly customizable widgets.
 
 ## Prerequisites For Insights:

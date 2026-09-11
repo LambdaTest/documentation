@@ -28,6 +28,188 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-cypress-testing/"
+    },
+    "headline": "Getting Started With Cypress Testing On TestMu AI Platform",
+    "description": "In this documentation, learn how to perform end-to-end Cypress testing on the TestMu AI Automation Cloud across multiple browser versions.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-cypress-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "You can run your first Cypress test on the TestMu AI platform in a few simple steps",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/Cypress-Cloud",
+        "text": "git clone https://github.com/LambdaTest/Cypress-Cloud.git\ncd Cypress-Cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g lambdatest-cypress-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Your First Test (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/cypress-io/cypress-example-kitchensink",
+        "text": "# Clone the kitchen sink repo\ngit clone https://github.com/cypress-io/cypress-example-kitchensink.git\n\n# Go to the cloned directory\ncd cypress-example-kitchensink"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Go to the cloned directory (Cypress v9)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/cypress-io/cypress-example-kitchensink",
+        "text": "# Clone the kitchen sink repo\ngit clone https://github.com/cypress-io/cypress-example-kitchensink.git\n\n# Go to the cloned directory\ncd cypress-example-kitchensink\n\n# Checkout to this commit\ngit checkout ab10094ef7b199ae7febafec413a0626414bcd3c  "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Checkout to this commit (Cypress v10)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "...\ncypress\n|-- fixtures\n|-- e2e\n|-- support\ncypress.config.js\n..."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Checkout to this commit (Cypress v9)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "...\ncypress\n|-- fixtures\n|-- integration\n|-- plugins\n|-- support\ncypress.json\n..."
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress init --cv=10"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress init "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v10",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"lambdatest_auth\": {\n     \"username\": \"<Your LambdaTest username>\",\n     \"access_key\": \"<Your LambdaTest access key>\"\n  },\n  \"browsers\": [\n     {\n        \"browser\": \"Chrome\",\n        \"platform\": \"Windows 10\",\n        \"versions\": [\n           \"latest-1\"\n        ]\n     },\n     {\n        \"browser\": \"Firefox\",\n        \"platform\": \"Windows 10\",\n        \"versions\": [\n           \"latest-1\"\n        ]\n     }\n  ],\n  \"run_settings\": {\n     \"cypress_config_file\": \"cypress.config.js\",\n     \"reporter_config_file\": \"base_reporter_config.json\",\n     \"build_name\": \"build-name\",\n     \"parallels\": 1,\n     \"specs\": \"./*.cy.js\",\n     \"ignore_files\": \"\",\n     \"network\": false,\n     \"headless\": false,\n     \"npm_dependencies\": {\n        \"cypress\": \"10.0.0\"\n     }\n  },\n  \"tunnel_settings\": {\n     \"tunnel\": false,\n     \"tunnel_name\": null\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress v9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "app\n{\n  \"lambdatest_auth\": {\n     \"username\": \"<Your LambdaTest username>\",\n     \"access_key\": \"<Your LambdaTest access key>\"\n  },\n  \"browsers\": [\n     {\n        \"browser\": \"Chrome\",\n        \"platform\": \"Windows 10\",\n        \"versions\": [\n           \"latest-1\"\n        ]\n     },\n     {\n        \"browser\": \"Firefox\",\n        \"platform\": \"Windows 10\",\n        \"versions\": [\n           \"latest-1\"\n        ]\n     }\n  ],\n  \"run_settings\": {\n     \"cypress_config_file\": \"cypress.json\",\n     \"reporter_config_file\": \"base_reporter_config.json\",\n     \"build_name\": \"build-name\",\n     \"parallels\": 1,\n     \"specs\": \"./*.spec.js\",\n     \"ignore_files\": \"\",\n     \"network\": false,\n     \"headless\": false,\n     \"npm_dependencies\": {\n        \"cypress\": \"9.0.0\"\n     }\n  },\n  \"tunnel_settings\": {\n     \"tunnel\": false,\n     \"tunnel_name\": null\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using the CLI: pass the --parallels flag with the number of sessions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "lambdatest-cypress run --parallels 5"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using lambdatest-config.json: set the parallels key under run_settings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"run_settings\": {\n    \"parallels\": 5\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing Locally Hosted or Privately Hosted Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "  \"tunnel_settings\": {\n\t\t\"tunnel\": true,\n\t\t\"tunnel_name\": \"LT_Tunnel\"\n\t}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Getting Started With Cypress Testing
 ---
 

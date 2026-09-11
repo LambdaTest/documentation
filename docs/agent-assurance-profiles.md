@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-profiles
+toc_max_heading_level: 2
 title: Configure Agent Assurance Invocation Profiles
 hide_title: false
 sidebar_label: Invocation Profiles
@@ -25,6 +26,150 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
       { "@type": "ListItem", "position": 3, "name": "Invocation Profiles", "item": `${BRAND_URL}/support/docs/agent-assurance-profiles/` }
     ]
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-profiles/"
+    },
+    "headline": "Configure Agent Assurance Invocation Profiles",
+    "description": "Configure HTTP, command, asynchronous, multi-turn, attachment, TLS, and MCP invocation profiles for Agent Assurance.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-profiles/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook profile",
+      "ai agent http testing",
+      "ai agent curl profile"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start with",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/profile add"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A synchronous JSON agent can be represented as",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "id: staging\nname: staging\nkind: http\nmode: sync\ntimeout_seconds: 120\ninvoke:\n  method: POST\n  url: https://agent.staging.example.com/v1/chat\n  headers:\n    Authorization: \"Bearer ${AGENT_TOKEN}\"\n    Content-Type: application/json\n  body:\n    message: \"{{goal}}\"\n    session_id: \"{{session}}\"\nresult:\n  from: json_path\n  path: $.reply.text\nresponse:\n  kind: json\nconversation:\n  kind: field\n  id_path: $.session_id\n  send_as: body.session_id\nverified: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use a command profile for a local CLI agent",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "id: local-cli\nname: local CLI\nkind: command\nmode: sync\ntimeout_seconds: 300\ninvoke:\n  argv: [claude, -p, \"{{goal}}\"]\n  cwd: services/travel-agent\n  env:\n    TRAVEL_AGENT_ENV: test\nresult:\n  from: stdout\nconversation:\n  kind: flag\n  resume_argv: [claude, -p, --resume, \"{{conversation}}\", \"{{goal}}\"]\nobserve:\n  filesystem: [./out]\nreset:\n  argv: [npm, run, reset:fixtures]\n  cwd: services/travel-agent\nverified: true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use mode: async when the initial request returns a handle and a later request retrieves the result",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "id: report-staging\nname: report staging\nkind: http\nmode: async\ntimeout_seconds: 180\ninvoke:\n  method: POST\n  url: https://agent.staging.example.com/v1/reports\n  headers:\n    Authorization: \"Bearer ${AGENT_TOKEN}\"\n  body:\n    prompt: \"{{goal}}\"\npoll:\n  invoke:\n    method: GET\n    url: https://agent.staging.example.com/v1/reports/{{handle}}\n    headers:\n      Authorization: \"Bearer ${AGENT_TOKEN}\"\n  handle_path: $.job_id\n  interval_seconds: 2\n  ready_when:\n    json_path: $.status\n    in: [complete, failed, cancelled]\n  max_attempts: 60\nresult:\n  from: json_path\n  path: $.result.summary\nresponse:\n  kind: json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The forward-compatible profile shapes are a field in the main request",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "attachments:\n  via: field\n  field: document"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Or a separate upload endpoint whose response supplies a link",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "attachments:\n  via: endpoint\n  upload:\n    method: POST\n    url: https://agent.staging.example.com/v1/files\n    headers:\n      Authorization: \"Bearer ${AGENT_TOKEN}\"\n  link_path: $.file_url"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Profiles are safe to commit only when they contain references rather than values",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "headers:\n  Authorization: \"Bearer ${AGENT_TOKEN}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Manage values interactively",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/env list\n/env set AGENT_TOKEN\n/env show AGENT_TOKEN\n/env rm AGENT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For a specific private CA, configure a PEM file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "invoke:\n  tls:\n    trust: file\n    ca_file: ./certs/staging-ca.pem"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add observation only for state Rook is allowed to read",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "observe:\n  usage: true\n  mcp: proxy\n  filesystem:\n    - ./out\n    - ./tmp/agent"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interactive commands",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/profile list\n/profile use <name>\n/profile show <name>\n/profile edit <name>\n/profile test <name>\n/profile curl <name>\n/profile rm <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless profile management supports listing, showing, switching, and removing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook profile list --entity <agent-id> --json\nrook profile show staging --entity <agent-id>\nrook profile use staging --entity <agent-id>\nrook profile rm staging --entity <agent-id>"
+      }
+    ],
+    "dateModified": "2026-08-25T16:54:35+05:30"
   }) }}
 />
 

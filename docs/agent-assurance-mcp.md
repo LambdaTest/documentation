@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-mcp
+toc_max_heading_level: 2
 title: Configure MCP Servers in Agent Assurance
 hide_title: false
 sidebar_label: MCP Servers
@@ -25,6 +26,157 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
       { "@type": "ListItem", "position": 3, "name": "MCP Servers", "item": `${BRAND_URL}/support/docs/agent-assurance-mcp/` }
     ]
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-mcp/"
+    },
+    "headline": "Configure MCP Servers in Agent Assurance",
+    "description": "Add, inspect, approve, enable, disable, and troubleshoot MCP servers used by Agent Assurance for AI agent discovery and verification.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-mcp/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook mcp",
+      "mcp agent testing",
+      "model context protocol verification"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interactive",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/mcp\n/mcp list"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp list\nrook mcp list --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local scope is the default",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp add github -- npx -y @modelcontextprotocol/server-github"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add a project or user definition",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp add github --scope project \\\n  --env 'GITHUB_TOKEN=${GITHUB_TOKEN}' \\\n  -- npx -y @modelcontextprotocol/server-github\n\nrook mcp add github --scope user \\\n  --env 'GITHUB_TOKEN=${GITHUB_TOKEN}' \\\n  -- npx -y @modelcontextprotocol/server-github"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Record a Remote Server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp add notion \\\n  --transport http \\\n  --url https://mcp.example.com/mcp \\\n  --header 'Authorization: Bearer ${NOTION_TOKEN}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Inspect a Definition",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp get github\nrook mcp get github --json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interactive",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/mcp approve <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp approve <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "When a project and discovered definition share the name, specify which one",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp approve <name> --origin project\nrook mcp approve <name> --origin discovered"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable, Disable, or Remove",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/mcp enable <name>\n/mcp disable <name>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Headless",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook mcp enable <name>\nrook mcp disable <name>\nrook mcp remove <name> --scope local"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "A scenario can require a verifier",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "verification_requires:\n  - type: mcp\n    server: github\n    op: issues.get"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Permission Prompts Still Apply",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "mcp_call(billing.get_refund_status)"
+      }
+    ],
+    "dateModified": "2026-08-25T16:54:35+05:30"
   }) }}
 />
 

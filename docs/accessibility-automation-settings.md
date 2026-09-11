@@ -43,6 +43,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-automation-settings/"
+    },
+    "headline": "Configure Accessibility Automation",
+    "description": "Configure capabilities for TestMu AI Accessibility Automation including WCAG version, best practices, and needs review settings.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-automation-settings/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "\"accessibility\" : true,                 // Enable accessibility testing\n\"accessibility.wcagVersion\": \"wcag21a\", // Specify WCAG version (e.g., WCAG 2.1 Level A)\n\"accessibility.bestPractice\": false,    // Exclude best practice issues from results\n\"accessibility.needsReview\": true       // Include issues that need review"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Enable Accessibility Checks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "accessibility : true"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. WCAG Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "accessibility.wcagVersion: 'wcag21a'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Best Practices Checks",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "accessibility.bestPractice: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Needs Review",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "accessibility.needsReview: true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This document details the configuration options available for your automated accessibility tests, ensuring comprehensive and efficient assessments.
 
 To enable the accessibility testing within your automated test suite, set the accessibility: true in your configuration file. You can also define other settings capabilities as described below.

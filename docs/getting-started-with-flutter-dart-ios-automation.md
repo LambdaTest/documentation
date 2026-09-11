@@ -48,6 +48,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/"
+    },
+    "headline": "Flutter Dart Testing On TestMu AI - iOS",
+    "description": "This guide details running your first Flutter Dart test on real iPhones using TestMu AI's Real Device Cloud.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-flutter-dart-ios-automation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "flutter",
+      "testmu ai",
+      "framework on testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Once you have uploaded your test suite, you can execute your test by running the following command (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"testSuite\": \"lt://App_id\",\n    \"device\": [\"iPhone.*-16\"],\n    \"video\": true,\n    \"deviceLog\": true,\n    \"queueTimeout\": 9000,\n    \"network\": true,\n    \"build\": \"Flutter iOS\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/flutter/ios/build\" --header \"Content-Type: application/json\" --header \"Authorization: Basic <Enter the Auth here>\" --data-raw \"{\\\"testSuite\\\": \\\"lt://APP_ID\\\",\\\"device\\\" :  [\\\"Pixel 6-12\\\"], \\\"video\\\": true, \\\"deviceLog\\\": true, \\\"queueTimeout\\\" : \\\"9000\\\",\\\"idleTimeout\\\" : \\\"600\\\"\\\"network\\\": true,\\\"build\\\" : \\\"Flutter iOS\\\"}\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Tests in Parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/build' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    \"testSuite\": \"lt://App_id\",\n    \"device\": [\"iPhone.*-16\",\"iPhone 14-16\",\"iPhone 15-17\"],\n    \"video\": true,\n    \"deviceLog\": true,\n    \"queueTimeout\": 9000,\n    \"network\": true,\n    \"build\": \"Flutter iOS - Parallel\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The flutter-testing-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "flutter-testing-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Flutter Testing Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/flutter-testing-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/flutter-testing-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 <RealDeviceTag value="Real Device" /> 
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 

@@ -16,6 +16,63 @@ slug: accessibility-fragment-identifier/
 canonical: https://www.testmuai.com/support/docs/accessibility-fragment-identifier/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-fragment-identifier/"
+    },
+    "headline": "Fragment Identifier for Accessibility Testing",
+    "description": "Treat URLs with different hash fragments as separate entities for accessibility issue tracking, triage, and reporting when you need section-level or SPA state granularity.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-fragment-identifier/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Fragment identifier"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 # Fragment Identifier for Accessibility Testing
 
 The **Fragment Identifier** option lets you treat URLs that differ only by the fragment (the part after `#`) as **separate entities** for accessibility issue tracking and management. That gives you finer-grained audits when anchors, in-page sections, or hash-based routes represent meaningfully different UI states.

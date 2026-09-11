@@ -47,6 +47,117 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/automation-testing-selenium-with-lettuce/"
+    },
+    "headline": "Selenium With Lettuce",
+    "description": "Run Lettuce Selenium test scripts on TestMu AI cloud grid with 3000+ desktop and mobile browsers. Setup, config, and execution steps included.",
+    "url": "https://www.testmuai.com/support/docs/automation-testing-selenium-with-lettuce/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "lettuce selenium cloud testing",
+      "run lettuce tests on selenium grid",
+      "lettuce automation cloud grid"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install virtualenv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/sample-lettuce",
+        "text": "git clone https://github.com/LambdaTest/sample-lettuce\ncd sample-lettuce"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create a virtual environment and activate it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "virtualenv venv\nsource venv/bin/activate"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the required packages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "capabilities = {\n        \"build\": \"Sample lettuce Build\",\n        \"platformName\": \"Windows 11\",\n        \"browserName\": \"Chrome\",\n        \"browserVersion\": \"latest\",\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Navigate to the tests directory and run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "cd tests //navigate to tests directory\npython lt_sample_todo.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/lettuce-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/lettuce-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run Lettuce tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.

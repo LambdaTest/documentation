@@ -44,6 +44,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-lighthouse-library/"
+    },
+    "headline": "Generate Lighthouse Reports With Playwright Lighthouse Library",
+    "description": "Learn how to generate multiple Lighthouse reports using Playwright Lighthouse Library.",
+    "url": "https://www.testmuai.com/support/docs/playwright-lighthouse-library/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "generate lighthouse reports in playwright",
+      "generate lighthouse reports with playwright lighthouse library",
+      "lighthouse reports testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Ensure that you have the Playwright Lighthouse Library installed in your web project.; Export the LIGHTHOUSE_LAMBDATEST environment variable to your project environment..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  npm install playwright-lighthouse"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "  export LIGHTHOUSE_LAMBDATEST='true'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Write your Test Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n### For Authenticated Pages\n> This feature is only supported on **Windows** and **macOS** platforms.\n\nThe feature allows you to generate Lighthouse reports for authenticated web pages using Playwright. This is particularly useful for testing performance, accessibility, SEO, and other quality metrics for pages that require authentication. By leveraging authentication tokens, you can analyze restricted pages in your Playwright tests on both **Windows** and **macOS** environments.\n\n<Tabs className=\"docs__val\">\n<TabItem value=\"win\" label=\"Windows\" default>\n\n```javascript\nawait page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ \n  action: 'lighthouseReport', \n  arguments: { url: 'https://www.example.com', \n  args: `--extra-headers \n  ${JSON.stringify({ authtoken: \"YOUR_AUTH_TOKEN\" })}` \n} })}` ); "
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Authenticated Pages (macOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ \n  action: 'lighthouseReport', \n  arguments: { url: 'https://www.example.com', \n  args: '--extra-headers \n  \"{\\\\\"authtoken\\\\\": \\\\\"YOUR_AUTH_TOKEN\\\\\"}\"' \n} })}`);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Test Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Trigger your Test on <BrandName />\n### Set up your authentication\n\nMake sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://www.testmuai.com/login/?redirectTo=https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.\n\n<Tabs className=\"docs__val\">\n\n<TabItem value=\"bash\" label=\"Linux / MacOS\" default>\n  <div className=\"lambdatest__codeblock\">\n  <CodeBlock className=\"language-bash\">\n  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}\nexport LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}\n<\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n\n<TabItem value=\"powershell\" label=\"Windows\" default>\n\n  <div className=\"lambdatest__codeblock\">\n  <CodeBlock className=\"language-powershell\">\n  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}\nset LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}\n<\/CodeBlock>\n<\/div>\n\n<\/TabItem>\n<\/Tabs>\n\n### Run your test\nPass the below command in the terminal to run the test:\n```bash\nnode RELATIVE_PATH_OF_YOUR_TEST_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
 A Lighthouse Report is a performance, accessibility, SEO, and best practices evaluation report generated using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse), an open-source, automated tool developed by Google. It is commonly used to assess and optimize the quality of web pages.
 
 <BrandName /> lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.

@@ -41,6 +41,87 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-format/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-evidence-format/"
+    },
+    "headline": "The .evidence Format",
+    "description": "The open, framework-agnostic .evidence format behind kane-cli packs: the L0 and L1 profiles, what sealing guarantees, and the Apache-2.0 evidence-cli tooling.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-evidence-format/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "evidence format",
+      "open test evidence format",
+      "evidence cli"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you want to produce or read packs outside kane-cli, the tooling is on npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @testmuai/evidence-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using the format directly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "evidence validate my-run.evidence --profile L0\nevidence finalize my-run.evidence/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "It is also a library, so validate and finalize can be called in process",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { validate, finalize } from \"@testmuai/evidence-cli\";\n\nconst report = await validate(\"my-run.evidence\", { profile: \"L1\" });\nif (!report.valid) {\n  for (const d of report.diagnostics) {\n    console.error(`${d.severity} ${d.location}: ${d.message} [${d.code}]`);\n  }\n}"
+      }
+    ],
+    "dateModified": "2026-08-20T22:28:08+05:30"
+  }) }}
+/>
+
 The `.evidence` pack is not a kane-cli-only file. It is an **open, framework-agnostic format** with its own specification, validator, and Apache-2.0 licensed tooling, published at [github.com/LambdaTest/evidence-cli](https://github.com/LambdaTest/evidence-cli).
 
 One shape, whatever made it: a browser agent, a Playwright suite, a Jest run, or an API check. A pack is readable by a CI dashboard, an auditor, or a human without knowing the framework that wrote it.

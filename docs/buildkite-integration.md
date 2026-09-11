@@ -42,6 +42,94 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/"
+    },
+    "headline": "Buildkite Integration With TestMu AI",
+    "description": "TestMu AI offers continuous integration with Buildkite to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.",
+    "url": "https://www.testmuai.com/support/docs/buildkite-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "continuous integration",
+      "buildkite"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The format should be as following",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "LT_USERNAME=YOUR_LAMBDATEST_USERNAME\nLT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating Buildkite with TestMu AI via UI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "steps:\n  - command: 'yarn && yarn LT test'\n    plugins:\n      - lambdatest/lambdatest~"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "That can be done with the following code",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "python3 lambdatest.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating Buildkite with TestMu AI via YAML",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "steps:\n  - label: \":docs-testing:\"\n    commands:\n      - python3 lambdatest.py"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Triggering tests from Buildkite CI/CD to <BrandName />
 * * *
 Buildkite is a continuous integration (CI) and continuous deployment (CD) platform that integrates with version control systems to automate the testing and release of software. Unlike traditional CI/CD solutions, Buildkite allows developers to run builds on their own infrastructure, offering a hybrid model that combines the flexibility of self-hosted runners with the convenience of a cloud-based UI. This ensures faster build times, high levels of security, and scalability to meet the demands of projects of any size.

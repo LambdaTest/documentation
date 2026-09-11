@@ -1,5 +1,6 @@
 ---
 id: rook-sequence
+toc_max_heading_level: 2
 title: The Rook Testing Sequence
 hide_title: false
 sidebar_label: The Sequence
@@ -13,6 +14,87 @@ site_name: TestMu AI
 slug: rook-sequence/
 canonical: https://www.testmuai.com/support/docs/rook-sequence/
 ---
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/rook-sequence/"
+    },
+    "headline": "The Rook Testing Sequence",
+    "description": "Follow the Rook workflow from sign-in and discovery through scenario generation, live execution, evidence review, and synchronization.",
+    "url": "https://www.testmuai.com/support/docs/rook-sequence/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook workflow",
+      "rook testing sequence",
+      "autonomous agent testing workflow"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rook has one command set with two surfaces",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "# Interactive TUI\n/explore .\n/generate\n/run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Interactive TUI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# Shell or CI\nrook explore .\nrook generate\nrook run"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use rook ask when you know the outcome but not the command",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook ask \"generate adversarial tests for refund-policy bypasses\""
+      }
+    ],
+    "dateModified": "2026-09-04T12:50:18+05:30"
+  }) }}
+/>
 
 # The Rook Testing Sequence
 

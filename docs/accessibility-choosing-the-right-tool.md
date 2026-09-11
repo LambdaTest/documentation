@@ -16,6 +16,63 @@ slug: accessibility-choosing-the-right-tool/
 canonical: https://www.testmuai.com/support/docs/accessibility-choosing-the-right-tool/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-choosing-the-right-tool/"
+    },
+    "headline": "Choosing the Right Accessibility Tool",
+    "description": "Pick DevTools, Automation, Test Scheduling, Web Scanner, mobile paths, reports, checklists, or MCP based on your workflow, with links to each doc.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-choosing-the-right-tool/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "DevTools"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Choosing the Right Accessibility Tool
 
 TestMu AI **Accessibility Testing** spans browser DevTools, web automation, scheduled and Web Scanner scans, native mobile (manual and Appium), reports, checklists, and optional AI/MCP workflows. Use this page as a **router**: match your situation to a starting doc, then follow the linked guides for setup and onboarding.

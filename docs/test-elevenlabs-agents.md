@@ -1,5 +1,6 @@
 ---
 id: test-elevenlabs-agents
+toc_max_heading_level: 2
 title: How to Test ElevenLabs Agents With TestMu AI
 hide_title: false
 sidebar_label: Test ElevenLabs Agents
@@ -43,71 +44,88 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
-# How to Test ElevenLabs Agents With TestMu AI
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-elevenlabs-agents/"
+    },
+    "headline": "How to Test ElevenLabs Agents With TestMu AI",
+    "description": "Automated phone, voice, and chat testing for agents built on the ElevenLabs Agents Platform. Drive multi-turn conversations across personas and score every run.",
+    "url": "https://www.testmuai.com/support/docs/test-elevenlabs-agents/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "test elevenlabs agents",
+      "elevenlabs agent testing",
+      "phone agent testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-24T18:03:55+05:30"
+  }) }}
+/>
+
+ElevenLabs deploys one agent configuration to phone, web voice, and text, with voice conversations running over WebRTC and text-only conversations over WebSocket. You can test your ElevenLabs agent on the TestMu AI Agent Testing Platform over the same WebRTC or WebSocket surface it serves, with multi-turn conversations across personas and edge cases scored on each run.
+
+To connect one, you need an ElevenLabs account with a published agent, a number imported under Phone Numbers for phone agents only, source docs for scenario generation (prompt, PRD, or knowledge base), and a TestMu AI workspace with agent-testing permissions.
+
+## Why do ElevenLabs voice and SIP codec settings break tests?
 
 ---
 
-ElevenLabs deploys one agent configuration to phone, web voice, and text, with voice conversations running over WebRTC and text-only conversations over WebSocket. TestMu AI connects to the agent on whichever surface it runs on, drives full multi-turn conversations across personas and edge cases, and scores every run.
+One agent configuration deploys to phone, web voice, and text, so a few behaviours are worth building dedicated scenarios around:
 
-## Before You Begin
+- **Fixed SIP codecs.** SIP audio runs at G711 8kHz or G722 16kHz regardless of the audio format set on the agent for WebSocket connections. Mismatches here look like quality failures but are codec failures.
+- **Auth by agent visibility.** Private agents need a signed link for WebSocket or a conversation token for WebRTC. Public agents need only the agent ID.
+- **Text-only depends on the response event.** Text-only mode depends on the agent response event firing, so a silent failure reads as a timeout.
 
----
-
-Before you connect an ElevenLabs agent, make sure you have:
-
-- ElevenLabs account with a published agent
-- A number imported under Phone Numbers, for phone agents only
-- TestMu AI workspace with agent-testing permissions
-- Source docs for scenario generation: prompt, PRD, or knowledge base
-
-## Test an ElevenLabs Phone Agent
+## Can you test ElevenLabs across phone, voice, and text?
 
 ---
 
-Phone testing covers inbound and outbound callers over native telephony, Twilio, or a SIP trunk. Paste the agent's system prompt to generate scenarios, then add the imported number under Phone Numbers and pick from 100+ voices, background noise conditions, and personas. It covers DTMF entry, transfers, voicemail handling, and carrier latency.
+ElevenLabs deploys one agent configuration across surfaces. Generate scenarios from the system prompt, supporting docs, or knowledge base, then follow the linked setup for the surface you test:
 
-Full setup: [Phone agent testing](/support/docs/phone-agent/)
+- **Phone** covers inbound and outbound callers over native telephony, Twilio, or a SIP trunk: DTMF entry, transfers, voicemail handling, and carrier latency. Setup: [phone agent testing](/support/docs/phone-agent/).
+- **Voice** reaches the agent over a direct audio stream rather than a phone number, using WebRTC or WebSocket. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise. Setup: [voice agent testing](/support/docs/voice-agent/).
+- **Chat** runs text-only conversations, either configured that way or forced with a runtime override, over WebSocket. It skips every audio metric and scores logic, tool calls, grounding, and safety, and can run on every commit. Setup: [chat agent testing](/support/docs/chat-agent/).
 
-## Test an ElevenLabs Voice Agent
-
----
-
-Voice testing applies to agents reached over a direct audio stream rather than a phone number. Paste the system prompt to generate scenarios, then create the endpoint profile using WebRTC or WebSocket. It isolates the speech pipeline, so STT and TTS accuracy, turn-taking, and interruption handling get tested without telephony noise in the results.
-
-Full setup: [Voice agent testing](/support/docs/voice-agent/)
-
-## Test an ElevenLabs Chat Agent
-
----
-
-Chat testing applies to agents running in text-only mode, either configured that way or forced with a runtime override. Upload the supporting docs and knowledge base the agent answers from to generate scenarios, then create the endpoint profile using WebSocket. It skips every audio metric and scores logic, tool calls, grounding, and safety, which can run on every commit.
-
-Full setup: [Chat agent testing](/support/docs/chat-agent/)
-
-## What You Get With Agent Testing
-
----
-
-Every ElevenLabs run, on any surface it supports, is scored across:
-
-- 30+ metrics across 8 categories, with configurable thresholds
-- Context-aware scenario generation
-- Adversarial testing and automated issue detection
-- 100+ voices and personas
-- Multilingual conversations
-- Quality scoring and real-time call monitoring
-
-## ElevenLabs-Specific Considerations
-
----
-
-A few ElevenLabs behaviours are worth building dedicated scenarios around:
-
-- SIP audio runs at G711 8kHz or G722 16kHz regardless of the audio format set on the agent for WebSocket connections. Mismatches here look like quality failures but are codec failures
-- Private agents need a signed link for WebSocket or a conversation token for WebRTC. Public agents need only the agent ID
-- Text-only mode depends on the agent response event firing, so a silent failure reads as a timeout
-
-## Troubleshooting
+## What goes wrong in an ElevenLabs test?
 
 ---
 

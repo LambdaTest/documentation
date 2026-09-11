@@ -44,6 +44,73 @@ canonical: https://www.testmuai.com/support/docs/api-testing-with-kane-cli/
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/api-testing-with-kane-cli/"
+    },
+    "headline": "API Testing Use Cases",
+    "description": "API testing use cases for Kane CLI, from smoke tests and auth-token chaining to schema validation, SLA gates, and multi-step API transactions, each with the exact steps to follow.",
+    "url": "https://www.testmuai.com/support/docs/api-testing-with-kane-cli/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli api testing",
+      "api testing use cases",
+      "kane cli"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run kane-cli run \"Open [your site], then run this exact request:\" followed by the full curl command in quotes, for example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   curl -X POST https://your-app.com/api/telecom/recharge \\\n     -H 'Content-Type: application/json' \\\n     -d '{\"mobile\":\"9876543210\",\"amount\":299,\"type\":\"prepaid\"}'"
+      }
+    ],
+    "dateModified": "2026-08-06T14:59:59+05:30"
+  }) }}
+/>
+
 These use cases cover API testing end to end: verifying that a service is alive, chaining authenticated requests, validating response schemas and business logic, proving that invalid requests fail closed, gating on latency, and running full multi-step transactions.
 
 Each one runs as a single `kane-cli run "..."` command. Kane CLI opens a real browser session, performs the described navigation and API calls, evaluates your assertions, and prints a live step-by-step log together with a plain-language pass or fail summary. Every successful run can be saved as a structured, rerunnable test case inside KaneAI Test Manager.

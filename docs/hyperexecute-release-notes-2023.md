@@ -42,6 +42,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-2023/"
+    },
+    "headline": "HyperExecute Release Notes 2023",
+    "description": "Consolidated HyperExecute release notes for 2023",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-release-notes-2023/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Support for Multiple Runtime Environments",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "runtime:\n  - language: java\n    version: '17'\n    addons:\n      - name: gauge\n        version: '1.5.6'\n      - name: gradle\n        version: '7.6'\n  - language: python\n    version: '3.10'\n  - language: node\n    version: '16'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clone your Private Repositories via Tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "tunnelOpts:\n  useInCodeSetUp: true\n### this flag is mandatory to pass to enable cloning via tunnel"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ---
 
 ## Version 2.1.4

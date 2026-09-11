@@ -6,6 +6,59 @@ description: Rule-level Accessibility guidance for Status Messages (WCAG 4.1.3 L
 slug: accessibility-web-rule-4-1-3-status-messages/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-web-rule-4-1-3-status-messages/"
+    },
+    "headline": "Status Messages (4.1.3)",
+    "description": "Rule-level Accessibility guidance for Status Messages (WCAG 4.1.3 Level AA).",
+    "url": "https://www.testmuai.com/support/docs/accessibility-web-rule-4-1-3-status-messages/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Status Messages (4.1.3)
 
 Status messages that provide information about the success or results of an action, the waiting state of an application, or the progress of a process must be programmatically determinable through role or properties so they can be presented to the user by assistive technologies without receiving focus.

@@ -48,6 +48,535 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-troubleshooting-guide/"
+    },
+    "headline": "Comprehensive Troubleshooting Guide for SmartUI",
+    "description": "Comprehensive troubleshooting guide for common SmartUI issues, including solutions, best practices, and diagnostic steps",
+    "url": "https://www.testmuai.com/support/docs/smartui-troubleshooting-guide/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "troubleshooting",
+      "smartui issues",
+      "visual testing problems"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If empty, set it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo %PROJECT_TOKEN%"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If empty, set it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   echo $env:PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If empty, set it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   $env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SmartUI CLI Installation",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If outdated, update",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install -g @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Network Connectivity",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   curl -I https://smartui.lambdatest.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Credentials Are Set",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Issue: Credentials Not Working (Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo %LT_USERNAME%\n   echo %LT_ACCESS_KEY%"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Issue: Credentials Not Working (Hooks)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   echo $env:LT_USERNAME\n   echo $env:LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Credentials Correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export LT_USERNAME=\"your_username\"\n   export LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   set LT_USERNAME=\"your_username\"\n   set LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 15",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   $env:LT_USERNAME=\"your_username\"\n   $env:LT_ACCESS_KEY=\"your_access_key\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Global Installation (-g flag)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Local Installation (without -g)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install @lambdatest/smartui-cli\n   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartUI CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Global installation (latest)\n   npm install -g @lambdatest/smartui-cli@latest\n\n   # Local installation (latest)\n   npm install @lambdatest/smartui-cli@latest\n\n   # Using npx (always uses latest)\n   npx @lambdatest/smartui-cli@latest --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "SmartUI Storybook CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Global installation (latest)\n   npm install -g @lambdatest/smartui-storybook@latest\n\n   # Local installation (latest)\n   npm install @lambdatest/smartui-storybook@latest\n\n   # Using npx (always uses latest)\n   npx @lambdatest/smartui-storybook@latest --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Checking Current Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # If installed globally\n   smartui --version\n\n   # If installed locally or using npx\n   npx smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Updating to Latest Version",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Global update\n   npm update -g @lambdatest/smartui-cli\n\n   # Local update\n   npm update @lambdatest/smartui-cli\n\n   # Force reinstall latest\n   npm install -g @lambdatest/smartui-cli@latest --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If installed globally",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     echo $PATH | grep -i node\n     npm config get prefix"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Force reinstall latest",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     # macOS/Linux - Add to ~/.bashrc or ~/.zshrc\n     export PATH=\"$PATH:$(npm config get prefix)/bin\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If installed locally",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     npx smartui --version\n     npx smartui exec -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "macOS/Linux - Add to ~/.bashrc or ~/.zshrc",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     ./node_modules/.bin/smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));\n   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(\"content\")));\n   SmartUISnapshot.smartuiSnapshot(driver, \"Screenshot Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Playwright (JavaScript)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   await page.goto('https://example.com');\n   await page.waitForSelector('#content', { state: 'visible' });\n   await page.waitForLoadState('networkidle');\n   await smartuiSnapshot.smartuiSnapshot(page, \"Screenshot Name\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Cypress",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   cy.visit('https://example.com');\n   cy.get('#content').should('be.visible');\n   cy.wait(2000); // Wait for animations\n   cy.smartuiSnapshot('Screenshot Name');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enable JavaScript in Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"enableJavaScript\": true,\n     \"waitForTimeout\": 2000,\n     \"waitForPageRender\": 5000\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Increase Wait Timeouts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"waitForTimeout\": 3000,\n     \"waitForPageRender\": 10000\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use Meaningful Names",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   // Good\n   cy.smartuiSnapshot('ProductPage-MainContent');\n   cy.smartuiSnapshot('CheckoutPage-PaymentForm');\n\n   // Bad\n   cy.smartuiSnapshot('screenshot1');\n   cy.smartuiSnapshot('test-' + Date.now());"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use ignoreDOM for Dynamic Content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "   let options = {\n     ignoreDOM: {\n       id: [\"timestamp\", \"user-id\", \"session-token\"],\n       class: [\"dynamic-content\", \"ad-banner\"],\n       cssSelector: [\"[data-testid='timestamp']\"]\n     }\n   };\n   smartuiSnapshot(driver, \"Screenshot Name\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Configuration File Exists",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   ls -la .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If missing, create it",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui config:create .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Validate JSON Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   cat .smartui.json | python -m json.tool"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Port Availability",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Check if port 5000 is in use\n   lsof -i :5000"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use different port",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui exec -P 5001 -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check File Permissions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   chmod 644 .smartui.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install -g @lambdatest/smartui-cli@latest"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check CLI Help",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npx smartui --help\n   npx smartui exec --help"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "npm packages",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm view @lambdatest/smartui-cli version\n   npm view @lambdatest/playwright-driver version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pip (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   pip index versions lambdatest-selenium-driver"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm cache clean --force"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Maven",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   mvn clean"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pip",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   pip cache purge"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Internet Connectivity",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   ping registry.npmjs.org"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check Node Version (for npm)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   node --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "GitHub Actions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   env:\n     PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "GitLab",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "   variables:\n     PROJECT_TOKEN: $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Validate JSON Syntax",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   cat .smartui.json | python -m json.tool"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To keep environment variables consistent across all terminals, configure them in your shell's startup file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Edit ~/.bashrc\n   nano ~/.bashrc\n\n   # Add your environment variables\n   export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\n   export LT_USERNAME=\"your_username\"\n   export LT_ACCESS_KEY=\"your_access_key\"\n\n   # Reload the configuration\n   source ~/.bashrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Reload the configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Edit ~/.zshrc\n   nano ~/.zshrc\n\n   # Add your environment variables\n   export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\n   export LT_USERNAME=\"your_username\"\n   export LT_ACCESS_KEY=\"your_access_key\"\n\n   # Reload the configuration\n   source ~/.zshrc"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Reload the configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   # Check if profile exists\n   Test-Path $PROFILE\n\n   # Create profile if it doesn't exist\n   if (!(Test-Path $PROFILE)) {\n       New-Item -Type File -Path $PROFILE -Force\n   }\n\n   # Edit profile\n   notepad $PROFILE\n\n   # Add your environment variables\n   $env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\n   $env:LT_USERNAME=\"your_username\"\n   $env:LT_ACCESS_KEY=\"your_access_key\"\n\n   # Reload the profile\n   . $PROFILE"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Open VS Code settings (Ctrl+, or Cmd+,) and add",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"terminal.integrated.env.linux\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\",\n       \"LT_USERNAME\": \"your_username\",\n       \"LT_ACCESS_KEY\": \"your_access_key\"\n     },\n     \"terminal.integrated.env.osx\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\",\n       \"LT_USERNAME\": \"your_username\",\n       \"LT_ACCESS_KEY\": \"your_access_key\"\n     },\n     \"terminal.integrated.env.windows\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\",\n       \"LT_USERNAME\": \"your_username\",\n       \"LT_ACCESS_KEY\": \"your_access_key\"\n     }\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create or edit .vscode/settings.json in your project root",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "   {\n     \"terminal.integrated.env.linux\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\"\n     },\n     \"terminal.integrated.env.osx\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\"\n     },\n     \"terminal.integrated.env.windows\": {\n       \"PROJECT_TOKEN\": \"123456#1234abcd-****-****-****-************\"\n     }\n   }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Create .env file in project root",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   PROJECT_TOKEN=123456#1234abcd-****-****-****-************\n   LT_USERNAME=your_username\n   LT_ACCESS_KEY=your_access_key"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Node.js projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     npm install dotenv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 58",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "     require('dotenv').config();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 59",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     npm install -g dotenv-cli\n     dotenv smartui exec -- <command>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Python projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "     pip install python-dotenv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 61",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "     from dotenv import load_dotenv\n     load_dotenv()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verifying Environment Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Check if variable is set\n   echo $PROJECT_TOKEN\n   echo $LT_USERNAME\n   echo $LT_ACCESS_KEY\n\n   # List all SmartUI-related variables\n   env | grep -E \"PROJECT_TOKEN|LT_USERNAME|LT_ACCESS_KEY|SMARTUI\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List all SmartUI-related variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   # Check if variable is set\n   echo %PROJECT_TOKEN%\n   echo %LT_USERNAME%\n   echo %LT_ACCESS_KEY%\n\n   # List all environment variables\n   set | findstr /i \"PROJECT_TOKEN LT_USERNAME LT_ACCESS_KEY SMARTUI\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List all environment variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "   # Check if variable is set\n   echo $env:PROJECT_TOKEN\n   echo $env:LT_USERNAME\n   echo $env:LT_ACCESS_KEY\n\n   # List all SmartUI-related variables\n   Get-ChildItem Env: | Where-Object { $_.Name -like \"*PROJECT_TOKEN*\" -or $_.Name -like \"*LT_*\" -or $_.Name -like \"*SMARTUI*\" }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Proxy Environment Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   export HTTP_PROXY=\"http://proxy.example.com:8080\"\n   export HTTPS_PROXY=\"http://proxy.example.com:8080\"\n   export NO_PROXY=\"localhost,127.0.0.1\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify Proxy Settings",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $HTTP_PROXY\n   echo $HTTPS_PROXY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Start Tunnel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   ./LT --user <username> --key <access_key>"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This comprehensive troubleshooting guide covers common issues you may encounter when using SmartUI for visual regression testing. Each issue includes symptoms, possible causes, and step-by-step solutions.
 
 ## Quick Diagnostic Checklist

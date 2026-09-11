@@ -38,6 +38,102 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/bamboo-integration-with-testmu/"
+    },
+    "headline": "How to integrate Bamboo with TestMu AI",
+    "description": "Deploy your code in a reliable manner at scale using Bamboo integration with TestMu AI, and ensure it looks robust across every browser with Selenium Grid on cloud.",
+    "url": "https://www.testmuai.com/support/docs/bamboo-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "bamboo integrations",
+      "testmu ai integrations with ci/cd tools",
+      "continuous integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A Bamboo Server installed.; A GIT repository.; wget & unzip utility.; Be aware of your TestMu AI authentication credentials, i.e., your TestMu AI username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your TestMu AI automation dashboard by clicking on the key icon near the help button.; For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  $ sudo apt-get install unzip\n  $ sudo apt-get install wget"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "      $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n      $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "     $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n     $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating TestMu AI With Bamboo Server",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "echo \"start testing\"\n//Add access credentials in plan variable\nexport LT_USERNAME=${bamboo.LT_USERNAME}\nexport LT_ACCESS_KEY=${bamboo.LT_ACCESS_KEY}\n\nwget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip\nunzip -o LT_Linux.zip\n\n//To start Tunnel\n./LT -user ${bamboo.LT_USERNAME} -key ${bamboo.LT_ACCESS_KEY} &\n\nnode ./node_modules/protractor/bin/protractor conf/single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Multiple Tests In Parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "echo \"start testing\"\nexport LT_USERNAME=<Your_LambdaTest_Username>\nexport LT_ACCESS_KEY=<Your_LambdaTest_Access_Key>\nnode ./node_modules/protractor/bin/protractor conf/parallel.conf.js"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
 # Bamboo Integration With <BrandName />
 ***
 Launched on 20 February 2007, Bamboo by Atlassian has become a worldwide adopted CI/CD tool. With Bamboo Server, you can generate multi-level build plans with the ease of defining triggers to specific builds post commits. You could also assign crucial builds or deployments to a colleague. Bamboo is free for open-source projects.

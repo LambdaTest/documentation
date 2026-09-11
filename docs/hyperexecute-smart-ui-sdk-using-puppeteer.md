@@ -50,6 +50,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/"
+    },
+    "headline": "UI Testing with Puppeteer using HyperExecute and SmartUI SDK",
+    "description": "Streamline Hyperexecute UI testing with SmartUI SDK and Puppeteer. Write robust, end-to-end tests effortlessly.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smart ui testing in hyperexecute",
+      "visual  ui testing,image to image comparison",
+      "regression testing tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Get your TestMu AI Username and Access key from the dashboard; Download HyperExecute CLI in order to initiate a test execution Job .; Set your Environmental Variables; HyperExecute YAML file which contains all the necessary instructions.; Use your login credentials to access TestMu AI SmartUI..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure Your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "  const capabilities = {\n    \"LT:Options\": {\n      \"build\": \"Puppeteer SmartUI Build\", // Mention your desired build name\n      \"name\": \"Puppeteer SmartUI Test\", // Provide the name of your test\n    },\n  };"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 90\ntestSuiteTimeout: 90\ntestSuiteStep: 90\n\nrunson: win\n\nautosplit: true\n\nretryOnFailure: true\nmaxRetries: 1\n\nconcurrency: 1\n\nenv:\n  PROJECT_TOKEN: \"YOUR_PROJECT_TOKEN\" #Enter your project token here\n\npre:\n  - npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer\n  - npx smartui config:create smartui-web.json\n\npost:\n  - cat hyperexecute-smartui-sdk.yaml\n\ntestDiscovery:\n  type: raw\n  mode: static\n  command: ls sdk/puppeteerCloud.js\n\ntestRunnerCommand: npx smartui exec node sdk/puppeteerCloud.js --config smartui-web.json\n\njobLabel: [\"smart-ui-sdk\", \"hyperexecute\", \"puppeteer\"]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 3",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pre:\n  - npm install @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer\n  - npx smartui config:create smartui-web.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using **Puppeteer**
 
 ## Prerequisites

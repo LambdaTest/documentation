@@ -59,6 +59,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/ip-geolocation-on-real-devices-browser/"
+    },
+    "headline": "IP Geolocation on Real Devices Browser",
+    "description": "Test your app and website across real devices and browsers with TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/ip-geolocation-on-real-devices-browser/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Device",
+    "keywords": [
+      "change geolocation on real device",
+      "TestMu AI geolocation testing",
+      "simulate GPS location Browser"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Understanding how your website behaves across different geographies is essential for delivering a personalized and compliant user experience. Whether you're targeting region-specific pricing, content, or legal requirements, geolocation simulation is a critical part of cross-border testing.
 
 With <BrandName />’s Geolocation Change feature for Real Device Browsers, you can manually simulate a different country during a live browser testing session, on actual Android devices. This allows you to test how your mobile website responds to users from specific locations without using a VPN or emulator.

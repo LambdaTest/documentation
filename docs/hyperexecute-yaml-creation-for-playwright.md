@@ -41,6 +41,171 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-yaml-creation-for-playwright/"
+    },
+    "headline": "HyperExecute YAML Creation for Playwright",
+    "description": "A step-by-step guide to creating a HyperExecute YAML configuration for Playwright tests: matrix strategy, dependencies, and parallel runs.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-yaml-creation-for-playwright/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pre",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Q: How can a specific Playwright project be executed?\nWhen a project has multiple Playwright projects defined, it may be necessary to run a specific one. Using the `--project` flag ensures that only the intended project executes without affecting others. Check that your execution command includes `--project=\"PROJECTNAME\"`and append it to the `testRunnerCommand`.\n\n```javascript\nnpx playwright test --project=chromium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Q: How can tests be executed with a specific configuration file?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "npx playwright test --config=playwright.config.staging.ts"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Q: How can private dependencies be accessed through a private network proxy?\nWhen private dependencies require access through a private network, configure HTTP and HTTPS proxies.\n\n**For npm:**\n\n```yaml title=\"hyperexecute.yaml\"\npre:\n  - npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}\n  - npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pre",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Q: How can scripts be run on each machine after test execution?\nUse the `post` parameter in the YAML file. Typical use cases include:\n\n- Running cleanup scripts\n- Closing API connections\n- Uploading test results to tools like Report Portal or Zephyr\n\n```yaml title=\"hyperexecute.yaml\"\npost:\n  - ./scripts/cleanup.sh\n  - ./scripts/upload-results.sh"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "globalPost",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Q: How can scripts be executed before all test executions start?\nUse the `globalPre` parameter to prepare environments or generate config files.\n\nExamples:\n- Generate runtime files\n- Import data\n- Run preparatory commands\n\n```yaml title=\"hyperexecute.yaml\"\nglobalPre:\n  - ./scripts/setup-env.sh\n  - ./scripts/import-data.sh"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "cacheDirectories",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**For yarn:**\n\n```yaml title=\"hyperexecute.yaml\"\ncacheKey: '{{ checksum \"yarn.lock\" }}'\ncacheDirectories:\n  - node_modules"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n**Test-level discovery:**\n\n```yaml title=\"hyperexecute.yaml\"\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep -rn \"test(\" tests | cut -d: -f1,2"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Q: How can Playwright reports be configured in HyperExecute?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- Update `hyperexecute.yaml` file:\n\n```yaml title=\"hyperexecute.yaml\"\nreport: true\npartialReports:\n  frameworkName: playwright\n  location: playwright-report\n  type: HTML"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "testDiscovery",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Q: Why do tests pass locally and on the automation grid but fail in HyperExecute?\nThis occurs due to a version mismatch between the Playwright client and server. In automation grid runs, the client is installed by the user, while the server is managed internally. In HyperExecute, both client and server must be explicitly installed and configured in the YAML to ensure compatibility.\n\n- Verify the required Playwright version by checking the dependency listed in your `package.json` file.\n- Once identified, install the specific version of Playwright during the pre step of the YAML:\n\n```yaml title=\"hyperexecute.yaml\"\npre:\n  - npx playwright@1.41.0 install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Q: Why are tests retried multiple times within a single scenario?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Q: How can environment variables required for test execution be configured?\nCertain frameworks or projects require specific environment variables, such as credentials or base URLs. Configuring these variables via the `env` section in the YAML or using a `.env` file ensures that tests execute successfully in HyperExecute.\n\n```yaml title=\"hyperexecute.yaml\"\nenv:\n  BASE_URL: https://example.com\n  API_KEY: your_api_key_here"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Q: How can environment variables required for test execution be configured?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Q: Why can tasks get stuck due to reports opening on a local server?\nPlaywright tests may hang if the HTML report is configured to automatically open on a local server after execution. Since HyperExecute runs in a headless CI environment, attempting to open the report in a browser window causes the process to stall indefinitely.\n\nTo prevent this, update your `playwright.config.ts` file to prevent the report from opening automatically by setting the open option to `'never'`.\n\n```javascript title=playwright.config.ts\"\nreporter: [['html', { open: 'never' }]]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "pre",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n## Q: Why might the browser fail to launch on HyperExecute?\nTests may fail to start if required browser binaries are missing or not installed correctly. Installing all Playwright dependencies, including browsers, ensures successful test execution.\n\n```yaml title=\"hyperexecute.yaml\"\npre:\n  - npx playwright install --with-deps"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Q: Why do tests time out on HyperExecute but pass locally?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "test.setTimeout(60000); // 60 seconds"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Q: Why do configuration files fail when using hardcoded absolute paths?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Instead of require(\"C:/user/folder/test.js\")\nrequire(\"./tests/test.js\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Q: Why are screenshots or videos not available in artifacts?",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n- Update the `hyperexecute.yaml` file:\n```yaml title=\"hyperexecute.yaml\"\nuploadArtefacts:\n  - name: FinalReport\n    path:\n      - test-results/**\n      - playwright-report/**"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This guide outlines common use cases and solutions for configuring Playwright test executions on **<BrandName /> HyperExecute**. It covers dependency management, environment setup, caching, reporting, and troubleshooting common issues.
 
 ## Q: How can private dependencies be accessed via a custom registry?

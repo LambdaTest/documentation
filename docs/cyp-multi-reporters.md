@@ -27,6 +27,87 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/cyp-multi-reporters/"
+    },
+    "headline": "Multi Reporters Support",
+    "description": "Learn how to generate multiple reporters supported by Cypress.",
+    "url": "https://www.testmuai.com/support/docs/cyp-multi-reporters/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "Cypress Automation",
+      "Cypress Testing Guide",
+      "Cypress Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "\"run_settings\":{\n.....\n\"reporter_config_file\": \"reporter-config_mochawesome_junit.json\",\n\"downloads\": \"./cypress/results\",\n.....\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "{   \n    \"reporterEnabled\": \"mochawesome,mocha-junit-reporter\",\n    \"mochawesomeReporterOptions\": {\n        \"reportDir\": \"cypress/results/json\",\n        \"overwrite\": true,\n        \"html\": true,\n\t\t\"json\": true\n    },\n    \"mochaJunitReporterReporterOptions\": {\n        \"mochaFile\": \"cypress/results/my-test-output.xml\",\n        \"toConsole\": true\n    }\n  }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample Output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "Waiting for build to finish...\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 (index) \u2502               Spec                \u2502   Status    \u2502 Platform \u2502 Browser  \u2502 Version \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502    0    \u2502 'cypress_env_params_test_spec.js' \u2502 'completed' \u2502 'win10'  \u2502 'Chrome' \u2502 '109.0' \u2502\n\u2502    1    \u2502 'cypress_env_params_test_spec.js' \u2502 'completed' \u2502 'win10'  \u2502 'Chrome' \u2502 '109.0' \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n{ completed: 2 }\nCreating directories\nDirectory created  lambdatest-artefacts/f60aa4f9-4fca-46aa-b862-e4a0746a2eea\nExtracted 14 entries for NPE6A-VMB8F-GVMDY-AG782\nExtracted 14 entries for 0OETA-BPSP3-XZVX4-EAPWB"
+      }
+    ],
+    "dateModified": "2026-07-19T21:41:43+05:30"
+  }) }}
+/>
+
 ---
 
 With <BrandName />, you can generate multiple reporters supported by Cypress for your tests. If you want to do so, follow the steps below and download the generated reports automatically.

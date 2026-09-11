@@ -52,6 +52,124 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-skills/"
+    },
+    "headline": "AI Agent Skills - TestMu AI Browser Cloud",
+    "description": "Give any AI agent a real browser with a ready-to-use skill for TestMu AI Browser Cloud. Works with Claude, Cursor, LangChain, CrewAI, OpenAI, and any LLM tool.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud skills",
+      "ai agent tools",
+      "langchain browser tool"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Node.js 16+ installed (18+ for Playwright adapter); TestMu AI account - Sign up at testmuai.com (free tier available); SDK installed:; Credentials configured:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Before You Begin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i @testmuai/browser-cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Before You Begin",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# .env\nLT_USERNAME=your_testmuai_username\nLT_ACCESS_KEY=your_testmuai_access_key"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install browser-cloud from the LambdaTest browser-cloud-skills repo with the Skills CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/browser-cloud-skills",
+        "text": "npx skills add https://github.com/LambdaTest/browser-cloud-skills --skill browser-cloud"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Scrape a single URL or batch-scrape multiple URLs with concurrency control",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { scrapeWithAgent, batchScrape } from './browser-cloud/examples/scrape-agent';\n\n// Single URL\nconst result = await scrapeWithAgent('https://example.com');\n\n// Multiple URLs, 3 concurrent sessions\nconst results = await batchScrape(\n  ['https://a.com', 'https://b.com', 'https://c.com'],\n  3\n);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Zero re-logins for scheduled agents",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { fetchDashboard } from './browser-cloud/examples/auth-persist-agent';\n\n// First run: logs in, saves session to .profiles/myapp-login.json\n// All future runs: loads saved session, skips login entirely\nconst data = await fetchDashboard('https://app.example.com/dashboard');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Build a LangChain agent that can browse the web as one of its tools",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { buildBrowserAgent } from './browser-cloud/examples/langchain-browser-tool';\n\nconst agent = await buildBrowserAgent();\nconst result = await agent.invoke({\n  input: 'Research the latest pricing for our top three competitors.',\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run multiple isolated browser sessions concurrently with progress tracking",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "import { parallelResearch } from './browser-cloud/examples/parallel-research';\n\nconst results = await parallelResearch([\n  'https://competitor-a.com/pricing',\n  'https://competitor-b.com/pricing',\n  'https://competitor-c.com/pricing',\n], 3);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Skill Repo Structure",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\u251c\u2500\u2500 package.json                        \u2190 npm scripts and SDK dependency\n\u251c\u2500\u2500 README.md\n\u2502\n\u2514\u2500\u2500 browser-cloud/                      \u2190 Skill bundle\n    \u251c\u2500\u2500 SKILL.md                        \u2190 Load this into your AI tool\n    \u251c\u2500\u2500 examples/\n    \u2502   \u251c\u2500\u2500 scrape-agent.ts             \u2190 Batch scraping with concurrency control\n    \u2502   \u251c\u2500\u2500 form-fill-agent.ts          \u2190 Form interaction with Playwright + stealth\n    \u2502   \u251c\u2500\u2500 auth-persist-agent.ts       \u2190 Login once, reuse session across runs\n    \u2502   \u251c\u2500\u2500 parallel-research.ts        \u2190 Parallel sessions with progress tracking\n    \u2502   \u2514\u2500\u2500 langchain-browser-tool.ts   \u2190 Four LangChain tool variants\n    \u2514\u2500\u2500 references/\n        \u251c\u2500\u2500 patterns/\n        \u2502   \u251c\u2500\u2500 quick-actions.md        \u2190 Scrape / screenshot / PDF one-liners\n        \u2502   \u251c\u2500\u2500 session-navigate.md     \u2190 Multi-step navigation and interaction\n        \u2502   \u251c\u2500\u2500 auth-profile.md         \u2190 Auth persistence patterns\n        \u2502   \u251c\u2500\u2500 parallel-sessions.md    \u2190 Concurrent agent sessions\n        \u2502   \u251c\u2500\u2500 tunnel.md              \u2190 Localhost and internal network access\n        \u2502   \u2514\u2500\u2500 files.md               \u2190 Upload/download between agent and browser\n        \u2514\u2500\u2500 integrations/\n            \u251c\u2500\u2500 openai-functions.md     \u2190 OpenAI + Anthropic function calling\n            \u2514\u2500\u2500 crewai.md              \u2190 CrewAI BaseTool (Python + Node bridge)"
+      }
+    ],
+    "dateModified": "2026-03-26T13:15:11+05:30"
+  }) }}
+/>
+
 # AI Agent Skills
 
 Give any AI agent a real browser. The `browser-cloud` skill is a structured instruction file that tells an LLM assistant exactly how to generate production-grade browser automation code using <BrandName /> Browser Cloud. Drop it into Claude, Cursor, or any LLM tool that supports custom skills, and your agent can spin up cloud browsers on demand.

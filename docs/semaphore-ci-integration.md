@@ -44,6 +44,116 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/semaphore-integration-with-testmu/"
+    },
+    "headline": "Semaphore CI Integration With TestMu AI",
+    "description": "Boost market delivery with TestMu AI's integration with Semaphore CI and automate tests on a cloud grid with 3000+ real browsers seamlessly.",
+    "url": "https://www.testmuai.com/support/docs/semaphore-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Global Dependencies; A Git or GitHub repository; Download and install node.js and node package manager or npm.; If you have npm already installed, you may want to upgrade it to the latest version. Here the code you can run in your terminal to upgrade npm.; TestMu AI Authentication Credentials; Be aware of your TestMu AI authentication credentials, i.e., your TestMu AI username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your TestMu AI automation dashboard by clicking on the key icon near the help button..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ brew install node"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    npm install npm@latest -g"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME>\n    $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating TestMu AI With Semaphore CI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "version: v1.0\nname: Run Protractor Test In LambdaTest\nagent:\n  machine:\n    type: e1-standard-2\n    os_image: ubuntu1804\nexecution_time_limit:\n  hours: 3\n\nblocks:\n  - name: Set Env Variables\n    task:\n      jobs:\n      - name: NODE_ENV\n        commands:\n          - echo 'export LT_USERNAME=\"{your_lambdatest_username}\"' >> ~/.bashrc\n          - echo 'export LT_ACCESS_KEY=\"{your_lambda_access_key}\"' >> ~/.bashrc\n  \n  - name: Run Tests\n    task:\n      jobs:\n      - name: Run Protractor\n        commands:\n          - checkout\n          - cd /home/semaphore/protractor-selenium-semaphore-sample\n          - npm install\n          - node node_modules/protractor/bin/protractor single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then Capabilities Generator at TestMu AI will provide you with the below program",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "var capabilities = {\n    \"build\" : \"your build name\", //You can edit this and assign a build name\n    \"name\" : \"your test name\", // Assign a name to your Test\n    \"platform\" : \"Windows 8.1\", // The operating system on which you want to test your website\n    \"browserName\" : \"Firefox\", // The browser on which you want to test\n    \"version\" : \"62.0\", // The browser version which you've selected to perform the test upon\n    \"resolution\" : \"1280x1024\", // The resolution in which you want to run the test as per your operating system\n    \"selenium_version\" : \"3.11.0\", //The version of Selenium on which the test will run\n    \"visual\" : true,\n    \"firefox.driver\" : v0.21.0\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing Locally Hosted or Privately Hosted Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "//Example of .semaphore/semaphore.yml for Lambda Tunnel\nversion: v1.0\nname: Run Protractor Test In LambdaTest\nagent:\n  machine:\n    type: e1-standard-2\n    os_image: ubuntu1804\nexecution_time_limit:\n  hours: 3\n\nblocks:\n  - name: Set Env Variables\n    task:\n      jobs:\n      - name: NODE_ENV\n        commands:\n          - ls -al\n          - echo 'export LT_USERNAME=\"<YOUR_LAMBDATEST_USERNAME>\"' >> .bashrc\n          - echo 'export LT_ACCESS_KEY=\"<YOUR_LAMBDATEST_ACCESS_KEY>\"' >> .bashrc\n          \n  - name: Set Tunnel\n    task:\n      jobs:\n      - name: Download and install tunnel\n        commands:\n          - checkout\n          - cd /home/semaphore/protractor-selenium-semaphore-sample\n          - wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip\n          #Extracting tunnel binary\n          - sudo apt-get install unzip\n          - unzip LT_Linux.zip\n          #Executing tunnel library\n          - ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} & sleep 30\n\n  - name: Run Tests\n    task:\n      jobs:\n      - name: Run Protractor\n        commands:\n          - checkout\n          - cd /home/semaphore/protractor-selenium-semaphore-sample\n          - npm install\n          - node node_modules/protractor/bin/protractor single.conf.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "node ./node_modules/protractor/bin/protractor parallel.conf.js"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Semaphore CI Integration With <BrandName />
 * * *
 Semaphore is a hosted continuous integration and deployment service used to test and deploy software projects hosted on GitHub and BitBucket. While open-source projects can use Semaphore for free in its full capacity, free use for private projects is limited to 100 builds per month.

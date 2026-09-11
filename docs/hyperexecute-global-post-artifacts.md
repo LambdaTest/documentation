@@ -43,6 +43,95 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-global-post-artifacts/"
+    },
+    "headline": "Download and Process Job Artifacts in Global Post",
+    "description": "Download every task's artifacts onto a VM after your HyperExecute job finishes, run custom shell commands to merge or transform them, upload the results to the dashboard, and optionally email them out.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-global-post-artifacts/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "lambdaTest",
+      "testmu ai hyperexecute",
+      "hyperexecute globalpost artifacts"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "uploadArtifacts is configured in your YAML so that your tasks actually produce artifacts to download.; commands under globalPost is not empty.; downloadArtifacts: true is explicitly set under globalPost..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add a globalPost section to your HyperExecute YAML and set downloadArtifacts: true",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "globalPost:\n  mode: remote\n  commands:\n    - echo \"Downloaded artifacts are at: ${ARTIFACTS_DIR}\"\n    - echo \"Place upload files here: ${UPLOAD_DIR}\"\n    - ls ${ARTIFACTS_DIR}\n    - mkdir -p ${UPLOAD_DIR}/processed-reports\n    - # ... your processing commands here ...\n  runson: linux\n  downloadArtifacts: true\n  email:\n    to:\n      - alice@yourcompany.com\n      - bob@yourcompany.com\n    templatePath: mailtemplates/template.html"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "ARTIFACTS_DIR \u2014 where the downloaded artifacts live",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ARTIFACTS_DIR/\n\u251c\u2500\u2500 task-id-1/\n\u2502   \u251c\u2500\u2500 artifact-name-1/\n\u2502   \u2502   \u251c\u2500\u2500 homepage.png\n\u2502   \u2502   \u2514\u2500\u2500 checkout.png\n\u2502   \u2514\u2500\u2500 artifact-name-2/\n\u2502       \u2514\u2500\u2500 output.log\n\u251c\u2500\u2500 task-id-2/\n\u2502   \u251c\u2500\u2500 artifact-name-1/\n\u2502   \u2502   \u2514\u2500\u2500 login.png\n\u2502   \u2514\u2500\u2500 artifact-name-2/\n\u2502       \u2514\u2500\u2500 output.log"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "UPLOAD_DIR \u2014 where to place your output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$UPLOAD_DIR/\n\u251c\u2500\u2500 merged-report.html     \u2190 created by user commands\n\u251c\u2500\u2500 summary.json\n\u2514\u2500\u2500 processed/\n    \u2514\u2500\u2500 final-results.csv"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Disabling email",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "globalPost:\n  mode: remote\n  runson: linux\n  downloadArtifacts: true\n  commands:\n    - ls ${ARTIFACTS_DIR}\n  disableEmail: true"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 The **`globalPost`** step can download every task's artifacts onto a VM after your HyperExecute job finishes, run the shell commands you specify against them, and place the processed output back into the job's **Artifacts** section on the dashboard. It can also email the final result to a list of recipients. This lets you turn the raw artifacts a job produced into a custom report or summary, entirely within HyperExecute and without any changes to your test framework code.
 
 > 📘 This page covers the artifact download and processing behavior of `globalPost`. For the base `globalPost` step (running cleanup commands after a job), see [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) in the YAML deep dive.

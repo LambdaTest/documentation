@@ -47,6 +47,200 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-pdf-cli-upload/"
+    },
+    "headline": "Upload PDFs via CLI",
+    "description": "Learn how to upload PDF files to SmartUI using the command-line interface for visual regression testing.",
+    "url": "https://www.testmuai.com/support/docs/smartui-pdf-cli-upload/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "PDF CLI Upload",
+      "SmartUI CLI",
+      "Visual Regression Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Familiarity with command-line tools is essential.; Visit the TestMu AI SmartUI page and log in with your credentials.; Obtain your LT_USERNAME and LT_ACCESS_KEY by clicking on the Access Key button, located at the top right corner of your dashboard..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's an example of a project token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "projectToken = \"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the CLI globally using npm",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Setup your credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nexport LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\"\nexport PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Setup your credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\nset LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\"\nset PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Setup your credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:LT_USERNAME=\"${YOUR_LAMBDATEST_USERNAME}\"\n$env:LT_ACCESS_KEY=\"${YOUR_LAMBDATEST_ACCESS_KEY}\"\n$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the upload-pdf command to upload one or multiple PDF files from a directory",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-pdf <directory_or_filename> [options]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upload all PDFs from a folder and name the build",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-pdf ./pdfs/ --buildName \"Release-v2.1\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upload a single PDF file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-pdf ./document.pdf --buildName \"Single-PDF-Test\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetch results and save to a file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-pdf ./spec.pdf --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Upload with custom project token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-pdf ./pdfs/ --projectToken \"123456#1234abcd-****-****-****-************\" --buildName \"Custom-Build\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Process multiple directories",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-pdf ./documents/ --buildName \"Batch-1\"\nsmartui upload-pdf ./reports/ --buildName \"Batch-2\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example for GitHub Actions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "- name: Upload PDFs to SmartUI\n  run: |\n    smartui upload-pdf ./generated-pdfs/ --buildName \"${{ github.sha }}\" --fetch-results test-results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 13",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "smartui upload-pdf ./pdfs/ --buildName \"Release-v1.0-$(date +%Y%m%d)\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PDF file is valid and not corrupted",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   file document.pdf"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Check file path is correct",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   ls -la ./pdfs/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify PROJECT_TOKEN is set correctly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   echo $PROJECT_TOKEN"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify SmartUI CLI is installed",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   smartui --version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install SmartUI CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Verify npm is available",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "   npm --version"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 :::caution
 This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.testmuai.com/demo/).
 :::

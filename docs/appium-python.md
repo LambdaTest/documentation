@@ -54,6 +54,117 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/appium-python/"
+    },
+    "headline": "Appium with Python",
+    "description": "Complete guide to running your first Python Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 5000+ Real Devices.",
+    "url": "https://www.testmuai.com/support/docs/appium-python/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "python appium",
+      "python appium tutorial",
+      "real devices"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; You should have Python installed.; Download and install pip..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "except",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"android\" label=\"Android\" default>\n\n```python title=\"android.py\"\nfrom appium import webdriver\nfrom appium.webdriver.common.mobileby import MobileBy\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nimport time\nimport os\n\ndesired_caps = {\n    \"deviceName\": \"Galaxy S20\",\n    \"platformName\": \"Android\",\n    \"platformVersion\": \"10\",\n    #highlight-next-line\n    \"app\": \"APP_URL\",  # Enter app (.apk) url\n    \"isRealMobile\": True,\n    \"build\": \"Python Vanilla Android\",\n    \"name\": \"Sample Test - Python\",\n    \"network\": False,\n    \"visual\": True,\n    \"video\": True\n}\n\n\ndef startingTest():\n    if os.environ.get(\"LT_USERNAME\") is None:\n        username = \"username\" #Add username here\n    else:\n        username = os.environ.get(\"LT_USERNAME\")\n    if os.environ.get(\"LT_ACCESS_KEY\") is None:\n        accesskey = \"accesskey\" #Add accessKey here\n    else:\n        accesskey = os.environ.get(\"LT_ACCESS_KEY\")\n\n    try:\n        driver = webdriver.Remote(desired_capabilities=desired_caps, command_executor=\"https://\" +\n                                  username+\":\"+accesskey+\"@mobile-hub.lambdatest.com/wd/hub\")\n        colorElement = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/color\")))\n        colorElement.click()\n\n        textElement = WebDriverWait(driver, 20).until(\n            EC.element_to_be_clickable((MobileBy.ID, \"com.lambdatest.proverbial:id/Text\")))\n        textElement.click()\n\n        toastElement = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/toast\")))\n        toastElement.click()\n\n        notification = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/notification\")))\n        notification.click()\n\n        geolocation = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/geoLocation\")))\n        geolocation.click()\n        time.sleep(5)\n\n        driver.back()\n\n        home = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/buttonPage\")))\n        home.click()\n\n        speedTest = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/speedTest\")))\n        speedTest.click()\n        time.sleep(5)\n\n        driver.back()\n\n        browser = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/webview\")))\n        browser.click()\n\n        url = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/url\")))\n        url.send_keys(\"https://www.testmuai.com\")\n\n        find = WebDriverWait(driver, 20).until(EC.element_to_be_clickable(\n            (MobileBy.ID, \"com.lambdatest.proverbial:id/find\")))\n        find.click()\n        driver.quit()\n    except:\n        driver.quit()\n\n\nstartingTest()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure the Test Capabilities (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n<TabItem value=\"android-config\" label=\"Android\" default>\n\n```python title=\"Android(.apk)\"\ndesired_caps = {\n    \"deviceName\":\"Galaxy S20\",\n    \"platformName\":\"Android\",\n    \"platformVersion\":\"10\",\n    \"isRealMobile\":True,\n    #highlight-next-line\n    \"app\":\"YOUR_APP_URL\",\n    \"build\":\"Python Vanilla Android\",\n    \"name\":\"Sample Test - Python\",\n    \"network\":False,\n    \"visual\":True,\n    \"video\":True\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "pip install -r requirements.txt"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python3 ios.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 6: Execute and Monitor your Tests (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "python3 android.py"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The appium-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "appium-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Appium Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/appium-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/appium-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 In this documentation, you will learn how to trigger a automation script of **Python** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites

@@ -52,6 +52,88 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/xctestplan/"
+    },
+    "headline": "XCTestPlan",
+    "description": "Manage iOS, iPadOS, macOS, watchOS, and tvOS tests with XCTestPlan on TestMu AI. Learn how to upload apps, configure tests, and view execution logs efficiently.",
+    "url": "https://www.testmuai.com/support/docs/xctestplan/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "XCUI test filters",
+      "app test automation",
+      "XCUI"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key.; Access to an iOS app (.ipa) and an XCUI Test app (.ipa file)..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 1",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nThis will only be used for filtering tests using xctestplan. You can use the following capability in xcui/build api:\n`\"xctestplan\" : \"lt://APP1234567891234567890\"` and use the following curl to upload xctestplan file.\n\n```bash \ncurl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan' \\\n--header 'Cookie: cf_use_ob=0' \\\n--header 'Authorization: Basic <Enter_Basic_Auth>' \\\n--form 'appFile=@\"/path/to/file\"' \\\n--form 'type=\"xctestplan\"'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Executing The Test (Linux / MacOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \\\n--header 'Authorization: Basic BASIC_AUTH_TOKEN' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n  \"app\" : \"lt://APP_ID\",\n  \"testSuite\": \"lt://TEST_SUITE_ID\",\n  \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\" #only when you want to use XCTestPlan\n  \"device\" :  [\"iPhone 11-14\"],\n  \"video\" : true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\" : \"Proverbial-XCUITest\"\n}'"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "curl --location --request POST \"https://mobile-api.lambdatest.com/framework/v1/xcui/build\" \\\n--header \"Authorization: Basic BASIC_AUTH_TOKEN\" \\\n--header \"Content-Type: application/json\" \\\n--data-raw \"{\n  \"app\" : \"lt://APP_ID\",\n  \"testSuite\": \"lt://TEST_SUITE_ID\",\n  \"xctestplan\" : \"lt://YOUR_XC_TEST_PLAN_ID\" #only when you want to use XCTestPlan\n  \"device\" :  [\"iPhone 11-14\"],\n  \"video\" : true,\n  \"queueTimeout\": 10800,\n  \"idleTimeout\": 150,\n  \"devicelog\": true,\n  \"network\": false,\n  \"build\" : \"Proverbial-XCUITest\"\n}\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 <RealDeviceTag value="Real Device" />
 XCTestPlan is a feature within Xcode used for building iOS, iPadOS, macOS, watchOS, tvOS, and audioOS applications. XCTestPlan helps manage how you run automated tests written with the XCTest framework.
 
@@ -181,9 +263,9 @@ curl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan
 
 ## Step 3: Executing The Test
 
-- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
+- You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey`ï¿½in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
 
-Take note of the base64 encoded authentication which needs to be added in the next step.
+Take note of theï¿½base64ï¿½encoded authentication which needs to be added in the next step.
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">

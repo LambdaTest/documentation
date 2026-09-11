@@ -40,6 +40,122 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-email-reports/"
+    },
+    "headline": "Receive Job Reports and Artifacts via Email",
+    "description": "Streamline testing with HyperExecute Email Reports! Learn how to effortlessly automate test runs and receive detailed reports. Boost efficiency today.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-email-reports/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The example added below shows you how to add your email IDs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "email:\n  to: \n    - <your_email_id@example.com>\n    - <another_email_id@example.com>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "YAML Configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "email:\n  to: \n    - currentUser"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Follow the below mentioned steps to receive your Artifacts via email",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "uploadArtifacts:\n  - name: Reports 1\n    path:\n      - ProtractorTestReport.html\n      - xmlresults.xml\n    email:\n      to: \n        - <your_email_id@example.com>\n        - <another_email_id@example.com>\n        \n  - name: Reports 2\n    path:\n      - ProtractorTestReport.html\n      - xmlresults.xml\n    email:\n      to: \n        - currentUser"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Add the email flag with to tag in the YAML file configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\npartialReports:\n  frameworkName: testng\n  location: target/surefire-reports/html\n  type: html\n  email:\n    to: \n      - <your_email_id@example.com>\n      - <another_email_id@example.com>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Correct format of entering the Email IDs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "- John Doe <johndoe@example.com>\n- John <johndoe@example.com>\n- johndoe@example.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Correct format of entering the Email IDs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "- John Doe johndoe@example.com>\n- John <<johndoe@example.com>\n- John johndoe@example.com\n- John Doe"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-end",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\nThis is how you can pass the value of your email address via CLI by running the command\n\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars \"email=xyz@abc.com\" --vars \"email1=abc@xyz.com\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "highlight-end",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n```bash\n./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars \"email=xyz@abc.com,abc@xyz.com,def@wxy.com\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Receive Job Reports and Artifacts via Email
 
 Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. To address this pain point, HyperExecute now provides the convenience of receiving Job Reports and Artifacts directly to your specified email addresses. This eliminates the need for manual downloads, allowing you to access critical job information instantly and effortlessly. Embrace the efficiency of automated delivery and spend less time navigating the UI and more time focusing on your development tasks.

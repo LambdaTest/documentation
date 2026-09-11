@@ -16,6 +16,95 @@ canonical: https://www.testmuai.com/support/docs/selenified-integration-with-tes
 --- 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenified-integration-with-testmu/"
+    },
+    "headline": "How to integrate selenified with TestMu AI",
+    "description": "With TestMu AI integration to Selenified, you can perform cross browser testing in parallel on more than 2000 real browsers available at an online Selenium Grid offered by TestMu AI. So you don\u2019t have to worry about configuring an in-house testing infrastructure as TestMu AI will take care of that for you.",
+    "url": "https://www.testmuai.com/support/docs/selenified-integration-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "selenified integration",
+      "selenified",
+      "selenium integration"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of running tests from Selenified. If you haven't run a Selenified test before, you can refer to their [official GitHub repository][1].; TestMu AI Hub URL; TestMu AI Authentication Credentials; For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "        $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n        $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "        $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n        $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Hub URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-Dhub=https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Authentication Credentials",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "-Dhub=https://LT_USERNAME:LT_ACCESS_KEY@hub.lambdatest.com"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Selenified Integration With <BrandName />
 Previously known as SecureCI™ Testing Framework, Selenified is an open-source test automation framework as a wrapper to Selenium with extra features such as detailed **traceable reporting**, **custom reporting**, ability to invoke **dynamic waits**, etc. so you could test your web-application across the web and even API level. The framework is built on top of TestNG, making it intuitive for beginners and offers support with multiple build tools such as Maven, Gradle, and Ant, making it easier to integrate with your DevOps build environments.
 

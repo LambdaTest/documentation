@@ -26,6 +26,87 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-ai-drag-drop/"
+    },
+    "headline": "Drag and Drop in KaneAI",
+    "description": "Author drag and drop interactions in KaneAI on Desktop Web, Android apps, iOS apps, and Mobile Web using natural language or manual recording. Covers replay behavior, supported scenarios, and limitations.",
+    "url": "https://www.testmuai.com/support/docs/kane-ai-drag-drop/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai drag drop"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Supported NL Patterns",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "drag \"Task Card\" to \"Done column\"\nmove the 3rd item to the top\ndrop \"iPhone 15\" on the comparison table\ndrag the top card to the bottom of the list\nmove task card from \"To Do\" column to \"In Progress\" column"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "E-commerce Product Sorting",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "drag product \"iPhone 15\" from available items to comparison table"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Project Management Board",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "move task card from \"To Do\" column to \"In Progress\" column"
+      }
+    ],
+    "dateModified": "2026-09-09T20:20:47+05:30"
+  }) }}
+/>
+
 KaneAI lets you author drag interactions across **Desktop Web, Android apps, iOS apps, and Mobile Web** using either natural language or by performing the gesture yourself. Use it for Kanban boards  and any other drag-driven UI flow.
 
 

@@ -48,6 +48,105 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/"
+    },
+    "headline": "Running Playwright Real Device Tests on HyperExecute",
+    "description": "Learn how to run playwright automation tests using Real Devices on HyperExecute",
+    "url": "https://www.testmuai.com/support/docs/playwright-real-device-on-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "hyperexecute",
+      "hyperexecute testing",
+      "real devices"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute YAML file with the test configuration.; HyperExecute CLI in order to initiate a test execution Job ..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure Desired Capabilities (Android)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample",
+        "text": "  <\/TabItem>\n\n  <TabItem value=\"ios\" label=\"iOS\" default>\n    ```javascript title=\"playwright-ios-real-device.js\" reference\n    https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample/blob/main/playwright-ios-real-device.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Configure the CDP URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample",
+        "text": "\n## Step 2: Download the CLI in your Project\nThe CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the project to execute the tests on HyperExecute.\n\nYou can download the CLI for your desired platform from the below mentioned links:\n\n| Host Machine | HyperExecute CLI |\n| ---------| ---------------- |\n| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |\n| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |\n| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |\n\n## Step 3: Configure YAML in your Test Suite\nUse the sample YAML below to configure your execution:\n\n<Tabs className=\"docs__val\">\n  <TabItem value=\"android\" label=\"Android\" default>\n    ```yaml title=\"hyperexecute_android.yaml\" reference\n    https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample/blob/main/hyperexecute_android.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure YAML in your Test Suite (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  <\/TabItem>\n<\/Tabs>\n\n:::info\nTo Run test on Mobile Containers in a Particular Region\n\n```yaml title=\"hyperexecute.yaml\"\ndynamicAllocation: true\n\nframework:\n  name: appium\n  args:\n    playwrightRD : true\n    region: ap       # supported regions -> ap, eu, us \n    reservation: false"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The playwright-skill package includes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "playwright-skill/\n\u251c\u2500\u2500 SKILL.md\n\u2514\u2500\u2500 reference/\n    \u251c\u2500\u2500 playbook.md\n    \u2514\u2500\u2500 advanced-patterns.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install a Playwright Agent Skill using the command below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "# Clone the repo and copy the skill you need\ngit clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/playwright-skill .claude/skills/\n\n# Or for Cursor / Copilot\ncp -r agent-skills/playwright-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 This guide explains how to run your **Playwright** tests on **Real devices (Android and iOS)**  using HyperExecute:
 
 ## Prerequisites

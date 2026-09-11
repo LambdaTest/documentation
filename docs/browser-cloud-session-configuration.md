@@ -47,6 +47,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-session-configuration/"
+    },
+    "headline": "Session Configuration - TestMu AI Browser Cloud",
+    "description": "Complete reference for all options available when creating a session with the TestMu AI Browser SDK.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-session-configuration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud configuration",
+      "session options",
+      "stealth config"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is a typical create call that sets the most common options",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const session = await client.sessions.create({\n  adapter: 'playwright',\n  dimensions: { width: 1920, height: 1080 },\n  blockAds: true,\n  stealthConfig: {\n    humanizeInteractions: true,\n    randomizeUserAgent: true,\n  },\n  proxy: 'http://my-proxy:8080',\n  lambdatestOptions: {\n    build: 'my-build',\n    name: 'my-test',\n    user: process.env.LT_USERNAME,\n    accessKey: process.env.LT_ACCESS_KEY,\n  },\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After creation, you receive a Session object with these fields",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "interface Session {\n    id: string;                    // Unique session ID\n    websocketUrl: string;          // WebSocket URL for adapter connection\n    debugUrl: string;              // TestMu AI dashboard URL\n    config: SessionConfig;         // Original configuration\n    status: 'live' | 'released' | 'failed';\n    createdAt: string;             // ISO timestamp\n    timeout: number;               // Session timeout in ms\n    dimensions: Dimensions;        // Viewport dimensions\n    sessionViewerUrl?: string;     // Live session viewer URL\n    userAgent?: string;            // Resolved user-agent\n    stealthConfig?: StealthConfig; // Active stealth settings\n}"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # Configure Session Options
 
 Complete reference for all options available when creating a session with the TestMu AI Browser SDK. Use these to control stealth, persistence, browser settings, network, and extensions.

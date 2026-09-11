@@ -47,6 +47,63 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/getting-started-with-mobile-app-real-time-testing/"
+    },
+    "headline": "Getting started with Mobile App Real Time Testing",
+    "description": "Test your mobile apps on real devices in real-time with TestMu AI. Easily launch virtual machines and test across various OS and versions.",
+    "url": "https://www.testmuai.com/support/docs/getting-started-with-mobile-app-real-time-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Real Time",
+    "keywords": [
+      "real time testing in testmu ai",
+      "testmu ai real time testing feature",
+      "online real time testing"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-07-14T19:15:31+05:30"
+  }) }}
+/>
 Real-Time Mobile App Testing allows you to test mobile applications directly on real devices in real time. It ensures that your app functions as intended, performs optimally, and provides a seamless user experience across various mobile operating systems such as Android and iOS. With <BrandName />, developers, testers, and QA professionals can interact with their mobile applications as end users would, on actual devices, without needing to manage an in-house device lab.
 
 ## Launch the Virtual Machine

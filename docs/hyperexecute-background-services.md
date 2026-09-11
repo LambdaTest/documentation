@@ -38,6 +38,78 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-background-services/"
+    },
+    "headline": "Background Services",
+    "description": "This documentation will help you",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-background-services/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "hyperexecute background services"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Using backgroundDirectives",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "backgroundDirectives:\n  shell: bash\n  commands:\n    - name: YOUR_SERVICE_NAME\n      command: npx static-server\n    - name: Database\n      command: mysql-server"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Using background",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "background:\n  - npx static-server\n  - mysql-server"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Background Services is a feature of HyperExecute which is generally used to run the long running **Application Servers**. You can trigger the background services by using either the `background` or `backgroundDirectives` property in the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#background) file.
 
 This feature is useful for the following cases:

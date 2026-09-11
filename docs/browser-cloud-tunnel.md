@@ -47,6 +47,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-tunnel/"
+    },
+    "headline": "Tunnel - TestMu AI Browser Cloud",
+    "description": "Access localhost and internal networks from cloud browsers in TestMu AI Browser Cloud.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-tunnel/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud tunnel",
+      "localhost cloud browser",
+      "encrypted tunnel"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Cloud Browser --(encrypted tunnel)--> Your Machine --> localhost:3000\n                                                   --> staging.internal.company.com\n                                                   --> 192.168.1.50:8080"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "TestMu AI Browser SDK handles starting and routing the tunnel automatically",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const session = await client.sessions.create({\n    adapter: 'puppeteer',\n    tunnel: true,\n    tunnelName: 'my-tunnel',   // Optional: name for identification\n    lambdatestOptions: { ... }\n});\n\nconst browser = await client.puppeteer.connect(session);\nconst page = (await browser.pages())[0];\n\nawait page.goto('http://localhost:3000');  // This works!"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "multiple sessions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "// Start the tunnel\nawait client.tunnel.start({\n    user: process.env.LT_USERNAME!,\n    key: process.env.LT_ACCESS_KEY!,\n    tunnelName: 'my-tunnel',\n});\n\nconsole.log('Tunnel running:', client.tunnel.getStatus()); // true\n\n// Create sessions that use it\nconst session = await client.sessions.create({\n    adapter: 'puppeteer',\n    tunnel: true,\n    tunnelName: 'my-tunnel',\n    lambdatestOptions: { ... }\n});\n\n// ... agent work ...\n\n// Stop when done\nawait client.tunnel.stop();"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Tunnel Config",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "interface TunnelConfig {\n    user: string;           // TestMu AI username\n    key: string;            // TestMu AI access key\n    tunnelName?: string;    // Named tunnel for identification\n    proxyHost?: string;     // Corporate proxy host\n    proxyPort?: string;     // Corporate proxy port\n    proxyUser?: string;     // Proxy auth user\n    proxyPass?: string;     // Proxy auth password\n    logFile?: string;       // Log file path\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "API",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "await client.tunnel.start(config);   // Start tunnel\nawait client.tunnel.stop();          // Stop tunnel\nclient.tunnel.getStatus();           // Returns true/false"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # Access Localhost and Internal Networks Using Tunnel
 
 Create encrypted tunnels between your local machine and Browser Cloud. Let cloud browsers reach localhost dev servers, staging environments, and private network resources.

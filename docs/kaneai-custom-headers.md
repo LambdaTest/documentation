@@ -43,6 +43,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-custom-headers/"
+    },
+    "headline": "Custom Headers in KaneAI",
+    "description": "Learn how to configure and use custom HTTP headers in KaneAI for Desktop Web and Mobile Browser test authoring, including support for secrets.",
+    "url": "https://www.testmuai.com/support/docs/kaneai-custom-headers/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "Custom Headers",
+      "Headers",
+      "secrets"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  X-Session-ID: 1234567890"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  Authorization: {{secrets.org.BearerToken}}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Use Cases",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "  Accept: application/json"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 # Custom Headers in KaneAI
 
 Custom headers allow you to inject additional HTTP header information into your test sessions. You can use them to send tokens, session IDs, content-type overrides, or any other custom metadata with requests made during your tests.

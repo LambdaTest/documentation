@@ -48,6 +48,186 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-figma-app/"
+    },
+    "headline": "Getting Started with TestMu AI's SmartUI Figma-App CLI",
+    "description": "Learn how to compare your Figma mobile designs with native app screenshots on real devices using SmartUI CLI.",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-figma-app/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Mobile App Visual Testing",
+      "Figma to App Comparison"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Node.js and npm installed; TestMu AI SmartUI account with App Automation plan; Your TestMu AI Username and Access Key from the Account Settings page; Figma Personal Access Token (how to get one); An Appium test suite for your app; Your app uploaded to the real device cloud so you have an app_url. See Upload your app.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Install SmartUI CLI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the following to create your initial design file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui config:create-figma-app designs.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Sample designs.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n#### Configuration Options\n\n| Config Key | Description | Usage |\n| ---------- | ----------- | ----- |\n| `mobile[].name` | Device name. This must be an exact match for a supported device, and the same device you run your Appium test on. An unsupported value fails validation with `unsupported mobile device name`. The generated config seeds valid examples you can start from. | Mandatory |\n| `mobile[].platform` | Operating system and version for the device, for example `[\"android 14\"]` or `[\"ios 17\"]`. | Optional |\n| `mobile[].orientation` | Either `portrait` or `landscape`. No other value is accepted. | Optional |\n| `figma.depth` | Positive integer controlling how deep into the Figma document tree the fetch traverses. The generated config uses `1`. | Optional |\n| `figma.configs[].figma_file_token` | File token for your Figma file. You can list multiple files in the same configuration. | Mandatory |\n| `figma.configs[].figma_ids` | List of node or frame IDs you want to compare. Values must be unique. | Mandatory |\n| `figma.configs[].screenshot_names` | Names given to the uploaded frames. If you supply this array it must have exactly the same number of entries as `figma_ids`, in the same order. Names must be unique across the whole file. | Optional |\n| `smartIgnore` | Top level boolean accepted by the config schema and forwarded with the upload. | Optional |\n\n:::note\n\nIf you add a property that is not listed above, the CLI logs `Additional property \"<name>\" is not allowed` as a warning and then continues with the upload. The extra key is ignored rather than applied, so check for this warning if a setting you added appears to have no effect.\n\n:::\n\n---\n\n### 4. Set Environment Variables\n\nSet all four values before running the upload.\n\n<Tabs className='docs__val' groupId='language'>\n<TabItem value='MacOS/Linux' label='MacOS/Linux' default>\n\n```bash\nexport PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\nexport FIGMA_TOKEN=\"figd_****************************************\"\nexport LT_USERNAME=\"YOUR_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Set Environment Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\nset FIGMA_TOKEN=\"figd_****************************************\"\nset LT_USERNAME=\"YOUR_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "4. Set Environment Variables",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\"\n$env:FIGMA_TOKEN=\"figd_****************************************\"\n$env:LT_USERNAME=\"YOUR_USERNAME\"\n$env:LT_ACCESS_KEY=\"YOUR_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "5. Upload your Figma designs as the baseline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma-app designs.json --buildName \"figma-baseline\" --markBaseline"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma-app designs.json --buildName \"v1.0.0\" --markBaseline --fetch-results results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "6. Upload your app",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "curl -u \"$LT_USERNAME:$LT_ACCESS_KEY\" \\\n-X POST \"https://manual-api.lambdatest.com/app/upload/realDevice\" \\\n-F \"appFile=@/path/to/your/app.apk\" \\\n-F \"name=YourAppName\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 9",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n:::warning\n\nThe app side is identified by `smartUI.project`, which takes the project **name**. The `PROJECT_TOKEN` you exported in Step 4 authenticates the CLI upload only. It is not used by the Appium capabilities.\n\n:::\n\n:::warning\n\n`visual: true` is mandatory. Without it no screenshots are sent to SmartUI and the build is reported with an `Error` status.\n\n:::\n\n---\n\n### 8. Capture screenshots with matching names\n\nAdd the screenshot hook after the point in your script where the screen you care about is rendered.\n\n**Critical**: Figma frames are stored with `.png` appended, so your app screenshot names must include the extension to line up with them.\n\n```javascript\n// \u274c Wrong, will not match the Figma frame\nawait driver.execute(\"smartui.takeScreenshot=homepage\");\n\n// \u2705 Correct, matches the Figma frame homepage.png\nawait driver.execute(\"smartui.takeScreenshot=homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "8. Capture screenshots with matching names",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// \u274c Wrong, throws\nawait driver.execute(\"smartui.takeScreenshot\", {name: \"homepage.png\"});\n\n// \u2705 Correct\nawait driver.execute(\"smartui.takeScreenshot\", {screenshotName: \"homepage.png\"});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 11",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// simple form\nawait driver.execute(\"smartui.takeScreenshot=homepage.png\");\n\n// config form\nawait driver.execute(\"smartui.takeScreenshot\", {screenshotName: \"homepage.png\"});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 12",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// the Selenium interface is JavascriptExecutor, with a lower case s in script\n((JavascriptExecutor) driver).executeScript(\"smartui.takeScreenshot=homepage.png\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 13",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "driver.execute_script(\"smartui.takeScreenshot=homepage.png\")"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 14",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i && node your_test_script.js"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Best Practices",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload-figma-app designs.json --buildName \"v1.0.0\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Uploads fail with an authentication error",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "echo $PROJECT_TOKEN\necho $FIGMA_TOKEN\necho $LT_USERNAME\necho $LT_ACCESS_KEY"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The upload authenticates and then fails during Processing App Figma with a message like",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Failed to retrieve figma files, Figma API rate limit reached for your token.\nYour file is on the 'starter' plan tier, and your token's rate-limit bucket is 'low'."
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real devices** with your **Figma design frames** to detect visual mismatches and ensure accurate implementation of mobile UI.
 
 The workflow has two halves. First you upload your Figma frames to SmartUI as the baseline using the CLI. Then you run your Appium test suite on the real device cloud so your app screenshots land in the same project and get compared against those frames. This guide covers both halves end to end.

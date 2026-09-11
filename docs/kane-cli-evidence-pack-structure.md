@@ -41,6 +41,73 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-evidence-pack-structur
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-evidence-pack-structure/"
+    },
+    "headline": "Evidence Pack Structure",
+    "description": "What is inside a kane-cli .evidence pack and what each part is for, from the run.yaml manifest anchor to per-step screenshots, logs, and failure records.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-evidence-pack-structure/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "evidence pack structure",
+      "run.yaml",
+      "result.yaml"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The layout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "<execution_id>.evidence\n\u251c\u2500\u2500 run.yaml                          # Run manifest: title, status, started/ended, totals\n\u251c\u2500\u2500 failure.yaml                      # Run-level failure rollup\n\u2514\u2500\u2500 tests/\n    \u2514\u2500\u2500 <test-id>/                    # One directory per test in the run\n        \u251c\u2500\u2500 test.md                   # The test definition\n        \u251c\u2500\u2500 result.yaml               # Verdict, per-step outcomes, tags, executed-by,\n        \u2502                             #   share identifiers, environment (browser/OS/resolution)\n        \u251c\u2500\u2500 logs/\n        \u2502   \u251c\u2500\u2500 meta.yaml             # Declares every log file below\n        \u2502   \u251c\u2500\u2500 tui.log               # Session narrative\n        \u2502   \u251c\u2500\u2500 <n>-run.log           # Runner log, one set per run index n (0, 1, \u2026)\n        \u2502   \u251c\u2500\u2500 <n>-actions.ndjson    # Step-by-step actions the agent performed\n        \u2502   \u251c\u2500\u2500 <n>-console.ndjson    # Browser console output, attributed per step\n        \u2502   \u2514\u2500\u2500 <n>-network.har       # Network traffic (HAR), attributed per step\n        \u251c\u2500\u2500 steps/\n        \u2502   \u2514\u2500\u2500 <ordinal>-<step-id>/  # One directory per executed step\n        \u2502       \u251c\u2500\u2500 screenshot.png    # The page as the agent saw it\n        \u2502       \u251c\u2500\u2500 annotated.png     # Same shot with the acted-on element highlighted\n        \u2502       \u251c\u2500\u2500 step.json         # Step metadata: kind, status, duration, url,\n        \u2502       \u2502                     #   action id, click coordinates, element rect\n        \u2502       \u2514\u2500\u2500 failure.yaml      # Failed/broken steps only: error, page state,\n        \u2502                             #   console/network references, triage\n        \u251c\u2500\u2500 auteur/\n        \u2502   \u2514\u2500\u2500 execution.json        # Full execution trajectory (step.json's action id\n        \u2502                             #   joins to operations in this tree)\n        \u2514\u2500\u2500 v16-trajectory/           # Per-run planning summaries and diagrams"
+      }
+    ],
+    "dateModified": "2026-08-20T22:28:08+05:30"
+  }) }}
+/>
+
 A `.evidence` file is a standard zip. `unzip -l <pack>` lists it, and `unzip -p <pack> <entry>` prints one file without extracting the whole pack.
 
 ## The layout

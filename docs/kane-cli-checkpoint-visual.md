@@ -38,6 +38,87 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-visual/
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-visual/"
+    },
+    "headline": "Visual Assertions",
+    "description": "Verify what is visible on the screen by analyzing the current screenshot. Visual is the default analyze method KaneAI uses for assertions.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-visual/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "visual assertion",
+      "screenshot assertion",
+      "kane cli"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: the product price is $29.99\nAssert: the search results show at least 5 items\nAssert: the error message is visible\nAssert: the hero section displays \"Welcome back\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Store the product price\nExtract the heading text\nGet the number of items in the cart"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If/Else",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "If the login button is visible then click it, else click Sign Up"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Visual assertions verify what's visible on screen by analyzing the current screenshot. This is the default method, when in doubt, KaneAI uses visual analysis.
 
 ## When It's Used

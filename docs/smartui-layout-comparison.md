@@ -24,6 +24,109 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-layout-testing/"
+    },
+    "headline": "Layout Comparison in SmartUI SDK",
+    "description": "Learn how to use SmartUI SDK's layout testing feature to verify only the layout structure of your pages while ignoring content and style changes",
+    "url": "https://www.testmuai.com/support/docs/smartui-layout-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "layout comparison",
+      "visual regression testing",
+      "ignore layout differences"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "For SmartUI SDK (smartui exec): SmartUI CLI version 4.1.8 or above is installed..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Using SmartUI SDK (smartUISnapshot command)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "    // Set options to focus only on layout structure\n    let options = {\n            ignoreType: [\"layout\"]\n          }\n\n    // Take a screenshot with layout comparison enabled\n    await smartuiSnapshot(driver, \"ScreenshotName\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Using SmartUI SDK (smartUISnapshot command)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "    // Set options to focus only on layout structure\n    Map<String, Object> options = new HashMap<>();\n    options.put(\"ignoreType\", Arrays.asList(\"layout\"));\n\n    // Take a screenshot with layout comparison enabled\n    smartuiSnapshot(driver, \"ScreenshotName\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Using SmartUI SDK (smartUISnapshot command)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "    # Set options to focus only on layout structure\n    options = {\n        \"ignoreType\": [\"layout\"]\n    }\n\n    # Take a screenshot with layout comparison enabled\n    smartui_snapshot(driver, \"ScreenshotName\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Take a screenshot with layout comparison enabled",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "C#",
+        "text": "    // Set options to focus only on layout structure\n    var options = new Dictionary<string, object>\n    {\n        { \"ignoreType\", new List<string> { \"layout\" } }\n    };\n\n    // Take a screenshot with layout comparison enabled\n    await SmartUI.Snapshot(driver, \"ScreenshotName\", options);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Take a screenshot with layout comparison enabled",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Ruby",
+        "text": "    # Set options to focus only on layout structure\n    options = {\n      ignoreType: [\"layout\"]\n    }\n\n    # Take a screenshot with layout comparison enabled\n    smartui_snapshot(driver, \"ScreenshotName\", options)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here's a complete example showing how to implement layout comparison in a test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "describe('Layout Structure Test', () => {\n  it('should verify layout structure while ignoring content and style changes', async () => {\n    // Navigate to the page\n    await driver.get('https://example.com');\n\n    // Wait for layout to stabilize (important for dynamic content)\n    await driver.wait(until.elementLocated(By.cssSelector('.main-content')), 5000);\n\n    // Configure options to focus only on layout structure\n    let options = {\n      ignoreType: [\"layout\"]\n    };\n\n    // Take screenshot with layout comparison\n    await smartuiSnapshot(driver, \"HomePageLayout\", options);\n  });\n});"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Layout testing is a specialized approach to visual testing that focuses on verifying the structural integrity and arrangement of UI elements rather than their specific content or styling. It ensures that your application's visual hierarchy and element positioning remain consistent across different environments and updates.
 
 The example below demonstrates localisation testing, one of the major use cases of layout testing, where a webpage is tested across languages and locales.

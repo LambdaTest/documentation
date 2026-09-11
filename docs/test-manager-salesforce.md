@@ -15,6 +15,63 @@ slug: test-manager-salesforce-app/
 canonical: https://www.testmuai.com/support/docs/test-manager-salesforce-app/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-manager-salesforce-app/"
+    },
+    "headline": "Generate and Run Salesforce Test Cases with Test Manager",
+    "description": "Generate and run test cases for your Salesforce flows with Test Manager on TestMu AI, an AI test case generator installed from Salesforce AgentExchange.",
+    "url": "https://www.testmuai.com/support/docs/test-manager-salesforce-app/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "test manager salesforce",
+      "salesforce test case generation",
+      "ai test cases salesforce"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-01T11:23:25+05:30"
+  }) }}
+/>
+
 # How to Generate and Run Salesforce Test Cases with Test Manager
 ---
 

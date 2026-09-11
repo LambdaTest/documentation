@@ -47,6 +47,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/deque-integration/"
+    },
+    "headline": "How to perform Accessibility testing using Deque's axe",
+    "description": "A quick guide to perform Automated Accessibility testing using Deque's axe across 3000+ browsers and OS combinations.",
+    "url": "https://www.testmuai.com/support/docs/deque-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "accessibility testing with axe",
+      "testmu ai deque integration",
+      "testmu ai deque"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Deque axe Integration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"@axe-core/webdriverio\": \"4.1.2-alpha.106\"\n//**or the latest version"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Deque axe Integration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "\"@wdio/lambdatest-service\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Deque axe Integration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "// Specify LambdaTest Username and Access Key.\nuser: process.env.LT_USERNAME,\nkey: process.env.LT_ACCESS_KEY,"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 4",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const AxeWebdriverIO = require('@axe-core/webdriverio').default;\n\nbefore: function (capabilities, specs, browser) {\n        const axeWdio = new AxeWebdriverIO({\n            client: browser\n        })\n \n        // Configure Command to run axe\n        browser.addCommand('getAxeResults', async () => {\n            return axeWdio.analyze()\n            .then(async (result) => {\n              \n             \n                return result\n            })\n            .catch(err => {\n                console.log(err)\n            })\n        })\n \n    },"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": " browser.getAxeResults()"
+      }
+    ],
+    "dateModified": "2026-02-12T19:51:34+05:30"
+  }) }}
+/>
+
 # Deque axe Integration
 ***
 

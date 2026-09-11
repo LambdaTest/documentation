@@ -18,6 +18,82 @@ canonical: https://www.testmuai.com/support/docs/agent-skills/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-skills/"
+    },
+    "headline": "TestMu AI Agent Skills for Test Automation Frameworks",
+    "description": "Install TestMu AI Agent Skills so your AI coding assistant writes and runs Selenium, Cypress, Playwright, Appium, and 70+ framework tests on the cloud.",
+    "url": "https://www.testmuai.com/support/docs/agent-skills/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "testmu ai agent skills",
+      "ai agent skills for test automation",
+      "install agent skills"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the installer once per skill you want",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "npx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill selenium-skill\nnpx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill playwright-skill\nnpx agentskillsforall add https://github.com/LambdaTest/agent-skills.git --skill cypress-skill"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List every skill in the repository, then install the one you want",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "npx agentskillsforall list https://github.com/LambdaTest/agent-skills.git"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Agent Skills 
 ---
 

@@ -43,6 +43,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/"
+    },
+    "headline": "Trigger Your Job via Local Selenium Web Driver",
+    "description": "How to Run Tests on HyperExecute using Local Selenium Web Driver",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Update YAML Configuration:",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.1\nglobalTimeout: 150\ntestSuiteTimeout: 150\ntestSuiteStep: 150\n\nrunson: win\n\nautosplit: true\n\nretryOnFailure: true\nmaxRetries: 1\n\nparallelism: 1\nconcurrency: 1\n\nenv:\n  CACHE_DIR: m2_cache_dir\n\ncacheKey: '{{ checksum \"pom.xml\" }}'\ncacheDirectories:\n  - m2_cache\n\npre:\n  - mvn dependency:resolve\n\nmergeArtifacts: true\nuploadArtefacts:\n - name: ExecutionSnapshots\n   path:\n    - target/surefire-reports/html/**\n\nreport: true\npartialReports:\n  location: target/surefire-reports/html\n  type: html\n  frameworkName: extent\n\ntestDiscovery:\n  type: raw\n  mode: remote\n  command: grep 'test name' xml/testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\\x3e//g'\n\ntestRunnerCommand: mvn test dependency:resolve\nwinTestRunnerCommand: mvn test dependency:resolve\nmacTestRunnerCommand: mvn test dependency:resolve\nlinuxTestRunnerCommand: mvn test dependency:resolve\n\n#highlight-start\nplatformConfig:\n  platform:\n    - os: win10\n      browserName: chrome\n      browserVersion: latest\n      build: win10\n      network: false\n    - os: win11\n      browserName: chrome\n      goog:chromeOptions:\n        args: [ \"--start-maximized\", \"--disable-gpu\" ]\n    - os: mac\n      browserName: firefox\n      browserVersion: 119\n    - os: linux\n      browserName: firefox\n      browserVersion: 115\n    - os: android\n      deviceName: .*\n      browserName: chrome\n    - os: ios\n      deviceName: .*\n\n  config:\n    build: latest\n    network: true\n    console: true\n#highlight-end"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 As a tester, whenever you switch from local web driver to remote web driver can be a tedious and time-consuming process. You will have to manually modify your tests which includes adding Desired Capabilities, and adjusting code just to get them running on a cloud testing platform. 
 
 HyperExecute's support for **Local Selenium Driver** allows you to seamlessly run your tests on our platform with very minimal changes. It will help you in

@@ -18,6 +18,87 @@ canonical: https://www.testmuai.com/support/docs/selenium-telemetry-logs/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/selenium-telemetry-logs/"
+    },
+    "headline": "Getting Started With Selenium Debugging Using Telemetry Logs",
+    "description": "Debug Selenium tests using telemetry logs with OpenTelemetry and Jaeger on TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/selenium-telemetry-logs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "selenium telemetry logs debugging",
+      "opentelemetry selenium 4 tracing",
+      "jaeger selenium distributed tracing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To enable them in your test sessions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "caps.setCapability(\"seTelemetryLogs\", true);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Enabling Telemetry Logs",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "caps.setCapability(\"selenium_version\", \"4.2.0\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here are the steps to integrate Jaeger with your test suites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "jaeger-all-in-one"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Debugging in Selenium Using Telemetry Logs
 ---
 

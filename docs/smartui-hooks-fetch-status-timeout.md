@@ -44,6 +44,94 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-hooks-fetch-status-timeout/"
+    },
+    "headline": "Auto-Wait and Retry for Screenshot Status (fetchScreenshotStatus timeout)",
+    "description": "Use the timeout option on the smartui.fetchScreenshotStatus hook to make SmartUI poll for the comparison result automatically instead of writing your own retry loop.",
+    "url": "https://www.testmuai.com/support/docs/smartui-hooks-fetch-status-timeout/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "smartui fetchScreenshotStatus",
+      "fetchScreenshotStatus timeout",
+      "smartui auto wait retry"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium (NodeJS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const result = await driver.executeScript(\"smartui.fetchScreenshotStatus\", {\n  screenshotName: \"checkout-page\",\n  timeout: 120\n});\nconsole.log(\"status:\", JSON.stringify(result, null, 2));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium (Python)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "result = driver.execute_script(\"smartui.fetchScreenshotStatus\", {\n    \"screenshotName\": \"checkout-page\",\n    \"timeout\": 120,\n})\nprint(\"status:\", result)"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium (Java)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "import java.util.HashMap;\nimport java.util.Map;\nimport org.openqa.selenium.JavascriptExecutor;\n\nMap<String, Object> config = new HashMap<>();\nconfig.put(\"screenshotName\", \"checkout-page\");\nconfig.put(\"timeout\", 120);\n\nObject result = ((JavascriptExecutor) driver)\n    .executeScript(\"smartui.fetchScreenshotStatus\", config);\nSystem.out.println(result);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Playwright / Puppeteer",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const result = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({\n  action: \"smartui.fetchScreenshotStatus\",\n  arguments: {\n    screenshotName: \"checkout-page\",\n    timeout: 120\n  }\n})}`);\nconsole.log(result);"
+      }
+    ],
+    "dateModified": "2026-07-22T03:53:07+05:30"
+  }) }}
+/>
+
 # Auto-Wait and Retry for Screenshot Status
 
 The `smartui.fetchScreenshotStatus` hook now accepts an optional **`timeout`** option. With a timeout set, SmartUI **polls for the comparison result on the server side** and returns as soon as it is ready, instead of failing immediately when the screenshot is still processing.

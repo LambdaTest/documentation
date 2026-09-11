@@ -44,6 +44,137 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/travis-ci-with-testmu/"
+    },
+    "headline": "How to integrate Travis CI with TestMu AI",
+    "description": "TestMu AI now integrates with Travis CI to boost go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on cloud. Perform automation testing in parallel with TestMu AI\u2019s Selenium grid to drastically trim down test cycles.",
+    "url": "https://www.testmuai.com/support/docs/travis-ci-with-testmu/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Integration",
+    "keywords": [
+      "testmu ai integrations",
+      "testmu ai integrations with ci/cd tools",
+      "ci/cd tools"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "A Git or GitHub repository; Download and install node.js and node package manager or npm.; If you have npm already installed, you may want to upgrade it to latest version. Here the code you can run in your terminal to upgrade npm.; For Linux/Mac:; For Windows:.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "In order to perform your karma tests with TestMu AI, you would need the below things to be already set up",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ brew install node"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating Travis CI With Our Online Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install npm@latest -g"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating Travis CI With Our Online Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n    $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites For Integrating Travis CI With Our Online Selenium Grid",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "    $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}\n    $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Integrating TestMu AI With Travis CI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "# Choose language and version\nlanguage: node_js\nnode_js:\n  - \"8\"\nbranches:\n  only:\n    - master\n \n# Setup custom environment variables\nenv:\n  global:\n    - LT_USERNAME=${LAMBDATEST_USERNAME}\n    - LT_ACCESS_KEY=${LAMBDATEST_ACCESS_KEY}\n \n# All the step which you want to run in container.\nscript:\n  # Fetching latest code from  git\n  - git pull origin master\n  # Installing dependencies\n  - npm install\n  # Running test!\n  - node_modules/.bin/nightwatch -e chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Then Capabilities Generator at TestMu AI will provide you with the below program",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "var capabilities = {\n    \"build\" : \"your build name\", //You can edit this and assign a build name\n    \"name\" : \"your test name\", // Assign a name to your Test\n    \"platform\" : \"Windows 8.1\", // The operating system on which you want to test your website\n    \"browserName\" : \"Firefox\", // The browser on which you want to test\n    \"version\" : \"62.0\", // The browser version which you've selected to perform the test upon\n    \"resolution\" : \"1280x1024\", // The resolution in which you want to run the test as per your operating system\n    \"selenium_version\" : \"3.11.0\", //The version of Selenium on which the test will run\n    \"visual\" : true,\n    \"firefox.driver\" : v0.21.0\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing Locally Hosted or Privately Hosted Projects",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "# Choose language and version\nlanguage: node_js\nnode_js:\n  - \"8\"\nbranches:\n  only:\n    - master\n \n# Setup custom environment variables\nenv:\n  global:\n    - LT_USERNAME=${LAMBDATEST_USERNAME}\n    - LT_ACCESS_KEY=${LAMBDATEST_ACCESS_KEY}\n \n# All the step which you want to run in container.\nscript:\n  # Fetching latest code from  git\n  - git pull origin master\n  # Downloading tunnel binary\n  - wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip\n  # Extracting tunnel binary\n  - sudo apt-get install unzip\n  - unzip LT_Linux.zip\n  # Executing tunnel binary\n  - ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY} &\n  - sleep 30\n  # Installing dependencies\n  - npm install\n  # Running test!\n  - node_modules/.bin/nightwatch -e chrome"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running test!",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\"desiredCapabilities\": {\n       \"tunnel\":true\n     }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ node_modules\\.bin\\nightwatch -e chrome,edge,firefox tests"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Parallel Testing",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "$ ./node_modules/.bin/nightwatch -e chrome,edge,firefox tests"
+      }
+    ],
+    "dateModified": "2026-06-09T15:09:24+05:30"
+  }) }}
+/>
+
 # Travis CI Integration with <BrandName />
 * * *
 

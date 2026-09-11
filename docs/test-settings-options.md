@@ -25,6 +25,115 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/test-settings-options/"
+    },
+    "headline": "Comparison Settings for SmartUI - Pixel to Pixel Comparison",
+    "description": "In this documentation, you will learn about the following test settings options and their meanings.",
+    "url": "https://www.testmuai.com/support/docs/test-settings-options/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Image Threshold (Selenium)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"cypress\" label=\"Cypress\" default>\n\n```json title=\"Add the following in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n      \"project\": \"<Your Project Name>\" // Add your SmartUI Project Name here\n      \"options\": {\n        // highlight-next-line\n        \"largeImageThreshold\": 100 // The image threshold for comparison the min of 100 and max of 1200\n      }\n    }"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Error Identifier Types (Selenium)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"cypress\" label=\"Cypress\">\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n      \"project\": \"<Your Project Name>\" // Add your SmartUI Project Name here\n      \"options\": {\n        // highlight-next-line\n        \"errorType\": \"movement\" // To set the error identifier\n      }\n    }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Ignore - P2P False Positives (Selenium)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"cypress\" label=\"Cypress\">\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n      \"project\": \"<Your Project Name>\" // Add your SmartUI Project Name here\n      \"options\": {\n        // highlight-next-line\n        \"ignore\": \"antialiasing\" // To set the ignore identifier\n      }\n    }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Transparency (Selenium)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"cypress\" label=\"Cypress\">\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n      \"project\": \"<Your Project Name>\" // Add your SmartUI Project Name here\n      \"options\": {\n        // highlight-next-line\n        \"transparency\": 0.3 // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9\n      }\n    }\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"cypress\" label=\"Cypress\">\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n  \"project\": \"<Your Project Name>\",\n  \"options\": {\n    \"boundingBoxes\": [\n      {\n        \"left\": 100,\n        \"top\": 500,\n        \"right\": 800,\n        \"bottom\": 300\n      },\n      {\n        \"left\": 800,\n        \"top\": 50,\n        \"right\": 20,\n        \"bottom\": 700\n      }\n    ]\n  }\n}\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"cypress\" label=\"Cypress\">\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n  \"project\": \"<Your Project Name>\",\n  \"options\": {\n    \"ignoredBoxes\": [\n      {\n        \"left\": 100,\n        \"top\": 500,\n        \"right\": 800,\n        \"bottom\": 300\n      },\n      {\n        \"left\": 800,\n        \"top\": 50,\n        \"right\": 20,\n        \"bottom\": 700\n      }\n    ]\n  }\n}\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Selenium",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n<\/TabItem>\n\n<TabItem value=\"cypress\" label=\"Cypress\">\n\n```json title=\"Make changes in your /project/lambdatest-config.json\"\n\"smart_ui\": {\n  \"project\": \"<Your Project Name>\",\n  \"options\": {\n    \"ignoreAreasColoredWith\": {\n      \"r\": 242,\n      \"g\": 201,\n      \"b\": 76,\n      \"a\": 1\n    }\n  }\n}\n"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ---
 
 ## Our Pixel to Pixel (P2P) Comparison Options

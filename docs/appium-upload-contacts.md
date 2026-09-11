@@ -51,6 +51,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/upload-contacts/"
+    },
+    "headline": "Upload Contacts on Real Devices",
+    "description": "Upload custom .vcf contact files to real Android and iOS devices and inject them into the native Contacts app before your test session begins.",
+    "url": "https://www.testmuai.com/support/docs/upload-contacts/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "contacts upload",
+      "vcf upload",
+      "vcard"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Response",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"media_url\": \"lt://MEDIAvcf_abc123def456\",\n  \"name\": \"contacts.vcf\",\n  \"status\": \"success\",\n  \"custom_id\": \"my-contacts\",\n  \"contact_count\": 12\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Set the Capability in Your Test Script",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "desired_capabilities = {\n  \"uploadMedia\": [\"lt://MEDIAf446d4170cd946aa9ec307d10cb679b9\", \"lt://MEDIA8d13e569b3e140c18e82b066022518bd\"]\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Upload Contacts (.vcf) on Real Devices
 <RealDeviceTag value="Real Device" />
 

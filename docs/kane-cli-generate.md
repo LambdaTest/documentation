@@ -41,6 +41,80 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-generate/
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-generate/"
+    },
+    "headline": "Generating Test Cases with AI",
+    "description": "Turn a plain-language description of what you want to test into structured test scenarios and test cases with kane-cli generate: refine in plain language, then save the functional cases as runnable _test.md files.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-generate/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "kane cli generate",
+      "kane cli test case generation",
+      "kane cli ai test cases"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Quick start",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "# 1. Generate from a description\nkane-cli generate \"checkout flow on a shopping site\"\n\n# 2. Refine it (repeat as needed)\nkane-cli generate \"also cover an expired card and an out-of-stock item\" --refine --req 23271\n\n# 3. Save the functional cases as runnable tests\nkane-cli generate --save --req 23271\n#    \u2192 .testmuai/tests/<suite>/<scenario>/<case>_test.md\n\n# 4. Run them\nkane-cli testmd run .testmuai/tests/checkout-23271/login/valid-credentials_test.md"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Attaching files for context",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "kane-cli generate \"test the login flow described in the attached spec\" --files ./login-spec.pdf,./wireframe.png"
+      }
+    ],
+    "dateModified": "2026-07-30T15:00:21+05:30"
+  }) }}
+/>
+
 `kane-cli generate` turns a plain-language description of *what you want to test* into structured **test scenarios** and **test cases**, without writing them by hand and without launching a browser. This page covers AI test-case generation from both the command line and the interactive kane-cli TUI.
 
 A generation produces:

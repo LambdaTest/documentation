@@ -40,6 +40,87 @@ canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-co
       }) }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-cookies/"
+    },
+    "headline": "Cookies Assertions",
+    "description": "Verify browser cookies (names, values, and flags such as httpOnly, secure, and sameSite) set during test execution.",
+    "url": "https://www.testmuai.com/support/docs/kane-cli-checkpoint-devtools-cookies/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Kane CLI",
+    "keywords": [
+      "cookies assertion",
+      "session cookie",
+      "httponly"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Assertions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Assert: a cookie named \"session_id\" exists\nAssert: the session cookie is httpOnly\nAssert: no cookies are set without the Secure flag\nAssert: at least 3 cookies are set on the page\nAssert: the auth cookie has sameSite set to \"Strict\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example Extractions",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Store all cookies\nExtract the value of the \"session_id\" cookie\nStore all cookie names\nGet all cookies for the example.com domain"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example If/Else",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "If a cookie named \"auth_token\" exists then go to dashboard, else go to login"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 Cookie assertions let you verify browser cookies: check existence, values, and security attributes like httpOnly, secure, and sameSite.
 
 ## How Capture Works

@@ -47,6 +47,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/browser-cloud-stealth/"
+    },
+    "headline": "Stealth Mode - TestMu AI Browser Cloud",
+    "description": "Make your agent's browser look like a real human user to bot-detection systems with TestMu AI Browser Cloud stealth mode.",
+    "url": "https://www.testmuai.com/support/docs/browser-cloud-stealth/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Browser Cloud",
+    "keywords": [
+      "browser cloud stealth",
+      "bot detection evasion",
+      "fingerprint masking"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "everything else automatically",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const session = await client.sessions.create({\n    adapter: 'puppeteer',\n    stealthConfig: {\n        humanizeInteractions: true,\n        randomizeUserAgent: true,\n        randomizeViewport: true,\n    },\n    lambdatestOptions: { ... }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "don't use bot detection)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "const session = await client.sessions.create({\n    adapter: 'puppeteer',\n    stealthConfig: {\n        skipFingerprintInjection: true,\n        randomizeUserAgent: false,\n        randomizeViewport: false,\n    },\n    lambdatestOptions: { ... }\n});"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "How Stealth Works",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "Session Creation\n    \u2502\n    \u251c\u2500 stealthConfig present?\n    \u2502   \u251c\u2500 Yes \u2192 pick random UA, store on session.userAgent\n    \u2502   \u2514\u2500 No  \u2192 skip\n    \u2502\n    \u25bc\nAdapter.connect()\n    \u2502\n    \u251c\u2500 Puppeteer:\n    \u2502   \u251c\u2500 skipFingerprintInjection? \u2192 raw puppeteer.connect()\n    \u2502   \u2514\u2500 else \u2192 puppeteerExtra.connect() with stealth plugin\n    \u2502       \u251c\u2500 Set random UA via page.setUserAgent()\n    \u2502       \u251c\u2500 Set random viewport via page.setViewport()\n    \u2502       \u2514\u2500 Humanize: monkey-patch click/type\n    \u2502\n    \u2514\u2500 Playwright:\n        \u251c\u2500 Inject stealth scripts via page.addInitScript()\n        \u251c\u2500 Auto-apply to new pages via context.on('page')\n        \u251c\u2500 Set random UA via page.evaluate()\n        \u251c\u2500 Set random viewport via page.setViewportSize()\n        \u2514\u2500 Humanize: monkey-patch click/type/fill"
+      }
+    ],
+    "dateModified": "2026-03-26T15:05:31+05:30"
+  }) }}
+/>
+
 # Avoid Bot Detection with Stealth Mode
 
 Make your agent's browser look like a real human user to bot-detection systems. Stealth mode masks fingerprints, randomizes user-agents, and humanizes interactions automatically.

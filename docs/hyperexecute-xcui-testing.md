@@ -49,6 +49,88 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/"
+    },
+    "headline": "Execute XCUI Framework Tests on HyperExecute",
+    "description": "Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-xcui-testing/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "xcui",
+      "iOS",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access key; HyperExecute CLI in order to initiate a test execution Job .; Setup the Environmental Variable; HyperExecute YAML file which contains all the necessary instructions..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: \"0.2\"\n\nrunson: ios\n\nautosplit: true\n\nconcurrency: 1\n\nretryOnFailure: true\nmaxRetries: 2\n\nframework:\n  name: \"ios/xcui\"\n  args:\n  # highlight-next-line\n    appPath: <RELATIVE_APP_PATH>\n    # highlight-next-line\n    testSuitePath: <RELATIVE_TEST_SUITE_PATH>\n    video: true\n    filters:\n      attributes:\n      - type: className\n        values: [\"LambdaUiKitIOSUITestsLaunchTests\"]\n      - type: testName\n        values: [\"LambdaUiKitIOSUITests/testverifyAppLaunch\"]\n    deviceSelectionStrategy: any\n    devices: [\".*\"]\n    artifacts: true\n\n    shards:\n      mappings:\n      - name: shard1\n        strategy: \"only-testing/skip-testing\"\n        values: [\"<className>/<className/testName>\"]\n     - name: shard2\n       strategy: \"only-testing/skip-testing\"\n       values: [\"<className>/<className/testName>\", \"<className>/<className/testName>\"]\n\njobLabel: ['HyperExecute', 'XCUI', 'Real Device']"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "To generate artifacts for your XCUI tests, add the artifacts: true and report: true flag in your YAML file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "report: true\n\nframework:\n  name: \"ios/xcui\"\n  args:\n    artifacts: true\n    ...//"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 This page outlines how to execute your XCUI tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
 ## Prerequisites

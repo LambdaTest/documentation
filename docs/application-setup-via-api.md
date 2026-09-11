@@ -52,6 +52,87 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/application-setup-via-api/"
+    },
+    "headline": "Perform Operations on your Application via API",
+    "description": "This guide will explain how to perform operations with your applications via api for real and virtual devices.",
+    "url": "https://www.testmuai.com/support/docs/application-setup-via-api/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "appium",
+      "application operations",
+      "testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fetch your Applications for Real Devices (iOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"metaData\": {\n    \"type\": \"ios\",\n    \"total\": 1\n  },\n  \"data\": [\n    {\n      \"app_id\": \"APP100245789181570497850\",\n      \"name\": \"proverbial_ios.ipa\",\n      \"type\": \"ios\",\n      \"updated_at\": \"2022-05-10T11:19:30.000Z\",\n      \"shared\": false,\n      \"source\": \"web-client\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Virtual Device",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n  \"message\": \"Deleted successfully.\"\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Virtual Device",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "{\n    \"data\": {\n        \"imageinjection_ready\": false, //current processing status\n        \"patched_url\": \"\",\n        \"screenshotunblock_ready\": false, //current processing status\n        \"status\": \"success\"\n    },\n    \"status\": \"success\"\n}"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application on <BrandName />, you can use our public REST APIs. In this documentation, we have listed all the operations you can perform with your application via APIs or cURL commands for both Virtual and Real Devices.
 
 :::note

@@ -46,6 +46,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-capture-screenshot/"
+    },
+    "headline": "Accessibility Capture Screenshot",
+    "description": "Capture annotated screenshots with red bounding boxes highlighting accessibility violations during manual and automated testing.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-capture-screenshot/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "TestMu AI",
+      "Accessibility",
+      "Testing"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Add the accessibility.captureScreenshot: true capability to your test configuration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "'LT:Options': {\n    \"accessibility\": true,\n    \"accessibility.wcagversion\": \"wcag21aa\",\n    \"accessibility.bestPractice\": true,\n    \"accessibility.needsReview\": false,\n    \"accessibility.captureScreenshot\": true,\n    \"accessibility.passedTestCases\": false\n}"
+      }
+    ],
+    "dateModified": "2026-04-24T12:22:27+05:30"
+  }) }}
+/>
+
 # Capture Screenshot for Accessibility Testing
 
 Automatically capture visual evidence of accessibility issues during automated testing. Screenshots include red bounding boxes that highlight the exact location of accessibility violations, providing immediate visual context for debugging and issue resolution.

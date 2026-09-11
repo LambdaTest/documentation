@@ -40,6 +40,80 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-artifacts/"
+    },
+    "headline": "Job Artifacts",
+    "description": "Learn how to generate the Artifacts for your desired framework and seamlessly interact with artifacts through the HyperExecute UI.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-artifacts/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI Hyperexecute",
+      "TestMu AI Hyperexecute help",
+      "TestMu AI Hyperexecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Follow the below mentioned steps to generate the Artifacts for your desired framework",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "uploadArtifacts:\n    - name: Executed-Job-Artifacts #user defined name of the artifact\n      path:\n        - src/test/index.html #path of the generated artifact\n    - name: My-Job-Artifacts\n      path:\n        - src/collect/info.html"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Steps to Generate and Download Artifacts",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "matrix:\n   os: [win]\n   browser: [\"chrome-latest-1\", \"firefox-latest-2\"]\n\nmergeArtifacts: true\nuploadArtefacts:\n  - name: $browser\n    path: \n      - allure-results/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 Artifacts are files generated during test execution, including reports and logs. You can refer to these files for obtaining consolidated information about the executed test cases, and can seamlessly interact with artifacts through the HyperExecute UI.
 
 Following the completion of a Job, these artifacts are automatically stored in the **artifacts folder**, distinguishing previous files into **old-artifacts** on subsequent runs while retaining the recent files in artifacts.

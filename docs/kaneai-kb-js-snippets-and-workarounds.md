@@ -43,6 +43,164 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds/"
+    },
+    "headline": "JS Snippets & Workarounds",
+    "description": "Work around natural language limitations in KaneAI using JavaScript snippets for DOM manipulation, validation, date pickers, shadow DOM, and more",
+    "url": "https://www.testmuai.com/support/docs/kaneai-kb-js-snippets-and-workarounds/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "KaneAI",
+    "keywords": [
+      "testmu ai automation",
+      "testmu ai kaneai",
+      "kaneai javascript"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Date on a Read-Only Date Picker",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const dateInput = document.querySelector('input[name=\"startDate\"]');\n// Remove readonly temporarily\ndateInput.removeAttribute('readonly');\n// Set the value\ndateInput.value = '2026-03-15';\n// Trigger change events so the framework (React, Angular, Vue) picks up the change\ndateInput.dispatchEvent(new Event('input', { bubbles: true }));\ndateInput.dispatchEvent(new Event('change', { bubbles: true }));\nreturn 'Date set to 2026-03-15';"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Use the native input setter",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const dateInput = document.querySelector('input[name=\"date\"]');\nconst nativeInputValueSetter = Object.getOwnPropertyDescriptor(\n  window.HTMLInputElement.prototype, 'value'\n).set;\nnativeInputValueSetter.call(dateInput, '2026-03-15');\ndateInput.dispatchEvent(new Event('input', { bubbles: true }));\nreturn 'React date picker value set';"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set Date Range Picker",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const startDate = document.querySelector('input[name=\"start\"]');\nconst endDate = document.querySelector('input[name=\"end\"]');\n\nconst setter = Object.getOwnPropertyDescriptor(\n  window.HTMLInputElement.prototype, 'value'\n).set;\n\nsetter.call(startDate, '2026-02-01');\nstartDate.dispatchEvent(new Event('input', { bubbles: true }));\n\nsetter.call(endDate, '2026-02-28');\nendDate.dispatchEvent(new Event('input', { bubbles: true }));\n\nreturn 'Date range set: Feb 1 - Feb 28, 2026';"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Convert Text to Lowercase and Validate",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const title = document.querySelector('h1.page-title').textContent;\nconst lowercase = title.toLowerCase();\nif (lowercase === 'welcome to dashboard') {\n  return 'PASS: Title in lowercase matches expected value';\n} else {\n  throw new Error('FAIL: Got \"' + lowercase + '\"');\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Extract and Validate a Substring",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const orderText = document.querySelector('.order-id').textContent;\n// Text is \"Order #12345\", extract just the number\nconst orderId = orderText.replace('Order #', '');\nif (orderId.length === 5 && !isNaN(orderId)) {\n  return 'PASS: Order ID is valid: ' + orderId;\n} else {\n  throw new Error('FAIL: Invalid order ID format: ' + orderId);\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Trim Whitespace and Compare",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const actual = document.querySelector('.username').textContent.trim();\nconst expected = 'john_doe';\nif (actual === expected) {\n  return 'PASS: Username matches';\n} else {\n  throw new Error('FAIL: Expected \"' + expected + '\", got \"' + actual + '\"');\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Assert Specific Table Cell Value",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const rows = document.querySelectorAll('table.users-table tbody tr');\nconst thirdRowFifthCol = rows[2].querySelectorAll('td')[4].textContent.trim();\nif (thirdRowFifthCol === 'Active') {\n  return 'PASS: 3rd row, 5th column is \"Active\"';\n} else {\n  throw new Error('FAIL: Got \"' + thirdRowFifthCol + '\"');\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Count Table Rows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const rowCount = document.querySelectorAll('table tbody tr').length;\nif (rowCount === 10) {\n  return 'PASS: Table has 10 rows';\n} else {\n  throw new Error('FAIL: Table has ' + rowCount + ' rows, expected 10');\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Validate Table is Sorted",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const cells = Array.from(document.querySelectorAll('table tbody tr td:first-child'));\nconst values = cells.map(cell => cell.textContent.trim());\nconst sorted = [...values].sort((a, b) => a.localeCompare(b));\nconst isSorted = JSON.stringify(values) === JSON.stringify(sorted);\nif (isSorted) {\n  return 'PASS: Table is sorted alphabetically by first column';\n} else {\n  throw new Error('FAIL: Table is not sorted. Got: ' + values.join(', '));\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Copy Text to Clipboard",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const text = document.querySelector('.referral-code').textContent;\nawait navigator.clipboard.writeText(text);\nreturn 'Copied to clipboard: ' + text;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Read Clipboard Content",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const clipText = await navigator.clipboard.readText();\nreturn 'Clipboard contains: ' + clipText;"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Read a Local Storage Value",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const token = localStorage.getItem('authToken');\nif (token) {\n  return 'Auth token exists: ' + token.substring(0, 20) + '...';\n} else {\n  throw new Error('FAIL: No auth token in localStorage');\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set a Local Storage Value (Test Setup)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "localStorage.setItem('feature_flag_newUI', 'true');\nreturn 'Feature flag set';"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Clear Session Storage (Logout Simulation)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "sessionStorage.clear();\nreturn 'Session storage cleared';"
+      }
+    ],
+    "dateModified": "2026-09-09T19:16:50+05:30"
+  }) }}
+/>
+
 KaneAI's natural language engine handles the vast majority of web testing scenarios. However, some interactions require direct DOM manipulation or precise programmatic control that natural language can't reliably express. For these cases, KaneAI provides **JS Snippets**: the ability to execute JavaScript code directly on the page.
 
 This guide is organized by common QA scenario, showing you **when** natural language falls short and **exactly what JS snippet** to use as a workaround.

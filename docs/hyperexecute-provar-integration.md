@@ -51,6 +51,101 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/"
+    },
+    "headline": "Integrate Provar with HyperExecute",
+    "description": "Integrate Provar with HyperExecute for Salesforce test automation. Configure, generate build files, set up licenses, and execute tests seamlessly.",
+    "url": "https://www.testmuai.com/support/docs/hyperexecute-provar-integration/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "HyperExecute",
+    "keywords": [
+      "TestMu AI HyperExecute",
+      "TestMu AI HyperExecute help",
+      "TestMu AI HyperExecute documentation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Generate and Update the build.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "<property name=\"provar.home\" value=\"../ProvarHome\"/>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Generate and Update the build.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "<property name=\"license.path\" value=\"../licenseHyperexeute\"/>\n<property name=\"unit.test\" value=\"*.testcase\" />"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Generate and Update the build.xml file",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "<fileset id=\"testcases\" file=\"../${unit.test}\" ><\/fileset>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Configure YAML in your Test Suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "---\nversion: 0.2\nglobalTimeout: 150\n\nrunson: win\n\nruntime:\n  language: java\n  version: \"11\"\n\nautosplit: false\n\nconcurrency: 4\n\nretryOnFailure: true\nmaxRetries: 2\n\nenv:\n  ProvarSecretsPassword: <ENTER_YOUR_PASSWORD>\n\npre:\n  - ls\n\npost:\n  - cat ./ANT/.lambdatestBuild.xml\n\nframework:\n name: provar\n discoveryType: test\n additional_args:\n  discoveryLevel: file # required"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Run the below command in your terminal at the root folder of the project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 Provar is a low-code/no-code testing tool specifically designed for Salesforce applications, enabling efficient creation and execution of UI and API tests.
 
 This documentation guides you on how to integrate Provar seamlessly with HyperExecute to leverage distributed testing capabilities for comprehensive Salesforce test automation.

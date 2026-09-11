@@ -41,6 +41,122 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/performance-tips/"
+    },
+    "headline": "Maximize Test Execution Performance on Automation Platform",
+    "description": "Speed up Selenium test execution on the cloud grid by disabling optional logging capabilities.",
+    "url": "https://www.testmuai.com/support/docs/performance-tips/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "reduce selenium test execution time",
+      "disable visual network console logs",
+      "cloud grid performance optimization"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you do not need these logs, disable them through capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ChromeOptions browserOptions = new ChromeOptions();\nbrowserOptions.setPlatformName(\"Windows 10\");\nbrowserOptions.setBrowserVersion(\"latest\");\nHashMap<String, Object> ltOptions = new HashMap<String, Object>();\nltOptions.put(\"build\", \"your build name\");\nltOptions.put(\"name\", \"your test name\");\nltOptions.put(\"console\", false);  // Disable console logs\nltOptions.put(\"network\", false);  // Disable network logs\nltOptions.put(\"visual\", false);   // Disable step-by-step screenshots\nbrowserOptions.setCapability(\"LT:Options\", ltOptions);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Using latest ensures your tests run on the most readily available browser instances",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "browserOptions.setBrowserVersion(\"latest\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Set an Appropriate Idle Timeout",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ltOptions.put(\"idleTimeout\", 120); // seconds - adjust based on your longest expected wait"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you are not running visual or screenshot-based tests, use a standard resolution",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "ltOptions.put(\"resolution\", \"1024x768\");"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Explicit waits poll for the expected condition and continue immediately",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "// Avoid this\nThread.sleep(5000);\n\n// Use this instead\nWebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));\nwait.until(ExpectedConditions.visibilityOfElementLocated(By.id(\"element-id\")));"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Close Sessions Properly",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Java",
+        "text": "@AfterMethod\npublic void tearDown() {\n    if (driver != null) {\n        driver.quit();\n    }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Windows",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "tracert hub.lambdatest.com"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "For Linux/Mac",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "traceroute hub.lambdatest.com"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Performance Tips
 * * *
 

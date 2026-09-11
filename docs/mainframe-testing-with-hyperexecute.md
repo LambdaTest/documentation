@@ -48,6 +48,103 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/"
+    },
+    "headline": "Mainframe Testing with HyperExecute",
+    "description": "Run a Robot Framework mainframe 3270 suite on HyperExecute. Install s3270 and x3270 emulators on the VM, start mock hosts as background services, autosplit suites across parallel Linux machines, and record the x3270 green screen.",
+    "url": "https://www.testmuai.com/support/docs/mainframe-testing-with-hyperexecute/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "mainframe testing hyperexecute",
+      "3270 emulator automation",
+      "s3270 x3270 hyperexecute"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Your TestMu AI Username and Access Key, with HyperExecute enabled on your plan.; The HyperExecute CLI binary in the root of your suite. The sample repo already bundles the Windows build.; The sample repo cloned locally (Step 1), or your own suite with a tests/ folder of .robot files.; Outbound HTTPS to *.lambdatest.com. Behind a corporate proxy, open an exception for it..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Repo",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/alif-laam-Meem/mainframe-robot",
+        "text": "git clone https://github.com/alif-laam-Meem/mainframe-robot\ncd mainframe-robot"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "partialReports",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "\n\n\nTwo lines are easy to get wrong:\n\n- **`captureScreenRecordingForScenarios`** is not only for the video. It provides the display `x3270` renders to. Do not add your own `DISPLAY` or `Xvfb`, which would send `x3270` to an unrecorded display and blank the video.\n- **`sleep 3`** in `testRunnerCommand` gives the background mocks time to bind their ports before tests connect. Raise it if your mocks start slowly.\n\n## Step 5: Run the Suite\n***\n\nRun the CLI from the repo root, pointing at the YAML.\n\n<Tabs className=\"docs__val\" groupId=\"os\">\n\n<TabItem value=\"powershell\" label=\"Windows (PowerShell)\" default>\n\n```powershell\n.\\hyperexecute.exe --config hyperexecute.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you did not set the environment variables, pass the credentials inline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": ".\\hyperexecute.exe --config hyperexecute.yaml --user \"<username>\" --key \"<access-key>\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 5: Run the Suite (Linux / macOS)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config hyperexecute.yaml"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you did not set the environment variables, pass the credentials inline",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "./hyperexecute --config hyperexecute.yaml --user \"<username>\" --key \"<access-key>\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Mainframe Testing with HyperExecute
 ***
 

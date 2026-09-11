@@ -43,6 +43,63 @@ import { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-test-scheduling-login-authentication/"
+    },
+    "headline": "Login & Authentication for Scheduled Scans",
+    "description": "Create reusable login configurations from the scheduler or dashboard. Choose Basic, Form, or Multi-page authentication and attach them to scheduled accessibility scans.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-test-scheduling-login-authentication/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [
+      "Accessibility scheduling",
+      "Login configuration",
+      "Form authentication"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Login & Authentication for Scheduled Scans
 
 **Login configurations** are saved profiles the scanner runs **before** a scheduled accessibility test. You define credentials and selectors once, then **select** a profile from the **login modal** whenever you create or edit a scan. The same modal opens from the **scheduler** (advanced options on the URL step) or from **Login configurations** on the dashboard, so you can manage profiles without starting a new scan.

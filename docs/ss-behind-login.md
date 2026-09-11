@@ -45,6 +45,63 @@ import CookieTrackingLogin from '@site/src/component/CookieTracking';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/taking-screenshots-of-pages-behind-login/"
+    },
+    "headline": "Taking Screenshots of Pages Behind Login",
+    "description": "With TestMu AI, now you can capture bulk screenshots of your web app or webpages, whether they behind a sign-in form or on a private staging server, for different browsers to measure the cross-browser compatibility.",
+    "url": "https://www.testmuai.com/support/docs/taking-screenshots-of-pages-behind-login/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Other Docs",
+    "keywords": [
+      "screenshot behind login",
+      "screenshot after login",
+      "take screenshots of pages behind login screen"
+    ],
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "dateModified": "2026-08-12T16:18:42+05:30"
+  }) }}
+/>
+
 # Taking Screenshots of Pages Behind Login
 ***
 <BrandName /> offers Screenshot testing, a feature to automatically capture bulk, full-paged screenshots of any URL over different browsers. You can perform [cross browser compatibility testing](https://www.testmuai.com/feature/) on both mobile and desktop browsers at the same time. Also, you can capture up to 25 screenshots in a single test session.

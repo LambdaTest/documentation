@@ -53,6 +53,144 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/smartui-cli-upload/"
+    },
+    "headline": "Upload your Screenshots via CLI",
+    "description": "In this documentation, learn how to upload and compare images (jpgs, jpegs, pngs) using the SmartUI CLI.",
+    "url": "https://www.testmuai.com/support/docs/smartui-cli-upload/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "SmartUI",
+    "keywords": [
+      "Visual Regression",
+      "Visual Regression Testing Guide",
+      "Visual Regression Test Automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "Basic understanding of Command Line Interface is required.; Login to TestMu AI SmartUI with your credentials..",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install required NPM modules for TestMu AI SmartUI CLI globally or in your project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install -g @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Install the Dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm install @lambdatest/smartui-cli"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "export PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "set PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 2: Configure your Project Token",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "PowerShell",
+        "text": "$env:PROJECT_TOKEN=\"123456#1234abcd-****-****-****-************\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Upload the required directory of images",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npx smartui upload <directoryName>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If you prefer to ignore resolutions and compare images solely based on their names, use the following flag",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npx smartui upload <directoryName> --ignoreResolutions"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Setup with Continuous Integration (CI)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "YAML",
+        "text": "steps:\n  - name: Running SmartUI CLI Tests\n    - run: |\n       npm install @lambdatest/smartui-cli\n       npx playwright install-deps\n       npx smartui upload <Directory Name> --removeExtensions"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "If no filename is specified, results will be stored in results.json",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload <directoryName> --fetch-results"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify a custom filename for your results",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload <directoryName> --fetch-results custom-results.json"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Specify a custom build name to group your screenshots in the following way",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx smartui upload <directoryName>  --buildName \"Sample Build Name\""
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
 With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 
 ## Prerequisites for running SmartUI CLI

@@ -44,6 +44,122 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/playwright-with-cucumberjs/"
+    },
+    "headline": "Running Playwright Tests With Cucumber.js",
+    "description": "Learn how to perform Playwright testing using Cucumber.js across multiple browser versions on the TestMu AI platform.",
+    "url": "https://www.testmuai.com/support/docs/playwright-with-cucumberjs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Web Automation",
+    "keywords": [
+      "playwright testing with Playwright test runner",
+      "playwright e2e testing with Playwright test runner",
+      "playwright mobile testing with Playwright test runner"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm install"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "set LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nset LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Prerequisites",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "export LT_USERNAME=\"YOUR_LAMBDATEST_USERNAME\"\nexport LT_ACCESS_KEY=\"YOUR_LAMBDATEST_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Running Playwright Tests With Cucumber.js",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "const { setWorldConstructor, World, Before, After} = require(\"@cucumber/cucumber\");\nconst { chromium } = require('playwright')\n\nclass CustomWorld extends World{\n  async setTestStatus(status, remark) {\n    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)\n  }\n}\n\nBefore(async (scenario) => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build with Cucumber Runner',\n      'name': scenario.pickle.name,\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true,\n      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n      'tunnelName': '' // Optional\n    }\n  }\n\n  // Create page and browser globals to be used in the scenarios\n  global.browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n\n  const context = await global.browser.newContext();\n\n  global.page = await context.newPage();\n})\n\nAfter(async () => {\n  await global.browser.close()\n})\n\nsetWorldConstructor(CustomWorld);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 5",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "npm run test"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Testing With Cucumber.js When Migrating To TestMu AI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "Before(async (scenario) => {\n  const capabilities = {\n    'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`\n    'browserVersion': 'latest',\n    'LT:Options': {\n      'platform': 'Windows 10',\n      'build': 'Playwright Sample Build with Cucumber Runner',\n      'name': scenario.pickle.name,\n      'user': process.env.LT_USERNAME,\n      'accessKey': process.env.LT_ACCESS_KEY,\n      'network': true,\n      'video': true,\n      'console': true,\n      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage\n      'tunnelName': '' // Optional\n    }\n  }\n\n  // Create page and browser globals to be used in the scenarios\n  global.browser = await chromium.connect({\n    wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`\n  })\n\n  const context = await global.browser.newContext();\n\n  global.page = await context.newPage();\n})\n\nAfter(async () => {\n  await global.browser.close()\n})\n\nsetWorldConstructor(CustomWorld);"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 7",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "class CustomWorld extends World{\n  async setTestStatus(status, remark) {\n    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status, remark } })}`)\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "After any assertions in your script mark the test status as passed as shown below",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "try {\n    assert.equal(title,\n        \"How to use HyperExecute for scalable and reliable web automation testing | TestMu AI\",\n        \"Page title does not match\");\n\n    await this.setTestStatus(\"passed\", \"Title matched\");\n  } catch (e) {\n    await this.setTestStatus(\"failed\", e);\n    throw(e);\n  }"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 # Playwright Testing With Cucumber.js
 * * *
 

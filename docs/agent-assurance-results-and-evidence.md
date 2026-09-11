@@ -1,5 +1,6 @@
 ---
 id: agent-assurance-results-and-evidence
+toc_max_heading_level: 2
 title: Understand Agent Assurance Results and Evidence
 hide_title: false
 sidebar_label: Results and Evidence
@@ -25,6 +26,115 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       { "@type": "ListItem", "position": 2, "name": "Support", "item": `${BRAND_URL}/support/docs/` },
       { "@type": "ListItem", "position": 3, "name": "Results and Evidence", "item": `${BRAND_URL}/support/docs/agent-assurance-results-and-evidence/` }
     ]
+  }) }}
+/>
+
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/agent-assurance-results-and-evidence/"
+    },
+    "headline": "Understand Agent Assurance Results and Evidence",
+    "description": "Interpret Agent Assurance verdicts, coverage, evidence, artifacts, trends, and root-cause reports in the terminal and browser viewer.",
+    "url": "https://www.testmuai.com/support/docs/agent-assurance-results-and-evidence/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Agent Testing",
+    "keywords": [
+      "rook report",
+      "ai agent test evidence",
+      "unable to verify"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "8 graded scenarios: 8 passed, 0 failed\n20 criteria: 8 verified, 12 unable to verify\npass rate: 100%\ncoverage: 40%"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "From the TUI",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/ui"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Print the URL without opening a browser",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "/ui --no-open"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Files Written for a Run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": ".testmuai/rook/agents/<agent-id>/\n  history.jsonl\n  history/<scenario-id>.jsonl\n  runs/<run-id>/\n    run.yaml\n    scenarios.yaml\n    analysis.yaml\n    report.evidence/\n    remedies/\n    scenarios/<scenario-id>/\n      request.json\n      response.json\n      verdict.yaml\n      artifacts/"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Print the most recent run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook report"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Print a specific run",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook report <run-id> --entity <agent-id>"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Machine-readable output",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "rook report <run-id> --entity <agent-id> --json"
+      }
+    ],
+    "dateModified": "2026-08-25T16:54:35+05:30"
   }) }}
 />
 

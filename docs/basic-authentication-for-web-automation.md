@@ -48,6 +48,73 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/basic-authentication-for-web-automation/"
+    },
+    "headline": "Basic Authentication for Safari Web Automation",
+    "description": "Now you can Basic Authentication during your Safari web automation sessions on iOS real devices with TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.",
+    "url": "https://www.testmuai.com/support/docs/basic-authentication-for-web-automation/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "App Automation",
+    "keywords": [
+      "basic authentication",
+      "safari web automation",
+      "web automation"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is an example of how to use the Basic Authentication hook in Python",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "data = {\n  \"username\": \"admin\",\n  \"password\": \"admin\",\n  \"url\": \"https://the-internet.herokuapp.com/basic_auth\",\n}\ndriver.execute_script(\"lambda-ios-set-basic-auth\", data)"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 ## Introduction
 ---
 Basic Authentication is a method for an HTTP user agent to provide a user name and password when making a request. In basic HTTP authentication, a request contains a header field in the form of `Authorization: Basic <credentials>`, where credentials is the **Base64** encoding of ID and password joined by a single colon `:`.

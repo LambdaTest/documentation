@@ -50,6 +50,178 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/scim/"
+    },
+    "headline": "SCIM Provisioning: Users & Groups",
+    "description": "Automate user and group lifecycle management with SCIM 2.0. Provision users, sync groups, map to teams, concurrency groups, and sub-organizations, all from your Identity Provider.",
+    "url": "https://www.testmuai.com/support/docs/scim/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Setting and Security",
+    "keywords": [
+      "TestMu AI SCIM",
+      "SCIM Provisioning",
+      "SCIM 2.0"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Schema & Attributes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:User\",\n    \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\"\n  ],\n  \"userName\": \"jane@company.com\",\n  \"active\": true,\n  \"name\": { \"givenName\": \"Jane\", \"familyName\": \"Doe\", \"formatted\": \"Jane Doe\" },\n  \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\": {\n    \"OrganizationRole\": \"User\",\n    \"LambdatestGroup\": \"Engineering\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "User API Operations (Create)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:User\",\n    \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\"\n  ],\n  \"userName\": \"jane@company.com\",\n  \"active\": true,\n  \"name\": { \"givenName\": \"Jane\", \"familyName\": \"Doe\", \"formatted\": \"Jane Doe\" },\n  \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\": {\n    \"OrganizationRole\": \"User\",\n    \"LambdatestGroup\": \"Engineering\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "User API Operations (Create)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:User\",\n    \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\"\n  ],\n  \"id\": \"23123\",\n  \"userName\": \"jane@company.com\",\n  \"active\": true,\n  \"name\": { \"givenName\": \"Jane\", \"familyName\": \"Doe\", \"formatted\": \"Jane Doe\" },\n  \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\": {\n    \"OrganizationRole\": \"User\",\n    \"LambdatestGroup\": \"Engineering\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Get by ID",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:User\",\n    \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\"\n  ],\n  \"id\": \"23123\",\n  \"userName\": \"jane@company.com\",\n  \"active\": true,\n  \"name\": { \"givenName\": \"Jane\", \"familyName\": \"Doe\", \"formatted\": \"Jane Doe\" },\n  \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\": {\n    \"OrganizationRole\": \"User\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List / Filter",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"],\n  \"totalResults\": 1,\n  \"startIndex\": 1,\n  \"itemsPerPage\": 20,\n  \"Resources\": [\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:User\",\n        \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\"\n      ],\n      \"id\": \"23123\",\n      \"userName\": \"jane@company.com\",\n      \"active\": true,\n      \"name\": { \"givenName\": \"Jane\", \"familyName\": \"Doe\", \"formatted\": \"Jane Doe\" },\n      \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\": {\n        \"OrganizationRole\": \"User\"\n      }\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update (PUT)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:schemas:core:2.0:User\"],\n  \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User\": {\n    \"OrganizationRole\": \"Admin\"\n  },\n  \"active\": true\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update (PATCH)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\n  \"Operations\": [\n    { \"op\": \"Replace\", \"path\": \"active\", \"value\": false },\n    { \"op\": \"Replace\", \"path\": \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole\", \"value\": \"Guest\" },\n    { \"op\": \"Replace\", \"path\": \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup\", \"value\": \"QA-Team\" }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Disable",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\n  \"Operations\": [\n    { \"op\": \"Replace\", \"path\": \"active\", \"value\": false }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Group Schema & Attributes",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:Group\",\n    \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group\"\n  ],\n  \"displayName\": \"eng-backend\",\n  \"members\": [{ \"value\": \"12345\" }, { \"value\": \"67890\" }],\n  \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group\": {\n    \"LambdatestRoles\": [\"User\"]\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Group API Operations (Create)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:Group\",\n    \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group\"\n  ],\n  \"displayName\": \"eng-backend\",\n  \"members\": [\n    { \"value\": \"23123\" },\n    { \"value\": \"23456\" }\n  ],\n  \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group\": {\n    \"LambdatestRoles\": [\"User\"]\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Group API Operations (Create)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:Group\",\n    \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group\"\n  ],\n  \"id\": \"50001\",\n  \"displayName\": \"eng-backend\",\n  \"members\": [\n    { \"value\": \"23123\", \"display\": \"jane@company.com\" },\n    { \"value\": \"23456\", \"display\": \"bob@company.com\" }\n  ],\n  \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group\": {\n    \"LambdatestRoles\": [\"User\"]\n  },\n  \"meta\": {\n    \"resourceType\": \"Group\",\n    \"created\": \"2025-01-15T10:30:00Z\",\n    \"lastModified\": \"2025-01-15T10:30:00Z\"\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "List / Filter",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:ListResponse\"],\n  \"totalResults\": 1,\n  \"startIndex\": 1,\n  \"itemsPerPage\": 20,\n  \"Resources\": [\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:Group\",\n        \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group\"\n      ],\n      \"id\": \"50001\",\n      \"displayName\": \"eng-backend\",\n      \"members\": [\n        { \"value\": \"23123\", \"display\": \"jane@company.com\" },\n        { \"value\": \"23456\", \"display\": \"bob@company.com\" }\n      ],\n      \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group\": {\n        \"LambdatestRoles\": [\"User\"]\n      },\n      \"meta\": {\n        \"resourceType\": \"Group\",\n        \"created\": \"2025-01-15T10:30:00Z\",\n        \"lastModified\": \"2025-01-15T10:30:00Z\"\n      }\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "PATCH (partial) to https://auth.lambdatest.com/api/scim/Groups/{id} (Add Members)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\n  \"Operations\": [\n    {\n      \"op\": \"Add\",\n      \"path\": \"members\",\n      \"value\": [{ \"value\": \"99999\" }]\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Remove Members",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\n  \"Operations\": [\n    {\n      \"op\": \"Remove\",\n      \"path\": \"members\",\n      \"value\": [{ \"value\": \"12345\" }]\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Rename",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\n  \"Operations\": [\n    {\n      \"op\": \"Replace\",\n      \"path\": \"displayName\",\n      \"value\": \"eng-platform\"\n    }\n  ]\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Update Roles",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JSON",
+        "text": "{\n  \"schemas\": [\"urn:ietf:params:scim:api:messages:2.0:PatchOp\"],\n  \"Operations\": [\n    {\n      \"op\": \"Replace\",\n      \"path\": \"urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:Group:LambdatestRoles\",\n      \"value\": [\"Admin\"]\n    }\n  ]\n}"
+      }
+    ],
+    "dateModified": "2026-07-03T19:09:57+05:30"
+  }) }}
+/>
+
 SCIM (System for Cross-domain Identity Management) lets your Identity Provider (IDP) automatically manage users and groups within your <BrandName /> organization, no manual account setup required.
 
 | Capability | What it does |

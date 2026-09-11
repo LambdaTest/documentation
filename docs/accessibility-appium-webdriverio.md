@@ -9,6 +9,84 @@ site_name: TestMu AI
 canonical: https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/
 ---
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/"
+    },
+    "headline": "Appium WebdriverIO",
+    "description": "Appium WebdriverIO with Accessibility: WDIO config, async hooks, lambda-accessibility-scan, and reports.",
+    "url": "https://www.testmuai.com/support/docs/accessibility-appium-webdriverio/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Accessibility Testing",
+    "keywords": [],
+    "proficiencyLevel": "Beginner",
+    "dependencies": "WebdriverIO + @wdio/appium-service (or your chosen runner) configured for TestMu AI; App artifact available to the grid; Accessibility entitlement.",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "1. Set capabilities in wdio.conf.ts (or .js)",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "export const config = {\n  capabilities: [{\n    platformName: 'Android',\n    'appium:deviceName': 'Pixel.*',\n    'appium:app': 'lt://APP_ID',\n    'accessibility': true,\n  }],\n  // host/user/key per your standard WDIO LambdaTest preset\n};"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "2. Call the hook after screens load",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "TypeScript",
+        "text": "await browser.execute('lambda-accessibility-scan');"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "3. Run the suite",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npx wdio run wdio.conf.ts"
+      }
+    ],
+    "dateModified": "2026-09-09T19:10:37+05:30"
+  }) }}
+/>
+
 # Appium WebdriverIO
 
 Use this guide when **WebdriverIO** orchestrates **Appium** tests for Android or iOS. Accessibility is enabled on the **remote options** object, and you call **`lambda-accessibility-scan`** from async tests or hooks.

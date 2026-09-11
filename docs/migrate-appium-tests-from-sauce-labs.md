@@ -40,6 +40,136 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/migrate-appium-tests-from-sauce-labs/"
+    },
+    "headline": "Migrate Appium Tests From Sauce Labs",
+    "description": "This documentation will guide you through the process of migrating your Appium test suites from Sauce Labs to TestMu AI.",
+    "url": "https://www.testmuai.com/support/docs/migrate-appium-tests-from-sauce-labs/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "migrate appium tests from sauce labs",
+      "migrate appium tests from sauce labs to testmu ai",
+      "how to migrate appium tests from sauce labs to testmu ai"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Here is a side-by-side comparison of each of the fields that we have highlighted above",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "userName = \"SAUCE_USERNAME\"\naccessKey = \"SAUCE_ACCESS_KEY\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Code sample 2",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "userName = \"LambdaTest_UserName\"\naccessKey = \"LambdaTest_AccessKey\""
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changes To The Hub URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "@ondemand.us-west-1.saucelabs.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Changes To The Hub URL",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "text",
+        "text": "@mobile-hub.lambdatest.com/wd/hub"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The following is an overview of the comparison of Desired Capabilities for the Java language",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "# demo.py\ncaps = {\n    caps['platformName'] = 'Android'\n    caps['browserName'] = 'Chrome'\n    caps['appium:deviceName'] = 'Google Pixel 3a GoogleAPI Emulator'\n    caps['appium:platformVersion'] = '11.0'\n    caps['sauce:options'] = {}\n    caps['sauce:options']['appiumVersion'] = '1.20.2'\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "demo.py",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "# demo.py\ncaps = [\n    {\n        \"deviceName\": \"Google Pixel 3\",\n        \"platformName\": \"Android\",\n        \"platformVersion\": \"11\",\n        \"app\": \"<lt_app_url>\",\n        \"isRealMobile\": True,\n        \"deviceOrientation\": \"PORTRAIT\",\n        \"build\": \"Demo\",\n           },\n]"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Example: Sauce Labs To TestMu AI Migration",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "#samplewikipedia.py\nimport ssl\n\ntry:\n    _create_unverified_https_context = ssl._create_unverified_context\nexcept AttributeError:\n    # Legacy Python that doesn't verify HTTPS certificates by default\n    pass\nelse:\n    # Handle target environment that doesn't support HTTPS verification\n    ssl._create_default_https_context = _create_unverified_https_context\n\nfrom threading import Thread\nimport time\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver.common.desired_capabilities import DesiredCapabilities\nfrom selenium.common.exceptions import TimeoutException\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nfrom appium.webdriver.common.mobileby import MobileBy\nfrom appium import webdriver\n\n# This array 'caps' defines the capabilities browser, device and OS combinations where the test will run\n\ncaps = {\n    caps['platformName'] = 'Android'\n    caps['browserName'] = 'Chrome'\n    caps['appium:deviceName'] = 'Google Pixel 3a GoogleAPI Emulator'\n    caps['appium:platformVersion'] = '11.0'\n    caps['sauce:options'] = {}\n    caps['sauce:options']['appiumVersion'] = '1.20.2'\n}\n\n# run_session function searches for 'saucelabs' on google.com\n\ndef run_session(desired_cap):\n    driver = webdriver.Remote(\n  \n        command_executor=\"https://SAUCE_USERNAME:SAUCE_ACCESS_KEY@ondemand.us-west-1.saucelabs.com/wd/hub\",\n        desired_capabilities=desired_cap)\n\n    # driver.get(\"https://www.ifconfig.me\")\n    # time.sleep(10)\n    # Test case for the saucelabs sample Android app.\n# If you have uploaded your app, update the test case here.\n    search_element = WebDriverWait(driver, 30).until(\n        EC.element_to_be_clickable(\n            (MobileBy.ACCESSIBILITY_ID, \"Search Wikipedia\"))\n    )\n    search_element.click()\n    search_input = WebDriverWait(driver, 30).until(\n        EC.element_to_be_clickable(\n            (MobileBy.ID, \"org.wikipedia.alpha:id/search_src_text\"))\n    )\n    search_input.send_keys(\"saucelabs\")\n    time.sleep(5)\n    search_results = driver.find_elements_by_class_name(\n        \"android.widget.TextView\")\n    assert(len(search_results) > 0)\n\n# Invoke driver.quit() after the test is done to indicate that the test is completed.\n    driver.quit()\n\n# The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel\nfor cap in caps:\n    Thread(target=run_session, args=(cap,)).start()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "#samplewikipedia.py\nimport ssl\n\ntry:\n    _create_unverified_https_context = ssl._create_unverified_context\nexcept AttributeError:\n    # Legacy Python that doesn't verify HTTPS certificates by default\n    pass\nelse:\n    # Handle target environment that doesn't support HTTPS verification\n    ssl._create_default_https_context = _create_unverified_https_context\n\nfrom threading import Thread\nimport time\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver.common.desired_capabilities import DesiredCapabilities\nfrom selenium.common.exceptions import TimeoutException\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nfrom appium.webdriver.common.mobileby import MobileBy\nfrom appium import webdriver\n\n# This array 'caps' defines the capabilities browser, device and OS combinations where the test will run\ncaps = [\n\n    {\n        \"deviceName\": \"Google Pixel 3\",\n        \"platformName\": \"Android\",\n        \"platformVersion\": \"11\",\n        \"app\": \"<lt_app_url>\",\n        \"isRealMobile\": True,\n        \"deviceOrientation\": \"PORTRAIT\",\n        \"build\": \"Demo\",\n           },\n]\n# run_session function searches for 'lambtest' on google.com\n\ndef run_session(desired_cap):\n    driver = webdriver.Remote(\n        # hub.mobile-dev-1.dev.lambdatest.io/wd/hub\",\n        command_executor=\"https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub\",\n        desired_capabilities=desired_cap)\n\n    # driver.get(\"https://www.ifconfig.me\")\n    # time.sleep(10)\n    # Test case for the lambdatest sample Android app.\n# If you have uploaded your app, update the test case here.\n    search_element = WebDriverWait(driver, 30).until(\n        EC.element_to_be_clickable(\n            (MobileBy.ACCESSIBILITY_ID, \"Search Wikipedia\"))\n    )\n    search_element.click()\n    search_input = WebDriverWait(driver, 30).until(\n        EC.element_to_be_clickable(\n            (MobileBy.ID, \"org.wikipedia.alpha:id/search_src_text\"))\n    )\n    search_input.send_keys(\"lambdatest\")\n    time.sleep(5)\n    search_results = driver.find_elements_by_class_name(\n        \"android.widget.TextView\")\n    assert(len(search_results) > 0)\n\n# Invoke driver.quit() after the test is done to indicate that the test is completed.\n    driver.quit()\n\n# The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel\n\nfor cap in caps:\n    Thread(target=run_session, args=(cap,)).start()"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "\nfrom threading import Thread\nimport time\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver.common.desired_capabilities import DesiredCapabilities\nfrom selenium.common.exceptions import TimeoutException\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nfrom appium.webdriver.common.mobileby import MobileBy\nfrom appium import webdriver\n\n\n# This array 'caps' defines the capabilities browser, device and OS combinations where the test will run\n\ncaps = {\n    caps['platformName'] = 'Android'\n    caps['browserName'] = 'Chrome'\n    caps['appium:deviceName'] = 'Google Pixel 3a GoogleAPI Emulator'\n    caps['appium:platformVersion'] = '11.0'\n    caps['sauce:options'] = {}\n    caps['sauce:options']['appiumVersion'] = '1.20.2'\n}\n\n\n# run_session function searches for 'saucelabs' on google.com\n\n\ndef run_session(desired_cap):\n    driver = webdriver.Remote(\n  \n        command_executor=\"https://SAUCE_USERNAME:SAUCE_ACCESS_KEY@ondemand.us-west-1.saucelabs.com/wd/hub\",\n        desired_capabilities=desired_cap)\n"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "run_session function searches for 'saucelabs' on google.com",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Python",
+        "text": "from threading import Thread\nimport time\nfrom selenium import webdriver\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver.common.desired_capabilities import DesiredCapabilities\nfrom selenium.common.exceptions import TimeoutException\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nfrom appium.webdriver.common.mobileby import MobileBy\nfrom appium import webdriver\n\ncaps = [\n\n    {\n        \"deviceName\": \"Google Pixel 3\",\n        \"platformName\": \"Android\",\n        \"platformVersion\": \"11\",\n        \"app\": \"<lt_app_url>\",\n        \"build\": \"Demo\",\n           },\n]\n\ndef run_session(desired_cap):\n    driver = webdriver.Remote(command_executor=\"https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub\", desired_capabilities=desired_cap)\n"
+      }
+    ],
+    "dateModified": "2026-04-07T12:50:21+05:30"
+  }) }}
+/>
+
 # Migrate Appium Tests From Sauce Labs To <BrandName />
 ***
 

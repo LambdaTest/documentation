@@ -46,6 +46,110 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
     }}
 ></script>
 
+<script type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": [
+      "Article",
+      "TechArticle"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.testmuai.com/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/"
+    },
+    "headline": "Selenium With WebDriverIO",
+    "description": "Run WebDriverIO Selenium automation scripts on TestMu AI cloud grid with 3000+ real browsers and operating systems.",
+    "url": "https://www.testmuai.com/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.testmuai.com/support/assets/images/og-images/testmuai-documentation-og.webp",
+      "width": 1200,
+      "height": 630
+    },
+    "inLanguage": "en",
+    "articleSection": "Documentation",
+    "keywords": [
+      "webdriverio selenium grid testing",
+      "run webdriverio tests cloud",
+      "webdriverio selenium cloud execution"
+    ],
+    "proficiencyLevel": "Beginner",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "url": "https://www.testmuai.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://www.testmuai.com/#organization",
+      "name": "TestMu AI",
+      "alternateName": [
+        "TestMuAI",
+        "TestMu",
+        "LambdaTest"
+      ],
+      "url": "https://www.testmuai.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.testmuai.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/testmu-ai/",
+        "https://x.com/testmuai",
+        "https://www.youtube.com/@TestMuAI"
+      ]
+    },
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 1: Clone the Sample Project",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/webdriverio-selenium",
+        "text": "git clone https://github.com/LambdaTest/webdriverio-selenium.git\ncd webdriverio-selenium"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the required dependencies",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm i webdriverio\nnpm i selenium-webdriver\nnpm i"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 3: Configure Your Test Capabilities",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "JavaScript",
+        "text": "//single.conf.js\nuser= process.env.LT_USERNAME || \"<your username>\",\nkey= process.env.LT_ACCESS_KEY || \"<your accessKey>\",\n\nexports.config = {\n\n  updateJob: false,\n  user,\n  key,\n  specs: [\n    './tests/specs/single_test.js'\n  ],\n  exclude: [],\n\n  capabilities: [{\n    browserName: 'chrome',\n    browserVersion: 'latest',\n    platformName: 'Windows 10',\n    name:\"Test webdriverio\",\n    build:\"build 1\",\n  }],\n  sync: true,\n  logLevel: 'info',\n  coloredLogs: true,\n  screenshotPath: './errorShots/',\n  baseUrl: '',\n  waitforTimeout: 100000,\n  connectionRetryTimeout: 90000,\n  connectionRetryCount: 1,\n  path: '/wd/hub',\n  hostname: 'hub.lambdatest.com',\n  port: 80,\n\n  beforeSession: function (config, capabilities, specs) {\n    capabilities.name=specs[0].split(/(\\\\|\\/)/g).pop() || undefined;\n    },\n    after: function (result, capabilities, specs) {\n      driver.execute(\"lambda-status=\".concat(result==0?\"passed\":\"failed\"),undefined);\n    },\n\n  framework: 'mocha',\n  mochaOpts: {\n      ui: 'bdd'\n  }\n}"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run single"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Step 4: Run the Test",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "text": "npm run parallel"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Install the skill",
+        "codeSampleType": "code snippet",
+        "programmingLanguage": "Shell",
+        "codeRepository": "https://github.com/LambdaTest/agent-skills",
+        "text": "git clone https://github.com/LambdaTest/agent-skills.git\ncp -r agent-skills/webdriverio-skill .claude/skills/\n\n# For Cursor / Copilot\ncp -r agent-skills/webdriverio-skill .cursor/skills/"
+      }
+    ],
+    "dateModified": "2026-09-09T19:13:32+05:30"
+  }) }}
+/>
+
 ---
 
 Run WebDriverIO tests on the TestMu AI cloud grid. This guide covers setup, running a sample test, configuring capabilities, and testing locally hosted pages.
