@@ -154,6 +154,8 @@ You can run Puppeteer testing of locally hosted websites and web apps via <Brand
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```

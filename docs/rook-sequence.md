@@ -14,6 +14,33 @@ site_name: TestMu AI
 slug: rook-sequence/
 canonical: https://www.testmuai.com/support/docs/rook-sequence/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Rook Testing Sequence",
+          "item": `${BRAND_URL}/support/docs/rook-sequence/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -119,12 +146,16 @@ You can request a later operation before completing every earlier one. Rook repo
 
 Rook has one command set with two surfaces:
 
+<VerifiedTag value="Verified" />
+
 ```text
 # Interactive TUI
 /explore .
 /generate
 /run
 ```
+
+<VerifiedTag value="Verified" />
 
 ```bash
 # Shell or CI
@@ -140,6 +171,8 @@ Bare `/project`, `/agent`, and `/profile` commands open pickers. Use the arrow k
 ## Ask in Plain Language
 
 Use `rook ask` when you know the outcome but not the command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 rook ask "generate adversarial tests for refund-policy bypasses"

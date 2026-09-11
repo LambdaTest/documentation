@@ -15,6 +15,8 @@ site_name: TestMu AI
 slug: kane-cli-browser-state/
 canonical: https://www.testmuai.com/support/docs/kane-cli-browser-state/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -131,6 +133,8 @@ Objectives can directly manage cookies, localStorage, and the clipboard, useful 
 
 ## Cookies
 
+<VerifiedTag value="Verified" />
+
 ```
 Set a cookie named session with value abc123
 Set cookies consent=yes and tracking=off, then reload the page
@@ -144,6 +148,8 @@ Clear all cookies
 - Provide `path` together with a domain; a path alone is rejected by the browser
 
 ## localStorage
+
+<VerifiedTag value="Verified" />
 
 ```
 Set localStorage keys theme=dark and lang=en
@@ -159,6 +165,8 @@ Clear localStorage
 
 The run uses an **isolated test clipboard**. Your real OS clipboard is never read or written. Site Copy buttons are captured into it automatically.
 
+<VerifiedTag value="Verified" />
+
 ```
 Write "John Tester" to the clipboard
 Click the message field, then paste from the clipboard
@@ -172,6 +180,8 @@ Clear the clipboard
 ## Verifying state
 
 Each of these has a matching assertion family. See [Cookies](/support/docs/kane-cli-checkpoint-devtools-cookies/), [localStorage](/support/docs/kane-cli-checkpoint-devtools-localstorage/), and [Clipboard](/support/docs/kane-cli-checkpoint-devtools-clipboard/):
+
+<VerifiedTag value="Verified" />
 
 ```
 Set a cookie named session with value abc123, reload, and verify the page shows you as logged in

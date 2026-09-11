@@ -5,6 +5,31 @@ sidebar_label: Mismatched Label Text
 description: Rule-level Accessibility guidance for Mismatched Label Text on Android.
 slug: accessibility-android-rule-mismatched-label-text/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Mismatched Label Text (Android)",
+          "item": `${BRAND_URL}/support/docs/accessibility-android-rule-mismatched-label-text/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

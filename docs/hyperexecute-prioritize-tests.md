@@ -17,6 +17,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-prioritize-tests/
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -117,6 +118,8 @@ The `jobLabel` YAML key is used to add tags or labels to jobs. In addition to pr
 ## Prioritize your Jobs using `jobLabel`
 
 You can prioritize your jobs by assigning the job labels **low**, **medium** or **high** to your jobs. The jobs with the priority **high** will be executed first, followed by **medium** priority jobs with **low** priority jobs at the end.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 jobLabel: ['high', 'medium', 'low']

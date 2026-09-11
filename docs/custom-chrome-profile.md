@@ -16,6 +16,7 @@ slug: upload-custom-chrome-profile/
 canonical: https://www.testmuai.com/support/docs/upload-custom-chrome-profile/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -154,6 +155,8 @@ Zip your Chrome profile folder and upload it to the TestMu AI cloud using the AP
 
 1. Zip the custom Chrome profile folder and upload it to TestMu AI cloud servers using the API below:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl --location --request POST 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \
 
@@ -164,11 +167,15 @@ curl --location --request POST 'https://api.lambdatest.com/automation/api/v1/fil
 
 After you upload the compressed file, a similar URL will be generated: 
 
+<VerifiedTag value="Verified" />
+
 ```json
 https://automation-prod-user-files.s3.amazonaws.com/profile/chrome/orgId-2939/zip.zip
 ```
 
 2. Add the above generated URL in your test script using the `"browserProfile"` capability as shown below:
+
+<VerifiedTag value="Verified" />
 
 ```sql
 "browserProfile":"https://automation-prod-user-files.s3.amazonaws.com/profile/chrome/orgId-242939/zip.zip"
@@ -180,12 +187,16 @@ View or delete uploaded Chrome profiles using the API commands below.
 
 * **To View the List of Uploaded Profiles**: Use the below cURL command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 curl --location --request GET 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \
 --header 'Authorization: Basic your_auth_key'
 ```
 
 * **To Delete the List of Uploaded Profiles**: Use the below cURL command:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location --request DELETE 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \

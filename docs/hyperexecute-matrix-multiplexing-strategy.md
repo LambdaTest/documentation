@@ -16,6 +16,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-matrix-multiplexin
 
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -134,6 +135,8 @@ Consider a scenario where the matrix calculation results in 10 different possibl
 
 You can use a key as [browser], [files]  or any other unique key name. 
 
+<VerifiedTag value="Verified" />
+
 ``` yaml
 matrix:
   files: ["Test1","Test2","Test3"]
@@ -152,6 +155,8 @@ Here, ‘N’ could be browser version  number(s) that are common between the tw
 In matrix multiplexing strategy, *`key`:`value`* pairs mentioned in the source code override the same `key`:`value`  pairs mentioned in the HyperExecute YAML file.
 
 Let’s modify the above YAML file to run the scenarios on "latest" version of the Firefox browser:
+
+<VerifiedTag value="Verified" />
 
 ``` yaml
 #runson defines the OS of your test execution node.
@@ -180,6 +185,8 @@ Let’s take a case where the test scenarios are implemented in Java. Files File
 
 ## Exclusion in Matrix Strategy
 Assuming that you created a matrix but there is one specific combination that you don't want the system to consider. This can happen for instance if you have a combination of Safari and Windows which won't be a valid combination, in such cases you can exclude such a combination using the `exclusionMatrix` parameter as shown below.
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 #runson defines the OS of your test execution node.

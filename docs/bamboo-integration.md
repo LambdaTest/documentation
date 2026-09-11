@@ -14,6 +14,7 @@ slug: bamboo-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/bamboo-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,7 +32,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "item": "https://www.testmuai.com/support/"
         },{
           "@type": "ListItem",
-          "position": 4,
+          "position": 3,
           "name": "Bamboo Integration With TestMu AI",
           "item": `${BRAND_URL}/support/docs/bamboo-integration-with-testmu/`
         }]
@@ -147,6 +148,8 @@ Launched on 20 February 2007, Bamboo by Atlassian has become a worldwide adopted
 - A GIT repository.
 - wget & unzip utility.
 
+  <VerifiedTag value="Verified" />
+
   ```
   $ sudo apt-get install unzip
   $ sudo apt-get install wget
@@ -155,11 +158,16 @@ Launched on 20 February 2007, Bamboo by Atlassian has become a worldwide adopted
 - Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     - For Linux/Mac:
+
+      <VerifiedTag value="Verified" />
+
       ```
       $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
       $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
       ```   
     - For Windows:
+
+     <VerifiedTag value="Verified" />
 
      ```
      $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
@@ -184,6 +192,8 @@ Launched on 20 February 2007, Bamboo by Atlassian has become a worldwide adopted
 <img loading="lazy" src={require('../assets/images/bamboo-integration/2.webp').default} alt="Bamboo Integration" width="902" height="839" className="doc_img"/>
 
 **Step 6:** To create your third task, you would need to configure the below script for running a Protractor test.
+
+<VerifiedTag value="Verified" />
 
 ```
 echo "start testing"
@@ -212,6 +222,8 @@ node ./node_modules/protractor/bin/protractor conf/single.conf.js
 Parallel Testing is one of the most demanding features of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. So you can execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions. Wondering how many parallel test cases can you run? That depends entirely on the number of concurrent session under your opted plan.
 
 To run parallel tests using Bamboo integration with <BrandName />, you need to change the script in Step 6 as below.   
+
+<VerifiedTag value="Verified" />
 
 ```
 echo "start testing"

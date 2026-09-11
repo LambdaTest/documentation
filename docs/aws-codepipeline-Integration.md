@@ -17,6 +17,7 @@ slug: aws-codepipeline-integration-with-testmu/
 canonical: https://www.testmuai.com/support/docs/aws-codepipeline-integration-with-testmu/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 ***
 <script type="application/ld+json"
@@ -35,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "item": "https://www.testmuai.com/support/"
         },{
           "@type": "ListItem",
-          "position": 4,
+          "position": 3,
           "name": "AWS CodePipeline Integration",
           "item": `${BRAND_URL}/support/docs/aws-codepipeline-integration-with-testmu/`
         }]
@@ -146,11 +147,16 @@ AWS CodePipeline is a cloud-based continuous delivery platform for fully automat
    Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://www.testmuai.com/login/?redirectTo=https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
    - For Linux/Mac:
+
+    <VerifiedTag value="Verified" />
+
     ```
     $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
     $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
     ```
    - For Windows:
+
+     <VerifiedTag value="Verified" />
 
      ```
      $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
@@ -188,6 +194,8 @@ AWS CodePipeline is a cloud-based continuous delivery platform for fully automat
 
 **Step 7:** Start a build and pull the codes from Git. Read the below `buildspec.yml` from your project’s root directory.
 
+<VerifiedTag value="Verified" />
+
 ```
 version: 0.2
 env:
@@ -216,6 +224,8 @@ discard-paths: yes
 ```
 
 **Step 8:** Monitor your test being triggered on the <BrandName /> platform. You will observe the below output generated.
+
+<VerifiedTag value="Verified" />
 
 ```
 [Container] 2019/07/09 05:43:39 Running command echo Build started on `date` 

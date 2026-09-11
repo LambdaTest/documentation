@@ -6,6 +6,33 @@ sidebar_label: /generate
 description: Generate grounded functional, non-functional, and adversarial scenarios for the active agent.
 slug: rook-command-generate/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /generate Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-generate/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +95,8 @@ Use <code>/generate</code> after exploration to write test scenarios for the act
 
 ## Syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /generate [options] [-- free-text instruction]
 ~~~
@@ -83,6 +112,8 @@ The shell form is <code>rook generate</code> with the same options.
 | <code>--allow &lt;rule&gt;</code> | Pre-authorize one exact tool rule for this launch. Repeatable. |
 | <code>--json</code> | Emit machine-readable events. |
 | <code>--verbose</code> | Show subagent activity and credits as work happens. |
+
+<VerifiedTag value="Verified" />
 
 ~~~text
 /generate --total 20 --class functional,adversarial

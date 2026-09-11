@@ -179,6 +179,8 @@ cd playwright-java-junit
 
 2. Install the npm dependencies.
 
+<VerifiedTag value="Verified" />
+
 ```
 npm install
 ```
@@ -259,6 +261,8 @@ The [junit-5-skill](https://github.com/LambdaTest/agent-skills/tree/main/junit-5
 
 The junit-5-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 junit-5-skill/
 ├── SKILL.md
@@ -281,6 +285,8 @@ It provides structured guidance for:
 ***
 
 Install a JUnit 5 Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

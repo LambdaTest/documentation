@@ -24,6 +24,7 @@ canonical: https://www.testmuai.com/support/docs/web-scanner-advanced-features/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -427,6 +428,8 @@ For comprehensive tunnel setup instructions, configuration options, and troubles
 
 Download the <BrandName /> Tunnel binary for your platform:
 
+<VerifiedTag value="Verified" />
+
 <Tabs className="docs__val" groupId="platform">
 <TabItem value="windows" label="Windows" default>
 
@@ -470,6 +473,8 @@ https://downloads.lambdatest.com/tunnel/v3/linux/arm64/LT
 </Tabs>
 
 #### Step 2: Start the Tunnel
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val" groupId="platform">
 <TabItem value="windows" label="Windows" default>

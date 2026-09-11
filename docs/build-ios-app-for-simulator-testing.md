@@ -20,6 +20,7 @@ canonical: https://www.testmuai.com/support/docs/build-ios-app-for-simulator-tes
 
 import CodeBlock from '@theme/CodeBlock';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -210,6 +211,8 @@ If you use a CI/CD pipeline or prefer the terminal, use `xcodebuild` with the `-
 
 **Step 2:** Run the following build command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 xcodebuild -project YourProject.xcodeproj \
            -scheme YourScheme \
@@ -233,6 +236,8 @@ If your project uses a **workspace** (e.g., with CocoaPods), replace `-project Y
 
 **Step 3:** Locate the `.app` output from the **Derived Data** directory. You can find the path in the build output, or use:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 xcodebuild -project YourProject.xcodeproj \
            -scheme YourScheme \
@@ -243,6 +248,8 @@ xcodebuild -project YourProject.xcodeproj \
 ```
 
 **Step 4:** Compress the `.app` into a `.zip` file:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 cd /path/to/build/output/
@@ -257,6 +264,8 @@ Before uploading, verify that your `.app` is targeting the correct platform usin
 
 **Step 1:** Run the following command:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 vtool -show-build YourApp.app/YourApp
 ```
@@ -266,12 +275,18 @@ Replace the second `YourApp` with the actual binary name inside the `.app` bundl
 **Step 2:** Check the output:
 
 - **Correct (Simulator build):**
+
+  <VerifiedTag value="Verified" />
+
   ```
   platform: IOSSIMULATOR
   ```
   or `platform 7`
 
 - **Incorrect (Device build):**
+
+  <VerifiedTag value="Verified" />
+
   ```
   platform: IOS
   ```
@@ -281,6 +296,9 @@ If the platform shows `IOS` or `platform 2`, the build is for physical devices a
 
 :::tip Alternative Verification
 You can also use `otool` to check the architecture:
+
+<VerifiedTag value="Verified" />
+
 ```bash
 lipo -info YourApp.app/YourApp
 ```

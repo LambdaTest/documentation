@@ -242,6 +242,8 @@ With this plugin, you can:
 
 Run the following command in the terminal to start the Katalon instance.
 
+<VerifiedTag value="Verified" />
+
 ```bash
 /Applications/Katalon\ Studio\ Enterprise.app/Contents/MacOS/katalon
 ```
@@ -254,6 +256,8 @@ In your Katalon project, set the `PROJECT_TOKEN` environment variable:
 #### Via Project Settings:
 1. Go to **Project > Settings > Plugins > SmartUI Integration**.
 2. Here you may set your project token
+
+<VerifiedTag value="Verified" />
 
 ```bash
 PROJECT_TOKEN = "project_token..."
@@ -296,6 +300,8 @@ WebUI.closeBrowser()
 You can pass additional configuration via a JSON file or inline parameters.
 
 #### Using a Config File (`config.json`):
+
+<VerifiedTag value="Verified" />
 
 ```json
 {

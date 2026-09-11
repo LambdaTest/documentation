@@ -25,6 +25,7 @@ canonical: https://www.testmuai.com/support/docs/hyperexecute-detox-testing/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -232,6 +233,8 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 ### Step 3: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
@@ -260,6 +263,8 @@ Download the HyperExecute CLI and copy it into the root folder.
 ### Step 2: Configure YAML in your Test Suite
 Use the sample YAML below to configure your execution:
 
+<VerifiedTag value="Verified" />
+
 ```yaml reference title="hyperexecute.yaml"
 https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
 ```
@@ -281,6 +286,8 @@ HyperExecute supports the following capabilities for your Detox test runs. Add t
 ### Tunnel
 
 Test applications hosted on your local or private network by routing traffic through a secure <BrandName /> Tunnel. Enable it by setting the top-level `tunnel` flag in your YAML:
+
+<VerifiedTag value="Verified" />
 
 ```yaml
 tunnel: true
@@ -306,6 +313,8 @@ The [detox-skill](https://github.com/LambdaTest/agent-skills/tree/main/detox-ski
 
 The detox-skill package includes:
 
+<VerifiedTag value="Verified" />
+
 ```
 detox-skill/
 ├── SKILL.md
@@ -328,6 +337,8 @@ It provides structured guidance for:
 ***
 
 Install a Detox Agent Skill using the command below:
+
+<VerifiedTag value="Verified" />
 
 ```
 # Clone the repo and copy the skill you need

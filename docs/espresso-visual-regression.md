@@ -249,6 +249,8 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 
 <TabItem value='bash' label='Linux / MacOS' default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
 {`export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
@@ -259,6 +261,8 @@ export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
 </TabItem>
 
 <TabItem value='powershell' label='Windows' default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -276,11 +280,15 @@ set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
 
 - In your `build.gradle` file, add the [lambdatest-espresso](https://central.sonatype.com/artifact/io.github.lambdatest/lambdatest-espresso) dependency:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 implementation 'io.github.lambdatest:lambdatest-espresso:1.0.1'
 ```
 
 - Initialize this dependency in your test classes. You can do it as follows:
+
+<VerifiedTag value="Verified" />
 
 ```bash java
 import io.github.lambdatest.LTApp;
@@ -308,6 +316,8 @@ To begin testing, upload your Android application (.apk file) to <BrandName />'s
 
 <TabItem value='bash' label='Linux / MacOS' default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_ANDROID_APP>"' --form 'type="espresso-android"'`}
@@ -317,6 +327,8 @@ To begin testing, upload your Android application (.apk file) to <BrandName />'s
 </TabItem>
 
 <TabItem value='powershell' label='Windows' default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -342,6 +354,8 @@ The following sample cURL command shows how to upload a test suite:
 
 <TabItem value='bash' label='Linux / MacOS' default>
 
+  <VerifiedTag value="Verified" />
+
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
 {`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="espresso-android"'`}
@@ -351,6 +365,8 @@ The following sample cURL command shows how to upload a test suite:
 </TabItem>
 
 <TabItem value='powershell' label='Windows' default>
+
+  <VerifiedTag value="Verified" />
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -371,6 +387,8 @@ The following sample cURL command shows how to upload a test suite:
 - You will need **base64 encoded authentication** in order to execute your Espresso automation test suite. Enter your `username:accesskey` in **[Basic Authentication Header Generator](https://mixedanalytics.com/knowledge-base/api-connector-encode-credentials-to-base-64/)** to generate your auth token.
 
 Take note of the base64 encoded authentication which needs to be added in the next step.
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -416,6 +434,8 @@ Sharding can be categorized into two types:
 **Manual Sharding**: This feature enables users to manually specify shards along with their definitions, offering multiple strategies such as class, package, and more. By doing so, users can have greater flexibility and control over the sharding process.
 
 Refer to the sample `.yaml` file here
+
+<VerifiedTag value="Verified" />
 
 ```bash title="SampleYamlFile.yaml"
 version: "0.2"
@@ -488,6 +508,8 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 Refer to the sample `.yaml` file here
 
+<VerifiedTag value="Verified" />
+
 ```bash title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
@@ -546,6 +568,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 | <img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/> | <img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/> |
 
 ## Best Practices
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='project-and-build-naming' label='Project and Build Naming' default>
@@ -614,6 +638,8 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 </Tabs>
 
 ## Troubleshooting
+
+<VerifiedTag value="Verified" />
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>

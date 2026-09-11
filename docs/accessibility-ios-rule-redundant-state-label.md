@@ -5,6 +5,31 @@ sidebar_label: Redundant State in Label
 description: Rule-level Accessibility guidance for Redundant State Keyword in Accessibility Label on iOS.
 slug: accessibility-ios-rule-redundant-state-label/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Redundant State Keyword in Accessibility Label",
+          "item": `${BRAND_URL}/support/docs/accessibility-ios-rule-redundant-state-label/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

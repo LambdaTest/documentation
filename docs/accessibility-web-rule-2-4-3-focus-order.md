@@ -5,6 +5,31 @@ sidebar_label: Focus Order (2.4.3)
 description: Rule-level Accessibility guidance for Focus Order (WCAG 2.4.3 Level A).
 slug: accessibility-web-rule-2-4-3-focus-order/
 ---
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Focus Order (2.4.3)",
+          "item": `${BRAND_URL}/support/docs/accessibility-web-rule-2-4-3-focus-order/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({

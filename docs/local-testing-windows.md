@@ -16,6 +16,7 @@ slug: local-testing-windows/
 canonical: https://www.testmuai.com/support/docs/local-testing-windows/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -168,11 +169,16 @@ This zip file contains the tunnel binary which will help in establishing a secur
 <img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-2.webp').default} alt="extracting binary zip file" width="988" height="487" className="doc_img"/>
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
+
+<VerifiedTag value="Verified" />
+
 ```
 LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
 
 So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is <BrandName />, the command would be:
+
+<VerifiedTag value="Verified" />
 
 ```
 LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest
@@ -292,11 +298,16 @@ Use the following arguments in your command line.
 
 Here is how the format of full command would look like:
 
+<VerifiedTag value="Verified" />
+
 ```
 LT --user {user login email} --key {user key} --proxy-host {full proxy hostname} --proxy-user {proxy username} --proxy-pass {proxy password} --proxy-port {port number}
 ```
 
 Example of full command:
+
+<VerifiedTag value="Verified" />
+
 ```
 LT --user example@lambdatest.com --key 123asd123 --proxy-host abc.wonderproxy.com --proxy-user abcdefg --proxy-pass hijklmnop --proxy-port 12345
 ```

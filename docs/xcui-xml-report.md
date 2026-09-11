@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -125,6 +126,8 @@ XML reports provide a detailed summary of test execution, allowing you to better
 To fetch the XML report for a `non-shard` build, you can use the following cURL command:
 
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/?encoder=false" \
@@ -136,6 +139,8 @@ To fetch the XML report for a `non-shard` build, you can use the following cURL 
 **Shard build (For single shard):**
 To fetch the XML report for a `single shard` in a shard build,use:
 
+<VerifiedTag value="Verified" />
+
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>&encoder=false' \
@@ -146,6 +151,8 @@ To fetch the XML report for a `single shard` in a shard build,use:
 
 **Shard build (For all the shards):**
 To fetch the XML reports for `all shards` in a shard build, use:
+
+<VerifiedTag value="Verified" />
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

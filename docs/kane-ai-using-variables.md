@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -175,6 +176,8 @@ The value of variables can be edited by clicking on the variables listing icon o
 ### Using Natural Language in authoring session
 KaneAI allows you to create variables using natural language. For instance, you can write:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 Set username as John
 ```
@@ -229,10 +232,14 @@ Variable usage can be done using the `{{` prefix to list all existing variables 
 
 #### String variables example:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 Enter {{username}} in user input field
 ```
 This will input the value of the username variable in the user input field.
+
+<VerifiedTag value="Verified" />
 
 ```bash
 assert {{username}} contains 'John'
@@ -241,6 +248,8 @@ This will assert if the username variable contains the value "John".
 
 #### JSON variables example:
 JSON variables are generated from the response of an API used via the slash command or from the DB query output. We can use JSON variables to reach a particular object which might be inside the JSON hierarchy via the UI when the `{{` prefix is used in the input box inside the KaneAI session. For instance, we can assert that the email field inside the API variable response matches "john.doe@example.com".
+
+<VerifiedTag value="Verified" />
 
 ```bash
 assert {{api_variable.response.email}} is 'john.doe@example.com'
@@ -283,6 +292,8 @@ You can pass environment name programmatically when initiating test runs via the
 * To find the optional `environment_id`, click your desired environment. In the resulting URL, use the value of the `envId` parameter as the `environment_id`. 
 * For example, if the URL contains `envId=4133`, use **4133** as the environment_id.
 :::
+
+<VerifiedTag value="Verified" />
 
 ```bash
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \

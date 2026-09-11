@@ -23,6 +23,7 @@ canonical: https://www.testmuai.com/support/docs/smartui-agent-skills/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -187,6 +188,8 @@ The [`smartui-skill`](https://github.com/LambdaTest/agent-skills/tree/main/smart
 
 Clone the Agent Skills repository and copy the SmartUI skill into your agent's skills directory:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 git clone https://github.com/LambdaTest/agent-skills.git
 
@@ -210,6 +213,8 @@ If you prefer installing all available framework skills, clone the repository di
 ## Set Up Your Authentication
 
 Export your <BrandName /> credentials and SmartUI project token as environment variables so the agent can run tests on the cloud:
+
+<VerifiedTag value="Verified" />
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
@@ -252,6 +257,8 @@ From this, the agent will:
 ### Step 2: Run the visual test
 
 Ask the agent to run it, or run the command it generated yourself:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 npx smartui exec -- npx playwright test

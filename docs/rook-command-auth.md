@@ -6,6 +6,33 @@ sidebar_label: /auth
 description: Verify that Rook's stored authentication token is currently valid.
 slug: rook-command-auth/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+import { BRAND_URL } from '@site/src/component/BrandName';
+
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": BRAND_URL
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": `${BRAND_URL}/support/docs/`
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rook /auth Command",
+          "item": `${BRAND_URL}/support/docs/rook-command-auth/`
+        }]
+      })
+    }}
+></script>
 
 <script type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,12 +95,16 @@ Use <code>/auth</code> to verify stored credentials against the Rook controller.
 
 ## Syntax
 
+<VerifiedTag value="Verified" />
+
 ~~~text
 /auth
 /auth status
 ~~~
 
 Headless:
+
+<VerifiedTag value="Verified" />
 
 ~~~bash
 rook auth status

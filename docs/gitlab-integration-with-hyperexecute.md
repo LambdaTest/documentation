@@ -17,6 +17,7 @@ slug: gitlab-integration-with-hyperexecute/
 canonical: https://www.testmuai.com/support/docs/gitlab-integration-with-hyperexecute/
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+import VerifiedTag from '@site/src/component/verifiedTag';
 
 
 <script type="application/ld+json"
@@ -162,6 +163,8 @@ To connect your external repository by URL, fill in the required information in 
 - Create a new `.gitlab-ci.yml` file at the root of the repository.
 
 Below is a sample of GitLab YAML created for your reference:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 ## Define the image to use (adjust for macOS if needed)

@@ -13,6 +13,8 @@ site_name: TestMu AI
 slug: kane-cli-checkpoint-title/
 canonical: https://www.testmuai.com/support/docs/kane-cli-checkpoint-title/
 ---
+import VerifiedTag from '@site/src/component/verifiedTag';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -122,12 +124,16 @@ Title assertions check the browser tab's document title (`document.title`).
 
 ### Assertions
 
+<VerifiedTag value="Verified" />
+
 ```
 Assert: page title contains "Dashboard"
 Assert: title is "My Account - Settings"
 ```
 
 ### Extractions
+
+<VerifiedTag value="Verified" />
 
 ```
 Store the page title

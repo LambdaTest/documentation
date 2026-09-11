@@ -679,6 +679,8 @@ It's recommended to use `npm_dependencies` instead of `package.json` because `pa
 #### Install npm packages via a tunnel
 Use the `npm_via_tunnel` flag to route npm install traffic through a tunnel. This is useful when installing packages from a private registry, or in a restricted environment where the public npm registry isn't directly reachable. Add it to `run_settings`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 "npm_via_tunnel": true
 ```
@@ -704,6 +706,8 @@ You can set environment variables for your Cypress tests in three ways: via the 
 #### Via the config file
 **Cypress 9.** A sample `cypress.json`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
 ......
@@ -718,6 +722,8 @@ You can set environment variables for your Cypress tests in three ways: via the 
 
 **Cypress 10.** A sample `cypress.config.js`:
 
+<VerifiedTag value="Verified" />
+
 ```bash
 module.exports = defineConfig({
   env: {
@@ -728,6 +734,8 @@ module.exports = defineConfig({
 ```
 
 Use them in your test spec:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 describe('Sample test', () => {
@@ -744,6 +752,8 @@ describe('Sample test', () => {
 
 #### Via `cypress.env.json`
 
+<VerifiedTag value="Verified" />
+
 ```bash
 {
     "CYPRESS_BASE_URL":"https://example.cypress.io/",
@@ -754,6 +764,8 @@ describe('Sample test', () => {
 
 #### Via the Cypress CLI
 Add variables with the `--envs` parameter:
+
+<VerifiedTag value="Verified" />
 
 ```bash
 lambdatest-cypress run --envs "CYPRESS_BASE_URL=https://example.cypress.io/,ACTIONS_URL=commands/actions,WINDOW_URL=commands/window"
